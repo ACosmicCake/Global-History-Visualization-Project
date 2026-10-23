@@ -1,0 +1,124 @@
+{
+  "id": "place-venice",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Venice",
+  "summary": "Venice was founded in the 5th century AD, when people fleeing barbarian raids took refuge on sandy islands of the lagoon such as Torcello, Jesolo and Malamocco. Built on 118 small islands, it became a major maritime power in the 10th century and the seat of a republic that fell in 1797. UNESCO inscribed the city and its lagoon in 1987.",
+  "when": {
+    "start": {
+      "year": 450
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "display": "5th century AD–present",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Founded in the 5th century AD",
+        "source": "src-unesco"
+      },
+      {
+        "calendar": "as written",
+        "value": "Since the fall of the Venetian republic in 1797",
+        "source": "src-brit"
+      }
+    ],
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO gives only the 5th century AD; 450 is the midpoint."
+    }
+  },
+  "where": {
+    "lat": 45.4371908,
+    "lon": 12.3345898,
+    "elevation_m": null,
+    "modern_name": "Venice, Veneto, Italy",
+    "historical_name": "Venice and the lagoon settlements of Torcello, Jesolo and Malamocco (later the Republic of Venice)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Lagoon city that became a medieval maritime power and from which Marco Polo set out for Asia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1271-marco-polo-journey-to-china",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco",
+      "url": "https://whc.unesco.org/en/list/394/",
+      "title": "Venice and its Lagoon",
+      "publisher": "UNESCO World Heritage Centre",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brit",
+      "url": "https://web.archive.org/web/2026/https://www.britannica.com/place/Venice",
+      "title": "Venice | Italy, History, Map, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Venice%2C%20Italy&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Venice",
+      "publisher": "OpenStreetMap contributors",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The 5th-century date is UNESCO's rounded statement; the traditional day (25 March 421) is not on the pages I opened, so I left it out. The archived Britannica copy gives the 1797 fall but not the Republic's start.",
+  "author": "historian-agent:essentials-f2",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:47.404Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

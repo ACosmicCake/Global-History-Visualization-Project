@@ -59,7 +59,7 @@
         dayMap: { value: loader.load('assets/earth-day.jpg') }, nightMap: { value: loader.load('assets/earth-night.jpg') },
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
         nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
-        paleoOn: { value: 0 },
+        paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 },
         detailMap: { value: null }, detailBounds: { value: new THREE.Vector4(0, 0, 0.25, 0.5) }, detailMix: { value: 0 },
       },
       vertexShader: `varying vec2 vUv; varying vec3 vN; varying vec3 vW;
@@ -68,11 +68,16 @@
       fragmentShader: `uniform sampler2D dayMap; uniform sampler2D nightMap; uniform sampler2D waterMap; uniform sampler2D topoMap;
         uniform vec3 sunDir; uniform float nightLights; uniform float relief;
         uniform sampler2D detailMap; uniform vec4 detailBounds; uniform float detailMix;
-        uniform float paleoOn;
+        uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat;
         varying vec2 vUv; varying vec3 vN; varying vec3 vW;
+        float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
+        float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+          return mix(mix(mix(hash(i), hash(i + vec3(1,0,0)), f.x), mix(hash(i + vec3(0,1,0)), hash(i + vec3(1,1,0)), f.x), f.y),
+                     mix(mix(hash(i + vec3(0,0,1)), hash(i + vec3(1,0,1)), f.x), mix(hash(i + vec3(0,1,1)), hash(i + vec3(1,1,1)), f.x), f.y), f.z); }
+        float fbm(vec3 p){ return noise(p) * 0.5 + noise(p * 2.03 + 1.7) * 0.25 + noise(p * 4.11 + 5.3) * 0.15 + noise(p * 8.3 + 9.1) * 0.1; }
         void main(){
           vec3 n0 = normalize(vN), L = normalize(sunDir), v = normalize(cameraPosition - vW);
-          float water = texture2D(waterMap, vUv).r;
+          float water = texture2D(waterMap, vUv).r, water0 = water;
           // relief: tilt the normal by the height gradient (globe.gl: +Y north, longitude grows toward +X from +Z)
           vec3 east = normalize(cross(vec3(0.0, 1.0, 0.0), n0) + vec3(1e-5, 0.0, 0.0)), north = cross(n0, east);
           float h0 = texture2D(topoMap, vUv).r;
@@ -92,6 +97,39 @@
           if (paleoOn > 0.0) {   // deep time: today's imagery gives way to open ocean under the moving land mesh
             day = mix(day, vec3(0.04, 0.12, 0.25), paleoOn);   // open ocean; the land mesh is drawn on top
             water = mix(water, 1.0, paleoOn);
+            // ice ages: sea ice poleward of the ice line, with a ragged edge (schematic, by latitude only)
+            float lat0 = abs(asin(clamp(n0.y, -1.0, 1.0))) * 57.2958;
+            float seaIce = smoothstep(iceLat - 3.0, iceLat + 3.0, lat0 + (noise(n0 * 7.0) - 0.5) * 10.0) * paleoOn;
+            day = mix(day, vec3(0.80, 0.86, 0.92), seaIce); water *= 1.0 - seaIce;
+          }
+          // Before the plate model (older than 1 billion years) nobody can map the continents, so the globe shows an
+          // artist's impression of the eon instead, plainly labelled as such by the viewer: a molten, cratered
+          // Hadean; an Archean water world with a few small islands under an orange haze; Proterozoic land of unknown
+          // shape, iced over in the Huronian glaciation (c. 2.4-2.1 Ga). Today's coastlines show as faint lines,
+          // because the pins mark where the evidence for these ages is found today.
+          float glow = 0.0; vec3 haze = vec3(0.0);
+          if (early > 0.0) {
+            vec3 p = n0 * 2.2;
+            float f = fbm(p * 1.6), g = fbm(p * 6.0 + 3.0);
+            float hadean = smoothstep(3.95, 4.15, ageGa), proto = 1.0 - smoothstep(2.4, 2.6, ageGa);
+            float landAmt = mix(0.70, 0.60, proto);                       // a few islands, later larger land of unknown shape
+            float isLand = smoothstep(landAmt - 0.03, landAmt + 0.03, f);
+            vec3 sea = mix(vec3(0.03, 0.10, 0.16), vec3(0.03, 0.12, 0.24), proto);
+            vec3 rock = mix(vec3(0.24, 0.22, 0.20), vec3(0.38, 0.33, 0.28), proto) * (0.8 + 0.4 * g);
+            vec3 c = mix(sea, rock, isLand); float w = 1.0 - isLand;
+            float ice = smoothstep(2.15, 2.22, ageGa) * (1.0 - smoothstep(2.4, 2.47, ageGa));   // Huronian glaciation window
+            c = mix(c, vec3(0.86, 0.90, 0.95), ice * smoothstep(0.55, 0.75, fbm(p * 3.0 + 7.0) * 0.6 + abs(n0.y) * 0.7)); w *= 1.0 - ice * 0.7;
+            // Hadean: dark crust split by glowing magma and scarred by impacts
+            float crack = 1.0 - smoothstep(0.0, 0.035, abs(fbm(p * 3.3) - 0.5));
+            float crater = smoothstep(0.86, 0.9, noise(p * 9.0)) * (1.0 - smoothstep(0.9, 0.94, noise(p * 9.0)));
+            c = mix(c, vec3(0.09, 0.07, 0.06) * (0.7 + 0.6 * g) + crater * 0.12, hadean); w *= 1.0 - hadean;
+            glow = crack * hadean;
+            // today's coastlines, faint, so the pins (where the evidence is found today) have a reference
+            float wn = texture2D(waterMap, vUv + vec2(1.0 / 1600.0, 0.0)).r, ws = texture2D(waterMap, vUv + vec2(0.0, 1.0 / 800.0)).r;
+            float coast = smoothstep(0.25, 0.6, abs(water0 - wn) + abs(water0 - ws));
+            c = mix(c, vec3(0.75, 0.72, 0.62), coast * 0.35);
+            day = mix(day, c, early); water = mix(water, w, early);
+            haze = mix(vec3(0.0), vec3(1.0, 0.55, 0.25), (1.0 - hadean) * (1.0 - proto)) * early;   // Archean orange haze
           }
           vec3 night = texture2D(nightMap, vUv).rgb;
           vec3 dayCol = day * (0.16 + 1.0 * max(mix(ndl0, ndl, 0.85), 0.0));
@@ -104,6 +142,8 @@
           float fres = pow(1.0 - max(dot(n0, v), 0.0), 2.6);
           vec3 sky = mix(vec3(1.0, 0.52, 0.25), vec3(0.42, 0.66, 1.0), smoothstep(-0.05, 0.35, ndl0));
           col = mix(col, sky, fres * 0.4 * smoothstep(-0.25, 0.2, ndl0));
+          col += vec3(1.0, 0.36, 0.08) * glow * 0.9;                               // magma glows on the night side too
+          col = mix(col, haze, fres * 0.55 * length(haze) * 0.8);
           gl_FragColor = vec4(col, 1.0);
         }`,
     });
@@ -122,6 +162,7 @@
     // Clouds: a translucent shell lit by the same sun
     // the cloud image (4.4 MB) loads after the globe has drawn; until then the shell is fully transparent
     const cloudUniforms = { map: { value: new THREE.Texture() }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 } };
+    idle(() => loadMorph(), 6000);   // the plate data, ready before anyone scrolls into deep time
     idle(() => loader.load('assets/earth-clouds.png', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }), 1500);
     cloudMat = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false,
@@ -260,7 +301,7 @@
   // plates' rotations are interpolated between 10 Ma steps (quaternion slerp) and the vertex shader turns the land,
   // so the continents glide continuously. The globe beneath shows open ocean while this is on.
   const PALEO_MAX = 1000;
-  let morph = null, morphLoad = null, land = null, landMat = null, rotTex = null, rotData = null, paleoMa = null;
+  let morph = null, morphLoad = null, land = null, landMat = null, rotTex = null, rotData = null, paleoMa = null, shownMa = null;
   function slerp(a, b, f) {
     const d = a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
     if (d > 0.9995) { const q = a.map((x, i) => x + (b[i] - x) * f), n = Math.hypot(...q); return q.map(x => x / n); }
@@ -298,14 +339,14 @@
     rotTex.magFilter = rotTex.minFilter = THREE.NearestFilter;
     landMat = new THREE.ShaderMaterial({
       transparent: true, side: THREE.DoubleSide,
-      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, R: { value: R * 1.0008 } },
+      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, R: { value: R * 1.0008 } },
       // geographic (x 0°E, y 90°E, z north) to globe.gl's frame (x 90°E, y north, z 0°E)
       vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; varying vec3 vN; varying float vOk;
         void main(){ vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.5)); vOk = step(0.5, dot(q, q));
           vec3 v = position; vec3 t = 2.0 * cross(q.yzw, v); vec3 p = v + q.x * t + cross(q.yzw, t);
           vec3 w = vec3(p.y, p.z, p.x);
           vN = normalize(mat3(modelMatrix) * w); gl_Position = projectionMatrix * modelViewMatrix * vec4(w * R, 1.0); }`,
-      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; varying vec3 vN; varying float vOk;
+      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; varying vec3 vN; varying float vOk;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
           return mix(mix(mix(hash(i), hash(i + vec3(1,0,0)), f.x), mix(hash(i + vec3(0,1,0)), hash(i + vec3(1,1,0)), f.x), f.y),
@@ -319,6 +360,7 @@
           vec3 rock = vec3(0.50, 0.40, 0.31), dry = vec3(0.60, 0.48, 0.33), green = vec3(0.27, 0.35, 0.20), cold = vec3(0.40, 0.42, 0.34);
           vec3 wet = mix(green, cold, smoothstep(50.0, 70.0, lat));
           vec3 c = mix(rock, mix(wet, dry, smoothstep(0.25, 0.75, arid)), veg) * (0.9 + 0.18 * tex);
+          c = mix(c, vec3(0.90, 0.93, 0.96), smoothstep(iceLat - 4.0, iceLat + 2.0, lat + (tex - 0.5) * 14.0));   // ice sheets
           vec3 col = mix(c * 0.04, c * (0.16 + 1.0 * max(ndl, 0.0)), lit);
           gl_FragColor = vec4(col, opacity); }`,
     });
@@ -335,20 +377,76 @@
     });
     rotTex.needsUpdate = true;
     landMat.uniforms.veg.value = Math.min(1, Math.max(0, (470 - ma) / 70));   // bare rock and soil before land plants spread (c. 470-400 Ma)
+    landMat.uniforms.iceLat.value = earthMat.uniforms.iceLat.value = iceLine(ma);
+  }
+  // The latitude poleward of which ice is drawn, for the major glaciations (a schematic picture by latitude, not a
+  // reconstruction of the ice sheets): the Cryogenian "Snowball Earth" glaciations (Sturtian c. 717-660 Ma, Marinoan
+  // c. 650-635 Ma) reach the tropics; the end-Ordovician (c. 445 Ma) and late Paleozoic (c. 335-260 Ma) ice ages
+  // cover the polar regions; Antarctica's ice sheet grows from about 34 Ma. 90 means no ice.
+  const ICE = [[717, 660, 8], [650, 635, 8], [446, 443, 58], [335, 260, 55], [34, 0, 68]];
+  function iceLine(ma) {
+    let lat = 90;
+    for (const [a, b, l] of ICE) {
+      const out = Math.max(0, b - ma, ma - a);   // millions of years outside the glaciation; the ice fades over 3 My
+      if (out < 3) lat = Math.min(lat, l + ((90 - l) * out) / 3);
+    }
+    return lat;
   }
   // ma: millions of years before present, or null for today's Earth. Returns the age shown.
   function setPaleo(ma) {
     const u = earthMat.uniforms;
-    if (ma == null || ma < 2) { paleoMa = null; u.paleoOn.value = 0; if (land) land.visible = false; return null; }
-    paleoMa = Math.min(ma, PALEO_MAX);
-    loadMorph().then(() => {
+    if (ma == null || ma < 2) { paleoMa = null; u.paleoOn.value = 0; u.early.value = 0; if (land) land.visible = false; return null; }
+    paleoMa = Math.min(ma, PALEO_MAX); shownMa = ma;
+    // past the model's reach the land fades away (no continents are invented) and the eon's artist's impression fades in
+    const beyond = Math.min(1, Math.max(0, (PALEO_MAX + 100 - ma) / 100));
+    u.early.value = 1 - beyond; u.ageGa.value = ma / 1000;
+    const apply = () => {
       if (paleoMa == null || !land) return;
       const on = Math.min(1, (ma - 2) / 8);   // fade in between 2 and 10 Ma, where the continents still look like today's
-      const beyond = Math.min(1, Math.max(0, (PALEO_MAX + 100 - ma) / 100));   // past the model's reach the land fades away: no continents are invented
       u.paleoOn.value = on; landMat.uniforms.opacity.value = on * beyond; land.visible = beyond > 0;
       applyPaleo();
-    });
+    };
+    // once the plate data is loaded the update is immediate, so pins placed right after this call ride the same rotation
+    if (morph) apply(); else loadMorph().then(() => { apply(); window.dispatchEvent(new Event('paleo-ready')); });
     return paleoMa;
+  }
+  // which plate a present-day point sits on: inside one of today's coastline rings (each tagged with its plate), else
+  // the plate of the nearest ring within about 8 degrees; null for open ocean far from any land
+  const plateCache = new Map();
+  function inRing(lon, lat, pts) {
+    let inside = false;
+    for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+      const [xi, yi] = pts[i], [xj, yj] = pts[j];
+      if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi + 1e-12) + xi) inside = !inside;
+    }
+    return inside;
+  }
+  function plateOf(lat, lon) {
+    if (!morph) return null;
+    const key = `${lat.toFixed(2)},${lon.toFixed(2)}`;
+    if (plateCache.has(key)) return plateCache.get(key);
+    let best = null, bd = 8;
+    for (const r of morph.rings) {
+      if (!r.box) { const xs = r.pts.map(p => p[0]), ys = r.pts.map(p => p[1]); r.box = [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)]; }
+      const [x0, y0, x1, y1] = r.box;
+      if (lat < y0 - 8 || lat > y1 + 8 || (lon < x0 - 12 && x1 - x0 < 300) || (lon > x1 + 12 && x1 - x0 < 300)) continue;
+      if (inRing(lon, lat, r.pts)) { best = r.p; bd = -1; break; }
+      for (const [x, y] of r.pts) { const d = Math.hypot((x - lon) * Math.cos((lat * Math.PI) / 180), y - lat); if (d < bd) { bd = d; best = r.p; } }
+    }
+    plateCache.set(key, best);
+    return best;
+  }
+  // where a present-day point stood at the age now shown, turned with its plate (the same rotation as the land);
+  // null when the plate has no reconstruction at that age or the point is not on a plate
+  function platePos(lat, lon) {
+    if (!morph || paleoMa == null || !rotData || shownMa > PALEO_MAX) return null;
+    const k = plateOf(lat, lon); if (k == null) return null;
+    const w = rotData[k * 4], qx = rotData[k * 4 + 1], qy = rotData[k * 4 + 2], qz = rotData[k * 4 + 3];
+    if (w * w + qx * qx + qy * qy + qz * qz < 0.5) return null;
+    const a = (lon * Math.PI) / 180, b = (lat * Math.PI) / 180, v = [Math.cos(b) * Math.cos(a), Math.cos(b) * Math.sin(a), Math.sin(b)];
+    const t = [2 * (qy * v[2] - qz * v[1]), 2 * (qz * v[0] - qx * v[2]), 2 * (qx * v[1] - qy * v[0])];
+    const p = [v[0] + w * t[0] + (qy * t[2] - qz * t[1]), v[1] + w * t[1] + (qz * t[0] - qx * t[2]), v[2] + w * t[2] + (qx * t[1] - qy * t[0])];
+    return { lat: (Math.asin(Math.max(-1, Math.min(1, p[2]))) * 180) / Math.PI, lon: (Math.atan2(p[1], p[0]) * 180) / Math.PI };
   }
 
   function update({ date, sunMode: mode, nightLights, clouds: showClouds, zoomAlt, flat }) {
@@ -365,5 +463,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { init, update, setPaleo, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { init, update, setPaleo, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();

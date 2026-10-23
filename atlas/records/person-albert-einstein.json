@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-albert-einstein",
+  "kind": "person",
+  "title": "Albert Einstein",
+  "summary": "Born in Ulm in 1879, Einstein worked as a technical expert at the Swiss patent office in Bern from 1902 to 1909 and wrote papers in 1905 that included the special theory of relativity. He later held posts in Prague, Zurich and Berlin, moved to Princeton in 1933, and died there in 1955.",
+  "when": {
+    "start": {
+      "year": 1879
+    },
+    "end": {
+      "year": 1955
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Life dates as given by the opened sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "14 March 1879",
+        "source": "src-mactutor-einstein"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 14, 1879",
+        "source": "src-nobel-einstein"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "from 1902 to 1909",
+        "source": "src-mactutor-einstein"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "18 April 1955",
+        "source": "src-mactutor-einstein"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "April 18, 1955",
+        "source": "src-nobel-einstein"
+      }
+    ],
+    "display": "1879–1955"
+  },
+  "where": {
+    "lat": 46.9484742,
+    "lon": 7.4521749,
+    "elevation_m": null,
+    "modern_name": "Bern, Switzerland (pinned to the city of the patent office where he worked 1902–1909; city centroid)",
+    "historical_name": "Bern, Swiss Confederation (patent office; Einstein was born at Ulm, Württemberg, and died at Princeton, New Jersey)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-bern"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "His 1905 papers, including the special theory of relativity, and his work on general relativity make him one of the most cited figures in modern physics."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1919-eddington-eclipse-expedition",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mactutor-einstein",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/",
+      "title": "Einstein (MacTutor biography)",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nobel-einstein",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+      "title": "Albert Einstein - Biographical",
+      "publisher": "Nobel Prize Outreach (NobelPrize.org)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-bern",
+      "url": "https://nominatim.openstreetmap.org/search?q=Bern+Switzerland&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Bern",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Bern (patent office years) as a city centroid; Ulm is the birthplace and Princeton the place of death. MacTutor notes one reference gives 1878 but its biography gives 1879. Link to the 1919 eclipse record is thematic only. Nobel page was read through a plain HTTP fetch; WebFetch is blocked there.",
+  "author": "historian-agent:essentials-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:18.106Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

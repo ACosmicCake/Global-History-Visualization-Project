@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:essentials-f1",
+  "updated": "2026-10-23",
+  "id": "1876-invention-of-the-telephone",
+  "kind": "event",
+  "title": "First intelligible speech over the telephone (Bell and Watson)",
+  "summary": "On 10 March 1876 Alexander Graham Bell spoke to his assistant Thomas Watson through his electrical speech apparatus in their attic laboratory at 5 Exeter Place, Boston. The IEEE records it as the first transmission of intelligible speech over electrical wires, and Bell's notebook entry for that day records the words he used.",
+  "when": {
+    "start": {
+      "year": 1876
+    },
+    "end": {
+      "year": 1876
+    },
+    "precision": "day",
+    "display": "10 March 1876",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The first transmission of intelligible speech over electrical wires took place on 10 March 1876.",
+        "source": "src-ethw"
+      },
+      {
+        "calendar": "as written",
+        "value": "March 10, 1876, notebook entry",
+        "source": "src-loc"
+      }
+    ]
+  },
+  "where": {
+    "lat": 42.3588336,
+    "lon": -71.0578303,
+    "elevation_m": null,
+    "modern_name": "Boston, Massachusetts (the laboratory at 5 Exeter Place; exact site not geocoded, pinned to the city)",
+    "historical_name": "Bell and Watson attic laboratory, 5 Exeter Place, Boston, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Marks the first transmission of intelligible speech over electrical wires, the start of telephony."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ethw",
+      "url": "https://ethw.org/Milestones:First_Intelligible_Voice_Transmission_over_Electric_Wire,_1876",
+      "title": "Milestones: First Intelligible Voice Transmission over Electric Wire, 1876",
+      "publisher": "IEEE (Engineering and Technology History Wiki)",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-loc",
+      "url": "https://www.loc.gov/loc/lcib/0404/digitize.html",
+      "title": "'Watson, Come Here ...': Bell Papers Document Experiments, Family Life (Information Bulletin)",
+      "publisher": "Library of Congress",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&limit=2&q=Boston,+Massachusetts",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Exeter Place did not geocode in Nominatim, so the pin is the city of Boston with a 3 km tolerance. The site is described only as an attic laboratory; the IEEE page notes a separate marker for the earlier lab at 109 Court Street. Wording of the first sentence varies by account and is not quoted.",
+  "published_at": "2026-10-23T14:56:04.409Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1876",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 10 March 1876 Alexander Graham Bell spoke to his assistant Thomas Watson through his electrical speech apparatus in their attic laboratory at 5 Exeter Place, Boston.",
+        "source": "src-ethw"
+      },
+      {
+        "span": "1876",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The IEEE records it as the first transmission of intelligible speech over electrical wires, and Bell's notebook entry for that day records the words he used.",
+        "source": "src-ethw",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:essentials-f1",
+  "updated": "2026-10-23",
+  "id": "1905-special-relativity",
+  "kind": "event",
+  "title": "Einstein publishes special relativity",
+  "summary": "In 1905 Albert Einstein published \"On the Electrodynamics of Moving Bodies\" in Annalen der Physik, setting out special relativity. He worked on his physics in spare time alongside his job at the Swiss Patent Office in Bern; the paper was one of four he published that year, which became known as his annus mirabilis.",
+  "when": {
+    "start": {
+      "year": 1905
+    },
+    "end": {
+      "year": 1905
+    },
+    "precision": "year",
+    "display": "1905",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "17 (1905), pp. 891-921",
+        "source": "src-pitt"
+      },
+      {
+        "calendar": "as written",
+        "value": "four papers by Einstein were published in the journal Annalen der Physik",
+        "source": "src-royal"
+      }
+    ]
+  },
+  "where": {
+    "lat": 46.9476741,
+    "lon": 7.449971,
+    "elevation_m": null,
+    "modern_name": "Einsteinhaus, Kramgasse 49, Bern, Switzerland (his home; the patent office was also in Bern)",
+    "historical_name": "Bern, Swiss Confederation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Foundational paper of special relativity."
+  },
+  "related": [
+    {
+      "id": "person-albert-einstein",
+      "type": "related"
+    },
+    {
+      "id": "1887-michelson-morley-experiment",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pitt",
+      "url": "https://sites.pitt.edu/~jdnorton/teaching/HPS_0410/chapters/origins_pathway/On-the_electrodynamics/index.html",
+      "title": "On the Electrodynamics of Moving Bodies (course reading, HPS 0410)",
+      "publisher": "University of Pittsburgh (John D. Norton)",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-royal",
+      "url": "https://royalsociety.org/blog/2023/10/at-home-with-the-einsteins/",
+      "title": "At home with the Einsteins",
+      "publisher": "The Royal Society",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nobel",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+      "title": "Albert Einstein - Biographical",
+      "publisher": "Nobel Prize Outreach",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&limit=2&q=Kramgasse+49,+Bern",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources opened give the year, volume and pages (Annalen der Physik 17, pp. 891-921) but no exact day; a June date seen in a non-institutional source is not used. The pin is his Bern home at Kramgasse 49, an assumption about where it was written; the sources say only that he worked in Bern in spare time.",
+  "published_at": "2026-10-23T14:56:06.522Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1905",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1905 Albert Einstein published \"On the Electrodynamics of Moving Bodies\" in Annalen der Physik, setting out special relativity.",
+        "source": "src-pitt"
+      },
+      {
+        "span": "1905",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He worked on his physics in spare time alongside his job at the Swiss Patent Office in Bern; the paper was one of four he published that year…",
+        "source": "src-pitt",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

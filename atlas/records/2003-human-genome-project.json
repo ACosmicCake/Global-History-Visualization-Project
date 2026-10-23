@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2003-human-genome-project",
+  "kind": "process",
+  "title": "Human Genome Project",
+  "summary": "An international research effort to read all human DNA, launched in October 1990. In the United States the National Institutes of Health and the Department of Energy ran it. A working draft was announced on 26 June 2000, and on 14 April 2003 the International Human Genome Sequencing Consortium announced completion, more than two years ahead of schedule.",
+  "when": {
+    "start": {
+      "year": 1990,
+      "iso": "1990-10-01"
+    },
+    "end": {
+      "year": 2003,
+      "iso": "2003-04-14"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the official beginning on 1 October 1990; end is the completion announcement of 14 April 2003."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "October 1, 1990: The Human Genome Project officially begins",
+        "source": "src-nhgri-history"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On April 14, 2003, the International Human Genome Sequencing Consortium announces the successful completion",
+        "source": "src-nhgri-timeline"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On June 26, 2000, the International Human Genome Sequencing Consortium announces",
+        "source": "src-nhgri-timeline"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "formally begun in October 1990 and completed in 2003",
+        "source": "src-doe-hgp"
+      }
+    ],
+    "display": "October 1990 – 14 April 2003"
+  },
+  "where": {
+    "lat": 38.9806658,
+    "lon": -77.100256,
+    "elevation_m": null,
+    "modern_name": "Bethesda, Maryland, USA (the National Human Genome Research Institute, the NIH centre for the project; the project was international, with research at institutions around the world)",
+    "historical_name": "National Center for Human Genome Research, National Institutes of Health, Bethesda, Maryland, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-geonames-4348599"
+    ]
+  },
+  "regions": [
+    "global",
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "life_extinction"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Produced the reference sequence of the human genome and set open-data norms for genomics."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nhgri-hgp",
+      "url": "https://www.genome.gov/human-genome-project",
+      "title": "The Human Genome Project",
+      "publisher": "National Human Genome Research Institute (genome.gov)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nhgri-timeline",
+      "url": "https://www.genome.gov/human-genome-project/timeline",
+      "title": "Human Genome Project Timeline",
+      "publisher": "National Human Genome Research Institute (genome.gov)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nhgri-history",
+      "url": "https://www.genome.gov/about-nhgri/Brief-History-Timeline",
+      "title": "NHGRI History and Timeline of Events",
+      "publisher": "National Human Genome Research Institute (genome.gov)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-doe-hgp",
+      "url": "https://doe-humangenomeproject.ornl.gov/human-genome-project-timeline/",
+      "title": "Human Genome Project Timeline",
+      "publisher": "US Department of Energy Human Genome Project (Oak Ridge National Laboratory)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-4348599",
+      "url": "https://www.geonames.org/4348599",
+      "title": "Bethesda (GeoNames 4348599)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1990-10-01",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The Human Genome Project officially begins as an international effort led in the US by NIH and the Department of Energy.",
+        "source": "src-nhgri-history"
+      },
+      {
+        "span": "2000-06-26",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The international consortium announces a working draft of the human genome sequence.",
+        "source": "src-nhgri-timeline"
+      },
+      {
+        "span": "2003-04-14",
+        "action": "pulse { radius_km: 120 }",
+        "caption": "Completion is announced, more than two years ahead of schedule, finishing the project's sequencing goal.",
+        "source": "src-nhgri-timeline",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Pinned at Bethesda as the US NIH lead; the project was international and several non-US centres did much of the sequencing, which I did not source. The 2003 completion covered the gene-containing sequence, not every base.",
+  "author": "historian-agent:essentials-c",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:12.870Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

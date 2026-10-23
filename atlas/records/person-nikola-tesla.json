@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-nikola-tesla",
+  "kind": "person",
+  "title": "Nikola Tesla",
+  "summary": "Born on 10 July 1856 in Smiljan, then in the Austrian Empire and now in Croatia, Tesla worked in Europe as a telegraph drafter and electrician before emigrating to the United States in June 1884. In New York he developed an alternating-current induction motor, whose patents Westinghouse acquired. He became a US citizen in 1891 and died in New York City on 7 January 1943.",
+  "when": {
+    "start": {
+      "year": 1856,
+      "iso": "1856-07-10"
+    },
+    "end": {
+      "year": 1943,
+      "iso": "1943-01-07"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth date 10 July 1856 is given by IEEE and the US Department of Energy; the death date rests on the IEEE page alone."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "born on 10 July 1856 in Smiljan, Austrian Empire (present-day Croatia)",
+        "source": "src-ieee-tesla"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "born on July 10, 1856",
+        "source": "src-doe-tesla"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "born in 1856 in the village of Smiljan",
+        "source": "src-tesla-museum"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "died on January 7, 1943, in New York City",
+        "source": "src-ieee-tesla"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In June 1884, he immigrated to the United States",
+        "source": "src-ieee-tesla"
+      }
+    ],
+    "display": "10 July 1856 – 7 January 1943"
+  },
+  "where": {
+    "lat": 44.5638889,
+    "lon": 15.3180556,
+    "elevation_m": null,
+    "modern_name": "Smiljan, near Gospic, Lika-Senj County, Croatia (his birthplace; his main career was in New York)",
+    "historical_name": "Smiljan, a village in Lika, Austrian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-geonames-3190482"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "people",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Engineer whose alternating-current motor work underpinned the modern electrical supply system."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-thomas-edison",
+      "type": "related",
+      "because": "Tesla went to the United States in 1884 to work under Edison and later favoured alternating current in the war of the currents."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ieee-tesla",
+      "url": "https://life.ieee.org/a-brief-history-of-nikola-tesla-told-in-stamps/",
+      "title": "A Brief History of Nikola Tesla Told in Stamps",
+      "publisher": "IEEE Life Members",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-doe-tesla",
+      "url": "https://www.energy.gov/articles/top-11-things-you-didnt-know-about-nikola-tesla",
+      "title": "Top 11 Things You Didn't Know About Nikola Tesla",
+      "publisher": "US Department of Energy",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tesla-museum",
+      "url": "https://tesla-museum.org/en/extraordinary-world/birthplace/",
+      "title": "Birthplace",
+      "publisher": "Nikola Tesla Museum, Belgrade",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "where",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-geonames-3190482",
+      "url": "https://www.geonames.org/3190482",
+      "title": "Smiljan (GeoNames 3190482)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pinned at the birthplace, Smiljan, though his working life was in New York. Least sure of: the death date appears on one opened page only; Westinghouse patent sale details come from the IEEE page.",
+  "author": "historian-agent:essentials-c",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:34.311Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

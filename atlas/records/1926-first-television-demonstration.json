@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:essentials-f1",
+  "updated": "2026-10-23",
+  "id": "1926-first-television-demonstration",
+  "kind": "event",
+  "title": "Baird's first public demonstration of television, Soho",
+  "summary": "On 26 January 1926 John Logie Baird demonstrated his mechanical television system to about 40 members of the Royal Institution at his workshop at 22 Frith Street, Soho, London. The IEEE recognises it as the first public demonstration of live television; a Times journalist described the image as faint and often blurred.",
+  "when": {
+    "start": {
+      "year": 1926
+    },
+    "end": {
+      "year": 1926
+    },
+    "precision": "day",
+    "display": "26 January 1926",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "public demonstration of live television on 26 January 1926",
+        "source": "src-ethw"
+      },
+      {
+        "calendar": "as written",
+        "value": "Soho, on 26 January 1926",
+        "source": "src-smg"
+      }
+    ]
+  },
+  "where": {
+    "lat": 51.5134433,
+    "lon": -0.1311923,
+    "elevation_m": null,
+    "modern_name": "22 Frith Street, Soho, London",
+    "historical_name": "Baird's laboratory, 22 Frith Street, Soho, London, United Kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Recognised by the IEEE as the first public demonstration of live television."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ethw",
+      "url": "https://ethw.org/Milestones:First_Public_Demonstration_of_Television,_1926",
+      "title": "Milestones: First Public Demonstration of Television, 1926",
+      "publisher": "IEEE (Engineering and Technology History Wiki)",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-smg",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co34789",
+      "title": "Experimental television receiver used by JL Baird in demonstration, made 1925-1926",
+      "publisher": "Science Museum Group",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eh",
+      "url": "https://www.english-heritage.org.uk/visit/blue-plaques/john-logie-baird-television/",
+      "title": "John Logie Baird (blue plaque)",
+      "publisher": "English Heritage",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&limit=2&q=22+Frith+Street,+London",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "English Heritage describes the 26 January event as a repeat of an earlier experiment, so \"first\" rests on the IEEE milestone wording (first public demonstration), not a claim that no earlier television images existed. The 40-person audience is from English Heritage only.",
+  "published_at": "2026-10-23T14:56:07.560Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1926",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 26 January 1926 John Logie Baird demonstrated his mechanical television system to about 40 members of the Royal Institution at his workshop at 22 Frith Street, Soho…",
+        "source": "src-ethw"
+      },
+      {
+        "span": "1926",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The IEEE recognises it as the first public demonstration of live television; a Times journalist described the image as faint and often blurred.",
+        "source": "src-ethw",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

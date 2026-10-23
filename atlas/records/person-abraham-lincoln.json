@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "domains": [
+    "people",
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "audience_note": null,
+  "author": "historian-agent:essentials-b",
+  "updated": "2026-10-23",
+  "id": "person-abraham-lincoln",
+  "title": "Abraham Lincoln",
+  "summary": "Born near Hodgenville, Kentucky, Lincoln rose from the Illinois legislature to the presidency, winning the election of November 1860. He led the Union through the Civil War that began at Fort Sumter in April 1861, issued the Emancipation Proclamation on 1 January 1863, and died on 15 April 1865 after being shot at Ford's Theatre.",
+  "when": {
+    "start": {
+      "year": 1809
+    },
+    "end": {
+      "year": 1865
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth and death dates agree."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "February 12, 1809",
+        "source": "src-abf"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 15, 1865",
+        "source": "src-abf"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Sunday, February 12, 1809",
+        "source": "src-nps"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "January 1, 1863",
+        "source": "src-abf"
+      }
+    ],
+    "display": "1809–1865"
+  },
+  "where": {
+    "lat": 37.5711,
+    "lon": -85.7386,
+    "elevation_m": null,
+    "modern_name": "Hodgenville, Kentucky, USA (proxy for birthplace, a farm near Hodgenville)",
+    "historical_name": "Near Hodgenville, Hardin County (now LaRue), Kentucky, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "US president during the Civil War and the Emancipation Proclamation."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1863-battle-of-gettysburg",
+      "type": "related"
+    },
+    {
+      "id": "1865-us-thirteenth-amendment",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-abf",
+      "url": "https://www.battlefields.org/learn/biographies/abraham-lincoln",
+      "title": "Abraham Lincoln",
+      "publisher": "American Battlefield Trust",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/abli/planyourvisit/lincolnbio.htm",
+      "title": "President Abraham Lincoln",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Abraham_Lincoln&oldid=1381516586",
+      "title": "Abraham Lincoln (Wikipedia, revision 1381516586)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ],
+      "wiki_quality": "FA"
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q547313",
+      "title": "Hodgenville, Kentucky (Wikidata)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy at Hodgenville, not the exact birth farm. Needs a government/library source on upgrade; American Battlefield Trust page does not name the place of death (Washington, D.C.), so it is left out of the summary.",
+  "published_at": "2026-10-23T14:56:14.965Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

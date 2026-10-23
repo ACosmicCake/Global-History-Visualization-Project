@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-charles-darwin",
+  "kind": "person",
+  "title": "Charles Darwin",
+  "summary": "Darwin was born in 1809 and joined HMS Beagle in December 1831 for a five-year voyage. In September 1842 he moved with his family to Down House at Downe, where he developed his theory of natural selection and wrote On the Origin of Species (1859). He died in 1882.",
+  "when": {
+    "start": {
+      "year": 1809
+    },
+    "end": {
+      "year": 1882
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Life dates as given by the opened sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "12 February 1809",
+        "source": "src-darwinproject"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "December 1831",
+        "source": "src-darwinproject"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "24 September 1842",
+        "source": "src-eh-down"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "24 November 1859",
+        "source": "src-darwinproject"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "19 April 1882",
+        "source": "src-darwinproject"
+      }
+    ],
+    "display": "1809–1882"
+  },
+  "where": {
+    "lat": 51.3314488,
+    "lon": 0.0533873,
+    "elevation_m": null,
+    "modern_name": "Down House, Downe, London Borough of Bromley, England (pinned to the home where he lived for 40 years)",
+    "historical_name": "Down House, Down, Kent, England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-downhouse"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "science_technology",
+    "life_extinction"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Author of On the Origin of Species (1859), which set out evolution by natural selection."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1859-origin-of-species",
+      "type": "related"
+    },
+    {
+      "id": "1831-beagle-voyage",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-darwinproject",
+      "url": "https://www.darwinproject.ac.uk/learning-resources/timeline",
+      "title": "Darwin timeline",
+      "publisher": "Darwin Correspondence Project, University of Cambridge",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eh-down",
+      "url": "https://www.english-heritage.org.uk/visit/places/home-of-charles-darwin-down-house/history/",
+      "title": "Down House history",
+      "publisher": "English Heritage",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-downhouse",
+      "url": "https://nominatim.openstreetmap.org/search?q=Down+House+Downe+Bromley&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Down House",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Birthplace (Shrewsbury) was not confirmed on a page I opened, so it is left out. Darwin Correspondence Project gives no exact Beagle day or place of death; it refers to his home in Downe in the death entry. Down House is in Kent historically and in the London Borough of Bromley today. WebFetch read both pages; the DCP page is script-driven so spotcheck may fail.",
+  "author": "historian-agent:essentials-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:21.292Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

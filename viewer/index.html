@@ -58,7 +58,7 @@
   #legend.collapsed .legend-head svg { transform: rotate(-90deg); }
   #legend.collapsed #legend-body { display: none; }
   #legend-body { margin-top: 8px; }
-  #legend h2, .eyebrow { margin: 0 0 8px; font: 500 10px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  #legend h2 { margin: 0 0 8px; font: 500 10px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
   #legend ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; }
   #legend li button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 3px 4px; border: 0; background: transparent; border-radius: 5px; font-size: 12px; color: var(--soft); text-align: left; }
   #legend li button:hover { background: rgba(255,255,255,.05); }
@@ -84,6 +84,14 @@
   #empty { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); text-align: center; padding: 14px 18px; max-width: 320px; z-index: 2; }
   #empty p { margin: 0 0 8px; color: var(--soft); }
   #empty button { border: 1px solid var(--brass); color: var(--brass); background: var(--brass-dim); border-radius: 999px; padding: 4px 12px; font-size: 12px; }
+  /* deep time between records: a quiet period card low on the screen, out of the globe's centre */
+  #empty.period { top: auto; bottom: 214px; transform: translateX(-50%); max-width: min(420px, calc(100vw - 32px)); text-align: left; padding: 12px 16px; }
+  #empty.period p { font-size: 13px; line-height: 1.45; }
+  #empty.period b { display: block; font: 500 17px var(--f-display); color: var(--text); }
+  #empty.period small { display: block; font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); margin: 2px 0 6px; }
+  #empty.period em { display: block; margin-top: 7px; font-style: normal; font-size: 11px; color: var(--muted); }
+  #empty-near { display: flex; gap: 6px; flex-wrap: wrap; justify-content: space-between; }
+  #empty-near button { max-width: 48%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-color: rgba(217,179,106,.45); background: transparent; }
   #emphasis-flag { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: max(16px, env(safe-area-inset-top, 0px)); font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); padding: 4px 8px; border-radius: 6px; z-index: 2; }
   #hint { position: absolute; left: 50%; bottom: 200px; transform: translateX(-50%); padding: 6px 14px; font-size: 12px; color: var(--soft); white-space: nowrap; z-index: 2; transition: opacity .8s; pointer-events: none; }
   #hint.fade { opacity: 0; }
@@ -125,10 +133,14 @@
   .ctx-labels { display: flex; justify-content: space-between; font: 10px var(--f-mono); color: var(--muted); margin-top: 3px; }
   .track { position: relative; margin-top: 10px; }
   #density { display: block; width: 100%; height: 26px; }
-  #slider { -webkit-appearance: none; appearance: none; width: 100%; height: 26px; background: transparent; position: absolute; left: 0; top: 0; margin: 0; }
+  #slider { -webkit-appearance: none; appearance: none; width: 100%; height: 26px; background: transparent; position: absolute; left: 0; top: 0; margin: 0; touch-action: none; cursor: ew-resize; }
   #slider::-webkit-slider-runnable-track { height: 26px; background: transparent; }
-  #slider::-webkit-slider-thumb { -webkit-appearance: none; width: 4px; height: 30px; margin-top: -2px; background: #fff3d6; border-radius: 2px; box-shadow: 0 0 0 3px var(--brass), 0 0 14px rgba(217,179,106,.8); }
-  #slider::-moz-range-thumb { width: 4px; height: 30px; background: #fff3d6; border: 0; border-radius: 2px; box-shadow: 0 0 0 3px var(--brass); }
+  /* a 20px-wide grab area around the thin visible marker */
+  #slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 30px; margin-top: -2px; border-radius: 3px; cursor: grab;
+    background: linear-gradient(90deg, transparent 5px, var(--brass) 5px, var(--brass) 8px, #fff3d6 8px, #fff3d6 12px, var(--brass) 12px, var(--brass) 15px, transparent 15px); filter: drop-shadow(0 0 6px rgba(217,179,106,.8)); }
+  #slider:active::-webkit-slider-thumb { cursor: grabbing; }
+  #slider::-moz-range-thumb { width: 20px; height: 30px; border: 0; border-radius: 3px; cursor: grab;
+    background: linear-gradient(90deg, transparent 5px, var(--brass) 5px, var(--brass) 8px, #fff3d6 8px, #fff3d6 12px, var(--brass) 12px, var(--brass) 15px, transparent 15px); }
   .ticks { display: flex; justify-content: space-between; font: 10px var(--f-mono); color: var(--muted); margin-top: 4px; }
 
   /* ---------- record panel */
@@ -267,7 +279,7 @@
 </div>
 
 <div id="notice" class="glass" hidden></div>
-<div id="empty" class="glass" hidden><p id="empty-text"></p><button id="empty-btn">Show the whole period</button></div>
+<div id="empty" class="glass" hidden><p id="empty-text"></p><div id="empty-near"></div><button id="empty-btn">Show the whole period</button></div>
 <div id="emphasis-flag" class="glass" hidden>Monuments enlarged for visibility</div>
 <div id="planet-ring" hidden aria-hidden="true"></div>
 <div id="planet" hidden aria-label="Planet-wide records"></div>

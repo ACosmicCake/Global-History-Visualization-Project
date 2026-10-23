@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2007-iphone-and-the-smartphone",
+  "kind": "event",
+  "title": "Introduction of the iPhone",
+  "summary": "On 9 January 2007 Apple introduced the iPhone at Macworld in San Francisco, presenting it as a phone, a touch-controlled iPod and an internet device in one. It shipped on 29 June 2007, and Apple sold a million in three months. The museum reports over a billion sold since, and says the device remade the computer industry.",
+  "when": {
+    "start": {
+      "year": 2007,
+      "iso": "2007-01-09"
+    },
+    "end": {
+      "year": 2007,
+      "iso": "2007-06-29"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the announcement; end is the US shipping date given by the Computer History Museum."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "MACWORLD SAN FRANCISCO—January 9, 2007",
+        "source": "src-apple-iphone"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "announced on January 9, 2007",
+        "source": "src-chm-iphone"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "It shipped on June 29",
+        "source": "src-chm-iphone"
+      }
+    ],
+    "display": "9 January – 29 June 2007"
+  },
+  "where": {
+    "lat": 37.7749295,
+    "lon": -122.4194155,
+    "elevation_m": null,
+    "modern_name": "Moscone Center, San Francisco, California, USA (Macworld venue; the pin is the city centre, as no venue coordinates were opened)",
+    "historical_name": "Macworld Conference and Expo, San Francisco, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-5391959"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The launch of the device that popularised the touchscreen smartphone and now has over a billion units sold."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-steve-jobs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-apple-iphone",
+      "url": "https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/",
+      "title": "Apple Reinvents the Phone with iPhone",
+      "publisher": "Apple Inc. (Newsroom)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chm-iphone",
+      "url": "https://computerhistory.org/blog/happy-birthday-iphone/",
+      "title": "Happy 10th Birthday, iPhone!",
+      "publisher": "Computer History Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-history-iphone",
+      "url": "https://www.history.com/this-day-in-history/january-9/steve-jobs-debuts-the-iphone",
+      "title": "Steve Jobs debuts the iPhone",
+      "publisher": "HISTORY (A+E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-geonames-5391959",
+      "url": "https://www.geonames.org/5391959",
+      "title": "San Francisco (GeoNames 5391959)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2007-01-09",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Apple introduces the iPhone at Macworld in San Francisco as a phone, touch iPod and internet device in one.",
+        "source": "src-apple-iphone"
+      },
+      {
+        "span": "2007-06-29",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The iPhone ships in the United States.",
+        "source": "src-chm-iphone"
+      },
+      {
+        "span": "2007-09",
+        "action": "numbers.counter { range: [1000000, 1000000000] }",
+        "caption": "Apple sold a million within three months; the museum reports over a billion sold to date.",
+        "source": "src-chm-iphone",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Pinned at San Francisco city centre rather than the Moscone venue, since no venue coordinates were opened. The \"over a billion\" figure is as of the 2017 museum post. Smartphones existed earlier; the title mirrors the queue.",
+  "author": "historian-agent:essentials-c",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:13.886Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-isaac-newton",
+  "kind": "person",
+  "title": "Isaac Newton",
+  "summary": "Born at Woolsthorpe in Lincolnshire, Newton entered Trinity College, Cambridge, in 1661 and became Lucasian Professor in 1669. At Edmond Halley's urging he wrote the Principia, published in 1687. He died in London in 1727.",
+  "when": {
+    "start": {
+      "year": 1643
+    },
+    "end": {
+      "year": 1727
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth falls on 25 December 1642 in the Julian (Old Style) calendar then used in England, which MacTutor converts to 4 January 1643; the start year is the Gregorian one."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (New Style)",
+        "value": "4 January 1643",
+        "source": "src-mactutor-newton"
+      },
+      {
+        "calendar": "Julian (Old Style)",
+        "value": "25 December 1642 (old calendar)",
+        "source": "src-sep-newton"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "31 March 1727",
+        "source": "src-mactutor-newton"
+      },
+      {
+        "calendar": "Julian (Old Style)",
+        "value": "20 March 1727",
+        "source": "src-sep-newton"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "entered Trinity College, Cambridge, on 5 June 1661",
+        "source": "src-mactutor-newton"
+      }
+    ],
+    "display": "1643–1727 (born 25 December 1642 Old Style)"
+  },
+  "where": {
+    "lat": 52.2068904,
+    "lon": 0.1151126,
+    "elevation_m": null,
+    "modern_name": "Trinity College, Cambridge, England (pinned to where he studied and held the Lucasian chair)",
+    "historical_name": "Trinity College, University of Cambridge, Kingdom of England (born at Woolsthorpe, Lincolnshire; died in London)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-trinity"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Author of the 1687 Principia, a founding text of classical mechanics."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1687-newton-principia",
+      "type": "related"
+    },
+    {
+      "id": "1543-scientific-revolution",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mactutor-newton",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Newton/",
+      "title": "Newton (MacTutor biography)",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sep-newton",
+      "url": "https://plato.stanford.edu/entries/newton/",
+      "title": "Isaac Newton (Stanford Encyclopedia of Philosophy)",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-trinity",
+      "url": "https://nominatim.openstreetmap.org/search?q=Trinity+College+Cambridge&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Trinity College, Cambridge",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The two sources differ on the death day (MacTutor 31 March 1727 New Style, SEP 20 March 1727 Old Style: the same day). SEP does not name the place of death; MacTutor gives London. Birth year 1643 is the Gregorian conversion of Christmas Day 1642. Part_of link to the scientific revolution is thematic.",
+  "author": "historian-agent:essentials-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:25.623Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

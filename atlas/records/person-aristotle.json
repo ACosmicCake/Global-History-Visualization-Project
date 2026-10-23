@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-aristotle",
+  "kind": "person",
+  "title": "Aristotle",
+  "summary": "Born in 384 BCE at Stagira in Macedonia, Aristotle went to Athens at about seventeen to study at Plato's Academy. He founded his own school, the Lyceum, there in 335 BCE, left Athens in 323 BCE, and died at Chalcis on Euboea in 322 BCE.",
+  "when": {
+    "start": {
+      "year": -383
+    },
+    "end": {
+      "year": -321
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Life dates as given by the opened sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "384 B.C.E.",
+        "source": "src-sep-aristotle"
+      },
+      {
+        "calendar": "BC",
+        "value": "384 BC",
+        "source": "src-mactutor-aristotle"
+      },
+      {
+        "calendar": "BC",
+        "value": "In 335 BC Aristotle founded his own school the Lyceum in Athens",
+        "source": "src-mactutor-aristotle"
+      },
+      {
+        "calendar": "BCE",
+        "value": "In 335 he returned to Athens and set up his own school",
+        "source": "src-sep-aristotle"
+      },
+      {
+        "calendar": "BC",
+        "value": "322 BC",
+        "source": "src-mactutor-aristotle"
+      }
+    ],
+    "display": "384–322 BCE"
+  },
+  "where": {
+    "lat": 37.9755648,
+    "lon": 23.7348324,
+    "elevation_m": null,
+    "modern_name": "Athens, Greece (city centroid; pinned to where he studied under Plato and taught at the Lyceum)",
+    "historical_name": "Athens, Attica (a polis of classical Greece); born at Stagira, Macedonia; died at Chalcis, Euboea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-athens"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "religion_philosophy",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Philosopher and founder of the Lyceum in Athens."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-alexander-the-great",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sep-aristotle",
+      "url": "https://plato.stanford.edu/entries/aristotle/",
+      "title": "Aristotle (Stanford Encyclopedia of Philosophy)",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mactutor-aristotle",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Aristotle/",
+      "title": "Aristotle (MacTutor biography)",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-athens",
+      "url": "https://nominatim.openstreetmap.org/search?q=Athens+Greece&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Athens",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a city centroid; the Lyceum site was not looked up. Alexander link is carried because MacTutor places Aristotle's death the year after Alexander's. Years are astronomical (384 BCE = -383).",
+  "author": "historian-agent:essentials-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:19.227Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

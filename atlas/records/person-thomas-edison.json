@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-thomas-edison",
+  "kind": "person",
+  "title": "Thomas Edison",
+  "summary": "American inventor, born in Milan, Ohio, on 11 February 1847. In 1876 he left Newark for Menlo Park, New Jersey, where his laboratory produced the tin foil phonograph (1877) and a practical electric lighting system first shown publicly in December 1879. He later built a larger laboratory at West Orange, New Jersey, and by his death on 18 October 1931 held 1,093 US patents.",
+  "when": {
+    "start": {
+      "year": 1847,
+      "iso": "1847-02-11"
+    },
+    "end": {
+      "year": 1931,
+      "iso": "1931-10-18"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day-level birth and death dates given by the National Park Service; Rutgers confirms the year and day of death."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "February 11, 1847 in Milan, Ohio",
+        "source": "src-nps-edison"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "3:21 am on October 18, 1931",
+        "source": "src-nps-edison"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1876 Edison sold all his Newark manufacturing concerns",
+        "source": "src-nps-edison"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "completed on 25 March 1876",
+        "source": "src-rutgers-menlo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "death on October 18, 1931",
+        "source": "src-rutgers-bio"
+      }
+    ],
+    "display": "11 February 1847 – 18 October 1931"
+  },
+  "where": {
+    "lat": 40.565104,
+    "lon": -74.3373708,
+    "elevation_m": null,
+    "modern_name": "Menlo Park, Edison Township, Middlesex County, New Jersey, USA (site of his laboratory from 1876; he was born in Milan, Ohio, and died at West Orange, New Jersey)",
+    "historical_name": "Menlo Park, a small village in New Jersey about 25 miles southwest of New York City, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-geonames-5101080"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "people",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Prolific American inventor and founder of an industrial research laboratory; his phonograph and lighting system shaped the electric age."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-nikola-tesla",
+      "type": "related"
+    },
+    {
+      "id": "person-henry-ford",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-edison",
+      "url": "https://home.nps.gov/edis/learn/historyculture/edison-biography.htm",
+      "title": "Edison Biography",
+      "publisher": "National Park Service (Thomas Edison National Historical Park)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-rutgers-bio",
+      "url": "https://edison.rutgers.edu/life-of-edison/biography",
+      "title": "Biography",
+      "publisher": "Thomas A. Edison Papers, Rutgers University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rutgers-menlo",
+      "url": "https://edison.rutgers.edu/life-of-edison/biographical-essays/the-invention-factory",
+      "title": "The Invention Factory",
+      "publisher": "Thomas A. Edison Papers, Rutgers University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-5101080",
+      "url": "https://www.geonames.org/5101080",
+      "title": "Menlo Park (GeoNames 5101080)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pinned at Menlo Park (the 1876 laboratory), not West Orange where he lived and died; GeoNames gives the village centre, so the lab site may be about 1 km off. Least sure of: invention-year attributions rest on NPS wording only.",
+  "author": "historian-agent:essentials-c",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:37.523Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

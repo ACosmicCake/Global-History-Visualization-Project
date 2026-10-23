@@ -73,11 +73,20 @@ const tierOn = p => state.outlines || !p.outline;
 // the Domains & layers filters: a record shows if any of its domains is on and its importance level is on
 const domainOn = p => (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) && !state.impOff.has(p.importance || 0);
 const paleoOn = () => state.paleoMa != null && state.paleoMa >= 10;
-const placed = p => (paleoOn() && p.paleo?.lat != null ? { ...p, lat: p.paleo.lat, lon: p.paleo.lon } : p);
+// in deep time a pin rides on its plate: today's find spot turned with the same rotation as the continents shown,
+// else the record's own sourced paleo-position, else today's coordinates (past the plate model's reach)
+const placed = p => {
+  if (!paleoOn() || p.lat == null) return p;
+  const q = window.Space.platePos?.(p.lat, p.lon) || (p.paleo?.lat != null && { lat: p.paleo.lat, lon: p.paleo.lon });
+  return q ? { ...p, lat: q.lat, lon: q.lon } : p;
+};
+window.addEventListener('paleo-ready', () => render());
 function visiblePins() {
   const win = windowNow(), mi = minImportance();
-  return state.pins.filter(p => p.lat != null && inLevel(p) && domainOn(p) && tierOn(p) && (p.importance >= mi || p.id === state.selected)
-    && p.end >= win.from && p.start <= win.to).map(placed);
+  // the open record always shows (with its route), whatever the time scale, filters or zoom thinning: a sequence can
+  // move the time axis to a scale the record isn't classed at, and its pin must not vanish while it is being read
+  return state.pins.filter(p => p.lat != null && (p.id === state.selected || inLevel(p) && domainOn(p) && tierOn(p) && p.importance >= mi
+    && p.end >= win.from && p.start <= win.to)).map(placed);
 }
 
 // ---------- pin badges: a coloured disc with the domain's glyph, drawn once per domain on a canvas
@@ -335,7 +344,11 @@ function placePlanetOrbit() { // per frame: the ring on the globe's edge, the pi
   ring.hidden = !fits;
   if (fits) ring.style.cssText = `left:${cx - r - 3}px;top:${cy - r - 3}px;width:${r * 2 + 6}px;height:${r * 2 + 6}px`;
   // the pill sits just above the globe, or near the top of the view when the globe fills it
-  const y = Math.max(14, Math.min(H - 300, (fits ? cy - r : 0) - 40)), x = Math.max(180, Math.min(W - 180, cx));
+  let y = Math.max(14, Math.min(H - 300, (fits ? cy - r : 0) - 40));
+  const x = Math.max(Math.min(180, W / 2), Math.min(W - Math.min(180, W / 2), cx));
+  // never on top of the title, search box and layers button (on a phone they span the width of the screen)
+  const head = $('#masthead').getBoundingClientRect(), pw = (box.firstElementChild?.offsetWidth || 160) / 2;
+  if (x + pw > head.left && x - pw < head.right && y < head.bottom + 8) y = head.bottom + 8;
   box.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
 }
 
@@ -470,6 +483,62 @@ function routeSoFar(p) {
   if (last && next) { const f = (state.t - last.year) / (next.year - last.year); pts.push({ lat: last.lat + (next.lat - last.lat) * f, lon: last.lon + (next.lon - last.lon) * f }); }
   return pts;
 }
+// Deep time between records: rather than "nothing recorded", the geological period in view with a one-line general
+// picture of it, plainly marked as background (not a sourced atlas record), and the nearest records either side.
+// Period boundaries in millions of years, from the International Chronostratigraphic Chart (ICS, v2024/12).
+const PERIODS = [
+  [4567, 4031, 'Hadean', 'The young Earth forms and is hit by a Mars-sized body, making the Moon. A molten surface cools to a first crust; the oldest surviving mineral grains date from late in this eon.'],
+  [4031, 3600, 'Eoarchean', 'The oldest rocks that survive form. Oceans already cover most of the planet, and the first life may already be in them.'],
+  [3600, 3200, 'Paleoarchean', 'Microbial mats build stromatolites in shallow seas, among the oldest widely accepted signs of life. The air holds almost no oxygen.'],
+  [3200, 2800, 'Mesoarchean', 'Small continents grow from volcanic island arcs. Some microbes may already be making oxygen by photosynthesis.'],
+  [2800, 2500, 'Neoarchean', 'Continental crust grows quickly and the first large stable cores of continents form. Oxygen is made, but used up as fast as it appears.'],
+  [2500, 2300, 'Siderian', 'Banded iron formations are laid down as oxygen from microbes rusts the iron dissolved in the oceans.'],
+  [2300, 2050, 'Rhyacian', 'The Great Oxidation Event: oxygen builds up in the air for the first time, and long glaciations follow as greenhouse methane falls.'],
+  [2050, 1800, 'Orosirian', 'Mountain building assembles an early supercontinent, often called Columbia or Nuna. Two of Earth’s largest known impact craters, Vredefort and Sudbury, form.'],
+  [1800, 1600, 'Statherian', 'Continents stabilise. Cells with a nucleus (eukaryotes) are known from fossils of about this age.'],
+  [1600, 1400, 'Calymmian', 'Platform sediments spread over stable continents; the long, quiet "boring billion" is under way.'],
+  [1400, 1200, 'Ectasian', 'Sea life is still mostly single-celled; the first red algae, early multicellular life, appear around this time.'],
+  [1200, 1000, 'Stenian', 'Grenville mountain building welds continents into the supercontinent Rodinia.'],
+  [1000, 720, 'Tonian', 'Rodinia is complete and begins to break apart. Oxygen begins to rise again, and simple animals may have appeared.'],
+  [720, 635, 'Cryogenian', '"Snowball Earth": ice spreads from the poles to the tropics, at least twice, and the oceans are largely frozen over.'],
+  [635, 538.8, 'Ediacaran', 'After the ice, the first large complex organisms, the soft-bodied Ediacaran biota, live on the sea floor.'],
+  [538.8, 486.85, 'Cambrian', 'The Cambrian explosion: most major animal groups appear in the seas, many with shells and eyes. The land is still bare.'],
+  [486.85, 443.1, 'Ordovician', 'Sea life diversifies greatly, the first plants reach land, and the period ends in an ice age and a mass extinction.'],
+  [443.1, 419.62, 'Silurian', 'Reefs recover and jawed fish spread. Small vascular plants and the first land animals, arthropods, colonise the shores.'],
+  [419.62, 358.86, 'Devonian', 'The Age of Fishes. The first forests grow, and the first four-limbed vertebrates crawl from the water.'],
+  [358.86, 298.9, 'Carboniferous', 'Vast swamp forests lay down today’s coal. Oxygen is high, insects grow huge, and the first reptiles appear.'],
+  [298.9, 251.9, 'Permian', 'The supercontinent Pangaea is assembled, with a dry interior. The period ends in the largest mass extinction in Earth’s history.'],
+  [251.9, 201.4, 'Triassic', 'Life recovers on Pangaea; the first dinosaurs and mammals appear, and another mass extinction ends the period.'],
+  [201.4, 143.1, 'Jurassic', 'Pangaea splits and the Atlantic begins to open. Dinosaurs dominate the land; the first birds appear.'],
+  [143.1, 66, 'Cretaceous', 'Flowering plants spread, and the continents near their modern shapes. An asteroid impact ends the reign of the non-avian dinosaurs.'],
+  [66, 23.04, 'Paleogene', 'Mammals and birds diversify into the empty niches. A hot climate gives way to cooling, and Antarctica freezes over.'],
+  [23.04, 2.58, 'Neogene', 'Grasslands spread, the climate keeps cooling, and the first hominins appear in Africa.'],
+  [2.58, 0.0117, 'Pleistocene', 'Ice ages come and go. Several kinds of humans live side by side, and modern humans spread from Africa across the world.'],
+];
+const periodAt = ma => PERIODS.find(([a, b]) => ma <= a && ma > b) || null;
+function renderPeriod([a, b, name, text]) {
+  const span = a >= 1000 ? `${(a / 1000).toFixed(2)}–${(b / 1000).toFixed(2)} billion years ago` : b < 1 ? `${a} million – ${Math.round(b * 1000)} thousand years ago` : `${a}–${b} million years ago`;
+  $('#empty-text').innerHTML = `<b>${esc(name)}</b><small>${esc(span)}</small>${esc(text)}<em>Background sketch, not a sourced record: the general scientific picture, simplified.</em>`;
+  // the nearest records either side of the window, so a gap is one click away from something real
+  const win = windowNow(), cand = state.pins.filter(p => p.lat != null && inLevel(p) && domainOn(p) && tierOn(p));
+  const before = cand.filter(p => p.end < win.from).sort((x, y) => y.end - x.end)[0], after = cand.filter(p => p.start > win.to).sort((x, y) => x.start - y.start)[0];
+  $('#empty-near').replaceChildren(...[[before, '←'], [after, '→']].filter(([p]) => p).map(([p, arrow]) => {
+    const b2 = document.createElement('button');
+    b2.textContent = arrow === '←' ? `← ${p.title}` : `${p.title} →`;
+    b2.title = `Go to ${fmtYear(p.start)}`;
+    b2.onclick = () => { state.t = Math.min(p.start, NOW); render(); };
+    return b2;
+  }));
+}
+// past the plate model's reach: what the Earth was like, as an artist's impression (no continents are reconstructed)
+function eonNote(ma) {
+  const ga = ma / 1000;
+  const scene = ga > 4.0 ? 'Hadean Earth: a young crust cracked over magma and scarred by impacts, under a thick hot sky.'
+    : ga > 2.5 ? 'Archean Earth: a water world with few small islands, under an orange, oxygen-poor haze; microbial life in the seas.'
+    : ga > 2.1 && ga < 2.45 ? 'Huronian glaciation: ice reaching far toward the equator as oxygen rose and greenhouse methane fell.'
+    : 'Proterozoic Earth: growing continents and shallow seas, oxygen slowly building up; life still mostly single-celled.';
+  return `${scene} Artist’s impression: no plate model reaches back past ${window.Space.PALEO_MAX} million years, so where the land lay is unknown. Faint lines are today’s coastlines; pins mark where the evidence is found today.`;
+}
 function render() {
   tierKey = tier(); updateSky();
   const shown = visiblePins();
@@ -502,21 +571,27 @@ function render() {
   $('#t0').textContent = fmtYear(from, true);
   $('#tm').textContent = LEVELS[state.level].key === 'event' ? '' : fmtYear((from + to) / 2, true);
   $('#t1').textContent = LEVELS[state.level].key === 'event' ? fmtYear(to, true) : 'today';
-  $('#slider').value = Math.round(((state.t - from) / (to - from)) * 1000);
+  if (!slideRange) $('#slider').value = Math.round(((state.t - from) / (to - from)) * 1000);
   const full = NOW - EARTH, left = (from - EARTH) / full, width = Math.max((to - from) / full, 0.004);
   Object.assign($('#context .win').style, { left: `${Math.min(left, 1 - width) * 100}%`, width: `${width * 100}%` });
 
-  const notice = state.paleoMa != null && -state.t / 1e6 > window.Space.PALEO_MAX ? `No plate reconstruction reaches back past ${window.Space.PALEO_MAX} million years, so no continents are drawn. Pins sit at today’s coordinates.`
-    : state.paleoMa >= 10 ? `Continents as they stood ${Math.round(state.paleoMa)} million years ago, moved plate by plate (MERDITH2021 plate model, GPlates). Pins with a paleo-position sit where they were then.`
+  const notice = state.paleoMa != null && -state.t / 1e6 > window.Space.PALEO_MAX ? eonNote(-state.t / 1e6)
+    : state.paleoMa >= 10 ? `Continents as they stood ${Math.round(state.paleoMa)} million years ago, moved plate by plate (MERDITH2021 plate model, GPlates). Pins ride on their plates, from where the evidence is found today.`
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
     : state.t < -12000 ? 'The map shows today’s coastlines. Ice-age sea levels and ice sheets are not loaded yet.' : '';
   $('#notice').textContent = notice; show($('#notice'), !!notice && $('#panel').hidden);
   const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.end >= from && p.start <= to);
   show($('#empty'), state.pins.length > 0 && pins.length === 0);
-  $('#empty-text').textContent = state.whole || !anyInLevel
-    ? (anyInLevel ? 'Zoom in to see smaller events here.' : `No published records in the ${LEVELS[state.level].name.toLowerCase()} scale yet.`)
-    : `Nothing recorded near ${fmtYear(state.t)} yet.`;
-  show($('#empty-btn'), !state.whole && anyInLevel);
+  const period = state.t < -11700 && periodAt(-state.t / 1e6);
+  $('#empty').classList.toggle('period', !!period);
+  if (period && pins.length === 0) renderPeriod(period);
+  else {
+    $('#empty-text').textContent = state.whole || !anyInLevel
+      ? (anyInLevel ? 'Zoom in to see smaller events here.' : `No published records in the ${LEVELS[state.level].name.toLowerCase()} scale yet.`)
+      : `Nothing recorded near ${fmtYear(state.t)} yet.`;
+    $('#empty-near').replaceChildren();
+  }
+  show($('#empty-btn'), !period && !state.whole && anyInLevel);
   drawDensity();
 }
 
@@ -580,7 +655,18 @@ function setLevel(i, keepT = false) {
   if (on && tabs.scrollWidth > tabs.clientWidth) tabs.scrollTo({ left: on.offsetLeft - (tabs.clientWidth - on.offsetWidth) / 2, behavior: 'smooth' });
   render();
 }
-$('#slider').oninput = e => { const { from, to } = range(); state.t = from + (to - from) * (+e.target.value / 1000); render(); };
+// Dragging the time slider: the scale is fixed when the drag starts (in the one-year scale the range follows the
+// year, so recomputing it mid-drag made the thumb run away), the slider's own value is left alone while it is held,
+// and the globe redraws at most once a frame however fast the input events come
+let slideRange = null, slideFrame = 0;
+const slideEnd = () => { slideRange = null; };
+$('#slider').addEventListener('pointerdown', () => { slideRange = range(); });
+for (const ev of ['pointerup', 'pointercancel', 'change', 'blur']) $('#slider').addEventListener(ev, slideEnd);
+$('#slider').oninput = e => {
+  const { from, to } = slideRange || range();
+  state.t = from + (to - from) * (+e.target.value / 1000);
+  if (!slideFrame) slideFrame = requestAnimationFrame(() => { slideFrame = 0; render(); });
+};
 $('#context').onclick = e => {
   const r = e.currentTarget.getBoundingClientRect(), f = (e.clientX - r.left) / r.width;
   if (f > 0.985) { state.t = -500; return setLevel(4); }  // the Humans sliver opens Civilization (spec 2)

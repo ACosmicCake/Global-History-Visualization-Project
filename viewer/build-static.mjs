@@ -9,7 +9,7 @@ import { published, pinsPayload, recordPayload, readLinks } from './api.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.resolve(process.argv[2] || path.join(HERE, '..', 'dist'));
-const SKIP = new Set(['server.mjs', 'api.mjs', 'build.mjs', 'build-static.mjs']); // tools, not part of the site
+const SKIP = new Set(['server.mjs', 'api.mjs', 'build-static.mjs']); // tools, not part of the site
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });

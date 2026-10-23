@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-alan-turing",
+  "kind": "person",
+  "title": "Alan Turing",
+  "summary": "Born in London on 23 June 1912, Turing described the abstract machine now named after him in a paper published in 1936. After war was declared in 1939 he worked full time at Bletchley Park on breaking Enigma, and his Hut 8 section deciphered naval messages. He later worked on early computers at the National Physical Laboratory and Manchester, and died at his home in Wilmslow, Cheshire, in June 1954.",
+  "when": {
+    "start": {
+      "year": 1912,
+      "iso": "1912-06-23"
+    },
+    "end": {
+      "year": 1954,
+      "iso": "1954-06-07"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources differ on the death date: MacTutor and the Science Museum Group give 7 June 1954; King's College Cambridge gives 8 June; Hodges says he died the day before he was found on 8 June."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "born on 23 June 1912",
+        "source": "src-kings-turing"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Born 23 June 1912 London, England Died 7 June 1954 Wilmslow, Cheshire",
+        "source": "src-mactutor-turing"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "he died, on 8 June 1954, at his house in Wilmslow, Cheshire",
+        "source": "src-kings-turing"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1936 he published On Computable Numbers",
+        "source": "src-mactutor-turing"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "When war was declared in 1939 Turing immediately moved to work full-time",
+        "source": "src-mactutor-turing"
+      }
+    ],
+    "display": "23 June 1912 – 7 June 1954"
+  },
+  "where": {
+    "lat": 51.99649472738222,
+    "lon": -0.7425642013549805,
+    "elevation_m": null,
+    "modern_name": "Bletchley Park, Milton Keynes, England (his wartime codebreaking base; born in London, died in Wilmslow, Cheshire)",
+    "historical_name": "Government Code and Cypher School, Bletchley Park, Buckinghamshire, England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-geonames-8468728"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "science_technology",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Mathematician whose 1936 paper and wartime codebreaking helped found computer science."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "related"
+    },
+    {
+      "id": "person-ada-lovelace",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-kings-turing",
+      "url": "https://turingarchive.kings.cam.ac.uk/about-alan-turing",
+      "title": "About Alan Turing",
+      "publisher": "The Turing Digital Archive, King's College, Cambridge",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-mactutor-turing",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Turing/",
+      "title": "Alan Turing (1912 - 1954) - Biography",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-smg-turing",
+      "url": "https://collection.sciencemuseumgroup.org.uk/people/cp37701/alan-turing",
+      "title": "Alan Turing",
+      "publisher": "Science Museum Group",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hodges-turing",
+      "url": "https://www.turing.org.uk/publications/dnb.html",
+      "title": "Alan Turing - a short biography",
+      "publisher": "Andrew Hodges, turing.org.uk",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-8468728",
+      "url": "https://www.geonames.org/8468728",
+      "title": "Bletchley Park (GeoNames 8468728)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Death date is disputed between 7 and 8 June 1954 across opened sources; I used 7 June. Bletchley Park coordinates are GeoNames' park point; the summary omits the cause of death.",
+  "author": "historian-agent:essentials-c",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:17.037Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

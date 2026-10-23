@@ -1,0 +1,118 @@
+{
+  "id": "place-new-york-city",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "New York City",
+  "summary": "Manhattan, Canarsee, Hackensack and Rockaway peoples lived on the land before the Dutch colony of New Amsterdam began to form by 1624. It became seat of government of New Netherland in 1625, a major North Atlantic trading port by the 1650s, and passed to the British in 1664. It was national capital until 1790, and Washington took his presidential oath there in 1789.",
+  "when": {
+    "start": {
+      "year": 1624
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "display": "1624–present (Dutch colony of New Amsterdam onward)",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "by 1624, the colony of",
+        "source": "src-nps"
+      },
+      {
+        "calendar": "as written",
+        "value": "1625 Town of Nieuw Amsterdam becomes seat of government for Nieuw Netherlands.",
+        "source": "src-nyc"
+      },
+      {
+        "calendar": "as written",
+        "value": "1785 New York City becomes state capital (until 1789) and national capital (until 1790).",
+        "source": "src-nyc"
+      }
+    ]
+  },
+  "where": {
+    "lat": 40.7127281,
+    "lon": -74.0060152,
+    "elevation_m": null,
+    "modern_name": "New York City, New York, USA",
+    "historical_name": "Nieuw Amsterdam, colony of New Netherland (Dutch West India Company)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Major North Atlantic port from the 1650s and, for a time, the capital of the United States."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/mava/learn/historyculture/new-netherland.htm",
+      "title": "The Rise and Fall of New Netherland",
+      "publisher": "U.S. National Park Service",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nyc",
+      "url": "https://www.nyc.gov/site/dcas/about/green-book-important-nyc-dates.page",
+      "title": "Important NYC Dates",
+      "publisher": "City of New York, Department of Citywide Administrative Services",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=New%20York%20City&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for New York City",
+      "publisher": "OpenStreetMap contributors",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Start year 1624 follows the NPS (colony 'began to be formed' by 1624); the city government dates the seat of government to 1625 and Lenape-area peoples to about 1000, so the span begins with the Dutch settlement, not earlier occupation. The 1626 Manhattan purchase is left out as its terms are contested. The sources opened do not state the renaming.",
+  "author": "historian-agent:essentials-f2",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:45.280Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

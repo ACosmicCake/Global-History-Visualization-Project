@@ -129,7 +129,7 @@
       if (!on) continue;
       const a = (now / ob.period) * Math.PI * 2;
       ob.craft.position.set(Math.cos(a) * ob.r, 0, Math.sin(a) * ob.r);
-      ob.label.position.copy(ob.craft.position);
+      ob.label.position.copy(ob.craft.position); ob.label.visible = true; // clearHeader may hide it again this frame
     }
     const g = gmst(date && !isNaN(date) ? date : new Date());
     for (const p of PROBES) {
@@ -141,6 +141,19 @@
       p.mark.position.copy(_v); p.label.position.copy(_v);
     }
     if (ensureMoon()) for (const a of APOLLO) { a.mark.visible = year >= a.from; if (a.label) a.label.visible = year >= a.from; }
+    clearHeader();
+  }
+  // a label that would sit under the page's title and search box (drawn over the canvas) is hidden; its dot stays
+  function clearHeader() {
+    const head = document.querySelector('#masthead')?.getBoundingClientRect();
+    if (!head) return;
+    const cam = globe.camera(), rect = globe.renderer().domElement.getBoundingClientRect();
+    for (const s of [...ORBITERS.map(o => o.label), ...PROBES.map(p => p.label), ...APOLLO.map(a => a.label)]) {
+      if (!s || !isVisible(s.parent) || !s.visible) continue;
+      s.getWorldPosition(_v).project(cam);
+      const x = rect.left + (_v.x + 1) * rect.width / 2, y = rect.top + (1 - _v.y) * rect.height / 2;
+      if (x > head.left - 8 && x < head.right + 220 && y > head.top - 8 && y < head.bottom + 8) s.visible = false;
+    }
   }
   // keep the orbiting craft moving between time changes
   (function spin() { if (lastYear != null) update(lastYear, lastDate); requestAnimationFrame(spin); })();

@@ -1,0 +1,112 @@
+{
+  "id": "place-amsterdam",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Amsterdam",
+  "summary": "Amsterdam first appears, as Amstelledamme, in a toll privilege issued by Count Floris V on 27 October 1275. A settlement formed by the Amstel estuary after the All Saints' Flood of 1170, and waterways let trade flourish. A canal district built from the late 16th century as a new port city reflects wealth from maritime trade.",
+  "when": {
+    "start": {
+      "year": 1275
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "display": "1275–present (first document naming the city)",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The Toll Privilege issued by Count Floris V on 27 October 1275",
+        "source": "src-arch"
+      },
+      {
+        "calendar": "as written",
+        "value": "a settlement was established after the All Saints’ Flood of 1170",
+        "source": "src-arch"
+      }
+    ]
+  },
+  "where": {
+    "lat": 52.3730796,
+    "lon": 4.8924534,
+    "elevation_m": null,
+    "modern_name": "Amsterdam, Netherlands",
+    "historical_name": "Amstelledamme, County of Holland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Medieval toll-privileged trading settlement that grew into a major port with a UNESCO-listed 17th-century canal district."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-arch",
+      "url": "https://www.amsterdam.nl/stadsarchief/amsterdam-city-archives/exhibitions/the-birth-the-city-search-medieval/",
+      "title": "The Birth of the City. In Search of Medieval Amsterdam",
+      "publisher": "Stadsarchief Amsterdam (Amsterdam City Archives)",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco",
+      "url": "https://whc.unesco.org/en/list/1349/",
+      "title": "Seventeenth-Century Canal Ring Area of Amsterdam inside the Singelgracht",
+      "publisher": "UNESCO World Heritage Centre",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Amsterdam%2C%20Netherlands&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Amsterdam",
+      "publisher": "OpenStreetMap contributors",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "1275 is the first document naming the city, not the founding: the Archives date a settlement to after the 1170 flood and note earlier peatland activity.",
+  "author": "historian-agent:essentials-f2",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T14:56:39.820Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
