@@ -219,7 +219,10 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
 // ---------- globe
 const zoomK = () => Math.min(1, Math.max(0.0015, state.alt / 1.8)); // pins and labels shrink as the camera comes in, down to street scale
 const tip = p => `<div class="tip"><span class="d">${esc(p.display)}${p.outline ? ' · outline' : ''}</span><b>${esc(p.title)}</b><p>${esc(p.summary)}</p></div>`;
-const globe = Globe({ animateIn: true, rendererConfig: { antialias: true, alpha: true } })($('#globe'))
+// High-density screens (2x, 3x) would render 4–9 times the pixels for little visible gain on a moving globe: cap the
+// drawing resolution at 1.5x (and antialias only at 1x, where it is needed and cheap)
+const PR = Math.min(window.devicePixelRatio || 1, 1.5);
+const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, alpha: true, powerPreference: 'high-performance' } })($('#globe'))
   .backgroundColor('rgba(0,0,0,0)')
   .showGraticules(false).showAtmosphere(false)
   .polygonCapColor(() => '#24332c').polygonSideColor(() => 'rgba(0,0,0,0)').polygonStrokeColor(() => 'rgba(160,190,165,0.35)').polygonAltitude(0.003)
@@ -260,11 +263,14 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: true, alpha:
   .objectLabel(o => `<div class="tip"><span class="d">3D model · ${esc(o.kind)}</span><b>${esc(o.title)}</b><p>${esc(o.note)}</p></div>`)
   .onObjectClick(o => openRecord(o.id));
 window.Space.init(globe); // satellite Earth, clouds, stars, Sun and Moon (space.js)
+// spacecraft in the sky (spacecraft.js): clicking one opens its record once that record is published
+window.Spacecraft?.init(globe, { onPick: id => openRecord(id), known: id => state.pins.some(p => p.id === id) });
 globe.pointOfView({ lat: 28, lng: 25, altitude: state.alt });
 globe.controls().autoRotate = false;
 
 // Smooth zoom and drag: the stock wheel zoom jumps one step per notch, so we take over the wheel and ease the
 // camera altitude toward a target in log space every frame; rotation gets inertia from the controls' damping.
+globe.renderer().setPixelRatio(PR);
 const controls = globe.controls();
 controls.enableZoom = false;
 controls.enableDamping = true; controls.dampingFactor = 0.08; controls.rotateSpeed = 0.55;
@@ -292,6 +298,47 @@ $('#globe').addEventListener('touchend', () => { pinch = null; }, { passive: tru
 // Rebuilding pins and labels is expensive, so that waits until the camera settles and the detail tier changes.
 let lastFrame = performance.now(), settleTimer = null, tierKey = '';
 const tier = () => `${minImportance()}|${Math.round(Math.log2(zoomK()) * 3)}`;
+// ---------- planet-wide records: no single place, so no pin. A faint ring at the globe's edge says "something
+// planet-wide is happening now", and one small pill above the globe names how many; clicking it opens a short list.
+let planetList = [], planetOpen = false, planetKey = '';
+function renderPlanet(planet) {
+  planetList = [...planet].sort((a, b) => b.importance - a.importance || a.start - b.start);
+  const on = planetList.length > 0 && $('#panel').hidden && !window.Sequence?.playing;
+  if (!on) planetOpen = false;
+  const key = planetList.map(p => p.id).join('|') + planetOpen;
+  if (key !== planetKey) {
+    planetKey = key;
+    const top = planetList[0];
+    $('#planet').innerHTML = `<button class="pw-pill" aria-expanded="${planetOpen}" title="Records about the whole planet at this time">
+        <span class="pw-dot"></span><span class="pw-lab">Planet-wide</span><span class="pw-n">${planetList.length}</span>${planetList.length === 1 ? `<span class="pw-one">${esc(top.title)}</span>` : ''}</button>
+      ${planetOpen ? `<ul class="pw-list" role="list">${planetList.map(p => `<li><button data-id="${esc(p.id)}"><img alt="" src="${badgeURL(p.domains?.[0], !p.outline)}"><span class="t">${esc(p.title)}</span><span class="d">${esc(p.display || '')}</span></button></li>`).join('')}</ul>` : ''}`;
+    $('#planet .pw-pill').onclick = () => {
+      if (planetList.length === 1) return openRecord(planetList[0].id);
+      planetOpen = !planetOpen; renderPlanet(planetList);
+    };
+    $('#planet').querySelectorAll('button[data-id]').forEach(b => { b.onclick = () => { planetOpen = false; openRecord(b.dataset.id); }; });
+  }
+  show($('#planet'), on); show($('#planet-ring'), on);
+  placePlanetOrbit();
+}
+addEventListener('pointerdown', e => { if (planetOpen && !e.target.closest('#planet')) { planetOpen = false; renderPlanet(planetList); } });
+addEventListener('keydown', e => { if (e.key === 'Escape' && planetOpen) { planetOpen = false; renderPlanet(planetList); } });
+const _o = new THREE.Vector3();
+function placePlanetOrbit() { // per frame: the ring on the globe's edge, the pill just above it (cheap: two style writes)
+  const box = $('#planet');
+  if (box.hidden) return;
+  const cam = globe.camera(), el = globe.renderer().domElement, W = el.clientWidth || innerWidth, H = el.clientHeight || innerHeight;
+  _o.set(0, 0, 0).project(cam);
+  const cx = (_o.x + 1) * W / 2, cy = (1 - _o.y) * H / 2, d = cam.position.length();
+  const r = Math.tan(Math.asin(Math.min(0.999, GLOBE_R / d))) / Math.tan((cam.fov * Math.PI / 180) / 2) * H / 2; // the globe's radius in px
+  const ring = $('#planet-ring'), fits = r * 2 < Math.min(W, H) * 1.05;
+  ring.hidden = !fits;
+  if (fits) ring.style.cssText = `left:${cx - r - 3}px;top:${cy - r - 3}px;width:${r * 2 + 6}px;height:${r * 2 + 6}px`;
+  // the pill sits just above the globe, or near the top of the view when the globe fills it
+  const y = Math.max(14, Math.min(H - 300, (fits ? cy - r : 0) - 40)), x = Math.max(180, Math.min(W - 180, cx));
+  box.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+}
+
 (function zoomFrame(now) {
   const dt = Math.min(64, (now ?? performance.now()) - lastFrame); lastFrame = now ?? performance.now();
   if (zoomTarget != null) {
@@ -303,7 +350,7 @@ const tier = () => `${minImportance()}|${Math.round(Math.log2(zoomK()) * 3)}`;
     controls.rotateSpeed = 0.55 * Math.min(1, Math.max(0.06, next / 2)); // calmer dragging close in
     cameraMoved(next);
   }
-  placePinSprites();
+  placePinSprites(); placePlanetOrbit();
   requestAnimationFrame(zoomFrame);
 })();
 let skyAlt = 0;
@@ -338,6 +385,7 @@ function updateSky() {
   window.Space.update({ date: state.t > -4000 ? yearToDate(state.t) : new Date(), sunMode: eventScale || state.realSun ? 'real' : 'camera',
     nightLights: !map && state.t >= 1900, clouds: !map && state.clouds, zoomAlt: state.alt, flat: map });
   state.paleoMa = window.Space.setPaleo(!map && state.t < -2e6 ? -state.t / 1e6 : null);
+  window.Spacecraft?.update(state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
 }
 
 // ---------- procedural monuments (spec 6.4): built only from the record's own sourced measurements
@@ -426,9 +474,7 @@ function render() {
   tierKey = tier(); updateSky();
   const shown = visiblePins();
   const pins = shown.filter(p => !p.global), planet = shown.filter(p => p.global);   // planet-wide records get a chip, not a misleading pin
-  $('#planet').innerHTML = planet.length ? '<span>Planet-wide</span>' + planet.map(p => `<button data-id="${esc(p.id)}" title="${esc(p.display || '')}">${esc(p.title)}</button>`).join('') : '';
-  show($('#planet'), planet.length > 0 && $('#panel').hidden);
-  $('#planet').querySelectorAll('button').forEach(b => { b.onclick = () => openRecord(b.dataset.id); });
+  renderPlanet(planet);
   // One persistent datum per pin, so globe.gl keeps each badge and only adds or removes the pins entering or
   // leaving the time window (fresh objects every render would rebuild every sprite and make the pins flash)
   const ids = new Set(pins.map(p => p.id));
@@ -741,7 +787,7 @@ async function loadModels() {
 let lastSig = '';
 async function refresh() {
   try {
-    const d = await (await fetch('api/pins.json', { cache: 'no-store' })).json();
+    const d = await (await fetch('api/pins.json', { cache: LIVE ? 'no-store' : 'default' })).json();
     const sig = d.pins.map(p => p.id + p.updated).join('|');
     if (sig === lastSig) return;
     lastSig = sig; state.pins = d.pins;
@@ -768,4 +814,7 @@ for (const ev of ['pointerdown', 'wheel', 'touchstart']) $('#globe').addEventLis
 setTimeout(dismissHint, 12000);
 window.atlas = { openRecord, goTo, state, globe }; // handy for debugging from the console
 buildChrome(); setLevel(4);
-const dataReady = refresh(); setInterval(refresh, 15000);
+// Live refresh only against the local server, where records are being published; the static site's data changes
+// only with a new deploy, so it is fetched once (and can be cached).
+const LIVE = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+const dataReady = refresh(); if (LIVE) setInterval(refresh, 15000);

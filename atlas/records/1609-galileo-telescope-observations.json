@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1609-galileo-telescope-observations",
+  "kind": "event",
+  "title": "Galileo's first telescopic observations of the heavens",
+  "summary": "In 1609 Galileo built telescopes of increasing power, showing an eight-power instrument in Venice on 21 August and reaching twenty-power by November. By his own account he first observed the Moon on 30 November 1609, and in January 1610 he found four moons of Jupiter.",
+  "when": {
+    "start": {
+      "year": 1609
+    },
+    "end": {
+      "year": 1610
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Telescope built summer 1609; first Moon observation 30 November 1609 by his own account; Jupiter moons January 1610."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "August 21",
+        "source": "src-imss-galileo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "November 30, 1609",
+        "source": "src-hao-galileo"
+      }
+    ],
+    "display": "Summer 1609 to January 1610"
+  },
+  "where": {
+    "lat": 45.43972,
+    "lon": 12.33194,
+    "elevation_m": null,
+    "modern_name": "Venice, Italy (where Galileo showed his eight-power telescope on 21 August 1609; he then taught at Padua)",
+    "historical_name": "Padua, Republic of Venice",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-venice"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The first systematic telescopic observations of the Moon and Jupiter, which undermined the view of perfect, unchanging heavens."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1610-galileo-sidereus-nuncius",
+      "type": "caused",
+      "because": "The 1609-1610 observations were the content published in Sidereus Nuncius in 1610."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-imss-galileo",
+      "url": "https://brunelleschi.imss.fi.it/esplora/cannocchiale/dswmedia/storia/estoria2_st.html",
+      "title": "Galileo's telescope: from the workshop to the stars",
+      "publisher": "Istituto e Museo di Storia della Scienza, Florence",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hao-galileo",
+      "url": "https://www2.hao.ucar.edu/education/scientists/galileo-galilei-1564-1642",
+      "title": "Galileo Galilei (1564-1642)",
+      "publisher": "High Altitude Observatory, NCAR/UCAR",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-venice",
+      "url": "https://www.wikidata.org/wiki/Q641",
+      "title": "Wikidata Q641 (Venice, coordinate location P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1609-08-21",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Galileo showed an eight-power telescope from the bell tower of San Marco, Venice.",
+        "source": "src-imss-galileo"
+      },
+      {
+        "span": "1609-11-30",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "By his own account he first observed the Moon on this date, with a better telescope.",
+        "source": "src-hao-galileo"
+      },
+      {
+        "span": "1610-01",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "In January 1610 he discovered four moons of Jupiter, which he named the Medicean Planets.",
+        "source": "src-imss-galileo",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the Padua pin: the sources say he held the Padua chair but not explicitly that observing took place there. Wikidata is the only coordinate source. Harriot observed the Moon in July 1609, earlier than Galileo.",
+  "author": "historian-agent:space-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:26:36.169Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

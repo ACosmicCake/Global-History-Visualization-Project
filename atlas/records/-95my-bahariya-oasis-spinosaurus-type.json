@@ -1,0 +1,182 @@
+{
+  "id": "-95my-bahariya-oasis-spinosaurus-type",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Bahariya Formation, Egypt (Spinosaurus type locality)",
+  "summary": "In 1912 collector Richard Markgraf found a partial Spinosaurus skeleton in the Bahariya Oasis of western Egypt, named S. aegyptiacus by Stromer in 1915. The early Cenomanian Bahariya Formation (about 97 million years old) was a coastal plain of lagoons, tidal flats and mangroves, with Carcharodontosaurus, Bahariasaurus, Aegyptosaurus and Paralititan. The holotype was destroyed in a 1944 bombing raid on Munich.",
+  "when": {
+    "start": {
+      "year": -100500000
+    },
+    "end": {
+      "year": -93900000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Smith et al. (2006) give early Cenomanian, about 97 Ma; Lacovara et al. (2001) say Cenomanian. Bounds here are the whole Cenomanian from the ICS chart, wider than the early-Cenomanian estimate."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "early Cenomanian, about 97 million years ago",
+        "source": "src-smith2006"
+      },
+      {
+        "calendar": "stage",
+        "value": "Cenomanian (Late Cretaceous)",
+        "source": "src-gsa2001"
+      }
+    ],
+    "display": "Cenomanian, about 97 Ma"
+  },
+  "where": {
+    "lat": 28.3572,
+    "lon": 28.863,
+    "elevation_m": null,
+    "modern_name": "Bahariya Oasis, Giza Governorate, Western Desert, Egypt (pin at the oasis; the exact 1912 collecting site is not given in the sources)",
+    "historical_name": "Bahariya Formation, southern shore of the Tethys seaway, northern Gondwana; Kingdom of Egypt under British occupation in 1912",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-osm-bahariya"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Type locality of Spinosaurus and a Cenomanian coastal dinosaur community."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-smith2006",
+      "url": "https://researchdiscovery.drexel.edu/esploro/outputs/journalArticle/New-information-regarding-the-holotype-of/991022196560904721",
+      "title": "New information regarding the holotype of Spinosaurus aegyptiacus Stromer, 1915",
+      "publisher": "Journal of Paleontology (Cambridge University Press), via Drexel University",
+      "author": "J.B. Smith, M.C. Lamanna, H. Mayr, K.J. Lacovara",
+      "date_published": "2006",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gsa2001",
+      "url": "https://gsa.confex.com/gsa/2001AM/webprogram/Paper28535.html",
+      "title": "Coastal depositional environments along the Cretaceous Tethys seaway of Egypt",
+      "publisher": "Geological Society of America (Annual Meeting abstract)",
+      "author": "K.J. Lacovara et al.",
+      "date_published": "2001",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-sciam-spino",
+      "url": "https://www.scientificamerican.com/blog/tetrapod-zoology/the-discovery-and-early-interpretation-of-spinosaurus",
+      "title": "The discovery and early interpretation of Spinosaurus",
+      "publisher": "Scientific American (Tetrapod Zoology blog)",
+      "author": "Darren Naish",
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-bahariya",
+      "url": "https://nominatim.openstreetmap.org/search?q=Bahariya%20Oasis%20Egypt&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Bahariya Oasis",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2023-09.pdf",
+      "title": "International Chronostratigraphic Chart v2023/09",
+      "publisher": "International Commission on Stratigraphy",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the spatial detail: the Bahariya Oasis is large and the sources do not give the 1912 find spot, so the pin is the oasis (OSM) with a wide margin. The age is early Cenomanian, about 97 Ma, in the Journal of Paleontology abstract (its Drexel page is script-rendered, so spotcheck.mjs cannot find text there; I read it with WebFetch) and Cenomanian elsewhere.",
+  "author": "historian-agent:dino-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-97000000",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "About 97 million years ago the Bahariya region was a low coastal plain of lagoons, tidal flats, mangroves and channels.",
+        "source": "src-gsa2001"
+      },
+      {
+        "span": "1912",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1912 fossil collector Richard Markgraf found the Spinosaurus remains at El-Bahariya, and Stromer named them Spinosaurus aegyptiacus in 1915.",
+        "source": "src-sciam-spino"
+      },
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Stromer’s original material was destroyed in an Allied bombing raid on Munich in April 1944.",
+        "source": "src-sciam-spino",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:45:40.833Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

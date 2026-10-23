@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-10000-doggerland",
+  "kind": "place",
+  "title": "Doggerland, the lost land under the North Sea",
+  "summary": "Doggerland was a landmass in what is now the North Sea until rising seas in the mid-Holocene drowned it and separated Britain from the rest of Europe. About 8,150 years ago the Storegga submarine landslide off Norway sent a tsunami across the North Sea; deposits in the southern North Sea show its effects there were temporary and local, softened by woodland and terrain.",
+  "when": {
+    "start": {
+      "year": -6200
+    },
+    "end": {
+      "year": -6200
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 100,
+      "end_plus_years": 100,
+      "note": "The Storegga slide failed \"around 8150 years ago\"; the wider inundation is dated only to the mid-Holocene."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BP",
+        "value": "raged across the North Sea approximately 8,150 years ago",
+        "source": "src-past"
+      },
+      {
+        "calendar": "BP",
+        "value": "marine inundation took place during the mid-Holocene",
+        "source": "src-gla"
+      }
+    ],
+    "display": "about 8,150 years ago (Storegga tsunami)"
+  },
+  "where": {
+    "lat": 55.012,
+    "lon": 2.404,
+    "elevation_m": null,
+    "modern_name": "Dogger Bank, central North Sea (representative position; Doggerland covered a wider submerged area)",
+    "historical_name": "Mesolithic land bridge between Britain and continental Europe (no polity)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "A drowned Mesolithic landscape that once joined Britain to the continent."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-6100-storegga-slide-tsunami",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gla",
+      "url": "https://eprints.gla.ac.uk/220846",
+      "title": "Evidence of a Storegga tsunami deposit in the southern North Sea (Geosciences 10(7), e270)",
+      "publisher": "University of Glasgow (Enlighten)",
+      "author": "Gaffney et al.",
+      "date_published": "2020",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-past",
+      "url": "https://the-past.com/news/searching-for-the-storegga-tsunami-in-doggerland",
+      "title": "Searching for the Storegga tsunami in Doggerland",
+      "publisher": "Current Archaeology (The Past)",
+      "date_published": "2020-02-18",
+      "accessed": "2026-10-23",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-arxiv",
+      "url": "https://arxiv.org/abs/1707.05593",
+      "title": "Was Doggerland catastrophically flooded by the Mesolithic Storegga tsunami?",
+      "publisher": "arXiv (Hill et al.)",
+      "author": "Hill et al.",
+      "date_published": "2017-07-18",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Dogger+Bank&format=json&limit=2",
+      "title": "Dogger Bank (OSM way 172152776)",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-6200",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "About 8,150 years ago a submarine landslide off Norway set off the Storegga tsunami, which crossed the North Sea.",
+        "source": "src-past"
+      },
+      {
+        "span": "-6200",
+        "action": "region.fill { radius_km: 200 }",
+        "caption": "A tsunami deposit at the head of a buried river system in the southern North Sea shows the wave reached Doggerland.",
+        "source": "src-gla"
+      },
+      {
+        "span": "-6200",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The wave's effects there were temporary and local, softened by woodland and terrain; rising seas went on to cut Britain off from Europe.",
+        "source": "src-gla",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the id-implied date of 10,000 BCE: the sources date only the Storegga tsunami (about 8,150 years ago) and the mid-Holocene inundation, so the record dates to the tsunami. Whether the tsunami emptied Doggerland is debated.",
+  "author": "historian-agent:deep-c",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:41:23.975Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

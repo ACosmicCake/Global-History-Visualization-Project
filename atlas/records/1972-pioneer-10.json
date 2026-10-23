@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1972-pioneer-10",
+  "kind": "event",
+  "title": "Pioneer 10 launch and first Jupiter flyby",
+  "summary": "Pioneer 10 launched from Cape Canaveral in March 1972, crossed the asteroid belt and made the first close flyby of Jupiter on 4 December 1973. It was the first spacecraft sent to the outer solar system; its signal was last detected on 23 January 2003.",
+  "when": {
+    "start": {
+      "year": 1972,
+      "iso": "1972-03-02"
+    },
+    "end": {
+      "year": 1973,
+      "iso": "1973-12-04"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Launch is 2 March 1972 local (01:49 UT per NASA Science; 3 March UT per NSSDCA)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "March 2, 1972 / 01:49:04 UT",
+        "source": "src-nasa-p10"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "04 December 1973",
+        "source": "src-nssdc-p10"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "23 January 2003",
+        "source": "src-nssdc-p10"
+      }
+    ],
+    "display": "Launched 2-3 March 1972; Jupiter flyby 4 December 1973"
+  },
+  "where": {
+    "lat": 28.5834,
+    "lon": -80.583,
+    "elevation_m": null,
+    "modern_name": "Cape Canaveral launch site (Launch Complex 36A), Florida; the spacecraft flew past Jupiter and onward out of the solar system",
+    "historical_name": "Cape Canaveral Air Force Station, Florida, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-spacedevs-slc41",
+      "src-wikidata-ccsfs"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First spacecraft to travel to the outer solar system and to investigate Jupiter at close range."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1977-voyager-2",
+      "type": "related"
+    },
+    {
+      "id": "1957-launch-of-sputnik-1",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-p10",
+      "url": "https://science.nasa.gov/mission/pioneer-10/",
+      "title": "Pioneer 10",
+      "publisher": "NASA Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nssdc-p10",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A",
+      "title": "Pioneer 10",
+      "publisher": "NASA Space Science Data Coordinated Archive",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-spacedevs-slc41",
+      "url": "https://lldev.thespacedevs.com/2.3.0/pads/29",
+      "title": "Space Launch Complex 41, Cape Canaveral SFS (pad record)",
+      "publisher": "The Space Devs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wikidata-ccsfs",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q334465.json",
+      "title": "Cape Canaveral Space Force Station (Wikidata Q334465)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1972-03-02",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Pioneer 10 launched from Cape Canaveral on 2 March 1972, local date.",
+        "source": "src-nasa-p10"
+      },
+      {
+        "span": "1973-12-04",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "It made its closest approach to Jupiter on 4 December 1973, the first spacecraft to investigate the planet.",
+        "source": "src-nssdc-p10",
+        "consequence": true
+      },
+      {
+        "span": "2003-01-23",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Its signal was last detected from Earth on 23 January 2003.",
+        "source": "src-nssdc-p10"
+      }
+    ]
+  },
+  "reviewer_note": "Launch date differs by page: 2 March 1972 (local, NASA Science) vs 3 March (UT, NSSDCA). Both sources are NASA; no non-NASA publisher was opened. Pin is the launch site.",
+  "author": "historian-agent:space-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:26:32.551Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

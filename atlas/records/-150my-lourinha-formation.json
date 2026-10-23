@@ -1,0 +1,167 @@
+{
+  "id": "-150my-lourinha-formation",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Lourinhã Formation dinosaur fauna, Portugal",
+  "summary": "Around Lourinhã in west-central Portugal, Late Jurassic (Kimmeridgian to Tithonian) delta and coastal-plain rocks of the Lourinhã and Alcobaça formations hold Torvosaurus, Ceratosaurus, Allosaurus, the stegosaur Dacentrurus and several sauropods. A nest of theropod eggs at Paimogo gave the only dinosaur embryos then known from Europe.",
+  "when": {
+    "start": {
+      "year": -154800000
+    },
+    "end": {
+      "year": -145000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Stage bounds taken from the ICS chart (Kimmeridgian base 154.8 Ma, Tithonian top 145.0 Ma). Mateus (2006) gives only the stages; the Lourinhã Formation is mostly Tithonian and the Alcobaça Formation mainly Kimmeridgian. The id says 150 Ma, a round figure inside this range."
+    },
+    "as_recorded": [
+      {
+        "calendar": "stage",
+        "value": "Kimmeridgian to Tithonian",
+        "source": "src-mateus2006"
+      },
+      {
+        "calendar": "stage",
+        "value": "Late Jurassic, Kimmeridgian/Tithonian",
+        "source": "src-antunes2003"
+      }
+    ],
+    "display": "Late Jurassic, Kimmeridgian to Tithonian (c. 154.8 to 145.0 Ma)"
+  },
+  "where": {
+    "lat": 39.2434,
+    "lon": -9.3119,
+    "elevation_m": null,
+    "modern_name": "Lourinhã, Lisboa district, west-central Portugal (proxy pin at the town; localities lie along the coast nearby)",
+    "historical_name": "Lourinhã and Alcobaça formations, western Iberian (Lusitanian) basin, Late Jurassic; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-osm-lourinha"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Europe’s richest Late Jurassic dinosaur area, with genera shared with the Morrison Formation of North America."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mateus2006",
+      "url": "https://docentes.fct.unl.pt/sites/default/files/omateus/files/mateus_-_2006_-_late_jurassic_dinosaurs_from_the_morrison_formation_usa_the_lourinha_and_alcobaca_formations_portugal_and_the_tendaguru_beds_tanzania_a_comparison.pdf",
+      "title": "Late Jurassic dinosaurs from the Morrison Formation (USA), the Lourinhã and Alcobaça formations (Portugal), and the Tendaguru Beds (Tanzania): a comparison",
+      "publisher": "New Mexico Museum of Natural History and Science (Bulletin 36)",
+      "author": "Octávio Mateus",
+      "date_published": "2006",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-antunes2003",
+      "url": "https://docentes.fct.unl.pt/omateus/files/antunes_mateus_2003_dinosaurs_of_portugal.pdf",
+      "title": "Dinosaurs of Portugal",
+      "publisher": "Comptes Rendus Palevol (Elsevier)",
+      "author": "M.T. Antunes, O. Mateus",
+      "date_published": "2003",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-lourinha",
+      "url": "https://nominatim.openstreetmap.org/search?q=Lourinh%C3%A3%2C%20Portugal&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Lourinhã",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2023-09.pdf",
+      "title": "International Chronostratigraphic Chart v2023/09",
+      "publisher": "International Commission on Stratigraphy",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the formation boundary: the dinosaur genera are listed for the Lourinhã and Alcobaça formations together, and Allosaurus sp. in the 2003 review is from the Alcobaça beds. The pin is the town, not a single quarry. Ages are stages only.",
+  "author": "historian-agent:dino-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-154800000",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "Kimmeridgian to Tithonian river-delta and coastal-plain deposits, with occasional marine flooding, built up in what is now west-central Portugal.",
+        "source": "src-mateus2006"
+      },
+      {
+        "span": "-149200000",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "At Paimogo near Lourinhã a nest of about one hundred theropod eggs, some with embryo bones of Lourinhanosaurus, was found in 1993.",
+        "source": "src-antunes2003"
+      },
+      {
+        "span": "-145000000",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "These remained the only dinosaur embryos found in Europe by 2003, and their bone structure points to fast early growth.",
+        "source": "src-antunes2003",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:45:38.307Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

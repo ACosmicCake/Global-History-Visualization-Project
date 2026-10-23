@@ -8,10 +8,12 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const RECORDS = path.resolve(HERE, '..', 'atlas', 'records');
 const WIKI_LINKS = path.resolve(HERE, '..', 'atlas', 'wiki_links.json');
 
-// Only the fields the engine needs for pins; the full record is fetched on click.
+// Only the fields the engine needs for pins; the full record is fetched on click. The summary is only the hover
+// tooltip's teaser, so it is cut to about two lines (it was most of the pin list's size).
+const teaser = s => { s = String(s || ''); return s.length <= 180 ? s : s.slice(0, 180).replace(/\s+\S*$/, '') + '…'; };
 function pin(r) {
   return {
-    id: r.id, title: r.title, summary: r.summary, kind: r.kind, scale: r.scale, importance: r.importance?.score ?? 1,
+    id: r.id, title: r.title, summary: teaser(r.summary), kind: r.kind, scale: r.scale, importance: r.importance?.score ?? 1,
     confidence: r.confidence, domains: r.domains, start: r.when?.start?.year, end: r.when?.end?.year ?? r.when?.start?.year,
     display: r.when?.display, lat: r.where?.lat, lon: r.where?.lon, global: (r.where?.uncertainty_km ?? 0) >= 5000 || r.where?.geometry?.type === 'global', paleo: r.where?.paleo?.lat != null ? r.where.paleo : null,
     geometry: r.where?.geometry?.type, waypoints: (r.where?.geometry?.waypoints || []).map(w => ({ lat: w.lat, lon: w.lon, year: typeof w.year === 'number' ? w.year : null, date: w.date, label: w.label })),

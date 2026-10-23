@@ -1,0 +1,153 @@
+{
+  "id": "-120my-gadoufaoua-nigersaurus",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Gadoufaoua, Elrhaz Formation, Niger",
+  "summary": "At Gadoufaoua on the western edge of the Ténéré Desert, Niger, fluvial sandstones of the Aptian–Albian Elrhaz Formation (about 112 million years old by one estimate) hold the sauropod Nigersaurus, the spinosaurid Suchomimus, the iguanodonts Ouranosaurus and Lurdusaurus, two newly described theropods and the giant crocodyliform Sarcosuchus, with only freshwater aquatic fauna.",
+  "when": {
+    "start": {
+      "year": -121400000
+    },
+    "end": {
+      "year": -100500000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Stage bounds from the ICS chart: Aptian base 121.4 Ma to Albian top 100.5 Ma. Sereno and Brusatte (2008) give about 112 Ma for the formation. The id says 120 Ma, which is the older end of the range."
+    },
+    "as_recorded": [
+      {
+        "calendar": "stage",
+        "value": "The beds are considered to be Aptian-to-Albian in age",
+        "source": "src-sereno2007"
+      },
+      {
+        "calendar": "Ma",
+        "value": "Aptian–Albian, ca. 112 Ma",
+        "source": "src-sereno2008"
+      }
+    ],
+    "display": "Aptian–Albian, c. 121 to 100 Ma (about 112 Ma by one estimate)"
+  },
+  "where": {
+    "lat": 16.4333,
+    "lon": 9.1167,
+    "elevation_m": null,
+    "modern_name": "Gadoufaoua, western edge of the Ténéré Desert, Agadez region, Niger",
+    "historical_name": "Elrhaz Formation (Tegama Group), Gadoufaoua, African interior far from the Benue Trough deltas; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-sereno2008"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A major Early Cretaceous African dinosaur assemblage that includes one of the most common large herbivores of its day."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sereno2007",
+      "url": "https://sites.ohio.edu/witmerl/Downloads/2007_Sereno_Wilson_Witmer_et-al_Nigersaurus_Supporting%20Information.pdf",
+      "title": "Structural extremes in a Cretaceous dinosaur, Supporting Information Text S1: Geologic setting",
+      "publisher": "PLoS ONE (Public Library of Science)",
+      "author": "P.C. Sereno et al.",
+      "date_published": "2007",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sereno2008",
+      "url": "https://app.pan.pl/archive/published/app53/app53-015.pdf",
+      "title": "Basal abelisaurid and carcharodontosaurid theropods from the Lower Cretaceous Elrhaz Formation of Niger",
+      "publisher": "Acta Palaeontologica Polonica (Polish Academy of Sciences)",
+      "author": "P.C. Sereno, S.L. Brusatte",
+      "date_published": "2008",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2023-09.pdf",
+      "title": "International Chronostratigraphic Chart v2023/09",
+      "publisher": "International Commission on Stratigraphy",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age: the two papers say Aptian–Albian and about 112 Ma; the id’s 120 Ma is not stated by either. The pin gives the paper’s degrees and minutes (N 16°26′, E 9°7′), accurate to a few km at best, and the fossil area is wider.",
+  "author": "historian-agent:dino-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-112000000",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Cross-bedded river sandstones of the Elrhaz Formation formed in Aptian–Albian time, about 112 million years ago by one estimate, far from deltas.",
+        "source": "src-sereno2008"
+      },
+      {
+        "span": "-112000000",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Nigersaurus was one of the most common large herbivores of its day, while the spinosaurid Suchomimus was the most common large theropod.",
+        "source": "src-sereno2007"
+      },
+      {
+        "span": "2008",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Described in 2008, the abelisaurid Kryptops and carcharodontosaurid Eocarcharia are among the earliest known members of their groups, living beside Suchomimus.",
+        "source": "src-sereno2008",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:45:39.516Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

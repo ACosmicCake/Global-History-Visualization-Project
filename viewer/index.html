@@ -87,11 +87,21 @@
   #emphasis-flag { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: max(16px, env(safe-area-inset-top, 0px)); font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); padding: 4px 8px; border-radius: 6px; z-index: 2; }
   #hint { position: absolute; left: 50%; bottom: 200px; transform: translateX(-50%); padding: 6px 14px; font-size: 12px; color: var(--soft); white-space: nowrap; z-index: 2; transition: opacity .8s; pointer-events: none; }
   #hint.fade { opacity: 0; }
-  /* planet-wide records (no meaningful single place) sit above the time console instead of on the globe */
-  #planet { position: absolute; left: 50%; bottom: 236px; transform: translateX(-50%); display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: center; max-width: min(720px, calc(100vw - 32px)); padding: 6px 10px; z-index: 2; font-size: 12px; }
-  #planet > span { color: var(--soft); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; margin-right: 2px; }
-  #planet button { font: inherit; color: var(--ink, #e9edf4); background: rgba(255,255,255,0.06); border: 1px solid var(--rule); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
-  #planet button:hover { background: rgba(255,255,255,0.12); }
+  /* planet-wide records (no single place): a faint ring on the globe's edge and one small pill above it that opens a short list */
+  #planet-ring { position: absolute; border-radius: 50%; pointer-events: none; z-index: 1; box-shadow: 0 0 0 1px rgba(217,179,106,.18), 0 0 18px rgba(217,179,106,.10); }
+  #planet { position: absolute; left: 0; top: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; width: 0; will-change: transform; }
+  #planet .pw-pill { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; padding: 4px 11px 4px 9px; border-radius: 999px; border: 1px solid rgba(217,179,106,.32);
+    background: rgba(10,16,28,.62); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: var(--soft); font: 500 10px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+  #planet .pw-pill:hover, #planet .pw-pill[aria-expanded=true] { border-color: var(--brass); color: var(--text); }
+  #planet .pw-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brass); box-shadow: 0 0 8px var(--brass); }
+  #planet .pw-n { color: var(--brass); }
+  #planet .pw-one { text-transform: none; letter-spacing: 0; font-size: 12px; font-family: inherit; color: var(--text); max-width: 220px; overflow: hidden; text-overflow: ellipsis; }
+  #planet .pw-list { list-style: none; margin: 6px 0 0; padding: 4px; width: 290px; max-height: 300px; overflow-y: auto; border-radius: 10px; border: 1px solid var(--rule-strong); background: var(--glass-strong); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 10px 28px rgba(0,0,0,.45); }
+  #planet .pw-list button { width: 100%; display: grid; grid-template-columns: 16px 1fr; column-gap: 8px; text-align: left; padding: 6px 7px; border: 0; border-radius: 6px; background: transparent; color: var(--text); cursor: pointer; }
+  #planet .pw-list button:hover { background: var(--brass-dim); }
+  #planet .pw-list img { width: 16px; height: 16px; grid-row: span 2; margin-top: 1px; }
+  #planet .pw-list .t { font-size: 12.5px; line-height: 1.3; }
+  #planet .pw-list .d { font: 10px var(--f-mono); color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   @media (max-width: 760px) { #hint { white-space: normal; text-align: center; width: calc(100vw - 48px); bottom: 170px; } }
   #loading { position: absolute; inset: 0; display: grid; place-items: center; z-index: 5; background: var(--ink); transition: opacity .6s; font: 12px var(--f-mono); letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
   #loading.gone { opacity: 0; pointer-events: none; }
@@ -259,7 +269,8 @@
 <div id="notice" class="glass" hidden></div>
 <div id="empty" class="glass" hidden><p id="empty-text"></p><button id="empty-btn">Show the whole period</button></div>
 <div id="emphasis-flag" class="glass" hidden>Monuments enlarged for visibility</div>
-<div id="planet" class="glass" hidden aria-label="Planet-wide records"></div>
+<div id="planet-ring" hidden aria-hidden="true"></div>
+<div id="planet" hidden aria-label="Planet-wide records"></div>
 <div id="hint" class="glass">Drag to rotate · scroll or pinch to zoom · click a pin to read its record</div>
 
 <section id="panel" class="glass" hidden aria-live="polite"></section>
@@ -292,6 +303,7 @@
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js"></script>
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <script src="space.js"></script>
+<script src="spacecraft.js"></script>
 <script src="sequence.js"></script>
 <script src="app.js"></script>
 </body>

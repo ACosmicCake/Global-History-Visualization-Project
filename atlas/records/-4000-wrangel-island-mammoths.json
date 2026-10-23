@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-4000-wrangel-island-mammoths",
+  "kind": "place",
+  "title": "Wrangel Island: the last woolly mammoths",
+  "summary": "Wrangel Island, off Siberia, was the last refuge of the woolly mammoth. After rising seas cut the island off, a population descended from fewer than ten animals recovered to about 300 breeding individuals and lasted some 6,000 years, dying out around 4,000 years ago. Genomes from 21 mammoths show inbreeding, but the population stayed stable until a rapid, unexplained collapse.",
+  "when": {
+    "start": {
+      "year": -8000
+    },
+    "end": {
+      "year": -2000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 1000,
+      "start_plus_years": 1000,
+      "end_minus_years": 500,
+      "end_plus_years": 500,
+      "note": "Extinction \"some 4,000 years ago\" and survival \"another 6,000 years\" are rounded figures; the start is derived from these."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "What eventually caused the extinction of the Wrangel population some 4,000 years ago remains a mystery",
+        "source": "src-su"
+      },
+      {
+        "calendar": "years ago",
+        "value": "Four thousand years ago, on an island off the coast of what is now Siberia",
+        "source": "src-sn"
+      }
+    ],
+    "display": "about 10,000 to 4,000 years ago"
+  },
+  "where": {
+    "lat": 71.2247,
+    "lon": -178.717,
+    "elevation_m": null,
+    "modern_name": "Wrangel Island, Chukotka Autonomous Okrug, Russia",
+    "historical_name": "Arctic island off northeastern Siberia (no polity)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 80,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "The last known woolly mammoth population, whose genomes show how a small population persisted for millennia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-39ka-yuka-mammoth",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-su",
+      "url": "https://su.se/english/news/new-genetic-study-reveals-the-woolly-mammoths-journey-towards-extinction-1.746552",
+      "title": "New genetic study reveals the woolly mammoths' journey towards extinction",
+      "publisher": "Stockholm University",
+      "date_published": "2024-06-27",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sn",
+      "url": "https://www.sciencenews.org/article/last-woolly-mammoths-species-extinct",
+      "title": "The last woolly mammoths offer new clues to why the species went extinct",
+      "publisher": "Science News",
+      "author": "Claire Yuan",
+      "date_published": "2024-06-27",
+      "accessed": "2026-10-23",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=R1866564&format=json",
+      "title": "Wrangel Island (OSM relation 1866564)",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 22,
+    "beats": [
+      {
+        "span": "-8000",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "When rising seas formed the island, fewer than ten mammoths survived to found its population.",
+        "source": "src-su"
+      },
+      {
+        "span": "-2000",
+        "action": "region.fill { radius_km: 120 }",
+        "caption": "About 4,000 years ago the last mammoths died out; numbers had held near 300 until just before, so the collapse was very rapid.",
+        "source": "src-su",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the id year: the queue id says 4000 BCE but the sources say about 4,000 years ago (roughly 2000 BCE), which the record uses. Start year is derived from \"10,000 years ago\" mainland loss and 6,000 years of survival.",
+  "author": "historian-agent:deep-c",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:41:24.618Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

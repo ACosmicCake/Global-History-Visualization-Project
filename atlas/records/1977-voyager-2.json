@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1977-voyager-2",
+  "kind": "event",
+  "title": "Voyager 2 launch and Grand Tour of the outer planets",
+  "summary": "NASA launched Voyager 2 from Cape Canaveral on 20 August 1977. It flew past Jupiter in 1979, Saturn in 1981, Uranus in 1986 and Neptune in 1989, and remains the only spacecraft to have visited Uranus and Neptune.",
+  "when": {
+    "start": {
+      "year": 1977,
+      "iso": "1977-08-20"
+    },
+    "end": {
+      "year": 1989,
+      "iso": "1989-08-25"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Launch is dated 20 August 1977 (UT) and the Neptune closest approach 25 August 1989; the span runs between them."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Aug. 20, 1977 / 14:29:44 UT",
+        "source": "src-nasa-v2"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "closest approach on 09 July 1979",
+        "source": "src-nssdc-v2"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "25 August 1989",
+        "source": "src-nssdc-v2"
+      }
+    ],
+    "display": "20 August 1977 launch; Neptune flyby 25 August 1989"
+  },
+  "where": {
+    "lat": 28.5834,
+    "lon": -80.583,
+    "elevation_m": null,
+    "modern_name": "Cape Canaveral launch site (Launch Complex 41), Florida; the spacecraft flew past Jupiter, Saturn, Uranus and Neptune",
+    "historical_name": "Cape Canaveral Air Force Station, Florida, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-spacedevs-slc41",
+      "src-wikidata-ccsfs"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The only spacecraft to have visited Uranus and Neptune, and a mission whose gravity-assist route linked all four giant planets."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1957-launch-of-sputnik-1",
+      "type": "related"
+    },
+    {
+      "id": "1969-07-20-apollo-11",
+      "type": "related"
+    },
+    {
+      "id": "1972-pioneer-10",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-v2",
+      "url": "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "title": "Voyager 2",
+      "publisher": "NASA Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jpl-v2",
+      "url": "https://www.jpl.nasa.gov/missions/voyager-2/",
+      "title": "Voyager 2",
+      "publisher": "NASA Jet Propulsion Laboratory",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nssdc-v2",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+      "title": "Voyager 2",
+      "publisher": "NASA Space Science Data Coordinated Archive",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-spacedevs-slc41",
+      "url": "https://lldev.thespacedevs.com/2.3.0/pads/29",
+      "title": "Space Launch Complex 41, Cape Canaveral SFS (pad record)",
+      "publisher": "The Space Devs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wikidata-ccsfs",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q334465.json",
+      "title": "Cape Canaveral Space Force Station (Wikidata Q334465)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1977-08-20",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Voyager 2 lifted off from Cape Canaveral, Florida, on 20 August 1977.",
+        "source": "src-nasa-v2"
+      },
+      {
+        "span": "1986-01-24",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "It reached Uranus on 24 January 1986, its third giant-planet flyby.",
+        "source": "src-nssdc-v2"
+      },
+      {
+        "span": "1989-08-25",
+        "action": "pulse { radius_km: 120 }",
+        "caption": "The Neptune flyby in 1989 made Voyager 2 the only craft to have visited both Uranus and Neptune.",
+        "source": "src-jpl-v2",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of: NASA pages disagree on the date Voyager 2 entered interstellar space (5 Nov vs 25 Nov vs 10 Dec 2018), so that milestone is omitted. Saturn closest approach is 25 or 26 Aug 1981 depending on page.",
+  "author": "historian-agent:space-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:26:28.851Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2015-new-horizons-pluto",
+  "kind": "event",
+  "title": "New Horizons flies past Pluto",
+  "summary": "New Horizons launched from Cape Canaveral on 19 January 2006 and passed Pluto on 14 July 2015, the first close look at the dwarf planet. It showed Pluto and its moons to be far more complex than expected, including a vast nitrogen-ice plain, then went on to the Kuiper Belt.",
+  "when": {
+    "start": {
+      "year": 2006,
+      "iso": "2006-01-19"
+    },
+    "end": {
+      "year": 2015,
+      "iso": "2015-07-14"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Launch 19 January 2006; Pluto closest approach 14 July 2015 (about 11:48-11:49 UT)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Jan. 19, 2006",
+        "source": "src-nasa-nh"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "July 14, 2015",
+        "source": "src-nasa-nh"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "14 July 2015",
+        "source": "src-nssdc-nh"
+      }
+    ],
+    "display": "Launched 19 January 2006; Pluto flyby 14 July 2015"
+  },
+  "where": {
+    "lat": 28.5834,
+    "lon": -80.583,
+    "elevation_m": null,
+    "modern_name": "Cape Canaveral launch site, Florida; the spacecraft flew past Pluto",
+    "historical_name": "Cape Canaveral Air Force Station, Florida, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-spacedevs-slc41",
+      "src-wikidata-ccsfs"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First spacecraft to visit Pluto, revealing a geologically active world and extending exploration to the Kuiper Belt."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1977-voyager-2",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-nh",
+      "url": "https://science.nasa.gov/mission/new-horizons/",
+      "title": "New Horizons",
+      "publisher": "NASA Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nssdc-nh",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-001A",
+      "title": "New Horizons",
+      "publisher": "NASA Space Science Data Coordinated Archive",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-apl-nh",
+      "url": "https://www.jhuapl.edu/destinations/missions/new-horizons",
+      "title": "New Horizons",
+      "publisher": "Johns Hopkins Applied Physics Laboratory",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-spacedevs-slc41",
+      "url": "https://lldev.thespacedevs.com/2.3.0/pads/29",
+      "title": "Space Launch Complex 41, Cape Canaveral SFS (pad record)",
+      "publisher": "The Space Devs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wikidata-ccsfs",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q334465.json",
+      "title": "Cape Canaveral Space Force Station (Wikidata Q334465)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "2006-01-19",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "New Horizons launched from Cape Canaveral on an Atlas V rocket.",
+        "source": "src-nasa-nh"
+      },
+      {
+        "span": "2015-07-14",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "It flew through the Pluto system on 14 July 2015, the first close look at the dwarf planet.",
+        "source": "src-nasa-nh"
+      },
+      {
+        "span": "2019-01-01",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "The spacecraft then flew past Kuiper Belt object Arrokoth on 1 January 2019.",
+        "source": "src-nssdc-nh",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the pin (launch site, not Pluto). The JHUAPL page was only confirmed for the two dates via a fetch summary.",
+  "author": "historian-agent:space-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:26:33.941Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "-76my-dinosaur-provincial-park",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Dinosaur Provincial Park, Alberta",
+  "summary": "Dinosaur Provincial Park in Alberta exposes Campanian strata of the Oldman and Dinosaur Park formations, dated by uranium-lead to 76.72–74.30 million years, laid down on alluvial to coastal plains west of the Bearpaw seaway. They yield over 166 vertebrate taxa, including 51 non-avian dinosaur species such as Gorgosaurus, Centrosaurus, Styracosaurus and Chasmosaurus.",
+  "when": {
+    "start": {
+      "year": -76720000
+    },
+    "end": {
+      "year": -74300000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "U-Pb range for the strata from the IUGS geoheritage page. Argon dates on bentonites in the Dinosaur Park Formation give about 76.1 to 77.0 Ma (Campbell et al. 2016), so the two methods overlap but do not agree exactly."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "the strata are 76.72 to 74.30 million years old (U-Pb dating)",
+        "source": "src-iugs-dpp"
+      },
+      {
+        "calendar": "Ma",
+        "value": "bentonite dates from about 76.1 to 77.0 million years ago",
+        "source": "src-campbell2016"
+      }
+    ],
+    "display": "Late Cretaceous (Campanian), c. 76.7 to 74.3 Ma"
+  },
+  "where": {
+    "lat": 50.76,
+    "lon": -111.5197,
+    "elevation_m": null,
+    "modern_name": "Dinosaur Provincial Park, near Patricia, Alberta, Canada",
+    "historical_name": "Belly River Group (Oldman and Dinosaur Park formations), western shore of the Western Interior Seaway; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-iugs-dpp"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "One of the richest Late Cretaceous dinosaur assemblages, with over 500 specimens in museums worldwide."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-iugs-dpp",
+      "url": "https://iugs-geoheritage.org/?p=4069",
+      "title": "Dinosaur Provincial Park (IUGS geological heritage site)",
+      "publisher": "International Union of Geological Sciences",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-campbell2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4699738",
+      "title": "A re-evaluation of the chasmosaurine ceratopsid genus Chasmosaurus from the Upper Cretaceous (Campanian) Dinosaur Park Formation of western Canada",
+      "publisher": "PLoS ONE (Public Library of Science), via PubMed Central",
+      "author": "J.A. Campbell et al.",
+      "date_published": "2016",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of how the two dating methods fit together. Coordinates are the IUGS page’s degrees-minutes-seconds. I read only the first 100,000 characters of the PLoS ONE article.",
+  "author": "historian-agent:dino-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-76720000",
+        "action": "region.fill { radius_km: 40 }",
+        "caption": "Alluvial to coastal plains west of the Bearpaw seaway laid down the Oldman and Dinosaur Park formations in Campanian time.",
+        "source": "src-iugs-dpp"
+      },
+      {
+        "span": "-76100000",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "Among over 166 vertebrate taxa are 51 non-avian dinosaur species; bonebeds hold hundreds of Centrosaurus, Coronosaurus or Styracosaurus.",
+        "source": "src-iugs-dpp"
+      },
+      {
+        "span": "1900",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "More than 110 years of collecting has sent over 500 dinosaur specimens from the park to museums worldwide.",
+        "source": "src-iugs-dpp",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:45:42.661Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-190my-lufeng-formation-lufengosaurus",
+  "kind": "place",
+  "title": "Lufeng Formation, Yunnan: the Lufengosaurus fauna",
+  "summary": "Red-bed strata of the Lufeng Basin in Yunnan, China, hold the Early Jurassic Lufengosaurus fauna, dated by one museum to about 195–190 million years ago. Lufengosaurus, a plant-eating prosauropod, shares the beds with other sauropodomorphs such as Yunnanosaurus and Jingshanosaurus, plus theropods and ornithischians, found in digs since the 1940s.",
+  "when": {
+    "start": {
+      "year": -195000000
+    },
+    "end": {
+      "year": -190000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 6000000,
+      "start_plus_years": 2000000,
+      "end_minus_years": 2000000,
+      "end_plus_years": 5000000,
+      "note": "Numeric range 195–190 Ma is the Australian Museum's figure for Lufengosaurus; the Acta Palaeontologica Polonica paper gives the stage as Hettangian–Sinemurian and the type locality as Shawan Member (Hettangian), which can reach older than 195 Ma. Uncertainties are editorial allowances."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Million years ago",
+        "value": "about 195 to 190 million years ago",
+        "source": "src-ausmus"
+      },
+      {
+        "calendar": "Stage",
+        "value": "Early Jurassic (Hettangian–Sinemurian)",
+        "source": "src-app"
+      }
+    ],
+    "display": "c. 195–190 million years ago (Early Jurassic)"
+  },
+  "where": {
+    "lat": 25.1476,
+    "lon": 101.9766,
+    "elevation_m": null,
+    "modern_name": "Lufeng County (Shawan area), Chuxiong Prefecture, Yunnan, China",
+    "historical_name": "Lufeng Basin, southwestern China (Early Jurassic); no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Classic Early Jurassic dinosaur fauna of Asia, type locality of Lufengosaurus."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-app",
+      "url": "https://www.app.pan.pl/archive/published/app60/app000012013.pdf",
+      "title": "Vertebral fusion in two Early Jurassic sauropodomorph dinosaurs from the Lufeng Formation of Yunnan, China (Xing et al. 2015)",
+      "publisher": "Acta Palaeontologica Polonica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ausmus",
+      "url": "https://australian.museum/learn/dinosaurs/fact-sheets/lufengosaurus-huenei/",
+      "title": "Lufengosaurus huenei",
+      "publisher": "Australian Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/search.html?q=Lufeng&country=CN&featureClass=A",
+      "title": "Lufeng Xian, Yunnan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Lufeng County seat per GeoNames, a proxy for the basin and for Shawan village (no coordinates for Shawan were found). Ages differ across sources; the 195–190 Ma range comes from one museum fact sheet.",
+  "author": "historian-agent:dino-a",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-195000000",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "Red-bed strata of the Lufeng Basin in Yunnan, Early Jurassic in age, hold a rich dinosaur assemblage called the Lufengosaurus fauna.",
+        "source": "src-app"
+      },
+      {
+        "span": "-195000000",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Shawan village area is the type locality of Lufengosaurus huenei, a plant-eating prosauropod, in the Shawan Member.",
+        "source": "src-app"
+      },
+      {
+        "span": "1941",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Digs since the 1940s also yielded Yunnanosaurus, Jingshanosaurus, theropods and ornithischians from the same basin.",
+        "source": "src-app",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:31:03.532Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

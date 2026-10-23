@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-150my-tendaguru-beds",
+  "kind": "place",
+  "title": "Tendaguru Beds, Tanzania: Late Jurassic dinosaurs of East Africa",
+  "summary": "Near Tendaguru hill by Lindi in southern Tanzania, Late Jurassic strata (Kimmeridgian–Tithonian, roughly 157–145 million years old) yielded the dinosaurs Giraffatitan, Dicraeosaurus, Kentrosaurus, Elaphrosaurus and Dysalotosaurus. A Berlin museum expedition dug about 80 square kilometres there in 1909–1913, then German East Africa, and sent about 225 tons of material to Germany.",
+  "when": {
+    "start": {
+      "year": -157000000
+    },
+    "end": {
+      "year": -145000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Museum für Naturkunde Berlin states 'roughly 157 to 145 million years old' and Kimmeridgian–Tithonian. No uncertainty is given."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma, stage",
+        "value": "Late Jurassic (Kimmeridgian-Tithonian), and are therefore between 157 and 145 MA old",
+        "source": "src-mfn"
+      }
+    ],
+    "display": "c. 157–145 million years ago (Late Jurassic, Kimmeridgian–Tithonian)"
+  },
+  "where": {
+    "lat": -10.05,
+    "lon": 39.1167,
+    "elevation_m": null,
+    "modern_name": "Tendaguru hill area near Lindi, southern Tanzania",
+    "historical_name": "Eastern Africa coast, Late Jurassic; excavated 1909–1913 in German East Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of Africa’s richest Late Jurassic dinosaur sites, source of mounted skeletons in Berlin."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-mfn",
+      "url": "https://website-archiv.museumfuernaturkunde.berlin/en/research/virtual-access-fossil-and-archival-material-german-tendaguru-expedition-1909-1913",
+      "title": "Virtual access to fossil and archival material from the German Tendaguru Expedition (1909-1913)",
+      "publisher": "Museum für Naturkunde Berlin",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nhm",
+      "url": "https://www.nhm.ac.uk/discover/a-history-of-african-dinosaurs-unique-narratives-starting-to-be-told.html",
+      "title": "A history of African dinosaurs: unique narratives starting to be told",
+      "publisher": "Natural History Museum, London",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1432102.json",
+      "title": "Tendaguru Formation (Q1432102)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Neither museum page describes the ancient environment, so none is given. Coordinates are the Wikidata point for the formation (precision about 0.02°), not a surveyed pin of the hill. Both museums give 225 tons; another MfN page said about 230 tonnes.",
+  "author": "historian-agent:dino-a",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-150000000",
+        "action": "region.fill { radius_km: 30 }",
+        "caption": "Late Jurassic Tendaguru strata, Kimmeridgian–Tithonian in age, cover about 80 square kilometres around Tendaguru hill near Lindi.",
+        "source": "src-mfn"
+      },
+      {
+        "span": "-150000000",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Giraffatitan, Dicraeosaurus, Kentrosaurus, Elaphrosaurus and Dysalotosaurus are the dinosaurs the Berlin museum lists from these beds.",
+        "source": "src-mfn"
+      },
+      {
+        "span": "1909",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "Between 1909 and 1913 a Berlin expedition collected about 225 tons of material, which remains in Germany.",
+        "source": "src-nhm",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:31:06.490Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "1968-apollo-8-earthrise",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Apollo 8 and the Earthrise photograph",
+  "summary": "Apollo 8 carried Frank Borman, James Lovell and William Anders from Kennedy Space Center on 21 December 1968, the first mission to take humans to the Moon and back. On 24 December, in lunar orbit, Anders photographed Earth rising over the Moon's horizon, the image known as Earthrise. The crew splashed down on 27 December.",
+  "when": {
+    "start": {
+      "year": 1968,
+      "iso": "1968-12-24"
+    },
+    "end": {
+      "year": 1968,
+      "iso": "1968-12-24"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date is that of the Earthrise photograph in lunar orbit; the whole mission ran 21–27 December 1968."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Dec. 24, 1968",
+        "source": "src-nasa-earthrise"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "December 21, 1968",
+        "source": "src-nasa-apollo8"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "December 27, 1968",
+        "source": "src-si-apollo8"
+      }
+    ],
+    "display": "24 December 1968 (mission 21–27 December 1968)"
+  },
+  "where": {
+    "lat": 28.608389,
+    "lon": -80.604333,
+    "elevation_m": null,
+    "modern_name": "Launch Complex 39A, Kennedy Space Center, Florida, USA (pin marks the launch pad; the photograph was taken in lunar orbit)",
+    "historical_name": "Launch Pad 39A, NASA Kennedy Space Center, Florida, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wd-39a"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "First crewed flight around the Moon; its Earthrise image became an icon of Earth seen from space."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1969-07-20-apollo-11",
+      "type": "related"
+    },
+    {
+      "id": "1961-gagarin-first-human-spaceflight",
+      "type": "related"
+    },
+    {
+      "id": "1947-cold-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-earthrise",
+      "url": "https://www.nasa.gov/image-article/apollo-8-astronaut-bill-anders-captures-earthrise/",
+      "title": "Apollo 8 Astronaut Bill Anders Captures Earthrise",
+      "publisher": "NASA",
+      "author": "NASA",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa-apollo8",
+      "url": "https://www.nasa.gov/mission/apollo-8/",
+      "title": "Apollo 8",
+      "publisher": "NASA",
+      "author": "NASA",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-si-apollo8",
+      "url": "https://airandspace.si.edu/explore/stories/apollo-missions/apollo-8",
+      "title": "Apollo 8",
+      "publisher": "Smithsonian National Air and Space Museum",
+      "author": "Smithsonian National Air and Space Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-39a",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q24256513.json",
+      "title": "Kennedy Space Center Launch Complex 39A (Wikidata Q24256513)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is the launch pad, not the Moon. The NASA mission page names Pad 39A in a linked article title that the page summary only indirectly confirmed.",
+  "author": "historian-agent:space-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1968-12-21",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "Apollo 8 launched from Kennedy Space Center with Borman, Lovell and Anders on 21 December 1968.",
+        "source": "src-nasa-apollo8"
+      },
+      {
+        "span": "1968-12-24",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In lunar orbit on 24 December, Bill Anders photographed Earth rising above the Moon's horizon.",
+        "source": "src-nasa-earthrise"
+      },
+      {
+        "span": "2018",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "In 2018 the International Astronomical Union named a crater 'Anders' Earthrise' to commemorate the photograph.",
+        "source": "src-nasa-earthrise",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:27:35.376Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

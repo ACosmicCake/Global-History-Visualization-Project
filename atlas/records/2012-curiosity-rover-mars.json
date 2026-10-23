@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2012-curiosity-rover-mars",
+  "kind": "event",
+  "title": "Curiosity rover lands in Gale Crater, Mars",
+  "summary": "NASA launched the Curiosity rover on 26 November 2011 and landed it in Gale Crater on 6 August 2012 using a sky-crane descent. Its early findings showed chemical and mineral evidence of past habitable environments on Mars, and it later detected organic molecules in drilled rock.",
+  "when": {
+    "start": {
+      "year": 2011,
+      "iso": "2011-11-26"
+    },
+    "end": {
+      "year": 2012,
+      "iso": "2012-08-06"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Launch 26 November 2011; landing 05:32 UTC on 6 August 2012 (evening of 5 August PDT)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Nov. 26, 2011",
+        "source": "src-nasa-msl"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Aug. 6, 2012",
+        "source": "src-nasa-msl"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "launched on 26 November 2011",
+        "source": "src-nssdc-msl"
+      }
+    ],
+    "display": "Launched 26 November 2011; landed 6 August 2012"
+  },
+  "where": {
+    "lat": 28.5834,
+    "lon": -80.583,
+    "elevation_m": null,
+    "modern_name": "Cape Canaveral launch site, Florida; the rover landed in Gale Crater, Mars",
+    "historical_name": "Cape Canaveral Air Force Station, Florida, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-spacedevs-slc41",
+      "src-wikidata-ccsfs"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The largest Mars rover to date found evidence of past habitable environments, shaping later Mars exploration goals."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1976-viking-1-mars-landing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-msl",
+      "url": "https://science.nasa.gov/mission/msl-curiosity/",
+      "title": "Mars Science Laboratory: Curiosity Rover",
+      "publisher": "NASA Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jpl-msl",
+      "url": "https://www.jpl.nasa.gov/missions/mars-science-laboratory-curiosity-rover-msl/",
+      "title": "Mars Science Laboratory / Curiosity Rover",
+      "publisher": "NASA Jet Propulsion Laboratory",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nssdc-msl",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-070A",
+      "title": "Mars Science Laboratory",
+      "publisher": "NASA Space Science Data Coordinated Archive",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-spacedevs-slc41",
+      "url": "https://lldev.thespacedevs.com/2.3.0/pads/29",
+      "title": "Space Launch Complex 41, Cape Canaveral SFS (pad record)",
+      "publisher": "The Space Devs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wikidata-ccsfs",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q334465.json",
+      "title": "Cape Canaveral Space Force Station (Wikidata Q334465)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "2011-11-26",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Curiosity launched toward Mars from Cape Canaveral.",
+        "source": "src-nssdc-msl"
+      },
+      {
+        "span": "2012-08-06",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "It landed in Gale Crater using a parachute and a sky crane.",
+        "source": "src-jpl-msl"
+      },
+      {
+        "span": "2012",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Early analyses found chemical and mineral evidence of past habitable environments on Mars.",
+        "source": "src-nasa-msl",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the pin (launch site, not Gale Crater) and the exact landing time. The consequence beat is dated only to 2012 (early-mission findings).",
+  "author": "historian-agent:space-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:26:31.323Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

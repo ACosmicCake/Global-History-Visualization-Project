@@ -1,0 +1,166 @@
+{
+  "id": "-95my-huincul-formation-argentinosaurus",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Huincul Formation, Neuquén, Argentina (Argentinosaurus)",
+  "summary": "The Huincul Formation of Neuquén Province, Argentina, is a thick succession of Late Cretaceous fluvial deposits of middle Cenomanian to early Turonian age. Its dinosaurs include the titanosaur Argentinosaurus, first described in 1993 from Plaza Huincul, other sauropods such as Choconsaurus and Limaysaurus, and theropods including Mapusaurus, Skorpiovenator and Gualicho.",
+  "when": {
+    "start": {
+      "year": -100500000
+    },
+    "end": {
+      "year": -89800000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Bellardini et al. (2022) give middle Cenomanian to early Turonian; a table lists Argentinosaurus as Late Cenomanian. Bounds here are the Cenomanian base to the Turonian top in the ICS chart, wider than the stated interval. The id says 95 Ma, inside it."
+    },
+    "as_recorded": [
+      {
+        "calendar": "stage",
+        "value": "Middle Cenomanian–Early Turonian",
+        "source": "src-peapa2022"
+      },
+      {
+        "calendar": "stage",
+        "value": "Upper Cretaceous (Late Cenomanian)",
+        "source": "src-metode"
+      }
+    ],
+    "display": "Middle Cenomanian to early Turonian (bounds 100.5 to 89.8 Ma)"
+  },
+  "where": {
+    "lat": -38.9304,
+    "lon": -69.2002,
+    "elevation_m": null,
+    "modern_name": "Plaza Huincul, Neuquén Province, Argentina (the formation extends across the central Neuquén Basin)",
+    "historical_name": "Huincul Formation, Neuquén Basin, Patagonia; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-osm-huincul"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Home of Argentinosaurus and a diverse Cenomanian sauropod and theropod fauna."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-peapa2022",
+      "url": "https://peapaleontologica.org.ar/index.php/peapa/article/view/419",
+      "title": "New rebbachisaurid remains from the Huincul Formation (Middle Cenomanian–Early Turonian) of the central Neuquén Basin, Patagonia, Argentina",
+      "publisher": "Publicación Electrónica de la Asociación Paleontológica Argentina",
+      "author": "F. Bellardini et al.",
+      "date_published": "2022",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-metode",
+      "url": "https://metode.org/wp-content/uploads/2023/11/Argentinosaurus-huinculensis-ENG.pdf",
+      "title": "Argentinosaurus huinculensis, general information (Table 3)",
+      "publisher": "Mètode (metode.org)",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-huincul",
+      "url": "https://nominatim.openstreetmap.org/search?q=Plaza%20Huincul%20Argentina&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Plaza Huincul",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2023-09.pdf",
+      "title": "International Chronostratigraphic Chart v2023/09",
+      "publisher": "International Commission on Stratigraphy",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the second source, a table-only PDF whose parent article I could not identify, and of the numeric age (stages only). I read only the first 100,000 characters of the Bellardini article, so the geography is the Plaza Huincul town pin, not a quarry.",
+  "author": "historian-agent:dino-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-100500000",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "Thick fluvial deposits of the Huincul Formation, middle Cenomanian to early Turonian in age, built up across the central Neuquén Basin.",
+        "source": "src-peapa2022"
+      },
+      {
+        "span": "1993",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "Bonaparte and Coria described Argentinosaurus from vertebrae, sacrum, ilium and fibula found at Plaza Huincul.",
+        "source": "src-metode"
+      },
+      {
+        "span": "2022",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The formation also yields Mapusaurus and other theropods and several sauropods, so the giant titanosaur shared this river system with a varied fauna.",
+        "source": "src-peapa2022",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:45:42.032Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

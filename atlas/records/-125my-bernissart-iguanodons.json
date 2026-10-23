@@ -1,0 +1,161 @@
+{
+  "id": "-125my-bernissart-iguanodons",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Bernissart Iguanodon sinkhole, Belgium",
+  "summary": "In 1878 miners 322 m down the Sainte-Barbe coal pit at Bernissart, Belgium, broke into a clay-filled sinkhole packed with Iguanodon skeletons, among them Iguanodon bernissartensis and Mantellisaurus atherfieldensis, with crocodiles, turtles, fish and plants. The clay is lake sediment of Wealden type, dated from middle Barremian to earliest Aptian.",
+  "when": {
+    "start": {
+      "year": -125770000
+    },
+    "end": {
+      "year": -121400000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "The sources give only stages (middle Barremian to earliest Aptian). Bounds here are the Barremian stage from the ICS chart (125.77 to 121.4 Ma); the earliest Aptian lies just younger than the end bound and the middle-Barremian start is not resolved. The id says 125 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "stage",
+        "value": "late Late Barremian to earliest Aptian age was estimated for the iguanodon-bearing sediments",
+        "source": "src-godefroit2012"
+      }
+    ],
+    "display": "Barremian to earliest Aptian (c. 125.8 to 121 Ma)"
+  },
+  "where": {
+    "lat": 50.4786,
+    "lon": 3.6914,
+    "elevation_m": null,
+    "modern_name": "Bernissart, Hainaut, Wallonia, Belgium (pin at the municipality centre; the Sainte-Barbe pit lies within it)",
+    "historical_name": "Sainte-Barbe coal pit, Mons basin, Kingdom of Belgium in 1878; Early Cretaceous lake basin at the time of the animals",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-bernissart"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "One of the largest finds of articulated dinosaur skeletons, the first mounted as whole animals."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-godefroit2012",
+      "url": "https://biblio.naturalsciences.be/library-1/rbins-staff-publications/pdfs/Chapter%201%20-Godefroit%20et%20al.pdf",
+      "title": "Bernissart and the Iguanodons (Chapter 1 of Bernissart Dinosaurs and Early Cretaceous Terrestrial Ecosystems)",
+      "publisher": "Royal Belgian Institute of Natural Sciences (Indiana University Press)",
+      "author": "P. Godefroit et al.",
+      "date_published": "2012",
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rbins-glance",
+      "url": "https://www.naturalsciences.be/en/discover-join/discover/the-bernissart-iguanodons-at-a-glance",
+      "title": "The Bernissart Iguanodons at a glance",
+      "publisher": "Royal Belgian Institute of Natural Sciences",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-bernissart",
+      "url": "https://nominatim.openstreetmap.org/search?q=Bernissart%2C%20Belgium&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Bernissart",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2023-09.pdf",
+      "title": "International Chronostratigraphic Chart v2023/09",
+      "publisher": "International Commission on Stratigraphy",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the numeric dates: the museum chapter gives stages only. The two RBINS sources differ on the discovery date (28 Feb 1878 vs late March 1878), so the summary says only 1878. Skeleton counts also vary (about 30), so none is given.",
+  "author": "historian-agent:dino-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-125770000",
+        "action": "region.fill { radius_km: 30 }",
+        "caption": "Lake clays of Wealden type, laid down from the middle Barremian to earliest Aptian, filled a sinkhole near present-day Bernissart.",
+        "source": "src-godefroit2012"
+      },
+      {
+        "span": "1878",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "In 1878 miners 322 m underground in the Sainte-Barbe pit met the sinkhole and its Iguanodon skeletons.",
+        "source": "src-godefroit2012"
+      },
+      {
+        "span": "1883",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Louis De Pauw began mounting the skeletons in 1882 under Louis Dollo, and the first was shown in Brussels in 1883.",
+        "source": "src-rbins-glance",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:45:38.907Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

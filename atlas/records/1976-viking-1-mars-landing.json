@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1976-viking-1-mars-landing",
+  "kind": "event",
+  "title": "Viking 1 lands on Mars",
+  "summary": "Viking 1 landed in western Chryse Planitia on 20 July 1976, the first successful Mars landing. After launch from Cape Canaveral in August 1975, its lander searched the soil for signs of life and operated until contact was lost in November 1982.",
+  "when": {
+    "start": {
+      "year": 1976,
+      "iso": "1976-07-20"
+    },
+    "end": {
+      "year": 1976,
+      "iso": "1976-07-20"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Touchdown at 11:53:06 UT on 20 July 1976 per NSSDCA."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "landed on Mars on July 20, 1976",
+        "source": "src-astronomy-viking"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "launched on 20 August 1975",
+        "source": "src-nssdc-viking"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "July 20th, 1976",
+        "source": "src-gsfc-viking"
+      }
+    ],
+    "display": "20 July 1976 (launched 20 August 1975)"
+  },
+  "where": {
+    "lat": 28.5834,
+    "lon": -80.583,
+    "elevation_m": null,
+    "modern_name": "Cape Canaveral launch site, Florida; the lander touched down in western Chryse Planitia, Mars (22.27 N, 312.05 E planetocentric)",
+    "historical_name": "Cape Canaveral Air Force Station, Florida, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-spacedevs-slc41",
+      "src-wikidata-ccsfs"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "First successful landing on Mars with returned data, giving the first direct surface investigation of another planet."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1957-launch-of-sputnik-1",
+      "type": "related"
+    },
+    {
+      "id": "1969-07-20-apollo-11",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nssdc-viking",
+      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-075C",
+      "title": "Viking 1 Lander",
+      "publisher": "NASA Space Science Data Coordinated Archive",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-astronomy-viking",
+      "url": "https://www.astronomy.com/today-in-the-history-of-astronomy/july-20-1976-viking-1-lands-on-mars",
+      "title": "July 20, 1976: Viking 1 lands on Mars",
+      "publisher": "Astronomy magazine (Kalmbach Media)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gsfc-viking",
+      "url": "https://science.gsfc.nasa.gov/attic/mola/viking1.html",
+      "title": "Viking 1 landing site",
+      "publisher": "NASA Goddard Space Flight Center",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-spacedevs-slc41",
+      "url": "https://lldev.thespacedevs.com/2.3.0/pads/29",
+      "title": "Space Launch Complex 41, Cape Canaveral SFS (pad record)",
+      "publisher": "The Space Devs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wikidata-ccsfs",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q334465.json",
+      "title": "Cape Canaveral Space Force Station (Wikidata Q334465)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1975-08-20",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Viking 1 launched from Cape Canaveral aboard a Titan IIIE-Centaur rocket.",
+        "source": "src-nssdc-viking"
+      },
+      {
+        "span": "1976-07-20",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The lander touched down on Chryse Planitia, the first craft to land on Mars and return data.",
+        "source": "src-astronomy-viking"
+      },
+      {
+        "span": "1982-11",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "The lander kept working for more than six years, until contact was lost in November 1982.",
+        "source": "src-nssdc-viking",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the pin: it marks the Cape Canaveral launch site, and the Mars coordinates come from NSSDCA only. Soviet Mars 3 touched down in 1971 but returned no usable data per the sources.",
+  "author": "historian-agent:space-a",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:26:30.123Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

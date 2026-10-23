@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2021-james-webb-space-telescope",
+  "kind": "event",
+  "title": "James Webb Space Telescope launched",
+  "summary": "The James Webb Space Telescope, an international NASA, ESA and Canadian Space Agency infrared observatory, lifted off on an Ariane 5 rocket from Europe's Spaceport in French Guiana on 25 December 2021. Ground teams in Baltimore confirmed that it had deployed its solar array and was in good condition.",
+  "when": {
+    "start": {
+      "year": 2021
+    },
+    "end": {
+      "year": 2021
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Liftoff is given as 13:20 CET (ESA) and 12:20 UTC / 7:20 AM ET (NASA); the same instant."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 25, 2021",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "25 December",
+        "source": "src-esa"
+      }
+    ],
+    "display": "25 December 2021"
+  },
+  "where": {
+    "lat": 5.225978,
+    "lon": -52.777974,
+    "elevation_m": null,
+    "modern_name": "Guiana Space Centre, Kourou, French Guiana",
+    "historical_name": "Guiana Space Centre (Europe's Spaceport), Kourou, French Guiana, France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-aerovia"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Launch of the largest space infrared observatory, a joint NASA, ESA and CSA mission."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/mission/webb/launch/",
+      "title": "Webb's Launch",
+      "publisher": "NASA",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-esa",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Webb/Webb_liftoff_on_Ariane_5_to_unlock_secrets_of_the_Universe",
+      "title": "Webb liftoff on Ariane 5 to unlock secrets of the Universe",
+      "publisher": "European Space Agency",
+      "author": null,
+      "date_published": "2021-12-25",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-aerovia",
+      "url": "https://www.aerovia.org/facilities/guiana-space-centre",
+      "title": "Guiana Space Centre",
+      "publisher": "Aerovia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the spaceport as a whole (proxy for launch complex ELA-3, which NASA names); coordinates from a directory site, not institutional; Wikidata snippet (5°14'14\"N, 52°45'38\"W) differs by about 2 km.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T06:38:44.058Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

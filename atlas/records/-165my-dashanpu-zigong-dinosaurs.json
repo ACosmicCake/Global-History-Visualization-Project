@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-165my-dashanpu-zigong-dinosaurs",
+  "kind": "place",
+  "title": "Dashanpu, Zigong: Middle Jurassic dinosaur quarry",
+  "summary": "At Dashanpu in Zigong, Sichuan, a sandstone 3–5 metres thick near the base of the Lower Shaximiao Formation holds the greatest known concentration of Middle Jurassic dinosaurs, including the sauropods Shunosaurus and Dashanpusaurus, the stegosaur Huayangosaurus and Agilisaurus. The beds are lake and river deposits of a red-bed basin; the formation's exact age is debated.",
+  "when": {
+    "start": {
+      "year": -165000000
+    },
+    "end": {
+      "year": -165000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 9000000,
+      "start_plus_years": 4000000,
+      "end_minus_years": 9000000,
+      "end_plus_years": 4000000,
+      "note": "Sources give only \"Middle Jurassic\"; the pin date is a mid-period placement with wide uncertainty, not a measured age. The formation's exact age is debated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Epoch",
+        "value": "Middle Jurassic (no numeric age given)",
+        "source": "src-iugs"
+      },
+      {
+        "calendar": "Stage / Ma",
+        "value": "Bajocian to Bathonian (invertebrates) vs Bathonian-Callovian-Oxfordian (zircon); maximum depositional age 166.0 ± 1.5 Ma at Yunyang",
+        "source": "src-rsos"
+      }
+    ],
+    "display": "Middle Jurassic (exact age debated)"
+  },
+  "where": {
+    "lat": 29.3969,
+    "lon": 104.8242,
+    "elevation_m": null,
+    "modern_name": "Dashanpu, Zigong, Sichuan, China",
+    "historical_name": "Sichuan Basin, eastern Asia (Middle Jurassic); no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-iugs"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Type locality of the Shunosaurus Fauna and the greatest known concentration of Middle Jurassic dinosaurs."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-iugs",
+      "url": "https://iugs-geoheritage.org/?p=10700",
+      "title": "Dashanpu Middle Jurassic Dinosaur Fossils Site",
+      "publisher": "IUGS International Commission on Geoheritage",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rsos",
+      "url": "https://www.dinodata.de/bibliothek/pdf_n/2022/rsos.220794.pdf",
+      "title": "New macronarian from the Middle Jurassic of Chongqing, China (Dai et al. 2022)",
+      "publisher": "Royal Society Open Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Numeric age is a placeholder: no opened page dates Dashanpu in Ma; the range display (c. 170-159) reflects the debated Bathonian-Oxfordian span and is not stated verbatim. confidence set to contested. Coordinates from the IUGS page (29°23′49″N 104°49′27″E). Wang et al. 2018 (159 ± 2 Ma) was not opened.",
+  "author": "historian-agent:dino-a",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-165000000",
+        "action": "region.fill { radius_km: 40 }",
+        "caption": "Lake and river muds and sands, mostly purplish-red mudstone with sandstone, filled a red-bed basin in what is now the Sichuan Basin.",
+        "source": "src-iugs"
+      },
+      {
+        "span": "-165000000",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "A sandstone near the formation base holds Shunosaurus, Dashanpusaurus, Huayangosaurus and Agilisaurus.",
+        "source": "src-iugs"
+      },
+      {
+        "span": "1972",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "First uncovered in 1972, the site has yielded 29 species in 26 genera and is the type locality of the Shunosaurus Fauna.",
+        "source": "src-iugs",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:31:05.089Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

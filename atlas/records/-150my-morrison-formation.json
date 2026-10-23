@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-150my-morrison-formation",
+  "kind": "place",
+  "title": "Morrison Formation: Late Jurassic dinosaurs of western North America",
+  "summary": "The Morrison Formation, Late Jurassic rock across the western United States dated about 163.5–145 million years ago, holds many of North America's best-known dinosaurs: sauropods such as Apatosaurus, Diplodocus and Camarasaurus, plus Stegosaurus, Allosaurus and Ceratosaurus. At Dinosaur National Monument's Carnegie Quarry the beds are a floodplain with rivers, braided streams and small lakes in a warm, humid landscape.",
+  "when": {
+    "start": {
+      "year": -163500000
+    },
+    "end": {
+      "year": -145000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "NPS gives 163.5 to 145 Ma; Utah Geology gives Kimmeridgian, about 155–148 Ma. The range here is the NPS one; the narrower Utah range lies inside it."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "Late Jurassic, about 163.5 to 145 million years ago",
+        "source": "src-nps"
+      },
+      {
+        "calendar": "Stage / Ma",
+        "value": "Late Jurassic, Kimmeridgian stage, about 155–148 Ma",
+        "source": "src-utah"
+      }
+    ],
+    "display": "c. 163.5–145 million years ago (Late Jurassic; Kimmeridgian c. 155–148 Ma)"
+  },
+  "where": {
+    "lat": 40.4414,
+    "lon": -109.3012,
+    "elevation_m": null,
+    "modern_name": "Dinosaur Quarry, Dinosaur National Monument, Utah (representative site of a formation spanning the western United States)",
+    "historical_name": "Western interior of North America, Late Jurassic floodplain; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The most productive source of dinosaur fossils in North America, home to many iconic Late Jurassic dinosaurs."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/dino/learn/nature/morrison-formation.htm",
+      "title": "Morrison Formation",
+      "publisher": "National Park Service (Dinosaur National Monument)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps2",
+      "url": "https://home.nps.gov/subjects/fossils/jurassic-dinosaurs.htm",
+      "title": "Jurassic dinosaurs",
+      "publisher": "National Park Service (Fossils and Paleontology)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-utah",
+      "url": "https://utahgeology.com/?p=4931",
+      "title": "Morrison Formation",
+      "publisher": "Geology of Utah’s Grand Staircase (utahgeology.com)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/search.html?q=Dinosaur+National+Monument&country=US",
+      "title": "Dinosaur Quarry, Uintah County, Utah",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The formation covers about 1.5 million km², so the pin is only a representative quarry (GeoNames, Dinosaur Quarry). The two NPS pages share a publisher; utahgeology.com is a non-institutional class \"other\" source. Age sources differ (163.5–145 vs 155–148 Ma).",
+  "author": "historian-agent:dino-a",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-155000000",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "The Morrison Formation spreads across the western United States, laid down as an alluvial plain of river channels and floodplains.",
+        "source": "src-utah"
+      },
+      {
+        "span": "-150000000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At Carnegie Quarry the beds hold Apatosaurus, Diplodocus, Camarasaurus, Stegosaurus, Allosaurus and Ceratosaurus, in a floodplain with rivers and small lakes.",
+        "source": "src-nps"
+      },
+      {
+        "span": "-150000000",
+        "action": "pulse { radius_km: 120 }",
+        "caption": "So many fossils survived that Allosaurus, Apatosaurus, Diplodocus and Stegosaurus are known from the Morrison; the formation is known worldwide for dinosaurs.",
+        "source": "src-nps2",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:31:05.751Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

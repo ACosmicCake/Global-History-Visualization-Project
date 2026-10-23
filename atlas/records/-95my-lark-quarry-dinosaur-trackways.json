@@ -1,0 +1,167 @@
+{
+  "id": "-95my-lark-quarry-dinosaur-trackways",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Lark Quarry dinosaur trackways, Winton Formation, Queensland",
+  "summary": "At Lark Quarry, 95 km south-west of Winton in central-western Queensland, thousands of footprints in the mid-Cretaceous Winton Formation record dozens of dinosaurs on a river floodplain. Small ornithopod (Wintonopus) and small theropod (Skartopus) tracks are joined by large tracks once read as a theropod’s and reassessed in 2011 as an ornithopod’s. Sauropods such as Diamantinasaurus are known from the formation.",
+  "when": {
+    "start": {
+      "year": -113000000
+    },
+    "end": {
+      "year": -93900000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Romilio and Salisbury (2011) say late Albian–Cenomanian; Poropat et al. (2021) call the upper Winton Formation Cenomanian to possibly lowermost Turonian. Bounds here run from the Albian base to the Cenomanian top in the ICS chart. The id says 95 Ma; no opened page gives that figure."
+    },
+    "as_recorded": [
+      {
+        "calendar": "stage",
+        "value": "mid-Cretaceous (late Albian–Cenomanian, Winton Formation)",
+        "source": "src-romilio2011"
+      },
+      {
+        "calendar": "stage",
+        "value": "Cenomanian to possibly lowermost Turonian (upper Winton Formation)",
+        "source": "src-poropat2021"
+      }
+    ],
+    "display": "Late Albian to Cenomanian, c. 105 to 94 Ma (bounds 113 to 93.9 Ma)"
+  },
+  "where": {
+    "lat": -23.0333,
+    "lon": 142.4028,
+    "elevation_m": null,
+    "modern_name": "Lark Quarry Conservation Park (Dinosaur Stampede National Monument), near Winton, Queensland, Australia",
+    "historical_name": "Winton Formation, Eromanga Basin floodplain, then high southern latitudes; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-lark"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Australia’s most famous dinosaur tracksite and a source of debate over how track-makers are identified."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-romilio2011",
+      "url": "https://dinosaurs.group.uq.edu.au/files/2119/Romilio_Salisbury_2011.pdf",
+      "title": "A reassessment of large theropod dinosaur tracks from the mid-Cretaceous (late Albian–Cenomanian) Winton Formation of Lark Quarry, central-western Queensland, Australia: A case for mistaken identity",
+      "publisher": "Cretaceous Research (Elsevier), via University of Queensland",
+      "author": "A. Romilio, S.W. Salisbury",
+      "date_published": "2011",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-poropat2021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8216175",
+      "title": "A diverse Late Cretaceous vertebrate tracksite from the Winton Formation of Queensland, Australia",
+      "publisher": "PeerJ, via PubMed Central",
+      "author": "S.F. Poropat et al.",
+      "date_published": "2021",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-lark",
+      "url": "https://nominatim.openstreetmap.org/search?q=Lark%20Quarry%20Conservation%20Park&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim result for Lark Quarry Conservation Park",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2023-09.pdf",
+      "title": "International Chronostratigraphic Chart v2023/09",
+      "publisher": "International Commission on Stratigraphy",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the numeric age (stages only, no Ma in the opened pages) and the pin (park centroid from OSM). The \"stampede\" reading of the tracks is not asserted. I read only the first 100,000 characters of the PeerJ article.",
+  "author": "historian-agent:dino-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "-113000000",
+        "action": "region.fill { radius_km: 80 }",
+        "caption": "Rivers and a low-relief floodplain covered this part of Queensland while the Winton Formation formed, from late Albian to Cenomanian time.",
+        "source": "src-poropat2021"
+      },
+      {
+        "span": "1984",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Thulborn and Wade recognised three track types at Lark Quarry, named Wintonopus, Skartopus and cf. Tyrannosauropus.",
+        "source": "src-romilio2011"
+      },
+      {
+        "span": "2011",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A 2011 shape analysis argued the large tracks were made by an ornithopod, not a theropod, changing the trackmaker picture.",
+        "source": "src-romilio2011",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:45:41.423Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

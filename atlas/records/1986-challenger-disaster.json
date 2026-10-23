@@ -1,0 +1,184 @@
+{
+  "id": "1986-challenger-disaster",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Space Shuttle Challenger disaster (STS-51-L)",
+  "summary": "On 28 January 1986 the Space Shuttle Challenger broke apart 73 seconds into its STS-51-L ascent, killing all seven crew, including teacher Christa McAuliffe. A failed rubber seal in a solid rocket booster joint began the sequence. The shuttle fleet was grounded for more than two years and the presidential commission found that most causes lay in human errors of judging data, communicating and deciding.",
+  "when": {
+    "start": {
+      "year": 1986,
+      "iso": "1986-01-28"
+    },
+    "end": {
+      "year": 1986,
+      "iso": "1986-01-28"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Single day; breakup occurred 73 seconds after liftoff."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On January 28, 1986",
+        "source": "src-nasa-51l"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "the morning of January 28, 1986",
+        "source": "src-si-challenger"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 28, 1986",
+        "source": "src-nasa-51l-mission"
+      }
+    ],
+    "display": "28 January 1986"
+  },
+  "where": {
+    "lat": 28.627183,
+    "lon": -80.620895,
+    "elevation_m": null,
+    "modern_name": "Launch Complex 39B (Pad B), Kennedy Space Center, Florida, USA (pin marks the launch pad; the vehicle broke apart over the Atlantic off the Florida coast)",
+    "historical_name": "Launch Pad B (39B), NASA Kennedy Space Center, Florida, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-39b"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Loss of a crewed orbiter and seven lives; grounded the shuttle fleet for over two years and reshaped NASA's safety practice."
+  },
+  "confidence": "established",
+  "audience_note": "Loss of life: the seven crew members of Challenger were killed in the accident.",
+  "related": [
+    {
+      "id": "1981-first-space-shuttle-flight",
+      "type": "related"
+    },
+    {
+      "id": "1947-cold-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-51l",
+      "url": "https://www.nasa.gov/challenger-sts-51l-accident/",
+      "title": "Challenger STS-51L Accident",
+      "publisher": "NASA",
+      "author": "NASA",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa-51l-mission",
+      "url": "https://www.nasa.gov/mission/sts-51l/",
+      "title": "STS-51L",
+      "publisher": "NASA",
+      "author": "NASA",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-si-challenger",
+      "url": "https://airandspace.si.edu/stories/editorial/remembering-challenger-25-years-later",
+      "title": "Remembering Challenger 25 Years Later",
+      "publisher": "Smithsonian National Air and Space Museum",
+      "author": "Smithsonian National Air and Space Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-39b",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q24256506.json",
+      "title": "Kennedy Space Center Launch Complex 39B (Wikidata Q24256506)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: it is the launch pad, while the offshore breakup point has no coordinates in a source I opened (uncertainty set to 30 km). NASA's page says Pad B; I mapped it to 39B via the Wikidata entry.",
+  "author": "historian-agent:space-b",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1986-01-28",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Challenger lifted off from Kennedy Space Center on the morning of 28 January 1986 on mission STS-51-L.",
+        "source": "src-si-challenger"
+      },
+      {
+        "span": "1986-01-28",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Seventy-three seconds into the flight the vehicle broke apart; all seven crew members died.",
+        "source": "src-nasa-51l"
+      },
+      {
+        "span": "1986-01-28",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "The fleet lost one of its orbiters and was grounded for more than two years, with greater attention to safety afterwards.",
+        "source": "src-si-challenger",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-23T06:27:32.022Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

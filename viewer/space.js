@@ -7,6 +7,9 @@
   const R = 100;                       // globe.gl globe radius
   const rad = d => (d * Math.PI) / 180, deg = r => (r * 180) / Math.PI;
   const norm = a => ((a % 360) + 360) % 360;
+  // run fn once the page has settled: after `ms`, then when the browser is idle (so a heavy download never competes
+  // with the first frames)
+  const idle = (fn, ms) => setTimeout(() => (window.requestIdleCallback ? requestIdleCallback(fn, { timeout: 4000 }) : fn()), ms);
 
   // ---------- astronomy: sub-solar and sub-lunar points for a JS Date (UTC)
   function daysJ2000(date) { return date.getTime() / 864e5 - 10957.5; }   // days since 2000-01-01 12:00 UTC
@@ -53,7 +56,7 @@
     const topo = loader.load('assets/earth-topology.png');
     earthMat = new THREE.ShaderMaterial({
       uniforms: {
-        dayMap: { value: loader.load('assets/earth-bluemarble-8k.jpg') }, nightMap: { value: loader.load('assets/earth-night.jpg') },
+        dayMap: { value: loader.load('assets/earth-day.jpg') }, nightMap: { value: loader.load('assets/earth-night.jpg') },
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
         nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
         paleoOn: { value: 0 },
@@ -106,14 +109,23 @@
     });
     flatMat = new THREE.MeshPhongMaterial({ color: 0x0d1d33, shininess: 4 });
     globe.globeMaterial(earthMat);
-    const aniso = globe.renderer().capabilities.getMaxAnisotropy();
+    const caps = globe.renderer().capabilities, aniso = caps.getMaxAnisotropy();
     for (const k of ['dayMap', 'nightMap']) earthMat.uniforms[k].value.anisotropy = aniso;
+    // The globe opens on the 4K day map (1.5 MB); once the page is idle, a desktop-class device swaps in the 8K Blue
+    // Marble (4 MB, ~130 MB of GPU memory). Phones and small GPUs keep the 4K map; close-up detail comes from the
+    // Blue Marble tiles either way.
+    const strong = caps.maxTextureSize >= 8192 && !matchMedia('(pointer: coarse)').matches && (navigator.deviceMemory ?? 8) >= 4;
+    if (strong) idle(() => loader.load('assets/earth-bluemarble-8k.jpg', t => {
+      t.anisotropy = aniso; const old = earthMat.uniforms.dayMap.value; earthMat.uniforms.dayMap.value = t; old.dispose();
+    }), 4000);
 
     // Clouds: a translucent shell lit by the same sun
-    const cloudTex = loader.load('assets/earth-clouds.png');
+    // the cloud image (4.4 MB) loads after the globe has drawn; until then the shell is fully transparent
+    const cloudUniforms = { map: { value: new THREE.Texture() }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 } };
+    idle(() => loader.load('assets/earth-clouds.png', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }), 1500);
     cloudMat = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false,
-      uniforms: { map: { value: cloudTex }, sunDir: { value: sunDir.clone() }, opacity: { value: CLOUD_OPACITY } },
+      uniforms: cloudUniforms,
       vertexShader: `varying vec2 vUv; varying vec3 vN; varying vec3 vW; void main(){ vUv = uv; vN = normalize(mat3(modelMatrix) * normal);
         vW = (modelMatrix * vec4(position,1.0)).xyz; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
       // only the denser cloud systems, kept thin so the map shows through; fuller toward the limb, where real clouds pile up in view
