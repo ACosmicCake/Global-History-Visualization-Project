@@ -1,0 +1,221 @@
+{
+  "id": "place-haamonga-a-maui-trilithon",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Ha'amonga 'a Maui trilithon",
+  "summary": "A three-slab coral limestone trilithon at Heketā on Tongatapu, said to have been built about 1200 CE by the 11th Tu'i Tonga, Tu'itatui. It is believed to have served as a gateway to his royal compound; a later royal study linked its lintel notches to the sun's movements.",
+  "when": {
+    "start": {
+      "year": 1200
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO says 'about 1200AD'; World History Commons says the 13th century (1201-1300). End is the present: the monument still stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (UNESCO)",
+        "value": "about 1200AD",
+        "source": "src-unesco-tl5167"
+      },
+      {
+        "calendar": "AD (World History Commons)",
+        "value": "Built in the 13th century",
+        "source": "src-whc-haamonga"
+      }
+    ],
+    "display": "c. 1200 CE"
+  },
+  "where": {
+    "lat": -21.1365895,
+    "lon": -175.0480804,
+    "elevation_m": null,
+    "modern_name": "Ha'amonga 'a Maui, Niutoua, Tongatapu, Tonga",
+    "historical_name": "Ha'amonga 'a Maui, gateway of the Heketā royal compound of the Tu'i Tonga polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-haamonga"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Principal feature of the Ha'amonga 'a Maui Historic Park, one of two sites in Tonga's UNESCO tentative-list entry."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-whc-haamonga",
+      "url": "https://worldhistorycommons.org/haamonga-maui-tonga",
+      "title": "Ha'amonga 'a Maui in Tonga",
+      "publisher": "World History Commons",
+      "author": "World History Commons",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-tl5167",
+      "url": "https://whc.unesco.org/en/tentativelists/5167/",
+      "title": "The Ancient Capitals of the Kingdom of Tonga (Tentative List 5167)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "Tonga (submitting State Party), via UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-osm-haamonga",
+      "url": "https://www.openstreetmap.org/way/687265667",
+      "title": "OpenStreetMap way 687265667 (Ha'amonga 'a Maui)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A single gateway of two upright coral limestone slabs carrying a lintel, 5.8 m long and 1.4 m wide (World History Commons); no surveyed site plan stored.",
+      "source": "src-whc-haamonga",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "source": "src-whc-haamonga",
+      "measurements": [
+        {
+          "part": "trilithon height",
+          "value": 5.2,
+          "unit": "m",
+          "source": "src-whc-haamonga",
+          "note": "\"5.2 meters high\" (17 feet); UNESCO tentative list gives 6 metres"
+        },
+        {
+          "part": "trilithon length",
+          "value": 5.8,
+          "unit": "m",
+          "source": "src-whc-haamonga",
+          "note": "\"5.8 meters long\" (19 feet)"
+        },
+        {
+          "part": "trilithon width",
+          "value": 1.4,
+          "unit": "m",
+          "source": "src-whc-haamonga",
+          "note": "\"1.4 meters wide\" (4.6 feet)"
+        },
+        {
+          "part": "height (UNESCO figure)",
+          "value": 6,
+          "unit": "m",
+          "source": "src-unesco-tl5167",
+          "note": "\"stands at 6 metres in height\"; each slab \"more than 20 tonnes\""
+        },
+        {
+          "part": "count of slabs",
+          "value": 3,
+          "unit": "slabs",
+          "source": "src-unesco-tl5167",
+          "note": "\"three coral limestone slabs\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a single upright-and-lintel gateway at true size"
+      },
+      {
+        "level": "local",
+        "representation": "procedural trilithon, two uprights and a lintel at the sourced dimensions"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1200,
+        "end_year": 1300,
+        "state": "construction",
+        "description": "Built about 1200 CE by the 11th Tu'i Tonga, Tu'itatui (UNESCO); World History Commons says the 13th century.",
+        "source": "src-unesco-tl5167"
+      },
+      {
+        "start_year": 1300,
+        "end_year": null,
+        "state": "intact",
+        "description": "Stands in the Ha'amonga 'a Maui Historic Park; the pages opened give no dated damage or alteration.",
+        "source": "src-unesco-tl5167"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1200,
+        "to_year": null,
+        "material": "coral limestone slabs",
+        "source": "src-unesco-tl5167"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block. Height sources disagree: World History Commons 5.2 m (used with its length and width), UNESCO 6 m. World History Commons is an unsigned overview and its figures may derive from other references. Builder and date are traditional ('it is said'). Least sure of the 1200-1300 construction span.",
+  "author": "historian-agent:m-12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:46:33.963Z"
+}

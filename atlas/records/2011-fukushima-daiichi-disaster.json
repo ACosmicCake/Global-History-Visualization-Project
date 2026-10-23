@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2011-fukushima-daiichi-disaster",
+  "kind": "event",
+  "title": "Fukushima Daiichi nuclear accident",
+  "summary": "After the magnitude 9.0 Great East Japan Earthquake on 11 March 2011, a tsunami of about 15 metres reached the Fukushima Daiichi plant, cutting power and cooling. Reactor fuel melted in several units, and the accident was later rated level 7 on the INES scale. Over 100,000 people were evacuated; no deaths were attributed to radiation, while 2313 disaster-related evacuee deaths were identified by September 2020.",
+  "when": {
+    "start": {
+      "year": 2011
+    },
+    "end": {
+      "year": 2011
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Earthquake at 2:46 pm on 11 March 2011; tsunami first wave 3:42 pm."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "11 March 2011",
+        "source": "src-wna-fukushima"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "11 March 2011",
+        "source": "src-greenfacts-fukushima"
+      }
+    ],
+    "display": "11 March 2011"
+  },
+  "where": {
+    "lat": 37.423056,
+    "lon": 141.033056,
+    "elevation_m": null,
+    "modern_name": "Fukushima Daiichi Nuclear Power Plant, Ōkuma, Fukushima Prefecture, Japan",
+    "historical_name": "Fukushima Daiichi nuclear plant, Fukushima Prefecture, Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-gn-fuku"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The worst nuclear plant emergency since Chernobyl, rated INES level 7, with long-running evacuation and decommissioning consequences."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a nuclear accident with mass evacuation and displacement, and a wider earthquake and tsunami that killed many thousands.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wna-fukushima",
+      "url": "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/fukushima-daiichi-accident",
+      "title": "Fukushima Daiichi Accident",
+      "publisher": "World Nuclear Association",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-greenfacts-fukushima",
+      "url": "https://www.greenfacts.org/en/fukushima-consequences/index.htm",
+      "title": "Consequences of the Fukushima nuclear accident (summary of IAEA report)",
+      "publisher": "GreenFacts",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-gn-fuku",
+      "url": "https://www.geonames.org/search.html?q=Fukushima+Daiichi+Nuclear+Power+Plant",
+      "title": "GeoNames: Fukushima Daiichi Nuclear Power Plant",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The sources differ on the number of units with core damage (WNA says units 1-3; GreenFacts quoting IAEA says two units), so the summary says several units. Evacuee figures also differ (over 100,000 vs some 160,000); I give the lower figure. WNA is an industry body.",
+  "author": "historian-agent:o-s94",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:19:31.477Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1958-bossa-nova",
+  "kind": "movement",
+  "title": "Bossa Nova",
+  "summary": "Bossa nova was a Brazilian musical movement that took shape in Rio de Janeiro from 1958. It recast samba with a simplified guitar beat and unusual harmonies, centred on Tom Jobim and João Gilberto, whose 'Chega de Saudade' became his first bossa nova hit in 1958. It lasted until about 1963.",
+  "when": {
+    "start": {
+      "year": 1958
+    },
+    "end": {
+      "year": 1963
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 3,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Memorial da Democracia dates the movement from 1958 to about 1963; Smithsonian Magazine places Gilberto's early guitar experiments in 1955."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "surgiu em 1958",
+        "source": "src-memorial"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "por volta de 1963",
+        "source": "src-memorial"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "first bossa nova hit in 1958",
+        "source": "src-smith"
+      }
+    ],
+    "display": "1958–c. 1963"
+  },
+  "where": {
+    "lat": -22.90642,
+    "lon": -43.18223,
+    "elevation_m": null,
+    "modern_name": "Rio de Janeiro, Brazil",
+    "historical_name": "Rio de Janeiro, Brazil",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geo"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "art_music_literature"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Brazilian movement that reshaped popular song and is described as a major turning point in Brazilian culture."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-memorial",
+      "url": "https://memorialdademocracia.com.br/card/a-bossa-nova-revoluciona-a-cancao-brasileira",
+      "title": "'Chega de saudade': é a vez da bossa nova",
+      "publisher": "Memorial da Democracia (Instituto Lula)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-smith",
+      "url": "https://www.smithsonianmag.com/smart-news/remembering-bossa-nova-pioneer-joao-gilberto-180972578/",
+      "title": "Bossa Nova Became a Turning Point in Brazilian Culture. João Gilberto Helped Launch It",
+      "publisher": "Smithsonian Magazine (Smithsonian Institution)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geo",
+      "url": "https://www.geodatos.net/en/coordinates/brazil/rio-de-janeiro",
+      "title": "Rio de Janeiro Geographic coordinates",
+      "publisher": "Geodatos",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date varies by source (1955 experiments, 1958 hit); pin is Rio city centre as proxy. Only two publishers; Smithsonian Magazine is a magazine of a museum institution, classed museum.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:10:30.556Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1958",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Bossa nova was a Brazilian musical movement that took shape in Rio de Janeiro from 1958.",
+        "source": "src-memorial"
+      },
+      {
+        "span": "1963",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It recast samba with a simplified guitar beat and unusual harmonies, centred on Tom Jobim and João Gilberto, whose 'Chega de Saudade' became his first bossa nova hit…",
+        "source": "src-memorial",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

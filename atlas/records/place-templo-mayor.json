@@ -1,0 +1,254 @@
+{
+  "id": "place-templo-mayor",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Templo Mayor of Tenochtitlan",
+  "summary": "The Templo Mayor was the main temple of Tenochtitlan, the Mexica capital, dedicated to Tlaloc and Huitzilopochtli and rebuilt in seven construction stages. It was destroyed in the war of 1521, lay buried for centuries and was rediscovered in the 20th century in what is now central Mexico City.",
+  "when": {
+    "start": {
+      "year": 1325
+    },
+    "end": {
+      "year": 1521
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 75,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "1325 is the approximate settlement date of the Mexica on the island, per INAH; the date of the first temple stage was not confirmed on an opened page, so the start is a loose bound. End is destruction in the war of 1521."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, INAH guide (Spanish)",
+        "value": "aproximadamente en 1325",
+        "source": "src-inah"
+      },
+      {
+        "calendar": "Gregorian, INAH guide (Spanish)",
+        "value": "guerra de 1521",
+        "source": "src-inah"
+      }
+    ],
+    "display": "c. 1325-1521 (site of the temple; destroyed 1521)"
+  },
+  "where": {
+    "lat": 19.435036,
+    "lon": -99.131207,
+    "elevation_m": null,
+    "modern_name": "Zona Arqueologica del Templo Mayor, Centro Historico, Mexico City, Mexico",
+    "historical_name": "Templo Mayor (Huei Teocalli), sacred precinct of Mexico-Tenochtitlan, Mexica (Aztec) capital",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-geonames-tm"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The central ritual building of the Mexica Empire and a leading Mesoamerican archaeological site; part of the UNESCO Historic Centre of Mexico City."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-tenochtitlan",
+      "type": "part_of"
+    },
+    {
+      "id": "1521-siege-of-tenochtitlan",
+      "type": "related"
+    },
+    {
+      "id": "1428-aztec-triple-alliance",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-inah",
+      "url": "https://difusion.inah.gob.mx/images/guias/115_zona-arqueologica-templo-mayor.pdf",
+      "title": "Zona Arqueologica del Templo Mayor (visitor guide)",
+      "publisher": "Instituto Nacional de Antropologia e Historia (INAH), Mexico",
+      "author": null,
+      "date_published": "2016",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco412",
+      "url": "https://whc.unesco.org/en/list/412",
+      "title": "Historic Centre of Mexico City and Xochimilco",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": "1987",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-tm",
+      "url": "https://www.geonames.org/search.html?q=Templo+Mayor&country=MX",
+      "title": "GeoNames search: Templo Mayor, Mexico City",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-whe-tm",
+      "url": "https://www.worldhistory.org/Templo_Mayor/",
+      "title": "Templo Mayor",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start date: opened pages date the Mexica settlement (c. 1325), not the first temple stage. The 1978 Coyolxauhqui discovery was read on the INAH museum page but is not entered in as_recorded.",
+  "author": "historian-agent:o-s2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:32.942Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square pyramid base of about 80 m a side in the last of seven construction stages, within a sacred precinct about 365 m a side (INAH; World History Encyclopedia).",
+      "source": "src-inah",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-inah",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 45,
+          "unit": "m",
+          "source": "src-inah",
+          "note": "approximately, last construction stage; World History Encyclopedia gives 60 m"
+        },
+        {
+          "part": "base length",
+          "value": 80,
+          "unit": "m",
+          "source": "src-inah",
+          "note": "approximately, per side, last stage"
+        },
+        {
+          "part": "base width",
+          "value": 80,
+          "unit": "m",
+          "source": "src-inah"
+        },
+        {
+          "part": "tiers",
+          "value": 4,
+          "unit": "count",
+          "source": "src-whe-tm",
+          "note": "four tiers, with two flights of steps on the west side"
+        },
+        {
+          "part": "summit shrines",
+          "value": 2,
+          "unit": "count",
+          "source": "src-whe-tm",
+          "note": "twin temples to Tlaloc and Huitzilopochtli"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "stepped pyramid with two summit shrines"
+      },
+      {
+        "level": "local",
+        "representation": "procedural four-tier pyramid with a double stairway and twin temple blocks on top"
+      },
+      {
+        "level": "street",
+        "representation": "stage-by-stage enlargements from the excavated remains"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1325,
+        "end_year": 1520,
+        "state": "construction",
+        "description": "Seven construction stages and partial enlargements; Tenochtitlan was founded about 1325, and the date of the first stage was not confirmed on a page opened.",
+        "source": "src-inah"
+      },
+      {
+        "start_year": 1521,
+        "end_year": 1521,
+        "state": "destroyed",
+        "description": "Destroyed in the war of 1521 and later buried; remains rediscovered in the 20th century.",
+        "source": "src-inah"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1325,
+        "to_year": 1521,
+        "material": "stone masonry",
+        "source": "src-whe-tm"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

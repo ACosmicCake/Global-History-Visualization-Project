@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-26ka-lake-lisan",
+  "kind": "process",
+  "title": "Lake Lisan",
+  "summary": "Lake Lisan was the late Pleistocene precursor of the Dead Sea. Bartov and colleagues put it at about 70,000 to 15,000 years ago; it rose sharply from about 27,000 years ago to a peak near 164 m below sea level between 26,000 and 23,000 years ago, then fell to about 300 m below sea level as it shrank towards the Dead Sea.",
+  "when": {
+    "start": {
+      "year": -70000
+    },
+    "end": {
+      "year": -15000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years used as stated with no offset. Bartov et al. (2002) cover 55,000 to 15,000 cal yr BP and give the highstand as 26,000 to 23,000; GFZ places highstand sediments between about 24,000 and 14,000 years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "cal yr BP",
+        "value": "70,000 to 15,000 years before present",
+        "source": "src-bartov-lisan"
+      },
+      {
+        "calendar": "years ago",
+        "value": "highstand between ca 24.000 and 14.000 years ago",
+        "source": "src-gfz-lisan"
+      }
+    ],
+    "display": "c. 70,000 to 15,000 years ago (highstand c. 26,000 to 23,000)"
+  },
+  "where": {
+    "lat": 31.541946,
+    "lon": 35.4812013,
+    "elevation_m": null,
+    "modern_name": "Dead Sea basin (proxy pin at the modern Dead Sea), Israel, Jordan and the West Bank",
+    "historical_name": "Lake Lisan, Jordan Rift Valley, before any states",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-osm-deadsea"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "Records the last-glacial water balance of the Levant and fed the salt and sediment record of the Dead Sea."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-bartov-lisan",
+      "url": "https://www.cambridge.org/core/product/identifier/S0033589400010528/type/journal_article",
+      "title": "Lake Levels and Sequence Stratigraphy of Lake Lisan, the Late Pleistocene Precursor of the Dead Sea",
+      "publisher": "Cambridge University Press (Quaternary Research)",
+      "author": "Yuval Bartov, Mordechai Stein, Yehouda Enzel, Amotz Agnon, Ze'ev Reches",
+      "date_published": "2002",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gfz-lisan",
+      "url": "https://www.gfz.de/en/press/news/details/neues-aus-der-klimageschichte-des-toten-meeres",
+      "title": "News from the climate history of the Dead Sea",
+      "publisher": "GFZ German Research Centre for Geosciences",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-deadsea",
+      "url": "https://nominatim.openstreetmap.org/search?q=Dead+Sea&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Dead Sea",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the period: the 70,000 start is the summary on the Cambridge page, while the study itself covers 55,000 to 15,000 cal yr BP, and GFZ gives a 24,000 to 14,000 highstand. The pin is a proxy at the modern Dead Sea; the lake was far larger. Years are as stated, no offset.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:12:16.187Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-70000",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Lake Lisan was the late Pleistocene precursor of the Dead Sea.",
+        "source": "src-bartov-lisan"
+      },
+      {
+        "span": "-15000",
+        "action": "pulse { radius_km: 64 }",
+        "caption": "Bartov and colleagues put it at about 70,000 to 15,000 years ago; it rose sharply from about 27,000 years ago to a peak near 164 m below sea…",
+        "source": "src-bartov-lisan",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

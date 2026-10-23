@@ -1,0 +1,171 @@
+{
+  "id": "1500-shaybani-conquest-of-transoxiana",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Shaybani Khan's Conquest of Transoxiana",
+  "summary": "Muhammad Shaybani Khan, an Uzbek ruler descended from Genghis Khan, had by 1500 made himself master of Samarkand and the Syr Darya and Amu Darya basins. He then advanced into Khorasan and took Herat in 1507, ending Timurid rule there. He was killed by the Safavid shah Ismail I in 1510.",
+  "when": {
+    "start": {
+      "year": 1500
+    },
+    "end": {
+      "year": 1507
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Britannica says by 1500; another page (History of War) places the final fall of Samarkand in 1501. Not used as a source."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "by 1500 had made himself master of Samarkand",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 1507, when the army of",
+        "source": "src-iranica"
+      },
+      {
+        "calendar": "CE",
+        "value": "Herat in 1507",
+        "source": "src-met"
+      }
+    ],
+    "display": "c. 1500–1507"
+  },
+  "where": {
+    "lat": 39.655,
+    "lon": 66.964,
+    "elevation_m": null,
+    "modern_name": "Samarkand, Uzbekistan",
+    "historical_name": "Samarkand, Timurid-ruled Transoxiana",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Replaced the last Timurid rule in Transoxiana and Khorasan with Shaybanid Uzbek rule."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-timurid-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/biography/Muhammad-Shaybani",
+      "title": "Muhammad Shaybani",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-iranica",
+      "url": "https://www.iranicaonline.org/articles/herat-iii/",
+      "title": "Herat iii. History, Medieval Period",
+      "publisher": "Encyclopaedia Iranica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-met",
+      "url": "https://www.metmuseum.org/art/collection/search/451408",
+      "title": "Portrait of Muhammad Khan Shaibani, the Uzbek (d.1510)",
+      "publisher": "The Metropolitan Museum of Art",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://countries.dev/place/1216265",
+      "title": "Samarkand (GeoNames 1216265)",
+      "publisher": "countries.dev (GeoNames data)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Samarkand capture date: Britannica says by 1500; History of War (opened, not cited) says Babur retook it in 1500 and it fell finally in 1501. Pin is Samarkand as proxy for Transoxiana.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:14.551Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1500",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Muhammad Shaybani Khan, an Uzbek ruler descended from Genghis Khan, had by 1500 made himself master of Samarkand and the Syr Darya and Amu Darya basins.",
+        "source": "src-britannica"
+      },
+      {
+        "span": "1507",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He was killed by the Safavid shah Ismail I in 1510.",
+        "source": "src-britannica",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

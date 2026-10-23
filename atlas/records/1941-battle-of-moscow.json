@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1941-battle-of-moscow",
+  "kind": "event",
+  "title": "Battle of Moscow",
+  "summary": "Climax of Operation Barbarossa, in which German Army Group Centre drove on Moscow under Operation Typhoon in autumn 1941. Red Army counterattacks under Zhukov began in December 1941 and pushed the Axis forces back, ending Germany's intention to take the Soviet capital.",
+  "when": {
+    "start": {
+      "year": 1941
+    },
+    "end": {
+      "year": 1942
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Britannica dates the battle 30 September 1941 to 7 January 1942; World History Encyclopedia gives 2 October 1941 as the launch of Typhoon and 6 December 1941 as the start of Soviet counterattacks."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 30, 1941, to January 7, 1942",
+        "source": "src-brit"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "On 2 October",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "6 December 1941",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "7 January 1942",
+        "source": "src-whe"
+      }
+    ],
+    "display": "30 September 1941 – 7 January 1942"
+  },
+  "where": {
+    "lat": 55.7522,
+    "lon": 37.6156,
+    "elevation_m": null,
+    "modern_name": "Moscow, Russia (pin is the city centre, a proxy for the battle zone)",
+    "historical_name": "Moscow, Soviet Union",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-coord"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Britannica calls it the climax of Operation Barbarossa and the end of Germany's aim of taking Moscow."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-brit",
+      "url": "https://www.britannica.com/event/Battle-of-Moscow",
+      "title": "Battle of Moscow",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/article/2686/battle-of-moscow-in-1941-2/",
+      "title": "Battle of Moscow in 1941-2: The USSR's First Victory",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-coord",
+      "url": "https://time-ok.com/coordinates/moscow",
+      "title": "Moscow coordinates",
+      "publisher": "time-ok.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date differs: Britannica 30 Sep 1941, World History Encyclopedia says Typhoon launched 2 Oct; both are reference works, no university/museum source. Pin is Moscow centre proxy.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T23:22:21.762Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1941",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Climax of Operation Barbarossa, in which German Army Group Centre drove on Moscow under Operation Typhoon in autumn 1941.",
+        "source": "src-brit"
+      },
+      {
+        "span": "1942",
+        "action": "pulse { radius_km: 320 }",
+        "caption": "Red Army counterattacks under Zhukov began in December 1941 and pushed the Axis forces back, ending Germany's intention to take the Soviet capital.",
+        "source": "src-brit",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

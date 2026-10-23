@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "-1500ka-turkana-boy",
+  "kind": "person",
+  "title": "Turkana Boy (KNM-WT 15000)",
+  "summary": "A nearly complete early-human skeleton of a boy, catalogued KNM-WT 15000, was found at Nariokotome on the west side of Lake Turkana, Kenya, by Kamoya Kimeu in 1984. Dated to roughly 1.5 to 1.6 million years ago, it is classed as Homo erectus and records how an early human of that age was built.",
+  "when": {
+    "start": {
+      "year": -1600000
+    },
+    "end": {
+      "year": -1500000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 100000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 100000,
+      "note": "Smithsonian gives about 1.6 million years ago; Australian Museum about 1.5 million years ago. The range spans both. Discovery was in 1984."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "About 1.6 million years ago",
+        "source": "src-si-wt15000"
+      },
+      {
+        "calendar": "years ago",
+        "value": "lived about 1.5 million years ago",
+        "source": "src-ausmus-ergaster"
+      }
+    ],
+    "display": "c. 1.6-1.5 million years ago"
+  },
+  "where": {
+    "lat": 4.1264788,
+    "lon": 35.857605,
+    "elevation_m": null,
+    "modern_name": "Nariokotome, West Turkana, Kenya",
+    "historical_name": "Nariokotome, west of Lake Turkana (no polity; Pleistocene)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-nariokotome"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "The most complete early Homo skeleton of its age, a benchmark for early human anatomy."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-1800ka-homo-erectus-dispersal-from-africa",
+      "type": "related"
+    },
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-si-wt15000",
+      "url": "https://humanorigins.si.edu/evidence/human-fossils/fossils/knm-wt-15000",
+      "title": "KNM-WT 15000",
+      "publisher": "Smithsonian Institution, Human Origins Program",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ausmus-ergaster",
+      "url": "https://australian.museum/learn/science/human-evolution/homo-ergaster/",
+      "title": "Homo ergaster",
+      "publisher": "The Australian Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-nariokotome",
+      "url": "https://nominatim.openstreetmap.org/search?q=Nariokotome&format=json",
+      "title": "Nariokotome (hamlet, node 3285660396)",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: age (1.6 vs 1.5 Ma between sources). Completeness differs (Smithsonian 40%, Australian Museum almost 90%) so it is omitted. Point is the Nariokotome hamlet, not the excavation spot.",
+  "published_at": "2026-10-22T11:14:57.613Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

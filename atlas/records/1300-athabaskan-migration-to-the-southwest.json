@@ -1,0 +1,190 @@
+{
+  "id": "1300-athabaskan-migration-to-the-southwest",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Athabaskan migration to the Southwest",
+  "summary": "Athabaskan-speaking ancestors of the Navajo and Apache migrated south from Canada’s Mackenzie Basin into the American Southwest. Scholars disagree on timing: some say the southward move began about 1000 and ended by the early 1500s, while Crow Canyon says they probably arrived after A.D. 1450 and were in the Mesa Verde region by the early 1500s. The groups later split into the Navajo and the Apache.",
+  "when": {
+    "start": {
+      "year": 1000
+    },
+    "end": {
+      "year": 1500
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "EBSCO Research Starters says most scholars put the start of the southward move about 1000 and its end in the early 1500s; Crow Canyon says arrival after A.D. 1450. The id year 1300 follows neither source and is not used."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "began their southward move about 1000",
+        "source": "src-ebsco-athap"
+      },
+      {
+        "calendar": "CE",
+        "value": "concluded in the early 1500",
+        "source": "src-ebsco-athap"
+      },
+      {
+        "calendar": "CE",
+        "value": "arrived in the Southwest after A.D. 1450",
+        "source": "src-cc-athap"
+      }
+    ],
+    "display": "c. 1000–1500 CE"
+  },
+  "where": {
+    "lat": 61.666666666667,
+    "lon": -114,
+    "elevation_m": null,
+    "modern_name": "Mackenzie Basin, Canada (origin) to Mesa Verde region, Colorado, USA",
+    "historical_name": "Northern Athabaskan homeland in the Mackenzie Basin; later the Southwest and the Mesa Verde region",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 61.666666666667,
+          "lon": -114,
+          "date": "Undated stage of the route",
+          "label": "Mackenzie Basin, Canada, the traced origin. Point is Great Slave Lake, a map anchor chosen inside the basin region, not a sourced site.",
+          "source": "src-ebsco-athap",
+          "coordinate_source": "src-wd-gsl"
+        },
+        {
+          "lat": 37.260375,
+          "lon": -108.494444,
+          "date": "Early 1500s",
+          "label": "Mesa Verde region, where Athabaskan speakers were present by at least the early 1500s. Point is Mesa Verde National Park.",
+          "source": "src-cc-athap",
+          "coordinate_source": "src-wd-mesaverde"
+        }
+      ]
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-wd-gsl",
+      "src-wd-mesaverde"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Brought the ancestors of the Navajo and Apache and their languages to the Southwest."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-athap",
+      "url": "https://www.ebsco.com/research-starters/history/athapaskans-arrive-southwest",
+      "title": "Athapaskans Arrive in the Southwest",
+      "publisher": "EBSCO Research Starters",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cc-athap",
+      "url": "https://crowcanyon.org/EducationProducts/peoples_mesa_verde/post_pueblo_navajo.php",
+      "title": "Peoples of the Mesa Verde Region: Navajo",
+      "publisher": "Crow Canyon Archaeological Center",
+      "author": "Crow Canyon Archaeological Center",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-gsl",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5539.json",
+      "title": "Wikidata entry for Great Slave Lake (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-mesaverde",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q237128.json",
+      "title": "Wikidata entry for Mesa Verde National Park (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "about 1000",
+        "action": "path.trace {}",
+        "caption": "Athabaskan speakers begin moving south from Canada’s Mackenzie Basin, according to most scholars cited by EBSCO.",
+        "source": "src-ebsco-athap",
+        "consequence": false
+      },
+      {
+        "span": "after A.D. 1450",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Crow Canyon says they probably reached the Southwest after A.D. 1450, and Mesa Verde by the early 1500s.",
+        "source": "src-cc-athap",
+        "consequence": false
+      },
+      {
+        "span": "early 1500s",
+        "action": "region.fill { radius_km: 800 }",
+        "caption": "Once in the Southwest, the groups differentiated into the Navajo and Apache peoples.",
+        "source": "src-cc-athap",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: dating is openly contested between the sources (start about 1000 vs arrival after 1450), so the span is wide and confidence is contested. The Mackenzie Basin point is an anchor (Great Slave Lake from Wikidata), not a sourced site; uncertainty 1500 km. The id year 1300 is not supported by either source. Crow Canyon class other; EBSCO is a reference source.",
+  "author": "historian-agent:o-s91",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:11:08.226Z"
+}

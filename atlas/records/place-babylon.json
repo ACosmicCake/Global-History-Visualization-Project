@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s40",
+  "updated": "2026-10-22",
+  "id": "place-babylon",
+  "kind": "place",
+  "title": "Babylon",
+  "summary": "Babylon, on the Euphrates 85 km south of Baghdad, was a minor port city until Hammurabi (reigned 1792-1750 BCE) made it his capital. It was capital of the Neo-Babylonian Empire from 626 to 539 BCE under rulers such as Nebuchadnezzar, then of the Achaemenid Empire after Cyrus took it, until Alexander the Great in 331 BCE. UNESCO inscribed its ruins, walls, gates, palaces and temples in 2019.",
+  "when": {
+    "start": {
+      "year": -1791
+    },
+    "end": {
+      "year": -330
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "World History Encyclopedia: the city is older than Sargon of Akkad (reign 2334-2279 BCE) and became a capital under Hammurabi (1792 BCE); it fell to Alexander in 331 BCE and continued as a trade centre afterwards. UNESCO dates the Neo-Babylonian capital phase to 626-539 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "Hammurabi (reign 1792-1750 BCE) made it the capital; fell to Alexander the Great in 331 BCE",
+        "source": "src-whe-babylon"
+      },
+      {
+        "calendar": "BCE (UNESCO)",
+        "value": "between 626 and 539 BCE, was the capital of the Neo-Babylonian Empire",
+        "source": "src-unesco-babylon"
+      }
+    ],
+    "display": "Capital from 1792 BCE; Neo-Babylonian capital 626-539 BCE"
+  },
+  "where": {
+    "lat": 32.54197,
+    "lon": 44.42083,
+    "elevation_m": null,
+    "modern_name": "Babylon, Babil Governorate, Iraq",
+    "historical_name": "Babylon, on the Euphrates; capital of Hammurabi's and then the Neo-Babylonian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-unesco-babylon",
+      "src-wd-babylon"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "It was the seat of successive empires and is a World Heritage Site."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-achaemenid-empire",
+      "type": "related"
+    },
+    {
+      "id": "person-cyrus-the-great",
+      "type": "related"
+    },
+    {
+      "id": "person-alexander-the-great",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-babylon",
+      "url": "https://whc.unesco.org/en/list/278/",
+      "title": "Babylon",
+      "publisher": "UNESCO World Heritage Centre",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-whe-babylon",
+      "url": "https://www.worldhistory.org/babylon/",
+      "title": "Babylon: The Gate of the Gods",
+      "publisher": "World History Encyclopedia",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-babylon",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5684.json",
+      "title": "Wikidata entry for Babylon (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "author": "Staatliche Museen zu Berlin, Vorderasiatisches Museum, via Google Arts & Culture",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "opened": true,
+      "id": "src-smb-ishtar-recon",
+      "url": "https://artsandculture.google.com/asset/ishtar-gate-reconstruction-of-the-outer-gate-unknown/DwG4vt3_ylapbQ",
+      "title": "Ishtar Gate, reconstruction of the outer gate (VA Bab 1408-1456)",
+      "publisher": "Staatliche Museen zu Berlin, Vorderasiatisches Museum, via Google Arts & Culture",
+      "class": "museum",
+      "supports": [
+        "model.geometry"
+      ]
+    },
+    {
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "opened": true,
+      "id": "src-whe-ishtargate",
+      "url": "https://www.worldhistory.org/Ishtar_Gate/",
+      "title": "Ishtar Gate",
+      "publisher": "World History Encyclopedia",
+      "class": "reference",
+      "supports": [
+        "model.phases"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start: the city predates Hammurabi but no earlier date is given, so the span starts with his reign. No model: no height or plan dimension for a single monument was sought.",
+  "published_at": "2026-10-22T09:57:09.589Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Outer Ishtar Gate as reconstructed in the Pergamon Museum, Berlin, from glazed bricks excavated at Babylon (Kasr): 26.41 m wide and 4.38 m deep. The museum shows only the smaller outer gate. Placed at Babylon as a schematic block.",
+      "source": "src-smb-ishtar-recon",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "reconstruction",
+      "shape": "block",
+      "author": "Staatliche Museen zu Berlin (Pergamon Museum reconstruction)",
+      "asset_url": null,
+      "license": null,
+      "source": "src-smb-ishtar-recon",
+      "measurements": [
+        {
+          "part": "Ishtar Gate (outer gate reconstruction) height",
+          "value": 14.73,
+          "unit": "m",
+          "source": "src-smb-ishtar-recon",
+          "note": "h14.73 m"
+        },
+        {
+          "part": "Ishtar Gate (outer gate reconstruction) width",
+          "value": 26.41,
+          "unit": "m",
+          "source": "src-smb-ishtar-recon",
+          "note": "w26.41 m"
+        },
+        {
+          "part": "Ishtar Gate (outer gate reconstruction) depth",
+          "value": 4.38,
+          "unit": "m",
+          "source": "src-smb-ishtar-recon",
+          "note": "d4.38 m"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "single block at the Ishtar Gate dimensions of the Berlin reconstruction"
+      },
+      {
+        "level": "local",
+        "representation": "gate block with glazed-brick colour, labelled reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -575,
+        "end_year": -575,
+        "state": "construction",
+        "description": "Ishtar Gate built by Nebuchadnezzar II, circa 575 BCE.",
+        "source": "src-whe-ishtargate"
+      },
+      {
+        "start_year": -575,
+        "end_year": 1899,
+        "state": "intact",
+        "description": "Gate stands as the main entrance to Babylon; the end date is the rediscovery of the ruins by Robert Koldewey in 1899, not a dated collapse.",
+        "source": "src-whe-babylon"
+      },
+      {
+        "start_year": 1899,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "Ruins rediscovered and excavated by Robert Koldewey from 1899; the gate itself was later rebuilt in the Pergamon Museum, Berlin, and a reconstruction was attempted at Babylon.",
+        "source": "src-whe-babylon"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -575,
+        "to_year": null,
+        "material": "glazed bricks (burnt bricks glazed)",
+        "source": "src-smb-ishtar-recon"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:m-8",
+  "updated": "2026-10-22",
+  "id": "place-terracotta-army",
+  "title": "Terracotta Army and Mausoleum of the First Qin Emperor",
+  "summary": "The mausoleum of Qin Shi Huang, founder of the first unified empire, was begun in 246 BCE at the northern foot of Lishan Mountain near Xi'an and worked on until his death in 210 BCE. Nearly 200 pits hold thousands of life-size terracotta soldiers and horses, bronze chariots and weapons beside the unexcavated burial mound. The army was found in 1974 and documents Qin military organisation.",
+  "when": {
+    "start": {
+      "year": -245
+    },
+    "end": {
+      "year": -209
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 'begun in 246 BCE' (UNESCO), astronomical -245; end is the emperor's death in 210 BCE (-209), the date until which UNESCO says work continued. The army was found in 1974 CE (World History Encyclopedia)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (UNESCO)",
+        "value": "Begun in 246 BCE",
+        "source": "src-unesco-441"
+      },
+      {
+        "calendar": "CE/BCE (UNESCO)",
+        "value": "until the death of the Emperor in 210",
+        "source": "src-unesco-441"
+      },
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "discovered in 1974 CE",
+        "source": "src-whe-terracotta"
+      }
+    ],
+    "display": "Begun 246 BCE; emperor died 210 BCE; army found 1974 CE"
+  },
+  "where": {
+    "lat": 34.385,
+    "lon": 109.27306,
+    "elevation_m": null,
+    "modern_name": "Terracotta Army pits, Lintong District, Xi'an, Shaanxi, China",
+    "historical_name": "Mausoleum of Qin Shi Huang (Qinshihuang Mausoleum), Qin Empire (capital Xianyang)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wikidata-q47672",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "UNESCO calls the pits a world-renowned discovery and the mausoleum the largest in Chinese history; the army is a direct witness to Qin and Warring States military organisation."
+  },
+  "related": [
+    {
+      "id": "-0221-qin-unification-of-china",
+      "type": "related"
+    },
+    {
+      "id": "person-qin-shi-huang",
+      "type": "related"
+    },
+    {
+      "id": "polity-qin-dynasty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-441",
+      "url": "https://whc.unesco.org/en/list/441",
+      "title": "Mausoleum of the First Qin Emperor (World Heritage List no. 441)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-whe-terracotta",
+      "url": "https://www.worldhistory.org/Terracotta_Army/",
+      "title": "Terracotta Army",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q47672",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q47672.json",
+      "title": "Wikidata Q47672: Terracotta Army, coordinates 34.385, 109.27306",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 441, geolocation 34.3814167, 109.2536667 and 34.3851944, 109.2734444",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No model: UNESCO gives the grave mound as 51.3 m high, but the World History Encyclopedia gives a 60 m mound 350 m a side, and UNESCO gives no plan dimension for the mound, so height and plan could not be sourced together. The point is the Wikidata Terracotta Army coordinate (matches UNESCO's second of two unlabelled geolocations, about 1.9 km east of the first, which sits on the grave mound; the OSM mausoleum way is at 34.3814, 109.2538). Dates: UNESCO says 'Begun in 246 BCE', so -245.",
+  "published_at": "2026-10-22T09:01:45.519Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

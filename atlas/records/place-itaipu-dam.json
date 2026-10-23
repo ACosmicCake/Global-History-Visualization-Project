@@ -1,0 +1,198 @@
+{
+  "id": "place-itaipu-dam",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Itaipu Dam",
+  "aliases": [
+    "Itaipu Hydroelectric Power Plant",
+    "Usina Hidrelétrica de Itaipu"
+  ],
+  "summary": "Itaipu is a dam on the Paraná River on the Brazil-Paraguay border, built jointly under a 1973 treaty that gave both countries equal ownership. Construction began in 1975 and ended in 1984. The dam is 196 m high and, by the plant's own technical data, 7,919 m long. Building it took 50 million cubic metres of excavation and 12.3 million cubic metres of concrete.",
+  "when": {
+    "start": {
+      "year": 1975
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start (1975) and completion (1984) are given by IEEE Spectrum; the Itaipu tourism page also dates the first works to 1975 and the start of generation to 1984. End is the present: the plant operates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (IEEE Spectrum)",
+        "value": "Construction began in 1975 and was completed in 1984",
+        "source": "src-ieee-itaipu"
+      },
+      {
+        "calendar": "CE (Itaipu Binacional tourism page)",
+        "value": "Phase I (1975-1978)",
+        "source": "src-itaipu-tourism"
+      }
+    ],
+    "display": "Built 1975–1984"
+  },
+  "where": {
+    "lat": -25.4081085,
+    "lon": -54.5886402,
+    "elevation_m": null,
+    "modern_name": "Itaipu Dam, Foz do Iguaçu, Paraná, Brazil (border with Paraguay)",
+    "historical_name": "Itaipu hydroelectric dam on the Paraná River, Brazil-Paraguay (joint venture under the 1973 treaty)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-itaipu"
+    ]
+  },
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "Dam across the Paraná River on the Brazil-Paraguay border, 7,919 m long (Itaipu Binacional); drawn by the viewer as a path.",
+      "source": "src-itaipu-tourism",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-itaipu-tourism",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 196,
+          "unit": "m",
+          "source": "src-itaipu-tourism",
+          "note": "\"Maximum height: 196 meters\"; IEEE Spectrum: \"reaches a height of 196 meters\""
+        },
+        {
+          "part": "length",
+          "value": 7919,
+          "unit": "m",
+          "source": "src-itaipu-tourism",
+          "note": "\"Total length: 7.919 meters\" as written on the page (7,919 m); IEEE Spectrum says the dam \"spans the river's 7.9-kilometer width\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "dam drawn as a path across the Paraná at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural wall 7,919 m long and 196 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1975,
+        "end_year": 1984,
+        "state": "construction",
+        "description": "Construction began in 1975 and was completed in 1984 (IEEE Spectrum); the plant's own page lists works from Phase I (1975-1978) and says generation began in 1984.",
+        "source": "src-ieee-itaipu"
+      },
+      {
+        "start_year": 1984,
+        "end_year": null,
+        "state": "intact",
+        "description": "In operation since 1984 (Itaipu Binacional tourism page; IEEE Spectrum).",
+        "source": "src-itaipu-tourism"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "IEEE Spectrum says that for decades it was the world's largest hydroelectric facility."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ieee-itaipu",
+      "url": "https://spectrum.ieee.org/itaipu-dam-hydropower-ieee-milestone",
+      "title": "Itaipu Dam: South America's Renewable Energy Giant",
+      "publisher": "IEEE Spectrum",
+      "author": "IEEE Spectrum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-itaipu-tourism",
+      "url": "https://turismoitaipu.com.br/en/the-itaipu-plant/",
+      "title": "Itaipu Hydroelectric Power Plant: How it Works and Interesting Facts",
+      "publisher": "Itaipu Binacional (tourism site)",
+      "author": "Itaipu Binacional (tourism site)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-itaipu",
+      "url": "https://nominatim.openstreetmap.org/search?q=Itaipu+Dam&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Usina Hidrelétrica de Itaipu, way 32236291 (-25.4081085, -54.5886402)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape wall with model.linear true as instructed. Length 7,919 m is the plant's own \"Total length: 7.919 meters\" (a dot thousands separator); IEEE gives only the river width, 7.9 km. Wikipedia-derived dates of 1971 were not used. Point is a way on the dam from OpenStreetMap; the dam is nearly 8 km long so the point lies on it, not at its centre. No geometry path: neither source names end points.",
+  "author": "historian-agent:m-13",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:17:28.095Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

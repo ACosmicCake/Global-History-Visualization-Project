@@ -1,0 +1,158 @@
+{
+  "id": "-359my-hangenberg-event",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Hangenberg event (end-Devonian extinction)",
+  "summary": "The Hangenberg event was a short extinction crisis at the end of the Devonian, first defined in the Rhenish Mountains of Germany, where its type sections give a date of 359.3 ± 0.1 Ma. It hit free-swimming animals such as fish and ammonoids hardest and is linked to ocean anoxia, a brief intense glaciation and large sea-level changes. Marine life then stayed at low diversity for more than 20 million years.",
+  "when": {
+    "start": {
+      "year": -359400000
+    },
+    "end": {
+      "year": -359200000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Range is 359.3 ± 0.1 Ma from the Rhenish Mountains type sections as quoted by Bundy and Ekhoff (Boise State). The same page gives 360.0 ± 0.1 Ma for tuffs in the Exshaw Formation, Alberta, so other regions give older dates. Denayer and Prestianni (2020) say the late Famennian extinctions lasted one to several hundred thousand years. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "359.3 ± 0.1 Ma, from the type sections in the Rhenish Mountains of Germany",
+        "source": "src-boise"
+      },
+      {
+        "calendar": "Ma",
+        "value": "360.0 ± 0.1 Ma, Exshaw Formation tuffs, Alberta",
+        "source": "src-boise"
+      }
+    ],
+    "display": "c. 359.3 million years ago (end of the Devonian)"
+  },
+  "where": {
+    "lat": 50.377013,
+    "lon": 7.604083,
+    "elevation_m": null,
+    "modern_name": "Rhenish Mountains (Rhenish Massif), western Germany; also recorded in Belgium, Poland, Alberta and elsewhere",
+    "historical_name": "Rhenish Mountains on the southern shelf of Laurussia, Late Devonian; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-wd-rhenish"
+    ],
+    "paleo": {
+      "lat": -19.68,
+      "lon": -11.02,
+      "age_ma": 359,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A major end-Devonian extinction crisis, followed by a recovery the Palaeontological Association page calls the longest of any crisis."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-boise",
+      "url": "https://scholarworks.boisestate.edu/as_13/10",
+      "title": "Geochronology in the Exshaw Formation: correlation with the Hangenberg extinction event (student presentation)",
+      "publisher": "Boise State University ScholarWorks",
+      "author": "Susan Bundy, Josh Ekhoff",
+      "date_published": "2013",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-denayer",
+      "url": "https://library.naturalsciences.be/pdfs-open-access/2020/Denayer%20et%20al.%202020%20-DCB.pdf",
+      "title": "The Devonian-Carboniferous boundary in Belgium and surrounding areas (Palaeobiodiversity and Palaeoenvironments)",
+      "publisher": "Royal Belgian Institute of Natural Sciences (Springer)",
+      "author": "Julien Denayer, Cyrille Prestianni",
+      "date_published": "2020",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-palass",
+      "url": "https://palass.org/careers/phd-opportunity/phd-longest-delay-slow-recovery-hangenberg-mass-extinction",
+      "title": "PhD: The longest delay: the slow recovery from the Hangenberg mass extinction",
+      "publisher": "The Palaeontological Association",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-rhenish",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q313834.json",
+      "title": "Wikidata entry for Rhenish Massif (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=7.604083,50.377013&time=359&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: Boise State gives 359.3 ± 0.1 Ma for the Rhenish type sections but 360.0 ± 0.1 Ma for Alberta, so the age is regional. The pin is the Wikidata point for the Rhenish Massif, not a named type section.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:25.116Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

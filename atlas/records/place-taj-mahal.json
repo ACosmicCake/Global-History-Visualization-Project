@@ -1,0 +1,235 @@
+{
+  "id": "place-taj-mahal",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Taj Mahal, Agra",
+  "summary": "The Taj Mahal is a white marble mausoleum at Agra, India, built between 1631 and 1648 by the Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal. It is a leading work of Mughal architecture and has been a UNESCO World Heritage site since 1983.",
+  "when": {
+    "start": {
+      "year": 1631
+    },
+    "end": {
+      "year": 1648
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "built in Agra between 1631 and 1648",
+        "source": "src-unesco252"
+      },
+      {
+        "calendar": "CE",
+        "value": "1631 - 48",
+        "source": "src-tajgov"
+      }
+    ],
+    "display": "1631-1648 CE"
+  },
+  "where": {
+    "lat": 27.17417,
+    "lon": 78.04222,
+    "elevation_m": null,
+    "modern_name": "Taj Mahal, Agra, Uttar Pradesh, India",
+    "historical_name": "Taj Mahal (tomb of Mumtaz Mahal), Agra, Mughal Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-unesco252",
+      "src-wikidata-taj"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "art_music_literature",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The best-known Mughal monument and a masterpiece of world architecture, inscribed by UNESCO in 1983."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco252",
+      "url": "https://whc.unesco.org/en/list/252",
+      "title": "Taj Mahal (World Heritage List no. 252)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": "1983",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "where.lat",
+        "where.lon",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-washu-taj",
+      "url": "https://iiif.quartexcollections.com/washu/iiif/db8317f7-d13a-4edd-8332-d7ff36a8967f/manifest",
+      "title": "Agra, gateway of the Taj Mahal (19th Century Architectural Photography Collection record rsv07p08)",
+      "publisher": "Washington University in St. Louis, Kranzberg Art & Architecture Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-tajgov",
+      "url": "https://tajmahal.gov.in/overview.aspx",
+      "title": "Taj Mahal overview",
+      "publisher": "Government of Uttar Pradesh (tajmahal.gov.in)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-wikidata-taj",
+      "url": "https://www.wikidata.org/wiki/Q9141",
+      "title": "Wikidata item Q9141 (Taj Mahal), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: domed_building (square chamfered tomb, central dome; minarets and chhatris omitted from the base shape). Total height 74.22 m, 57 m square tomb and 100.05 m plinth are from a university photograph-collection record. Other sources give about 73 m and plinth heights of 6-7 m. UNESCO gives 1631-1648.",
+  "model": {
+    "footprint": {
+      "description": "Tomb square in plan, 57 m on each side with chamfered corners, on a white marble plinth 100.05 m square and 5.79 m high (Washington University record).",
+      "source": "src-washu-taj",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "domed_building",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-washu-taj",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 74.22,
+          "unit": "m",
+          "source": "src-washu-taj",
+          "note": "total height of the tomb"
+        },
+        {
+          "part": "base side",
+          "value": 57,
+          "unit": "m",
+          "source": "src-washu-taj",
+          "note": "tomb square in plan with chamfered corners"
+        },
+        {
+          "part": "plinth length",
+          "value": 100.05,
+          "unit": "m",
+          "source": "src-washu-taj",
+          "note": "square plinth"
+        },
+        {
+          "part": "plinth height",
+          "value": 5.79,
+          "unit": "m",
+          "source": "src-washu-taj"
+        },
+        {
+          "part": "dome height",
+          "value": 44.4,
+          "unit": "m",
+          "source": "src-washu-taj",
+          "note": "including the drum; the tajmahal.gov.in overview also gives 44.4 m for the outer dome"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "plinth, cube with dome and four corner minarets"
+      },
+      {
+        "level": "local",
+        "representation": "procedural tomb, onion dome on drum, four chhatris and four minarets"
+      },
+      {
+        "level": "street",
+        "representation": "pishtaq arches and inlay decoration not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1631,
+        "end_year": 1648,
+        "state": "construction",
+        "description": "Built at Agra for Shah Jahan.",
+        "source": "src-unesco252"
+      },
+      {
+        "start_year": 1648,
+        "end_year": null,
+        "state": "intact",
+        "description": "Mausoleum stands.",
+        "source": "src-unesco252"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1631,
+        "to_year": null,
+        "material": "white marble",
+        "source": "src-unesco252"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:36.246Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

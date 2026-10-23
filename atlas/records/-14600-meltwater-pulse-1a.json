@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "-14600-meltwater-pulse-1a",
+  "kind": "event",
+  "title": "Meltwater Pulse 1A",
+  "summary": "Meltwater Pulse 1A was an abrupt jump in global sea level during the last deglaciation. Tahiti corals bracket it between 14,650 and 14,310 years ago, with a rise there of 12 to 22 metres, most probably 14 to 18, in step with the Bølling warming. Which ice sheets supplied the water is still argued: Southern Hemisphere and North American sources have both been proposed.",
+  "when": {
+    "start": {
+      "year": -12700
+    },
+    "end": {
+      "year": -12360
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": "The paper counts years before AD 1950, so 14,650 and 14,310 years ago become astronomical years -12700 and -12360. The record id (-14600) uses the rounded years-ago figure directly."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years before present (present = AD 1950)",
+        "value": "MWP-1A started no earlier than 14,650 years ago and ended before 14,310 years ago",
+        "source": "src-deschamps2012"
+      },
+      {
+        "calendar": "years ago",
+        "value": "Meltwater pulse 1a (MWP1a), some 14 600 years ago",
+        "source": "src-cordis-saddle"
+      }
+    ],
+    "display": "c. 14,650–14,310 years ago (counted from 1950)"
+  },
+  "where": {
+    "lat": -17.666667,
+    "lon": -149.466667,
+    "elevation_m": null,
+    "modern_name": "Tahiti, French Polynesia (coral drilling site offshore; the event itself was global)",
+    "historical_name": "No single place: a global sea-level rise recorded offshore of Tahiti",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-tahiti",
+      "src-deschamps2012"
+    ]
+  },
+  "regions": [
+    "global",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "The most extreme deglacial sea-level jump on record, used to test how fast ice sheets can lose mass."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-10950-younger-dryas",
+      "type": "related"
+    },
+    {
+      "id": "-10ka-submergence-of-sundaland",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-deschamps2012",
+      "url": "https://www.whoi.edu/cms/files/Deschamps_etal_2012_282445.pdf",
+      "title": "Ice-sheet collapse and sea-level rise at the Bølling warming 14,600 years ago (Nature 483:559–564, doi:10.1038/nature10902)",
+      "publisher": "Nature (Springer Nature); PDF hosted by Woods Hole Oceanographic Institution",
+      "author": "Pierre Deschamps, Nicolas Durand, Edouard Bard, et al.",
+      "date_published": "2012",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-cordis-saddle",
+      "url": "https://cordis.europa.eu/news/rcn/35038-saddle-collapse-behind-rapid-sea-level-rise",
+      "title": "Saddle collapse behind rapid sea level rise",
+      "publisher": "CORDIS, European Commission",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "what",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-wd-tahiti",
+      "url": "https://www.wikidata.org/wiki/Q42000",
+      "title": "Wikidata item Q42000 (Tahiti), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the record id: -14600 treats 14,600 years ago as a calendar year, while the sourced dates count from AD 1950 and give about -12700 to -12360. The pin is the Tahiti coral site only as a marker; uncertainty_km is 5000 because the event is global. The ice-sheet source is contested and is stated as such; the North American model result (a rise of 9 metres in 500 years) comes from a news summary of one study.",
+  "published_at": "2026-10-22T16:17:40.857Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-12700",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Meltwater Pulse 1A was an abrupt jump in global sea level during the last deglaciation.",
+        "source": "src-deschamps2012"
+      },
+      {
+        "span": "-12360",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Which ice sheets supplied the water is still argued: Southern Hemisphere and North American sources have both been proposed.",
+        "source": "src-deschamps2012",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

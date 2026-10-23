@@ -1,0 +1,153 @@
+{
+  "id": "1830-the-great-game",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "The Great Game",
+  "summary": "The Great Game is the name for the rivalry between Britain and Russia for influence in Central Asia and neighbouring lands. The phrase is credited to Arthur Conolly, who used it in 1840, though historian Malcolm Yapp argues the rivalry sense came later. The Anglo-Russian Convention of August 1907 formally ended the contest.",
+  "when": {
+    "start": {
+      "year": 1800
+    },
+    "end": {
+      "year": 1907
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 30,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give no sharp start: 'early nineteenth century' (Yapp). The id year 1830 is only a lookup key. End: Anglo-Russian Convention, August 1907."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "early nineteenth century",
+        "source": "src-ba"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August, 1907",
+        "source": "src-ency"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "end of July 1840",
+        "source": "src-ba"
+      }
+    ],
+    "display": "early 19th century – 1907"
+  },
+  "where": {
+    "lat": 34.5281,
+    "lon": 69.1723,
+    "elevation_m": null,
+    "modern_name": "Kabul, Afghanistan (proxy pin for Central Asia/Afghanistan theatre)",
+    "historical_name": "Central Asia, Persia and Afghanistan between the Russian Empire and British India (Kabul as proxy pin)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-gn"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Long imperial contest shaping the borders and politics of Afghanistan, Persia and Central Asia."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ba",
+      "url": "https://www.thebritishacademy.ac.uk/documents/2491/111p179.pdf",
+      "title": "The Legend of the Great Game (Elie Kedourie Memorial Lecture)",
+      "publisher": "British Academy",
+      "author": "Malcolm Yapp",
+      "date_published": "2001",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ency",
+      "url": "https://www.encyclopedia.com/politics/encyclopedias-almanacs-transcripts-and-maps/great-game",
+      "title": "Great Game",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Eric v.d. Luft",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn",
+      "url": "https://www.geonames.org/1138958",
+      "title": "Kabul, Afghanistan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date is vague; Conolly's coinage is disputed (Yapp: term older, rivalry sense later, first found in Boulger). Pin is a Kabul proxy for a vast theatre. Anglo-Afghan Wars not cited.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:26.794Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1800",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Great Game is the name for the rivalry between Britain and Russia for influence in Central Asia and neighbouring lands.",
+        "source": "src-ba"
+      },
+      {
+        "span": "1907",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The Anglo-Russian Convention of August 1907 formally ended the contest.",
+        "source": "src-ba",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

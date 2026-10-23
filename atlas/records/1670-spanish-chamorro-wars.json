@@ -1,0 +1,171 @@
+{
+  "id": "1670-spanish-chamorro-wars",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Spanish-Chamorro Wars on Guam",
+  "summary": "After Jesuit missionaries led by Diego Luis de San Vitores arrived in 1668 and pressed Christianity on the CHamoru people, conflict broke out. San Vitores was killed in 1672, the military took over the mission, and fighting continued until about 1695. Spanish forces killed hundreds, and the population fell sharply.",
+  "when": {
+    "start": {
+      "year": 1668
+    },
+    "end": {
+      "year": 1695
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 4,
+      "end_minus_years": 3,
+      "end_plus_years": 0,
+      "note": "Guampedia dates the arrival of the missionaries to 1668 and says the ensuing conflict lasted until 1695. Smithsonian Magazine says twenty-six years of wars followed San Vitores's 1672 death, which points to a slightly later end, so the end is shown with a few years of uncertainty. The id year 1670 is only a lookup key."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The ensuing conflict, which lasted until 1695",
+        "source": "src-guampedia-tr"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Twenty-six years of Spanish - Chamorro wars ensued",
+        "source": "src-smithsonian"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "arrival of Padre Diego Luis de San Vitores in 1668",
+        "source": "src-guampedia-ag"
+      }
+    ],
+    "display": "c. 1668–1695"
+  },
+  "where": {
+    "lat": 13.483333,
+    "lon": 144.75,
+    "elevation_m": null,
+    "modern_name": "Hagåtña, Guam (pin on the Spanish mission and presidio centre; fighting spread across Guam)",
+    "historical_name": "Hagåtña, Guam, in the Mariana Islands, a Spanish mission and presidio",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-hagatna"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "religion_philosophy"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A decades-long conflict that brought Guam under Spanish control and sharply reduced the CHamoru population."
+  },
+  "confidence": "probable",
+  "audience_note": "This record concerns armed conflict, the killing of Indigenous people and a large population loss. Casualty and population figures are estimates and vary by source.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-guampedia-tr",
+      "url": "https://www.guampedia.com/transmission-of-christianity-into-chamorro-culture/",
+      "title": "Transmission of Christianity into CHamoru/Chamorro Culture",
+      "publisher": "Guampedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-guampedia-ag",
+      "url": "https://www.guampedia.com/chiefs-aguarin/",
+      "title": "Agualin",
+      "publisher": "Guampedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-smithsonian",
+      "url": "https://www.smithsonianmag.com/history/story-zoot-suit-riots-180964508/",
+      "title": "Smithsonian Magazine article on Guam and the Chamorro people (2017)",
+      "publisher": "Smithsonian Magazine",
+      "author": null,
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-hagatna",
+      "url": "https://www.wikidata.org/wiki/Q30988",
+      "title": "Wikidata item Q30988 (Hagåtña), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The id year 1670 is only a lookup key; the sources date the conflict from 1668 (mission arrival) to 1695, and they differ on the end. I could not confirm a start date for open fighting. Guampedia and the Smithsonian page differ on population figures, so none are stated. The Smithsonian URL slug shows a different article title than its content; the page text was read and matches the claims. Wikipedia-based summaries were not used.",
+  "author": "historian-agent:o-s107",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T18:43:53.969Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1668",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "After Jesuit missionaries led by Diego Luis de San Vitores arrived in 1668 and pressed Christianity on the CHamoru people, conflict broke out.",
+        "source": "src-guampedia-tr"
+      },
+      {
+        "span": "1695",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "San Vitores was killed in 1672, the military took over the mission, and fighting continued until about 1695.",
+        "source": "src-guampedia-tr",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

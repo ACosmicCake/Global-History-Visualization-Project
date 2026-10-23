@@ -1,0 +1,133 @@
+{
+  "id": "2022-siege-of-mariupol",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Siege of Mariupol",
+  "summary": "During Russia's 2022 invasion of Ukraine, the port city of Mariupol was besieged and bombarded. Civilians were trapped, and a drama theater sheltering them was destroyed. Ukrainian defenders held out in the Azovstal steel plant, from which a UN-Red Cross operation evacuated civilians by 1 May 2022.",
+  "when": {
+    "start": {
+      "year": 2022
+    },
+    "end": {
+      "year": 2022
+    },
+    "precision": "month",
+    "display": "February–May 2022",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "1 May 2022",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "19 March 2022",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 47.0975,
+    "lon": 37.61,
+    "elevation_m": null,
+    "modern_name": "Mariupol, Ukraine",
+    "historical_name": "Mariupol, Ukraine",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A major, prolonged urban siege of the 2022 Russian invasion of Ukraine, with a large civilian toll and war-crime allegations."
+  },
+  "confidence": "established",
+  "audience_note": "Contains references to civilian deaths, bombardment and alleged war crimes.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260116000343/https://www.president.gov.ua/en/news/zmistovni-peregovori-pro-mir-i-bezpeku-dlya-ukrayini-yedinij-73661",
+      "title": "Meaningful talks on peace and security for Ukraine are the only chance for Russia to reduce the damage from its own mistakes - address by President Volodymyr Zelenskyy — Official website of the Presid",
+      "publisher": "president.gov.ua",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://news.un.org/en/story/2022/05/1117342",
+      "title": "Ukraine: UN-Red Cross operation underway to evacuate civilians from stricken Mariupol plant | UN News",
+      "publisher": "news.un.org",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q111017791",
+      "title": "Wikidata Q111017791 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give no explicit start or end date for the siege; the Wikidata dates of 25 February to 20 May 2022 are not confirmed by them. The sources show the siege was ongoing on 19 March and 1 May 2022 only. The 20,000 civilian death figure is a mayor's report and is not in the summary. (Drafted by the Wikipedia pipeline from president.gov.ua, news.un.org; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:22.630Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2022",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "During Russia's 2022 invasion of Ukraine, the port city of Mariupol was besieged and bombarded.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2022",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Civilians were trapped, and a drama theater sheltering them was destroyed.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

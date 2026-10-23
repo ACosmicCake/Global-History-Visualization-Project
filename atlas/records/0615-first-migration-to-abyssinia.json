@@ -1,0 +1,159 @@
+{
+  "id": "0615-first-migration-to-abyssinia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "First Muslim migration to Aksum (Abyssinia)",
+  "summary": "Around 615 CE a small group of early Muslims left Mecca, on Muhammad's advice, to escape pressure from the Quraysh and found refuge under the Christian ruler of the Kingdom of Aksum. Later Muslim accounts remember it as the first hijra, and some emigrants stayed for years.",
+  "when": {
+    "start": {
+      "year": 615
+    },
+    "end": {
+      "year": 615
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Muslim tradition and modern scholars give 615 CE (fifth year of the mission, month of Rajab); some accounts give 613 CE. The dates rest on later Muslim biographical tradition (Ibn Ishaq)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as stated by a scholarly article",
+        "value": "In the year 615, the Prophet advised those without clan support to flee to Abyssinia",
+        "source": "src-magnusson"
+      },
+      {
+        "calendar": "Gregorian and Islamic months",
+        "value": "615 CE, in the month of Rajab, during the fifth year of the prophetic mission",
+        "source": "src-encmuhammad"
+      }
+    ],
+    "display": "c. 615 CE"
+  },
+  "where": {
+    "lat": 14.12109,
+    "lon": 38.72337,
+    "elevation_m": null,
+    "modern_name": "Aksum (Axum), Tigray, Ethiopia (destination; emigrants set out from Mecca via the Red Sea)",
+    "historical_name": "Kingdom of Aksum (Aksumite Empire), ruled by a Christian king called the Najashi/Negus in Muslim sources",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-geonames-axum"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "An early refuge-seeking migration of the Muslim community, remembered in Islamic tradition as the first hijra, which links Arabia and Aksum."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-muhammad",
+      "type": "related"
+    },
+    {
+      "id": "0630-conquest-of-mecca",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-magnusson",
+      "url": "https://scholarsarchive.byu.edu/thetean/vol36/iss1/3",
+      "title": "Satanic Verses?: An Analysis of the Explanations for the Return of the Muslim Community from Abyssinia",
+      "publisher": "Brigham Young University ScholarsArchive (THETEAN)",
+      "author": "Andrew D. Magnusson",
+      "date_published": "2007",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encmuhammad",
+      "url": "https://muhammadencyclopedia.com/article/first-phase-of-migration-to-abyssinia",
+      "title": "First phase of migration to Abyssinia",
+      "publisher": "Encyclopedia of Muhammad",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-axum",
+      "url": "https://www.geonames.org/search.html?q=Aksum&country=ET",
+      "title": "GeoNames search: Aksum (Axum), Ethiopia",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the year (613 vs 615 in tradition) and of the pin: the event spans Mecca, the Red Sea crossing and Aksum; the pin is the destination city, not a precise site. Identity of the Najashi (Ashama; modern proposals Armah or Ella Tsaham) is not settled. Source base is late Muslim tradition.",
+  "author": "historian-agent:o-s2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:30.600Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "615",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Around 615 CE a small group of early Muslims left Mecca, on Muhammad's advice, to escape pressure from the Quraysh and found refuge under the Christian ruler of…",
+        "source": "src-magnusson"
+      },
+      {
+        "span": "615",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Later Muslim accounts remember it as the first hijra, and some emigrants stayed for years.",
+        "source": "src-magnusson",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

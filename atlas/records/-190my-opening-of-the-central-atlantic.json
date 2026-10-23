@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-190my-opening-of-the-central-atlantic",
+  "kind": "event",
+  "title": "Opening of the Central Atlantic Ocean",
+  "summary": "Pangaea began to split between North America and Africa, and ocean crust started to form in the Central Atlantic. One reconstruction dates the start to the Late Sinemurian, about 190 million years ago, with very slow spreading at first; magnetic data off the US coast suggest spreading by about 168.5 million years ago. Published breakup ages disagree.",
+  "when": {
+    "start": {
+      "year": -190000000
+    },
+    "end": {
+      "year": -168500000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 5000000,
+      "start_plus_years": 5000000,
+      "end_minus_years": 5000000,
+      "end_plus_years": 5000000,
+      "note": "Onset estimates differ by study; Labails et al. (2010) give 190 Ma, while Greene et al. (2017) suggest the Blake Spur anomaly is about 168.5 Ma (M42), with earlier anomalies possibly documenting the first spreading or synrift magmatism."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "opening started already during the Late Sinemurian (190 Ma)",
+        "source": "src-labails"
+      },
+      {
+        "calendar": "Magnetic anomaly",
+        "value": "Blake Spur Magnetic Anomaly may be M series anomaly M42 (~168.5 Ma)",
+        "source": "src-greene"
+      }
+    ],
+    "display": "c. 190–168.5 million years ago"
+  },
+  "where": {
+    "lat": 31,
+    "lon": -79,
+    "elevation_m": null,
+    "modern_name": "Blake Plateau, western Atlantic off the south-eastern United States (centre point, near the Blake Spur Magnetic Anomaly)",
+    "historical_name": "Eastern North American margin of Pangaea, conjugate to Morocco and Nova Scotia (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-blake"
+    ],
+    "paleo": {
+      "lat": 8.06,
+      "lon": -13.71,
+      "age_ma": 190,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 31.0, -79.0 reconstructed to 190 Ma. PALEOMAP returned no position for this point at 190 Ma."
+    }
+  },
+  "regions": [
+    "oceans",
+    "northern_america",
+    "northern_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Birth of the Atlantic Ocean, the first stage in the breakup of Pangaea."
+  },
+  "related": [
+    {
+      "id": "-200my-breakup-of-pangaea",
+      "type": "part_of"
+    },
+    {
+      "id": "-201my-central-atlantic-magmatic-province",
+      "type": "caused_by",
+      "because": "CAMP volcanism preceded the rifting and seafloor spreading in the Central Atlantic."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-labails",
+      "url": "https://archimer.ifremer.fr/doc/00014/12533/",
+      "title": "An alternative early opening scenario for the Central Atlantic Ocean (Labails, Olivet, Aslanian, Roest; EPSL 297:355-368)",
+      "publisher": "Ifremer (Archimer)",
+      "author": "Ifremer (Archimer)",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-greene",
+      "url": "https://pubs.usgs.gov/publication/70194447",
+      "title": "Refining the formation and early evolution of the Eastern North American Margin: new insights from multiscale magnetic anomaly analyses (Greene et al., JGR Solid Earth)",
+      "publisher": "U.S. Geological Survey",
+      "author": "U.S. Geological Survey",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-blake",
+      "url": "https://www.wikidata.org/wiki/Q4924463",
+      "title": "Wikidata: Blake Plateau (Q4924463)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Opening age is contested: 190 Ma (Labails) vs about 168.5 Ma for the Blake Spur anomaly (Greene, who frames it as a possibility); other literature quotes 195-175 Ma, not opened. The pin is a loose centre of the Blake Plateau, not the oldest oceanic crust.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:25.003Z"
+}

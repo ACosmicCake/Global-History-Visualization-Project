@@ -1,0 +1,151 @@
+{
+  "id": "1863-pacific-labour-trade-blackbirding",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Pacific labour trade to Queensland (blackbirding)",
+  "summary": "From 1863 to 1904 about 62,000 Pacific Islanders from roughly 80 Melanesian islands were brought to Queensland as indentured labourers for cotton and sugar plantations, in what is known as blackbirding. Many were kidnapped, tricked or coerced. Because of re-enlistments, perhaps 50,000 individuals were involved, and over 14,564 died in Queensland between 1868 and 1906. Many were deported by 1908 under the White Australia policy.",
+  "when": {
+    "start": {
+      "year": 1863
+    },
+    "end": {
+      "year": 1904
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Both sources give 1863 to 1904 for the trade; deportations ran later, to 1908 per the State Library of Queensland. The 62,000 figure counts indenture contracts (Queensland State Archives) and includes repeat contracts."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "from 1863 to 1904",
+        "source": "src-slq-asi"
+      },
+      {
+        "calendar": "CE",
+        "value": "between 1863 and 1904",
+        "source": "src-qsa-asi"
+      }
+    ],
+    "display": "1863–1904"
+  },
+  "where": {
+    "lat": -20,
+    "lon": 143,
+    "elevation_m": null,
+    "modern_name": "Queensland, Australia (recruited from Melanesian islands)",
+    "historical_name": "Queensland, supplied from about 80 Melanesian islands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 900,
+    "coordinate_sources": [
+      "src-wd-qld"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "About 62,000 indenture contracts, kidnapping and coercion, and the origin of the Australian South Sea Islander community."
+  },
+  "confidence": "established",
+  "audience_note": "This record describes the kidnapping, trickery and coercion of Pacific Islanders, including boys, and a very high death rate among them. Some recruits signed contracts willingly in the sources, so the extent of coercion varied.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-slq-asi",
+      "url": "https://www.slq.qld.gov.au/discover/exhibitions/australian-south-sea-islanders",
+      "title": "Australian South Sea Islanders",
+      "publisher": "State Library of Queensland",
+      "author": "State Library of Queensland",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-qsa-asi",
+      "url": "https://blogs.archives.qld.gov.au/2016/05/27/australian-south-sea-islanders-in-queensland/",
+      "title": "Australian South Sea Islanders in Queensland",
+      "publisher": "Queensland State Archives",
+      "author": "Queensland State Archives",
+      "date_published": "2016-05-27",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-qld",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q36074.json",
+      "title": "Wikidata entry for Queensland (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1863",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Islanders from the Melanesian islands begin to be brought to Queensland as indentured labourers on cotton and sugar plantations.",
+        "source": "src-slq-asi",
+        "consequence": false
+      },
+      {
+        "span": "1863 to 1904",
+        "action": "numbers.counter { range: [0, 62000] }",
+        "caption": "Over 62,000 indenture contracts were issued, on 807 voyages involving 80 islands.",
+        "source": "src-qsa-asi",
+        "consequence": false
+      },
+      {
+        "span": "1908",
+        "action": "region.fill { radius_km: 800 }",
+        "caption": "By 1908 many had been deported under the White Australia policy, and those who remained faced harsh treatment and discrimination.",
+        "source": "src-slq-asi",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: location is the Queensland state centre (large uncertainty) because recruitment ran across many islands; the 1863 first-voyage details (Don Juan, Brisbane) were only seen in search snippets, so they are not used. The 62,000 counts contracts per the archives, 62,000 people per the library; the summary says people and notes re-enlistment. Whether the trade amounted to slavery is debated elsewhere and is not asserted.",
+  "author": "historian-agent:o-s91",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:11:09.464Z"
+}

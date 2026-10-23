@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes naval combat with significant loss of life.",
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "1942-battle-of-midway",
+  "kind": "event",
+  "title": "Battle of Midway",
+  "summary": "From 3 to 7 June 1942 American and Japanese naval forces fought near Midway Atoll in the central Pacific. US forces sank all four Japanese carriers, Akagi, Kaga, Soryu and Hiryu, losing the carrier Yorktown, which a Japanese submarine torpedoed during salvage. Japan's offensive was halted and the United States began offensive action.",
+  "when": {
+    "start": {
+      "year": 1942,
+      "iso": "1942-06-03"
+    },
+    "end": {
+      "year": 1942,
+      "iso": "1942-06-07"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The National WWII Museum gives June 3-7; World History Encyclopedia gives 4-6 June."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The five-day battle, fought from June 3-7, 1942",
+        "source": "src-ww2museum-midway"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Battle of Midway, 4-6 June 1942",
+        "source": "src-whe-midway"
+      }
+    ],
+    "display": "3-7 June 1942"
+  },
+  "where": {
+    "lat": 28.2075,
+    "lon": -177.35,
+    "elevation_m": null,
+    "modern_name": "Midway Atoll, Northwestern Hawaiian Islands (US)",
+    "historical_name": "Midway Atoll, a US possession in the central Pacific; the fighting covered a wide sea area",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata-midway"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "oceania"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Called the turning point of the Pacific War; Japan lost four carriers."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    },
+    {
+      "id": "1941-12-07-attack-on-pearl-harbor",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ww2museum-midway",
+      "url": "https://www.nationalww2museum.org/war/topics/battle-of-midway",
+      "title": "Battle of Midway",
+      "publisher": "The National WWII Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-whe-midway",
+      "url": "https://www.worldhistory.org/article/2964/battle-of-midway/",
+      "title": "Battle of Midway: Japan's First Naval Defeat in WWII",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-midway",
+      "url": "https://www.wikidata.org/wiki/Q47863",
+      "title": "Wikidata item Q47863 (Midway Atoll), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualty figures differ between the two sources (museum: 307 US personnel; WHE: 362) so none is stated. The pin is the atoll, not a battle site; the carriers were sunk at sea. Which of the four carriers sank on which day follows the cited pages only in part.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1942-06-04",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The decisive carrier fighting near Midway begins on 4 June; Kaga, Akagi and Soryu sink after being hit.",
+        "source": "src-whe-midway"
+      },
+      {
+        "span": "1942-06-05",
+        "action": "region.fill { radius_km: 400 }",
+        "caption": "Akagi and Hiryu are scuttled on 5 June, so Japan has lost all four carriers.",
+        "source": "src-ww2museum-midway"
+      },
+      {
+        "span": "1942-06-07",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Yorktown sinks at dawn on 7 June. With its carriers gone, Japan's offensive is overturned and the US begins offensive action.",
+        "source": "src-ww2museum-midway",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T08:21:38.720Z"
+}

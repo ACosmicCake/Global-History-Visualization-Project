@@ -1,0 +1,168 @@
+{
+  "id": "1884-international-meridian-conference",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "International Meridian Conference",
+  "summary": "Delegates from many countries met in Washington DC in October 1884 to choose a common zero of longitude and basis for time-reckoning. Backed by the United States and Britain, a vote placed the prime meridian at Greenwich rather than Paris; the conference also took up a universal day and a dateline at 180 degrees.",
+  "when": {
+    "start": {
+      "year": 1884
+    },
+    "end": {
+      "year": 1884
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UCSD gives 1 October to 1 November 1884; the Greenwich Meridian site says only October 1884."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October 1, 1884",
+        "source": "src-ucsd"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 1",
+        "source": "src-ucsd"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October 1884",
+        "source": "src-tgm"
+      }
+    ],
+    "display": "1 October – 1 November 1884"
+  },
+  "where": {
+    "lat": 38.8951,
+    "lon": -77.0364,
+    "elevation_m": null,
+    "modern_name": "Washington, DC, USA",
+    "historical_name": "Washington, District of Columbia, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Its vote for Greenwich underlies the world's longitude and time-reckoning conventions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ucsd",
+      "url": "https://1884.ucsd.edu/archives/MeridianConf.html",
+      "title": "International Meridian Conference (Kikuchi Dairoku archive)",
+      "publisher": "University of California San Diego",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tgm",
+      "url": "https://www.thegreenwichmeridian.org/tgm/articles.php?article=10",
+      "title": "The adoption of a Prime Meridian and the International Meridian Conference of 1884",
+      "publisher": "The Greenwich Meridian (thegreenwichmeridian.org)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lick",
+      "url": "https://www.ucolick.org/~sla/leapsecs/scans-meridian.html",
+      "title": "1884 International Meridian Conference",
+      "publisher": "University of California Observatories (Lick Observatory)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://wiki.openstreetmap.org/wiki/Washington_DC",
+      "title": "Washington DC",
+      "publisher": "OpenStreetMap Wiki",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on participation (UCSD: 27 countries; Greenwich Meridian site: 41 delegates from 25 nations), so no count is given. Pin is a city-centre proxy for Washington.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:12.540Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1884",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Delegates from many countries met in Washington DC in October 1884 to choose a common zero of longitude and basis for time-reckoning.",
+        "source": "src-ucsd"
+      },
+      {
+        "span": "1884",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Backed by the United States and Britain, a vote placed the prime meridian at Greenwich rather than Paris; the conference also took up a universal day and a…",
+        "source": "src-ucsd",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

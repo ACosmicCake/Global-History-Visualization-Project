@@ -1,0 +1,147 @@
+{
+  "id": "1942-second-battle-of-el-alamein",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Second Battle of El Alamein",
+  "summary": "From 23 October to 4 November 1942 the British Eighth Army under Montgomery attacked the Axis army under Rommel at El Alamein in Egypt, with about 200,000 men and as many as 1,200 tanks. The Allied victory forced a retreat that ended in Tunisia.",
+  "when": {
+    "start": {
+      "year": 1942
+    },
+    "end": {
+      "year": 1942
+    },
+    "precision": "day",
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "23 October to 4 November 1942",
+        "source": "src-historyofwar"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Battle of El Alamein, 23 October 1942",
+        "source": "src-awm"
+      }
+    ],
+    "display": "23 October – 4 November 1942"
+  },
+  "where": {
+    "lat": 30.833944,
+    "lon": 28.949268,
+    "elevation_m": null,
+    "modern_name": "El Alamein, Matrouh Governorate, Egypt",
+    "historical_name": "El Alamein front, Western Desert, Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Described as Montgomery's first great offensive victory that forced Rommel into a retreat ending at the Mareth Line."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-historyofwar",
+      "url": "https://www.historyofwar.org/articles/battles_alamein_2nd.html",
+      "title": "Second battle of El Alamein, 23 October-4 November 1942",
+      "publisher": "historyofwar.org",
+      "author": "historyofwar.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-awm",
+      "url": "https://awm.gov.au/articles/atwar/alamein23",
+      "title": "The Battle of El Alamein, 23 October 1942",
+      "publisher": "Australian War Memorial",
+      "author": "Australian War Memorial",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=El+Alamein+Egypt&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result: El Alamein Egypt",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": "2026-10-22",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "End date differs by source: historyofwar gives 4 November; an EBSCO page I opened gives 3 November (Rommel ordered retreat). The AWM page supports only the 23 October start; the end date and force numbers rest on historyofwar alone.",
+  "author": "historian-agent:o-s76",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T14:19:15.628Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1942",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 23 October to 4 November 1942 the British Eighth Army under Montgomery attacked the Axis army under Rommel at El Alamein in Egypt, with about 200,000 men…",
+        "source": "src-historyofwar"
+      },
+      {
+        "span": "1942",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Allied victory forced a retreat that ended in Tunisia.",
+        "source": "src-historyofwar",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-valley-of-the-kings",
+  "kind": "place",
+  "title": "Valley of the Kings",
+  "summary": "The Valley of the Kings is a desert valley on the west bank of the Nile opposite ancient Thebes (modern Luxor), where rulers of Egypt's 18th, 19th and 20th dynasties were buried between about 1550 and 1069 BCE. Thutmose I is the first ruler confirmed buried there; it has over sixty tombs, including Tutankhamun's. UNESCO lists it within Ancient Thebes with its Necropolis (1979).",
+  "when": {
+    "start": {
+      "year": -1549
+    },
+    "end": {
+      "year": -1068
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 50,
+      "end_minus_years": 69,
+      "end_plus_years": 0,
+      "note": "The Egyptian Ministry gives the New Kingdom as c. 1550-1069 BC, during which the rulers were buried here; UNESCO gives the tombs as 1500-1000 BCE. Burial in the valley began with Thutmose I (c. 1504-1492 BC)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC",
+        "value": "New Kingdom ( c. 1550-1069 BC)",
+        "source": "src-egmon-votk"
+      },
+      {
+        "calendar": "BCE",
+        "value": "tombs of the Valley of the Kings (1500 - 1000 BCE)",
+        "source": "src-unesco-thebes"
+      }
+    ],
+    "display": "c. 1550-1069 BCE"
+  },
+  "where": {
+    "lat": 25.74025,
+    "lon": 32.602358,
+    "elevation_m": null,
+    "modern_name": "Valley of the Kings, West Bank, Luxor, Egypt",
+    "historical_name": "Royal necropolis on the west bank of the Nile opposite Thebes, New Kingdom Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wikidata-votk"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Royal burial ground of New Kingdom Egypt and site of Tutankhamun's tomb; part of a World Heritage site."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1922-discovery-of-tutankhamuns-tomb",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-egmon-votk",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/",
+      "title": "Valley of the Kings",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.modern_name",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-unesco-thebes",
+      "url": "https://whc.unesco.org/en/list/87",
+      "title": "Ancient Thebes with its Necropolis",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-wikidata-votk",
+      "url": "https://www.wikidata.org/wiki/Q133423",
+      "title": "Wikidata item Q133423 (Valley of the Kings), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The date span is the New Kingdom period of the burials, not a construction date of the site. Tutankhamun's tomb is named in the UNESCO text; its discovery year was not read on an opened page and is not stated. Tomb count: Egyptian Ministry says over sixty.",
+  "published_at": "2026-10-22T08:21:39.350Z"
+}

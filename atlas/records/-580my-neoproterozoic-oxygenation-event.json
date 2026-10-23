@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "contested",
+  "audience_note": null,
+  "author": "historian-agent:o-s26",
+  "updated": "2026-10-22",
+  "id": "-580my-neoproterozoic-oxygenation-event",
+  "kind": "process",
+  "title": "Neoproterozoic (Ediacaran) oxygenation",
+  "summary": "During the Ediacaran Period, roughly 635 to 541 million years ago, oxygen in the air and oceans appears to have risen. Evidence shows pulses around 580 million years ago, and one model suggests a sustained increase to about a quarter of todays level. Whether it was one event or a fluctuating window is debated.",
+  "when": {
+    "start": {
+      "year": -580000000
+    },
+    "end": {
+      "year": -541000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 55000000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the c. 580 Ma pulse reported from the Oman Shuram Excursion work; the Ediacaran rise modelled by Williams and colleagues spans the whole period, 635 to 541 Ma, so the start could be as early as 635 Ma. End is the end of the Ediacaran, 541 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (million years ago)",
+        "value": "increases in oxygen levels during the ca. 580 Ma Shuram Excursion",
+        "source": "src-nasa-noe"
+      },
+      {
+        "calendar": "Ma (million years ago)",
+        "value": "sustained rise in atmospheric oxygen during the Ediacaran, 635-541 Ma",
+        "source": "src-williams2019"
+      }
+    ],
+    "display": "c. 580-541 million years ago (Ediacaran)"
+  },
+  "where": {
+    "lat": 21,
+    "lon": 57,
+    "elevation_m": null,
+    "modern_name": "Global ocean and atmosphere (marker placed in Oman, where Shuram Excursion evidence was studied)",
+    "historical_name": "Ediacaran Earth, before any polities",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-wd-q842",
+      "src-nasa-noe"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "A proposed rise in oxygen just before the first large animals, often linked to their emergence."
+  },
+  "related": [
+    {
+      "id": "-2400my-great-oxidation-event",
+      "type": "related"
+    },
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-noe",
+      "url": "https://astrobiology.nasa.gov/nai/annual-reports/2015/ucr/alternative-earth-4-the-rise-of-complexity-amid-environmental-turmoil/",
+      "title": "Alternative Earth 4: The rise of complexity amid environmental turmoil (2015 Annual Science Report)",
+      "publisher": "NASA Astrobiology Institute / UC Riverside",
+      "author": "NASA Astrobiology Institute",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-williams2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6584537/",
+      "title": "A tectonically driven Ediacaran oxygenation event",
+      "publisher": "Nature Communications (via PubMed Central)",
+      "author": "Joshua J. Williams, Benjamin J. W. Mills, Timothy M. Lenton",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "confidence"
+      ]
+    },
+    {
+      "id": "src-wd-q842",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q842.json",
+      "title": "Wikidata item Q842 (Oman), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the framing: the 2020 Tostevin and Mills review (seen only in a search snippet, not opened) argues for a fluctuating window rather than one event, so confidence is contested. The pin is a marker only; the process is global.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-580000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "During the Ediacaran Period, roughly 635 to 541 million years ago, oxygen in the air and oceans appears to have risen.",
+        "source": "src-nasa-noe"
+      },
+      {
+        "span": "-541000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Evidence shows pulses around 580 million years ago, and one model suggests a sustained increase to about a quarter of todays level.",
+        "source": "src-nasa-noe",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T07:37:39.620Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

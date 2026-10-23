@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1957-launch-of-sputnik-1",
+  "kind": "event",
+  "title": "Launch of Sputnik 1",
+  "summary": "On 4 October 1957 the Soviet Union launched Sputnik 1, the first artificial Earth satellite, from the Baikonur Cosmodrome in Kazakhstan. The US State Department says its success had a major impact on the Cold War, and that fear of falling behind led US policymakers to accelerate space and weapons programs.",
+  "when": {
+    "start": {
+      "year": 1957,
+      "iso": "1957-10-04"
+    },
+    "end": {
+      "year": 1957,
+      "iso": "1957-10-04"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day given on the cited page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On October 4, 1957, the Soviet Union launched the earth's first artificial satellite, Sputnik-1.",
+        "source": "src-state-sputnik"
+      }
+    ],
+    "display": "4 October 1957"
+  },
+  "where": {
+    "lat": 45.9178932,
+    "lon": 63.4083721,
+    "elevation_m": null,
+    "modern_name": "Baikonur Cosmodrome, Kyzylorda Region, Kazakhstan",
+    "historical_name": "Soviet Union (launch site now Baikonur Cosmodrome in Kazakhstan)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-osm-baikonur"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "First artificial satellite; its success changed Cold War policy in the United States."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1969-07-20-apollo-11",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-state-sputnik",
+      "url": "https://history.state.gov/milestones/1953-1960/sputnik",
+      "title": "Sputnik and the Space Race",
+      "publisher": "US Department of State, Office of the Historian",
+      "author": "Office of the Historian",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-esa-sputnik",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Integral/30_September_-_4_October",
+      "title": "30 September - 4 October",
+      "publisher": "European Space Agency",
+      "author": "ESA",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-baikonur",
+      "url": "https://nominatim.openstreetmap.org/search?q=Baikonur+Cosmodrome&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for Baikonur Cosmodrome (relation 6725906)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: coordinate is the cosmodrome centroid, not the launch pad; ESA page opened but its date wording was not confirmed.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1957-10-04",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The Soviet Union launched Sputnik 1 from Baikonur in Kazakhstan, the first artificial Earth satellite.",
+        "source": "src-state-sputnik"
+      },
+      {
+        "span": "1958",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "US policymakers, fearing they had fallen behind, accelerated space and weapons programs.",
+        "source": "src-state-sputnik",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:11:46.068Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

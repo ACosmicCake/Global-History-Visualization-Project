@@ -1,0 +1,138 @@
+{
+  "id": "1939-winter-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Winter War",
+  "summary": "The Soviet Union invaded Finland on 30 November 1939 after Finland refused Soviet territorial demands, which were justified by the need to protect Leningrad. Finland resisted for over two months, but a renewed Soviet offensive in February 1940 led to the Moscow Peace Treaty, in which Finland ceded 9% of its territory yet kept its sovereignty.",
+  "when": {
+    "start": {
+      "year": 1939
+    },
+    "end": {
+      "year": 1940
+    },
+    "precision": "day",
+    "display": "30 November 1939 – 13 March 1940",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "on 30 November 1939",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "Moscow Peace Treaty on 13 March 1940",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "November 30, 1939 - March 12, 1940",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 65,
+    "lon": 27,
+    "elevation_m": null,
+    "modern_name": "Finland, Karelian Isthmus (proxy pin: Finland, the location Wikidata lists)",
+    "historical_name": "Finland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A major early World War II conflict that shaped Finnish independence and perceptions of Soviet military strength."
+  },
+  "confidence": "established",
+  "audience_note": "Describes war with heavy military losses.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Winter_War&oldid=1380602709",
+      "title": "Winter War (Wikipedia, revision 1380602709)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "FA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20260102120010/https://www.britannica.com/event/Russo-Finnish-War",
+      "title": "Russo-Finnish War | Summary, Combatants, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q33",
+      "title": "Wikidata Q33 (Finland, coordinates of the location Wikidata gives for Q134949)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources disagree on the end date: Wikipedia gives 13 March 1940 and Britannica gives 12 March 1940. I used 1940 for the end year, so the discrepancy does not affect the year fields. The Britannica text is mostly page boilerplate around a short summary. (Drafted by the Wikipedia pipeline from Wikipedia, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:49:55.204Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1939",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The Soviet Union invaded Finland on 30 November 1939 after Finland refused Soviet territorial demands, which were justified by the need to protect Leningrad.",
+        "source": "src-wp"
+      },
+      {
+        "span": "1940",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Finland resisted for over two months, but a renewed Soviet offensive in February 1940 led to the Moscow Peace Treaty, in which Finland ceded 9% of its territory…",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

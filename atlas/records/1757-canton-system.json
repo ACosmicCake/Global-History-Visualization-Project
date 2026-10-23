@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "1757-canton-system",
+  "kind": "process",
+  "title": "The Canton System (Guangzhou as the only port for foreign trade)",
+  "summary": "In 1757 the Qing court designated Guangzhou (Canton) as the only port for foreign commerce. Trade there was run by a monopoly of licensed Chinese merchants, the co-hong, under government officials, and foreign merchants could stay only during a trading season from April to September. China was forced to abandon the system after the First Opium War, which ended in 1842.",
+  "when": {
+    "start": {
+      "year": 1757
+    },
+    "end": {
+      "year": 1842
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 1757 decision. Other sources date the formal co-hong monopoly to 1760; those pages were not used for the dates. The end year follows the EBSCO title (1757–1842)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "as the only port for foreign commerce in 1757",
+        "source": "src-chiculture-canton"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Canton System (1757–1842) was a foreign trade policy established by China's Qing dynasty",
+        "source": "src-ebsco-canton"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "As soon as the Qianlong Emperor implemented the Guangzhou System in 1757, limiting Guangzhou as the only trading port open to the world",
+        "source": "src-hkmm-canton"
+      }
+    ],
+    "display": "1757–1842"
+  },
+  "where": {
+    "lat": 23.13,
+    "lon": 113.26,
+    "elevation_m": null,
+    "modern_name": "Guangzhou (Canton), Guangdong, China",
+    "historical_name": "Guangzhou (Canton), Qing dynasty China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-guangzhou",
+      "src-hkmm-canton"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "trade_exploration",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Shaped Qing foreign trade for about eight decades and fed the tensions that led to the First Opium War."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1839-first-opium-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-chiculture-canton",
+      "url": "https://chiculture.org.hk/en/photo-story/2804",
+      "title": "(3) A Winter Residence under the Canton System",
+      "publisher": "Academy of Chinese Studies (The Splendid Chinese Culture)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-ebsco-canton",
+      "url": "https://www.ebsco.com/research-starters/history/canton-system-1757-1842/",
+      "title": "Canton System (1757–1842), Research Starters",
+      "publisher": "EBSCO",
+      "author": "Jack Lasky",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-hkmm-canton",
+      "url": "https://www.hkmaritimemuseum.org/post/travel-guide-guangzhou",
+      "title": "The Ultimate Travel Guide of Guangzhou in the Late 18th Century",
+      "publisher": "Hong Kong Maritime Museum",
+      "author": null,
+      "date_published": "2022-03-25",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-guangzhou",
+      "url": "https://www.wikidata.org/wiki/Q16572",
+      "title": "Wikidata item Q16572 (Guangzhou), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end date: EBSCO ties the end to the First Opium War and the 1842 settlement, while the Academy page covers only the early period; the 1842 end is from the EBSCO title and text. The Opium War link is listed as related; EBSCO says tensions including the opium trade led to the war, but I did not treat the system as its sole cause. Trading-season dates differ across pages found in searches (April to September here).",
+  "published_at": "2026-10-22T16:17:46.386Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1757",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1757 the Qing court designated Guangzhou (Canton) as the only port for foreign commerce.",
+        "source": "src-chiculture-canton"
+      },
+      {
+        "span": "1842",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "China was forced to abandon the system after the First Opium War, which ended in 1842.",
+        "source": "src-chiculture-canton",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

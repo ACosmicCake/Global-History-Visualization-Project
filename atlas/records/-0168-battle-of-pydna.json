@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "-0168-battle-of-pydna",
+  "kind": "event",
+  "title": "Battle of Pydna",
+  "summary": "At Pydna in June 168 BCE the Roman consul Lucius Aemilius Paullus defeated King Perseus of Macedon in a battle that World History Encyclopedia says lasted about an hour. Perseus fled to Samothrace, where he was captured, and the defeat ended the Third Macedonian War and the independence of the old Macedonian kingdom.",
+  "when": {
+    "start": {
+      "year": -167
+    },
+    "end": {
+      "year": -167
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "168 BCE = -167. Month from the World History Encyclopedia account; Livius gives the year only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "June 168 BCE; lunar eclipse on the night of 21 June 168 BCE, battle early the next day",
+        "source": "src-whe-pydna"
+      },
+      {
+        "calendar": "BCE",
+        "value": "168",
+        "source": "src-livius-pydna"
+      }
+    ],
+    "display": "June 168 BCE"
+  },
+  "where": {
+    "lat": 40.3974977,
+    "lon": 22.6167808,
+    "elevation_m": null,
+    "modern_name": "Ancient Pydna, near Makrygialos, Pieria, Greece",
+    "historical_name": "Pydna, a port in Macedonia, kingdom of Macedon",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The decisive Roman victory that ended the independent Macedonian kingdom."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "polity-macedon",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-republic",
+      "type": "related"
+    },
+    {
+      "id": "-0166-roman-sack-of-epirus",
+      "type": "caused",
+      "because": "Rome's victory at Pydna led the Senate to the reprisals against Epirus (link taken from the existing stub note, not from an opened page)."
+    }
+  ],
+  "numbers": [
+    {
+      "field": "deaths",
+      "label": "Macedonians killed (World History Encyclopedia)",
+      "low": 20000,
+      "high": 20000,
+      "unit": "people",
+      "estimate": true,
+      "as_of": "battle",
+      "source": "src-whe-pydna",
+      "note": "Given as over 20,000, with 6,000 taken prisoner; Roman dead about 100."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-pydna",
+      "url": "https://www.worldhistory.org/Battle_of_Pydna/",
+      "title": "Battle of Pydna",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-livius-pydna",
+      "url": "https://www.livius.org/articles/place/pydna/",
+      "title": "Pydna",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Pydna+Pieria&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact day: WHE implies 22 June via an eclipse on 21 June, but Livius gives the year only. The pin is the ancient town; the battlefield lay near the Leucus river and the Roman camp in the foothills of Mt. Olocrus (per WHE).",
+  "published_at": "2026-10-22T10:55:46.136Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-167",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At Pydna in June 168 BCE the Roman consul Lucius Aemilius Paullus defeated King Perseus of Macedon in a battle that World History Encyclopedia says lasted about an…",
+        "source": "src-whe-pydna"
+      },
+      {
+        "span": "-167",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Perseus fled to Samothrace, where he was captured, and the defeat ended the Third Macedonian War and the independence of the old Macedonian kingdom.",
+        "source": "src-whe-pydna",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "id": "1953-07-27-korean-armistice-agreement",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Korean Armistice Agreement",
+  "summary": "On 27 July 1953 at Panmunjom, Lt. Gen. William K. Harrison Jr. for the United Nations Command and Gen. Nam Il for the Korean People's Army and Chinese People's Volunteers signed an armistice. It took effect at 10 p.m. that evening and set up a demilitarized zone, with both sides withdrawing two kilometres from the line.",
+  "when": {
+    "start": {
+      "year": 1953,
+      "iso": "1953-07-27"
+    },
+    "end": {
+      "year": 1953,
+      "iso": "1953-07-27"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Signing was at 10 a.m. (army.mil); the NARA text states the armistice took effect at 10 p.m. the same day. The date is consistent across both pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "July 27, 1953",
+        "source": "src-nara"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "10 a.m. July 27, 1953",
+        "source": "src-armymil"
+      }
+    ],
+    "display": "27 July 1953"
+  },
+  "where": {
+    "lat": 37.9556,
+    "lon": 126.6778,
+    "elevation_m": null,
+    "modern_name": "Panmunjom, Korean Demilitarized Zone",
+    "historical_name": "Panmunjom, Korea (truce village on the military demarcation line)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-pmj"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "It halted fighting in the Korean War and created the demilitarized zone that still divides the peninsula."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1950-korean-war",
+      "type": "related",
+      "because": "The armistice ended the fighting of the Korean War."
+    },
+    {
+      "id": "1950-10-19-chinese-intervention-in-korea",
+      "type": "related"
+    },
+    {
+      "id": "place-korean-demilitarized-zone",
+      "type": "caused",
+      "because": "The agreement set up the demilitarized zone, with each side withdrawing two kilometres from the demarcation line."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nara",
+      "url": "https://www.archives.gov/milestone-documents/armistice-agreement-restoration-south-korean-state",
+      "title": "Armistice Agreement for the Restoration of the South Korean State (1953)",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-armymil",
+      "url": "https://www.army.mil/article/107980/korean_war_armistice_turns_60_july_27",
+      "title": "Korean War Armistice turns 60 July 27",
+      "publisher": "U.S. Army (army.mil)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-wd-pmj",
+      "url": "https://www.wikidata.org/wiki/Q495167",
+      "title": "Wikidata item Q495167 (Panmunjom), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: Panmunjom coordinates come from Wikidata, with a few km of slack.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:40:48.917Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1953-07-27",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 27 July 1953 at Panmunjom, Lt.",
+        "source": "src-nara"
+      },
+      {
+        "span": "1953",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "for the United Nations Command and Gen.",
+        "source": "src-nara",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

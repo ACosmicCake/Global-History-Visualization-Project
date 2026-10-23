@@ -1,0 +1,150 @@
+{
+  "id": "-34my-opening-of-drake-passage",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Opening of Drake Passage",
+  "summary": "Drake Passage, the seaway between South America and Antarctica, opened so that Pacific and Atlantic water could mix at high southern latitudes, and this is linked to the Antarctic Circumpolar Current and to Antarctic glaciation. The date is disputed: earlier estimates ranged from 15 to 49 million years ago, and two studies argue for opening in the mid to late Eocene.",
+  "when": {
+    "start": {
+      "year": -49000000
+    },
+    "end": {
+      "year": -15000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 15000000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range of 15 to 49 million years ago from the University of Florida news page; individual studies in the sources: mid to late Eocene (Eagles et al. 2006); more than 40 million years (Martin and Scher, per UF). A 2021 Chemical Geology study (31-26 Ma) appeared only in a search result and was not opened."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (years ago)",
+        "value": "mid to late Eocene times",
+        "source": "src-eagles2006"
+      },
+      {
+        "calendar": "million years ago",
+        "value": "ranged from 15 million years to 49 million years ago",
+        "source": "src-ufl2006"
+      }
+    ],
+    "display": "Disputed: estimates 49-15 million years ago"
+  },
+  "where": {
+    "lat": -58.580277777778,
+    "lon": -62.909444444444,
+    "elevation_m": null,
+    "modern_name": "Drake Passage, between South America and Antarctica",
+    "historical_name": "Gateway between the Pacific and Atlantic oceans; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wikidata-drake"
+    ],
+    "paleo": {
+      "not_applicable": "The GPlates MERDITH2021 model returned no plate at this ocean point (oceanic crust formed later than the passage opening), so no paleo-position is given."
+    }
+  },
+  "regions": [
+    "oceans",
+    "antarctica"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "A gateway opening tied to the onset of the Antarctic Circumpolar Current and debated as a cause of Antarctic glaciation."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-34my-eocene-oligocene-glaciation",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-eagles2006",
+      "url": "https://web.meteo.mcgill.ca/~tremblay/Courses/ATOC530/Eagles.et.al.EPSLetters.2006.pdf",
+      "title": "Small basins in the Scotia Sea: The Eocene Drake Passage gateway (Earth and Planetary Science Letters 242:343-353)",
+      "publisher": "Earth and Planetary Science Letters (Elsevier)",
+      "author": "Graeme Eagles, Roy Livermore, Peter Morris",
+      "date_published": "2006",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ufl2006",
+      "url": "https://archive.news.ufl.edu/articles/2006/04/geologists-opening-of-passage-may-be-tied-to-antarctic-cooling.html",
+      "title": "Geologists: Opening of passage may be tied to Antarctic cooling",
+      "publisher": "University of Florida News",
+      "author": null,
+      "date_published": "2006-04-20",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-drake",
+      "url": "https://www.wikidata.org/wiki/Q143650",
+      "title": "Wikidata item Q143650 (Drake Passage), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date, which is genuinely contested; the id says 34 Ma but no opened source gives 34 Ma as the opening date. Pin is a point mid-passage. Only two studies were read; a 2021 deep-opening study was a search lead, not opened. The Eagles PDF was read via pdftotext.",
+  "author": "historian-agent:o-s63",
+  "updated": "2026-10-22",
+  "perspectives": [
+    {
+      "holder": "Eagles, Livermore and Morris (2006)",
+      "account": "Two small Scotia Sea basins started to open in mid to late Eocene times, opening a shallow or intermediate-depth gateway.",
+      "sources": [
+        "src-eagles2006"
+      ]
+    },
+    {
+      "holder": "Martin and Scher (2006), as reported by University of Florida",
+      "account": "Neodymium isotopes from fish teeth support older dates, more than 40 million years.",
+      "sources": [
+        "src-ufl2006"
+      ]
+    }
+  ],
+  "published_at": "2026-10-22T12:14:25.046Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

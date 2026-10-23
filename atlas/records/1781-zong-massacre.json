@@ -1,0 +1,177 @@
+{
+  "id": "1781-zong-massacre",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Zong massacre",
+  "summary": "From 29 November 1781 the crew of the slave ship Zong threw enslaved Africans into the sea over several days on its voyage from Ghana to Jamaica: 122 were thrown overboard and 10 more jumped, 132 deaths among 442 aboard. The owners claimed insurance for the loss, and a 1783 King's Bench case, not a murder trial, followed.",
+  "when": {
+    "start": {
+      "year": 1781,
+      "iso": "1781-11-29"
+    },
+    "end": {
+      "year": 1781
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The killings began 29 November and ran into early December 1781 (insurance.museum); the National Maritime Museum and Master Mariners give 132 deaths, while insurance.museum counts 122 thrown overboard plus 10 who jumped. The ship reached Jamaica on 22 December 1781. The position at sea was not given."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "between the 29 th of November and sometime in early December",
+        "source": "src-ins"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "the deaths of 132 enslaved African people",
+        "source": "src-rmg"
+      }
+    ],
+    "display": "29 November 1781 to early December 1781"
+  },
+  "where": {
+    "lat": 18.18,
+    "lon": -77.4,
+    "elevation_m": null,
+    "modern_name": "At sea between the coast of Ghana and Jamaica (pin at Jamaica)",
+    "historical_name": "Atlantic voyage from the African coast to Jamaica; the exact position of the killings is unrecorded",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-wd-jam"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "sub_saharan_africa",
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The mass killing and the insurance case that followed became a defining episode in the history of the Atlantic slave trade and its legal and moral reckoning."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the mass killing of enslaved people by drowning. Casualty figures vary by source (132 deaths in most accounts).",
+  "related": [
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related",
+      "because": "The Zong was a slave ship carrying captives across the Atlantic."
+    },
+    {
+      "id": "1787-abolition-of-slavery",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ins",
+      "url": "https://insurance.museum/?p=17318",
+      "title": "The Zong massacre (John Lane, Insurance Museum)",
+      "publisher": "Insurance Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-rmg",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-500960",
+      "title": "Documents relating a case in the Court of King's Bench involving the ship ZONG",
+      "publisher": "Royal Museums Greenwich (National Maritime Museum)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-mm",
+      "url": "https://www.mastermariners.org.au/stories-from-the-past/6329-1781-the-british-slave-ship-zong",
+      "title": "1781 The British slave ship Zong",
+      "publisher": "Company of Master Mariners of Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-jam",
+      "url": "https://www.wikidata.org/wiki/Q766",
+      "title": "Wikidata item Q766 (Jamaica), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin, a stand-in at Jamaica because the position of the killings is not given. Death toll sources agree on 132 but split it differently. Only departure and arrival are dated, so no path animation.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1781-08",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "In mid-August 1781 the Zong left Ghana for Jamaica with 442 enslaved people aboard.",
+        "source": "src-ins"
+      },
+      {
+        "span": "1781-11-29",
+        "action": "numbers.counter { range: [0, 132] }",
+        "caption": "From 29 November the crew threw enslaved people overboard over several days; 132 died in all.",
+        "source": "src-ins"
+      },
+      {
+        "span": "1783",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "The owners' insurance claim reached the Court of King's Bench, handled as a property dispute, not a murder prosecution.",
+        "source": "src-mm",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:40:51.209Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

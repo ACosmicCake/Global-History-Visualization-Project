@@ -1,0 +1,249 @@
+{
+  "id": "place-chan-chan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Chan Chan (Tschudi citadel)",
+  "summary": "Chan Chan, near Trujillo on Peru's north coast, was the capital of the Chimú kingdom and the largest adobe city of pre-Columbian America. Nine walled 'citadels' or palaces stand in its six-square-kilometre monumental zone; the Tschudi palace is enclosed by an adobe wall about 10 m high. The kingdom peaked in the 15th century.",
+  "when": {
+    "start": {
+      "year": 1400
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 300,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "ICOMOS says the Chimú kingdom reached its zenith in the 15th century, shortly before the Inca conquest around 1470. The city is older and Tschudi's own building dates are not given in the sources opened, so 1400 is a nominal start with a wide minus range. End is the present: the ruins stand."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "zenith in the 15th century",
+        "source": "src-icomos-chanchan"
+      },
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "In about 1470",
+        "source": "src-icomos-chanchan"
+      }
+    ],
+    "display": "Chimú capital, zenith in the 15th century; abandoned after 1535"
+  },
+  "where": {
+    "lat": -8.10596,
+    "lon": -79.07375,
+    "elevation_m": null,
+    "modern_name": "Chan Chan Archaeological Zone, Huanchaco, Trujillo, La Libertad, Peru",
+    "historical_name": "Chan Chan, capital of the Chimú kingdom (the Tschudi or Nik An 'citadel' is its best-preserved palace)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-chanchan",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The largest earthen city of the pre-Columbian Americas (UNESCO), and the capital of the Chimú state before the Inca conquest."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-366",
+      "url": "https://whc.unesco.org/en/list/366/",
+      "title": "Chan Chan Archaeological Zone (World Heritage List no. 366)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-icomos-chanchan",
+      "url": "https://whc.unesco.org/document/153276",
+      "title": "Advisory body evaluation: Chan Chan Archaeological Zone (Peru), 1986",
+      "publisher": "UNESCO World Heritage Centre (ICOMOS evaluation)",
+      "author": "ICOMOS",
+      "date_published": "1986",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.footprint"
+      ]
+    },
+    {
+      "id": "src-correo-chanchan",
+      "url": "https://diariocorreo.pe/edicion/la-libertad/chan-chan-la-ciudadela-de-barro-mas-grande-de-america-latina-noticia/",
+      "title": "Chan Chan, la ciudadela de barro más grande de América Latina",
+      "publisher": "Diario Correo (La Libertad)",
+      "author": "Diario Correo",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-cyark-chanchan",
+      "url": "https://artsandculture.google.com/asset/3d-model-of-chan-chan-palacio-tshudi-cyark/owFyQNNyFEp3iw",
+      "title": "3D model of Chan Chan - Palacio Tshudi (CyArk)",
+      "publisher": "Google Arts & Culture (CyArk)",
+      "author": "CyArk",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-chanchan",
+      "url": "https://nominatim.openstreetmap.org/search?q=Chan+Chan&format=json",
+      "title": "OpenStreetMap Nominatim result for Chan Chan (Peru)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List dataset (syndication XML)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A large rectangular compound enclosed by a high adobe wall; the Tschudi (Nik An) palace's plan dimensions are not given in the sources opened, so only the wall's section is modelled. UNESCO gives the monumental zone as about 6 sq km with nine such enclosures.",
+      "source": "src-icomos-chanchan",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-correo-chanchan",
+      "measurements": [
+        {
+          "part": "wall height (Tschudi enclosure)",
+          "value": 10,
+          "unit": "m",
+          "source": "src-cyark-chanchan",
+          "note": "CyArk: wall \"in some areas reaches 10 meters in height\"; Correo says 10 to 12 metres"
+        },
+        {
+          "part": "wall base width (thickness)",
+          "value": 4.5,
+          "unit": "m",
+          "source": "src-correo-chanchan",
+          "note": "\"4 a 5 metros de ancho en su base\" (4 to 5 m); midpoint used"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "nine large rectangular walled compounds across the monumental zone, Tschudi one of them"
+      },
+      {
+        "level": "local",
+        "representation": "procedural enclosure wall at 10 m high and about 4.5 m thick at the base, with the interior plazas as a labelled schematic"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1400,
+        "end_year": 1470,
+        "state": "construction",
+        "description": "The Chimú kingdom reached its zenith in the 15th century; Tschudi is among the later citadels. Exact dates of its construction are not in the sources opened.",
+        "source": "src-icomos-chanchan"
+      },
+      {
+        "start_year": 1470,
+        "end_year": 1535,
+        "state": "intact",
+        "description": "After the Inca conquest (about 1470) the city continued until the Spanish founded Trujillo in 1535; the site was afterwards quickly abandoned.",
+        "source": "src-icomos-chanchan"
+      },
+      {
+        "start_year": 1535,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "Abandoned after 1535; the adobe is eroding rapidly and the ruins were plundered.",
+        "source": "src-icomos-chanchan"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1400,
+        "to_year": 2026,
+        "material": "unbaked adobe bricks of clay and straw, laid as thick earthen walls",
+        "source": "src-icomos-chanchan"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape wall: height and base thickness are the only dimensions with sources, and there is no length for the Tschudi enclosure, so the viewer should draw the wall section only. Heights in other sources run from 7.5 to 18 m; 10 m is CyArk's and the low end of Correo's range, and the base width comes from a newspaper. Least sure of all measurements and of the nominal 1400 start.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:12:59.324Z"
+}

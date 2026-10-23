@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s54",
+  "updated": "2026-10-22",
+  "id": "0850-invention-of-gunpowder",
+  "kind": "event",
+  "title": "Invention of gunpowder",
+  "summary": "In the mid-ninth century, according to EBSCO, Daoist alchemists in China found that sulfur, saltpeter and a carbon material such as charcoal made a flammable mixture. A Harvard thesis says a ninth-century Daoist text warned against combining them. EBSCO says the first book with a gunpowder formula appeared in 1044.",
+  "when": {
+    "start": {
+      "year": 850
+    },
+    "end": {
+      "year": 850
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 49,
+      "end_minus_years": 50,
+      "end_plus_years": 49,
+      "note": "Sources say mid-ninth century or ninth century; a Cambridge excerpt says first made in the seventh or eighth century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Mid-9th century",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "CE",
+        "value": "first appeared in a ninth century Daoist text",
+        "source": "src-harvard"
+      }
+    ],
+    "display": "mid-9th century"
+  },
+  "where": {
+    "lat": 34.5412252,
+    "lon": 108.9237067,
+    "elevation_m": null,
+    "modern_name": "China (no site named in the sources; point is the OpenStreetMap marker for the country)",
+    "historical_name": "China, Tang dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The mixture later underlay gunpowder weapons that changed warfare."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-tang-dynasty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/invention-gunpowder-and-guns/",
+      "title": "Invention of Gunpowder and Guns",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-harvard",
+      "url": "https://dash.harvard.edu/server/api/core/bitstreams/4a5f9505-c599-4a27-b13f-121e7f10da03/content",
+      "title": "The Great Military Divergence: The Gunpowder Revolutions of China and Advancement in the West",
+      "publisher": "Harvard University Division of Continuing Education (DASH)",
+      "author": "Pierre Dimaculangan",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cup",
+      "url": "https://assets.cambridge.org/97805218/43133/excerpt/9780521843133_excerpt.pdf",
+      "title": "Introduction: firearms and armaments industries (excerpt)",
+      "publisher": "Cambridge University Press",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.uncertainty"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E4%B8%AD%E5%9B%BD&format=json&limit=1",
+      "title": "China",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No site is named in any source, so the pin is only a country marker with 2500 km uncertainty. The 850 year is the id convention; sources say mid-9th century. Specific text title not stated on opened scholarly pages, so omitted.",
+  "published_at": "2026-10-22T11:03:02.779Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "850",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In the mid-ninth century, according to EBSCO, Daoist alchemists in China found that sulfur, saltpeter and a carbon material such as charcoal made a flammable mixture.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "850",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "EBSCO says the first book with a gunpowder formula appeared in 1044.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

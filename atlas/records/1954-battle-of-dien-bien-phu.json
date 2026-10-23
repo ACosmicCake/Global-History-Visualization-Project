@@ -1,0 +1,155 @@
+{
+  "id": "1954-battle-of-dien-bien-phu",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Dien Bien Phu",
+  "summary": "From 13 March to 7 May 1954 Viet Minh forces under Vo Nguyen Giap besieged the French fortified garrison in the valley of Dien Bien Phu in northwestern Vietnam, led by Christian de Castries, and overran it. The defeat ended French military influence in Indochina and led into the Geneva talks, which divided Vietnam at the 17th parallel.",
+  "when": {
+    "start": {
+      "year": 1954,
+      "month": 3,
+      "day": 13
+    },
+    "end": {
+      "year": 1954,
+      "month": 5,
+      "day": 7
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The battle began on March 13, 1954, and ended on May 7, 1954.",
+        "source": "src-historynet"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On May 7, 1954, the French garrison fell after a four month siege.",
+        "source": "src-histstate"
+      }
+    ],
+    "display": "13 March - 7 May 1954"
+  },
+  "where": {
+    "lat": 21.392377,
+    "lon": 103.015958,
+    "elevation_m": null,
+    "modern_name": "Dien Bien Phu, Dien Bien Province, Vietnam",
+    "historical_name": "Dien Bien Phu, a French-held valley fortress near the Laotian border",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-dbp"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Decisive defeat that ended French rule in Indochina and set the terms for the division of Vietnam at Geneva."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1955-vietnam-war",
+      "type": "related"
+    },
+    {
+      "id": "1939-world-war-ii",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1953-1960/dien-bien-phu",
+      "title": "Dien Bien Phu and the Fall of French Indochina (Milestones 1953-1960)",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-historynet",
+      "url": "https://historynet.com/battle-of-dien-bien-phu/",
+      "title": "Dien Bien Phu: What Happened at the Pivotal 1954 Battle",
+      "publisher": "HistoryNet (drawing on Bernard B. Fall)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-dbp",
+      "url": "https://www.wikidata.org/wiki/Q36027",
+      "title": "Wikidata item Q36027 (Dien Bien Phu), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the 13 March start (one popular source drawing on Bernard Fall) and of casualty figures, which are left out of the summary (Fall gives 15,094 French and allied troops in the valley and about 25,000 Viet Minh casualties). The pin is the town, not the strongpoints.",
+  "author": "historian-agent:o-s27",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T07:49:31.045Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1954",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 13 March to 7 May 1954 Viet Minh forces under Vo Nguyen Giap besieged the French fortified garrison in the valley of Dien Bien Phu in northwestern…",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1954",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The defeat ended French military influence in Indochina and led into the Geneva talks, which divided Vietnam at the 17th parallel.",
+        "source": "src-histstate",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

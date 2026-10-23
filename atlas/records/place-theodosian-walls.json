@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "id": "place-theodosian-walls",
+  "title": "Theodosian Walls of Constantinople",
+  "summary": "The land walls of Constantinople, built in 412–414 under Theodosius II while his praetorian prefect Anthemius held power, ran from the Golden Horn to the Sea of Marmara. After an earthquake in 447 a second wall and more towers were added. Ottoman forces stormed them on 29 May 1453.",
+  "when": {
+    "start": {
+      "year": 412
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Livius gives 412–414 for the building; Turkish Archaeological News says the first phase was completed in 413. The walls were repaired and rebuilt after the 447 earthquake. End is the present: sections stand today."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years CE (Livius)",
+        "value": "The wall was built in 412-414",
+        "source": "src-livius-walls"
+      },
+      {
+        "calendar": "Years CE (Turkish Archaeological News)",
+        "value": "was completed in 413",
+        "source": "src-tan-walls"
+      }
+    ],
+    "display": "Built 412–414; rebuilt after 447; partly standing today"
+  },
+  "where": {
+    "lat": 41.01916,
+    "lon": 28.924276,
+    "elevation_m": null,
+    "modern_name": "Theodosian Walls, Istanbul, Turkey",
+    "historical_name": "Land walls of Constantinople, Eastern Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-tan-walls"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Livius and Turkish Archaeological News both describe a 5.5 to 5.7 km double wall with 96 towers on the main wall that stood until the 1453 assault."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1453-fall-of-constantinople",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-walls",
+      "url": "https://www.livius.org/articles/place/constantinople-istanbul/constantinople-photos/constantinople-theodosian-walls/",
+      "title": "Constantinople, Theodosian Walls",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-tan-walls",
+      "url": "https://turkisharchaeonews.net/object/theodosian-land-walls-constantinople",
+      "title": "Theodosian Land Walls of Constantinople",
+      "publisher": "Turkish Archaeological News",
+      "author": "Turkish Archaeological News",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where",
+        "where.coordinate_sources",
+        "model"
+      ]
+    }
+  ],
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "A double land wall across the Historical Peninsula, almost 5.5 km (Livius) or 5.7 km (Turkish Archaeological News) long, from the Golden Horn to the Sea of Marmara. Drawn as a path.",
+      "source": "src-livius-walls",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "wall",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-livius-walls",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 12,
+          "unit": "m",
+          "source": "src-livius-walls",
+          "note": "Livius: the original wall stood 12 m high; Turkish Archaeological News gives the main wall as 12 m tall"
+        },
+        {
+          "part": "length",
+          "value": 5500,
+          "unit": "m",
+          "source": "src-livius-walls",
+          "note": "Livius: almost 5½ km; Turkish Archaeological News gives 5.7 km for the Theodosian walls and 7.2 km with the Blachernae section"
+        },
+        {
+          "part": "width (thickness)",
+          "value": 5,
+          "unit": "m",
+          "source": "src-tan-walls",
+          "note": "main wall 5 m thick"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "wall path along the western edge of the peninsula"
+      },
+      {
+        "level": "local",
+        "representation": "double wall with towers drawn along its path"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 412,
+        "end_year": 414,
+        "state": "construction",
+        "description": "Built in 412–414 (Livius); first phase completed in 413 (Turkish Archaeological News).",
+        "source": "src-livius-walls"
+      },
+      {
+        "start_year": 447,
+        "end_year": null,
+        "state": "altered",
+        "description": "An earthquake damaged the walls in 447; a second wall about 8 m high was added and the towers doubled to 192 (Livius).",
+        "source": "src-livius-walls"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "A 5.5 km wall is drawn as a path, not a raised block; the figures come from Livius and a news site, so they are kept as data."
+  },
+  "reviewer_note": "Lengths differ: almost 5½ km (Livius) vs 5.7 km (Turkish Archaeological News). Pin is a coordinate printed by Turkish Archaeological News (a news site, not a gazetteer), hence 3 km uncertainty. UNESCO pages returned 403, so no UNESCO figures. Wall shape chosen as closest; no_mesh set.",
+  "author": "historian-agent:o-s116",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:44:09.366Z"
+}

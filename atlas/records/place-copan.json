@@ -1,0 +1,253 @@
+{
+  "id": "place-copan",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Copán",
+  "summary": "Copán, in western Honduras, was a Classic Maya city whose dynasty began with K'inich Yax K'uk' Mo' in 426 CE and ended with the city's abandonment in the early tenth century. Its Great Plaza, Acropolis, ball court and Hieroglyphic Stairway, with the longest known Maya inscription, make it a UNESCO site, listed in 1980.",
+  "when": {
+    "start": {
+      "year": 426
+    },
+    "end": {
+      "year": 900
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": "Start is the accession of the dynasty's founder (Altar Q text, Sept. 426); end is the abandonment 'in the early 10th century' per UNESCO. UNESCO dates the great Classic period AD 300-900."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD",
+        "value": "The great period of Copán ... occurred during the Classical period, AD 300-900",
+        "source": "src-unesco-129"
+      },
+      {
+        "calendar": "Long Count / AD",
+        "value": "8.19.10.0.7 (Sept. 6, 426) when K'uk' Mo Ahaw received the God K scepter",
+        "source": "src-penn-copan"
+      }
+    ],
+    "display": "Dynasty from 426 CE to abandonment c. 900 CE"
+  },
+  "where": {
+    "lat": 14.837963,
+    "lon": -89.142442,
+    "elevation_m": null,
+    "modern_name": "Copán Ruinas, Copán Department, Honduras",
+    "historical_name": "Copán (Xukpi), Classic Maya royal seat at the southeastern edge of the Maya area",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wikidata-copan"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Southeastern Maya capital of a 16-ruler dynasty, famed for sculpture and for the Hieroglyphic Stairway."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0250-classic-maya-period",
+      "type": "part_of"
+    },
+    {
+      "id": "0800-terminal-classic-maya-collapse",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-129",
+      "url": "https://whc.unesco.org/en/list/129",
+      "title": "Maya Site of Copan (World Heritage List no. 129)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-penn-copan",
+      "url": "https://www.penn.museum/sites/expedition/dynasty-founder-yax-kuk-mo-according-to-the-inscriptions/",
+      "title": "Dynasty Founder Yax K'uk' Mo' According to the Inscriptions (Expedition Magazine)",
+      "publisher": "Penn Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wikidata-copan",
+      "url": "https://www.wikidata.org/wiki/Q214827",
+      "title": "Wikidata item Q214827, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "author": "Getty Conservation Institute",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "opened": true,
+      "id": "src-getty-hierstair",
+      "url": "https://www.getty.edu/projects/maya-initiative/hieroglyphic-stairway-at-copan/",
+      "title": "Hieroglyphic Stairway at Copán (Maya Initiative)",
+      "publisher": "Getty Conservation Institute",
+      "class": "museum",
+      "supports": [
+        "model.geometry",
+        "model.phases"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end year: UNESCO says abandonment in the early 10th century, so 900 is a round figure. No model written: UNESCO says the Acropolis mass rises some 30 m and the Great Plaza covers three hectares, but I found no sourced single-structure height with a plan dimension from an acceptable page.",
+  "author": "historian-agent:m-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T05:38:17.960Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Hieroglyphic Stairway on the pyramid structure (Temple 26) on the east side of the plaza at Copán, Honduras; stairway ten meters wide by twenty-four meters high, sixty-three steps.",
+      "source": "src-getty-hierstair",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-getty-hierstair",
+      "measurements": [
+        {
+          "part": "Hieroglyphic Stairway height",
+          "value": 24,
+          "unit": "m",
+          "source": "src-getty-hierstair",
+          "note": "'twenty-four meters high'"
+        },
+        {
+          "part": "Hieroglyphic Stairway width",
+          "value": 10,
+          "unit": "m",
+          "source": "src-getty-hierstair",
+          "note": "'ten meters wide'"
+        },
+        {
+          "part": "Hieroglyphic Stairway steps",
+          "value": 63,
+          "unit": "count",
+          "source": "src-getty-hierstair",
+          "note": "sixty-three steps"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "single stepped block at the stairway width and height"
+      },
+      {
+        "level": "local",
+        "representation": "stepped pyramid with 63-step stair, labelled schematic"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 700,
+        "end_year": 799,
+        "state": "construction",
+        "description": "Hieroglyphic Stairway built in two stages during the eighth century.",
+        "source": "src-getty-hierstair"
+      },
+      {
+        "start_year": 799,
+        "end_year": 900,
+        "state": "intact",
+        "description": "Stairway stands in Copán's Classic Period, which the source gives as 250 to 900 CE.",
+        "source": "src-getty-hierstair"
+      },
+      {
+        "start_year": 900,
+        "end_year": 1936,
+        "state": "ruined",
+        "description": "Ruined; when rediscovered and excavated only the lower fifteen steps were in original position.",
+        "source": "src-getty-hierstair"
+      },
+      {
+        "start_year": 1937,
+        "end_year": 1940,
+        "state": "restored",
+        "description": "Remaining steps reconstructed from fallen blocks gathered on the plaza.",
+        "source": "src-getty-hierstair"
+      },
+      {
+        "start_year": 1940,
+        "end_year": null,
+        "state": "restored",
+        "description": "Stairway stands reconstructed and conserved, under a canvas shelter since 1985.",
+        "source": "src-getty-hierstair"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 700,
+        "to_year": null,
+        "material": "carved stone blocks",
+        "source": "src-getty-hierstair"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

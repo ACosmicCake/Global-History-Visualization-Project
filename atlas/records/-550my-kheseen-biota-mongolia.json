@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s15",
+  "updated": "2026-10-22",
+  "id": "-550my-kheseen-biota-mongolia",
+  "kind": "process",
+  "title": "Kheseen Biota, Mongolia",
+  "summary": "Phosphorite beds of the Khesen (Kheseen) Formation in northern Mongolia preserve three-dimensional microfossils of the Doushantuo type, including embryo-like Megasphaera. Their age is disputed: a 2017 study placed them in the latest Ediacaran, while later work dates them to about 534-531 Ma, in the earliest Cambrian.",
+  "when": {
+    "start": {
+      "year": -550000000
+    },
+    "end": {
+      "year": -531000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 5000000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The 2017 study gives only 'latest Ediacaran' (no number in the opened abstract); the later basin study gives 534-531 Ma. The 550 Ma start is the id's nominal age, not a measured date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological period",
+        "value": "latest Ediacaran",
+        "source": "src-anderson2017"
+      },
+      {
+        "calendar": "Ma, foreland basin age model",
+        "value": "between 534 and 531 Ma",
+        "source": "src-princeton2025"
+      },
+      {
+        "calendar": "Geological period",
+        "value": "basal Cambrian (Nemakit-Daldynian)",
+        "source": "src-anttila2020"
+      }
+    ],
+    "display": "c. 550–531 Ma (age disputed)"
+  },
+  "where": {
+    "lat": 51.1,
+    "lon": 100.5,
+    "elevation_m": null,
+    "modern_name": "Khuvsgul (Khovsgol) basin, northern Mongolia (pin at Lake Khuvsgul; exact outcrop not given in opened pages)",
+    "historical_name": "No polity; Khuvsgul terrane, an arc-related basin",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wikidata"
+    ],
+    "paleo": {
+      "lat": 4.39,
+      "lon": -78.11,
+      "age_ma": 535,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "PALEOMAP gives 9.66 S, 1.60 E for the same point at 535 Ma; MULLER2019 does not cover this age. The models disagree widely and the Khuvsgul terrane was a separate arc fragment, so treat the position as indicative only."
+    }
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 2,
+    "justification": "A phosphatized microfossil assemblage whose Ediacaran versus Cambrian age bears on how late Ediacaran-type forms persisted."
+  },
+  "confidence": "contested",
+  "related": [
+    {
+      "id": "-575my-ediacaran-biota",
+      "type": "related"
+    },
+    {
+      "id": "-539my-nama-group-ediacaran-cambrian-boundary",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-anderson2017",
+      "url": "https://www.research.ed.ac.uk/en/publications/doushantuo-type-microfossils-from-latest-ediacaran-phosphorites-o/",
+      "title": "Doushantuo-type microfossils from latest Ediacaran phosphorites of northern Mongolia",
+      "publisher": "University of Edinburgh Research Explorer (Geology 45:1079-1082)",
+      "author": "Ross P. Anderson and colleagues",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-anttila2020",
+      "url": "https://gsa.confex.com/gsa/2020AM/webprogram/Paper359065.html",
+      "title": "Cryogenian to early Cambrian evolution of the phosphorite-bearing Khovsgol Basin, Mongolia",
+      "publisher": "Geological Society of America (GSA 2020 Connects Online)",
+      "author": "Eliel S.C. Anttila and Francis A. Macdonald",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-princeton2025",
+      "url": "https://collaborate.princeton.edu/en/publications/cambrian-foreland-phosphogenesis-in-the-khuvsgul-basin-of-mongoli/",
+      "title": "Cambrian foreland phosphogenesis in the Khuvsgul Basin of Mongolia",
+      "publisher": "Princeton University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q192215",
+      "title": "Wikidata item Q192215 (Khovsgol Lake), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=100.5,51.1&time=535&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruct_points (MERDITH2021, PALEOMAP), query for 100.5E 51.1N at 535 Ma",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age, the central dispute (2017 latest Ediacaran vs 2020 and later Cambrian). Outcrop coordinates were not on any opened page; the pin is Lake Khuvsgul with a 150 km radius. The 2017 abstract calls Megasphaera a putative animal embryo.",
+  "published_at": "2026-10-22T05:18:39.624Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

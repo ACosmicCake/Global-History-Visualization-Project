@@ -1,0 +1,219 @@
+{
+  "id": "place-sarnath",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Sarnath, site of the first sermon",
+  "summary": "Ancient Buddhist site near Varanasi, where Buddhist tradition places the Buddha's first sermon to his first disciples. Stupas, temples and monasteries were built there from before the Mauryan era to the 12th century CE; the Dhamek Stupa, about 43 m tall, still stands.",
+  "when": {
+    "start": {
+      "year": -549
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO says the Buddha is believed to have visited in the 6th century BCE (tradition); structures at the site run from the pre-Mauryan period to the 12th century CE, and pilgrimage revived in the 20th century. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Centuries BCE/CE, UNESCO",
+        "value": "believed to be the place that Gautama Buddha visited in the 6th century BCE; decline in the 12th century CE",
+        "source": "src-unesco-927"
+      },
+      {
+        "calendar": "Years BCE/CE, Ministry of Tourism",
+        "value": "Dhamek Stupa built in 500 CE to replace an earlier structure commissioned by Ashoka in 249 BCE",
+        "source": "src-ii-dhamek"
+      }
+    ],
+    "display": "Buddhist site from the 6th century BCE (tradition) to the 12th century CE; Dhamek Stupa c. 500 CE"
+  },
+  "where": {
+    "lat": 25.3808,
+    "lon": 83.0245,
+    "elevation_m": null,
+    "modern_name": "Sarnath, Varanasi district, Uttar Pradesh, India",
+    "historical_name": "Isipatana (Rishipatana), the Deer Park (Mrigadava), near Kashi; later a Buddhist monastic centre under the Mauryan, Kushana and Gupta empires",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wd-dhamek"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "One of the four principal Buddhist pilgrimage places and the setting of the first sermon in Buddhist tradition."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-siddhartha-gautama",
+      "type": "related"
+    },
+    {
+      "id": "person-ashoka",
+      "type": "related"
+    },
+    {
+      "id": "place-bodh-gaya",
+      "type": "related"
+    },
+    {
+      "id": "place-lumbini",
+      "type": "related"
+    },
+    {
+      "id": "place-kushinagar",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-927",
+      "url": "https://whc.unesco.org/en/list/927/",
+      "title": "Ancient Buddhist Site of Sarnath (World Heritage List no. 927)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d. (inscribed 2026)",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ii-dhamek",
+      "url": "https://www.incredibleindia.gov.in/en/uttar-pradesh/varanasi/dhamek-stupa",
+      "title": "Dhamek Stupa, Varanasi: Buddhist Heritage",
+      "publisher": "Incredible India, Ministry of Tourism, Government of India",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-dhamek",
+      "url": "https://www.wikidata.org/wiki/Q1985137",
+      "title": "Wikidata Q1985137: Dhamek Stupa (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Circular drum of the Dhamek Stupa, 28 m across, within the Sarnath archaeological site. Plan taken from the Ministry of Tourism page; no surveyed plan was opened.",
+      "source": "src-ii-dhamek",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stupa",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-ii-dhamek",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 43,
+          "unit": "m",
+          "source": "src-ii-dhamek",
+          "note": "Page says 43 meters tall and 141 ft tall; the same ministry's Sarnath page says 42 metres"
+        },
+        {
+          "part": "diameter",
+          "value": 28,
+          "unit": "m",
+          "source": "src-ii-dhamek",
+          "note": "Page says 28 meters wide"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "cylindrical stupa drum on the Sarnath site plan, enlarged for visibility"
+      },
+      {
+        "level": "local",
+        "representation": "solid cylinder of the stupa at 43 m by 28 m with the Gupta-era carved lower band"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -248,
+        "end_year": 499,
+        "state": "construction",
+        "description": "Earlier stupa traditionally attributed to Ashoka (249 BCE), replaced by the present one.",
+        "source": "src-ii-dhamek"
+      },
+      {
+        "start_year": 500,
+        "end_year": null,
+        "state": "altered",
+        "description": "Present stupa built about 500 CE; lower part carved in Gupta style, upper part left unfinished.",
+        "source": "src-ii-dhamek"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 500,
+        "to_year": null,
+        "material": "stone and brick",
+        "source": "src-ii-dhamek"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Model shape: stupa, the closest listed form to a solid brick-and-stone cylinder. Dimensions rest on a single tourism-ministry page (43 m, 28 m); the same ministry's Sarnath page gives 42 m, and other sites quote 33 to 43.6 m, so the height is the weakest number. The phase dates (249 BCE Ashoka, 500 CE rebuild) are as stated by that page; the Ashokan attribution is tradition. UNESCO's page lists no Dhamek dimensions. Coordinates are the Wikidata point for the Dhamek Stupa; Wikidata is not a publisher. Confidence \"probable\" because the schema has no \"traditional\" level.",
+  "author": "historian-agent:o-s19",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:38:39.190Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

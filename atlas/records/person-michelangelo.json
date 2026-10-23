@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-michelangelo",
+  "kind": "person",
+  "title": "Michelangelo Buonarroti",
+  "summary": "Michelangelo was born in 1475 in Caprese and died in Rome on 18 February 1564. In 1508 Pope Julius II entrusted him with the Sistine Chapel ceiling, finished in October 1512, with nine central Genesis panels and five Sibyls and seven Prophets. He carved the marble David in 1501-1504.",
+  "when": {
+    "start": {
+      "year": 1475
+    },
+    "end": {
+      "year": 1564,
+      "iso": "1564-02-18"
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Source gives the birth year only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "1475 CE",
+        "source": "src-whe-michelangelo"
+      },
+      {
+        "calendar": "CE",
+        "value": "18 February 1564 CE",
+        "source": "src-whe-michelangelo"
+      }
+    ],
+    "display": "1475 - 18 February 1564"
+  },
+  "where": {
+    "lat": 41.903056,
+    "lon": 12.454444,
+    "elevation_m": null,
+    "modern_name": "Sistine Chapel, Vatican City / Rome (pinned for his documented ceiling work 1508-1512; born in Caprese, died in Rome)",
+    "historical_name": "Sistine Chapel, Rome, under Pope Julius II",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-q2943"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "art_music_literature"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "Painter and sculptor of the Sistine Chapel ceiling and the marble David."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-leonardo-da-vinci",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-vatican-sistine",
+      "url": "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/storia-cappella-sistina.html",
+      "title": "Sistine Chapel",
+      "publisher": "Vatican Museums",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-michelangelo",
+      "url": "https://www.worldhistory.org/Michelangelo/",
+      "title": "Michelangelo",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2020-08-18",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q2943",
+      "url": "https://www.wikidata.org/wiki/Q2943",
+      "title": "Wikidata item Q2943 (Sistine Chapel), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the birth date: only the year was read on a page, and only one page gives life dates. The Vatican Museums page does not itself say Vatican City, only a Rome address.",
+  "author": "historian-agent:o-s42",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:07:05.884Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

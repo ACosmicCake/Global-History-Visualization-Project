@@ -1,0 +1,151 @@
+{
+  "id": "1985-mexico-city-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1985 Mexico City Earthquake",
+  "summary": "On the morning of 19 September 1985 an earthquake of about magnitude 8 struck the subduction zone off Michoacan, on Mexico's Pacific coast. The worst damage came about 220 miles away in Mexico City, whose soft lake-bed ground prolonged the shaking. NIST gives 10,000 deaths and 3,000 buildings demolished; Berkeley notes official death tolls range from 9,500 to 35,000.",
+  "when": {
+    "start": {
+      "year": 1985
+    },
+    "end": {
+      "year": 1985
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources agree on the date; local time given as 7:18 (NIST) or 7:19 (Berkeley) am. Magnitude given as 8.1 by both."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, local time",
+        "value": "September 19, 1985",
+        "source": "src-nist"
+      },
+      {
+        "calendar": "Gregorian, local time",
+        "value": "19-Sep-1985",
+        "source": "src-berkeley"
+      }
+    ],
+    "display": "19 September 1985"
+  },
+  "where": {
+    "lat": 19.42847,
+    "lon": -99.12766,
+    "elevation_m": null,
+    "modern_name": "Mexico City, Mexico (pin is the city, a proxy for the damage zone; the epicentre was offshore Michoacan, not pinned)",
+    "historical_name": "Mexico City, United Mexican States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "One of the deadliest earthquakes in the Americas, showing how lake-bed soil can amplify distant shaking."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a disaster with thousands of deaths, including people trapped in collapsed buildings.",
+  "related": [
+    {
+      "id": "place-mexico-city",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nist",
+      "url": "https://www.nist.gov/el/earthquake-mexico-1985",
+      "title": "Earthquake Mexico 1985",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "author": null,
+      "date_published": "2011-06-13",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-berkeley",
+      "url": "https://seismo.berkeley.edu/blog/2008/09/19/mexico-city-1985.html",
+      "title": "Today in Earthquake History: Mexico City 1985",
+      "publisher": "Berkeley Seismological Laboratory, UC Berkeley",
+      "author": null,
+      "date_published": "2008-09-19",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/3530597/mexico-city.html",
+      "title": "GeoNames: Mexico City",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude (8.0 vs 8.1) and deaths vary by source; the pin is Mexico City, not the epicentre, as no opened page gave epicentre coordinates.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:09.113Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1985",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On the morning of 19 September 1985 an earthquake of about magnitude 8 struck the subduction zone off Michoacan, on Mexico's Pacific coast.",
+        "source": "src-nist"
+      },
+      {
+        "span": "1985",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "NIST gives 10,000 deaths and 3,000 buildings demolished; Berkeley notes official death tolls range from 9,500 to 35,000.",
+        "source": "src-nist",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

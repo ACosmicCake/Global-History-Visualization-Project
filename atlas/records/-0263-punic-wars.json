@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0263-punic-wars",
+  "kind": "event",
+  "title": "Punic Wars (264–146 BCE)",
+  "summary": "The Punic Wars were three military conflicts fought between the Roman Republic and the Carthaginian Empire between 264 and 146 BCE over dominance in the western Mediterranean. Beginning over rivalry in Sicily, expanding across Iberia and Italy through Hannibal's campaigns, and culminating in the siege of Carthage, Rome's victory destroyed its greatest rival, transformed Rome into the supreme naval and territorial power in the Mediterranean, and established its first overseas provinces.",
+  "when": {
+    "start": {
+      "year": -263
+    },
+    "end": {
+      "year": -145
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dates encompass the First Punic War (264–241 BCE), Second Punic War (218–201 BCE), and Third Punic War (149–146 BCE)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (EBSCO Research Starters)",
+        "value": "between the ancient city-states of Rome and Carthage from 264 to 146 BCE.",
+        "source": "src-ebsco-punic"
+      },
+      {
+        "calendar": "Greek Olympiad dating (Polybius 1.5; Loeb Classical Library 1922)",
+        "value": "took place in the 129th Olympiad [264‑261 B.C. ]",
+        "source": "src-polybius"
+      }
+    ],
+    "display": "264–146 BCE"
+  },
+  "where": {
+    "lat": 36.853056,
+    "lon": 10.323056,
+    "elevation_m": null,
+    "modern_name": "Carthage, Tunis Governorate, Tunisia (the wars spanned Sicily, Italy, Hispania, and North Africa; Carthage is the primary strategic objective and site of the final siege)",
+    "historical_name": "Carthago, capital of the Carthaginian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-pleiades-carthage"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Eliminated Rome's primary imperial competitor and established Roman hegemony across the western Mediterranean."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "part_of"
+    },
+    {
+      "id": "-0145-destruction-of-carthage",
+      "type": "has_part"
+    },
+    {
+      "id": "polity-numidia",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-rome",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-punic",
+      "url": "https://www.ebsco.com/research-starters/military-history-and-science/punic-wars",
+      "title": "Punic Wars",
+      "publisher": "EBSCO",
+      "author": "Jeremiah B. McCall",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-polybius",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/1*.html",
+      "title": "Polybius, The Histories, Book 1",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago), public-domain Loeb text",
+      "author": "Polybius; trans. W. R. Paton",
+      "date_published": "1922",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-carthage",
+      "url": "https://pleiades.stoa.org/places/314921/json",
+      "title": "Carthago (Pleiades 314921 JSON record)",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-263",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "In 264 BCE, conflict over Messana in Sicily opened the First Punic War between Rome and Carthage.",
+        "source": "src-polybius"
+      },
+      {
+        "span": "-145",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Rome's total victory in 146 BCE eradicated Carthage and established Roman hegemony across the western Mediterranean.",
+        "source": "src-ebsco-punic",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the demographic toll across the three wars; while ancient narrative accounts detail massive casualties at Cannae and the final siege, total losses remain rough modern approximations.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:32.400Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

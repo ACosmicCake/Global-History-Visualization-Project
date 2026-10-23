@@ -1,0 +1,159 @@
+{
+  "id": "1792-black-loyalist-migration-sierra-leone",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Nova Scotian Black Loyalists found Freetown, Sierra Leone",
+  "summary": "In January 1792 a fleet of fifteen ships carried about 1,200 Black Nova Scotians, many of them Black Loyalists from the American Revolution, from Halifax to West Africa under John Clarkson of the Sierra Leone Company. They arrived in early March and began building Freetown.",
+  "when": {
+    "start": {
+      "year": 1792,
+      "iso": "1792-01-15"
+    },
+    "end": {
+      "year": 1792
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Departure is dated to the day; arrival is given only as early March 1792."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "15 Jan. 1792",
+        "source": "src-dcb"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "early in March",
+        "source": "src-dcb"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 15th, 1792",
+        "source": "src-dal"
+      }
+    ],
+    "display": "15 January to early March 1792"
+  },
+  "where": {
+    "lat": 8.48714,
+    "lon": -13.2356,
+    "elevation_m": null,
+    "modern_name": "Freetown, Sierra Leone",
+    "historical_name": "Freetown, colony of the Sierra Leone Company",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-freetown"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Founded the settler community from which the Sierra Leone Creole people descend, a landmark of Atlantic Black resettlement."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dcb",
+      "url": "https://www.biographi.ca/en/bio/peters_thomas_4E.html",
+      "title": "Peters, Thomas (biography)",
+      "publisher": "Dictionary of Canadian Biography",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-dal",
+      "url": "https://www.dal.ca/news/2022/03/25/sierra-leone-migration-anniversary.html",
+      "title": "Remembering the Sierra Leone Migration, 230 years later",
+      "publisher": "Dalhousie University",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-geonames-freetown",
+      "url": "https://www.geonames.org/2409306/freetown.html",
+      "title": "GeoNames: Freetown",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the 1,196 vs about 1,200 count (DCB says some 1,200 gathered, Dalhousie 1,196 sailed) and of the exact arrival day.",
+  "author": "historian-agent:o-s1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:26.971Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1792-01-15",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In January 1792 a fleet of fifteen ships carried about 1,200 Black Nova Scotians, many of them Black Loyalists from the American Revolution, from Halifax to West Africa…",
+        "source": "src-dcb"
+      },
+      {
+        "span": "1792",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "They arrived in early March and began building Freetown.",
+        "source": "src-dcb",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

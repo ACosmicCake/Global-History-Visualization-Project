@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "1958-keeling-curve",
+  "kind": "event",
+  "title": "Keeling Curve begins at Mauna Loa",
+  "summary": "In March 1958 Charles David Keeling of Scripps began measuring atmospheric carbon dioxide at the NOAA weather station on Mauna Loa, Hawaii, using an infrared gas analyzer bought with International Geophysical Year funds. The first day's reading was 313 ppm. NOAA calls the Mauna Loa data the longest record of direct atmospheric CO2 measurements; NOAA started its own parallel series in May 1974.",
+  "when": {
+    "start": {
+      "year": 1958,
+      "iso": "1958-03"
+    },
+    "end": {
+      "year": 1958,
+      "iso": "1958-03"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "The record is continuing; the pin dates its start."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "was installed at Mauna Loa in March 1958",
+        "source": "src-keeling-ucsd"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "in March of 1958 at the NOAA Weather Station on Mauna Loa volcano",
+        "source": "src-noaa"
+      },
+      {
+        "calendar": "ppm",
+        "value": "recorded 313 ppm on its first day of operation",
+        "source": "src-keeling-ucsd"
+      }
+    ],
+    "display": "March 1958"
+  },
+  "where": {
+    "lat": 19.5361,
+    "lon": -155.576,
+    "elevation_m": null,
+    "modern_name": "Mauna Loa Observatory, Hawaii, USA",
+    "historical_name": "Mauna Loa NOAA weather station, Territory of Hawaii",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wd-mlo"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The longest direct record of atmospheric CO2, begun at a single station in 1958."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1957-international-geophysical-year",
+      "type": "caused_by",
+      "because": "The analyzers were bought with International Geophysical Year funds from the Weather Bureau."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-keeling-ucsd",
+      "url": "https://keelingcurve.ucsd.edu/?p=276",
+      "title": "The History of the Keeling Curve",
+      "publisher": "Scripps Institution of Oceanography, UC San Diego",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-noaa",
+      "url": "https://noaa.gov/node/12247",
+      "title": "Annual increase in Keeling Curve peak is one of the largest on record",
+      "publisher": "National Oceanic and Atmospheric Administration (NOAA)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-mlo",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q622590.json",
+      "title": "Wikidata item Q622590 (Mauna Loa Observatory), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pinned at the sourced station, not as a global event. Both pages date the start to March 1958; the UCSD page also says the 313 ppm reading came on the first day of operation, with no day given.",
+  "published_at": "2026-10-22T18:31:59.343Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1958-03",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In March 1958 Charles David Keeling of Scripps began measuring atmospheric carbon dioxide at the NOAA weather station on Mauna Loa, Hawaii, using an infrared gas analyzer bought…",
+        "source": "src-keeling-ucsd"
+      },
+      {
+        "span": "1958",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The first day's reading was 313 ppm.",
+        "source": "src-keeling-ucsd",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

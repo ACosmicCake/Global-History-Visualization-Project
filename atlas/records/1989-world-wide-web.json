@@ -1,0 +1,157 @@
+{
+  "id": "1989-world-wide-web",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Invention of the World Wide Web at CERN",
+  "summary": "In 1989 Tim Berners-Lee, working at the CERN laboratory, devised the World Wide Web to automate information-sharing among scientists at institutes worldwide. He wrote a first proposal in March 1989, and by the end of 1990 had a first web server and browser running at CERN.",
+  "when": {
+    "start": {
+      "year": 1989
+    },
+    "end": {
+      "year": 1990
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Proposal March 1989; working server and browser by end of 1990 per CERN."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "in 1989",
+        "source": "src-cern"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 1989",
+        "source": "src-cern"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "By the end of 1990",
+        "source": "src-cern"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1989",
+        "source": "src-sci"
+      }
+    ],
+    "display": "1989–1990"
+  },
+  "where": {
+    "lat": 46.233058,
+    "lon": 6.055692,
+    "elevation_m": null,
+    "modern_name": "CERN, Meyrin (Geneva area), Switzerland",
+    "historical_name": "CERN (European Organization for Nuclear Research), Meyrin, Canton of Geneva, Switzerland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-cern-dir"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The Web became the main way people use the Internet to share information worldwide."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-cern",
+      "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/",
+      "title": "A short history of the Web",
+      "publisher": "CERN",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sci",
+      "url": "https://www.sciencemuseum.org.uk/objects-and-stories/world-wide-web-global-information-space",
+      "title": "The World Wide Web: A global information space",
+      "publisher": "Science Museum Group",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cern-dir",
+      "url": "https://home.cern/directions/",
+      "title": "Directions",
+      "publisher": "CERN",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is CERN's reception (site proxy), not the exact office. Science Museum says Berners-Lee returned to CERN full time in 1989; CERN says he invented the Web in 1989.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:53:42.735Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1989",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1989 Tim Berners-Lee, working at the CERN laboratory, devised the World Wide Web to automate information-sharing among scientists at institutes worldwide.",
+        "source": "src-cern"
+      },
+      {
+        "span": "1990",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He wrote a first proposal in March 1989, and by the end of 1990 had a first web server and browser running at CERN.",
+        "source": "src-cern",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

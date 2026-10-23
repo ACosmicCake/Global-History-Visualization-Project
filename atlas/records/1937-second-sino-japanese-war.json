@@ -1,0 +1,138 @@
+{
+  "id": "1937-second-sino-japanese-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Second Sino-Japanese War",
+  "summary": "A conflict between China and Japan that began in earnest with a clash at the Marco Polo Bridge on July 7, 1937, after Japan's expanding influence in China since 1931. It involved rapid Japanese conquests, including the Nanjing Massacre, then stalemate, and ended with Japan's defeat in 1945. China suffered some 15 million deaths.",
+  "when": {
+    "start": {
+      "year": 1937
+    },
+    "end": {
+      "year": 1945
+    },
+    "precision": "year",
+    "display": "7 July 1937 – 1945",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Second Sino-Japanese War , (1937–45)",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "July 7, 1937",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "between 1937 and 1945, China and Japan were at total war",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 35,
+    "lon": 105,
+    "elevation_m": null,
+    "modern_name": "China (including Hebei and Manchuria) (proxy pin: China, the location Wikidata lists)",
+    "historical_name": "China (including Hebei and Manchuria)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Major theatre of the Second World War, the most wrenching event in modern Chinese history, with some 15 million Chinese deaths."
+  },
+  "confidence": "established",
+  "audience_note": "Contains mass killing of civilians and sexual violence, including the Nanjing Massacre.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260302030033/https://www.britannica.com/event/Second-Sino-Japanese-War",
+      "title": "Second Sino-Japanese War | Summary, Combatants, Facts, & Map | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.history.ox.ac.uk/chinas-war-japan",
+      "title": "China's War with Japan | Faculty of History",
+      "publisher": "history.ox.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q29520",
+      "title": "Wikidata Q29520 (China, coordinates of the location Wikidata gives for Q170314)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources suggest the conflict may be dated from 1931, while the main war is dated 1937–1945. The end date of 1945 is given only as a year; the Wikidata lead of 9 September 1945 is not confirmed by the sources. Casualty figures are as stated (up to 300,000 at Nanjing; some 15 million overall).. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, history.ox.ac.uk; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:49:56.498Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1937",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A conflict between China and Japan that began in earnest with a clash at the Marco Polo Bridge on July 7, 1937, after Japan's expanding influence in China…",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It involved rapid Japanese conquests, including the Nanjing Massacre, then stalemate, and ended with Japan's defeat in 1945.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

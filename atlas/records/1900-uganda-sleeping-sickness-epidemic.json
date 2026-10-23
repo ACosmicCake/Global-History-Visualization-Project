@@ -1,0 +1,132 @@
+{
+  "id": "1900-uganda-sleeping-sickness-epidemic",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Uganda Sleeping Sickness Epidemic",
+  "summary": "A severe sleeping sickness epidemic struck Uganda, especially around the shores and islands of Lake Victoria, from about 1900. One CDC-published study puts deaths above 250,000 over 1900–1920; another scholarly article says over 200,000 had died by 1905. Bruce's commission at Entebbe showed the tsetse fly Glossina palpalis transmits the parasite.",
+  "when": {
+    "start": {
+      "year": 1900
+    },
+    "end": {
+      "year": 1920
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "CDC article dates the epidemic 1900 to 1920; Headrick says it broke out in 1901. Intensity peaked in the early 1900s."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "From 1900 to 1920",
+        "source": "src-cdc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "broke out in 1901",
+        "source": "src-plos"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "By 1905 over 200,000",
+        "source": "src-plos"
+      }
+    ],
+    "display": "1900–1920 (outbreak recorded from 1901)"
+  },
+  "where": {
+    "lat": 0.05621,
+    "lon": 32.47949,
+    "elevation_m": null,
+    "modern_name": "Entebbe, Uganda (proxy pin; epidemic covered the northern Lake Victoria shore and Busoga)",
+    "historical_name": "Entebbe, Uganda Protectorate (British)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-geloky"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "disease",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "First documented large sleeping sickness epidemic in Uganda, with very high mortality and a landmark in identifying the tsetse vector."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes mass death from disease among the African population.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-cdc",
+      "url": "https://wwwnc.cdc.gov/eid/article/10/4/pdfs/02-0626.pdf",
+      "title": "Reanalyzing the 1900–1920 Sleeping Sickness Epidemic in Uganda",
+      "publisher": "Emerging Infectious Diseases, CDC",
+      "author": null,
+      "date_published": "2004-04",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-plos",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3998934/",
+      "title": "Sleeping Sickness Epidemics and Colonial Responses in East and Central Africa, 1900–1940",
+      "publisher": "PLOS Neglected Tropical Diseases (via PubMed Central)",
+      "author": "Daniel R Headrick",
+      "date_published": "2014-04-24",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geloky",
+      "url": "https://geloky.com/geocoding/place/Entebbe+Uganda",
+      "title": "Entebbe Uganda Map Lat Long Coordinates",
+      "publisher": "Geloky",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Discovery lead of 250,000 deaths for 1900–1906 not confirmed: CDC says 250,000+ over 1900–1920; Headrick says 200,000+ by 1905. Pin is Entebbe as proxy. Bruce identification credited with Castellani priority dispute (Headrick).",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:21.595Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

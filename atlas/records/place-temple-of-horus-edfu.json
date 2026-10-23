@@ -1,0 +1,213 @@
+{
+  "id": "place-temple-of-horus-edfu",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Temple of Horus at Edfu",
+  "summary": "The Temple of Horus at Edfu, Egypt, was begun by Ptolemy III Euergetes I in 237 BCE and officially finished in 57 BCE, about 180 years later. Yale's Tell Edfu project calls it the best example of Ptolemaic temple building in Egypt; the complex is a little over 140 m long, with pylon towers about 36 m high.",
+  "when": {
+    "start": {
+      "year": -236
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 237 BCE (Yale; ancient-egypt.co.uk gives 23 August 237 BC); the temple was officially finished in 57 BCE. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Yale Egyptology)",
+        "value": "in 237 BCE",
+        "source": "src-yale-edfu"
+      },
+      {
+        "calendar": "BCE (Yale Egyptology)",
+        "value": "officially finished in 57 BCE",
+        "source": "src-yale-edfu"
+      },
+      {
+        "calendar": "BC (ancient-egypt.co.uk)",
+        "value": "23 August 237 BC",
+        "source": "src-ancegypt-edfu"
+      }
+    ],
+    "display": "Begun 237 BCE; finished 57 BCE; standing today"
+  },
+  "where": {
+    "lat": 24.9784,
+    "lon": 32.8735,
+    "elevation_m": null,
+    "modern_name": "Temple of Horus, Edfu, Aswan Governorate, Egypt",
+    "historical_name": "Temple of Horus of Behedet, lord of Edfu, in Ptolemaic Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-edfu",
+      "src-wikidata-edfu"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Described by Yale as the best example of Ptolemaic temple building in Egypt, owing to its completeness and state of preservation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-yale-edfu",
+      "url": "https://egyptology.yale.edu/expeditions/current-expeditions/tell-edfu-project/overview-other-edfu-monuments",
+      "title": "Overview of other Edfu monuments (Tell Edfu Project)",
+      "publisher": "Yale University, Department of Near Eastern Languages and Civilizations (Egyptology)",
+      "author": "Yale University, Department of Near Eastern Languages and Civilizations (Egyptology)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-ancegypt-edfu",
+      "url": "https://ancient-egypt.co.uk/edfu/pages/plan_of_edfu_temple.htm",
+      "title": "Plan of Edfu temple",
+      "publisher": "ancient-egypt.co.uk",
+      "author": "ancient-egypt.co.uk",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-edfu",
+      "url": "https://nominatim.openstreetmap.org/search?q=Temple+of+Edfu&format=json",
+      "title": "OpenStreetMap Nominatim: relation 14110436 (24.9783733, 32.8735047)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wikidata-edfu",
+      "url": "https://www.wikidata.org/wiki/Q613037",
+      "title": "Temple of Edfu (Q613037), coordinate location P625 (24.977778, 32.873333)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape block (a pylon-fronted temple; no colonnade plan was sourced). Yale gives the pylon towers as 'approximately 36m in height' and the temple as 'little over 140m long', area about 7000 m2; no width was found. A Heidelberg study seen only in search snippets gave 32.5 m and ~70 m; it was not opened. Dates: Yale says Ptolemy III began in 237 BCE and Ptolemy VIII inaugurated it in 142 BCE; the main door was fitted in 57 BCE.",
+  "author": "historian-agent:m-10",
+  "updated": "2026-10-22",
+  "model": {
+    "footprint": {
+      "description": "Pylon-fronted temple oriented south to north, a little over 140 m long, occupying about 7000 m2. Taken from the Yale Tell Edfu project page; no survey polygon was opened.",
+      "source": "src-yale-edfu",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-yale-edfu",
+      "measurements": [
+        {
+          "part": "height of entrance pylon towers (Temple of Horus)",
+          "value": 36,
+          "unit": "m",
+          "source": "src-yale-edfu",
+          "note": "Yale: \"two large towers measuring approximately 36m in height\""
+        },
+        {
+          "part": "length of temple (Temple of Horus)",
+          "value": 140,
+          "unit": "m",
+          "source": "src-yale-edfu",
+          "note": "Yale: \"little over 140m long\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "long south-to-north temple block with a pylon gateway at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural pylon gateway, court and hall block, in the state for the date"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -236,
+        "end_year": -56,
+        "state": "construction",
+        "description": "Begun by Ptolemy III Euergetes I in 237 BCE; inaugurated in 142 BCE under Ptolemy VIII and again in 70 BCE under Ptolemy XII; officially finished in 57 BCE, 180 years in total.",
+        "source": "src-yale-edfu"
+      },
+      {
+        "start_year": -56,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed; Yale calls it the best example of Ptolemaic temple building in Egypt owing to its completeness and state of preservation.",
+        "source": "src-yale-edfu"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T11:01:28.030Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

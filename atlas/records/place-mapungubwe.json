@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-mapungubwe",
+  "kind": "place",
+  "title": "Mapungubwe",
+  "summary": "Mapungubwe, where the Shashe and Limpopo rivers meet in South Africa, was a trading and farming centre between AD 900 and 1300. Its king lived in a palace on top of the hill, apart from commoners, and gold and ivory were traded through East African ports. Around AD 1300 a drier, cooler period led to decline, and power moved to Great Zimbabwe.",
+  "when": {
+    "start": {
+      "year": 900
+    },
+    "end": {
+      "year": 1300
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 20,
+      "note": "SAHRA gives changes \"between AD900 and AD1300\" and decline \"around AD1300\"; another page says cities were almost completely abandoned by 1320."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "between AD900 and AD1300",
+        "source": "src-sahra-mapungubwe"
+      },
+      {
+        "calendar": "CE",
+        "value": "Around AD1300",
+        "source": "src-sahra-mapungubwe"
+      },
+      {
+        "calendar": "CE",
+        "value": "Overshadowed by rivals by 1300; almost completely abandoned by 1320",
+        "source": "src-thinkafrica-mapungubwe"
+      }
+    ],
+    "display": "AD 900 to c. 1300"
+  },
+  "where": {
+    "lat": -22.211667,
+    "lon": 29.387889,
+    "elevation_m": null,
+    "modern_name": "Mapungubwe Cultural Landscape, Limpopo Province, South Africa",
+    "historical_name": "Mapungubwe, on the Limpopo near its confluence with the Shashe (no polity name given on pages opened)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-mapungubwe"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Early stratified state of southern Africa linked to Indian Ocean trade."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-great-zimbabwe",
+      "type": "related",
+      "because": "SAHRA says power moved to Great Zimbabwe after the decline."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sahra-mapungubwe",
+      "url": "https://www.sahra.org.za/mapungubwe-cultural-landscape/",
+      "title": "Mapungubwe Cultural Landscape",
+      "publisher": "South African Heritage Resources Agency",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-thinkafrica-mapungubwe",
+      "url": "https://thinkafrica.net/mapungubwe/",
+      "title": "The First Kingdom in Southern Africa: Mapungubwe",
+      "publisher": "Let Africa Speak (Think Africa)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-mapungubwe",
+      "url": "https://www.wikidata.org/wiki/Q1136251",
+      "title": "Mapungubwe Cultural Landscape (Q1136251)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Wikidata coordinates for the landscape, not the hill itself; the pages opened give no hill height or plan dimensions, so no model was added. Thinkafrica is weak and its own timeline is internally inconsistent; only the confluence location is taken from it.",
+  "author": "historian-agent:o-s39",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:55:19.058Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

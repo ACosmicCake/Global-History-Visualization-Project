@@ -1,0 +1,234 @@
+{
+  "id": "place-statue-of-liberty",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Statue of Liberty, New York Harbor",
+  "summary": "The Statue of Liberty, sculpted by Frederic Auguste Bartholdi with a framework engineered by Gustave Eiffel, was France's gift for the centenary of American independence. Inaugurated in 1886 at the entrance to New York Harbor, it rises about 93 m from the ground to the tip of the torch.",
+  "when": {
+    "start": {
+      "year": 1886
+    },
+    "end": {
+      "year": 1886
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Inaugurated in 1886",
+        "source": "src-unesco307"
+      },
+      {
+        "calendar": "CE",
+        "value": "since its dedication in 1886",
+        "source": "src-nps-history"
+      }
+    ],
+    "display": "1886 CE (dedicated)"
+  },
+  "where": {
+    "lat": 40.689444,
+    "lon": -74.044722,
+    "elevation_m": null,
+    "modern_name": "Statue of Liberty, Liberty Island, New York Harbor, New York, USA",
+    "historical_name": "Liberty Enlightening the World (Statue of Liberty), New York Harbor, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-unesco307",
+      "src-wikidata-liberty"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "art_music_literature",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "A gift from France that became a global symbol of liberty and the entry to the United States for millions of immigrants; a UNESCO World Heritage site."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco307",
+      "url": "https://whc.unesco.org/en/list/307",
+      "title": "Statue of Liberty (World Heritage List no. 307)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": "1984",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-nps-stats",
+      "url": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm",
+      "title": "Statue Statistics",
+      "publisher": "National Park Service",
+      "author": null,
+      "date_published": "2024-12-30",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.materials",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-nps-history",
+      "url": "https://www.nps.gov/stli/learn/historyculture/index.htm",
+      "title": "History & Culture, Statue of Liberty National Monument",
+      "publisher": "National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wikidata-liberty",
+      "url": "https://www.wikidata.org/wiki/Q9202",
+      "title": "Wikidata item Q9202 (Statue of Liberty), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: statue. Heights are NPS figures (ground to torch tip 305 ft 1 in; waist width 35 ft). The exact day of dedication was not entered since the NPS caption (28 October 1886) was not on a dated text page; year only. The construction start is not sourced, so the phase uses the 1886 inauguration. Coordinates: UNESCO point, which matches the Wikidata point to about 25 m.",
+  "model": {
+    "footprint": {
+      "description": "The statue stands on a pedestal 154 ft (46.94 m) above the ground; torch tip 305 ft 1 in above ground (NPS).",
+      "source": "src-nps-stats",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "statue",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-nps-stats",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 92.99,
+          "unit": "m",
+          "source": "src-nps-stats",
+          "note": "ground to tip of torch, 305 ft 1 in"
+        },
+        {
+          "part": "height of statue above pedestal",
+          "value": 46.05,
+          "unit": "m",
+          "source": "src-nps-stats",
+          "note": "top of base to torch, 151 ft 1 in"
+        },
+        {
+          "part": "pedestal height",
+          "value": 46.94,
+          "unit": "m",
+          "source": "src-nps-stats",
+          "note": "ground to pedestal, 154 ft"
+        },
+        {
+          "part": "width of waist",
+          "value": 10.67,
+          "unit": "m",
+          "source": "src-nps-stats",
+          "note": "35 ft"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "standing figure on a pedestal"
+      },
+      {
+        "level": "local",
+        "representation": "procedural figure with raised torch, tablet and crown with seven rays"
+      },
+      {
+        "level": "street",
+        "representation": "copper sheeting and chains at the feet not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1886,
+        "end_year": 1886,
+        "state": "construction",
+        "description": "Inaugurated 1886 on Liberty Island; the start of construction is not stated in the sources opened.",
+        "source": "src-unesco307"
+      },
+      {
+        "start_year": 1886,
+        "end_year": 1986,
+        "state": "intact",
+        "description": "Statue with the original torch.",
+        "source": "src-nps-stats"
+      },
+      {
+        "start_year": 1986,
+        "end_year": null,
+        "state": "restored",
+        "description": "The current torch, a replacement of the original, was installed in 1986.",
+        "source": "src-nps-stats"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1886,
+        "to_year": null,
+        "material": "copper sheeting 3/32 inch thick over a metal framework",
+        "source": "src-nps-stats"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:38.846Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

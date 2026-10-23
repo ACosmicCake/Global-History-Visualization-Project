@@ -1,0 +1,111 @@
+{
+  "id": "2017-oaxaca-and-chiapas-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2017 Oaxaca and Chiapas Earthquake",
+  "summary": "A magnitude 8.2 earthquake struck off the coast of Chiapas, Mexico, in September 2017. It generated a tsunami, with the Pacific Tsunami Warning Center recording a 1.75 m wave at a Chiapas gauge and smaller waves across the Pacific.",
+  "when": {
+    "start": {
+      "year": 2017
+    },
+    "end": {
+      "year": 2017
+    },
+    "precision": "day",
+    "display": "7–8 September 2017",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "ORIGIN TIME 0449 UTC SEP 8 2017",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "2017-09-08 04:49:18",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 14.899,
+    "lon": -94.027,
+    "elevation_m": null,
+    "modern_name": "Off the coast of Chiapas, Mexico (Gulf of Tehuantepec)",
+    "historical_name": "Off the coast of Chiapas, Mexico (Gulf of Tehuantepec)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Magnitude 8.2 earthquake with a Pacific-wide tsunami and a large research literature, but the sources give no casualty figures."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=611600536",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20170909005429/http://ptwc.weather.gov/ptwc/text.php?id=pacific.TSUPAC.2017.09.08.1827",
+      "title": "web.archive.org",
+      "publisher": "ptwc.weather.gov",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q38982786",
+      "title": "Wikidata Q38982786 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give origin time as 8 September UTC, while many papers call it 7 September local time, so the date is shown as 7–8 September. Depth differs between sources (51.1 km vs 33 km preliminary). The sources contain no casualty or damage totals, so the summary omits them. (Drafted by the Wikipedia pipeline from isc.ac.uk, ptwc.weather.gov; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:51.640Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

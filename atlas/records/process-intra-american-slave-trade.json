@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s9",
+  "updated": "2026-10-22",
+  "id": "process-intra-american-slave-trade",
+  "kind": "process",
+  "title": "Intra-American slave trade",
+  "summary": "From the sixteenth century enslaved people were shipped between places in the Americas, from Caribbean islands to the mainland and later along coasts such as New Orleans and Rio de Janeiro. The SlaveVoyages database lists 27,680 such voyages as of its 2022 expansion; it gives no total number of captives.",
+  "when": {
+    "start": {
+      "year": 1500
+    },
+    "end": {
+      "year": 1860
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 99,
+      "end_minus_years": 0,
+      "end_plus_years": 28,
+      "note": "Start is \"the sixteenth century\". The end of 1860 is the last year of the New Orleans and Rio de Janeiro datasets; the source says the trade ended only with the abolition of slavery, which is not dated on the opened page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "earliest voyages date to the sixteenth century",
+        "source": "src-sv"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "New Orleans (1820-1860); Rio de Janeiro (1831-1860)",
+        "source": "src-sv"
+      }
+    ],
+    "display": "16th century to c. 1860 and after"
+  },
+  "where": {
+    "elevation_m": null,
+    "geometry": {
+      "type": "point"
+    },
+    "lat": 15,
+    "lon": -75,
+    "modern_name": "Caribbean Sea and Atlantic coasts of the Americas (reference pin)",
+    "historical_name": "Colonial and national ports of the Americas, from Newfoundland to Buenos Aires",
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-wd-q1247"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "It moved large numbers of enslaved people within the Americas, beyond the Atlantic crossing counted in earlier datasets."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns the forced shipment and sale of enslaved people; contains no graphic detail but may be distressing.",
+  "related": [
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sv",
+      "url": "https://legacy.slavevoyages.org/blog/methodology-intra-american",
+      "title": "The Intra-American Slave Trade Database (methodology)",
+      "publisher": "SlaveVoyages (Emory University and partners)",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-emory",
+      "url": "https://news.emory.edu/features/2019/06/documenting-slave-voyages",
+      "title": "Documenting slave voyages",
+      "publisher": "Emory University News",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q1247",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1247.json",
+      "title": "Wikidata entry (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "No aggregate captive total was found on opened pages; the Emory 2019 article cites \"some 92,000 Africans\" in a sentence whose scope is unclear, so I omit it. Voyage counts are database figures, not the numbers of people moved. Pin is a Caribbean reference point for a hemisphere-wide process.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1500",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "In the sixteenth century captives were first moved from Caribbean islands to the American mainland.",
+        "source": "src-sv"
+      },
+      {
+        "span": "1831",
+        "action": "pulse { radius_km: 600 }",
+        "caption": "Over 3,200 coastwise voyages carried enslaved people to New Orleans (1820-1860); over 12,000 voyages reached Rio de Janeiro (1831-1860).",
+        "source": "src-sv"
+      },
+      {
+        "span": "2022",
+        "action": "numbers.counter { range: [11521, 27680] }",
+        "caption": "The database grew from 11,521 listed voyages in 2019 to 27,680 in 2022; up to a fifth of Africans sailed on again.",
+        "source": "src-sv",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:29:45.099Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

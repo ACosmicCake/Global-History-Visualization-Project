@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s26",
+  "updated": "2026-10-22",
+  "id": "-3075-eastern-north-american-plant-domestication",
+  "kind": "process",
+  "title": "Plant domestication in eastern North America",
+  "summary": "Around 5,000 years ago Indigenous people in the eastern United States began domesticating local plants, starting with squash, then sunflower, marshelder and chenopod. By about 3,800 years ago several of these were grown together, making eastern North America an independent centre of plant domestication.",
+  "when": {
+    "start": {
+      "year": -3075
+    },
+    "end": {
+      "year": -1850
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 200,
+      "start_plus_years": 200,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the earliest direct date for domesticated squash at Phillips Spring, Missouri, 5,025 calibrated years BP (1950 minus 5025). End is about 3,800 cal BP, when a crop complex of several domesticates appears at Riverton, Illinois. The squash 1-sigma range is 5,290 to 4,870 cal BP."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Calibrated years BP",
+        "value": "squash 5,025 cal B.P. (Phillips Spring); sunflower 4,840; marshelder 4,400",
+        "source": "src-smith2006"
+      },
+      {
+        "calendar": "Calibrated years BP",
+        "value": "crop complex at about 3800 B.P. (Riverton, Illinois)",
+        "source": "src-smith2009"
+      }
+    ],
+    "display": "c. 3075 BCE to c. 1850 BCE (squash 5,025 cal BP; crop complex 3,800 cal BP)"
+  },
+  "where": {
+    "lat": 38.25031,
+    "lon": -92.50046,
+    "elevation_m": null,
+    "modern_name": "Eastern United States, with the earliest squash at Phillips Spring, Missouri (marker is the centre of Missouri)",
+    "historical_name": "Eastern Woodlands of North America (Indigenous peoples; no polities)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 800,
+    "coordinate_sources": [
+      "src-geonames-mo",
+      "src-smith2006"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "One of a handful of independent origins of agriculture in the world."
+  },
+  "related": [
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-smith2006",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1567861/",
+      "title": "Eastern North America as an independent center of plant domestication",
+      "publisher": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "author": "Bruce D. Smith",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-smith2009",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2666091/",
+      "title": "Initial formation of an indigenous crop complex in eastern North America at 3800 B.P.",
+      "publisher": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "author": "Bruce D. Smith, Richard A. Yarnell",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-geonames-mo",
+      "url": "https://www.geonames.org/4398678/",
+      "title": "Missouri",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-maughan2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11137100/",
+      "title": "North American pitseed goosefoot (Chenopodium berlandieri) is a genetic resource to improve Andean quinoa (C. quinoa)",
+      "publisher": "Scientific Reports (Springer Nature), via PubMed Central",
+      "author": "Peter J. Maughan, Eric N. Jellen and colleagues",
+      "date_published": "2024-05-29",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "confidence"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the centre of Missouri, not the site: Phillips Spring has no coordinates in the opened sources. Chenopod dates differ slightly between the two papers. Marshelder is listed as sumpweed by some authors. A 2024 Scientific Reports paper says thin-testa chenopod appears in eastern sites from about 6000 years ago, earlier than Smith's dates; that is noted, not used for the range.",
+  "published_at": "2026-10-22T07:37:41.965Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

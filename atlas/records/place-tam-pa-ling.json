@@ -1,0 +1,130 @@
+{
+  "id": "place-tam-pa-ling",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Tam Pà Ling cave, Laos",
+  "summary": "Tam Pà Ling, a cave in northern Laos, holds some of the earliest fossil evidence of Homo sapiens in mainland Southeast Asia. Fossils were washed in over many millennia; a frontal bone dates to about 70,000 years ago and a tibia to about 77,000, hinting at an early dispersal that may have left no descendants.",
+  "when": {
+    "start": {
+      "year": -86000
+    },
+    "end": {
+      "year": -30000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 5000,
+      "start_plus_years": 5000,
+      "end_minus_years": 5000,
+      "end_plus_years": 5000,
+      "note": "The Flinders summary says fossils were deposited between about 86,000 and 30,000 years ago; dated human remains span 77 ± 9 kyr (tibia), 70 ± 3 kyr (frontal) and 52–40 kyr (skull and mandible). Years before present, not calibrated to 1950."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago (luminescence, U-series, modelling)",
+        "value": "between 86,000–30,000 years ago",
+        "source": "src-flinders"
+      },
+      {
+        "calendar": "kyr (thousand years ago)",
+        "value": "70 ± 3 kyr",
+        "source": "src-pmc-tpl"
+      }
+    ],
+    "display": "c. 86,000–30,000 years ago (oldest dated human remains c. 77,000–70,000 years ago)"
+  },
+  "where": {
+    "lat": 20.208611,
+    "lon": 103.409722,
+    "elevation_m": null,
+    "modern_name": "Tam Pà Ling cave, northern Laos",
+    "historical_name": "Tam Pà Ling cave, upland northern Laos; no polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-tpl"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Among the oldest dated Homo sapiens fossils on the Southeast Asian mainland."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pmc-tpl",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10264382/",
+      "title": "Tam Pà Ling hominin fossils (Nature Communications, 2023)",
+      "publisher": "Nature Communications (via PubMed Central)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-flinders",
+      "url": "https://news.flinders.edu.au/?p=29000",
+      "title": "Fossils and fires: insights into early modern human activity in the jungles of Southeast Asia",
+      "publisher": "Flinders University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-tpl",
+      "url": "https://www.wikidata.org/wiki/Q27922296",
+      "title": "Wikidata item Q27922296, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: no opened page gave coordinates, and the Wikidata point may not match the province named in the paper (northeast), so uncertainty is set wide. The 86,000 figure is the deposit span from one summary, not a fossil age. The paper text was read only to 100,000 characters.",
+  "author": "historian-agent:o-s11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:44:59.584Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

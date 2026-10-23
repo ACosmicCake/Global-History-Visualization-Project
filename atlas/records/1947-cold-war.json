@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1947-cold-war",
+  "kind": "period",
+  "title": "The Cold War",
+  "summary": "After World War II the United States and its allies and the Soviet Union and its satellite states entered a decades-long struggle for supremacy without direct battle between their soldiers. The Truman Doctrine of 1947 marked a turn in US policy; the Soviet Union's collapse in December 1991 ended the bipolar contest.",
+  "when": {
+    "start": {
+      "year": 1947
+    },
+    "end": {
+      "year": 1991
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 0,
+      "end_minus_years": 2,
+      "end_plus_years": 0,
+      "note": "Sources date the origins to 1945-1946 tensions; 1947 is the Truman Doctrine marker. The end is dated by the USSR's dissolution; the Office of the Historian also links the Cold War's end to the fall of the Berlin Wall in 1989."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "The Truman Doctrine (1947)",
+        "source": "src-jfk"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 12, 1947",
+        "source": "src-osh-truman"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 25, 1991",
+        "source": "src-osh-collapse"
+      }
+    ],
+    "display": "c. 1947–1991"
+  },
+  "where": {
+    "lat": 38.89511,
+    "lon": -77.03637,
+    "elevation_m": null,
+    "modern_name": "Washington, D.C., United States (proxy pin for a global rivalry)",
+    "historical_name": "Washington, D.C., United States (proxy pin: capital of one of the two superpowers)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-dti",
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Defining geopolitical rivalry of the second half of the 20th century, shaping alliances, nuclear arms races and proxy conflicts worldwide."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-jfk",
+      "url": "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/the-cold-war",
+      "title": "The Cold War",
+      "publisher": "John F. Kennedy Presidential Library and Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osh-truman",
+      "url": "https://history.state.gov/milestones/1945-1952/truman-doctrine",
+      "title": "The Truman Doctrine, 1947",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osh-collapse",
+      "url": "https://history.state.gov/milestones/1989-1992/collapse-soviet-union",
+      "title": "The Collapse of the Soviet Union",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dti",
+      "url": "https://dateandtime.info/citycoordinates.php?id=4140963",
+      "title": "Washington, D.C. coordinates",
+      "publisher": "dateandtime.info",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://latlong.info/united-states/district-of-columbia/washington-d-c",
+      "title": "Washington, D.C. latitude and longitude",
+      "publisher": "latlong.info",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy (Washington, D.C.) for a global rivalry. Start 1947 and end 1991 are conventional markers; opened pages do not explicitly state the Cold War's start/end years, only the Truman Doctrine (1947) and USSR collapse (1991).",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:53:39.517Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1947",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "After World War II the United States and its allies and the Soviet Union and its satellite states entered a decades-long struggle for supremacy without direct battle between…",
+        "source": "src-jfk"
+      },
+      {
+        "span": "1991",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Truman Doctrine of 1947 marked a turn in US policy; the Soviet Union's collapse in December 1991 ended the bipolar contest.",
+        "source": "src-jfk",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

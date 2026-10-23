@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "1736-qing-imperial-astronomy-jesuit-exchange",
+  "kind": "process",
+  "title": "Jesuit astronomers at the Qing court",
+  "summary": "From 1644 the new Qing court adopted the Western calendar method, and Jesuit Johann Adam Schall von Bell became the first regular director of the Astronomical Bureau in Beijing. After a calendar dispute, his successor Ferdinand Verbiest was put in charge of the Bureau's affairs in 1669, and Jesuits kept directing observation and calendar work.",
+  "when": {
+    "start": {
+      "year": 1644
+    },
+    "end": {
+      "year": 1688
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1644, the xifa (Western rule) accepted as the only authorized one; Schall first regular Director of the Astronomical Bureau",
+        "source": "src-icm"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "12 July 1669, the Emperor placed Verbiest in charge of the Bureau's affairs; he held the office until his death in 1688",
+        "source": "src-icm"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1645, calendar texts reissued as the Calendar Compendium following the New Western Method",
+        "source": "src-oxford"
+      }
+    ],
+    "display": "1644–1688 (Schall von Bell to Verbiest; Jesuit service at the Bureau continued after)"
+  },
+  "where": {
+    "lat": 39.906111,
+    "lon": 116.428056,
+    "elevation_m": null,
+    "modern_name": "Beijing Ancient Observatory, Beijing, China",
+    "historical_name": "Beijing, capital of the Qing empire (seat of the Imperial Board of Astronomy)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-obs"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Placed European mathematical astronomy at the centre of Qing calendar-making for generations and opened a channel of scientific exchange between Europe and China."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1644-battle-of-shanhai-pass",
+      "type": "contemporary"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1644",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "As the Qing dynasty began, the Western calendar method was authorized and Schall von Bell became first regular director of the Astronomical Bureau.",
+        "source": "src-icm"
+      },
+      {
+        "span": "1645",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Calendar texts were reissued as the Calendar Compendium following the New Western Method, one of the dynasty's first initiatives.",
+        "source": "src-oxford",
+        "consequence": true
+      },
+      {
+        "span": "1669",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "After the calendar dispute, Ferdinand Verbiest replaced Yang Guangxian and was placed in charge of the Bureau's affairs.",
+        "source": "src-icm"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-icm",
+      "url": "https://www.icm.gov.mo/rc/viewer/20021/1051",
+      "title": "Jesuits in China (Revista de Cultura)",
+      "publisher": "Instituto Cultural, Macao SAR Government",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-oxford",
+      "url": "https://www.mhs.ox.ac.uk/heaven/onex5.html",
+      "title": "5. The Chinese Heaven",
+      "publisher": "Museum of the History of Science, University of Oxford",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ricci-bc",
+      "url": "https://web.bc.edu/ricci/indexSubject.php?id=105",
+      "title": "Subject: Jesuits, China, Qing dynasty, contributions in astronomy",
+      "publisher": "Ricci Institute Library, Boston College",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-obs",
+      "url": "https://www.wikidata.org/wiki/Q439299",
+      "title": "Wikidata item Q439299 (Beijing Ancient Observatory), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The id says 1736 but no opened page ties the record to that year; 1644 is the sourced start and the id was kept as instructed. The end year 1688 is Verbiest's death; other accounts have Jesuits holding the post for about 150 years but no opened page gave an end date. The pin is the Beijing Ancient Observatory, used as a stand-in for the Bureau's seat in Beijing (not stated in an opened source). Schall's exact appointment year is not given on the opened pages.",
+  "published_at": "2026-10-22T04:45:17.458Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s3",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "1556-first-printing-press-india-goa",
+  "kind": "event",
+  "title": "Printing press introduced at Goa",
+  "summary": "Jesuits brought the first printing press to India in 1556, setting it up at St Paul's College in Old Goa. The Spanish Jesuit brother Juan de Bustamante is named as its earliest printer. The first known imprint appeared in November 1556; earlier prints, likely catechisms or pamphlets, are now lost.",
+  "when": {
+    "start": {
+      "year": 1556
+    },
+    "end": {
+      "year": 1556
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "Printweek gives September 1556 for arrival and November 1556 for the first known imprint."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "arrived in India under the auspices of the Society of Jesus at Goa in September 1556; first known imprint in November of that year",
+        "source": "src-printweek"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "press established in Goa in 1556",
+        "source": "src-goan"
+      }
+    ],
+    "display": "September–November 1556"
+  },
+  "where": {
+    "lat": 15.44383,
+    "lon": 73.88571,
+    "elevation_m": null,
+    "modern_name": "Old Goa, Goa, India",
+    "historical_name": "Goa, capital of Portuguese India (Estado da Índia)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-oldgoa"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The first printing press to reach India, it began the era of printed books in the subcontinent."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1450-gutenberg-printing-press",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-printweek",
+      "url": "https://printweek.in/features/print-history-jesuit-historians-and-printing-in-sixteenth-century-india-57129",
+      "title": "Print History: Jesuit Historians and Printing in Sixteenth Century India",
+      "publisher": "PrintWeek India",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-goan",
+      "url": "https://www.thegoan.net/tg-life-sunday/role-of-the-printing-press-in-goa’s-cultural-history/131767.html",
+      "title": "Role of the printing press in Goa's cultural history",
+      "publisher": "The Goan",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-oldgoa",
+      "url": "https://www.geonames.org/search.html?q=Old+Goa&country=IN",
+      "title": "GeoNames search results: Old Goa",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Both sources are journalism; no scholarly or museum page opened. Sources disagree on the first book (a 1557 Doctrina Christam is cited elsewhere; The Goan names the 1563 Orta Colóquios as the first documented work), so the summary avoids naming one. Upgrade should add a library or scholarly source.",
+  "published_at": "2026-10-22T03:32:03.839Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1556",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Jesuits brought the first printing press to India in 1556, setting it up at St Paul's College in Old Goa.",
+        "source": "src-printweek"
+      },
+      {
+        "span": "1556",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The first known imprint appeared in November 1556; earlier prints, likely catechisms or pamphlets, are now lost.",
+        "source": "src-printweek",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

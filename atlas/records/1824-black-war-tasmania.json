@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1824-black-war-tasmania",
+  "kind": "event",
+  "title": "Black War in Tasmania",
+  "summary": "Violent frontier conflict between Tasmanian Aboriginal people and British settlers and authorities in Van Diemen's Land, dated from about 1824 by the National Museum of Australia. Lieutenant-Governor George Arthur declared martial law on 1 November 1828, and in October–November 1830 the 'Black Line' sweep failed to capture many Aboriginal people; later efforts removed them to Flinders Island.",
+  "when": {
+    "start": {
+      "year": 1824
+    },
+    "end": {
+      "year": 1830
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "NMA dates the war's start to 'about 1824'; other scholarship dates it differently. End set at the Black Line (1830); removals to Flinders Island followed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "In about 1824",
+        "source": "src-nma"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1 November 1828",
+        "source": "src-awm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October and November 1830",
+        "source": "src-awm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "In 1828",
+        "source": "src-nma"
+      }
+    ],
+    "display": "c. 1824–1830"
+  },
+  "where": {
+    "lat": -42.87936,
+    "lon": 147.32941,
+    "elevation_m": null,
+    "modern_name": "Tasmania, Australia (pin at Hobart, a proxy for the island-wide conflict)",
+    "historical_name": "Van Diemen's Land, British colony",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-geodatos"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Described by NMA as the most extensive conflict in Australian history; it devastated Tasmanian Aboriginal communities."
+  },
+  "confidence": "established",
+  "audience_note": "Describes colonial violence against Aboriginal people, including killings of women and children.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nma",
+      "url": "https://www.nma.gov.au/defining-moments/resources/the-black-line",
+      "title": "The Black Line",
+      "publisher": "National Museum of Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-awm",
+      "url": "https://www.awm.gov.au/articles/blog/governer-daveys-proclamation",
+      "title": "Proclamation board, Tasmanian frontier era",
+      "publisher": "Australian War Memorial",
+      "author": "Thomas Rogers",
+      "date_published": "2023-04-11",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geodatos",
+      "url": "https://www.geodatos.net/en/coordinates/australia/hobart",
+      "title": "Hobart Geographic coordinates",
+      "publisher": "geodatos.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date varies by source (NMA 'about 1824'; Britannica snippet says 1804, not opened). Pin is Hobart as a proxy. NMA's 'fewer than 2,000 by about 1818' looked odd, so no population figures used.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T20:58:25.837Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1824",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Violent frontier conflict between Tasmanian Aboriginal people and British settlers and authorities in Van Diemen's Land, dated from about 1824 by the National Museum of Australia.",
+        "source": "src-nma"
+      },
+      {
+        "span": "1830",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "Lieutenant-Governor George Arthur declared martial law on 1 November 1828, and in October–November 1830 the 'Black Line' sweep failed to capture many Aboriginal people; later efforts removed them…",
+        "source": "src-nma",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

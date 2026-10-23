@@ -1,0 +1,132 @@
+{
+  "id": "1963-white-revolution",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "White Revolution",
+  "summary": "A program of modernization and reform carried out in Iran by Mohammad Reza Shah Pahlavi from 1963 until 1979. It redistributed land, created literacy and health corps, and extended voting rights to women. It weakened landowners and clerical power, and benefits were uneven. Rapid urbanization followed, and the program ended with the 1979 Islamic revolution.",
+  "when": {
+    "start": {
+      "year": 1963
+    },
+    "end": {
+      "year": 1979
+    },
+    "precision": "year",
+    "display": "1963–1979",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "implemented in Iran in 1963 and continued until 1979",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "1963 - 1979",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 32,
+    "lon": 53,
+    "elevation_m": null,
+    "modern_name": "Iran (proxy pin: Iran, the country Wikidata lists)",
+    "historical_name": "Iran",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "people"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "A major national reform program that reshaped Iran's society and fed into the 1979 revolution."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260111010347/https://www.britannica.com/topic/White-Revolution",
+      "title": "White Revolution (Iran) | History, Significance, & Effects | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/white-revolution-1961-1963",
+      "title": "White Revolution (1961–1963) | Encyclopedia.com",
+      "publisher": "Encyclopedia.com (Gale)",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q794",
+      "title": "Wikidata Q794 (Iran, coordinates of the country Wikidata gives for Q1068139)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Encyclopedia.com titles the entry 1961–1963 and notes land reform began a year earlier, while Britannica dates the program 1963–1979. I used 1963–1979 per Britannica and the Wikidata lead. Land redistribution figures differ between sources (2.5 million families vs about half a million peasants with adequate land).} (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, Encyclopedia.com (Gale); quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:00:51.711Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1963",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A program of modernization and reform carried out in Iran by Mohammad Reza Shah Pahlavi from 1963 until 1979.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1979",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It redistributed land, created literacy and health corps, and extended voting rights to women.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

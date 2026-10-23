@@ -1,0 +1,154 @@
+{
+  "id": "1954-guatemalan-coup",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1954 Guatemalan coup d'etat",
+  "summary": "In June 1954 Guatemalan president Jacobo Arbenz Guzman was overthrown in a coup orchestrated by the US Central Intelligence Agency and carried out by exiled Colonel Carlos Castillo Armas. Washington feared communist influence, and Arbenz's land reform had hurt the United Fruit Company. The CIA operation, codenamed PBSUCCESS, was documented in records released in 1997 and 2003.",
+  "when": {
+    "start": {
+      "year": 1954
+    },
+    "end": {
+      "year": 1954
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "Opened sources give \"June 1954\" for the overthrow. Day-level start of the invasion was not confirmed on an opened page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "June 1954",
+        "source": "src-nara"
+      }
+    ],
+    "display": "June 1954"
+  },
+  "where": {
+    "lat": 14.6417,
+    "lon": -90.5133,
+    "elevation_m": null,
+    "modern_name": "Guatemala City, Guatemala",
+    "historical_name": "Guatemala City, capital of the Republic of Guatemala",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 80,
+    "coordinate_sources": [
+      "src-wd-gt"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A landmark Cold War covert intervention that ended Guatemala's reform government and shaped Latin American views of US policy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1961-04-17-bay-of-pigs-invasion",
+      "type": "related"
+    },
+    {
+      "id": "1953-cuban-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-frus",
+      "url": "https://history.state.gov/historicaldocuments/frus1952-54Guat/intro",
+      "title": "Foreign Relations of the United States, 1952-1954, Guatemala: Introduction",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nara",
+      "url": "https://text-message.blogs.archives.gov/2012/02/13/the-cia-in-guatemala/",
+      "title": "The CIA in Guatemala",
+      "publisher": "U.S. National Archives (Text Message blog)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-gt",
+      "url": "https://www.wikidata.org/wiki/Q1555",
+      "title": "Wikidata item Q1555 (Guatemala City), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the day-level dates: the opened sources give only \"June 1954\". Casualties and motives are contested; the framing here follows US government records.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1952-06-17",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Arbenz's Decree 900 agrarian reform law was promulgated, hitting the United Fruit Company hardest.",
+        "source": "src-frus"
+      },
+      {
+        "span": "1954-06",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "A CIA-orchestrated coup, carried out by exile Colonel Castillo Armas, overthrew Arbenz.",
+        "source": "src-nara"
+      },
+      {
+        "span": "1954-06-27",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Arbenz's presidency ended, and the CIA later released many redacted records on the operation.",
+        "source": "src-frus",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:40:50.901Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

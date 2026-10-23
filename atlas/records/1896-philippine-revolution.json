@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1896-philippine-revolution",
+  "kind": "event",
+  "title": "Philippine Revolution",
+  "summary": "In August 1896, after a Spanish friar was tipped off about the Katipunan, a secret society of about 30,000 members, Andres Bonifacio proclaimed revolution against Spain. Sources disagree on the date and place of the first cry, 23 or 26 August at Pugad Lawin or Balintawak. Fighting was strongest in Cavite under Emilio Aguinaldo, and the revolution is dated 1896-1898.",
+  "when": {
+    "start": {
+      "year": 1896,
+      "iso": "1896-08"
+    },
+    "end": {
+      "year": 1898
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The first cry is dated 23 August (NHCP marker) or 26 August (Library of Congress guide); the Library of Congress country study has Bonifacio attacking Spanish installations on 29 August 1896. The end year follows the Library of Congress guide span 1896-1898."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "attacking Spanish military installations on August 29, 1896",
+        "source": "src-loc-study-1896"
+      },
+      {
+        "calendar": "Gregorian (Filipino text)",
+        "value": "NAGPULONG NOONG UMAGA NG IKA-23 AGOSTO 1896",
+        "source": "src-nhcp-pugadlawin"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On August 26, 1896, after learning that the Katipunan had been betrayed, Bonifacio issued the Grito de Balintawak",
+        "source": "src-loc-guide-ph"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Philippine Revolution, 1896-1898",
+        "source": "src-loc-guide-ph"
+      }
+    ],
+    "display": "August 1896 to 1898"
+  },
+  "where": {
+    "lat": 14.6506,
+    "lon": 121.0014,
+    "elevation_m": null,
+    "modern_name": "Balintawak / Bahay Toro area, Quezon City, Metro Manila (disputed site of the first cry); fighting also in Cavite Province",
+    "historical_name": "Environs of Manila, Spanish Philippines",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-balintawak",
+      "src-nhcp-pugadlawin"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The revolt against Spanish rule in the Philippines, tied in the sources to the Biak-na-Bato pact and later events."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "person-jose-rizal",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc-study-1896",
+      "url": "https://countrystudies.us/philippines/12.htm",
+      "title": "The 1896 Uprising and Rizal’s Execution (Philippines: A Country Study)",
+      "publisher": "Library of Congress Federal Research Division",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-loc-study-katipunan",
+      "url": "https://countrystudies.us/philippines/11.htm",
+      "title": "The Katipunan (Philippines: A Country Study)",
+      "publisher": "Library of Congress Federal Research Division",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nhcp-pugadlawin",
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/ang-sigaw-ng-pugadlawin-1896/",
+      "title": "Ang Sigaw ng Pugadlawin (1896)",
+      "publisher": "National Historical Commission of the Philippines",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-loc-guide-ph",
+      "url": "https://guides.loc.gov/world-of-1898/philippines",
+      "title": "Philippine Perspective, World of 1898",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-balintawak",
+      "url": "https://www.wikidata.org/wiki/Q55604770",
+      "title": "Balintawak (Wikidata Q55604770)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1896-08-29",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "After a friar was tipped off about the Katipunan, Bonifacio proclaimed revolution and attacked Spanish military installations on 29 August 1896.",
+        "source": "src-loc-study-1896"
+      },
+      {
+        "span": "1896-11",
+        "action": "region.fill { radius_km: 40 }",
+        "caption": "Between August and November 1896 rebels commanded by Aguinaldo defeated colonial troops in Cavite, which became the centre of the revolution.",
+        "source": "src-loc-study-1896"
+      },
+      {
+        "span": "1896-12-30",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Rizal was executed on 30 December 1896; the Library of Congress study says his death filled the rebels with new determination.",
+        "source": "src-loc-study-1896",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Date and place of the first cry are disputed in the sources (23 vs 26 August; Pugad Lawin vs Balintawak); the pin uses the Balintawak barangay as a central point. Least sure: end of revolution (1898 from LoC guide span only).",
+  "audience_note": null,
+  "author": "historian-agent:o-s60",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:36:54.791Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

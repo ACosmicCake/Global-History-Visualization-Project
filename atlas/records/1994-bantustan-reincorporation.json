@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "1994-bantustan-reincorporation",
+  "kind": "event",
+  "title": "Collapse and reincorporation of the Bantustans, 1994",
+  "summary": "On 27 April 1994, as South Africa's first democratic elections took place, the ten apartheid-era Bantustans, including the four declared 'independent' homelands of Transkei, Bophuthatswana, Venda and Ciskei, ceased to exist. Their territories were reincorporated into the new nine provinces of a democratic South Africa; no foreign government had recognised the four as independent states.",
+  "when": {
+    "start": {
+      "year": 1994
+    },
+    "end": {
+      "year": 1994
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The South African Homelands or Bantustans ceased to exist on 27 April 1994, and were re-incorporated into the new nine provinces",
+        "source": "src-saho"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Bantustans were dissolved in 1994, after Nelson Mandela was elected president",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "27 April 1994"
+  },
+  "where": {
+    "lat": -25.746389,
+    "lon": 28.188056,
+    "elevation_m": null,
+    "modern_name": "Pretoria, South Africa (seat of government; the territories lay across the country)",
+    "historical_name": "Republic of South Africa; ten homelands (Transkei, Bophuthatswana, Venda, Ciskei and six self-governing territories)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-pretoria"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Ended the territorial machinery of apartheid and restored South African citizenship and a single national territory for the residents of the homelands."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1994-04-27-south-african-general-election",
+      "type": "contemporary"
+    },
+    {
+      "id": "1990-end-of-apartheid",
+      "type": "part_of"
+    },
+    {
+      "id": "1948-national-party-election-and-apartheid-legislation",
+      "type": "caused_by",
+      "because": "The homeland system grew out of apartheid separate-development policy begun after 1948."
+    },
+    {
+      "id": "person-nelson-mandela",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1976",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Pretoria began declaring homelands independent: Transkei in 1976, Bophuthatswana 1977, Venda 1979 and Ciskei 1981.",
+        "source": "src-saho"
+      },
+      {
+        "span": "1994-04-27",
+        "action": "region.fill { radius_km: 600 }",
+        "caption": "On 27 April 1994 all the homelands ceased to exist and were folded into nine provinces of a democratic South Africa.",
+        "source": "src-saho",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-saho",
+      "url": "https://sahistory.org.za/article/homelands",
+      "title": "The Homelands",
+      "publisher": "South African History Online",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/politics-and-government/bantustan/",
+      "title": "Bantustan (Research Starters)",
+      "publisher": "EBSCO Information Services",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-pretoria",
+      "url": "https://www.wikidata.org/wiki/Q3926",
+      "title": "Wikidata item Q3926 (Pretoria), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "27 April 1994 is from SAHO only; EBSCO says only 'in 1994'. The 'no foreign recognition' claim and the legal instrument (the 1993 interim constitution) were seen in search snippets, not on an opened page, so the instrument is not named. The Bophuthatswana crisis of March 1994 is not covered here. The pin is Pretoria as a stand-in for a nationwide change.",
+  "published_at": "2026-10-22T04:45:21.184Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

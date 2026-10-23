@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s102",
+  "updated": "2026-10-22",
+  "confidence": "established",
+  "id": "person-carlos-chagas",
+  "kind": "person",
+  "title": "Carlos Chagas",
+  "summary": "Carlos Chagas was a Brazilian physician born near Oliveira, Minas Gerais, in 1878 and died in Rio de Janeiro in 1934. In 1909 he identified American trypanosomiasis, later called Chagas disease, and named its agent Trypanosoma cruzi in honour of Oswaldo Cruz.",
+  "when": {
+    "start": {
+      "year": 1878,
+      "month": 7,
+      "day": 9
+    },
+    "end": {
+      "year": 1934,
+      "month": 11,
+      "day": 8
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both opened pages give 9 July 1878."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "born in Oliveira, Minas Gerais, on July 9, 1878; died in Rio de Janeiro on November 8, 1934",
+        "source": "src-scielo-chagas"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "nasceu em 9 de julho de 1878 ... Faleceu no Rio de Janeiro, em 8 de novembro de 1934; Foi descobridor, em 1909, da trypanosomiase americana",
+        "source": "src-fiocruz-chagas"
+      }
+    ],
+    "display": "9 July 1878 – 8 November 1934"
+  },
+  "where": {
+    "lat": -22.911111,
+    "lon": -43.205556,
+    "elevation_m": null,
+    "modern_name": "Rio de Janeiro, Brazil (place of death; proxy pin)",
+    "historical_name": "Rio de Janeiro, Federal capital of Brazil",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-q8678"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "people",
+    "science_technology",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Identified Chagas disease and its parasite."
+  },
+  "sources": [
+    {
+      "id": "src-fiocruz-chagas",
+      "url": "https://dichistoriasaude.coc.fiocruz.br/wiki_dicionario/index.php?title=CHAGAS%2C_CARLOS",
+      "title": "Chagas, Carlos",
+      "publisher": "Fiocruz (Casa de Oswaldo Cruz)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-scielo-chagas",
+      "url": "https://www.scielo.br/j/jbpml/a/X9Ksv66rVFHDL8WvV5D3Zhy/?format=html&lang=pt&ilang=en",
+      "title": "Carlos Chagas",
+      "publisher": "Jornal Brasileiro de Patologia e Medicina Laboratorial (SciELO)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q8678",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q8678.json",
+      "title": "Wikidata Q8678 (Rio de Janeiro)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Rio de Janeiro as death place (proxy); birth was on a farm about 20 km from Oliveira per Fiocruz.",
+  "published_at": "2026-10-22T18:11:16.365Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "id": "2013-mars-orbiter-mission",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Mars Orbiter Mission (Mangalyaan)",
+  "summary": "India's first interplanetary mission, Mangalyaan, was launched by ISRO on a PSLV rocket from Sriharikota on 5 November 2013. After a transit of about 300 days it entered Mars orbit on 24 September 2014 (23 September in UT per NASA), then operated for around eight years.",
+  "when": {
+    "start": {
+      "year": 2013,
+      "iso": "2013-11-05"
+    },
+    "end": {
+      "year": 2014,
+      "iso": "2014-09-24"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "NASA Science lists orbit insertion as 23 September 2014, 1:47:32 UT; the MDSCC page says 24 September 2014. The one-day difference is unexplained in the sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, UT",
+        "value": "Nov. 5, 2013 | 09:08 UT",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "Gregorian, UT",
+        "value": "Sept. 23, 2014 | 1:47:32 UT",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "5 November 2013",
+        "source": "src-mdscc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "24 September 2014",
+        "source": "src-mdscc"
+      }
+    ],
+    "display": "5 November 2013 (launch) to 24 September 2014 (Mars orbit insertion)"
+  },
+  "where": {
+    "lat": 13.74,
+    "lon": 80.24,
+    "elevation_m": null,
+    "modern_name": "Satish Dhawan Space Centre, Sriharikota, Andhra Pradesh, India",
+    "historical_name": "Satish Dhawan Space Centre SHAR, Sriharikota, India",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-astronautix",
+      "src-orbitalradar"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "India's first interplanetary mission, which reached Mars orbit and ran for about eight years."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/mission/mom/",
+      "title": "Mars Orbiter Mission",
+      "publisher": "NASA Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mdscc",
+      "url": "https://www.mdscc.nasa.gov/index.php/en/current-missions/marsorbitermission_eng/",
+      "title": "Mars Orbiter Mission",
+      "publisher": "Madrid Deep Space Communication Complex (NASA)",
+      "author": null,
+      "date_published": "2019-09-09",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-isro",
+      "url": "https://www.isro.gov.in/MOM.html",
+      "title": "Mars Orbiter Mission",
+      "publisher": "Indian Space Research Organisation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-modeldiplomat",
+      "url": "https://modeldiplomat.com/learn/glossary/mangalyaan-mars-orbiter-mission",
+      "title": "Mangalyaan (Mars Orbiter Mission)",
+      "publisher": "Model Diplomat",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-astronautix",
+      "url": "http://www.astronautix.com/s/sriharikota.html",
+      "title": "Sriharikota",
+      "publisher": "Astronautix",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-orbitalradar",
+      "url": "https://orbitalradar.com/spaceports/satish-dhawan",
+      "title": "Satish Dhawan Space Centre",
+      "publisher": "Orbital Radar",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "NASA gives orbit insertion as 23 Sept 2014 UT, other sources 24 Sept; unreconciled. Pin is the launch site, a proxy for the mission. Pad coordinates come from low-precision pages.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T21:24:56.306Z"
+}

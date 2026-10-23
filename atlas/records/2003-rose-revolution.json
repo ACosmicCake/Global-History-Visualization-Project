@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2003-rose-revolution",
+  "kind": "event",
+  "title": "Rose Revolution",
+  "summary": "Nonviolent protests in Georgia began in early November 2003 after a disputed parliamentary election, with roses as the movement's symbol. Led by Mikheil Saakashvili, they forced President Eduard Shevardnadze to resign and brought new elections in January 2004, when Saakashvili was inaugurated.",
+  "when": {
+    "start": {
+      "year": 2003
+    },
+    "end": {
+      "year": 2003
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources differ by a day on the start (3 vs 4 November 2003); end of protest period given as 25 November 2003 by Swarthmore."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 4, 2003 to November 25, 2003",
+        "source": "src-gnad"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 3, 2003",
+        "source": "src-adst"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "January 25th, 2004",
+        "source": "src-adst"
+      }
+    ],
+    "display": "November 2003"
+  },
+  "where": {
+    "lat": 41.69143,
+    "lon": 44.83412,
+    "elevation_m": null,
+    "modern_name": "Tbilisi, Georgia (pin is the capital city centre, a proxy for the protests)",
+    "historical_name": "Tbilisi, Georgia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Early colour revolution that ended Shevardnadze's presidency and brought Saakashvili to power."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-gnad",
+      "url": "https://nvdatabase.swarthmore.edu/content/georgians-overthrow-dictator-rose-revolution-2003",
+      "title": "Georgians overthrow a dictator (Rose Revolution), 2003",
+      "publisher": "Swarthmore College, Global Nonviolent Action Database",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-adst",
+      "url": "https://adst.org/2015/11/georgia-and-the-rose-revolution/",
+      "title": "Georgia and The Rose Revolution",
+      "publisher": "Association for Diplomatic Studies and Training (ADST)",
+      "author": null,
+      "date_published": "2015",
+      "accessed": "2026-10-23",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/611717",
+      "title": "Tbilisi (GeoNames 611717)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Exact resignation date not confirmed on opened pages; sources differ on start (3 vs 4 Nov). Pin is Tbilisi as proxy. JSTOR, State Dept and Project MUSE leads were blocked.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T01:20:27.232Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2003",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Nonviolent protests in Georgia began in early November 2003 after a disputed parliamentary election, with roses as the movement's symbol.",
+        "source": "src-gnad"
+      },
+      {
+        "span": "2003",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Led by Mikheil Saakashvili, they forced President Eduard Shevardnadze to resign and brought new elections in January 2004, when Saakashvili was inaugurated.",
+        "source": "src-gnad",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

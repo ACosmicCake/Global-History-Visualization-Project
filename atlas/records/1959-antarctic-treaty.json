@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "1959-antarctic-treaty",
+  "kind": "event",
+  "title": "Antarctic Treaty",
+  "summary": "On 1 December 1959 twelve countries whose scientists had worked in Antarctica during the International Geophysical Year signed the Antarctic Treaty in Washington. It reserves the continent for peaceful purposes, keeps scientific research free and its results shared, and sets territorial claims aside. It entered into force in 1961.",
+  "when": {
+    "start": {
+      "year": 1959
+    },
+    "end": {
+      "year": 1961
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Signed 1 December 1959; the Antarctic Treaty Secretariat gives 1961 for entry into force."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "signed in Washington on 1 December 1959",
+        "source": "src-ats"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "December 01, 1959",
+        "source": "src-ucsb"
+      }
+    ],
+    "display": "Signed 1 December 1959; in force 1961"
+  },
+  "where": {
+    "lat": 38.895,
+    "lon": -77.036667,
+    "elevation_m": null,
+    "modern_name": "Washington, D.C., United States",
+    "historical_name": "Washington, D.C., United States (place of signing)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-washington"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Set the legal framework for the governance of Antarctica, still the basis for the Antarctic Treaty System."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ats",
+      "url": "https://www.ats.aq/e/antarctictreaty.html",
+      "title": "The Antarctic Treaty",
+      "publisher": "Secretariat of the Antarctic Treaty",
+      "author": "Secretariat of the Antarctic Treaty",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ucsb",
+      "url": "https://www.presidency.ucsb.edu/documents/statement-the-president-concerning-the-antarctic-treaty",
+      "title": "Statement by the President Concerning the Antarctic Treaty",
+      "publisher": "The American Presidency Project, UC Santa Barbara",
+      "author": "The American Presidency Project, UC Santa Barbara",
+      "date_published": "1959-12-01",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bas",
+      "url": "https://www.bas.ac.uk/about/antarctica/the-antarctic-treaty/",
+      "title": "The Antarctic Treaty",
+      "publisher": "British Antarctic Survey",
+      "author": "British Antarctic Survey",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-washington",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q61.json",
+      "title": "Wikidata entry for Washington, D.C. (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Entry-into-force date (23 June 1961) was seen only in a search snippet, so only the year 1961 from the Secretariat page is recorded.",
+  "published_at": "2026-10-22T08:18:30.161Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1959",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 1 December 1959 twelve countries whose scientists had worked in Antarctica during the International Geophysical Year signed the Antarctic Treaty in Washington.",
+        "source": "src-ats"
+      },
+      {
+        "span": "1961",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It reserves the continent for peaceful purposes, keeps scientific research free and its results shared, and sets territorial claims aside.",
+        "source": "src-ats",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0430-peloponnesian-war",
+  "kind": "event",
+  "title": "Peloponnesian War",
+  "summary": "From 431 to 404 BCE Athens and the Delian League fought Sparta and the Peloponnesian League. World History Encyclopedia says Sparta feared Athens' tribute-funded fleet; Thebes' attack on Plataea opened the war. Athens surrendered in 404 BCE, pulled down its Long Walls and accepted a fleet limit of 12 ships.",
+  "when": {
+    "start": {
+      "year": -430
+    },
+    "end": {
+      "year": -403
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The span is the second war of 431–404 BCE; World History Encyclopedia also counts a First Peloponnesian War c. 460–445 BCE, which is not covered here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "from 431 to 404 BCE",
+        "source": "src-whe-peloponnesian"
+      },
+      {
+        "calendar": "b.c.e. (EBSCO)",
+        "value": "431–404 b.c.e.",
+        "source": "src-ebsco-peloponnesian"
+      },
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "431–421 BCE: Archidamian War",
+        "source": "src-livius-athens"
+      }
+    ],
+    "display": "431–404 BCE"
+  },
+  "where": {
+    "lat": 38.2208936,
+    "lon": 23.2737305,
+    "elevation_m": null,
+    "modern_name": "Plataea (Plataies), Boeotia, Greece",
+    "historical_name": "Plataea, Boeotian city allied to Athens; the war itself spread across the Greek world",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-plataea"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Long war between the two leading Greek power blocs that ended Athens' empire."
+  },
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "-0477-delian-league",
+      "type": "related"
+    },
+    {
+      "id": "-0429-plague-of-athens",
+      "type": "has_part"
+    },
+    {
+      "id": "-0406-battle-of-arginusae-slaves-enfranchisement",
+      "type": "related"
+    },
+    {
+      "id": "-0412-flight-of-the-enslaved-from-attica",
+      "type": "related"
+    },
+    {
+      "id": "-0403-rule-of-the-thirty",
+      "type": "caused",
+      "because": "World History Encyclopedia says the Spartans told the Athenians to choose 30 men after Athens' defeat."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-peloponnesian",
+      "url": "https://www.worldhistory.org/Peloponnesian_War/",
+      "title": "Peloponnesian War",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2018-05-02",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-peloponnesian",
+      "url": "https://www.ebsco.com/research-starters/history/peloponnesian-wars-military-history",
+      "title": "Peloponnesian Wars (military history) (Research Starter)",
+      "publisher": "EBSCO Information Services",
+      "author": "Thomas T. Lewis",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mit-thucydides",
+      "url": "https://classics.mit.edu/Thucydides/pelopwar.2.second.html",
+      "title": "The History of the Peloponnesian War, Book 2 (Crawley translation)",
+      "publisher": "MIT Internet Classics Archive",
+      "author": "Thucydides, translated by Richard Crawley",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-athens",
+      "url": "https://www.livius.org/articles/place/athens/",
+      "title": "Athens",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-plataea",
+      "url": "https://nominatim.openstreetmap.org/search?q=Plataea+archaeological+site&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Plataea, node 3805264669 (38.2208936, 23.2737305)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Plataea because both Thucydides (Crawley, MIT) and EBSCO say the war opened with the Theban attack there; a regions geometry would suit a full record. The Livius line used is the 431–421 Archidamian War, so it supports the start only.",
+  "published_at": "2026-10-22T10:33:52.971Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-430",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 431 to 404 BCE Athens and the Delian League fought Sparta and the Peloponnesian League.",
+        "source": "src-whe-peloponnesian"
+      },
+      {
+        "span": "-403",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "World History Encyclopedia says Sparta feared Athens' tribute-funded fleet; Thebes' attack on Plataea opened the war.",
+        "source": "src-whe-peloponnesian",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

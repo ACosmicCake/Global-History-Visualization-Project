@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0477-delian-league",
+  "kind": "polity",
+  "title": "Delian League",
+  "summary": "In 478 BCE Athens formed the Delian League with Greek city-states, keeping its treasury on Delos; the first tribute assessment is credited to Aristides. Athens moved the treasury to its own city c. 454 BCE after a failed Egyptian expedition, and the league ended in 404 BCE when Athens lost the Peloponnesian War.",
+  "when": {
+    "start": {
+      "year": -477
+    },
+    "end": {
+      "year": -403
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "World History Encyclopedia gives formation in 478 BCE; Livius places the first tribute assessment in the third year after Salamis and gives no founding year."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "formed in 478 BCE",
+        "source": "src-whe-delian"
+      },
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "dissolved in 404 BCE",
+        "source": "src-whe-delian"
+      },
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "the third year after the battle of Salamis",
+        "source": "src-livius-delian"
+      }
+    ],
+    "display": "478–404 BCE"
+  },
+  "where": {
+    "lat": 37.3997459,
+    "lon": 25.2682604,
+    "elevation_m": null,
+    "modern_name": "Delos, Cyclades, Greece",
+    "historical_name": "Delos, sacred island in the Cyclades, seat of the league treasury under Athenian leadership",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-osm-delos"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Athens-led alliance whose tribute built Athenian naval power and paid for the Parthenon."
+  },
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "-0479-battle-of-salamis",
+      "type": "related"
+    },
+    {
+      "id": "-0446-construction-of-the-parthenon",
+      "type": "caused",
+      "because": "World History Encyclopedia says the Parthenon was paid for from surplus in the league's war treasury."
+    },
+    {
+      "id": "-0430-peloponnesian-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-delian",
+      "url": "https://www.worldhistory.org/Delian_League/",
+      "title": "Delian League",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2016-03-04",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-delian",
+      "url": "https://www.livius.org/articles/concept/delian-league/",
+      "title": "Delian League",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-delos",
+      "url": "https://nominatim.openstreetmap.org/search?q=Delos+archaeological+site&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Delos, way 125611041 (37.3997459, 25.2682604)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pages disagree on the treasury move: Livius puts it after a crisis in 461, World History Encyclopedia says c. 454 BCE; the summary follows WHE. Kind set to polity; change to organization if the schema owner prefers. Point is Delos, not Athens.",
+  "published_at": "2026-10-22T10:33:52.239Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

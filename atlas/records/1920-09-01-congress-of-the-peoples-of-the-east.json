@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s3",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "1920-09-01-congress-of-the-peoples-of-the-east",
+  "kind": "event",
+  "title": "First Congress of the Peoples of the East, Baku",
+  "summary": "The Communist International convened a congress in Baku in September 1920 for delegates from Asia and the Middle East. Nearly 1,900 delegates attended, and the gathering issued a manifesto urging workers and peasants of the East to unite with European workers against imperialism, especially British. Historians treat it as an early Comintern effort to reach colonised peoples.",
+  "when": {
+    "start": {
+      "year": 1920,
+      "iso": "1920-09-01"
+    },
+    "end": {
+      "year": 1920,
+      "iso": "1920-09-08"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Sources agree on 1 September for the opening; 8 September for the close is from the Slavic Review abstract."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "held in Baku from September 1 to 8, 1920",
+        "source": "src-slavic-review"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On September 1, 1920, in the city of Baku",
+        "source": "src-baku-manifesto"
+      }
+    ],
+    "display": "1–8 September 1920"
+  },
+  "where": {
+    "lat": 40.3777,
+    "lon": 49.892,
+    "elevation_m": null,
+    "modern_name": "Baku, Azerbaijan",
+    "historical_name": "Baku, Azerbaijan (Soviet-controlled in 1920)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-baku"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "An early international gathering linking the Comintern to anti-colonial and revolutionary movements across Asia."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1917-russian-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-baku-manifesto",
+      "url": "https://www.marxists.org/history/international/comintern/baku/manifesto.htm",
+      "title": "Baku Congress of the Peoples of the East: Manifesto",
+      "publisher": "Marxists Internet Archive",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-slavic-review",
+      "url": "https://www.cambridge.org/core/journals/slavic-review/article/communism-and-the-east-the-baku-congress-1920/377D701364AD9C0A7B1DF7CE40319A3E",
+      "title": "Communism and the East: The Baku Congress, 1920",
+      "publisher": "Slavic Review (Cambridge University Press)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-baku",
+      "url": "https://www.geonames.org/search.html?q=Baku&country=AZ&featureClass=P",
+      "title": "GeoNames search results: Baku",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Delegate counts vary by source (1,891 in the stenographic protocol; about 1,900 to over 2,000 elsewhere), so the summary says nearly 1,900. The Comintern summons is attested by a Marxists.org foreword, not opened in full here.",
+  "published_at": "2026-10-22T03:32:02.787Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1920-09-01",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Communist International convened a congress in Baku in September 1920 for delegates from Asia and the Middle East.",
+        "source": "src-baku-manifesto"
+      },
+      {
+        "span": "1920",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Nearly 1,900 delegates attended, and the gathering issued a manifesto urging workers and peasants of the East to unite with European workers against imperialism, especially British.",
+        "source": "src-baku-manifesto",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

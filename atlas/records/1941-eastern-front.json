@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1941-eastern-front",
+  "kind": "event",
+  "title": "Eastern Front",
+  "summary": "The German-Soviet theatre of World War II began when Nazi Germany and its allies invaded the Soviet Union on 22 June 1941. After German advances stalled before Moscow, Soviet forces pushed back and took Berlin in spring 1945; Germany's forces in the east surrendered on 9 May 1945. It was the largest and deadliest theatre of the war.",
+  "when": {
+    "start": {
+      "year": 1941
+    },
+    "end": {
+      "year": 1945
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the invasion date; end is the German surrender in the east per USHMM."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 22, 1941",
+        "source": "src-ushmm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 22, 1941",
+        "source": "src-nww2"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 9, 1945",
+        "source": "src-ushmm"
+      }
+    ],
+    "display": "22 June 1941 – 9 May 1945"
+  },
+  "where": {
+    "lat": 55.752,
+    "lon": 37.6178,
+    "elevation_m": null,
+    "modern_name": "Moscow, Russia (proxy pin; the front spanned eastern Europe)",
+    "historical_name": "Eastern Europe, Soviet Union and German-held territories; pin at Moscow, capital of the USSR (proxy)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Described by the US Holocaust Memorial Museum as the largest and deadliest theatre of World War II."
+  },
+  "confidence": "established",
+  "audience_note": "Includes mass killing of civilians, the shooting of Jews by Einsatzgruppen, and the deaths of Soviet prisoners of war.",
+  "related": [
+    {
+      "id": "1941-battle-of-moscow",
+      "type": "has_part"
+    },
+    {
+      "id": "1941-1945-soviet-prisoners-of-war-in-german-captivity",
+      "type": "has_part"
+    },
+    {
+      "id": "1941-the-holocaust",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ushmm",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/the-soviet-union-and-the-eastern-front",
+      "title": "The Soviet Union and the Eastern Front",
+      "publisher": "United States Holocaust Memorial Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nww2",
+      "url": "https://www.nationalww2museum.org/war/articles/operation-barbarossa",
+      "title": "Operation Barbarossa: The Biggest of All Time",
+      "publisher": "The National WWII Museum",
+      "author": "Robert Citino",
+      "date_published": "2021-06-18",
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/524901/moscow.html",
+      "title": "Moscow",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy at Moscow with 1000 km uncertainty; the front has no single location. Start and end dates from USHMM; no source gave an alternative end.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:50:00.417Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

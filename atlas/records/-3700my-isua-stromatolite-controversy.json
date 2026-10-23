@@ -1,0 +1,167 @@
+{
+  "id": "-3700my-isua-stromatolite-controversy",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "event",
+  "title": "Isua 3.7-billion-year-old stromatolite controversy",
+  "summary": "In 2016, geologists reported the discovery of 3.7-billion-year-old putative stromatolites in southwest Greenland's Isua supracrustal belt, claiming the oldest direct fossil evidence of life. A 2018 reinvestigation by NASA astrobiologists disputed the finding, showing the conical structures lacked internal microbial laminations and represented non-biological deformation features produced by tectonic shearing. The debate remains a major cautionary case study for identifying ancient biosignatures on Earth and Mars.",
+  "when": {
+    "start": {
+      "year": -3700000000
+    },
+    "end": {
+      "year": -3700000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Age of the metasedimentary rocks in the Isua supracrustal belt dated to c. 3.7 Ga (between 3.7 and 3.8 billion years old). The controversy over their biogenicity unfolded from 2016 onward."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Astronomical / geological age",
+        "value": "3.7 and 3.8 billion years old",
+        "source": "src-nasa-astrobiology-greenland"
+      },
+      {
+        "calendar": "Astronomical / geological age",
+        "value": "3.7-billion-year-old rocks in Greenland",
+        "source": "src-quanta-isua-2018"
+      }
+    ],
+    "display": "c. 3.7 Ga (controversy 2016–present)"
+  },
+  "where": {
+    "lat": 65.09,
+    "lon": -50.04,
+    "elevation_m": null,
+    "modern_name": "Isua supracrustal belt, Sermersooq, southwest Greenland",
+    "historical_name": "Eoarchean crust (predates human polities and place names)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wikidata-isua"
+    ],
+    "paleo": {
+      "not_applicable": "Predates plate tectonic reconstructions; Eoarchean supracrustal rocks."
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction",
+    "science_technology"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A high-profile test case for evaluating putative morphological biosignatures in intensely metamorphosed deep-time rocks, directly impacting Mars sample return strategy."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3700my-origin-of-life",
+      "type": "part_of"
+    },
+    {
+      "id": "-4200my-last-universal-common-ancestor",
+      "type": "related"
+    },
+    {
+      "id": "-2400my-great-oxidation-event",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-astrobiology-greenland",
+      "url": "https://astrobiology.nasa.gov/news/on-the-ground-in-greenland/",
+      "title": "On the Ground in Greenland",
+      "publisher": "NASA Astrobiology",
+      "author": "Marc Kaufman",
+      "date_published": "2019-09-10",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-quanta-isua-2018",
+      "url": "https://www.quantamagazine.org/worlds-oldest-fossils-now-appear-to-be-squished-rocks-20181022/",
+      "title": "World's Oldest Fossils Now Appear to Be Squished Rocks",
+      "publisher": "Quanta Magazine",
+      "author": "Jonathan Lambert",
+      "date_published": "2018-10-22",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-isua",
+      "url": "https://www.wikidata.org/wiki/Q1626318",
+      "title": "Isua Greenstone Belt (Q1626318)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of whether any biogenic consensus will ever emerge for Isua, as metamorphic deformation is severe; the pin represents the general Isua supracrustal belt coordinates from Wikidata.",
+  "published_at": "2026-10-22T07:06:49.768Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3700000000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "7-billion-year-old putative stromatolites in southwest Greenland's Isua supracrustal belt, claiming the oldest direct fossil evidence of life.",
+        "source": "src-nasa-astrobiology-greenland"
+      },
+      {
+        "span": "-3700000000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The debate remains a major cautionary case study for identifying ancient biosignatures on Earth and Mars.",
+        "source": "src-nasa-astrobiology-greenland",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

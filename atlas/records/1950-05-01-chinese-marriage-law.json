@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s9",
+  "updated": "2026-10-22",
+  "id": "1950-05-01-chinese-marriage-law",
+  "kind": "event",
+  "title": "Marriage Law of the People's Republic of China, 1950",
+  "summary": "The PRC promulgated its first marriage law on 1 May 1950. It set free choice of partner, monogamy and equal rights for the sexes, banned concubinage, bigamy and child marriage, and required registration. Annual campaigns popularised it until 1955, and implementation produced widespread disputes.",
+  "when": {
+    "start": {
+      "year": 1950,
+      "iso": "1950-05-01"
+    },
+    "end": {
+      "year": 1950,
+      "iso": "1950-05-01"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Promulgation date from one opened source; the other opened source says only 1950."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "promulgated on 1 May 1950",
+        "source": "src-posters"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "in 1950, China's new Communist government enacted a Marriage Law",
+        "source": "src-ucpress"
+      }
+    ],
+    "display": "1 May 1950"
+  },
+  "where": {
+    "elevation_m": null,
+    "geometry": {
+      "type": "point"
+    },
+    "lat": 39.904,
+    "lon": 116.4075,
+    "modern_name": "Beijing, China",
+    "historical_name": "Beijing, seat of the Central People's Government of the People's Republic of China",
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-q956"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The first basic law of the new state, it reshaped marriage and family relations for hundreds of millions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1949-chinese-communist-revolution",
+      "type": "caused_by",
+      "because": "The law was among the first measures of the new Communist government."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-posters",
+      "url": "https://chineseposters.net/themes/marriage-law",
+      "title": "New Marriage Law (1950)",
+      "publisher": "Chinese Posters (IISH / Landsberger collection)",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ucpress",
+      "url": "https://www.ucpress.edu/books/revolutionizing-the-family/hardcover",
+      "title": "Revolutionizing the Family (Neil J. Diamant)",
+      "publisher": "University of California Press",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-q956",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q956.json",
+      "title": "Wikidata entry (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Beijing as national capital; the law applied countrywide and the sources do not name the signing place. Law text and Council meeting dates were not opened.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1950-05-01",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The new Marriage Law was promulgated, setting free choice of partners, monogamy and equal rights, with marriages and divorces to be registered.",
+        "source": "src-posters"
+      },
+      {
+        "span": "1950",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "It outlawed arranged marriage, concubinage and bigamy, in what the publisher calls a dramatic state effort to change family life.",
+        "source": "src-ucpress"
+      },
+      {
+        "span": "1955",
+        "action": "pulse { radius_km: 120 }",
+        "caption": "Annual campaigns ran to 1955, by when over 90 percent of marriages were registered, but implementation brought disputes, divorces and violence.",
+        "source": "src-posters",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:29:42.077Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

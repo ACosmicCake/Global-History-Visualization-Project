@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s104",
+  "updated": "2026-10-22",
+  "id": "1514-battle-of-chaldiran",
+  "kind": "event",
+  "title": "Battle of Chaldiran",
+  "summary": "On 23 August 1514 the Ottoman army under Sultan Selim I destroyed the Safavid forces of Shah Ismail I at Chaldiran, on a plain between Khoi and Urmia north-west of Tabriz. The Ottomans took Tabriz on 5 September but left about eight days later. The Safavids afterwards moved their capital from Tabriz to Qazwin.",
+  "when": {
+    "start": {
+      "year": 1514,
+      "iso": "1514-08-23"
+    },
+    "end": {
+      "year": 1514,
+      "iso": "1514-08-23"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both opened sources give 23 August 1514; no troop or casualty figures are used."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "August 23, 1514",
+        "source": "src-ebsco-caldiran"
+      },
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "August 23, 1514",
+        "source": "src-warhistory-chaldiran"
+      }
+    ],
+    "display": "23 August 1514"
+  },
+  "where": {
+    "lat": 39.088852777778,
+    "lon": 44.326997222222,
+    "elevation_m": null,
+    "modern_name": "Plain of Chaldiran, between Khoi and Urmia, about 160 km north-west of Tabriz",
+    "historical_name": "Plain of Chaldiran, Safavid realm",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd-chaldiran"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Ottoman victory over the Safavids that was followed by Ottoman gains in Azerbaijan and Kurdistan and a Safavid change of capital."
+  },
+  "confidence": "established",
+  "audience_note": "Military conflict; troop and casualty figures vary widely between sources and are not stated here.",
+  "related": [
+    {
+      "id": "polity-ottoman-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-caldiran",
+      "url": "https://www.ebsco.com/research-starters/military-history-and-science/battle-caldiran/",
+      "title": "Battle of Caldiran",
+      "publisher": "EBSCO Research Starters",
+      "author": "Jason Ridler",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-warhistory-chaldiran",
+      "url": "https://warhistory.org/@msw/article/battle-of-chaldiran-august-23-1514",
+      "title": "Battle of Chaldiran, (August 23, 1514)",
+      "publisher": "WarHistory.org",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-chaldiran",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q745110.json",
+      "title": "Battle of Chaldiran (Wikidata Q745110)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "EBSCO lists the location as 'now Turkey' while WarHistory and Wikidata place it near Khoi and Urmia in Iran; the pin follows Wikidata and WarHistory. Least sure of the 'about eight days' wait before leaving Tabriz.",
+  "published_at": "2026-10-22T18:25:12.858Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

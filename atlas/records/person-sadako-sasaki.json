@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-sadako-sasaki",
+  "kind": "person",
+  "title": "Sadako Sasaki",
+  "summary": "Sadako Sasaki was a girl in Hiroshima who was two years old when the atomic bomb fell on 6 August 1945. In 1955 she was diagnosed with leukemia, then called atomic bomb disease, folded paper cranes in hospital and died in October 1955. Her classmates' campaign helped fund the Children's Peace Monument.",
+  "when": {
+    "start": {
+      "year": 1943
+    },
+    "end": {
+      "year": 1955
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth year is inferred from being two years old in 1945 (The Elders page gives \"around 1943\"); death is October 1955 on opened pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Sadako was two years old, and two kilometres away from the atomic bomb when it was dropped on Hiroshima",
+        "source": "src-elders"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "She died in October 1955",
+        "source": "src-elders"
+      }
+    ],
+    "display": "c. 1943 – October 1955"
+  },
+  "where": {
+    "lat": 34.38525,
+    "lon": 132.455306,
+    "elevation_m": null,
+    "modern_name": "Hiroshima, Japan",
+    "historical_name": "Hiroshima, Hiroshima Prefecture, Empire of Japan (1945); Japan (1955)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-wd-hiro"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "people",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Her story became an international symbol of peace and of the long-term harm of the atomic bombing; paper cranes are sent to Hiroshima in her memory."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a child's death from radiation-related illness.",
+  "related": [
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "caused_by",
+      "because": "She was exposed to the bombing as a toddler and her leukemia was then called atomic bomb disease."
+    },
+    {
+      "id": "place-hiroshima",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/articles/000/the-story-of-sadako-sasaki.htm",
+      "title": "The Story of Sadako Sasaki",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-elders",
+      "url": "https://theelders.org/news/story-sadako-sasaki-and-hiroshima-peace-cranes",
+      "title": "The story of Sadako Sasaki and the Hiroshima peace cranes",
+      "publisher": "The Elders",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-hiro",
+      "url": "https://www.wikidata.org/wiki/Q34664",
+      "title": "Wikidata item Q34664 (Hiroshima), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Exact birth and death days not confirmed on opened pages. Sources disagree on distance from the hypocentre (about a mile vs two kilometres) and on how many cranes she folded; both omitted. Pin is the Hiroshima city centroid. No animation: no sourced life path.",
+  "author": "historian-agent:o-s13",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T04:53:24.406Z"
+}

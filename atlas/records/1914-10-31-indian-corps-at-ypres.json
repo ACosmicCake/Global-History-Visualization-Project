@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes combat deaths.",
+  "author": "historian-agent:o-s44",
+  "updated": "2026-10-22",
+  "id": "1914-10-31-indian-corps-at-ypres",
+  "kind": "event",
+  "title": "Indian Corps at Ypres: the 129th Baluchis at Hollebeke",
+  "summary": "Indian troops were sent to the Western Front in autumn 1914 to help the exhausted British force, and their first engagement came on 25 October near Ypres. On 31 October the 129th Baluchis, outnumbered about five to one, held Hollebeke; Sepoy Khudadad Khan kept working his gun after being wounded until the rest of his crew were killed.",
+  "when": {
+    "start": {
+      "year": 1914
+    },
+    "end": {
+      "year": 1914
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "See as_recorded."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 31st October, 1914, at Hollebeke, Belgium",
+        "source": "src-gazette-khudadad"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "31 October 1914",
+        "source": "src-govuk-khudadad"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On the 31st",
+        "source": "src-thn-baluchis"
+      }
+    ],
+    "display": "31 October 1914"
+  },
+  "where": {
+    "lat": 50.8053,
+    "lon": 2.9381,
+    "elevation_m": null,
+    "modern_name": "Hollebeke, Ypres, West Flanders, Belgium",
+    "historical_name": "Hollebeke, Belgium",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-hollebeke"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 2,
+    "justification": "One day of action by Indian troops, recorded in a London Gazette citation."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gazette-khudadad",
+      "url": "https://www.thegazette.co.uk/all-notices/content/332",
+      "title": "Gazette notice: Khudadad Khan citation",
+      "publisher": "The Gazette",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-govuk-khudadad",
+      "url": "https://www.gov.uk/government/case-studies/ww1-pakistani-vc-recipient-khudadad-khan",
+      "title": "WW1 Pakistani VC recipient Khudadad Khan",
+      "publisher": "GOV.UK",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-thn-baluchis",
+      "url": "https://thehistorynetwork.org/?p=7962",
+      "title": "Multiple first at the First Battle of Ypres, 1914",
+      "publisher": "History Network",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wfa-indian",
+      "url": "https://www.westernfrontassociation.com/world-war-i-articles/2008/may/the-indian-army-on-the-western-front/",
+      "title": "The Indian Army on the Western Front",
+      "publisher": "Western Front Association",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-hollebeke",
+      "url": "https://www.wikidata.org/wiki/Q601051",
+      "title": "Wikidata item Q601051 (Hollebeke), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The gov.uk page says the German attack began on 30 October; the date here is the 31 October action in the Gazette citation. The Baluchis pages do not name the Indian Corps; only the Western Front Association page covers the 25 October action. Hollebeke coordinate comes from Wikidata (\"section of Ypres\").",
+  "published_at": "2026-10-22T10:16:08.417Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Indian troops were sent to the Western Front in autumn 1914 to help the exhausted British force, and their first engagement came on 25 October near Ypres.",
+        "source": "src-gazette-khudadad"
+      },
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "On 31 October the 129th Baluchis, outnumbered about five to one, held Hollebeke; Sepoy Khudadad Khan kept working his gun after being wounded until the rest of his…",
+        "source": "src-gazette-khudadad",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

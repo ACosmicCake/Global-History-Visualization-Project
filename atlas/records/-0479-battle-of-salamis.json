@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0479-battle-of-salamis",
+  "kind": "event",
+  "title": "Battle of Salamis",
+  "summary": "In September 480 BCE the allied Greek fleet defeated the Persian navy in the strait of Salamis, opposite Athens. Livius says at least a third of the Persian ships were defeated by nightfall and that Xerxes recalled his army, a serious setback but not a disaster; the Greeks and Persians met again at Plataea in 479 BCE.",
+  "when": {
+    "start": {
+      "year": -479
+    },
+    "end": {
+      "year": -479
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Livius gives 29 September; World History Encyclopedia gives September only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "29 September (480 BCE)",
+        "source": "src-livius-salamis"
+      },
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "September 480 BCE",
+        "source": "src-whe-salamis"
+      }
+    ],
+    "display": "29 September 480 BCE"
+  },
+  "where": {
+    "lat": 37.9383706,
+    "lon": 23.5083736,
+    "elevation_m": null,
+    "modern_name": "Strait of Salamis, between Salamis island and Attica, Greece (point is the island centroid)",
+    "historical_name": "Strait of Salamis, opposite Athens, Saronic Gulf",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 12,
+    "coordinate_sources": [
+      "src-osm-salamis"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive Greek naval victory over the Persian fleet in Xerxes' invasion."
+  },
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "-0482-laurion-silver-and-the-themistoclean-fleet",
+      "type": "related"
+    },
+    {
+      "id": "-0489-battle-of-marathon",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-salamis",
+      "url": "https://www.livius.org/articles/battle/salamis-480-bce/",
+      "title": "Battle of Salamis (480 BCE)",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-salamis",
+      "url": "https://www.worldhistory.org/Battle_of_Salamis/",
+      "title": "Battle of Salamis",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2013-05-05",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-salamis",
+      "url": "https://nominatim.openstreetmap.org/search?q=Salamina+island+Greece&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Salamis island, relation 957707 (37.9383706, 23.5083736)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Point is the centroid of Salamis island from OSM; the battle was in the strait on its east side, so uncertainty is 12 km. A separate stub, -0480-battle-of-salamis (created from the Laurion record), duplicates this event under a different id; the orchestrator may want to merge or redirect it. WHE gives Saronic Gulf; Livius gives the strait of Salamis.",
+  "published_at": "2026-10-22T10:33:51.905Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

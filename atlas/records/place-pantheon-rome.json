@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "scale": "civilization",
+  "confidence": "established",
+  "audience_note": null,
+  "domains": [
+    "built_world"
+  ],
+  "author": "historian-agent:m-15",
+  "updated": "2026-10-22",
+  "id": "place-pantheon-rome",
+  "title": "Pantheon, Rome",
+  "summary": "The Pantheon in Rome is a circular building with a granite-columned portico, topped by a concrete dome that remains the world's largest unreinforced concrete dome. A source credits Agrippa with building it in 27 BCE; it was rebuilt under Hadrian around 118–125 CE, and consecrated as a church in 609.",
+  "when": {
+    "start": {
+      "year": 118
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 6,
+      "start_plus_years": 7,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is Hadrian's rebuilding, ca. 118-125 CE (Texas Tech) or 112-125 (italia.it). Agrippa's first building (27 BC per italia.it) is not modelled. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Texas Tech University Libraries)",
+        "value": "completely rebuilt by Emperor Hadrian ca. 118-125 CE",
+        "source": "src-ttu-pantheon"
+      },
+      {
+        "calendar": "AD (italia.it)",
+        "value": "Between 112 and 125 A.D., Hadrian had it rebuilt.",
+        "source": "src-italia-pantheon"
+      },
+      {
+        "calendar": "BC (italia.it)",
+        "value": "It was built in 27 BC at the behest of Marcus Vipsanius Agrippa.",
+        "source": "src-italia-pantheon"
+      },
+      {
+        "calendar": "AD (italia.it)",
+        "value": "It was consecrated in 609 to Santa Maria dei Martiri.",
+        "source": "src-italia-pantheon"
+      }
+    ],
+    "display": "Rebuilt c. 118–125 CE; church from 609; standing today"
+  },
+  "where": {
+    "lat": 41.898616,
+    "lon": 12.4768334,
+    "elevation_m": null,
+    "modern_name": "Pantheon, Piazza della Rotonda, Rome, Italy",
+    "historical_name": "Pantheon (temple to all the gods), Rome, Roman Empire under Hadrian; later the church of Santa Maria dei Martiri, Papal Rome",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-pantheon"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "The best-preserved large building of imperial Rome, still roofed by its original concrete dome, and a standing reference for domed architecture."
+  },
+  "related": [
+    {
+      "id": "place-rome",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ttu-pantheon",
+      "url": "https://exhibits.lib.ttu.edu/s/archlib/item/18839",
+      "title": "Pantheon (Architecture Library collection)",
+      "publisher": "Texas Tech University Libraries",
+      "author": "Texas Tech University Libraries",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-italia-pantheon",
+      "url": "https://italia.it/en/lazio/rome/pantheon",
+      "title": "Pantheon, Rome",
+      "publisher": "italia.it (Italian national tourism portal)",
+      "author": "italia.it (Italian national tourism portal)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-pantheon",
+      "url": "https://nominatim.openstreetmap.org/search?q=Pantheon+Rome&format=json",
+      "title": "OpenStreetMap Nominatim: Pantheon, relation 3374342 (41.8986160, 12.4768334)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Circular rotunda with a columned portico on the Piazza della Rotonda, taken from the Texas Tech and italia.it descriptions; no survey polygon was opened.",
+      "source": "src-ttu-pantheon",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "domed_building",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-ttu-pantheon",
+      "measurements": [
+        {
+          "part": "height (to the oculus)",
+          "value": 43.3,
+          "unit": "m",
+          "source": "src-ttu-pantheon",
+          "note": "\"43.3 metres (142 ft)\"; italia.it gives the dome as 43.44 m internal diameter with height equal to it"
+        },
+        {
+          "part": "dome diameter (interior circle)",
+          "value": 43.3,
+          "unit": "m",
+          "source": "src-ttu-pantheon",
+          "note": "\"43.3 metres (142 ft)\""
+        },
+        {
+          "part": "oculus diameter",
+          "value": 8.15,
+          "unit": "m",
+          "source": "src-ttu-pantheon",
+          "note": "\"oculus of 8.15 m diameter\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "circular domed rotunda with front portico at true plan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural dome with oculus and columned portico, in the state for the date"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 118,
+        "end_year": 125,
+        "state": "construction",
+        "description": "Completely rebuilt by Emperor Hadrian ca. 118-125 CE.",
+        "source": "src-ttu-pantheon"
+      },
+      {
+        "start_year": 125,
+        "end_year": 609,
+        "state": "intact",
+        "description": "Standing as a Roman temple between Hadrian's rebuilding and its consecration as a church.",
+        "source": "src-italia-pantheon"
+      },
+      {
+        "start_year": 609,
+        "end_year": null,
+        "state": "altered",
+        "description": "Consecrated in 609 to Santa Maria dei Martiri and in use as a church.",
+        "source": "src-italia-pantheon"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 118,
+        "to_year": null,
+        "material": "concrete (unreinforced dome)",
+        "source": "src-ttu-pantheon"
+      },
+      {
+        "from_year": 118,
+        "to_year": null,
+        "material": "granite (portico columns)",
+        "source": "src-ttu-pantheon"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape domed_building. Least sure of the start year: Texas Tech gives Hadrian ca. 118-125 CE, italia.it 112-125, and the first Agrippan building (27 BC) is not modelled. Dome diameter and height vary by source (43.2 MIT course page, 43.3 Texas Tech, 43.44 italia.it); 43.3 from Texas Tech used.",
+  "published_at": "2026-10-22T12:38:27.118Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

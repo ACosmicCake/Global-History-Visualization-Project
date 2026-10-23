@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "scale": "civilization",
+  "author": "historian-agent:m-3",
+  "updated": "2026-10-22",
+  "id": "place-lalibela-rock-hewn-churches",
+  "title": "Rock-Hewn Churches of Lalibela",
+  "summary": "The rock-hewn churches of Lalibela in northern Ethiopia are monolithic and cave churches cut into volcanic tuff around 1200 CE under King Lalibela of the Zagwe dynasty, who is said to have planned a new Jerusalem. Bete Giyorgis, a cross-shaped church sunk in its own trench, is the best known. The churches are still in use.",
+  "when": {
+    "start": {
+      "year": 1150
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The churches are thought to have been cut within a 100-year period around 1200 AD (ISPRS), and UNESCO attributes the work to the 12th century; start is 1150 with that spread. End is the present: the churches are in use."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (ISPRS Highlights, University of Melbourne)",
+        "value": "All 12 churches in the town are thought to have been constructed within a 100-year period around 1200 AD",
+        "source": "src-isprs-fraser"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "set out to construct in the 12th century",
+        "source": "src-unesco-18"
+      }
+    ],
+    "display": "Cut c. 1150-1250 CE; in use today"
+  },
+  "where": {
+    "lat": 12.03145,
+    "lon": 39.04123,
+    "elevation_m": null,
+    "modern_name": "Bete Giyorgis, Lalibela, Amhara Region, Ethiopia",
+    "historical_name": "Roha (later Lalibela), capital of the Zagwe dynasty, Ethiopia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-lalibela"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "A UNESCO World Heritage property of eleven monolithic and cave churches, a centre of Christian pilgrimage since the 12th century."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-18",
+      "url": "https://whc.unesco.org/en/list/18",
+      "title": "Rock-Hewn Churches, Lalibela (World Heritage List no. 18)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-isprs-fraser",
+      "url": "https://www.isprs.org/publications/highlights/highlights0603/30_HL_09_01_Article_Fraser.pdf",
+      "title": "The Photogrammetric Recording of Bet Giorgis, The Rock Churches of Lalibela (ISPRS Highlights vol. 6 no. 3, 2001)",
+      "publisher": "ISPRS, compiled by Clive Fraser, University of Melbourne",
+      "author": "ISPRS, compiled by Clive Fraser, University of Melbourne",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-osm-lalibela",
+      "url": "https://nominatim.openstreetmap.org/search?q=Bete+Giyorgis+Lalibela&format=json",
+      "title": "OpenStreetMap Nominatim: Bete Giorgis, node 13988269052 (12.0314511, 39.0412287)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Cross-shaped monolithic church 12 by 12 m in plan standing in a square trench about 25 m on a side, cut free from volcanic tuff (ISPRS photogrammetric article, University of Melbourne). Bete Giyorgis stands apart from the two main church groups. No survey polygon was opened.",
+      "source": "src-isprs-fraser",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "source": "src-isprs-fraser",
+      "measurements": [
+        {
+          "part": "height (Bete Giyorgis)",
+          "value": 13,
+          "unit": "m",
+          "source": "src-isprs-fraser",
+          "note": "\"the 12 x 12 x 13m Bet Giorgis\""
+        },
+        {
+          "part": "length (Bete Giyorgis)",
+          "value": 12,
+          "unit": "m",
+          "source": "src-isprs-fraser"
+        },
+        {
+          "part": "width (Bete Giyorgis)",
+          "value": 12,
+          "unit": "m",
+          "source": "src-isprs-fraser"
+        },
+        {
+          "part": "trench side (square trench around the church)",
+          "value": 25,
+          "unit": "m",
+          "source": "src-isprs-fraser",
+          "note": "\"within its 25m square trench\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "square trench with the cross-shaped church block inside it at true plan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural monolith: cruciform block with the window rows, set in the trench"
+      },
+      {
+        "level": "street",
+        "representation": "carved windows and roof cross as a labelled schematic reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1150,
+        "end_year": 1250,
+        "state": "construction",
+        "description": "The churches of Lalibela are thought to have been cut within a 100-year period around 1200 AD.",
+        "source": "src-isprs-fraser"
+      },
+      {
+        "start_year": 1251,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Church stands and is still used by the Ethiopian Orthodox Church.",
+        "source": "src-isprs-fraser"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1150,
+        "to_year": 2026,
+        "material": "volcanic tuff, cut in place",
+        "source": "src-isprs-fraser"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block, modelling only Bete Giyorgis (the place record covers the whole site). The construction window 1150-1250 follows 'a 100-year period around 1200 AD' and is approximate. Trench depth was not found in a university or museum source, so none is stored. The UNESCO XML point for property 18 (12.0333 N, 38.8167 E) puts the longitude about 24 km west of the town, so the OpenStreetMap node for Bete Giorgis is used instead.",
+  "published_at": "2026-10-22T04:53:50.158Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

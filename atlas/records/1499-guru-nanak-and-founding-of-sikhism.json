@@ -1,0 +1,166 @@
+{
+  "id": "1499-guru-nanak-and-founding-of-sikhism",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Guru Nanak’s revelation at Sultanpur and the Sikh tradition",
+  "summary": "In Sikh tradition, Guru Nanak, born in 1469 at Talwandi in Punjab, had a profound religious experience at about the age of thirty, dated to 1499, while living at Sultanpur Lodi, where he had worked in the governor’s stores. He later founded the settlement of Kartarpur on the Ravi, where a community gathered around him.",
+  "when": {
+    "start": {
+      "year": 1499
+    },
+    "end": {
+      "year": 1499
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "The year 1499 is a traditional date, given by one source as the year Nanak was thirty. Another says only \"around 30 years old\"."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (traditional)",
+        "value": "Guru Nanak was thirty years old at this time in 1499",
+        "source": "src-sikhs-nanak"
+      },
+      {
+        "calendar": "CE (traditional)",
+        "value": "When he was around 30 years old, he had a profound religious experience",
+        "source": "src-patheos-nanak"
+      },
+      {
+        "calendar": "CE (traditional)",
+        "value": "At age 30",
+        "source": "src-gtemple-nanak"
+      }
+    ],
+    "display": "1499 (traditional date)"
+  },
+  "where": {
+    "lat": 31.214677,
+    "lon": 75.196019,
+    "elevation_m": null,
+    "modern_name": "Sultanpur Lodhi, Kapurthala district, Punjab, India",
+    "historical_name": "Sultanpur (Sultanpur Lodi), Punjab, under the Muslim governor Daulat Khan Lodi",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-sultanpur"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The traditional starting point of the Sikh community, centred on Guru Nanak and his later settlement at Kartarpur."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-sikhs-nanak",
+      "url": "https://www.sikhs.org/guru1.htm",
+      "title": "Guru Nanak",
+      "publisher": "Sikhs.org",
+      "author": "Sikhs.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-patheos-nanak",
+      "url": "https://www.patheos.com/library/sikhism/origins/beginnings",
+      "title": "Sikhism: Beginnings",
+      "publisher": "Patheos Library",
+      "author": "Patheos Library",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gtemple-nanak",
+      "url": "https://www.goldentempleamritsar.org/sikh-gurus/guru-nanak-dev-ji/",
+      "title": "Guru Nanak Dev Ji",
+      "publisher": "Sri Harmandir Sahib (Golden Temple), Amritsar",
+      "author": "Golden Temple Amritsar",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-sultanpur",
+      "url": "https://www.geonames.org/search.html?q=Sultanpur+Lodhi",
+      "title": "Sultanpur Lodhi, Punjab, India",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: 1499 is a traditional date reckoned from the 1469 birth and \"age thirty\"; Patheos says \"around 30\". The Sultanpur setting is also from tradition (a river experience). Kartarpur (founded later) is not pinned here. No Sikh record exists yet in the atlas to link.",
+  "author": "historian-agent:o-s70",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:10:28.422Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1499",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In Sikh tradition, Guru Nanak, born in 1469 at Talwandi in Punjab, had a profound religious experience at about the age of thirty, dated to 1499, while living…",
+        "source": "src-sikhs-nanak"
+      },
+      {
+        "span": "1499",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He later founded the settlement of Kartarpur on the Ravi, where a community gathered around him.",
+        "source": "src-sikhs-nanak",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

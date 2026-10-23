@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:mig-1",
+  "updated": "2026-10-22",
+  "id": "1000-thule-inuit-migration",
+  "kind": "process",
+  "title": "Thule Inuit migration from Alaska to Greenland",
+  "summary": "The Thule, ancestors of present-day Inuit, developed around the Bering Strait and spread east across the Arctic, replacing the Dorset culture in the Canadian Arctic and reaching northwestern Greenland. Archaeologists place the main movement around AD 1200-1250; older estimates of about AD 1000 and a late 11th-century arrival are also cited.",
+  "when": {
+    "start": {
+      "year": 1000
+    },
+    "end": {
+      "year": 1225
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Years are calendar years AD. Start 1000: the traditional date from Mathiassen (1927) for the Thule development and spread (University of Alaska Museum). The \"initial migration from Alaska to Arctic Canada and Greenland\" is dated around AD 1200 and the earliest migrants around AD 1200-1250 (Friesen and Norman 2016; midpoint 1225). Parks Canada places the arrival in the eastern Arctic around the end of the 11th century. The waypoint at Smith Sound uses the same general date because the source does not date its sites separately."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD",
+        "value": "Thule migration first suggested as occurring around 1000 A.D.; adaptation developed around the Bering Strait region",
+        "source": "src-uaf-thule"
+      },
+      {
+        "calendar": "AD",
+        "value": "Initial Thule Inuit migration from Alaska to Arctic Canada and Greenland around AD 1200; earliest migrants around AD 1200-1250",
+        "source": "src-friesen2016"
+      },
+      {
+        "calendar": "AD",
+        "value": "Arrival in the eastern Arctic around the end of the 11th century; Thule predominant by A.D. 1200",
+        "source": "src-parks-sirmilik"
+      }
+    ],
+    "display": "c. AD 1000-1250 (timing debated)"
+  },
+  "where": {
+    "lat": 65.75,
+    "lon": -168.97694444444,
+    "elevation_m": null,
+    "modern_name": "Bering Strait region, Alaska and Chukotka (first waypoint)",
+    "historical_name": "Western Arctic coast at the Bering Strait; later Inuit homelands, with no states or recorded place names at this date",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 65.75,
+          "lon": -168.97694444444,
+          "year": 1000,
+          "date": "around 1000 A.D. (Thule development and spread; University of Alaska Museum). Contested: some sources date the eastward migration later",
+          "label": "Bering Strait region: where the Thule maritime adaptation developed. Point is the strait centre; no specific site is named in the source.",
+          "source": "src-uaf-thule",
+          "coordinate_source": "src-wd-bering"
+        },
+        {
+          "lat": 70.5,
+          "lon": -122.5,
+          "year": 1225,
+          "date": "earliest Thule migrants around AD 1200-1250 (Amundsen Gulf; Friesen and Norman 2016)",
+          "label": "Amundsen Gulf, western Canadian Arctic: a series of pioneering Thule sites dated by radiocarbon. Point is the gulf centre.",
+          "source": "src-friesen2016",
+          "coordinate_source": "src-wd-amundsen"
+        },
+        {
+          "lat": 78.4167,
+          "lon": -74,
+          "year": 1225,
+          "date": "initial migration to northwestern Greenland around AD 1200 (Friesen and Norman 2016); site-level dates not given",
+          "label": "Smith Sound between Ellesmere Island and northwestern Greenland, named among areas holding early Thule sites. Date is the general migration date.",
+          "source": "src-friesen2016",
+          "coordinate_source": "src-wd-smith"
+        }
+      ]
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wd-bering",
+      "src-wd-amundsen",
+      "src-wd-smith"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The last major prehistoric migration into the Americas, whose descendants are the Inuit of Alaska, Canada and Greenland."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-23ka-peopling-of-the-americas",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-friesen2016",
+      "url": "https://journalhosting.ucalgary.ca/index.php/arctic/article/download/67586/51487",
+      "title": "The Pembroke Site: Thule Inuit Migrants on Southern Victoria Island (Arctic 69(1):1-18)",
+      "publisher": "Arctic Institute of North America, University of Calgary (journal Arctic)",
+      "author": "Arctic Institute of North America, University of Calgary (journal Arctic)",
+      "date_published": "2016-03",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-uaf-thule",
+      "url": "https://www.uaf.edu/museum/collections/archaeo/online-exhibits/paleo-eskimo-cultures/thule/",
+      "title": "Thule Culture",
+      "publisher": "University of Alaska Museum of the North",
+      "author": "University of Alaska Museum of the North",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-parks-sirmilik",
+      "url": "https://www.parcs.canada.ca/pn-np/nu/sirmilik/culture/histoire-history",
+      "title": "History - Sirmilik National Park",
+      "publisher": "Parks Canada",
+      "author": "Parks Canada",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "perspectives"
+      ]
+    },
+    {
+      "id": "src-wd-bering",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q11769.json",
+      "title": "Wikidata entry for the Bering Strait (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-amundsen",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1974744.json",
+      "title": "Wikidata entry for Amundsen Gulf (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-smith",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1164842.json",
+      "title": "Wikidata entry for Smith Sound (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the Smith Sound date is the generic migration date, not a site date; the three points are regions, not dated sites; timing is genuinely debated (AD 1000, late 11th century, 1200-1250, plus a 2022 paper argued in search results that some eastern dates pre-date 1200, not opened). Add Birnirk or Cape Parry site dates and Greenland site dates in the full record.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "around 1000 A.D.",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The Thule whaling and sea-mammal hunting way of life develops around the Bering Strait.",
+        "source": "src-uaf-thule",
+        "consequence": false
+      },
+      {
+        "span": "AD 1200-1250",
+        "action": "path.trace {}",
+        "caption": "Pioneers move east by umiak through Amundsen Gulf and across the Canadian Arctic in a rapid migration.",
+        "source": "src-friesen2016",
+        "consequence": false
+      },
+      {
+        "span": "around AD 1200",
+        "action": "region.fill { radius_km: 600 }",
+        "caption": "Thule settle northwestern Greenland and replace the Dorset culture across the Canadian Arctic; modern Inuit descend from them.",
+        "source": "src-uaf-thule",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:24.298Z"
+}

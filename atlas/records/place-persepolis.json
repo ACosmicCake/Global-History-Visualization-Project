@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "scale": "civilization",
+  "author": "historian-agent:m-3",
+  "updated": "2026-10-22",
+  "id": "place-persepolis",
+  "title": "Persepolis",
+  "summary": "Persepolis was the ceremonial capital of the Achaemenid Persian Empire, begun by Darius I about 518 BCE on a large terrace in Fars, Iran. Its Apadana audience hall, where tribute was received, was the largest building. Alexander the Great captured the city in 330 BCE and had the Apadana and treasury burned.",
+  "when": {
+    "start": {
+      "year": -517
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 518 BC founding (UNESCO), astronomical -517. Alexander took the city in 330 BC. End is the present: the ruins stand."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (UNESCO)",
+        "value": "Founded by Darius I in 518 B.C.",
+        "source": "src-unesco-114"
+      },
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "captured Persepolis in the first weeks of 330 BCE",
+        "source": "src-livius-persepolis"
+      }
+    ],
+    "display": "Founded c. 518 BCE; burned 330 BCE; ruins today"
+  },
+  "where": {
+    "lat": 29.93513,
+    "lon": 52.88951,
+    "elevation_m": null,
+    "modern_name": "Apadana, Persepolis (Takht-e Jamshid), Fars Province, Iran",
+    "historical_name": "Parsa (Persepolis), ceremonial capital of the Achaemenid Empire, in Persis",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-persepolis",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "art_music_literature"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "The Achaemenid ceremonial capital and one of the most important archaeological sites in the world (UNESCO); a landmark of ancient Persian art and imperial ideology."
+  },
+  "related": [
+    {
+      "id": "person-alexander-the-great",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-114",
+      "url": "https://whc.unesco.org/en/list/114",
+      "title": "Persepolis (World Heritage List no. 114)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "model.geometry.measurements",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-iranica-apadana",
+      "url": "https://www.iranicaonline.org/?p=5664",
+      "title": "Apadana",
+      "publisher": "Encyclopaedia Iranica, Columbia University",
+      "author": "Encyclopaedia Iranica, Columbia University",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-livius-persepolis",
+      "url": "https://www.livius.org/articles/place/persepolis/",
+      "title": "Persepolis",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": "Livius.org (Jona Lendering)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-livius-apadana",
+      "url": "https://livius.org/articles/place/persepolis/persepolis-photos/persepolis-apadana",
+      "title": "Persepolis, Apadana",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": "Livius.org (Jona Lendering)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-osm-persepolis",
+      "url": "https://nominatim.openstreetmap.org/search?q=Apadana+Persepolis&format=json",
+      "title": "OpenStreetMap Nominatim: Apadana, way 95531802 (29.9351294, 52.8895104)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 114, geolocation (29.9344, 52.8903)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square hypostyle audience hall on the Persepolis terrace (about 450 by 300 m), with porticoes on three sides and corner towers; a type plan at least 109 m square with a main hall at least 58 m a side, taken from the Encyclopaedia Iranica article on the apadana (Persepolis and Susa plans). No survey polygon was opened.",
+      "source": "src-iranica-apadana",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "temple_colonnade",
+      "source": "src-iranica-apadana",
+      "measurements": [
+        {
+          "part": "height (column height of the Apadana, about)",
+          "value": 20,
+          "unit": "m",
+          "source": "src-unesco-114",
+          "note": "UNESCO: columns 1.60 m in diameter with a height of about 20 metres. Iranica: columns more than 19 m; Livius: 25 m."
+        },
+        {
+          "part": "base side (building, at least)",
+          "value": 109,
+          "unit": "m",
+          "source": "src-iranica-apadana",
+          "note": "\"at least 109 m square\""
+        },
+        {
+          "part": "width (main hall, at least)",
+          "value": 58,
+          "unit": "m",
+          "source": "src-iranica-apadana",
+          "note": "\"main hall measuring at least 58 m on each side\""
+        },
+        {
+          "part": "column diameter",
+          "value": 1.6,
+          "unit": "m",
+          "source": "src-unesco-114"
+        },
+        {
+          "part": "columns in main hall",
+          "value": 36,
+          "unit": "count",
+          "source": "src-iranica-apadana"
+        },
+        {
+          "part": "columns in total",
+          "value": 72,
+          "unit": "count",
+          "source": "src-livius-apadana",
+          "note": "6x6 inside the hall, the rest in three porticoes"
+        },
+        {
+          "part": "terrace length",
+          "value": 450,
+          "unit": "m",
+          "source": "src-livius-persepolis",
+          "note": "a 450x300-meter terrace"
+        },
+        {
+          "part": "terrace width",
+          "value": 300,
+          "unit": "m",
+          "source": "src-livius-persepolis"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "rectangular terrace with the Apadana footprint and column grid at the listed plan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural hypostyle hall: 36-column hall, three porticoes, corner towers, the stairs and reliefs flagged as schematic"
+      },
+      {
+        "level": "street",
+        "representation": "columns with double bull protomes and fluted shafts as a labelled schematic reconstruction; the standing columns in the ruined state"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -517,
+        "end_year": -489,
+        "state": "construction",
+        "description": "Apadana built in the first building phase of the palace complex, thought to have lasted from 518 to 490 BCE.",
+        "source": "src-livius-persepolis"
+      },
+      {
+        "start_year": -488,
+        "end_year": -330,
+        "state": "intact",
+        "description": "Audience hall stands; the relief stairs show tribute bearers from the empire.",
+        "source": "src-livius-apadana"
+      },
+      {
+        "start_year": -329,
+        "end_year": -329,
+        "state": "destroyed",
+        "description": "Alexander the Great, in 330 BCE, selected the Apadana and the Treasury to be destroyed; black traces of burning remain on column bases.",
+        "source": "src-livius-apadana"
+      },
+      {
+        "start_year": -328,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "The old capital was a mere ruin for the next two thousand years; thirteen columns still stand.",
+        "source": "src-livius-persepolis"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -517,
+        "to_year": -329,
+        "material": "stone columns with composite capitals; mud-brick walls",
+        "source": "src-iranica-apadana"
+      },
+      {
+        "from_year": -517,
+        "to_year": -329,
+        "material": "roof of cedar, ebony and teak timber (burnt layer found at excavation)",
+        "source": "src-livius-apadana"
+      },
+      {
+        "from_year": -328,
+        "to_year": 2026,
+        "material": "stone column remains and burnt debris",
+        "source": "src-livius-apadana"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape temple_colonnade for the Apadana (the place is the whole Persepolis terrace). Least sure of the plan and height: the 109 m and 58 m figures are the apadana type as reconstructed from the Persepolis and Susa plans in Encyclopaedia Iranica, not a Persepolis-only survey; column heights range 19 m (Iranica) to 25 m (Livius, class other), so UNESCO's 20 m is used. The destroyed phase is dated to 330 BCE; Livius itself headlines the burning as a question ('Destruction?').",
+  "published_at": "2026-10-22T04:53:51.436Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

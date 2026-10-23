@@ -1,0 +1,166 @@
+{
+  "id": "1943-bengal-famine",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Bengal famine",
+  "summary": "A famine in the Bengal province of British India, 1943–1944, killed an estimated three million people, the cited maximum, with the estimates questioned. The Online Atlas on the History of Humanitarianism ties it to wartime disruption and colonial attempts to silence the crisis; relief began only in November 1943. A 2019 study reported by Al Jazeera found no drought as a cause.",
+  "when": {
+    "start": {
+      "year": 1943
+    },
+    "end": {
+      "year": 1944
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "HHR Atlas dates the famine 1943–1944 and places the first signs about a year before November 1943."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (HHR Atlas)",
+        "value": "Bengal, 1943-1944",
+        "source": "src-hhr"
+      },
+      {
+        "calendar": "CE (GeoJournal article)",
+        "value": "Bengal famine, 1943–1944",
+        "source": "src-pmc"
+      }
+    ],
+    "display": "1943–1944"
+  },
+  "where": {
+    "lat": 22.562627,
+    "lon": 88.363044,
+    "elevation_m": null,
+    "modern_name": "Kolkata (Calcutta) as a pin for Bengal, West Bengal, India and Bangladesh",
+    "historical_name": "Bengal, a province of British India (the sources name Calcutta as its most important and populous city)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-geonames-kolkata"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Described as one of the worst disasters in twentieth-century South Asia, occurring during the Second World War."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns mass starvation and death. The toll is an estimate (up to about three million) that scholars have questioned, and the causes and degree of British responsibility are debated.",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    },
+    {
+      "id": "1947-08-15-indian-independence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hhr",
+      "url": "https://hhr-atlas.ieg-mainz.de/articles/simonow-bengal",
+      "title": "Bengal, 1943-1944: Famine Relief in Times of War",
+      "publisher": "Online Atlas on the History of Humanitarianism and Human Rights (Leibniz Institute of European History, Mainz)",
+      "author": "Joanna Simonow",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9735018/",
+      "title": "Colonial Biopolitics and the Great Bengal Famine of 1943",
+      "publisher": "GeoJournal (via PubMed Central)",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "numbers",
+        "where"
+      ]
+    },
+    {
+      "id": "src-aljazeera",
+      "url": "https://www.aljazeera.com/news/2019/4/1/churchills-policies-to-blame-for-1943-bengal-famine-study",
+      "title": "Churchill's policies to blame for 1943 Bengal famine: Study",
+      "publisher": "Al Jazeera",
+      "author": "Bilal Kuchay",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "numbers",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-kolkata",
+      "url": "https://www.geonames.org/search.html?q=Kolkata",
+      "title": "GeoNames search results",
+      "publisher": "GeoNames",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin and the range: the famine covered the whole province, so Kolkata stands for Bengal (300 km). Opened pages give only 3 million (HHR 'estimated', Al Jazeera 'up to three million', PMC 'cited maximum'); no lower estimate was on an opened page, so no lower bound is stated.",
+  "author": "historian-agent:o-s48",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:41:24.373Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1943",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "A famine in the Bengal province of British India, 1943–1944, killed an estimated three million people, the cited maximum, with the estimates questioned.",
+        "source": "src-hhr"
+      },
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "The Online Atlas on the History of Humanitarianism ties it to wartime disruption and colonial attempts to silence the crisis; relief began only in November 1943.",
+        "source": "src-hhr",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

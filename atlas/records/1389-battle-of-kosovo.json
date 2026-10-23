@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1389-battle-of-kosovo",
+  "kind": "event",
+  "title": "Battle of Kosovo",
+  "summary": "Armies of the Serbian prince Lazar Hrebeljanović and the Ottoman sultan Murad I fought at Kosovo Polje in 1389. Both leaders died and both sides lost heavily. The Ottomans could raise another army, and Serbia later became part of the Ottoman Empire. Surviving accounts are late and conflict.",
+  "when": {
+    "start": {
+      "year": 1389
+    },
+    "end": {
+      "year": 1389
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day is 28 June in the Gregorian reckoning, 15 June Old Style per Britannica; De Re Militari gives 28 June 1389."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian with Old Style equivalent",
+        "value": "June 28 (June 15, Old Style), 1389",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "28 June 1389",
+        "source": "src-drm"
+      }
+    ],
+    "display": "28 June 1389 (15 June Old Style)"
+  },
+  "where": {
+    "lat": 42.69064,
+    "lon": 21.1237,
+    "elevation_m": null,
+    "modern_name": "Kosovo Polje, near Pristina, Kosovo (pin: Gazimestan memorial, a proxy near the battlefield)",
+    "historical_name": "Kosovo Polje, within the lands of Serbian lords (Lazar Hrebeljanović's principality and Vuk Branković's territory)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-aroundus"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Both the Serbian prince and the Ottoman sultan died; the battle preceded Serbia's absorption into the Ottoman Empire."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/event/Battle-of-Kosovo-1389-Balkans",
+      "title": "Battle of Kosovo (1389)",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-drm",
+      "url": "https://deremilitari.org/2014/03/the-battle-of-kosovo-early-reports-of-victory-and-defeat/",
+      "title": "The Battle of Kosovo: Early Reports of Victory and Defeat",
+      "publisher": "De Re Militari: The Society for Medieval Military History",
+      "author": null,
+      "date_published": "2014",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-aroundus",
+      "url": "https://aroundus.com/p/9968231-gazimestan",
+      "title": "Gazimestan",
+      "publisher": "AroundUs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Gazimestan memorial (coordinates from a non-institutional page), a proxy; exact battlefield position uncertain. Accounts conflict on how Murad died and Lazar's fate.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:41:28.209Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1389",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Armies of the Serbian prince Lazar Hrebeljanović and the Ottoman sultan Murad I fought at Kosovo Polje in 1389.",
+        "source": "src-britannica"
+      },
+      {
+        "span": "1389",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Ottomans could raise another army, and Serbia later became part of the Ottoman Empire.",
+        "source": "src-britannica",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

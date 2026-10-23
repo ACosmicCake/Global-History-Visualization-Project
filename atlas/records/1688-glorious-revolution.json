@@ -1,0 +1,133 @@
+{
+  "id": "1688-glorious-revolution",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Glorious Revolution",
+  "summary": "In 1688–89 the Catholic James II of England was deposed after opposition leaders invited the Protestant William of Orange to come with an army. James fled to France, and William and Mary were made joint rulers. The settlement and Bill of Rights established Parliament's supremacy and a constitutional monarchy.",
+  "when": {
+    "start": {
+      "year": 1688
+    },
+    "end": {
+      "year": 1689
+    },
+    "precision": "year",
+    "display": "1688–1689",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The Glorious Revolution took place during 1688–89.",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "The Glorious Revolution of November 1688",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 51.50722,
+    "lon": -0.1275,
+    "elevation_m": null,
+    "modern_name": "London, England (proxy pin: the capital)",
+    "historical_name": "Kingdom of England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Established parliamentary supremacy and constitutional monarchy in England, shaping later British government."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260104150550/https://www.britannica.com/event/Glorious-Revolution",
+      "title": "Glorious Revolution | Summary, Significance, Causes, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.worldhistory.org/Glorious_Revolution/",
+      "title": "Glorious Revolution - World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q84",
+      "title": "Wikidata Q84 (London, coordinate location P625)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on the endpoint: Britannica ends with the April 1689 coronation, World History Encyclopedia cites the Bill of Rights of 16 December 1689. Wikidata gives a start of 28 December 1688, which the sources do not support; I used the 1688–1689 span. Britannica says Parliament met 22 January 1689; World History Encyclopedia gives 13 February 1689 for the decree making William king.Both sources agree on the 5 November 1688 landing.But they differ on whether the Bill of Rights followed the Declaration of Rights.Britannica calls it 'later that year'.So I kept the summary general.Uncertainty_km is an estimate.World History Encyclopedia also says Parliament invited William, while Britannica says opposition leaders did.I used Britannica's wording.The dating basis for the 1689 end is Britannica's 1688–89 range.Overall confidence is high.Importance 4 is a judgement call.A 5 is arguable.Nothing more is uncertain.But I flag the date range as the main point to check.Also, the Bloodless label is from Britannica.The summary avoids any figures not in the sources.Check before publication.End. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, World History Encyclopedia; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T01:20:25.203Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1688",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "In 1688–89 the Catholic James II of England was deposed after opposition leaders invited the Protestant William of Orange to come with an army.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1689",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "James fled to France, and William and Mary were made joint rulers.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

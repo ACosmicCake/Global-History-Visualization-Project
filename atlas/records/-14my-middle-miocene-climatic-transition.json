@@ -1,0 +1,192 @@
+{
+  "id": "-14my-middle-miocene-climatic-transition",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Middle Miocene climate transition",
+  "summary": "Around 14 million years ago the climate took a major step toward the modern ice-house state. The East Antarctic Ice Sheet expanded rapidly and the Southern Ocean cooled and freshened in step with it. A drop in atmospheric CO2 of about 200 microatmospheres before 13.9 million years ago may have helped trigger the ice growth.",
+  "when": {
+    "start": {
+      "year": -15000000
+    },
+    "end": {
+      "year": -13000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range follows Frigola et al. (2018), \"~15-13 Ma\"; Leutert et al. and Raitzsch et al. both say about 14 Ma. Years are Ma counted back from the present with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "about 14 million years ago",
+        "source": "src-leutert2020"
+      },
+      {
+        "calendar": "Ma",
+        "value": "~14 Ma",
+        "source": "src-raitzsch2021"
+      },
+      {
+        "calendar": "Ma",
+        "value": "∼15–13 Ma",
+        "source": "src-frigola2018"
+      }
+    ],
+    "display": "c. 15–13 million years ago (centred on about 14 Ma)"
+  },
+  "where": {
+    "lat": -80,
+    "lon": 80,
+    "elevation_m": null,
+    "modern_name": "East Antarctic Ice Sheet (global climate event; pin at the ice sheet)",
+    "historical_name": "East Antarctica, Middle Miocene; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wikidata-eais"
+    ],
+    "paleo": {
+      "lat": -79.03,
+      "lon": 104.04,
+      "age_ma": 14,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "antarctica",
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "A step in the long shift to the modern Antarctic ice sheet and ice-house climate."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-34my-eocene-oligocene-glaciation",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-leutert2020",
+      "url": "https://www.research-collection.ethz.ch/handle/20.500.11850/438718",
+      "title": "Coupled Southern Ocean cooling and Antarctic ice sheet expansion during the middle Miocene (Nature Geoscience 13:634-639)",
+      "publisher": "ETH Zurich Research Collection (Nature Geoscience)",
+      "author": "T. J. Leutert et al.",
+      "date_published": "2020",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-raitzsch2021",
+      "url": "https://cp.copernicus.org/articles/17/703/2021/",
+      "title": "Atmospheric carbon dioxide variations across the middle Miocene climate transition (Climate of the Past 17:703-719)",
+      "publisher": "Copernicus Publications",
+      "author": "M. Raitzsch et al.",
+      "date_published": "2021",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-frigola2018",
+      "url": "https://gmd.copernicus.org/articles/11/1607/2018/",
+      "title": "Boundary conditions for the Middle Miocene Climate Transition (MMCT v1.0) (Geoscientific Model Development 11:1607-1626)",
+      "publisher": "Copernicus Publications",
+      "author": "A. Frigola, M. Prange, M. Schulz",
+      "date_published": "2018",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-wikidata-eais",
+      "url": "https://www.wikidata.org/wiki/Q1771054",
+      "title": "Wikidata item Q1771054 (East Antarctic Ice Sheet), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=80,-80&time=14&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the event was global and the opened pages name no type section, so the pin sits on the East Antarctic Ice Sheet with 5000 km uncertainty; the Wikidata point (-80, 80) is generic. Dates range from about 14 Ma to 15-13 Ma; the id uses 14. Debate over how much of the isotope signal is ice rather than cooling came from search summaries only and was not opened.",
+  "author": "historian-agent:o-s67",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:35:45.105Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-15000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Around 14 million years ago the climate took a major step toward the modern ice-house state.",
+        "source": "src-leutert2020"
+      },
+      {
+        "span": "-13000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "9 million years ago may have helped trigger the ice growth.",
+        "source": "src-leutert2020",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

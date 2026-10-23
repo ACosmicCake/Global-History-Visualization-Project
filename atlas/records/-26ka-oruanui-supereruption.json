@@ -1,0 +1,153 @@
+{
+  "id": "-26ka-oruanui-supereruption",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Oruanui supereruption of Taupō volcano",
+  "summary": "The Oruanui eruption of Taupō volcano, in the Taupō Volcanic Zone of New Zealand, erupted about 530 km³ of crystal-poor rhyolite plus 3–5 km³ of mafic magma. One study dates it to 25.4 ka and a university science article to about 26,500 years ago, near the end of the last ice age. Researchers call it a supereruption.",
+  "when": {
+    "start": {
+      "year": -24550
+    },
+    "end": {
+      "year": -23450
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Two dates in the opened sources: 25.4 ka (Allan et al. 2017) and about 26,500 years ago (Vanderbilt 2019). Converted with year = 1950 - years, an assumption since neither page states its reference year: 26.5 ka = -24550, 25.4 ka = -23450."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ka (years before present)",
+        "value": "25.4 ka",
+        "source": "src-allan2017"
+      },
+      {
+        "calendar": "years ago",
+        "value": "about 26,500 years ago",
+        "source": "src-vanderbilt"
+      }
+    ],
+    "display": "c. 25,400–26,500 years ago"
+  },
+  "where": {
+    "lat": -38.8055555555556,
+    "lon": 175.900833333333,
+    "elevation_m": null,
+    "modern_name": "Taupō volcano and Lake Taupō, North Island, New Zealand",
+    "historical_name": "Taupō volcano, Taupō Volcanic Zone (no polities; New Zealand was uninhabited by people)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wikidata-taupo"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "A 530 km³ supereruption, the type case of the most recent supereruption studied in detail at Taupō."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-74ka-toba-supereruption",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-allan2017",
+      "url": "https://eprints.whiterose.ac.uk/id/eprint/116162/",
+      "title": "A cascade of magmatic events during the assembly and eruption of a super-sized magma body (Contrib. Mineral. Petrol. 172:49)",
+      "publisher": "Contributions to Mineralogy and Petrology (Springer); White Rose Research Online",
+      "author": "Allan, Barker, Millet, Morgan, Rooyakkers, Schipper, Wilson",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers.volume"
+      ]
+    },
+    {
+      "id": "src-vanderbilt",
+      "url": "https://news.vanderbilt.edu/2019/02/19/explosive-discoveries-what-science-can-tell-us-about-the-next-volcanic-super-eruption",
+      "title": "Explosive discoveries: what science can tell us about the next volcanic super-eruption",
+      "publisher": "Vanderbilt University",
+      "author": "Lila Johnson",
+      "date_published": "2019-02-19",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-taupo",
+      "url": "https://www.wikidata.org/wiki/Q3775494",
+      "title": "Wikidata item Q3775494 (Taupō Volcano), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: sources differ (25.4 ka vs about 26,500 years ago) and neither states its reference year; the id says 26 ka. Pin is the volcano point, not the vent area. The 450 km³ super-eruption threshold from the Vanderbilt page was left out of the summary.",
+  "author": "historian-agent:o-s63",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:14:24.320Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-24550",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Oruanui eruption of Taupō volcano, in the Taupō Volcanic Zone of New Zealand, erupted about 530 km³ of crystal-poor rhyolite plus 3–5 km³ of mafic magma.",
+        "source": "src-allan2017"
+      },
+      {
+        "span": "-23450",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "4 ka and a university science article to about 26,500 years ago, near the end of the last ice age.",
+        "source": "src-allan2017",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

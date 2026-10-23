@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "1958-uss-nautilus-north-pole",
+  "kind": "event",
+  "title": "USS Nautilus passes under the North Pole",
+  "summary": "At 11:15 p.m. on 3 August 1958 the nuclear submarine USS Nautilus, under Commander William R. Anderson with 116 men aboard, passed beneath the geographic North Pole. After leaving Pearl Harbor on 23 July it dived under the Arctic ice off northern Alaska on 1 August, and made a 96-hour, 1,830-mile submerged transit that ended between Greenland and Spitsbergen.",
+  "when": {
+    "start": {
+      "year": 1958,
+      "iso": "1958-08-03"
+    },
+    "end": {
+      "year": 1958,
+      "iso": "1958-08-03"
+    },
+    "precision": "minute",
+    "uncertainty": {
+      "note": "Crossing time 11:15 p.m. on 3 August 1958 (EDT per the History page). Dive began 1 August; EBSCO has the vessel resurfacing on 5 August."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "At 11:15 p.m. EDT on 3 August 1958, Commander Anderson announced to his crew",
+        "source": "src-history-uk"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The crew of 116 men reached the North Pole at 11:15 p.m. on Aug. 3, 1958",
+        "source": "src-congress"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The voyage began on August 1, 1958 ... completed on August 3 at 11:15 P.M.",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "3 August 1958, 11:15 p.m. EDT"
+  },
+  "where": {
+    "lat": 90,
+    "lon": 0,
+    "elevation_m": 0,
+    "modern_name": "Geographic North Pole, Arctic Ocean",
+    "historical_name": "Geographic North Pole beneath the Arctic ice cap, no sovereign territory",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-npole"
+    ]
+  },
+  "regions": [
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First crossing of the geographic North Pole by a submerged vessel, made possible by nuclear propulsion."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://ebsco.com/research-starters/history/uss-nautilus-crosses-under-north-pole",
+      "title": "The USS Nautilus Crosses Under the North Pole",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-congress",
+      "url": "https://www.govinfo.gov/content/pkg/CRECB-2008-pt11/html/CRECB-2008-pt11-Pg14816.htm",
+      "title": "Congressional Record (Bound Edition), vol. 154 (2008), Part 11, remarks on USS Nautilus",
+      "publisher": "U.S. Government Publishing Office (Congressional Record)",
+      "author": null,
+      "date_published": "2008",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-uk",
+      "url": "https://www.history.co.uk/this-day-in-history/03-august/nautilus-travels-under-the-north-pole",
+      "title": "Nautilus travels under the North Pole",
+      "publisher": "HISTORY (A+E Networks UK)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-npole",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q934.json",
+      "title": "Wikidata item Q934 (North Pole), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ: one remark in the Congressional Record has the boat departing Seattle, while the New London Day text it quotes says Pearl Harbor on 23 July; I used Pearl Harbor (also on the History page). The pole pin is lat 90 by definition (longitude 0 is arbitrary).",
+  "published_at": "2026-10-22T18:32:01.157Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1958-08-03",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "m.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1958",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "After leaving Pearl Harbor on 23 July it dived under the Arctic ice off northern Alaska on 1 August, and made a 96-hour, 1,830-mile submerged transit that ended…",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "-9700-start-of-the-holocene",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Start of the Holocene",
+  "summary": "The Holocene Series/Epoch is formally defined at a depth of 1492.45 m in the NGRIP2 ice core from central Greenland, at the clearest warming signal ending the Younger Dryas cold stage. Annual layer counting dates this base to 11,700 years before 2000 CE, with a 99-year maximum counting error.",
+  "when": {
+    "start": {
+      "year": -9700
+    },
+    "end": {
+      "year": -9700
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 99,
+      "start_plus_years": 99,
+      "end_minus_years": 99,
+      "end_plus_years": 99,
+      "note": "Maximum counting error of 99 years, equated to 2 sigma, on the ice-core layer count; year -9700 is 11,700 b2k converted to astronomical years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ice-core years b2k (before AD 2000)",
+        "value": "11,700 yr b2k",
+        "source": "src-lund"
+      },
+      {
+        "calendar": "ice-core years b2k (before 2000 CE)",
+        "value": "11,700 yr b2k",
+        "source": "src-inqua"
+      }
+    ],
+    "display": "c. 11,700 years before 2000 CE (astronomical year -9700)"
+  },
+  "where": {
+    "lat": 75.1,
+    "lon": -42.32,
+    "elevation_m": null,
+    "modern_name": "NGRIP2 borehole, central Greenland ice sheet",
+    "historical_name": "Greenland ice sheet (no polity); pin is the GSSP ice-core drill site, a proxy for a global event",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-ics"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Formal base of the current geological epoch, marking the end of the last cold stage of the Pleistocene."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-10950-younger-dryas",
+      "type": "caused_by",
+      "because": "The Holocene base is defined at the warming that ended the Younger Dryas (Greenland Stadial 1)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/gssps/holocene",
+      "title": "GSSP for Holocene Stage",
+      "publisher": "International Commission on Stratigraphy",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lund",
+      "url": "https://portal.research.lu.se/en/publications/the-global-stratotype-section-and-point-gssp-for-the-base-of-the-/",
+      "title": "The Global Stratotype Section and Point (GSSP) for the base of the Holocene Series/Epoch in the NGRIP ice core (Walker et al.)",
+      "publisher": "Lund University Research Portal",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-inqua",
+      "url": "https://quaternary.stratigraphy.org/major-divisions",
+      "title": "Major divisions of the Quaternary",
+      "publisher": "Subcommission on Quaternary Stratigraphy (ICS)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "ICS page says counting uncertainty 69 years; the other two say 99 years; I used 99. Year -9700 is the b2k minus 2000 conversion. ICS and its Quaternary subcommission are one body, so independence rests on Lund University.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:55:45.838Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

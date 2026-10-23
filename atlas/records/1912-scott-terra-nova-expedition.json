@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes the deaths of the polar party from cold and starvation.",
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "1912-scott-terra-nova-expedition",
+  "kind": "event",
+  "title": "Scott's Terra Nova expedition to the South Pole",
+  "summary": "The British Antarctic Expedition under Robert Falcon Scott left London on 1 June 1910 and set out for the Pole on 1 November 1911. Scott's party of five reached the South Pole on 17 January 1912 and found that Amundsen's Norwegian party had arrived 34 days earlier. All five died on the return journey; Scott's last diary entry is dated 29 March 1912.",
+  "when": {
+    "start": {
+      "year": 1910
+    },
+    "end": {
+      "year": 1913
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Gazette title gives 1910 to 1913. Polar journey 1 November 1911 to March 1912; the bodies were found 12 November (1912). The nzaht page puts Amundsen's arrival 35 days earlier, the Gazette 34."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The Terra Nova left London on 1 June 1910",
+        "source": "src-nzaht-scott"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On 17 January 1912, the British Antarctic Expedition",
+        "source": "src-gazette-scott"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Scott’s last diary entry is dated 29 March",
+        "source": "src-nzaht-scott"
+      }
+    ],
+    "display": "1910-1913 (polar journey Nov 1911 - Mar 1912)"
+  },
+  "where": {
+    "lat": -77.6333,
+    "lon": 166.4,
+    "elevation_m": null,
+    "modern_name": "Cape Evans, Ross Island, Antarctica (base), to the South Pole",
+    "historical_name": "Scott's base at Cape Evans, Ross Island, and the route south; Antarctica had no state at this date",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -77.6333,
+          "lon": 166.4,
+          "year": 1911,
+          "date": "1911-11-01",
+          "label": "Cape Evans, Ross Island: Scott's base (landed 4 January 1911); the polar journey sets out 1 November 1911.",
+          "source": "src-nzaht-scott",
+          "coordinate_source": "src-wikidata-capeevans"
+        },
+        {
+          "lat": -90,
+          "lon": 0,
+          "year": 1912,
+          "date": "1912-01-17",
+          "label": "South Pole: the five-man party arrives and finds a Norwegian tent.",
+          "source": "src-gazette-scott",
+          "coordinate_source": "src-wikidata-southpole"
+        },
+        {
+          "lat": -83.75,
+          "lon": 171,
+          "year": 1912,
+          "date": "1912-02-17",
+          "label": "Beardmore Glacier (glacier centre point): Edgar Evans dies at its base on the return.",
+          "source": "src-gazette-scott",
+          "coordinate_source": "src-wikidata-beardmore"
+        }
+      ]
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata-capeevans",
+      "src-wikidata-southpole",
+      "src-wikidata-beardmore"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Scott's party reached the Pole after Amundsen and died on the return, a defining episode of Antarctic exploration."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nzaht-scott",
+      "url": "https://nzaht.org/conserve/explorer-bases/scotts-hut-cape-evans/history-of-scotts-expedition/",
+      "title": "History of Scott's Expedition",
+      "publisher": "New Zealand Antarctic Heritage Trust",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-gazette-scott",
+      "url": "https://www.thegazette.co.uk/all-notices/content/313",
+      "title": "Terra Nova Expedition, 1910 to 1913",
+      "publisher": "The Gazette (The National Archives, UK)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-wikidata-capeevans",
+      "url": "https://www.wikidata.org/wiki/Q1634141",
+      "title": "Wikidata item Q1634141 (Cape Evans), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.geometry",
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wikidata-southpole",
+      "url": "https://www.wikidata.org/wiki/Q933",
+      "title": "Wikidata item Q933 (South Pole), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-wikidata-beardmore",
+      "url": "https://www.wikidata.org/wiki/Q791644",
+      "title": "Wikidata item Q791644 (Beardmore Glacier), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "Only the 1 November 1911 start, 17 January 1912 Pole, 17 February Evans death and 29 March last diary entry are dated on opened pages; Scott's own death date is not stated (29 March is the presumed date per the Gazette). The Beardmore waypoint is the glacier centre point, not the death site, and Cape Evans as the departure point is inferred from the base-camp wording.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 32,
+    "beats": [
+      {
+        "span": "1911-11-01",
+        "action": "path.trace {}",
+        "caption": "Scott leaves base on 1 November 1911 with support parties, motor sledges, dogs and ponies.",
+        "source": "src-gazette-scott"
+      },
+      {
+        "span": "1912-01-17",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The party of five reaches the South Pole on 17 January 1912 and finds a Norwegian tent already there.",
+        "source": "src-gazette-scott"
+      },
+      {
+        "span": "1912-03-29",
+        "action": "path.trace {}",
+        "caption": "On the return Edgar Evans dies on 17 February; Scott's last diary entry is dated 29 March, and none of the five survives.",
+        "source": "src-gazette-scott",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T08:21:38.416Z"
+}

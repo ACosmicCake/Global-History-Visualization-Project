@@ -1,0 +1,218 @@
+{
+  "id": "1565-manila-galleon-trade",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Manila galleon trade",
+  "summary": "Spanish galleons made trans-Pacific voyages between Manila and Acapulco from 1565 to 1815, carrying spices, porcelain and other luxury goods from Asia and gold and silver from the Americas. The friar and pilot Andres de Urdaneta found the eastward return, reaching Mexico on 5 October 1565, and perhaps a third of silver from New Spain and Peru went to Asia.",
+  "when": {
+    "start": {
+      "year": 1565
+    },
+    "end": {
+      "year": 1815
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Both sources give 1565 to 1815."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "trans-Pacific voyages between the Philippines and Mexico from 1565 to 1815",
+        "source": "src-ebsco-galleon"
+      },
+      {
+        "calendar": "CE",
+        "value": "major route traveled by Spanish galleons from 1565 to 1815",
+        "source": "src-guampedia-galleon"
+      },
+      {
+        "calendar": "CE",
+        "value": "arrived in Mexico on 5 October 1565",
+        "source": "src-guampedia-galleon"
+      }
+    ],
+    "display": "1565 to 1815"
+  },
+  "where": {
+    "lat": 14.595833333333,
+    "lon": 120.97722222222,
+    "elevation_m": null,
+    "modern_name": "Manila, Philippines (western terminus; route ends at Acapulco, Mexico)",
+    "historical_name": "Manila in the Spanish Philippines; Acapulco in New Spain",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 14.595833333333,
+          "lon": 120.97722222222,
+          "date": "1565 (Urdaneta's return voyage)",
+          "label": "Manila: start of the eastbound crossing, which passed Taiwan and Japan.",
+          "source": "src-guampedia-galleon",
+          "coordinate_source": "src-wd-manila",
+          "year": 1565
+        },
+        {
+          "lat": 16.8628695,
+          "lon": -99.8870087,
+          "year": 1565,
+          "date": "5 October 1565",
+          "label": "Acapulco: Urdaneta's San Pedro arrived in Mexico.",
+          "source": "src-guampedia-galleon",
+          "coordinate_source": "src-wd-acapulco"
+        }
+      ]
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-manila",
+      "src-wd-japan",
+      "src-wd-acapulco"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "latin_america_caribbean",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Tied the Americas to Asia across the Pacific for 250 years and moved a large share of American silver to Asia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1519-magellan-elcano-circumnavigation",
+      "type": "related"
+    },
+    {
+      "id": "1545-silver-of-potosi",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-galleon",
+      "url": "https://www.ebsco.com/research-starters/history/manila-galleon/",
+      "title": "Manila galleon",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO Research Starters",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-guampedia-galleon",
+      "url": "https://www.guampedia.com/navigation-and-cargo-of-the-manila-galleons/",
+      "title": "Navigation and Cargo of the Manila Galleons",
+      "publisher": "Guampedia (University of Guam)",
+      "author": "Guampedia (University of Guam)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-manila",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1461.json",
+      "title": "Wikidata entry for Manila (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-japan",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q17.json",
+      "title": "Wikidata entry for Japan (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-acapulco",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q81398.json",
+      "title": "Wikidata entry for Acapulco (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1565",
+        "action": "path.trace {}",
+        "caption": "Urdaneta finds the eastern edge of the Kuroshio gyre near Japan and sails on to Mexico, arriving 5 October.",
+        "source": "src-ebsco-galleon",
+        "consequence": false
+      },
+      {
+        "span": "1565 to 1815",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Galleons link Manila and Acapulco, carrying Asian spices and porcelain one way and American gold and silver the other.",
+        "source": "src-guampedia-galleon",
+        "consequence": false
+      },
+      {
+        "span": "1565 to 1815",
+        "action": "region.fill { radius_km: 800 }",
+        "caption": "Perhaps as much as one-third of the silver mined in New Spain and Peru went to Asia.",
+        "source": "src-ebsco-galleon",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: Japan waypoint is a country centroid (flagged); Manila departure is undated on opened pages; Acapulco arrival is 5 October 1565 only in Guampedia (other sites give 8 October, not opened). The westbound Marianas stop is described in Guampedia but not drawn.",
+  "author": "historian-agent:o-s55",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:13:35.347Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": "Describes political executions of Athenian citizens by an oligarchic regime.",
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0403-rule-of-the-thirty",
+  "kind": "period",
+  "title": "Rule of the Thirty (the Thirty Tyrants) at Athens",
+  "summary": "After Athens' defeat, the Spartans told the Athenians to choose 30 men, who ruled as an oligarchy for about eight months from late summer 404 BCE. About 1,500 Athenians died under them and citizenship was limited to 3,000 men. Thrasybulus took Phyle and then Piraeus, Critias was killed, and democracy was restored.",
+  "when": {
+    "start": {
+      "year": -403
+    },
+    "end": {
+      "year": -402
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "World History Encyclopedia: roughly late summer 404 BCE to early summer 403 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "roughly late-summer 404 BCE to early-summer 403 BCE",
+        "source": "src-whe-thirty"
+      },
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "404–403 BCE: The Rule of the Thirty ends, and democracy is restored",
+        "source": "src-livius-athens"
+      }
+    ],
+    "display": "404–403 BCE"
+  },
+  "where": {
+    "lat": 37.9755648,
+    "lon": 23.7348324,
+    "elevation_m": null,
+    "modern_name": "Athens, Greece",
+    "historical_name": "Athens, polis in Attica, under a Spartan-backed oligarchy",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm-athens"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "atrocity_injustice"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Brief oligarchy after Athens' defeat; its fall restored democracy."
+  },
+  "related": [
+    {
+      "id": "-0430-peloponnesian-war",
+      "type": "caused_by",
+      "because": "World History Encyclopedia says the Spartans told the Athenians to choose 30 men after Athens' defeat."
+    },
+    {
+      "id": "-0398-trial-of-socrates",
+      "type": "related"
+    },
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-thirty",
+      "url": "https://www.worldhistory.org/The_Thirty_Tyrants/",
+      "title": "The Thirty Tyrants",
+      "publisher": "World History Encyclopedia",
+      "author": "Christopher Planeaux",
+      "date_published": "2015-11-13",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-athens",
+      "url": "https://www.livius.org/articles/place/athens/",
+      "title": "Athens",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-athens",
+      "url": "https://nominatim.openstreetmap.org/search?q=Athens+Greece&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Athens, node 441183 (37.9755648, 23.7348324)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Only the WHE article gives the month-level span and counts. The WHE Peloponnesian War page confirms Athens surrendered in 404 BCE; the sequence defeat then Thirty is taken from these two pages together.",
+  "published_at": "2026-10-22T10:33:53.709Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-403",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "After Athens' defeat, the Spartans told the Athenians to choose 30 men, who ruled as an oligarchy for about eight months from late summer 404 BCE.",
+        "source": "src-whe-thirty"
+      },
+      {
+        "span": "-402",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Thrasybulus took Phyle and then Piraeus, Critias was killed, and democracy was restored.",
+        "source": "src-whe-thirty",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "id": "1247-tusi-couple",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Tusi couple first presented",
+  "summary": "In late October 1245, in the town of Tun (today Firdaws) in southern Khurasan, Nasir al-Din al-Tusi completed a Persian appendix to his Mu'iniyya treatise that first presented the device now called the Tusi couple: two linked circles, one twice the size of the other, that make a point oscillate along a straight line. A second version appeared in his Almagest recension of 13 February 1247, and the fullest account in his Tadhkira of 1261, which first appeared while he directed the Maragha observatory.",
+  "when": {
+    "start": {
+      "year": 1245
+    },
+    "end": {
+      "year": 1261
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the completion date of the Hall-i mushkilat-i Mu'iniyya (first part of Jumada II 643 AH = late October 1245, per Ragep). The Tahrir al-Majisti (second version) was completed 13 February 1247 and the Tadhkira first appeared in 1261; end is the Tadhkira."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Hijri (643 AH) with CE equivalent given by Ragep",
+        "value": "first part of Jumada II, 643 of the Hijra [= late October 1245], within the town of Tun",
+        "source": "src-ragep"
+      },
+      {
+        "calendar": "Hijri (644 AH) with CE equivalent",
+        "value": "completed on 5 Shawwal 644/ 13 February 1247 (Tahrir al-Majisti, Recension of the Almagest)",
+        "source": "src-ragep"
+      },
+      {
+        "calendar": "Hijri (659 AH) with CE equivalent",
+        "value": "al-Tadhkira fi 'ilm al-hay'a, which first appeared in 659/1261",
+        "source": "src-ragep"
+      }
+    ],
+    "display": "1245 (first presented); 1247 and 1261 (later versions)"
+  },
+  "where": {
+    "lat": 34.0185,
+    "lon": 58.1722,
+    "elevation_m": null,
+    "modern_name": "Firdaws (Ferdows), South Khorasan Province, Iran (site of the former town of Tun)",
+    "historical_name": "Tun, in Quhistan, southern Khurasan, under the Ismaili rulers of Quhistan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-ragep",
+      "src-geonames-ferdows"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Tusi's device let planetary models keep uniform circular motion at Ptolemaic accuracy, and it later influenced Islamic and European astronomers (Biographical Encyclopedia of Astronomers)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1543-scientific-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1258-siege-of-baghdad",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ragep",
+      "url": "https://archive.nyu.edu/bitstream/2451/61288/59/14.%20Ragep.pdf",
+      "title": "The origins of the Tusi-couple revisited",
+      "publisher": "New York University (NYU Archive)",
+      "author": "F. Jamil Ragep",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bea",
+      "url": "https://islamsci.mcgill.ca/RASI/BEA/Tusi_BEA.pdf",
+      "title": "Tusi, Nasir al-Din (entry in the Biographical Encyclopedia of Astronomers)",
+      "publisher": "Springer, Biographical Encyclopedia of Astronomers (hosted by McGill University)",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-ferdows",
+      "url": "https://www.geonames.org/search.html?q=Ferdows&country=IR",
+      "title": "GeoNames search results",
+      "publisher": "GeoNames",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the id: the queue id says 1247, but Ragep dates the first presentation to late October 1245 (Hall-i mushkilat-i Mu'iniyya, written at Tun); 1247 is the second version in the Almagest recension. The queue brief said Maragheh, but the Maragha observatory only appears for the 1261 Tadhkira, so the pin is Tun (Ragep: today called Firdaws, about 80 km WNW of Qa'in) at the GeoNames Ferdows point; the garden Bagh Barakah is not located.",
+  "author": "historian-agent:o-s48",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:41:23.023Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1245",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In late October 1245, in the town of Tun (today Firdaws) in southern Khurasan, Nasir al-Din al-Tusi completed a Persian appendix to his Mu'iniyya treatise that first presented…",
+        "source": "src-ragep"
+      },
+      {
+        "span": "1261",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A second version appeared in his Almagest recension of 13 February 1247, and the fullest account in his Tadhkira of 1261, which first appeared while he directed the…",
+        "source": "src-ragep",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

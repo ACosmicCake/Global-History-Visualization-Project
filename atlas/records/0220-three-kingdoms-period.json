@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s25",
+  "updated": "2026-10-22",
+  "id": "0220-three-kingdoms-period",
+  "kind": "period",
+  "title": "Three Kingdoms period",
+  "summary": "After the Han dynasty fell in 220 CE, China split into three rival states: Wei in the north, Shu in Sichuan and Wu in the south. The division lasted until 280, when the Western Jin dynasty reunified the country.",
+  "when": {
+    "start": {
+      "year": 220
+    },
+    "end": {
+      "year": 280
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Start given as 220 by the Smithsonian; World History Encyclopedia dates Wei to 221-265. End 280 when Jin reunified China."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "After the Han dynasty fell in 220",
+        "source": "src-si-division"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 280, the country was reunited",
+        "source": "src-si-division"
+      }
+    ],
+    "display": "220–280 CE"
+  },
+  "where": {
+    "lat": 34.67345,
+    "lon": 112.43684,
+    "elevation_m": null,
+    "modern_name": "Central China (reference anchor at Luoyang, Henan)",
+    "historical_name": "Former Han lands divided among Wei, Shu and Wu",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-gn-luoyang"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Division of China after the Han into three rival states, ended by Jin reunification."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-han-dynasty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-si-division",
+      "url": "https://asia-archive.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/explore-by-dynasty/period-of-division/",
+      "title": "Period of Division (220-589)",
+      "publisher": "Smithsonian National Museum of Asian Art",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-redcliffs",
+      "url": "https://www.worldhistory.org/Battle_of_Red_Cliffs/",
+      "title": "Battle of Red Cliffs",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2020-01-21",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-luoyang",
+      "url": "https://www.geonames.org/search.html?q=Luoyang&country=CN",
+      "title": "GeoNames search results: Luoyang, Henan, China (1801792)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a reference anchor only: no opened source names Luoyang as the period’s site. Start year varies (220 vs 221) by source.",
+  "published_at": "2026-10-22T07:22:33.866Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

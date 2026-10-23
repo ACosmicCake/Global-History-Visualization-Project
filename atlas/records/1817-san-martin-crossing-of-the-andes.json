@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1817-san-martin-crossing-of-the-andes",
+  "kind": "event",
+  "title": "San Martín's crossing of the Andes",
+  "summary": "In January 1817 José de San Martín led the Army of the Andes, reported at more than 5,000 men, out of Mendoza and over the Andes into Chile in two columns, one through the Los Patos pass and one through Uspallata. The army reached Chile on 5 February and won the Battle of Chacabuco on 12 February.",
+  "when": {
+    "start": {
+      "year": 1817
+    },
+    "end": {
+      "year": 1817
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "Start date varies: January 6 (Universidad de Mendoza), 12 January (Mendoza government), January 18 (EBSCO). Army size also varies: 3,550 (EBSCO), more than 5,000 (Universidad de Mendoza), 5,000 (Mendoza government)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "January 6, 1817",
+        "source": "src-um-andes"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "el 12 de enero 1817",
+        "source": "src-mendoza-andes"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "el 5 de febrero del mismo",
+        "source": "src-mendoza-andes"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "February 12, 1817",
+        "source": "src-um-andes"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On January 18, 1817",
+        "source": "src-ebsco-andes"
+      }
+    ],
+    "display": "January – 12 February 1817"
+  },
+  "where": {
+    "lat": -32.889722,
+    "lon": -68.844444,
+    "elevation_m": null,
+    "modern_name": "Mendoza, Argentina (departure) to Chacabuco, Chile",
+    "historical_name": "Mendoza, United Provinces of South America (Río de la Plata) to Chacabuco, Chile",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -32.889722,
+          "lon": -68.844444,
+          "year": 1817.03,
+          "date": "January 1817 (6, 12 or 18 January depending on source)",
+          "label": "Mendoza: the Army of the Andes leaves. Point is the city, not the camp.",
+          "source": "src-mendoza-andes",
+          "coordinate_source": "src-wd-mendoza"
+        },
+        {
+          "lat": -32.993056,
+          "lon": -70.683889,
+          "year": 1817.122,
+          "date": "12 February 1817",
+          "label": "Chacabuco, Chile: the Army of the Andes wins the battle.",
+          "source": "src-um-andes",
+          "coordinate_source": "src-wd-chacabuco"
+        }
+      ]
+    },
+    "uncertainty_km": 80,
+    "coordinate_sources": [
+      "src-wd-mendoza",
+      "src-wd-chacabuco"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A mountain crossing that carried an independence army into Chile and opened the campaign against Spanish rule on the Pacific coast."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1824-battle-of-ayacucho",
+      "type": "related"
+    },
+    {
+      "id": "person-simon-bolivar",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-um-andes",
+      "url": "https://um.edu.ar/en/noticias/a-206-anos-de-la-creacion-del-ejercito-de-los-andes/",
+      "title": "206 years after the creation of the Army of the Andes",
+      "publisher": "Universidad de Mendoza",
+      "author": "Universidad de Mendoza",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-mendoza-andes",
+      "url": "https://www.mendoza.gov.ar/prensa/informe-especial-los-200-anos-del-cruce-de-los-andes-por-el-ejercito-libertador-movilizan-hoy-a-mendoza/",
+      "title": "Informe especial: Los 200 años del Cruce de los Andes por el Ejército Libertador",
+      "publisher": "Gobierno de Mendoza",
+      "author": "Gobierno de Mendoza",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ebsco-andes",
+      "url": "https://www.ebsco.com/research-starters/history/san-martins-military-campaigns/",
+      "title": "San Martin's Military Campaigns",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO Research Starters",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-mendoza",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q44237.json",
+      "title": "Wikidata entry for Mendoza (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-chacabuco",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1425658.json",
+      "title": "Wikidata entry for the Battle of Chacabuco (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the start date and army size (sources disagree: January 6, 12 or 18; 3,550 vs 5,000+). The Universidad de Mendoza page has a typo (\"2017\") that was read as 1817. The pass has no sourced coordinate, so the path has two waypoints. Links to Ayacucho and Bolívar are thematic, not causal claims.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1817-01",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "The Army of the Andes, put at more than 5,000 men, sets out from Mendoza in January 1817.",
+        "source": "src-um-andes",
+        "consequence": false
+      },
+      {
+        "span": "1817-01 / 1817-02-05",
+        "action": "path.trace {}",
+        "caption": "San Martín crosses by Los Patos pass while Las Heras takes the Uspallata pass with the artillery; the army reaches Chile on 5 February.",
+        "source": "src-mendoza-andes",
+        "consequence": false
+      },
+      {
+        "span": "1817-02-12",
+        "action": "region.fill { radius_km: 80 }",
+        "caption": "Seven days after reaching Chile, the army wins the Battle of Chacabuco.",
+        "source": "src-mendoza-andes",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:53.969Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

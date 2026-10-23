@@ -1,0 +1,246 @@
+{
+  "id": "place-zaghouan-carthage-aqueduct",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Zaghouan-Carthage Roman aqueduct",
+  "summary": "A Roman aqueduct that carried spring water from Zaghouan to Carthage, about 132 km counting its branches, with 17 km on arcades; its arches reached 38 m in the Miliane valley. Built in the 2nd century CE, it was interrupted in Vandal times and rebuilt in places under the Hafsids in 1250-1267.",
+  "when": {
+    "start": {
+      "year": 120
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 80,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Carthage Magazine believes it was built between 120 and 131 CE; Hydria says the 2nd century CE; npj Heritage Science says Hadrian's 128 CE visit prompted the order. Start is 120, end of the span is 2nd century. End is the present: sections remain."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Carthage Magazine)",
+        "value": "between 120 and 131 AC",
+        "source": "src-carthagemag-zagh"
+      },
+      {
+        "calendar": "AD (Hydria)",
+        "value": "2nd century AD",
+        "source": "src-hydria-carthage"
+      },
+      {
+        "calendar": "AD (npj Heritage Science)",
+        "value": "visit of Emperor Hadrian to Carthage in 128 AD",
+        "source": "src-nature-zagh"
+      }
+    ],
+    "display": "2nd century CE (c. 120-131)"
+  },
+  "where": {
+    "lat": 36.3871082,
+    "lon": 10.1311569,
+    "elevation_m": null,
+    "modern_name": "Temple of Waters, source of the Zaghouan-Carthage aqueduct, Zaghouan, Tunisia",
+    "historical_name": "Aqueduct supplying Roman Carthage, province of Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-temple-waters"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "npj Heritage Science calls it the largest aqueduct built by the Roman Empire; a case study in Roman construction."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nature-zagh",
+      "url": "https://www.nature.com/articles/s40494-025-02144-5",
+      "title": "The materials of historical monuments: characterisation of the mortars of the Roman aqueduct of Zaghouan-Carthage",
+      "publisher": "npj Heritage Science (Nature Portfolio)",
+      "author": "F. Carvalho et al., NOVA FCT (npj Heritage Science, 9 December 2025)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-hydria-carthage",
+      "url": "https://hydriaproject.info/en/case-studies/water-supply-in-roman-carthage/waterworks",
+      "title": "Water supply in Roman Carthage (Hydria Virtual Museum)",
+      "publisher": "Hydria Virtual Museum (MIO-ECSDE)",
+      "author": "Hydria Virtual Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-carthagemag-zagh",
+      "url": "https://carthagemagazine.com/zaghouan-aqueduct-water-supply-in-roman-carthage/",
+      "title": "Zaghouan Aqueduct: Water Supply in Roman Carthage",
+      "publisher": "Carthage Magazine",
+      "author": "Carthage Magazine",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-temple-waters",
+      "url": "https://www.openstreetmap.org/node/322955345",
+      "title": "OpenStreetMap node 322955345 (Temple of Waters, Zaghouan)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "A conduit about 132 km long including branches, of which 17 km ran on arcades across valleys; drawn by the viewer as a path. Pin is the Temple of Waters at the Zaghouan spring end.",
+      "source": "src-nature-zagh",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "source": "src-nature-zagh",
+      "measurements": [
+        {
+          "part": "arcade height (Miliane valley)",
+          "value": 38,
+          "unit": "m",
+          "source": "src-nature-zagh",
+          "note": "\"the arches reached 38 m in height\""
+        },
+        {
+          "part": "total length including branches",
+          "value": 132000,
+          "unit": "m",
+          "source": "src-nature-zagh",
+          "note": "\"total length of 132 km\"; main conduit \"just over 90 km\"; Hydria also gives 132 km"
+        },
+        {
+          "part": "length of aerial arcade sections",
+          "value": 17000,
+          "unit": "m",
+          "source": "src-nature-zagh",
+          "note": "\"Only 17 km\"; Hydria: \"more than 17 km\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "aqueduct drawn as a path from Zaghouan to Carthage at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural arcade at the sourced height along the path"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 120,
+        "end_year": 200,
+        "state": "construction",
+        "description": "Built in the 2nd century CE (Hydria); believed built between 120 and 131 (Carthage Magazine).",
+        "source": "src-hydria-carthage"
+      },
+      {
+        "start_year": 200,
+        "end_year": 439,
+        "state": "intact",
+        "description": "Supplied Carthage; the pages opened give no dated changes in this span.",
+        "source": "src-nature-zagh"
+      },
+      {
+        "start_year": 439,
+        "end_year": 698,
+        "state": "altered",
+        "description": "Water supply interrupted during the Vandal occupation, 439-533, then repaired; the Byzantine period brought abandonment and stone-robbing (npj Heritage Science). Hydria says it worked until at least 536.",
+        "source": "src-nature-zagh"
+      },
+      {
+        "start_year": 698,
+        "end_year": 1250,
+        "state": "ruined",
+        "description": "After Carthage fell to the Arabs in 698, the aerial sections were destroyed again, though later restored with different features (npj Heritage Science).",
+        "source": "src-nature-zagh"
+      },
+      {
+        "start_year": 1250,
+        "end_year": null,
+        "state": "restored",
+        "description": "New sections built under Hafsid Sultan Abu Abdullah Mohammed I, 1250-1267, to supply his palace and Tunis (npj Heritage Science).",
+        "source": "src-nature-zagh"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 120,
+        "to_year": null,
+        "material": "stone and mortar (arcades and conduit)",
+        "source": "src-nature-zagh"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Linear (shape wall as the nearest path form). 38 m is the figure npj Heritage Science gives for the Miliane valley; a Roman-aqueduct database snippet I did not open gives 33.65 m and 20 m, and the Carthage and Hydria pages open give no heights. Length 132 km includes branches; the main conduit is just over 90 km. Phase gaps (533-698, 200-439) are not sourced as intact. Pin is OSM's Temple of Waters node at the Zaghouan end.",
+  "author": "historian-agent:m-12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:46:36.596Z"
+}

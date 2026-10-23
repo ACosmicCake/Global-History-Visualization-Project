@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1972-aboriginal-tent-embassy",
+  "kind": "event",
+  "title": "Aboriginal Tent Embassy",
+  "summary": "On 26 January 1972 four activists from Sydney put up a beach umbrella opposite Parliament House in Canberra and called it the Aboriginal Embassy, protesting the government's stance on land rights. Tents and supporters followed, and the site became a lasting symbol of First Nations protest.",
+  "when": {
+    "start": {
+      "year": 1972
+    },
+    "end": {
+      "year": 1972
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the founding day. The embassy continued in various forms afterwards; the end year only marks the founding year."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "26 January 1972",
+        "source": "src-nma"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "26 January 1972",
+        "source": "src-peo"
+      }
+    ],
+    "display": "26 January 1972"
+  },
+  "where": {
+    "lat": -35.30111111,
+    "lon": 149.13,
+    "elevation_m": null,
+    "modern_name": "Aboriginal Tent Embassy, Canberra, Australia",
+    "historical_name": "Lawns opposite Parliament House (now Old Parliament House), Canberra, Australian Capital Territory, Australia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Enduring symbol of Aboriginal and Torres Strait Islander land rights protest, in a site listed in 1995 for its political significance."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nma",
+      "url": "https://www.nma.gov.au/defining-moments/resources/aboriginal-tent-embassy",
+      "title": "Aboriginal Tent Embassy",
+      "publisher": "National Museum of Australia",
+      "author": null,
+      "date_published": "2024-10-25",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-peo",
+      "url": "https://peo.gov.au/understand-our-parliament/history-of-parliament/history-milestones/australian-parliament-history-timeline/events/aboriginal-tent-embassy",
+      "title": "Aboriginal Tent Embassy",
+      "publisher": "Parliamentary Education Office",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q189212",
+      "title": "Wikidata item Q189212 (Aboriginal Tent Embassy), coordinate location",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Wikidata's coordinate for the embassy site (35°18'4\"S, 149°7'48\"E), converted to decimals; Wikidata page was read via search text as direct fetch failed. Embassy later moved sites; the pin is the lawn site.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:27.733Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1972",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 26 January 1972 four activists from Sydney put up a beach umbrella opposite Parliament House in Canberra and called it the Aboriginal Embassy, protesting the government's stance…",
+        "source": "src-nma"
+      },
+      {
+        "span": "1972",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Tents and supporters followed, and the site became a lasting symbol of First Nations protest.",
+        "source": "src-nma",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

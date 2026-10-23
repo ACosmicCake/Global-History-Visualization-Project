@@ -1,0 +1,187 @@
+{
+  "id": "1807-british-abolition-of-the-slave-trade-act",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Slave Trade Act 1807 (Britain)",
+  "summary": "On 25 March 1807, King George III gave royal assent to the Slave Trade Act, prohibiting British vessels and subjects from participating in the transatlantic slave trade from 1 May 1807. Passed by the British Parliament after decades of campaigning by abolitionists and continuous resistance by enslaved peoples, the statute dismantled the world's largest commercial slave trafficking fleet and initiated international naval interdiction, though legal chattel slavery in British colonies persisted until the 1833 Emancipation Act.",
+  "when": {
+    "start": {
+      "year": 1807,
+      "iso": "1807-03-25"
+    },
+    "end": {
+      "year": 1807,
+      "iso": "1807-03-25"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Royal Assent given on 25 March 1807; trading prohibited from 1 May 1807."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "25 March 1807",
+        "source": "src-rmg-act-1807"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "25 March 2007 marks the 200th anniversary of the abolition of the slave trade",
+        "source": "src-anti-slavery-2005"
+      }
+    ],
+    "display": "25 March 1807"
+  },
+  "where": {
+    "lat": 51.4998,
+    "lon": -0.1246,
+    "elevation_m": null,
+    "modern_name": "Palace of Westminster, London, United Kingdom",
+    "historical_name": "Palace of Westminster, London, United Kingdom of Great Britain and Ireland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-unesco-426"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Abolished British participation in the transatlantic slave trade, transforming British maritime policy toward international naval suppression of human trafficking."
+  },
+  "confidence": "established",
+  "audience_note": "Documents legislation restricting the transatlantic trade in enslaved African human beings.",
+  "related": [
+    {
+      "id": "1787-abolition-of-slavery",
+      "type": "part_of"
+    },
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    },
+    {
+      "id": "1781-zong-massacre",
+      "type": "related"
+    },
+    {
+      "id": "person-olaudah-equiano",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1807-03-25",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "The British Parliament enacts the Slave Trade Act, making the shipment of enslaved Africans aboard British vessels illegal.",
+        "source": "src-rmg-act-1807",
+        "consequence": false
+      },
+      {
+        "span": "1807-05-01",
+        "action": "flow.restrict { ocean: 'Atlantic', label: 'British slave trade prohibited' }",
+        "caption": "The ban takes effect, prompting the Royal Navy's West Africa Squadron to interdict Atlantic slave traffic.",
+        "source": "src-rmg-slave-trade-end",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-rmg-act-1807",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-478658",
+      "title": "'An Act for the abolition of the slave trade' (George III, Chapter 36, dated 25 March 1807)",
+      "publisher": "Royal Museums Greenwich (National Maritime Museum)",
+      "author": "National Maritime Museum",
+      "date_published": "1807-03-25",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-rmg-slave-trade-end",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/how-did-slave-trade-end-britain",
+      "title": "How did the slave trade end in Britain?",
+      "publisher": "Royal Museums Greenwich",
+      "author": "Royal Museums Greenwich",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-anti-slavery-2005",
+      "url": "https://www.antislavery.org/wp-content/uploads/2017/01/18072007.pdf",
+      "title": "1807-2007: Over 200 years of campaigning against slavery",
+      "publisher": "Anti-Slavery International",
+      "author": "Mike Kaye",
+      "date_published": "2005",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-426",
+      "url": "https://whc.unesco.org/en/list/426/",
+      "title": "Palace of Westminster and Westminster Abbey including Saint Margaret's Church (World Heritage List no. 426)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1987",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the immediate reduction percentage in transatlantic crossings in 1807–1808 before British naval patrols established regular anti-slaving interdiction stations.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:30.194Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

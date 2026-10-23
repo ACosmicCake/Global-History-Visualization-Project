@@ -1,0 +1,164 @@
+{
+  "id": "1971-12-16-liberation-of-bangladesh",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Bangladesh Liberation War and the surrender of 16 December 1971",
+  "summary": "The Pakistan army began a crackdown on Dhaka on the night of 25 March 1971, and a nine-month war for Bengali independence followed. On 16 December 1971 Pakistani forces in the east surrendered at Dhaka to the Mukti Bahini and the Indian Army. Death-toll estimates run from 300,000 to 3 million; about ten million people fled to India.",
+  "when": {
+    "start": {
+      "year": 1971,
+      "iso": "1971-03-25"
+    },
+    "end": {
+      "year": 1971,
+      "iso": "1971-12-16"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Start is the night of 25 March 1971 (Operation Searchlight, around 11 pm per The Daily Star); independence was proclaimed on 26 March, not sourced on opened pages. End is the surrender on 16 December 1971."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "MARCH 25, 1971: Pakistan army unleashes terror",
+        "source": "src-ds25"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "December 16, 1971, the Pakistani Army surrendered",
+        "source": "src-amnesty"
+      }
+    ],
+    "display": "25 March - 16 December 1971"
+  },
+  "where": {
+    "lat": 23.728889,
+    "lon": 90.394444,
+    "elevation_m": null,
+    "modern_name": "Dhaka, Bangladesh (the war covered all of former East Pakistan)",
+    "historical_name": "Dacca, capital of East Pakistan, Islamic Republic of Pakistan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "War that created Bangladesh and one of the deadliest conflicts of the late twentieth century."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass killing, rape and displacement of civilians. Death-toll figures are contested and politically sensitive.",
+  "related": [
+    {
+      "id": "1947-08-15-indian-independence",
+      "type": "related",
+      "because": "East Pakistan, the territory that became Bangladesh, was created by the 1947 Partition."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ds25",
+      "url": "https://www.thedailystar.net/frontpage/march-25-1971-pakistan-army-unleashes-terror-1553008",
+      "title": "MARCH 25, 1971: Pakistan army unleashes terror",
+      "publisher": "The Daily Star (Bangladesh)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ds07",
+      "url": "https://archive.thedailystar.net/forum/2007/december/rape.htm",
+      "title": "The grim numbers of 1971: Genocide versus denial",
+      "publisher": "The Daily Star (Bangladesh)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "casualties"
+      ]
+    },
+    {
+      "id": "src-amnesty",
+      "url": "https://www.amnestyusa.org/blog/happy-birthday-bangladesh",
+      "title": "Happy Birthday, Bangladesh",
+      "publisher": "Amnesty International USA",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "casualties"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q1354",
+      "title": "Dhaka (Wikidata Q1354), coordinates 23.728889 N, 90.394444 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualties: \"most estimates\" 300,000 to 3 million (The Daily Star, 2007), R. J. Rummel about 1.5 million (same page), \"upwards of 3 million\" (Amnesty USA). The official Bangladeshi figure is 3 million; Pakistani official figures are far lower but were not on an opened page. Surrender was signed at Ramna Race Course, Dhaka, per search results only. Region tag: southern_asia.",
+  "author": "historian-agent:o-s18",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1971-03-25",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "The Pakistan army attacked sleeping residents of Dhaka around 11 pm in an operation it called Searchlight.",
+        "source": "src-ds25"
+      },
+      {
+        "span": "1971-12-16",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Pakistani forces surrendered to the Mukti Bahini and the Indian Army, ending the war.",
+        "source": "src-amnesty",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:26:14.167Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

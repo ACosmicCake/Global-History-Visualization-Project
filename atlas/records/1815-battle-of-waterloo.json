@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1815-battle-of-waterloo",
+  "kind": "event",
+  "title": "Battle of Waterloo",
+  "summary": "On 18 June 1815 Napoleon's French army fought a coalition led by Wellington and Blücher near Brussels and was defeated. The battle ended Napoleon's imperial power; he was forced to abdicate when the Allies entered Paris on 7 July. It closed a war that had lasted 23 years.",
+  "when": {
+    "start": {
+      "year": 1815
+    },
+    "end": {
+      "year": 1815
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Single-day battle per National Army Museum."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "18 June 1815",
+        "source": "src-nam"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "7 July",
+        "source": "src-nam"
+      }
+    ],
+    "display": "18 June 1815"
+  },
+  "where": {
+    "lat": 50.67846,
+    "lon": 4.40482,
+    "elevation_m": null,
+    "modern_name": "Waterloo battlefield (pin at the Lion's Mound monument, a proxy), near Waterloo, Belgium",
+    "historical_name": "Near Waterloo, south of Brussels (Smithsonian: near Brussels)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-cirkwi"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Decisive battle that ended Napoleon's imperial power after a 23-year war."
+  },
+  "confidence": "established",
+  "audience_note": "Battle with heavy loss of life; an estimated 20,000 men died, per Smithsonian Magazine.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nam",
+      "url": "https://www.nam.ac.uk/explore/battle-waterloo",
+      "title": "Battle of Waterloo",
+      "publisher": "National Army Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-smith",
+      "url": "https://www.smithsonianmag.com/smart-news/archaeologists-uncover-rare-human-skeleton-waterloo-battlefield-180980439/",
+      "title": "Archaeologists Uncover Rare Human Skeleton at Waterloo",
+      "publisher": "Smithsonian Magazine",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cirkwi",
+      "url": "https://www.cirkwi.com/en/point-interet/231846-lion-s-mound",
+      "title": "Lion's Mound",
+      "publisher": "Cirkwi",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Lion's Mound monument from a tourism site (proxy for the battlefield); a better gazetteer/heritage coordinate would help. Smithsonian is journalism, not scholarly.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:41:37.755Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1815",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 18 June 1815 Napoleon's French army fought a coalition led by Wellington and Blücher near Brussels and was defeated.",
+        "source": "src-nam"
+      },
+      {
+        "span": "1815",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The battle ended Napoleon's imperial power; he was forced to abdicate when the Allies entered Paris on 7 July.",
+        "source": "src-nam",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

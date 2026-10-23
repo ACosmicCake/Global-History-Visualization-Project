@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:mig-1",
+  "updated": "2026-10-22",
+  "id": "-45ka-modern-humans-across-eurasia",
+  "kind": "process",
+  "title": "Modern humans spread across Eurasia",
+  "summary": "Around 45,000 years ago small groups of Homo sapiens appear across Eurasia, from Germany and Bulgaria to Siberia, with another at Tianyuan near Beijing about 40,000 years ago. Some of these early groups, such as the one at Ranis, left no descendants among people alive today.",
+  "when": {
+    "start": {
+      "year": -43040
+    },
+    "end": {
+      "year": -38050
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "note": "Years are 1950 minus the age. Ranis13: 43,400-46,580 cal BP (midpoint 44,990). Bacho Kiro: occupation window 45,820-43,650 years ago (midpoint 44,735). Ust'-Ishim: \"approximately 44 kyr\" (Sumer et al. 2024); the 2014 genome paper gives 46,880-43,210 cal BP. Tianyuan: about 40,000 years. The sites are separate population records, not one migrating group; route order follows date and west-to-east position. Levant sites are omitted because no opened source dates them."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Calibrated radiocarbon years BP",
+        "value": "Ranis13 dated to 43,400-46,580 cal BP; the paper uses about 45 ka",
+        "source": "src-sumer2024"
+      },
+      {
+        "calendar": "Radiocarbon and genetic, years ago",
+        "value": "Bacho Kiro Cave occupied in the interval 45,820 to 43,650 years ago; fossils approximately 45,000 years ago",
+        "source": "src-mpg-bacho"
+      },
+      {
+        "calendar": "Genomic, kyr",
+        "value": "Ust'-Ishim approximately 44-thousand year (kyr)-old",
+        "source": "src-sumer2024"
+      },
+      {
+        "calendar": "Radiocarbon, years",
+        "value": "Tianyuan leg bone about 40,000 years old",
+        "source": "src-mpg-tianyuan"
+      }
+    ],
+    "display": "c. 45,000-40,000 years ago"
+  },
+  "where": {
+    "lat": 50.663888888889,
+    "lon": 11.568055555556,
+    "elevation_m": null,
+    "modern_name": "Ilsenhöhle, Ranis, Thuringia, Germany (first waypoint; town of Ranis as proxy)",
+    "historical_name": "Late Pleistocene Europe during the overlap with Neanderthals; no polities or place names exist at this date",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 50.663888888889,
+          "lon": 11.568055555556,
+          "year": -43040,
+          "date": "43,400-46,580 cal BP (Ranis13, Sümer et al. 2024)",
+          "label": "Ilsenhöhle at Ranis, Thuringia, Germany: modern human remains, part of a small population with no known living descendants. Point is Ranis town.",
+          "source": "src-sumer2024",
+          "coordinate_source": "src-wd-ranis"
+        },
+        {
+          "lat": 42.946666666667,
+          "lon": 25.430277777778,
+          "year": -42785,
+          "date": "interval from 45,820 to 43,650 years ago (Bacho Kiro, Max Planck Society 2020)",
+          "label": "Bacho Kiro Cave, Bulgaria: Initial Upper Palaeolithic modern humans with stone tools and ornaments.",
+          "source": "src-mpg-bacho",
+          "coordinate_source": "src-wd-bacho"
+        },
+        {
+          "lat": 57.694444444444,
+          "lon": 71.170833333333,
+          "year": -42050,
+          "date": "approximately 44-thousand year (kyr)-old (Ust'-Ishim, Sümer et al. 2024)",
+          "label": "Ust'-Ishim on the Irtysh, western Siberia: femur with a genome; the 2014 radiocarbon range is 46,880-43,210 cal BP. Point is the settlement of Ust'-Ishim.",
+          "source": "src-sumer2024",
+          "coordinate_source": "src-wd-ustishim"
+        },
+        {
+          "lat": 39.65777778,
+          "lon": 115.87138889,
+          "year": -38050,
+          "date": "about 40,000 years old (Tianyuan Cave, Max Planck Society 2013)",
+          "label": "Tianyuan Cave near Beijing: a 40,000-year-old individual related to many present-day Asians and Native Americans.",
+          "source": "src-mpg-tianyuan",
+          "coordinate_source": "src-wd-tianyuan"
+        }
+      ]
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-ranis",
+      "src-wd-bacho",
+      "src-wd-ustishim",
+      "src-wd-tianyuan"
+    ]
+  },
+  "regions": [
+    "europe",
+    "central_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "Marks the arrival of modern humans across the Neanderthal world and shows early populations that left no living descendants."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "caused_by",
+      "because": "These groups descended from the population that left Africa."
+    },
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sumer2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11839475/",
+      "title": "Earliest modern human genomes constrain timing of Neanderthal admixture (Nature 638:711-717)",
+      "publisher": "Nature (Springer Nature, via PubMed Central)",
+      "author": "Nature (Springer Nature, via PubMed Central)",
+      "date_published": "2024-12-12",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-mpg-bacho",
+      "url": "https://www.mpg.de/14778668/the-oldest-upper-paleolithic-homo-sapiens-in-europe",
+      "title": "The oldest Upper Paleolithic Homo sapiens in Europe",
+      "publisher": "Max Planck Society",
+      "author": "Max Planck Society",
+      "date_published": "2020-05-11",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-mpg-tianyuan",
+      "url": "https://www.mpg.de/6842535/dna-Tianyuan-cave",
+      "title": "A relative from the Tianyuan Cave",
+      "publisher": "Max Planck Society",
+      "author": "Max Planck Society",
+      "date_published": "2013-01-21",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-ranis",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q550275.json",
+      "title": "Wikidata entry for Ranis (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-bacho",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q4838907.json",
+      "title": "Wikidata entry for Bacho Kiro Cave (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-ustishim",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q4478405.json",
+      "title": "Wikidata entry for Ust'-Ishim (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-tianyuan",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2431206.json",
+      "title": "Wikidata entry for Tianyuan Cave (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: Ust'-Ishim at 44 ka (Sumer) versus 45 ka midpoint (2014 paper); Ranis point is the town, not the cave; the four sites are not one migrating band, and Levant stepping stones are omitted for lack of an opened source.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "46,580-43,400 cal BP",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "About 45,000 years ago a small modern human group lives at Ranis in Germany, among Neanderthals.",
+        "source": "src-sumer2024",
+        "consequence": false
+      },
+      {
+        "span": "45,820-43,650 years ago / c. 44 ka",
+        "action": "path.trace {}",
+        "caption": "Modern humans occupy Bacho Kiro Cave in Bulgaria and reach Ust-Ishim in western Siberia within the same few thousand years.",
+        "source": "src-mpg-bacho",
+        "consequence": false
+      },
+      {
+        "span": "c. 40,000 years ago",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "By about 40,000 years ago a modern human lives at Tianyuan Cave near Beijing, related to many living Asians and Native Americans.",
+        "source": "src-mpg-tianyuan",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:22.807Z"
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1879-war-of-the-pacific",
+  "kind": "event",
+  "title": "War of the Pacific",
+  "summary": "The War of the Pacific began in 1879 when Chilean troops crossed the northern frontier of the disputed desert region, bringing Chile against Bolivia and Peru, which had been allied by a defence pact since 1873. Chile took Lima in January 1881 and sealed its victory with the 1883 Treaty of Ancón. It gained Tarapacá and Antofagasta, cutting off Bolivia's outlet to the Pacific, and took control of nitrate exports.",
+  "when": {
+    "start": {
+      "year": 1879
+    },
+    "end": {
+      "year": 1883
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start year from Country Studies (\"in 1879\"); end is the October 1883 Treaty of Ancón (Memoria Chilena)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "War began when Chilean troops crossed the northern frontier in 1879.",
+        "source": "src-countrystudies"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "octubre de 1883",
+        "source": "src-memoria"
+      }
+    ],
+    "display": "1879-1883"
+  },
+  "where": {
+    "lat": -23.646389,
+    "lon": -70.398056,
+    "elevation_m": null,
+    "modern_name": "Antofagasta region, Chile (conflict across Chile, Peru and Bolivia)",
+    "historical_name": "Antofagasta, Bolivia (the war ran through Peru and Bolivia)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-antof"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Redrew the borders of western South America and left Bolivia without a coast."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1824-battle-of-ayacucho",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-countrystudies",
+      "url": "https://www.countrystudies.us/chile/15.htm",
+      "title": "Chile: War of the Pacific, 1879-83 (Country Studies)",
+      "publisher": "Library of Congress, Federal Research Division (Country Studies)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-memoria",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-96351.html",
+      "title": "Negociaciones diplomáticas (El impacto de la guerra del Pacífico)",
+      "publisher": "Memoria Chilena, Biblioteca Nacional de Chile",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-antof",
+      "url": "https://www.wikidata.org/wiki/Q3612",
+      "title": "Wikidata Q3612: Antofagasta, -23.64639, -70.39806",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Antofagasta, named on the Country Studies page as the port near the disputed border; the war spanned three countries, so uncertainty is 600 km. Memoria Chilena has Tacna and Arica left to a later plebiscite; the summary omits them. No casualty figures and no declaration or Antofagasta occupation date on opened pages. Least sure of the Memoria Chilena date wording.",
+  "author": "historian-agent:o-s41",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:06:18.754Z"
+}

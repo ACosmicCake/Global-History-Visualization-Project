@@ -1,0 +1,135 @@
+{
+  "id": "-1000ka-mid-pleistocene-transition",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Mid-Pleistocene Transition",
+  "summary": "Between about 1.25 and 0.7 million years ago, Earth's glacial cycles changed from roughly 41,000-year, mostly symmetric cycles to strongly asymmetric cycles of about 100,000 years. A 2019 model study attributes the timing to declining atmospheric CO2 combined with glacial removal of regolith from North America and northern Europe, while a 2021 overview calls the cause unknown.",
+  "when": {
+    "start": {
+      "year": -1250000
+    },
+    "end": {
+      "year": -700000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range follows Willeit et al. (2019), \"between ~1.25 and ~0.7 Ma ago\"; Eos says \"for the past 1.2 million years\". The id uses 1000 ka. Years are ka with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "between ~1.25 and ~0.7 Ma ago",
+        "source": "src-willeit2019"
+      },
+      {
+        "calendar": "years",
+        "value": "For the past 1.2 million years",
+        "source": "src-eos2021"
+      }
+    ],
+    "display": "c. 1.25–0.7 million years ago"
+  },
+  "where": {
+    "lat": 47,
+    "lon": -105,
+    "elevation_m": null,
+    "modern_name": "Global climate transition; pin at North America (Wikidata point), where regolith removal is modelled",
+    "historical_name": "Earth, Early to Middle Pleistocene; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10000,
+    "coordinate_sources": [
+      "src-wikidata-na"
+    ]
+  },
+  "regions": [
+    "global",
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "The change from 41,000-year to ~100,000-year glacial cycles shaped the later Pleistocene ice ages."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-2580ka-onset-of-northern-hemisphere-glaciation",
+      "type": "related"
+    },
+    {
+      "id": "-770ka-matuyama-brunhes-reversal",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-willeit2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6447376/",
+      "title": "Mid-Pleistocene transition in glacial cycles explained by declining CO2 and regolith removal (Science Advances 5:eaav7337)",
+      "publisher": "Science Advances (AAAS), via PubMed Central",
+      "author": "M. Willeit, A. Ganopolski, R. Calov, V. Brovkin",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eos2021",
+      "url": "https://eos.org/editors-vox/exploring-the-dramatic-shift-in-ice-age-duration",
+      "title": "Exploring the Dramatic Shift in Ice Age Duration",
+      "publisher": "Eos (American Geophysical Union)",
+      "author": "C.J. Berends, R. van de Wal, L.J. Lourens",
+      "date_published": "2021-07-28",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-na",
+      "url": "https://www.wikidata.org/wiki/Q49",
+      "title": "Wikidata item Q49 (North America)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: Eos says ~120,000-year cycles while Willeit says ~100-ka; the summary uses the latter. The pin has no sourced type site, hence 10000 km. Cause is contested per the sources.",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:09.143Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

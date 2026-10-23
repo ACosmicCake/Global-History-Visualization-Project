@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s16",
+  "updated": "2026-10-22",
+  "id": "-66my-deccan-traps-eruptions",
+  "kind": "event",
+  "title": "Deccan Traps eruptions",
+  "summary": "Huge basalt eruptions built the Deccan Traps of India about 66 million years ago, covering more than 500,000 square kilometres over roughly a million years. Dating shows the main phase began about 250,000 years before the end-Cretaceous boundary, so the eruptions overlapped the mass extinction, alongside the Chicxulub impact.",
+  "when": {
+    "start": {
+      "year": -66293000
+    },
+    "end": {
+      "year": -65543000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 300000,
+      "start_plus_years": 300000,
+      "end_minus_years": 300000,
+      "end_plus_years": 300000,
+      "note": "Derived: the atlas record -66my-chicxulub-impact puts the K-Pg boundary at 66.043 Ma (Renne et al.); Princeton says the main phase began about 250,000 years before it and lasted about 750,000 years. ScienceDaily (2005) uses an older 65 Ma. The plus/minus is a rounding bracket, not a published error."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "about 65 million years ago; lasted about one million years",
+        "source": "src-sciencedaily"
+      },
+      {
+        "calendar": "U-Pb zircon",
+        "value": "main phase began about 250,000 years before the K-Pg boundary",
+        "source": "src-princeton"
+      }
+    ],
+    "display": "c. 66.3–65.5 million years ago"
+  },
+  "where": {
+    "lat": 14,
+    "lon": 77,
+    "elevation_m": null,
+    "modern_name": "Deccan Traps, western and central India (pin at the Deccan Plateau centre point)",
+    "historical_name": "Deccan region of the Indian plate (no human geography)",
+    "geometry": {
+      "type": "area",
+      "description": "Flood-basalt province across western and central India; the GeoNames Deccan Plateau point lies south of the main basalt outcrop."
+    },
+    "uncertainty_km": 700,
+    "coordinate_sources": [
+      "src-geonames-deccan"
+    ],
+    "paleo": {
+      "not_applicable": "Outline record; palaeo-position to be added at expansion."
+    }
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of the largest volcanic provinces on Earth and a leading candidate, with the Chicxulub impact, for stress on life at the end of the Cretaceous."
+  },
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related"
+    },
+    {
+      "id": "-66my-paleogene-mammal-radiation",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-princeton",
+      "url": "https://collaborate.princeton.edu/en/publications/u-pb-geochronology-of-the-deccan-traps-and-relation-to-the-end-cr/",
+      "title": "U-Pb geochronology of the Deccan Traps and relation to the end-Cretaceous mass extinction",
+      "publisher": "Princeton University (Science, Schoene et al.)",
+      "author": "Princeton University (Science, Schoene et al.)",
+      "date_published": "2015",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sciencedaily",
+      "url": "https://www.sciencedaily.com/releases/2005/08/050810130729.htm",
+      "title": "Deccan Traps volcanism and the K-T extinction (press release)",
+      "publisher": "ScienceDaily",
+      "author": "ScienceDaily",
+      "date_published": "2005-08-10",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-deccan",
+      "url": "https://www.geonames.org/search.html?q=Deccan+Plateau",
+      "title": "GeoNames: Deccan Plateau, India",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a loose regional centre (GeoNames Deccan Plateau) because no opened source gives coordinates for the traps; the basalts lie mostly north of it. Volume estimates conflict (over 1.1 million km3 Princeton; over 2-3 million km3 original per ScienceDaily); the ScienceDaily page is 2005 and uses an older 65 Ma age. Start/end are derived from the atlas Chicxulub record plus the Princeton offsets.",
+  "published_at": "2026-10-22T05:24:19.516Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-66293000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Huge basalt eruptions built the Deccan Traps of India about 66 million years ago, covering more than 500,000 square kilometres over roughly a million years.",
+        "source": "src-princeton"
+      },
+      {
+        "span": "-65543000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Dating shows the main phase began about 250,000 years before the end-Cretaceous boundary, so the eruptions overlapped the mass extinction, alongside the Chicxulub impact.",
+        "source": "src-princeton",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1947-kon-tiki-expedition",
+  "kind": "event",
+  "title": "Kon-Tiki expedition",
+  "summary": "In 1947 six men led by Thor Heyerdahl sailed a balsa raft from Callao, Peru, on 28 April and after 101 days at sea ran aground on a reef at Raroia in the Tuamotu Archipelago. Heyerdahl wanted to test whether prehistoric South Americans could have reached Polynesia by drifting on ocean currents.",
+  "when": {
+    "start": {
+      "year": 1947
+    },
+    "end": {
+      "year": 1947
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The departure date is given on both pages; the landing date (7 August) is stated only by the HISTORY page, and the Kon-Tiki Museum page gives 101 days at sea."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 28 April 1947",
+        "source": "src-kontiki-museum"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "101 days at sea",
+        "source": "src-kontiki-museum"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "August 7, 1947",
+        "source": "src-history-kontiki"
+      }
+    ],
+    "display": "28 April – 7 August 1947"
+  },
+  "where": {
+    "lat": -16.016667,
+    "lon": -142.433333,
+    "elevation_m": null,
+    "modern_name": "Raroia atoll, Tuamotu Archipelago, French Polynesia (landing); departure from Callao, Peru",
+    "historical_name": "Callao, Peru to Raroia, Tuamotu Archipelago (no polity named in the sources)",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -12.052222,
+          "lon": -77.139167,
+          "year": 1947.321,
+          "date": "28 April 1947",
+          "label": "Callao, Peru: the raft departs with six men and a parrot.",
+          "source": "src-kontiki-museum",
+          "coordinate_source": "src-wd-callao"
+        },
+        {
+          "lat": -16.016667,
+          "lon": -142.433333,
+          "year": 1947.597,
+          "date": "7 August 1947 (101 days at sea)",
+          "label": "Raroia, Tuamotu Archipelago: the raft runs aground on a coral reef by the atoll. Point is the island, not the reef.",
+          "source": "src-history-kontiki",
+          "coordinate_source": "src-wd-raroia"
+        }
+      ]
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-wd-callao",
+      "src-wd-raroia"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "oceania",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration",
+    "human_evolution_migration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A famous modern raft voyage whose book and film made Pacific migration a public question."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1000-polynesian-settlement-of-east-polynesia",
+      "type": "related"
+    },
+    {
+      "id": "1976-hokulea-voyage-to-tahiti",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-kontiki-museum",
+      "url": "https://kon-tiki.no/en/heyerdahls-expeditions/kon-tiki",
+      "title": "Kon-Tiki, 1947",
+      "publisher": "Kon-Tiki Museum, Oslo",
+      "author": "Kon-Tiki Museum, Oslo",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-history-kontiki",
+      "url": "https://www.history.com/this-day-in-history/august-7/wood-raft-makes-4300-mile-voyage",
+      "title": "Wood raft makes 4,300-mile voyage",
+      "publisher": "HISTORY (A+E Networks)",
+      "author": "HISTORY (A+E Networks)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-callao",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q105037.json",
+      "title": "Wikidata entry for Callao (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-raroia",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q666634.json",
+      "title": "Wikidata entry for Raroia (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the Raroia point is the island, not the reef. HISTORY gives 4,300 miles; the museum page gives no distance, so no distance is used. Neither page names intermediate stops, so the path has two waypoints.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1947-04-28",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Six men and a parrot leave Callao, Peru, on a balsa raft bound for Polynesia.",
+        "source": "src-kontiki-museum",
+        "consequence": false
+      },
+      {
+        "span": "1947-04-28 / 1947-08-07",
+        "action": "path.trace {}",
+        "caption": "The raft drifts for 101 days across the Pacific, meeting storms, sharks and whales, before running aground at Raroia.",
+        "source": "src-history-kontiki",
+        "consequence": false
+      },
+      {
+        "span": "1947-08-07",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "The voyage became a bestselling book and an Oscar-winning documentary; the raft is now displayed at the Kon-Tiki Museum in Oslo.",
+        "source": "src-history-kontiki",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:51.059Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

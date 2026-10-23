@@ -1,0 +1,171 @@
+{
+  "id": "1953-iranian-coup-d-etat",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Iranian coup d'etat of 1953",
+  "summary": "A covert operation planned by the CIA with British intelligence, known as Operation Ajax, removed Iranian Prime Minister Mohammad Mosaddeq in August 1953. A first attempt on 15 August failed, but on 19 August his premiership ended and General Zahedi replaced him; the shah returned on 23 August. The CIA publicly acknowledged its role in 2013. Mosaddeq was convicted of treason.",
+  "when": {
+    "start": {
+      "year": 1953
+    },
+    "end": {
+      "year": 1953
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "First attempt 15 August; ended 19 August 1953."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "August 19, 1953",
+        "source": "src-cfr-1953"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "August 19",
+        "source": "src-nsa-1953"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "August 19, 1953",
+        "source": "src-history-1953"
+      }
+    ],
+    "display": "15-19 August 1953"
+  },
+  "where": {
+    "lat": 35.6892523,
+    "lon": 51.3896004,
+    "elevation_m": null,
+    "modern_name": "Tehran, Iran",
+    "historical_name": "Tehran, capital of Iran under Shah Mohammad Reza Pahlavi",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm-tehran"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "A US-British covert operation that ended Mosaddeq's government and restored the shah, with lasting effects on Iran and on later US interventions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1979-iranian-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-cfr-1953",
+      "url": "https://www.cfr.org/articles/the-1953-overthrow-of-iranian-prime-minister-mohammad-mosaddeq",
+      "title": "The 1953 Overthrow of Iranian Prime Minister Mohammad Mosaddeq",
+      "publisher": "Council on Foreign Relations",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nsa-1953",
+      "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB435/",
+      "title": "CIA Confirms Role in 1953 Iran Coup",
+      "publisher": "National Security Archive, George Washington University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-1953",
+      "url": "https://www.history.com/this-day-in-history/august-19/cia-assisted-coup-overthrows-government-of-iran",
+      "title": "CIA-assisted coup overthrows government of Iran",
+      "publisher": "HISTORY",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-tehran",
+      "url": "https://www.openstreetmap.org/relation/6663864",
+      "title": "OpenStreetMap relation 6663864 (Tehran)",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "No opened page gives a death toll for the unrest, so none is stated (a figure of about 300 appears in search snippets only). Tehran is a city-level pin. The CFR page says the first attempt on 15 August failed and the premiership ended 19 August; NSA says the outcome was settled by the afternoon of 19 August.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:53.273Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1953",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A covert operation planned by the CIA with British intelligence, known as Operation Ajax, removed Iranian Prime Minister Mohammad Mosaddeq in August 1953.",
+        "source": "src-cfr-1953"
+      },
+      {
+        "span": "1953",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A first attempt on 15 August failed, but on 19 August his premiership ended and General Zahedi replaced him; the shah returned on 23 August.",
+        "source": "src-cfr-1953",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

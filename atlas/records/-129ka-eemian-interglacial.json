@@ -1,0 +1,147 @@
+{
+  "id": "-129ka-eemian-interglacial",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "period",
+  "title": "Eemian interglacial",
+  "summary": "The Eemian was the interglacial before the present one, lasting from about 130,000 to 115,000 years ago. Dating of corals on stable coastlines shows sea level at least as high as today from about 128,000 to 116,000 years ago. North Greenland was about 8 °C warmer than now and seas stood roughly 4 to 8 m higher.",
+  "when": {
+    "start": {
+      "year": -130000
+    },
+    "end": {
+      "year": -115000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 2000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1000,
+      "note": "University of Washington gives 130,000 to 115,000 years ago; Muhs (2002) gives high sea level from about 128,000 to 116,000 years before present. Years are approximate and not converted from a 1950 reference."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years before present",
+        "value": "from 130,000 to 115,000 years ago",
+        "source": "src-uw2013"
+      },
+      {
+        "calendar": "yr B.P., uranium-series coral ages",
+        "value": "sea level at least as high as present from about 128,000 to 116,000 yr B.P.",
+        "source": "src-muhs2002"
+      }
+    ],
+    "display": "c. 130,000–115,000 years ago"
+  },
+  "where": {
+    "lat": 77.45,
+    "lon": -51.06,
+    "elevation_m": null,
+    "modern_name": "NEEM ice-core camp, northwest Greenland (global interglacial; pin at the Eemian ice-core site)",
+    "historical_name": "North-West Greenland ice sheet; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-neem"
+    ],
+    "paleo": null
+  },
+  "regions": [
+    "global",
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "The most recent interglacial warmer than the present with higher sea level, a reference for current warming."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-muhs2002",
+      "url": "https://www.usgs.gov/publications/evidence-timing-and-duration-last-interglacial-period-high-precision-uranium-series",
+      "title": "Evidence for the timing and duration of the last interglacial period from high-precision uranium-series ages of corals on tectonically stable coastlines (Quaternary Research)",
+      "publisher": "U.S. Geological Survey",
+      "author": "D. R. Muhs",
+      "date_published": "2002",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-uw2013",
+      "url": "https://www.washington.edu/news/2013/01/23/greenland-ice-core-provides-picture-of-prehistoric-sea-level-rise/",
+      "title": "Greenland ice core provides picture of prehistoric sea level rise",
+      "publisher": "University of Washington",
+      "author": null,
+      "date_published": "2013-01-23",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-neem",
+      "url": "https://neem.dk/",
+      "title": "NEEM: North Greenland Eemian Ice Drilling",
+      "publisher": "University of Copenhagen",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the Eemian was global, and NEEM is only the Eemian ice-core site named by the University of Copenhagen, so uncertainty is 5000 km. The id says 129 ka but the opened pages give 130,000-115,000 and 128,000-116,000 years. The temperature and sea-level figures come from the 2013 University of Washington news report. The phrase \"interglacial before the present one\" is my reading of \"last interglacial period\" in the Muhs title.",
+  "author": "historian-agent:o-s67",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:35:45.509Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-130000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Eemian was the interglacial before the present one, lasting from about 130,000 to 115,000 years ago.",
+        "source": "src-muhs2002"
+      },
+      {
+        "span": "-115000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Dating of corals on stable coastlines shows sea level at least as high as today from about 128,000 to 116,000 years ago.",
+        "source": "src-muhs2002",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

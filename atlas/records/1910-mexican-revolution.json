@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1910-mexican-revolution",
+  "kind": "event",
+  "title": "Mexican Revolution",
+  "summary": "The Mexican Revolution is dated to about 1910-1920. It began with Francisco Madero's call to arms on 20 November 1910; Díaz resigned the presidency by the end of May 1911 after the Treaty of Ciudad Juárez. The Constitutionalists later took control, save Villa and Zapata's strongholds, and the 1917 Constitution expressed the revolution's goals, including limits on private property.",
+  "when": {
+    "start": {
+      "year": 1910,
+      "iso": "1910-11-20"
+    },
+    "end": {
+      "year": 1920
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the date Madero's call to arms was set to begin (6 p.m., 20 November 1910). End year 1920 is the Library of Congress's \"approximately 1910-1920\"; no opened page gives an end date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "the Mexican Revolution \"began\" on 20 November, 1910",
+        "source": "src-loc-madero"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "during the Mexican Revolution, approximately 1910-1920",
+        "source": "src-loc-exhibit"
+      }
+    ],
+    "display": "1910-1920"
+  },
+  "where": {
+    "lat": 19.353773,
+    "lon": -99.13589,
+    "elevation_m": null,
+    "modern_name": "Mexico (nationwide; pin at Mexico City)",
+    "historical_name": "Mexico (Díaz presidency, then provisional and revolutionary governments); pin at Mexico City",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 700,
+    "coordinate_sources": [
+      "src-wd-mexcity"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The upheaval that ended the Díaz regime and produced the 1917 Constitution and land reform."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns a decade of civil war that harmed many civilians; the sources opened give no death toll, and none is stated here.",
+  "related": [
+    {
+      "id": "place-mexico-city",
+      "type": "related"
+    },
+    {
+      "id": "1810-grito-de-dolores",
+      "type": "related"
+    },
+    {
+      "id": "1914-world-war-i",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc-madero",
+      "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/rise-of-madero.html",
+      "title": "The Rise of Francisco Madero (The Mexican Revolution and the United States)",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-loc-exhibit",
+      "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/",
+      "title": "The Mexican Revolution and the United States",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-berkeley-clacs",
+      "url": "https://clacs.berkeley.edu/mexicos-centennials-promise-and-legacy-mexican-revolution",
+      "title": "Mexico's Centennials: The Promise and Legacy of the Mexican Revolution",
+      "publisher": "Center for Latin American Studies, University of California, Berkeley",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-mexcity",
+      "url": "https://www.wikidata.org/wiki/Q1489",
+      "title": "Wikidata Q1489: Mexico City, 19.353773, -99.13589",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "A nationwide conflict, so the pin is Mexico City with a 700 km radius, not a battle site. End year 1920 rests on one approximate phrase from the LOC exhibit page. Díaz resignation timing is from the LOC page (\"by the end of the month\" after the 21 May 1911 convention). Least sure of the end date.",
+  "author": "historian-agent:o-s41",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:06:18.378Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1910-11-20",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Mexican Revolution is dated to about 1910-1920.",
+        "source": "src-loc-madero"
+      },
+      {
+        "span": "1920",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It began with Francisco Madero's call to arms on 20 November 1910; Díaz resigned the presidency by the end of May 1911 after the Treaty of Ciudad Juárez.",
+        "source": "src-loc-madero",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "id": "1965-cuban-expedition-to-the-congo",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "event",
+  "title": "Cuban expedition to the Congo led by Che Guevara",
+  "summary": "In April 1965, Ernesto 'Che' Guevara led an undercover force of roughly one hundred Afro-Cuban volunteers into eastern Congo across Lake Tanganyika to support anti-imperialist Simba rebels. Hampered by cultural divisions, poor communication, uncommitted local commanders, and counter-attacks by government troops accompanied by white mercenaries, the mission failed to ignite a broader revolution. Guevara withdrew his surviving troops in November 1965, recording the venture as an unmitigated failure that reshaped Cuban policy in Africa.",
+  "when": {
+    "start": {
+      "year": 1965,
+      "iso": "1965-04-24"
+    },
+    "end": {
+      "year": 1965,
+      "iso": "1965-11-21"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Guevara crossed Lake Tanganyika into the Congo on 24 April 1965 and evacuated with surviving forces on 21 November 1965."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Guevara spoke of his campaign in the Congo",
+        "source": "src-nsa-gwu-doc27"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Congo: American imperialism had not been the reason for his failure there but, rather, the Belgian mercenaries",
+        "source": "src-frus-che-congo"
+      }
+    ],
+    "display": "April–November 1965"
+  },
+  "where": {
+    "lat": -4.30111,
+    "lon": 28.94417,
+    "elevation_m": null,
+    "modern_name": "Fizi Territory, South Kivu, Democratic Republic of the Congo",
+    "historical_name": "Fizi Territory, Democratic Republic of the Congo (Congo-Léopoldville)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-geonames-fizi"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Cuba's initial covert attempt to export revolutionary guerrilla warfare to the African continent, leading directly to Guevara's subsequent deployment to Bolivia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-che-guevara",
+      "type": "same_person"
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "contemporary"
+    },
+    {
+      "id": "1967-bolivian-guerrilla-campaign",
+      "type": "related"
+    },
+    {
+      "id": "1953-cuban-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-frus-che-congo",
+      "url": "https://history.state.gov/historicaldocuments/frus1964-68v31/d172",
+      "title": "Memorandum of Conversation: Statements by Ernesto 'Che' Guevara Prior to His Execution",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "Central Intelligence Agency / Department of State",
+      "date_published": "1967-10-13",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nsa-gwu-doc27",
+      "url": "https://nsarchive.gwu.edu/document/24606-document-27-cia-memorandum-richard-helms-dean-rusk-et-al-statements-ernesto-che",
+      "title": "Document 27: CIA Memorandum, Richard Helms to Dean Rusk et al., 'Statements by Ernesto \"Che\" Guevara Prior to His Execution', October 13, 1967",
+      "publisher": "National Security Archive, George Washington University",
+      "author": "Richard Helms",
+      "date_published": "1967-10-13",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-fizi",
+      "url": "https://www.geonames.org/9179483/fizi.html",
+      "title": "Fizi, DR Congo (GeoNames ID 9179483)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2021-09-08",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact location of the main guerrilla mountain base above Lake Tanganyika; coordinates are anchored to Fizi as the key regional base territory.",
+  "published_at": "2026-10-22T07:06:50.046Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1965-04-24",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "In April 1965, Ernesto 'Che' Guevara led an undercover force of roughly one hundred Afro-Cuban volunteers into eastern Congo across Lake Tanganyika to support anti-imperialist Simba rebels.",
+        "source": "src-frus-che-congo"
+      },
+      {
+        "span": "1965",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Hampered by cultural divisions, poor communication, uncommitted local commanders, and counter-attacks by government troops accompanied by white mercenaries, the mission failed to ignite a broader revolution.",
+        "source": "src-frus-che-congo",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

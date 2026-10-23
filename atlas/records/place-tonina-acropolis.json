@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "id": "place-tonina-acropolis",
+  "title": "Acropolis of Toniná, Chiapas",
+  "summary": "The acropolis of Toniná, a Maya city in Chiapas, was built on a mountain top that was reshaped into seven platforms. INAH gives them a height of 245 feet and facades 1,050 feet wide. The city reached its peak in the Classic period, between 600 and 900 CE.",
+  "when": {
+    "start": {
+      "year": 600
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "INAH dates the site's peak to 600-900 AD; it does not date when the acropolis was built, and Yucatán Magazine says the city was likely founded in the 2nd century CE with clearer history from the 6th. Start 600 is the beginning of that peak. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (INAH)",
+        "value": "reached its peak during the Classic period, from 600 to 900 AD",
+        "source": "src-inah-tonina"
+      },
+      {
+        "calendar": "CE (Yucatán Magazine)",
+        "value": "comes into clearer focus during the late classic in the 6th century CE",
+        "source": "src-yucatanmag-tonina"
+      }
+    ],
+    "display": "Classic-period peak 600–900 CE; ruins today"
+  },
+  "where": {
+    "lat": 16.900385,
+    "lon": -92.00976,
+    "elevation_m": null,
+    "modern_name": "Toniná archaeological zone, Ocosingo, Chiapas, Mexico",
+    "historical_name": "Toniná, a Classic Maya city of the Ocosingo valley, Chiapas",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-tonina"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "INAH describes the acropolis as seven platforms 245 feet high; Yucatán Magazine puts it at about 74 m, towering over the plaza."
+  },
+  "confidence": "probable",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-inah-tonina",
+      "url": "https://lugares.inah.gob.mx/en/node/4359",
+      "title": "Toniná (archaeological zone)",
+      "publisher": "Instituto Nacional de Antropología e Historia (INAH), Mexico",
+      "author": "Instituto Nacional de Antropología e Historia (INAH), Mexico",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-yucatanmag-tonina",
+      "url": "https://yucatanmagazine.com/a-new-power-rises-in-the-mountains-the-mighty-tonina/",
+      "title": "A new power rises in the mountains, the mighty Toniná (Carlos Rosado van der Gracht)",
+      "publisher": "Yucatán Magazine",
+      "author": "Yucatán Magazine",
+      "date_published": "2021-05-31",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-tonina",
+      "url": "https://www.openstreetmap.org/way/159358068",
+      "title": "OpenStreetMap outline of the Toniná archaeological site (way 159358068)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "model.geometry"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Acropolis terraced into seven platforms on a modified mountain, with facades 1,050 feet wide (INAH). Register figures only.",
+      "source": "src-inah-tonina",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-inah-tonina",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 74.7,
+          "unit": "m",
+          "source": "src-inah-tonina",
+          "note": "\"seven platforms with a height of 245 feet\"; Yucatán Magazine says about 74 m"
+        },
+        {
+          "part": "base width",
+          "value": 320,
+          "unit": "m",
+          "source": "src-inah-tonina",
+          "note": "\"facades that are 1050 feet wide\""
+        },
+        {
+          "part": "tiers",
+          "value": 7,
+          "unit": "count",
+          "source": "src-inah-tonina",
+          "note": "seven platforms"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a huge terraced acropolis of seven platforms at the published height and width"
+      },
+      {
+        "level": "local",
+        "representation": "procedural seven-tier stepped mass; temples, stairs and carvings are not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 600,
+        "end_year": 900,
+        "state": "intact",
+        "description": "Site at its peak in the Classic period, 600-900 AD (INAH); the acropolis's own building dates are not given.",
+        "source": "src-inah-tonina"
+      },
+      {
+        "start_year": 901,
+        "end_year": null,
+        "state": "ruined",
+        "description": "Now an archaeological zone; the end of the city and later condition are not described on the pages opened.",
+        "source": "src-inah-tonina"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stepped_pyramid with 7 tiers. The 245 ft height and 1,050 ft width are INAH figures converted to metres (74.7 m and 320 m); the INAH page does not say whether 245 ft is measured from the plaza. The acropolis has no sourced construction date: the 600 start is the site's Classic peak, so the phases are a stand-in. Coordinates are the OSM point for the whole archaeological site, not the acropolis.",
+  "author": "historian-agent:m-24",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:55:36.502Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

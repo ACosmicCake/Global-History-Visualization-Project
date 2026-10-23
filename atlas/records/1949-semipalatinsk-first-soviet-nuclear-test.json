@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1949-semipalatinsk-first-soviet-nuclear-test",
+  "kind": "event",
+  "title": "First Soviet nuclear test (RDS-1) at Semipalatinsk",
+  "summary": "On 29 August 1949 the Soviet Union detonated its first nuclear device, RDS-1, at the Semipalatinsk test site in Kazakhstan, with an estimated yield of 22 kilotons. The test surprised Western governments. The site went on to host 456 Soviet tests until 1989, and eastern Kazakhstan still reports higher cancer rates.",
+  "when": {
+    "start": {
+      "year": 1949,
+      "iso": "1949-08-29"
+    },
+    "end": {
+      "year": 1949,
+      "iso": "1949-08-29"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Date is stated identically on all opened pages; time of day is not recorded here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Gregorian)",
+        "value": "August 29, 1949",
+        "source": "src-bulletin"
+      },
+      {
+        "calendar": "CE (Gregorian)",
+        "value": "Aug 29, 1949",
+        "source": "src-eclinmed"
+      },
+      {
+        "calendar": "CE (Gregorian)",
+        "value": "29 August 1949",
+        "source": "src-kas"
+      }
+    ],
+    "display": "29 August 1949"
+  },
+  "where": {
+    "lat": 50.02775,
+    "lon": 78.99555556,
+    "elevation_m": null,
+    "modern_name": "Semipalatinsk Test Site (the \"polygon\"), near Semey, north-eastern Kazakhstan",
+    "historical_name": "Semipalatinsk test site, Kazakh SSR, USSR",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-sts"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "science_technology"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Began Soviet nuclear weapons testing and a decades-long programme with lasting health effects in Kazakhstan."
+  },
+  "confidence": "established",
+  "audience_note": "Describes nuclear weapons testing and its radiation and cancer effects on exposed civilians; contains health statistics that may be distressing.",
+  "related": [
+    {
+      "id": "1942-manhattan-project",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bulletin",
+      "url": "https://thebulletin.org/2009/09/the-lasting-toll-of-semipalatinsks-nuclear-testing/",
+      "title": "The lasting toll of Semipalatinsk's nuclear testing",
+      "publisher": "Bulletin of the Atomic Scientists",
+      "author": "Togzhan Kassenova",
+      "date_published": "2009-09-28",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-eclinmed",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6734094/",
+      "title": "Four decades of nuclear testing: the legacy of Semipalatinsk (eClinicalMedicine 13:1)",
+      "publisher": "eClinicalMedicine (Elsevier, via PubMed Central)",
+      "author": "n.d.",
+      "date_published": "2019-08-29",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-kas",
+      "url": "https://www.kas.de/en/web/multilateraler-dialog-wien/to-the-third-nuclear-age-a-timeline/detail/-/content/inaugural-soviet-nuclear-test",
+      "title": "Inaugural Soviet nuclear test",
+      "publisher": "Konrad-Adenauer-Stiftung, Multilateral Dialogue Vienna",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-sts",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q757666.json",
+      "title": "Wikidata entry for Semipalatinsk Test Site (coordinates)",
+      "publisher": "Wikidata",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the pin is the centre of the test site, not the RDS-1 ground zero, hence 30 km; the first-test location within the 18,000 km2 site was not read. Test counts differ slightly between pages (456 total in both, but 116 versus 111 atmospheric), so only the total is used. Yield 22 kilotons is from the KAS timeline.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1949-08-29",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "The Soviet Union detonates its first nuclear device, RDS-1, at the Semipalatinsk test site; the estimated yield is 22 kilotons.",
+        "source": "src-kas",
+        "consequence": false
+      },
+      {
+        "span": "1949-1989",
+        "action": "numbers.counter { range: [1, 456] }",
+        "caption": "Testing continues at the site for four decades, ending on 19 October 1989 after 456 tests, 340 of them underground.",
+        "source": "src-bulletin",
+        "consequence": false
+      },
+      {
+        "span": "2009",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Decades on, cancer rates in eastern Kazakhstan remain 25–30 percent higher than elsewhere in the country, according to the 2009 article.",
+        "source": "src-bulletin",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s61",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:56:53.050Z"
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s24",
+  "updated": "2026-10-22",
+  "id": "-47ka-neanderthal-modern-human-interbreeding",
+  "kind": "process",
+  "title": "Neanderthal-modern human interbreeding",
+  "summary": "A 2024 study of ancient and present-day genomes dated the main Neanderthal gene flow into Homo sapiens to a period beginning about 50,500 years ago and lasting roughly 7,000 years, centred near 47,000 years ago. As a result, most people outside Africa carry about 1 to 2 percent Neanderthal DNA.",
+  "when": {
+    "start": {
+      "year": -48550
+    },
+    "end": {
+      "year": -41550
+    },
+    "precision": "millennium",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Years ago (genomic dating)",
+        "value": "Began about 50,500 years ago and lasted about 7,000 years; mean date about 47,000 years ago",
+        "source": "src-berk"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "Gene flow began about 50,000 years ago and lasted about 7,000 years; single admixture event about 47,000 years ago",
+        "source": "src-mpg"
+      }
+    ],
+    "display": "c. 50,500–43,500 years ago (centre c. 47,000)"
+  },
+  "where": {
+    "lat": 57.6944,
+    "lon": 71.1708,
+    "elevation_m": null,
+    "modern_name": "Western Eurasia (where the mixing happened is not known; the coordinates are the Ust'-Ishim find area, whose genome carries long Neanderthal segments)",
+    "historical_name": "Eurasia, no polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-ui"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "Explains why most living people carry Neanderthal DNA and sets a time frame for the dispersal of modern humans across Eurasia."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related"
+    },
+    {
+      "id": "species-homo-neanderthalensis",
+      "type": "related"
+    },
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "related"
+    },
+    {
+      "id": "2010-05-07-draft-neanderthal-genome",
+      "type": "related"
+    },
+    {
+      "id": "person-ust-ishim-man",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mpg",
+      "url": "https://www.mpg.de/23832006/new-timeline-for-neandertal-gene-flow-event",
+      "title": "New timeline for Neandertal gene flow event",
+      "publisher": "Max Planck Society",
+      "author": "Max Planck Institute for Evolutionary Anthropology",
+      "date_published": "2024-12-12",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-berk",
+      "url": "https://news.berkeley.edu/2024/12/12/a-new-timeline-for-neanderthal-interbreeding-with-modern-humans/",
+      "title": "A new timeline for Neanderthal interbreeding with modern humans",
+      "publisher": "University of California, Berkeley (Berkeley News)",
+      "author": "Berkeley News",
+      "date_published": "2024-12-12",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-wd-ui",
+      "url": "https://www.wikidata.org/wiki/Q4478405",
+      "title": "Wikidata item Q4478405 (Ust-Ishim), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The sources do not say where the interbreeding happened; the pin is the Ust'-Ishim find area as an illustrative site of early Neanderthal ancestry, not the event place, hence the large uncertainty. The 43,500 end date is my subtraction of 7,000 from 50,500, implied but not stated by the Berkeley page. Queue id says 47 ka (the mean).",
+  "published_at": "2026-10-22T07:15:51.654Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-48550",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A 2024 study of ancient and present-day genomes dated the main Neanderthal gene flow into Homo sapiens to a period beginning about 50,500 years ago and lasting roughly…",
+        "source": "src-mpg"
+      },
+      {
+        "span": "-41550",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "As a result, most people outside Africa carry about 1 to 2 percent Neanderthal DNA.",
+        "source": "src-mpg",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

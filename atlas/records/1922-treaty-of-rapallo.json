@@ -1,0 +1,133 @@
+{
+  "id": "1922-treaty-of-rapallo",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Treaty of Rapallo (Germany–Soviet Russia, 1922)",
+  "summary": "Germany and Soviet Russia signed a treaty at Rapallo, Italy, resuming diplomatic and consular relations. Both sides waived war-related financial claims and agreed to most-favoured-nation treatment in trade. As Germany's first agreement as an independent agent since World War I, it angered the Western Allies.",
+  "when": {
+    "start": {
+      "year": 1922
+    },
+    "end": {
+      "year": 1922
+    },
+    "precision": "day",
+    "display": "16 April 1922",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Treaty of Rapallo , (April 16, 1922)",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "Original text done in duplicate at Rapallo on April 16, 1922",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 44.33611,
+    "lon": 9.21944,
+    "elevation_m": null,
+    "modern_name": "Rapallo, Italy",
+    "historical_name": "Rapallo",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Reshaped postwar diplomacy by restoring German–Soviet relations and alarming the Western Allies."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251229195810/https://www.britannica.com/event/Treaty-of-Rapallo",
+      "title": "Treaty of Rapallo | Italy, Austria & Yugoslavia | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://avalon.law.yale.edu/20th_century/rapallo_001.asp",
+      "title": "The Avalon Project : German-Russian Agreement; April 16, 1922 (Treaty of Rapallo)",
+      "publisher": "avalon.law.yale.edu",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q155796",
+      "title": "Wikidata Q155796 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources agree on the date and place. Britannica's title page mentions Italy, Austria and Yugoslavia in its header, but the article text concerns only the Germany–Soviet treaty. Britannica calls the Soviet signatory Chicherin; Avalon spells it Tchitcherin. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, avalon.law.yale.edu; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:08:03.290Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1922",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Germany and Soviet Russia signed a treaty at Rapallo, Italy, resuming diplomatic and consular relations.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1922",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "As Germany's first agreement as an independent agent since World War I, it angered the Western Allies.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

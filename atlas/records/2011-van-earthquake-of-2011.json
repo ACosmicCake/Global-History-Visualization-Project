@@ -1,0 +1,133 @@
+{
+  "id": "2011-van-earthquake-of-2011",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Van earthquake of 2011",
+  "summary": "A severe earthquake struck near Erciş and Van in eastern Turkey on 23 October 2011. More than 570 people were killed and thousands of structures were destroyed. It was felt as far away as Jordan and southern Russia. Rescue and relief were led by Turkey's Ministry of Health and the Turkish Red Crescent.",
+  "when": {
+    "start": {
+      "year": 2011
+    },
+    "end": {
+      "year": 2011
+    },
+    "precision": "day",
+    "display": "23 October 2011",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "October 23, 2011",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "2011-10-23 10:41:22",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 38.628,
+    "lon": 43.486,
+    "elevation_m": null,
+    "modern_name": "Van and Erciş, eastern Turkey",
+    "historical_name": "Van and Erciş, eastern Turkey",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Deadly regional earthquake with more than 570 deaths and widespread destruction, but limited global historical reach."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions mass death and building collapse from an earthquake.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=17394270",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20250621103852/https://www.britannica.com/event/Van-earthquake-of-2011",
+      "title": "Van earthquake of 2011 | Summary, Death Toll, Damage, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q189079",
+      "title": "Wikidata Q189079 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude differs between sources: Mw 7.1 (ISC, GCMT) versus 7.2 (Britannica). Depth also differs (7.6 km in ISC versus about 20 km in Britannica). Time is given as 10:41:22 (ISC, presumably UTC) and 1:41 pm local time (Britannica), which are consistent.  The 'disease' domain tag is a poor fit; no better available domain exists.} (Drafted by the Wikipedia pipeline from isc.ac.uk, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2011",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "A severe earthquake struck near Erciş and Van in eastern Turkey on 23 October 2011.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2011",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "More than 570 people were killed and thousands of structures were destroyed.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-23T04:33:40.933Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

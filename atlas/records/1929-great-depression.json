@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1929-great-depression",
+  "kind": "event",
+  "title": "The Great Depression (from the Wall Street crash of 1929)",
+  "summary": "The stock market crash of October 1929, centred on the New York Stock Exchange, ended the prosperity of the 1920s. The Dow fell nearly 13 percent on 28 October and nearly 12 percent the next day, and kept sliding until the summer of 1932. A worldwide depression followed, with over a quarter of the American workforce jobless at its depths.",
+  "when": {
+    "start": {
+      "year": 1929
+    },
+    "end": {
+      "year": 1941
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 2,
+      "end_plus_years": 0,
+      "note": "Sources opened give no formal end year; the Library of Congress says wartime mobilization after Pearl Harbor (December 1941) cured the depression. End year is a loose proxy."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October 28, 1929",
+        "source": "src-fed"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October 1929",
+        "source": "src-loc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 8, 1932",
+        "source": "src-fed"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 7, 1941",
+        "source": "src-loc"
+      }
+    ],
+    "display": "From October 1929 (crash); depression through the 1930s"
+  },
+  "where": {
+    "lat": 40.706712,
+    "lon": -74.011111,
+    "elevation_m": null,
+    "modern_name": "New York Stock Exchange, Wall Street / Broad Street, New York City, USA (pin = historical marker location, proxy for Wall Street)",
+    "historical_name": "New York Stock Exchange, New York City, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-hmdb",
+      "src-nps"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A worldwide economic collapse whose effects, per the Library of Congress, reached politics and the road to war."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-fed",
+      "url": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1929",
+      "title": "Stock Market Crash of 1929",
+      "publisher": "Federal Reserve History (Federal Reserve System)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-loc",
+      "url": "https://www.loc.gov/classroom-materials/united-states-history-primary-source-timeline/great-depression-and-world-war-ii-1929-1945/overview/",
+      "title": "Overview: Great Depression and World War II, 1929-1945",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/places/new-york-stock-exchange.htm",
+      "title": "New York Stock Exchange",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-hmdb",
+      "url": "https://www.hmdb.org/m.asp?m=47254",
+      "title": "New York Stock Exchange Historical Marker",
+      "publisher": "Historical Marker Database",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the NYSE historical marker location (proxy for Wall Street); end year 1941 is a loose proxy since no opened source gives a formal end. Summary's 'worldwide' rests on LOC.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:53:41.173Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1929",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The stock market crash of October 1929, centred on the New York Stock Exchange, ended the prosperity of the 1920s.",
+        "source": "src-fed"
+      },
+      {
+        "span": "1941",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Dow fell nearly 13 percent on 28 October and nearly 12 percent the next day, and kept sliding until the summer of 1932.",
+        "source": "src-fed",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "1968-green-revolution-india",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Green Revolution in India (wheat)",
+  "summary": "In the mid-1960s India launched a high-yielding varieties programme built on Mexican semi-dwarf wheat bred by Norman Borlaug. Borlaug’s Nobel lecture reports Indian wheat output rising from a 1964–65 record of 12.3 million tons to 16.5 million in 1968 and 20.0 million in 1970. An Indian scientist says the result in Punjab was called a miracle.",
+  "when": {
+    "start": {
+      "year": 1966
+    },
+    "end": {
+      "year": 1970
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Start is the 1966 approval of the high-yielding varieties programme; end is the 1970 harvest in Borlaug’s figures. Sources give different years for the 18,000-tonne seed import, so none is stated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "16.5, 18.7, and 20.0 million tons during 1968, 1969, and 1970 harvests",
+        "source": "src-nobel-borlaug"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 1966, we proposed a high yielding varieties programme",
+        "source": "src-icar-swaminathan"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 1968, Prime Minister Indira Gandhi released a special stamp called the wheat revolution",
+        "source": "src-icar-swaminathan"
+      }
+    ],
+    "display": "1966–1970 (1968 harvest: 16.5 million tons of wheat)"
+  },
+  "where": {
+    "lat": 30.91667,
+    "lon": 75.41667,
+    "elevation_m": null,
+    "modern_name": "Punjab, India",
+    "historical_name": "Punjab state, Republic of India",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-geonames-punjab"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Sharp wheat gains in the late 1960s moved India toward self-sufficiency in wheat, per the Nobel lecture."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1947-08-15-indian-independence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nobel-borlaug",
+      "url": "https://www.nobelprize.org/prizes/peace/1970/borlaug/lecture/",
+      "title": "Norman Borlaug: Nobel Lecture, The Green Revolution, Peace, and Humanity",
+      "publisher": "Nobel Prize Outreach",
+      "author": "Norman E. Borlaug",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-icar-swaminathan",
+      "url": "https://www.icar.org.in/en/node/5072",
+      "title": "‘Our farmers are second to none’",
+      "publisher": "Indian Council of Agricultural Research",
+      "author": "ICAR",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-punjab",
+      "url": "https://www.geonames.org/search.html?q=Punjab&country=IN&featureClass=A",
+      "title": "Punjab, India",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the pin. The programme was national; Punjab is chosen because the ICAR interview calls the result the \"Punjab Miracle\". The sources disagree on the baseline (10 vs 12.3 million tonnes) and on the year of the seed import, so only Borlaug’s dated series is used.",
+  "author": "historian-agent:o-s70",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:10:26.932Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1966",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In the mid-1960s India launched a high-yielding varieties programme built on Mexican semi-dwarf wheat bred by Norman Borlaug.",
+        "source": "src-nobel-borlaug"
+      },
+      {
+        "span": "1970",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "An Indian scientist says the result in Punjab was called a miracle.",
+        "source": "src-nobel-borlaug",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

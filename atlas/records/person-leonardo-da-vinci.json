@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-leonardo-da-vinci",
+  "kind": "person",
+  "title": "Leonardo da Vinci",
+  "summary": "Leonardo da Vinci was born in 1452 near Vinci and died in 1519 in France. He worked in Florence, Rome and for years in Milan for the Sforza family, where he painted The Last Supper on the refectory wall of Santa Maria delle Grazie. He spent his last years near Amboise, where he was buried.",
+  "when": {
+    "start": {
+      "year": 1452,
+      "iso": "1452-04-15"
+    },
+    "end": {
+      "year": 1519,
+      "iso": "1519-05-02"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "World History Encyclopedia gives full dates; the National Gallery gives years only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "1452 - 1519",
+        "source": "src-ng-leonardo"
+      },
+      {
+        "calendar": "CE",
+        "value": "15 April 1452 CE",
+        "source": "src-whe-leonardo"
+      },
+      {
+        "calendar": "CE",
+        "value": "2 May 1519 CE",
+        "source": "src-whe-leonardo"
+      }
+    ],
+    "display": "15 April 1452 - 2 May 1519"
+  },
+  "where": {
+    "lat": 45.466944,
+    "lon": 9.19,
+    "elevation_m": null,
+    "modern_name": "Milan, Italy (pinned for his Milan years and The Last Supper; born near Vinci, died near Amboise, France)",
+    "historical_name": "Milan, under Ludovico Sforza, Duke of Milan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wikidata-q490"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "art_music_literature"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "Painter whose Last Supper, Mona Lisa and Virgin of the Rocks are named by the museum sources."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-michelangelo",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ng-leonardo",
+      "url": "https://www.nationalgallery.org.uk/artists/leonardo-da-vinci",
+      "title": "Leonardo da Vinci (1452 - 1519)",
+      "publisher": "The National Gallery, London",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-leonardo",
+      "url": "https://www.worldhistory.org/Leonardo_da_Vinci/",
+      "title": "Leonardo da Vinci",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2020-09-07",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q490",
+      "url": "https://www.wikidata.org/wiki/Q490",
+      "title": "Wikidata item Q490 (Milan), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: Milan is chosen as the place of the Last Supper and a long stay, not a birthplace. The sources disagree on when he moved to Milan (1482 vs 1483), so the summary gives no year for it.",
+  "author": "historian-agent:o-s42",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:07:05.572Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "1976-06-16-soweto-uprising",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Soweto uprising",
+  "summary": "On 16 June 1976 Black schoolchildren in Soweto marched against the imposition of Afrikaans as a language of instruction, and police opened fire. Protests spread across South Africa. Africanews reports 176 dead after the shooting and closer to 700 nationwide; SAHO states about 566 schoolchildren were killed. International condemnation followed, including a UN arms embargo within a year.",
+  "when": {
+    "start": {
+      "year": 1976,
+      "iso": "1976-06-16"
+    },
+    "end": {
+      "year": 1976,
+      "iso": "1976-06-16"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The uprising began on 16 June 1976 and protests continued for months; only the opening day is dated here. Death figures differ by source and counting period."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "16 June 1976",
+        "source": "src-africanews"
+      }
+    ],
+    "display": "16 June 1976"
+  },
+  "where": {
+    "lat": -26.267778,
+    "lon": 27.858611,
+    "elevation_m": null,
+    "modern_name": "Soweto, Johannesburg, Gauteng, South Africa",
+    "historical_name": "Soweto, Black township southwest of Johannesburg, Transvaal Province, South Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Student revolt that revived mass resistance to apartheid and increased sanctions pressure; commemorated as Youth Day."
+  },
+  "confidence": "established",
+  "audience_note": "Describes police shootings of schoolchildren, including a boy aged 12 or 13. Casualty figures are contested.",
+  "related": [
+    {
+      "id": "1960-03-21-sharpeville-massacre",
+      "type": "related"
+    },
+    {
+      "id": "1948-national-party-election-and-apartheid-legislation",
+      "type": "related"
+    },
+    {
+      "id": "1990-end-of-apartheid",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-africanews",
+      "url": "https://www.africanews.com/2026/06/12/south-africa-marks-50th-anniversary-of-the-1976-student-uprising/",
+      "title": "South Africa marks 50th anniversary of the 1976 student uprising",
+      "publisher": "Africanews",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "casualties"
+      ]
+    },
+    {
+      "id": "src-saho",
+      "url": "https://sahistory.org.za/node/8889",
+      "title": "Hector Pieterson",
+      "publisher": "South African History Online",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "casualties"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q217426",
+      "title": "Soweto (Wikidata Q217426), coordinates -26.267778 N, 27.858611 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Deaths: 176 after police opened fire and closer to 700 as protests spread (Africanews); about 566 schoolchildren killed during the protests (SAHO). Hector Pieterson is 12 per SAHO and 13 per Africanews. Pin is the township centre, not a single street.",
+  "author": "historian-agent:o-s18",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1976-06-16",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Students in Soweto protested the use of Afrikaans as a language of instruction; police opened fire.",
+        "source": "src-africanews"
+      },
+      {
+        "span": "1977",
+        "action": "region.fill { radius_km: 80 }",
+        "caption": "Condemnation of the police action grew; within a year the UN Security Council imposed an arms embargo on South Africa.",
+        "source": "src-africanews",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:26:12.662Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

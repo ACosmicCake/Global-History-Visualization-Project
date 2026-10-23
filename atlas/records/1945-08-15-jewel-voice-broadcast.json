@@ -1,0 +1,164 @@
+{
+  "id": "1945-08-15-jewel-voice-broadcast",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Jewel Voice Broadcast (Hirohito's surrender announcement)",
+  "summary": "On 15 August 1945 Japanese radio carried a recording of Emperor Hirohito reading a rescript that announced Japan's acceptance of the Allied joint declaration, ending the war. Most listeners had never heard his voice. The recording had been made the day before, when junior officers tried to seize it and overthrow the government.",
+  "when": {
+    "start": {
+      "year": 1945,
+      "iso": "1945-08-15"
+    },
+    "end": {
+      "year": 1945,
+      "iso": "1945-08-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both opened pages give 15 August 1945 for the broadcast and 14 August for the recording."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The rescript aired on Wednesday, August 15 (recorded August 14); the page dates the surrender to August 1945",
+        "source": "src-hoover"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "August 15, 1945 (recorded August 14)",
+        "source": "src-asf"
+      }
+    ],
+    "display": "15 August 1945"
+  },
+  "where": {
+    "lat": 35.6825,
+    "lon": 139.7521,
+    "elevation_m": null,
+    "modern_name": "Tokyo Imperial Palace, Chiyoda, Tokyo, Japan",
+    "historical_name": "Imperial Palace (Kyujo), Tokyo, Empire of Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-palace"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Announced the end of the Second World War in Asia to the Japanese public; the first time most heard the emperor's voice."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-09-nagasaki-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-09-soviet-invasion-of-manchuria",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hoover",
+      "url": "https://www.hoover.org/node/391727",
+      "title": "V-J Day article by Peter R. Mansoor (Hoover Institution)",
+      "publisher": "Hoover Institution, Stanford University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-asf",
+      "url": "https://www.airandspaceforces.com/article/0812keeperfile/",
+      "title": "Hirohito's \"Jewel Voice Broadcast\"",
+      "publisher": "Air & Space Forces Magazine, Air & Space Forces Association",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-palace",
+      "url": "https://www.wikidata.org/wiki/Q500681",
+      "title": "Wikidata item Q500681 (Tokyo Imperial Palace), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates confirmed on both opened pages (recording 14 August, broadcast 15 August). The time of broadcast and the exact recording location are not used because only a tour-company page and search snippets give them. Pin is the palace, where the recording was made; the broadcast itself went out nationwide. Fate of the coup plotters not described.",
+  "author": "historian-agent:o-s22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:51:50.126Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945-08-15",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 15 August 1945 Japanese radio carried a recording of Emperor Hirohito reading a rescript that announced Japan's acceptance of the Allied joint declaration, ending the war.",
+        "source": "src-hoover"
+      },
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The recording had been made the day before, when junior officers tried to seize it and overthrow the government.",
+        "source": "src-hoover",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

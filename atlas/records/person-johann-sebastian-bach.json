@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-johann-sebastian-bach",
+  "kind": "person",
+  "title": "Johann Sebastian Bach",
+  "summary": "Bach was born in Eisenach on 21 March 1685. After posts including Weimar (1708-1717) and Köthen from 1717, he was appointed cantor of St Thomas's Church in Leipzig in February 1723, taking up the post on 1 June. He held it until his death on 28 July 1750 and was buried in Leipzig.",
+  "when": {
+    "start": {
+      "year": 1685,
+      "iso": "1685-03-21"
+    },
+    "end": {
+      "year": 1750,
+      "iso": "1750-07-28"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dates as written on the Bach-Archiv page; the page does not state which calendar it uses."
+    },
+    "as_recorded": [
+      {
+        "calendar": "other",
+        "value": "was born in Eisenach on 21 March",
+        "source": "src-bacharchiv"
+      },
+      {
+        "calendar": "other",
+        "value": "28 July in 1750",
+        "source": "src-bacharchiv"
+      },
+      {
+        "calendar": "CE",
+        "value": "born in Eisenach on March 21, 1685",
+        "source": "src-notenspur-bach"
+      }
+    ],
+    "display": "21 March 1685 - 28 July 1750"
+  },
+  "where": {
+    "lat": 51.340632,
+    "lon": 12.374733,
+    "elevation_m": null,
+    "modern_name": "Leipzig, Germany (pinned for his Thomaskantor post 1723-1750; born in Eisenach)",
+    "historical_name": "Leipzig (Electoral Saxony)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-q2079"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "art_music_literature"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "Composer and Thomaskantor in Leipzig for 27 years, documented by the Bach-Archiv."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-bacharchiv",
+      "url": "https://www.bach-leipzig.de/en/neutral/johann-sebastian-bach-%E2%94%80-chronology",
+      "title": "Johann Sebastian Bach - A chronology",
+      "publisher": "Bach-Archiv Leipzig",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-notenspur-bach",
+      "url": "https://www.notenspur-leipzig.de/en/composers-in-leipzig?tx_notenspurkomponisten_komponistenliste%5Baction%5D=show&tx_notenspurkomponisten_komponistenliste%5Bcomposer%5D=59&tx_notenspurkomponisten_komponistenliste%5Bcontroller%5D=Composer&cHash=e12909e05102960255f283ed9a56cdb0",
+      "title": "Composers in Leipzig: Johann Sebastian Bach",
+      "publisher": "Notenspur Leipzig e.V.",
+      "author": "Christiane Hausmann",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q2079",
+      "url": "https://www.wikidata.org/wiki/Q2079",
+      "title": "Wikidata item Q2079 (Leipzig), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the death place: neither page states it; the summary only says he was buried in Leipzig. A search lead gave 31 March 1685 as an alternative birth date, which I did not verify.",
+  "author": "historian-agent:o-s42",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:07:06.560Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

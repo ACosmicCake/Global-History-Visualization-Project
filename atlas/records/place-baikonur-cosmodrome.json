@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s80",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-baikonur-cosmodrome",
+  "kind": "place",
+  "title": "Baikonur Cosmodrome",
+  "summary": "Baikonur Cosmodrome is a launch site on the flat grasslands of Kazakhstan, begun in 1955 as a secret Soviet missile site. Sputnik 1 was launched from it in 1957, and Yuri Gagarin, the first human in space, also launched from it. The associated city is rented and administered by the Russian Federation.",
+  "when": {
+    "start": {
+      "year": 1955
+    },
+    "end": {
+      "year": 1955
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Construction began in 1955 (ESA). NASA: Sputnik launched from the site in 1957."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "construction of the secret missile site began in 1955",
+        "source": "src-esa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "launched Sputnik from here in 1957",
+        "source": "src-nasa"
+      }
+    ],
+    "display": "construction began 1955"
+  },
+  "where": {
+    "lat": 45.9648,
+    "lon": 63.3051,
+    "elevation_m": null,
+    "modern_name": "Baikonur Cosmodrome, Kazakhstan",
+    "historical_name": "Soviet missile site (cosmodrome), in the Kazakhstan grasslands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-baikonur",
+      "src-esa",
+      "src-nasa"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The launch site of the first satellite and the first human spaceflight."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1957-launch-of-sputnik-1",
+      "type": "related"
+    },
+    {
+      "id": "1961-gagarin-first-human-spaceflight",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-esa",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Baikonur_Cosmodrome",
+      "title": "Baikonur Cosmodrome",
+      "publisher": "European Space Agency",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/photojournal/baikonur-cosmodrome-kazakhstan/",
+      "title": "Baikonur Cosmodrome, Kazakhstan",
+      "publisher": "NASA Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-baikonur",
+      "url": "https://www.wikidata.org/wiki/Q177477",
+      "title": "Wikidata item Q177477 (Baikonur Cosmodrome), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates differ by source: ESA 45.6 N 63.4 E, NASA 46 N 63.6 E, Wikidata 45.9648 N 63.3051 E, so 30 km uncertainty. Pin is the Wikidata point. The ESA page gave no dates for the Sputnik and Gagarin launches; those are kept in their own records.",
+  "published_at": "2026-10-22T15:30:11.355Z"
+}

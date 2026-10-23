@@ -1,0 +1,242 @@
+{
+  "id": "1853-livingstone-trans-african-journey",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Livingstone's journey across southern Africa",
+  "summary": "In November 1853 David Livingstone set out from Linyanti, the main Makololo village, for the Angolan coast, reaching Luanda in May 1854. He returned east, reaching Linyanti in September 1855, and in November 1855 became the first European to reach the Victoria Falls. On 20 May 1856 he arrived at Quelimane on the coast of Mozambique. The Makololo king Sekeletu supplied porters.",
+  "when": {
+    "start": {
+      "year": 1853
+    },
+    "end": {
+      "year": 1856
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO says the journey began at Linyanti in May 1853 (S2A3: he reached Linyanti in May 1853 and set out in November 1853). Quelimane: 20 May (S2A3) or 25 May (EBSCO) 1856."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "In November that year he set out on a 2500 km journey to Luanda",
+        "source": "src-s2a3-liv"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "On 20 May 1856 he reached Quelimane, on the coast of Mozambique",
+        "source": "src-s2a3-liv"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "He finally reached the coast, at Quelimane, on May 25, 1856.",
+        "source": "src-ebsco-liv"
+      }
+    ],
+    "display": "1853–1856"
+  },
+  "where": {
+    "lat": -18.072222,
+    "lon": 24.015556,
+    "elevation_m": null,
+    "modern_name": "Linyanti (Zambezi Region, Namibia) to Luanda (Angola), Victoria Falls (Zambia/Zimbabwe) and Quelimane (Mozambique)",
+    "historical_name": "Linyanti, village of the Makololo; Luanda; Victoria Falls (Mosi-oa-Tunya); Quelimane",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -18.072222,
+          "lon": 24.015556,
+          "year": 1853.83,
+          "date": "November 1853 (set out from Linyanti)",
+          "label": "Linyanti, principal village of the Makololo: departure.",
+          "source": "src-s2a3-liv",
+          "coordinate_source": "src-gn-linyanti"
+        },
+        {
+          "lat": -8.836816876087466,
+          "lon": 13.234319686889648,
+          "year": 1854.33,
+          "date": "May 1854 (arrived at Luanda; EBSCO: May 2)",
+          "label": "Luanda on the Angolan coast: westernmost point.",
+          "source": "src-ebsco-liv",
+          "coordinate_source": "src-gn-luanda"
+        },
+        {
+          "lat": -17.91933,
+          "lon": 25.85051,
+          "year": 1855.88,
+          "date": "November 1855 (EBSCO: November 17)",
+          "label": "Victoria Falls, reached on the return east.",
+          "source": "src-ebsco-liv",
+          "coordinate_source": "src-gn-vicfalls"
+        },
+        {
+          "lat": -17.878611,
+          "lon": 36.888333,
+          "year": 1856.38,
+          "date": "20 May 1856 (S2A3) or May 25, 1856 (EBSCO)",
+          "label": "Quelimane on the Mozambique coast: end of the crossing.",
+          "source": "src-s2a3-liv",
+          "coordinate_source": "src-gn-quelimane"
+        }
+      ]
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-gn-linyanti",
+      "src-gn-luanda",
+      "src-gn-vicfalls",
+      "src-gn-quelimane"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A journey from the Angolan coast to the Indian Ocean coast that included the first European sighting of the Victoria Falls."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-liv",
+      "url": "https://www.ebsco.com/research-starters/history/livingstone-sees-victoria-falls/",
+      "title": "Livingstone Sees the Victoria Falls",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-s2a3-liv",
+      "url": "https://www.s2a3.org.za/bio/Biograph_final.php?serial=1699",
+      "title": "S2A3 Biographical Database of Southern African Science: Livingstone",
+      "publisher": "S2A3 Biographical Database of Southern African Science",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-linyanti",
+      "url": "https://www.geonames.org/search.html?q=Linyanti&country=NA",
+      "title": "GeoNames: Linyanti",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-luanda",
+      "url": "https://www.geonames.org/search.html?q=Luanda&country=AO",
+      "title": "GeoNames: Luanda",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-vicfalls",
+      "url": "https://www.geonames.org/search.html?q=Victoria+Falls",
+      "title": "GeoNames: Victoria Falls",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-quelimane",
+      "url": "https://www.geonames.org/search.html?q=Quelimane&country=MZ",
+      "title": "GeoNames: Quelimane",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources conflict: start May vs November 1853 (S2A3 distinguishes arrival in May from departure in November); Victoria Falls day 17 November is on EBSCO (its header says 1853 but the body supports 1855; S2A3 says November 1855); Quelimane 20 or 25 May 1856. Neither page says first to cross Africa, so that claim is omitted. Sekeletu supplied porters (EBSCO); the S2A3 page names Chief Sebituane instead. The Falls are Mosi-oa-Tunya (EBSCO). The return to Linyanti in September 1855 is on both pages. African guides and carriers are not individually named on the pages opened. Waypoint years are month fractions.",
+  "author": "historian-agent:o-s66",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1853",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "In November 1853 Livingstone leaves Linyanti for the Angolan coast, with porters supplied by the Kololo king Sekeletu.",
+        "source": "src-s2a3-liv",
+        "consequence": false
+      },
+      {
+        "span": "1855",
+        "action": "path.trace {}",
+        "caption": "Back east, he reaches Linyanti in September 1855 and, in November, becomes the first European to reach the Victoria Falls.",
+        "source": "src-s2a3-liv",
+        "consequence": false
+      },
+      {
+        "span": "1856-05",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "In May 1856 he arrives at Quelimane on the Mozambique coast, having travelled from the Angolan coast to the Indian Ocean side.",
+        "source": "src-s2a3-liv",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T12:37:19.535Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

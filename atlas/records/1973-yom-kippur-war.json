@@ -1,0 +1,132 @@
+{
+  "id": "1973-yom-kippur-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Yom Kippur War",
+  "summary": "Egypt and Syria attacked Israel on two fronts on the Jewish holy day of Yom Kippur, 1973. After early Arab gains, Israel crossed the Suez Canal and pushed back the Syrians. The fighting ended with a cease-fire on October 26, drew in the US and Soviet Union indirectly, and paved the way for Egypt–Israel peace.",
+  "when": {
+    "start": {
+      "year": 1973
+    },
+    "end": {
+      "year": 1973
+    },
+    "precision": "day",
+    "display": "6–26 October 1973",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "initiated by Egypt and Syria on October 6, 1973",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "it lasted until October 26, 1973",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 27,
+    "lon": 29,
+    "elevation_m": null,
+    "modern_name": "Sinai Peninsula (Suez Canal) and Golan Heights (proxy pin: Egypt, the country Wikidata lists)",
+    "historical_name": "Sinai Peninsula (Suez Canal) and Golan Heights",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Major Arab-Israeli war that drew in the superpowers and shaped the later Egypt-Israel peace process."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251224010323/https://www.britannica.com/event/Yom-Kippur-War",
+      "title": "Yom Kippur War | Summary, Causes, Combatants, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.usmcu.edu/Outreach/Marine-Corps-University-Press/Expeditions-with-MCUP-digital-journal/Crossing-under-Fire/",
+      "title": "Crossing under Fire",
+      "publisher": "usmcu.edu",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q79",
+      "title": "Wikidata Q79 (Egypt, coordinates of the country Wikidata gives for Q49100)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Britannica's quick-facts box gives the end as c. November 1973, while its text says the war ceased on October 26; I used October 26. Casualty figures are not given in the sources, so none are included. Location is a broad two-front area. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, usmcu.edu; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:49:55.852Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1973",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Egypt and Syria attacked Israel on two fronts on the Jewish holy day of Yom Kippur, 1973.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1973",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The fighting ended with a cease-fire on October 26, drew in the US and Soviet Union indirectly, and paved the way for Egypt–Israel peace.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

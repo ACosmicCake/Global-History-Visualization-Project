@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "audience_note": null,
+  "id": "-0600-meroe-iron-smelting",
+  "title": "Iron smelting at Meroe",
+  "summary": "Iron was smelted at Meroe on the Nile in Sudan from at least the seventh to sixth century BCE, and the practice lasted over a thousand years. Large heaps of slag and furnace debris mark the city as one of the largest ironmaking centres in Africa. A Penn Museum article dates slag from a deep level to the 6th century BCE.",
+  "when": {
+    "start": {
+      "year": -600
+    },
+    "end": {
+      "year": 400
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UCL researchers say new radiocarbon dates suggest significant-scale iron production from at least the seventh–sixth century B.C. and for over one thousand years. The Penn Museum article reports \"MR-7 514 ± 73 B.C.\" for slag at Level 16. The end year is the start plus the stated \"over one thousand years\", a minimum."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years BC (UCL, Humphris et al.)",
+        "value": "from at least the seventh - sixth century B.C., and was practiced at the site for over one thousand years",
+        "source": "src-ucl-meroe"
+      },
+      {
+        "calendar": "Years BC (Penn Museum Expedition)",
+        "value": "6th century B.C.",
+        "source": "src-penn-meroe"
+      }
+    ],
+    "display": "From the 7th–6th century BCE, for over 1,000 years"
+  },
+  "where": {
+    "lat": 16.9380862,
+    "lon": 33.7480636,
+    "elevation_m": null,
+    "modern_name": "Meroe, River Nile State, Sudan",
+    "historical_name": "Royal city of Meroe, Kingdom of Kush",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm-meroe"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "science_technology",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Penn Museum article calls the Level 16 slag date the oldest for iron working obtained in sub-Saharan Africa."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "place-meroe-pyramids",
+      "type": "same_place"
+    },
+    {
+      "id": "polity-kingdom-of-kush",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ucl-meroe",
+      "url": "https://discovery.ucl.ac.uk/10042893/9/Humphris%20et%20al.%20JFA%20approved.pdf",
+      "title": "Iron Smelting in Sudan: Experimental Archaeology at the Royal City of Meroe",
+      "publisher": "University College London (Journal of Field Archaeology)",
+      "author": "Humphris et al.",
+      "date_published": "2018",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-penn-meroe",
+      "url": "https://www.penn.museum/sites/expedition/art-and-industry/",
+      "title": "Art and Industry",
+      "publisher": "Penn Museum (Expedition Magazine)",
+      "author": "Samia B. Dafa'alla",
+      "date_published": "1993",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-meroe",
+      "url": "https://www.openstreetmap.org/node/2491790685",
+      "title": "OpenStreetMap node 2491790685, Meroe (16.9380862, 33.7480636)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": null,
+  "reviewer_note": "Dates differ by source: UCL gives 7th–6th century BCE (2017 radiocarbon), Penn (1993) a single 6th-century date; I set start at -600 (601 BCE) as the 6th/7th century boundary. The end year is a floor derived from \"over one thousand years\". Placed under northern_africa (UN M49 treats Sudan so) though Penn says sub-Saharan. UCL says no furnace earlier than the first century AD has yet been found at Meroe, which I did not put in the summary.",
+  "author": "historian-agent:o-s116",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:44:16.518Z"
+}

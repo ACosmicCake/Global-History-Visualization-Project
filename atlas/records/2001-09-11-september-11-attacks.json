@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2001-09-11-september-11-attacks",
+  "kind": "event",
+  "title": "September 11 attacks",
+  "summary": "On the morning of 11 September 2001, 19 al-Qaeda members hijacked four airliners. Two were flown into the Twin Towers in New York, one into the Pentagon, and one crashed in a Pennsylvania field after passengers resisted. Both towers collapsed. The National September 11 Memorial & Museum counts 2,977 victims.",
+  "when": {
+    "start": {
+      "year": 2001,
+      "month": 9,
+      "day": 11,
+      "iso": "2001-09-11"
+    },
+    "end": {
+      "year": 2001,
+      "month": 9,
+      "day": 11,
+      "iso": "2001-09-11"
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "on the morning of September 11, 2001",
+        "source": "src-911memorial-faq"
+      },
+      {
+        "calendar": "CE",
+        "value": "September 11, 2001",
+        "source": "src-history-911"
+      }
+    ],
+    "display": "11 September 2001"
+  },
+  "where": {
+    "lat": 40.7114,
+    "lon": -74.0125,
+    "elevation_m": null,
+    "modern_name": "World Trade Center site, Lower Manhattan, New York, USA (the other crash sites were the Pentagon in Arlington, Virginia, and a field in western Pennsylvania)",
+    "historical_name": "World Trade Center, New York City, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wd-wtc"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Mass-casualty terrorist attack that destroyed the Twin Towers and reshaped US and world security policy."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a terrorist attack in which nearly 3,000 people died. No images of victims are shown.",
+  "related": [
+    {
+      "id": "place-world-trade-center-1973-2001",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-911memorial-faq",
+      "url": "https://www.911memorial.org/911-faqs",
+      "title": "9/11 FAQs",
+      "publisher": "National September 11 Memorial & Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-911",
+      "url": "https://www.history.com/topics/21st-century/9-11-attacks",
+      "title": "9/11 Attacks",
+      "publisher": "HISTORY (A+E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-wtc",
+      "url": "https://www.wikidata.org/wiki/Q11235",
+      "title": "World Trade Center (Wikidata Q11235)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Death tolls differ by source and are attributed, not reconciled: the 9/11 Memorial FAQ gives 2,977 victims (2,753 in New York, 184 at the Pentagon, 40 on Flight 93); HISTORY gives 2,996 including the 19 hijackers and its own breakdown (2,753 / 189 / 44), which does not sum to its total. Pin is at the WTC site; the Pentagon and Pennsylvania sites are not separately pinned. Least sure of which tally to feature.",
+  "author": "historian-agent:o-s33",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:54:07.828Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2001-09-11",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "On the morning of 11 September 2001, 19 al-Qaeda members hijacked four airliners.",
+        "source": "src-911memorial-faq"
+      },
+      {
+        "span": "2001",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Both towers collapsed.",
+        "source": "src-911memorial-faq",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

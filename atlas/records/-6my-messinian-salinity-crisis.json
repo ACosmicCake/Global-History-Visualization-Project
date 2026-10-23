@@ -1,0 +1,162 @@
+{
+  "id": "-6my-messinian-salinity-crisis",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Messinian salinity crisis",
+  "summary": "During the Messinian salinity crisis the Mediterranean's connection to the Atlantic was restricted, and evaporites formed first in shallow sub-basins and then in the deepest basins. Onset is dated to 5.96 ± 0.02 Ma. The crisis ended about 5.33 million years ago, when Atlantic water refilled the basin through the Gibraltar Strait in the Zanclean flood.",
+  "when": {
+    "start": {
+      "year": -5960000
+    },
+    "end": {
+      "year": -5330000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 20000,
+      "start_plus_years": 20000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Onset 5.96 ± 0.02 Ma; Roveri et al. also cite a refined 5.97 Ma (Manzi et al. 2013). End 5.33 Ma is the Zanclean base and reflooding age."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "5.96 ± 0.02 Ma",
+        "source": "src-roveri2014"
+      },
+      {
+        "calendar": "Ma",
+        "value": "5.33 Ma",
+        "source": "src-roveri2014"
+      },
+      {
+        "calendar": "million years ago",
+        "value": "about 5.33 million years ago",
+        "source": "src-garcia2009"
+      }
+    ],
+    "display": "c. 5.96-5.33 million years ago"
+  },
+  "where": {
+    "lat": 35.973888888889,
+    "lon": -5.516111111111,
+    "elevation_m": null,
+    "modern_name": "Mediterranean Sea basin (pin at the Strait of Gibraltar)",
+    "historical_name": "Mediterranean basin, Late Miocene; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-wikidata-gibraltar"
+    ],
+    "paleo": {
+      "lat": 33.12,
+      "lon": -5.25,
+      "age_ma": 5.96,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "europe",
+    "northern_africa",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "A basin-wide salinity and sea-level crisis that transformed the Mediterranean and ended in a catastrophic reflooding."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-roveri2014",
+      "url": "https://educacion.usal.es/wp-content/uploads/sites/30/2017/10/roveri2014.pdf",
+      "title": "The Messinian Salinity Crisis: Past and future of a great challenge for marine sciences (Marine Geology 352:25-58)",
+      "publisher": "Marine Geology (Elsevier)",
+      "author": "Marco Roveri et al.",
+      "date_published": "2014",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-garcia2009",
+      "url": "https://researchers.mq.edu.au/en/publications/catastrophic-flood-of-the-mediterranean-after-the-messinian-salin/",
+      "title": "Catastrophic flood of the Mediterranean after the Messinian salinity crisis (Nature 462:778-781)",
+      "publisher": "Nature (Springer Nature); Macquarie University research portal",
+      "author": "Garcia-Castellanos et al.",
+      "date_published": "2009",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-5.516111,35.973889&time=5.96&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    },
+    {
+      "id": "src-wikidata-gibraltar",
+      "url": "https://www.wikidata.org/wiki/Q36124",
+      "title": "Wikidata item Q36124 (Strait of Gibraltar), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the crisis affected the whole Mediterranean, so the Strait of Gibraltar point carries a 1500 km uncertainty. The end age is stated as 5.33 Ma on both pages; Garcia-Castellanos puts the drying at about 5.6 Ma, which is within the range.",
+  "author": "historian-agent:o-s63",
+  "updated": "2026-10-22",
+  "perspectives": [
+    {
+      "holder": "Garcia-Castellanos et al. (2009)",
+      "account": "About 90% of the refilling water may have moved in a few months to two years, with discharge near 10^8 m³/s.",
+      "sources": [
+        "src-garcia2009"
+      ]
+    }
+  ],
+  "published_at": "2026-10-22T12:14:26.258Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "id": "1950-09-15-inchon-landing",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Inchon landing (Operation Chromite)",
+  "summary": "On 15 September 1950 United Nations Command forces under General MacArthur landed at Inchon on Korea's west coast, behind the North Korean advance. Marines first took Wolmido island, then the city. Kimpo airfield fell on the night of 17 September, and Seoul was retaken days later, helping break the Pusan perimeter and push UN forces toward the 38th parallel.",
+  "when": {
+    "start": {
+      "year": 1950,
+      "iso": "1950-09-15"
+    },
+    "end": {
+      "year": 1950,
+      "iso": "1950-09-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The landing day is 15 September; the Wolmido assault began about 0625 and the main landing about 1733 local time per War History Online. Fighting for Inchon continued for several days and the Seoul campaign for about two weeks."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "captured Wolmido island ... and other important positions in the city on 15 September",
+        "source": "src-usmcu"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "D-day, set for September 15",
+        "source": "src-warhistory"
+      }
+    ],
+    "display": "15 September 1950"
+  },
+  "where": {
+    "lat": 37.463889,
+    "lon": 126.648611,
+    "elevation_m": null,
+    "modern_name": "Incheon (Wolmido island and port), South Korea",
+    "historical_name": "Inchon, west-coast port of the Republic of Korea, then held by North Korean forces",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Amphibious operation that reversed the early course of the Korean War."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1950-korean-war",
+      "type": "related"
+    },
+    {
+      "id": "1950-10-19-chinese-intervention-in-korea",
+      "type": "related",
+      "because": "The advance north after Inchon and Seoul preceded Chinese entry into the war."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-usmcu",
+      "url": "https://www.usmcu.edu/Outreach/Marine-Corps-University-Press/MCH/Marine-Corps-History-Winter-2023-24/Historiographical-Essay-The-Landing-and-Liberation/",
+      "title": "Historiographical Essay: The Landing and Liberation",
+      "publisher": "Marine Corps University Press",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-warhistory",
+      "url": "https://warhistory.org/fr/article/inchon-landings?amp=1",
+      "title": "Inchon Landings",
+      "publisher": "War History Online",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q20934",
+      "title": "Incheon (Wikidata Q20934), coordinates 37.463889 N, 126.648611 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Incheon city; Wolmido lies a few km west. Seoul recapture date was not on the opened pages, so the summary says only \"days later\". No path animation: only three dated points were sourced and two lack coordinates in sources opened.",
+  "author": "historian-agent:o-s18",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1950-09-15",
+        "action": "pulse { radius_km: 8 }",
+        "caption": "Marines took Wolmido island and other key positions at Inchon after naval bombardment and air strikes.",
+        "source": "src-usmcu"
+      },
+      {
+        "span": "1950-09-17",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Kimpo airfield fell to the 5th Marine Regiment that night.",
+        "source": "src-usmcu"
+      },
+      {
+        "span": "1950-09",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "The landing let UN forces liberate Seoul and break out of the Pusan perimeter.",
+        "source": "src-usmcu",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:26:13.568Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

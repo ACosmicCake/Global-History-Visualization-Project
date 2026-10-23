@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1820-bellingshausen-sights-antarctica",
+  "kind": "event",
+  "title": "Bellingshausen sights Antarctica",
+  "summary": "On 27 or 28 January 1820 Fabian von Bellingshausen, commanding the Russian sloop Vostok, came within about 20 miles of the Antarctic coast and sighted ice shelves off what is now the Princess Martha Coast. It is often credited as the first sighting of the continent, though his journals do not say it might be land.",
+  "when": {
+    "start": {
+      "year": 1820
+    },
+    "end": {
+      "year": 1820
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The British Antarctic Territory page dates the sighting 27 January 1820; the California Academy of Sciences and the Lynceans page give 28 January."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "27 January 1820 – Fabian Gottlieb van Bellingshausen first sights ice shelves",
+        "source": "src-bat"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 28, 1820",
+        "source": "src-calacademy"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "28 January 1820",
+        "source": "src-lynceans"
+      }
+    ],
+    "display": "27–28 January 1820"
+  },
+  "where": {
+    "lat": -69.357778,
+    "lon": -2.247222,
+    "elevation_m": null,
+    "modern_name": "Off the Princess Martha Coast, Queen Maud Land, Antarctica",
+    "historical_name": "Southern Ocean off the Antarctic coast (uncharted at the time)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-lynceans"
+    ]
+  },
+  "regions": [
+    "antarctica",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Widely credited as the first sighting of the Antarctic continent."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1768-cook-endeavour-voyage",
+      "type": "related"
+    },
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "related"
+    },
+    {
+      "id": "1959-antarctic-treaty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bat",
+      "url": "https://www.britishantarcticterritory.org.uk/heritage/antarctica-200/",
+      "title": "Antarctica 200",
+      "publisher": "British Antarctic Territory",
+      "author": "British Antarctic Territory",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-calacademy",
+      "url": "https://www.calacademy.org/blogs/the-long-view/long-view-study-no-10-bellingshausen",
+      "title": "Long View Study No. 10 (Bellingshausen)",
+      "publisher": "California Academy of Sciences",
+      "author": "California Academy of Sciences",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-lynceans",
+      "url": "https://lynceans.org/all-posts/200th-anniversary-of-the-discovery-of-antarctica-28-january-2020/",
+      "title": "200th Anniversary of the Discovery of Antarctica: 28 January 2020",
+      "publisher": "Lynceans",
+      "author": "Lynceans",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: priority is disputed. The British Antarctic Territory dates Bransfield's sighting of land on the Antarctic Peninsula to 30 January 1820. The coordinates are the position the Lynceans page gives for 28 January (69°21'28\" S, 2°14'50\" W), converted to decimal degrees, from one source only. The sighting day (27 vs 28) differs by source.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1820-01-28",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The Vostok, under Bellingshausen, with the Mirny under Lazarev, comes within about 20 miles of the Antarctic coast.",
+        "source": "src-lynceans",
+        "consequence": false
+      },
+      {
+        "span": "1820-01-28",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "Bellingshausen records ice mountains, but his journals do not say they might be land, and his charts show no land.",
+        "source": "src-calacademy",
+        "consequence": false
+      },
+      {
+        "span": "1820-01-30",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Days after the ice-shelf sighting, Bransfield sights land on the Antarctic Peninsula, so the order of discovery remains discussed.",
+        "source": "src-bat",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:51.973Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "id": "place-el-tajin-pyramid-of-the-niches",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Pyramid of the Niches, El Tajín",
+  "aliases": [
+    "Pirámide de los Nichos"
+  ],
+  "summary": "The Pyramid of the Niches is the best-known building of El Tajín, a pre-Hispanic city in Veracruz, Mexico. It has a square base 36 metres on a side, rises in stepped levels, and carries 365 niches. Arqueología Mexicana says it was built in a single phase, around AD 1100–1150.",
+  "when": {
+    "start": {
+      "year": 1100
+    },
+    "end": {
+      "year": 1150
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Arqueología Mexicana: built in a single stage \"hacia 1100-1150 d.C.\"; ICOMOS gives the city's occupation as 800 to 1200 and INAH gives its peak as 600 to 1000 CE, so the pyramid's date is not firmly fixed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Arqueología Mexicana)",
+        "value": "hacia 1100-1150 d.C.",
+        "source": "src-arqmex-tajin"
+      },
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "800",
+        "source": "src-icomos-tajin"
+      }
+    ],
+    "display": "Built c. 1100–1150"
+  },
+  "where": {
+    "lat": 20.4480139,
+    "lon": -97.37827,
+    "elevation_m": null,
+    "modern_name": "Pyramid of the Niches (Edificio 1), El Tajín, Papantla, Veracruz, Mexico",
+    "historical_name": "Pyramid of the Niches at the pre-Hispanic city of El Tajín, Veracruz",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-tajin"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Square stepped pyramid, 36 m on a side, with rows of niches on each tier.",
+      "source": "src-inah-tajin",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-inah-tajin",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 25,
+          "unit": "m",
+          "source": "src-inah-tajin",
+          "note": "\"alcanzando con sus siete niveles los 25 metros de altura\" (INAH); Arqueología Mexicana says about 18 m for the present six-body structure"
+        },
+        {
+          "part": "base length",
+          "value": 36,
+          "unit": "m",
+          "source": "src-inah-tajin",
+          "note": "\"36 metros por lado\"; ICOMOS: 36 m square at the base"
+        },
+        {
+          "part": "base width",
+          "value": 36,
+          "unit": "m",
+          "source": "src-inah-tajin",
+          "note": "square base"
+        },
+        {
+          "part": "tiers",
+          "value": 7,
+          "unit": "count",
+          "source": "src-inah-tajin",
+          "note": "\"siete niveles\" (INAH); ICOMOS and Arqueología Mexicana count six steps or bodies"
+        },
+        {
+          "part": "niches",
+          "value": 365,
+          "unit": "count",
+          "source": "src-inah-tajin",
+          "note": "365 niches"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "pyramid footprint at 36 m by 36 m"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped pyramid, 36 m square, 7 tiers with niches"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1100,
+        "end_year": 1150,
+        "state": "construction",
+        "description": "Raised in a single stage around 1100–1150 CE (Arqueología Mexicana); ICOMOS gives the city occupation as 800–1200.",
+        "source": "src-arqmex-tajin"
+      },
+      {
+        "start_year": 1150,
+        "end_year": 1200,
+        "state": "intact",
+        "description": "City still occupied until about 1200 (ICOMOS).",
+        "source": "src-icomos-tajin"
+      },
+      {
+        "start_year": 1201,
+        "end_year": null,
+        "state": "ruined",
+        "description": "ICOMOS: the site was abandoned and partly destroyed after 1200; the pyramid was first recorded in 1785.",
+        "source": "src-icomos-tajin"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "ICOMOS calls the Pyramid of the Niches the most impressive of the pyramid structures at El Tajín, a UNESCO World Heritage site."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-inah-tajin",
+      "url": "https://patrimoniomundialmexico.inah.gob.mx/publico/lista_detalle.php?idLista=MTM%3D",
+      "title": "Ciudad Prehispánica de El Tajín",
+      "publisher": "Instituto Nacional de Antropología e Historia (INAH)",
+      "author": "Instituto Nacional de Antropología e Historia (INAH)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-icomos-tajin",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/631.pdf",
+      "title": "Prehispanic City of El Tajín, ICOMOS evaluation",
+      "publisher": "ICOMOS / UNESCO World Heritage Centre",
+      "author": "ICOMOS / UNESCO World Heritage Centre",
+      "date_published": "1992-10",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-arqmex-tajin",
+      "url": "https://arqueologiamexicana.mx/mexico-antiguo/plaza-de-los-nichos",
+      "title": "Plaza de los Nichos",
+      "publisher": "Arqueología Mexicana (Editorial Raíces / INAH)",
+      "author": "Arqueología Mexicana (Editorial Raíces / INAH)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-tajin",
+      "url": "https://nominatim.openstreetmap.org/search?q=Pir%C3%A1mide+de+los+Nichos+El+Taj%C3%ADn&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Pirámide de los Nichos (Edificio 1), Papantla, way 173533084 (20.4480139, -97.37827)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape stepped_pyramid. Conflicts: height 25 m and seven levels (INAH World Heritage page, same page as the 36 m side) versus about 18 m and six bodies (Arqueología Mexicana; ICOMOS says six steps below a temple); the 25 m figure is used so the measurements come from one page. Date: Arqueología Mexicana gives 1100-1150, ICOMOS the occupation 800-1200. The OCR in the ICOMOS PDF is garbled (\"36 rn square\").",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:07.760Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

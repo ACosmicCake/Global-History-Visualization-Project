@@ -1,0 +1,164 @@
+{
+  "id": "1962-10-cuban-missile-crisis",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Cuban Missile Crisis",
+  "summary": "In October 1962 the United States found Soviet nuclear missile sites being built in Cuba. After a U-2 flight on 14 October, President Kennedy announced a naval quarantine on 22 October. On 28 October Khrushchev publicly agreed to remove the missiles. The 13-day standoff was the closest the superpowers came to nuclear war and led to the White House-Kremlin hotline.",
+  "when": {
+    "start": {
+      "year": 1962,
+      "iso": "1962-10-14"
+    },
+    "end": {
+      "year": 1962,
+      "iso": "1962-10-28"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Start is the U-2 photographs of 14 October; the crisis is widely called 13 days (History.com) counted from the White House briefing of 16 October to 28 October. The US quarantine ended 20 November 1962."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Oct. 14: A U-2 flight photographs ... missile sites under construction in Cuba; Oct. 28: Khrushchev publicly announces ... dismantled and removed",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "a tense, 13-day political and military standoff; Kennedy broadcast October 22, 1962",
+        "source": "src-histcom"
+      }
+    ],
+    "display": "14-28 October 1962"
+  },
+  "where": {
+    "lat": 23.136667,
+    "lon": -82.358889,
+    "elevation_m": null,
+    "modern_name": "Cuba and the surrounding Caribbean (pin at Havana)",
+    "historical_name": "Republic of Cuba under Fidel Castro; crisis managed from Washington and Moscow",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Closest nuclear confrontation of the Cold War; led to the hotline and the Test Ban Treaty."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1953-cuban-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1961-04-17-bay-of-pigs-invasion",
+      "type": "related",
+      "because": "Both Castro and Khrushchev saw the missiles as deterrence against further US aggression after the Bay of Pigs (History.com)."
+    },
+    {
+      "id": "1960-10-19-us-embargo-on-cuba",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1961-1968/cuban-missile-crisis",
+      "title": "The Cuban Missile Crisis, October 1962",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-histcom",
+      "url": "https://www.history.com/topics/cold-war/cuban-missile-crisis",
+      "title": "Cuban Missile Crisis",
+      "publisher": "History.com (A+E Networks)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q1563",
+      "title": "Havana (Wikidata Q1563), coordinates 23.136667 N, -82.358889 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Havana as a stand-in; decisions were taken in Washington and Moscow, and the quarantine ran across the Atlantic approaches. Start date uses the 14 October photographs; History.com counts 13 days. Jupiter missile removal from Turkey (April 1963) is a secret-deal element not stated as a public bargain.",
+  "author": "historian-agent:o-s18",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1962-10-14",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "A US U-2 flight photographed Soviet ballistic missile sites under construction in Cuba.",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1962-10-22",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Kennedy announced a naval quarantine of Cuba and demanded that the missiles be removed.",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1962-10-28",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Khrushchev announced the Soviet missiles would be dismantled and removed, ending the standoff.",
+        "source": "src-histstate",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:26:13.243Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

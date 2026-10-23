@@ -1,0 +1,150 @@
+{
+  "id": "1977-discovery-of-hydrothermal-vents",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Discovery of hydrothermal vents",
+  "summary": "In February 1977, an oceanographic expedition at the Galápagos Rift using the crewed submersible Alvin discovered the first active deep-sea hydrothermal vents at a depth of 2,500 meters. Contrary to expectations of a barren seafloor desert, scientists found dense biological communities of giant tubeworms, clams, and mussels thriving on chemical energy released by vent fluids, revolutionizing biology by demonstrating that primary production can occur entirely independent of sunlight via chemosynthesis.",
+  "when": {
+    "start": {
+      "year": 1977
+    },
+    "end": {
+      "year": 1977
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Galápagos Hydrothermal Expedition began 8 February 1977; Alvin dive 713 made the first direct visual discovery of hydrothermal vents on 17 February 1977."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Feb. 17. It was Alvin dive No. 713",
+        "source": "src-whoi-vents"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Rose Garden vent field on the Galápagos Rift in 1977 marked the discovery of hydrothermal vents",
+        "source": "src-chen2024-marbio"
+      }
+    ],
+    "display": "17 February 1977"
+  },
+  "where": {
+    "lat": 0.81,
+    "lon": -86.22,
+    "elevation_m": -2500,
+    "modern_name": "Rose Garden vent field, Galápagos Rift, Pacific Ocean",
+    "historical_name": "Galápagos Rift spreading center, eastern equatorial Pacific; international waters",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-chen2024-marbio"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "science_technology",
+    "life_extinction"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Disproved the dogma that all Earth ecosystems depend on solar photosynthesis by revealing vast deep-sea communities fueled by chemosynthesis."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3700my-origin-of-life",
+      "type": "related",
+      "because": "Hydrothermal vent chemistry provided the primary modern analogue for theories of the origin of terrestrial life in alkaline deep-sea springs."
+    },
+    {
+      "id": "-4200my-last-universal-common-ancestor",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1977-02-17",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Submersible Alvin dives 2,500 meters at the Galápagos Rift and locates warm hydrothermal springs.",
+        "source": "src-whoi-vents",
+        "consequence": false
+      },
+      {
+        "span": "1977-02-17",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Discovery of lush vent ecosystems proves life can thrive purely on chemosynthesis without sunlight.",
+        "source": "src-chen2024-marbio",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-whoi-vents",
+      "url": "https://www.whoi.edu/feature/history-hydrothermal-vents/discovery/1977.html",
+      "title": "1977 - Astounding Discoveries: Discovering Hydrothermal Vents",
+      "publisher": "Woods Hole Oceanographic Institution",
+      "author": "Woods Hole Oceanographic Institution",
+      "date_published": "2005",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-chen2024-marbio",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10869388/",
+      "title": "Hydrothermal vent fauna of the Galápagos Rift: updated species list with new records",
+      "publisher": "Marine Biodiversity (Springer Nature, via PubMed Central)",
+      "author": "Chong Chen et al.",
+      "date_published": "2024-02-15",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources",
+        "summary",
+        "animation"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of whether the exact initial 17 February 1977 dive site was Clambake 1 rather than Rose Garden (which was named on the 1979 return cruise).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:30.546Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

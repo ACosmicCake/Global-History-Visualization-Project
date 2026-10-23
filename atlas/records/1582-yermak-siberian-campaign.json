@@ -1,0 +1,149 @@
+{
+  "id": "1582-yermak-siberian-campaign",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Yermak's Siberian campaign",
+  "summary": "The Cossack ataman Yermak, hired by the Stroganov merchants, led a few hundred men by boat along Siberian rivers in 1582. After defeating Khan Kuchum he occupied the khan's capital Kashlyk (Isker) in October 1582 and received tribute from local peoples. Kuchum later killed most of the band, but later expeditions continued the Russian annexation of Siberia.",
+  "when": {
+    "start": {
+      "year": 1582
+    },
+    "end": {
+      "year": 1582
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "The start of the expedition is dated 1581 by most sources and 1582 by Skrynnikov (Encyclopedia.com); the occupation of Kashlyk is October 1582."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "October 1582",
+        "source": "src-encyc-yermak"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "1582",
+        "source": "src-rbth-yermak"
+      }
+    ],
+    "display": "1582 (Kashlyk occupied October 1582)"
+  },
+  "where": {
+    "lat": 58.14942,
+    "lon": 68.52048,
+    "elevation_m": null,
+    "modern_name": "Isker (Qashliq) fortress site near Tobolsk, Tyumen Oblast, Russia",
+    "historical_name": "Kashlyk (Isker, Sibir), capital of Khan Kuchum's Khanate of Sibir",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-isker"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The campaign began the Russian annexation of Siberia."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-encyc-yermak",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/yermak-timofeyevich",
+      "title": "Yermak Timofeyevich",
+      "publisher": "Encyclopedia.com (Encyclopedia of Russian History)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rbth-yermak",
+      "url": "https://www.rbth.com/history/331675-how-siberia-was-once-separate-country",
+      "title": "How Siberia was once a separate country",
+      "publisher": "Russia Beyond",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-isker",
+      "url": "https://www.wikidata.org/wiki/Q1815305",
+      "title": "Wikidata item Q1815305 (Isker), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Encyclopedia.com says many details are disputed: the start year (1581 or 1582), the size of the force and who ordered the offensive. Only \"a few hundred\" and 1582 are used. The pin is the Isker fortress site, not a route.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:49.412Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1582",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Cossack ataman Yermak, hired by the Stroganov merchants, led a few hundred men by boat along Siberian rivers in 1582.",
+        "source": "src-encyc-yermak"
+      },
+      {
+        "span": "1582",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Kuchum later killed most of the band, but later expeditions continued the Russian annexation of Siberia.",
+        "source": "src-encyc-yermak",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

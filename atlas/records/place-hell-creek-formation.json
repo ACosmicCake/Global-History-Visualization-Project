@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-hell-creek-formation",
+  "kind": "place",
+  "title": "Hell Creek Formation",
+  "summary": "The Hell Creek Formation is a body of freshwater clays, mudstones and sandstones laid down in the last part of the Cretaceous, exposed in eastern Montana and nearby states. Its dinosaur beds, including Tyrannosaurus and Triceratops, and the K-Pg boundary above them record life just before the end-Cretaceous extinction.",
+  "when": {
+    "start": {
+      "year": -68000000
+    },
+    "end": {
+      "year": -66000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Rock age range as given by Smithsonian Magazine; UCMP places deposition in the Maastrichtian."
+    },
+    "as_recorded": [
+      {
+        "calendar": "geologic age, as recorded",
+        "value": "between 66 million and 68 million years old",
+        "source": "src-smithsonian"
+      },
+      {
+        "calendar": "geologic age, as recorded",
+        "value": "Maastrichtian",
+        "source": "src-ucmp"
+      }
+    ],
+    "display": "c. 68–66 million years ago"
+  },
+  "where": {
+    "lat": 47.6225061,
+    "lon": -106.8764564,
+    "elevation_m": null,
+    "modern_name": "Hell Creek, Garfield County, Montana, USA (pin is the type-area stream, a proxy for a formation spread over several states)",
+    "historical_name": "not applicable (Late Cretaceous landmass, now North America)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-hometown",
+      "src-geolex"
+    ],
+    "paleo": {
+      "lat": 50.82,
+      "lon": -83.15,
+      "age_ma": 67,
+      "plate_model": "MULLER2019 (GPlates Web Service; MERDITH2021 and PALEOMAP give differing results)",
+      "source": "src-hometown"
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Key fossil-bearing unit for latest Cretaceous dinosaurs and the K-Pg boundary; source of most T. rex museum specimens."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-smithsonian",
+      "url": "https://www.smithsonianmag.com/science-nature/the-hell-creek-formation-is-north-americas-legendary-boneyard-see-the-top-five-discoveries-found-in-the-iconic-fossil-bed-180988545/",
+      "title": "The Hell Creek Formation Is North America's Legendary Boneyard",
+      "publisher": "Smithsonian Magazine",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ucmp",
+      "url": "https://ucmp.berkeley.edu/science/parks/hellcreek.php",
+      "title": "Hell Creek Formation, Montana",
+      "publisher": "University of California Museum of Paleontology",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geolex",
+      "url": "https://ngmdb.usgs.gov/Geolex/UnitRefs/HellCreekRefs_8598.html",
+      "title": "Geolex: Hell Creek publications",
+      "publisher": "U.S. Geological Survey",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-hometown",
+      "url": "https://montana.hometownlocator.com/maps/feature-map,ftc,1,fid,772326,n,hell%20creek.cfm",
+      "title": "Hell Creek (in Garfield County, MT)",
+      "publisher": "HomeTownLocator",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Hell Creek stream gazetteer point, a proxy; formation also spans the Dakotas and Wyoming. Paleo models disagree; paleo source field is a stand-in.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:41:16.232Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1969-07-20-apollo-11",
+  "kind": "event",
+  "title": "Apollo 11 Moon landing",
+  "summary": "On 20 July 1969 the lunar module Eagle landed in the Sea of Tranquility at 4:18 p.m. EDT, carrying Neil Armstrong and Edwin Aldrin, while Michael Collins piloted the command module. Armstrong became the first person to walk on the Moon, and Aldrin joined him about 20 minutes later. The mission fulfilled President Kennedy's 1961 goal of a crewed lunar landing and return.",
+  "when": {
+    "start": {
+      "year": 1969,
+      "iso": "1969-07-20"
+    },
+    "end": {
+      "year": 1969,
+      "iso": "1969-07-20"
+    },
+    "precision": "minute",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Landing 20 July 1969, 4:18 p.m. EDT. The mission ran 16-24 July 1969."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On July 20th 1969 at 4:18 PM, EDT the Lunar Module \"Eagle\" landed",
+        "source": "src-nasm-a11"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "July 16-24, 1969; the Eagle has landed, July 20",
+        "source": "src-alsj-a11"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "July 16, 1969; 9:32 a.m. EDT launch; landing July 20, 1969",
+        "source": "src-nasa-a11"
+      }
+    ],
+    "display": "20 July 1969, 4:18 p.m. EDT"
+  },
+  "where": {
+    "lat": 28.608389,
+    "lon": -80.604333,
+    "elevation_m": null,
+    "modern_name": "Launch Complex 39A, Kennedy Space Center, Florida, USA (Earth anchor); landing site Tranquility Base, Sea of Tranquility, the Moon",
+    "historical_name": "Launch Pad 39A, Cape Kennedy, Florida; landing at Tranquility Base, Mare Tranquillitatis, the Moon",
+    "geometry": {
+      "type": "regions",
+      "regions": [
+        {
+          "name": "Tranquility Base (Moon)",
+          "lat": 0.67409,
+          "lon": 23.47298,
+          "note": "Lunar landing site; 0.67409 N, 23.47298 E per the NASA Apollo Lunar Surface Journal (source: National Space Science Data Center).",
+          "source": "src-alsj-a11"
+        }
+      ]
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-lc39a",
+      "src-alsj-a11"
+    ],
+    "body": "Moon"
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "First crewed landing on the Moon."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nasm-a11",
+      "url": "https://airandspace.si.edu/multimedia-gallery/gpn-2000-001164hjpg",
+      "title": "Apollo 11 image record (GPN-2000-001164)",
+      "publisher": "Smithsonian National Air and Space Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-alsj-a11",
+      "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11ov.html",
+      "title": "Apollo 11 overview",
+      "publisher": "NASA (Apollo Lunar Surface Journal)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa-a11",
+      "url": "https://www.nasa.gov/history/apollo-11-mission-overview/",
+      "title": "Apollo 11 Mission Overview",
+      "publisher": "NASA",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-lc39a",
+      "url": "https://www.wikidata.org/wiki/Q24256513",
+      "title": "Kennedy Space Center Launch Complex 39A (Wikidata Q24256513), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The event happened on the Moon, so per the schema the pin is the Earth launch pad and the lunar site is a region with body set to Moon. Wikidata gives slightly different lunar coordinates (0.6875 N, 23.4333 E) from NASA's. The Kennedy 1961 goal is from the NASA mission page.",
+  "author": "historian-agent:o-s38",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:44:08.020Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1969-07-20",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "m.",
+        "source": "src-nasm-a11"
+      },
+      {
+        "span": "1969",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Armstrong became the first person to walk on the Moon, and Aldrin joined him about 20 minutes later.",
+        "source": "src-nasm-a11",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

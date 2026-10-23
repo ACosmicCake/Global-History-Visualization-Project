@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "-135ka-lake-malawi-megadroughts",
+  "kind": "period",
+  "title": "Lake Malawi megadroughts",
+  "summary": "Sediment cores from Lake Malawi record periods of severe aridity between 135 and 75 thousand years ago, when the lake's water volume fell by at least 95 percent. In the driest phase the lake, now about 706 m deep, shrank to a saline, alkaline body of roughly 125 m. After about 70 thousand years ago the climate became wetter and more stable across much of tropical Africa.",
+  "when": {
+    "start": {
+      "year": -135000
+    },
+    "end": {
+      "year": -75000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "note": "Scholz et al. give 135-75 kyr; Cohen et al. give discrete episodes 135-90 ka, with aridity easing after 95 ka. Years are before present counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "kyr ago",
+        "value": "periods of severe aridity between 135 and 75 thousand years (kyr) ago",
+        "source": "src-scholz2007"
+      },
+      {
+        "calendar": "ka",
+        "value": "several discrete episodes between 135 and 90 ka",
+        "source": "src-cohen2007"
+      },
+      {
+        "calendar": "years ago",
+        "value": "a long period with several extreme droughts about 135,000 to 75,000 years ago",
+        "source": "src-syr"
+      }
+    ],
+    "display": "c. 135,000 to 75,000 years ago"
+  },
+  "where": {
+    "lat": -12.183333,
+    "lon": 34.366667,
+    "elevation_m": null,
+    "modern_name": "Lake Malawi, Malawi, Mozambique and Tanzania (lake-centre proxy; drill site not pinned)",
+    "historical_name": "Lake Malawi basin, southern East African Rift; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wd-malawi"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "Cores show tropical Africa was far drier than at the last glacial maximum for tens of thousands of years."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-25my-formation-of-the-east-african-rift",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-scholz2007",
+      "url": "https://experts.arizona.edu/en/publications/east-african-megadroughts-between-135-and-75-thousand-years-ago-a/",
+      "title": "East African megadroughts between 135 and 75 thousand years ago and bearing on early-modern human origins (PNAS 104(42):16416-16421)",
+      "publisher": "University of Arizona Research Portal (abstract of Scholz et al., PNAS)",
+      "author": null,
+      "date_published": "2007-10-16",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cohen2007",
+      "url": "https://pure.psu.edu/en/publications/ecological-consequences-of-early-late-pleistocene-megadroughts-in/",
+      "title": "Ecological consequences of early Late Pleistocene megadroughts in tropical Africa (PNAS 104(42):16422-16427)",
+      "publisher": "Penn State Pure (abstract of Cohen et al., PNAS)",
+      "author": null,
+      "date_published": "2007-10-16",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-syr",
+      "url": "https://www.newswise.com/articles/change-from-arid-to-wet-climate-in-africa-had-significant-effect-on-early-human-evolution",
+      "title": "Change from arid to wet climate in Africa had significant effect on early human evolution",
+      "publisher": "Syracuse University (via Newswise)",
+      "author": null,
+      "date_published": "2007-09-03",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-malawi",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5532.json",
+      "title": "Wikidata item Q5532 (Lake Malawi), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The two PNAS abstracts differ on the end of the dry phase (75 vs 90 ka); I kept the wider range and noted both. The two scholarly pages describe papers in the same journal by different author teams; the third is a university press release.",
+  "published_at": "2026-10-22T18:32:02.050Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-135000",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Sediment cores from Lake Malawi record periods of severe aridity between 135 and 75 thousand years ago, when the lake's water volume fell by at least 95 percent.",
+        "source": "src-scholz2007"
+      },
+      {
+        "span": "-75000",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "After about 70 thousand years ago the climate became wetter and more stable across much of tropical Africa.",
+        "source": "src-scholz2007",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

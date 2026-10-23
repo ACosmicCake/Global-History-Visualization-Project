@@ -1,0 +1,180 @@
+{
+  "id": "1990-03-21-independence-of-namibia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Independence of Namibia",
+  "summary": "Namibia became independent on 21 March 1990 after UN-supervised elections in November 1989 under Security Council resolution 435. Shortly after midnight the South African flag was lowered and the Namibian flag raised, and UN Secretary-General Javier Perez de Cuellar swore in Sam Nujoma as first president, ending South African rule begun after the First World War.",
+  "when": {
+    "start": {
+      "year": 1990,
+      "iso": "1990-03-21"
+    },
+    "end": {
+      "year": 1990,
+      "iso": "1990-03-21"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Independence took effect shortly after midnight on 21 March 1990."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 21 March 1990, Namibia becomes an independent country",
+        "source": "src-unna"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On 21 March 1990, shortly after midnight, the South African flag was lowered and the Namibian flag was raised",
+        "source": "src-untag"
+      }
+    ],
+    "display": "21 March 1990"
+  },
+  "where": {
+    "lat": -22.57,
+    "lon": 17.083611111111,
+    "elevation_m": null,
+    "modern_name": "Windhoek, Namibia (national capital; ceremony site not stated in opened sources)",
+    "historical_name": "Windhoek, South West Africa/Namibia (then under South African administration)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-windhoek"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Completed decolonisation in southern Africa and ended South Africa's administration of the territory."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1990-end-of-apartheid",
+      "type": "related"
+    },
+    {
+      "id": "1988-cuito-cuanavale",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-untag",
+      "url": "https://peacekeeping.un.org/sites/default/files/past/untagFT.htm",
+      "title": "UNTAG: United Nations Transition Assistance Group, Facts and Figures",
+      "publisher": "United Nations Peacekeeping",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unna",
+      "url": "https://namibia.un.org/en/175155-uns-role-namibian-independence",
+      "title": "The UN's role in Namibian Independence",
+      "publisher": "United Nations in Namibia",
+      "author": null,
+      "date_published": "2022-03-17",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-saho",
+      "url": "https://sahistory.org.za/dated-event/namibia-gains-independence",
+      "title": "Namibia gains Independence",
+      "publisher": "South African History Online",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-windhoek",
+      "url": "https://www.wikidata.org/wiki/Q3935",
+      "title": "Wikidata item Q3935 (Windhoek), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: Windhoek is the capital but the opened sources do not state where the midnight ceremony was held. UNTAG facts (resolution 435, elections 7-11 November 1989) are from the UN page; SAHO gives the date and the post-First World War South African administration. The peacekeeping.un.org UNTAG page was read in full but is a Word-exported HTML page that the spotcheck tool cannot parse, so its details (flag lowering, oath, turnout) are not machine-verifiable; the UN Namibia page confirms the date.",
+  "author": "historian-agent:o-s8",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1989-11-07",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "UN-supervised elections to a Constituent Assembly were held in November 1989 under Resolution 435; SWAPO won 41 of 72 seats.",
+        "source": "src-unna"
+      },
+      {
+        "span": "1990-03-21",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Shortly after midnight on 21 March 1990 the Namibian flag replaced the South African flag and Sam Nujoma took the presidential oath.",
+        "source": "src-untag"
+      },
+      {
+        "span": "1990-03-21",
+        "action": "region.fill { radius_km: 600 }",
+        "caption": "Namibia became independent, ending South African administration that began after the First World War.",
+        "source": "src-saho",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:36:09.964Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

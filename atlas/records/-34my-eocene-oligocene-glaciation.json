@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "-34my-eocene-oligocene-glaciation",
+  "kind": "event",
+  "title": "Eocene–Oligocene glaciation",
+  "summary": "Around 34 million years ago global cooling lasting about 790,000 years shifted Earth from a largely ice-free greenhouse climate to an icehouse, with the first major glaciation of Antarctica. Sediments in Prydz Bay record glaciers advancing into the bay from 34.4 million years ago. A decline in atmospheric carbon dioxide is one of the two leading explanations.",
+  "when": {
+    "start": {
+      "year": -34000000
+    },
+    "end": {
+      "year": -33210000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 400000,
+      "start_plus_years": 300000,
+      "end_minus_years": 300000,
+      "end_plus_years": 300000,
+      "note": "Hutchinson et al. (2021) give about 34 Ma lasting about 790 kyr and place the major Antarctic glaciation near 33.7 Ma; Passchier et al. (2017) record glaciers reaching Prydz Bay from 34.4 Ma. Exact steps differ between records."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "global cooling occurring ∼34 million years ago (Ma) and lasting ∼790 kyr",
+        "source": "src-hutchinson"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "From 34.4 Ma",
+        "source": "src-passchier"
+      }
+    ],
+    "display": "c. 34 million years ago (lasting c. 790,000 years)"
+  },
+  "where": {
+    "lat": -69,
+    "lon": 75,
+    "elevation_m": null,
+    "modern_name": "Prydz Bay, East Antarctica",
+    "historical_name": "Prydz Bay margin of East Antarctica (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wd-prydz"
+    ],
+    "paleo": {
+      "lat": -69.47,
+      "lon": 91.35,
+      "age_ma": 34,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Prydz Bay reference site (lat -69, lon 75) reconstructed to 34 Ma."
+    }
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Marks the start of the modern Antarctic ice sheet and Earth's shift from greenhouse to icehouse."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-hutchinson",
+      "url": "https://cp.copernicus.org/articles/17/269/2021/",
+      "title": "The Eocene-Oligocene transition: a review of marine and terrestrial proxy data, models and model-data comparisons (Climate of the Past 17:269-315)",
+      "publisher": "Copernicus Publications (Climate of the Past)",
+      "author": "Copernicus Publications (Climate of the Past)",
+      "date_published": "2021-02-01",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-passchier",
+      "url": "https://research-portal.uu.nl/en/publications/an-antarctic-stratigraphic-record-of-stepwise-ice-growth-through-/",
+      "title": "An Antarctic stratigraphic record of stepwise ice growth through the Eocene-Oligocene transition (GSA Bulletin 129:318-330)",
+      "publisher": "Utrecht University Research Portal (GSA Bulletin)",
+      "author": "Utrecht University Research Portal (GSA Bulletin)",
+      "date_published": "2017-03-01",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-prydz",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q156116.json",
+      "title": "Wikidata entry for Prydz Bay (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=75,-69&time=34&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruct_points, MERDITH2021, 34 Ma",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Start/end follow the Hutchinson abstract (34 Ma plus 790 kyr); other records give 33.9 or 33.7 Ma for the main step. Prydz Bay is the Passchier study region and a reference site for the paleo position, not a single drill hole. where.paleo is not filled: GPlates was down (503).",
+  "published_at": "2026-10-22T08:21:20.470Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "id": "1973-chipko-movement",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Chipko movement",
+  "summary": "In early 1973 villagers of Mandal in Chamoli district, led by Chandi Prasad Bhatt and the Dasholi Gram Swarajya Mandal, prevented a sports goods company from felling 14 ash trees, the first Chipko battle. The movement spread across the Indian Himalayas and its pressure is linked to the 1980 Forest Conservation Act.",
+  "when": {
+    "start": {
+      "year": 1973
+    },
+    "end": {
+      "year": 1973
+    },
+    "precision": "year",
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "early 1973 in Chamoli district, when the villagers of Mandal, led by Bhatt and the Dasholi Gram Swarajya Mandal",
+        "source": "src-dte"
+      },
+      {
+        "calendar": "CE",
+        "value": "in 1973 to mobilize",
+        "source": "src-rma"
+      }
+    ],
+    "display": "Early 1973"
+  },
+  "where": {
+    "lat": 30.41252,
+    "lon": 79.319777,
+    "elevation_m": null,
+    "modern_name": "Gopeshwar, Chamoli district, Uttarakhand, India (base of the Dasholi Gram Swarajya Mandal; Mandal village is in Chamoli district)",
+    "historical_name": "Chamoli district, Himalayan foothills, India",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-gn-gopeshwar"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Chipko became a model for community-based forest protection and contributed to national forest policy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-dte",
+      "url": "https://www.downtoearth.org.in/environment/chipko-an-unfinished-mission-30883",
+      "title": "Chipko: an unfinished mission",
+      "publisher": "Down To Earth",
+      "author": "Amit Mitra",
+      "date_published": "2012-01-05",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rma",
+      "url": "https://rmaward.asia/rmawardees/bhatt-chandi-prasad/",
+      "title": "Bhatt, Chandi Prasad",
+      "publisher": "Ramon Magsaysay Award Foundation",
+      "author": "Ramon Magsaysay Award Foundation",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-earth",
+      "url": "https://earth.org/50-years-on-the-legacy-of-the-chipko-movement/",
+      "title": "50 Years On: The Legacy of India's Chipko Movement",
+      "publisher": "Earth.Org",
+      "author": "Aysha Sadak",
+      "date_published": "2024-06-28",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-gopeshwar",
+      "url": "https://www.geonames.org/search.html?q=Gopeshwar&country=IN",
+      "title": "Gopeshwar, Chamoli",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "I could not find coordinates for Mandal village, so the pin is Gopeshwar, where the RMA page places the Dasholi society, with 30 km uncertainty. Earth.Org gives no start year and mentions Reni and Mandal; other accounts give a different first action, which is not used.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:47.808Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1973",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In early 1973 villagers of Mandal in Chamoli district, led by Chandi Prasad Bhatt and the Dasholi Gram Swarajya Mandal, prevented a sports goods company from felling 14…",
+        "source": "src-dte"
+      },
+      {
+        "span": "1973",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The movement spread across the Indian Himalayas and its pressure is linked to the 1980 Forest Conservation Act.",
+        "source": "src-dte",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

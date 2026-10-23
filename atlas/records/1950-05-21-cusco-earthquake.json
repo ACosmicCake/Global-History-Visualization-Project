@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s25",
+  "updated": "2026-10-22",
+  "id": "1950-05-21-cusco-earthquake",
+  "kind": "event",
+  "title": "1950 Cusco earthquake",
+  "summary": "An earthquake struck Cusco on 21 May 1950. It reportedly affected more than 30,000 people and damaged half of the city’s buildings. A later survey found only a handful of fractures in Inca buildings from it.",
+  "when": {
+    "start": {
+      "year": 1950,
+      "iso": "1950-05-21"
+    },
+    "end": {
+      "year": 1950,
+      "iso": "1950-05-21"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Single day."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "earthquake of May 21, 1950",
+        "source": "src-fau-arquin"
+      }
+    ],
+    "display": "21 May 1950"
+  },
+  "where": {
+    "lat": -13.53188,
+    "lon": -71.96701,
+    "elevation_m": null,
+    "modern_name": "Cusco, Peru",
+    "historical_name": "Cuzco, Republic of Peru",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-gn-cusco"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Reportedly damaged half of Cusco’s buildings, though Inca stonework fared better."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-cusco",
+      "type": "related"
+    },
+    {
+      "id": "1650-03-31-cusco-earthquake",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-fau-arquin",
+      "url": "https://omeka.hpc.fau.edu/s/arquinslide/item/27576",
+      "title": "Coricancha apse wall after the earthquake of May 21, 1950 (Florence Arquin slide G-4 372)",
+      "publisher": "Florida Atlantic University",
+      "author": "Florence Arquin",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eos",
+      "url": "https://eos.org/articles/written-in-stone-inca-buildings-remember-ancient-earthquakes",
+      "title": "Written in stone: Inca buildings remember ancient earthquakes (Eos 103)",
+      "publisher": "AGU (Eos)",
+      "author": "Erin Martin-Jones",
+      "date_published": "2022-09-20",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-gn-cusco",
+      "url": "https://www.geonames.org/3941584/",
+      "title": "GeoNames entry: Cusco, Peru (3941584)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualty and magnitude figures not confirmed; the 30,000-affected and half-the-buildings figures are reported with \"reportedly\" by Eos.",
+  "published_at": "2026-10-22T07:22:32.573Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1950-05-21",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "An earthquake struck Cusco on 21 May 1950.",
+        "source": "src-fau-arquin"
+      },
+      {
+        "span": "1950",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "It reportedly affected more than 30,000 people and damaged half of the city’s buildings.",
+        "source": "src-fau-arquin",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

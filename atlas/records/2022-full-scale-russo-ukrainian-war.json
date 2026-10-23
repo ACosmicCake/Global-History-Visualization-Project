@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2022-full-scale-russo-ukrainian-war",
+  "kind": "event",
+  "title": "Full-scale Russo-Ukrainian war",
+  "summary": "On 24 February 2022 Russia's president announced a \"special military operation\" in Ukraine, beginning the full-scale phase of the Russo-Ukrainian war. On 2 March 2022 the UN General Assembly, with 141 votes in favour, demanded an immediate end to Russia's military operations. On 16 March 2022 the International Court of Justice ordered Russia to suspend them.",
+  "when": {
+    "start": {
+      "year": 2022
+    },
+    "end": {
+      "year": 2022
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start date 24 February 2022; sources opened give no end, so the end year is a placeholder and the war is treated as ongoing."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "24 February 2022",
+        "source": "src-icj"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "16 March 2022",
+        "source": "src-un2"
+      }
+    ],
+    "display": "from 24 February 2022"
+  },
+  "where": {
+    "lat": 50.4546624398828,
+    "lon": 30.523796081543,
+    "elevation_m": null,
+    "modern_name": "Ukraine (pin at Kyiv, the capital, as a proxy for the whole country)",
+    "historical_name": "Ukraine",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A major interstate war that prompted a General Assembly resolution and an ICJ provisional-measures order within weeks."
+  },
+  "confidence": "established",
+  "audience_note": "War with civilian casualties; this outline gives no casualty figures.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-un",
+      "url": "https://news.un.org/en/story/2022/03/1113152",
+      "title": "General Assembly resolution demands end to Russian offensive in Ukraine",
+      "publisher": "United Nations (UN News)",
+      "author": null,
+      "date_published": "2022-03-02",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-un2",
+      "url": "https://news.un.org/en/story/2022/03/1114052",
+      "title": "International Court orders Russia to 'immediately suspend' military operations in Ukraine",
+      "publisher": "United Nations (UN News)",
+      "author": null,
+      "date_published": "2022-03-16",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-icj",
+      "url": "https://www.icj-cij.org/node/106135",
+      "title": "Order of 16 March 2022",
+      "publisher": "International Court of Justice",
+      "author": null,
+      "date_published": "2022-03-16",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "http://www.geonames.org/search.html?country=&q=kiev",
+      "title": "GeoNames search: Kiev",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Kyiv as a proxy for the whole country; end year is a placeholder for an ongoing war. The 'full-scale phase' wording comes from no institutional page I opened; UN pages say Russia invaded.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:35:40.105Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

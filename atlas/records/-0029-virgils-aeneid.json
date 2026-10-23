@@ -1,0 +1,150 @@
+{
+  "id": "-0029-virgils-aeneid",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "work",
+  "title": "Virgil's Aeneid",
+  "summary": "Between 29 and 19 BCE, the Roman poet Publius Vergilius Maro (Virgil) composed the Aeneid, a twelve-book Latin epic narrating the journey of the Trojan prince Aeneas from the ruins of Troy to Italy, where his descendants founded Rome. Commissioned and encouraged during the principate of Augustus, the unfinished masterpiece provided Rome with a grand national founding myth linking Augustan imperial rule to ancient heroic tradition, becoming one of the most influential works in Western world literature.",
+  "when": {
+    "start": {
+      "year": -28
+    },
+    "end": {
+      "year": -18
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Composition dated from c. 30–29 BCE (-29 to -28) until Virgil's death on 21 September 19 BCE (-18)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "c. 29-19 BCE",
+        "source": "src-nd-aeneid"
+      },
+      {
+        "calendar": "BCE",
+        "value": "death in 19 BCE",
+        "source": "src-whe-virgil"
+      }
+    ],
+    "display": "c. 29–19 BCE (-28 to -18)"
+  },
+  "where": {
+    "lat": 41.89193,
+    "lon": 12.51133,
+    "elevation_m": null,
+    "modern_name": "Rome, Italy",
+    "historical_name": "Roma, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "art_music_literature",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Rome's defining national epic, establishing the foundational Trojan genealogy of the Roman state and shaping Western literary tradition for two millennia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-1180-trojan-war",
+      "type": "related"
+    },
+    {
+      "id": "place-troy",
+      "type": "related"
+    },
+    {
+      "id": "place-rome",
+      "type": "same_place"
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "-0750-homers-iliad",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nd-aeneid",
+      "url": "https://pls.nd.edu/the-major/what-will-i-read/the-aeneid/",
+      "title": "The Aeneid (Program of Liberal Studies reading list)",
+      "publisher": "University of Notre Dame",
+      "author": "Program of Liberal Studies",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-virgil",
+      "url": "https://www.worldhistory.org/virgil/",
+      "title": "Virgil",
+      "publisher": "World History Encyclopedia",
+      "author": "Donald L. Wasson",
+      "date_published": "2018-04-10",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070/rome.html",
+      "title": "Rome, Lazio, Italy",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact balance between composition in Campania and recitation before Augustus in Rome; tradition places major drafting at Naples and dying revisions at Brundisium.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:29.594Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

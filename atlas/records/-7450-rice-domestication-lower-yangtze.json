@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s3",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "-7450-rice-domestication-lower-yangtze",
+  "kind": "process",
+  "title": "Rice domestication in the Lower Yangtze (Shangshan culture)",
+  "summary": "In the Lower Yangtze valley of Zhejiang, people of the Shangshan culture were using and processing wild rice by about 11,000 years ago. Rice with reduced seed shattering, a domestication trait, is documented at Huxi by 9,000–8,400 years ago. Scholars dispute exactly when rice became fully domesticated, and the process was gradual.",
+  "when": {
+    "start": {
+      "year": -9050
+    },
+    "end": {
+      "year": -6450
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "note": "Years BP converted without a 1950 adjustment. Start follows the 2024 phytolith study; the earlier-start debate (pre-domestication from about 13,000 years ago) and the late end (full domestication later) are not included."
+    },
+    "as_recorded": [
+      {
+        "calendar": "kyBP, AMS radiocarbon",
+        "value": "Shangshan occupation about 11.0–8.6 kyBP",
+        "source": "src-yang2015"
+      },
+      {
+        "calendar": "Years ago, phytolith and luminescence dating",
+        "value": "about 11,000 years ago domesticated rice phytolith share rose rapidly",
+        "source": "src-cas2024"
+      },
+      {
+        "calendar": "BP",
+        "value": "Huxi site, Shangshan Culture, 9000–8400 BP",
+        "source": "src-zheng2016"
+      }
+    ],
+    "display": "c. 11,000 to 8,400 years ago"
+  },
+  "where": {
+    "lat": 29.47084,
+    "lon": 119.81807,
+    "elevation_m": null,
+    "modern_name": "Pujiang County, Jinhua, Zhejiang, China (Shangshan site)",
+    "historical_name": "Upper Puyang River basin, Lower Yangtze region, Zhejiang; Neolithic, no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-geonames-pujiang",
+      "src-yang2015"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Rice, domesticated in this region, became a staple for much of humanity, and Shangshan is among the earliest known sites of rice use."
+  },
+  "confidence": "contested",
+  "related": [
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-yang2015",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4633675",
+      "title": "Barnyard grasses were processed with rice around 10000 years ago",
+      "publisher": "Scientific Reports (Nature Portfolio), via PubMed Central",
+      "author": "Xiaoyan Yang et al.",
+      "date_published": "2015",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cas2024",
+      "url": "https://english.cas.cn/newsroom/news--archives/2024/research-news/202405/t20240524_1129484.shtml",
+      "title": "Research News: Origin of rice agriculture in East Asia (Science, 24 May 2024)",
+      "publisher": "Chinese Academy of Sciences",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-zheng2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4914946",
+      "title": "Rice domestication revealed by reduced shattering of archaeological rice from the Lower Yangtze valley",
+      "publisher": "Scientific Reports (Nature Portfolio), via PubMed Central",
+      "author": "Yunfei Zheng et al.",
+      "date_published": "2016",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-pujiang",
+      "url": "https://www.geonames.org/search.html?q=Pujiang&country=CN",
+      "title": "GeoNames search results: Pujiang County",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Domestication timing is contested (wild, transitional or domesticated); the span here is a compromise of opened sources. The record id suggests c. 7450 BCE but opened sources support about 9000–6450 BCE, so the id and dates differ. Pujiang County centroid is used for the Shangshan site; exact site coordinates not opened.",
+  "published_at": "2026-10-22T03:32:05.549Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-9050",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In the Lower Yangtze valley of Zhejiang, people of the Shangshan culture were using and processing wild rice by about 11,000 years ago.",
+        "source": "src-yang2015"
+      },
+      {
+        "span": "-6450",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Scholars dispute exactly when rice became fully domesticated, and the process was gradual.",
+        "source": "src-yang2015",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

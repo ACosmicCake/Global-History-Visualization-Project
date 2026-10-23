@@ -1,0 +1,132 @@
+{
+  "id": "1812-french-invasion-of-russia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "French invasion of Russia",
+  "summary": "Napoleon's Grande Armée entered Russia in 1812 and retreated from Moscow from 19 October. Cold, disease and fighting destroyed it; an estimated 612,000 combatants entered and only 112,000 returned. The loss of trained men and cavalry weakened France, and Prussia then changed sides in 1813.",
+  "when": {
+    "start": {
+      "year": 1812
+    },
+    "end": {
+      "year": 1812
+    },
+    "precision": "year",
+    "display": "1812 (retreat from 19 October to December 1812)",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Napoleon began his retreat, his army now 110,000 strong, on October 19, 1812",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "On November 12, 1812",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 55.75056,
+    "lon": 37.6175,
+    "elevation_m": null,
+    "modern_name": "Moscow, Russia (proxy pin: the invasion reached Moscow and the retreat began there; the route ran from the Neman)",
+    "historical_name": "Russian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "The destruction of Napoleon's Grande Armée reshaped the Napoleonic Wars and European alliances."
+  },
+  "confidence": "established",
+  "audience_note": "Describes very heavy military deaths, disease and suffering of prisoners and wounded.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260102011724/https://www.britannica.com/event/Napoleonic-Wars/The-retreat-from-Moscow",
+      "title": "Napoleonic Wars - Russia, Europe, 1812 | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20260208031446/https://academic.oup.com/jid/article-abstract/193/1/112/863741?redirectedFrom=fulltext",
+      "title": "Evidence for Louse-Transmitted Diseases in Soldiers of Napoleon’s Grand Army in Vilnius | The Journal of Infectious Diseases | Oxford Academic",
+      "publisher": "Oxford University Press",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q649",
+      "title": "Wikidata Q649 (Moscow, coordinate location P625)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources cover mainly the retreat; neither gives the June invasion date, so the start is only the year 1812. The second source is a disease study that only supports the disease claim. Casualty figures are estimates. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, Oxford University Press; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:45.709Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1812",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Napoleon's Grande Armée entered Russia in 1812 and retreated from Moscow from 19 October.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1812",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Cold, disease and fighting destroyed it; an estimated 612,000 combatants entered and only 112,000 returned.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

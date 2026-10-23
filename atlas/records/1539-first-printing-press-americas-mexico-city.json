@@ -1,0 +1,156 @@
+{
+  "id": "1539-first-printing-press-americas-mexico-city",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "First printing press in the Americas (Juan Pablos, Mexico City)",
+  "summary": "In 1539 the printer Giovanni Paoli, known as Juan Pablos, set up the first documented printing press in the Americas in Mexico City for the Seville publisher Juan Cromberger. His first book, a Christian doctrine in Spanish and Nahuatl, appeared that year.",
+  "when": {
+    "start": {
+      "year": 1539
+    },
+    "end": {
+      "year": 1539
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give 1539 for the first press and first book. The Library of Congress says Pablos sailed from Seville on 12 June 1539 and arrived in October 1539, while another source gives 12 June 1539 as the completion date of the first book; both cannot be right, so only the year is recorded."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "arrived in Mexico City in October 1539",
+        "source": "src-loc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1539 ... set up in Mexico City the first documented printing press in the Western Hemisphere",
+        "source": "src-hoi"
+      }
+    ],
+    "display": "1539"
+  },
+  "where": {
+    "lat": 19.435036,
+    "lon": -99.131207,
+    "elevation_m": null,
+    "modern_name": "Centro Historico, Mexico City, Mexico (pin is the neighbouring Templo Mayor site, a few hundred metres from the press house)",
+    "historical_name": "Mexico City (Ciudad de Mexico), capital of the Viceroyalty of New Spain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-geonames-tm",
+      "src-hoi"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "science_technology",
+    "art_music_literature"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Introduced movable-type printing to the Americas, enabling books and official documents in New Spain, including in indigenous languages."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1450-gutenberg-printing-press",
+      "type": "caused_by",
+      "because": "Mexico City's press carried European movable-type printing, developed by Gutenberg, to the Americas."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc",
+      "url": "https://blogs.loc.gov/loc/2018/10/hispanic-heritage-month-early-titles-by-the-americas-first-printing-press/",
+      "title": "Hispanic Heritage Month: early titles by the Americas' first printing press",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": "2018-10",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hoi",
+      "url": "https://historyofinformation.com/detail.php?id=1768",
+      "title": "Juan Pablos issues the first book printed in the Western Hemisphere",
+      "publisher": "Jeremy Norman's HistoryofInformation.com",
+      "author": "Jeremy M. Norman",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-tm",
+      "url": "https://www.geonames.org/search.html?q=Templo+Mayor&country=MX",
+      "title": "GeoNames search: Templo Mayor, Mexico City (neighbouring site, used as a proxy)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: sources only say Mexico City (Centro); the coordinates are the Templo Mayor, a few hundred metres away, hence the 1 km uncertainty. The press-house location was not confirmed on an opened page. Earlier press claims (Escala espiritual, c. 1537) are unsurvived and unconfirmed.",
+  "author": "historian-agent:o-s2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:39.829Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1539",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1539 the printer Giovanni Paoli, known as Juan Pablos, set up the first documented printing press in the Americas in Mexico City for the Seville publisher Juan…",
+        "source": "src-loc"
+      },
+      {
+        "span": "1539",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "His first book, a Christian doctrine in Spanish and Nahuatl, appeared that year.",
+        "source": "src-loc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "place-monte-verde",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Monte Verde archaeological site",
+  "summary": "Monte Verde, beside Chinchihuapi Creek in southern Chile, was long dated to about 14,500 years ago and treated as a leading pre-Clovis site in the Americas. A 2026 study in Science argues its archaeological layer is no older than the Middle Holocene; the new date is disputed.",
+  "when": {
+    "start": {
+      "year": -12550
+    },
+    "end": {
+      "year": -12550
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 6300,
+      "end_minus_years": 0,
+      "end_plus_years": 6300,
+      "note": "The original dating is about 14,500 BP (year -12550 with year = 1950 minus BP). The 2026 study says the site cannot be older than 8200-4200 BP (about -6250 to -2250). Dating contested since March 2026; the range spans both."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years before present (B.P.), original dates as reported in 2026",
+        "value": "~14,500 years before the present (B.P.)",
+        "source": "src-usgs"
+      },
+      {
+        "calendar": "Years before present (B.P.), 2026 reassessment",
+        "value": "cannot be older than the Middle Holocene (8200 to 4200 years B.P.)",
+        "source": "src-usgs"
+      },
+      {
+        "calendar": "Years, news report 2026",
+        "value": "only around 8,000 years old",
+        "source": "src-natgeo"
+      }
+    ],
+    "display": "Dated c. 14,500 BP originally; reassessed in 2026 as no older than 8200-4200 BP (contested)"
+  },
+  "where": {
+    "lat": -41.515839,
+    "lon": -73.185602,
+    "elevation_m": null,
+    "modern_name": "Monte Verde, near Puerto Montt, Los Lagos Region, Chile",
+    "historical_name": "No polity; hunter-gatherer camp on a creek in temperate rainforest of southern Chile",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-mv"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Its original date reshaped views of the first peopling of the Americas; the contested re-dating makes it central to current debate."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-23ka-peopling-of-the-americas",
+      "type": "part_of"
+    },
+    {
+      "id": "-13ka-clovis-complex",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-usgs",
+      "url": "https://www.usgs.gov/publications/a-mid-holocene-age-monte-verde-challenges-timeline-human-colonization-south-america",
+      "title": "A mid-Holocene age for Monte Verde challenges the timeline of human colonization of South America (Science, DOI 10.1126/science.adw9217)",
+      "publisher": "U.S. Geological Survey Publications Warehouse",
+      "author": "Todd A. Surovell, Cesar Mendez, Juan Luis Garcia, Christopher Luthgens, Jay M. Thompson, Claudio Latorre",
+      "date_published": "2026-03-19",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-natgeo",
+      "url": "https://www.nationalgeographic.com/history/article/monte-verde-redated",
+      "title": "When did humans arrive in the Americas? A new study reignites the debate",
+      "publisher": "National Geographic",
+      "author": "Christina Larson",
+      "date_published": "2026-03-19",
+      "accessed": "2026-10-21",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-mv",
+      "url": "https://www.geonames.org/search.html?q=Monte+Verde&country=CL",
+      "title": "GeoNames search: Monte Verde, Los Lagos Region, Chile",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "DATING CONTESTED since March 2026 (Surovell et al., Science); other archaeologists dispute it, so both ranges are kept. Coordinates are a GeoNames populated-place fix for Monte Verde near Puerto Montt, not a surveyed excavation point; neither opened page gives site coordinates (10 km uncertainty).",
+  "author": "historian-agent:o-s2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:37.869Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

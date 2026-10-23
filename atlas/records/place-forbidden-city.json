@@ -1,0 +1,265 @@
+{
+  "id": "place-forbidden-city",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Forbidden City (Imperial Palace), Beijing",
+  "summary": "The Forbidden City in Beijing was the Ming and Qing imperial palace from 1420 to 1911, built under the Yongle Emperor between 1406 and 1420. Its largest building, the Hall of Supreme Harmony, stands on a three-tier marble terrace on the central axis. It is a UNESCO World Heritage site.",
+  "when": {
+    "start": {
+      "year": 1406
+    },
+    "end": {
+      "year": 1420
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "began in 1406 and was completed in 1420",
+        "source": "src-ebsco-fc"
+      },
+      {
+        "calendar": "CE",
+        "value": "originally built in 1420",
+        "source": "src-chinadaily-hall"
+      }
+    ],
+    "display": "1406-1420 CE"
+  },
+  "where": {
+    "lat": 39.915889,
+    "lon": 116.390667,
+    "elevation_m": null,
+    "modern_name": "Hall of Supreme Harmony, Forbidden City (Palace Museum), Dongcheng, Beijing, China",
+    "historical_name": "Hall of Supreme Harmony (Taihe Dian), imperial palace of the Ming and Qing dynasties, Beijing",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-wikidata-hall"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The largest surviving imperial palace complex in China and the seat of Ming and Qing emperors for nearly five centuries; a UNESCO World Heritage site."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-fc",
+      "url": "https://www.ebsco.com/research-starters/history/forbidden-city",
+      "title": "Forbidden City (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco439",
+      "url": "https://whc.unesco.org/en/list/439",
+      "title": "Imperial Palaces of the Ming and Qing Dynasties in Beijing and Shenyang (World Heritage List no. 439)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": "1987",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-chinadaily-hall",
+      "url": "https://govt.chinadaily.com.cn/s/202105/24/WS60ab676e498e7a02c6f6bfd5/hall-of-supreme-harmony-taihe-dian.html",
+      "title": "Hall of Supreme Harmony (Taihe Dian)",
+      "publisher": "China Daily",
+      "author": null,
+      "date_published": "2021-05-24",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.phases",
+        "model.materials",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-gmw-hall",
+      "url": "https://m.gmw.cn/baijia/2021-08/07/35061112.html",
+      "title": "Taihe Dian (Hall of Supreme Harmony) article, Guangming Daily (in Chinese)",
+      "publisher": "Guangming Daily (m.gmw.cn)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-wikidata-hall",
+      "url": "https://www.wikidata.org/wiki/Q3393365",
+      "title": "Wikidata item Q3393365 (Hall of Supreme Harmony), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: block (a group of rectangular halls on terraces). Hall figures (64 x 37.2 m, 26.92 m high, 35.05 m with platform) come from a Guangming Daily article quoting Palace Museum material, not from the Palace Museum site, which would not load; the palace extent (760 x 960 m) is from the Japanese-language UNESCO text. The point is the Hall, not the whole palace; start 1406 is from EBSCO only.",
+  "model": {
+    "footprint": {
+      "description": "Walled rectangle about 760 m east-west by 960 m north-south (UNESCO); the Hall of Supreme Harmony measures about 64 x 37.2 m on a three-tier marble terrace (Guangming Daily).",
+      "source": "src-unesco439",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-gmw-hall",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 35.05,
+          "unit": "m",
+          "source": "src-gmw-hall",
+          "note": "Hall of Supreme Harmony including its platform"
+        },
+        {
+          "part": "hall height excluding platform",
+          "value": 26.92,
+          "unit": "m",
+          "source": "src-gmw-hall"
+        },
+        {
+          "part": "hall length",
+          "value": 64,
+          "unit": "m",
+          "source": "src-gmw-hall",
+          "note": "eleven bays"
+        },
+        {
+          "part": "hall width",
+          "value": 37.2,
+          "unit": "m",
+          "source": "src-gmw-hall",
+          "note": "five bays"
+        },
+        {
+          "part": "palace width (east-west)",
+          "value": 760,
+          "unit": "m",
+          "source": "src-unesco439"
+        },
+        {
+          "part": "palace length (north-south)",
+          "value": 960,
+          "unit": "m",
+          "source": "src-unesco439"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "rectangular palace block with the Hall as a raised block on the axis"
+      },
+      {
+        "level": "local",
+        "representation": "procedural halls on terraces with hipped roofs"
+      },
+      {
+        "level": "street",
+        "representation": "Hall of Supreme Harmony with marble terrace and roof tiers"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1406,
+        "end_year": 1420,
+        "state": "construction",
+        "description": "Palace built under the Yongle Emperor.",
+        "source": "src-ebsco-fc"
+      },
+      {
+        "start_year": 1420,
+        "end_year": 1679,
+        "state": "intact",
+        "description": "Imperial palace of the Ming and, from 1644, the Qing.",
+        "source": "src-chinadaily-hall"
+      },
+      {
+        "start_year": 1679,
+        "end_year": 1697,
+        "state": "altered",
+        "description": "The Hall of Supreme Harmony was destroyed by fire in 1679 and replaced.",
+        "source": "src-chinadaily-hall"
+      },
+      {
+        "start_year": 1697,
+        "end_year": null,
+        "state": "restored",
+        "description": "The current Hall dates from 1697.",
+        "source": "src-chinadaily-hall"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1420,
+        "to_year": null,
+        "material": "timber frame, yellow-tile roof, white marble terrace",
+        "source": "src-chinadaily-hall"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:35.534Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s72",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "1971-papunya-tula-art-movement",
+  "kind": "movement",
+  "title": "Papunya Tula art movement",
+  "summary": "In 1971 at Papunya, west of Alice Springs, schoolteacher Geoffrey Bardon encouraged men to paint a blank school wall. Senior Aboriginal men painted a Honey Ant Dreaming mural, and many more began painting. In 1972 the artists formed their own company, owned by people of the Luritja and Pintupi language groups. Sacred symbols are removed from works shown publicly.",
+  "when": {
+    "start": {
+      "year": 1971
+    },
+    "end": {
+      "year": 1972
+    },
+    "precision": "year",
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, Papunya Tula Artists",
+        "value": "The Papunya Tula Art Movement began in 1971",
+        "source": "src-pta"
+      },
+      {
+        "calendar": "Gregorian, Papunya Tula Artists",
+        "value": "In 1972 the artists successfully established their own company",
+        "source": "src-pta"
+      },
+      {
+        "calendar": "Gregorian, National Gallery of Victoria",
+        "value": "The catalyst for the movement occurred in 1971",
+        "source": "src-ngv-papunya"
+      },
+      {
+        "calendar": "Gregorian, Art Gallery of New South Wales",
+        "value": "Papunya Tula Artists was established by a small group of Aboriginal artists in 1971",
+        "source": "src-agnsw-papunya"
+      }
+    ],
+    "display": "1971 (company formed 1972)"
+  },
+  "where": {
+    "lat": -23.2045,
+    "lon": 131.9122,
+    "elevation_m": null,
+    "modern_name": "Papunya, Northern Territory, Australia",
+    "historical_name": "Papunya, an administrative settlement for Aboriginal people from the desert",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-gn-papunya",
+      "src-pta"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "art_music_literature"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The National Gallery of Victoria says the Papunya Tula movement is regarded as the origin of the Western Desert art movement."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-pta",
+      "url": "https://papunyatula.com.au/pages/history",
+      "title": "History",
+      "publisher": "Papunya Tula Artists (Aboriginal-owned company)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ngv-papunya",
+      "url": "https://www.ngv.vic.gov.au/explore/collection/conservation/caring-for-first-nations-collections/papunya-tula/",
+      "title": "Papunya Tula",
+      "publisher": "National Gallery of Victoria",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-agnsw-papunya",
+      "url": "https://archive.artgallery.nsw.gov.au/media/archives_2000/papunya_tula/",
+      "title": "Papunya Tula",
+      "publisher": "Art Gallery of New South Wales",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-papunya",
+      "url": "https://www.geonames.org/search.html?q=Papunya",
+      "title": "GeoNames search: Papunya",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Written from the artist-owned company and two Australian public galleries. Sources differ on whether the company dates to 1971 (AGNSW) or 1972 (Papunya Tula Artists); both shown. No restricted content described. A knowledgeable reviewer should confirm wording.",
+  "published_at": "2026-10-22T13:26:44.555Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1971",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1971 at Papunya, west of Alice Springs, schoolteacher Geoffrey Bardon encouraged men to paint a blank school wall.",
+        "source": "src-pta"
+      },
+      {
+        "span": "1972",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Senior Aboriginal men painted a Honey Ant Dreaming mural, and many more began painting.",
+        "source": "src-pta",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

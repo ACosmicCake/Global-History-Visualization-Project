@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:o-s110",
+  "updated": "2026-10-22",
+  "id": "place-tianning-temple-pagoda-beijing",
+  "kind": "place",
+  "title": "Tianning Temple Pagoda, Beijing",
+  "summary": "The Tianning Temple Pagoda in Xicheng District, Beijing, is a solid octagonal brick pagoda with thirteen levels of eaves, built from 1119 to 1120 under the Liao dynasty. The Beijing tourism bureau gives its height as 57.8 metres; Beijing Postcards calls it over 900 years old, from when the city was the Liao southern capital.",
+  "when": {
+    "start": {
+      "year": 1119
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Beijing tourism bureau says built from 1119 to 1120. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Beijing tourism bureau)",
+        "value": "1119",
+        "source": "src-visitbj-tianning"
+      },
+      {
+        "calendar": "CE (Beijing Postcards)",
+        "value": "more than 900 years ago",
+        "source": "src-bjpostcards-tianning"
+      }
+    ],
+    "display": "Built 1119-1120; standing today"
+  },
+  "where": {
+    "lat": 39.8937381,
+    "lon": 116.3397831,
+    "elevation_m": null,
+    "modern_name": "Tianning Temple Pagoda, Guanganmenwai, Xicheng District, Beijing, China",
+    "historical_name": "Tianning Temple Pagoda, Nanjing (southern capital), Liao dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-tianning"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A Liao-dynasty brick pagoda in Beijing."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-visitbj-tianning",
+      "url": "https://english.visitbeijing.com.cn/article/47ONZJRVAHA",
+      "title": "Tianning Temple Pagoda",
+      "publisher": "Beijing Municipal Bureau of Culture and Tourism (Visit Beijing)",
+      "author": "Beijing Tourism Operations Monitoring Centre",
+      "date_published": "2016-06-17",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model.geometry"
+      ]
+    },
+    {
+      "id": "src-bjpostcards-tianning",
+      "url": "https://www.beijing-postcards.com/archival-materials/the-oldest-surviving-building-in-beijing",
+      "title": "The oldest surviving building in Beijing",
+      "publisher": "Beijing Postcards",
+      "author": "Ying Li",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry"
+      ]
+    },
+    {
+      "id": "src-osm-tianning",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E5%A4%A9%E5%AE%81%E5%AF%BA%E5%A1%94%20%E5%8C%97%E4%BA%AC&format=json",
+      "title": "OpenStreetMap Nominatim: 天宁寺塔, way 532863319 (39.8937381, 116.3397831)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "id": "src-osm-outline-tianning",
+      "url": "https://www.openstreetmap.org/way/532863319",
+      "title": "OpenStreetMap outline of 天宁寺塔",
+      "publisher": "OpenStreetMap contributors",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape pagoda with 13 tiers (dense-eave form). Height 57.8 m from the Beijing tourism bureau; Beijing Postcards rounds to 58 m. The OSM outline (28.0 by 28.0 m) is tagged as the pagoda but is likely the square base platform, so the drawn plan may be wider than the tower. Least sure of that plan.",
+  "model": {
+    "footprint": {
+      "description": "Square plan of about 28.0 m by 28.0 m from the OpenStreetMap outline tagged as the pagoda (way 532863319); it may include the base platform. Shape chosen: pagoda, 13 tiers.",
+      "source": "src-osm-outline-tianning",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pagoda",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-visitbj-tianning",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 57.8,
+          "unit": "m",
+          "source": "src-visitbj-tianning",
+          "note": "\"At 57.8 meters tall\"; Beijing Postcards says 58 meters"
+        },
+        {
+          "part": "tiers",
+          "value": 13,
+          "unit": "count",
+          "source": "src-visitbj-tianning",
+          "note": "thirteen levels of eaves"
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 28,
+          "unit": "m",
+          "source": "src-osm-outline-tianning"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 28,
+          "unit": "m",
+          "source": "src-osm-outline-tianning"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "octagonal 13-tier dense-eave brick pagoda extruded to its sourced height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural pagoda on its mapped plan"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1119,
+        "end_year": 1120,
+        "state": "construction",
+        "description": "Built from 1119 to 1120 under the Liao dynasty.",
+        "source": "src-visitbj-tianning"
+      },
+      {
+        "start_year": 1121,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Stands today in Tianning Temple, Xicheng District.",
+        "source": "src-visitbj-tianning"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1119,
+        "to_year": 2026,
+        "material": "brick",
+        "source": "src-visitbj-tianning"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T19:16:42.067Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

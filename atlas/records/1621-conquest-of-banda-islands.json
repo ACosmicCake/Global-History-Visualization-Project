@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1621-conquest-of-banda-islands",
+  "kind": "event",
+  "title": "Dutch Conquest of the Banda Islands",
+  "summary": "In 1621 Jan Pieterszoon Coen, Governor-General of the Dutch East India Company, ordered the capture of the whole Banda archipelago. One source says more than ninety percent of the Bandanese people were killed, and another that the survivors' lands were occupied by the Company, giving it a world monopoly on nutmeg and mace.",
+  "when": {
+    "start": {
+      "year": 1621
+    },
+    "end": {
+      "year": 1621
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give the year 1621; operations are not dated more finely here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1621",
+        "source": "src-duke"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1621",
+        "source": "src-ncku"
+      }
+    ],
+    "display": "1621"
+  },
+  "where": {
+    "lat": -4.55,
+    "lon": 129.87,
+    "elevation_m": null,
+    "modern_name": "Banda Islands, Maluku, Indonesia",
+    "historical_name": "Banda Islands (Banda archipelago), Maluku; Bandanese settlements before Dutch East India Company control",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-mapcarta",
+      "src-unesco"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Established the Dutch East India Company's monopoly over nutmeg and mace and destroyed most of the Bandanese population."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a massacre and the destruction of most of an island population; may be distressing.",
+  "related": [
+    {
+      "id": "1602-dutch-east-india-company",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-duke",
+      "url": "https://sites.duke.edu/thefinregblog/2021/10/25/the-dutch-east-india-company-at-the-dawn-of-modern-capitalism-civilized-dispossession-on-the-banda-islands/",
+      "title": "The Dutch East India Company at the Dawn of Modern Capitalism: “Civilized Dispossession” on the Banda Islands",
+      "publisher": "Duke University (Financial Regulation blog)",
+      "author": null,
+      "date_published": "2021-10-25",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ncku",
+      "url": "https://researchoutput.ncku.edu.tw/en/publications/genocide-in-the-spice-islands-the-dutch-east-india-company-and-th/",
+      "title": "Genocide in the Spice Islands: The Dutch East India Company and the Destruction of the Bandanese Civilization",
+      "publisher": "National Cheng Kung University (research output; Cambridge University Press chapter, 2023)",
+      "author": null,
+      "date_published": "2023",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco",
+      "url": "https://whc.unesco.org/en/tentativelists/6065/",
+      "title": "Banda Islands Cultural Landscape - UNESCO World Heritage tentative list",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-mapcarta",
+      "url": "https://mapcarta.com/Banda_Islands",
+      "title": "Banda Islands",
+      "publisher": "Mapcarta",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy for the archipelago centre (Mapcarta), consistent with UNESCO's coordinate range. Ninety-percent figure rests on one blog; NCKU abstract gives 15,000 pre-conquest population but I did not cite a death toll from it.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:25.373Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1621",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1621 Jan Pieterszoon Coen, Governor-General of the Dutch East India Company, ordered the capture of the whole Banda archipelago.",
+        "source": "src-duke"
+      },
+      {
+        "span": "1621",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "One source says more than ninety percent of the Bandanese people were killed, and another that the survivors' lands were occupied by the Company, giving it a world…",
+        "source": "src-duke",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

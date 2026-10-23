@@ -1,0 +1,161 @@
+{
+  "id": "place-omo-kibish",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Omo Kibish Formation (Omo I and Omo II, Ethiopia)",
+  "summary": "Sediments in the lower Omo Valley of southern Ethiopia that yielded the Omo I and Omo II hominid fossils, among the oldest Homo sapiens remains known. A 2022 study dated the volcanic ash above Omo I to 233,000 years, give or take 22,000, as a minimum age for the fossils.",
+  "when": {
+    "start": {
+      "year": -233000
+    },
+    "end": {
+      "year": -233000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 22000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Vidal et al. (2022) give 233 ± 22 kyr (2 sigma) for the KHS Tuff overlying the Omo I member, a minimum age. McDougall et al. (2005) preferred 195 ± 5 kyr. The range lower bound is the 233 kyr minimum with its error; the true age may be older. The start has no upper bound from the opened pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "radiometric, 40Ar/39Ar",
+        "value": "new minimum age for the Omo fossils of 233 ± 22 kyr",
+        "source": "src-vidal2022"
+      },
+      {
+        "calendar": "radiometric",
+        "value": "preferred estimate of the age of the Kibish hominids is 195 ± 5 kyr",
+        "source": "src-mcdougall2005"
+      }
+    ],
+    "display": "at least about 233,000 years ago (older estimate 195,000)"
+  },
+  "where": {
+    "lat": 5.41,
+    "lon": 35.908,
+    "elevation_m": null,
+    "modern_name": "Kibish Formation, lower Omo Valley, South Omo Zone, Ethiopia",
+    "historical_name": "Lower Omo Valley river and lake margin deposits; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-mcdougall2005"
+    ],
+    "paleo": {
+      "lat": 5.3,
+      "lon": 35.9,
+      "age_ma": 0.233,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Reconstruction to 0.233 Ma moves the point about 14 km; MULLER2019 gives 5.37 N, 35.85 E."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "Source of the Omo I fossils, among the oldest anatomically modern human remains, whose redating shifted the timeline of our species."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related"
+    },
+    {
+      "id": "-160ka-herto-homo-sapiens",
+      "type": "related"
+    },
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-vidal2022",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8791829/",
+      "title": "Age of the oldest known Homo sapiens from eastern Africa",
+      "publisher": "Nature (open copy on PubMed Central, US National Library of Medicine)",
+      "author": "Vidal, C. M. et al.",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-mcdougall2005",
+      "url": "https://www.nature.com/articles/nature03258",
+      "title": "Stratigraphic placement and age of modern humans from Kibish, Ethiopia",
+      "publisher": "Nature (Springer Nature)",
+      "author": "McDougall, I., Brown, F. H., Fleagle, J. G.",
+      "date_published": "2005",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-unesco-17",
+      "url": "https://whc.unesco.org/en/list/17/",
+      "title": "Lower Valley of the Omo (World Heritage List no. 17)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d. (inscribed 1980)",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Age is a minimum from the overlying tuff and is revised from the 2005 value. Pin is the dated tuff locality at Nakaa-kire near the Omo II site, 5 24.6 N, 35 54.5 E, from the McDougall supplementary table listing; the Wikidata point for the formation (4.80 N, 35.97 E) is about 67 km south and was not used. The Omo I find spot is not given on opened pages, so uncertainty is 10 km. Page text for the Vidal paper opened via PubMed Central.",
+  "author": "historian-agent:o-s19",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:38:41.113Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

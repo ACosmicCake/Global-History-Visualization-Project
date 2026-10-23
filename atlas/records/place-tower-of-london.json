@@ -1,0 +1,113 @@
+{
+  "id": "place-tower-of-london",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Tower of London",
+  "summary": "Historic castle on the north bank of the River Thames in London, founded toward the end of 1066 during the Norman Conquest. Its White Tower was a symbol of Norman power. Over time it served as royal residence, prison, armoury, treasury and home of the Crown Jewels, and it is now a World Heritage Site.",
+  "when": {
+    "start": {
+      "year": 1066
+    },
+    "end": {
+      "year": 1066
+    },
+    "precision": "year",
+    "display": "1066 (founded)",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "It was founded toward the end of 1066 as part of the Norman Conquest.",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "William the Conqueror built the White Tower in 1066",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 51.5082,
+    "lon": -0.0762,
+    "elevation_m": null,
+    "modern_name": "Tower of London, London, England",
+    "historical_name": "Tower of London",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Iconic Norman fortress and royal palace central to English state, monarchy and prison history; UNESCO World Heritage Site."
+  },
+  "confidence": "contested",
+  "audience_note": "Mentions imprisonment, torture reputation and executions, including of queens.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Tower_of_London&oldid=1378944287",
+      "title": "Tower of London (Wikipedia, revision 1378944287)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "FA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://whc.unesco.org/en/list/488",
+      "title": "Tower of London - UNESCO World Heritage Centre",
+      "publisher": "UNESCO",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q62378",
+      "title": "Wikidata Q62378 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on dating: Wikipedia says founded toward end of 1066 and the White Tower built in 1078; UNESCO says the White Tower was built in 1066. Used 1066 as the founding year. (Drafted by the Wikipedia pipeline from Wikipedia, UNESCO; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T00:36:36.379Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

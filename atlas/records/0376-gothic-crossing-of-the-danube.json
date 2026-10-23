@@ -1,0 +1,182 @@
+{
+  "id": "0376-gothic-crossing-of-the-danube",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Gothic crossing of the Danube",
+  "summary": "In 376 CE, Gothic Tervingi and Greuthungi displaced by the Huns sought asylum in the Eastern Roman Empire and crossed the lower Danube into Thrace. Exploitation and mistreatment by Roman commanders provoked a major Gothic uprising that culminated in the catastrophic Roman defeat at Adrianople.",
+  "when": {
+    "start": {
+      "year": 376
+    },
+    "end": {
+      "year": 376
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Summer to autumn 376 CE; Ammianus Marcellinus does not record exact calendar days for the crossing."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (modern scholarly account)",
+        "value": "In the year 376, the Goths sent a request to cross the Danube into Roman territory.",
+        "source": "src-ut-gothic-online"
+      },
+      {
+        "calendar": "Roman historical narrative (Ammianus Marcellinus 31.4.5)",
+        "value": "privilege of crossing the Danube and settling in parts of Thrace, they were ferried over for some nights and days",
+        "source": "src-ammianus-31"
+      },
+      {
+        "calendar": "Gregorian (modern scholarly reference)",
+        "value": "Tervingi and Greuthungi had been displaced from their homeland by an invasion of Huns in 375 and were seeking asylum from him",
+        "source": "src-dir-valens"
+      }
+    ],
+    "display": "376 CE"
+  },
+  "where": {
+    "lat": 44.1171,
+    "lon": 27.26056,
+    "elevation_m": null,
+    "modern_name": "Silistra, Bulgaria (Durostorum on the lower Danube)",
+    "historical_name": "Durostorum, Moesia Secunda, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 75,
+    "coordinate_sources": [
+      "src-geonames-silistra"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Admitting the armed Gothic nation across the Danube permanently altered Roman frontier security and triggered the Gothic War that destroyed an imperial field army at Adrianople."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0378-battle-of-adrianople",
+      "type": "caused",
+      "because": "Roman mistreatment of the Goths after the crossing led directly to the Gothic rebellion and battle of Adrianople."
+    },
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "376",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "In 376, thousands of Gothic refugees cross the lower Danube into Roman Thrace with imperial permission.",
+        "source": "src-ut-gothic-online",
+        "consequence": false
+      },
+      {
+        "span": "377",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Roman mistreatment and food extortion trigger open Gothic revolt across Thrace.",
+        "source": "src-dir-valens",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-ammianus-31",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Ammian/31*.html",
+      "title": "Ammianus Marcellinus, Roman History (Res Gestae), Book XXXI",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+      "author": "Ammianus Marcellinus; translated by John C. Rolfe",
+      "date_published": "1939",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "what",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-ut-gothic-online",
+      "url": "https://lrc.la.utexas.edu/eieol/gotol/90",
+      "title": "Gothic Online, Lesson 9: Gothic Wanderings, 376-401",
+      "publisher": "Linguistics Research Center, University of Texas at Austin",
+      "author": "Todd B. Krause; Jonathan Slocum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "what",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-dir-valens",
+      "url": "https://roman-emperors.sites.luc.edu/valens.htm",
+      "title": "Valens (364-378 A.D.)",
+      "publisher": "De Imperatoribus Romanis: An Online Encyclopedia of Roman Rulers (Loyola University Chicago)",
+      "author": "Noel Lenski",
+      "date_published": "1997",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-silistra",
+      "url": "https://www.geonames.org/727221/silistra.html",
+      "title": "Silistra, Bulgaria",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact stretch of the lower Danube where Fritigern's crossing was concentrated; Durostorum (Silistra) is the principal fortress and crossing hub cited, but crossings occurred at several points.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:32.948Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

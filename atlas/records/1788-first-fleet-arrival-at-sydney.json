@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "1788-first-fleet-arrival-at-sydney",
+  "kind": "event",
+  "title": "First Fleet arrival at Sydney Cove",
+  "summary": "Eleven ships under Captain Arthur Phillip left Portsmouth on 13 May 1787 carrying 759 convicts. After calls at Tenerife, Rio de Janeiro and Cape Town they entered Botany Bay in January 1788, then anchored in Sydney Cove on 26 January, beginning the British settlement of New South Wales on Gadigal Country.",
+  "when": {
+    "start": {
+      "year": 1787
+    },
+    "end": {
+      "year": 1788
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The fleet entered Botany Bay on 18 January 1788 (Museums of History NSW); Project Gutenberg Australia gives 20 January for the Botany Bay arrival. Both agree on 26 January for Sydney Cove. Port-of-call dates are from Project Gutenberg Australia only. Waypoint years are calendar years AD."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The fleet departed on 13 May 1787",
+        "source": "src-mhnsw"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Entering Botany Bay on 18 January 1788",
+        "source": "src-mhnsw"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "By the evening of 26 January 1788, all 11 ships were quietly anchored in Sydney Cove",
+        "source": "src-mhnsw"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Arrived at Sydney Cove: 26 January 1788",
+        "source": "src-gutenberg"
+      }
+    ],
+    "display": "13 May 1787 – 26 January 1788"
+  },
+  "where": {
+    "lat": -33.858611,
+    "lon": 151.211667,
+    "elevation_m": null,
+    "modern_name": "Sydney Cove, Sydney, New South Wales, Australia",
+    "historical_name": "Sydney Cove, Port Jackson, on Gadigal Country; later the colony of New South Wales",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 50.8235,
+          "lon": -1.1228,
+          "year": 1787,
+          "date": "13 May 1787",
+          "label": "Portsmouth Harbour, England: departure of the eleven ships.",
+          "source": "src-mhnsw",
+          "coordinate_source": "src-wd-portsmouth"
+        },
+        {
+          "lat": 28.4629,
+          "lon": -16.2472,
+          "year": 1787,
+          "date": "3 June 1787",
+          "label": "Santa Cruz de Tenerife, Canary Islands: first stop (arrival date from Project Gutenberg Australia).",
+          "source": "src-gutenberg",
+          "coordinate_source": "src-wd-tenerife"
+        },
+        {
+          "lat": -22.9111,
+          "lon": -43.2056,
+          "year": 1787,
+          "date": "5 August 1787",
+          "label": "Rio de Janeiro: second stop (arrival date from Project Gutenberg Australia).",
+          "source": "src-gutenberg",
+          "coordinate_source": "src-wd-rio"
+        },
+        {
+          "lat": -33.9253,
+          "lon": 18.4239,
+          "year": 1787,
+          "date": "13 October 1787",
+          "label": "Cape Town: last stop before Australia (arrival date from Project Gutenberg Australia).",
+          "source": "src-gutenberg",
+          "coordinate_source": "src-wd-capetown"
+        },
+        {
+          "lat": -33.9833,
+          "lon": 151.1833,
+          "year": 1788,
+          "date": "18 January 1788",
+          "label": "Botany Bay: fleet enters; the site is found unsuitable.",
+          "source": "src-mhnsw",
+          "coordinate_source": "src-wd-botany"
+        },
+        {
+          "lat": -33.858611,
+          "lon": 151.211667,
+          "year": 1788,
+          "date": "26 January 1788",
+          "label": "Sydney Cove: all eleven ships anchored by evening.",
+          "source": "src-mhnsw",
+          "coordinate_source": "src-wd-sydneycove"
+        }
+      ]
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-sydneycove",
+      "src-wd-portsmouth",
+      "src-wd-tenerife",
+      "src-wd-rio",
+      "src-wd-capetown",
+      "src-wd-botany"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Founded the first British colony on the Australian mainland, with lasting consequences for the Aboriginal peoples of the continent."
+  },
+  "confidence": "established",
+  "audience_note": "British colonisation began the dispossession of Aboriginal peoples; this outline covers only the voyage and landing.",
+  "related": [
+    {
+      "id": "-65ka-peopling-of-sahul",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "13 May 1787",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Eleven ships leave Portsmouth, carrying 759 convicts and the crews, marines and stores needed for a new colony.",
+        "source": "src-mhnsw",
+        "consequence": false
+      },
+      {
+        "span": "13 May 1787 / 20 January 1788",
+        "action": "path.trace {}",
+        "caption": "The fleet calls at Tenerife, Rio de Janeiro and Cape Town for fresh food and water, then enters Botany Bay.",
+        "source": "src-gutenberg",
+        "consequence": false
+      },
+      {
+        "span": "26 January 1788",
+        "action": "region.fill { radius_km: 20 }",
+        "caption": "Governor Phillip finds Botany Bay unsuitable; by evening all eleven ships are anchored in Sydney Cove and unloading, starting the colony.",
+        "source": "src-mhnsw",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-mhnsw",
+      "url": "https://mhnsw.au/stories/general/first-fleet/",
+      "title": "The First Fleet",
+      "publisher": "Museums of History NSW",
+      "author": "Museums of History NSW",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-gutenberg",
+      "url": "https://www.gutenberg.net.au/first-fleet.html",
+      "title": "First Fleet (overview with voyage dates)",
+      "publisher": "Project Gutenberg Australia",
+      "author": "Project Gutenberg Australia",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-sydneycove",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1756937.json",
+      "title": "Wikidata entry for Sydney Cove (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-portsmouth",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q7232468.json",
+      "title": "Wikidata entry for Portsmouth Harbour (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-tenerife",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q24014650.json",
+      "title": "Wikidata entry for Santa Cruz de Tenerife (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-rio",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q8678.json",
+      "title": "Wikidata entry for Rio de Janeiro (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-capetown",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5465.json",
+      "title": "Wikidata entry for Cape Town (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-botany",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q894682.json",
+      "title": "Wikidata entry for Botany Bay (Sydney) (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Botany Bay arrival is 18 Jan (Museums of History NSW) vs 20 Jan (Project Gutenberg Australia); port-of-call dates rest on the Gutenberg page alone; Sydney Cove is a point, not the wider Port Jackson.",
+  "published_at": "2026-10-22T08:18:28.074Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

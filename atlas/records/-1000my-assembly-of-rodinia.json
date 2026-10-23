@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "probable",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "-1000my-assembly-of-rodinia",
+  "kind": "process",
+  "title": "Assembly of the supercontinent Rodinia",
+  "summary": "Collisional mountain building of the Grenvillian orogeny, dated about 1090 to 980 million years ago, is tied to the amalgamation of several Proterozoic continents into the supercontinent Rodinia. Coeval collisions occurred in several continents, including Amazonia and Kalahari. A general account places the fusing of Rodinia continental blocks at 1.3 to 1.0 billion years ago.",
+  "when": {
+    "start": {
+      "year": -1090000000
+    },
+    "end": {
+      "year": -980000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The range is the stated span of the Grenvillian orogeny (ca. 1090-980 Ma); no error bars given. The general account says blocks fused around 1.3 to 1.0 Ga."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "ca. 1090–980 Ma Grenvillian orogeny",
+        "source": "src-umn"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "About 1.3-1.0 Ga during the Mesoproterozoic most of the continental crustal blocks",
+        "source": "src-austhrutime"
+      }
+    ],
+    "display": "c. 1090–980 million years ago"
+  },
+  "where": {
+    "lat": 45.624,
+    "lon": -74.5994,
+    "elevation_m": null,
+    "modern_name": "Grenville, Quebec, Canada (named after the Grenville Province of Laurentia; the orogen was one of several belts)",
+    "historical_name": "Grenvillian orogen, Laurentia (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-osm-grenville"
+    ],
+    "paleo": {
+      "not_applicable": "Predates plate reconstructions (older than 1000 Ma)."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Rodinia is the supercontinent that preceded the Cryogenian snowball Earth glaciations and later Gondwana and Pangaea."
+  },
+  "related": [
+    {
+      "id": "-717my-sturtian-snowball-earth",
+      "type": "related"
+    },
+    {
+      "id": "-335my-assembly-of-pangaea",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-umn",
+      "url": "https://experts.umn.edu/en/publications/the-late-mesoproterozoic-to-early-neoproterozoic-grenvillian-orog/",
+      "title": "The late Mesoproterozoic to early Neoproterozoic Grenvillian orogeny (abstract)",
+      "publisher": "University of Minnesota Experts",
+      "author": "University of Minnesota Experts",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-austhrutime",
+      "url": "https://austhrutime.com/rodinia.htm",
+      "title": "Rodinia (Australia: The Land Where Time Began)",
+      "publisher": "Australia: The Land Where Time Began",
+      "author": "Australia: The Land Where Time Began",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-grenville",
+      "url": "https://nominatim.openstreetmap.org/search?q=Grenville+Quebec&format=json",
+      "title": "OpenStreetMap Nominatim: Grenville, Quebec, Canada",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the exact date (1090-980 Ma is the Grenvillian orogeny, not a dated assembly end) and the pin, which is a village named for the Grenville Province, not a formal locality. The Australian page is a weak secondary source (class other). Rodinia as a single continent is not firmly evidenced: the same page says there is little definite evidence for it.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:46.877Z"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1980-iran-iraq-war",
+  "kind": "event",
+  "title": "Iran–Iraq War",
+  "summary": "Iraq attacked Iran on 22 September 1980, beginning an eight-year war between the two neighbours. It involved chemical weapons, attacks on Gulf shipping and strikes on cities. A UN-brokered ceasefire ended the fighting in August 1988, and estimates of the dead reach about a million or more.",
+  "when": {
+    "start": {
+      "year": 1980
+    },
+    "end": {
+      "year": 1988
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start date agreed by sources; Britannica gives the end as 20 August 1988, EBSCO as 8 August 1988."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 22, 1980–August 20, 1988",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 22, 1980-August 8, 1988",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "22 September 1980 – August 1988"
+  },
+  "where": {
+    "lat": 30.44079,
+    "lon": 48.18428,
+    "elevation_m": null,
+    "modern_name": "Khorramshahr, Khuzestan, Iran (proxy pin for the southern front; the war spanned the whole border and the Gulf)",
+    "historical_name": "Iran–Iraq border zone; Khorramshahr, Islamic Republic of Iran, and Ba'athist Iraq",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Described as the longest conventional war of the twentieth century, with hundreds of thousands to over a million dead."
+  },
+  "confidence": "established",
+  "audience_note": "Covers a war with mass casualties, child soldiers and chemical-weapons attacks on soldiers and civilians.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/event/Iran-Iraq-War",
+      "title": "Iran-Iraq War",
+      "publisher": "Encyclopaedia Britannica",
+      "author": "Britannica Editors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/iran-iraq-war/",
+      "title": "Iran-Iraq War",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://latitudelongitude.org/ir/khorramshahr/",
+      "title": "Khorramshahr, Iran latitude longitude",
+      "publisher": "latitudelongitude.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy at Khorramshahr (coordinates from a GeoNames-derived site). Britannica blocks spotcheck (403) though I read it via fetch. Sources differ on ceasefire date (8 vs 20 August 1988) and on deaths.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:49:59.112Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1980",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Iraq attacked Iran on 22 September 1980, beginning an eight-year war between the two neighbours.",
+        "source": "src-britannica"
+      },
+      {
+        "span": "1988",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "A UN-brokered ceasefire ended the fighting in August 1988, and estimates of the dead reach about a million or more.",
+        "source": "src-britannica",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

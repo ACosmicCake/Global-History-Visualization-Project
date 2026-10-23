@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s117",
+  "updated": "2026-10-22",
+  "id": "-2056my-bushveld-complex",
+  "kind": "event",
+  "title": "Emplacement of the Bushveld Complex",
+  "summary": "The Bushveld Complex of South Africa, described as the world's largest layered igneous intrusion and host to chromium, platinum-group and vanadium deposits, was emplaced about 2,060 to 2,055 million years ago. High-precision zircon dating puts its Rustenburg Layered Suite at about 2056.3 to 2055.5 million years ago, built up over at least 0.6 million years.",
+  "when": {
+    "start": {
+      "year": -2060000000
+    },
+    "end": {
+      "year": -2055000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years are Ma with no 1950 offset. Range is the 2060-2055 Ma interval for the whole complex (Scoates et al. 2021); the Rustenburg Layered Suite dates 2056.28 +/- 0.15 to 2055.54 +/- 0.27 Ma (Mungall et al. 2016)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (U-Pb zircon/baddeleyite)",
+        "value": "ages range from 2056.28±0.15 Myr for the UG1 to 2055.54±0.27 Myr for the Merensky Reef",
+        "source": "src-pmc"
+      },
+      {
+        "calendar": "Ma (U-Pb zircon)",
+        "value": "built incrementally over an ∼5 Myr interval from 2060 to 2055 Ma with a peak in magma flux at c. 2055–2056 Ma",
+        "source": "src-boise"
+      }
+    ],
+    "display": "c. 2060-2055 Ma (peak c. 2056 Ma)"
+  },
+  "where": {
+    "lat": -24.780995,
+    "lon": 29.202147,
+    "elevation_m": null,
+    "modern_name": "Bushveld Igneous Complex, South Africa (Wikidata point; the layered suite spans about 450 km east-west and 350 km north-south)",
+    "historical_name": "Kaapvaal Craton, southern Africa; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-wikidata-bushveld",
+      "src-pmc"
+    ],
+    "paleo": null
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "World's largest layered intrusion and a major source of chromium and platinum-group metals."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5114581/",
+      "title": "U–Pb geochronology documents out-of-sequence emplacement of ultramafic layers in the Bushveld Igneous Complex of South Africa",
+      "publisher": "Nature Communications (via PubMed Central)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-boise",
+      "url": "https://scholarworks.boisestate.edu/geo_facpubs/760",
+      "title": "Dating the Bushveld Complex: Timing of Crystallization, Duration of Magmatism, and Cooling of the World's Largest Layered Intrusion and Related Rocks (Journal of Petrology 62(2), 2021)",
+      "publisher": "Boise State University ScholarWorks",
+      "author": "J.S. Scoates, C.J. Wall, R.M. Friedman, D. Weis, E.A. Mathez, J.A. VanTongeren",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-bushveld",
+      "url": "https://www.wikidata.org/wiki/Q1017513",
+      "title": "Wikidata item Q1017513 (Bushveld igneous complex), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the single pin: the complex is five lobes across hundreds of km, so the Wikidata point is a rough centre. No paleo-position: 2,056 Ma lies outside the plate models. Years carry no 1950 offset.",
+  "published_at": "2026-10-22T19:36:32.300Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1789-bounty-mutiny",
+  "kind": "event",
+  "title": "Mutiny on the Bounty",
+  "summary": "On 28 April 1789, near Tofua in Tonga, Fletcher Christian and about twenty-five men seized the Bounty and set Captain William Bligh and 18 loyalists adrift in a 23-foot launch. Bligh reached Kupang, Timor, on 14 June after 48 days; Christian's group later settled on Pitcairn Island in January 1790.",
+  "when": {
+    "start": {
+      "year": 1789
+    },
+    "end": {
+      "year": 1790
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Boat length is 23 feet in two sources and 24 feet on famous-trials.com. HISTORY gives about 3,600 and nearly 4,000 miles for the launch voyage, so no distance is used."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "28 April 1789",
+        "source": "src-histmar-bounty"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "April 28, 1789",
+        "source": "src-ft-bounty"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "June 14, 1789",
+        "source": "src-history-bounty"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 15, 1790",
+        "source": "src-ft-bounty"
+      }
+    ],
+    "display": "28 April 1789 (mutiny); Pitcairn January 1790"
+  },
+  "where": {
+    "lat": -19.75,
+    "lon": -175.066667,
+    "elevation_m": null,
+    "modern_name": "Near Tofua, Tonga",
+    "historical_name": "Near the island of Tofua, Tonga (Friendly Islands), aboard the Bounty",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -17.666667,
+          "lon": -149.466667,
+          "year": 1788.817,
+          "date": "26 October 1788",
+          "label": "Tahiti: the Bounty arrives after ten months. Point is the island.",
+          "source": "src-histmar-bounty",
+          "coordinate_source": "src-wd-tahiti"
+        },
+        {
+          "lat": -19.75,
+          "lon": -175.066667,
+          "year": 1789.32,
+          "date": "28 April 1789",
+          "label": "Near Tofua, Tonga: the mutiny. Point is the island; the source says only \"near\".",
+          "source": "src-histmar-bounty",
+          "coordinate_source": "src-wd-tofua"
+        },
+        {
+          "lat": -10.163333,
+          "lon": 123.577778,
+          "year": 1789.449,
+          "date": "14 June 1789",
+          "label": "Kupang, Timor: Bligh's launch arrives after 48 days.",
+          "source": "src-histmar-bounty",
+          "coordinate_source": "src-wd-kupang"
+        },
+        {
+          "lat": -25.070556,
+          "lon": -130.104444,
+          "year": 1790.038,
+          "date": "15 January 1790",
+          "label": "Pitcairn Island: Christian's group arrives in the Bounty. A separate journey from Bligh's launch.",
+          "source": "src-ft-bounty",
+          "coordinate_source": "src-wd-pitcairn"
+        }
+      ]
+    },
+    "uncertainty_km": 80,
+    "coordinate_sources": [
+      "src-wd-tahiti",
+      "src-wd-tofua",
+      "src-wd-kupang",
+      "src-wd-pitcairn"
+    ]
+  },
+  "regions": [
+    "oceania",
+    "oceans",
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "trade_exploration",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A famous naval mutiny and open-boat voyage that led to the settlement of Pitcairn Island."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1768-cook-endeavour-voyage",
+      "type": "related"
+    },
+    {
+      "id": "1788-first-fleet-arrival-at-sydney",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-histmar-bounty",
+      "url": "https://historicalmaritime.com/blogs/historical-maritime/the-mutiny-on-the-bounty-1789-a-voyage-from-scientific-mission-to-seafaring-rebellion",
+      "title": "The Mutiny on the Bounty, 1789: A Voyage from Scientific Mission to Seafaring Rebellion",
+      "publisher": "Historical Maritime",
+      "author": "Historical Maritime",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ft-bounty",
+      "url": "https://famous-trials.com/bounty/393-chronology",
+      "title": "The Mutiny on the Bounty: A Chronology",
+      "publisher": "Famous Trials, University of Missouri-Kansas City School of Law",
+      "author": "Famous Trials, University of Missouri-Kansas City School of Law",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-history-bounty",
+      "url": "https://www.history.com/this-day-in-history/june-14/bounty-mutiny-survivors-reach-timor",
+      "title": "Bounty mutiny survivors reach Timor",
+      "publisher": "HISTORY (A+E Networks)",
+      "author": "HISTORY (A+E Networks)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-tahiti",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q42000.json",
+      "title": "Wikidata entry for Tahiti (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-tofua",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1414448.json",
+      "title": "Wikidata entry for Tofua (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-kupang",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q14155.json",
+      "title": "Wikidata entry for Kupang (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-pitcairn",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1779748.json",
+      "title": "Wikidata entry for Pitcairn Island (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: exact mutiny location (sources say near Tofua or near Tonga), launch length (23 vs 24 feet), and Bligh's Tahiti departure (4 vs 5 April 1789), which is not used. The path joins Bligh's launch and Christian's ship as two separate journeys.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 35,
+    "beats": [
+      {
+        "span": "1789-04-28",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Before dawn Fletcher Christian and about twenty-five men seize the Bounty, and Bligh and 18 loyalists are put into a 23-foot launch.",
+        "source": "src-histmar-bounty",
+        "consequence": false
+      },
+      {
+        "span": "1789-04-28 / 1789-06-14",
+        "action": "path.trace {}",
+        "caption": "After 48 days at sea Bligh's launch reaches Kupang on Timor.",
+        "source": "src-histmar-bounty",
+        "consequence": false
+      },
+      {
+        "span": "1790-01-15",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Christian and eight others reach Pitcairn; when found in 1808, only John Adams was left of the nine mutineers.",
+        "source": "src-history-bounty",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:52.618Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

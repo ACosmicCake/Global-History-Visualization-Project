@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes a forced state relocation of Inuit families to the High Arctic, with hardship, isolation and a reported death; accounts come partly from people who were moved.",
+  "author": "historian-agent:o-s103",
+  "updated": "2026-10-22",
+  "id": "1953-inuit-high-arctic-relocation",
+  "kind": "event",
+  "title": "High Arctic relocation of Inuit families, 1953",
+  "summary": "In 1953 the Canadian government moved Inuit families from Inukjuak in northern Quebec to the High Arctic, including Resolute Bay and Grise Fiord; families from Pond Inlet were also sent. Officials called it a humanitarian project, but families said it served Canadian sovereignty, and promises of game and a two-year stay were not kept. Canada apologized in 2010.",
+  "when": {
+    "start": {
+      "year": 1953
+    },
+    "end": {
+      "year": 1953
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Canada.ca apology release and CIRNAC say only \"the 1950s\"; 1953 comes from Hakai Magazine (families sailed in August 1953) and Nunatsiaq News."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (Hakai Magazine)",
+        "value": "August 1953 aboard the Canadian Arctic patrol vessel C. D. Howe",
+        "source": "src-hakai"
+      },
+      {
+        "calendar": "Gregorian (Nunatsiaq News)",
+        "value": "moved with their parents in 1953 from northern Quebec to Cornwallis Island",
+        "source": "src-nunatsiaq"
+      },
+      {
+        "calendar": "Decade (Government of Canada)",
+        "value": "the 1950s",
+        "source": "src-canada"
+      }
+    ],
+    "display": "1953"
+  },
+  "where": {
+    "lat": 76.4181376,
+    "lon": -82.7165575,
+    "elevation_m": null,
+    "modern_name": "Route from Inukjuak (Quebec) to Resolute Bay and Grise Fiord (Nunavut)",
+    "historical_name": "Port Harrison (Inukjuak), northern Quebec, to Resolute Bay and Craig Harbour/Grise Fiord in the Northwest Territories, Canada",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 58.4536824,
+          "lon": -78.1124276,
+          "date": "1953",
+          "label": "Inukjuak, northern Quebec: 19 Inuit families set out (Government of Canada).",
+          "source": "src-canada",
+          "coordinate_source": "src-osm-inukjuak",
+          "year": 1953
+        },
+        {
+          "lat": 74.697029,
+          "lon": -94.840851,
+          "date": "1953",
+          "label": "Resolute Bay on Cornwallis Island, a destination of the move (Nunatsiaq News).",
+          "source": "src-nunatsiaq",
+          "coordinate_source": "src-osm-resolute",
+          "year": 1953
+        },
+        {
+          "lat": 76.4181376,
+          "lon": -82.7165575,
+          "date": "1953",
+          "label": "Grise Fiord on Ellesmere Island, the other destination (Hakai Magazine).",
+          "source": "src-hakai",
+          "coordinate_source": "src-osm-grise",
+          "year": 1953
+        }
+      ]
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-grise",
+      "src-osm-inukjuak",
+      "src-osm-resolute"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "A state relocation of Inuit families that Canada later acknowledged with a formal apology for mistakes and broken promises."
+  },
+  "confidence": "established",
+  "related": [],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1953",
+        "action": "path.trace {}",
+        "caption": "Families from Inukjuak, joined by others from Pond Inlet, are carried north to Resolute Bay and Grise Fiord.",
+        "source": "src-canada",
+        "consequence": false
+      },
+      {
+        "span": "1953",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "The RCMP promised abundant game and a two-year stay; families faced isolation and hardship instead.",
+        "source": "src-hakai",
+        "consequence": false
+      },
+      {
+        "span": "2010-08-18",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "In 2010 the government apologized in Inukjuak for the mistakes and broken promises of this chapter.",
+        "source": "src-canada",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-canada",
+      "url": "https://www.canada.ca/en/news/archive/2010/08/government-canada-apologizes-relocation-inuit-families-high-arctic.html",
+      "title": "Government of Canada Apologizes for Relocation of Inuit Families to the High Arctic",
+      "publisher": "Government of Canada (Indian and Northern Affairs Canada)",
+      "author": "Government of Canada",
+      "date_published": "2010-08-18",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-hakai",
+      "url": "https://hakaimagazine.com/features/the-people-used-as-pawns-in-canadas-claim-to-the-arctic/",
+      "title": "The People Used as Pawns in Canada's Claim to the Arctic",
+      "publisher": "Hakai Magazine (originally in Up Here)",
+      "author": "Dana Bowen",
+      "date_published": "2022-03-22",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nunatsiaq",
+      "url": "https://nunatsiaq.com/stories/article/65674one_year_after_ottawas_apology_to_the_high_arctic_relocatees_memories_/",
+      "title": "One year after Ottawa's apology to High Arctic relocatees, memories endure",
+      "publisher": "Nunatsiaq News",
+      "author": "Jane George",
+      "date_published": "2011-08-18",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-grise",
+      "url": "https://www.openstreetmap.org/way/399510383",
+      "title": "OpenStreetMap way 399510383, Grise Fiord, 76.4181376, -82.7165575",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-osm-inukjuak",
+      "url": "https://www.openstreetmap.org/relation/9390720",
+      "title": "OpenStreetMap relation 9390720, Inukjuak, 58.4536824, -78.1124276",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-osm-resolute",
+      "url": "https://www.openstreetmap.org/relation/6002501",
+      "title": "OpenStreetMap relation 6002501, Resolute, 74.697029, -94.840851",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of numbers and distance: Canada.ca and Nunatsiaq say 1,200 km and 19 Inukjuak plus 3 Pond Inlet families (the Pond Inlet families are not dated to 1953 in the pages read), while a Hakai photo caption says about 2,000 km. Whether Pond Inlet families moved in 1953 is unconfirmed.",
+  "published_at": "2026-10-22T18:10:01.233Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

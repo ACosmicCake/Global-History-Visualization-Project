@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0482-laurion-silver-and-the-themistoclean-fleet",
+  "kind": "event",
+  "title": "Maronea silver strike and the building of the Themistoclean fleet",
+  "summary": "In 483/2 BCE, during the archonship of Nicomedes, a rich vein of silver was struck at Maronea in the Laurion mining district of Attica, yielding a hundred talents for the Athenian treasury. Instead of a per-capita dividend, Themistocles persuaded the assembly to fund the construction of one hundred triremes. This expanded fleet defeated the Persian navy at Salamis in 480 BCE, securing Athenian maritime supremacy.",
+  "when": {
+    "start": {
+      "year": -482
+    },
+    "end": {
+      "year": -479
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Discovery of the Maronea ore and assembly vote occurred in the Athenian archon year of Nicomedes (483/2 BCE); the newly built fleet fought at Salamis in 480 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Aristotle, Ath. Pol. 22.7, trans. Sir Frederic G. Kenyon)",
+        "value": "Two years later, in the archonship of Nicodemus, the mines of Maroneia were discovered, and the state made a profit of a hundred talents from the working of them",
+        "source": "src-athconst-mit"
+      },
+      {
+        "calendar": "BCE (Danielle L. Kellogg, review of Ben Akrigg, sehepunkte 21, 2021)",
+        "value": "determines that more than 30,000 male slaves were needed for service in the silver mines and in the Athenian navy",
+        "source": "src-kellogg2021"
+      }
+    ],
+    "display": "483/2–480 BCE"
+  },
+  "where": {
+    "lat": 37.724298,
+    "lon": 23.987113,
+    "elevation_m": null,
+    "modern_name": "Lavreotiki (Laurium / Kamariza), East Attica, Greece",
+    "historical_name": "Maroneia, Laurion mining district, Attica, polis of Athens",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-pleiades-laureion"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Maronea strike and Themistocles' naval bill transformed Athens into a major maritime power and provided the fleet that defeated Xerxes' invasion at Salamis."
+  },
+  "confidence": "established",
+  "audience_note": "Documents perilous subterranean chattel slavery in the Laurion silver extraction galleries.",
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "-0479-battle-of-salamis",
+      "type": "caused",
+      "because": "The 100 triremes financed by the Maronea silver strike formed the naval backbone of the Greek victory at Salamis."
+    },
+    {
+      "id": "-0412-flight-of-the-enslaved-from-attica",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-athconst-mit",
+      "url": "http://classics.mit.edu/Aristotle/athenian_const.1.1.html",
+      "title": "The Athenian Constitution, Part 1",
+      "publisher": "The Internet Classics Archive (MIT)",
+      "author": "Aristotle (attributed); trans. Sir Frederic G. Kenyon",
+      "date_published": "1994",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-kellogg2021",
+      "url": "https://sehepunkte.net/2021/01/33368.html",
+      "title": "Rezension von: Ben Akrigg, Population and Economy in Classical Athens",
+      "publisher": "sehepunkte (Rezensionsjournal für die Geschichtswissenschaften)",
+      "author": "Danielle L. Kellogg",
+      "date_published": "2021-01-15",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-plutarch-them",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Themistocles*.html",
+      "title": "Plutarch, Life of Themistocles, chapter 4",
+      "publisher": "LacusCurtius, University of Chicago (Loeb Classical Library vol. II, 1914)",
+      "author": "Plutarch; trans. Bernadotte Perrin",
+      "date_published": "1914",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-laureion",
+      "url": "https://pleiades.stoa.org/places/580010/json",
+      "title": "Laureion: a Pleiades place resource",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-482",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "In 483/2 BCE, a rich silver vein is struck at Maronea in the Laurion mining district of Attica.",
+        "source": "src-athconst-mit"
+      },
+      {
+        "span": "-479",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The one hundred triremes constructed with the silver defeat the Persian fleet at Salamis in 480 BCE.",
+        "source": "src-athconst-mit",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of whether the Athenian assembly funded 100 triremes (as in Ath. Pol. 22.7) or 200 (as reported in Herodotus 7.144), and of the manuscript reading of the archon's name (Nicomedes versus Nicodemus).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:27.211Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ]
+}

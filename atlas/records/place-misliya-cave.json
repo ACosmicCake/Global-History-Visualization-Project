@@ -1,0 +1,161 @@
+{
+  "id": "place-misliya-cave",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Misliya Cave, Mount Carmel",
+  "summary": "Prehistoric cave on Mount Carmel in northern Israel. A fossil upper jaw with teeth found there was dated by three methods to 177,000 to 194,000 years ago and identified as Homo sapiens, which would make it the earliest modern human fossil outside Africa; the age has been challenged.",
+  "when": {
+    "start": {
+      "year": -194000
+    },
+    "end": {
+      "year": -177000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range of the three-method date for the Misliya-1 maxilla as published in 2018 (177,000 to 194,000 years)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago, multiple methods",
+        "value": "Misliya (177,000-194,000 years ago)",
+        "source": "src-harvard-misliya"
+      },
+      {
+        "calendar": "years old, multiple methods",
+        "value": "between 177,000 and 194,000 years old",
+        "source": "src-ro-misliya"
+      }
+    ],
+    "display": "about 177,000-194,000 years ago (age disputed)"
+  },
+  "where": {
+    "lat": 32.741335,
+    "lon": 34.972444,
+    "elevation_m": null,
+    "modern_name": "Misliya Cave, Mount Carmel, Haifa District, Israel",
+    "historical_name": "Cave on the western slope of Mount Carmel in the Levant; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-misliya"
+    ],
+    "paleo": {
+      "lat": 32.63,
+      "lon": 34.94,
+      "age_ma": 0.185,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Reconstruction to 0.185 Ma moves the point about 12 km; MULLER2019 gives 32.69 N, 34.92 E."
+    }
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Candidate for the earliest Homo sapiens fossil outside Africa, pushing back dispersal estimates if the dates hold."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related"
+    },
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related"
+    },
+    {
+      "id": "place-omo-kibish",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-harvard-misliya",
+      "url": "https://www.harvardmagazine.com/2018/01/researchers-find-earliest-known-human-fossil-outside-africa",
+      "title": "Researchers Find Earliest Known Human Fossil Outside Africa",
+      "publisher": "Harvard Magazine",
+      "author": "Marina N. Bolotnikova",
+      "date_published": "2018-01-25",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ro-misliya",
+      "url": "https://researchoutreach.org/articles/discovering-first-early-modern-humans-left-africa/",
+      "title": "Discovering when the first early modern humans left Africa",
+      "publisher": "Research Outreach",
+      "author": "Weinstein-Evron, M. and Hershkovitz, I.",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-misliya",
+      "url": "https://www.wikidata.org/wiki/Q12409386",
+      "title": "Wikidata Q12409386: Misliya Cave (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Both opened sources are journalism summaries of the 2018 Science paper (Hershkovitz et al.), which I could not open (403). The age is stated as published; a later published comment questioning the uranium-series dates appeared in search results but was not opened, so the dispute is flagged without detail. Coordinates are from Wikidata.",
+  "author": "historian-agent:o-s19",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:38:41.490Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

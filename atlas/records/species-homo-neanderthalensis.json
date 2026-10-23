@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s26",
+  "updated": "2026-10-22",
+  "id": "species-homo-neanderthalensis",
+  "kind": "species",
+  "title": "Homo neanderthalensis (Neanderthals)",
+  "summary": "Neanderthals were a distinct species of archaic human who lived across Europe and southwestern to central Asia from about 400,000 to 40,000 years ago. Short, stocky and cold-adapted, they made Mousterian stone tools, controlled fire and buried their dead, and some of their DNA survives in people today.",
+  "when": {
+    "start": {
+      "year": -400000
+    },
+    "end": {
+      "year": -40000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources round to \"about 400,000 to 40,000 years ago\"; the figures are used as years and not converted from before-present counts. The Natural History Museum says the best-known Neanderthals lived 130,000 to 40,000 years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "About 400,000 - 40,000 years ago",
+        "source": "src-si-neand"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "from about 400,000 to 40,000 years ago",
+        "source": "src-nhm-neand"
+      }
+    ],
+    "display": "c. 400,000-40,000 years ago"
+  },
+  "where": {
+    "lat": 51.2267,
+    "lon": 6.9511,
+    "elevation_m": null,
+    "modern_name": "Neander Valley, Germany (type locality; the species ranged across Europe and southwestern to central Asia)",
+    "historical_name": "Neander Valley near Mettmann; species range Europe to the Altai, no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-wd-q170081",
+      "src-nhm-neand"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "The best-studied extinct human relative and a source of DNA in living people."
+  },
+  "related": [
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "related"
+    },
+    {
+      "id": "-47ka-neanderthal-modern-human-interbreeding",
+      "type": "related"
+    },
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related"
+    },
+    {
+      "id": "place-shanidar-cave",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-si-neand",
+      "url": "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis",
+      "title": "Homo neanderthalensis",
+      "publisher": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "author": "Smithsonian Human Origins Program",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-nhm-neand",
+      "url": "https://www.nhm.ac.uk/discover/who-were-the-neanderthals.html",
+      "title": "Who were the Neanderthals?",
+      "publisher": "Natural History Museum, London",
+      "author": "Natural History Museum",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-q170081",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q170081.json",
+      "title": "Wikidata item Q170081 (Neandertal valley), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Neander Valley type locality with a 3,000 km uncertainty to reflect the range. Start date varies by source; the Smithsonian composite-skeleton page suggests c. 200,000 years for European Neanderthals, which was not used.",
+  "published_at": "2026-10-22T07:37:40.484Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

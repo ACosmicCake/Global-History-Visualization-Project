@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "confidence": "established",
+  "scale": "civilization",
+  "audience_note": "This record concerns the city struck by the first atomic bomb used in war and its preserved ruin. It refers to mass death and injury, and casualty detail is left to the event record.",
+  "author": "historian-agent:m-6",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-hiroshima",
+  "title": "Hiroshima and the Genbaku Dome",
+  "summary": "Hiroshima began in 1589 when Mori Terumoto started a castle on the Ota river delta, and it became a city in 1889. On 6 August 1945 the first atomic bomb used in war exploded over it. The ruined former Industrial Promotion Hall, the Genbaku Dome, was preserved as a peace memorial.",
+  "when": {
+    "start": {
+      "year": 1589
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the year Mori Terumoto began the castle (1589); the city page says it was tentatively completed in 1591. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (City of Hiroshima)",
+        "value": "In 1589, Terumoto Mori began construction of a castle on a delta",
+        "source": "src-hiroshima-history"
+      },
+      {
+        "calendar": "CE (City of Hiroshima)",
+        "value": "Hiroshima officially became one of the first cities in all of Japan in April 1, 1889",
+        "source": "src-hiroshima-history"
+      }
+    ],
+    "display": "Castle town founded 1589; city 1889; atomic bombing 6 August 1945"
+  },
+  "where": {
+    "lat": 34.39556,
+    "lon": 132.45361,
+    "elevation_m": null,
+    "modern_name": "Hiroshima Peace Memorial (Genbaku Dome), Hiroshima, Japan",
+    "historical_name": "Hiroshima, castle town of Mori Terumoto on the Ota delta, Aki Province (later Hiroshima Prefecture, Empire of Japan, then Japan)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-unesco-xml",
+      "src-unesco-775"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "The first city hit by an atomic bomb in war; the Genbaku Dome is a UNESCO World Heritage property and a global symbol of peace."
+  },
+  "related": [
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-09-nagasaki-bombing",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hiroshima-history",
+      "url": "https://www.city.hiroshima.lg.jp/english/overview/1029882/1009928.html",
+      "title": "The History of Hiroshima City",
+      "publisher": "City of Hiroshima",
+      "author": "City of Hiroshima",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-hiroshima-dome",
+      "url": "https://www.city.hiroshima.lg.jp/english/peace/1029869/1010014.html",
+      "title": "The Story of the Atomic Bomb Dome",
+      "publisher": "City of Hiroshima (Peace Culture)",
+      "author": "City of Hiroshima",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-hiroshima-univ",
+      "url": "https://home.hiroshima-u.ac.jp/tsugi/rs_H_hus_Bussan_e.htm",
+      "title": "On the Architectural Design Concept of the \"Hiroshima-Ken Bussan-Chinretsu-Kan\" (Today's Atomic Bomb Dome)",
+      "publisher": "Hiroshima University",
+      "author": "Toshimasa Sugimoto (Geijyutu Kenkyu No. 2)",
+      "date_published": "1989-07",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-775",
+      "url": "https://whc.unesco.org/en/list/775/",
+      "title": "Hiroshima Peace Memorial (Genbaku Dome) (World Heritage List no. 775)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance",
+        "where",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): geolocation entries",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Foundation of about 1,023 m2 on the Motoyasu River bank in Sarugaku-cho, with a central tower under an elliptical dome whose plan measures 10.6 by 8.6 m. No survey polygon was opened.",
+      "source": "src-hiroshima-dome",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "domed_building",
+      "source": "src-hiroshima-dome",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 25,
+          "unit": "m",
+          "source": "src-hiroshima-dome",
+          "note": "City of Hiroshima: the building stood 25 meters high."
+        },
+        {
+          "part": "dome diameter (long axis of elliptical plan)",
+          "value": 10.6,
+          "unit": "m",
+          "source": "src-hiroshima-univ",
+          "note": "Sugimoto 1989: pseudo-ellipse, long axis 10.6 m, short axis 8.6 m."
+        },
+        {
+          "part": "dome plan, short axis",
+          "value": 8.6,
+          "unit": "m",
+          "source": "src-hiroshima-univ"
+        },
+        {
+          "part": "foundation area",
+          "value": 1023,
+          "unit": "m2",
+          "source": "src-hiroshima-dome"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled enlarged for visibility in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "domed block at true height and foundation area on the Motoyasu River bank"
+      },
+      {
+        "level": "local",
+        "representation": "procedural domed building with central elliptical dome, shown intact or as the preserved ruin by date"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1914,
+        "end_year": 1915,
+        "state": "construction",
+        "description": "Built by Hiroshima Prefecture to a design by Jan Letzel; work began 1914 and it opened in 1915.",
+        "source": "src-hiroshima-dome"
+      },
+      {
+        "start_year": 1915,
+        "end_year": 1944,
+        "state": "intact",
+        "description": "Stood as the Prefectural Commercial Exhibition Hall, later the Industrial Promotion Hall.",
+        "source": "src-hiroshima-dome"
+      },
+      {
+        "start_year": 1945,
+        "end_year": 1966,
+        "state": "ruined",
+        "description": "Left as strongly damaged ruins near the hypocentre after the bombing of 6 August 1945.",
+        "source": "src-hiroshima-univ"
+      },
+      {
+        "start_year": 1967,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "City council resolved in 1966 to preserve it; preservation projects in 1967 and 1989 stabilised the ruin, kept as it was just after the bombing.",
+        "source": "src-hiroshima-dome"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1915,
+        "to_year": 2026,
+        "material": "brick with partial steel reinforcement; exterior of stone and mortar",
+        "source": "src-hiroshima-dome"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape domed_building. The record is the city, but the pin and model are the Genbaku Dome (UNESCO point) because the model rules need one structure; the city centre lies about 1.1 km away. Least sure of the dome diameter: 10.6 m is the long axis of a pseudo-ellipse from a 1989 university paper, short axis 8.6 m.",
+  "published_at": "2026-10-22T06:22:10.904Z"
+}

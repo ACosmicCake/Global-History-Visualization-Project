@@ -1,0 +1,167 @@
+{
+  "id": "-1219-shang-oracle-bone-inscriptions",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Shang oracle-bone inscriptions at Anyang",
+  "summary": "At Yinxu, the late Shang capital near Anyang, diviners carved questions to royal ancestors on ox bones and turtle shells. More than 150,000 inscribed pieces bearing over 4,500 distinct characters have been found; they record sacrifices, wars, farming and officials, and form the earliest known formal Chinese writing. Scholars first noticed them in 1899.",
+  "when": {
+    "start": {
+      "year": -1299
+    },
+    "end": {
+      "year": -1045
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Range is the Yinxu capital period, 1300–1046 BC (UNESCO). The earliest inscriptions date to the reign of King Wu Ding (World History Encyclopedia); his exact dates were not confirmed on an opened page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC, Shang capital period at Yin Xu",
+        "value": "late Shang Dynasty (1300 - 1046 BC)",
+        "source": "src-unesco"
+      },
+      {
+        "calendar": "BC, as stated by Henan provincial government site",
+        "value": "late Shang Dynasty (c. 16th century-11th century BC)",
+        "source": "src-henan"
+      }
+    ],
+    "display": "c. 1300–1046 BCE"
+  },
+  "where": {
+    "lat": 36.1225,
+    "lon": 114.31861111,
+    "elevation_m": null,
+    "modern_name": "Yinxu, near Anyang, Henan, China",
+    "historical_name": "Yin (Yinxu), capital of the late Shang dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wikidata",
+      "src-unesco"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "art_music_literature",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Earliest known formal Chinese writing and the main primary record of the Shang court."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3300-invention-of-writing",
+      "type": "related"
+    },
+    {
+      "id": "-1200-late-bronze-age-collapse",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco",
+      "url": "https://whc.unesco.org/en/list/1114/",
+      "title": "Yin Xu",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-henan",
+      "url": "https://english.henan.gov.cn/2025/03-15/3137156.html",
+      "title": "Decoding history's bones",
+      "publisher": "Henan Provincial People's Government (English portal)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/Oracle_Bones/",
+      "title": "Oracle Bones",
+      "publisher": "World History Encyclopedia",
+      "author": "Emily Mark",
+      "date_published": "n.d.",
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q464904",
+      "title": "Yinxu (Wikidata Q464904), coordinates 36.1225 N, 114.3186 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Yinxu site, not a single findspot; the id year -1219 falls in the Wu Ding era but the range here is the whole capital period. The 150,000 and 4,500 figures come from a provincial government news item.",
+  "author": "historian-agent:o-s4",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:40:33.937Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1299",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At Yinxu, the late Shang capital near Anyang, diviners carved questions to royal ancestors on ox bones and turtle shells.",
+        "source": "src-unesco"
+      },
+      {
+        "span": "-1045",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Scholars first noticed them in 1899.",
+        "source": "src-unesco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

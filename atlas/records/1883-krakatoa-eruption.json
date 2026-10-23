@@ -1,0 +1,163 @@
+{
+  "id": "1883-krakatoa-eruption",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Eruption of Krakatau (Krakatoa)",
+  "summary": "On 26 and 27 August 1883 the volcano Krakatau in the Sunda Strait erupted in a series of explosions, the last among the loudest sounds in recorded history. Tsunamis struck nearby coasts of Java and Sumatra. NOAA gives about 36,000 deaths, over 34,000 of them from tsunamis; ash circled the globe and a small global cooling followed.",
+  "when": {
+    "start": {
+      "year": 1883,
+      "month": 8,
+      "day": 26
+    },
+    "end": {
+      "year": 1883,
+      "month": 8,
+      "day": 27
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Eruptive activity began around 20 May 1883 (History.com); the paroxysm was 26-27 August. Death tolls are estimates: History.com gives at least 31,000 from tsunamis and about 4,500 from pyroclastic flows."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "August 26, 1883",
+        "source": "src-noaa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The major eruptions occurred on August 26 and 27, 1883.",
+        "source": "src-history"
+      }
+    ],
+    "display": "26-27 August 1883"
+  },
+  "where": {
+    "lat": -6.102,
+    "lon": 105.423,
+    "elevation_m": null,
+    "modern_name": "Krakatau, Sunda Strait, between Java and Sumatra, Indonesia",
+    "historical_name": "Krakatau (Krakatoa), uninhabited island in the Sunda Strait",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-krakatoa"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "One of the deadliest and best-documented volcanic eruptions, with tsunami losses on two islands and worldwide atmospheric effects."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-74ka-toba-supereruption",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-noaa",
+      "url": "https://www.ncei.noaa.gov/news/day-historic-krakatau-eruption-1883",
+      "title": "On This Day: Historic Krakatau Eruption of 1883",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "numbers",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/this-day-in-history/august-27/krakatau-explodes",
+      "title": "Krakatoa explodes with massive force",
+      "publisher": "History.com (A&E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "numbers",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-krakatoa",
+      "url": "https://www.wikidata.org/wiki/Q82613",
+      "title": "Wikidata item Q82613 (Krakatoa), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the death toll (about 36,000 per NOAA; subtotals differ between NOAA and History.com) and of exact wave heights, which are not stated here. Krakatau also had earlier activity from 20 May.",
+  "author": "historian-agent:o-s27",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1883-08-26",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The most violent explosion sent ash about 80 km into the sky above the Sunda Strait.",
+        "source": "src-noaa"
+      },
+      {
+        "span": "1883-08-27",
+        "action": "pulse { radius_km: 4800 }",
+        "caption": "The final explosion was heard about 3,000 miles (roughly 4,800 km) away, among the loudest sounds in recorded history.",
+        "source": "src-history"
+      },
+      {
+        "span": "1883-08-27",
+        "action": "numbers.counter { range: [34000, 36000] }",
+        "caption": "Roughly 36,000 people died; NOAA attributes more than 34,000 of the deaths to tsunamis along the strait.",
+        "source": "src-noaa",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T07:49:30.231Z"
+}

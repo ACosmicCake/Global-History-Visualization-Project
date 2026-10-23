@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s51",
+  "updated": "2026-10-22",
+  "id": "person-johannes-gutenberg",
+  "kind": "person",
+  "title": "Johannes Gutenberg",
+  "summary": "Johannes Gutenberg (born Johann Gensfleisch zur Laden) was born around 1398 in Mainz and trained there as a goldsmith. After years in Strasbourg he had a printing operation by 1450, funded by a loan from Johann Fust; Fust sued and the partnership was dissolved in 1455. He died in Mainz in 1468.",
+  "when": {
+    "start": {
+      "year": 1398
+    },
+    "end": {
+      "year": 1468
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 8,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Encyclopedia.com gives \"around 1398\"; the Gutenberg-Gesellschaft page gives no birth date, so the +/- range is an editorial estimate of doubt. The Gesellschaft says a document of 26 February 1468 records his death and that the date 3 February may be invented."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Encyclopedia.com)",
+        "value": "ca. 1398–1468; died on Feb. 3, 1468",
+        "source": "src-encyc-gutenberg"
+      },
+      {
+        "calendar": "CE (Gutenberg-Gesellschaft)",
+        "value": "Early 1468, exact date unknown",
+        "source": "src-gg-final-years"
+      }
+    ],
+    "display": "c. 1398–1468"
+  },
+  "where": {
+    "lat": 49.9995205,
+    "lon": 8.2736253,
+    "elevation_m": null,
+    "modern_name": "Mainz, Rhineland-Palatinate, Germany",
+    "historical_name": "Mainz (Encyclopedia.com: birth and death at Mainz)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-mainz"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Associated with the start of printing in Mainz; central to the existing printing record."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "1450-gutenberg-printing-press",
+      "type": "same_person"
+    },
+    {
+      "id": "place-mainz",
+      "type": "related"
+    },
+    {
+      "id": "1462-sack-of-mainz",
+      "type": "related"
+    },
+    {
+      "id": "1457-mainz-psalter",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyc-gutenberg",
+      "url": "https://www.encyclopedia.com/international/encyclopedias-almanacs-transcripts-and-maps/gutenberg-johann-ca-1398-1468",
+      "title": "Gutenberg, Johann (ca. 1398–1468)",
+      "publisher": "Encyclopedia.com (Encyclopedia of World Biography)",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gg-final-years",
+      "url": "https://www.gutenberg-gesellschaft.de/en/johannes-gutenberg/gutenbergs-final-years",
+      "title": "Gutenberg's final years",
+      "publisher": "Internationale Gutenberg-Gesellschaft in Mainz",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-mainz",
+      "url": "https://nominatim.openstreetmap.org/search?q=Mainz&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Mainz (49.9995205, 8.2736253)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth year is not firmly attested. Pin is the city of Mainz. Day of death is doubtful per the Gutenberg-Gesellschaft, so only the year is used. The 1462 losses are in 1462-sack-of-mainz. The Fust loan figure (800 guilders) is on Encyclopedia.com only.",
+  "published_at": "2026-10-22T10:53:11.831Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

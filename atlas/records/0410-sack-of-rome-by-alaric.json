@@ -1,0 +1,183 @@
+{
+  "id": "0410-sack-of-rome-by-alaric",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Sack of Rome by Alaric's Goths",
+  "summary": "In August 410 CE, Visigoths under King Alaric breached the Salarian Gate after a protracted siege and plundered Rome for three days. The first capture of the imperial city by a foreign invader in eight centuries stunned contemporaries and accelerated Western Roman collapse.",
+  "when": {
+    "start": {
+      "year": 410,
+      "iso": "0410-08-24"
+    },
+    "end": {
+      "year": 410,
+      "iso": "0410-08-27"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Traditional entry date is 24 August 410 (Julian); primary accounts agree on a three-day sack in late August 410."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian / Gregorian (modern reference)",
+        "value": "In August of 410 CE Alaric the Gothic king accomplished something that had not been done in over eight centuries",
+        "source": "src-whe-sack-410"
+      },
+      {
+        "calendar": "Julian / Gregorian (modern scholarly encyclopedia)",
+        "value": "The end result was the sack of Rome in 410.",
+        "source": "src-dir-honorius"
+      },
+      {
+        "calendar": "Historical narrative (Procopius, Wars 3.2.22)",
+        "value": "Salarian Gate",
+        "source": "src-procopius-vandal-1a"
+      }
+    ],
+    "display": "24–27 August 410 CE"
+  },
+  "where": {
+    "lat": 41.8902,
+    "lon": 12.4922,
+    "elevation_m": null,
+    "modern_name": "Rome, Italy (Porta Salaria / city center)",
+    "historical_name": "Roma, Western Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The first sack of the imperial capital in 800 years broke Rome's aura of invulnerability, stimulated Augustine's City of God, and accelerated the collapse of Western Roman authority."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0455-vandal-sack-of-rome",
+      "type": "related"
+    },
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "410-08",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "In August 410, Alaric's Visigoths enter Rome through the Salarian Gate and plunder it for three days.",
+        "source": "src-procopius-vandal-1a",
+        "consequence": false
+      },
+      {
+        "span": "410",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The fall of the ancient capital shocks the Mediterranean world and inspires Augustine's City of God.",
+        "source": "src-dir-honorius",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-dir-honorius",
+      "url": "https://roman-emperors.sites.luc.edu/honorius.htm",
+      "title": "Honorius (395-423 A.D.)",
+      "publisher": "De Imperatoribus Romanis: An Online Encyclopedia of Roman Rulers (Loyola University Chicago)",
+      "author": "Ralph W. Mathisen",
+      "date_published": "1999",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-whe-sack-410",
+      "url": "https://www.worldhistory.org/article/1449/sack-of-rome-410-ce/",
+      "title": "Sack of Rome 410 CE",
+      "publisher": "World History Encyclopedia",
+      "author": "Donald L. Wasson",
+      "date_published": "2019-09-23",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-procopius-vandal-1a",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Procopius/Wars/3A*.html",
+      "title": "Procopius, History of the Wars, Book III: The Vandalic War",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+      "author": "Procopius; translated by H. B. Dewing",
+      "date_published": "1916",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "where",
+        "what",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070/rome.html",
+      "title": "Rome, Italy",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the disputed accounts of entry at the Salarian Gate, whether opened by Gothic sympathizers or treason from within as debated between Procopius and later chroniclers.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:33.505Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

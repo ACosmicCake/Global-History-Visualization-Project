@@ -1,0 +1,137 @@
+{
+  "id": "1992-rio-earth-summit",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Rio Earth Summit (UNCED)",
+  "summary": "From 3 to 14 June 1992 Rio de Janeiro hosted the United Nations Conference on Environment and Development. It adopted the Rio Declaration, the voluntary action plan Agenda 21 and a non-binding statement on forests, and opened the Framework Convention on Climate Change and the Convention on Biological Diversity for signature.",
+  "when": {
+    "start": {
+      "year": 1992
+    },
+    "end": {
+      "year": 1992
+    },
+    "precision": "day",
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "From 3-14 June 1992, Rio de Janeiro hosted the United Nations Conference on Environment and Development (UNCED).",
+        "source": "src-lop"
+      }
+    ],
+    "display": "3–14 June 1992"
+  },
+  "where": {
+    "lat": -22.90642,
+    "lon": -43.18223,
+    "elevation_m": null,
+    "modern_name": "Rio de Janeiro, Brazil",
+    "historical_name": "Rio de Janeiro, Brazil",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-gn-rio"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "global"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The conference produced founding agreements for international climate and biodiversity policy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-lop",
+      "url": "https://publications.gc.ca/Collection-R/LoPBdP/BP/bp317-e.htm",
+      "title": "The Rio Earth Summit: summary of the United Nations Conference on Environment and Development (BP-317E)",
+      "publisher": "Library of Parliament, Canada",
+      "author": "Stephanie Meakin",
+      "date_published": "1992-11",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-epa",
+      "url": "https://www.epa.gov/archive/epa/aboutepa/products-1992-earth-summit.html",
+      "title": "Products of the 1992 Earth Summit",
+      "publisher": "U.S. Environmental Protection Agency (EPA Journal)",
+      "author": "Kathy Sessions",
+      "date_published": "1993",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-rio",
+      "url": "https://www.geonames.org/search.html?q=Rio+de+Janeiro&country=BR",
+      "title": "Rio de Janeiro, Brazil",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The Library of Parliament page gives conflicting participant counts (105, 154 and 178 nations), so no count is used. The EPA page gives no dates; the dates rest on the Canadian page.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:48.504Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1992",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 3 to 14 June 1992 Rio de Janeiro hosted the United Nations Conference on Environment and Development.",
+        "source": "src-lop"
+      },
+      {
+        "span": "1992",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It adopted the Rio Declaration, the voluntary action plan Agenda 21 and a non-binding statement on forests, and opened the Framework Convention on Climate Change and the Convention…",
+        "source": "src-lop",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

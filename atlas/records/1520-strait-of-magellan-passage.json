@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1520-strait-of-magellan-passage",
+  "kind": "event",
+  "title": "Magellan's passage through the strait",
+  "summary": "Magellan's fleet sighted Cape Virgenes on 21 October 1520 and spent about five weeks working through the strait that now bears his name. The San Antonio deserted and went back to Spain, and the three remaining ships, Trinidad, Concepción and Victoria, entered the Pacific on 28 November 1520.",
+  "when": {
+    "start": {
+      "year": 1520
+    },
+    "end": {
+      "year": 1520
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Sources differ on the passage: the Genoese pilot's account says 21 October to 26 November (36 days); National Geographic and Sigmalive give 28 November for leaving the strait; the PMC article says crossing took 27 days."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "which falls on October 21",
+        "source": "src-natgeo-magellan"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "November 28, 1520",
+        "source": "src-natgeo-magellan"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "28 November 1520",
+        "source": "src-sigma-magellan"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "thirty-six days",
+        "source": "src-fordham-magellan"
+      }
+    ],
+    "display": "21 October – 28 November 1520"
+  },
+  "where": {
+    "lat": -54,
+    "lon": -71,
+    "elevation_m": null,
+    "modern_name": "Strait of Magellan, Chile",
+    "historical_name": "Strait first called the Strait of All Saints; Spanish expedition, no settled polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-strait"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "The first known passage between the Atlantic and the Pacific by a European fleet."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1519-magellan-elcano-circumnavigation",
+      "type": "part_of"
+    },
+    {
+      "id": "1521-magellan-arrival-in-the-philippines",
+      "type": "caused",
+      "because": "The fleet that entered the Pacific here went on to reach the Philippine islands in March 1521."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-natgeo-magellan",
+      "url": "https://www.nationalgeographic.com/history/history-magazine/article/240-men-started-magellan-voyage-around-world-only-18-finished-it",
+      "title": "240 men started Magellan's voyage around the world. Only 18 finished it.",
+      "publisher": "National Geographic",
+      "author": "National Geographic",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-fordham-magellan",
+      "url": "https://sourcebooks.fordham.edu/mod/1519magellan.asp",
+      "title": "Account of Magellan's voyage by a Genoese pilot",
+      "publisher": "Fordham University, Internet History Sourcebooks",
+      "author": "Fordham University, Internet History Sourcebooks",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-sigma-magellan",
+      "url": "https://en.sigmalive.com/on-this-day-magellan-discovers-route-to-the-pacific-1520/",
+      "title": "On this day: Magellan discovers route to the Pacific (1520)",
+      "publisher": "Sigmalive",
+      "author": "Sigmalive",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-strait",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q48365.json",
+      "title": "Wikidata entry for the Strait of Magellan (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the point is the centre of the strait, not a surveyed track, hence the large uncertainty. Duration differs by source (36 days, 27 days or about five weeks). This record covers only the strait passage; the wider voyage is in 1519-magellan-elcano-circumnavigation.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1520-10-21",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Magellan's fleet sights Cape Virgenes, at the eastern entrance to the strait, on the feast day of the eleven thousand virgins.",
+        "source": "src-sigma-magellan",
+        "consequence": false
+      },
+      {
+        "span": "1520-10-21 / 1520-11-28",
+        "action": "region.fill { radius_km: 250 }",
+        "caption": "The ships spend over a month in storms and currents, and the San Antonio slips away and sails back to Spain.",
+        "source": "src-natgeo-magellan",
+        "consequence": false
+      },
+      {
+        "span": "1520-11-28",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "The three remaining ships leave the strait, the first Europeans to enter the Pacific from its eastern shore.",
+        "source": "src-natgeo-magellan",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:53.312Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

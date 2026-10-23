@@ -1,0 +1,159 @@
+{
+  "id": "-8my-expansion-of-c4-grasslands",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Late Miocene expansion of C4 grasslands",
+  "summary": "In the Siwalik deposits of northern Pakistan, soil carbon isotopes show C3 vegetation giving way to C4 grasses from about 7.3 million years ago, with floodplain vegetation close to pure C4 grassland by about 6 Ma. A study of Siwalik and Bengal Fan sediments finds a relatively rapid shift in plant-wax carbon isotopes before 6 Ma, with soil changes possibly beginning as early as 9 Ma.",
+  "when": {
+    "start": {
+      "year": -9000000
+    },
+    "end": {
+      "year": -6000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range runs from the earliest suggested onset (\"as early as 9 Ma\", Freeman and Colarusso 2001) to near-pure C4 grassland at about 6 Ma (Quade and Cerling 1995), whose own onset is 7.3 Ma. The id uses 8 Ma. Years are Ma with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "At 7.3 Ma, a shift toward more positive carbon isotopic values began",
+        "source": "src-quade1995"
+      },
+      {
+        "calendar": "Ma",
+        "value": "as early as 9 Ma",
+        "source": "src-freeman2001"
+      },
+      {
+        "calendar": "Ma",
+        "value": "prior to 6 Ma",
+        "source": "src-freeman2001"
+      }
+    ],
+    "display": "c. 9–6 million years ago (onset 7.3 Ma in northern Pakistan)"
+  },
+  "where": {
+    "lat": 33.5,
+    "lon": 73,
+    "elevation_m": null,
+    "modern_name": "Potwar Plateau, northern Pakistan (Siwalik sections; the Indian subcontinent record is wider)",
+    "historical_name": "Northern Indian subcontinent, Late Miocene; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wikidata-potwar",
+      "src-quade1995"
+    ],
+    "paleo": {
+      "lat": 29.7,
+      "lon": 70.91,
+      "age_ma": 8,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A major shift in terrestrial vegetation recorded in Siwalik isotopes."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-14my-middle-miocene-climatic-transition",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-quade1995",
+      "url": "https://experts.arizona.edu/en/publications/expansion-of-csub4sub-grasses-in-the-late-miocene-of-northern-pak/",
+      "title": "Expansion of C4 grasses in the Late Miocene of Northern Pakistan: evidence from stable isotopes in paleosols (Palaeogeography, Palaeoclimatology, Palaeoecology 115:91-116)",
+      "publisher": "University of Arizona research portal (Elsevier journal)",
+      "author": "J. Quade, T.E. Cerling",
+      "date_published": "1995",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-freeman2001",
+      "url": "https://pure.psu.edu/en/publications/molecular-and-isotopic-records-of-csub4sub-grassland-expansion-in/",
+      "title": "Molecular and isotopic records of C4 grassland expansion in the late Miocene (Geochimica et Cosmochimica Acta 65:1439-1454)",
+      "publisher": "Penn State research portal (Elsevier journal)",
+      "author": "K.H. Freeman, L.A. Colarusso",
+      "date_published": "2001",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-potwar",
+      "url": "https://www.wikidata.org/wiki/Q34817453",
+      "title": "Wikidata item Q34817453 (Potwar Plateau)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=73,33.5&time=8&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: sources give a 7.3 Ma onset (Pakistan) and \"as early as 9 Ma\" (paleosols), not 8 Ma; the pin is the Potwar Plateau from Wikidata while the opened pages name only \"northern Pakistan\". Both pages are university portals for articles by different authors.",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:09.516Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1882-chinese-exclusion-act",
+  "kind": "event",
+  "title": "Chinese Exclusion Act",
+  "summary": "The US Congress passed, and President Chester A. Arthur signed, the Chinese Exclusion Act, approved on 6 May 1882. It banned Chinese laborers from immigrating for ten years and required certificates from other Chinese travelers. Sources describe it as the first law to place broad restrictions on US immigration.",
+  "when": {
+    "start": {
+      "year": 1882
+    },
+    "end": {
+      "year": 1882
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Approval date 6 May 1882 per National Archives."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 6, 1882",
+        "source": "src-nara"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1882",
+        "source": "src-hist"
+      }
+    ],
+    "display": "6 May 1882"
+  },
+  "where": {
+    "lat": 38.8951,
+    "lon": -77.0364,
+    "elevation_m": null,
+    "modern_name": "Washington, D.C., United States",
+    "historical_name": "Washington, District of Columbia, United States (seat of Congress; proxy pin for a nationwide law)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-tok"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First broad federal restriction on US immigration, extended in 1892 and made permanent in 1902."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a law that discriminated against people by ethnicity and nationality.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nara",
+      "url": "https://www.archives.gov/milestone-documents/chinese-exclusion-act",
+      "title": "Chinese Exclusion Act (1882)",
+      "publisher": "U.S. National Archives",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hist",
+      "url": "https://history.state.gov/milestones/1866-1898/chinese-immigration",
+      "title": "Chinese Immigration and the Chinese Exclusion Acts",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tok",
+      "url": "https://time-ok.com/coordinates/washington-d-c",
+      "title": "Washington, D.C. coordinates",
+      "publisher": "time-ok.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Washington, D.C. as a proxy for a national law. Sources say first significant/broad immigration restriction; 'first law barring a nationality' not stated, so omitted.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:12.172Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1882",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The US Congress passed, and President Chester A.",
+        "source": "src-nara"
+      },
+      {
+        "span": "1882",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Sources describe it as the first law to place broad restrictions on US immigration.",
+        "source": "src-nara",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

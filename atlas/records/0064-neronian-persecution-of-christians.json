@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes torture and execution of civilians.",
+  "author": "historian-agent:o-s44",
+  "updated": "2026-10-22",
+  "id": "0064-neronian-persecution-of-christians",
+  "kind": "event",
+  "title": "Nero's persecution of Christians after the fire of Rome",
+  "summary": "After a fire in 64 destroyed most of Rome, Tacitus reports that Nero blamed a group the people called Christians and punished them with severe tortures. Victims were covered in animal skins and torn by dogs, nailed to crosses, or burned as night lighting.",
+  "when": {
+    "start": {
+      "year": 64
+    },
+    "end": {
+      "year": 64
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "See as_recorded."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "On 19-27 July 64",
+        "source": "src-livius-tacitus"
+      },
+      {
+        "calendar": "CE",
+        "value": "the great fire in Rome in the year 64",
+        "source": "src-ect-tacitus"
+      }
+    ],
+    "display": "64 CE (the fire is dated 19–27 July 64)"
+  },
+  "where": {
+    "lat": 41.89193,
+    "lon": 12.51133,
+    "elevation_m": null,
+    "modern_name": "Rome, Italy",
+    "historical_name": "Rome (Roman Empire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "religion_philosophy"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Earliest state persecution of Christians reported in Tacitus; known mainly through one Roman author."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "place-rome",
+      "type": "related"
+    },
+    {
+      "id": "0030-origins-of-early-christianity",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-tacitus",
+      "url": "https://livius.org/sources/content/tacitus/tacitus-on-the-christians",
+      "title": "Tacitus on the Christians",
+      "publisher": "Livius.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-perseus-tacitus",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0078:book=15:chapter=44",
+      "title": "Tacitus, Annals 15.44 (translation)",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ect-tacitus",
+      "url": "https://www.earlychurchtexts.com/public/tacitus_persecution_under_nero.htm",
+      "title": "Tacitus on the persecution under Nero",
+      "publisher": "Early Church Texts",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070",
+      "title": "GeoNames: Rome",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Rests on one ancient author (Tacitus) via translations. The livius page gives the fire as 19-27 July 64; the other pages give only \"64\". Pin is Rome (centre) with 5 km uncertainty.",
+  "published_at": "2026-10-22T10:16:07.754Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "64",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "After a fire in 64 destroyed most of Rome, Tacitus reports that Nero blamed a group the people called Christians and punished them with severe tortures.",
+        "source": "src-livius-tacitus"
+      },
+      {
+        "span": "64",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Victims were covered in animal skins and torn by dogs, nailed to crosses, or burned as night lighting.",
+        "source": "src-livius-tacitus",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

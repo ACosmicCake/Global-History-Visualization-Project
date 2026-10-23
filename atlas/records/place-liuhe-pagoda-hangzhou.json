@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:o-s110",
+  "updated": "2026-10-22",
+  "id": "place-liuhe-pagoda-hangzhou",
+  "kind": "place",
+  "title": "Liuhe Pagoda, Hangzhou",
+  "summary": "The Liuhe Pagoda stands at the foot of Yuelun Mountain in Hangzhou, Zhejiang. It was first built in the Northern Song period, lost in 1121 and rebuilt in 1165 under the Southern Song. The Hangzhou government gives its height as 59.89 metres, with a brick interior of seven storeys and a 13-storey outer timber form.",
+  "when": {
+    "start": {
+      "year": 960
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 167,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Hangzhou government says built in the Northern Song period (960-1127 AD); China Daily gives no exact founding year. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Hangzhou government)",
+        "value": "Northern Song period (960-1127 AD)",
+        "source": "src-ehz-liuhe"
+      },
+      {
+        "calendar": "CE (Hangzhou government)",
+        "value": "1121",
+        "source": "src-ehz-liuhe"
+      },
+      {
+        "calendar": "CE (Hangzhou government)",
+        "value": "1165",
+        "source": "src-ehz-liuhe"
+      }
+    ],
+    "display": "Northern Song; lost 1121; rebuilt 1165; standing today"
+  },
+  "where": {
+    "lat": 30.1983004,
+    "lon": 120.12661,
+    "elevation_m": null,
+    "modern_name": "Liuhe Pagoda, Zhijiang Road No 16, Xihu District, Hangzhou, Zhejiang, China",
+    "historical_name": "Liuhe Pagoda at the foot of Yuelun Mountain, Song China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-liuhe"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A surviving Song pagoda surveyed by Liang Sicheng in 1934."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ehz-liuhe",
+      "url": "https://www.ehangzhou.gov.cn/2018-06/14/c_242884.htm",
+      "title": "Liuhe Pagoda - Hangzhou",
+      "publisher": "Information Office of Hangzhou Municipal People's Government",
+      "author": "Hangzhou Municipal People's Government",
+      "date_published": "2018-06-14",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model.geometry"
+      ]
+    },
+    {
+      "id": "src-chinadaily-liuhe",
+      "url": "https://govt.chinadaily.com.cn/s/202204/13/WS62569cb4498e6a12c1229e35/the-liuhe-pagoda-hangzhou-zhejiang-province.html",
+      "title": "The Liuhe Pagoda, Hangzhou, Zhejiang province",
+      "publisher": "China Daily (government portal)",
+      "author": "China Daily",
+      "date_published": "2022-04-13",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry"
+      ]
+    },
+    {
+      "id": "src-osm-liuhe",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E5%85%AD%E5%92%8C%E5%A1%94&format=json",
+      "title": "OpenStreetMap Nominatim: 六和塔, way 159184108 (30.1983004, 120.12661)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "id": "src-osm-outline-liuhe",
+      "url": "https://www.openstreetmap.org/way/159184108",
+      "title": "OpenStreetMap outline of 六和塔",
+      "publisher": "OpenStreetMap contributors",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape pagoda with 13 tiers (outer form; interior is 7 storeys). Height 59.89 m from the Hangzhou government; China Daily says around 60 m. Plan from the OSM outline tagged as the pagoda (about 32.5 by 31.6 m, bounding rectangle). Exterior is a Qing-era refurbishment per China Daily (no year given). Least sure of the founding year.",
+  "model": {
+    "footprint": {
+      "description": "Plan of about 32.5 m by 31.6 m, measured from the OpenStreetMap outline tagged as the pagoda (way 159184108). Shape chosen: pagoda, 13 tiers of eaves.",
+      "source": "src-osm-outline-liuhe",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pagoda",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-ehz-liuhe",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 59.89,
+          "unit": "m",
+          "source": "src-ehz-liuhe",
+          "note": "\"59.89 meters high\"; China Daily says around 60 meters"
+        },
+        {
+          "part": "tiers",
+          "value": 13,
+          "unit": "count",
+          "source": "src-ehz-liuhe",
+          "note": "13 storeys in total; interior brick core has seven"
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 32.5,
+          "unit": "m",
+          "source": "src-osm-outline-liuhe"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 31.6,
+          "unit": "m",
+          "source": "src-osm-outline-liuhe"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "octagonal 13-tier pagoda extruded to its sourced height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural pagoda on its mapped plan"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 960,
+        "end_year": 1120,
+        "state": "construction",
+        "description": "Originally built in the Northern Song period (960-1127).",
+        "source": "src-ehz-liuhe"
+      },
+      {
+        "start_year": 1121,
+        "end_year": 1164,
+        "state": "destroyed",
+        "description": "Lost in 1121.",
+        "source": "src-ehz-liuhe"
+      },
+      {
+        "start_year": 1165,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "Rebuilt in 1165 under the Southern Song; the exterior is a later Qing refurbishment.",
+        "source": "src-ehz-liuhe"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 960,
+        "to_year": 2026,
+        "material": "brick inner core, timber outer storeys",
+        "source": "src-ehz-liuhe"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T19:16:41.520Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

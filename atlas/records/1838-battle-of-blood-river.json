@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s105",
+  "updated": "2026-10-22",
+  "model": null,
+  "id": "1838-battle-of-blood-river",
+  "kind": "event",
+  "title": "Battle of Blood River",
+  "summary": "On 16 December 1838 about 470 Voortrekkers under Andries Pretorius, formed up in a wagon laager on the Ncome River, defeated a Zulu army sent by King Dingane. SAHO gives 10,000–20,000 Zulu attackers and EBSCO about 10,000; both report about 3,000 Zulu dead and no Voortrekkers killed or almost none. The victory became central to Afrikaner national memory.",
+  "when": {
+    "start": {
+      "year": 1838,
+      "iso": "1838-12-16"
+    },
+    "end": {
+      "year": 1838,
+      "iso": "1838-12-16"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "SAHO and EBSCO both give 16 December 1838."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (SAHO)",
+        "value": "On 16 December 1838 the Battle of Blood River took place near the Ncome River in KwaZulu Natal.",
+        "source": "src-saho-blood-river"
+      },
+      {
+        "calendar": "CE (EBSCO)",
+        "value": "a significant battle that took place on December 16, 1838",
+        "source": "src-ebsco-blood-river"
+      }
+    ],
+    "display": "16 December 1838"
+  },
+  "where": {
+    "lat": -28.105791,
+    "lon": 30.545849,
+    "elevation_m": null,
+    "modern_name": "Ncome River, Nquthu / Dundee area, KwaZulu-Natal, South Africa (proxy pin: Ncome Monument and Museum Complex, mapped in OpenStreetMap beside the river)",
+    "historical_name": "Banks of the Ncome River, then Zulu kingdom under Dingane, border with Voortrekker settlement",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-ncome"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "EBSCO calls it a pivotal moment in Afrikaner national identity and the Great Trek narrative; it weakened the Zulu Kingdom."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a battle with about 3,000 reported dead on one side.",
+  "related": [
+    {
+      "id": "1835-great-trek",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-saho-blood-river",
+      "url": "https://sahistory.org.za/dated-event/battle-blood-river",
+      "title": "The Battle of Blood River",
+      "publisher": "South African History Online",
+      "author": "South African History Online",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-ebsco-blood-river",
+      "url": "https://www.ebsco.com/research-starters/history/blood-river/",
+      "title": "Blood River",
+      "publisher": "EBSCO Research Starters",
+      "author": "Richard D. Floyd",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-osm-ncome",
+      "url": "https://nominatim.openstreetmap.org/search?q=Ncome+Museum&format=json",
+      "title": "OpenStreetMap Nominatim: Ncome Monument and Museum Complex (way 1530761771; -28.1057910, 30.5458490)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualties are quoted per source: SAHO \"more than 3000 Zulu casualties\", 3 Voortrekkers wounded, none killed; EBSCO \"about 3,000 Zulus killed\", \"less than a handful of wounded\". Zulu strength differs: SAHO 10 000-20 000, EBSCO 10,000. Pin is a proxy (the Ncome museum complex beside the river), not the laager site; no source I opened gives the laager coordinates.",
+  "published_at": "2026-10-22T18:40:23.879Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1838-12-16",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 16 December 1838 about 470 Voortrekkers under Andries Pretorius, formed up in a wagon laager on the Ncome River, defeated a Zulu army sent by King Dingane.",
+        "source": "src-saho-blood-river"
+      },
+      {
+        "span": "1838",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "SAHO gives 10,000–20,000 Zulu attackers and EBSCO about 10,000; both report about 3,000 Zulu dead and no Voortrekkers killed or almost none.",
+        "source": "src-saho-blood-river",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

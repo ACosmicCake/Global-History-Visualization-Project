@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1274-mongol-invasions-of-japan",
+  "kind": "event",
+  "title": "Mongol invasions of Japan",
+  "summary": "In 1274 and again in 1281 Kublai Khan sent fleets from Korea and China against Japan, both times attacking Hakata Bay on Kyushu. The first force did not push inland from its bridgehead; in 1281 a typhoon on 14 August wrecked most of the second fleet. Historians dispute troop numbers and how decisive the storms were.",
+  "when": {
+    "start": {
+      "year": 1274,
+      "iso": "1274-11-05"
+    },
+    "end": {
+      "year": 1281
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 5 November 1274 attack on Tsushima, the first Japanese territory reached; the second invasion ended with the 14 August 1281 typhoon."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "The Mongol invasions of Japan took place in 1274 and 1281 CE",
+        "source": "src-whe-mongol-japan"
+      },
+      {
+        "calendar": "CE",
+        "value": "Medieval Japan: The Mongol Invasions, 1274 and 1281",
+        "source": "src-colorado-mongol"
+      }
+    ],
+    "display": "1274 and 1281"
+  },
+  "where": {
+    "lat": 33.63202,
+    "lon": 130.37344,
+    "elevation_m": 0,
+    "modern_name": "Hakata Bay, Fukuoka, Kyushu, Japan",
+    "historical_name": "Hakata Bay, northwest Kyushu, Japan under the Kamakura shogunate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd-hakata"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Two large seaborne invasions by the Mongol empire were repelled; the preparations and memory of the typhoons shaped medieval Japan."
+  },
+  "confidence": "established",
+  "audience_note": "Describes warfare, drownings at sea and the execution of stranded soldiers.",
+  "related": [
+    {
+      "id": "1219-mongol-invasion-of-khwarezmia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-mongol-japan",
+      "url": "https://www.worldhistory.org/article/1415/the-mongol-invasions-of-japan-1274-and-1281/",
+      "title": "The Mongol Invasions of Japan, 1274 and 1281",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2019-07-02",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-colorado-mongol",
+      "url": "https://www.colorado.edu/ptea-curriculum/cultural-encounters/history-and-memory-mongol-invasions-japan",
+      "title": "History and Memory: The Mongol Invasions of Japan",
+      "publisher": "Program for Teaching East Asia, University of Colorado Boulder",
+      "author": "Catherine Mein, Anthony Robbins and David Culley",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-hakata",
+      "url": "https://www.wikidata.org/wiki/Q2344806",
+      "title": "Hakata Bay (Wikidata Q2344806)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1274-11-19",
+        "action": "numbers.counter { range: [16600, 40000] }",
+        "caption": "On 19 November 1274 a Mongol fleet landed at Hakata Bay; estimates of its army run from 16,600 to 40,000 men.",
+        "source": "src-whe-mongol-japan"
+      },
+      {
+        "span": "1281-06-23",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The larger 1281 fleet attacked Hakata Bay on 23 June, against defences that included a wall built there in 1275.",
+        "source": "src-whe-mongol-japan"
+      },
+      {
+        "span": "1281-08-14",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "A typhoon on 14 August 1281 destroyed most of the fleet; Hakata then stayed on military alert until 1312.",
+        "source": "src-whe-mongol-japan",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of casualty and fleet figures: World History Encyclopedia gives 800-900 ships and 16,600-40,000 men for 1274, and 4,400 ships and about 100,000 men for 1281; the Colorado lesson says Thomas Conlan argues the 140,000 figure for 1281 is inflated tenfold or more.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s36",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:32:42.729Z"
+}

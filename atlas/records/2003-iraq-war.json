@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes a war with large military and civilian death tolls; casualty figures are estimates and categories (civilian, combatant) are disputed. Neutral summary of contested events.",
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "2003-iraq-war",
+  "kind": "event",
+  "title": "Iraq War (2003 invasion and aftermath)",
+  "summary": "A coalition including the United States and Britain began the invasion of Iraq on 20 March 2003 and overthrew Saddam Hussein's regime; an insurgency and sectarian violence followed. Brown University's Costs of War project estimates 275,000–306,000 direct war deaths in Iraq from March 2003 to August 2021 across all categories, and calls its figures approximations.",
+  "when": {
+    "start": {
+      "year": 2003
+    },
+    "end": {
+      "year": 2011
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "End year follows the Defense Department operation names cited by Costs of War (New Dawn to 31 December 2011); the Costs of War death count itself runs to August 2021."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "20 Mar 2003: Saddam's ultimatum to leave Iraq expired and the invasion began",
+        "source": "src-nam-iraq"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Operation Iraqi Freedom casualties between March 19, 2003, and Aug. 31, 2010; Operation New Dawn Sept. 1, 2010, to Dec. 31, 2011",
+        "source": "src-cow-deaths"
+      }
+    ],
+    "display": "20 March 2003 – 2011 (US operations; violence in Iraq continued afterwards)"
+  },
+  "where": {
+    "lat": 33.3061701,
+    "lon": 44.3872213,
+    "elevation_m": null,
+    "modern_name": "Baghdad, Iraq (pin stands for the country)",
+    "historical_name": "Baghdad, Republic of Iraq under Saddam Hussein, 2003",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A US-led invasion that overthrew the Iraqi government and was followed by years of insurgency and sectarian violence."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "2001-09-11-september-11-attacks",
+      "type": "related"
+    },
+    {
+      "id": "2001-war-in-afghanistan",
+      "type": "contemporary"
+    }
+  ],
+  "numbers": [
+    {
+      "field": "deaths",
+      "label": "Direct war deaths in Iraq, all categories (Costs of War)",
+      "low": 275087,
+      "high": 306495,
+      "unit": "people",
+      "estimate": true,
+      "as_of": "August 2021",
+      "source": "src-cow-deaths",
+      "note": "Approximations; excludes indirect deaths; category allocation (civilian vs combatant) is disputed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam-iraq",
+      "url": "https://www.nam.ac.uk/explore/iraq-war-invasion",
+      "title": "Iraq War: the invasion",
+      "publisher": "National Army Museum, London",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cow-deaths",
+      "url": "https://costsofwar.watson.brown.edu/sites/default/files/papers/Costs-of-War_Direct-War-Deaths_9-1-21.pdf",
+      "title": "Human Cost of Post-9/11 Wars: Direct War Deaths in Major War Zones",
+      "publisher": "Costs of War Project, Watson Institute, Brown University",
+      "author": "Neta C. Crawford and Catherine Lutz",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "numbers",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Baghdad&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end year: the 2011 end follows the US operation names in the Costs of War footnote, whereas the conflict and its death count continue later. The Imperial War Museum page returned 403, so only the National Army Museum was read for events.",
+  "published_at": "2026-10-22T10:55:44.230Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

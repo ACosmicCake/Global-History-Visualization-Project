@@ -1,0 +1,151 @@
+{
+  "id": "1024-jiaozi-paper-money",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Jiaozi: Song government paper money (Chengdu)",
+  "summary": "In Sichuan, merchant houses issued jiaozi notes against deposits of iron coin. After some issuers went bankrupt, the Northern Song government took over issue: a Paper-Notes Office was founded in 1023 on the proposal of Xue Tian, prefect of Yizhou (centred on Chengdu), and a government series followed in 1024, limited to Sichuan.",
+  "when": {
+    "start": {
+      "year": 1023
+    },
+    "end": {
+      "year": 1024
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "1023 is the takeover and the founding of the office; 1024 is the first government series. Sources differ on which year to call the start of state paper money."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "in 1023 the Song government took over the issue of jiaozi",
+        "source": "src-hoover-paper"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 1024, the government itself gave the issuing monopoly",
+        "source": "src-planetbanknote-jiaozi"
+      }
+    ],
+    "display": "1023–1024"
+  },
+  "where": {
+    "lat": 30.6666667,
+    "lon": 104.0666667,
+    "elevation_m": null,
+    "modern_name": "Chengdu, Sichuan, China",
+    "historical_name": "Yizhou (Chengdu), Sichuan, Northern Song dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-geonames-chengdu"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Described by a UCLA historian quoted in one source as the world’s first viable paper currency."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0105-cai-lun-papermaking",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hoover-paper",
+      "url": "https://www.hoover.org/research/rise-and-demise-paper-money-imperial-china",
+      "title": "The Rise and Demise of Paper Money in Imperial China",
+      "publisher": "Hoover Institution",
+      "author": "Hoover Institution",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-planetbanknote-jiaozi",
+      "url": "https://learn.planetbanknote.com/first-paper-money-china/",
+      "title": "The First Paper Money: Jiaozi, Huizi and Kublai Khan’s Chao",
+      "publisher": "Planet Banknote",
+      "author": "Planet Banknote",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-chengdu",
+      "url": "https://www.geonames.org/search.html?q=Chengdu&country=CN&featureClass=P",
+      "title": "Chengdu, Sichuan, China",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the 1023 vs 1024 split. One source says no Song specimens survive. The pin is Chengdu because Planet Banknote calls Yizhou the prefecture centred on Chengdu.",
+  "author": "historian-agent:o-s70",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:10:27.308Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1023",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In Sichuan, merchant houses issued jiaozi notes against deposits of iron coin.",
+        "source": "src-hoover-paper"
+      },
+      {
+        "span": "1024",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "After some issuers went bankrupt, the Northern Song government took over issue: a Paper-Notes Office was founded in 1023 on the proposal of Xue Tian, prefect of Yizhou…",
+        "source": "src-hoover-paper",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

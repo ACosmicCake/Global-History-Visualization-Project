@@ -1,0 +1,183 @@
+{
+  "id": "1948-12-10-universal-declaration-of-human-rights",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Universal Declaration of Human Rights",
+  "summary": "On 10 December 1948 the UN General Assembly, meeting in Paris, adopted the Universal Declaration of Human Rights by a vote of 48 to none with 8 abstentions. Eleanor Roosevelt chaired the drafting committee. It set out rights to which all people are entitled and became a reference point for later human rights law.",
+  "when": {
+    "start": {
+      "year": 1948,
+      "iso": "1948-12-10"
+    },
+    "end": {
+      "year": 1948,
+      "iso": "1948-12-10"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The date and tally agree across pages. The Third Committee had earlier approved the text 29 to none with 7 abstentions; that is a separate vote."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "10 December 1948",
+        "source": "src-unlegal"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "forty-eight to zero with eight abstentions",
+        "source": "src-gwu"
+      }
+    ],
+    "display": "10 December 1948"
+  },
+  "where": {
+    "lat": 48.8623,
+    "lon": 2.2881,
+    "elevation_m": null,
+    "modern_name": "Palais de Chaillot, Paris, France",
+    "historical_name": "Palais de Chaillot, Paris, France (seat of the UN General Assembly's 1948 session)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-pc"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The first global statement of universal human rights, it underpins international human rights law."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "org-united-nations",
+      "type": "related"
+    },
+    {
+      "id": "1945-06-26-un-charter",
+      "type": "related"
+    },
+    {
+      "id": "1948-12-09-genocide-convention",
+      "type": "related"
+    },
+    {
+      "id": "1949-08-12-geneva-conventions",
+      "type": "related"
+    },
+    {
+      "id": "1948-national-party-election-and-apartheid-legislation",
+      "type": "related",
+      "because": "South Africa, which began apartheid legislation that year, abstained from the vote."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unlegal",
+      "url": "https://legal.un.org/avl/ha/udhr/udhr.html",
+      "title": "Universal Declaration of Human Rights (Audiovisual Library of International Law)",
+      "publisher": "United Nations",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-gwu",
+      "url": "https://erpapers.columbian.gwu.edu/europe-again-magna-carta-all-mankind-1948",
+      "title": "Europe Again: A Magna Carta for All Mankind (1948)",
+      "publisher": "Eleanor Roosevelt Papers Project, George Washington University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unhist",
+      "url": "https://www.un.org/en/about-us/udhr/history-of-the-declaration",
+      "title": "History of the Declaration",
+      "publisher": "United Nations",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-pc",
+      "url": "https://www.wikidata.org/wiki/Q13360213",
+      "title": "Wikidata item Q13360213 (Palais de Chaillot), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the \"reference point for later law\" claim, which is general knowledge rather than from an opened page. Venue is from the UN legal library page captions.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:40:51.506Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1948-12-10",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 10 December 1948 the UN General Assembly, meeting in Paris, adopted the Universal Declaration of Human Rights by a vote of 48 to none with 8 abstentions.",
+        "source": "src-unlegal"
+      },
+      {
+        "span": "1948",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It set out rights to which all people are entitled and became a reference point for later human rights law.",
+        "source": "src-unlegal",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "-2000ka-okavango-delta-formation",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Okavango Delta Formation",
+  "summary": "The Okavango Delta is a large, low-gradient alluvial fan in north-western Botswana, built where the Okavango River spreads into a fault-bounded graben linked to the East African Rift system; its water drains into the Kalahari sands, not the sea. Its age is unresolved: IRD cites estimates from 12,000 years to 2 million years, while luminescence dating puts the start of alluvial-fan deposition in the incised rift no later than about 250,000 years ago.",
+  "when": {
+    "start": {
+      "year": -250000
+    },
+    "end": {
+      "year": -250000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 1750000,
+      "start_plus_years": 240000,
+      "end_minus_years": 1750000,
+      "end_plus_years": 240000,
+      "note": "Age is contested. IRD gives an estimated age between 12,000 years and 2 million years. Vainer et al. (2024, via Ben-Gurion University) date eolian sand formation to ~2.2-1.1 Ma, place major rift subsidence after that (latest major deformation probably 1.2-0.75 Ma), and date the start of alluvial-fan deposition to no later than ~250 ka. The pin year uses the 250 ka minimum; the id's 2 Ma is only a lookup key."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years before present, as recorded",
+        "value": "estimated between 12,000 years and 2 million years",
+        "source": "src-ird"
+      },
+      {
+        "calendar": "ka before present, as recorded",
+        "value": "not later than ∼250 ka",
+        "source": "src-bgu"
+      },
+      {
+        "calendar": "Ma before present, as recorded",
+        "value": "∼2.2 to 1.1 Ma",
+        "source": "src-bgu"
+      },
+      {
+        "calendar": "Ma before present, as recorded",
+        "value": "1.2–0.75 Ma",
+        "source": "src-bgu"
+      }
+    ],
+    "display": "Uncertain: estimates from c. 2 million to 12,000 years ago; fan deposition under way by c. 250,000 years ago"
+  },
+  "where": {
+    "lat": -19.283333,
+    "lon": 22.9,
+    "elevation_m": null,
+    "modern_name": "Okavango Delta, North-West District, Botswana",
+    "historical_name": "Okavango Rift Zone, Kalahari Basin (before any polity)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-unesco"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Formed Africa's largest endorheic delta, a UNESCO World Heritage wetland, through rift faulting in the Kalahari."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-25my-formation-of-the-east-african-rift",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ird",
+      "url": "https://en.ird.fr/project-okavango-tectonic-climate-and-biology-okavango-delta",
+      "title": "[Project] Okavango - Tectonic, climate and biology of the Okavango delta",
+      "publisher": "Institut de recherche pour le développement (IRD)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bgu",
+      "url": "https://cris.bgu.ac.il/en/publications/chronology-of-sedimentation-and-landscape-evolution-in-the-okavan/",
+      "title": "Chronology of Sedimentation and Landscape Evolution in the Okavango Rift Zone, a Developing Young Rift in Southern Africa (abstract, J. Geophys. Res. Earth Surface 2024)",
+      "publisher": "Ben-Gurion University of the Negev (research portal)",
+      "author": "Vainer et al.",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mccarthy",
+      "url": "https://the-eis.com/elibrary/sites/default/files/downloads/literature/The%20Okavango%20Delta%20and%20its%20place%20in%20the%20geomorphological%20evolution%20of%20southern%20Africa.pdf",
+      "title": "The Okavango Delta and its place in the geomorphological evolution of southern Africa (South African Journal of Geology 116.1)",
+      "publisher": "Geological Society of South Africa",
+      "author": "T.S. McCarthy",
+      "date_published": "2013",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco",
+      "url": "https://whc.unesco.org/en/list/1432/",
+      "title": "Okavango Delta",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "No opened source dates the delta's formation to 2 Ma; IRD gives 2 Ma only as the upper bound of a 12 ka-2 Ma range, and Vainer et al. 2024 put fan deposition by ~250 ka, so the pin year is -250000 with wide uncertainty. Coordinates are UNESCO's property centre.",
+  "author": "historian-agent:claude-api-opus-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:43:55.037Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

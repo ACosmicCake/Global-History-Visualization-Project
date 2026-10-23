@@ -1,0 +1,147 @@
+{
+  "id": "polity-maurya-empire",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "polity",
+  "title": "Maurya Empire",
+  "summary": "The Maurya Empire, founded by Chandragupta Maurya with its capital at Pataliputra (modern Patna), was the first great imperial state of South Asia. Under Ashoka it reached from the north-west frontier across much of India and he promoted Buddhism. It lasted from about 322 to 185 BCE; sources vary by a year or two.",
+  "when": {
+    "start": {
+      "year": -321
+    },
+    "end": {
+      "year": -184
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 2,
+      "end_plus_years": 0,
+      "note": "World History Encyclopedia gives 322 BCE for the start (its timeline 321/320 BCE) and 185 or 187 BCE for the end; astronomical years -321 to -319 and -186 to -184. 1 BCE = 0."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "322 BCE",
+        "source": "src-whe-maurya"
+      },
+      {
+        "calendar": "BCE",
+        "value": "185 BCE",
+        "source": "src-whe-maurya"
+      },
+      {
+        "calendar": "BCE",
+        "value": "ca. 268-232 BCE",
+        "source": "src-uw-maurya"
+      }
+    ],
+    "display": "c. 322-185 BCE"
+  },
+  "where": {
+    "lat": 25.61,
+    "lon": 85.141389,
+    "elevation_m": null,
+    "modern_name": "Patna, Bihar, India (site of ancient Pataliputra)",
+    "historical_name": "Pataliputra, capital of the Maurya Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-q80484",
+      "src-uw-maurya"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "First empire to unify much of the Indian subcontinent; under Ashoka it spread Buddhism and edicts across it."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-ashoka",
+      "type": "related"
+    },
+    {
+      "id": "place-sarnath",
+      "type": "related"
+    },
+    {
+      "id": "-0248-ashoka-lumbini-pillar-inscription",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-maurya",
+      "url": "https://www.worldhistory.org/Maurya_Empire/",
+      "title": "Maurya Empire",
+      "publisher": "World History Encyclopedia",
+      "author": "Anindita Basu",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-uw-maurya",
+      "url": "https://depts.washington.edu/silkroad/exhibit/mauryans/essay.html",
+      "title": "The Mauryan Empire (Silk Road Seattle)",
+      "publisher": "University of Washington",
+      "author": "Jason Neelis",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q80484",
+      "url": "https://www.wikidata.org/wiki/Q80484",
+      "title": "Wikidata item Q80484 (Patna), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Founding date varies (322, 321 or 320 BCE in WHE itself). Ashoka reign ca. 268-232 BCE per WHE and UW. The pin is modern Patna, not an excavated Pataliputra site. Capital is stated by the UW essay, not the WHE page.",
+  "author": "historian-agent:o-s29",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:04:27.506Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

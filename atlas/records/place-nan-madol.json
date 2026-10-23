@@ -1,0 +1,242 @@
+{
+  "id": "place-nan-madol",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Nan Madol",
+  "summary": "Nan Madol is a ceremonial and royal centre of more than 100 artificial islets off the south-east coast of Pohnpei, in Micronesia. Chiefs of the Saudeleur dynasty had its palaces, temples and tombs enclosed by walls of columnar basalt and coral, with tomb walls up to about 8 m high, mostly raised between 1200 and 1500 CE.",
+  "when": {
+    "start": {
+      "year": 1200
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 400,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO says the structures were built between 1200 and 1500 CE; the US National Park Service nomination dates megalithic building at Usendau to about AD 800 and occupation from at least AD 400. The start is UNESCO's, with a wide minus range for those earlier dates. End is the present: the ruins stand."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "built between 1200 and 1500 CE",
+        "source": "src-unesco-1503"
+      },
+      {
+        "calendar": "AD (US National Park Service)",
+        "value": "ca. A.D. 800",
+        "source": "src-nps-nanmadol"
+      }
+    ],
+    "display": "Built c. 1200–1500 CE; standing ruins"
+  },
+  "where": {
+    "lat": 6.8427778,
+    "lon": 158.3325,
+    "elevation_m": null,
+    "modern_name": "Nan Madol (Nandauwas islet), Madolenihmw, Pohnpei, Federated States of Micronesia",
+    "historical_name": "Nan Dauas (Nandauwas), the mortuary islet of the Saudeleur chiefs within Nan Madol, Pohnpei",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-nandauwas",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO World Heritage megalithic centre whose scale and technique, UNESCO says, testify to chiefly societies in the Pacific islands."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-1503",
+      "url": "https://whc.unesco.org/en/list/1503/",
+      "title": "Nan Madol: Ceremonial Centre of Eastern Micronesia (World Heritage List no. 1503)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-icomos-nanmadol",
+      "url": "https://whc.unesco.org/document/152815",
+      "title": "Advisory body evaluation: Nan Madol (Federated States of Micronesia)",
+      "publisher": "UNESCO World Heritage Centre (advisory body evaluation)",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-nps-nanmadol",
+      "url": "https://npgallery.nps.gov/NRHP/GetAsset/NRHP/74002226_text",
+      "title": "National Register of Historic Places Inventory-Nomination Form: Nan Madol",
+      "publisher": "US National Park Service",
+      "author": "US National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-nandauwas",
+      "url": "https://nominatim.openstreetmap.org/search?q=Nandauwas&format=json",
+      "title": "OpenStreetMap Nominatim result for Nandauwas",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List dataset (syndication XML)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "An island-like rectangular platform, the 50 by 60 m Nan Dauas islet, enclosed by basalt-prism walls laid header-and-stretcher over a boulder foundation, with a central tomb inside the outer walls. The wider complex has over 90 artificial islets up to about 115 by 100 m (NPS).",
+      "source": "src-nps-nanmadol",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-nps-nanmadol",
+      "measurements": [
+        {
+          "part": "wall height (maximum, Nan Dauas)",
+          "value": 8.1,
+          "unit": "m",
+          "source": "src-nps-nanmadol",
+          "note": "\"At Nan Dauas the walls reach 8.1 m, the maximum height anywhere in the complex\"; UNESCO evaluation says walls 6-7 m high"
+        },
+        {
+          "part": "base length (Nan Dauas islet)",
+          "value": 60,
+          "unit": "m",
+          "source": "src-nps-nanmadol",
+          "note": "\"The 50 by 60 m islet\""
+        },
+        {
+          "part": "base width (Nan Dauas islet)",
+          "value": 50,
+          "unit": "m",
+          "source": "src-nps-nanmadol"
+        },
+        {
+          "part": "largest islet length",
+          "value": 115,
+          "unit": "m",
+          "source": "src-nps-nanmadol",
+          "note": "islets \"up to about 115 by 100 m in size\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a field of low rectangular islets inside a seawall, Nandauwas the highest walled block"
+      },
+      {
+        "level": "local",
+        "representation": "procedural walled block 60 by 50 m with basalt-prism walls at the sourced height and a central tomb court"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1200,
+        "end_year": 1500,
+        "state": "construction",
+        "description": "UNESCO dates the stone palaces, temples, tombs and residential domains to 1200-1500 CE, the Saudeleur period; the evaluation gives megalithic construction between 1200-1300 and 1500-1600 CE.",
+        "source": "src-unesco-1503"
+      },
+      {
+        "start_year": 1500,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "UNESCO calls the remains ruins. The sources opened give no date for abandonment or collapse; the start year is the end of the stated building span.",
+        "source": "src-unesco-1503"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1200,
+        "to_year": 2026,
+        "material": "columnar basalt prisms laid header-and-stretcher over basalt boulders, with coral rubble fill",
+        "source": "src-nps-nanmadol"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block (the walled Nandauwas islet; the complex as a whole is a group of islets). Heights conflict: NPS gives 8.1 m maximum, the UNESCO evaluation 6-7 m; the model takes NPS's. Least sure of the start date (earlier radiocarbon dates exist) and of the 'ruined' phase start, which is bridged.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:12:58.042Z"
+}

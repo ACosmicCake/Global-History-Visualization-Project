@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s103",
+  "updated": "2026-10-22",
+  "id": "-3300ka-lomekwi-tools",
+  "kind": "event",
+  "title": "Lomekwi 3 stone tools, Kenya",
+  "summary": "Researchers reported stone tools from Lomekwi 3, near the western shore of Lake Turkana in northern Kenya, dated to 3.3 million years ago. That is about 700,000 years earlier than Oldowan tools. The tools are much larger than later Oldowan ones, and the sources say it is not known which hominin made them.",
+  "when": {
+    "start": {
+      "year": -3300000
+    },
+    "end": {
+      "year": -3300000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years before present in the sources are written here as negative calendar years without subtracting 1950; the sources give rounded ages. Both sources give 3.3 million years without an error range."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago (Stony Brook Medicine)",
+        "value": "dated at 3.3 million years old",
+        "source": "src-stonybrook"
+      },
+      {
+        "calendar": "Years ago (Earth magazine)",
+        "value": "to 3.3 million years ago",
+        "source": "src-earth"
+      }
+    ],
+    "display": "3.3 million years ago"
+  },
+  "where": {
+    "lat": 3.91083,
+    "lon": 35.8503,
+    "elevation_m": null,
+    "modern_name": "Lomekwi 3, West Turkana, northern Kenya",
+    "historical_name": "Western shore of Lake Turkana, in what is now northern Kenya; no polity applies",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-lomekwi"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "science_technology"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Reported as the oldest stone tools on record at the time, predating Oldowan artifacts by 700,000 years."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-stonybrook",
+      "url": "https://news.stonybrookmedicine.edu/news/stony-brook-scientists-discover-oldest-stone-tools-on-record-2/",
+      "title": "Stony Brook Scientists Discover Oldest Stone Tools on Record",
+      "publisher": "Stony Brook Medicine",
+      "author": "Stony Brook Medicine news",
+      "date_published": "2015-05-20",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-earth",
+      "url": "https://www.earthmagazine.org/article/earliest-stone-tools-pre-date-homo/",
+      "title": "Earliest stone tools pre-date Homo",
+      "publisher": "Earth magazine (American Geosciences Institute)",
+      "author": "Mary Caperton Morton",
+      "date_published": "2015-08-24",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-lomekwi",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q19833854.json",
+      "title": "Wikidata item Q19833854, Lomekwi archaeological site, coordinates 3.91083, 35.8503",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of coordinates: the Wikidata point is for the site named Lomekwi and neither source gives a position, so uncertainty_km is 5. The Nature paper itself could not be opened, so only a university release and a magazine article back the date.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3300000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "3 million years ago.",
+        "source": "src-stonybrook"
+      },
+      {
+        "span": "-3300000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The tools are much larger than later Oldowan ones, and the sources say it is not known which hominin made them.",
+        "source": "src-stonybrook",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T18:09:57.933Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

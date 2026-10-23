@@ -1,0 +1,142 @@
+{
+  "id": "polity-xiongnu",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "polity",
+  "title": "Xiongnu",
+  "summary": "The Xiongnu were a steppe confederation that rose to power under the chanyu Maodun (Modun) from 209 BCE, dominated Mongolia and surrounding grasslands, and forced the Han court into a humiliating treaty in 198 BCE. The empire later split, and its northern wing was driven from Mongolia in the first century CE.",
+  "when": {
+    "start": {
+      "year": -208
+    },
+    "end": {
+      "year": 91
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 20,
+      "end_plus_years": 0,
+      "note": "209 BCE is the year the tribes were unified under Maodun. End bound is when the Northern Xiongnu were chased from Mongolia (their shanyu took refuge in the Ili valley in 91 CE); Southern Xiongnu groups persisted in north China until about the early 3rd century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (BCE)",
+        "value": "reunified under the charismatic figure of Touman's son Maodun in 209",
+        "source": "src-iranica"
+      },
+      {
+        "calendar": "Gregorian (BCE/CE)",
+        "value": "emerged in the last centuries BCE; consolidated power over much of the steppe by the early second century BCE",
+        "source": "src-uw-xiongnu"
+      }
+    ],
+    "display": "c. 209 BCE - c. 91 CE"
+  },
+  "where": {
+    "lat": 50.2416667,
+    "lon": 106.1380556,
+    "elevation_m": null,
+    "modern_name": "Steppe heartland of Mongolia (pin on the Orkhon River as a representative point; the polity ranged from Manchuria to the Tarim Basin)",
+    "historical_name": "Xiongnu (Hsiung-nu) steppe empire, ruled by shanyu/chanyu; neighbour of Qin and Han China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 700,
+    "coordinate_sources": [
+      "src-geonames-orkhon"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The first great steppe empire; its rivalry with Han China shaped frontier policy, Great Wall building and trade across Inner Asia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-han-dynasty",
+      "type": "contemporary"
+    },
+    {
+      "id": "-0214-qin-campaign-against-the-xiongnu",
+      "type": "related"
+    },
+    {
+      "id": "-0130-han-great-wall-hexi-corridor",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-iranica",
+      "url": "https://www.iranicaonline.org/articles/xiongnu/",
+      "title": "Xiongnu",
+      "publisher": "Encyclopaedia Iranica (Center for Iranian Studies, Columbia University)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-uw-xiongnu",
+      "url": "https://depts.washington.edu/silkroad/museums/ubhist/xiongnu.html",
+      "title": "The National Museum of Mongolian History: Xiongnu",
+      "publisher": "University of Washington, Silk Road Seattle",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-orkhon",
+      "url": "https://www.geonames.org/search.html?q=Orhon+Gol",
+      "title": "GeoNames search: Orkhon River, Mongolia",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin (a representative point for a very large steppe state, 700 km uncertainty) and of the end date, which depends on whether the Northern Xiongnu collapse (91 CE) or the later disappearance of the Southern shanyu is taken as the end.",
+  "author": "historian-agent:o-s2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:35.383Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

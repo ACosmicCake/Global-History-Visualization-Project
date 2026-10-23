@@ -1,0 +1,154 @@
+{
+  "id": "1973-wollo-famine",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Wollo famine",
+  "summary": "Drought and a harvest failure in 1972-73 produced famine in Ethiopia's Wollo province, which killed between 40,000 and 80,000 people according to estimates by Seaman and Holt cited by Human Rights Watch; the Ethiopian Nutrition Institute's 200,000 is called over-pessimistic. Haile Selassie's government tried to conceal the famine. Its exposure by Jonathan Dimbleby helped bring down his rule and led to the Relief and Rehabilitation Commission.",
+  "when": {
+    "start": {
+      "year": 1972
+    },
+    "end": {
+      "year": 1973
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "HRW dates the famine 1972-3; Miller and Holt describe the 1973 famine after failed 1972 rains, with the crisis peaking in August 1973."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "famine of 1972-3 in Wollo",
+        "source": "src-hrw-wollo"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "the year of the famine, 1973",
+        "source": "src-miller-wollo"
+      }
+    ],
+    "display": "1972-1973"
+  },
+  "where": {
+    "lat": 11.122604,
+    "lon": 39.634982,
+    "elevation_m": null,
+    "modern_name": "Dessie, South Wollo, Amhara Region, Ethiopia (proxy pin for Wollo province)",
+    "historical_name": "Wollo province, Ethiopian Empire; Dessie was the provincial capital",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-osm-dessie"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "disease",
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The famine and its cover-up contributed to the downfall of Haile Selassie and led to the creation of the Relief and Rehabilitation Commission."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes a famine with tens of thousands of deaths and a government cover-up; the death estimates are contested.",
+  "related": [
+    {
+      "id": "person-haile-selassie",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hrw-wollo",
+      "url": "https://www.hrw.org/reports/pdfs/e/ethiopia/ethiopia.919/c3wollo.pdf",
+      "title": "Rebellion and Famine in the North under Haile Selassie (Human Rights Watch report, chapter 3)",
+      "publisher": "Human Rights Watch",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-miller-wollo",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A8D9CD6EF33E3AAA70FB840FEC285D27/S0029665175000365a.pdf/ethiopian_famine.pdf",
+      "title": "The Ethiopian famine",
+      "publisher": "Cambridge University Press (Proceedings of the Nutrition Society)",
+      "author": "D. S. Miller and J. F. J. Holt",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-dessie",
+      "url": "https://www.openstreetmap.org/node/281666535",
+      "title": "OpenStreetMap node 281666535 (Dessie)",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The death toll is contested: 40,000-80,000 (Seaman and Holt, via HRW) against 200,000 (Ethiopian Nutrition Institute, said by HRW to rest on over-pessimistic assumptions); Miller and Holt note the lack of definitive data. The pin is Dessie as a proxy for the province, and HRW names it as provincial capital in the text. Miller and Holt supply the 1973 year, the failed rains and the Wollo setting.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:53.865Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1972",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Drought and a harvest failure in 1972-73 produced famine in Ethiopia's Wollo province, which killed between 40,000 and 80,000 people according to estimates by Seaman and Holt cited…",
+        "source": "src-hrw-wollo"
+      },
+      {
+        "span": "1973",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Its exposure by Jonathan Dimbleby helped bring down his rule and led to the Relief and Rehabilitation Commission.",
+        "source": "src-hrw-wollo",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-80my-zealandia-continent",
+  "kind": "process",
+  "title": "Zealandia separates from Gondwana",
+  "summary": "Zealandia, a 4.9 million square kilometre region of continental crust in the southwest Pacific, was once part of Gondwana. The GSA Today paper describes a continental breakup unconformity of about 84 Ma, and NASA says New Zealand's land mass separated from Gondwana around 80 million years ago.",
+  "when": {
+    "start": {
+      "year": -84000000
+    },
+    "end": {
+      "year": -80000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 2000000,
+      "start_plus_years": 2000000,
+      "end_minus_years": 2000000,
+      "end_plus_years": 2000000,
+      "note": "Start is the ca. 84 Ma breakup unconformity in Mortimer et al. (2017); end is NASA's around 80 million years ago. Other published ranges for the separation differ and no opened page gives a single date. The 2 Ma allowances are not sourced."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "a widespread continental breakup unconformity of ca. 84 Ma age",
+        "source": "src-gsa-zealandia"
+      },
+      {
+        "calendar": "years ago",
+        "value": "separated from the ancient supercontinent of Gondwana around 80 million years ago",
+        "source": "src-nasa-nz"
+      }
+    ],
+    "display": "about 84-80 million years ago (Late Cretaceous)"
+  },
+  "where": {
+    "lat": -40,
+    "lon": 170,
+    "elevation_m": null,
+    "modern_name": "Zealandia, southwest Pacific Ocean (including New Zealand and New Caledonia)",
+    "historical_name": "Eastern margin of Gondwana (no polities exist at this date)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-zealandia"
+    ],
+    "paleo": {
+      "lat": -63.17,
+      "lon": 173.52,
+      "age_ma": 84,
+      "plate_model": "MULLER2019 (Muller et al. 2019, Tectonics) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point -40, 170 reconstructed to 84 Ma. MERDITH2021 gives -66.69, -167.35 and PALEOMAP -65.32, 175.98: the models agree on about 63-67 S but differ in longitude. Indicative only."
+    }
+  },
+  "regions": [
+    "oceania",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Zealandia is argued to be a mostly submerged continent, 94% under water."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-gsa-zealandia",
+      "url": "https://www.geosociety.org/gsa-today/march-april-2017/zealandia-earths-hidden-continent",
+      "title": "Zealandia: Earth's Hidden Continent",
+      "publisher": "GSA Today (Geological Society of America)",
+      "author": "N. Mortimer et al.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa-nz",
+      "url": "https://science.nasa.gov/earth/earth-observatory/new-zealand-3101/",
+      "title": "New Zealand",
+      "publisher": "NASA Earth Observatory",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-zealandia",
+      "url": "https://www.wikidata.org/wiki/Q150408",
+      "title": "Wikidata Q150408 (coordinate -40, 170)",
+      "publisher": "Wikidata",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The two dates differ in kind: GSA Today dates a breakup unconformity (ca. 84 Ma) and NASA the separation of New Zealand's land mass (around 80 Ma); other published figures run from 100 to 60 Ma. Pin is the Wikidata point for the region (about -40, 170), uncertainty 5000 km. MULLER2019 stored for the paleo-position.",
+  "author": "historian-agent:o-s98",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-84000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "9 million square kilometre region of continental crust in the southwest Pacific, was once part of Gondwana.",
+        "source": "src-gsa-zealandia"
+      },
+      {
+        "span": "-80000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The GSA Today paper describes a continental breakup unconformity of about 84 Ma, and NASA says New Zealand's land mass separated from Gondwana around 80 million years ago.",
+        "source": "src-gsa-zealandia",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T17:45:10.384Z"
+}

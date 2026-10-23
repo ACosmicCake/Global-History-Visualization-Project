@@ -1,0 +1,156 @@
+{
+  "id": "0030-crucifixion-of-jesus",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Crucifixion of Jesus",
+  "summary": "Jesus of Nazareth was executed by crucifixion in Jerusalem under the Roman governor Pontius Pilate; Tacitus records the execution under Tiberius. The year is debated, with 30 and 33 CE the usual candidates. Christians understand the event as central to their faith, while the historical core is the Roman execution.",
+  "when": {
+    "start": {
+      "year": 30
+    },
+    "end": {
+      "year": 33
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Exact year not settled. Astronomical reconstruction by Humphreys (2011), as reported by the cited page, leaves 7 April 30 CE or 3 April 33 CE within Pilate's governorship (c. 26 to c. 37 CE); the page does not state the calendar used for the April dates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Calendar not stated by source",
+        "value": "7 April 30 CE and 3 April 33 CE",
+        "source": "src-deadseaquake"
+      },
+      {
+        "calendar": "Roman reign reckoning",
+        "value": "during the reign of Tiberius",
+        "source": "src-perseus-tacitus"
+      }
+    ],
+    "display": "c. 30 or 33 CE (date debated); Jerusalem, under Pontius Pilate"
+  },
+  "where": {
+    "lat": 31.76904,
+    "lon": 35.21633,
+    "elevation_m": null,
+    "modern_name": "Jerusalem",
+    "historical_name": "Jerusalem, Roman province of Judaea (governed by Pontius Pilate)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames-jerusalem"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "people"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Central event of Christianity and one of the best-attested Roman executions of antiquity, with lasting effects on religion, art and law."
+  },
+  "confidence": "probable",
+  "audience_note": "Concerns an execution by crucifixion; religious accounts are summarized as beliefs, not as established fact.",
+  "related": [
+    {
+      "id": "person-jesus-of-nazareth",
+      "type": "related"
+    },
+    {
+      "id": "person-pontius-pilate",
+      "type": "related"
+    },
+    {
+      "id": "place-jerusalem",
+      "type": "related"
+    },
+    {
+      "id": "0029-baptism-of-jesus",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-perseus-tacitus",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0078:book=15:chapter=44",
+      "title": "Tacitus, Annals 15.44 (English translation)",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "author": "Tacitus",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-deadseaquake",
+      "url": "https://deadseaquake.info/EarthquakeCatalogOfTheDeadSea/JerusalemQuake_YearOfJesusDeath.html",
+      "title": "Year of the death of Jesus (Jerusalem earthquake catalog page citing Humphreys 2011)",
+      "publisher": "deadseaquake.info",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.uncertainty"
+      ]
+    },
+    {
+      "id": "src-intertextual",
+      "url": "https://intertextual.bible/text/luke-23.24/tacitus-annals-15.44",
+      "title": "Texts in Conversation: Luke 23:24 and Tacitus, Annals 15.44",
+      "publisher": "intertextual.bible",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-jerusalem",
+      "url": "https://www.geonames.org/281184",
+      "title": "GeoNames: Jerusalem",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the year: the date page is a secondary catalog summarizing Humphreys and does not name its calendar. Crucifixion under Pilate rests on Tacitus; Gospel details not checked here.",
+  "author": "historian-agent:o-s1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:22.619Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

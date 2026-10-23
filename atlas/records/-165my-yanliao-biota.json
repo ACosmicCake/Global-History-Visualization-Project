@@ -1,0 +1,133 @@
+{
+  "id": "-165my-yanliao-biota",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "period",
+  "title": "Yanliao Biota",
+  "summary": "The Yanliao Biota is a Jurassic fossil assemblage of northern China, also called the Daohugou Biota, with exceptionally preserved insects, vertebrates and plants. High-precision dating of the Jianchang section places it near 160 million years ago, and it holds the oldest documented feathered dinosaurs. It declined around 155 Ma as the climate dried.",
+  "when": {
+    "start": {
+      "year": -160889000
+    },
+    "end": {
+      "year": -155000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 5000000,
+      "start_plus_years": 5000000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Jianchang ash beds date to 160.889-160.254 Ma; the Daohugou beds are described as Middle Jurassic to earliest Late Jurassic; decline ca. 155 Ma. The id's -165my is only a lookup key."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (radiometric, U-Pb)",
+        "value": "160.889 Ma",
+        "source": "src-gsa"
+      },
+      {
+        "calendar": "Ma",
+        "value": "ca. 155 Ma",
+        "source": "src-mapress"
+      }
+    ],
+    "display": "c. 161–155 million years ago (Middle–Late Jurassic)"
+  },
+  "where": {
+    "lat": 41.31632,
+    "lon": 119.23863,
+    "elevation_m": null,
+    "modern_name": "Daohugou Village, Ningcheng County, Inner Mongolia, China",
+    "historical_name": "Not applicable (Jurassic; no polity); fossil locality at Daohugou",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-mdpi"
+    ],
+    "paleo": {
+      "not_applicable": "Outline tier; paleo-position not reconstructed."
+    }
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Source of the oldest documented feathered dinosaurs and a diverse Jurassic insect fauna, preceding the Jehol Biota."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-125my-jehol-biota",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gsa",
+      "url": "https://gsa.confex.com/gsa/2016AM/webprogram/Paper287253.html",
+      "title": "High-precision age constraints on the Jurassic rise of feathered dinosaurs and eutherian mammals: U-Pb geochronology of the Yanliao Biota from Jianchang",
+      "publisher": "Geological Society of America",
+      "author": "Chu, Ramezani, He, Bowring",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mapress",
+      "url": "https://www.mapress.com/pe/article/view/palaeoentomology.1.1.2",
+      "title": "The Middle-Late Jurassic Yanliao entomofauna",
+      "publisher": "Magnolia Press (Palaeoentomology)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mdpi",
+      "url": "https://www.mdpi.com/2075-4450/13/5/402",
+      "title": "Pamphiliidae sawfly fossils, Daohugou and Huangbanjigou (Insects 13(5), 402)",
+      "publisher": "MDPI",
+      "author": null,
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Discovery lead said ~165 Ma; sources give ~161-155 Ma, so id key differs. Pin is Daohugou village (one locality) from MDPI's 41°18.979′N 119°14.318′E, converted to decimal; spotcheck could not re-fetch MDPI. Anchiornis not verified, omitted.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:25:12.728Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

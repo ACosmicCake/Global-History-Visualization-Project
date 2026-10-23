@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2003-sars-outbreak",
+  "kind": "event",
+  "title": "SARS Outbreak of 2003",
+  "summary": "Severe acute respiratory syndrome emerged in Guangdong Province, southern China, in late 2002 and spread via travellers, including a Hong Kong hotel, to other countries. WHO issued a global alert on 12 March 2003; it counted 8,098 probable cases and 774 deaths by the outbreak's end.",
+  "when": {
+    "start": {
+      "year": 2002
+    },
+    "end": {
+      "year": 2003
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Case window November 2002 to July 2003 per CDC; WHO alert 12 March 2003."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "12 March 2003",
+        "source": "src-who-wpsar"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 2002",
+        "source": "src-cdc-faq"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "21 February 2003",
+        "source": "src-who-wpsar"
+      }
+    ],
+    "display": "November 2002 – July 2003"
+  },
+  "where": {
+    "lat": 23.3333,
+    "lon": 113.5,
+    "elevation_m": null,
+    "modern_name": "Guangdong Province, China (pin is the approximate provincial centre, a proxy for the first recognised cases)",
+    "historical_name": "Guangdong Province, People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-latitude"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First severe, readily transmissible new disease of the 21st century, per WHO WPRO, with worldwide spread."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-who-wpsar",
+      "url": "https://ojs.wpro.who.int/ojs/index.php/wpsar/article/view/208/296",
+      "title": "The legacies of SARS",
+      "publisher": "WHO Western Pacific Region (WPSAR)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cdc-faq",
+      "url": "https://archive.cdc.gov/www_cdc_gov/sars/about/faq.html",
+      "title": "SARS Frequently Asked Questions",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-latitude",
+      "url": "https://latitude.to/articles-by-country/cn/china/856/guangdong",
+      "title": "GPS coordinates of Guangdong, China",
+      "publisher": "latitude.to",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "WHO/CDC give 8,098 probable cases; the WPSAR article and History.com say 8,096. Pin is a provincial-centre proxy; Hong Kong was the hub of international spread.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:22.573Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

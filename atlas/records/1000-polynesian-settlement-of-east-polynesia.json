@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:mig-1",
+  "updated": "2026-10-22",
+  "id": "1000-polynesian-settlement-of-east-polynesia",
+  "kind": "process",
+  "title": "Polynesian settlement of East Polynesia",
+  "summary": "Polynesian voyagers from the Samoa and Tonga area settled the Society Islands around AD 1025-1120, then spread within about a century to the remaining islands, including Hawaii, Rapa Nui and New Zealand. A 2011 study of high-precision radiocarbon dates shortened earlier chronologies by several centuries.",
+  "when": {
+    "start": {
+      "year": 1073
+    },
+    "end": {
+      "year": 1256
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Years are calendar years AD, taking midpoints of the ranges in Wilmshurst et al. 2011: Society Islands ~1025-1120; Rapa Nui ~1200-1253; Hawaii ~1219-1266; New Zealand ~1230-1282. Gambier is dated more broadly (~1108-1275). Earlier chronologies placed settlement from AD 300-600 in the Marquesas; this study rejects those for unreliable samples, and the debate is continuing. The waypoints show arrival dates for island groups in order, not a single voyage; the Marquesas and other groups are omitted."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Calibrated radiocarbon, AD",
+        "value": "Colonization earliest in the Society Islands A.D. ~1025-1120; then dispersal to all remaining islands A.D. ~1190-1290",
+        "source": "src-wilmshurst2011"
+      },
+      {
+        "calendar": "Calibrated radiocarbon, AD",
+        "value": "Rapa Nui A.D. ~1200-1253; Hawaii A.D. ~1219-1266; New Zealand A.D. ~1230-1282",
+        "source": "src-wilmshurst2011"
+      },
+      {
+        "calendar": "AD",
+        "value": "Society Islands A.D. 1025-1120; remaining islands A.D. 1190-1290",
+        "source": "src-uh-polynesia"
+      }
+    ],
+    "display": "c. AD 1025-1290"
+  },
+  "where": {
+    "lat": -16.85,
+    "lon": -151.4,
+    "elevation_m": null,
+    "modern_name": "Society Islands, French Polynesia (first waypoint; archipelago centroid)",
+    "historical_name": "Central East Polynesia before European contact; no recorded place names",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -16.85,
+          "lon": -151.4,
+          "year": 1073,
+          "date": "A.D. ~1025-1120 (Society Islands, Wilmshurst et al. 2011)",
+          "label": "Society Islands, French Polynesia: earliest dated colonization in East Polynesia. Point is the archipelago centroid.",
+          "source": "src-wilmshurst2011",
+          "coordinate_source": "src-wd-society"
+        },
+        {
+          "lat": -27.12,
+          "lon": -109.35,
+          "year": 1227,
+          "date": "A.D. ~1200-1253 (Rapa Nui, Wilmshurst et al. 2011)",
+          "label": "Rapa Nui (Easter Island): island colonization, short chronology confirmed.",
+          "source": "src-wilmshurst2011",
+          "coordinate_source": "src-wd-easter"
+        },
+        {
+          "lat": 19.59,
+          "lon": -155.435,
+          "year": 1243,
+          "date": "A.D. ~1219-1266 (Hawaii, Wilmshurst et al. 2011)",
+          "label": "Hawaii: archipelago colonization; the point is Hawaii island, the largest, but the study dates the archipelago.",
+          "source": "src-wilmshurst2011",
+          "coordinate_source": "src-wd-hawaii"
+        },
+        {
+          "lat": -41.2,
+          "lon": 174,
+          "year": 1256,
+          "date": "A.D. ~1230-1282 (New Zealand, Wilmshurst et al. 2011)",
+          "label": "New Zealand (Aotearoa): colonization. Point is the national centroid; the study dates the island group.",
+          "source": "src-wilmshurst2011",
+          "coordinate_source": "src-wd-nz"
+        }
+      ]
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-society",
+      "src-wd-easter",
+      "src-wd-hawaii",
+      "src-wd-nz"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The last major settlement of habitable land by humans, completed by deliberate ocean voyaging."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-1300-lapita-expansion",
+      "type": "caused_by",
+      "because": "East Polynesians descend from Lapita-era settlers of West Polynesia."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wilmshurst2011",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3033267/",
+      "title": "High-precision radiocarbon dating shows recent and rapid initial human colonization of East Polynesia (PNAS 108:1815-1820)",
+      "publisher": "Proceedings of the National Academy of Sciences of the USA (via PubMed Central)",
+      "author": "Proceedings of the National Academy of Sciences of the USA (via PubMed Central)",
+      "date_published": "2011-02-01",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-uh-polynesia",
+      "url": "https://manoa.hawaii.edu/news/article.php?aId=4097",
+      "title": "East Polynesia colonized faster and more recently than previously thought",
+      "publisher": "University of Hawaii at Manoa News",
+      "author": "University of Hawaii at Manoa News",
+      "date_published": "2010-12-27",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-society",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q118920.json",
+      "title": "Wikidata entry for the Society Islands (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-easter",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q14452.json",
+      "title": "Wikidata entry for Easter Island (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-hawaii",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q68740.json",
+      "title": "Wikidata entry for Hawaii island (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-nz",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q664.json",
+      "title": "Wikidata entry for New Zealand (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: no dated West Polynesian starting waypoint is included (Wilmshurst says only that Polynesians dispersed from the Samoa-Tonga area); the waypoints are island-group arrival dates in order, not one voyage; Hawaii and New Zealand points are centroids; the short chronology is the current mainstream view but older longer chronologies still appear in the literature.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "A.D. ~1025-1120",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Voyagers settle the Society Islands, the earliest dated landfall in East Polynesia, about four centuries later than once assumed.",
+        "source": "src-wilmshurst2011",
+        "consequence": false
+      },
+      {
+        "span": "A.D. ~1190-1290",
+        "action": "path.trace {}",
+        "caption": "After a pause of 70-265 years, settlers reach Rapa Nui, Hawaii and New Zealand within roughly a century.",
+        "source": "src-wilmshurst2011",
+        "consequence": false
+      },
+      {
+        "span": "A.D. ~1230-1282",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "With New Zealand settled, Polynesians occupy almost every habitable island group across the Pacific, a triangle from Hawaii to Rapa Nui to New Zealand.",
+        "source": "src-wilmshurst2011",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:24.013Z"
+}

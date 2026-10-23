@@ -1,0 +1,147 @@
+{
+  "id": "1887-michelson-morley-experiment",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Michelson-Morley Experiment",
+  "summary": "In July 1887 Albert Michelson of Case and Edward Morley of Western Reserve conducted an interferometer experiment in Cleveland to detect Earth's motion through the luminiferous ether. They found a shift consistent with zero, the first measurement accurate enough to challenge the ether's existence; special relativity later explained the null result.",
+  "when": {
+    "start": {
+      "year": 1887
+    },
+    "end": {
+      "year": 1887
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Marker text gives July 1887; APS gives 1887."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 1887",
+        "source": "src-ohio"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1887",
+        "source": "src-aps"
+      }
+    ],
+    "display": "July 1887"
+  },
+  "where": {
+    "lat": 41.50407,
+    "lon": -81.6084,
+    "elevation_m": null,
+    "modern_name": "Case Western Reserve University, University Circle, Cleveland, Ohio, USA",
+    "historical_name": "Cleveland, Ohio, United States (Case School of Applied Science / Western Reserve College)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-hmdb"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Famous null result that was the first strong evidence against the luminiferous ether, later explained by special relativity."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-aps",
+      "url": "https://www.aps.org/funding-recognition/historic-sites/case",
+      "title": "Historic Site: Case Western Reserve University",
+      "publisher": "American Physical Society",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ohio",
+      "url": "https://remarkableohio.org/marker/34-18-the-michelson-morley-experiment/",
+      "title": "34-18 The Michelson-Morley Experiment",
+      "publisher": "Ohio History Connection (Remarkable Ohio)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-hmdb",
+      "url": "https://www.hmdb.org/m.asp?m=11849",
+      "title": "Michelson-Morley Experiment Historical Marker",
+      "publisher": "Historical Marker Database",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the 1952 commemorative marker (41°30.244′N 81°36.504′W converted to decimal), a proxy for 'near this spot'; exact apparatus site not confirmed. Month from marker text.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:28:44.182Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1887",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In July 1887 Albert Michelson of Case and Edward Morley of Western Reserve conducted an interferometer experiment in Cleveland to detect Earth's motion through the luminiferous ether.",
+        "source": "src-aps"
+      },
+      {
+        "span": "1887",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "They found a shift consistent with zero, the first measurement accurate enough to challenge the ether's existence; special relativity later explained the null result.",
+        "source": "src-aps",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

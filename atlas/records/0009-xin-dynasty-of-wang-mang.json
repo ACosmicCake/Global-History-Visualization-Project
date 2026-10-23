@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s26",
+  "updated": "2026-10-22",
+  "id": "0009-xin-dynasty-of-wang-mang",
+  "kind": "period",
+  "title": "Xin dynasty of Wang Mang",
+  "summary": "In 9 CE Wang Mang, a relative of the Han empress dowager, ended Han rule and proclaimed the Xin dynasty, claiming to revive Zhou institutions. His land, currency and monopoly reforms largely failed, and he was killed in 23 CE. The Han was restored in 25 CE as the Eastern Han.",
+  "when": {
+    "start": {
+      "year": 9
+    },
+    "end": {
+      "year": 23
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years only; sources give 9 CE for the founding and 23 CE for his death. The Han restoration followed in 25 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "proclaimed the Xin dynasty in 9 C.E.; killed in 23 C.E.",
+        "source": "src-ebsco-wm"
+      },
+      {
+        "calendar": "AD",
+        "value": "Wang Mang took the throne in AD 9 and died in AD 23",
+        "source": "src-libre-wm"
+      }
+    ],
+    "display": "9-23 CE"
+  },
+  "where": {
+    "lat": 34.3083,
+    "lon": 108.8583,
+    "elevation_m": null,
+    "modern_name": "Xi'an, Shaanxi, China",
+    "historical_name": "Chang'an, capital of the Xin dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-q6501000",
+      "src-ebsco-wm"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The break between Western and Eastern Han and a famous attempt at radical state reform."
+  },
+  "related": [
+    {
+      "id": "polity-han-dynasty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-wm",
+      "url": "https://www.ebsco.com/research-starters/history/wang-mang/",
+      "title": "Wang Mang",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-libre-wm",
+      "url": "https://human.libretexts.org/Bookshelves/History/World_History/An_Outline_History_of_East_Asia_to_1200_(Schneewind)/05:_Religion_and_Society_in_Han_(206_BC_____AD_220)/5.07:_Wang_Mangs_New_Dynasty_AD_9-23",
+      "title": "Wang Mang's New Dynasty, AD 9-23",
+      "publisher": "Humanities LibreTexts (An Outline History of East Asia to 1200, Sarah Schneewind)",
+      "author": "Sarah Schneewind",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-q6501000",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q6501000.json",
+      "title": "Wikidata item Q6501000 (Chang'an), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is modern Xi'an (Chang'an); the capital is named in the EBSCO page only in passing. Sources differ on whether the Xin counts as a legitimate dynasty; the framing is neutral.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "9",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 9 CE Wang Mang, a relative of the Han empress dowager, ended Han rule and proclaimed the Xin dynasty, claiming to revive Zhou institutions.",
+        "source": "src-ebsco-wm"
+      },
+      {
+        "span": "23",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "His land, currency and monopoly reforms largely failed, and he was killed in 23 CE.",
+        "source": "src-ebsco-wm",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T07:37:41.093Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

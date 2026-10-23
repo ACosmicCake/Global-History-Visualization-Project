@@ -1,0 +1,128 @@
+{
+  "id": "1952-egyptian-revolution",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1952 Egyptian revolution",
+  "summary": "On 23 July 1952 the Free Officers, led by Col. Gamal Abdel Nasser, toppled Egypt's monarchy in a coup. Scholars describe it as a coup that preempted a revolution. Free Officers rule shaped Egypt for decades, and the coup is often cited as a case of coup contagion in the Middle East.",
+  "when": {
+    "start": {
+      "year": 1952
+    },
+    "end": {
+      "year": 1952
+    },
+    "precision": "day",
+    "display": "23 July 1952",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "toppled the monarchy in a coup on July 23, 1952",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 30.05,
+    "lon": 31.21667,
+    "elevation_m": null,
+    "modern_name": "Egypt (proxy pin: Kingdom of Egypt, the location Wikidata lists)",
+    "historical_name": "Kingdom of Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Ended Egypt's monarchy and began decades of Free Officers rule with wide regional influence."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260112080240/https://academic.oup.com/isr/article/27/4/viaf033/8402320",
+      "title": "Following the Free Officers: Explaining the Politics of Coup Contagion and Containment | International Studies Review | Oxford Academic",
+      "publisher": "Oxford University Press",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251230225827/https://www.britannica.com/place/Egypt/The-revolution-and-the-Republic",
+      "title": "Egypt - Revolution, Republic, Nile | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q124943",
+      "title": "Wikidata Q124943 (Kingdom of Egypt, coordinates of the location Wikidata gives for Q1780431)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources are a Britannica section on Egypt and a journal article treating the coup as a case study; the article does not give the date itself. Britannica mentions Farouk only in a caption and says the republic was declared in July 1952 there, but Egypt officially became a republic in June 1953 in the text. Not reconciled here. Place is the whole country. Summary uses Britannica for the date. Importance judgement is mine. Nothing else was stretched. Minor tension noted. Revolution vs coup terminology varies. (Drafted by the Wikipedia pipeline from Oxford University Press, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1952",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "On 23 July 1952 the Free Officers, led by Col.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1952",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "It preempted a revolution but became a revolution from above.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-23T02:31:29.883Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

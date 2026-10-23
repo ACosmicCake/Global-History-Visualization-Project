@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:o-s110",
+  "updated": "2026-10-22",
+  "id": "1567-chinese-variolation",
+  "kind": "event",
+  "title": "Variolation in Ming China",
+  "summary": "Variolation, deliberate inoculation with smallpox material through the nose, was practised in Ming China. A Macao Cultural Institute paper says it first appeared in the Longqing reign (1567-1572), and the CDC's Emerging Infectious Diseases journal records Longqing-era practitioners in Taiping County, Anhui. A Korean review names a 1549 text as the oldest record.",
+  "when": {
+    "start": {
+      "year": 1567
+    },
+    "end": {
+      "year": 1572
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 18,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Longqing reign dates 1567-1572 are from two sources; a 2026 EID review says practice began no later than the Chenghua-Longqing period (1465-1572); a Korean review dates the oldest text, Douzhen Xinfa, to 1549."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Review of Culture, Macao)",
+        "value": "reign of Emperor Longqing (1567",
+        "source": "src-icm-variolation"
+      },
+      {
+        "calendar": "CE (EID)",
+        "value": "no later than the Chenghua–Longqing period of the Ming dynasty (1465–1572 CE)",
+        "source": "src-eid-variolation"
+      },
+      {
+        "calendar": "CE (J Trauma Inj)",
+        "value": "which Manjeon published in 1549",
+        "source": "src-jti-variolation"
+      }
+    ],
+    "display": "Longqing reign, 1567-1572"
+  },
+  "where": {
+    "lat": 29.7172627,
+    "lon": 118.3324811,
+    "elevation_m": null,
+    "modern_name": "Huangshan City, Anhui, China (proxy pin: the Korean review names Huangshan City as the Longqing-era centre; EID names Taiping County, Anhui)",
+    "historical_name": "Taiping County area, Ming China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-osm-huangshan"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "disease",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "An early documented smallpox inoculation practice; the Macao paper says it reached Europe in the early eighteenth century."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-icm-variolation",
+      "url": "https://www.icm.gov.mo/rc/viewer/pdfViewerParts/40018/3767",
+      "title": "Odes on Guiding Smallpox Out: Qiu Xi's Contribution to Vaccination in China",
+      "publisher": "Cultural Institute of the Macao SAR Government (Review of Culture)",
+      "author": "Dong Shaoxin",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eid-variolation",
+      "url": "https://wwwnc.cdc.gov/eid/article/32/10/26-0729_article",
+      "title": "Variolation Techniques, Medical Explanations, and Dissemination in Late Imperial China",
+      "publisher": "Emerging Infectious Diseases (CDC)",
+      "author": "Emerging Infectious Diseases",
+      "date_published": "2026-10",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jti-variolation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11703690/",
+      "title": "Development of variolation and its introduction to Joseon-era Korea",
+      "publisher": "Journal of Trauma and Injury (PMC)",
+      "author": "Journal of Trauma and Injury",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-huangshan",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E9%BB%84%E5%B1%B1%E5%B8%82&format=json",
+      "title": "OpenStreetMap Nominatim: 黄山市, relation 2992498 (29.7172627, 118.3324811)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Date is the Longqing reign, not a proven first case: sources disagree (1549 text; practice no later than 1465-1572; EID says earlier Tang/Song accounts lack corroboration). The record id carries 1567 only as a lookup key. Pin is a proxy (Huangshan City).",
+  "published_at": "2026-10-22T19:16:40.253Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1567",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Variolation, deliberate inoculation with smallpox material through the nose, was practised in Ming China.",
+        "source": "src-icm-variolation"
+      },
+      {
+        "span": "1572",
+        "action": "pulse { radius_km: 96 }",
+        "caption": "A Macao Cultural Institute paper says it first appeared in the Longqing reign (1567-1572), and the CDC's Emerging Infectious Diseases journal records Longqing-era practitioners in Taiping County, Anhui.",
+        "source": "src-icm-variolation",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

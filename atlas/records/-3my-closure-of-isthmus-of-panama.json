@@ -1,0 +1,164 @@
+{
+  "id": "-3my-closure-of-isthmus-of-panama",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Closure of the Isthmus of Panama",
+  "summary": "Between three and 2.8 million years ago, the tectonic uplift and emergence of the Isthmus of Panama severed the Central American Seaway between the Atlantic and Pacific oceans. This land bridge rerouted ocean currents to form the modern Gulf Stream, profoundly influencing global climate, while enabling the Great American Biotic Interchange of terrestrial mammals and plants between North and South America and permanently isolating marine populations.",
+  "when": {
+    "start": {
+      "year": -3000000
+    },
+    "end": {
+      "year": -2800000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 500000,
+      "start_plus_years": 200000,
+      "end_minus_years": 200000,
+      "end_plus_years": 200000,
+      "note": "Traditional geological and palaeontological consensus dates the complete emergence of the isthmus to between 3.0 and 2.8 Ma; disputed earlier shoaling and island-arc connections date to the Miocene."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Millions of years ago",
+        "value": "By about 3 million years ago, an isthmus had formed between North and South America",
+        "source": "src-nasa-panama"
+      },
+      {
+        "calendar": "Ma (millions of years ago)",
+        "value": "formation of the Isthmus of Panama sensu stricto around 2.8 Ma",
+        "source": "src-odea2016"
+      }
+    ],
+    "display": "c. 3.0–2.8 million years ago"
+  },
+  "where": {
+    "lat": 9,
+    "lon": -80,
+    "elevation_m": null,
+    "modern_name": "Isthmus of Panama, Panama",
+    "historical_name": "Central American land bridge between the Pacific Ocean and the Caribbean Sea; no human polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-geonames-panama"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "Severed the Atlantic and Pacific oceans, reorganized global ocean circulation to form the Gulf Stream, and triggered the Great American Biotic Interchange."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-13ka-megafaunal-extinction-in-the-americas",
+      "type": "related",
+      "because": "The megafauna involved in the late Pleistocene American extinctions descended from the interchange across the Panama isthmus."
+    },
+    {
+      "id": "1912-01-06-wegener-continental-drift-lecture",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "c. 3 Ma",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Tectonic collision and sediment build-up gradually close the marine gap between the Americas.",
+        "source": "src-nasa-panama",
+        "consequence": false
+      },
+      {
+        "span": "c. 2.8 Ma",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Complete closure establishes the Gulf Stream and triggers the Great American Biotic Interchange.",
+        "source": "src-odea2016",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-odea2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4988774/",
+      "title": "Formation of the Isthmus of Panama",
+      "publisher": "Science Advances (AAAS, via PubMed Central)",
+      "author": "Aaron O'Dea, Harilaos A. Lessios, Anthony G. Coates, et al.",
+      "date_published": "2016-08-17",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nasa-panama",
+      "url": "https://earthobservatory.nasa.gov/images/4073/panama-isthmus-that-changed-the-world",
+      "title": "Panama: Isthmus that Changed the World",
+      "publisher": "NASA Earth Observatory",
+      "author": "NASA Earth Observatory",
+      "date_published": "2003-12-30",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-panama",
+      "url": "https://www.geonames.org/3703437/isthmus-of-panama.html",
+      "title": "Isthmus of Panama (GeoNames entry 3703437)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the timing of earlier transient shoals versus the definitive 2.8 Ma complete land bridge closure.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:29.219Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

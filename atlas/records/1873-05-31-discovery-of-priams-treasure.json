@@ -1,0 +1,166 @@
+{
+  "id": "1873-05-31-discovery-of-priams-treasure",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Discovery of 'Priam's Treasure' at Hisarlık",
+  "summary": "On 31 May 1873, Heinrich Schliemann uncovered a major hoard of gold, silver, and bronze artifacts at Hisarlık in northwestern Anatolia, misidentifying it as the legendary treasure of King Priam from Homer's Iliad. In reality dating to Early Bronze Age Troy II over a millennium before the Trojan War, the find electrified public interest in archaeology but caused lasting controversy due to Schliemann's destructive methods, unauthorized export from the Ottoman Empire, and subsequent wartime displacement.",
+  "when": {
+    "start": {
+      "year": 1873,
+      "iso": "1873-05-31"
+    },
+    "end": {
+      "year": 1873,
+      "iso": "1873-05-31"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date claimed by Schliemann in his excavation notes; David Traill notes discrepancies in later published reports."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "31 May 1873",
+        "source": "src-bmcr-traill"
+      },
+      {
+        "calendar": "Gregorian (first excavations by Schliemann at the site)",
+        "value": "1870",
+        "source": "src-unesco-849"
+      }
+    ],
+    "display": "31 May 1873"
+  },
+  "where": {
+    "lat": 39.9575,
+    "lon": 26.2389,
+    "elevation_m": null,
+    "modern_name": "Hisarlık, Tevfikiye, Çanakkale Province, Turkey",
+    "historical_name": "Hisarlık, Biga Sanjak, Ottoman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-unesco-849"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "art_music_literature",
+    "science_technology"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The discovery of the gold hoard galvanized global belief in the historical basis of Homer's epics and laid the foundation for Aegean Bronze Age archaeology."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-troy",
+      "type": "same_place"
+    },
+    {
+      "id": "person-heinrich-schliemann",
+      "type": "related"
+    },
+    {
+      "id": "-1180-trojan-war",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1873-05-31",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Heinrich Schliemann unearths a rich cache of Bronze Age gold and metalwork at Hisarlık, naming it Priam's Treasure.",
+        "source": "src-bmcr-traill",
+        "consequence": false
+      },
+      {
+        "span": "1873-05-31",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The hoard is smuggled out of the Ottoman Empire, igniting legal battles and proving Troy's deep prehistoric antiquity.",
+        "source": "src-bmcr-traill",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-bmcr-traill",
+      "url": "https://bmcr.brynmawr.edu/1994/1994.03.01/",
+      "title": "Review of David A. Traill, Excavating Schliemann: Collected Papers on Schliemann",
+      "publisher": "Bryn Mawr Classical Review",
+      "author": "David Gill",
+      "date_published": "1994-03-01",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-smb-trojan",
+      "url": "https://www.smb.museum/en/museums-institutions/museum-fuer-vor-und-fruehgeschichte/collection-research/research/schliemanns-collection-of-trojan-antiquitie/",
+      "title": "Re-examination of Heinrich Schliemann’s 'Collection of Trojan Antiquities'",
+      "publisher": "Staatliche Museen zu Berlin, Museum für Vor- und Frühgeschichte",
+      "author": "Museum für Vor- und Frühgeschichte",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-unesco-849",
+      "url": "https://whc.unesco.org/en/list/849/",
+      "title": "Archaeological Site of Troy (World Heritage List no. 849)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1998",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of whether the hoard was discovered entirely as a single closed deposit on 31 May 1873 or represented a composite assemblage aggregated by Schliemann as Traill argues.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:28.694Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

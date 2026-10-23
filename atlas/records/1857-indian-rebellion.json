@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes massacres of civilians by both sides and mass executions, including prisoners blown from cannon, and contested death tolls.",
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "1857-indian-rebellion",
+  "kind": "event",
+  "title": "Indian Rebellion of 1857",
+  "summary": "In May 1857 Bengal army sepoys at Meerut killed their British officers and marched on Delhi, starting a widespread revolt against East India Company rule in northern India. Fighting and British reprisals, including on civilians, continued until a peace treaty of 8 July 1858. The Company was then dissolved and the Crown assumed rule. Sources attribute more than 100,000 Indian deaths.",
+  "when": {
+    "start": {
+      "year": 1857,
+      "iso": "1857-05"
+    },
+    "end": {
+      "year": 1858,
+      "iso": "1858-07-08"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Royal Hampshire Regiment Museum dates the revolt May 1857 to July 1859 in one sentence but states a peace treaty on 8 July 1858 ended the rebellion; end set to 8 July 1858 and the 1859 figure noted here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In May 1857 sepoys of the Bengal army stationed at Meerut shot their British officers",
+        "source": "src-rhr-1857"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On July 8 1858, a peace treaty was signed and the rebellion ended",
+        "source": "src-rhr-1857"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The first of these uprisings was in May 1857",
+        "source": "src-oer-1857"
+      }
+    ],
+    "display": "May 1857 - 8 July 1858"
+  },
+  "where": {
+    "lat": 28.98,
+    "lon": 77.706389,
+    "elevation_m": null,
+    "modern_name": "Meerut, Uttar Pradesh, India (where the revolt began)",
+    "historical_name": "Meerut, a military station about 40 miles from Delhi under East India Company rule",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wikidata-meerut"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Largest challenge to East India Company rule; led to the Company's dissolution and direct Crown rule."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1757-battle-of-plassey",
+      "type": "related"
+    },
+    {
+      "id": "1947-08-15-indian-independence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rhr-1857",
+      "url": "https://www.royalhampshireregiment.org/about-the-museum/timeline/37th-indian-mutiny-1857-1859/",
+      "title": "The 37th and the Indian Mutiny 1857-1859",
+      "publisher": "Royal Hampshire Regiment Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-oer-1857",
+      "url": "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/Origins/Unit7/1857-Indian-Uprising",
+      "title": "1857 Indian Uprising and British Rule",
+      "publisher": "OER Project",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-wikidata-meerut",
+      "url": "https://www.wikidata.org/wiki/Q200237",
+      "title": "Wikidata item Q200237 (Meerut), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death tolls are attributed and unreconciled: the museum says more than 100,000 Indians were killed; OER Project says over 50,000 sepoys and about 100,000 civilians died in suppression and revenge, plus a famine with no figure. The museum page gives both 1859 and 8 July 1858 as endpoints. Pin is Meerut but the rebellion spread across northern India; the day of the outbreak was not stated on an opened page.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1857-05",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "In May 1857 sepoys at Meerut shoot their British officers and march on Delhi.",
+        "source": "src-rhr-1857"
+      },
+      {
+        "span": "1857-09-14",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Revolt spreads across the north; on 14 September British forces storm Delhi, and civilians are killed in revenge.",
+        "source": "src-rhr-1857"
+      },
+      {
+        "span": "1858-07-08",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A peace treaty ends the rebellion; the Company is dissolved and the Crown rules. One museum puts Indian deaths above 100,000.",
+        "source": "src-rhr-1857",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T08:21:37.178Z"
+}

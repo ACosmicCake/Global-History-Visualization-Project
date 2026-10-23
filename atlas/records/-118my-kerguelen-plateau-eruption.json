@@ -1,0 +1,122 @@
+{
+  "id": "-118my-kerguelen-plateau-eruption",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Kerguelen Plateau volcanism",
+  "summary": "The Kerguelen Plateau in the southern Indian Ocean is described as one of the largest volcanic plateaus in the world and the largest in the Southern Ocean, running more than 2,200 km northwest to southeast. Its magmatic crust formed between about 119 and 95 million years ago, with southern basement dated 119 to 110 Ma, and its volcanism is attributed to a large hotspot. Its northern part is far younger, under 40 Ma.",
+  "when": {
+    "start": {
+      "year": -119000000
+    },
+    "end": {
+      "year": -95000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "note": "Geoscience Australia: magmatic crust Barremian-Cenomanian (119 to 95 Ma), southern basement Aptian-Albian (119 to 110 Ma), central basalts about 102 Ma, northern province Oligocene-Miocene (under 40 Ma). The ODP Leg 183 press release gives about 110 Ma for the southern plateau and 85 to 95 Ma for the central plateau. The id says 118 Ma; no opened page gives that figure. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "Barremian-Cenomanian (119 - 95 Ma)",
+        "source": "src-ga"
+      },
+      {
+        "calendar": "Ma",
+        "value": "formed approximately 110 million years ago (southern plateau); formed between 85 and 95 million years ago (central plateau)",
+        "source": "src-odp183"
+      }
+    ],
+    "display": "c. 119 to 95 million years ago"
+  },
+  "where": {
+    "lat": -51,
+    "lon": 72,
+    "elevation_m": null,
+    "modern_name": "Kerguelen Plateau, southern Indian Ocean, about 3,000 km southwest of Fremantle, Western Australia",
+    "historical_name": "Kerguelen Plateau on the Antarctic and Indian plate margins, Early Cretaceous; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wd-kerg"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "antarctica"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "One of the largest oceanic volcanic plateaus on Earth, built over tens of millions of years."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ga",
+      "url": "https://www.ga.gov.au/scientific-topics/energy/province-sedimentary-basin-geology/petroleum/offshore-southern-australia/kerguelen-plateau",
+      "title": "Kerguelen Plateau",
+      "publisher": "Geoscience Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-odp183",
+      "url": "https://odplegacy.org/outreach/press_releases/leg183.html",
+      "title": "ODP Leg 183 press release (Kerguelen Plateau), 11 February 1999",
+      "publisher": "Ocean Drilling Program (Consortium for Ocean Leadership)",
+      "author": null,
+      "date_published": "1999",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-kerg",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2308629.json",
+      "title": "Wikidata entry for Kerguelen Plateau (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: the id says 118 Ma but the opened pages give 119 to 95 Ma (Geoscience Australia) or about 110 Ma for the south (ODP 1999). where.paleo is omitted because the GPlates service returned no value (999.99) for this point in MERDITH2021, MULLER2019, PALEOMAP and SETON2012 at 118 to 120 Ma. The Wikidata point is the plateau centre.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:26.272Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

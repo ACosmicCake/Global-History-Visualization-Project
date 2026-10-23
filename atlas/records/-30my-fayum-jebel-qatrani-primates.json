@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "-30my-fayum-jebel-qatrani-primates",
+  "kind": "place",
+  "title": "Fayum primates of the Jebel Qatrani Formation",
+  "summary": "Excavations by the Geological Survey of Egypt and Duke University in the Jebel Qatrani Formation, Fayum, Egypt, recovered many primate fossils, including the anthropoids Aegyptopithecus, Propliopithecus, Parapithecus and Apidium, and Qatrania wingi, then the earliest African anthropoid known. A 2006 reassessment placed the youngest Fayum anthropoids between 30.2 and 29.5 Ma and the propliopithecids from about 31.5 Ma.",
+  "when": {
+    "start": {
+      "year": -31500000
+    },
+    "end": {
+      "year": -29500000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Range from Seiffert (2006); the same paper says most taxa were formerly thought to be 35.4-33.3 Ma. The id says 30 Ma. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "are probably between 30.2 and 29.5 Ma (youngest Fayum anthropoids)",
+        "source": "src-seiffert2006"
+      },
+      {
+        "calendar": "Ma",
+        "value": "first appear in the Fayum area at ≈31.5 Ma (propliopithecids)",
+        "source": "src-seiffert2006"
+      },
+      {
+        "calendar": "epoch",
+        "value": "upper levels of the formation ... early Oligocene",
+        "source": "src-duke1983"
+      }
+    ],
+    "display": "c. 31.5 to 29.5 Ma"
+  },
+  "where": {
+    "lat": 29.453611,
+    "lon": 30.580833,
+    "elevation_m": null,
+    "modern_name": "Fayum Depression, Faiyum Governorate, Egypt (proxy pin at Faiyum Oasis; the formation lies in the Fayum area)",
+    "historical_name": "Jebel Qatrani Formation, northern edge of the African plate, Oligocene; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wd-fayum"
+    ],
+    "paleo": {
+      "lat": 21.32,
+      "lon": 29.33,
+      "age_ma": 30,
+      "plate_model": "MERDITH2021 (via GPlates Web Service)",
+      "source": "src-gplates",
+      "note": "Faiyum Oasis proxy at 30 Ma. MULLER2019 gives 24.56 N, 24.20 E and PALEOMAP 26.33 N, 27.50 E."
+    }
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "life_extinction",
+    "human_evolution_migration"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Source of many early anthropoid fossils from Africa."
+  },
+  "confidence": "probable",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-seiffert2006",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1458784",
+      "title": "Seiffert (2006), PNAS abstract on revised ages of the Fayum fossil mammal faunas",
+      "publisher": "Proceedings of the National Academy of Sciences, via PubMed Central",
+      "author": null,
+      "date_published": "2006",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-duke1983",
+      "url": "https://scholars.duke.edu/publication/723750",
+      "title": "Qatrania and the Fayum (Simons and Kay, Nature 1983, abstract)",
+      "publisher": "Duke Scholars, Duke University",
+      "author": null,
+      "date_published": "1983",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-fayum",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1399125.json",
+      "title": "Wikidata item Q1399125 (Faiyum Oasis), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=30.5808,29.4536&time=30&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Duke abstract gives no age in Ma, only early Oligocene; ages come from the 2006 PNAS abstract. Pin is a proxy at Faiyum Oasis.",
+  "published_at": "2026-10-22T18:32:04.969Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

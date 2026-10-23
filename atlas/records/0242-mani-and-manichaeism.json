@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s99",
+  "updated": "2026-10-22",
+  "id": "0242-mani-and-manichaeism",
+  "kind": "movement",
+  "title": "Mani and the rise of Manichaeism",
+  "summary": "Mani, born in 216 in Persian Babylonia, had revelations from age 12 and at 24 received a calling as an apostle of light. He left his community, preached in Persia, travelled to northern India in the early 240s and returned after Shapur I took the throne, who let him teach. Executed in 276 under Bahram I, his teachings reached North Africa in the west and the China Sea in the east.",
+  "when": {
+    "start": {
+      "year": 242
+    },
+    "end": {
+      "year": 276
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Beth Mardutho gives Shapur I as 242-72 and Mani's death ca. 276; the University of Washington essay gives Shapur I as r. 241-272 and Mani executed in 276. Start 242 follows the royal-protection date; birth was 216."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "royal protection of Shapur I (242-72); Mani was put to death ca. 276",
+        "source": "src-gedsh-mani"
+      },
+      {
+        "calendar": "CE",
+        "value": "returned shortly after the coronation of Shapur I (r. 241-272); executed in 276",
+        "source": "src-uw-mani"
+      }
+    ],
+    "display": "242-276 (born 216)"
+  },
+  "where": {
+    "lat": 32.5425,
+    "lon": 44.42111111111111,
+    "elevation_m": null,
+    "modern_name": "Babylonia, central Iraq (reference point: Babylon)",
+    "historical_name": "Persian Babylonia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-wikidata-q5684"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "people"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Founded a religion that spread from North Africa to the China Sea within a few generations."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "polity-sasanian-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gedsh-mani",
+      "url": "https://gedsh.bethmardutho.org/Mani",
+      "title": "Mani (216 - ca. 276), Gorgias Encyclopedic Dictionary of the Syriac Heritage",
+      "publisher": "Beth Mardutho: The Syriac Institute (Gorgias Encyclopedic Dictionary)",
+      "author": "Jeff W. Childers",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-uw-mani",
+      "url": "https://depts.washington.edu/silkroad/exhibit/religion/manichaeism/essay.html",
+      "title": "Manichaeism (Silk Road Seattle essay, citing Foltz, Religions of the Silk Road)",
+      "publisher": "University of Washington Libraries (Silk Road Seattle)",
+      "author": "Richard Foltz (cited)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-q5684",
+      "url": "https://www.wikidata.org/wiki/Q5684",
+      "title": "Babylon (Wikidata Q5684)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: place. Pages give only Mesopotamia / Persian Babylonia, so the pin is Babylon as a regional marker with wide uncertainty. Iranica and Britannica block fetches; Beth Mardutho and University of Washington used instead. Shapur I start date differs by one year across the two pages.",
+  "published_at": "2026-10-22T17:57:16.514Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "242",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Mani, born in 216 in Persian Babylonia, had revelations from age 12 and at 24 received a calling as an apostle of light.",
+        "source": "src-gedsh-mani"
+      },
+      {
+        "span": "276",
+        "action": "pulse { radius_km: 320 }",
+        "caption": "He left his community, preached in Persia, travelled to northern India in the early 240s and returned after Shapur I took the throne, who let him teach.",
+        "source": "src-gedsh-mani",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

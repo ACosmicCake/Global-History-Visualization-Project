@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "probable",
+  "audience_note": null,
+  "id": "-0406-battle-of-arginusae-slaves-enfranchisement",
+  "kind": "event",
+  "title": "Battle of Arginusae and the manning of the Athenian fleet with slaves",
+  "summary": "In summer 406 BCE an Athenian fleet defeated a Spartan one off the Arginusae islands, between Lesbos and the Asian mainland. Xenophon says Athens manned 110 ships in thirty days by embarking all of military age, slave or free. A university lecture handout adds that a decree offered volunteering slaves freedom and citizenship, an unusual step not every Athenian welcomed; Athens lost 25 ships and Sparta 75.",
+  "when": {
+    "start": {
+      "year": -405
+    },
+    "end": {
+      "year": -405
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Summer of 406 BCE per the Warwick handout; Xenophon notes are dated 406 B.C."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Xenophon, Hellenica 1.6, Perseus footnotes)",
+        "value": "406 B.C.",
+        "source": "src-xenophon"
+      },
+      {
+        "calendar": "BCE (Warwick handout)",
+        "value": "summer (406)",
+        "source": "src-warwick"
+      }
+    ],
+    "display": "Summer 406 BCE"
+  },
+  "where": {
+    "lat": 39.00528,
+    "lon": 26.79028,
+    "elevation_m": null,
+    "modern_name": "Arginusae islands, off the Aegean coast of Turkey",
+    "historical_name": "Arginusae (Arginousai) islands, opposite Mytilene between Lesbos and the Asia Minor mainland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-q23822737"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A late Peloponnesian War sea battle whose manning policy offered slaves freedom and citizenship."
+  },
+  "related": [
+    {
+      "id": "-0430-peloponnesian-war",
+      "type": "part_of"
+    },
+    {
+      "id": "-0507-classical-athens",
+      "type": "related"
+    },
+    {
+      "id": "polity-sparta",
+      "type": "related"
+    },
+    {
+      "id": "-0412-flight-of-the-enslaved-from-attica",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-xenophon",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0206:book=1:chapter=6",
+      "title": "Hellenica, Book 1, chapter 6",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "author": "Xenophon",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-warwick",
+      "url": "https://warwick.ac.uk/fac/arts/classics/warwickclassicsnetwork/events/classciv2020/lectures/athenian_politics__the_war_and_frogs_m.griffith_2013.pdf",
+      "title": "Athenian politics, the war and Frogs (lecture handout, 2013)",
+      "publisher": "University of Warwick, Classics Network",
+      "author": "M. Griffith",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q23822737",
+      "url": "https://www.wikidata.org/wiki/Q23822737",
+      "title": "Wikidata: Arginusae",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the citizenship decree: only the Warwick handout states it on a page I opened (its text is OCR-garbled in places); Xenophon says only that slave or free were embarked. Pin is the island group.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s47",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-405",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In summer 406 BCE an Athenian fleet defeated a Spartan one off the Arginusae islands, between Lesbos and the Asian mainland.",
+        "source": "src-xenophon"
+      },
+      {
+        "span": "-405",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A university lecture handout adds that a decree offered volunteering slaves freedom and citizenship, an unusual step not every Athenian welcomed; Athens lost 25 ships and Sparta 75.",
+        "source": "src-xenophon",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T10:28:51.611Z"
+}

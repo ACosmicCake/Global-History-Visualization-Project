@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0946-millennium-eruption-of-paektu",
+  "kind": "event",
+  "title": "Millennium Eruption of Paektu (Changbaishan)",
+  "summary": "The Millennium Eruption of Paektu (Changbaishan), a volcano on the China-North Korea border, ranks among the largest eruptions of the Common Era. A radiocarbon signal in a larch killed by pyroclastic currents, combined with Greenland ice evidence, dates it to late 946 CE. A USGS-hosted study gives about 23 km3 dense rock equivalent. The date rules out a role in the collapse of the Bohai Kingdom.",
+  "when": {
+    "start": {
+      "year": 946
+    },
+    "end": {
+      "year": 946
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Oppenheimer et al. (2017) date it to late 946 CE; earlier estimates had no consensus across at least the tenth century CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "circa 946 CE",
+        "source": "src-usgs-paektu"
+      },
+      {
+        "calendar": "CE",
+        "value": "late 946 CE",
+        "source": "src-oppenheimer-paektu"
+      }
+    ],
+    "display": "late 946 CE"
+  },
+  "where": {
+    "lat": 42.0072612,
+    "lon": 128.056396,
+    "elevation_m": null,
+    "modern_name": "Paektu / Changbaishan, on the China-North Korea border",
+    "historical_name": "Paektu / Changbaishan volcano, near the Bohai Kingdom (Manchuria/Korea)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-baekdu"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "One of the largest eruptions of the Common Era, now securely dated."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0950-medieval-climate-anomaly",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-usgs-paektu",
+      "url": "https://www.usgs.gov/publications/quantifying-gas-emissions-946-ce-millennium-eruption-paektu-volcano-democratic-peoples",
+      "title": "Quantifying gas emissions from the 946 CE Millennium Eruption of Paektu volcano, DPRK/China",
+      "publisher": "U.S. Geological Survey",
+      "author": "Kayla Iacovino et al.",
+      "date_published": "2016-11-30",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-oppenheimer-paektu",
+      "url": "https://www.climatology.uni-mainz.de/files/2016/03/Oppenheimer_2017_QSR-1.pdf",
+      "title": "Multi-proxy dating the Millennium Eruption of Changbaishan to late 946 CE",
+      "publisher": "Elsevier (Quaternary Science Reviews), PDF hosted by Johannes Gutenberg University Mainz",
+      "author": "Clive Oppenheimer et al.",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-baekdu",
+      "url": "https://nominatim.openstreetmap.org/search?q=Baekdu+Mountain&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Baekdu Mountain / Changbaishan",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the volume: 23 km3 DRE is the USGS page figure for the Iacovino et al. 2016 study; the USGS page does not give day or month. A 2022 study cited in a search snippet argues for winter 946; not opened, not used.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:12:14.148Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "946",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Millennium Eruption of Paektu (Changbaishan), a volcano on the China-North Korea border, ranks among the largest eruptions of the Common Era.",
+        "source": "src-usgs-paektu"
+      },
+      {
+        "span": "946",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A radiocarbon signal in a larch killed by pyroclastic currents, combined with Greenland ice evidence, dates it to late 946 CE.",
+        "source": "src-usgs-paektu",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

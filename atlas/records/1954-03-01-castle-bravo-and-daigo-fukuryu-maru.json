@@ -1,0 +1,160 @@
+{
+  "id": "1954-03-01-castle-bravo-and-daigo-fukuryu-maru",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Castle Bravo Nuclear Test and the Daigo Fukuryu Maru Incident",
+  "summary": "On 1 March 1954, the United States detonated Castle Bravo at Bikini Atoll in the Marshall Islands, producing a 15-megaton yield that exceeded theoretical predictions by more than twofold. Dangerous radioactive fallout contaminated hundreds of Marshallese residents on Rongelap and Utirik Atolls, American servicemen, and the crew of the Japanese tuna trawler Daigo Fukuryu Maru (Lucky Dragon No. 5). The resulting radiation sickness and death provoked fierce international outrage, catalyzing Japan's Gensuikyo ban-the-bomb movement and accelerating global mobilization against nuclear testing.",
+  "when": {
+    "start": {
+      "year": 1954,
+      "iso": "1954-03-01"
+    },
+    "end": {
+      "year": 1954,
+      "iso": "1954-03-01"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "March 1, 1954",
+        "source": "src-ahf-castle-bravo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 1, 1954",
+        "source": "src-d5f-exhibition"
+      }
+    ],
+    "display": "1 March 1954"
+  },
+  "where": {
+    "lat": 11.5833,
+    "lon": 165.3887,
+    "elevation_m": 0,
+    "modern_name": "Bikini Atoll, Marshall Islands",
+    "historical_name": "Bikini Atoll, Trust Territory of the Pacific Islands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-geonames-bikini-lagoon"
+    ]
+  },
+  "regions": [
+    "oceania",
+    "eastern_asia",
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "atrocity_injustice",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Castle Bravo was the highest-yield thermonuclear test in United States history, producing widespread radiological fallout that poisoned Indigenous populations and Japanese fishermen and sparked the global anti-nuclear testing movement."
+  },
+  "confidence": "established",
+  "audience_note": "Details severe radiation poisoning, radioactive fallout contamination, acute radiation syndrome, and long-term health crises among exposed populations.",
+  "related": [
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-09-nagasaki-bombing",
+      "type": "related"
+    },
+    {
+      "id": "place-shinkolobwe-mine",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ahf-castle-bravo",
+      "url": "https://ahf.nuclearmuseum.org/ahf/history/castle-bravo/",
+      "title": "Castle Bravo",
+      "publisher": "Atomic Heritage Foundation / National Museum of Nuclear Science & History",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "what",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-d5f-exhibition",
+      "url": "http://d5f.org/en/en-about",
+      "title": "Daigo Fukuryu-Maru Exhibition Hall Official Site",
+      "publisher": "Tokyo Metropolitan Daigo Fukuryu Maru Exhibition Hall",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-bikini-lagoon",
+      "url": "https://www.geonames.org/2080854",
+      "title": "GeoNames entry for Bikini Lagoon, Bikini Atoll (GeoNameId 2080854)",
+      "publisher": "GeoNames",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Detonation took place on 1 March 1954 on an artificial island off Namu Island, Bikini Atoll; coordinates anchor to Bikini Lagoon via GeoNames 2080854.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1954-03-01",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 1 March 1954, the United States detonated Castle Bravo at Bikini Atoll in the Marshall Islands, producing a 15-megaton yield that exceeded theoretical predictions by more than…",
+        "source": "src-ahf-castle-bravo"
+      },
+      {
+        "span": "1954",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The resulting radiation sickness and death provoked fierce international outrage, catalyzing Japan's Gensuikyo ban-the-bomb movement and accelerating global mobilization against nuclear testing.",
+        "source": "src-ahf-castle-bravo",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T04:34:11.763Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

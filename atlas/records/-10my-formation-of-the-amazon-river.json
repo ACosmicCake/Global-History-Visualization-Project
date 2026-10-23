@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s117",
+  "updated": "2026-10-22",
+  "id": "-10my-formation-of-the-amazon-river",
+  "kind": "process",
+  "title": "Onset of the transcontinental Amazon River",
+  "summary": "Studies of offshore marine sediments date the start of the Amazon as a river crossing South America from the Andes to the Atlantic to the late Miocene. One study puts it between 9.4 and 9 million years ago, tied to Andean tectonism; an earlier study gave 11.8 to 11.3 million years ago, with the river reaching its present size in the late Pliocene.",
+  "when": {
+    "start": {
+      "year": -11800000
+    },
+    "end": {
+      "year": -9000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years are Ma with no 1950 offset. Hoorn et al. (2017): onset between 9.4 and 9 Ma; Figueiredo et al. (2009): between 11.8 and 11.3 Ma. The record spans both estimates; the onset age is still debated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "an onset of the transcontinental Amazon River between 9.4 and 9 Ma",
+        "source": "src-hoorn"
+      },
+      {
+        "calendar": "Ma",
+        "value": "initiated as a transcontinental river between 11.8 and 11.3 Ma ago (middle to late Miocene)",
+        "source": "src-figueiredo"
+      }
+    ],
+    "display": "c. 11.8-9 Ma (late Miocene; debated)"
+  },
+  "where": {
+    "lat": 0.13443,
+    "lon": -50.42588,
+    "elevation_m": null,
+    "modern_name": "Amazon Delta and mouth, northern Brazil (proxy pin; the evidence is from offshore wells and a borehole in the Foz do Amazonas Basin, and the river spans South America)",
+    "historical_name": "Amazon drainage, northern South America; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 800,
+    "coordinate_sources": [
+      "src-wikidata-amazondelta"
+    ],
+    "paleo": {
+      "lat": -3.2,
+      "lon": -47.6,
+      "age_ma": 10,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Birth of the world's largest river system, linked to Andean uplift."
+  },
+  "confidence": "contested",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-hoorn",
+      "url": "https://stri-apps.si.edu/docs/publications/pdfs/Hoorn_2017_Amazon_Delta.pdf",
+      "title": "The Amazon at sea: Onset and stages of the Amazon River from a marine record, with special reference to Neogene plant turnover in the drainage basin (Global and Planetary Change, 2017)",
+      "publisher": "Elsevier (Global and Planetary Change; copy hosted by Smithsonian Tropical Research Institute)",
+      "author": "C. Hoorn et al.",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-figueiredo",
+      "url": "https://dare.uva.nl/id/1aa82e4e-a4a6-4c9b-8f4d-d4bd81060eb1",
+      "title": "Late Miocene onset of the Amazon River and the Amazon deep-sea fan: Evidence from the Foz do Amazonas Basin (Geology 37(7), 2009)",
+      "publisher": "University of Amsterdam (UvA-DARE) / Geology",
+      "author": "J. Figueiredo, C. Hoorn, P. van der Ven, E. Soares",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-amazondelta",
+      "url": "https://www.wikidata.org/wiki/Q10264912",
+      "title": "Wikidata item Q10264912 (Amazon Delta), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-50.43,0.13&time=10&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Onset age is debated and the two papers share an author; the record spans both. Pin is the delta as a proxy for a basin-wide event. Paleo-position is for 10 Ma (MERDITH2021), the nearest round age; the other models differ by a few degrees.",
+  "published_at": "2026-10-22T19:36:33.660Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

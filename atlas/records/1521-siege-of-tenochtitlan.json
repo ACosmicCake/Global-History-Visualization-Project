@@ -1,0 +1,143 @@
+{
+  "id": "1521-siege-of-tenochtitlan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Siege and fall of Tenochtitlan",
+  "summary": "In 1521 Hernan Cortes, with Spanish troops and large numbers of indigenous allies, besieged the Mexica island capital in Lake Texcoco and blockaded it with ships on the lake. The city surrendered on 13 August (Julian), ending Mexica rule and opening Spanish colonial rule in central Mexico.",
+  "when": {
+    "start": {
+      "year": 1521
+    },
+    "end": {
+      "year": 1521,
+      "iso": "1521-08-23"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start varies by source (World History Encyclopedia gives April 1521, with brigantines deployed 28 April). Surrender recorded as 13 August 1521, a Julian date; converted to proleptic Gregorian 23 August 1521 (+10 days)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian (source does not state calendar)",
+        "value": "13 August after 93 days of resistance",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "Julian (source does not state calendar)",
+        "value": "August 13, 1521",
+        "source": "src-history"
+      }
+    ],
+    "display": "April to 13 August 1521 (Julian) = 23 August 1521 Gregorian"
+  },
+  "where": {
+    "lat": 19.42847,
+    "lon": -99.12766,
+    "elevation_m": null,
+    "modern_name": "Mexico City, Mexico (site of Tenochtitlan)",
+    "historical_name": "Mexico-Tenochtitlan, Mexica (Aztec) island capital in Lake Texcoco",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames-mexicocity"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Ended the Mexica (Aztec) state and began Spanish colonial rule in Mexico, a turning point of the Americas."
+  },
+  "confidence": "established",
+  "audience_note": "Describes siege warfare, famine, disease and massacre of civilians.",
+  "related": [
+    {
+      "id": "place-tenochtitlan",
+      "type": "related"
+    },
+    {
+      "id": "1428-aztec-triple-alliance",
+      "type": "related"
+    },
+    {
+      "id": "1520-smallpox-epidemic-in-mexico",
+      "type": "caused_by",
+      "because": "The 1520 smallpox outbreak reportedly killed a large share of the city's people and its ruler Cuitlahuac before the siege, weakening resistance."
+    },
+    {
+      "id": "place-mexico-city",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/Hernan_Cortes/",
+      "title": "Hernan Cortes",
+      "publisher": "World History Encyclopedia",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "what"
+      ]
+    },
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/topics/exploration/hernan-cortes",
+      "title": "Hernan Cortes",
+      "publisher": "History.com (A&E Television Networks)",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames-mexicocity",
+      "url": "https://www.geonames.org/3530597/mexico-city.html",
+      "title": "GeoNames: Mexico City",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start date (April vs late May by source) and of the calendar: 13 August 1521 is assumed Julian per convention, converted to 23 August. Pin is Mexico City centre, not the exact Templo Mayor.",
+  "author": "historian-agent:o-s1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:24.233Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

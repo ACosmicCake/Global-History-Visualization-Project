@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1777-10-17-battle-of-saratoga",
+  "kind": "event",
+  "title": "Battles of Saratoga and surrender of Burgoyne",
+  "summary": "Between 19 September and 7 October 1777, American and British forces fought at Freeman's Farm and Bemis Heights near Saratoga, New York. On 17 October General John Burgoyne's army surrendered to General Horatio Gates. The American victory helped convince France to sign a treaty of alliance with the United States.",
+  "when": {
+    "start": {
+      "year": 1777,
+      "iso": "1777-09-19"
+    },
+    "end": {
+      "year": 1777,
+      "iso": "1777-10-17"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Fighting 19 September to 7 October; surrender 17 October 1777."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Sep 19 - Oct 7, 1777 (battle); surrendered on October 17, 1777",
+        "source": "src-abt-sar"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "October 17, 1777 (surrender of Burgoyne to Gates)",
+        "source": "src-nps-sar"
+      }
+    ],
+    "display": "19 September – 17 October 1777"
+  },
+  "where": {
+    "lat": 42.9989,
+    "lon": -73.6375,
+    "elevation_m": null,
+    "modern_name": "Saratoga National Historical Park, New York, USA",
+    "historical_name": "Saratoga, Province of New York, British America",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-sar"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Surrender of a British army; followed by the French alliance."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1778-02-06-franco-american-alliance",
+      "type": "caused",
+      "because": "The American Battlefield Trust says the victory convinced France to sign a treaty of alliance with the United States."
+    },
+    {
+      "id": "1781-10-19-siege-of-yorktown",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-abt-sar",
+      "url": "https://www.battlefields.org/learn/revolutionary-war/battles/saratoga",
+      "title": "Saratoga",
+      "publisher": "American Battlefield Trust",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-sar",
+      "url": "https://home.nps.gov/sara/learn/photosmultimedia/saratoga-monument-virtual-tour-2.htm",
+      "title": "Saratoga Monument Virtual Tour, Stop 2",
+      "publisher": "National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-sar",
+      "url": "https://www.wikidata.org/wiki/Q7423366",
+      "title": "Saratoga National Historical Park (Wikidata Q7423366), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The NPS page says the surrender happened about a mile downhill from the Saratoga Monument, not at a pin I can name; the pin is the battlefield park and the 15 km radius also reaches the surrender area near Schuylerville.",
+  "author": "historian-agent:o-s38",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:44:06.607Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1777-09-19",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Between 19 September and 7 October 1777, American and British forces fought at Freeman's Farm and Bemis Heights near Saratoga, New York.",
+        "source": "src-abt-sar"
+      },
+      {
+        "span": "1777",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The American victory helped convince France to sign a treaty of alliance with the United States.",
+        "source": "src-abt-sar",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

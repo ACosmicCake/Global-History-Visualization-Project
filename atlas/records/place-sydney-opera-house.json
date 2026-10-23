@@ -1,0 +1,231 @@
+{
+  "id": "place-sydney-opera-house",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Sydney Opera House",
+  "aliases": [],
+  "summary": "The Sydney Opera House in New South Wales, Australia, began construction on 2 March 1959 and was opened by Queen Elizabeth II on 20 October 1973. Permasteelisa lists it as 67 m high, 183 m long and 120 m wide at its widest point, with architects Hall, Todd and Littlemore and Jorn Utzon. UNESCO World Heritage status followed in 2007.",
+  "when": {
+    "start": {
+      "year": 1959
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 2 March 1959 (Sydney Opera House). Opened 20 October 1973 (Sydney Opera House, Archiweb). End is the present: the building stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (Sydney Opera House)",
+        "value": "On 2 March 1959",
+        "source": "src-soh-start"
+      },
+      {
+        "calendar": "Gregorian (Sydney Opera House)",
+        "value": "20th October, 1973",
+        "source": "src-soh-facts"
+      },
+      {
+        "calendar": "Gregorian (Archiweb)",
+        "value": "officially opened only on October 20, 1973",
+        "source": "src-archiweb-soh"
+      }
+    ],
+    "display": "Built 1959–1973; opened 20 October 1973"
+  },
+  "where": {
+    "lat": -33.857198,
+    "lon": 151.2151234,
+    "elevation_m": null,
+    "modern_name": "Sydney Opera House, Sydney, New South Wales, Australia",
+    "historical_name": "Sydney Opera House, Sydney, New South Wales, Australia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-soh"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "built_world",
+    "art_music_literature"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Permasteelisa notes UNESCO World Heritage status was granted in 2007."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-soh-start",
+      "url": "https://www.sydneyoperahouse.com/our-story/construction-begins",
+      "title": "Construction begins",
+      "publisher": "Sydney Opera House",
+      "author": "Sydney Opera House",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-soh-facts",
+      "url": "https://www.sydneyoperahouse.com/building/interesting-facts-about-sydney-opera-house",
+      "title": "Interesting facts about Sydney Opera House",
+      "publisher": "Sydney Opera House",
+      "author": "Sydney Opera House",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-permasteelisa-soh",
+      "url": "https://www.permasteelisagroup.com/historic-project/sydney-opera-house/",
+      "title": "Sydney Opera House",
+      "publisher": "Permasteelisa Group",
+      "author": "Permasteelisa Group",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "importance",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-archiweb-soh",
+      "url": "https://www.archiweb.cz/en/n/foreign/pred-50-lety-byl-polozen-zakladni-kamen-budovy-opery-v-sydney",
+      "title": "Fifty years ago, the foundation stone of the Sydney Opera House was laid",
+      "publisher": "Archiweb",
+      "author": "Archiweb",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-soh",
+      "url": "https://nominatim.openstreetmap.org/search?q=Sydney+Opera+House&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim: Sydney Opera House, relation 9596872 (-33.8571980, 151.2151234)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Overall envelope 183 m long by 120 m wide at its widest point (Permasteelisa); Archiweb gives 183 by 118 m. Register figures only; a single block stands in for the three groups of shells.",
+      "source": "src-permasteelisa-soh",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-permasteelisa-soh",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 67,
+          "unit": "m",
+          "source": "src-permasteelisa-soh",
+          "note": "\"67m high; 183m long; 120m wide (at its widest point)\"; Archiweb: \"67 meters above sea level\""
+        },
+        {
+          "part": "length",
+          "value": 183,
+          "unit": "m",
+          "source": "src-permasteelisa-soh"
+        },
+        {
+          "part": "width",
+          "value": 120,
+          "unit": "m",
+          "source": "src-permasteelisa-soh",
+          "note": "Archiweb gives 118 m"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "block at the harbour point at true size"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block 183 x 120 m and 67 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1959,
+        "end_year": 1973,
+        "state": "construction",
+        "description": "Construction began on 2 March 1959 and the building opened on 20 October 1973; about 14 years to build (Sydney Opera House pages).",
+        "source": "src-soh-start"
+      },
+      {
+        "start_year": 1973,
+        "end_year": null,
+        "state": "intact",
+        "description": "In use since opening in 1973; World Heritage status granted in 2007 (Permasteelisa).",
+        "source": "src-permasteelisa-soh"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block (a stand-in for the three groups of shells). Least sure of: width (120 m Permasteelisa, 118 m Archiweb, 130 m on a travel page) and whether 67 m is above sea level or above the podium (Archiweb says above sea level). Permasteelisa is a facade contractor (class other). UNESCO, Heritage NSW and DCCEEW pages were blocked or timed out, so no heritage-body page confirms the dimensions.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:37.004Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2025-myanmar-earthquake",
+  "kind": "event",
+  "title": "2025 Myanmar earthquake",
+  "summary": "A magnitude 7.7 earthquake struck near Mandalay, Myanmar, on 28 March 2025 at about 10 km depth, rupturing the Sagaing Fault. It devastated the Sagaing and Mandalay area, led the ruling council to declare a state of emergency, and was felt as far away as Bangkok.",
+  "when": {
+    "start": {
+      "year": 2025
+    },
+    "end": {
+      "year": 2025
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Mainshock time given as 06:20:54 UTC by ISRO; local time about 12:50 p.m. per USGS and NASA."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, UTC",
+        "value": "28 March 2025 at 06:20:54 (UTC)",
+        "source": "src-isro"
+      },
+      {
+        "calendar": "Gregorian, local time",
+        "value": "March 28, 2025",
+        "source": "src-usgs"
+      },
+      {
+        "calendar": "Gregorian, local time",
+        "value": "March 28, 2025",
+        "source": "src-nasa"
+      }
+    ],
+    "display": "28 March 2025"
+  },
+  "where": {
+    "lat": 22.013,
+    "lon": 95.922,
+    "elevation_m": null,
+    "modern_name": "Near Sagaing and Mandalay, Myanmar",
+    "historical_name": "Near Sagaing and Mandalay, Myanmar (Burma)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-isro"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Largest earthquake to hit Myanmar in over a century per IOM, with devastation across the Mandalay region and effects felt in Thailand."
+  },
+  "confidence": "established",
+  "audience_note": "Natural disaster involving deaths and destruction; this outline gives no casualty figures.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-isro",
+      "url": "https://www.isro.gov.in/Earthquake_Myanmar.html",
+      "title": "ISRO's Cartosat-3 image shows damage caused by the Earthquake in Myanmar on 28 Mar 2025",
+      "publisher": "Indian Space Research Organisation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usgs",
+      "url": "https://www.usgs.gov/news/featured-story/m77-mandalay-burma-myanmar-earthquake",
+      "title": "M7.7 Mandalay, Burma (Myanmar) Earthquake",
+      "publisher": "U.S. Geological Survey",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/earth/earth-observatory/satellite-data-show-motion-of-burma-earthquakes-154156/",
+      "title": "Satellite Data Show Motion of Burma Earthquakes",
+      "publisher": "NASA Earth Observatory",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-iom",
+      "url": "https://myanmar.un.org/en/291899-iom-myanmar-earthquake-response-situation-report-01",
+      "title": "IOM Myanmar: Earthquake Response Situation Report 01",
+      "publisher": "United Nations in Myanmar / IOM",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is ISRO's stated epicentre (22.013 N, 95.922 E), a single-source coordinate; USGS and NASA say only 'near Mandalay'. Magnitudes and rupture details vary by agency; casualty figures omitted.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:41.122Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

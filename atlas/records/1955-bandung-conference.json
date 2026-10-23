@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1955-bandung-conference",
+  "kind": "event",
+  "title": "Bandung Conference (Asian–African Conference)",
+  "summary": "From 18 to 24 April 1955 twenty-nine Asian and African governments met at Bandung, Indonesia, with Burma, India, Indonesia, Pakistan and Sri Lanka as sponsors. The closing communiqué called for economic and cultural cooperation, self-determination, human rights and an end to racial discrimination, and the conference laid the foundation for the nonaligned movement.",
+  "when": {
+    "start": {
+      "year": 1955
+    },
+    "end": {
+      "year": 1955
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Exact days from the Google Arts & Culture page; the State Department page says only April 1955."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "In April, 1955",
+        "source": "src-state"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "April 18 to 24, 1955",
+        "source": "src-gac"
+      }
+    ],
+    "display": "18–24 April 1955"
+  },
+  "where": {
+    "lat": -6.9210059,
+    "lon": 107.6092288,
+    "elevation_m": null,
+    "modern_name": "Gedung Merdeka, Bandung, West Java, Indonesia",
+    "historical_name": "Bandung, Republic of Indonesia (Merdeka Building)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-gm"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "eastern_asia",
+    "southern_asia",
+    "western_asia",
+    "northern_africa",
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First large conference of Asian and African states, a foundation for the nonaligned movement."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1945-08-17-proclamation-of-indonesian-independence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-state",
+      "url": "https://history.state.gov/milestones/1953-1960/bandung-conf",
+      "title": "Asian-African Conference of Bandung, 1955",
+      "publisher": "US Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gac",
+      "url": "https://artsandculture.google.com/story/lgVx-JVFi9gstw",
+      "title": "Asian-African Conference, Bandung (LIFE Photo Collection story)",
+      "publisher": "Google Arts & Culture",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-gm",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Gedung%20Merdeka%20Bandung",
+      "title": "OpenStreetMap Nominatim: Gedung Merdeka, Bandung",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The State Department page gives only \"April 1955\"; the exact days 18-24 are from the Google Arts & Culture story (the Jabar provincial page, Republika and others were 403 or not opened). The Merdeka Building is named on the Google page as a venue, not stated as the sole venue. Participant breakdown (Asia/Africa/observers) not confirmed on opened pages and left out.",
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:07.806Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1955",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 18 to 24 April 1955 twenty-nine Asian and African governments met at Bandung, Indonesia, with Burma, India, Indonesia, Pakistan and Sri Lanka as sponsors.",
+        "source": "src-state"
+      },
+      {
+        "span": "1955",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The closing communiqué called for economic and cultural cooperation, self-determination, human rights and an end to racial discrimination, and the conference laid the foundation for the nonaligned movement.",
+        "source": "src-state",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

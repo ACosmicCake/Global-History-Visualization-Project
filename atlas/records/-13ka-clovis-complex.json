@@ -1,0 +1,162 @@
+{
+  "id": "-13ka-clovis-complex",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "period",
+  "title": "Clovis complex",
+  "summary": "The Clovis complex was a widespread terminal Pleistocene archaeological technocomplex across North America, defined by distinctive fluted lanceolate stone projectile points, prismatic blades, and bone and ivory tools. Once considered the founding culture of the Americas under the long-standing Clovis-first model, revised radiocarbon dating places its lifespan within a narrow window of roughly 13,050 to 12,750 calibrated years ago, concluding abruptly alongside the extinction of North American proboscideans at the onset of the Younger Dryas.",
+  "when": {
+    "start": {
+      "year": -11100
+    },
+    "end": {
+      "year": -10800
+    },
+    "precision": "century",
+    "as_recorded": [
+      {
+        "calendar": "Radiocarbon, calibrated years BP (95.4% probability range)",
+        "value": "maximum calibrated (cal) age range for Clovis of ~13,050 to ~12,750 cal yr B.P.",
+        "source": "src-waters2020"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Blackwater Draw (formerly known as Anderson Basin) (restricted) - 01/20/61 Roosevelt County, NM",
+        "source": "src-nps-nhl"
+      }
+    ],
+    "display": "c. 13,050–12,750 cal BP (11,110 ± 40 to 10,820 ± 10 14C yr BP)"
+  },
+  "where": {
+    "lat": 33.3673,
+    "lon": -104.6833,
+    "elevation_m": 1219,
+    "modern_name": "Blackwater Draw (Locality No. 1), Roosevelt County, New Mexico, United States (type site of the Clovis complex)",
+    "historical_name": "Blackwater Draw spring-fed lake and marsh margins, Llano Estacado, southern High Plains",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "The Clovis complex is the defining archaeological benchmark of the terminal Pleistocene in North America, whose dating revision settled the debate over the peopling of the Americas."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-23ka-peopling-of-the-americas",
+      "type": "part_of"
+    },
+    {
+      "id": "person-anzick-1",
+      "type": "has_part"
+    },
+    {
+      "id": "-13ka-megafaunal-extinction-in-the-americas",
+      "type": "contemporary"
+    },
+    {
+      "id": "-26ka-beringian-standstill",
+      "type": "related"
+    },
+    {
+      "id": "-23ka-white-sands-human-footprints",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-waters2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7577710/",
+      "title": "The age of Clovis—13,050 to 12,750 cal yr B.P (Science Advances 6:eaaz0455)",
+      "publisher": "Science Advances (AAAS, via PubMed Central)",
+      "author": "Michael R. Waters, Thomas W. Stafford Jr., David L. Carlson",
+      "date_published": "2020-10-21",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-nhl",
+      "url": "https://www.nps.gov/subjects/nationalhistoriclandmarks/list-of-nhls-by-state.htm",
+      "title": "List of National Historic Landmarks by State (New Mexico: Blackwater Draw)",
+      "publisher": "National Park Service (U.S. Department of the Interior)",
+      "author": "National Park Service",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where.historical_name",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/5457945",
+      "title": "GeoNames gazetteer entry for Blackwater Draw, United States (5457945)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact dates of the earliest regional pre-Clovis industries and whether Clovis ended precisely with the onset of the Younger Dryas cold reversal.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:30.059Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-11100",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Clovis complex was a widespread terminal Pleistocene archaeological technocomplex across North America, defined by distinctive fluted lanceolate stone projectile points, prismatic blades, and bone and ivory tools.",
+        "source": "src-waters2020"
+      },
+      {
+        "span": "-10800",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Once considered the founding culture of the Americas under the long-standing Clovis-first model, revised radiocarbon dating places its lifespan within a narrow window of roughly 13,050 to 12,750…",
+        "source": "src-waters2020",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

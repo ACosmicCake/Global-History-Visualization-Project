@@ -1,0 +1,170 @@
+{
+  "id": "1888-brazil-lei-aurea",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Lei Aurea abolishes slavery in Brazil",
+  "summary": "On 13 May 1888 Princess Isabel, acting as regent while Emperor Pedro II was abroad, signed Law No. 3,353, the Lei Aurea. Its two articles declared slavery extinct in Brazil. Parliament had passed the bill in about five days, over opposition from slaveholding senators led by the Baron of Cotegipe.",
+  "when": {
+    "start": {
+      "year": 1888,
+      "iso": "1888-05-13"
+    },
+    "end": {
+      "year": 1888,
+      "iso": "1888-05-13"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Date agrees across two opened pages (Senado Federal and Arquivo Nacional). Parliamentary passage ran from 8 May to 13 May."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "13 de maio de 1888",
+        "source": "src-senado"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "lei n. 3.353, de 13 de maio de 1888",
+        "source": "src-an"
+      }
+    ],
+    "display": "13 May 1888"
+  },
+  "where": {
+    "lat": -22.911111,
+    "lon": -43.205556,
+    "elevation_m": null,
+    "modern_name": "Rio de Janeiro, Brazil",
+    "historical_name": "Rio de Janeiro, capital of the Empire of Brazil (Paco da Cidade)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Ended legal slavery in Brazil."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    },
+    {
+      "id": "1787-abolition-of-slavery",
+      "type": "related"
+    },
+    {
+      "id": "process-intra-american-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-senado",
+      "url": "https://www12.senado.leg.br/noticias/materias/2019/05/13/ha-131-anos-senadores-aprovavam-o-fim-da-escravidao-no-brasil",
+      "title": "Ha 131 anos, senadores aprovavam o fim da escravidao no Brasil",
+      "publisher": "Senado Federal (Brazil)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-senado2",
+      "url": "https://www12.senado.leg.br/noticias/especiais/arquivo-s/senado-e-camara-aprovaram-lei-aurea-em-5-dias/senado-e-camara-aprovaram-lei-aurea-em-5-dias",
+      "title": "Senado e Camara aprovaram Lei Aurea em 5 dias",
+      "publisher": "Senado Federal (Brazil)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-an",
+      "url": "https://mapa.arquivonacional.gov.br/index.php/assuntos/15-dicionario/65-dicionario-da-administracao-publica-brasileira-do-periodo-imperial/276-lei-aurea",
+      "title": "Lei Aurea",
+      "publisher": "Arquivo Nacional (Brazil)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q8678",
+      "title": "Rio de Janeiro (Wikidata Q8678), coordinates -22.911111 N, -43.205556 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is central Rio de Janeiro; the Senado page says the princess awaited the law at the Paco da Cidade. Vote counts differ on secondary sites and were not used. The \"last country in the Americas\" claim was not on an opened page and is omitted.",
+  "author": "historian-agent:o-s18",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1888-05-08",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "The government sent the abolition bill to Parliament, which passed it within days despite opposition from slaveholders.",
+        "source": "src-senado"
+      },
+      {
+        "span": "1888-05-13",
+        "action": "region.fill { radius_km: 40 }",
+        "caption": "Princess Isabel signed the two-article Lei Aurea, declaring slavery extinct in Brazil.",
+        "source": "src-an",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:26:15.028Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

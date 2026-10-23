@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-cape-hatteras-lighthouse",
+  "kind": "place",
+  "title": "Cape Hatteras Lighthouse",
+  "summary": "The Cape Hatteras Lighthouse at Buxton, North Carolina, was lit on 16 December 1870 to warn ships off the Diamond Shoals sandbar. The National Park Service calls it the tallest brick lighthouse in the United States, at 198.49 feet including the foundation. It was moved 2,900 feet inland because of shoreline erosion.",
+  "when": {
+    "start": {
+      "year": 1870,
+      "iso": "1870-12-16"
+    },
+    "end": {
+      "year": 1870,
+      "iso": "1870-12-16"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Construction completed 1870; light first lit 16 December 1870."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 16, 1870",
+        "source": "src-nps"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 16th, 1870",
+        "source": "src-obls"
+      }
+    ],
+    "display": "16 December 1870 (first lit)"
+  },
+  "where": {
+    "lat": 35.251203,
+    "lon": -75.528176,
+    "elevation_m": null,
+    "modern_name": "Buxton, North Carolina, USA",
+    "historical_name": "Cape Hatteras, North Carolina, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1.5,
+    "coordinate_sources": [
+      "src-nps",
+      "src-obls"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Landmark tower guarding a hazardous stretch of the Atlantic coast; tallest brick lighthouse in the US per the National Park Service."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/caha/planyourvisit/chls.htm",
+      "title": "Cape Hatteras Light Station",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-obls",
+      "url": "https://www.outerbankslighthousesociety.org/capehatteras.html",
+      "title": "Cape Hatteras Lighthouse",
+      "publisher": "Outer Banks Lighthouse Society",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ncpedia",
+      "url": "https://www.ncpedia.org/cape-hatteras-lighthouse",
+      "title": "Cape Hatteras Lighthouse",
+      "publisher": "NCpedia, State Library of North Carolina",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Height varies: NPS 198.49 ft (foundation to pinnacle), Outer Banks Lighthouse Society 198 ft, NCpedia 208 ft. Pin is the tower's current (relocated) site, about 2,900 ft from its 1870 site.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:41:07.434Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "enriched"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Circular column 32 ft 5-1/2 in in diameter at its base, rising from an octagonal brick and granite base (NPS dimensions table); plan taken from the tower's stated column diameter.",
+      "source": "src-nps",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-nps",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 58.89,
+          "unit": "m",
+          "source": "src-nps",
+          "note": "NPS: 193.20 ft, ground to lighthouse peak; 198.49 ft to lightning rod (about 60.50 m)"
+        },
+        {
+          "part": "diameter",
+          "value": 9.89,
+          "unit": "m",
+          "source": "src-nps",
+          "note": "NPS: column diameter 32' 5-1/2\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "conical striped tower marker on the Outer Banks"
+      },
+      {
+        "level": "local",
+        "representation": "tapered round tower on octagonal base with lantern, black and white spiral stripes"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1868,
+        "end_year": 1870,
+        "state": "construction",
+        "description": "Construction began October 1868; light first lit 16 December 1870.",
+        "source": "src-nps"
+      },
+      {
+        "start_year": 1870,
+        "end_year": 1998,
+        "state": "intact",
+        "description": "Tower stood at its original site, which became threatened by shoreline erosion.",
+        "source": "src-nps"
+      },
+      {
+        "start_year": 1999,
+        "end_year": null,
+        "state": "altered",
+        "description": "Whole light station moved 2,900 feet to a new site in 1999.",
+        "source": "src-nps"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1870,
+        "to_year": null,
+        "material": "brick tower on an octagonal brick and granite base, iron and glass lantern",
+        "source": "src-nps"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

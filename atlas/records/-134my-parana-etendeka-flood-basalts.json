@@ -1,0 +1,168 @@
+{
+  "id": "-134my-parana-etendeka-flood-basalts",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Paraná-Etendeka flood basalts",
+  "summary": "The Paraná-Etendeka flood basalt province spans southern Brazil and neighbouring parts of South America and, across the later-opened South Atlantic, Namibia and Angola. Eruptions began about 135 ± 1 Ma, before seafloor spreading started, and lavas advanced from south to north over roughly 2 million years. A 2009 re-mapping puts Paraná Basin lava cover at about 917,000 km2 and the whole province at no less than 1.7 million km3.",
+  "when": {
+    "start": {
+      "year": -135000000
+    },
+    "end": {
+      "year": -133000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Renne (AGU 2015): inception 135 ± 1 Ma, extrusion over roughly 2 million years from south to north, with high-Ti magmas starting about 0.5 Myr later and continuing to about 133 Ma. Frank et al. (2009) revise earlier figures of 1,200,000 km2 and 800,000 km3. Years are Ma counted back from the present. The id says 134 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "about 135 ± 1 Ma, before the initiation of sea floor spreading; ~2 Myr, south to north; high-Ti to ~133 Ma",
+        "source": "src-renne"
+      },
+      {
+        "calendar": "km2, km3",
+        "value": "917,000 km2 (± 15,000); at least 1,700,000 km3 for the whole province",
+        "source": "src-frank"
+      }
+    ],
+    "display": "c. 135 to 133 million years ago"
+  },
+  "where": {
+    "lat": -29.13417,
+    "lon": -49.99466,
+    "elevation_m": null,
+    "modern_name": "Serra Geral, southern Brazil (Paraná Basin; the Etendeka part lies in Namibia and Angola)",
+    "historical_name": "Southwestern Gondwana before the opening of the South Atlantic; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wd-sg"
+    ],
+    "paleo": {
+      "lat": -29.92,
+      "lon": -8.47,
+      "age_ma": 135,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "One of the largest continental flood basalt provinces, erupting just before the South Atlantic opened."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-130my-opening-of-the-south-atlantic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-renne",
+      "url": "https://studio.m-anage.com/agu/fm15/webprogram/Paper80910.html",
+      "title": "Age and Duration of the Paraná-Etendeka Flood Basalts and Related Plumbing System (AGU Fall Meeting 2015)",
+      "publisher": "American Geophysical Union",
+      "author": "Paul R. Renne",
+      "date_published": "2015",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-frank",
+      "url": "https://seer.ufrgs.br/PesquisasemGeociencias/article/download/17874/pdf",
+      "title": "Review of the areal extent and the volume of the Serra Geral Formation, Paraná Basin, South America (Pesquisas em Geociências 36)",
+      "publisher": "Instituto de Geociências, Universidade Federal do Rio Grande do Sul",
+      "author": "Heinrich Theodor Frank, Márcia Elisa Boscato Gomes, Milton Luiz Laquintinie Formoso",
+      "date_published": "2009",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-sg",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1121658.json",
+      "title": "Wikidata entry for Serra Geral (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-49.99466,-29.13417&time=135&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin and the volume: the Wikidata point for Serra Geral is a mountain-range point, not the province centre, and the province also covers Namibia and Angola (about 3,000 km away), so 1000 km is a compromise. Area and volume figures are contested; Frank et al. replace older 1,200,000 km2 and 800,000 km3 numbers. The id says 134 Ma but Renne gives 135 ± 1 Ma.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:25.849Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-135000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Paraná-Etendeka flood basalt province spans southern Brazil and neighbouring parts of South America and, across the later-opened South Atlantic, Namibia and Angola.",
+        "source": "src-renne"
+      },
+      {
+        "span": "-133000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Eruptions began about 135 ± 1 Ma, before seafloor spreading started, and lavas advanced from south to north over roughly 2 million years.",
+        "source": "src-renne",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

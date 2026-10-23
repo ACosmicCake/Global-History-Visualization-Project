@@ -1,0 +1,137 @@
+{
+  "id": "-3260my-barberton-s2-impact",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Barberton S2 meteorite impact",
+  "summary": "About 3.26 billion years ago a bolide with an estimated diameter of 37 to 58 km struck, leaving the S2 spherule layer at the base of the Fig Tree Group in the Barberton Greenstone Belt, South Africa. A 2024 study infers a giant tsunami, heating and partial evaporation of surface ocean waters, and phosphorus from the vaporized bolide, followed by recovery of the biosphere.",
+  "when": {
+    "start": {
+      "year": -3260000000
+    },
+    "end": {
+      "year": -3260000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Impact dated about 3.26 Ga from an overlying 3,258 ± 3 Ma tuff (Drabon et al. 2024); Lowe and Byerly give the layer as ~3.258 Ga. Years are Ga with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ga",
+        "value": "~3.26 Ga based on an immediately overlying 3,258 ± 3 Ma tuff",
+        "source": "src-drabon2024"
+      },
+      {
+        "calendar": "Ga",
+        "value": "~3.258 Ga S2 impact layer",
+        "source": "src-lowe2024"
+      }
+    ],
+    "display": "c. 3.26 billion years ago"
+  },
+  "where": {
+    "lat": -25.973889,
+    "lon": 31.013889,
+    "elevation_m": null,
+    "modern_name": "Barberton Greenstone Belt, South Africa (Fig Tree Group; pin is the Wikidata point for the belt)",
+    "historical_name": "Barberton Greenstone Belt, Kaapvaal Craton; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata-barberton",
+      "src-drabon2024",
+      "src-lowe2024"
+    ],
+    "paleo": {
+      "not_applicable": "Age is beyond the 1000 Ma limit of the MERDITH2021 plate model."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "One of the largest known impacts on early Earth, with a sourced chain of environmental effects."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3500my-barberton-greenstone-belt",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-drabon2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11536127/",
+      "title": "Effect of a giant meteorite impact on Paleoarchean surface environments and life (PNAS 121:e2408721121)",
+      "publisher": "PNAS, via PubMed Central",
+      "author": "N. Drabon, A.H. Knoll, D.R. Lowe, et al.",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-lowe2024",
+      "url": "https://ajsonline.org/article/122938-geology-of-the-eastern-barberton-greenstone-belt-south-africa-early-deformation-and-the-role-of-large-meteor-impact",
+      "title": "Geology of the Eastern Barberton Greenstone Belt, South Africa: Early Deformation and the Role of Large Meteor Impacts (American Journal of Science 324:12)",
+      "publisher": "American Journal of Science",
+      "author": "D.R. Lowe, G.R. Byerly",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-barberton",
+      "url": "https://www.wikidata.org/wiki/Q25379514",
+      "title": "Wikidata item Q25379514 (Barberton Greenstone Belt)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the age comes from an overlying tuff, not the layer itself, and the AJS page prints \"3.258±3 Ga\" where the PNAS paper gives 3,258 ± 3 Ma. Effects are the 2024 study's inferences (\"likely\" in the source). Pin is the belt point, not the Barite Valley or Umbaumba sections.",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:07.708Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

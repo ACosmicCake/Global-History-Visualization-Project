@@ -1,0 +1,179 @@
+{
+  "id": "-16my-columbia-river-flood-basalts",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Columbia River flood basalts",
+  "summary": "The Columbia River Basalt Group erupted more than 350 lava flows between about 16.7 and 5.5 million years ago, most of its volume in about 1.1 million years from 16.7 to 15.6 Ma. Fissures along the Washington–Oregon–Idaho border fed flows that often exceeded 1,000 km3 and now cover over 210,000 km2 of eastern Oregon and Washington, western Idaho and northern Nevada.",
+  "when": {
+    "start": {
+      "year": -16700000
+    },
+    "end": {
+      "year": -15600000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range is the main phase named by USGS (about 16.7 to 15.6 Ma); the whole group erupted from about 16.7 to 5.5 Ma (USGS) or 17.5 to 6 Ma (Lewis and Clark Trail Alliance). Jarboe et al. (2010) date the Steens reversal at 16.73 +0.13/-0.08 Ma. Years are Ma with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "around 16.7 to 15.6 Ma",
+        "source": "src-usgs-cvo"
+      },
+      {
+        "calendar": "Ma",
+        "value": "from about 16.7 Ma to 5.5 Ma",
+        "source": "src-usgs-cvo"
+      },
+      {
+        "calendar": "Ma",
+        "value": "between 17.5 and 6 million years ago",
+        "source": "src-lewisclark"
+      },
+      {
+        "calendar": "Ma",
+        "value": "16.73 + 0.13/−0.08 Ma (95% confidence)",
+        "source": "src-usgs-jarboe"
+      }
+    ],
+    "display": "c. 16.7–15.6 million years ago (group erupted to c. 5.5 Ma)"
+  },
+  "where": {
+    "lat": 42.636419,
+    "lon": -118.576717,
+    "elevation_m": null,
+    "modern_name": "Steens Mountain, Oregon (dated lava flows; the province spans eastern Oregon and Washington, western Idaho and northern Nevada)",
+    "historical_name": "Interior Pacific Northwest of North America, Miocene; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wikidata-steens",
+      "src-usgs-jarboe",
+      "src-usgs-cvo"
+    ],
+    "paleo": {
+      "lat": 44.74,
+      "lon": -108.19,
+      "age_ma": 16.7,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A large Miocene flood-basalt province in the western United States."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-14my-middle-miocene-climatic-transition",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-usgs-cvo",
+      "url": "https://www.usgs.gov/observatories/cvo/columbia-river-basalt-group-stretches-oregon-idaho",
+      "title": "Columbia River Basalt Group Stretches from Oregon to Idaho",
+      "publisher": "U.S. Geological Survey, Cascades Volcano Observatory",
+      "author": "USGS",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-usgs-jarboe",
+      "url": "https://pubs.usgs.gov/publication/70190465",
+      "title": "The age of the Steens reversal and the Columbia River Basalt Group (Chemical Geology 274:158-168)",
+      "publisher": "U.S. Geological Survey Publications Warehouse (Chemical Geology)",
+      "author": "N.A. Jarboe, R.S. Coe, P. Renne, J.M. Glen",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-lewisclark",
+      "url": "https://lewis-clark.org/sciences/geology/columbia-river-geology/columbia-river-basalts/",
+      "title": "Columbia River Basalts",
+      "publisher": "Lewis and Clark Trail Alliance (Discover Lewis & Clark)",
+      "author": "John W. Jengo",
+      "date_published": "2014",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-steens",
+      "url": "https://www.wikidata.org/wiki/Q2335876",
+      "title": "Wikidata item Q2335876 (Steens Mountain)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-118.5767,42.6364&time=16.7&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: USGS puts the vents along the Washington/Oregon/Idaho border, so Steens Mountain (named in the USGS-hosted Jarboe abstract) is a representative point, not the vent centre, hence 400 km. The two USGS pages are one publisher; the second independent publisher is the Lewis and Clark Trail Alliance (class other).",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:06.974Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "polity-roman-republic",
+  "kind": "polity",
+  "title": "Roman Republic",
+  "summary": "The Roman state of 509–27 BC, which began when Rome overthrew its monarchy and was governed by two annually elected consuls, a Senate and popular assemblies. It expanded across Italy and, through the Punic and Macedonian Wars, beyond. Civil wars after Caesar crossed the Rubicon in 49 BCE ended it when Octavian received the name Augustus in 27 BCE.",
+  "when": {
+    "start": {
+      "year": -508
+    },
+    "end": {
+      "year": -26
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "509 BCE = -508; 27 BCE = -26. The source article body gives 510 BCE for the end of the monarchy; only the dedication of the temple of Jupiter Capitolinus is called certainly dated to 509."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (proleptic Gregorian)",
+        "value": "period of ancient Roman civilization (509 BC–27 BC); article body dates the overthrow of the last king to 510 BCE",
+        "source": "src-whe-republic"
+      },
+      {
+        "calendar": "BC",
+        "value": "509 BC to 27 BC; the 509 BC events are \"according to tradition\"",
+        "source": "src-rome-net-republic"
+      }
+    ],
+    "display": "509–27 BCE"
+  },
+  "where": {
+    "lat": 41.8933203,
+    "lon": 12.4829321,
+    "elevation_m": null,
+    "modern_name": "Rome, Lazio, Italy",
+    "historical_name": "Rome, capital of the Roman Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The Roman state that conquered Italy and the Mediterranean before the principate began."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-0168-battle-of-pydna",
+      "type": "related"
+    },
+    {
+      "id": "polity-macedon",
+      "type": "related"
+    },
+    {
+      "id": "-0030-battle-of-actium",
+      "type": "related"
+    },
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "related",
+      "because": "the event record covers the Republic's rise; this record covers the polity"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-republic",
+      "url": "https://www.worldhistory.org/Roman_Republic/",
+      "title": "Roman Republic",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rome-net-republic",
+      "url": "https://www.rome.net/roman-republic",
+      "title": "Roman Republic (509 BC - 27 BC)",
+      "publisher": "Rome.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Roma%2C+Lazio%2C+Italia&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start year: World History Encyclopedia gives 509 BCE in its data but 510 BCE in the text, and Rome.net calls the 509 events traditional. Second source is a general site, not scholarly.",
+  "published_at": "2026-10-22T10:56:13.203Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

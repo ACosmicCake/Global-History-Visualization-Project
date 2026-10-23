@@ -1,0 +1,133 @@
+{
+  "id": "1906-san-francisco-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1906 San Francisco earthquake",
+  "summary": "A magnitude 7.9 earthquake struck off the northern California coast on April 18, 1906, when the San Andreas Fault slipped along about 270 miles (430 km). A four-day fire followed and destroyed some 28,000 buildings. The death toll is now believed to exceed 3,000, and about 250,000 people were left homeless. The city was rebuilt to be earthquake- and fire-resistant.",
+  "when": {
+    "start": {
+      "year": 1906
+    },
+    "end": {
+      "year": 1906
+    },
+    "precision": "day",
+    "display": "18 April 1906",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "occurred on April 18, 1906, at 5:12 am",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "1906-04-18 13:12:27",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 37.75,
+    "lon": -122.55,
+    "elevation_m": null,
+    "modern_name": "San Francisco, California, and the northern San Andreas Fault, United States",
+    "historical_name": "San Francisco, California, and the northern San Andreas Fault, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "One of the most destructive US disasters; field studies led to the elastic rebound theory of earthquakes."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a disaster with over 3,000 deaths and mass homelessness.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260108010219/https://www.britannica.com/event/San-Francisco-earthquake-of-1906",
+      "title": "San Francisco earthquake of 1906 | Facts, Magnitude, & Damage | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=16957905",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q211386",
+      "title": "Wikidata Q211386 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Britannica gives magnitude 7.9, while the ISC lists Ms 8.4 (origin time 13:12:27, presumably UTC), so magnitude estimates differ. The ISC source is mostly a bibliography and gives no casualty data. Epicentre location is approximate. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, isc.ac.uk; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:25.213Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1906",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "9 earthquake struck off the northern California coast on April 18, 1906, when the San Andreas Fault slipped along about 270 miles (430 km).",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1906",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "A four-day fire followed and destroyed some 28,000 buildings.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

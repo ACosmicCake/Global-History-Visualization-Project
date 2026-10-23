@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s16",
+  "updated": "2026-10-22",
+  "id": "2019-covid-19-pandemic",
+  "kind": "event",
+  "title": "COVID-19 pandemic",
+  "summary": "Wuhan health authorities reported a pneumonia cluster on 31 December 2019; WHO declared an international emergency on 30 January 2020 and characterized COVID-19 as a pandemic on 11 March. WHO estimates about 14.9 million excess deaths in 2020 and 2021 (range 13.3 to 16.6 million), well above reported deaths.",
+  "when": {
+    "start": {
+      "year": 2019,
+      "iso": "2019-12-31"
+    },
+    "end": {
+      "year": 2021,
+      "iso": "2021-12-31"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the date of the first report to WHO. End is the close of the period covered by WHO's excess-death estimate, not an end of the pandemic; no opened source dates its end."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "31 Dec 2019 Wuhan Municipal Health Commission, China, reported a cluster of cases of pneumonia",
+        "source": "src-who-timeline"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "30 January 2020 (PHEIC); 11 March 2020 (pandemic)",
+        "source": "src-who-timeline"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1 January 2020 to 31 December 2021 (excess deaths period)",
+        "source": "src-who-excess"
+      }
+    ],
+    "display": "From 31 Dec 2019 (deaths estimated through 2021)"
+  },
+  "where": {
+    "lat": 30.5833333,
+    "lon": 114.2666667,
+    "elevation_m": null,
+    "modern_name": "Wuhan, Hubei, China (first reported cluster; the pandemic was global)",
+    "historical_name": "Wuhan, People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-geonames-wuhan"
+    ]
+  },
+  "regions": [
+    "global",
+    "eastern_asia"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A global pandemic that caused millions of deaths and reshaped health systems, economies and daily life."
+  },
+  "numbers": [
+    {
+      "field": "deaths",
+      "label": "Excess deaths 2020-2021, WHO estimate",
+      "low": 13300000,
+      "high": 16600000,
+      "unit": "people",
+      "estimate": true,
+      "source": "src-who-excess",
+      "note": "Central estimate about 14.9 million."
+    },
+    {
+      "field": "deaths",
+      "label": "Reported COVID-19 deaths to 31 Dec 2020, WHO",
+      "low": 1813188,
+      "high": 1813188,
+      "unit": "people",
+      "estimate": false,
+      "source": "src-who-story",
+      "note": "Same WHO page gives at least 3 million excess deaths for 2020 (preliminary)."
+    }
+  ],
+  "related": [
+    {
+      "id": "1918-influenza-pandemic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-who-timeline",
+      "url": "https://www.who.int/news/item/27-04-2020-who-timeline---covid-19",
+      "title": "WHO Timeline - COVID-19 (archived 27 April 2020)",
+      "publisher": "World Health Organization",
+      "author": "World Health Organization",
+      "date_published": "2020-04-27",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-who-excess",
+      "url": "https://www.who.int/news/item/05-05-2022-14.9-million-excess-deaths-were-associated-with-the-covid-19-pandemic-in-2020-and-2021",
+      "title": "14.9 million excess deaths were associated with the COVID-19 pandemic in 2020 and 2021",
+      "publisher": "World Health Organization",
+      "author": "World Health Organization",
+      "date_published": "2022-05-05",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "numbers.deaths"
+      ]
+    },
+    {
+      "id": "src-who-story",
+      "url": "https://www.who.int/data/stories/the-true-death-toll-of-covid-19-estimating-global-excess-mortality",
+      "title": "The true death toll of COVID-19: estimating global excess mortality",
+      "publisher": "World Health Organization",
+      "author": "World Health Organization",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "numbers.deaths"
+      ]
+    },
+    {
+      "id": "src-un-desa",
+      "url": "https://www.un.org/en/desa/149-million-excess-deaths-associated-covid-19-pandemic-2020-and-2021",
+      "title": "14.9 million excess deaths associated with the COVID-19 pandemic in 2020 and 2021",
+      "publisher": "United Nations Department of Economic and Social Affairs",
+      "author": "United Nations Department of Economic and Social Affairs",
+      "date_published": "2022-05-05",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "numbers.deaths"
+      ]
+    },
+    {
+      "id": "src-geonames-wuhan",
+      "url": "https://www.geonames.org/search.html?q=Wuhan&country=CN",
+      "title": "GeoNames: Wuhan, Hubei, China",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Figures are WHO modelled excess deaths and WHO-reported deaths to end 2020; I did not open a source for the later cumulative reported total, so none is stated. The end bound is only the excess-death window. Origin of the virus is not addressed.",
+  "published_at": "2026-10-22T05:24:15.988Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

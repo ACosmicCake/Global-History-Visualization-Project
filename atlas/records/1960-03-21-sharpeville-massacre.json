@@ -1,0 +1,178 @@
+{
+  "id": "1960-03-21-sharpeville-massacre",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Sharpeville massacre",
+  "summary": "On 21 March 1960 police opened fire on a crowd gathered at the Sharpeville police station, south of Johannesburg, during a Pan Africanist Congress protest against the pass laws. The official inquest counted 69 dead and 180 seriously wounded; other sources give 180 to over 200 injured. The killings drew UN condemnation and led to a state of emergency and bans on the ANC and PAC.",
+  "when": {
+    "start": {
+      "year": 1960,
+      "iso": "1960-03-21"
+    },
+    "end": {
+      "year": 1960,
+      "iso": "1960-03-21"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Date agrees across opened pages. Injury figures differ: 180 seriously wounded (official inquest, per SAHO), more than 180 injured (Canadian Museum for Human Rights)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "21 March 1960",
+        "source": "src-saho"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 21, 1960",
+        "source": "src-cmhr"
+      }
+    ],
+    "display": "21 March 1960"
+  },
+  "where": {
+    "lat": -26.666667,
+    "lon": 27.866667,
+    "elevation_m": null,
+    "modern_name": "Sharpeville, near Vereeniging, Gauteng, South Africa",
+    "historical_name": "Sharpeville, a Black township near Vereeniging, Transvaal Province, Union of South Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Turning point in the anti-apartheid struggle, marked each year by the UN on 21 March."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a police shooting of unarmed protesters, most hit as they fled. Casualty figures are contested.",
+  "related": [
+    {
+      "id": "1948-national-party-election-and-apartheid-legislation",
+      "type": "related",
+      "because": "The pass laws protested at Sharpeville were part of the apartheid system built after 1948."
+    },
+    {
+      "id": "1990-end-of-apartheid",
+      "type": "related"
+    },
+    {
+      "id": "person-nelson-mandela",
+      "type": "related"
+    },
+    {
+      "id": "1976-06-16-soweto-uprising",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-saho",
+      "url": "https://www.sahistory.org.za/article/sharpeville",
+      "title": "Sharpeville Massacre, 21 March 1960",
+      "publisher": "South African History Online",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "casualties"
+      ]
+    },
+    {
+      "id": "src-cmhr",
+      "url": "https://humanrights.ca/node/501",
+      "title": "The Sharpeville Massacre",
+      "publisher": "Canadian Museum for Human Rights",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "casualties"
+      ]
+    },
+    {
+      "id": "src-un",
+      "url": "https://www.un.org/en/observances/end-racism-day",
+      "title": "International Day for the Elimination of Racial Discrimination, 21 March",
+      "publisher": "United Nations",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q1422014",
+      "title": "Sharpeville (Wikidata Q1422014), coordinates -26.666667 N, 27.866667 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "69 dead in every source; wounded given as 180 seriously wounded (SAHO, citing the official inquest) and more than 180 (CMHR). Banning of ANC/PAC is 7 April 1960 in SAHO but 8 April in CMHR; SAHO used. Crowd size also varies by source.",
+  "author": "historian-agent:o-s18",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1960-03-21",
+        "action": "pulse { radius_km: 8 }",
+        "caption": "Police fired on a pass-law protest at Sharpeville; the official inquest counted 69 dead and 180 seriously wounded.",
+        "source": "src-saho"
+      },
+      {
+        "span": "1960-04-07",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "The government banned the ANC and PAC under the Unlawful Organisations Act, after declaring a state of emergency.",
+        "source": "src-saho",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:26:12.362Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

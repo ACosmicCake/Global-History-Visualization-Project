@@ -1,0 +1,133 @@
+{
+  "id": "-0479-battle-of-plataea",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Plataea",
+  "summary": "Final land battle of the second Persian invasion of Greece, fought near Plataea in Boeotia. A Spartan-led Greek alliance defeated Mardonius's Achaemenid army after a stalemate and a fragmented Greek retreat. Mardonius was killed and much of the Persian army was destroyed, ending the invasion; the Persians never invaded Greece again.",
+  "when": {
+    "start": {
+      "year": -478
+    },
+    "end": {
+      "year": -478
+    },
+    "precision": "month",
+    "display": "August 479 BC",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "It took place in August 479 BC near the city of Plataea in Boeotia",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "The war’s deciding encounter at Plataea in July 479 bce",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 38.24,
+    "lon": 23.318,
+    "elevation_m": null,
+    "modern_name": "Plataea, Boeotia, Greece",
+    "historical_name": "Plataea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive land victory that ended the Persian invasion of Greece."
+  },
+  "confidence": "established",
+  "audience_note": "Describes battlefield slaughter of retreating troops.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Plataea&oldid=1375049994",
+      "title": "Battle of Plataea (Wikipedia, revision 1375049994)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "GA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251211094044/https://www.britannica.com/event/Battle-of-Plataea",
+      "title": "Battle of Plataea (479 BCE) | Description & Significance | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q204636",
+      "title": "Wikidata Q204636 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources disagree on the month: Wikipedia says August 479 BC, Britannica says July 479 BCE. Wikidata gives 27 August; I used year-level month precision. Start_year -478 is wrong for 479 BC under astronomical numbering; 479 BC is -478, which is correct, while the atlas id uses -0479 as a lookup key only. Troop numbers and losses vary across sources and are omitted. (Drafted by the Wikipedia pipeline from Wikipedia, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:38.911Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-478",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Final land battle of the second Persian invasion of Greece, fought near Plataea in Boeotia.",
+        "source": "src-wp"
+      },
+      {
+        "span": "-478",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Mardonius was killed and much of the Persian army was destroyed, ending the invasion; the Persians never invaded Greece again.",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

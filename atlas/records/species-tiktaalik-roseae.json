@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "species-tiktaalik-roseae",
+  "kind": "species",
+  "title": "Tiktaalik roseae",
+  "summary": "Tiktaalik roseae is a fish about 375 million years old, found in 2004 on Ellesmere Island, Nunavut. Its front fins contain an arm-like internal skeleton with joints but lack clear fingers, and researchers described it in Nature in 2006 as a missing link between fish and land animals.",
+  "when": {
+    "start": {
+      "year": -375000000
+    },
+    "end": {
+      "year": -375000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both opened pages say about 375 million years; no error range stated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "lived some 375 million years ago",
+        "source": "src-naturenews"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "A 375 million-year-old fishapod",
+        "source": "src-nunatsiaq"
+      }
+    ],
+    "display": "c. 375 million years ago"
+  },
+  "where": {
+    "lat": 79.6216,
+    "lon": -76.7747,
+    "elevation_m": null,
+    "modern_name": "Ellesmere Island, Nunavut, Canada",
+    "historical_name": "River delta on the Devonian equator, Laurussia (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-osm-ellesmere"
+    ],
+    "paleo": {
+      "lat": 1.71,
+      "lon": -40.21,
+      "age_ma": 375,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Island centroid 79.62, -76.77 reconstructed to 375 Ma; the find site is a specific locality on the island."
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "A transitional fossil showing fish features and limb-like fin bones, used to illustrate the move onto land."
+  },
+  "related": [
+    {
+      "id": "-372my-late-devonian-extinction",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-naturenews",
+      "url": "https://www.nature.com/news/2006/060403/full/news060403-7.html",
+      "title": "The fish that crawled out of the water",
+      "publisher": "Nature News (Nature Publishing Group)",
+      "author": "Nature News (Nature Publishing Group)",
+      "date_published": "2006-04-03",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nunatsiaq",
+      "url": "https://nunatsiaq.com/stories/article/prehistoric-fish-crawls-into-spotlight-at-canadian-museum-of-nature/",
+      "title": "Prehistoric fish crawls into spotlight at Canadian Museum of Nature",
+      "publisher": "Nunatsiaq News",
+      "author": "Nunatsiaq News",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-ellesmere",
+      "url": "https://nominatim.openstreetmap.org/search?q=Ellesmere+Island&format=json",
+      "title": "OpenStreetMap Nominatim: Ellesmere Island, Nunavut, Canada",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Both sources are news outlets; no museum or journal page opened. Pin is the island centroid, not the find locality, hence 400 km uncertainty. Age figures differ between sources (375 to about 385 Ma); I used the two that I opened.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:47.845Z"
+}

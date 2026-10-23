@@ -1,0 +1,148 @@
+{
+  "id": "1121-battle-of-didgori",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Didgori",
+  "summary": "On 12 August 1121 King David IV of Georgia defeated a larger Muslim coalition in the Didgori valley, near Manglisi west of Tbilisi, partly by sending 200 horsemen to join the enemy ranks before striking. The Georgian Encyclopedia cites coalition figures of 300,000 (Javakhishvili) to 600,000 (Gautier). Tbilisi was freed in 1122 and became David's capital.",
+  "when": {
+    "start": {
+      "year": 1121
+    },
+    "end": {
+      "year": 1121
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give 12 August 1121."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "August 12, 1121",
+        "source": "src-georgianenc-didgori"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "August 12, 1121",
+        "source": "src-travelguide-didgori"
+      }
+    ],
+    "display": "12 August 1121"
+  },
+  "where": {
+    "lat": 41.7606,
+    "lon": 44.5069,
+    "elevation_m": null,
+    "modern_name": "Didgori valley near Manglisi, Georgia (pin is Didgori mountain)",
+    "historical_name": "Didgori valley, an approach to Tbilisi and Shida Kartli, in the Kingdom of Georgia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-didgori"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A decisive Georgian victory credited with ending Seljuk domination in Georgia and launching the kingdom's 12th-13th century golden age."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-georgianenc-didgori",
+      "url": "https://georgianencyclopedia.ge/en/form_eng/692",
+      "title": "Battle of Didgori",
+      "publisher": "Georgian Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-travelguide-didgori",
+      "url": "https://travelguide.ge/en/articles/didgoris-brdzola-1121-tslis-12-agvisto-1121/",
+      "title": "Battle of Didgori 1121",
+      "publisher": "Travel Guide Georgia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-didgori",
+      "url": "https://www.wikidata.org/wiki/Q602609",
+      "title": "Wikidata item Q602609 (Didgori mountain), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is the Didgori mountain from Wikidata; the sources say the valley lies near Manglisi, about 40 km west of Tbilisi (Travel Guide Georgia). Army figures are contested; only the attributed coalition range is given, and the Georgian Encyclopedia gives no Georgian figure.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:47.362Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1121",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 12 August 1121 King David IV of Georgia defeated a larger Muslim coalition in the Didgori valley, near Manglisi west of Tbilisi, partly by sending 200 horsemen…",
+        "source": "src-georgianenc-didgori"
+      },
+      {
+        "span": "1121",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Tbilisi was freed in 1122 and became David's capital.",
+        "source": "src-georgianenc-didgori",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

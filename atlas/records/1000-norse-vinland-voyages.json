@@ -1,0 +1,169 @@
+{
+  "id": "1000-norse-vinland-voyages",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Norse voyages to Vinland",
+  "summary": "Norse seafarers from Greenland sailed to lands in north-eastern North America that the sagas call Helluland, Markland and Vinland. At L'Anse aux Meadows in Newfoundland, Norse seafarers set up a base some time about AD 1000; radiocarbon dates put its construction between 980 and 1020 CE, and it was probably occupied for under ten years. The sagas record both trade and fighting with the Indigenous people the Norse met.",
+  "when": {
+    "start": {
+      "year": 980
+    },
+    "end": {
+      "year": 1020
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 10,
+      "end_minus_years": 10,
+      "end_plus_years": 10,
+      "note": "Sagas place the voyages between about 970 and 1030 CE; L'Anse aux Meadows radiocarbon dates give construction between 980 and 1020 CE (World History Encyclopedia)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "Some time about AD 1000",
+        "source": "src-parks-lanse"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "sometime between c. 970-1030 CE",
+        "source": "src-whe-vinland"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "built between 980-1020 CE",
+        "source": "src-whe-vinland"
+      }
+    ],
+    "display": "c. 980–1020 CE"
+  },
+  "where": {
+    "lat": 51.595381627,
+    "lon": -55.532152288,
+    "elevation_m": null,
+    "modern_name": "L'Anse aux Meadows, Newfoundland and Labrador, Canada",
+    "historical_name": "Vinland (saga name); L'Anse aux Meadows possibly Leifsbudir/Straumfjord",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-gn-lanse"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Norse site in the Americas that the sources name, showing European presence centuries before Columbus."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related"
+    },
+    {
+      "id": "1000-thule-inuit-migration",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-parks-lanse",
+      "url": "https://parks.canada.ca/culture/designation/lieu-site/anse-aux-meadows",
+      "title": "L'Anse aux Meadows National Historic Site",
+      "publisher": "Parks Canada",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-whe-vinland",
+      "url": "https://www.worldhistory.org/Vinland/",
+      "title": "Vinland",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-lanse",
+      "url": "https://www.geonames.org/search.html?q=L%27Anse+aux+Meadows&country=CA",
+      "title": "GeoNames: L'Anse aux Meadows",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Kept as a point record, not a route: no opened page locates Norse stops with dates, and the Greenland base is not named. Helluland/Markland positions are only suggested (northern Labrador or Baffin Island; central Labrador) so no route is drawn. Parks Canada says the site could be Leif Ericsson Vinland camp; World History Encyclopedia says likely Leifsbudir/Straumfjord. The extent of Vinland is debated. The sagas were written down in the 13th century. Indigenous peoples are described through the saga term skraeling (called derogatory by World History Encyclopedia); no Indigenous-authored source was opened.",
+  "author": "historian-agent:o-s66",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1000",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Some time about AD 1000, Norse seafarers set up a base at L'Anse aux Meadows on Newfoundland.",
+        "source": "src-parks-lanse",
+        "consequence": false
+      },
+      {
+        "span": "1000",
+        "action": "numbers.counter { range: [70, 90] }",
+        "caption": "The eight turf-walled buildings there could house 70 to 90 people, a base for further exploring.",
+        "source": "src-whe-vinland",
+        "consequence": false
+      },
+      {
+        "span": "1020",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The base was probably used for under ten years; the Norse left in an orderly way, possibly because of distance and Indigenous resistance.",
+        "source": "src-whe-vinland",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T12:37:20.935Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

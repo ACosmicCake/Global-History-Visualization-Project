@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s9",
+  "updated": "2026-10-22",
+  "id": "0562-defeat-of-tikal-star-war",
+  "kind": "event",
+  "title": "Defeat of Tikal in the \"star war\" of 562 CE",
+  "summary": "Caracol Altar 21, dedicated in AD 633, records a \"star war\" defeat of Tikal in AD 562. The attacker's name is damaged; Simon Martin doubts it was Caracol's king and favours the Snake (Kaan) kingdom. The defeat coincides with the start of a roughly 130-year gap in Tikal monument dedications.",
+  "when": {
+    "start": {
+      "year": 562
+    },
+    "end": {
+      "year": 562
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Sources give AD 562. A Long Count equivalent (searches suggest 9.6.8.4.2 or 9.6.7.16.2) was not confirmed on any opened page and is omitted."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (AD); Long Count not given on opened pages",
+        "value": "the defeat of Tikal that took place in AD 562",
+        "source": "src-pari"
+      },
+      {
+        "calendar": "Gregorian (AD)",
+        "value": "562",
+        "source": "src-decipher"
+      }
+    ],
+    "display": "AD 562"
+  },
+  "where": {
+    "elevation_m": null,
+    "geometry": {
+      "type": "point"
+    },
+    "lat": 17.2221,
+    "lon": -89.6236,
+    "modern_name": "Tikal, Peten, Guatemala",
+    "historical_name": "Tikal (Mutal), Classic Maya kingdom",
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-q181172"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A pivotal Classic Maya defeat, marking the start of the Tikal Hiatus."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-tikal",
+      "type": "same_place"
+    },
+    {
+      "id": "place-caracol",
+      "type": "related"
+    },
+    {
+      "id": "place-calakmul",
+      "type": "related"
+    },
+    {
+      "id": "0250-classic-maya-period",
+      "type": "part_of"
+    },
+    {
+      "id": "0695-tikal-victory-over-calakmul",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pari",
+      "url": "https://www.mesoweb.com/pari/publications/journal/601/Altar21.pdf",
+      "title": "Caracol Altar 21 Revisited (Simon Martin, PARI Journal 6:1)",
+      "publisher": "Pre-Columbian Art Research Institute",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-decipher",
+      "url": "https://mayadecipherment.com/2008/06/07/a-caracol-emblem-glyph-at-tikal/",
+      "title": "A Caracol Emblem Glyph at Tikal",
+      "publisher": "Maya Decipherment (David Stuart)",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q181172",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q181172.json",
+      "title": "Wikidata entry (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The victor is unresolved (Martin: unknown; the Snake kingdom is a candidate, Caracol's king is discounted). Long Count requested but unconfirmed, so absent. Tikal ruler's fate is not stated in the sources I opened.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "562",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "Caracol Altar 21, dedicated in AD 633, records a \"star war\" defeat of the Holy Lord of Tikal.",
+        "source": "src-pari"
+      },
+      {
+        "span": "562",
+        "action": "pulse { radius_km: 35 }",
+        "caption": "The attacker's name is damaged; Martin finds no basis for Caracol's king and suggests the Snake kingdom.",
+        "source": "src-pari"
+      },
+      {
+        "span": "562",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The defeat coincides with the start of a roughly 130-year lacuna in monument dedications at Tikal.",
+        "source": "src-pari",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:29:44.077Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

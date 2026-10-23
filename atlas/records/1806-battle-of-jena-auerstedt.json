@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1806-battle-of-jena-auerstedt",
+  "kind": "event",
+  "title": "Battle of Jena–Auerstedt",
+  "summary": "On 14 October 1806 two simultaneous battles near Jena and Auerstedt ended in a French victory over the Prussian army. Napoleon fought at Jena and Marshal Davout at Hassenhausen near Auerstedt. The defeat led to the French capture of Berlin in late October.",
+  "when": {
+    "start": {
+      "year": 1806
+    },
+    "end": {
+      "year": 1806
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give 14 October 1806."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "14 October 1806",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "14 October, 1806",
+        "source": "src-fn"
+      }
+    ],
+    "display": "14 October 1806"
+  },
+  "where": {
+    "lat": 50.92878,
+    "lon": 11.5899,
+    "elevation_m": null,
+    "modern_name": "Jena, Thuringia, Germany (pin is the city, a proxy; the Auerstedt fighting was at Hassenhausen, further north)",
+    "historical_name": "Jena, in the lands of the Duke of Weimar",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive double battle that crushed the Prussian army and opened Berlin to the French."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/article/2256/battle-of-jena-auerstedt/",
+      "title": "Battle of Jena-Auerstedt",
+      "publisher": "World History Encyclopedia",
+      "author": "Harrison W. Mark",
+      "date_published": "2023-07-19",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fn",
+      "url": "https://www.napoleon.org/en/magazine/itineraries/jena-auerstedt-14-october-1806/",
+      "title": "Jena-Auerstedt 14 October, 1806",
+      "publisher": "Fondation Napoléon",
+      "author": null,
+      "date_published": "2016-05-09",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2895044",
+      "title": "Jena, Germany",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Jena city as proxy; Auerstedt fighting was at Hassenhausen. Fondation Napoléon gives Berlin entry 23 Oct, World History Encyclopedia 25 Oct, so summary says only late October.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:21:36.452Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1806",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 14 October 1806 two simultaneous battles near Jena and Auerstedt ended in a French victory over the Prussian army.",
+        "source": "src-whe"
+      },
+      {
+        "span": "1806",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The defeat led to the French capture of Berlin in late October.",
+        "source": "src-whe",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

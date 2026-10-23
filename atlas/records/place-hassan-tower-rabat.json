@@ -1,0 +1,232 @@
+{
+  "id": "place-hassan-tower-rabat",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Hassan Tower, Rabat",
+  "aliases": [
+    "Tour Hassan",
+    "Minaret of the Hassan Mosque"
+  ],
+  "summary": "The Hassan Tower is the unfinished minaret of the Hassan Mosque in Rabat, Morocco, begun under the Almohad ruler Yaqub al-Mansur. UNESCO dates the mosque's start to 1184, while History Hit gives about 1195. Work stopped when he died in 1199, and the tower stands 44 m high.",
+  "when": {
+    "start": {
+      "year": 1184
+    },
+    "end": {
+      "year": 1199
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 11,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO says the Hassan Mosque was begun in 1184; History Hit says about 1195; the Museum With No Frontiers dates work to al-Mansur's reign (AD 1184-99) and says it halted at his death."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (UNESCO)",
+        "value": "Hassan Mosque (begun in 1184)",
+        "source": "src-unesco-1401"
+      },
+      {
+        "calendar": "Gregorian (History Hit)",
+        "value": "began in approximately 1195 AD",
+        "source": "src-historyhit-hassan"
+      },
+      {
+        "calendar": "Hegira / Gregorian (Discover Islamic Art)",
+        "value": "AH 579–95 / AD 1184–99",
+        "source": "src-mwnf-hassan-en"
+      }
+    ],
+    "display": "Begun 1184 or c. 1195; halted at al-Mansur's death in 1199"
+  },
+  "where": {
+    "lat": 34.0241,
+    "lon": -6.82272,
+    "elevation_m": null,
+    "modern_name": "Hassan Tower, Rabat, Morocco",
+    "historical_name": "Minaret of the Almohad Hassan Mosque, Rabat, Almohad Caliphate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Surviving minaret of an unfinished Almohad mosque in the UNESCO-listed historic city of Rabat."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-mwnf-hassan-en",
+      "url": "https://islamicart.museumwnf.org/database_item.php?id=monument%3BISL%3Bma%3BMon01%3B8%3Ben",
+      "title": "Hasan Mosque",
+      "publisher": "Discover Islamic Art, Museum With No Frontiers",
+      "author": "Discover Islamic Art, Museum With No Frontiers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-mwnf-hassan-fr",
+      "url": "https://islamicart.museumwnf.org/database_item.php?id=monuments%3BISL%3Bma%3BMon01%3B8%3Bfr",
+      "title": "Mosquée Hassan",
+      "publisher": "Discover Islamic Art, Museum With No Frontiers",
+      "author": "Discover Islamic Art, Museum With No Frontiers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "model"
+      ]
+    },
+    {
+      "id": "src-historyhit-hassan",
+      "url": "https://www.historyhit.com/locations/hassan-tower/",
+      "title": "Hassan Tower - History and Facts",
+      "publisher": "History Hit",
+      "author": "History Hit",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-1401",
+      "url": "https://whc.unesco.org/en/list/1401/",
+      "title": "Rabat, Modern Capital and Historic City: a Shared Heritage",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q579331",
+      "title": "Wikidata Q579331: Hassan Tower (coordinate 34.0241, -6.82272)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square minaret base of 16.20 m (French page of Discover Islamic Art; its English page prints 6.20 m, an apparent typo).",
+      "source": "src-mwnf-hassan-fr",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "tower",
+      "source": "src-mwnf-hassan-en",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 44,
+          "unit": "m",
+          "source": "src-mwnf-hassan-en",
+          "note": "currently rises to 44 m in height; the original design was 64 m (over 80 m with the lantern)"
+        },
+        {
+          "part": "base width (square)",
+          "value": 16.2,
+          "unit": "m",
+          "source": "src-mwnf-hassan-fr",
+          "note": "French page: base carrée de 16,20 m; the English page prints 6.20 m square base, so the two pages conflict"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "square tower at true base on the unfinished mosque site"
+      },
+      {
+        "level": "local",
+        "representation": "procedural square-section tower at its present 44 m"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1184,
+        "end_year": 1199,
+        "state": "construction",
+        "description": "Built under Yaqub al-Mansur (reigned 1184-99); UNESCO says the mosque was begun in 1184, History Hit about 1195.",
+        "source": "src-mwnf-hassan-en"
+      },
+      {
+        "start_year": 1199,
+        "end_year": 1755,
+        "state": "altered",
+        "description": "Construction was halted at the monarch's death and the minaret left unfinished.",
+        "source": "src-mwnf-hassan-en"
+      },
+      {
+        "start_year": 1755,
+        "end_year": null,
+        "state": "ruined",
+        "description": "Shock waves of the 1755 Lisbon earthquake decapitated the minaret, now 44 m high.",
+        "source": "src-mwnf-hassan-fr"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape tower, square (no diameter sourced). The base width rests on the French page only; the English page of the same publisher says 6.20 m, which cannot fit a 44 m tower, so treat 16.20 m as likely but unconfirmed by an independent page (an Archnet page was blocked). Start date conflicts: 1184 (UNESCO) versus about 1195 (History Hit). Phase 1199-1755 state altered is my label for the unfinished tower.",
+  "author": "historian-agent:m-22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:54:27.597Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

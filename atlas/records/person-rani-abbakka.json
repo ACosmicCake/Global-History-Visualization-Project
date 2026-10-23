@@ -1,0 +1,120 @@
+{
+  "id": "person-rani-abbakka",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "title": "Rani Abbakka of Ullal",
+  "summary": "Rani Abbakka was queen of Ullal in Karnataka in the 16th century. The Government of India's press office says she fought and defeated the Portuguese and repulsed their attacks for several decades. IGNCA dates Portuguese attacks on Ullal to 1555 and 1567 and says she was imprisoned and died fighting.",
+  "when": {
+    "start": {
+      "year": 1501
+    },
+    "end": {
+      "year": 1600
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The PIB gives only the 16th century. IGNCA states she fought the Portuguese between 1530 and 1599, which is that source's own claim and is not used as the record's dates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Rani Abakka, the Queen of Ullal, Karnataka fought and defeated the mighty Portuguese in the 16th century",
+        "source": "src-pib-abbakka"
+      }
+    ],
+    "display": "16th century"
+  },
+  "where": {
+    "lat": 12.81696,
+    "lon": 74.8414,
+    "elevation_m": null,
+    "modern_name": "Ullal, Dakshina Kannada district, Karnataka, India",
+    "historical_name": "Ullal, a small coastal kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-ullal"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "people",
+    "wars_conflict"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 3,
+    "justification": "The Indian government press office presents her as a queen who repulsed Portuguese attacks for several decades."
+  },
+  "confidence": "contested",
+  "sources": [
+    {
+      "id": "src-pib-abbakka",
+      "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=1792966&reg=3&lang=2",
+      "title": "Smt. Meenakashi Lekhi releases a pictorial book on India's Women Unsung Heroes of Freedom Struggle as part of Azadi ka Amrit Mahotsav",
+      "publisher": "Press Information Bureau, Government of India",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ignca-abbakka",
+      "url": "https://ignca.gov.in/abbakka-rani-the-unsung-warrior-queen/",
+      "title": "Abbakka Rani: The Unsung Warrior Queen",
+      "publisher": "Indira Gandhi National Centre for the Arts",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-ullal",
+      "url": "https://www.wikidata.org/wiki/Q2738747",
+      "title": "Wikidata item Q2738747 (Ullal), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Contested and thinly sourced: both opened pages are Government of India outreach material and tradition is mixed with record (the IGNCA account includes a prison revolt). The IGNCA page was read through WebFetch; its TLS setup fails in plain Node fetch, so spotcheck.mjs cannot re-fetch it. Only the PIB page supports the dated claim. No scholarly source was found, so years of birth and death are left open (record dated to the 16th century). Government sources only (PIB, IGNCA); no scholarly source confirms the 1555/1567 attacks or her death in battle.",
+  "audience_note": null,
+  "author": "historian-agent:o-s106",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T18:36:16.513Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

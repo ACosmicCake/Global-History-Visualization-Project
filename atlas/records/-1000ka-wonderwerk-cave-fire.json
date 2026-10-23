@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "-1000ka-wonderwerk-cave-fire",
+  "kind": "event",
+  "title": "Burning at Wonderwerk Cave",
+  "summary": "Analysis of intact sediments at Wonderwerk Cave, Northern Cape, South Africa, found burned bone and ashed plant remains in an early Acheulean layer dated to about 1.0 million years ago. The authors called it the earliest secure evidence for burning in an archaeological context; a news summary says it pushed back human use of fire by 300,000 years.",
+  "when": {
+    "start": {
+      "year": -1000000
+    },
+    "end": {
+      "year": -1000000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 100000,
+      "start_plus_years": 100000,
+      "end_minus_years": 100000,
+      "end_plus_years": 100000,
+      "note": "Sources give only approximately 1.0 Ma; the margin is a placeholder for that rounding."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "during the early Acheulean occupation, approximately 1.0 Ma",
+        "source": "src-usf-wonderwerk"
+      },
+      {
+        "calendar": "years ago",
+        "value": "a layer dated to one million years ago",
+        "source": "src-sd-wonderwerk"
+      }
+    ],
+    "display": "c. 1.0 million years ago"
+  },
+  "where": {
+    "lat": -27.846472,
+    "lon": 23.5539776,
+    "elevation_m": null,
+    "modern_name": "Wonderwerk Cave, Northern Cape, South Africa",
+    "historical_name": "Wonderwerk Cave, near the edge of the Kalahari (no polity; Pleistocene)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-wonderwerk"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "science_technology"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "Among the oldest secure evidence for fire in an archaeological context."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-1800ka-homo-erectus-dispersal-from-africa",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-usf-wonderwerk",
+      "url": "https://digitalcommons.usf.edu/kip_articles/3335",
+      "title": "Microstratigraphic evidence of in situ fire in the Acheulean strata of Wonderwerk Cave, Northern Cape province, South Africa",
+      "publisher": "University of South Florida Digital Commons (abstract of Berna et al., PNAS 2012)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-sd-wonderwerk",
+      "url": "https://www.sciencedaily.com/releases/2012/04/120402162548.htm",
+      "title": "Early humans used fire a million years ago",
+      "publisher": "ScienceDaily",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-wonderwerk",
+      "url": "https://nominatim.openstreetmap.org/search?q=Wonderwerk+Cave&format=json",
+      "title": "Wonderwerk Cave (cave entrance node 1388709831)",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: exact age (sources say approximately 1.0 Ma) and the 300,000-year gain, which is ScienceDaily wording. No hominin species is named in the opened pages.",
+  "published_at": "2026-10-22T11:14:57.983Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

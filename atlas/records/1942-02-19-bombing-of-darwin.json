@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s3",
+  "updated": "2026-10-22",
+  "audience_note": "Describes an air raid with about 250 civilian and military deaths.",
+  "id": "1942-02-19-bombing-of-darwin",
+  "kind": "event",
+  "title": "Bombing of Darwin",
+  "summary": "On 19 February 1942 Japanese carrier aircraft, followed by land-based bombers, attacked Darwin in northern Australia. About 250 people were killed, eight of the 47 ships in the harbour were sunk, and ten US fighters were destroyed. Sixty-four further raids on Darwin followed until November 1943.",
+  "when": {
+    "start": {
+      "year": 1942,
+      "iso": "1942-02-19"
+    },
+    "end": {
+      "year": 1942,
+      "iso": "1942-02-19"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Single-day event."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "19 February 1942; the first raid began shortly before 10 a.m.",
+        "source": "src-awm"
+      }
+    ],
+    "display": "19 February 1942"
+  },
+  "where": {
+    "lat": -12.4611,
+    "lon": 130.8418,
+    "elevation_m": null,
+    "modern_name": "Darwin, Northern Territory, Australia",
+    "historical_name": "Darwin (Port Darwin), Northern Territory, Commonwealth of Australia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-darwin"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "The largest foreign air attack on the Australian mainland, and a defining wartime memory in Australia."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-awm",
+      "url": "https://www.awm.gov.au/articles/blog/1942-bombing-of-darwin",
+      "title": "Remembering 1942: The Bombing of Darwin",
+      "publisher": "Australian War Memorial",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-darwin",
+      "url": "https://www.geonames.org/search.html?q=Darwin&country=AU&featureClass=P",
+      "title": "GeoNames search results: Darwin, Northern Territory",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-aidr",
+      "url": "https://knowledge.aidr.org.au/resources/other-disasters-wartime-bombing-raids-northern-territory-1942/",
+      "title": "Darwin, February 1942",
+      "publisher": "Australian Institute for Disaster Resilience (Australian Government-backed)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Only one event source (Australian War Memorial) opened; National Archives of Australia page timed out. Casualty figures vary in the literature (\"about 243\" in the 1950s histories, later revised upward); the summary says about 250.",
+  "published_at": "2026-10-22T03:32:03.483Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1942-02-19",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 19 February 1942 Japanese carrier aircraft, followed by land-based bombers, attacked Darwin in northern Australia.",
+        "source": "src-awm"
+      },
+      {
+        "span": "1942",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "About 250 people were killed, eight of the 47 ships in the harbour were sunk, and ten US fighters were destroyed.",
+        "source": "src-awm",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

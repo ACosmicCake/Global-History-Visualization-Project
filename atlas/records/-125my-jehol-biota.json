@@ -1,0 +1,162 @@
+{
+  "id": "-125my-jehol-biota",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "period",
+  "title": "Jehol Biota",
+  "summary": "During the Early Cretaceous, between roughly 131 and 120 million years ago, recurrent volcanic eruptions in northeastern China rapidly buried lake ecosystems under fine ash falls. These conditions created the Jehol Biota, a world-famous fossil lagerstätte in Liaoning. Preserving exceptional details of feathers, soft integument, and early flowering plants, the Jehol fossils established the dinosaurian origin of birds, illuminated early avian diversification, and documented the ecological expansion of the Cretaceous Terrestrial Revolution.",
+  "when": {
+    "start": {
+      "year": -131000000
+    },
+    "end": {
+      "year": -120000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 4000000,
+      "start_plus_years": 4000000,
+      "end_minus_years": 2000000,
+      "end_plus_years": 2000000,
+      "note": "The Jehol Biota spans the Yixian and Jiufotang formations from approximately 131 to 120 Ma (Barremian to Aptian), with peak flourishing and diversity centered around 125 Ma (Zhou et al. 2021; ScienceDaily 2017)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "flourishing period of around 125 Ma",
+        "source": "src-zhou2021-pmc"
+      },
+      {
+        "calendar": "years old",
+        "value": "Cretaceous Jehol Biota (approximately 131 to 120 million years old)",
+        "source": "src-sciencedaily-jehol"
+      }
+    ],
+    "display": "c. 131–120 million years ago, peaking c. 125 Ma (Early Cretaceous)"
+  },
+  "where": {
+    "lat": 41.79667,
+    "lon": 121.04972,
+    "elevation_m": 300,
+    "modern_name": "Beipiao, Chaoyang, Liaoning, China",
+    "historical_name": "Jehol lacustrine basin, eastern Asian continental margin, Early Cretaceous; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-geonames-beipiao"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "World-famous fossil lagerstätte that proved the evolutionary transition from theropod dinosaurs to birds and preserved the earliest flowering plants."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related"
+    },
+    {
+      "id": "-183my-karoo-ferrar-volcanism",
+      "type": "related"
+    },
+    {
+      "id": "-130my-opening-of-the-south-atlantic",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-zhou2021-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8403929/",
+      "title": "Spatiotemporal evolution of the Jehol Biota: Responses to the North China craton destruction in the Early Cretaceous",
+      "publisher": "Proceedings of the National Academy of Sciences (PNAS, via PubMed Central)",
+      "author": "Zhonghe Zhou, Qingren Meng, Rixiang Zhu",
+      "date_published": "2021-08-16",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sciencedaily-jehol",
+      "url": "https://www.sciencedaily.com/releases/2017/03/170324192645.htm",
+      "title": "Scientists make new discovery about bird evolution",
+      "publisher": "ScienceDaily",
+      "author": "ScienceDaily",
+      "date_published": "2017-03-24",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-beipiao",
+      "url": "https://www.geonames.org/2038167/beipiao.html",
+      "title": "Beipiao, Liaoning, China",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact chronological boundary between the lower Yixian Formation lacustrine beds and the overlying Jiufotang Formation across different sub-basins in western Liaoning.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-131000000",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "During the Early Cretaceous, between roughly 131 and 120 million years ago, recurrent volcanic eruptions in northeastern China rapidly buried lake ecosystems under fine ash falls.",
+        "source": "src-zhou2021-pmc"
+      },
+      {
+        "span": "-120000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "These conditions created the Jehol Biota, a world-famous fossil lagerstätte in Liaoning.",
+        "source": "src-zhou2021-pmc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T14:01:40.500Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

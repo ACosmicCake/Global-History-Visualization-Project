@@ -1,0 +1,173 @@
+{
+  "id": "1545-silver-of-potosi",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Silver of Potosi",
+  "summary": "Silver was discovered at the Cerro Rico (Rich Hill) in 1545, at Potosi in the Andes of southern Bolivia. In 1573 Viceroy Toledo adapted the Inca mita into a rotating forced indigenous labour system supplying as many as 13,400 workers a year. Potosi had more than 100,000 inhabitants by 1600.",
+  "when": {
+    "start": {
+      "year": 1545
+    },
+    "end": {
+      "year": 1600
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "note": "Discovery 1545; mita 1573; population over 100,000 by 1600. Output fell after about 1600. End year 1600 is a chosen cut-off for this outline."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "the discovery of silver at the Cerro Rico (Rich Hill) in 1545",
+        "source": "src-ency-potosi"
+      },
+      {
+        "calendar": "CE",
+        "value": "in 1573",
+        "source": "src-ency-potosi"
+      },
+      {
+        "calendar": "CE",
+        "value": "more than 100,000 inhabitants by 1600",
+        "source": "src-ency-potosi"
+      }
+    ],
+    "display": "1545 to c. 1600"
+  },
+  "where": {
+    "lat": -19.589166666667,
+    "lon": -65.753333333333,
+    "elevation_m": null,
+    "modern_name": "Potosi, Bolivia",
+    "historical_name": "Potosi in the Spanish viceroyalty of Peru, below the Cerro Rico",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-potosi"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "trade_exploration",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Its silver and forced labour system shaped the Spanish empire and world trade."
+  },
+  "confidence": "established",
+  "audience_note": "This record covers forced labour in the Potosi mines: the mita, a rotating forced indigenous labour draft, and, according to one source, enslaved Africans. It may be distressing; estimates of deaths vary widely and are not given here.",
+  "related": [
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    },
+    {
+      "id": "process-intra-american-slave-trade",
+      "type": "related"
+    },
+    {
+      "id": "1533-spanish-capture-of-cusco",
+      "type": "related"
+    },
+    {
+      "id": "1565-manila-galleon-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ency-potosi",
+      "url": "https://www.encyclopedia.com/places/latin-america-and-caribbean/south-american-political-geography/potosi",
+      "title": "Potosi",
+      "publisher": "Encyclopedia.com",
+      "author": "Encyclopedia.com",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-rapoport-potosi",
+      "url": "https://law.utexas.edu/humanrights/projects/child-labor-and-the-mountain-that-eats-men/",
+      "title": "Child Labor and the Mountain That Eats Men",
+      "publisher": "Rapoport Center for Human Rights and Justice, University of Texas at Austin",
+      "author": "Rapoport Center for Human Rights and Justice, University of Texas at Austin",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-wd-potosi",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q35045.json",
+      "title": "Wikidata entry for Potosi (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1545",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "Silver is discovered at the Cerro Rico (Rich Hill), and Spaniards and Andeans rush to work the ores.",
+        "source": "src-ency-potosi",
+        "consequence": false
+      },
+      {
+        "span": "1573",
+        "action": "numbers.counter { range: [0, 13400] }",
+        "caption": "Viceroy Toledo adapts the Inca mita into rotating forced indigenous labour, as many as 13,400 workers a year.",
+        "source": "src-ency-potosi",
+        "consequence": false
+      },
+      {
+        "span": "1600",
+        "action": "region.fill { radius_km: 30 }",
+        "caption": "Potosi has more than 100,000 inhabitants.",
+        "source": "src-ency-potosi",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: labour figures vary by entry (13,000 to 14,000). African forced labour rests on the Rapoport Center page only; Encyclopedia.com does not describe Africans in the mines. UNESCO and IISH pages were not reachable. Another entry in the same source says Potosi was founded in 1547. Point is the city, not the mountain.",
+  "author": "historian-agent:o-s55",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:13:36.043Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

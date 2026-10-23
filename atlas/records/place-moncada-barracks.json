@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "confidence": "established",
+  "scale": "civilization",
+  "audience_note": null,
+  "author": "historian-agent:m-6",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-moncada-barracks",
+  "title": "Moncada Barracks, Santiago de Cuba",
+  "summary": "The Moncada Barracks in Santiago de Cuba began as a Spanish colonial military camp authorised in 1859, and later housed the Cuban army's Maceo Regiment. On 26 July 1953 Fidel Castro led an unsuccessful assault on it that started his revolutionary movement. It became a school in 1960.",
+  "when": {
+    "start": {
+      "year": 1859
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Construction was authorised 1 October 1859 and the works began 24 January 1860. A fire destroyed the complex in 1937 and a new barracks opened in 1944. End is the present: it is a school and museum."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Sierra Maestra)",
+        "value": "El 1ro de octubre de 1859, se autoriza la construcción del “Campo Militar de la Reina”",
+        "source": "src-sierramaestra-huellas"
+      },
+      {
+        "calendar": "CE (Granma)",
+        "value": "26 de julio de 1953",
+        "source": "src-granma-moncada"
+      },
+      {
+        "calendar": "CE (Sierra Maestra)",
+        "value": "Transformado en Ciudad Escolar el 28 de enero de 1960",
+        "source": "src-sierramaestra-antiguo"
+      }
+    ],
+    "display": "Authorised 1859; rebuilt 1944; attacked 26 July 1953; school since 1960"
+  },
+  "where": {
+    "lat": 20.02626,
+    "lon": -75.81999,
+    "elevation_m": null,
+    "modern_name": "Cuartel Moncada / Ciudad Escolar 26 de Julio, Santiago de Cuba, Cuba",
+    "historical_name": "Campo Militar de la Reina (later Reina Mercedes, then Cuartel Moncada), Spanish and then Cuban army garrison, Santiago de Cuba",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-moncada"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "built_world",
+    "law_politics_rights"
+  ],
+  "importance": {
+    "score": 3,
+    "justification": "The target of the 1953 assault that began the Cuban Revolution; it gave the 26th of July Movement its name."
+  },
+  "related": [
+    {
+      "id": "person-fidel-castro",
+      "type": "related"
+    },
+    {
+      "id": "1953-cuban-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sierramaestra-huellas",
+      "url": "https://sierramaestra.cu/index.php/santiago/especiales/item/7463-cuartel-moncada-las-huellas-de-una-historia",
+      "title": "Cuartel Moncada: las huellas de una historia",
+      "publisher": "Periodico Sierra Maestra (Santiago de Cuba)",
+      "author": "Aida Morales Tejeda (Oficina del Conservador de la Ciudad)",
+      "date_published": "2023-07-22",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-sierramaestra-antiguo",
+      "url": "https://www.sierramaestra.cu/index.php/titulares/item/7296-antiguo-cuartel-moncada-testigo-de-la-audaz-accion-del-26-de-julio",
+      "title": "Antiguo cuartel Moncada, testigo de la audaz accion del 26 de julio",
+      "publisher": "Periodico Sierra Maestra (Santiago de Cuba)",
+      "author": "Marlene Montoya Maza",
+      "date_published": "2023-07-10",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-granma-moncada",
+      "url": "https://www.granma.cu/asalto-moncada/2023-07-24/evocacion-historica-a-70-anos-del-asalto-al-moncada-24-07-2023-23-07-11",
+      "title": "Evocacion historica, a 70 anos del asalto al Moncada",
+      "publisher": "Granma (Communist Party of Cuba daily)",
+      "author": "Mayra Aladro Cardoso",
+      "date_published": "2023-07-24",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-osm-moncada",
+      "url": "https://nominatim.openstreetmap.org/search?q=Cuartel+Moncada+Santiago+de+Cuba&format=json",
+      "title": "OpenStreetMap Nominatim: Cuartel Moncada, node 6199185285 (20.0262606, -75.8199944)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start: 1859 is the authorisation, works began January 1860, and one article only places its origins under Governor Tacon. All sources are Cuban state-aligned press. No model: no dimensions found on an opened page.",
+  "published_at": "2026-10-22T06:22:11.492Z"
+}

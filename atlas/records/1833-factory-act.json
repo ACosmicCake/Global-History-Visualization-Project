@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s51",
+  "updated": "2026-10-22",
+  "id": "1833-factory-act",
+  "kind": "event",
+  "title": "Factory Act of 1833",
+  "summary": "Britain's Factory Act of 1833 applied to textile factories, with silk and lace producers among those exempt. It barred employing children under nine, required schooling of two hours a day for the young workers, and created government factory inspectors with the right to enter any factory. It did not introduce the ten-hour day workers sought.",
+  "when": {
+    "start": {
+      "year": 1833
+    },
+    "end": {
+      "year": 1833
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both pages give only the year 1833."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (EBSCO)",
+        "value": "1833",
+        "source": "src-ebsco-factory"
+      },
+      {
+        "calendar": "CE (Encyclopedia.com)",
+        "value": "Factory Act of 1833",
+        "source": "src-encyc-factory"
+      }
+    ],
+    "display": "1833"
+  },
+  "where": {
+    "lat": 51.499387,
+    "lon": -0.1244812,
+    "elevation_m": null,
+    "modern_name": "London, England",
+    "historical_name": "London, England (EBSCO gives the locale as London)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-westminster"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Called the first major state regulation of factory labor in Britain; the pages say it fell short of the ten-hour day."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-factory",
+      "url": "https://www.ebsco.com/research-starters/history/factory-act/",
+      "title": "Factory Act",
+      "publisher": "EBSCO Research Starters",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-factory",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/factory-act",
+      "title": "Factory Act",
+      "publisher": "Encyclopedia.com",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-westminster",
+      "url": "https://nominatim.openstreetmap.org/search?q=Palace+of+Westminster+London&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Palace of Westminster (51.4993870, -0.1244812)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The two pages disagree on the daily hours cap for 9-13-year-olds (EBSCO: eight; Encyclopedia.com: nine), so no hours figure is stated. Encyclopedia.com limits schooling to children under 13, EBSCO to ages 9-13; the summary says only \"young workers\". Pin is London via an arbitrary central point (Palace of Westminster node); the Act applied nationally. Royal assent date was not found on an opened page.",
+  "published_at": "2026-10-22T10:53:13.453Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1833",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Britain's Factory Act of 1833 applied to textile factories, with silk and lace producers among those exempt.",
+        "source": "src-ebsco-factory"
+      },
+      {
+        "span": "1833",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It barred employing children under nine, required schooling of two hours a day for the young workers, and created government factory inspectors with the right to enter any…",
+        "source": "src-ebsco-factory",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

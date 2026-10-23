@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-6000-mega-lake-chad",
+  "kind": "process",
+  "title": "Lake Mega-Chad",
+  "summary": "Lake Mega-Chad was the largest pluvial lake in Africa, about 360,000 km2 at its peak in the southern Sahara. A 2015 PNAS study dated its highstand from about 11,500 to 5,000 years ago, with levels falling rapidly around 5,000 years ago; its northern Bodélé basin finally dried out around 1,000 years ago.",
+  "when": {
+    "start": {
+      "year": -11500
+    },
+    "end": {
+      "year": -5000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "ka values used as stated, with no 1950 or 2000 offset. Humid conditions began around 15 ka; levels fell rapidly around 5 ka; the Bodélé basin dried finally around 1 ka (Armitage et al. 2015). ScienceDaily puts the peak around 6,000 years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ka",
+        "value": "highstand by 11.5 ka",
+        "source": "src-kcl-chad"
+      },
+      {
+        "calendar": "years ago",
+        "value": "around 6,000 years ago",
+        "source": "src-sciencedaily-chad"
+      }
+    ],
+    "display": "Highstand c. 11,500 to 5,000 years ago (peak around 6,000 years ago)"
+  },
+  "where": {
+    "lat": 13.0208581,
+    "lon": 14.5801806,
+    "elevation_m": null,
+    "modern_name": "Lake Chad basin (proxy pin at the modern Lake Chad), on the borders of Nigeria, Chad, Cameroon and Niger",
+    "historical_name": "Palaeolake Mega-Chad in the southern Sahara, before any states",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-osm-chad"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "northern_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "The largest lake of the African humid period; its collapse exposed the Bodélé dust source."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3000-end-of-the-african-humid-period",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-kcl-chad",
+      "url": "https://kclpure.kcl.ac.uk/portal/en/publications/west-african-monsoon-dynamics-inferred-from-abrupt-fluctuations-o/",
+      "title": "West African monsoon dynamics inferred from abrupt fluctuations of Lake Mega-Chad",
+      "publisher": "King's College London (PNAS paper by Armitage, Bristow and Drake)",
+      "author": "Simon J. Armitage, Charlie S. Bristow, Nick A. Drake",
+      "date_published": "2015",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sciencedaily-chad",
+      "url": "https://www.sciencedaily.com/releases/2015/06/150629162542.htm",
+      "title": "Largest freshwater lake on Earth was reduced to desert dunes in just a few hundred years",
+      "publisher": "ScienceDaily (university press release)",
+      "author": null,
+      "date_published": "2015-06-29",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-chad",
+      "url": "https://nominatim.openstreetmap.org/search?q=Lake+Chad&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Lac Tchad",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the 360,000 km2 area (ScienceDaily only; the KCL abstract gives none). The pin is a proxy at the modern lake; the palaeolake reached the Bodélé in northern Chad. Dates are ka as stated, no offset.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:12:15.707Z"
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "place-meishan-gssp",
+  "kind": "place",
+  "title": "Meishan Permian-Triassic boundary section (GSSP)",
+  "summary": "The Meishan quarries in Changxing County, Zhejiang, expose the type section for the base of the Triassic, marked by the first appearance of the conodont Hindeodus parvus at Bed 27c. Ash layers there date the end-Permian mass extinction to about 251.94 million years ago, making it the global reference for that event.",
+  "when": {
+    "start": {
+      "year": -252500000
+    },
+    "end": {
+      "year": -251940000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 300000,
+      "start_plus_years": 300000,
+      "end_minus_years": 300000,
+      "end_plus_years": 300000,
+      "note": "IUGS Geoheritage gives the end-Permian extinction at 251.94 Ma. The ICS Induan page lists several older determinations and says reprocessed U-Pb suggests 252.5 Ma, with the dated ash bed slightly below the boundary."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "end-Permian extinction 251.94 million years ago",
+        "source": "src-iugs"
+      },
+      {
+        "calendar": "U-Pb zircon",
+        "value": "revised processing for U-Pb ages suggest 252.5 Ma",
+        "source": "src-ics-ind"
+      }
+    ],
+    "display": "c. 252.5–251.9 million years ago"
+  },
+  "where": {
+    "lat": 31.0798,
+    "lon": 119.7061,
+    "elevation_m": null,
+    "modern_name": "Meishan, Changxing County, Huzhou, Zhejiang, China",
+    "historical_name": "Marine carbonate shelf of the South China block (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-iugs"
+    ],
+    "paleo": {
+      "lat": 18.8,
+      "lon": 102.35,
+      "age_ma": 252,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 31.08, 119.71 reconstructed to 252 Ma. PALEOMAP gives 17.17 N, 103.88 E."
+    }
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Global reference section for the Permian-Triassic boundary and the best-dated record of Earth's most severe extinction."
+  },
+  "related": [
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-iugs",
+      "url": "https://iugs-geoheritage.org/geoheritage_sites/gssps-of-meishan-the-chronostratigraphic-record-of-the-biggest-phanerozoic-mass-extinction/",
+      "title": "Permian-Triassic great extinction and GSSPs of Meishan",
+      "publisher": "International Union of Geological Sciences (IUGS Geoheritage)",
+      "author": "International Union of Geological Sciences (IUGS Geoheritage)",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where.lat",
+        "where.lon",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ics-ind",
+      "url": "https://stratigraphy.org/gssps/induan",
+      "title": "GSSP for the Induan Stage (base of the Triassic), Meishan, China",
+      "publisher": "International Commission on Stratigraphy",
+      "author": "International Commission on Stratigraphy",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates converted from IUGS degrees-minutes-seconds (31 04 51 N, 119 42 22 E); the ICS page gives a slightly different, garbled form. Ages vary widely by method; 251.94 Ma is the extinction age, not the formal boundary age.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:27.288Z"
+}

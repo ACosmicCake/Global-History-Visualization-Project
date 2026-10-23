@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1795-mungo-park-niger-expedition",
+  "kind": "event",
+  "title": "Mungo Park's first Niger expedition",
+  "summary": "The African Association hired the Scottish surgeon Mungo Park in 1795 to locate the Niger. He left Pisania on the Gambia on 2 December 1795, saw the river at Segou in July 1796 and reached Silla on 29 July, where he turned back. He arrived at Falmouth on 22 December 1797.",
+  "when": {
+    "start": {
+      "year": 1795
+    },
+    "end": {
+      "year": 1797
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "Gale says Park left Britain in May 1795; Thomson (1890) gives departure from Pisania on 2 December 1795, the night of 20 July 1796 in a village before the Niger, Silla on 29 July 1796 and Falmouth on 22 December 1797. End year 1797 is the Falmouth arrival; Gale says \"late 1797\"."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "On the 2nd December 1795",
+        "source": "src-thomson-park"
+      },
+      {
+        "calendar": "CE",
+        "value": "He arrived at Silla on the 29th July",
+        "source": "src-thomson-park"
+      },
+      {
+        "calendar": "CE",
+        "value": "arrived at Falmouth on the 22nd December",
+        "source": "src-thomson-park"
+      },
+      {
+        "calendar": "CE",
+        "value": "Park left Britain in May 1795",
+        "source": "src-gale-park"
+      }
+    ],
+    "display": "May 1795 - December 1797 (reached the Niger July 1796)"
+  },
+  "where": {
+    "lat": 13.45,
+    "lon": -6.2666666666667,
+    "elevation_m": null,
+    "modern_name": "Segou, Mali (where Park first saw the Niger)",
+    "historical_name": "Sego, capital of Bambarra, on the Niger",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd-segou"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "First European account of the Niger flowing east, which shaped the next decades of exploration."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-thomson-park",
+      "url": "https://www.gutenberg.org/files/52285/52285-h/52285-h.htm",
+      "title": "Mungo Park and the Niger",
+      "publisher": "Project Gutenberg (Joseph Thomson, 1890 biography)",
+      "author": "Joseph Thomson",
+      "date_published": "1890",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gale-park2",
+      "url": "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/mungo-parks-african-adventures",
+      "title": "Mungo Park African Adventures",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Gale",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gale-park",
+      "url": "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/mungo-park",
+      "title": "Mungo Park",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Gale",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-segou",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q333476.json",
+      "title": "Wikidata entry for Segou (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: place names. I could place only Segou; Pisania and Silla have no modern location on the pages I opened, so there is no path (the task note asked for one). Gale text gives conflicting distances (over 200 miles vs over 1,000 miles up the Niger), so none is used. Dates come from a secondary biography (Thomson 1890), not Park's own journal.",
+  "author": "historian-agent:o-s74",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "July 1796",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "At Segou Park sees the Niger flowing east, the first time a European had reached it, says Thomson.",
+        "source": "src-thomson-park",
+        "consequence": false
+      },
+      {
+        "span": "29 July 1796",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "He reaches Silla and decides to turn back toward the coast.",
+        "source": "src-thomson-park",
+        "consequence": false
+      },
+      {
+        "span": "1797",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Park returns to Britain in late 1797 and writes Travels in the Interior Districts of Africa, an instant success.",
+        "source": "src-gale-park",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:57:00.959Z"
+}

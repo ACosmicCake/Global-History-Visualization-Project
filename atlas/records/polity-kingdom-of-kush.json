@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s75",
+  "updated": "2026-10-22",
+  "id": "polity-kingdom-of-kush",
+  "kind": "polity",
+  "title": "Kingdom of Kush",
+  "summary": "Nubian kingdom on the Nile in what is now Sudan, dated from about 1069 BCE to 350 CE, with Napata as first capital. According to World History Encyclopedia the capital moved to Meroë around 590 BCE, and the kingdom ended after an Aksumite invasion c. 330 CE. UNESCO calls Meroë its heartland.",
+  "when": {
+    "start": {
+      "year": -1068
+    },
+    "end": {
+      "year": 350
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_plus_years": 300,
+      "note": "World History Encyclopedia gives c. 1069 BCE to 350 CE; UNESCO dates Kush as a major power from the 8th century BC to the 4th century AD."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE/CE",
+        "value": "flourished between c. 1069 BCE and 350 CE",
+        "source": "src-whe-kush"
+      },
+      {
+        "calendar": "BC/AD",
+        "value": "a major power from the 8th century B.C. to the 4th century A.D.",
+        "source": "src-unesco-1336"
+      },
+      {
+        "calendar": "BCE",
+        "value": "the capital of Kush was moved to Meroe",
+        "source": "src-whe-kush"
+      }
+    ],
+    "display": "c. 1069 BCE – 350 CE"
+  },
+  "where": {
+    "lat": 16.9333333333,
+    "lon": 33.75,
+    "elevation_m": null,
+    "modern_name": "Meroë, River Nile State, Sudan (capital pinned: Meroë, the capital from c. 590 BCE per WHE; Napata was the earlier capital)",
+    "historical_name": "Meroë, capital of the Kingdom of Kush",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-unesco-xml",
+      "src-unesco-1336"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A major Nile power that, per World History Encyclopedia, supplied kings to Egypt's 25th Dynasty and later ruled from Meroë."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "place-meroe-pyramids",
+      "type": "related"
+    },
+    {
+      "id": "person-amanirenas",
+      "type": "related"
+    },
+    {
+      "id": "polity-kingdom-of-aksum",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-kush",
+      "url": "https://www.worldhistory.org/Kush/",
+      "title": "Kush",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-unesco-1336",
+      "url": "https://whc.unesco.org/en/list/1336",
+      "title": "Archaeological Sites of the Island of Meroe",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List, full dataset (XML) with site coordinates",
+      "publisher": "UNESCO World Heritage Centre (XML dataset)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date differs (c. 1069 BCE WHE vs 8th century BCE UNESCO). The Kerma culture is described by WHE as an earlier culture and is excluded. Pin is the Meroë pyramid point in UNESCO's data, not a surveyed city centre.",
+  "published_at": "2026-10-22T14:07:27.166Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

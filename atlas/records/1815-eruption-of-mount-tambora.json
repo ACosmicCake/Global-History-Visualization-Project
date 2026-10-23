@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes a volcanic disaster with large loss of life. Death-toll figures vary widely between sources and are given here as attributed ranges, not settled counts.",
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "1815-eruption-of-mount-tambora",
+  "kind": "event",
+  "title": "Eruption of Mount Tambora",
+  "summary": "Mount Tambora, on Sumbawa in present-day Indonesia, erupted in April 1815, with a climax around 10 April, and was rated VEI 7. Death tolls are attributed differently: NOAA gives 11,000 from pyroclastic flows and over 100,000 from later food shortages, while Munich Re cites some 71,000 directly. The following year was called the Year Without a Summer.",
+  "when": {
+    "start": {
+      "year": 1815,
+      "iso": "1815-04-05"
+    },
+    "end": {
+      "year": 1815,
+      "iso": "1815-04-15"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "NOAA: 5 to 10 April; Munich Re: 10 to 15 April; VolcanoDB: climax 10-11 April."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "the actual eruption occurred between April 5 to its climax on April 10",
+        "source": "src-noaa-tambora"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "between 10 and 15 April 1815",
+        "source": "src-munich-tambora"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "the climactic explosion came on 10–11 April 1815",
+        "source": "src-volcanodb-tambora"
+      }
+    ],
+    "display": "5-15 April 1815"
+  },
+  "where": {
+    "lat": -8.245278,
+    "lon": 117.992778,
+    "elevation_m": null,
+    "modern_name": "Mount Tambora, Sumbawa, Indonesia",
+    "historical_name": "Mount Tambora, Sumbawa (Dutch East Indies period)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-q168714"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Rated VEI 7, the largest eruption in recorded history per VolcanoDB; followed by the cold 1816 Year Without a Summer."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1883-krakatoa-eruption",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-noaa-tambora",
+      "url": "https://www.nesdis.noaa.gov/news/day-history-mount-tambora-explosively-erupts-1815",
+      "title": "This Day in History: Mount Tambora Explosively Erupts in 1815",
+      "publisher": "NOAA NESDIS",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-munich-tambora",
+      "url": "https://www.munichre.com/en/insights/natural-disaster-and-climate-change/vulcanic-erruption-mount-tambora-lethal.html",
+      "title": "Lethal volcanic eruption: Mount Tambora",
+      "publisher": "Munich Re",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-volcanodb-tambora",
+      "url": "https://volcanodb.com/mount-tambora-eruption",
+      "title": "Mount Tambora 1815: The Largest Eruption in Recorded History",
+      "publisher": "VolcanoDB",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q168714",
+      "url": "https://www.wikidata.org/wiki/Q168714",
+      "title": "Tambora (Wikidata Q168714)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1815-04-10",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Tambora on Sumbawa reached its climax around 10 April 1815, rated VEI 7.",
+        "source": "src-noaa-tambora"
+      },
+      {
+        "span": "1815-04",
+        "action": "numbers.counter { range: [11000, 71000] }",
+        "caption": "Death tolls differ by source: NOAA gives 11,000 from pyroclastic flows; Munich Re cites some 71,000 directly.",
+        "source": "src-munich-tambora"
+      },
+      {
+        "span": "1816",
+        "action": "region.fill { radius_km: 2000 }",
+        "caption": "The following year became known as the Year Without a Summer, with Northern Hemisphere temperatures falling.",
+        "source": "src-noaa-tambora",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: death toll (11,000 to over 100,000 depending on source and on direct versus later famine deaths) and the exact eruption dates (5-15 April across sources).",
+  "published_at": "2026-10-22T11:14:59.980Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

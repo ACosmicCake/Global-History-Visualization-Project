@@ -1,0 +1,276 @@
+{
+  "id": "place-angkor-wat",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Angkor Wat",
+  "aliases": [
+    "Vrah Vishnuloka"
+  ],
+  "summary": "Angkor Wat, near Siem Reap in Cambodia, is the state temple of the Khmer king Suryavarman II, built from 1113 and completed after his death about 1150. A three-level stepped pyramid topped by five towers, with a central shrine 65 m high, it was dedicated to Vishnu. It is the largest and most important monument at Angkor.",
+  "when": {
+    "start": {
+      "year": 1113
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 10,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of Suryavarman II's reign, 1113, from which the MIT Libraries record dates creation (1113 to ca. 1150); the temple was completed after his death c. 1150. End is the present: it is a living monument and UNESCO property."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (MIT Libraries)",
+        "value": "Creation date: 1113-ca. 1150",
+        "source": "src-mit-angkor-wat"
+      },
+      {
+        "calendar": "CE (German Angkor Imagery Project)",
+        "value": "Suryavarman II (1113-1150)",
+        "source": "src-gaip-angkor-wat"
+      }
+    ],
+    "display": "Built c. 1113–1150 CE (reign of Suryavarman II)"
+  },
+  "where": {
+    "lat": 13.412521,
+    "lon": 103.86659,
+    "elevation_m": null,
+    "modern_name": "Angkor Wat, Angkor Archaeological Park, Siem Reap Province, Cambodia",
+    "historical_name": "Vrah Vishnuloka, state temple of Yashodharapura, the first capital at Angkor, Khmer Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-angkor-wat"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The largest religious monument in the world and the national emblem of Cambodia, the principal temple of the Khmer Empire's art (UNESCO lists it among the masterpieces of Angkor)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-mit-angkor-wat",
+      "url": "https://dome.mit.edu/handle/1721.3/154474?show=full",
+      "title": "Angkor Wat, Richard Langendorf Collection",
+      "publisher": "MIT Libraries (Dome)",
+      "author": "Richard Langendorf (photograph); patron Suryavarman II",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-nd-angkor-wat",
+      "url": "https://marble.nd.edu/item/283faf62-8c87-4c61-87b4-a88620cf3d44",
+      "title": "Angkor Wat: exterior arcade of outer galleried temple with the quincunx of towers behind",
+      "publisher": "University of Notre Dame, Hesburgh Libraries (Architecture Library)",
+      "author": "University of Notre Dame, Hesburgh Libraries (Architecture Library)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-gaip-angkor-wat",
+      "url": "https://www.khmer-heritage.de/sites/angkor_wat/angkor_wat_english.html",
+      "title": "Angkor Wat, The German Angkor Imagery Project",
+      "publisher": "German Angkor Imagery Project (khmer-heritage.de)",
+      "author": "German Angkor Imagery Project (khmer-heritage.de)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-668",
+      "url": "https://whc.unesco.org/en/list/668",
+      "title": "Angkor (World Heritage List no. 668)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-angkor-wat",
+      "url": "https://nominatim.openstreetmap.org/search?q=Angkor+Wat&format=json",
+      "title": "OpenStreetMap Nominatim: Angkor Wat, way 1113380295 (13.4125210, 103.8665896)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A square-ish ground plan of four nested enclosures: the outer wall 1025 m by 802 m, a second-level enclosure 100 by 115 m, an inner gallery 60 by 60 m, and the central quincunx of towers; the outer gallery measures 187 by 215 m. The German Angkor Imagery Project adds a moat of 1500 by 1300 m. Register figures only.",
+      "source": "src-mit-angkor-wat",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-mit-angkor-wat",
+      "measurements": [
+        {
+          "part": "height (central shrine)",
+          "value": 65,
+          "unit": "m",
+          "source": "src-gaip-angkor-wat",
+          "note": "\"The central towers rises 65 metres from ground level\"; the MIT record says \"height of central shrine: 65 m\""
+        },
+        {
+          "part": "base length (outer gallery)",
+          "value": 215,
+          "unit": "m",
+          "source": "src-nd-angkor-wat",
+          "note": "\"187 by 215 m\"; the MIT record prints the same pair in parentheses beside the outer wall"
+        },
+        {
+          "part": "base width (outer gallery)",
+          "value": 187,
+          "unit": "m",
+          "source": "src-nd-angkor-wat"
+        },
+        {
+          "part": "outer wall, length",
+          "value": 1025,
+          "unit": "m",
+          "source": "src-mit-angkor-wat",
+          "note": "\"dimensions of outer wall: 1025 x 802 m\""
+        },
+        {
+          "part": "outer wall, width",
+          "value": 802,
+          "unit": "m",
+          "source": "src-mit-angkor-wat"
+        },
+        {
+          "part": "inner gallery, side",
+          "value": 60,
+          "unit": "m",
+          "source": "src-mit-angkor-wat",
+          "note": "\"dimensions of inner gallery: 60 x 60 m\""
+        },
+        {
+          "part": "tiers (levels of the stepped pyramid)",
+          "value": 3,
+          "unit": "count",
+          "source": "src-mit-angkor-wat",
+          "note": "a stepped pyramid on three levels"
+        },
+        {
+          "part": "towers (quincunx on the top level)",
+          "value": 5,
+          "unit": "count",
+          "source": "src-mit-angkor-wat",
+          "note": "five towers in quincunx"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "square temple-mountain with the moat and the outer wall at true size, and the five towers as a quincunx"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped pyramid on three levels inside four enclosures, topped by the quincunx; central tower 65 m"
+      },
+      {
+        "level": "street",
+        "representation": "relief galleries (about 600 m of bas-relief) as a labelled schematic band; the western causeway and moat as reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1113,
+        "end_year": 1150,
+        "state": "construction",
+        "description": "Built as a royal temple-mountain by Suryavarman II (r. 1113-1150) but not completed until after his death, c. 1150.",
+        "source": "src-mit-angkor-wat"
+      },
+      {
+        "start_year": 1150,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Stands as a continuously known monument; in the 16th century Buddhist sculptures were placed in the shrines and the gold Vishnu statue was removed (German Angkor Imagery Project). Restoration works at Angkor ran from 1907 to 1992 (UNESCO).",
+        "source": "src-gaip-angkor-wat"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1113,
+        "to_year": 2026,
+        "material": "sandstone",
+        "source": "src-mit-angkor-wat"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stepped_pyramid (three levels with a quincunx of towers). Least sure of the base size: 187 x 215 m is the outer gallery per Notre Dame and is printed in parentheses in the MIT record next to the 1025 x 802 m outer wall, so the MIT figure's meaning is ambiguous; I used Notre Dame for the pyramid-level plan and MIT for the enclosure. The 65 m height is in the MIT record and is repeated by the German Angkor Imagery Project, a non-institutional source (class other), which is the one spotcheck can read. The MIT figures (1025 x 802, 60 x 60, 65 m) sit in the page's embedded metadata JSON, which spotcheck strips; I confirmed them by reading the raw page. The 'intact' phase glosses over 16th-century changes and modern restoration, noted in the description only. UNESCO's points for property 668 are not at the temple, so coordinates come from OpenStreetMap.",
+  "author": "historian-agent:m-1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:35:36.061Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

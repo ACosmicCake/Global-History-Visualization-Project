@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-mauna-kea",
+  "kind": "place",
+  "title": "Mauna Kea",
+  "summary": "Mauna Kea is the highest peak on the Island of Hawai‘i, a shield volcano reaching 4,207.3 m. The USGS says it is probably at least 1 million years old and last erupted between 6,000 and 4,000 years ago; Oregon State University says it began erupting on the sea floor about 800,000 years ago.",
+  "when": {
+    "start": {
+      "year": -1000000
+    },
+    "end": {
+      "year": -800000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "USGS: probably at least 1 million years old (a minimum). Oregon State: began erupting on the sea floor about 800,000 years ago. The span covers both statements; ages are counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "Mauna Kea is probably at least 1 million years old",
+        "source": "src-usgs-maunakea"
+      },
+      {
+        "calendar": "years ago",
+        "value": "It began erupting on the sea floor about 800,000 years ago",
+        "source": "src-osu-maunakea"
+      }
+    ],
+    "display": "Probably at least 1 million years old; erupting for about 800,000 years"
+  },
+  "where": {
+    "lat": 19.82,
+    "lon": -155.47,
+    "elevation_m": null,
+    "modern_name": "Mauna Kea, Island of Hawai‘i, United States",
+    "historical_name": "Mauna Kea, a volcano with no polities at this date; later within the Hawaiian Kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-usgs-maunakea",
+      "src-osu-maunakea"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Hawai‘i’s highest peak and a well-studied shield volcano."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-usgs-maunakea",
+      "url": "https://www.usgs.gov/volcanoes/mauna-kea/geology-and-history",
+      "title": "Geology and History of Mauna Kea",
+      "publisher": "U.S. Geological Survey",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osu-maunakea",
+      "url": "https://volcano.oregonstate.edu/mauna-kea",
+      "title": "Mauna Kea",
+      "publisher": "Oregon State University (Volcano World)",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Both pages give 19.82 N, 155.47 W, the volcano summit area, hence 5 km. They differ on age (1 million minimum vs 800,000 years of eruption), so the record shows a span. The 4,207.3 m height and last-eruption window are from the USGS page. No model (natural feature).",
+  "author": "historian-agent:o-s98",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:45:06.516Z"
+}

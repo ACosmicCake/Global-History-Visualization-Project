@@ -1,0 +1,178 @@
+{
+  "id": "1988-cuito-cuanavale",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Cuito Cuanavale",
+  "summary": "From March 1987 to mid-1988, Angolan government forces backed by Cuban troops and Soviet advisers fought UNITA rebels supported by South African forces around Cuito Cuanavale in southern Angola. The outcome is disputed, often described as a stalemate, but it helped bring a ceasefire and a path to Namibian independence.",
+  "when": {
+    "start": {
+      "year": 1987,
+      "iso": "1987-03"
+    },
+    "end": {
+      "year": 1988,
+      "iso": "1988-06"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Conversation dates the fighting from March 1987 to the end of June 1988, with the siege January to end of March 1988; other accounts use other start dates, and the DefenceWeb article treats the events as a series of separate engagements."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "from March 1987 to the end of June 1988; siege January to end of March 1988",
+        "source": "src-conversation"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "14 February 1988, first SADF-Cuban tank clash (Chambinga)",
+        "source": "src-defenceweb"
+      }
+    ],
+    "display": "March 1987 – June 1988"
+  },
+  "where": {
+    "lat": -15.163889,
+    "lon": 19.173056,
+    "elevation_m": null,
+    "modern_name": "Cuito Cuanavale, Angola",
+    "historical_name": "Cuito Cuanavale, southeastern People's Republic of Angola",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-wd-cuito"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A turning point in the Angolan war whose aftermath is linked to Namibian independence and the weakening of South African power in the region."
+  },
+  "confidence": "contested",
+  "audience_note": "A war with disputed casualty figures and a contested outcome; each side claims victory.",
+  "related": [
+    {
+      "id": "1990-03-21-independence-of-namibia",
+      "type": "related"
+    },
+    {
+      "id": "1990-end-of-apartheid",
+      "type": "related"
+    },
+    {
+      "id": "person-nelson-mandela",
+      "type": "related"
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "related"
+    },
+    {
+      "id": "1965-cuban-expedition-to-the-congo",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-conversation",
+      "url": "https://theconversation.com/its-30-years-since-cuito-cuanavale-how-the-battle-redefined-southern-africa-78134",
+      "title": "It's 30 years since Cuito Cuanavale: how the battle redefined southern Africa",
+      "publisher": "The Conversation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-defenceweb",
+      "url": "https://www.defenceweb.co.za/military-history/the-fog-of-war-how-cuito-cuanavale-became-a-legend/",
+      "title": "The fog of war: how Cuito Cuanavale became a legend",
+      "publisher": "defenceWeb",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-cuito",
+      "url": "https://www.wikidata.org/wiki/Q899515",
+      "title": "Wikidata item Q899515 (Cuito Cuanavale), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Contested outcome stated as such: the Angolan government, Cuba and the ANC say South Africa was decisively defeated; many South African veterans reject that; The Conversation describes a tactical stalemate. Casualty figures are left out of the summary: The Conversation lists 79 South African dead as admitted by South Africa; DefenceWeb notes SADF claims of 500 Angolan and 32 Cuban casualties at Chambinga on 14 February 1988 and says figures vary. Pin is the town; engagements were spread along the Lomba River and nearby.",
+  "author": "historian-agent:o-s22",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1987-03",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Fighting begins in southern Angola: government forces with Cuban and Soviet backing against UNITA, supported by South African forces.",
+        "source": "src-conversation",
+        "consequence": false
+      },
+      {
+        "span": "1988-01",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "South African and UNITA forces besiege Cuito Cuanavale from January to the end of March 1988.",
+        "source": "src-conversation",
+        "consequence": false
+      },
+      {
+        "span": "1990-03",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "A ceasefire and a timetable for UN-supervised elections follow, and Namibia becomes independent in March 1990.",
+        "source": "src-conversation",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:51:48.397Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

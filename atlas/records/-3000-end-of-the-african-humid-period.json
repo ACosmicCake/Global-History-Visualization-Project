@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "-3000-end-of-the-african-humid-period",
+  "kind": "process",
+  "title": "End of the African Humid Period",
+  "summary": "The African Humid Period, when the Sahara held lakes, animals and people, likely lasted from 11,000 to 5,000 years ago. Sediment-core researchers report that North Africa dried back to desert nearly simultaneously within one to two centuries, while another account notes the change was not uniform, with more gradual dust increases in southern cores.",
+  "when": {
+    "start": {
+      "year": -3050
+    },
+    "end": {
+      "year": -2850
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 1000,
+      "start_plus_years": 200,
+      "end_minus_years": 200,
+      "end_plus_years": 200,
+      "note": "phys.org: ended 5,000 years ago and dried within one to two centuries; Oceanbites: around 6,000 years ago. Years ago converted by subtracting from 1950."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "likely lasted from 11,000 to 5,000 years ago",
+        "source": "src-physorg-ahp"
+      },
+      {
+        "calendar": "years ago",
+        "value": "around 6,000 years ago, this all changed",
+        "source": "src-oceanbites-ahp"
+      }
+    ],
+    "display": "c. 5,000 years ago (sources: 6,000-5,000)"
+  },
+  "where": {
+    "lat": 23.079722,
+    "lon": 12.612222,
+    "elevation_m": null,
+    "modern_name": "Sahara, North Africa",
+    "historical_name": "Green Sahara region, no polity (Holocene)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-wikidata-q6583"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Turned the green Sahara into desert, reshaping where people lived in northern Africa."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-330ka-middle-pleistocene-green-sahara",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-physorg-ahp",
+      "url": "https://phys.org/news/2013-04-abrupt-widespread-climate-shift-sahara.html",
+      "title": "Research points to abrupt and widespread climate shift in the Sahara 5,000 years ago",
+      "publisher": "Phys.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-oceanbites-ahp",
+      "url": "https://oceanbites.org/new-insights-into-old-events-using-marine-sediment/",
+      "title": "New insights into old events using marine sediment",
+      "publisher": "Oceanbites",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q6583",
+      "url": "https://www.wikidata.org/wiki/Q6583",
+      "title": "Sahara (Wikidata Q6583)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: timing (6,000 vs 5,000 years ago) and abruptness (abrupt per phys.org, patchier per Oceanbites). Point is a Sahara centroid; the shift was regional.",
+  "published_at": "2026-10-22T11:14:59.290Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

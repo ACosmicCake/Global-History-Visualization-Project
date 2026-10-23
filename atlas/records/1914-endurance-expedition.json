@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "1914-endurance-expedition",
+  "kind": "event",
+  "title": "Endurance expedition",
+  "summary": "Ernest Shackleton's ship Endurance became trapped in Weddell Sea pack ice on 18 January 1915 and sank on 21 November 1915. The crew camped on the ice, reached Elephant Island by lifeboat in April 1916, and Shackleton sailed the James Caird to South Georgia to find help. The full party was rescued on 30 August 1916.",
+  "when": {
+    "start": {
+      "year": 1914
+    },
+    "end": {
+      "year": 1916
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "NOVA gives 16 April 1916 for the landing on Elephant Island; other accounts give 15 April. The Burke Museum gives 27 October 1915 for abandoning the ship."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On August 8, 1914",
+        "source": "src-burke"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 18 Endurance becomes beset in the pack ice",
+        "source": "src-nova"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Shackleton and his crew watch Endurance sink",
+        "source": "src-nova"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "April 24 Shackleton and five others depart for South Georgia in James Caird",
+        "source": "src-nova"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "which rescued the party on this day, 22 months after",
+        "source": "src-nova"
+      }
+    ],
+    "display": "8 August 1914 – 30 August 1916"
+  },
+  "where": {
+    "lat": -77.816667,
+    "lon": -35.116667,
+    "elevation_m": null,
+    "modern_name": "Vahsel Bay, Weddell Sea, Antarctica (farthest-south point of the drift)",
+    "historical_name": "Vahsel Bay, Weddell Sea, Antarctica",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -54.281472,
+          "lon": -36.508028,
+          "year": 1914,
+          "date": "5 December 1914",
+          "label": "Grytviken, South Georgia: Endurance sails for Antarctica.",
+          "source": "src-nova",
+          "coordinate_source": "src-wd-grytviken"
+        },
+        {
+          "lat": -77.816667,
+          "lon": -35.116667,
+          "year": 1915,
+          "date": "22 February 1915",
+          "label": "Vahsel Bay, about 77 degrees south: farthest south reached while the ship drifts in the ice. Point is the bay, not a surveyed ship position.",
+          "source": "src-nova",
+          "coordinate_source": "src-wd-vahsel"
+        },
+        {
+          "lat": -61.14,
+          "lon": -55.12,
+          "year": 1916,
+          "date": "16 April 1916",
+          "label": "Elephant Island: the three lifeboats land.",
+          "source": "src-nova",
+          "coordinate_source": "src-wd-elephant"
+        },
+        {
+          "lat": -54.15,
+          "lon": -36.6333,
+          "year": 1916,
+          "date": "20 May 1916",
+          "label": "Stromness Bay, South Georgia: Shackleton, Worsley and Crean reach the whaling station after the James Caird voyage.",
+          "source": "src-nova",
+          "coordinate_source": "src-wd-stromness"
+        },
+        {
+          "lat": -61.14,
+          "lon": -55.12,
+          "year": 1916,
+          "date": "30 August 1916",
+          "label": "Elephant Island: the Yelcho rescues the stranded party.",
+          "source": "src-nova",
+          "coordinate_source": "src-wd-elephant"
+        }
+      ]
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-vahsel",
+      "src-wd-grytviken",
+      "src-wd-elephant",
+      "src-wd-stromness"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A celebrated survival story of polar exploration, in which the whole party survived after the loss of the ship."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "related"
+    },
+    {
+      "id": "1914-world-war-i",
+      "type": "contemporary"
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 35,
+    "beats": [
+      {
+        "span": "1915-01-18 / 1915-11-21",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Endurance is trapped in Weddell Sea pack ice, drifts with it for months, and is finally crushed and sinks on 21 November.",
+        "source": "src-nova",
+        "consequence": false
+      },
+      {
+        "span": "1916-04-09 / 1916-05-20",
+        "action": "path.trace {}",
+        "caption": "The crew reaches Elephant Island by lifeboat; Shackleton and five men sail the James Caird to South Georgia, landing 10 May.",
+        "source": "src-nova",
+        "consequence": false
+      },
+      {
+        "span": "1916-08-30",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "The Yelcho reaches Elephant Island and rescues the stranded party, 22 months after they left South Georgia.",
+        "source": "src-nova",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-nova",
+      "url": "https://www.pbs.org/wgbh/nova/shackletonexped/1914/timeline.html",
+      "title": "Shackleton's Antarctic Adventure: Timeline",
+      "publisher": "NOVA / WGBH, PBS",
+      "author": "NOVA / WGBH, PBS",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-burke",
+      "url": "https://www.burkemuseum.org/static/endurance/expedition2.html",
+      "title": "Shackleton at the Burke: the expedition",
+      "publisher": "Burke Museum of Natural History and Culture",
+      "author": "Burke Museum of Natural History and Culture",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-vahsel",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q281869.json",
+      "title": "Wikidata entry for Vahsel Bay (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-grytviken",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q185672.json",
+      "title": "Wikidata entry for Grytviken (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-elephant",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q988689.json",
+      "title": "Wikidata entry for Elephant Island (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-stromness",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1510300.json",
+      "title": "Wikidata entry for Stromness Bay (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Landing date on Elephant Island is 16 April in NOVA but 15 April in some accounts; the Vahsel Bay point is a bay centroid, not the ship position, and the NOVA page is a timeline summary.",
+  "published_at": "2026-10-22T08:18:29.861Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

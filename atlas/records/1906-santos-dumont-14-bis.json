@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s102",
+  "updated": "2026-10-22",
+  "confidence": "established",
+  "id": "1906-santos-dumont-14-bis",
+  "kind": "event",
+  "title": "Santos-Dumont 14-bis flights at Bagatelle",
+  "summary": "In autumn 1906 Alberto Santos-Dumont flew his 14-bis aircraft in Paris. A flight on 23 October of nearly 60 metres was certified by the Aéro Club de France, and on 12 November at Bagatelle he covered 220 metres in about 21 seconds, described as the first world aviation record.",
+  "when": {
+    "start": {
+      "year": 1906,
+      "month": 10,
+      "day": 23
+    },
+    "end": {
+      "year": 1906,
+      "month": 11,
+      "day": 12
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Two flights dated by separate sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "November 12, 1906, Bagatelle: 220 meters (770 ft.) in 21 seconds and 2/3",
+        "source": "src-si-santos"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "October 23, 1906: first sustained and officially witnessed flight in a powered heavier-than-air machine in Europe",
+        "source": "src-tha-santos"
+      }
+    ],
+    "display": "23 October – 12 November 1906"
+  },
+  "where": {
+    "lat": 48.871389,
+    "lon": 2.247222,
+    "elevation_m": null,
+    "modern_name": "Parc de Bagatelle, Bois de Boulogne, Paris, France",
+    "historical_name": "Bagatelle, Paris, French Third Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-q956826"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Early officially witnessed powered flights in Europe."
+  },
+  "sources": [
+    {
+      "id": "src-si-santos",
+      "url": "https://smithsonianeducation.org/scitech/impacto/graphic/aviation/alberto.html",
+      "title": "Alberto Santos Dumont",
+      "publisher": "Smithsonian Institution (Smithsonian Education)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tha-santos",
+      "url": "https://transportationhistory.org/2019/10/23/1906-the-first-european-powered-heavier-than-air-flight-gets-off-the-ground/",
+      "title": "1906: The First European Powered Heavier-Than-Air Flight Gets Off the Ground",
+      "publisher": "Transportation History",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q956826",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q956826.json",
+      "title": "Wikidata Q956826 (Parc de Bagatelle)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The 23 October page says Paris, not Bagatelle; Bagatelle is stated only on the Smithsonian page. Distances differ between sources (60 vs 60.1 m).",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1906",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In autumn 1906 Alberto Santos-Dumont flew his 14-bis aircraft in Paris.",
+        "source": "src-si-santos"
+      },
+      {
+        "span": "1906",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A flight on 23 October of nearly 60 metres was certified by the Aéro Club de France, and on 12 November at Bagatelle he covered 220 metres in…",
+        "source": "src-si-santos",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T18:11:17.169Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

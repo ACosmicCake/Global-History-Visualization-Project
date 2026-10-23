@@ -1,0 +1,164 @@
+{
+  "id": "1912-sinking-of-the-titanic",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Sinking of the Titanic",
+  "summary": "On the night of 14–15 April 1912, the British passenger liner RMS Titanic struck an iceberg in the North Atlantic during its maiden voyage and foundered, resulting in the loss of 1,517 passengers and crew. Due to a catastrophic shortage of lifeboats and inadequate distress procedures, more than two-thirds of those aboard perished, prompting major international reforms in maritime safety, mandatory continuous radio watches, and the 1914 SOLAS convention.",
+  "when": {
+    "start": {
+      "year": 1912
+    },
+    "end": {
+      "year": 1912
+    },
+    "precision": "hour",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Struck an iceberg at 11:40 p.m. ship's time on 14 April 1912 and foundered at 2:20 a.m. on 15 April 1912."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On the night of April 14, 1912, the Titanic collided with an iceberg and sank, resulting in the death of 1,517 people",
+        "source": "src-frey2010-pnas"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "passengers rescued and passengers lost",
+        "source": "src-tip-senate"
+      }
+    ],
+    "display": "14–15 April 1912"
+  },
+  "where": {
+    "lat": 41.70778,
+    "lon": -49.82025,
+    "elevation_m": -3800,
+    "modern_name": "RMS Titanic Wreck Site, North Atlantic Ocean (about 600 km south-southeast of Newfoundland)",
+    "historical_name": "North Atlantic shipping lane, south of the Grand Banks of Newfoundland; international waters",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-titanic"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "northern_america",
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "One of history's deadliest peacetime commercial shipwrecks, prompting the creation of the International Ice Patrol and the first SOLAS treaty."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1912-01-06-wegener-continental-drift-lecture",
+      "type": "contemporary"
+    },
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1912-04-14",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "RMS Titanic strikes an iceberg in the North Atlantic while steaming toward New York.",
+        "source": "src-frey2010-pnas",
+        "consequence": false
+      },
+      {
+        "span": "1912-04-15",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "The vessel sinks with the loss of over 1,500 lives, triggering sweeping global maritime safety reforms.",
+        "source": "src-tip-senate",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-frey2010-pnas",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2841937/",
+      "title": "Interaction of natural survival instincts and internalized social norms exploring the Titanic and Lusitania disasters",
+      "publisher": "Proceedings of the National Academy of Sciences of the USA (PNAS, via PubMed Central)",
+      "author": "Bruno S. Frey, David A. Savage, Roberto G. Torgler",
+      "date_published": "2010-03-02",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-tip-senate",
+      "url": "https://www.titanicinquiry.org/USInq/USReport/AmInqRep03.php",
+      "title": "United States Senate Inquiry Report: Titanic",
+      "publisher": "Titanic Inquiry Project (U.S. Senate Committee on Commerce Report No. 806)",
+      "author": "William Alden Smith et al.",
+      "date_published": "1912-05-28",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-titanic",
+      "url": "https://www.geonames.org/6951424/rms-titanic-wreck-site.html",
+      "title": "RMS Titanic Wreck Site (GeoNames entry 6951424)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of differing casualty tallies (1,517 in the US Senate report versus 1,490–1,503 cited in some British inquiry records).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:29.884Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

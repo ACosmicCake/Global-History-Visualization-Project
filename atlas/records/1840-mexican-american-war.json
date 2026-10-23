@@ -1,0 +1,134 @@
+{
+  "id": "1840-mexican-american-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Mexican-American War",
+  "summary": "A war between the United States and Mexico, stemming from the 1845 US annexation of Texas and a dispute over whether Texas ended at the Nueces River or the Rio Grande. US forces won, and Mexico ceded more than 500,000 square miles of territory. The war also reopened the slavery-extension issue.",
+  "when": {
+    "start": {
+      "year": 1846
+    },
+    "end": {
+      "year": 1848
+    },
+    "precision": "month",
+    "display": "April 1846 – 2 February 1848",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "fought from April 1846 to February 1848",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "The peace treaty was signed 2 Feb. 1848 at Guadalupe-Hidalgo",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 23,
+    "lon": -102,
+    "elevation_m": null,
+    "modern_name": "Mexico, Texas and the United States (proxy pin: Mexico, the location Wikidata lists)",
+    "historical_name": "Mexico, Texas and the United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Expanded US territory by about one-third and intensified the sectional slavery dispute."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260105000055/https://www.britannica.com/event/Mexican-American-War",
+      "title": "Mexican-American War | Significance, Battles, Results, Timeline, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://case.edu/ech/articles/m/mexican-american-war",
+      "title": "MEXICAN-AMERICAN WAR | Encyclopedia of Cleveland History | Case Western Reserve University",
+      "publisher": "case.edu",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q96",
+      "title": "Wikidata Q96 (Mexico, coordinates of the location Wikidata gives for Q6683)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Britannica gives the start as April 1846 and the first clash as 25 April, while the Case Western entry places the skirmish in May 1846. The Wikidata start of 24 April is not stated in the sources. The end year uses the 2 February 1848 treaty signing. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, case.edu; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:46.320Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1846",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A war between the United States and Mexico, stemming from the 1845 US annexation of Texas and a dispute over whether Texas ended at the Nueces River or…",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1848",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The war also reopened the slavery-extension issue.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

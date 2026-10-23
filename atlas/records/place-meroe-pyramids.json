@@ -1,0 +1,253 @@
+{
+  "id": "place-meroe-pyramids",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Pyramids of Meroë (Kushite royal cemeteries)",
+  "summary": "At Meroë, on the Nile in what is now Sudan, the kings and queens of the Kingdom of Kush were buried under small, steep-sided pyramids of sandstone or brick. The northern cemetery was begun in the later 3rd century BCE. The largest pyramids are no more than about 17.5 m square at the base, far smaller than Egypt's.",
+  "when": {
+    "start": {
+      "year": -275
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 25,
+      "start_plus_years": 25,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Past gives the northern cemetery as founded in the second half of the 3rd century BC by King Amantekha; -275 is the mid-point of that half-century (-299 to -250 is the stated span). The kingdom ended in the 4th century AD, after which the pyramids stand as ruins. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC/AD (The Past)",
+        "value": "second half of the 3rd century BC",
+        "source": "src-the-past-meroe"
+      },
+      {
+        "calendar": "BC/AD (UNESCO)",
+        "value": "from the 8th century B.C. to the 4th century A.D.",
+        "source": "src-unesco-1336"
+      }
+    ],
+    "display": "Built from the later 3rd century BCE to the 4th century CE; standing today"
+  },
+  "where": {
+    "lat": 16.93809,
+    "lon": 33.74806,
+    "elevation_m": null,
+    "modern_name": "Meroë (Begarawiyah) pyramid cemeteries, River Nile State, Sudan",
+    "historical_name": "Royal pyramid cemeteries of Meroë, capital of the Kingdom of Kush (Meroitic period)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-meroe",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The best-known Kushite monuments and part of a UNESCO World Heritage property; they show the pyramid form carried far south of Egypt for some 600 years."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-giza-pyramids",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-1336",
+      "url": "https://whc.unesco.org/en/list/1336/",
+      "title": "Archaeological Sites of the Island of Meroe (World Heritage List no. 1336)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-unesco-meroe-nomination",
+      "url": "https://whc.unesco.org/document/168998",
+      "title": "Nomination dossier: The Archaeological Sites of the Island of Meroe (Sudan)",
+      "publisher": "UNESCO World Heritage Centre (nomination document)",
+      "author": "State Party of Sudan",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-the-past-meroe",
+      "url": "https://the-past.com/review/travel/the-royal-road-to-meroe/",
+      "title": "The Royal Road to Meroë",
+      "publisher": "The Past (Current Publishing)",
+      "author": "The Past",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-meroe",
+      "url": "https://nominatim.openstreetmap.org/search?q=Meroe&format=json",
+      "title": "OpenStreetMap Nominatim result for Meroe",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List dataset (syndication XML)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A square base per pyramid, set over rock-cut burial chambers; the nomination dossier gives royal-period bases from about 4.5 m up to 17.5 m square. Register figures only; no surveyed footprint for the cemetery is stored.",
+      "source": "src-unesco-meroe-nomination",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-unesco-meroe-nomination",
+      "measurements": [
+        {
+          "part": "height (upper end, large royal pyramid)",
+          "value": 30,
+          "unit": "m",
+          "source": "src-the-past-meroe",
+          "note": "\"around 30 metres in height\" for the steep Meroë superstructure; an upper figure, not a measured typical one"
+        },
+        {
+          "part": "base side length (largest, square)",
+          "value": 17.5,
+          "unit": "m",
+          "source": "src-unesco-meroe-nomination",
+          "note": "\"no more than 17.5m square at the base\""
+        },
+        {
+          "part": "base side length (smallest royal-period pyramids)",
+          "value": 4.5,
+          "unit": "m",
+          "source": "src-unesco-meroe-nomination",
+          "note": "range runs \"c 4.5m up to 17.5m square\""
+        },
+        {
+          "part": "face angle (maximum)",
+          "value": 73,
+          "unit": "degrees",
+          "source": "src-unesco-meroe-nomination",
+          "note": "faces between 60 and 73 degrees to the horizontal"
+        },
+        {
+          "part": "face angle (minimum)",
+          "value": 60,
+          "unit": "degrees",
+          "source": "src-unesco-meroe-nomination"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "steep square-based pyramids at true base and height, in a row along the northern cemetery ridge"
+      },
+      {
+        "level": "local",
+        "representation": "procedural steep pyramid with a one-room chapel on the east face, using the sourced base and angle range"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -275,
+        "end_year": 350,
+        "state": "construction",
+        "description": "Pyramids built for around 40 kings, queens and princes in the Northern Cemetery from the second half of the 3rd century BC until the end of the kingdom in the 4th century AD (The Past). Individual pyramid dates are not given in the sources opened.",
+        "source": "src-the-past-meroe"
+      },
+      {
+        "start_year": 350,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "After the kingdom ended in the 4th century AD the pyramids stood as ruins; UNESCO names wind erosion and desertification as main threats today. The start year is the kingdom's end, not a dated collapse.",
+        "source": "src-unesco-1336"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -275,
+        "to_year": 350,
+        "material": "sandstone blocks (later brick or coursed rubble) over a rubble core, originally lime-plastered",
+        "source": "src-unesco-meroe-nomination"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape pyramid. A 'typical' royal pyramid is not given in one measured source: base 17.5 m is the largest (UNESCO nomination) and height 30 m is a magazine figure for the large ones; 17.5 m at 73 degrees gives about 28.6 m, so they agree roughly. Smaller pyramids are much lower. Least sure of that height (secondary source) and of the -275 start (mid-point of a half-century); the 350 end is the kingdom's end and the ruined phase start is bridged.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:12:57.129Z"
+}

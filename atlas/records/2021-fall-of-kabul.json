@@ -1,0 +1,128 @@
+{
+  "id": "2021-fall-of-kabul",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Fall of Kabul",
+  "summary": "On 15 August 2021 the Taliban entered Kabul and seized control of Afghanistan's capital after President Ashraf Ghani fled the country. The Afghan government's collapse surprised US officials, and a mass airlift followed, evacuating more than 123,000 people by the end of August. The Doha Agreement of 2020 is argued to have contributed.",
+  "when": {
+    "start": {
+      "year": 2021
+    },
+    "end": {
+      "year": 2021
+    },
+    "precision": "day",
+    "display": "15 August 2021",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "on 15 August 2021, the Taliban seized control of Afghanistan’s capital, Kabul",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 34.5,
+    "lon": 69.16667,
+    "elevation_m": null,
+    "modern_name": "Kabul, Afghanistan",
+    "historical_name": "Kabul, Afghanistan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "southern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Collapse of a US-backed government and end of the 20-year US war, with major humanitarian consequences."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions civilian deaths from a suicide bombing and a mistaken airstrike, and Taliban repression.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://brill.com/view/journals/hjd/17/1/article-p32_2.xml",
+      "title": "Diplomacy of Disaster: The Afghanistan ‘Peace Process’ and the Taliban Occupation of Kabul in: The Hague Journal of Diplomacy Volume 17 Issue 1 (2022)",
+      "publisher": "brill.com",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.cambridge.org/core/journals/american-journal-of-international-law/article/united-states-grapples-with-aftermath-of-withdrawal-from-afghanistan/43F1DC48F22B3A8772B2928170B7AAEA",
+      "title": "United States Grapples with Aftermath of Withdrawal from Afghanistan | American Journal of International Law | Cambridge Core",
+      "publisher": "Cambridge University Press",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q108102583",
+      "title": "Wikidata Q108102583 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources are journal articles about the diplomacy and US aftermath, not a narrative of the fall itself. The evacuation figures differ slightly (roughly 120,000 versus more than 123,000). Place coordinates are inferred from the city name only. (Drafted by the Wikipedia pipeline from brill.com, Cambridge University Press; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:23.288Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2021",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 15 August 2021 the Taliban entered Kabul and seized control of Afghanistan's capital after President Ashraf Ghani fled the country.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2021",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Afghan government's collapse surprised US officials, and a mass airlift followed, evacuating more than 123,000 people by the end of August.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

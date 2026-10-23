@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s16",
+  "updated": "2026-10-22",
+  "id": "2010-arab-spring",
+  "kind": "movement",
+  "title": "Arab Spring",
+  "summary": "After a Tunisian street vendor set himself on fire on 17 December 2010, protests against ruling governments spread across the Arab world, mostly in 2011. Tunisia's and Egypt's presidents left office and Libya's ruler was overthrown, while Syria slid into civil war and Bahrain's protests were suppressed.",
+  "when": {
+    "start": {
+      "year": 2010,
+      "iso": "2010-12-17"
+    },
+    "end": {
+      "year": 2011
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Start is the self-immolation date. HISTORY.com says uprisings generally began in the spring of 2011 and Bahrain protests ran 2011-2012. No opened source fixes an end date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "17 December 2010",
+        "source": "src-amnesty"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "began in the spring of 2011",
+        "source": "src-history"
+      }
+    ],
+    "display": "From 17 December 2010; mainly 2011"
+  },
+  "where": {
+    "lat": 35.03823,
+    "lon": 9.484935,
+    "elevation_m": null,
+    "modern_name": "Sidi Bouzid, Tunisia (where the movement began)",
+    "historical_name": "Sidi Bouzid, Republic of Tunisia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-sidibouzid"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A region-wide wave of uprisings that changed governments in several states and led to lasting civil wars."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-amnesty",
+      "url": "https://www.amnesty.org/en/documents/mde03/3096/2015/en/",
+      "title": "North Africa: Human rights developments in five years since Arab Spring uprisings",
+      "publisher": "Amnesty International",
+      "author": "Amnesty International",
+      "date_published": "2015-12-16",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/topics/middle-east/arab-spring",
+      "title": "Arab Spring",
+      "publisher": "A&E Television Networks (HISTORY)",
+      "author": "A&E Television Networks (HISTORY)",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-sidibouzid",
+      "url": "https://www.geonames.org/search.html?q=Sidi+Bouzid&country=TN",
+      "title": "GeoNames: Sidi Bouzid, Tunisia",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Tunisian origin although the movement spans many countries. End year is a loose bracket. HISTORY.com is a popular source; a scholarly one should replace it on expansion. Syria civil war and Bahrain suppression are from HISTORY.com only.",
+  "published_at": "2026-10-22T05:24:15.016Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

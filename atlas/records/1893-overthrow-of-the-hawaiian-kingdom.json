@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1893-overthrow-of-the-hawaiian-kingdom",
+  "kind": "event",
+  "title": "Overthrow of the Hawaiian Kingdom",
+  "summary": "On 17 January 1893 a Committee of Safety representing American and European sugar planters deposed the Hawaiian monarchy and proclaimed a provisional government, a day after armed US naval forces took positions near ʻIolani Palace. Queen Liliʻuokalani, the last reigning monarch, yielded her authority under protest to the United States rather than to the provisional government. The United States annexed the islands in 1898.",
+  "when": {
+    "start": {
+      "year": 1893,
+      "iso": "1893-01-17"
+    },
+    "end": {
+      "year": 1893,
+      "iso": "1893-01-17"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day of the deposition. US naval forces took positions on 16 January 1893; annexation followed on 7 July 1898 (Newlands Resolution) with the flag change at ʻIolani Palace on 12 August 1898."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "on the afternoon of January 17, 1893, a Committee of Safety ... deposed the Hawaiian monarchy and proclaimed the establishment of a provisional government",
+        "source": "src-hcr67"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On Jan.17, 1893, Queen Liliʻuokalani was deposed from the throne of the Hawaiian Kingdom",
+        "source": "src-ksbe"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The overthrow happened on Jan. 17, 1893",
+        "source": "src-hawaiinewsnow"
+      }
+    ],
+    "display": "17 January 1893"
+  },
+  "where": {
+    "lat": 21.306622,
+    "lon": -157.858958,
+    "elevation_m": null,
+    "modern_name": "ʻIolani Palace, Honolulu, Oʻahu, Hawaiʻi, USA",
+    "historical_name": "Honolulu, Kingdom of Hawaiʻi",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-iolani"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "End of the independent Hawaiian monarchy, followed by annexation by the United States, and the subject of the Hawaii legislature's 2004 resolution acknowledging the overthrow as illegal."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1000-polynesian-settlement-of-east-polynesia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hcr67",
+      "url": "https://data.capitol.hawaii.gov/sessions/session2004/Bills/HCR67_.htm",
+      "title": "H.C.R. No. 67, 2004: Acknowledging the illegal overthrow of the Kingdom of Hawaii",
+      "publisher": "Hawaii State Legislature",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ksbe",
+      "url": "https://ksbe.edu/article/kukahekahe-the-overthrow-of-queen-liliuokalani",
+      "title": "Kūkahekahe: The overthrow of Queen Liliʻuokalani",
+      "publisher": "Kamehameha Schools",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hawaiinewsnow",
+      "url": "https://www.hawaiinewsnow.com/2019/01/17/hundreds-mark-years-since-overthrow-hawaiian-kingdom/",
+      "title": "Hundreds mark 126 years since overthrow of Hawaiian kingdom",
+      "publisher": "Hawaii News Now",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-iolani",
+      "url": "https://www.wikidata.org/wiki/Q423525",
+      "title": "Wikidata: ʻIolani Palace",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The 2004 House resolution describes the event as an illegal conspiracy; the summary states only the dated actions. The pin is ʻIolani Palace; the resolution places US forces near the government buildings and the Palace, and the pages do not name the exact building where the Committee of Safety acted. Native Hawaiian source used: Kamehameha Schools article quoting the Queen's own book.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1893-01-16",
+        "action": "pulse { radius_km: 2 }",
+        "caption": "Armed US naval forces take positions near the government buildings and ʻIolani Palace.",
+        "source": "src-hcr67",
+        "consequence": false
+      },
+      {
+        "span": "1893-01-17",
+        "action": "region.fill { radius_km: 3 }",
+        "caption": "A Committee of Safety deposes the monarchy; Queen Liliʻuokalani yields to the United States under protest.",
+        "source": "src-hcr67",
+        "consequence": false
+      },
+      {
+        "span": "1898-08-12",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "After annexation, the Hawaiian flag is lowered at ʻIolani Palace and replaced by the American flag.",
+        "source": "src-hawaiinewsnow",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s59",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:39:19.443Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

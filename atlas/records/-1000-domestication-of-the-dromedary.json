@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-1000-domestication-of-the-dromedary",
+  "kind": "process",
+  "title": "Domestication of the dromedary",
+  "summary": "Excavations at Tell Abraq and Muweilah near Sharjah in the UAE revealed some of the first clear signs of camel domestication, with settlement expansion at both sites around 1000 BCE linked to it. A Bryn Mawr College report says south-eastern Arabia, now the UAE and Oman, was likely where the dromedary was first domesticated.",
+  "when": {
+    "start": {
+      "year": -999
+    },
+    "end": {
+      "year": -999
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 300,
+      "start_plus_years": 300,
+      "end_minus_years": 300,
+      "end_plus_years": 300,
+      "note": "Sources give \"around 1000 B.C.E.\" and \"3,000-year-old evidence\"; no precise first date is stated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "around 1000 B.C.E. was likely the result of camel domestication",
+        "source": "src-bas-camel"
+      },
+      {
+        "calendar": "years ago",
+        "value": "3,000-year-old evidence discovered at two excavation sites in Sharjah",
+        "source": "src-national-camel"
+      }
+    ],
+    "display": "around 1000 BCE"
+  },
+  "where": {
+    "lat": 25.4833,
+    "lon": 55.55,
+    "elevation_m": null,
+    "modern_name": "Tell Abraq, Sharjah/Umm Al Quwain, United Arab Emirates",
+    "historical_name": "South-eastern Arabia (Iron Age; no polity named in sources)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wikidata-Q3517362"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Camel domestication underpinned long-distance overland trade."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-1000-incense-route",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bas-camel",
+      "url": "https://www.biblicalarchaeology.org/daily/news/uae-sites-reveal-first-signs-of-camel-domestication/",
+      "title": "UAE Sites Reveal First Signs of Camel Domestication",
+      "publisher": "Biblical Archaeology Society",
+      "author": "BAS Staff",
+      "date_published": "2012-01-11",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-national-camel",
+      "url": "https://www.thenationalnews.com/uae/sharjah-s-3000-year-old-clue-to-the-first-domesticated-camels-1.477352",
+      "title": "Sharjah's 3,000-year-old clue to the first domesticated camels",
+      "publisher": "The National",
+      "author": "Marie Louise Olson",
+      "date_published": "2012-01-08",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brynmawr-camel",
+      "url": "https://www.brynmawr.edu/news/new-study-combines-genetics-and-archaeology-look-origins-domestic-camel",
+      "title": "New study combines genetics and archaeology to look at origins of domestic camel",
+      "publisher": "Bryn Mawr College",
+      "author": "Bryn Mawr College",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-Q3517362",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3517362.json",
+      "title": "Tell Abraq (Wikidata Q3517362)",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date and exact site: no page opened states a precise first-domestication date; the pin is an excavation site named, not a proven first place.",
+  "author": "historian-agent:o-s93",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:15:36.949Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-999",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Excavations at Tell Abraq and Muweilah near Sharjah in the UAE revealed some of the first clear signs of camel domestication, with settlement expansion at both sites around…",
+        "source": "src-bas-camel"
+      },
+      {
+        "span": "-999",
+        "action": "pulse { radius_km: 96 }",
+        "caption": "A Bryn Mawr College report says south-eastern Arabia, now the UAE and Oman, was likely where the dromedary was first domesticated.",
+        "source": "src-bas-camel",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

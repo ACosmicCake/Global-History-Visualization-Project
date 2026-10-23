@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1526-battle-of-mohacs",
+  "kind": "event",
+  "title": "Battle of Mohács",
+  "summary": "On 29 August 1526 an Ottoman army under Sultan Süleyman defeated Hungary's army, led by King Louis II, on a marshy plain at Mohács on the Danube. Louis was killed, and the defeat ended Hungary as an independent united kingdom; much of it was later absorbed into the Ottoman Empire.",
+  "when": {
+    "start": {
+      "year": 1526
+    },
+    "end": {
+      "year": 1526
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day given by Britannica; the park directorate gives only August 1526."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August 29, 1526",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August 1526",
+        "source": "src-ddnp"
+      }
+    ],
+    "display": "29 August 1526"
+  },
+  "where": {
+    "lat": 45.942869,
+    "lon": 18.646899,
+    "elevation_m": null,
+    "modern_name": "Mohács National Memorial site, Sátorhely, Mohács, Hungary",
+    "historical_name": "Plain near Mohács, Kingdom of Hungary",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-ddnp"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive defeat that ended Hungary as an independent united kingdom and opened Ottoman rule over much of it."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/event/Battle-of-Mohacs",
+      "title": "Battle of Mohács (1526)",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ddnp",
+      "url": "https://www.ddnp.hu/en/protected_areas/national_park_and_nature_protection_areas/mohacs_national_memorial_nature_reserve",
+      "title": "Mohács National Memorial Nature Reserve",
+      "publisher": "Duna-Drava National Park Directorate",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the memorial site at Sátorhely (a proxy for the battlefield, whose exact extent I did not verify). Britannica gives two versions of Louis's death; summary says only killed.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:10:37.216Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1526",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 29 August 1526 an Ottoman army under Sultan Süleyman defeated Hungary's army, led by King Louis II, on a marshy plain at Mohács on the Danube.",
+        "source": "src-britannica"
+      },
+      {
+        "span": "1526",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Louis was killed, and the defeat ended Hungary as an independent united kingdom; much of it was later absorbed into the Ottoman Empire.",
+        "source": "src-britannica",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

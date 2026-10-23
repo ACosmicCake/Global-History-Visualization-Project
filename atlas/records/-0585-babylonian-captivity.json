@@ -1,0 +1,154 @@
+{
+  "id": "-0585-babylonian-captivity",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Babylonian captivity of the Judeans",
+  "summary": "Nebuchadnezzar II of Babylon besieged Jerusalem and sent its elite citizens to Babylon, an episode known as the Babylonian Captivity. A Babylonian chronicle dates the capture of the city and its king to early 597 BCE; deportations are dated 597 to 587 BCE, with Jerusalem destroyed in 587/586 BCE.",
+  "when": {
+    "start": {
+      "year": -596
+    },
+    "end": {
+      "year": -586
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 1,
+      "end_minus_years": 1,
+      "end_plus_years": 1,
+      "note": "Sources give 598/597 for the first capture and 587/586 for the destruction; both spans are shown as years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "597 BCE - 587 BCE Jews are deported to Babylonia",
+        "source": "src-whe-neb"
+      },
+      {
+        "calendar": "Babylonian regnal calendar",
+        "value": "Addaru in the seventh year of Nebuchadnezzar, is our February/March 597",
+        "source": "src-livius-abc5"
+      }
+    ],
+    "display": "597–587 BCE"
+  },
+  "where": {
+    "lat": 32.540833,
+    "lon": 44.424167,
+    "elevation_m": null,
+    "modern_name": "Babylon, Babil Governorate, Iraq",
+    "historical_name": "Babylon, the Neo-Babylonian empire of Nebuchadnezzar II",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-gn-babylon"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "religion_philosophy",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The deportation of Judah's elite to Babylon followed the fall of Jerusalem and is a defining episode in the history of the Judeans."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes the forced deportation of a population and the destruction of a city; the sources give no graphic detail and this record gives none.",
+  "related": [
+    {
+      "id": "place-babylon",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-neb",
+      "url": "https://www.worldhistory.org/Nebuchadnezzar_II/",
+      "title": "Nebuchadnezzar II",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2018-11-07",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-abc5",
+      "url": "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/",
+      "title": "Jerusalem Chronicle (ABC 5)",
+      "publisher": "Livius.org",
+      "author": "Livius.org (translation adapted from A.K. Grayson and J.-J. Glassner)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-babylon",
+      "url": "https://www.geonames.org/search.html?q=Babylon&country=IQ",
+      "title": "Babylon, Iraq",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The sources give 597 and 587/586 BCE; the span starts at the first deportation. The pin marks Babylon, where the elite were sent, not the Judean origin. No opened page gave the end of the exile (538 BCE), so the span stops at 587 BCE.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:41.488Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-596",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Nebuchadnezzar II of Babylon besieged Jerusalem and sent its elite citizens to Babylon, an episode known as the Babylonian Captivity.",
+        "source": "src-whe-neb"
+      },
+      {
+        "span": "-586",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A Babylonian chronicle dates the capture of the city and its king to early 597 BCE; deportations are dated 597 to 587 BCE, with Jerusalem destroyed in 587/586…",
+        "source": "src-whe-neb",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

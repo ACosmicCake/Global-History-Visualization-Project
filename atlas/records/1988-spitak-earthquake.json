@@ -1,0 +1,134 @@
+{
+  "id": "1988-spitak-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1988 Spitak earthquake",
+  "summary": "A surface-wave magnitude 6.8 earthquake struck northern Armenia, then in the Soviet Union, on 7 December 1988, from slip on a thrust fault near Spitak. Between 25,000 and 50,000 people were killed. Poor construction drove the toll, and 113 countries sent aid in a sign of easing Cold War tensions.",
+  "when": {
+    "start": {
+      "year": 1988
+    },
+    "end": {
+      "year": 1988
+    },
+    "precision": "day",
+    "display": "7 December 1988",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "on 7 December, 1988, at 11:41 local time",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "1988-12-07 07:41:26",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 40.98333,
+    "lon": 44.18333,
+    "elevation_m": null,
+    "modern_name": "Spitak, northern Armenia",
+    "historical_name": "Armenian SSR, Soviet Union",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Deadliest earthquake worldwide in the 1980s, with a notable international relief effort during the late Cold War."
+  },
+  "confidence": "established",
+  "audience_note": "Mass death and injury from a natural disaster.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=1988_Armenian_earthquake&oldid=1381383332",
+      "title": "1988 Armenian earthquake (Wikipedia, revision 1381383332)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "GA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=417441",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q815567",
+      "title": "Wikidata Q815567 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude differs by source: 6.8 surface-wave in Wikipedia versus Mw 6.7 in the ISC listing. The death toll is given as a wide range (25,000–50,000). Time 11:41 local matches 07:41 UTC in the ISC listing. (Drafted by the Wikipedia pipeline from Wikipedia, isc.ac.uk; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:31.434Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1988",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "8 earthquake struck northern Armenia, then in the Soviet Union, on 7 December 1988, from slip on a thrust fault near Spitak.",
+        "source": "src-wp"
+      },
+      {
+        "span": "1988",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Between 25,000 and 50,000 people were killed.",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

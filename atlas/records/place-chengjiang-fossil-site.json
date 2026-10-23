@@ -1,0 +1,149 @@
+{
+  "id": "place-chengjiang-fossil-site",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Chengjiang Fossil Site",
+  "summary": "Early Cambrian fossil site in Yunnan, China, preserving soft-bodied animals in fine detail. At least 16 phyla and about 196 species are documented, including some of the earliest known chordates and vertebrates, making it a key record of the rapid diversification of animal life.",
+  "when": {
+    "start": {
+      "year": -518000000
+    },
+    "end": {
+      "year": -518000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 12000000,
+      "start_plus_years": 12000000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "IUGS gives approximately 518 Ma (Cambrian Epoch 2, Age 3); UNESCO gives 530 million years before present. The range spans both."
+    },
+    "as_recorded": [
+      {
+        "calendar": "geological",
+        "value": "Cambrian Epoch 2, Age 3 (Approximately 518 million years ago)",
+        "source": "src-iugs-chengjiang"
+      },
+      {
+        "calendar": "geological",
+        "value": "530 million years before present",
+        "source": "src-unesco-1388"
+      }
+    ],
+    "display": "about 518 million years ago (early Cambrian; UNESCO says 530)"
+  },
+  "where": {
+    "lat": 24.66889,
+    "lon": 102.97722,
+    "elevation_m": null,
+    "modern_name": "Chengjiang County (Maotianshan area), Yuxi, Yunnan Province, China",
+    "historical_name": "Shallow marine basin on the South China block; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-unesco-1388",
+      "src-iugs-chengjiang"
+    ],
+    "paleo": {
+      "lat": -21.37,
+      "lon": 99.34,
+      "age_ma": 518,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 24.67 N, 102.98 E reconstructed to 518 Ma. Model frames differ in absolute position, so the value is indicative."
+    }
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of the two best-known Cambrian soft-bodied fossil sites, with the earliest known vertebrates."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "part_of"
+    },
+    {
+      "id": "place-burgess-shale",
+      "type": "related"
+    },
+    {
+      "id": "-514my-emu-bay-shale-lagerstatte",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-1388",
+      "url": "https://whc.unesco.org/en/list/1388/",
+      "title": "Chengjiang Fossil Site (World Heritage List no. 1388)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d. (inscribed 2012)",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-iugs-chengjiang",
+      "url": "https://iugs-geoheritage.org/geoheritage_sites/cambrian-chengjiang-fossil-site-chengjiang-lagerstatte/",
+      "title": "Cambrian Chengjiang Fossil Site and Lagerstatte",
+      "publisher": "International Union of Geological Sciences (IUGS) Geoheritage Sites",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Two opened sources disagree on age: UNESCO 530 Ma and IUGS about 518 Ma; the record uses 518 with a 12 Ma range. Coordinates are UNESCO's property point, 24 40 8 N, 102 58 38 E, matching IUGS. Merdith 2021 paleo-position is indicative only.",
+  "author": "historian-agent:o-s19",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:38:40.284Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

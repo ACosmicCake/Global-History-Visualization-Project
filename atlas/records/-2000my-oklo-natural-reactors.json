@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s80",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "-2000my-oklo-natural-reactors",
+  "kind": "process",
+  "title": "Oklo natural nuclear fission reactors",
+  "summary": "About two billion years ago, sustained natural uranium fission chain reactions occurred in ore of the Francevillian Basin in Gabon. French researchers found the first reactor in 1972. Scientific American counts seventeen reactors, sixteen at Oklo and one at Bangombé, which ran for several hundred thousand years and averaged about 100 kilowatts.",
+  "when": {
+    "start": {
+      "year": -2000000000
+    },
+    "end": {
+      "year": -1999000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give only \"two billion years ago\". The end adds the source's \"up to 1 million years\" of operation."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years before present",
+        "value": "Two billion years ago",
+        "source": "src-sciam"
+      },
+      {
+        "calendar": "years before present",
+        "value": "two billion years ago",
+        "source": "src-osti"
+      }
+    ],
+    "display": "about 2 billion years ago"
+  },
+  "where": {
+    "lat": -1.3944444444444,
+    "lon": 13.160833333333,
+    "elevation_m": null,
+    "modern_name": "Oklo, Haut-Ogooué, Gabon (Franceville Basin)",
+    "historical_name": "Oklo uranium ore in the Francevillian basin, Gabon",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-oklo"
+    ],
+    "paleo": {
+      "not_applicable": "Beyond the plate model (about 2 Ga); the plate reconstruction used by the atlas does not reach this age."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate",
+    "science_technology"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Natural fission reactors preserved in ancient uranium ore, a source of isotope evidence."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-sciam",
+      "url": "https://www.scientificamerican.com/blog/guest-blog/natures-nuclear-reactors-the-2-billion-year-old-natural-fission-reactors-in-gabon-western-africa/",
+      "title": "Nature's Nuclear Reactors: The 2-Billion-Year-Old Natural Fission Reactors in Gabon, Western Africa",
+      "publisher": "Scientific American",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osti",
+      "url": "https://www.osti.gov/etdeweb/biblio/22027282",
+      "title": "Background and recent advance for isotopic studies on the Oklo natural fission reactors",
+      "publisher": "OSTI (U.S. Department of Energy)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-oklo",
+      "url": "https://www.wikidata.org/wiki/Q26761",
+      "title": "Wikidata item Q26761 (Oklo), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Dated with the sources' own wording (\"two billion years ago\"), so precision is coarse. SciAm gives both \"up to 1 million years\" and \"several hundred thousand years\" for operation; the summary uses the latter. The reactor count (17) is SciAm's; other sources may differ. The OSTI abstract names the Francevillian basin; SciAm says Franceville Basin. Pin is the Wikidata point for Oklo.",
+  "published_at": "2026-10-22T15:30:11.734Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-2000000000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "About two billion years ago, sustained natural uranium fission chain reactions occurred in ore of the Francevillian Basin in Gabon.",
+        "source": "src-sciam"
+      },
+      {
+        "span": "-1999000000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "French researchers found the first reactor in 1972.",
+        "source": "src-sciam",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1994-first-chechen-war",
+  "kind": "event",
+  "title": "First Chechen War",
+  "summary": "War between Russia and the breakaway Chechen Republic of Ichkeria. Yeltsin ordered the army to restore constitutional order on 1 December 1994, and a heavy assault on Grozny followed. It ended with the Khasavyurt Accords of August 1996 after a Chechen counterattack retook Grozny. Estimates of civilian deaths range from 20,000 to 100,000.",
+  "when": {
+    "start": {
+      "year": 1994
+    },
+    "end": {
+      "year": 1996
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Tufts dates the start to 1 Dec 1994 (order) and 31 Dec 1994 (assault on Grozny); PRCP gives 30 August 1996 for the Khasavyurt Accords."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 1, 1994",
+        "source": "src-tufts"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 31, 1994",
+        "source": "src-tufts"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August 30, 1996",
+        "source": "src-prcp"
+      }
+    ],
+    "display": "1994–1996"
+  },
+  "where": {
+    "lat": 43.3197,
+    "lon": 45.6934,
+    "elevation_m": null,
+    "modern_name": "Grozny, Chechen Republic, Russia",
+    "historical_name": "Grozny, Chechen Republic of Ichkeria (claimed); Russian Federation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-mapcarta"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Major post-Soviet war that devastated Chechnya and ended in a Russian withdrawal in 1996."
+  },
+  "confidence": "established",
+  "audience_note": "Describes war with large civilian casualties, including bombardment of Grozny and reported abuses.",
+  "related": [
+    {
+      "id": "1944-chechen-deportation-operation-chechevitsa",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-tufts",
+      "url": "https://sites.tufts.edu/atrocityendings/2015/08/07/russia-1st-chechen-war/#Fatalities",
+      "title": "Russia: Chechen war",
+      "publisher": "Tufts University (Atrocity Endings)",
+      "author": null,
+      "date_published": "2015",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-prcp",
+      "url": "https://www.prcprague.cz/fcdataset/russia-chechnya",
+      "title": "Russia vs. Chechnya",
+      "publisher": "Peace Research Center Prague, Charles University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mapcarta",
+      "url": "https://mapcarta.com/Grozny",
+      "title": "Grozny Map",
+      "publisher": "Mapcarta",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Grozny as a proxy for a war across all Chechnya; start date varies by source (1 vs 31 Dec 1994). Accord date 30 Aug per PRCP; other sources may say 31 Aug.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:50:01.075Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1994",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "War between Russia and the breakaway Chechen Republic of Ichkeria.",
+        "source": "src-tufts"
+      },
+      {
+        "span": "1996",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "It ended with the Khasavyurt Accords of August 1996 after a Chechen counterattack retook Grozny.",
+        "source": "src-tufts",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "1956-suez-crisis",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Suez Crisis",
+  "summary": "Egypt nationalized the Suez Canal Company on about 26 July 1956. Israel invaded the Sinai on 29 October, and Britain and France bombed Egypt and landed troops near Port Said on 31 October. A UN ceasefire took effect on 7/8 November; a UN force arrived that month, and the Anglo-French withdrawal from Port Said was completed on 22 December 1956.",
+  "when": {
+    "start": {
+      "year": 1956
+    },
+    "end": {
+      "year": 1956
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Start is nationalization (State Dept: July 26); end is completion of the Anglo-French withdrawal from Port Said."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "July 26, 1956 (nationalization); October 29, 1956 (Israeli attack)",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "29 October; 31 October; 7/8 November (ceasefire); 22 December 1956",
+        "source": "src-un"
+      }
+    ],
+    "display": "26 July – 22 December 1956"
+  },
+  "where": {
+    "lat": 31.263235,
+    "lon": 32.305505,
+    "elevation_m": null,
+    "modern_name": "Port Said, Egypt",
+    "historical_name": "Port Said, at the Mediterranean end of the Suez Canal, Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A major Cold War-era crisis that led to the first large UN emergency force."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a military invasion with casualties.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1953-1960/suez",
+      "title": "The Suez Crisis, 1956",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": "U.S. Department of State, Office of the Historian",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-un",
+      "url": "https://peacekeeping.un.org/en/mission/past/unef1backgr2.html",
+      "title": "UNEF I Background (chronology)",
+      "publisher": "United Nations Peacekeeping",
+      "author": "United Nations Peacekeeping",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Port+Said&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Port Said (node 27564975)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Port Said, where Anglo-French troops landed; the crisis spans the Canal and Sinai. Ceasefire: State Dept says 6 November acceptance, UN says it took effect midnight GMT 7/8 November. \"First large UN emergency force\" in the importance text is not claimed in the summary. UN page gives nationalization only as about 26 July.",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1956-07-26",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Nasser announces nationalization of the Suez Canal Company.",
+        "source": "src-histstate",
+        "consequence": false
+      },
+      {
+        "span": "1956-10-31",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Britain and France bomb Egypt and land troops near Port Said after Israel's 29 October attack.",
+        "source": "src-un",
+        "consequence": false
+      },
+      {
+        "span": "1956-12-22",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "The Anglo-French withdrawal from Port Said is completed and a UN force takes over the area.",
+        "source": "src-un",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:36.560Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

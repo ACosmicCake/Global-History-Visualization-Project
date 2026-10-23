@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "polity-roman-empire",
+  "kind": "polity",
+  "title": "Roman Empire",
+  "summary": "The Roman Empire was the post-Republican imperial state of ancient Rome, established following the constitutional settlement of Octavian as Augustus in 27 BCE. Expanding across Europe, North Africa, and Western Asia, it unified the Mediterranean basin under imperial administration, Roman law, and monumental infrastructure. The Western Empire collapsed in 476 CE, while the Eastern Byzantine state endured until 1453, shaping European governance, legal codes, and cultural institutions.",
+  "when": {
+    "start": {
+      "year": -26
+    },
+    "end": {
+      "year": 476
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 4,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 977,
+      "note": "Conventionally dated from the constitutional settlement of 27 BCE when Octavian took the name Augustus, though some trace the principate to the victory at Actium in 31 BCE. The Western Empire ended in 476 CE with the deposition of Romulus Augustulus; the Eastern (Byzantine) Empire survived until the fall of Constantinople in 1453 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "Empire began in 27 BCE and, in the West, ended in 476 CE; in the East, it ended in 1453 CE.",
+        "source": "src-whe-roman-empire"
+      },
+      {
+        "calendar": "Roman consular dating (Res Gestae 34; Loeb Classical Library 1924, note 140)",
+        "value": "January 16, 27 B.C.",
+        "source": "src-rg-34"
+      }
+    ],
+    "display": "27 BCE – 476 CE (Eastern Empire to 1453 CE)"
+  },
+  "where": {
+    "lat": 41.89193,
+    "lon": 12.51133,
+    "elevation_m": null,
+    "modern_name": "Rome, Italy (imperial capital and administrative center; territory spanned Europe, North Africa, and Western Asia)",
+    "historical_name": "Roma, capital of the Imperium Romanum",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of history's most influential polities, creating legal traditions, urban networks, and linguistic foundations across three continents."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "related"
+    },
+    {
+      "id": "place-rome",
+      "type": "related"
+    },
+    {
+      "id": "person-augustus",
+      "type": "related"
+    },
+    {
+      "id": "person-julius-caesar",
+      "type": "related"
+    },
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "has_part"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-roman-empire",
+      "url": "https://www.worldhistory.org/Roman_Empire/",
+      "title": "Roman Empire",
+      "publisher": "World History Encyclopedia",
+      "author": "Donald L. Wasson",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-rg-34",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Augustus/Res_Gestae/6*.html",
+      "title": "Res Gestae Divi Augusti, chapters 34–35",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago), public-domain Loeb text",
+      "author": "Augustus; trans. Frederick W. Shipley",
+      "date_published": "1924",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070",
+      "title": "Rome (GeoNames 3169070)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the polity's temporal boundaries: standard convention marks the principate from 27 BCE to 476 CE in the West, but imperial administration began de facto under Julius Caesar and survived in Byzantium until 1453 CE.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:31.213Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

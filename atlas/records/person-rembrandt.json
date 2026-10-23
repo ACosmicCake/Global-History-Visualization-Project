@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-rembrandt",
+  "kind": "person",
+  "title": "Rembrandt van Rijn",
+  "summary": "Rembrandt was born in Leiden on 15 July 1606 and moved to Amsterdam in 1631, where he died on 4 October 1669. He bought a house there in 1639 and worked in it until selling it in 1658. The Rijksmuseum dates his Night Watch to 1642.",
+  "when": {
+    "start": {
+      "year": 1606,
+      "iso": "1606-07-15"
+    },
+    "end": {
+      "year": 1669,
+      "iso": "1669-10-04"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Rembrandt House page gives only the year 1606 for birth."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "On 15 July 1606, Rembrandt was born in the city of Leiden.",
+        "source": "src-rijks-rembrandt"
+      },
+      {
+        "calendar": "CE",
+        "value": "Rembrandt died on 4 October 1669",
+        "source": "src-rijks-rembrandt"
+      },
+      {
+        "calendar": "CE",
+        "value": "4 October 1669, Amsterdam",
+        "source": "src-rembrandthuis"
+      }
+    ],
+    "display": "15 July 1606 - 4 October 1669"
+  },
+  "where": {
+    "lat": 52.366667,
+    "lon": 4.883333,
+    "elevation_m": null,
+    "modern_name": "Amsterdam, Netherlands (pinned for his documented work from 1631; born in Leiden)",
+    "historical_name": "Amsterdam",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-q727"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "art_music_literature"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "Painter of The Night Watch and a central figure for the Rijksmuseum and Rembrandt House Museum."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-rijks-rembrandt",
+      "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-life-rembrandt",
+      "title": "10 things about the life of Rembrandt",
+      "publisher": "Rijksmuseum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rembrandthuis",
+      "url": "https://www.rembrandthuis.nl/en/rembrandt-van-rijn/",
+      "title": "Rembrandt van Rijn | his life, work and house in Amsterdam",
+      "publisher": "Rembrandt House Museum (Museum Het Rembrandthuis)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q727",
+      "url": "https://www.wikidata.org/wiki/Q727",
+      "title": "Wikidata item Q727 (Amsterdam), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of bankruptcy dates: the Rijksmuseum pages give 1656 and 1658, so the summary omits them. Pin is Amsterdam city centre, not the house itself.",
+  "author": "historian-agent:o-s42",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:07:06.208Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

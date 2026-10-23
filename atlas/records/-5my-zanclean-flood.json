@@ -1,0 +1,154 @@
+{
+  "id": "-5my-zanclean-flood",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Zanclean flood",
+  "summary": "About 5.33 million years ago the Mediterranean, which had been cut off from the ocean and largely dried out, was refilled by Atlantic water through the Strait of Gibraltar. A channel about 200 km long crosses the strait. Modelling suggests early discharge near 100 million cubic metres per second, with about 90% of the water transferred in a few months to two years.",
+  "when": {
+    "start": {
+      "year": -5330000
+    },
+    "end": {
+      "year": -5330000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The pages give 5.33 (Nature 2009) and 5.3 (Earth-Science Reviews 2020) Ma without an error bar. Garcia-Castellanos et al. say flooding began with low discharges that may have lasted up to several thousand years before the main phase."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "refilled about 5.33 million years ago",
+        "source": "src-garcia2009"
+      },
+      {
+        "calendar": "Ma",
+        "value": "end of the Messinian Salinity Crisis at 5.3 million years ago",
+        "source": "src-garcia2020"
+      }
+    ],
+    "display": "c. 5.33 million years ago"
+  },
+  "where": {
+    "lat": 35.97388888889,
+    "lon": -5.51611111111,
+    "elevation_m": null,
+    "modern_name": "Strait of Gibraltar",
+    "historical_name": "Strait of Gibraltar between the Atlantic and the Mediterranean basin; Late Miocene to Early Pliocene, no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-wikidata-gibraltar"
+    ],
+    "paleo": {
+      "lat": 33.43,
+      "lon": -5.27,
+      "age_ma": 5.33,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "europe",
+    "northern_africa",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "A proposed megaflood that refilled an entire sea, with discharge far above any river today."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-6my-messinian-salinity-crisis",
+      "type": "caused_by",
+      "because": "The flood refilled the Mediterranean basin after the Messinian salinity crisis had cut it off from the ocean."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-garcia2009",
+      "url": "https://researchers.mq.edu.au/en/publications/catastrophic-flood-of-the-mediterranean-after-the-messinian-salin/",
+      "title": "Catastrophic flood of the Mediterranean after the Messinian salinity crisis (Nature 462:778-781)",
+      "publisher": "Macquarie University research portal (Nature)",
+      "author": "D. Garcia-Castellanos et al.",
+      "date_published": "2009",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-garcia2020",
+      "url": "https://oceanrep.geomar.de/id/eprint/48572",
+      "title": "The Zanclean megaflood of the Mediterranean – Searching for independent evidence (Earth-Science Reviews 201:103061)",
+      "publisher": "GEOMAR OceanRep (Earth-Science Reviews)",
+      "author": "D. Garcia-Castellanos et al.",
+      "date_published": "2020",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-gibraltar",
+      "url": "https://www.wikidata.org/wiki/Q36124",
+      "title": "Wikidata item Q36124 (Strait of Gibraltar), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-5.516111111111,35.973888888889&time=5.33&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The 2020 abstract presents the flood as a hypothesis being tested, so confidence is probable. Both opened pages share a lead author: different publishers, not independent research groups. Pin is the Strait of Gibraltar; the 2020 abstract describes a channel nearly 390 km long from the Gulf of Cádiz to the Algerian Basin.",
+  "author": "historian-agent:o-s67",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:35:44.724Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

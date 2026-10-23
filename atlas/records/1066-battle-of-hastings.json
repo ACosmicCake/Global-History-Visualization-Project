@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1066-battle-of-hastings",
+  "kind": "event",
+  "title": "Battle of Hastings",
+  "summary": "On 14 October 1066 the Norman-French army of William, Duke of Normandy, defeated the English army of King Harold Godwinson near the present town of Battle, East Sussex. Harold was killed. The victory began the Norman Conquest, and William was crowned king on Christmas Day 1066.",
+  "when": {
+    "start": {
+      "year": 1066
+    },
+    "end": {
+      "year": 1066
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give 14 October 1066."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given by source)",
+        "value": "14 October 1066",
+        "source": "src-eh"
+      },
+      {
+        "calendar": "Gregorian (as given by source)",
+        "value": "14 October 1066",
+        "source": "src-wp"
+      }
+    ],
+    "display": "14 October 1066"
+  },
+  "where": {
+    "lat": 50.918458,
+    "lon": 0.48229324,
+    "elevation_m": null,
+    "modern_name": "Battle, East Sussex, England (pin is the town centre, a proxy for the battlefield)",
+    "historical_name": "Kingdom of England (battlefield near Hastings, Sussex)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-gaz"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Decisive Norman victory that began the Norman Conquest of England."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-eh",
+      "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/history/",
+      "title": "History of Battle Abbey and Battlefield",
+      "publisher": "English Heritage",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Hastings&oldid=1380225409",
+      "title": "Battle of Hastings (Wikipedia, revision 1380225409)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "wiki_quality": "FA",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gaz",
+      "url": "https://gazetteer.org.uk/place/Battle,_Sussex_2775",
+      "title": "Battle, Sussex",
+      "publisher": "Gazetteer of British Place Names (Association of British Counties)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Battle town centre, not the exact battlefield; sources differ on the precise English position (abbey site vs Caldbec Hill). Gazetteer's own claim that the town contains the battle site is consistent.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:10:33.004Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1066",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 14 October 1066 the Norman-French army of William, Duke of Normandy, defeated the English army of King Harold Godwinson near the present town of Battle, East Sussex.",
+        "source": "src-eh"
+      },
+      {
+        "span": "1066",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Harold was killed.",
+        "source": "src-eh",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

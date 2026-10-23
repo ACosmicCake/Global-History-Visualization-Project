@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-shinkolobwe-mine",
+  "kind": "place",
+  "title": "Shinkolobwe uranium mine",
+  "summary": "Shinkolobwe, a mine of Union Minière in the Belgian Congo about 100 miles northwest of Lubumbashi, held some of the richest uranium ore known. In 1940 Edgar Sengier shipped about 1,200 tons to New York; the United States bought it in 1942 for the Manhattan Project. The mine officially closed in 2004.",
+  "when": {
+    "start": {
+      "year": 1940
+    },
+    "end": {
+      "year": 2004
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 25,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The start is the 1940 ore shipment to the United States, not the mine's opening, which the opened pages do not date. End is the official closure in 2004."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "shipped about 1,200 tons ... to the U.S. in 1940",
+        "source": "src-nps"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The mine was officially closed in 2004",
+        "source": "src-ahf"
+      }
+    ],
+    "display": "1940 shipment; closed 2004"
+  },
+  "where": {
+    "lat": -11.054972,
+    "lon": 26.547278,
+    "elevation_m": null,
+    "modern_name": "Shinkolobwe, Democratic Republic of the Congo",
+    "historical_name": "Shinkolobwe, Belgian Congo (mine of Union Minière du Haut-Katanga)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-shink"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Source of about two-thirds of the uranium acquired by the Manhattan Project."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1942-manhattan-project",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/articles/000/staten-island-new-york.htm",
+      "title": "Staten Island, New York (Manhattan Project National Historical Park)",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ahf",
+      "url": "https://ahf.nuclearmuseum.org/ahf/history/uranium-mining/",
+      "title": "Uranium Mining",
+      "publisher": "Atomic Heritage Foundation / National Museum of Nuclear Science & History",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-shink",
+      "url": "https://www.wikidata.org/wiki/Q2096071",
+      "title": "Wikidata item Q2096071 (Shinkolobwe Mine), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Opening date of the mine was not confirmed on an opened page, so the when range starts at the 1940 shipment. The two-thirds share is the NPS statement about Union Minière supply to the Manhattan Project. Tonnage 1,200 tons (NPS) differs from other published figures (about 1,050 tons seen only in a search lead). Mining labour conditions not covered.",
+  "author": "historian-agent:o-s13",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T04:53:23.660Z"
+}

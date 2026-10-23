@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2017-treaty-on-the-prohibition-of-nuclear-weapons",
+  "kind": "event",
+  "title": "Treaty on the Prohibition of Nuclear Weapons",
+  "summary": "A UN conference in New York adopted the Treaty on the Prohibition of Nuclear Weapons on 7 July 2017, by 122 votes in favour, one against and one abstention. It opened for signature on 20 September 2017 and entered into force on 22 January 2021, after the 50th ratification.",
+  "when": {
+    "start": {
+      "year": 2017,
+      "iso": "2017-07-07"
+    },
+    "end": {
+      "year": 2021,
+      "iso": "2021-01-22"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Adoption 7 July 2017; entry into force 22 January 2021."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "7 July 2017",
+        "source": "src-unoda"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "20 September 2017",
+        "source": "src-icrc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "22 January 2021",
+        "source": "src-icrc"
+      }
+    ],
+    "display": "Adopted 7 July 2017; in force 22 January 2021"
+  },
+  "where": {
+    "lat": 40.743,
+    "lon": -73.9675,
+    "elevation_m": null,
+    "modern_name": "United Nations Headquarters, New York, USA",
+    "historical_name": "United Nations Headquarters, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-lat"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First legally binding international agreement to prohibit nuclear weapons comprehensively, though no nuclear-armed state joined."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unoda",
+      "url": "https://disarmament.unoda.org/en/our-work/weapons-mass-destruction/nuclear-weapons/treaty-prohibition-nuclear-weapons",
+      "title": "Treaty on the Prohibition of Nuclear Weapons",
+      "publisher": "United Nations Office for Disarmament Affairs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-icrc",
+      "url": "https://www.icrc.org/en/document/2017-treaty-prohibition-nuclear-weapons",
+      "title": "2017 Treaty on the Prohibition of Nuclear Weapons",
+      "publisher": "International Committee of the Red Cross",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-aca",
+      "url": "https://www.armscontrol.org/factsheets/treaty-prohibition-nuclear-weapons-glance",
+      "title": "The Treaty on the Prohibition of Nuclear Weapons At A Glance",
+      "publisher": "Arms Control Association",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-lat",
+      "url": "https://latitude.to/articles-by-country/us/united-states/1419/headquarters-of-the-united-nations",
+      "title": "GPS coordinates of Headquarters of the United Nations",
+      "publisher": "Latitude.to",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is UN Headquarters in New York (conference venue, proxy); coordinates from a non-institutional site. Adoption vote count from UNODA only.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:35:41.454Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2017-07-07",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A UN conference in New York adopted the Treaty on the Prohibition of Nuclear Weapons on 7 July 2017, by 122 votes in favour, one against and one…",
+        "source": "src-unoda"
+      },
+      {
+        "span": "2021",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It opened for signature on 20 September 2017 and entered into force on 22 January 2021, after the 50th ratification.",
+        "source": "src-unoda",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

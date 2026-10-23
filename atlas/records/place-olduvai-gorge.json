@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-olduvai-gorge",
+  "kind": "place",
+  "title": "Olduvai Gorge",
+  "summary": "Olduvai Gorge is a 14 km deep ravine in Tanzania, inside the Ngorongoro Conservation Area. Its layers hold a sequence of hominin species and the Oldowan stone tools. Louis and Mary Leakey and their son Jonathan found the first Homo habilis fossils there in 1960, including the partial skeleton of a boy about 1.8 million years old.",
+  "when": {
+    "start": {
+      "year": -1798050
+    },
+    "end": {
+      "year": -1798050
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Converted as year = 1950 minus age. The Natural History Museum gives about 1.8 Ma for the OH 7 partial skeleton and for Oldowan tools, a hammerstone at 1.85-1.6 Ma, and Homo habilis at about 2.0-1.6 Ma; the pin uses 1.8 Ma. UNESCO says the sequence runs up to Homo sapiens, so the gorge as a site spans a longer time."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "A 1.8-million-year-old partial skeleton of a boy",
+        "source": "src-nhm-habilis"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "They date back to about 1.8 million years ago.",
+        "source": "src-nhm-habilis"
+      }
+    ],
+    "display": "c. 1.8 million years ago (hominin and Oldowan tool record)"
+  },
+  "where": {
+    "lat": -2.98333,
+    "lon": 35.35,
+    "elevation_m": null,
+    "modern_name": "Olduvai Gorge, Ngorongoro Conservation Area, Tanzania",
+    "historical_name": "Olduvai (Oldupai) Gorge, Great Rift Valley, East Africa; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-olduvai"
+    ],
+    "paleo": {
+      "lat": -3.83,
+      "lon": 35.38,
+      "age_ma": 1.8,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Reconstruction to 1.8 Ma moves the point about 100 km south."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "Type site of the Oldowan and source of key hominin fossils, including the first Homo habilis finds."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-1800ka-homo-erectus-dispersal-from-africa",
+      "type": "related"
+    },
+    {
+      "id": "-300ka-onset-of-the-middle-stone-age",
+      "type": "related"
+    },
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-ngorongoro",
+      "url": "https://whc.unesco.org/en/list/39/",
+      "title": "Ngorongoro Conservation Area",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nhm-habilis",
+      "url": "https://www.nhm.ac.uk/discover/homo-habilis-early-maker-stone-tools.html",
+      "title": "Homo habilis, an early maker of stone tools",
+      "publisher": "Natural History Museum, London",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-olduvai",
+      "url": "https://www.wikidata.org/wiki/Q217043",
+      "title": "Wikidata Q217043: Olduvai Gorge, -2.98333, 35.35",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=35.35,-2.98333&time=1.8&model=MERDITH2021",
+      "title": "GPlates Web Service point reconstruction (MERDITH2021)",
+      "publisher": "GPlates Web Service (EarthByte Group, University of Sydney)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Wikidata point for the gorge (-2.98333, 35.35). The gorge is 14 km long, so uncertainty is 10 km, and the OH 7 find spot is not on the opened pages. Main date of 1.8 Ma is the NHM figure; no opened page dates Bed I as a whole. NHM gives 4 November 1960 for OH 7. UNESCO page read via script fetch (WebFetch returned 403).",
+  "author": "historian-agent:o-s41",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:06:16.698Z"
+}

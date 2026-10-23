@@ -1,0 +1,154 @@
+{
+  "id": "-7050-neolithic-spread-into-europe",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Spread of the Neolithic into Europe",
+  "summary": "Farming reached Europe from the Near East and Anatolia over several thousand years, between about 8000 and 3000 BCE by one estimate. Ancient DNA shows early farmers in central Europe were genetically close to Near Eastern and Anatolian populations, with genetic distances rising westward across the Balkans. Models favour movement of people over spread of ideas alone, with only limited mixing with local hunter-gatherers.",
+  "when": {
+    "start": {
+      "year": -7999
+    },
+    "end": {
+      "year": -2999
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 500,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1000,
+      "note": "Sources give 8,000-4,000 b.c. for the transition (Haak et al.) and 8000-3000 BCE for the spread model (Isern et al.). The record id year (-7050) is an approximate marker only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "b.c.",
+        "value": "8,000–4,000 b.c.",
+        "source": "src-haak"
+      },
+      {
+        "calendar": "BCE",
+        "value": "between 8,000 and 3,000 calibrated years BCE",
+        "source": "src-isern"
+      }
+    ],
+    "display": "c. 8000–3000 BCE"
+  },
+  "where": {
+    "lat": 38.5,
+    "lon": 25.3,
+    "elevation_m": null,
+    "modern_name": "Aegean Sea, used as a marker only; the spread ran from Anatolia across the Balkans and the Mediterranean",
+    "historical_name": "Anatolia, Aegean and the Balkans on the route into Europe",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-wd-aegean"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "science_technology"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Introduced farming across Europe, the base of later European settled societies."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-haak",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2976717/",
+      "title": "Ancient DNA from European Early Neolithic Farmers Reveals Their Near Eastern Affinities",
+      "publisher": "PLOS Biology, via PubMed Central",
+      "author": "Wolfgang Haak et al.",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-isern",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5594011/",
+      "title": "The ancient cline of haplogroup K implies that the Neolithic transition in Europe was mainly demic",
+      "publisher": "Scientific Reports (Springer Nature), via PubMed Central",
+      "author": "Neus Isern, Joaquim Fort, Victor L. de Rioja",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-aegean",
+      "url": "https://www.wikidata.org/wiki/Q34575",
+      "title": "Wikidata item Q34575 (Aegean Sea), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "A process spanning thousands of years, so the Aegean pin is a loose marker with 1500 km uncertainty, not an origin point. The id year -7050 is not sourced: opened pages give 8000-3000 BCE; I used the sourced range. Migration vs diffusion is still debated; the summary reports what the two papers conclude.",
+  "author": "historian-agent:o-s37",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-7999",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Farming reached Europe from the Near East and Anatolia over several thousand years, between about 8000 and 3000 BCE by one estimate.",
+        "source": "src-haak"
+      },
+      {
+        "span": "-2999",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Models favour movement of people over spread of ideas alone, with only limited mixing with local hunter-gatherers.",
+        "source": "src-haak",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T09:45:43.266Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "2016-central-italy-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "August 2016 Central Italy earthquake",
+  "summary": "A Mw 6.2 earthquake struck central Italy in the night of 24 August 2016, near Accumoli. It razed the medieval town of Amatrice and surrounding hamlets and caused all the casualties of the sequence's first main shock. Together with the October shocks, the sequence killed almost 300 people.",
+  "when": {
+    "start": {
+      "year": 2016
+    },
+    "end": {
+      "year": 2016
+    },
+    "precision": "day",
+    "display": "24 August 2016",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "2016-08-24 01:36:33",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "occurred in the night of 24 August",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 42.71,
+    "lon": 13.24,
+    "elevation_m": null,
+    "modern_name": "Amatrice and Accumoli area, central Italy (Lazio, Abruzzi, Marche, Umbria border)",
+    "historical_name": "Amatrice and Accumoli area, central Italy (Lazio, Abruzzi, Marche, Umbria border)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Deadly regional earthquake, part of Italy's strongest seismic sequence in decades, but not world-historical."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions deaths and destruction from an earthquake.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=611462212",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20230911115009/https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017TC004583",
+      "title": "The Macroseismic Intensity Distribution of the 30 October 2016 Earthquake in Central Italy (Mw 6.6): Seismotectonic Implications - Galli - 2017 - Tectonics - Wiley Online Library",
+      "publisher": "agupubs.onlinelibrary.wiley.com",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q26689701",
+      "title": "Wikidata Q26689701 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give the 24 August death toll only indirectly: the sequence total is 299 and all casualties are attributed to this event. The ISC origin time is 01:36:33 and is presumably UTC. Depth differs between sources (11.6 km in the ISC listing, about 8 km in the paper). (Drafted by the Wikipedia pipeline from isc.ac.uk, agupubs.onlinelibrary.wiley.com; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:30.752Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2016",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "2 earthquake struck central Italy in the night of 24 August 2016, near Accumoli.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2016",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It razed the medieval town of Amatrice and surrounding hamlets and caused all the casualties of the sequence's first main shock.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

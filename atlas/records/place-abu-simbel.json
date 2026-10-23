@@ -1,0 +1,242 @@
+{
+  "id": "place-abu-simbel",
+  "schema_version": "1.0.0",
+  "record_version": 3,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Abu Simbel",
+  "summary": "Abu Simbel in Nubia, southern Egypt, has two rock-cut temples made for Ramesses II and his queen Nefertari, the larger fronted by four seated colossi of the king. In the 1960s the temples were moved from their original site, after the Aswan High Dam threatened to submerge them.",
+  "when": {
+    "start": {
+      "year": -1263
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start follows the Ministry of Tourism and Antiquities, which says the temple was cut around 1264 BC (astronomical -1263). The Ministry dates the move to 1968; UNESCO dates its campaign 1960 to 1980. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (Ministry of Tourism and Antiquities)",
+        "value": "around 1264 BC",
+        "source": "src-mota-abusimbel"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "International Campaign launched by UNESCO, in 1960 to 1980",
+        "source": "src-unesco-88"
+      }
+    ],
+    "display": "Cut c. 1264 BC; moved in the 1960s; standing today"
+  },
+  "where": {
+    "lat": 22.3372,
+    "lon": 31.6258,
+    "elevation_m": null,
+    "modern_name": "Abu Simbel, Aswan Governorate, Egypt",
+    "historical_name": "Temples of Ramesses II and Nefertari in Nubia, Egypt (19th Dynasty)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Among the most famous monuments of Egypt, central to the UNESCO international campaign that saved the Nubian monuments."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-mota-abusimbel",
+      "url": "https://egymonuments.gov.eg/en/archaeological-sites/abu-simbel/",
+      "title": "Abu Simbel, Discover Egypt's Monuments",
+      "publisher": "Egypt Ministry of Tourism and Antiquities",
+      "author": "Egypt Ministry of Tourism and Antiquities",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-88",
+      "url": "https://whc.unesco.org/en/list/88",
+      "title": "Nubian Monuments from Abu Simbel to Philae (World Heritage List no. 88)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List data (XML export), geolocation of the property",
+      "publisher": "UNESCO World Heritage Centre (list XML)",
+      "author": "UNESCO World Heritage Centre (list XML)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "author": "University of Notre Dame, Marble collection",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "opened": true,
+      "id": "src-nd-marble-abusimbel",
+      "url": "https://marble.nd.edu/item/bn999596g4z",
+      "title": "Great Temple of Abu Simbel: Frontal view, depicting all four seated statues of Ramses II and the rock-cut portal",
+      "publisher": "University of Notre Dame, Marble collection",
+      "class": "museum",
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "Model: Great Temple facade, 30 m high by 35 m wide, from the University of Notre Dame Raclin Murphy Museum collection page; other sources give 30-33 m high and 35-38 m wide. Coordinate is the first UNESCO point for property 88, which is the Abu Simbel location; the list does not label it.",
+  "author": "historian-agent:m-7",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:52:09.229Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 3,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Rock-cut facade of the Great Temple of Ramesses II at its relocated site on the shore of Lake Nasser, about 64 m above and 180 m west of its ancient position; facade 35 m long and 30 m high.",
+      "source": "src-nd-marble-abusimbel",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-nd-marble-abusimbel",
+      "measurements": [
+        {
+          "part": "Great Temple facade height",
+          "value": 30,
+          "unit": "m",
+          "source": "src-nd-marble-abusimbel",
+          "note": "rock-cut facade, '30 m high and 35 m long'"
+        },
+        {
+          "part": "Great Temple facade width",
+          "value": 35,
+          "unit": "m",
+          "source": "src-nd-marble-abusimbel",
+          "note": "'35 m long'"
+        },
+        {
+          "part": "seated colossus height",
+          "value": 22,
+          "unit": "m",
+          "source": "src-nd-marble-abusimbel",
+          "note": "four colossi of Ramesses II, each 22 m high"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "single rock-cut facade block at true width and height"
+      },
+      {
+        "level": "local",
+        "representation": "facade block with four seated colossi at 22 m, labelled schematic"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -1263,
+        "end_year": -1263,
+        "state": "construction",
+        "description": "Great Temple cut into the living rock for Ramesses II, around 1264 BC.",
+        "source": "src-mota-abusimbel"
+      },
+      {
+        "start_year": -1263,
+        "end_year": 1967,
+        "state": "intact",
+        "description": "Temple stands at its original cliff site, with one colossus collapsed in antiquity by earthquake.",
+        "source": "src-mota-abusimbel"
+      },
+      {
+        "start_year": 1968,
+        "end_year": 1968,
+        "state": "altered",
+        "description": "Temples moved from their original location after the Aswan High Dam threatened to submerge them, in an international effort led by UNESCO.",
+        "source": "src-mota-abusimbel"
+      },
+      {
+        "start_year": 1968,
+        "end_year": null,
+        "state": "intact",
+        "description": "Temple stands at its relocated site on the shore of Lake Nasser.",
+        "source": "src-nd-marble-abusimbel"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -1263,
+        "to_year": null,
+        "material": "temple cut into the living rock of the cliff",
+        "source": "src-mota-abusimbel"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "1914-battle-of-tannenberg",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Tannenberg",
+  "summary": "A World War I battle in East Prussia in which German forces under Hindenburg and Ludendorff surrounded and destroyed the Russian Second Army under Samsonov. Of 150,000 Russians, 92,000 were captured. Fought barely a month into the war, it became emblematic of the Russian Empire's war experience and later a German symbol of pride.",
+  "when": {
+    "start": {
+      "year": 1914
+    },
+    "end": {
+      "year": 1914
+    },
+    "precision": "day",
+    "display": "26–30 August 1914",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Battle of Tannenberg , (August 26–30, 1914)",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "August 26, 1914 - August 30, 1914",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 53.75,
+    "lon": 20.5,
+    "elevation_m": null,
+    "modern_name": "Stębark, Poland (East Prussia)",
+    "historical_name": "Tannenberg, East Prussia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive early Eastern Front German victory that destroyed an army and became a lasting national myth."
+  },
+  "confidence": "established",
+  "audience_note": "Describes battlefield deaths, mass capture and a general's suicide.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260109151106/https://www.britannica.com/event/Battle-of-Tannenberg-World-War-I-1914",
+      "title": "Battle of Tannenberg | Facts, Outcome, & Significance | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20120229091937/http://info-poland.buffalo.edu/classroom/JM/monument.html",
+      "title": "Tannenberg: a Monument of German Pride",
+      "publisher": "info-poland.buffalo.edu",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q153858",
+      "title": "Wikidata Q153858 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Britannica gives 26–30 August 1914, while Wikidata suggests 23–30 August; I followed the sources. The Britannica text is truncated, so the later outcome section is not covered. Casualty figures come only from the Info-Poland page. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, info-poland.buffalo.edu; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:21:34.565Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A World War I battle in East Prussia in which German forces under Hindenburg and Ludendorff surrounded and destroyed the Russian Second Army under Samsonov.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Fought barely a month into the war, it became emblematic of the Russian Empire's war experience and later a German symbol of pride.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

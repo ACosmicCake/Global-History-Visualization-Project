@@ -1,0 +1,146 @@
+{
+  "id": "1793-philadelphia-yellow-fever",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Philadelphia Yellow Fever Epidemic of 1793",
+  "summary": "Between August and November 1793 yellow fever struck Philadelphia, then the temporary U.S. capital. Sources estimate over 5,000 deaths among about 50,000 inhabitants. Thousands fled, most federal officials including Washington left, and commerce and city government were crippled. The government returned in November as deaths fell.",
+  "when": {
+    "start": {
+      "year": 1793
+    },
+    "end": {
+      "year": 1793
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Penn State source gives August to November 1793; earliest cases in early August."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Between August and November 1793",
+        "source": "src-psu"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "in 1793",
+        "source": "src-phlenc"
+      }
+    ],
+    "display": "August–November 1793"
+  },
+  "where": {
+    "lat": 39.95238,
+    "lon": -75.16362,
+    "elevation_m": null,
+    "modern_name": "Philadelphia, Pennsylvania, USA",
+    "historical_name": "Philadelphia, Pennsylvania, United States (temporary national capital)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geo"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "One of the deadliest epidemics in American history, which disrupted the national capital and led to a permanent city health office."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-psu",
+      "url": "https://pabook.libraries.psu.edu/literary-cultural-heritage-map-pa/feature-articles/philadelphia-under-siege-yellow-fever-1793",
+      "title": "Philadelphia Under Siege: The Yellow Fever of 1793",
+      "publisher": "Penn State University Libraries (PA Book)",
+      "author": "Ryan P. Langton",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-phlenc",
+      "url": "https://philadelphiaencyclopedia.org/essays/yellow-fever/",
+      "title": "Yellow Fever",
+      "publisher": "The Encyclopedia of Greater Philadelphia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geo",
+      "url": "https://www.geodatos.net/en/coordinates/united-states/philadelphia",
+      "title": "Philadelphia Geographic coordinates",
+      "publisher": "Geodatos",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Capital 'relocation' in the lead is not supported: sources say officials left temporarily and returned in November. Pin is city centre; death toll is an estimate (about 5,000 vs over 5,000).",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:20.251Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1793",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "S.",
+        "source": "src-psu"
+      },
+      {
+        "span": "1793",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The government returned in November as deaths fell.",
+        "source": "src-psu",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "id": "place-dahshur-pyramids",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Pyramids of Sneferu at Dahshur",
+  "summary": "At Dahshur, south of Memphis, King Sneferu of the Fourth Dynasty built the Bent Pyramid and the Red Pyramid. The Bent Pyramid changed slope partway up; the Red Pyramid is generally regarded as the first successfully completed true pyramid, with smooth sides, and the third largest in Egypt.",
+  "when": {
+    "start": {
+      "year": -2612
+    },
+    "end": {
+      "year": -2588
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 30,
+      "start_plus_years": 30,
+      "end_minus_years": 30,
+      "end_plus_years": 30,
+      "note": "The range is Sneferu's reign (c. 2613-2589 BC) per the Ministry, not a dated building period; the Red Pyramid's own building is placed by the Ministry at year 13 of the reign plus about 10 years. Magli dates Sneferu around 2575 BC."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC",
+        "value": "The reign of the second king, Snefru (c. 2613-2589 BC)",
+        "source": "src-mota-oldkingdom"
+      },
+      {
+        "calendar": "regnal",
+        "value": "may have been started in the 13th year of his reign, taking 10 years to be built",
+        "source": "src-mota-redpyramid"
+      }
+    ],
+    "display": "Reign of Sneferu, c. 2613-2589 BCE"
+  },
+  "where": {
+    "lat": 29.808333,
+    "lon": 31.205833,
+    "elevation_m": null,
+    "modern_name": "Red Pyramid, Dahshur, Giza Governorate, Egypt (the Bent Pyramid lies about 1.85 km to the south)",
+    "historical_name": "Dahshur, southern part of the necropolis of Memphis, capital of Old Kingdom Egypt (Fourth Dynasty)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wikidata-redpyr"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Site of the first successful true pyramid and of the Bent Pyramid that records the change of slope, bridging the Step Pyramid and Giza."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-saqqara-step-pyramid",
+      "type": "related"
+    },
+    {
+      "id": "place-giza-pyramids",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mota-redpyramid",
+      "url": "https://egymonuments.gov.eg/en/monuments/the-red-pyramid",
+      "title": "The Red Pyramid",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-mota-oldkingdom",
+      "url": "https://egymonuments.gov.eg/en/historical-periods/old-kingdom",
+      "title": "Old Kingdom",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-mota-bent",
+      "url": "https://egymonuments.gov.eg/monuments/the-bent-pyramid/",
+      "title": "The Bent Pyramid",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-magli-2009",
+      "url": "https://arxiv.org/pdf/0911.4614",
+      "title": "Geometry and perspective in the landscape of the Saqqara pyramids",
+      "publisher": "arXiv (preprint)",
+      "author": "Giulio Magli",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.footprint"
+      ]
+    },
+    {
+      "id": "src-unesco-86",
+      "url": "https://whc.unesco.org/en/list/86",
+      "title": "Memphis and its Necropolis - the Pyramid Fields from Giza to Dahshur (World Heritage List no. 86)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-redpyr",
+      "url": "https://www.wikidata.org/wiki/Q135332",
+      "title": "Wikidata item Q135332, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Model is the Red Pyramid only (shape: pyramid, true smooth-sided form), taken from Magli's published figures (104.4 m tall, base 218.5 by 221.5 m); other sources give 104-105 m and about 220 m, and the Ministry pages give no numbers. Construction phase is derived: reign start -2612 + year 13, +10 years. Magli is an arXiv preprint (class scholarly), not a museum or heritage body. Record covers both pyramids but the pin and model are the Red Pyramid.",
+  "author": "historian-agent:m-5",
+  "updated": "2026-10-22",
+  "model": {
+    "footprint": {
+      "description": "Square base of about 218.5 by 221.5 m (Magli 2009); the pyramid stands at the north end of the Dahshur pyramid field, about 1.85 km north of the Bent Pyramid.",
+      "source": "src-magli-2009",
+      "method": "surveyed"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-magli-2009",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 104.4,
+          "unit": "m",
+          "source": "src-magli-2009",
+          "note": "Red Pyramid; Magli also lists the Bent Pyramid separately"
+        },
+        {
+          "part": "base length",
+          "value": 221.5,
+          "unit": "m",
+          "source": "src-magli-2009",
+          "note": "Red Pyramid, longer side"
+        },
+        {
+          "part": "base width",
+          "value": 218.5,
+          "unit": "m",
+          "source": "src-magli-2009",
+          "note": "Red Pyramid, shorter side"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "single square-based pyramid at the Dahshur pin; Bent Pyramid not modelled"
+      },
+      {
+        "level": "local",
+        "representation": "procedural smooth-sided pyramid with white Tura limestone casing while phases say it was cased"
+      },
+      {
+        "level": "street",
+        "representation": "internal chambers and casing remnants left unmodelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -2600,
+        "end_year": -2590,
+        "state": "construction",
+        "description": "Red Pyramid built over about ten years, begun around year 13 of Sneferu's reign (reign dated c. 2613-2589 BC); the years are derived from those two statements.",
+        "source": "src-mota-redpyramid"
+      },
+      {
+        "start_year": -2590,
+        "end_year": null,
+        "state": "intact",
+        "description": "Pyramid completed and cased in white Tura limestone; the casing was later reused in medieval times (date not given), leaving the reddish core visible.",
+        "source": "src-mota-redpyramid"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -2600,
+        "to_year": null,
+        "material": "local limestone core with white Tura limestone casing, later removed",
+        "source": "src-mota-redpyramid"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T05:38:17.183Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

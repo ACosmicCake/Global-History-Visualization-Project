@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-ravenna",
+  "kind": "place",
+  "title": "Ravenna",
+  "summary": "In 402, after a Visigothic invasion of Italy, the emperor Honorius moved the Western imperial court from Milan to the defended city of Ravenna, which stayed the main imperial base in the West. It later served as the seat of Byzantine Italy, and holds early Christian monuments.",
+  "when": {
+    "start": {
+      "year": 402
+    },
+    "end": {
+      "year": 800
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 100,
+      "end_plus_years": 0,
+      "note": "End is an upper bound only: the opened page says Byzantine Italy until the 8th century; the place continues to exist."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "In 402, after the Visigothic invasion of Italy, Honorius retired from Milan to Ravenna",
+        "source": "src-luc-honorius"
+      },
+      {
+        "calendar": "CE",
+        "value": "Byzantine Italy until the 8th century",
+        "source": "src-wh-ravenna"
+      }
+    ],
+    "display": "imperial seat from 402"
+  },
+  "where": {
+    "lat": 44.4161,
+    "lon": 12.2017,
+    "elevation_m": null,
+    "modern_name": "Ravenna, Emilia-Romagna, Italy",
+    "historical_name": "Ravenna, imperial residence in the Western Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-ravenna"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 2,
+    "justification": "Western imperial seat from 402 and home to a notable group of early Christian monuments."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-galla-placidia",
+      "type": "related"
+    },
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "0493-ostrogothic-kingdom-of-italy",
+      "type": "related"
+    },
+    {
+      "id": "person-odoacer",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-luc-honorius",
+      "url": "https://roman-emperors.sites.luc.edu/honorius.htm",
+      "title": "Honorius (A.D. 393-423)",
+      "publisher": "De Imperatoribus Romanis (Loyola University Chicago)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wh-ravenna",
+      "url": "https://www.worldhistory.org/Ravenna/",
+      "title": "Ravenna",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-ravenna",
+      "url": "https://www.wikidata.org/wiki/Q13364",
+      "title": "Ravenna (Wikidata Q13364)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No 3D model: no opened page gives a sourced height for the Mausoleum of Galla Placidia or San Vitale. Importance kept at 2 for that reason. The World History Encyclopedia Ravenna page was a thin index page. Least sure of when Ravenna ceased to be a seat of power (page says only until the 8th century).",
+  "author": "historian-agent:o-s33",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:54:09.971Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "0100-gandhara-buddhist-art",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Gandharan Buddhist art",
+  "summary": "Gandharan art, from what is now northern Pakistan and Afghanistan, can be traced to the 1st century BCE and flourished in the Kushan era, especially under King Kanishka in the 1st century CE. The life of the Buddha became its staple subject, with Buddha images in chapels, stupas and monasteries.",
+  "when": {
+    "start": {
+      "year": -99
+    },
+    "end": {
+      "year": 100
+    },
+    "precision": "century",
+    "as_recorded": [
+      {
+        "calendar": "CE/BCE",
+        "value": "Gandharan art can be traced to the 1st century BCE",
+        "source": "src-whe-gand"
+      },
+      {
+        "calendar": "CE",
+        "value": "especially under King Kanishka in the 1st century CE",
+        "source": "src-whe-gand"
+      },
+      {
+        "calendar": "CE",
+        "value": "78 AD (reign of Kanishka)",
+        "source": "src-dawn"
+      }
+    ],
+    "display": "1st century BCE–1st century CE"
+  },
+  "where": {
+    "lat": 33.737295,
+    "lon": 72.800644,
+    "elevation_m": null,
+    "modern_name": "Taxila, Punjab, Pakistan",
+    "historical_name": "Taxila, within Gandhara under the Kushan Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-gn-taxila"
+    ]
+  },
+  "regions": [
+    "southern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "art_music_literature",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Gandharan sculpture is credited with early and abundant images of the Buddha and links Buddhist art to Silk Route exchange."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-whe-gand",
+      "url": "https://www.worldhistory.org/Gandhara_Civilization/",
+      "title": "Gandhara Civilization",
+      "publisher": "World History Encyclopedia",
+      "author": "Muhammad Bin Naveed",
+      "date_published": "2015-07-07",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dawn",
+      "url": "https://www.dawn.com/news/1039675",
+      "title": "Taxila Museum: a treasure trove of Gandhara civilisation",
+      "publisher": "Dawn",
+      "author": "Amjad Iqbal",
+      "date_published": "2013-09-01",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "where",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-taxila",
+      "url": "https://www.geonames.org/search.html?q=Taxila&country=PK",
+      "title": "Taxila, Pakistan",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Gandhara spanned a wide area; the pin is Taxila, where the Dawn article places the museum collection from local sites. The start year is the 1st century BCE per World History Encyclopedia. Scholars differ on the peak, which these two pages do not settle.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:43.357Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-99",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Gandharan art, from what is now northern Pakistan and Afghanistan, can be traced to the 1st century BCE and flourished in the Kushan era, especially under King Kanishka…",
+        "source": "src-whe-gand"
+      },
+      {
+        "span": "100",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The life of the Buddha became its staple subject, with Buddha images in chapels, stupas and monasteries.",
+        "source": "src-whe-gand",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

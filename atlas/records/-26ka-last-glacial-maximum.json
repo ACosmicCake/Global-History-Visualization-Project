@@ -1,0 +1,165 @@
+{
+  "id": "-26ka-last-glacial-maximum",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Last Glacial Maximum",
+  "summary": "The Last Glacial Maximum marked the peak extent of continental ice sheets during the final glacial cycle, lowering global sea level by approximately 130 meters and locking vast water volumes into the Laurentide, Fennoscandian, and Antarctic ice sheets. This profound cold interval reshaped global vegetation into extensive steppe-tundra, exposed continental shelves including the Bering Land Bridge, and closed interior migration corridors into North America, channeling and isolating human populations across northern Eurasia and Beringia.",
+  "when": {
+    "start": {
+      "year": -24550
+    },
+    "end": {
+      "year": -17050
+    },
+    "precision": "millennium",
+    "as_recorded": [
+      {
+        "calendar": "Calibrated radiocarbon and sea-level inversion (ka BP)",
+        "value": "a slow fall to −134 m from 29 to 21 ka BP with a maximum grounded ice volume",
+        "source": "src-lambeck2014"
+      },
+      {
+        "calendar": "Years ago (ka)",
+        "value": "Last Glacial Maximum (LGM, ∼ 21 000 years ago)",
+        "source": "src-kageyama2021"
+      }
+    ],
+    "display": "c. 26,500–19,000 years ago (sea-level lowstand −134 m c. 29–21 ka BP)"
+  },
+  "where": {
+    "lat": 72.5793,
+    "lon": -38.453,
+    "elevation_m": 3216,
+    "modern_name": "Summit Camp, Greenland Ice Sheet (reference ice-core drill site for GISP2/GRIP and Greenland Stadial 2 chronostratigraphy; global event)",
+    "historical_name": "Greenland Ice Sheet summit during the peak of the last glaciation; planetary climate event",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "global",
+    "northern_america",
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 5,
+    "justification": "The Last Glacial Maximum represents the peak of global ice sheet extent during the last glacial cycle, dramatically lowering sea levels and shaping planetary climate and human migration corridors."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-26ka-beringian-standstill",
+      "type": "caused"
+    },
+    {
+      "id": "-23ka-peopling-of-the-americas",
+      "type": "caused"
+    },
+    {
+      "id": "-23ka-white-sands-human-footprints",
+      "type": "contemporary"
+    },
+    {
+      "id": "-13ka-clovis-complex",
+      "type": "related"
+    },
+    {
+      "id": "-13ka-megafaunal-extinction-in-the-americas",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-lambeck2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4217469/",
+      "title": "Sea level and global ice volumes from the Last Glacial Maximum to the Holocene (PNAS 111:15296–15303)",
+      "publisher": "Proceedings of the National Academy of Sciences of the USA (via PubMed Central)",
+      "author": "Kurt Lambeck, Hélène Rouby, Anthony Purcell, Yiying Sun, Malcolm Sambridge",
+      "date_published": "2014-10-13",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-kageyama2021",
+      "url": "https://cp.copernicus.org/articles/17/1065/2021/",
+      "title": "The PMIP4 Last Glacial Maximum experiments: preliminary results and comparison with the PMIP3 simulations (Climate of the Past 17:1065–1089)",
+      "publisher": "Copernicus Publications (European Geosciences Union)",
+      "author": "Masa Kageyama, Sandy P. Harrison, et al.",
+      "date_published": "2021-05-18",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/6949601/",
+      "title": "GeoNames gazetteer entry for Summit Camp, Greenland (6949601)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the global bounds chosen for the LGM (26.5–19.0 ka versus sea-level lowstand 29–21 ka BP), and representing a global climate event with a Greenland ice-core anchor point.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:29.492Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-24550",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Last Glacial Maximum marked the peak extent of continental ice sheets during the final glacial cycle, lowering global sea level by approximately 130 meters and locking vast…",
+        "source": "src-lambeck2014"
+      },
+      {
+        "span": "-17050",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "This profound cold interval reshaped global vegetation into extensive steppe-tundra, exposed continental shelves including the Bering Land Bridge, and closed interior migration corridors into North America, channeling and…",
+        "source": "src-lambeck2014",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

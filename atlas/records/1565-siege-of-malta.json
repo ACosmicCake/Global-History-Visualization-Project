@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1565-siege-of-malta",
+  "kind": "event",
+  "title": "Siege of Malta",
+  "summary": "In 1565 an Ottoman force under Sultan Süleyman besieged Malta, held by the Knights Hospitaller. Fort St. Elmo fell after a month of resistance, but the Knights held on and the Turks withdrew in September. The siege later prompted the founding of Valletta in 1566.",
+  "when": {
+    "start": {
+      "year": 1565
+    },
+    "end": {
+      "year": 1565
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources agree on 18 May to 8 September 1565; EBSCO says the fleet appeared on the night of 18 May."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 18-September 8, 1565",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 18, 1565",
+        "source": "src-historynet"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "On September 8",
+        "source": "src-historynet"
+      }
+    ],
+    "display": "18 May – 8 September 1565"
+  },
+  "where": {
+    "lat": 35.90056,
+    "lon": 14.51444,
+    "elevation_m": null,
+    "modern_name": "Valletta, Malta (proxy pin for the siege area)",
+    "historical_name": "Island of Malta, held by the Knights Hospitaller",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-unesco"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Celebrated Ottoman–Hospitaller clash that ended in an Ottoman withdrawal and led to the founding of Valletta."
+  },
+  "confidence": "established",
+  "audience_note": "Describes warfare, including mass killing of defenders and prisoners.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/siege-malta/",
+      "title": "Siege of Malta (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-historynet",
+      "url": "https://historynet.com/no-mercy-malta/",
+      "title": "No Mercy at Malta",
+      "publisher": "HistoryNet (Historynet LLC)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco",
+      "url": "https://whc.unesco.org/en/list/131/",
+      "title": "City of Valletta",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Valletta (UNESCO coordinates, founded after the siege), a proxy for the Grand Harbour area. Dates from EBSCO and HistoryNet only.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:41:29.714Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1565",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1565 an Ottoman force under Sultan Süleyman besieged Malta, held by the Knights Hospitaller.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1565",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Elmo fell after a month of resistance, but the Knights held on and the Turks withdrew in September.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

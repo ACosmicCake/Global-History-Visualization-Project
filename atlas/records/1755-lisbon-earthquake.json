@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1755-lisbon-earthquake",
+  "kind": "event",
+  "title": "1755 Lisbon earthquake",
+  "summary": "On the morning of 1 November 1755, All Saints' Day, a major earthquake with an Atlantic epicentre struck Lisbon. Fires and a tsunami followed, and Lisbon was devastated. Damage spread across Portugal's coast and North Africa. The disaster spurred the beginnings of modern seismology and sharp debate among Enlightenment writers.",
+  "when": {
+    "start": {
+      "year": 1755
+    },
+    "end": {
+      "year": 1755
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day is consistent across both sources; time of day given only as about 9:30 a.m. by one source."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Nov. 1, 1755",
+        "source": "src-earth"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1 November 1755",
+        "source": "src-rcc"
+      }
+    ],
+    "display": "1 November 1755"
+  },
+  "where": {
+    "lat": 38.7251,
+    "lon": -9.1498,
+    "elevation_m": null,
+    "modern_name": "Lisbon, Portugal (pin is the city centre, a proxy; the epicentre lay offshore in the Atlantic, about 200 km southwest per Earth magazine)",
+    "historical_name": "Lisbon, Kingdom of Portugal",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Destroyed a European capital, triggered a tsunami across the Atlantic region, and helped start modern seismology."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a disaster with large loss of life, fire and drowning.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-earth",
+      "url": "https://www.earthmagazine.org/article/benchmarks-november-1-1755-earthquake-destroys-lisbon/",
+      "title": "Benchmarks: November 1, 1755: Earthquake destroys Lisbon",
+      "publisher": "American Geosciences Institute (EARTH Magazine)",
+      "author": "Lucas Joel",
+      "date_published": "2015-10-23",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-rcc",
+      "url": "https://www.environmentandsociety.org/tools/keywords/lisbon-earthquake",
+      "title": "Lisbon Earthquake",
+      "publisher": "Rachel Carson Center, LMU Munich (Environment & Society Portal)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2267057",
+      "title": "GeoNames: Lisbon",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources disagree on magnitude (8.7 vs 8.5) and I left it out; the pin is Lisbon city, not the offshore epicentre. Only two non-coordinate publishers.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:39.783Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1755",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "On the morning of 1 November 1755, All Saints' Day, a major earthquake with an Atlantic epicentre struck Lisbon.",
+        "source": "src-earth"
+      },
+      {
+        "span": "1755",
+        "action": "pulse { radius_km: 320 }",
+        "caption": "Damage spread across Portugal's coast and North Africa.",
+        "source": "src-earth",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

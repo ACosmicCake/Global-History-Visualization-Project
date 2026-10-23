@@ -1,0 +1,132 @@
+{
+  "id": "2010-chile-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2010 Chile earthquake",
+  "summary": "A magnitude-8.8 earthquake struck off the coast of south-central Chile, causing widespread damage and a tsunami that devastated some coastal areas. Together they caused more than 500 deaths, and nearly 400,000 homes were damaged. It was the strongest in the region since the 1960 event.",
+  "when": {
+    "start": {
+      "year": 2010
+    },
+    "end": {
+      "year": 2010
+    },
+    "precision": "day",
+    "display": "27 February 2010",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "occurred on February 27, 2010, off the coast of south-central Chile",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "2010-02-27 06:34:12",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": -35.909,
+    "lon": -72.733,
+    "elevation_m": null,
+    "modern_name": "Off the coast of south-central Chile (Maule and Biobío regions)",
+    "historical_name": "Off the coast of south-central Chile (Maule and Biobío regions)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "One of the strongest earthquakes recorded, with a Pacific tsunami and heavy damage in Chile."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions deaths from an earthquake and tsunami.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251122095908/https://www.britannica.com/event/Chile-earthquake-of-2010",
+      "title": "Chile earthquake of 2010 | Tsunami, Deaths, Recovery, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=14340585",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q151835",
+      "title": "Wikidata Q151835 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Britannica gives 3:34 am local time while the ISC lists 06:34:12, which are consistent as UTC versus local time. Death toll was revised downward from over 800 to more than 500 per Britannica. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, isc.ac.uk; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:36.052Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2010",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "8 earthquake struck off the coast of south-central Chile, causing widespread damage and a tsunami that devastated some coastal areas.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2010",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Together they caused more than 500 deaths, and nearly 400,000 homes were damaged.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

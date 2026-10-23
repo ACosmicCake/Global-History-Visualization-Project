@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1872-japan-first-railway",
+  "kind": "event",
+  "title": "Japan's First Railway",
+  "summary": "Japan's first railway ran between Shimbashi in Tokyo and Yokohama. Regular services began in June 1872 on the Shinagawa–Yokohama section, and the full line opened on 14 October 1872 in a ceremony attended by the Meiji Emperor, under the Ministry of Public Works.",
+  "when": {
+    "start": {
+      "year": 1872
+    },
+    "end": {
+      "year": 1872
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Regular services between Shinagawa and Yokohama began 12 June 1872; 14 October 1872 is the opening ceremony of the full line to Shimbashi."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "14 October 1872",
+        "source": "src-ejrcf"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "14 October 1872",
+        "source": "src-obp"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "12 June 1872",
+        "source": "src-ejrcf"
+      }
+    ],
+    "display": "14 October 1872"
+  },
+  "where": {
+    "lat": 35.66639,
+    "lon": 139.75861,
+    "elevation_m": null,
+    "modern_name": "Shimbashi Station area, Minato, Tokyo, Japan (proxy pin: the line's Tokyo terminus; the line ran to Yokohama)",
+    "historical_name": "Shimbashi, Tokyo, Empire of Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Opening of the country's first railway, the start of Japan's national rail network."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ejrcf",
+      "url": "https://www.ejrcf.or.jp/jrtr/jrtr01/history.html",
+      "title": "Dawn of Japanese Railways",
+      "publisher": "East Japan Railway Culture Foundation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-obp",
+      "url": "https://books.openbookpublishers.com/10.11647/obp.0281/ch6.xhtml",
+      "title": "A Short History of Transport in Japan from Ancient Times to the Present, ch. 6 Railways",
+      "publisher": "Open Book Publishers",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q801436",
+      "title": "Wikidata item Q801436 (Shimbashi Station), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Wikidata page not directly fetchable; coordinates (35°39'59\"N, 139°45'31\"E) read from search-result text. Pin is a proxy for the Tokyo terminus. Two dates: 12 June partial service vs 14 October ceremony.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:41:37.089Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1872",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Japan's first railway ran between Shimbashi in Tokyo and Yokohama.",
+        "source": "src-ejrcf"
+      },
+      {
+        "span": "1872",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Regular services began in June 1872 on the Shinagawa–Yokohama section, and the full line opened on 14 October 1872 in a ceremony attended by the Meiji Emperor, under…",
+        "source": "src-ejrcf",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

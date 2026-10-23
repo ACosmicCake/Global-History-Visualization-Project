@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1945-battle-of-okinawa",
+  "kind": "event",
+  "title": "Battle of Okinawa",
+  "summary": "The Battle of Okinawa (Operation Iceberg) was a roughly three-month US campaign, beginning with landings on 1 April 1945, to seize 640 square miles of the Ryukyu Islands, about 340 miles from mainland Japan. The National WWII Museum calls it the largest battle of the Pacific War and the last major battle of the war.",
+  "when": {
+    "start": {
+      "year": 1945
+    },
+    "end": {
+      "year": 1945
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 1 April landings; end 22 June is the Tenth Army flag-raising marking victory, per the museum page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 1",
+        "source": "src-nww2"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 22, 1945",
+        "source": "src-nww2"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "82 days",
+        "source": "src-nww2"
+      }
+    ],
+    "display": "1 April – 22 June 1945"
+  },
+  "where": {
+    "lat": 26.5,
+    "lon": 127.9333,
+    "elevation_m": null,
+    "modern_name": "Okinawa Island, Okinawa, Japan (pin is a proxy at the island's approximate centre)",
+    "historical_name": "Okinawa Island, Ryukyu Islands, Empire of Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-lat"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Described as the largest and last major battle of the Pacific War, fought close to the Japanese home islands."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a battle with very heavy military and civilian casualties.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nww2",
+      "url": "https://www.nationalww2museum.org/war/articles/okinawa-costs-victory-last-battle",
+      "title": "Okinawa: The Costs of Victory in the Last Battle",
+      "publisher": "The National WWII Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usmc",
+      "url": "https://www.usmcu.edu/Portals/218/OkinawaVictoryInThePacific.pdf",
+      "title": "Okinawa: Victory in the Pacific",
+      "publisher": "Historical Branch, G-3 Division, Headquarters, U.S. Marine Corps (hosted by Marine Corps University)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-lat",
+      "url": "https://latitude.to/articles-by-country/jp/japan/1474/okinawa-island",
+      "title": "GPS coordinates of Okinawa Island, Japan",
+      "publisher": "Latitude.to",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Summary rests mainly on the museum page; the Marine Corps monograph was only skimmed for planning context. Pin is an island-centre proxy from a non-institutional coordinate site.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T23:22:25.066Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

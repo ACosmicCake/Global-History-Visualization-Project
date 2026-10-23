@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s40",
+  "updated": "2026-10-22",
+  "id": "1187-battle-of-hattin",
+  "kind": "event",
+  "title": "Battle of Hattin",
+  "summary": "On 4 July 1187 Saladin's army destroyed the Latin army of Guy of Lusignan, King of Jerusalem, at the Horns of Hattin near Lake Tiberias. Mounted archers wore the Franks down with thirst and harassment; the True Cross was captured and captured Templars and Hospitallers were reportedly executed. Saladin went on to take Acre and, on 2 October 1187 by one account, Jerusalem, which prompted the Third Crusade.",
+  "when": {
+    "start": {
+      "year": 1187
+    },
+    "end": {
+      "year": 1187
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO gives 4 July 1187; World History Encyclopedia gives 3-4 July 1187."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (EBSCO)",
+        "value": "July 4, 1187",
+        "source": "src-ebsco-hattin"
+      },
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "On 3 July 1187 CE Saladin attacked the moving Frankish army; on the morning of 4 July the Franks tried to push on",
+        "source": "src-whe-hattin"
+      }
+    ],
+    "display": "4 July 1187 (3-4 July in one source)"
+  },
+  "where": {
+    "lat": 32.79972,
+    "lon": 35.45972,
+    "elevation_m": null,
+    "modern_name": "Horns of Hattin, near Tiberias, Israel",
+    "historical_name": "Horns of Hattin (Hattin, Galilee), Kingdom of Jerusalem",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-hattin"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The crusader field army was destroyed and most of the Latin kingdom, including Jerusalem, was lost within months."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions the execution of prisoners after the battle.",
+  "related": [
+    {
+      "id": "place-jerusalem",
+      "type": "caused",
+      "because": "The Latin defeat left the kingdom undefended and Saladin took Jerusalem in autumn 1187."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-hattin",
+      "url": "https://www.worldhistory.org/Battle_of_Hattin/",
+      "title": "Battle of Hattin: Saladin's Greatest Victory",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ebsco-hattin",
+      "url": "https://www.ebsco.com/research-starters/military-history-and-science/battle-hattin/",
+      "title": "Battle of Hattin (Research Starters)",
+      "publisher": "EBSCO Information Services",
+      "author": "Christopher G. Libertini",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-hattin",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1411801.json",
+      "title": "Wikidata entry for Horns of Hattin (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the Jerusalem date: World History Encyclopedia gives 2 October in text but September in its timeline. Army sizes are left out because the pages disagree (and WHE flags its own figures as imprecise).",
+  "published_at": "2026-10-22T09:57:07.986Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

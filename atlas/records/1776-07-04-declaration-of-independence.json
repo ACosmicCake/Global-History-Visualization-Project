@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1776-07-04-declaration-of-independence",
+  "kind": "event",
+  "title": "Adoption of the Declaration of Independence",
+  "summary": "On 4 July 1776 the Continental Congress formally adopted the Declaration of Independence, which explained the vote for independence it had taken on 2 July. John Dunlap printed the first copies that night. Most delegates signed the engrossed parchment later, on 2 August 1776, and some never signed.",
+  "when": {
+    "start": {
+      "year": 1776,
+      "iso": "1776-07-04"
+    },
+    "end": {
+      "year": 1776,
+      "iso": "1776-07-04"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Adoption on 4 July; the independence vote was 2 July and signing 2 August."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "officially adopted that morning (July 4, 1776)",
+        "source": "src-nara-doi"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "formally adopted the Declaration of Independence two days later, July 4, 1776",
+        "source": "src-nps-doi"
+      }
+    ],
+    "display": "4 July 1776"
+  },
+  "where": {
+    "lat": 39.948889,
+    "lon": -75.15,
+    "elevation_m": null,
+    "modern_name": "Independence Hall, Philadelphia, Pennsylvania, USA",
+    "historical_name": "Pennsylvania State House, Philadelphia, Province of Pennsylvania",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wd-ih"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Founding document of the United States, adopted by Congress."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1789-08-26-declaration-of-the-rights-of-man",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nara-doi",
+      "url": "https://www.archives.gov/founding-docs/declaration-history",
+      "title": "Declaration of Independence: A History",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-doi",
+      "url": "https://home.nps.gov/subjects/nationalmall4th/history-of-independence-day.htm",
+      "title": "History of Independence Day",
+      "publisher": "National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-ih",
+      "url": "https://www.wikidata.org/wiki/Q390028",
+      "title": "Independence Hall (Wikidata Q390028), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The Archives page names the Pennsylvania State House only for the 7 June reading of the Lee resolution; the NPS page ties the announcement to Independence Hall, so the pin rests on that and on the NPS page.",
+  "author": "historian-agent:o-s38",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:44:06.293Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1776-07-04",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 4 July 1776 the Continental Congress formally adopted the Declaration of Independence, which explained the vote for independence it had taken on 2 July.",
+        "source": "src-nara-doi"
+      },
+      {
+        "span": "1776",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "John Dunlap printed the first copies that night.",
+        "source": "src-nara-doi",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

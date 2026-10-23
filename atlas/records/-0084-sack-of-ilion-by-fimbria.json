@@ -1,0 +1,167 @@
+{
+  "id": "-0084-sack-of-ilion-by-fimbria",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Sack of Ilion by Fimbria",
+  "summary": "In 85 BCE, during the First Mithridatic War, the rogue Roman commander Gaius Flavius Fimbria besieged, captured, and leveled the historic city of Ilion after its citizens refused him entry and offered surrender to his rival Sulla. Fimbria slaughtered the inhabitants, burned the sanctuary of Athena, and dismantled the city walls. Following Fimbria's defeat, Sulla compensated the surviving Ilians and restored the city, reaffirming Rome's mythic ancestry and ties to Troy.",
+  "when": {
+    "start": {
+      "year": -84
+    },
+    "end": {
+      "year": -84
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 1,
+      "end_plus_years": 0,
+      "note": "Appian dates the sack to the close of the 173rd Olympiad (85/84 BCE; astronomical year -84). Modern scholars date the siege to late 85 BCE or early 84 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Olympiad (Appian, Mithr. 53)",
+        "value": "close of the 173d Olympiad",
+        "source": "src-livius-appian-11"
+      },
+      {
+        "calendar": "BCE (Strabo, Geog. 13.1.27)",
+        "value": "Mithridatic war",
+        "source": "src-strabo-13"
+      }
+    ],
+    "display": "85/84 BCE (-84, close of the 173rd Olympiad)"
+  },
+  "where": {
+    "lat": 39.9575,
+    "lon": 26.2389,
+    "elevation_m": null,
+    "modern_name": "Hisarlık, Tevfikiye, Çanakkale Province, Turkey",
+    "historical_name": "Ilion (Ἴλιον), Roman province of Asia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-unesco-849"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "The brutal destruction of Ilion highlighted Roman internal factional violence during the Sullan civil wars and prompted major Sullan restorations honoring Rome's mythic Trojan origins."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-troy",
+      "type": "same_place"
+    },
+    {
+      "id": "-1180-trojan-war",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-republic",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "-0084",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Gaius Flavius Fimbria besieges and storms Ilion in eleven days, burning the city and temple of Athena.",
+        "source": "src-livius-appian-11",
+        "consequence": false
+      },
+      {
+        "span": "-0084",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Sulla defeats Fimbria and grants autonomy and rebuilding funds to Ilion, restoring the city.",
+        "source": "src-strabo-13",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-livius-appian-11",
+      "url": "https://www.livius.org/sources/content/appian/appian-the-mithridatic-wars/appian-the-mithridatic-wars-11/",
+      "title": "Appian, The Mithridatic Wars 11 (chapters 51–55)",
+      "publisher": "Livius.org",
+      "author": "Appian of Alexandria; ed. Jona Lendering",
+      "date_published": "2020",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-strabo-13",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/13A1*.html",
+      "title": "Strabo, Geography, Book XIII, Chapter 1",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+      "author": "Strabo; trans. H. L. Jones",
+      "date_published": "1928",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-unesco-849",
+      "url": "https://whc.unesco.org/en/list/849/",
+      "title": "Archaeological Site of Troy (World Heritage List no. 849)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1998",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of whether the siege concluded in late 85 BCE or early 84 BCE; Appian places it at the close of the 173rd Olympiad.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:28.994Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

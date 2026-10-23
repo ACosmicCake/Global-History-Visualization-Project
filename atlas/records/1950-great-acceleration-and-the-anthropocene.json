@@ -1,0 +1,179 @@
+{
+  "id": "1950-great-acceleration-and-the-anthropocene",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "The Great Acceleration and the proposed (rejected) Anthropocene epoch",
+  "summary": "The Great Acceleration is the synchronous speed-up, from the 1950s on, of 24 indicators of human activity and Earth-system change. In 2023 the Anthropocene Working Group proposed that a new epoch began between 1950 and 1954, marked by plutonium from nuclear testing in the sediment of Crawford Lake, near Toronto. In a statement of 26 March 2024, the IUGS and the International Commission on Stratigraphy confirmed that the Subcommission on Quaternary Stratigraphy had voted to reject the proposal.",
+  "when": {
+    "start": {
+      "year": 1950
+    },
+    "end": {
+      "year": 2025
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "note": "Future Earth says the synchronous acceleration runs \"from the 1950s to the present day\" (ongoing; the end year here is a placeholder for now). The Working Group proposal names 1950 to 1954 for the epoch start."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "from the 1950s to the present day",
+        "source": "src-fe-ga"
+      },
+      {
+        "calendar": "CE",
+        "value": "between 1950 and 1954",
+        "source": "src-aj-anthro"
+      }
+    ],
+    "display": "1950s–present"
+  },
+  "where": {
+    "lat": 43.468055555556,
+    "lon": -79.948611111111,
+    "elevation_m": null,
+    "modern_name": "Crawford Lake, Ontario, Canada (proposed type site for a global marker)",
+    "historical_name": "Planet-wide process; type site is a lake near Toronto",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-crawford"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Marks the post-1950 surge in human impact on the Earth system, and a proposed geological epoch boundary."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-fe-ga",
+      "url": "https://futureearth.org/the-great-acceleration/",
+      "title": "The Great Acceleration",
+      "publisher": "Future Earth",
+      "author": "International Geosphere-Biosphere Programme and Stockholm Resilience Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-aj-anthro",
+      "url": "https://www.aljazeera.com/news/2023/7/11/evidence-in-canada-lake-indicates-start-of-new-anthropocene-epoch",
+      "title": "Evidence in Canada lake indicates start of new Anthropocene epoch",
+      "publisher": "Al Jazeera",
+      "author": "Al Jazeera",
+      "date_published": "2023-07-11",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-earthsky-anthro",
+      "url": "https://earthsky.org/human-world/experts-declare-anthropocene-has-begun/",
+      "title": "Did the Anthropocene begin in the 1950s?",
+      "publisher": "EarthSky",
+      "author": "Deborah Byrd and Kelly Kizer Whitt",
+      "date_published": "2023-07-13",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-crawford",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5182884.json",
+      "title": "Wikidata entry for Crawford Lake (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-sqs-anthro",
+      "url": "https://quaternary.stratigraphy.org/working-groups/anthropocene",
+      "title": "Working Group on the Anthropocene (IUGS–ICS statement of 26 March 2024)",
+      "publisher": "Subcommission on Quaternary Stratigraphy, International Commission on Stratigraphy",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1950s to present",
+        "action": "numbers.counter { range: [0, 24] }",
+        "caption": "Twenty-four indicators, 12 socio-economic and 12 Earth-system, accelerate together from the 1950s.",
+        "source": "src-fe-ga",
+        "consequence": false
+      },
+      {
+        "span": "2023",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Geologists point to a plutonium layer from nuclear testing in the sediment of Crawford Lake in Ontario as a marker.",
+        "source": "src-earthsky-anthro",
+        "consequence": false
+      },
+      {
+        "span": "1950 to 1954",
+        "action": "region.fill { radius_km: 1000 }",
+        "caption": "The Anthropocene Working Group proposes naming the start of a new epoch between 1950 and 1954.",
+        "source": "src-aj-anthro",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: the formal status. I did not open any page on whether the epoch was ratified, so the summary says only that a proposal was made in 2023; check before upgrading. Crawford Lake is a sourced type site (Al Jazeera, EarthSky) but the record is planet-wide, so uncertainty is 5000 km. The \"24 indicators\" and \"from the 1950s\" claims are from Future Earth. End year 2025 is a placeholder for an ongoing process.",
+  "author": "historian-agent:o-s91",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:11:09.878Z"
+}

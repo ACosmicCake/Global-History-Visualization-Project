@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s44",
+  "updated": "2026-10-22",
+  "id": "person-caravaggio",
+  "kind": "person",
+  "title": "Caravaggio (Michelangelo Merisi)",
+  "summary": "Michelangelo Merisi, called Caravaggio, was an Italian painter born in 1571 who moved to Rome in 1592. His first major commission was the St Matthew canvases for the Contarelli Chapel in San Luigi dei Francesi. After killing a man in a duel in 1606 he fled south, and he died at Porto Ercole on 18 July 1610.",
+  "when": {
+    "start": {
+      "year": 1571
+    },
+    "end": {
+      "year": 1610
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "See as_recorded."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Milan, 1571-Porto Ercole, 1610",
+        "source": "src-thyssen-caravaggio"
+      },
+      {
+        "calendar": "CE",
+        "value": "died at Porto Ercole on 18 July 1610",
+        "source": "src-thyssen-caravaggio"
+      },
+      {
+        "calendar": "CE",
+        "value": "died on July 18th, 1610",
+        "source": "src-uw-caravaggio"
+      }
+    ],
+    "display": "1571–1610"
+  },
+  "where": {
+    "lat": 41.89193,
+    "lon": 12.51133,
+    "elevation_m": null,
+    "modern_name": "Rome, Italy (pin: Rome, where he painted his first major public commission)",
+    "historical_name": "Rome (Papal States)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "art_music_literature",
+    "people"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "A museum biography presents the Rome commission as the start of his public career."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "place-rome",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-thyssen-caravaggio",
+      "url": "https://www.museothyssen.org/en/node/14437",
+      "title": "Caravaggio (Michelangelo Merisi)",
+      "publisher": "Museo Nacional Thyssen-Bornemisza",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-uw-caravaggio",
+      "url": "https://depts.washington.edu/hrome/Authors/kelih/Caravaggio/pub_zbarticle_view_printable.html",
+      "title": "Shedding Light on Caravaggio",
+      "publisher": "University of Washington",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070",
+      "title": "GeoNames: Rome",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The two sources differ on birthplace (Milan in the museum header; the town of Caravaggio in the university article), so the summary gives only the year. Pin is Rome (centre), not a specific church. Place of death rests on the museum source only.",
+  "published_at": "2026-10-22T10:16:06.489Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

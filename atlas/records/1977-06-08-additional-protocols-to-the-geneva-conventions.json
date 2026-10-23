@@ -1,0 +1,166 @@
+{
+  "id": "1977-06-08-additional-protocols-to-the-geneva-conventions",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Additional Protocols I and II to the Geneva Conventions",
+  "summary": "On 8 June 1977 a diplomatic conference in Geneva adopted two Protocols supplementing the 1949 Geneva Conventions: Protocol I on international armed conflicts and Protocol II on non-international ones. They added rules on protecting civilians and on civil wars, and entered into force on 7 December 1978.",
+  "when": {
+    "start": {
+      "year": 1977,
+      "iso": "1977-06-08"
+    },
+    "end": {
+      "year": 1978,
+      "iso": "1978-12-07"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the adoption date; end is entry into force."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Adopted: 8 June 1977, Geneva",
+        "source": "src-un"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Entry into force: 7 December 1978",
+        "source": "src-un"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "June 8, 2017 marks the 40 th anniversary of the adoption of the two Protocols",
+        "source": "src-icrc"
+      }
+    ],
+    "display": "Adopted 8 June 1977; in force 7 December 1978"
+  },
+  "where": {
+    "lat": 46.2,
+    "lon": 6.15,
+    "elevation_m": null,
+    "modern_name": "Geneva, Switzerland",
+    "historical_name": "Geneva, Swiss Confederation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-geneva"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Extended the laws of war to the conduct of hostilities, civilian protection and civil wars, and are now binding on well over 160 states."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1949-08-12-geneva-conventions",
+      "type": "caused_by",
+      "because": "Gaps in the 1949 texts on the conduct of hostilities and on internal conflicts led states to negotiate supplementary protocols."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-un",
+      "url": "https://legal.un.org/avl/ha/pagc/pagc.html",
+      "title": "Protocols Additional to the Geneva Conventions of 12 August 1949",
+      "publisher": "United Nations Audiovisual Library of International Law",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-icrc",
+      "url": "https://blogs.icrc.org/cross-files/40th-anniversary-of-the-1977-additional-protocols/",
+      "title": "40th anniversary of the 1977 Additional Protocols",
+      "publisher": "International Committee of the Red Cross (Cross-files blog)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-geneva",
+      "url": "https://www.wikidata.org/wiki/Q71",
+      "title": "Wikidata item Q71 (Geneva), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The ICRC treaty database page (ihl-databases.icrc.org) is JavaScript-driven and could not be read, so dates rest on the UN legal library and the ICRC blog. States-party counts (174 and 169) are as of October 2020 per the UN page. The pin is Geneva, not the conference venue.",
+  "author": "historian-agent:o-s8",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1977-06-08",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "A diplomatic conference in Geneva adopted Protocols I and II, supplementing the four 1949 Geneva Conventions.",
+        "source": "src-un"
+      },
+      {
+        "span": "1978-12-07",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Both Protocols entered into force, with rules on conduct of hostilities and on civil wars.",
+        "source": "src-un"
+      },
+      {
+        "span": "2020",
+        "action": "numbers.counter { range: [169, 174] }",
+        "caption": "By October 2020, 174 states were party to Protocol I and 169 to Protocol II, extending civilian protection in war.",
+        "source": "src-un",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:36:03.902Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

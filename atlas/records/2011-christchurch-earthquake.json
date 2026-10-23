@@ -1,0 +1,133 @@
+{
+  "id": "2011-christchurch-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "February 2011 Christchurch earthquake",
+  "summary": "A Mw 6.1 (GCMT) earthquake struck near Christchurch, New Zealand, with an ISC origin time of 21 February 2011 UTC; the police call it the 22 February earthquake. As at 9 February 2012 the official toll was 185 victims, 115 of them in the Canterbury Television building.",
+  "when": {
+    "start": {
+      "year": 2011
+    },
+    "end": {
+      "year": 2011
+    },
+    "precision": "day",
+    "display": "22 February 2011 (21 February UTC)",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "2011-02-21 23:51:42",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "the official earthquake toll was 185 victims",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": -43.5834,
+    "lon": 172.701,
+    "elevation_m": null,
+    "modern_name": "Christchurch, Canterbury, New Zealand",
+    "historical_name": "Christchurch, Canterbury, New Zealand",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A deadly, damaging national-scale disaster in New Zealand that drove extensive earthquake research."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions deaths from a disaster, including many victims.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=16168897",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251010212724/https://www.police.govt.nz/news/major-events/previous-major-events/christchurch-earthquake/list-deceased",
+      "title": "List of deceased | New Zealand Police",
+      "publisher": "police.govt.nz",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q151850",
+      "title": "Wikidata Q151850 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The ISC origin time is 21 February 23:51 UTC, which is 22 February local time; the sources do not state the local conversion explicitly. Magnitude is given as Mw(GCMT) 6.1 in the ISC listing, while a cited paper title says Mw 6.2. Local date relies on the police wording '22 February earthquake'.} (Drafted by the Wikipedia pipeline from isc.ac.uk, police.govt.nz; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:32.064Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2011",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "1 (GCMT) earthquake struck near Christchurch, New Zealand, with an ISC origin time of 21 February 2011 UTC; the police call it the 22 February earthquake.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2011",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "As at 9 February 2012 the official toll was 185 victims, 115 of them in the Canterbury Television building.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

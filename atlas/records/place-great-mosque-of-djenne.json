@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "scale": "civilization",
+  "author": "historian-agent:m-3",
+  "updated": "2026-10-22",
+  "id": "place-great-mosque-of-djenne",
+  "title": "Great Mosque of Djenné",
+  "summary": "The Great Mosque of Djenné in Mali is a Sudano-Sahelian mud-brick mosque, rebuilt in 1906-1907 under French colonial administration on the site of an older mosque that tradition dates to 1280. Its walls are replastered with mud every year. A restoration financed by the Aga Khan Trust for Culture began in 2009.",
+  "when": {
+    "start": {
+      "year": 1906
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The present building dates to 1906-1907 (Zamani Project) or 1907 (UNESCO, Harvard). End is the present. Zamani gives 1280 for the first mosque on the site, not for the standing building."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Zamani Project)",
+        "value": "the current mosque was built between 1906 and 1907",
+        "source": "src-zamani"
+      },
+      {
+        "calendar": "CE (UNESCO World Heritage Centre)",
+        "value": "the monument erected in 1907",
+        "source": "src-unesco-news574"
+      },
+      {
+        "calendar": "CE (Zamani Project)",
+        "value": "First built in 1280",
+        "source": "src-zamani"
+      }
+    ],
+    "display": "Present building 1906-1907; standing today"
+  },
+  "where": {
+    "lat": 13.90511,
+    "lon": -4.55533,
+    "elevation_m": null,
+    "modern_name": "Great Mosque (Grande Mosquée), Djenné, Mopti Region, Mali",
+    "historical_name": "Great Mosque of Djenné, in the town of Djenné, under French colonial administration when rebuilt in 1907",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-djenne",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "The largest earthen mosque in the world and the emblem of Sudano-Sahelian earth architecture, in a UNESCO World Heritage town."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-zamani",
+      "url": "https://black-monuments-matter.zamaniproject.org/site-mali-mosques.html",
+      "title": "Site: Djenne and Timbuktu Mosque (Black Monuments Matter)",
+      "publisher": "Zamani Project, University of Cape Town",
+      "author": "Zamani Project, University of Cape Town",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-news574",
+      "url": "https://whc.unesco.org/en/news/574",
+      "title": "Restoration works continue despite violent storms at the Great Mosque of Djenné",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-harvard-djenne",
+      "url": "https://projects.iq.harvard.edu/whoseculture/mosque-djenne",
+      "title": "Mosque of Djenné (Whose Culture?)",
+      "publisher": "Harvard University",
+      "author": "Harvard University",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-djenne",
+      "url": "https://nominatim.openstreetmap.org/search?q=Great+Mosque+of+Djenn%C3%A9&format=json",
+      "title": "OpenStreetMap Nominatim: Grande Mosquée de Djenné, relation 11916275 (13.9051090, -4.5553311)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 116, geolocations (13.9053, -4.5554 area)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Rectangular mosque with the qibla wall to the east, a covered prayer hall about 50 by 26 m and an interior courtyard; length 85 m by width 65 m and 6,375 square metres of floor area per the Zamani Project listing. No survey polygon was opened.",
+      "source": "src-zamani",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "source": "src-zamani",
+      "measurements": [
+        {
+          "part": "height (central minaret)",
+          "value": 18,
+          "unit": "m",
+          "source": "src-zamani",
+          "note": "\"height of the central minaret: 18m\"; ceiling height listed as 8 m"
+        },
+        {
+          "part": "length",
+          "value": 85,
+          "unit": "m",
+          "source": "src-zamani"
+        },
+        {
+          "part": "width",
+          "value": 65,
+          "unit": "m",
+          "source": "src-zamani"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "rectangular earthen block with the east-wall towers at the listed plan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural mosque: prayer hall, courtyard, 90 pillars and the east towers, with the protruding toron beams"
+      },
+      {
+        "level": "street",
+        "representation": "roof ventilation holes (104) and the east facade buttresses as a labelled schematic reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1906,
+        "end_year": 1907,
+        "state": "construction",
+        "description": "The present mosque was built between 1906 and 1907 on the ruins of an older mosque.",
+        "source": "src-zamani"
+      },
+      {
+        "start_year": 1908,
+        "end_year": 2008,
+        "state": "intact",
+        "description": "Mosque stands, replastered each year.",
+        "source": "src-unesco-news574"
+      },
+      {
+        "start_year": 2009,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "Restoration financed by the Aga Khan Trust for Culture began in January 2009 and continues with traditional masons.",
+        "source": "src-unesco-news574"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1906,
+        "to_year": 2026,
+        "material": "earthen construction (mud, laterite plaster) with annual replastering",
+        "source": "src-unesco-news574"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block (rectangular mass with towers; no dome). Least sure of the dimensions: Zamani Project (University of Cape Town) lists 85 x 65 m and an 18 m central minaret, while other popular accounts (not opened) give a 75 x 75 m platform and about 16 m; the Zamani figures are the only university or museum measurements found. The standing mosque is the 1906-07 rebuilding; the 1280 first mosque is not modelled.",
+  "published_at": "2026-10-22T04:53:49.587Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

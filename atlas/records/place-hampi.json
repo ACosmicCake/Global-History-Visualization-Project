@@ -1,0 +1,132 @@
+{
+  "id": "place-hampi",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Hampi",
+  "summary": "Hampi in Karnataka is the ruined capital of the Vijayanagara kingdom, a Hindu state whose rulers built large Dravidian temples and palaces in the 14th to 16th centuries. After Deccan sultanates conquered the city in 1565 it was plundered and abandoned.",
+  "when": {
+    "start": {
+      "year": 1336
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The ASI dates the monuments to 1336-1570; UNESCO describes the city between the 14th and 16th centuries and its conquest in 1565. End is the present: the ruins survive."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (ASI)",
+        "value": "built between AD 1336-1570",
+        "source": "src-asi-hampi"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "Conquered by the Deccan Muslim confederacy in 1565",
+        "source": "src-unesco-241"
+      }
+    ],
+    "display": "Monuments built 1336–1570 CE; sacked 1565; ruins stand today"
+  },
+  "where": {
+    "lat": 15.3144,
+    "lon": 76.4717,
+    "elevation_m": null,
+    "modern_name": "Group of Monuments at Hampi, Vijayanagara district, Karnataka, India",
+    "historical_name": "Vijayanagara, capital of the Vijayanagara kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "UNESCO calls it the last capital of the last great Hindu kingdom; the ASI notes remains over about 26 sq km within seven lines of fortification."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-241",
+      "url": "https://whc.unesco.org/en/list/241",
+      "title": "Group of Monuments at Hampi (World Heritage List no. 241)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-asi-hampi",
+      "url": "https://asi.nic.in/pages/WorldHeritageHampi",
+      "title": "Hampi (1986), Karnataka",
+      "publisher": "Archaeological Survey of India",
+      "author": "Archaeological Survey of India",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List data (XML export), geolocation of the property",
+      "publisher": "UNESCO World Heritage Centre (list XML)",
+      "author": "UNESCO World Heritage Centre (list XML)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Place pin only: no model, since no single named structure with sourced height and plan was opened (ASI names the Pampapati and Vitthala temples without sizes). Coordinate is the UNESCO point, inside a 26 sq km site; uncertainty 5 km. Least sure: 1336 is the ASI start of monument building, not a founding date.",
+  "author": "historian-agent:m-7",
+  "updated": "2026-10-22",
+  "aliases": [
+    "Vijayanagara",
+    "Group of Monuments at Hampi"
+  ],
+  "published_at": "2026-10-22T07:52:08.254Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "model": null
+}

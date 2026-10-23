@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": "The Volta Basin evacuation displaced about 80,000 people; the Daedalus essay calls the evacuation of Worobong in October 1964 traumatic and chaotic, and says many settlers could not finish their one-room core houses.",
+  "id": "place-akosombo-dam",
+  "title": "Akosombo Dam, Volta River",
+  "summary": "Akosombo Dam on the Volta River in Ghana was built between 1961 and 1965 by the Volta River Authority as part of the Volta River Project. The dam was closed in May 1964. Filling the reservoir displaced about eighty thousand people, and by 1963 the Volta River Authority had begun building fifty-two resettlement townships for people from 739 villages.",
+  "when": {
+    "start": {
+      "year": 1961
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 4,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Volta River Authority gives 1961 to 1965 for construction; Daedalus says construction began in 1961, the dam was closed in May 1964 and completed in 1965. End is the present: the dam operates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years CE (Volta River Authority)",
+        "value": "1961 - 1965",
+        "source": "src-vra-akosombo"
+      },
+      {
+        "calendar": "Years CE (Daedalus)",
+        "value": "Dam construction began in 1961; completed in 1965; With the closure of the Akosombo Dam in May 1964",
+        "source": "src-daedalus-akosombo"
+      }
+    ],
+    "display": "Built 1961–1965; operating today"
+  },
+  "where": {
+    "lat": 6.2998403,
+    "lon": 0.0593226,
+    "elevation_m": null,
+    "modern_name": "Akosombo Dam, Asuogyaman District, Eastern Region, Ghana",
+    "historical_name": "Akosombo Dam of the Volta River Project, Ghana",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-akosombo"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The Volta River Authority operates it, and the Daedalus essay and a University of Passau page both put the number displaced at about 80,000."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-vra-akosombo",
+      "url": "https://vra.com/our_mandate/akosombo_hydro_plant.php",
+      "title": "Akosombo Hydro Plant",
+      "publisher": "Volta River Authority",
+      "author": "Volta River Authority",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-daedalus-akosombo",
+      "url": "https://www.amacad.org/publication/daedalus/ghanas-akosombo-dam-volta-lake-fisheries-climate-change",
+      "title": "Ghana's Akosombo Dam, Volta Lake Fisheries & Climate Change",
+      "publisher": "American Academy of Arts and Sciences (Daedalus)",
+      "author": "Daedalus",
+      "date_published": "2021",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-passau-akosombo",
+      "url": "https://www.uni-passau.de/en/mitrawa/public/volta-lake-and-akosombo-dam",
+      "title": "Volta Lake and Akosombo Dam",
+      "publisher": "University of Passau",
+      "author": "University of Passau",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-osm-akosombo",
+      "url": "https://www.openstreetmap.org/way/506145122",
+      "title": "OpenStreetMap way 506145122, Akosombo Dam (centre 6.2998403, 0.0593226)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "A dam across the Volta River with a main dam 660 m long and a saddle dam 355 m long (Volta River Authority table). Drawn as a path.",
+      "source": "src-vra-akosombo",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "wall",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-vra-akosombo",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 111,
+          "unit": "m",
+          "source": "src-vra-akosombo",
+          "note": "111 m (364.17 ft) at the axis from bedrock; the same page also says 141 m high and lists a structural height of 375 ft"
+        },
+        {
+          "part": "length (main dam)",
+          "value": 660,
+          "unit": "m",
+          "source": "src-vra-akosombo",
+          "note": "Specifications table 660 m (2,165.33 ft); other entries on the page give 640 m crest length; University of Passau also gives 660 m"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "dam drawn as a path across the Volta"
+      },
+      {
+        "level": "local",
+        "representation": "wall 660 m long"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1961,
+        "end_year": 1965,
+        "state": "construction",
+        "description": "Original construction period 1961 - 1965 (Volta River Authority).",
+        "source": "src-vra-akosombo"
+      },
+      {
+        "start_year": 1965,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed in 1965 (Daedalus) and in service since.",
+        "source": "src-daedalus-akosombo"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "A dam is not one of the procedural shapes; height and length are kept as data. The operator page gives conflicting heights (111 m, 141 m, 375 ft)."
+  },
+  "reviewer_note": "The VRA page contradicts itself on height (111 m at the axis, 141 m in text, 375 ft in the table), and on crest length (660 m vs 640 m). I record 111 m and 660 m, labelled. The 80,000 figure is rounded (\"about eighty thousand\"); earlier planning estimates (18,000; 62,000) differ.",
+  "author": "historian-agent:o-s116",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:44:13.472Z"
+}

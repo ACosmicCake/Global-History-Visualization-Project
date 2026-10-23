@@ -1,0 +1,143 @@
+{
+  "id": "-800ka-vostok-and-epica-ice-cores",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Vostok and EPICA Dome C ice cores",
+  "summary": "Deep Antarctic ice cores gave a continuous record of past climate and greenhouse gases. The Vostok core covered the past 420,000 years; the EPICA Dome C core, reported in Nature in 2004, reached 740,000 years, and the EPICA team later described a record back 800 000 years. Atmospheric CO2 and methane are now at their highest levels in that span.",
+  "when": {
+    "start": {
+      "year": -798050
+    },
+    "end": {
+      "year": -798050
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The pin year is the oldest extent of the record, 800 000 years back, converted with year = 1950 - 800000 (assumption: the page gives no reference year). The 2004 Nature paper itself reports 740,000 years; the 420,000-year Vostok figure comes from that paper's abstract."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years (record length)",
+        "value": "a climate record for the past 740,000 years",
+        "source": "src-epica2004"
+      },
+      {
+        "calendar": "years (record length)",
+        "value": "back 800 000 years",
+        "source": "src-eu2007"
+      }
+    ],
+    "display": "Record covering about the past 800,000 years (Vostok 420,000; Dome C 740,000 in 2004)"
+  },
+  "where": {
+    "lat": -75.1,
+    "lon": 123.35,
+    "elevation_m": null,
+    "modern_name": "Dome C, East Antarctica (EPICA site); Vostok Station lies at about 78.46°S, 106.87°E",
+    "historical_name": "Dome C, Antarctic interior (no polity; Antarctic Treaty territory)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-domec",
+      "src-wikidata-vostok"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "geology_climate",
+    "science_technology"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "These cores are the main ice-core record of glacial cycles and greenhouse gases over about 800,000 years."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-epica2004",
+      "url": "https://www.iceandclimate.nbi.ku.dk/publications/papers/abstracts/Abstract197/",
+      "title": "Eight glacial cycles from an Antarctic ice core (Nature 429:623-628)",
+      "publisher": "Niels Bohr Institute, University of Copenhagen (citing Nature)",
+      "author": "EPICA community members",
+      "date_published": "2004",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eu2007",
+      "url": "https://isogklima.nbi.ku.dk/nyhedsfolder/uk_with_dk_companion/20080314_descartes/pages_from_eu_science_awards2007_en.pdf",
+      "title": "EPICA European Project for Ice Coring in Antarctica (EU Science Awards 2007 pages)",
+      "publisher": "European Commission (Descartes Prize publication), hosted by Niels Bohr Institute",
+      "author": null,
+      "date_published": "2007",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-domec",
+      "url": "https://www.wikidata.org/wiki/Q3045552",
+      "title": "Wikidata item Q3045552 (Dome C), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wikidata-vostok",
+      "url": "https://www.wikidata.org/wiki/Q211014",
+      "title": "Wikidata item Q211014 (Vostok Station), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the single pin date: the record spans 420,000 to about 800,000 years and no drilling dates were read on an opened page. Pin is Dome C by Wikidata only; EU page was read as a PDF via pdftotext.",
+  "author": "historian-agent:o-s63",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:14:24.706Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

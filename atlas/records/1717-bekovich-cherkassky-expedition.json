@@ -1,0 +1,150 @@
+{
+  "id": "1717-bekovich-cherkassky-expedition",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Bekovich-Cherkassky Expedition to Khiva",
+  "summary": "In 1717 Captain Alexander Bekovich-Cherkassky led the first Russian army expedition to Khiva on Peter I's orders. The tsar's written instructions called for forts on the Amu Darya, making the Khivan khan a subject and seeking a route to India. The expedition was destroyed and Bekovich was killed, and the episode became a Russian saying.",
+  "when": {
+    "start": {
+      "year": 1717
+    },
+    "end": {
+      "year": 1717
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Russkiy Mir says the detachment set out through the desert in June 1717; the month of its destruction is not taken from an opened page. Preparations and earlier Caspian surveys began earlier."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "in 1717",
+        "source": "src-russkiymir"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "in June 1717",
+        "source": "src-russkiymir"
+      }
+    ],
+    "display": "1717"
+  },
+  "where": {
+    "lat": 41.3814,
+    "lon": 60.3611,
+    "elevation_m": null,
+    "modern_name": "Khiva, Uzbekistan (pin is the expedition's destination, a proxy)",
+    "historical_name": "Khiva, Khanate of Khiva",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-worldplaces"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "First Russian army expedition to Khiva, ending in the loss of the whole force and Peter I's Central Asian plans."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the killing and mutilation of a commander and the enslavement of captives.",
+  "related": [
+    {
+      "id": "place-itchan-kala-khiva",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-russkiymir",
+      "url": "https://russkiymir.ru/en/publications/231425/",
+      "title": "Lost Like Bekovich",
+      "publisher": "Russkiy Mir Foundation",
+      "author": "Dmitrii Klimov",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rudn",
+      "url": "https://doi.org/10.22363/2312-8674-2022-21-3-312-321",
+      "title": "Eastward Motion of Peter the Great's Empire",
+      "publisher": "RUDN Journal of Russian History (RUDN University)",
+      "author": "Evgenii V. Anisimov",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-worldplaces",
+      "url": "https://www.worldplacesexplained.com/places/khiva",
+      "title": "Khiva (Uzbekistan)",
+      "publisher": "World Places Explained",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Year 1717 rests on Russkiy Mir (a foundation site); RUDN article confirms the aims and the failure but I did not find a destruction month on an opened page. Pin is Khiva as proxy; the actual fight was about 150 km away per Russkiy Mir.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:05.592Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1717",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In 1717 Captain Alexander Bekovich-Cherkassky led the first Russian army expedition to Khiva on Peter I's orders.",
+        "source": "src-russkiymir"
+      },
+      {
+        "span": "1717",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "The expedition was destroyed and Bekovich was killed, and the episode became a Russian saying.",
+        "source": "src-russkiymir",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

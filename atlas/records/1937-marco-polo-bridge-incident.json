@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1937-marco-polo-bridge-incident",
+  "kind": "event",
+  "title": "Marco Polo Bridge incident",
+  "summary": "On 7 July 1937, during Japanese army exercises near the Marco Polo Bridge southwest of Beiping, Japanese troops asked to enter Wanping to look for a missing soldier. The Chinese side refused and fighting began. After this clash, Japan and China remained at war continuously until 1945.",
+  "when": {
+    "start": {
+      "year": 1937
+    },
+    "end": {
+      "year": 1937
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Clash begins on the night of 7 July 1937; later fighting not dated here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 7, 1937",
+        "source": "src-osu"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "7 July 1937",
+        "source": "src-chiculture"
+      }
+    ],
+    "display": "7 July 1937"
+  },
+  "where": {
+    "lat": 39.85,
+    "lon": 116.22,
+    "elevation_m": null,
+    "modern_name": "Marco Polo Bridge (Lugouqiao) and Wanping, southwest of central Beijing, China (pin is the Wanping Fortress, a proxy for the bridge area)",
+    "historical_name": "Marco Polo Bridge (Lugouqiao) and Wanping, near Beiping, Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-latitude"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Clash widely treated as the start of the continuous Sino-Japanese war of 1937-1945."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1937-12-13-nanjing-massacre",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-osu",
+      "url": "https://origins.osu.edu/read/marco-polo-bridge-incident-1937",
+      "title": "The Marco Polo Bridge Incident (1937)",
+      "publisher": "Origins, The Ohio State University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chiculture",
+      "url": "https://chiculture.org.hk/en/photo-story/3234",
+      "title": "The Marco Polo Bridge Incident and the Outbreak of the Total War of Resistance Against Japanese Aggression",
+      "publisher": "Chinese Culture Promotion Office, Hong Kong SAR Government",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-latitude",
+      "url": "https://latitude.to/map/cn/china/cities/beijing/articles/98808/wanping-fortress",
+      "title": "GPS coordinates of Wanping Fortress, China",
+      "publisher": "Latitude.to",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates are a rounded Wanping Fortress pin from a secondary aggregator, not a surveyed bridge point; verify. Sources describe the fighting only briefly; Government source has a Chinese-perspective framing.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:21:37.786Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1937",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 7 July 1937, during Japanese army exercises near the Marco Polo Bridge southwest of Beiping, Japanese troops asked to enter Wanping to look for a missing soldier.",
+        "source": "src-osu"
+      },
+      {
+        "span": "1937",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Chinese side refused and fighting began.",
+        "source": "src-osu",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

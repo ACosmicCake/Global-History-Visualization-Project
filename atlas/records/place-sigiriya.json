@@ -1,0 +1,131 @@
+{
+  "id": "place-sigiriya",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Sigiriya",
+  "aliases": [
+    "Sigirya",
+    "Lion Rock"
+  ],
+  "summary": "Sigiriya is a rock in central Sri Lanka with sheer cliffs rising as high as 180 m above the surrounding land. Sri Lanka's Central Province tourism site says King Kashyapa (477 to 495 AD) built his palace on top, and NASA describes a fifth-century palace and fortress on the flat summit. The site was declared a UNESCO World Heritage Site in 1982.",
+  "when": {
+    "start": {
+      "year": 477
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of Kashyapa's reign, 477 AD, per the Central Province tourism page; NASA says only fifth-century. The palace is the work of his reign, so the build dates are not separately stated. End is the present: the ruin stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (Central Province tourism)",
+        "value": "King Kashyapa (477 – 495 AD) built his palace on top of this rock",
+        "source": "src-cp-sigiriya"
+      },
+      {
+        "calendar": "Century (NASA Earth Observatory)",
+        "value": "Fifth-century king Kasyapa had a palace and fortress built on Sigirya's relatively flat summit.",
+        "source": "src-nasa-sigiriya"
+      }
+    ],
+    "display": "Palace-fortress of King Kashyapa, 477–495 CE"
+  },
+  "where": {
+    "lat": 7.9569231,
+    "lon": 80.7598585,
+    "elevation_m": null,
+    "modern_name": "Sigiriya, Central Province, Sri Lanka",
+    "historical_name": "Sigiriya, the palace-fortress of King Kashyapa, Anuradhapura-period Sri Lanka",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-sigiriya"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "NASA notes UNESCO World Heritage designation in 1982."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nasa-sigiriya",
+      "url": "https://science.nasa.gov/earth/earth-observatory/sri-lankas-granite-fortress-149543",
+      "title": "Sri Lanka's Granite Fortress",
+      "publisher": "NASA Earth Observatory",
+      "author": "NASA Earth Observatory",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-cp-sigiriya",
+      "url": "https://tourism.cp.gov.lk/en/sigiriya",
+      "title": "Sigiriya",
+      "publisher": "Central Province Tourism, Sri Lanka",
+      "author": "Central Province Tourism, Sri Lanka",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-sigiriya",
+      "url": "https://nominatim.openstreetmap.org/search?q=Sigiriya&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Sigiriya, way 23810659 (7.9569231, 80.7598585)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Outline only, no model: height 180 m is on both pages (NASA \"as high as 180 meters\", Central Province \"approximately 180 metres\"), but no plan dimension was found (the 140 x 40 m figure on the Central Province page is the painted rock face). UNESCO page was blocked (403). Palace dates are the reign of Kashyapa; the pages do not give the build years.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:38.318Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

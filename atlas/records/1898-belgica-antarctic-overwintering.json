@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "1898-belgica-antarctic-overwintering",
+  "kind": "event",
+  "title": "Belgica Antarctic overwintering",
+  "summary": "The Belgian Antarctic Expedition ship Belgica, under Adrien de Gerlache, became trapped in the pack ice of the Bellingshausen Sea near Peter I Island in late February 1898 and could not leave for about thirteen months. Its crew became the first to endure a full Antarctic winter and its long night; Frederick Cook was the physician and met Roald Amundsen during the voyage. The ship broke free on 14 March 1899.",
+  "when": {
+    "start": {
+      "year": 1898,
+      "iso": "1898-02-28"
+    },
+    "end": {
+      "year": 1899,
+      "iso": "1899-03-14"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Trapping date: 28 February 1898 (RCE); the Ohio State account says only late February 1898. Release 14 March 1899 in both."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "the ship became trapped in the ice of the Bellinghausen Sea, near Peter I Island, on February 28th, 1898",
+        "source": "src-rce"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The ship was the first ship ever to overwinter in Antarctica",
+        "source": "src-rce"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On March 14th they cleared the ice (after 15 February 1899)",
+        "source": "src-rce"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Late in February we entered the main body of the sea ice",
+        "source": "src-osu"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "spent the next thirteen months drifting with the ice",
+        "source": "src-osu"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "on March 14, 1899, the Belgian Antarctic Expedition emerged from the pack ice",
+        "source": "src-osu"
+      }
+    ],
+    "display": "28 February 1898 to 14 March 1899"
+  },
+  "where": {
+    "lat": -68.85,
+    "lon": -90.583333,
+    "elevation_m": 0,
+    "modern_name": "Pack ice of the Bellingshausen Sea near Peter I Island, Antarctica (proxy pin at Peter I Island; the ship drifted with the ice)",
+    "historical_name": "Bellingshausen Sea pack ice off Peter I Island (spelled Bellinghausen in the source); Belgian Antarctic Expedition, no sovereign territory",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-peter1"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First expedition to winter in the Antarctic region, with Amundsen and Cook among those aboard."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "related"
+    },
+    {
+      "id": "1906-amundsen-northwest-passage",
+      "type": "related"
+    },
+    {
+      "id": "1820-bellingshausen-sights-antarctica",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rce",
+      "url": "https://mass.cultureelerfgoed.nl/rv-belgica",
+      "title": "RV Belgica",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed (Cultural Heritage Agency of the Netherlands), MASS",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osu",
+      "url": "https://library.osu.edu/site/frederickcook/belgian-antarctic-expedition/",
+      "title": "Belgian Antarctic Expedition",
+      "publisher": "Ohio State University Libraries",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-peter1",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q202780.json",
+      "title": "Wikidata item Q202780 (Peter I Island), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: it is a proxy at Peter I Island; neither page gives coordinates for the ice drift. RCE gives 28 Feb 1898 for the trapping, OSU only late February.",
+  "published_at": "2026-10-22T18:31:58.908Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1898-02-28",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Belgian Antarctic Expedition ship Belgica, under Adrien de Gerlache, became trapped in the pack ice of the Bellingshausen Sea near Peter I Island in late February 1898…",
+        "source": "src-rce"
+      },
+      {
+        "span": "1899",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Its crew became the first to endure a full Antarctic winter and its long night; Frederick Cook was the physician and met Roald Amundsen during the voyage.",
+        "source": "src-rce",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

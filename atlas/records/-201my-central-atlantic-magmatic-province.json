@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-201my-central-atlantic-magmatic-province",
+  "kind": "event",
+  "title": "Central Atlantic Magmatic Province (CAMP) eruptions",
+  "summary": "Enormous basalt eruptions flooded the rifting margins of Pangaea about 201 million years ago, in a province now spread across eastern North America, Morocco, Brazil and West Africa. Dating of rocks such as the Palisades Sill in New Jersey shows the main eruptions came in short bursts at the time of the end-Triassic extinction.",
+  "when": {
+    "start": {
+      "year": -201000000
+    },
+    "end": {
+      "year": -200960000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 30000,
+      "start_plus_years": 30000,
+      "end_minus_years": 30000,
+      "end_plus_years": 30000,
+      "note": "MIT News and EarthSky (2013) give about 201 Ma, eruptions lasting about 40,000 years, dated to within about 30,000 years. Other reports of the same work describe pulses over a longer span, so the end date is a lower bound."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon",
+        "value": "201 million years ago; eruptions over about 40,000 years in three bursts",
+        "source": "src-mit"
+      },
+      {
+        "calendar": "U-Pb zircon",
+        "value": "about 201 million years ago; dated to within roughly 30,000 years",
+        "source": "src-earthsky"
+      }
+    ],
+    "display": "c. 201 million years ago"
+  },
+  "where": {
+    "lat": 40.9738,
+    "lon": -73.9103,
+    "elevation_m": null,
+    "modern_name": "Palisades Sill, Hudson River, New Jersey and New York (a dated CAMP intrusion; the province spans several continents)",
+    "historical_name": "Rift zone within Pangaea (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd-palisades"
+    ],
+    "paleo": {
+      "lat": 15.45,
+      "lon": -10.11,
+      "age_ma": 201,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 40.97, -73.91 reconstructed to 201 Ma. PALEOMAP gives 21.24 N, 20.64 W. The province itself is far larger than this point."
+    }
+  },
+  "regions": [
+    "northern_america",
+    "northern_africa",
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of the largest known volcanic provinces and the leading candidate for the trigger of the end-Triassic mass extinction."
+  },
+  "related": [
+    {
+      "id": "-201my-end-triassic-extinction",
+      "type": "caused",
+      "because": "Dating links CAMP eruptions in time with the end-Triassic extinction."
+    },
+    {
+      "id": "-190my-opening-of-the-central-atlantic",
+      "type": "caused",
+      "because": "CAMP magmatism preceded the opening of the Central Atlantic."
+    },
+    {
+      "id": "-200my-breakup-of-pangaea",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mit",
+      "url": "https://news.mit.edu/2013/volcanic-eruptions-triggered-end-triassic-extinction-0321",
+      "title": "Volcanic eruptions triggered end-Triassic extinction (MIT News)",
+      "publisher": "Massachusetts Institute of Technology",
+      "author": "Massachusetts Institute of Technology",
+      "date_published": "2013-03-21",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-earthsky",
+      "url": "https://earthsky.org/science-wire/before-dinosaurs-era-volcanic-eruptions-triggered-mass-extinction/",
+      "title": "Before dinosaurs era, volcanic eruptions triggered mass extinction (EarthSky Science Wire)",
+      "publisher": "EarthSky",
+      "author": "EarthSky",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-palisades",
+      "url": "https://www.wikidata.org/wiki/Q2975612",
+      "title": "Wikidata: Palisades Sill (Q2975612)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a single dated intrusion, not the province centre. The 40,000-year duration comes from MIT News/EarthSky and may refer to the main eruptive bursts; the Science paper (not opened) is said elsewhere to describe pulses over a longer interval.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:25.980Z"
+}

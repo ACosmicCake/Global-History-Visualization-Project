@@ -1,0 +1,133 @@
+{
+  "id": "2008-sichuan-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2008 Sichuan earthquake",
+  "summary": "A magnitude-7.9 earthquake struck mountainous Sichuan province in southwestern China, with its epicentre near Dujiangyan, caused by movement on the Longmenshan Fault. Almost 90,000 people were counted dead or missing, nearly 375,000 were injured, and many schools collapsed, prompting debate over construction standards and reservoir triggering.",
+  "when": {
+    "start": {
+      "year": 2008
+    },
+    "end": {
+      "year": 2008
+    },
+    "precision": "day",
+    "display": "12 May 2008",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "on May 12, 2008",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "2008-05-12 06:28:00",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 31.021,
+    "lon": 103.367,
+    "elevation_m": null,
+    "modern_name": "Sichuan province, China (epicentre near Dujiangyan, about 80 km west-northwest of Chengdu)",
+    "historical_name": "Wenchuan earthquake",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "One of the deadliest earthquakes in recent history, with almost 90,000 dead or missing and an estimated $86 billion cost."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass death, including thousands of children killed in collapsed schools.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=13228121",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251202090853/https://www.britannica.com/event/Sichuan-earthquake-of-2008",
+      "title": "Sichuan earthquake of 2008 | Overview, Damage, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q152033",
+      "title": "Wikidata Q152033 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude is 7.9 in Britannica and ISC (Mw) but 8.0 by Chinese measure. Death toll is the official figure, which some questioned as too low for children. ISC depth (10.4 km) differs from Britannica's 19 km. (Drafted by the Wikipedia pipeline from isc.ac.uk, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:37.553Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2008",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "9 earthquake struck mountainous Sichuan province in southwestern China, with its epicentre near Dujiangyan, caused by movement on the Longmenshan Fault.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2008",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Almost 90,000 people were counted dead or missing, nearly 375,000 were injured, and many schools collapsed, prompting debate over construction standards and reservoir triggering.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

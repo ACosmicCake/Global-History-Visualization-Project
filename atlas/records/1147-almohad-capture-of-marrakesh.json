@@ -1,0 +1,152 @@
+{
+  "id": "1147-almohad-capture-of-marrakesh",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Almohad capture of Marrakesh",
+  "summary": "In 1147, after an eleven-month siege, the Almohads under Abd al-Mu'min captured Marrakesh and executed the last Almoravid ruler, ending the Almoravid state. Marrakesh became the Almohad capital in the Maghreb and remained so until the Marinids took it in 1269.",
+  "when": {
+    "start": {
+      "year": 1147
+    },
+    "end": {
+      "year": 1147
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give the year only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "1147",
+        "source": "src-encyc-almohads"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "in 1147, following an eleven-month siege",
+        "source": "src-ebsco-abd"
+      }
+    ],
+    "display": "1147"
+  },
+  "where": {
+    "lat": 31.62947,
+    "lon": -7.98108,
+    "elevation_m": null,
+    "modern_name": "Marrakech, Morocco",
+    "historical_name": "Marrakesh, capital of the Almoravids, then of the Almohads in the Maghreb",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-marrakech"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The conquest ended Almoravid rule in the Maghreb and made Marrakesh the Almohad capital."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1062-founding-of-marrakesh-and-almoravid-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyc-almohads",
+      "url": "https://www.encyclopedia.com/history/modern-europe/spanish-and-portuguese-history/almohads",
+      "title": "Almohads",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-abd",
+      "url": "https://www.ebsco.com/research-starters/biography/abd-al-mumin/",
+      "title": "'Abd al-Mu'min",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-marrakech",
+      "url": "https://www.wikidata.org/wiki/Q101625",
+      "title": "Wikidata item Q101625 (Marrakech), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Only the year is stated by both sources. The siege length and the execution of the last Almoravid ruler are from EBSCO, which does not name him; web accounts differ on how he died, so no name or manner is added. The 1269 end of Almohad rule in Marrakesh is from the Gale entry. Replaced a non-reference source after finding it cited Wikipedia.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:50.193Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1147",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1147, after an eleven-month siege, the Almohads under Abd al-Mu'min captured Marrakesh and executed the last Almoravid ruler, ending the Almoravid state.",
+        "source": "src-encyc-almohads"
+      },
+      {
+        "span": "1147",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Marrakesh became the Almohad capital in the Maghreb and remained so until the Marinids took it in 1269.",
+        "source": "src-encyc-almohads",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

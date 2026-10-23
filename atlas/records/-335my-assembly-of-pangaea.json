@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-335my-assembly-of-pangaea",
+  "kind": "event",
+  "title": "Assembly of Pangaea",
+  "summary": "Gondwana and Laurussia converged as the Rheic Ocean closed, raising the Variscan, Alleghanian and Ouachita mountain belts and joining the continents into the supercontinent Pangaea. The sources date the climactic late-stage collision to roughly 330 to 290 million years ago, with terminal collision near 290 million years ago.",
+  "when": {
+    "start": {
+      "year": -330000000
+    },
+    "end": {
+      "year": -290000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 10000000,
+      "start_plus_years": 10000000,
+      "end_minus_years": 10000000,
+      "end_plus_years": 10000000,
+      "note": "Range taken from Murphy et al. (Elements, 2025): late-stage events 330-290 Ma, terminal collision about 290 Ma. The same authors date the wider orogenic series to about 380-290 Ma, and the closure was diachronous along the orogen; the atlas id uses -335 as a label only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "late-stage events at 330-290 Ma; terminal collision at about 290 Ma",
+        "source": "src-elements"
+      },
+      {
+        "calendar": "Geological period",
+        "value": "Rheic Ocean closure began in the Devonian and was largely complete by the Mississippian; Carboniferous-Permian collisions formed the Alleghanian and Ouachita orogens",
+        "source": "src-nance"
+      }
+    ],
+    "display": "c. 330–290 million years ago"
+  },
+  "where": {
+    "lat": 38,
+    "lon": -79,
+    "elevation_m": null,
+    "modern_name": "Appalachian Mountains, eastern United States (pin on the Alleghanian orogen, southern Appalachians)",
+    "historical_name": "Alleghanian orogen on the Laurentian margin of Laurussia, collided with Gondwana (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-appal"
+    ],
+    "paleo": {
+      "lat": -6.29,
+      "lon": -15.49,
+      "age_ma": 310,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 38.0, -79.0 reconstructed to 310 Ma (mid-range of the 330-290 Ma collision). PALEOMAP gives 10.50 S, 17.79 W."
+    }
+  },
+  "regions": [
+    "global",
+    "northern_america",
+    "europe"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Joined almost all continental crust into one supercontinent, setting the stage for the Mesozoic breakup and the opening of the Atlantic."
+  },
+  "related": [
+    {
+      "id": "-200my-breakup-of-pangaea",
+      "type": "caused",
+      "because": "Breakup of Pangaea could only follow the collisions that welded Gondwana and Laurussia together."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-elements",
+      "url": "https://www.elementsmagazine.org/assembling-pangaea-the-complex-morphology-of-the-laurussia-gondwana-collision/",
+      "title": "Assembling Pangaea - The Complex Morphology of the Laurussia - Gondwana Collision",
+      "publisher": "Elements Magazine (Mineralogical Society of America and partner societies)",
+      "author": "Elements Magazine (Mineralogical Society of America and partner societies)",
+      "date_published": "2025-12",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "regions"
+      ]
+    },
+    {
+      "id": "src-nance",
+      "url": "https://researchportal.port.ac.uk/en/publications/evolution-of-the-rheic-ocean/",
+      "title": "Evolution of the Rheic Ocean (Nance et al., Gondwana Research 17:194-222)",
+      "publisher": "University of Portsmouth Research Portal",
+      "author": "University of Portsmouth Research Portal",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-appal",
+      "url": "https://www.wikidata.org/wiki/Q93332",
+      "title": "Wikidata: Appalachian Mountains (Q93332)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Pangaea assembly was diachronous, so the dates are a representative window, not a single event. The pin is the Appalachian Mountains centre point on Wikidata (the southern Appalachians hosted the ~290 Ma terminal collision per Murphy et al.). The Nance et al. abstract gives only period names, not numeric ages. Paleo-position computed at 310 Ma.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:24.636Z"
+}

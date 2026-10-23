@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "-45ka-australian-megafauna-extinction",
+  "kind": "process",
+  "title": "Australian megafauna extinction",
+  "summary": "Australia's largest land animals disappeared in the late Pleistocene. Dating of remains from 28 sites put the continent-wide extinction at about 46,400 years ago. A 2016 analysis of 659 fossil ages found that megafauna vanished roughly 13,500 years after people arrived and argued that climate change was not the main cause, though the cause remains debated.",
+  "when": {
+    "start": {
+      "year": -51200
+    },
+    "end": {
+      "year": -39800
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "note": "Roberts et al. (2001) give about 46,400 years ago with a 95% range of 51,200-39,800 years; ages are before the time of publication, converted here to the calendar-year scale only approximately. Saltré et al. (2016) put extinction about 13,500 years after human arrival, with shorter overlap in some regions. Timing and cause are debated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "continent-wide extinction about 46,400 years ago",
+        "source": "src-anu-roberts"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "megafauna disappeared Australia-wide ∼13,500 years after human arrival",
+        "source": "src-mq-saltre"
+      }
+    ],
+    "display": "c. 46,400 years ago (range 51,200–39,800)"
+  },
+  "where": {
+    "lat": -27,
+    "lon": 133,
+    "elevation_m": null,
+    "modern_name": "Mainland Australia (centroid)",
+    "historical_name": "Sahul, the Pleistocene landmass joining Australia and New Guinea (Australian portion)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2000,
+    "coordinate_sources": [
+      "src-wd-australia"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "A continent-wide loss of large animals shortly after human arrival, central to debates on human and climate causes of extinction."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-65ka-peopling-of-sahul",
+      "type": "related"
+    },
+    {
+      "id": "-13ka-megafaunal-extinction-in-the-americas",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-anu-roberts",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/new-ages-for-the-last-australian-megafauna-continent-wide-extinct/",
+      "title": "New Ages for the Last Australian Megafauna: Continent-Wide Extinction About 46,000 Years Ago (Science 292:1888-1892)",
+      "publisher": "Australian National University Research Portal (Science)",
+      "author": "Australian National University Research Portal (Science)",
+      "date_published": "2001-06-08",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mq-saltre",
+      "url": "https://researchers.mq.edu.au/en/publications/climate-change-not-to-blame-for-late-quaternary-megafauna-extinct/",
+      "title": "Climate change not to blame for late Quaternary megafauna extinctions in Australia (Nature Communications 7:10511)",
+      "publisher": "Macquarie University Research Portal (Nature Communications)",
+      "author": "Macquarie University Research Portal (Nature Communications)",
+      "date_published": "2016-01-29",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-australia",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2872203.json",
+      "title": "Wikidata entry for mainland Australia (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Date range is the Roberts 2001 95% interval; later work argues for later survival in places. The pin is the continental centroid; cause is contested and the summary does not decide it.",
+  "published_at": "2026-10-22T08:18:29.225Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-51200",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Australia's largest land animals disappeared in the late Pleistocene.",
+        "source": "src-anu-roberts"
+      },
+      {
+        "span": "-39800",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Dating of remains from 28 sites put the continent-wide extinction at about 46,400 years ago.",
+        "source": "src-anu-roberts",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Details a naval defeat, the drowning of a child emperor and, per one source, thousands of drownings.",
+  "confidence": "established",
+  "author": "historian-agent:o-s110",
+  "updated": "2026-10-22",
+  "id": "1279-battle-of-yamen",
+  "kind": "event",
+  "title": "Battle of Yamen",
+  "summary": "On 19 March 1279 the Mongol-led Yuan forces won a naval victory at Yamen (Yaishan), near Xinhui in Guangdong, over the last Southern Song loyalists. The minister Lu Xiufu drowned himself while holding the young emperor Zhao Bing. The sources treat this as the end of the Song dynasty and the completion of the Mongol conquest of China.",
+  "when": {
+    "start": {
+      "year": 1279,
+      "iso": "1279-03-19"
+    },
+    "end": {
+      "year": 1279,
+      "iso": "1279-03-19"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Two sources give 19 March 1279; Chinaknowledge gives only the year 1279."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "19 Mar 1279 The Mongols complete their conquest of Song Dynasty China with victory at the naval battle at Yaishan",
+        "source": "src-whe-song"
+      },
+      {
+        "calendar": "CE (Roots of China)",
+        "value": "19 March 1279",
+        "source": "src-roc-yamen"
+      },
+      {
+        "calendar": "CE (Chinaknowledge)",
+        "value": "In 1279 the Yuan took the island, and Lu Xiufu drowned himself",
+        "source": "src-chinaknowledge-song"
+      }
+    ],
+    "display": "19 March 1279"
+  },
+  "where": {
+    "lat": 22.301708,
+    "lon": 113.051007,
+    "elevation_m": null,
+    "modern_name": "Yamen Town, Xinhui District, Jiangmen, Guangdong, China (town centroid; the battle was fought offshore)",
+    "historical_name": "Yaishan (Yamen), Southern Song China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm-yamen"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The last battle of the Southern Song, which sources treat as ending the dynasty and completing the Yuan conquest."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-whe-song",
+      "url": "https://www.worldhistory.org/timeline/Song_Dynasty/",
+      "title": "Timeline: Song Dynasty",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chinaknowledge-song",
+      "url": "http://www.chinaknowledge.de/History/Song/song-event.html",
+      "title": "Political History of the Song Period",
+      "publisher": "ChinaKnowledge.de",
+      "author": "Ulrich Theobald",
+      "date_published": "2016-03-19",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-roc-yamen",
+      "url": "https://rootsofchina.com/yamen-battle-southern-song/",
+      "title": "Yamen 1279: The Battle That Ended the Song Dynasty",
+      "publisher": "Roots of China",
+      "author": "Steven",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-yamen",
+      "url": "https://nominatim.openstreetmap.org/search?q=Yamen%20Xinhui%20Jiangmen&format=json",
+      "title": "OpenStreetMap Nominatim: 崖门镇, relation 19261654 (22.301708, 113.051007)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Roots of China says about 200,000 people were aboard the Song fleet (traditional estimate, called unreliable) and that thousands reportedly drowned; no sourced range. Roots of China gives Zhao Bing as about seven or eight years old. Pin is the town centroid, a proxy for an offshore battle.",
+  "published_at": "2026-10-22T19:16:37.669Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1279-03-19",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 19 March 1279 the Mongol-led Yuan forces won a naval victory at Yamen (Yaishan), near Xinhui in Guangdong, over the last Southern Song loyalists.",
+        "source": "src-whe-song"
+      },
+      {
+        "span": "1279",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The sources treat this as the end of the Song dynasty and the completion of the Mongol conquest of China.",
+        "source": "src-whe-song",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

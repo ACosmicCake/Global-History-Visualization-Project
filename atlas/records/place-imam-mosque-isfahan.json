@@ -1,0 +1,195 @@
+{
+  "id": "place-imam-mosque-isfahan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Imam Mosque (Shah Mosque), Isfahan",
+  "aliases": [
+    "Shah Mosque",
+    "Masjed-e Shah"
+  ],
+  "summary": "The Shah Mosque in Isfahan, Iran, is topped by a double-shell dome with a 22.65 m span and a height of 52 m, according to a structural study published by the SAHC masters network. That study dates its construction from 1611 to 1629; a design-canon page says it was largely complete by 1629 with finishing later, and that UNESCO inscribed it in 1979.",
+  "when": {
+    "start": {
+      "year": 1611
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 1611 on both pages. 1629 is the completion year given by SAHC; the second page says largely completed by 1629, finished later. End is the present: the mosque stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (SAHC)",
+        "value": "The construction of Shah Mosque started in 1611 and was completed in 1629.",
+        "source": "src-sahc-shah"
+      },
+      {
+        "calendar": "CE (Studio MatrX)",
+        "value": "Begun 1611, largely completed by 1629 (finished later)",
+        "source": "src-matrx-shah"
+      }
+    ],
+    "display": "Built 1611–1629 CE"
+  },
+  "where": {
+    "lat": 32.6547572,
+    "lon": 51.6784021,
+    "elevation_m": null,
+    "modern_name": "Imam (Shah) Mosque, Isfahan, Iran",
+    "historical_name": "Masjid-e Shah, the royal mosque of Safavid Isfahan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-shah"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Studio MatrX presents it as the Safavid four-iwan mosque and notes a UNESCO inscription in 1979."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-sahc-shah",
+      "url": "https://blog.msc-sahc.org/safety-assessment-of-the-shah-mosque-in-isfahan-iran/",
+      "title": "Safety Assessment of the Shah Mosque in Isfahan, Iran",
+      "publisher": "SAHC Advanced Masters (university consortium)",
+      "author": "SAHC Advanced Masters (university consortium)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-matrx-shah",
+      "url": "https://www.studiomatrx.org/architecture-canon/masjid-e-shah-shah-mosque",
+      "title": "Masjid-e Shah, Isfahan: The Safavid Four-Iwan Mosque",
+      "publisher": "Studio MatrX",
+      "author": "Studio MatrX",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-shah",
+      "url": "https://nominatim.openstreetmap.org/search?q=Imam+Mosque+Isfahan&format=json&limit=5",
+      "title": "OpenStreetMap Nominatim: Masjed-e Jame Abbasi, relation 1627974 (32.6547572, 51.6784021)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "No overall plan dimension of the mosque is given on the pages opened; only the dome span (22.65 m) is used for the plan.",
+      "source": "src-sahc-shah",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "domed_building",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-sahc-shah",
+      "measurements": [
+        {
+          "part": "height (outer dome)",
+          "value": 52,
+          "unit": "m",
+          "source": "src-sahc-shah",
+          "note": "\"22.65m span and 52m height\"; Studio MatrX says the apex stands roughly 53 metres above the floor"
+        },
+        {
+          "part": "diameter (dome span)",
+          "value": 22.65,
+          "unit": "m",
+          "source": "src-sahc-shah",
+          "note": "\"double-shell dome with 22.65m span\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "domed prayer hall at true size in Isfahan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural domed building with a 52 m double-shell dome of 22.65 m span"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1611,
+        "end_year": 1629,
+        "state": "construction",
+        "description": "Construction started in 1611 and was completed in 1629 (SAHC); Studio MatrX says largely completed by 1629 with finishing later.",
+        "source": "src-sahc-shah"
+      },
+      {
+        "start_year": 1629,
+        "end_year": null,
+        "state": "intact",
+        "description": "Stands; UNESCO inscription in 1979 (Studio MatrX). No later alteration is recorded on the pages opened.",
+        "source": "src-matrx-shah"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape domed_building. Least sure of: (1) the Imam/Shah alias is not stated on a page I opened; I treated the OSM-named Masjed-e Jame Abbasi at Isfahan as the same mosque, so verify. (2) Dome height 52 m (SAHC) vs 53 m (Studio MatrX); the 22.65 m is a structural span, not necessarily the outer diameter. SAHC is a university-network blog post (class reference); no overall plan size found.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:36.358Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

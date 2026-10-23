@@ -1,0 +1,155 @@
+{
+  "id": "0029-baptism-of-jesus",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Baptism of Jesus",
+  "summary": "In the Gospel accounts, John baptised Jesus in the Jordan region; Luke ties John's ministry to the fifteenth year of Tiberius, which one scholar dates to AD 29, though others have proposed AD 26 to 28. John 1:28 names Bethany beyond the Jordan; Al-Maghtas in Jordan is the traditional site, though its veneration is Byzantine or later and a west-bank site is also claimed.",
+  "when": {
+    "start": {
+      "year": 29
+    },
+    "end": {
+      "year": 29
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 3,
+      "start_plus_years": 0,
+      "end_minus_years": 3,
+      "end_plus_years": 0,
+      "note": "Luke 3:1 gives the fifteenth year of Tiberius; AD 29 on the usual count from Augustus's death in AD 14, AD 28 on inclusive counting, and AD 26-27 if counted from his co-rule."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD",
+        "value": "AD 29",
+        "source": "src-steinmann"
+      },
+      {
+        "calendar": "regnal year",
+        "value": "In the fifteenth year of Tiberius Caesar's rule",
+        "source": "src-lk3"
+      }
+    ],
+    "display": "c. AD 29 (scholarly estimate; tradition-based)"
+  },
+  "where": {
+    "lat": 31.837222,
+    "lon": 35.550278,
+    "elevation_m": null,
+    "modern_name": "Al-Maghtas (Bethany Beyond the Jordan), Jordan, the traditional site; a rival site lies on the west bank",
+    "historical_name": "Jordan valley; place named Bethany beyond the Jordan in John 1:28",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-maghtas",
+      "src-bas"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The baptism opens Jesus's ministry in the Gospels and is a fixed point in attempts to date his life."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-jesus-of-nazareth",
+      "type": "related"
+    },
+    {
+      "id": "person-pontius-pilate",
+      "type": "contemporary"
+    },
+    {
+      "id": "0030-crucifixion-of-jesus",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-steinmann",
+      "url": "https://www.tyndalebulletin.org/article/37789-reckoning-tiberius-s-reign-and-jesus-s-baptism-first-and-second-century-evidence-concerning-tiberius-s-fifteenth-year-luke-3-1.pdf",
+      "title": "Reckoning Tiberius's Reign and Jesus's Baptism",
+      "publisher": "Tyndale Bulletin (Tyndale House, Cambridge)",
+      "author": "Andrew E. Steinmann",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lk3",
+      "url": "https://www.biblegateway.com/passage/?search=Luke+3%3A1-23&version=NRSV",
+      "title": "Luke 3:1-23 (NRSV)",
+      "publisher": "BibleGateway (text of the National Council of Churches)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bas",
+      "url": "https://www.biblicalarchaeology.org/daily/news/baptismal-site-bethany-beyond-the-jordan-added-to-unesco-world-heritage-list/",
+      "title": "Baptismal Site \"Bethany Beyond the Jordan\" Added to UNESCO World Heritage List",
+      "publisher": "Biblical Archaeology Society",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-maghtas",
+      "url": "https://www.wikidata.org/wiki/Q12193567",
+      "title": "Wikidata item Q12193567 (Al Maghtas), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Tradition-based event: date comes from Luke 3:1 as counted by one scholar (Steinmann, who notes alternatives), and the place is disputed (east vs west bank; BAS says veneration began no earlier than Byzantine times). Confidence set to contested. The UNESCO decision page returned 403, so the 2015 listing is taken from the BAS page.",
+  "author": "historian-agent:o-s37",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:45:44.374Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

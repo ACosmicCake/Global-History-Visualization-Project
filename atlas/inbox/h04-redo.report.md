@@ -1,0 +1,5 @@
+# h04-redo (claude-api-sonnet-5-5, outline, 2026-10-23)
+Spent about $0.24; ledger total $71.44.
+
+- 1989-velvet-revolution: PASS 1989-velvet-revolution; $0.239
+  **Final note:** I wrote `1989-velvet-revolution` as an outline, and `run_gate` printed PASS. The only warning was that the record has no animation. **Publishers:** Wilson Center Digital Archive and Prague City Tourism. Wikipedia's article on the topic is not FA or GA, so I used it only to find leads. **Spotcheck:** - `17 November 1989` (Prague City Tourism) was confirmed. - The spotcheck tool failed twice on the Wilson Center page ("fetch failed"), so its two `as_recorded` values, "November 17" and "December 29", are not tool-confirmed. I did read both on the page myself during research. **Least sure of:** - The pin is Národní Street, where the 17 November 1989 confrontation took place. It stands in for a nationwide event. The coordinates come from the Prague City Tourism page. - The end date of 29 December follows the Wilson Center. The Wikipedia article gives 28 November as the end of 

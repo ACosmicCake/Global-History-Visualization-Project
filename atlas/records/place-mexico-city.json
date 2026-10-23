@@ -1,0 +1,158 @@
+{
+  "id": "place-mexico-city",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Mexico City",
+  "summary": "Mexico City was built in the 16th century on the ruins of Tenochtitlan, the Mexica capital on an island in Lake Texcoco, after the Spanish destroyed the city and drained the lake. It became the capital of New Spain, with a grid plan. The Templo Mayor was built over and has been excavated systematically since the late 1970s in the downtown. Its historic centre was listed by UNESCO in 1987.",
+  "when": {
+    "start": {
+      "year": 1521
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the fall of Tenochtitlan on 13 August 1521, after which the Spanish rebuilt the city; the place continues today."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "16th century",
+        "source": "src-inah"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "13 Aug 1521",
+        "source": "src-whe-tm"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "11-12-1987",
+        "source": "src-inah"
+      }
+    ],
+    "display": "1521 to present"
+  },
+  "where": {
+    "lat": 19.42847,
+    "lon": -99.12766,
+    "elevation_m": null,
+    "modern_name": "Mexico City, Mexico",
+    "historical_name": "Mexico City, capital of the Viceroyalty of New Spain, on the site of Mexica Tenochtitlan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-gn-mx"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Colonial and national capital standing on the Mexica capital's site, so that Mexica and Spanish layers coexist in one city."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-tenochtitlan",
+      "type": "related"
+    },
+    {
+      "id": "place-templo-mayor",
+      "type": "has_part"
+    },
+    {
+      "id": "1521-siege-of-tenochtitlan",
+      "type": "caused_by",
+      "because": "The Spanish destroyed Tenochtitlan in 1521 and built the capital of New Spain on its ruins."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-inah",
+      "url": "https://lugares.inah.gob.mx/en/node/6116",
+      "title": "Historic Centre of Mexico City and Xochimilco",
+      "publisher": "Instituto Nacional de Antropologia e Historia (INAH)",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-cortes",
+      "url": "https://www.worldhistory.org/Hernan_Cortes/",
+      "title": "Hernan Cortes",
+      "publisher": "World History Encyclopedia",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-tm",
+      "url": "https://www.worldhistory.org/Templo_Mayor/",
+      "title": "Templo Mayor",
+      "publisher": "World History Encyclopedia",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-mx",
+      "url": "https://www.geonames.org/3530597/mexico-city.html",
+      "title": "GeoNames: Mexico City",
+      "publisher": "GeoNames",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: 'continuity to today' rests on INAH and World History Encyclopedia; independent Mexico's retention of the capital was not confirmed on an opened page and is not claimed.",
+  "author": "historian-agent:o-s32",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:44:25.301Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

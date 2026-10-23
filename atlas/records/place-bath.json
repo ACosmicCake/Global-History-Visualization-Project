@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-bath",
+  "kind": "place",
+  "title": "Bath",
+  "summary": "Bath, in South West England, grew around natural hot springs that the Romans developed into the spa town of Aquae Sulis, with baths and a temple, in the 1st century AD. It later became a Georgian-era spa city and a UNESCO World Heritage Site in 1987.",
+  "when": {
+    "start": {
+      "year": 60
+    },
+    "end": {
+      "year": 60
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 20,
+      "start_plus_years": 40,
+      "end_minus_years": 20,
+      "end_plus_years": 40,
+      "note": "Wikipedia gives c. 60 AD for the Roman spa; UNESCO says only 1st century AD, so the range spans AD 40-100."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "c. 60 AD",
+        "source": "src-wiki-bath"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1st century AD",
+        "source": "src-unesco"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1987",
+        "source": "src-unesco"
+      }
+    ],
+    "display": "Roman spa founded c. AD 60 (1st century AD)"
+  },
+  "where": {
+    "lat": 51.38131,
+    "lon": -2.35906,
+    "elevation_m": null,
+    "modern_name": "Bath, Somerset, England",
+    "historical_name": "Aquae Sulis, Roman Britain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-unesco"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Roman spa town and World Heritage city with well-preserved Roman and Georgian remains."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco",
+      "url": "https://whc.unesco.org/en/list/428/",
+      "title": "City of Bath",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wiki-bath",
+      "url": "https://en.wikipedia.org/w/index.php?title=Bath%2C_Somerset&oldid=1381302252",
+      "title": "Bath, Somerset (Wikipedia, revision 1381302252)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "wiki_quality": "FA",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "UNESCO coordinates (51°22'52.7\"N 2°21'32.6\"W) are for the World Heritage property, a proxy for the city centre; Roman founding date is approximate (c. 60 AD vs '1st century').",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T00:04:35.494Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-23",
+      "version": 2,
+      "change": "outline"
+    }
+  ]
+}

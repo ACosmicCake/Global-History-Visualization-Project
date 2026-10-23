@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1848-revolutions-of-1848-in-the-german-states",
+  "kind": "event",
+  "title": "Revolutions of 1848 in the German states",
+  "summary": "In 1848 the European revolutionary wave reached the German states, where crowds demanded civil rights and national unity. Rulers conceded and allowed a national assembly, which met in Frankfurt's St Paul's Church from 18 May 1848. Its constitution was not accepted by the Prussian king, and the last resistance collapsed in summer 1849.",
+  "when": {
+    "start": {
+      "year": 1848
+    },
+    "end": {
+      "year": 1849
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Bundestag dates the revolution 1848/1849 and ends it in summer 1849; assembly dated 18 May 1848 to 31 May 1849 by Deutschlandmuseum."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1848/1849",
+        "source": "src-bundestag"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "18. Mai 1848",
+        "source": "src-bundestag"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Sommer 1849",
+        "source": "src-bundestag"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "18 May 1848 to 31 May 1849",
+        "source": "src-dm"
+      }
+    ],
+    "display": "1848–1849"
+  },
+  "where": {
+    "lat": 50.11552,
+    "lon": 8.68417,
+    "elevation_m": null,
+    "modern_name": "Frankfurt am Main, Germany (proxy pin: seat of the National Assembly; the unrest spanned many German states)",
+    "historical_name": "Frankfurt am Main, Free City within the German Confederation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First all-German parliament and first German catalogue of fundamental rights, emerging from a Europe-wide revolutionary wave."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1848-seneca-falls-convention",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bundestag",
+      "url": "https://www.bundestag.de/parlament/geschichte/parlamentarismus/1848",
+      "title": "Revolution und Frankfurter Nationalversammlung 1848/1849",
+      "publisher": "Deutscher Bundestag",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dm",
+      "url": "https://www.deutschlandmuseum.de/en/history/calendar/1848-05-18-the-frankfurt-parliament-convenes/",
+      "title": "The Frankfurt Parliament convenes",
+      "publisher": "Deutschlandmuseum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2925533/frankfurt-am-main.html",
+      "title": "Frankfurt am Main, Germany",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a Frankfurt proxy for a multi-state event; exact start (March 1848) not stated as a day on opened pages. Wikipedia article not citable.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T01:20:28.283Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1848",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "In 1848 the European revolutionary wave reached the German states, where crowds demanded civil rights and national unity.",
+        "source": "src-bundestag"
+      },
+      {
+        "span": "1849",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Its constitution was not accepted by the Prussian king, and the last resistance collapsed in summer 1849.",
+        "source": "src-bundestag",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

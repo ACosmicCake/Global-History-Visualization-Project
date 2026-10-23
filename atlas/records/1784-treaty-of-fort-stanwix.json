@@ -1,0 +1,176 @@
+{
+  "id": "1784-treaty-of-fort-stanwix",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Treaty of Fort Stanwix (1784)",
+  "summary": "On 22 October 1784 US commissioners Arthur Lee, Richard Butler and Oliver Wolcott and Six Nations delegates signed a treaty at Fort Stanwix. The Six Nations gave up land west and north of the 1768 line and returned prisoners; Oneida and Tuscarora lands were reconfirmed. The Six Nations council refused to ratify, and the Onondaga Nation regards its treaties with the United States as valid.",
+  "when": {
+    "start": {
+      "year": 1784,
+      "iso": "1784-10-22"
+    },
+    "end": {
+      "year": 1784,
+      "iso": "1784-10-22"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Signing date; negotiations ran about 12-23 October 1784."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "October 22, 1784",
+        "source": "src-nps"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "October 22, 1784",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1784",
+        "source": "src-onon"
+      }
+    ],
+    "display": "22 October 1784"
+  },
+  "where": {
+    "lat": 43.21056,
+    "lon": -75.45528,
+    "elevation_m": null,
+    "modern_name": "Fort Stanwix, Rome, New York, USA",
+    "historical_name": "Fort Stanwix, New York, United States, in Haudenosaunee territory",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wd-stanwix"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "First major US treaty with the Six Nations after the Revolution; it took land, opened Ohio to settlement pressure and remains disputed."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1779-sullivan-expedition",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/articles/000/treaty-and-land-transaction-of-1784.htm",
+      "title": "Treaty and Land Transaction of 1784",
+      "publisher": "US National Park Service",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/treaty-fort-stanwix",
+      "title": "Treaty of Fort Stanwix",
+      "publisher": "EBSCO Research Starters",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-onon",
+      "url": "https://onondaganation.org/government/treaties",
+      "title": "Treaties",
+      "publisher": "Onondaga Nation",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-stanwix",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q566356.json",
+      "title": "Wikidata: Fort Stanwix",
+      "publisher": "Wikidata",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the 'west and north of the 1768 line' wording follows NPS; EBSCO describes a new boundary replacing the 1768 one. The Onondaga page gives only the year 1784.",
+  "author": "historian-agent:o-s32",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:44:24.042Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1784-10-22",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 22 October 1784 US commissioners Arthur Lee, Richard Butler and Oliver Wolcott and Six Nations delegates signed a treaty at Fort Stanwix.",
+        "source": "src-nps"
+      },
+      {
+        "span": "1784",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Six Nations council refused to ratify, and the Onondaga Nation regards its treaties with the United States as valid.",
+        "source": "src-nps",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

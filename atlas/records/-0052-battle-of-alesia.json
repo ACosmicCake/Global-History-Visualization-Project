@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0052-battle-of-alesia",
+  "kind": "event",
+  "title": "Battle of Alesia",
+  "summary": "In 52 BCE Julius Caesar's army besieged the Gallic leader Vercingetorix and his allies at Alesia, building a double line of fortifications. A Gallic relief army failed to break the Roman lines and Vercingetorix surrendered, ending his war to free Gaul from Rome. The site is identified as Alise-Sainte-Reine.",
+  "when": {
+    "start": {
+      "year": -51
+    },
+    "end": {
+      "year": -51
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give only the year 52 BC (astronomical -51); the id year -0052 is a lookup key. The MuséoParc page places the siege in summer."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian (BC), as recorded",
+        "value": "52 BC",
+        "source": "src-man"
+      },
+      {
+        "calendar": "Julian (BC), as recorded",
+        "value": "52 BC",
+        "source": "src-alesia"
+      }
+    ],
+    "display": "52 BCE"
+  },
+  "where": {
+    "lat": 47.5367,
+    "lon": 4.49,
+    "elevation_m": null,
+    "modern_name": "Alise-Sainte-Reine (Mont-Auxois), Côte-d'Or, France",
+    "historical_name": "Alesia, oppidum of the Mandubii, Gaul (pre-Roman Gaul)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive defeat of Vercingetorix that ended the war waged by the Gauls to free Gaul from Roman rule."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-man",
+      "url": "https://en.musee-archeologienationale.fr/object/vercingetorix-and-alesia",
+      "title": "Vercingetorix and Alesia",
+      "publisher": "Musée d'Archéologie nationale (Saint-Germain-en-Laye)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-alesia",
+      "url": "https://alesia.com/en/history-of-the-site/",
+      "title": "History of the site",
+      "publisher": "Alésia MuséoParc",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/6452184",
+      "title": "Alise-Sainte-Reine, France",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the village of Alise-Sainte-Reine (GeoNames, proxy for Mont-Auxois), not the battlefield centre. Only the year (52 BC) is sourced; army and casualty figures are not given.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:25.879Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-51",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 52 BCE Julius Caesar's army besieged the Gallic leader Vercingetorix and his allies at Alesia, building a double line of fortifications.",
+        "source": "src-man"
+      },
+      {
+        "span": "-51",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A Gallic relief army failed to break the Roman lines and Vercingetorix surrendered, ending his war to free Gaul from Rome.",
+        "source": "src-man",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

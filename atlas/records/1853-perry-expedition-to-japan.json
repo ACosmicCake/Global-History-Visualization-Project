@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1853-perry-expedition-to-japan",
+  "kind": "event",
+  "title": "Perry expedition to Japan",
+  "summary": "On 8 July 1853 US Navy Commodore Matthew Perry led a squadron into Tokyo Bay, arriving at Uraga with a letter from the US President for the Japanese Emperor. He returned in 1854 with a larger squadron, and the Treaty of Kanagawa of 31 March 1854 opened Shimoda and Hakodate to US ships and provided for stranded American sailors.",
+  "when": {
+    "start": {
+      "year": 1853
+    },
+    "end": {
+      "year": 1854
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Arrival 8 July 1853; treaty 31 March 1854."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "July 8, 1853",
+        "source": "src-ush-perry"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 31, 1854",
+        "source": "src-ush-perry"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "July 8, 1853",
+        "source": "src-nippon-perry"
+      }
+    ],
+    "display": "8 July 1853 – 31 March 1854"
+  },
+  "where": {
+    "lat": 35.2515263,
+    "lon": 139.7150134,
+    "elevation_m": null,
+    "modern_name": "Uraga, Yokosuka, Kanagawa, Japan (OpenStreetMap stop node)",
+    "historical_name": "Uraga, at the entrance to Edo Bay, Tokugawa Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-osm-uraga"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "trade_exploration",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The visit and the 1854 treaty opened Japanese ports to US ships."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1637-shimabara-rebellion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ush-perry",
+      "url": "https://history.state.gov/milestones/1830-1860/opening-to-japan",
+      "title": "Opening to Japan, 1853-1854",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nippon-perry",
+      "url": "https://www.nippon.com/en/japan-topics/g02197/",
+      "title": "The Black Ships Shock: A Historic Encounter that Changed Japan",
+      "publisher": "Nippon.com (Nippon Communications Foundation)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-uraga",
+      "url": "https://nominatim.openstreetmap.org/search?q=Uraga%20Yokosuka&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Uraga",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Uraga is stated only by Nippon.com; the Office of the Historian says Tokyo Bay. Kurihama landing (14 July) is not on the opened pages.",
+  "author": "historian-agent:o-s100",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T18:09:28.703Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1853",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 8 July 1853 US Navy Commodore Matthew Perry led a squadron into Tokyo Bay, arriving at Uraga with a letter from the US President for the Japanese…",
+        "source": "src-ush-perry"
+      },
+      {
+        "span": "1854",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He returned in 1854 with a larger squadron, and the Treaty of Kanagawa of 31 March 1854 opened Shimoda and Hakodate to US ships and provided for stranded…",
+        "source": "src-ush-perry",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

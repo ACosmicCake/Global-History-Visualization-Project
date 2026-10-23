@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "1945-04-25-san-francisco-conference-ethiopia-liberia-delegations",
+  "kind": "event",
+  "title": "African and Asian delegations at the San Francisco Conference, 1945",
+  "summary": "At the San Francisco Conference (25 April–26 June 1945) fifty nations drafted the UN Charter. Only four African states attended: Egypt, Ethiopia, Liberia and South Africa. Ethiopia, led by Prime Minister Makonnen, and Liberia pressed for the protection of small nations, and both signed the Charter on 26 June; China was one of the four sponsoring powers.",
+  "when": {
+    "start": {
+      "year": 1945
+    },
+    "end": {
+      "year": 1945
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "delegates met between 25 April and 26 June 1945",
+        "source": "src-un"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Between April 25, 1945 and June 26, 1945",
+        "source": "src-nww2"
+      }
+    ],
+    "display": "25 April–26 June 1945"
+  },
+  "where": {
+    "lat": 37.775,
+    "lon": -122.419444,
+    "elevation_m": null,
+    "modern_name": "San Francisco, California, USA",
+    "historical_name": "San Francisco, United States (United Nations Conference on International Organization)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-sf"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "sub_saharan_africa",
+    "northern_africa",
+    "eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Shows how few African and Asian states were present at the founding of the UN and how Ethiopia and Liberia argued for small-state sovereignty."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1945-06-26-un-charter",
+      "type": "part_of"
+    },
+    {
+      "id": "org-united-nations",
+      "type": "related"
+    },
+    {
+      "id": "1935-second-italo-ethiopian-war",
+      "type": "caused_by",
+      "because": "Ethiopia's stance on collective security reflected the League of Nations' failure to stop the Italian invasion."
+    },
+    {
+      "id": "person-haile-selassie",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-un",
+      "url": "https://www.un.org/en/about-us/history-of-the-un/san-francisco-conference",
+      "title": "The San Francisco Conference",
+      "publisher": "United Nations",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-africarenewal",
+      "url": "https://africarenewal.un.org/en/magazine/four-african-countries-founding-un-san-francisco-1945",
+      "title": "Four African countries at the founding of the UN in San Francisco in 1945",
+      "publisher": "United Nations Africa Renewal",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "who"
+      ]
+    },
+    {
+      "id": "src-nww2",
+      "url": "https://www.nationalww2museum.org/war/articles/1945-san-francisco-conference-and-creation-united-nations",
+      "title": "The 1945 San Francisco Conference and the Creation of the United Nations",
+      "publisher": "The National WWII Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-sf",
+      "url": "https://www.wikidata.org/wiki/Q62",
+      "title": "Wikidata item Q62 (San Francisco), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The Asian side is thin: opened pages confirm China's role as a sponsoring power (T. V. Soong chaired plenaries) but do not itemise the other Asian delegations, so only China is named. Egypt counts among the four African states per Africa Renewal. The pin is the city, not the Veterans' War Memorial Building where the Charter was signed.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At the San Francisco Conference (25 April–26 June 1945) fifty nations drafted the UN Charter.",
+        "source": "src-un"
+      },
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Only four African states attended: Egypt, Ethiopia, Liberia and South Africa.",
+        "source": "src-un",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T04:45:23.134Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

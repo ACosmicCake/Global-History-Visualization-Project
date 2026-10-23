@@ -1,0 +1,213 @@
+{
+  "id": "place-tomb-of-askia-gao",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Tomb of Askia, Gao",
+  "summary": "The Tomb of Askia in Gao, Mali, is a stepped pyramidal tomb of mud brick, about 17 m high, built in 1495 by Askia Mohamed, emperor of the Songhai Empire. It stands with two flat-roofed mosques, a cemetery and an open assembly ground within a walled enclosure. Timbers projecting from its face serve as permanent scaffolding for the regular replastering.",
+  "when": {
+    "start": {
+      "year": 1495
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO and ICOMOS both say the tomb was built in 1495. End is the present: the site stands and is maintained by regular replastering."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "The spectacular pyramidal structure was built by Askia Mohamed, Emperor of the Songhai Empire in 1495.",
+        "source": "src-unesco-1139"
+      },
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "built by Askia Mohamed the Emperor of Songhai in 1495 in his capital Gao",
+        "source": "src-icomos-1139"
+      }
+    ],
+    "display": "Built 1495; standing today"
+  },
+  "where": {
+    "lat": 16.2893667,
+    "lon": -0.0448917,
+    "elevation_m": null,
+    "modern_name": "Tomb of Askia, Gao, Gao Region, Mali",
+    "historical_name": "The tomb of Askia Mohamed in Gao, capital of the Songhai Empire, beside the Great Mosque of Gao and the river Niger",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-askia",
+      "src-unesco-1139"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO calls it the most important and best conserved vestige of the Songhai Empire and a unique example of Sudano-Sahelian architecture."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-songhai-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-1139",
+      "url": "https://whc.unesco.org/en/list/1139/",
+      "title": "Tomb of Askia (World Heritage List no. 1139)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance",
+        "where"
+      ]
+    },
+    {
+      "id": "src-icomos-1139",
+      "url": "https://whc.unesco.org/document/151848",
+      "title": "Advisory Body Evaluation (ICOMOS): Le Tombeau des Askia, no. 1139",
+      "publisher": "ICOMOS",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-askia",
+      "url": "https://nominatim.openstreetmap.org/search?q=Tomb+of+Askia+Gao&format=json",
+      "title": "OpenStreetMap Nominatim: Tomb of King Askia, way 201065322 (16.2893667, -0.0448917)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A stepped pyramidal tomb about 17 m by 15 m at its base, with a winding external stair on the east side and timber scaffolding beams projecting from the faces (ICOMOS). Register figures only.",
+      "source": "src-icomos-1139",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-icomos-1139",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 17,
+          "unit": "m",
+          "source": "src-icomos-1139",
+          "note": "\"some 17 metres in height\""
+        },
+        {
+          "part": "base length",
+          "value": 17,
+          "unit": "m",
+          "source": "src-icomos-1139",
+          "note": "\"At its base it measures 17 by 15 metres.\""
+        },
+        {
+          "part": "base width",
+          "value": 15,
+          "unit": "m",
+          "source": "src-icomos-1139",
+          "note": "\"At its base it measures 17 by 15 metres.\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a single stepped pyramid at its published height and base on the edge of Gao"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped pyramid with the east stair and projecting timber scaffolding as schematic stubs; mosques and enclosure walls not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1495,
+        "end_year": 1495,
+        "state": "construction",
+        "description": "Built by Askia Mohamed in 1495 (UNESCO; ICOMOS).",
+        "source": "src-unesco-1139"
+      },
+      {
+        "start_year": 1495,
+        "end_year": null,
+        "state": "intact",
+        "description": "The earthen tomb is kept by regular replastering; UNESCO notes minor reversible alterations from repairs (tin water spouts, cement stairways, other scaffolding timbers).",
+        "source": "src-unesco-1139"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1495,
+        "to_year": null,
+        "material": "mud bricks faced with mud plaster, with permanent timber scaffolding beams",
+        "source": "src-icomos-1139"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stepped_pyramid: ICOMOS calls it a 'large stepped, pyramidal tomb' (no tier count is given, so none is recorded). UNESCO's page prints the coordinate N16 17 23.28, E0 2 40.416 (about 16.2898, 0.0446); the OSM point is at the same distance from the prime meridian but on the west side (-0.0449), and the OSM sign is used. Both are within about 0.1 km if the UNESCO longitude is read as west. Least sure of the UNESCO longitude sign.",
+  "author": "historian-agent:m-17",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:20:05.160Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

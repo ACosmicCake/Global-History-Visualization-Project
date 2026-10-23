@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "id": "place-pyramid-of-meidum",
+  "title": "Pyramid of Meidum, Beni Suef",
+  "summary": "The Meidum pyramid in Egypt's Beni Suef region grew from a seven-step pyramid to an eight-step one and was finally given smooth sides as a true pyramid about 92 to 95 m high on a 144 m base. It is linked with King Sneferu. Its outer layers are gone, leaving a three-step core in a mound of rubble.",
+  "when": {
+    "start": {
+      "year": -2612
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 15,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the first year of Sneferu's reign as the Ministry of Tourism and Antiquities dates it (c. 2613-2589 BC, astronomical -2612). The Penn Museum says ca. 2600 BCE, and earlier attribution to Huni (c. 2637-2613 BC) is called no longer the consensus. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years BC (Egyptian Ministry of Tourism and Antiquities)",
+        "value": "Sneferu (c. 2613–2589 BC)",
+        "source": "src-mota-meidum"
+      },
+      {
+        "calendar": "Years BCE (Penn Museum, Expedition)",
+        "value": "believed to have been built ca. 2600 BCE",
+        "source": "src-penn-meidum"
+      }
+    ],
+    "display": "Built c. 2613–2589 BCE (Sneferu); ruined core today"
+  },
+  "where": {
+    "lat": 29.388371,
+    "lon": 31.157128,
+    "elevation_m": null,
+    "modern_name": "Pyramid of Meidum, Beni Suef Governorate, Egypt",
+    "historical_name": "Pyramid at Meidum of the early 4th Dynasty (Old Kingdom), Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-meidum"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The Ministry of Tourism and Antiquities describes a stepwise conversion into Egypt's first true pyramid design at Meidum, a link in the pyramid sequence."
+  },
+  "confidence": "probable",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-mota-meidum",
+      "url": "https://egymonuments.gov.eg/en/monuments/the-pyramid-of-meidum",
+      "title": "The Pyramid of Meidum",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "author": "Ministry of Tourism and Antiquities, Egypt",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-penn-meidum",
+      "url": "https://www.penn.museum/sites/expedition?p=20726",
+      "title": "Looking Back (Expedition 56(1), originally published 2014)",
+      "publisher": "Penn Museum",
+      "author": "Penn Museum",
+      "date_published": "2014",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-meidum",
+      "url": "https://www.openstreetmap.org/way/89034641",
+      "title": "OpenStreetMap outline of the Meidum pyramid (way 89034641)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "model.geometry"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square base of 144 m in the final true-pyramid phase, as given by the Ministry of Tourism and Antiquities; the surviving ruin is a three-step core in a mound of debris.",
+      "source": "src-mota-meidum",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-mota-meidum",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 92,
+          "unit": "m",
+          "source": "src-mota-meidum",
+          "note": "final true-pyramid phase \"stood between 92 and 95 metres high\"; the lower bound is used"
+        },
+        {
+          "part": "base length",
+          "value": 144,
+          "unit": "m",
+          "source": "src-mota-meidum",
+          "note": "\"a base length of 144 metres\""
+        },
+        {
+          "part": "base width",
+          "value": 144,
+          "unit": "m",
+          "source": "src-mota-meidum",
+          "note": "same square base as the base length"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a smooth-sided pyramid at the published height and base"
+      },
+      {
+        "level": "local",
+        "representation": "procedural true pyramid; the stepped core and rubble mound are not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -2612,
+        "end_year": -2588,
+        "state": "construction",
+        "description": "Seven-step (E1), eight-step (E2) and true-pyramid (E3) phases, associated with Sneferu's reign c. 2613-2589 BC (Ministry of Tourism and Antiquities).",
+        "source": "src-mota-meidum"
+      },
+      {
+        "start_year": -2587,
+        "end_year": null,
+        "state": "ruined",
+        "description": "The smooth casing is gone and a three-step core stands in a mound of rubble; the page gives no date for the collapse.",
+        "source": "src-mota-meidum"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape pyramid, showing the final E3 phase at the lower 92 m bound of the sourced 92-95 m. The ruin today is far lower. The 'ruined' phase start is the year after Sneferu's reign ends and is not a sourced collapse date. No building material is stated on the opened pages. The Penn page says only 'over 300 feet' for height, not used.",
+  "author": "historian-agent:m-24",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:55:34.929Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

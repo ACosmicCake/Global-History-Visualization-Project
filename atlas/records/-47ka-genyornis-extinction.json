@@ -1,0 +1,135 @@
+{
+  "id": "-47ka-genyornis-extinction",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Genyornis Extinction",
+  "summary": "Genyornis newtoni, a large flightless Australian bird, disappeared after humans arrived. Burnt eggshell fragments at more than 200 sites, dated by three methods to 53.9–43.4 ka and likely before 47 ka, indicate people cooked its eggs. A 2016 study argued that egg harvesting contributed to its extinction.",
+  "when": {
+    "start": {
+      "year": -53900
+    },
+    "end": {
+      "year": -43400
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range is the dating window for burnt Genyornis eggshell; the paper says extinction by about 47 ka. The CU Boulder release gives a looser 'some 50,000 years ago'."
+    },
+    "as_recorded": [
+      {
+        "calendar": "radiometric ka (before present)",
+        "value": "likely before 47 ka",
+        "source": "src-nature"
+      },
+      {
+        "calendar": "radiometric ka (before present)",
+        "value": "between 53.9 and 43.4 ka",
+        "source": "src-nature"
+      },
+      {
+        "calendar": "approximate years ago",
+        "value": "some 50,000 years ago",
+        "source": "src-cu"
+      }
+    ],
+    "display": "c. 47,000 years ago (dating window 53.9–43.4 ka)"
+  },
+  "where": {
+    "lat": -25.61,
+    "lon": 134.3547,
+    "elevation_m": null,
+    "modern_name": "Australia (pin is a proxy: geographic centre of mainland Australia, W of Finke, NT)",
+    "historical_name": "Australian continent (Sahul), before any states",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2000,
+    "coordinate_sources": [
+      "src-confl"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "Gives rare direct evidence linking humans to the loss of an Australian megafaunal species."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-45ka-australian-megafauna-extinction",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nature",
+      "url": "https://www.nature.com/articles/ncomms10496",
+      "title": "Human predation contributed to the extinction of the Australian megafaunal bird Genyornis newtoni ~47 ka",
+      "publisher": "Nature Communications (Springer Nature)",
+      "author": "Miller et al.",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cu",
+      "url": "https://www.colorado.edu/today/2016/01/29/ancient-extinction-giant-australian-bird-points-humans",
+      "title": "Ancient extinction of giant Australian bird points to humans",
+      "publisher": "University of Colorado Boulder",
+      "author": null,
+      "date_published": "2016-01-29",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-confl",
+      "url": "https://confluence.org/confluence.php?visitid=10560",
+      "title": "DCP: Geographical Centre of Australia",
+      "publisher": "Degree Confluence Project",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a continental-centre proxy; date window is from one team's dating and the cause (human egg harvesting) is a contributory hypothesis. Overlaps broader megafauna record.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:25:16.547Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

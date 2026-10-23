@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0489-battle-of-marathon",
+  "kind": "event",
+  "title": "Battle of Marathon",
+  "summary": "In 490 BCE an Athenian army, reinforced by Plataea, defeated a Persian invasion force on the plain of Marathon. Livius gives about 25,000 Persians against some 10,000 Athenian hoplites; Herodotus counted 6,400 Persian and 192 Athenian dead. The Spartans arrived too late to take part.",
+  "when": {
+    "start": {
+      "year": -489
+    },
+    "end": {
+      "year": -489
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources disagree on the day and month: Livius gives 10 September or 12 August; World History Encyclopedia says September and names the 11th."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "the battle to 10 September or 12 August 490",
+        "source": "src-livius-marathon"
+      },
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "September 490 BCE",
+        "source": "src-whe-marathon"
+      }
+    ],
+    "display": "490 BCE (August or September)"
+  },
+  "where": {
+    "lat": 38.1532724,
+    "lon": 23.9620892,
+    "elevation_m": null,
+    "modern_name": "Marathon, East Attica, Greece (the battle was on the plain nearby)",
+    "historical_name": "Plain of Marathon, Attica, polis of Athens",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 6,
+    "coordinate_sources": [
+      "src-osm-marathon"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Athenian victory over a Persian invasion force, a founding episode of the Greek-Persian wars."
+  },
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "-0509-expulsion-of-the-peisistratids",
+      "type": "related"
+    },
+    {
+      "id": "-0479-battle-of-salamis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-marathon",
+      "url": "https://www.livius.org/articles/battle/marathon-490-bce/",
+      "title": "Battle of Marathon (490 BCE)",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-marathon",
+      "url": "https://www.worldhistory.org/marathon/",
+      "title": "Battle of Marathon",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2013-05-19",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-marathon",
+      "url": "https://nominatim.openstreetmap.org/search?q=Marathon+Attica+Greece&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Marathon town, node 1855562711 (38.1532724, 23.9620892)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates are the OSM point for Marathon town; the battlefield lies a few kilometres away, hence uncertainty 6 km. The two pages disagree on numbers and day; both are cited as written.",
+  "published_at": "2026-10-22T10:33:51.561Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

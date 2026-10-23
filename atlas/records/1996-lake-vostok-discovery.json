@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "1996-lake-vostok-discovery",
+  "kind": "event",
+  "title": "Discovery of Lake Vostok",
+  "summary": "Lake Vostok, a lake lying beneath the ice of central East Antarctica, is the largest Antarctic subglacial lake. NASA says it was discovered in 1996 with a radar on the European ERS-1 satellite. A review cites a 1996 paper by Kapitsa and colleagues reporting the water at least 500 m deep, and describes the lake as about 250 km long.",
+  "when": {
+    "start": {
+      "year": 1996,
+      "iso": "1996"
+    },
+    "end": {
+      "year": 1996,
+      "iso": "1996"
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "NASA states 1996 as the discovery year. The Phil. Trans. review also cites ERS-1 altimetry work from 1993 and radio-echo sounding from 1977, so earlier milestones exist."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "discovered in 1996 with a radar on the European ERS-1 satellite",
+        "source": "src-nasa-vostok"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Kapitsa et al. (1996) reported that it is at least 500 m deep",
+        "source": "src-siegert2016"
+      }
+    ],
+    "display": "1996"
+  },
+  "where": {
+    "lat": -77.5,
+    "lon": 106,
+    "elevation_m": null,
+    "modern_name": "Lake Vostok, beneath the East Antarctic ice sheet near Vostok Station",
+    "historical_name": "Subglacial lake beneath Vostok Station region, East Antarctica; no sovereign territory",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd-vostok"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "geology_climate",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Largest Antarctic subglacial lake, the first whose water depth was measured."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-800ka-vostok-and-epica-ice-cores",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-vostok",
+      "url": "https://science.nasa.gov/earth/earth-observatory/flying-over-vostok-station-82672/",
+      "title": "Flying Over Vostok Station",
+      "publisher": "NASA Earth Observatory",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-siegert2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4685968/",
+      "title": "Recent advances in understanding Antarctic subglacial lakes and hydrology",
+      "publisher": "Philosophical Transactions of the Royal Society A (Siegert, Ross, Le Brocq)",
+      "author": "Siegert, Ross, Le Brocq",
+      "date_published": "2016-01-28",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-vostok",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q152044.json",
+      "title": "Wikidata item Q152044 (Lake Vostok), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: sources credit different milestones (1977 radio-echo sounding, 1993 altimetry, 1996 Nature paper); the 1996 year rests on the NASA page. The Wikidata point is a lake-centre proxy.",
+  "published_at": "2026-10-22T18:32:00.707Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

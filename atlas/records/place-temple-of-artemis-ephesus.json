@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "scale": "civilization",
+  "confidence": "probable",
+  "audience_note": null,
+  "author": "historian-agent:m-18",
+  "updated": "2026-10-22",
+  "id": "place-temple-of-artemis-ephesus",
+  "title": "Temple of Artemis at Ephesus",
+  "summary": "The Temple of Artemis at Ephesus in Turkey was begun around 550 BCE with funding from Croesus of Lydia. Herostratus burned it in 356 BCE, and it was rebuilt from soon after. The Goths plundered or destroyed it around 267 CE, and a Christian mob tore it down in 401 CE.",
+  "when": {
+    "start": {
+      "year": -549
+    },
+    "end": {
+      "year": 401
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "World History Encyclopedia: construction began c. 550 BCE; the Encyclopaedia Romana page says c. 560 BC. End is the 401 CE demolition per WHE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "c. 550 BCE",
+        "source": "src-whe-artemis"
+      },
+      {
+        "calendar": "BC (Encyclopaedia Romana)",
+        "value": "c. 560 BC",
+        "source": "src-grout-artemis"
+      },
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "401 CE",
+        "source": "src-whe-artemis"
+      }
+    ],
+    "display": "c. 550–356 BCE, rebuilt c. 355–330 BCE; destroyed by 401 CE"
+  },
+  "where": {
+    "lat": 37.9497968,
+    "lon": 27.3636333,
+    "elevation_m": null,
+    "modern_name": "Temple of Artemis site (Artemision), Selçuk, İzmir Province, Türkiye",
+    "historical_name": "Artemision of Ephesus, Ionian Ephesus, under Lydian and later Greek rule",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.15,
+    "coordinate_sources": [
+      "src-osm-artemis"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "A very large Ionic temple; Pliny gives 127 columns and the rebuilt temple is known from excavation."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-whe-artemis",
+      "url": "https://www.worldhistory.org/Temple_of_Artemis_at_Ephesus/",
+      "title": "Temple of Artemis at Ephesus",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-grout-artemis",
+      "url": "https://penelope.uchicago.edu/~grout/encyclopaedia_romana/greece/paganism/artemis.html",
+      "title": "Temple of Artemis (Diana) at Ephesus",
+      "publisher": "University of Chicago (Encyclopaedia Romana, Penelope)",
+      "author": "University of Chicago (Encyclopaedia Romana, Penelope)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cam-mca",
+      "url": "https://museum.classics.cam.ac.uk/collections/casts/sculptured-column-drum-ephesus",
+      "title": "Sculptured column drum from Ephesus",
+      "publisher": "Museum of Classical Archaeology, University of Cambridge",
+      "author": "Museum of Classical Archaeology, University of Cambridge",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-artemis",
+      "url": "https://nominatim.openstreetmap.org/search?q=Temple+of+Artemis+Selcuk&format=json",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors (Nominatim)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Destroyed monument. Model is the Hellenistic rebuild only (WHE gives about 105 x 55 m and columns 17.65 m from excavation evidence); the earlier temple has Pliny-based figures of 129.5 x 68.6 m and 18.3 m columns (WHE) or about 377 x 180 ft (Encyclopaedia Romana). No overall building height is stated on any opened page, so height is the column height. Shape: temple_colonnade. Dates of the Goths vary (c. 267 WHE; AD 262 Encyclopaedia Romana). Least sure: the height and these dates.",
+  "model": {
+    "footprint": {
+      "description": "Rectangular temple of the Hellenistic rebuild, about 105 x 55 m, on a higher base than the original (World History Encyclopedia, from excavation evidence). No survey polygon opened.",
+      "source": "src-whe-artemis",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "reconstruction",
+      "shape": "temple_colonnade",
+      "author": "Living Atlas procedural reconstruction from published excavation figures",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-whe-artemis",
+      "measurements": [
+        {
+          "part": "height (column height; no overall height stated)",
+          "value": 17.65,
+          "unit": "m",
+          "source": "src-whe-artemis",
+          "note": "58 ft"
+        },
+        {
+          "part": "length",
+          "value": 105,
+          "unit": "m",
+          "source": "src-whe-artemis",
+          "note": "344 ft"
+        },
+        {
+          "part": "width",
+          "value": 55,
+          "unit": "m",
+          "source": "src-whe-artemis",
+          "note": "180 ft"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "rectangular colonnaded block about 105 x 55 m, labelled reconstruction"
+      },
+      {
+        "level": "local",
+        "representation": "procedural reconstruction of the Hellenistic rebuild: dipteral colonnade on a high base"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -354,
+        "end_year": -329,
+        "state": "construction",
+        "description": "Rebuild after the 356 BCE fire, c. 355–330 BCE; Alexander offered to pay in 334 BCE and the Ephesians declined.",
+        "source": "src-whe-artemis"
+      },
+      {
+        "start_year": -328,
+        "end_year": 266,
+        "state": "intact",
+        "description": "Hellenistic temple stands.",
+        "source": "src-whe-artemis"
+      },
+      {
+        "start_year": 267,
+        "end_year": 400,
+        "state": "ruined",
+        "description": "The Goths plundered or destroyed the temple c. 267 CE; Theodosius I decreed against pagan practices in 393 CE.",
+        "source": "src-whe-artemis"
+      },
+      {
+        "start_year": 401,
+        "end_year": null,
+        "state": "destroyed",
+        "description": "A Christian mob tore the temple down for the last time in 401 CE.",
+        "source": "src-whe-artemis"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T13:44:40.932Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

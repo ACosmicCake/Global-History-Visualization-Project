@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s80",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "polity-sasanian-empire",
+  "kind": "polity",
+  "title": "Sasanian Empire",
+  "summary": "The Sasanian Empire was the Persian dynasty that ruled from 224 to 651. Ardashir I founded it by defeating the last Parthian king, and its kings were inaugurated at Ctesiphon, the capital. The dynasty ended when Yazdegerd III lost a long struggle against Arab invaders.",
+  "when": {
+    "start": {
+      "year": 224
+    },
+    "end": {
+      "year": 651
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 2,
+      "note": "Start is 224 in two sources; Livius and CAIS give Ardashir's defeat of the last Parthian or crowning as 226, and WHE notes 224, 226 or 227 for the coronation."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Its kings and queens ruled from 224 to 651.",
+        "source": "src-livius"
+      },
+      {
+        "calendar": "CE",
+        "value": "224 - 651 CE",
+        "source": "src-cais"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 224 CE, at the Battle of Hormozdgan",
+        "source": "src-whe-ardashir"
+      }
+    ],
+    "display": "224-651 CE"
+  },
+  "where": {
+    "lat": 33.093611,
+    "lon": 44.580833,
+    "elevation_m": null,
+    "modern_name": "Ctesiphon, near Baghdad, Iraq",
+    "historical_name": "Ctesiphon, capital of the Sasanian empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-ctesiphon"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The last pre-Islamic Persian empire and a great power rival to Rome and Byzantium."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "place-ctesiphon-taq-kisra",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius",
+      "url": "https://www.livius.org/articles/dynasty/sasanians/",
+      "title": "Sasanians",
+      "publisher": "Livius.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cais",
+      "url": "https://www.cais-soas.com/CAIS/History/Sasanian/sasanid.htm",
+      "title": "An Introduction to the Sasanian Dynasty",
+      "publisher": "Circle of Ancient Iranian Studies, SOAS",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-whe-ardashir",
+      "url": "https://www.worldhistory.org/Ardashir_I/",
+      "title": "Ardashir I",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-ctesiphon",
+      "url": "https://www.wikidata.org/wiki/Q192541",
+      "title": "Wikidata item Q192541 (Ctesiphon), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start is 224 (CAIS, WHE) but 226 in Livius; the 2-year positive uncertainty covers that. The pin is the capital Ctesiphon (CAIS), not the empire's extent. Overlaps with the Ctesiphon/Taq Kisra place record; scope here is the dynasty.",
+  "published_at": "2026-10-22T15:30:08.958Z"
+}

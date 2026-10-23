@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s9",
+  "updated": "2026-10-22",
+  "id": "1946-12-14-un-ga-resolution-66-non-self-governing-territories",
+  "kind": "event",
+  "title": "UN General Assembly Resolution 66(I): the first list of Non-Self-Governing Territories",
+  "summary": "On 14 December 1946, at the end of its first session in New York, the UN General Assembly adopted resolution 66 (I) on information under Article 73(e) of the Charter. It noted a list of territories under Chapter XI, the first UN roll of Non-Self-Governing Territories. Sources give 72 or 74 territories.",
+  "when": {
+    "start": {
+      "year": 1946,
+      "iso": "1946-12-14"
+    },
+    "end": {
+      "year": 1946,
+      "iso": "1946-12-14"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Date agreed by both sources. The number of territories differs: the UN decolonization text says 72, a US State Department document says seventy-four."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "resolution 66 (I) of 14 December 1946",
+        "source": "src-ilo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Resolution 66 (I), December 14, 1946",
+        "source": "src-frus"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Flushing Meadow (23 Oct.-16 Dec. 1946)",
+        "source": "src-ask-un"
+      }
+    ],
+    "display": "14 December 1946"
+  },
+  "where": {
+    "elevation_m": null,
+    "geometry": {
+      "type": "point"
+    },
+    "lat": 40.7437,
+    "lon": -73.8448,
+    "modern_name": "Flushing Meadows-Corona Park, Queens, New York City, USA",
+    "historical_name": "Flushing Meadow, New York, interim seat of the United Nations General Assembly, 1946",
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wd-q745296",
+      "src-ask-un"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "It created the list that framed UN decolonization; Tokelau, listed in 1946, remains among 17 territories still on it."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1945-06-26-un-charter",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-frus",
+      "url": "https://history.state.gov/historicaldocuments/frus1949v02/d235",
+      "title": "Foreign Relations of the United States, 1949, Volume II, document 235",
+      "publisher": "Office of the Historian, US Department of State",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ilo",
+      "url": "http://metadata.ilo.org/thesaurus/285.html",
+      "title": "Non-Self-Governing Territories (thesaurus entry)",
+      "publisher": "International Labour Organization",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ask-un",
+      "url": "https://ask.un.org/faq/431376",
+      "title": "When has the General Assembly held meetings away from UN Headquarters?",
+      "publisher": "United Nations Dag Hammarskjold Library",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where",
+        "when"
+      ]
+    },
+    {
+      "id": "src-un-decol",
+      "url": "https://www.un.org/en/global-issues/decolonization",
+      "title": "Decolonization",
+      "publisher": "United Nations",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q745296",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q745296.json",
+      "title": "Wikidata entry (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the territory count (72 per UN text via the ILO, 74 per a 1949 US document); summary gives both. The UN decolonization pages did not load for me, so the 72 figure rests on the ILO quotation of UN wording. Pin is the interim Flushing Meadow site.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1946-12-14",
+        "action": "pulse { radius_km: 6 }",
+        "caption": "The General Assembly, then meeting at Flushing Meadow, adopted resolution 66 (I) on Article 73(e) information.",
+        "source": "src-ask-un"
+      },
+      {
+        "span": "1946-12-14",
+        "action": "pulse { radius_km: 8 }",
+        "caption": "It noted a list of territories to which Chapter XI of the Charter applied; a US document counts 74, UN wording 72.",
+        "source": "src-ilo"
+      },
+      {
+        "span": "1947",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "For twelve listed territories no information was sent in 1947 and 1948, and the US contested the Canal Zone entry.",
+        "source": "src-frus",
+        "consequence": true
+      },
+      {
+        "span": "1946",
+        "action": "pulse { radius_km: 12 }",
+        "caption": "Tokelau has been on the UN list since 1946; 17 such territories remain today.",
+        "source": "src-un-decol",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:29:41.634Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

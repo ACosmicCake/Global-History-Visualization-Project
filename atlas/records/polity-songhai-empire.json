@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "polity-songhai-empire",
+  "kind": "polity",
+  "title": "Songhai Empire",
+  "summary": "The Songhai Empire grew from a kingdom on the Niger bend into the largest state in West Africa, with Gao as its capital according to World History Encyclopedia. Sunni Ali (r. 1464-1492) began conquest, and Askia Mohammad I (r. 1494-1528) promoted Islamic law and scholarship. Civil wars weakened it, and Moroccan musket-armed forces defeated it in 1590-1591.",
+  "when": {
+    "start": {
+      "year": 1464
+    },
+    "end": {
+      "year": 1591
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 4,
+      "start_plus_years": 4,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Start is c. 1460 (World History Encyclopedia) or c. 1464 (EBSCO); end is 1591, the Moroccan victory."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Songhai Empire c. 1460 to c. 1591",
+        "source": "src-whe-songhai"
+      },
+      {
+        "calendar": "CE",
+        "value": "DATE c. 1464-1591",
+        "source": "src-ebsco-songhai"
+      }
+    ],
+    "display": "c. 1460-1591"
+  },
+  "where": {
+    "lat": 16.2667,
+    "lon": -0.05,
+    "elevation_m": null,
+    "modern_name": "Gao, Mali",
+    "historical_name": "Gao on the Niger, Songhai Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-gao"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Largest state of its time in West Africa, controlling the Niger trade towns including Timbuktu and Djenné."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-mali-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-timbuktu",
+      "type": "related"
+    },
+    {
+      "id": "1591-battle-of-tondibi",
+      "type": "caused",
+      "because": "The Moroccan victory at Tondibi in 1591 led to the empire's disintegration."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-songhai",
+      "url": "https://www.worldhistory.org/Songhai_Empire/",
+      "title": "Songhai Empire",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-songhai",
+      "url": "https://www.ebsco.com/research-starters/history/songhai-empire",
+      "title": "Songhai Empire (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-gao",
+      "url": "https://www.wikidata.org/wiki/Q188904",
+      "title": "Gao (Q188904)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "EBSCO names Kukiya as first capital and calls Gao a commercial centre, while World History Encyclopedia says Gao was the capital. Single-source Wikidata coordinates for Gao.",
+  "author": "historian-agent:o-s34",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:04:55.134Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

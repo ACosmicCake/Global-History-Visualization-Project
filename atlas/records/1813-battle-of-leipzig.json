@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1813-battle-of-leipzig",
+  "kind": "event",
+  "title": "Battle of Leipzig",
+  "summary": "The Battle of the Nations at Leipzig, fought 16–19 October 1813, set France and its Confederation of the Rhine allies against the armies of Austria, Prussia and Russia, with Sweden also in the coalition. The coalition won; at least 90,000 soldiers were killed or wounded, French forces retreated behind the Rhine, and the Confederation of the Rhine collapsed.",
+  "when": {
+    "start": {
+      "year": 1813
+    },
+    "end": {
+      "year": 1813
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both museum sources agree the battle ended 19 October 1813; start date 16 October from Deutschlandmuseum."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "between 16 and 19 October 1813",
+        "source": "src-dm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "ended on 19 October 1813",
+        "source": "src-dhm"
+      }
+    ],
+    "display": "16–19 October 1813"
+  },
+  "where": {
+    "lat": 51.333333333333,
+    "lon": 12.383333333333,
+    "elevation_m": null,
+    "modern_name": "Leipzig, Saxony, Germany (pin is a proxy: the city point, not the battlefield)",
+    "historical_name": "Leipzig, 1813",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-nomisma"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive coalition victory over Napoleon, described as the largest battle in world history to that date."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a battle with very large military casualties.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-dm",
+      "url": "https://www.deutschlandmuseum.de/en/history/calendar/1813-10-19-battle-of-leipzig/",
+      "title": "Battle of Leipzig",
+      "publisher": "Deutschlandmuseum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dhm",
+      "url": "https://www.dhm.de/en/exhibitions/archive/2013/1813-battle-of-leipzig/",
+      "title": "1813 – Battle of Leipzig",
+      "publisher": "Deutsches Historisches Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nomisma",
+      "url": "http://nomisma.org/id/leipzig",
+      "title": "Leipzig (Nomisma.org)",
+      "publisher": "Nomisma.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Leipzig city point from Nomisma, a proxy; the battlefield spread around the city. Casualty figure is a minimum ('at least 90,000') from Deutschlandmuseum.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T23:22:19.030Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1813",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Battle of the Nations at Leipzig, fought 16–19 October 1813, set France and its Confederation of the Rhine allies against the armies of Austria, Prussia and Russia…",
+        "source": "src-dm"
+      },
+      {
+        "span": "1813",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The coalition won; at least 90,000 soldiers were killed or wounded, French forces retreated behind the Rhine, and the Confederation of the Rhine collapsed.",
+        "source": "src-dm",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

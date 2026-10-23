@@ -1,0 +1,143 @@
+{
+  "id": "person-sophie-scholl",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "title": "Sophie Scholl",
+  "summary": "Sophie Scholl, born 9 May 1921 in Forchtenberg, belonged to the White Rose resistance group, which distributed leaflets denouncing the Nazi regime. A caretaker detained her at the University of Munich on 18 February 1943 while she and her brother Hans distributed leaflets. The People's Court under Roland Freisler sentenced her to death, and she was executed at Munich-Stadelheim on 22 February 1943.",
+  "when": {
+    "start": {
+      "year": 1921
+    },
+    "end": {
+      "year": 1943
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth 9 May 1921; arrest 18 February 1943; trial and execution 22 February 1943."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1921 9. Mai: Sophie Scholl wird in Forchtenberg",
+        "source": "src-dhm-scholl"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "18. Februar: Die Geschwister Scholl verteilen",
+        "source": "src-dhm-scholl"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "February 22, 1943",
+        "source": "src-ushmm-whiterose"
+      }
+    ],
+    "display": "1921-1943"
+  },
+  "where": {
+    "lat": 48.1375,
+    "lon": 11.575,
+    "elevation_m": null,
+    "modern_name": "Munich, Germany (arrest at the university, execution at Stadelheim prison)",
+    "historical_name": "Munchen, capital of Bavaria, Nazi Germany",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-wd-munich",
+      "src-dhm-scholl"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 3,
+    "justification": "A student of the White Rose resistance group executed for opposing the Nazi regime."
+  },
+  "confidence": "established",
+  "audience_note": "Refers to a state execution of a young woman and her brother.",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "related"
+    },
+    {
+      "id": "person-adolf-hitler",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dhm-scholl",
+      "url": "https://www.dhm.de/lemo/biografie/sophie-scholl",
+      "title": "Sophie Scholl 1921-1943",
+      "publisher": "Deutsches Historisches Museum (LeMO)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ushmm-whiterose",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/white-rose",
+      "title": "White Rose",
+      "publisher": "United States Holocaust Memorial Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-munich",
+      "url": "https://www.wikidata.org/wiki/Q1726",
+      "title": "Wikidata item Q1726 (Munich), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Munich city centre (Wikidata), not Stadelheim or the university; USHMM page gives the execution date only, DHM gives birth, arrest, trial and place. The leaflet count is not used.",
+  "author": "historian-agent:o-s43",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:16:58.840Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

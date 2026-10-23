@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-150my-archaeopteryx",
+  "kind": "event",
+  "title": "Archaeopteryx",
+  "summary": "Archaeopteryx was an early feathered, bird-like animal that lived around 150 million years ago in the Late Jurassic, in the lagoon deposits of the Solnhofen area of Bavaria. Its first fossil, a feather, turned up in 1861, and all 12 known specimens come from that area.",
+  "when": {
+    "start": {
+      "year": -150000000
+    },
+    "end": {
+      "year": -150000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources say 'around' or 'about' 150 million years; no error range given."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years before present, as recorded",
+        "value": "around 150 million years ago",
+        "source": "src-nhmu"
+      },
+      {
+        "calendar": "years before present, as recorded",
+        "value": "about 150 million years earlier",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian, discovery of first fossil",
+        "value": "1861",
+        "source": "src-iugs"
+      }
+    ],
+    "display": "c. 150 million years ago (Late Jurassic)"
+  },
+  "where": {
+    "lat": 48.8903,
+    "lon": 10.9681,
+    "elevation_m": null,
+    "modern_name": "Solnhofen-Eichstätt area, Altmühltal Nature Park, Bavaria, Germany",
+    "historical_name": "Solnhofen-Eichstätt lagoon area (Late Jurassic); not a polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-iugs"
+    ],
+    "paleo": {
+      "not_applicable": "Plate-model reconstructions of this point at 150 Ma disagree widely (three models gave very different positions); none adopted."
+    }
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Iconic early bird whose fossils were debated in the 1860s evolution dispute."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nhmu",
+      "url": "https://nhmu.utah.edu/articles/150-million-year-old-fossil-link-between-birds-and-dinosaurs",
+      "title": "An 150-Million-Year-Old Fossil Is the Link Between Birds and Dinosaurs",
+      "publisher": "Natural History Museum of Utah, University of Utah",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-iugs",
+      "url": "https://iugs-geoheritage.org/geoheritage_sites/jurassic-solnhofen-eichstatt-archaeopteryx-serial-site/",
+      "title": "Jurassic Solnhofen-Eichstätt Archaeopteryx serial site",
+      "publisher": "IUGS International Commission on Geoheritage",
+      "author": null,
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/archaeopteryx-lithographica-discovered/",
+      "title": "Archaeopteryx Lithographica Is Discovered",
+      "publisher": "EBSCO Research Starters",
+      "author": "Carolyn Gramling",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the IUGS serial-site coordinate (48°53'25\"N, 10°58'05\"E), a proxy for the Solnhofen-Eichstätt area, not a single find spot. 150 Ma is approximate. Sources differ on whether the 1861 find was a feather or skeleton.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:25:07.514Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-150000000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Archaeopteryx was an early feathered, bird-like animal that lived around 150 million years ago in the Late Jurassic, in the lagoon deposits of the Solnhofen area of Bavaria.",
+        "source": "src-nhmu"
+      },
+      {
+        "span": "-150000000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Its first fossil, a feather, turned up in 1861, and all 12 known specimens come from that area.",
+        "source": "src-nhmu",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

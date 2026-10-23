@@ -1,0 +1,262 @@
+{
+  "id": "place-hagia-sophia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Hagia Sophia, Istanbul",
+  "summary": "Hagia Sophia, the Church of the Holy Wisdom, was built at Constantinople for Emperor Justinian between 532 and 537, under a central dome about 31 m across. It became a mosque after the Ottoman conquest of 1453, a museum in 1934, and a mosque again in 2020.",
+  "when": {
+    "start": {
+      "year": 532
+    },
+    "end": {
+      "year": 537
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Completion Date 532-537",
+        "source": "src-asce-hs"
+      },
+      {
+        "calendar": "CE",
+        "value": "inaugurated on December 27, 537",
+        "source": "src-asce-hs"
+      }
+    ],
+    "display": "532-537 CE"
+  },
+  "where": {
+    "lat": 41.008667,
+    "lon": 28.980167,
+    "elevation_m": null,
+    "modern_name": "Hagia Sophia (Ayasofya), Fatih, Istanbul, Turkiye",
+    "historical_name": "Hagia Sophia (Church of the Holy Wisdom), Constantinople, Eastern Roman (Byzantine) Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-asce-hs"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The great church of the Byzantine Empire, later a mosque and museum, and a model for domed architecture; part of the UNESCO Historic Areas of Istanbul."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1453-fall-of-constantinople",
+      "type": "related"
+    },
+    {
+      "id": "polity-eastern-roman-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-asce-hs",
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/hagia-sophia",
+      "title": "Hagia Sophia (ASCE Historic Landmark)",
+      "publisher": "American Society of Civil Engineers",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where.lat",
+        "where.lon",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-harvard-hs",
+      "url": "https://mellonurbanism.harvard.edu/hagia-sophia",
+      "title": "Hagia Sophia",
+      "publisher": "Harvard University, Mellon Initiative in Urbanism",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-aljazeera-hs",
+      "url": "https://www.aljazeera.com/amp/features/2020/7/10/turkey-reconverts-istanbuls-hagia-sophia-museum-into-a-mosque",
+      "title": "Turkey reconverts Istanbul's Hagia Sophia museum into a mosque",
+      "publisher": "Al Jazeera",
+      "author": null,
+      "date_published": "2020-07-10",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-whe-hs",
+      "url": "https://www.worldhistory.org/Hagia_Sophia/",
+      "title": "Hagia Sophia",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: domed_building. Heights disagree by datum: ASCE gives a dome height of 48.5 m (160 ft) without naming the datum, World History Encyclopedia gives 55 m above the floor; both are listed. The museum year is the 1934 cabinet decision (Harvard, Al Jazeera); World History Encyclopedia says 1935. Length and width (81 x 73 m) come from a non-institutional reference page.",
+  "model": {
+    "footprint": {
+      "description": "Near-square plan about 81 m long by 73 m wide, under a central dome 31 m in diameter (World History Encyclopedia; ASCE).",
+      "source": "src-whe-hs",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "domed_building",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-asce-hs",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 55,
+          "unit": "m",
+          "source": "src-whe-hs",
+          "note": "crown of the dome above the floor, 180 ft"
+        },
+        {
+          "part": "dome height",
+          "value": 48.5,
+          "unit": "m",
+          "source": "src-asce-hs",
+          "note": "160 ft; datum not stated"
+        },
+        {
+          "part": "dome diameter",
+          "value": 31,
+          "unit": "m",
+          "source": "src-asce-hs",
+          "note": "over 101 ft"
+        },
+        {
+          "part": "length",
+          "value": 81,
+          "unit": "m",
+          "source": "src-whe-hs",
+          "note": "269 ft"
+        },
+        {
+          "part": "width",
+          "value": 73,
+          "unit": "m",
+          "source": "src-whe-hs",
+          "note": "240 ft"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "domed block with later minarets omitted"
+      },
+      {
+        "level": "local",
+        "representation": "procedural dome on a near-square nave, with semi-domes"
+      },
+      {
+        "level": "street",
+        "representation": "phase-dependent: Byzantine church, Ottoman additions, 20th-century museum state"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 532,
+        "end_year": 537,
+        "state": "construction",
+        "description": "Built under Justinian after the Nika riots; inaugurated 27 December 537. The first dome collapsed in 558 and was rebuilt in 562 to a greater height.",
+        "source": "src-asce-hs"
+      },
+      {
+        "start_year": 537,
+        "end_year": 1453,
+        "state": "intact",
+        "description": "Church of the Holy Wisdom.",
+        "source": "src-asce-hs"
+      },
+      {
+        "start_year": 1453,
+        "end_year": 1934,
+        "state": "altered",
+        "description": "Converted to a mosque after the Ottoman capture of Constantinople; Christian mosaics plastered over.",
+        "source": "src-harvard-hs"
+      },
+      {
+        "start_year": 1934,
+        "end_year": 2020,
+        "state": "restored",
+        "description": "Secularised as a museum under Ataturk, exposing the medieval mosaics.",
+        "source": "src-harvard-hs"
+      },
+      {
+        "start_year": 2020,
+        "end_year": null,
+        "state": "altered",
+        "description": "Reconverted to a mosque after the Council of State cancelled the 1934 decision in July 2020.",
+        "source": "src-aljazeera-hs"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 532,
+        "to_year": null,
+        "material": "brick and mortar",
+        "source": "src-whe-hs"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:34.879Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

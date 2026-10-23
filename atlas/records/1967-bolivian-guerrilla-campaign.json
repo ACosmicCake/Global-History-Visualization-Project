@@ -1,0 +1,148 @@
+{
+  "id": "1967-bolivian-guerrilla-campaign",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "event",
+  "title": "Bolivian guerrilla campaign of Che Guevara",
+  "summary": "In November 1966, Ernesto 'Che' Guevara arrived in Bolivia to establish the National Liberation Army (ELN), seeking to create a continental revolutionary focus using rural guerrilla foco doctrine. Operating in the rugged southeastern scrublands around Ñancahuazú, the insurgents faced isolation, lack of peasant recruitment, and internal estrangement from the Bolivian Communist Party. Surrounded by U.S.-trained Bolivian Rangers aided by CIA operatives, Guevara was captured in the Quebrada del Yuro on 8 October 1967 and executed the next day at La Higuera.",
+  "when": {
+    "start": {
+      "year": 1966,
+      "iso": "1966-11-03"
+    },
+    "end": {
+      "year": 1967,
+      "iso": "1967-10-09"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Guevara entered Bolivia in early November 1966; combat erupted in March 1967 and ended with his capture and execution on 8–9 October 1967."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "entered Bolivia from Brazil on a Uruguayan passport in November 1966",
+        "source": "src-nsa-gwu-bolivia"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "executed in the hills of Bolivia after being captured by a U.S.-trained Bolivian military battalion",
+        "source": "src-nsa-gwu-bolivia"
+      }
+    ],
+    "display": "November 1966 – 9 October 1967"
+  },
+  "where": {
+    "lat": -18.7945,
+    "lon": -64.2015,
+    "elevation_m": 2054,
+    "modern_name": "La Higuera, Vallegrande Province, Santa Cruz Department, Bolivia",
+    "historical_name": "Vallegrande Province, Republic of Bolivia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-geonames-lahiguera"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The defeat and execution of Che Guevara marked the definitive failure of the rural foco insurgency model in South America and solidified Guevara's iconographic legacy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-che-guevara",
+      "type": "same_person"
+    },
+    {
+      "id": "1967-10-09-execution-of-che-guevara",
+      "type": "has_part"
+    },
+    {
+      "id": "1965-cuban-expedition-to-the-congo",
+      "type": "related"
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nsa-gwu-bolivia",
+      "url": "https://nsarchive.gwu.edu/briefing-book/cuba-intelligence/2020-10-09/che-guevara-cia-mountains-bolivia",
+      "title": "Che Guevara and the CIA in the Mountains of Bolivia",
+      "publisher": "National Security Archive, George Washington University",
+      "author": "John Prados and Arturo Jimenez-Bacardi",
+      "date_published": "2020-10-09",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-frus-che-bolivia",
+      "url": "https://history.state.gov/historicaldocuments/frus1964-68v31/d172",
+      "title": "Memorandum of Conversation: Statements by Ernesto 'Che' Guevara Prior to His Execution",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "Central Intelligence Agency / Department of State",
+      "date_published": "1967-10-13",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-lahiguera",
+      "url": "https://www.geonames.org/3912127/la-higuera.html",
+      "title": "La Higuera, Bolivia (GeoNames ID 3912127)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2023-03-08",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of whether the campaign coordinate anchor should be the initial training camp at Ñancahuazú or the final battle and execution ground at La Higuera; pinned to La Higuera as the culmination point.",
+  "published_at": "2026-10-22T07:06:50.322Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

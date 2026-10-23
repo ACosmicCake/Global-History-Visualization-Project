@@ -1,0 +1,169 @@
+{
+  "id": "1526-first-battle-of-panipat",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "First Battle of Panipat",
+  "summary": "At Panipat in April 1526 Babur, with roughly 12,000 men, defeated Ibrahim Lodi, Sultan of Delhi, whose army Babur was told numbered 100,000 though other sources say as few as 40,000. Ibrahim was killed. The victory opened Delhi and Agra to Babur and began Mughal rule in India.",
+  "when": {
+    "start": {
+      "year": 1526
+    },
+    "end": {
+      "year": 1526
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give 21 April (historyofwar.org) and 20 April (Encyclopedia.com); the Smithsonian essay gives only April 1526."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian / CE",
+        "value": "21 April 1526",
+        "source": "src-historyofwar-panipat"
+      },
+      {
+        "calendar": "CE",
+        "value": "20 April 1526",
+        "source": "src-encyc-babur"
+      },
+      {
+        "calendar": "CE",
+        "value": "April 1526",
+        "source": "src-si-babur"
+      }
+    ],
+    "display": "20 or 21 April 1526"
+  },
+  "where": {
+    "lat": 29.3875,
+    "lon": 76.97,
+    "elevation_m": null,
+    "modern_name": "Panipat, Haryana, India (battlefield near the town)",
+    "historical_name": "Panipat, north of Delhi, in the Delhi Sultanate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-q139706",
+      "src-historyofwar-panipat"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Ended the Lodi dynasty of the Delhi Sultanate and began Mughal rule in India."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-historyofwar-panipat",
+      "url": "https://www.historyofwar.org/articles/battles_panipat_first.html",
+      "title": "First battle of Panipat, 21 April 1526",
+      "publisher": "HistoryofWar.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-babur",
+      "url": "https://www.encyclopedia.com/people/history/south-asian-history-biographies/babur",
+      "title": "Babur",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-si-babur",
+      "url": "https://asia-archive.si.edu/essays/memoir-06/",
+      "title": "VI. From Peshawar to Panipat (Discovering Babur's Gardens)",
+      "publisher": "Smithsonian National Museum of Asian Art",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q139706",
+      "url": "https://www.wikidata.org/wiki/Q139706",
+      "title": "Wikidata item Q139706 (Panipat), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Contested figures, attributed: Ibrahim's army 100,000 and 1,000 elephants (what Babur was told) versus as low as 40,000; enemy dead 15,000-16,000 (Babur's men's estimate) versus 40,000-50,000 (Agra inhabitants), per historyofwar.org. The role of artillery is disputed: historyofwar.org says archers mattered most, the Smithsonian says neither guns nor elephants were critical. Babur's 12,000 is the count at the Indus crossing per historyofwar.org.",
+  "author": "historian-agent:o-s29",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:04:26.909Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1526",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At Panipat in April 1526 Babur, with roughly 12,000 men, defeated Ibrahim Lodi, Sultan of Delhi, whose army Babur was told numbered 100,000 though other sources say as…",
+        "source": "src-historyofwar-panipat"
+      },
+      {
+        "span": "1526",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Ibrahim was killed.",
+        "source": "src-historyofwar-panipat",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

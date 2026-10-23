@@ -1,0 +1,131 @@
+{
+  "id": "2016-kumamoto-earthquakes",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2016 Kumamoto earthquakes",
+  "summary": "A series of strong shallow earthquakes struck Kumamoto Prefecture in central Kyushu, Japan, in April 2016. A magnitude 6.5 foreshock was followed about 28 hours later by a magnitude 7.3 main shock. They caused 273 deaths, 2809 injuries, 194,888 damaged buildings and evacuations of hospitals, reducing healthcare functionality.",
+  "when": {
+    "start": {
+      "year": 2016
+    },
+    "end": {
+      "year": 2016
+    },
+    "precision": "day",
+    "display": "14–16 April 2016",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The foreshock took place on 14 April 2016 at 9:26PM",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "16 April 2016 at 1:25AM",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 32.849,
+    "lon": 130.635,
+    "elevation_m": null,
+    "modern_name": "Kumamoto Prefecture, Kyushu, Japan",
+    "historical_name": "Kumamoto Prefecture, Kyushu, Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Destructive regional earthquake sequence with hundreds of casualties and wide study, but not world-historical."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions deaths and injuries from a natural disaster.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=610289055",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20221016180218/https://journals.sagepub.com/doi/10.1177/8755293020926180",
+      "title": "Post-earthquake hospital functionality evaluation: The case of Kumamoto Earthquake 2016 - Nebil Achour, Masakatsu Miyajima, 2020",
+      "publisher": "journals.sagepub.com",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q23825118",
+      "title": "Wikidata Q23825118 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitudes differ by agency: JMA gives 7.3 for the main shock while the ISC lists Mw(GCMT) = 7.0. The ISC origin time of 2016-04-15 16:25:06 appears to be UTC, matching the Japan local time of 16 April 01:25. Casualty figures come from a single hospital-focused paper, and its 'over 3000 casualties' differs from 273 deaths plus 2809 injuries only by rounding. (Drafted by the Wikipedia pipeline from isc.ac.uk, journals.sagepub.com; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:49.829Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2016",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "A series of strong shallow earthquakes struck Kumamoto Prefecture in central Kyushu, Japan, in April 2016.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2016",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "They caused 273 deaths, 2809 injuries, 194,888 damaged buildings and evacuations of hospitals, reducing healthcare functionality.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "2015-16-zika-virus-epidemic",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2015–16 Zika virus epidemic",
+  "summary": "Zika virus spread rapidly through Latin America and the Caribbean, with a suspected link between infection in pregnancy and newborn microcephaly. On 1 February 2016 the WHO declared a Public Health Emergency of International Concern and called for coordinated mosquito control, surveillance, diagnostics and vaccine development.",
+  "when": {
+    "start": {
+      "year": 2015
+    },
+    "end": {
+      "year": 2016
+    },
+    "precision": "month",
+    "display": "2015–2016",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "1 February 2016",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "following a similar cluster in French Polynesia in 2014",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": -14,
+    "lon": -53,
+    "elevation_m": null,
+    "modern_name": "Brazil (proxy pin: the epidemic centred on Brazil and spread across Latin America and the Caribbean)",
+    "historical_name": "Brazil, Latin America and the Caribbean",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A WHO-declared international health emergency with wide regional spread and links to birth defects."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions birth defects (microcephaly) in newborns.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.who.int/en/news-room/detail/01-02-2016-who-director-general-summarizes-the-outcome-of-the-emergency-committee-regarding-clusters-of-microcephaly-and-guillain-barr%C3%A9-syndrome",
+      "title": "WHO Director-General summarizes the outcome of the Emergency Committee regarding clusters of microcephaly and Guillain-Barr&#233; syndrome",
+      "publisher": "who.int",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4785754/",
+      "title": "The Emergence of Zika Virus as a Global Health Security Threat: A Review and a Consensus Statement of the INDUSEM Joint working Group (JWG) - PMC",
+      "publisher": "U.S. National Library of Medicine",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q155",
+      "title": "Wikidata Q155 (Brazil, coordinate location P625)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The sources do not give an explicit start or end date for the epidemic; the 2015 start and 2016 end follow the Wikidata lead and the February 2016 declaration. The sources give the PHEIC date as 1 February 2016 (WHO) and 2 February 2016 (review article). The causal link to microcephaly was described as strongly suspected, not proven. (Drafted by the Wikipedia pipeline from who.int, U.S. National Library of Medicine; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:52:31.316Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

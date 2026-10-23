@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "scale": "civilization",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:m-18",
+  "updated": "2026-10-22",
+  "id": "place-el-djem-amphitheatre",
+  "title": "Amphitheatre of El Djem (Thysdrus)",
+  "summary": "The amphitheatre at El Djem in Tunisia, ancient Thysdrus, has main axes of 147.90 by 122.20 m and rises 36 m. Tunisia's heritage service says it was built between 238 and 250 AD, while the Princeton Encyclopedia of Classical Sites favours 230–238 and the emperor Gordian I. It has been a World Heritage Site since 1979.",
+  "when": {
+    "start": {
+      "year": 238
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 8,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Tunisian ministry gives 238–250 AD; the Princeton Encyclopedia says no inscription survives and favours 230–238, so start allows 8 years earlier. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (Patrimoine de Tunisie)",
+        "value": "Constructed in the period from 238 to 250 AD",
+        "source": "src-pat-eljem"
+      },
+      {
+        "calendar": "AD (Princeton Encyclopedia)",
+        "value": "between A.D. 230 and 238",
+        "source": "src-princeton-thysdrus"
+      }
+    ],
+    "display": "c. 238–250 CE (Princeton: 230–238); standing today"
+  },
+  "where": {
+    "lat": 35.2964132,
+    "lon": 10.7075096,
+    "elevation_m": null,
+    "modern_name": "Amphitheatre of El Jem (El Djem), Mahdia Governorate, Tunisia",
+    "historical_name": "Large amphitheatre of Thysdrus, Roman Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.15,
+    "coordinate_sources": [
+      "src-osm-eljem"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "A very large Roman amphitheatre of about 148 x 122 m, a World Heritage Site since 1979."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-pat-eljem",
+      "url": "https://www.patrimoinedetunisie.com.tn/en/monuments/the-amphitheatre-of-thysdrus-el-jem/",
+      "title": "The Amphitheatre of Thysdrus (El Jem)",
+      "publisher": "Republic of Tunisia (Patrimoine de Tunisie)",
+      "author": "Republic of Tunisia (Patrimoine de Tunisie)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-princeton-thysdrus",
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Dthysdrus",
+      "title": "The Princeton Encyclopedia of Classical Sites, THYSDRUS (El Djem) Tunisia",
+      "publisher": "Princeton University Press (hosted by Perseus Digital Library, Tufts University)",
+      "author": "Princeton University Press (hosted by Perseus Digital Library, Tufts University)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-eljem",
+      "url": "https://nominatim.openstreetmap.org/search?q=Amphitheatre+El+Jem&format=json",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors (Nominatim)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape choice: arena (elliptical amphitheatre), axes and height from the Tunisian ministry page. Figures differ slightly by publisher: Princeton gives about 148 x 122 m, arena about 65 x 39 m and seats rising about 36 m; the ministry gives 147.90 x 122.20 m and arena 64 x 39 m. Least sure: the construction date, which no inscription fixes.",
+  "model": {
+    "footprint": {
+      "description": "Elliptical amphitheatre with main axes 147.90 x 122.20 m and an arena of 64 x 39 m (Tunisian heritage page); no survey polygon opened.",
+      "source": "src-pat-eljem",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "arena",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-pat-eljem",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 36,
+          "unit": "m",
+          "source": "src-pat-eljem",
+          "note": "\"Height: 36 m\""
+        },
+        {
+          "part": "length (major axis)",
+          "value": 147.9,
+          "unit": "m",
+          "source": "src-pat-eljem",
+          "note": "\"147.90 x 122.20 m\" main axes"
+        },
+        {
+          "part": "width (minor axis)",
+          "value": 122.2,
+          "unit": "m",
+          "source": "src-pat-eljem"
+        },
+        {
+          "part": "arena length (inner)",
+          "value": 64,
+          "unit": "m",
+          "source": "src-pat-eljem",
+          "note": "\"Arena: 64 x 39 m\""
+        },
+        {
+          "part": "arena width (inner)",
+          "value": 39,
+          "unit": "m",
+          "source": "src-pat-eljem"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "elliptical arena block at the stated axes and 36 m height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural amphitheatre with tiered seating and inner arena"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 238,
+        "end_year": 250,
+        "state": "construction",
+        "description": "Constructed in the period from 238 to 250 AD per the Tunisian heritage page (Princeton favours 230–238).",
+        "source": "src-pat-eljem"
+      },
+      {
+        "start_year": 251,
+        "end_year": null,
+        "state": "intact",
+        "description": "Standing; listed as a World Heritage Site since 26 October 1979 per the Tunisian heritage page.",
+        "source": "src-pat-eljem"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T13:44:39.795Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

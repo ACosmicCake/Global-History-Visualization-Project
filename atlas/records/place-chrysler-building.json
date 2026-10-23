@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-chrysler-building",
+  "kind": "place",
+  "title": "Chrysler Building",
+  "summary": "The Chrysler Building, at 405 Lexington Avenue in Manhattan, was designed by William Van Alen for Walter P. Chrysler. Its 1,046-foot (319 m) height made it the world's tallest building from 1930 to 1931, until the Empire State Building opened on 1 May 1931.",
+  "when": {
+    "start": {
+      "year": 1930
+    },
+    "end": {
+      "year": 1931
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Year of completion (1930) and end of tallest-building title (1931) as recorded; groundbreaking was 19 September 1928."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "completed in 1930",
+        "source": "src-nyc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "from 1930 to 1931",
+        "source": "src-skyscraper"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 19th, 1928",
+        "source": "src-skyscraper"
+      }
+    ],
+    "display": "Completed 1930; world's tallest 1930–1931"
+  },
+  "where": {
+    "lat": 40.751567,
+    "lon": -73.975833,
+    "elevation_m": null,
+    "modern_name": "405 Lexington Avenue, Midtown Manhattan, New York, USA",
+    "historical_name": "Chrysler Building, New York City, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-hmdb"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Briefly the world's tallest building and a prominent Art Deco landmark of the New York skyline."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-skyscraper",
+      "url": "https://www.skyscraper.org/tallest-towers/chrysler-building/",
+      "title": "The Chrysler Building - World's Tallest Towers",
+      "publisher": "The Skyscraper Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nyc",
+      "url": "https://www.nyctourism.com/attractions-tours/chrysler-building/",
+      "title": "Chrysler Building: FAQs & Visitors' Guide",
+      "publisher": "NYC Tourism + Conventions (NYCgo)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-hmdb",
+      "url": "https://www.hmdb.org/m.asp?m=282152",
+      "title": "Chrysler Building historical marker, Manhattan",
+      "publisher": "Historical Marker Database",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the historical marker's listed position (40°45.094′N 73°58.55′W converted to decimal) on Lexington Ave, a proxy for the building. NYCgo page confirms only 'completed in 1930'; height from Skyscraper Museum only. Wikidata fetch failed.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:10:40.061Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

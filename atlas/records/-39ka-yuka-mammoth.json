@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s117",
+  "updated": "2026-10-22",
+  "id": "-39ka-yuka-mammoth",
+  "kind": "event",
+  "title": "Yuka, the preserved juvenile mammoth carcass",
+  "summary": "In August 2010 an almost fully intact juvenile woolly mammoth carcass, nicknamed Yuka, was found in permafrost on the Oyogos Yar coast of Yakutia, with brain, flesh, skin and fur preserved. Its age is given as about 35,000 years by radiocarbon work at Novosibirsk State University but as 39,000 years by Guinness World Records. Cuts on the carcass may have been made by ancient hunters.",
+  "when": {
+    "start": {
+      "year": -37000
+    },
+    "end": {
+      "year": -32000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources disagree: about 35,000 years (radiocarbon, Novosibirsk State University; \"34-35 kyr BP\"), 39,000 years (Guinness World Records), and \"about thirty-eight thousand\" (AFP via NBC News). Years ago are counted from the present, rounded to -37000 to -32000; no calibration is stated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years (radiocarbon, as stated)",
+        "value": "preserved for about 35,000 years (according to the radiocarbon analysis)",
+        "source": "src-nsu"
+      },
+      {
+        "calendar": "years ago (as stated)",
+        "value": "In August 2010, the almost fully intact carcass of a 39,000-year-old female juvenile woolly mammoth",
+        "source": "src-gwr"
+      }
+    ],
+    "display": "c. 39,000-34,000 years ago (disputed); found August 2010"
+  },
+  "where": {
+    "lat": 72.68347,
+    "lon": 143.47526,
+    "elevation_m": null,
+    "modern_name": "Oyogos Yar coast, Laptev Sea, Sakha Republic (Yakutia), Russia",
+    "historical_name": "Oyogos Yar coast, Laptev Sea region; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wikidata-oyogos",
+      "src-nsu"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "One of the most complete woolly mammoth carcasses known, with soft tissue preserved."
+  },
+  "confidence": "contested",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nsu",
+      "url": "https://english.nsu.ru/news-events/news/research/yuka-mammoth-s-icy-tomb-new-findings",
+      "title": "Yuka Mammoth's Icy Tomb: New Findings",
+      "publisher": "Novosibirsk State University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gwr",
+      "url": "https://www.guinnessworldrecords.com/world-records/381829-most-complete-woolly-mammoth",
+      "title": "Most complete woolly mammoth",
+      "publisher": "Guinness World Records",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-oyogos",
+      "url": "https://www.wikidata.org/wiki/Q114397284",
+      "title": "Wikidata item Q114397284 (Oyogos Yar coast), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The target id says 39 ka; the university source gives about 35,000 years by radiocarbon, so the record is marked contested. Pin is the coastal area (Wikidata), not the find spot. Sex and age at death are disputed in other sources and are not claimed.",
+  "published_at": "2026-10-22T19:36:32.976Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-37000",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In August 2010 an almost fully intact juvenile woolly mammoth carcass, nicknamed Yuka, was found in permafrost on the Oyogos Yar coast of Yakutia, with brain, flesh, skin…",
+        "source": "src-nsu"
+      },
+      {
+        "span": "-32000",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "Cuts on the carcass may have been made by ancient hunters.",
+        "source": "src-nsu",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

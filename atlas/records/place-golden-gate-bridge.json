@@ -1,0 +1,211 @@
+{
+  "id": "place-golden-gate-bridge",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Golden Gate Bridge",
+  "summary": "The Golden Gate Bridge is a suspension bridge across the Golden Gate strait, the entrance to San Francisco Bay from the Pacific Ocean. Construction began on 5 January 1933 and the bridge opened to vehicles on 29 May 1937. It is 8,981 feet long including approaches, with a main span of 4,200 feet.",
+  "when": {
+    "start": {
+      "year": 1933
+    },
+    "end": {
+      "year": 1937
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 5 January 1933 per the bridge district; ASCE says construction began in November 1932. End is the vehicle opening on 29 May 1937 (the district page); ASCE lists completion as 1937."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Golden Gate Bridge district)",
+        "value": "Construction commenced on January 5, 1933",
+        "source": "src-ggb-district"
+      },
+      {
+        "calendar": "CE (Golden Gate Bridge district)",
+        "value": "May 29, 1937",
+        "source": "src-ggb-district"
+      },
+      {
+        "calendar": "CE (ASCE)",
+        "value": "November 1932",
+        "source": "src-asce-ggb"
+      }
+    ],
+    "display": "Built 1933–1937"
+  },
+  "where": {
+    "lat": 37.8166502,
+    "lon": -122.4782518,
+    "elevation_m": null,
+    "modern_name": "Golden Gate Bridge, San Francisco Bay, California, United States",
+    "historical_name": "Golden Gate Bridge across the Golden Gate strait, San Francisco Bay, California, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-ggb"
+    ]
+  },
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "Suspension bridge 8,981 ft (2,737 m) long including approaches, with a 4,200 ft (1,280 m) main span; drawn by the viewer as a path.",
+      "source": "src-ggb-district",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-ggb-district",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 227,
+          "unit": "m",
+          "source": "src-ggb-district",
+          "note": "\"Height of tower above water: 746 ft = 227 m\""
+        },
+        {
+          "part": "length",
+          "value": 2737,
+          "unit": "m",
+          "source": "src-ggb-district",
+          "note": "\"8,981 ft = 2,737 m\" including approaches, abutment to abutment"
+        },
+        {
+          "part": "main span",
+          "value": 1280,
+          "unit": "m",
+          "source": "src-ggb-district",
+          "note": "\"4,200 ft, 1,280 m\"; ASCE also gives 4,200 feet"
+        },
+        {
+          "part": "width",
+          "value": 27,
+          "unit": "m",
+          "source": "src-ggb-district",
+          "note": "\"90 ft = 27 m\" width of the bridge"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "bridge drawn as a path across the Golden Gate at full length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural suspension span 2,737 m long, towers 227 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1933,
+        "end_year": 1937,
+        "state": "construction",
+        "description": "Construction commenced 5 January 1933 and the bridge opened to vehicles 29 May 1937 (bridge district); ASCE gives a start in November 1932.",
+        "source": "src-ggb-district"
+      },
+      {
+        "start_year": 1937,
+        "end_year": null,
+        "state": "intact",
+        "description": "Open to vehicular traffic since May 1937.",
+        "source": "src-ggb-district"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Its 4,200 ft main span was the longest in the world when built in 1937, per the bridge district and ASCE."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ggb-district",
+      "url": "https://www.goldengate.org/exhibits/facts-and-figures-about-the-bridge/",
+      "title": "Facts and Figures about the Bridge",
+      "publisher": "Golden Gate Bridge Highway and Transportation District",
+      "author": "Golden Gate Bridge Highway and Transportation District",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-asce-ggb",
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/golden-gate-bridge",
+      "title": "Golden Gate Bridge",
+      "publisher": "American Society of Civil Engineers",
+      "author": "American Society of Civil Engineers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-ggb",
+      "url": "https://nominatim.openstreetmap.org/search?q=Golden+Gate+Bridge&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Golden Gate Bridge, San Francisco, way 537838948 (37.8166502, -122.4782518)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape wall with linear true. Start: district says 5 January 1933, ASCE says November 1932 (1933 used, one year of earlier uncertainty). The district page says the bridge opened to vehicles on 29 May 1937; it does not mention a pedestrian day. The OSM way is a point on the 2.7 km bridge.",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:08.440Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

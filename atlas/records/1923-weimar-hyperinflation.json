@@ -1,0 +1,152 @@
+{
+  "id": "1923-weimar-hyperinflation",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "German Hyperinflation of 1923",
+  "summary": "During 1923 the German Mark lost value so fast that wages were paid daily and people rushed to spend notes at once. The government ended the crisis with a currency reform: the Deutsche Rentenbank was founded in October and began issuing Rentenmark notes in mid-November 1923, replacing the Mark after savings and debts had nearly vanished.",
+  "when": {
+    "start": {
+      "year": 1923
+    },
+    "end": {
+      "year": 1923
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Bundesbank frames the inflation as 1914-23; this record covers the hyperinflation phase of 1923 ending with the Rentenmark."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 1923",
+        "source": "src-bbk"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Mitte November 1923",
+        "source": "src-rb"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "15. Oktober 1923",
+        "source": "src-rb"
+      }
+    ],
+    "display": "1923 (Rentenmark issued from mid-November 1923)"
+  },
+  "where": {
+    "lat": 52.52437,
+    "lon": 13.41053,
+    "elevation_m": null,
+    "modern_name": "Berlin, Germany (proxy pin for a nationwide event)",
+    "historical_name": "Berlin, Weimar Republic (German Reich); pin is a proxy, the event affected all Germany",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-coord"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Collapse of the German currency in 1923 and its reform shaped Weimar Germany and later views of inflation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-bbk",
+      "url": "https://www.bundesbank.de/en/tasks/topics/inflation-lessons-learnt-from-history-666006",
+      "title": "Inflation – lessons learnt from history",
+      "publisher": "Deutsche Bundesbank",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rb",
+      "url": "https://www.rentenbank.de/presse/Vor-100-Jahren-Die-Hyperinflation-von-1923-Von-der-Rentenmark-zur-Foerderbank/",
+      "title": "Vor 100 Jahren: Die Hyperinflation von 1923 - Von der Rentenmark zur Förderbank",
+      "publisher": "Landwirtschaftliche Rentenbank",
+      "author": null,
+      "date_published": "22 November 2023",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-coord",
+      "url": "https://dateandtime.info/citycoordinates.php?id=2950159",
+      "title": "Coordinates of Berlin (GeoNames id 2950159)",
+      "publisher": "dateandtime.info",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a Berlin proxy for a Germany-wide event. Both sources are German public institutions; Rentenbank is the successor-linked development bank, so not fully neutral. Exact 15 November issue date not confirmed.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:24.893Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1923",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "During 1923 the German Mark lost value so fast that wages were paid daily and people rushed to spend notes at once.",
+        "source": "src-bbk"
+      },
+      {
+        "span": "1923",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The government ended the crisis with a currency reform: the Deutsche Rentenbank was founded in October and began issuing Rentenmark notes in mid-November 1923, replacing the Mark after…",
+        "source": "src-bbk",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

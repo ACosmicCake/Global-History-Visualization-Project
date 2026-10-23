@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s14",
+  "updated": "2026-10-22",
+  "id": "1779-spain-in-the-american-revolution",
+  "kind": "event",
+  "title": "Spain, Bernardo de Galvez and the Gulf Coast campaigns, 1779–1781",
+  "summary": "After Spain went to war with Britain in 1779, Bernardo de Galvez, governor of Spanish Louisiana, took British posts on the lower Mississippi, Mobile in 1780 and Pensacola in 1781. The campaigns ended British control of West Florida and kept British forces occupied on the Gulf Coast during the American Revolution.",
+  "when": {
+    "start": {
+      "year": 1779
+    },
+    "end": {
+      "year": 1781
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Baton Rouge fell within about a month of the Spanish offensive opening in 1779; exact day not confirmed here. The Pensacola siege ran 9 March to 10 May 1781."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In August 1779, Spain finally declared war on Great Britain; within a month he had captured all four British forts in the lower Mississippi including Baton Rouge and Natchez",
+        "source": "src-nps-galvez"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "surrendered to Gálvez on March 14, 1780",
+        "source": "src-eoa-charlotte"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Pensacola officially came under control of the Spanish on May 10th, 1781",
+        "source": "src-abt-pensacola"
+      }
+    ],
+    "display": "1779–1781"
+  },
+  "where": {
+    "lat": 30.421389,
+    "lon": -87.217222,
+    "elevation_m": null,
+    "modern_name": "Pensacola, Florida, USA (with Baton Rouge, Louisiana and Mobile, Alabama)",
+    "historical_name": "Pensacola, capital of British West Florida; the campaign also took Baton Rouge and Mobile",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 30.4475,
+          "lon": -91.178611,
+          "date": "1779",
+          "label": "Baton Rouge (Louisiana), British post taken in the 1779 lower-Mississippi campaign",
+          "source": "src-nps-galvez",
+          "year": 1779
+        },
+        {
+          "lat": 30.727669,
+          "lon": -88.052672,
+          "date": "1780-03-14",
+          "label": "Mobile (Fort Charlotte), surrendered to Galvez",
+          "source": "src-eoa-charlotte",
+          "year": 1780
+        },
+        {
+          "lat": 30.421389,
+          "lon": -87.217222,
+          "date": "1781-05-10",
+          "label": "Pensacola, capital of British West Florida, came under Spanish control",
+          "source": "src-abt-pensacola",
+          "year": 1781
+        }
+      ]
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-pensacola",
+      "src-wd-mobile",
+      "src-wd-batonrouge"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Removed British control of the Gulf Coast and West Florida, a second front in the American Revolution."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "1783-09-03-treaty-of-paris",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-galvez",
+      "url": "https://www.nps.gov/foma/learn/historyculture/galvez.htm",
+      "title": "Bernardo de Gálvez",
+      "publisher": "National Park Service, Fort Matanzas National Monument",
+      "author": "National Park Service",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-eoa-charlotte",
+      "url": "https://encyclopediaofalabama.org/article/battle-of-fort-charlotte/",
+      "title": "Battle of Fort Charlotte",
+      "publisher": "Encyclopedia of Alabama (Auburn University / Alabama Humanities Alliance)",
+      "author": "Encyclopedia of Alabama",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-abt-pensacola",
+      "url": "https://www.battlefields.org/learn/revolutionary-war/battles/siege-pensacola",
+      "title": "Siege of Pensacola Battle Facts and Summary",
+      "publisher": "American Battlefield Trust",
+      "author": "American Battlefield Trust",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-pensacola",
+      "url": "https://www.wikidata.org/wiki/Q486306",
+      "title": "Wikidata item Q486306 (Pensacola), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wd-mobile",
+      "url": "https://www.wikidata.org/wiki/Q79875",
+      "title": "Wikidata item Q79875 (Mobile, Alabama), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wd-batonrouge",
+      "url": "https://www.wikidata.org/wiki/Q28218",
+      "title": "Wikidata item Q28218 (Baton Rouge), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the Baton Rouge date: NPS says only that the four lower-Mississippi forts fell within a month of Spain's August 1779 declaration; other sources give a different declaration date, so no exact day is claimed. Pensacola: the Trust page gives surrender on 8 May and formal Spanish control on 10 May. Pins are modern city centres.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1779",
+        "action": "path.trace {}",
+        "caption": "In 1779 Galvez struck first, taking the British forts on the lower Mississippi, including Baton Rouge and Natchez.",
+        "source": "src-nps-galvez"
+      },
+      {
+        "span": "1780-03-14",
+        "action": "path.trace {}",
+        "caption": "On 14 March 1780 Captain Durnford surrendered Fort Charlotte at Mobile to Galvez.",
+        "source": "src-eoa-charlotte"
+      },
+      {
+        "span": "1781-05-10",
+        "action": "pulse { radius_km: 120 }",
+        "caption": "Pensacola came under Spanish control on 10 May 1781, placing all of British West Florida in Spanish hands.",
+        "source": "src-abt-pensacola",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T05:06:26.337Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

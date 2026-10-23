@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-3430my-strelley-pool-stromatolite-reef",
+  "kind": "event",
+  "title": "Strelley Pool stromatolite reef, Pilbara",
+  "summary": "In the Pilbara of Western Australia, the Strelley Pool Chert preserves a multi-kilometre field of layered stromatolites about 3.43 billion years old, which the discoverers read as a reef built by microbes in shallow seas. It is among the oldest large records of apparent life, though biogenicity of such rocks is debated.",
+  "when": {
+    "start": {
+      "year": -3430000000
+    },
+    "end": {
+      "year": -3350000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 10000000,
+      "start_plus_years": 10000000,
+      "end_minus_years": 10000000,
+      "end_plus_years": 10000000,
+      "note": "Allwood et al. (2006) give 3,430 Ma; Duda et al. (2016) give the formation as 3.43-3.35 Ga; the inHerit record says approximately 3420 million years. Uncertainty is a rounding bracket."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "3,430-million-year-old Strelley Pool Chert",
+        "source": "src-allwood"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "the 3.43-3.35 Ga Strelley Pool Formation",
+        "source": "src-duda"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "approximately 3420 million years old",
+        "source": "src-inherit"
+      }
+    ],
+    "display": "c. 3.43–3.35 billion years ago"
+  },
+  "where": {
+    "lat": -21.2069,
+    "lon": 119.3077,
+    "elevation_m": null,
+    "modern_name": "Strelley Pool area, East Pilbara, Western Australia (sampling section on the Shaw River; about 34 km west of Marble Bar)",
+    "historical_name": "Shallow marine carbonate platform on the Pilbara Craton (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-duda"
+    ],
+    "paleo": {
+      "not_applicable": "MERDITH2021 covers only 0-1000 Ma and PALEOMAP 0-750 Ma; no GPlates model in the tool reaches 3,430 Ma."
+    }
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of the oldest widely cited records of microbial reef-building, bearing on how early and how diverse life was."
+  },
+  "related": [
+    {
+      "id": "-2400my-great-oxidation-event",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-allwood",
+      "url": "https://unsw.edu.au/content/dam/pdfs/unsw-adobe-websites/science/bees/aca/research/2022-01-Allwood%2C%20Walter%2C%20Kamber%2C%20Marshall%20and%20Burch%202006.pdf",
+      "title": "Stromatolite reef from the Early Archaean era of Australia (Allwood et al., Nature 441:714-718)",
+      "publisher": "University of New South Wales (author copy of Nature)",
+      "author": "University of New South Wales (author copy of Nature)",
+      "date_published": "2006",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/earth/earth-observatory/strelley-pool-chert-and-early-life-6664",
+      "title": "Strelley Pool Chert and Early Life",
+      "publisher": "NASA Earth Observatory",
+      "author": "NASA Earth Observatory",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-inherit",
+      "url": "https://inherit.dplh.wa.gov.au/Public/Inventory/Details/b0967a81-a707-4939-a35c-77e8d367994e",
+      "title": "Strelley Pool (heritage place record)",
+      "publisher": "Heritage Council of Western Australia (inHerit)",
+      "author": "Heritage Council of Western Australia (inHerit)",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-duda",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4726515",
+      "title": "A Rare Glimpse of Paleoarchean Life: Geobiology of an Exceptionally Preserved Microbial Mat Facies from the 3.4 Ga Strelley Pool Formation (Duda et al., PLoS ONE 11:e0147629)",
+      "publisher": "PLOS ONE",
+      "author": "PLOS ONE",
+      "date_published": "2016-01-25",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "when"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is the Duda et al. sampling section on the other side of the Shaw River from the Trendall locality, not the exact type locality; the reef extends over more than 10 km of outcrop (Allwood). Biological origin is debated, and the summary reflects that. No GPlates model reaches 3.43 Ga.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:27.622Z"
+}

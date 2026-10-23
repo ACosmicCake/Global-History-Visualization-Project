@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "scale": "civilization",
+  "author": "historian-agent:m-3",
+  "updated": "2026-10-22",
+  "id": "place-leshan-giant-buddha",
+  "title": "Leshan Giant Buddha",
+  "summary": "The Leshan Giant Buddha is a 71 m seated Maitreya Buddha carved out of a cliff of Mount Lingyun in Sichuan, China, where three rivers meet. Work began in 713 during the Tang dynasty and took about 90 years. It is the tallest pre-modern stone Buddha statue and is part of a UNESCO World Heritage property.",
+  "when": {
+    "start": {
+      "year": 713
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 713 start of carving (China Daily); about 90 years of work puts completion near 803. End is the present: the statue stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (China Daily)",
+        "value": "built over a 90-year period beginning in 713 during the Tang Dynasty",
+        "source": "src-chinadaily-leshan"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "carved out of a hillside in the 8th century",
+        "source": "src-unesco-779"
+      }
+    ],
+    "display": "Carved 713 to c. 803 CE; stands today"
+  },
+  "where": {
+    "lat": 29.54692,
+    "lon": 103.76931,
+    "elevation_m": null,
+    "modern_name": "Leshan Giant Buddha, Mount Lingyun, Leshan, Sichuan, China",
+    "historical_name": "Great Buddha of Lingyun Mountain at the confluence of the Min, Dadu and Qingyi rivers, Tang dynasty China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-leshan",
+      "src-xml-779"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "The tallest Buddha sculpture in the world for over a millennium, in a UNESCO World Heritage property, and a major monument of Tang Buddhism."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-779",
+      "url": "https://whc.unesco.org/en/list/779",
+      "title": "Mount Emei Scenic Area, including Leshan Giant Buddha Scenic Area (World Heritage List no. 779)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-chinaorg-leshan",
+      "url": "http://wiki.china.org.cn/index.php?title=Giant_Buddha_at_Leshan",
+      "title": "Giant Buddha at Leshan",
+      "publisher": "China Internet Information Center (china.org.cn)",
+      "author": "China Internet Information Center (china.org.cn)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-chinadaily-leshan",
+      "url": "https://govt.chinadaily.com.cn/s/202201/11/WS61dcdc2d498e6a12c121cd44/chinese-experts-mull-major-restoration-of-worlds-largest-stone-buddha-statue.html",
+      "title": "Chinese experts mull major restoration of world's largest stone Buddha statue",
+      "publisher": "China Daily",
+      "author": "China Daily",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-leshan",
+      "url": "https://nominatim.openstreetmap.org/search?q=Leshan+Giant+Buddha&format=json",
+      "title": "OpenStreetMap Nominatim: Leshan Giant Buddha, node 620388965 (29.5469169, 103.7693136)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-xml-779",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 779, geolocation (29.5447, 103.7733)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Seated figure cut into the Lingyun Mountain cliff face, facing west over the river confluence; 24 m across the shoulders and 71 m tall, with the head 14.7 m high and 10 m wide (china.org.cn). No survey polygon was opened.",
+      "source": "src-chinaorg-leshan",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "statue",
+      "source": "src-unesco-779",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 71,
+          "unit": "m",
+          "source": "src-unesco-779",
+          "note": "UNESCO: 71 meters; china.org.cn: 71 m tall"
+        },
+        {
+          "part": "width (across the shoulders)",
+          "value": 24,
+          "unit": "m",
+          "source": "src-chinaorg-leshan",
+          "note": "\"shoulders 24 m across\"; other published accounts give 28 m"
+        },
+        {
+          "part": "head height",
+          "value": 14.7,
+          "unit": "m",
+          "source": "src-chinaorg-leshan"
+        },
+        {
+          "part": "head width",
+          "value": 10,
+          "unit": "m",
+          "source": "src-chinaorg-leshan"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "seated figure silhouette cut into the cliff at true plan, facing the river confluence"
+      },
+      {
+        "level": "local",
+        "representation": "procedural seated Buddha with head, shoulders and knees against the cliff"
+      },
+      {
+        "level": "street",
+        "representation": "robe folds, curled hair buns and drainage channels as a labelled schematic reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 713,
+        "end_year": 803,
+        "state": "construction",
+        "description": "Carved over a 90-year period beginning in 713 during the Tang dynasty (completion near 803 is 713 plus 90 years).",
+        "source": "src-chinadaily-leshan"
+      },
+      {
+        "start_year": 804,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Statue stands; it has had repeated facelifts, the latest the seventh in over a century.",
+        "source": "src-chinadaily-leshan"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 713,
+        "to_year": 2026,
+        "material": "carved from the rock of the Mount Lingyun cliff, in situ",
+        "source": "src-chinaorg-leshan"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape statue (single seated figure). Least sure of the shoulder width: china.org.cn gives 24 m, while other accounts (not opened) give 28 m; the source is a government information site, not a museum or university. The 803 completion is arithmetic from 'a 90-year period beginning in 713', not a quoted date. UNESCO XML and OSM points are about 0.46 km apart; the OSM point is used.",
+  "published_at": "2026-10-22T04:53:52.738Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

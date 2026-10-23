@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1802-great-trigonometrical-survey",
+  "kind": "event",
+  "title": "Great Trigonometrical Survey",
+  "summary": "The Great Trigonometrical Survey of India began in 1802 under William Lambton, who proposed mapping the subcontinent with triangles, starting from a baseline near Madras. George Everest took over after Lambton died in 1823. Its network later supported the measurement of Peak XV, officially announced in March 1856 as 29,002 ft.",
+  "when": {
+    "start": {
+      "year": 1802
+    },
+    "end": {
+      "year": 1856
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 1802 per Royal Society and GPS World (10 April 1802); an academic paper on Academia.edu gives 1801. End year is the Peak XV announcement, not an end of the survey."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "the project began in 1802",
+        "source": "src-rs"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 10, 1802",
+        "source": "src-gpsw"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 1856",
+        "source": "src-gpsw"
+      }
+    ],
+    "display": "1802 (begun 10 April 1802); Peak XV announced March 1856"
+  },
+  "where": {
+    "lat": 13.067439,
+    "lon": 80.237617,
+    "elevation_m": null,
+    "modern_name": "Chennai, India (proxy for the Madras baseline)",
+    "historical_name": "Madras, East India Company territory",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-ll"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A multi-decade survey that mapped India by triangulation and underlies the measurement of Peak XV."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1856-peak-xv-everest-measurement",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rs",
+      "url": "https://royalsociety.org/blog/2023/09/mapping-india/",
+      "title": "Mapping India",
+      "publisher": "The Royal Society",
+      "author": "Hirra Ateeq",
+      "date_published": "2023-09-18",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gpsw",
+      "url": "https://www.gpsworld.com/peak-xv-the-framework-that-measured-mount-everest/",
+      "title": "Peak XV: The framework that measured Mount Everest",
+      "publisher": "GPS World",
+      "author": "William Tewelow",
+      "date_published": "2026-04-21",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ll",
+      "url": "https://www.latlong.net/place/chennai-tamil-nadu-india-2284.html",
+      "title": "Chennai, Tamil Nadu, India coordinates",
+      "publisher": "latlong.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Chennai city centre as proxy for the Madras baseline (St Thomas Mount area). Start 1801 vs 1802 differs by source. Peak XV claim rests on one trade article.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:41:11.690Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

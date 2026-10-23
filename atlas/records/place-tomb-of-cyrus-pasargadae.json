@@ -1,0 +1,255 @@
+{
+  "id": "place-tomb-of-cyrus-pasargadae",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Tomb of Cyrus at Pasargadae",
+  "aliases": [
+    "Tomb of Cyrus the Great"
+  ],
+  "summary": "The tomb of Cyrus at Pasargadae is a small stone chamber on a plinth of six receding tiers, about 11 m tall, linked to the death of Cyrus the Great around 530 BCE. Alexander the Great ordered restorations of the tomb in January 324 BCE. It forms part of the UNESCO-listed Pasargadae.",
+  "when": {
+    "start": {
+      "year": -529
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Studio Matrx gives c. 530 BCE, linked to Cyrus's death, as an approximation; no source opened dates the building more precisely. End is the present: the tomb stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Studio Matrx)",
+        "value": "c. 530 BCE",
+        "source": "src-studiomatrx-cyrus"
+      },
+      {
+        "calendar": "BCE (Livius)",
+        "value": "restorations in January 324 BCE",
+        "source": "src-livius-pasargadae"
+      }
+    ],
+    "display": "c. 530 BCE"
+  },
+  "where": {
+    "lat": 30.193921,
+    "lon": 53.167188,
+    "elevation_m": null,
+    "modern_name": "Tomb of Cyrus, Pasargadae, Fars, Iran",
+    "historical_name": "Tomb of Cyrus, Pasargadae, Achaemenid Persia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-wd-cyrus-tomb"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Six-tier stepped plinth measuring 13.35 m x 12.30 m at the base, carrying a gabled chamber.",
+      "source": "src-cais-pasargadae",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-cais-pasargadae",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 11.1,
+          "unit": "m",
+          "source": "src-cais-pasargadae",
+          "note": "\"estimated original height of 11.10 m\"; Studio Matrx: \"a little over 11 m\"; pasargadae.info: \"almost eleven meters\""
+        },
+        {
+          "part": "base length",
+          "value": 13.35,
+          "unit": "m",
+          "source": "src-cais-pasargadae",
+          "note": "plinth, \"13.35 X 12.30 m at the base\""
+        },
+        {
+          "part": "base width",
+          "value": 12.3,
+          "unit": "m",
+          "source": "src-cais-pasargadae",
+          "note": "plinth, \"13.35 X 12.30 m at the base\""
+        },
+        {
+          "part": "tiers",
+          "value": 6,
+          "unit": "count",
+          "source": "src-cais-pasargadae",
+          "note": "\"six receding tiers\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "small gabled tomb on a stepped plinth within the Pasargadae plain"
+      },
+      {
+        "level": "local",
+        "representation": "procedural six-tier stepped plinth 13.35 m x 12.30 m, about 11.1 m tall including the chamber"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -529,
+        "end_year": -529,
+        "state": "construction",
+        "description": "Built c. 530 BCE, linked to the death of Cyrus (Studio Matrx; approximate).",
+        "source": "src-studiomatrx-cyrus"
+      },
+      {
+        "start_year": -323,
+        "end_year": -323,
+        "state": "restored",
+        "description": "Alexander the Great ordered restorations in January 324 BCE (Livius).",
+        "source": "src-livius-pasargadae"
+      },
+      {
+        "start_year": -323,
+        "end_year": null,
+        "state": "intact",
+        "description": "The tomb remains part of the UNESCO property Pasargadae.",
+        "source": "src-unesco-pasargadae"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "Measurements come only from news or non-institutional pages; kept as data until a heritage or scholarly source confirms them."
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO says the tomb of Cyrus is part of an outstanding example of early Achaemenid royal art and architecture."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-cyrus-the-great",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-cais-pasargadae",
+      "url": "https://www.cais-soas.com/CAIS/Archaeology/Hakhamaneshian/Pasargadae.htm",
+      "title": "Pasargadae (Pâthragâda)",
+      "publisher": "Circle of Ancient Iranian Studies (CAIS)",
+      "author": "Circle of Ancient Iranian Studies (CAIS)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.footprint"
+      ]
+    },
+    {
+      "id": "src-studiomatrx-cyrus",
+      "url": "https://www.studiomatrx.org/architecture-canon/pasargadae-tomb-of-cyrus",
+      "title": "Tomb of Cyrus at Pasargadae: Severe Clarity in Achaemenid Stone",
+      "publisher": "Studio Matrx",
+      "author": "Amogh N P",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-livius-pasargadae",
+      "url": "https://www.livius.org/articles/place/pasargadae/",
+      "title": "Pasargadae",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-pasargadae",
+      "url": "https://whc.unesco.org/en/list/1106/",
+      "title": "Pasargadae",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "importance",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-wd-cyrus-tomb",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2635530.json",
+      "title": "Wikidata entry for Tomb of Cyrus (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape stepped_pyramid: six-tier plinth plus gabled chamber, height covers both. Construction date c. 530 BCE rests on one lesser source (Studio Matrx) and is marked probable; no opened page gives a firmer date. Records the tomb only, not Cyrus or the wider Pasargadae site.",
+  "author": "historian-agent:m-23",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:53:40.055Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s54",
+  "updated": "2026-10-22",
+  "id": "1980-eradication-of-smallpox",
+  "kind": "event",
+  "title": "Eradication of smallpox",
+  "summary": "A Global Commission certified smallpox eradication at WHO headquarters in Geneva in December 1979, and the World Health Assembly certified the world free of naturally occurring smallpox in May 1980, per the CDC. The last known natural case occurred in Somalia in 1977. WHO calls it the only infectious disease to achieve this.",
+  "when": {
+    "start": {
+      "year": 1980
+    },
+    "end": {
+      "year": 1980
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Commission certification December 1979; World Health Assembly May 1980."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "In May 1980, the World Health Assembly certified the world free of naturally occurring smallpox.",
+        "source": "src-cdc"
+      },
+      {
+        "calendar": "CE",
+        "value": "WHO declared smallpox eradicated in 1980",
+        "source": "src-who"
+      }
+    ],
+    "display": "May 1980"
+  },
+  "where": {
+    "lat": 46.2017559,
+    "lon": 6.1466014,
+    "elevation_m": null,
+    "modern_name": "Geneva, Switzerland (WHO headquarters)",
+    "historical_name": "Geneva, Switzerland (WHO headquarters)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "disease",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The only infectious disease so far declared eradicated, per WHO."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1520-smallpox-epidemic-in-mexico",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-who",
+      "url": "https://www.who.int/health-topics/smallpox",
+      "title": "Smallpox",
+      "publisher": "World Health Organization",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cdc",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5142a5.htm",
+      "title": "Notice to Readers: 25th Anniversary of the Last Case of Naturally Acquired Smallpox",
+      "publisher": "Centers for Disease Control and Prevention (MMWR)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nlm",
+      "url": "https://www.nlm.nih.gov/exhibition/smallpox/sp_success.html",
+      "title": "Smallpox: Success",
+      "publisher": "National Library of Medicine",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Geneva+Switzerland&format=json&limit=1",
+      "title": "Geneva, Switzerland",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Geneva because WHO says the commission certified eradication at its Geneva headquarters; CDC does not state where the Assembly met. NLM dates the last infection to 22 October 1977 and CDC to 26 October, so only 1977 is stated.",
+  "published_at": "2026-10-22T11:03:03.819Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

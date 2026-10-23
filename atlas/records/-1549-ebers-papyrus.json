@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "-1549-ebers-papyrus",
+  "kind": "work",
+  "title": "Ebers Papyrus",
+  "summary": "The Ebers Papyrus is an Egyptian medical scroll of 108 text columns in black and red hieratic, 18.63 metres long, copied in the later sixteenth century BCE near the start of the New Kingdom. Its nearly 900 textual units gather prescriptions, examinations and incantations. Georg Ebers acquired it at Luxor in the winter of 1872/73 for Leipzig University Library.",
+  "when": {
+    "start": {
+      "year": -1549
+    },
+    "end": {
+      "year": -1549
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 49,
+      "end_minus_years": 50,
+      "end_plus_years": 49,
+      "note": "The pages say \"end of the 16th century BCE\" and \"later sixteenth century BCE; c. 1550 BCE\", so the range covers 1600 to 1500 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "Its origin at the end of the 16th century BCE is verified by both the calendar on the reverse and radiocarbon dating performed in 2014.",
+        "source": "src-leipzig-ebers"
+      },
+      {
+        "calendar": "BCE",
+        "value": "Copied Later sixteenth century BCE; often given in shorthand as c. 1550 BCE",
+        "source": "src-historiamedica-ebers"
+      }
+    ],
+    "display": "c. 1550 BCE (later sixteenth century BCE)"
+  },
+  "where": {
+    "lat": 25.696667,
+    "lon": 32.644444,
+    "elevation_m": null,
+    "modern_name": "Luxor, Egypt (where the roll was bought; the place of production is unknown)",
+    "historical_name": "Egypt, early Eighteenth Dynasty (New Kingdom); exact place of production unknown",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-luxor",
+      "src-historiamedica-ebers"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "science_technology",
+    "disease"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The longest substantially complete surviving roll on ancient Egyptian healing."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "person-sushruta",
+      "type": "related"
+    },
+    {
+      "id": "person-al-razi",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-leipzig-ebers",
+      "url": "https://www.ub.uni-leipzig.de/en/about-us/exhibitions/permanent-exhibition/ebers-papyrus",
+      "title": "Ebers Papyrus (permanent exhibition)",
+      "publisher": "Leipzig University Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-historiamedica-ebers",
+      "url": "https://historiamedica.org/sources/ebers-papyrus/",
+      "title": "Ebers Papyrus",
+      "publisher": "Historia Medica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "what",
+        "where",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-wd-luxor",
+      "url": "https://www.wikidata.org/wiki/Q130514",
+      "title": "Wikidata item Q130514 (Luxor), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: both pages say the place of production is unknown, so the pin is Luxor, where Ebers bought the roll, with 500 km uncertainty to cover Egypt. The dealers' story that it came from a tomb at al-Asasif is undocumented and not used. The two pages give slightly different dates (end of the 16th century BCE versus c. 1550 BCE).",
+  "published_at": "2026-10-22T16:17:43.325Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

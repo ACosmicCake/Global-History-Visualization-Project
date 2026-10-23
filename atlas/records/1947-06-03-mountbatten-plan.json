@@ -1,0 +1,159 @@
+{
+  "id": "1947-06-03-mountbatten-plan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Mountbatten Plan (3 June Plan) for the Partition of India",
+  "summary": "On 3 June 1947 the British government and Viceroy Lord Mountbatten announced, with Nehru and Jinnah, a plan to end British rule by dividing British India into India and Pakistan. Provincial assemblies would vote on partition, boundary commissions would draw the lines, and Sylhet would hold a referendum. Power passed a year earlier than first planned.",
+  "when": {
+    "start": {
+      "year": 1947,
+      "month": 6,
+      "day": 3
+    },
+    "end": {
+      "year": 1947,
+      "month": 6,
+      "day": 3
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date of the announcement in London and New Delhi."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Tuesday 3 June 1947 (Hansard, Commons and Lords statements)",
+        "source": "src-hansard"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On the 3 June 1947 he stunned everyone by announcing with leaders Jawaharlal Nehru and Muhammad Ali Jinnah",
+        "source": "src-nationalarchives"
+      }
+    ],
+    "display": "3 June 1947"
+  },
+  "where": {
+    "lat": 28.613889,
+    "lon": 77.208889,
+    "elevation_m": null,
+    "modern_name": "New Delhi, India",
+    "historical_name": "New Delhi, seat of the Viceroy of India, British Indian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-newdelhi"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Set the terms of the partition of British India and the independence of India and Pakistan, with mass displacement and violence following."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1947-08-15-indian-independence",
+      "type": "caused",
+      "because": "The plan fixed the creation of two dominions and brought forward the transfer of power to August 1947."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hansard",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1947/jun/03/india-transfer-of-power",
+      "title": "India (Transfer of Power), House of Commons, 3 June 1947",
+      "publisher": "UK Parliament (Historic Hansard)",
+      "author": null,
+      "date_published": "1947-06-03",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nationalarchives",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/partition-of-british-india/",
+      "title": "Partition of British India (education resource)",
+      "publisher": "The National Archives (UK)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-newdelhi",
+      "url": "https://www.wikidata.org/wiki/Q987",
+      "title": "Wikidata item Q987 (New Delhi), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the plan was broadcast from New Delhi and read in both Houses in London; New Delhi is used. Dominion status and the August 1947 date follow the National Archives page; the Hansard text was read for the assembly votes, boundary commissions and Sylhet referendum.",
+  "author": "historian-agent:o-s6",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:55:50.355Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1947",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 3 June 1947 the British government and Viceroy Lord Mountbatten announced, with Nehru and Jinnah, a plan to end British rule by dividing British India into India…",
+        "source": "src-hansard"
+      },
+      {
+        "span": "1947",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Power passed a year earlier than first planned.",
+        "source": "src-hansard",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

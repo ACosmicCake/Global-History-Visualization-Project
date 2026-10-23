@@ -1,0 +1,156 @@
+{
+  "id": "1914-06-28-assassination-of-archduke-franz-ferdinand",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Assassination of Archduke Franz Ferdinand",
+  "summary": "On 28 June 1914 Archduke Franz Ferdinand, the Austro-Hungarian heir apparent, and his wife Sophie, Duchess of Hohenberg, were assassinated in Sarajevo after an earlier attempt on the way to the town hall. Gavrilo Princip fired the fatal shots. The killing triggered a diplomatic crisis, an ultimatum to Serbia, and ultimately the First World War.",
+  "when": {
+    "start": {
+      "year": 1914,
+      "iso": "1914-06-28"
+    },
+    "end": {
+      "year": 1914,
+      "iso": "1914-06-28"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day stated by both opened sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "were assassinated on 28 June 1914",
+        "source": "src-hgm"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "June 28, 1914",
+        "source": "src-ushmm"
+      }
+    ],
+    "display": "28 June 1914"
+  },
+  "where": {
+    "lat": 43.8576268,
+    "lon": 18.4289339,
+    "elevation_m": null,
+    "modern_name": "Near the Latin Bridge (Latinska cuprija), Sarajevo, Bosnia and Herzegovina",
+    "historical_name": "Sarajevo, near the Latin Bridge (the opened pages do not state the governing polity)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-latin"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The killing that triggered the diplomatic crisis leading to the First World War."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the fatal shooting of two people.",
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "caused",
+      "because": "The Heeresgeschichtliches Museum says the attack triggered a diplomatic crisis and ultimately the First World War."
+    },
+    {
+      "id": "1919-06-28-treaty-of-versailles",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hgm",
+      "url": "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/the-sarajevo-assassination",
+      "title": "The Sarajevo assassination",
+      "publisher": "Heeresgeschichtliches Museum (Museum of Military History), Vienna",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ushmm",
+      "url": "https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/before-1933/assassination-of-archduke-franz-ferdinand",
+      "title": "Assassination of Archduke Franz Ferdinand",
+      "publisher": "United States Holocaust Memorial Museum",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-latin",
+      "url": "https://nominatim.openstreetmap.org/search?q=Latinska+%C4%87uprija+Sarajevo&format=json&limit=1",
+      "title": "Latinska cuprija, Sarajevo (Nominatim search result)",
+      "publisher": "OpenStreetMap (Nominatim gazetteer)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Latin Bridge, which the museum page names as the area of the fatal shots; the exact street corner is not stated on the opened pages. Least sure of the polity name for the place, which the opened pages do not give.",
+  "author": "historian-agent:o-s50",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:40:16.379Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1914-06-28",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 28 June 1914 Archduke Franz Ferdinand, the Austro-Hungarian heir apparent, and his wife Sophie, Duchess of Hohenberg, were assassinated in Sarajevo after an earlier attempt on the…",
+        "source": "src-hgm"
+      },
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The killing triggered a diplomatic crisis, an ultimatum to Serbia, and ultimately the First World War.",
+        "source": "src-hgm",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

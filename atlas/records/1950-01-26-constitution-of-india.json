@@ -1,0 +1,151 @@
+{
+  "id": "1950-01-26-constitution-of-india",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Constitution of India comes into force",
+  "summary": "India's Constitution was adopted by its Constituent Assembly on 26 November 1949, after the Assembly first convened on 9 December 1946, and came into force on 26 January 1950. It became the country's founding legal framework.",
+  "when": {
+    "start": {
+      "year": 1950,
+      "iso": "1950-01-26"
+    },
+    "end": {
+      "year": 1950,
+      "iso": "1950-01-26"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The adoption (26 November 1949) and entry into force (26 January 1950) dates are separate; this record is dated to entry into force."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "came into force on January 26, 1950",
+        "source": "src-loc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "came into force on January 26, 1950",
+        "source": "src-cup"
+      }
+    ],
+    "display": "26 January 1950"
+  },
+  "where": {
+    "lat": 28.6139,
+    "lon": 77.2089,
+    "elevation_m": null,
+    "modern_name": "New Delhi, India",
+    "historical_name": "Delhi, seat of India's Constituent Assembly and government",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-del"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "It established the constitutional order of the world's most populous democracy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1947-08-15-indian-independence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc",
+      "url": "https://blogs.loc.gov/law/2011/02/the-constitution-of-india/",
+      "title": "The Constitution of India",
+      "publisher": "Library of Congress (Law Library)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cup",
+      "url": "https://www.cambridge.org/core/books/when-the-people-rule/founding-of-india-and-popular-sovereignty/1522B7B934AC8FEF521B8D99D19B5902",
+      "title": "The Founding of India and Popular Sovereignty (Chapter 9), When the People Rule",
+      "publisher": "Cambridge University Press",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-del",
+      "url": "https://www.wikidata.org/wiki/Q987",
+      "title": "Wikidata item Q987 (New Delhi), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: sources do not name a place for the entry into force, so the pin is the capital.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:40:49.857Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1950-01-26",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "India's Constitution was adopted by its Constituent Assembly on 26 November 1949, after the Assembly first convened on 9 December 1946, and came into force on 26 January…",
+        "source": "src-loc"
+      },
+      {
+        "span": "1950",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It became the country's founding legal framework.",
+        "source": "src-loc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

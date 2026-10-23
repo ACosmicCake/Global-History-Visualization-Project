@@ -1,0 +1,231 @@
+{
+  "id": "place-zhaozhou-bridge",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Zhaozhou Bridge",
+  "aliases": [
+    "Anji Bridge",
+    "Great Stone Bridge"
+  ],
+  "summary": "The Zhaozhou Bridge is a single-arch stone bridge in Zhao County, Hebei, designed and built in the Sui dynasty by the stonemason Li Chun. ASCE records its completion as 605 and calls it the world's oldest open-spandrel arch bridge. Its main arch spans about 37 m, and the bridge has been repaired several times, most thoroughly in the mid-1950s.",
+  "when": {
+    "start": {
+      "year": 605
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 24,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Completion in 605 is from ASCE; China Daily says built around 605. A 2026 scholarly paper dates it to 581-600, so the start range allows 24 years earlier. End is the present: the bridge stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ASCE landmark page)",
+        "value": "Completion Date 605",
+        "source": "src-asce-zhaozhou"
+      },
+      {
+        "calendar": "CE (China Daily)",
+        "value": "Built around 605 in China's Sui Dynasty (581-618)",
+        "source": "src-chinadaily-zhaozhou"
+      },
+      {
+        "calendar": "CE (Journal of Highway and Transportation Research and Development)",
+        "value": "built during the Sui dynasty (581–600) by Li Chun",
+        "source": "src-sciopen-zhaozhou"
+      }
+    ],
+    "display": "Built c. 605; standing today"
+  },
+  "where": {
+    "lat": 37.72025,
+    "lon": 114.76325,
+    "elevation_m": null,
+    "modern_name": "Zhaozhou Bridge, Zhao County, Shijiazhuang, Hebei, China",
+    "historical_name": "Anji Bridge / Great Stone Bridge, Zhao Prefecture, Sui dynasty China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-asce-zhaozhou"
+    ]
+  },
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "Single-arch stone bridge about 50.8 m long over a river in Zhao County, Hebei; drawn by the viewer as a path.",
+      "source": "src-asce-zhaozhou",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-asce-zhaozhou",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 7.28,
+          "unit": "m",
+          "source": "src-asce-zhaozhou",
+          "note": "Arch rise \"23.9 feet\" (ASCE) converted to metres; overall height above the river is not given on any opened page"
+        },
+        {
+          "part": "length",
+          "value": 50.82,
+          "unit": "m",
+          "source": "src-chinadaily-zhaozhou",
+          "note": "\"50.82 meters in length\" (China Daily); ASCE gives \"total length of 167 feet\"; Science and Technology Daily gives 64.4 m"
+        },
+        {
+          "part": "span",
+          "value": 37,
+          "unit": "m",
+          "source": "src-asce-zhaozhou",
+          "note": "ASCE: \"a span of 37 meters\" (122.6 feet); Science and Technology Daily: 37.02 m; China Daily: 37.37 m"
+        },
+        {
+          "part": "width",
+          "value": 9.6,
+          "unit": "m",
+          "source": "src-stdaily-zhaozhou",
+          "note": "\"9.6 meters wide\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "bridge drawn as a path over the river at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural single stone arch, span 37 m, length 50.82 m"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 605,
+        "end_year": 605,
+        "state": "construction",
+        "description": "Completion date 605 (ASCE); \"built around 605\" in the Sui dynasty (China Daily). A 2026 paper in a Tsinghua University Press journal says built 581-600; sources differ.",
+        "source": "src-asce-zhaozhou"
+      },
+      {
+        "start_year": 605,
+        "end_year": null,
+        "state": "intact",
+        "description": "Standing since; the earliest renovation came about 200 years after completion and the most thorough overhaul was in the mid-1950s (China Daily).",
+        "source": "src-chinadaily-zhaozhou"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "ASCE lists it as a historic landmark and the world's oldest open-spandrel arch bridge; China Daily calls it the oldest existing bridge in China."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-asce-zhaozhou",
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/zhaozhou-bridge",
+      "title": "Zhaozhou Bridge",
+      "publisher": "American Society of Civil Engineers",
+      "author": "American Society of Civil Engineers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-chinadaily-zhaozhou",
+      "url": "https://govt.chinadaily.com.cn/a/201908/16/WS5d561547498ebcb1905787b3.html",
+      "title": "Architectural Odyssey: Zhaozhou Bridge",
+      "publisher": "China Daily",
+      "author": "China Daily",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-stdaily-zhaozhou",
+      "url": "https://stdaily.com/web/English/2023-05/04/content_1921839.html",
+      "title": "Zhaozhou Bridge: Crystallization of Ancient Engineering Technology",
+      "publisher": "Science and Technology Daily",
+      "author": "Science and Technology Daily",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-sciopen-zhaozhou",
+      "url": "https://www.sciopen.com/article/10.26599/HTRD.2026.9480097",
+      "title": "Zhaozhou Bridge article abstract",
+      "publisher": "Tsinghua University Press (Journal of Highway and Transportation Research and Development, English Edition)",
+      "author": "Tsinghua University Press (Journal of Highway and Transportation Research and Development, English Edition)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape wall with linear true. Sources conflict: length 50.82 m (China Daily; ASCE 167 ft = about 50.9 m) versus 64.4 m (Science and Technology Daily); span 37 / 37.02 / 37.37 m; dates 605 versus 581-600. Height is the arch rise (23.9 ft, converted to 7.28 m), not the bridge height, which no opened page gives. ASCE says the Jiaohe River and China Daily the Xiao River, so no river is named in the summary. Coordinates are ASCE's DMS (37 43 12.9 N, 114 45 47.7 E) converted to decimal.",
+  "author": "historian-agent:m-13",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:17:30.120Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

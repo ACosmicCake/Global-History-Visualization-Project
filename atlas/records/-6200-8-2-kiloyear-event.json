@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "-6200-8-2-kiloyear-event",
+  "kind": "event",
+  "title": "8.2 kiloyear event",
+  "summary": "About 8,200 years ago, an abrupt climate event began in the Northern Hemisphere, recorded in Greenland ice cores and North Atlantic sediments. It is attributed to the drainage of the proglacial lakes Agassiz and Ojibway into the North Atlantic, which disturbed ocean circulation. The main cooling likely lasted about 150 to 200 years.",
+  "when": {
+    "start": {
+      "year": -6250
+    },
+    "end": {
+      "year": -6050
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 100,
+      "end_plus_years": 100,
+      "note": "Source says approximately 8,200 years ago; converted by subtracting from 1950. End assumes a main cooling of about 150-200 years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "started approximately 8,200 years ago",
+        "source": "src-ebsco-82"
+      },
+      {
+        "calendar": "ka",
+        "value": "The 8.2 ka event was the last deglacial abrupt climate event",
+        "source": "src-giss-82"
+      }
+    ],
+    "display": "c. 8,200 years ago"
+  },
+  "where": {
+    "lat": 72,
+    "lon": -40,
+    "elevation_m": null,
+    "modern_name": "Greenland (ice-core record) and the North Atlantic",
+    "historical_name": "North Atlantic region, no polity (Holocene)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wikidata-q223"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "The most recent abrupt climate shift of the deglaciation, a test case for ocean-circulation disruption."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-10950-younger-dryas",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-82",
+      "url": "https://www.ebsco.com/research-starters/earth-and-atmospheric-sciences/82-kiloyear-event/",
+      "title": "8.2 kiloyear event",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-giss-82",
+      "url": "https://www.giss.nasa.gov/pubs/abs/ho05500b.html",
+      "title": "Linking the 8.2 ka event and its freshwater forcing in the Labrador Sea",
+      "publisher": "NASA Goddard Institute for Space Studies (Hoffman et al., GRL 2012)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q223",
+      "url": "https://www.wikidata.org/wiki/Q223",
+      "title": "Greenland (Wikidata Q223)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: duration (the EBSCO page itself gives 2,000-4,000 years in one place and 150-200 years in another; I used the latter) and cause (NASA abstract says drainage of Agassiz may have caused it). Location is a planet-scale reference point.",
+  "published_at": "2026-10-22T11:14:59.661Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

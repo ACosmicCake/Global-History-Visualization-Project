@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s9",
+  "updated": "2026-10-22",
+  "id": "1959-march-campaign-against-racial-discrimination-cuba",
+  "kind": "process",
+  "title": "Cuban state campaign against racial discrimination, 1959-1961",
+  "summary": "In 1959 Fidel Castro's new government launched a campaign against racial discrimination: speeches, opening private beaches, remodelled parks and, by 1960, nationalised segregated clubs. By 1961 the revolution declared itself socialist, official discourse soon held racism eliminated, and in September 1961 more than 170 Black organisations were shut down.",
+  "when": {
+    "start": {
+      "year": 1959
+    },
+    "end": {
+      "year": 1961
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "The month (March) in the id is not confirmed by the opened sources, which say only 1959. End is September 1961, when Black organisations were closed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In 1959, Fidel Castro developed a campaign to eliminate racial discrimination",
+        "source": "src-cornell"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "in September 1961 more than 170 black organizations were shut down",
+        "source": "src-mahler"
+      }
+    ],
+    "display": "1959-1961"
+  },
+  "where": {
+    "elevation_m": null,
+    "geometry": {
+      "type": "point"
+    },
+    "lat": 23.1367,
+    "lon": -82.3589,
+    "modern_name": "Havana, Cuba",
+    "historical_name": "Havana, Republic of Cuba under the revolutionary government",
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-q1563"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "A state anti-discrimination drive that desegregated public space while later suppressing independent Black organising."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1953-cuban-revolution",
+      "type": "caused_by",
+      "because": "The campaign was launched by the revolutionary government that took power in 1959."
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mahler",
+      "url": "https://www.uni-bielefeld.de/einrichtungen/cias/forschung/black-americas/resources/Small-Axe-2015-Mahler-55-75-1.pdf",
+      "title": "Race and the Cuban Revolution in Nicolas Guillen Landrian's Coffea arabiga (Small Axe)",
+      "publisher": "Small Axe / Duke University Press",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cornell",
+      "url": "https://journals.library.cornell.edu/tmpfiles/CIAR_11_1_4.pdf",
+      "title": "Old History in the \"New\" Cuba (Cornell International Affairs Review)",
+      "publisher": "Cornell University",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q1563",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1563.json",
+      "title": "Wikidata entry (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Id says March 1959; opened sources give only 1959 (a March speech date was seen in search results, not confirmed). Both opened articles are secondary; Mahler cites de la Fuente, A Nation for All, pp. 269-81 for the measures.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1959",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Castro addressed racial discrimination in numerous speeches and interviews; private beaches were opened to all and parks remodelled to encourage integration.",
+        "source": "src-mahler"
+      },
+      {
+        "span": "1960",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Formerly segregated private clubs were nationalised and opened for public use.",
+        "source": "src-mahler"
+      },
+      {
+        "span": "1961",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "In September 1961 more than 170 Black organisations were shut down, and by 1962 officials held racial inequality eliminated.",
+        "source": "src-mahler",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:29:42.986Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1517-ottoman-conquest-of-egypt",
+  "kind": "event",
+  "title": "Ottoman Conquest of Egypt",
+  "summary": "In January 1517 Ottoman forces under Sultan Selim I defeated the Mamluk army at Raydaniyah, just outside Cairo, and took Egypt. The campaign ended the Mamluk sultanate as an independent power, which was folded into the Ottoman Empire, though Mamluks stayed active in Egyptian affairs until 1811.",
+  "when": {
+    "start": {
+      "year": 1517
+    },
+    "end": {
+      "year": 1517
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give the battle of Raydaniyah as 22 January (EBSCO) and 23 January (HistoryNet) 1517."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "January 22, 1517",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "January 23, 1517",
+        "source": "src-historynet"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "In 1517",
+        "source": "src-loc"
+      }
+    ],
+    "display": "January 1517"
+  },
+  "where": {
+    "lat": 30.0626,
+    "lon": 31.2497,
+    "elevation_m": null,
+    "modern_name": "Cairo, Egypt (proxy pin: Raydaniyah battlefield lay just outside the city)",
+    "historical_name": "Cairo, Mamluk Sultanate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Ended the Mamluk sultanate and brought Egypt under Ottoman control until 1798."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1250-mamluk-seizure-of-power-in-egypt",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/mamluk-ottoman-wars",
+      "title": "Mamlūk-Ottoman Wars",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-historynet",
+      "url": "https://historynet.com/the-battle-of-marj-dabiq/",
+      "title": "The Battle of Marj Dabiq",
+      "publisher": "HistoryNet",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-loc",
+      "url": "https://countrystudies.us/egypt/18.htm",
+      "title": "Egypt - The Ottoman Empire",
+      "publisher": "countrystudies.us (Country Studies series)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/360630",
+      "title": "Cairo",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Battle date differs by a day between sources (22 vs 23 Jan 1517); pin is Cairo as proxy for the nearby Raydaniyah battlefield.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:09.933Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1517",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In January 1517 Ottoman forces under Sultan Selim I defeated the Mamluk army at Raydaniyah, just outside Cairo, and took Egypt.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1517",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The campaign ended the Mamluk sultanate as an independent power, which was folded into the Ottoman Empire, though Mamluks stayed active in Egyptian affairs until 1811.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

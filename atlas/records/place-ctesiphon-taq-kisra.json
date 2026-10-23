@@ -1,0 +1,243 @@
+{
+  "id": "place-ctesiphon-taq-kisra",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Taq Kasra (Taq-i Kisra), Ctesiphon",
+  "summary": "The great vaulted hall (ayvan) of Taq Kasra at Ctesiphon, on the Tigris, is the surviving part of a Sasanian palace. Its date is disputed between the reign of Shapur I and the 6th century CE. Floods in 1888 destroyed a third of the standing ruin; Iraq restored it in the 1970s.",
+  "when": {
+    "start": {
+      "year": 241
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 359,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Encyclopaedia Iranica reports a tradition giving Shapur I (r. 241-72) and a stylistic case for the 6th century (Khosrow I); Amusing Planet says late 6th century. So the start lies between 241 and 600. End is the present: the ruin still stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Encyclopaedia Iranica)",
+        "value": "Shapur I (r. 241-72 A.D.)",
+        "source": "src-iranica-kesra"
+      },
+      {
+        "calendar": "CE (Encyclopaedia Iranica)",
+        "value": "a sixth century date",
+        "source": "src-iranica-kesra"
+      },
+      {
+        "calendar": "CE (Amusing Planet)",
+        "value": "late 6th century",
+        "source": "src-amusing-taq"
+      }
+    ],
+    "display": "3rd to 6th century CE (disputed); partly collapsed 1888"
+  },
+  "where": {
+    "lat": 33.0937384,
+    "lon": 44.5807874,
+    "elevation_m": null,
+    "modern_name": "Taq Kasra, Ctesiphon (al-Mada'in), Baghdad Governorate, Iraq",
+    "historical_name": "Ayvan-e Kesra (Taq-i Kisra) at Ctesiphon, Sasanian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-taq"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The only surviving structure of Sasanian Ctesiphon; Encyclopaedia Iranica discusses it as a major Sasanian monument and its great arch dominates the plan."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-iranica-kesra",
+      "url": "https://www.iranicaonline.org/articles/ayvan-e-kesra-palace-of-kosrow-at-ctesiphon/",
+      "title": "Ayvan-e Kesra (Palace of Kosrow at Ctesiphon), Encyclopaedia Iranica",
+      "publisher": "Encyclopaedia Iranica (Center for Iranian Studies, Columbia University)",
+      "author": "Encyclopaedia Iranica",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-amusing-taq",
+      "url": "https://www.amusingplanet.com/2016/03/taq-kasra-archway-of-ctesiphon.html",
+      "title": "Taq Kasra: The Archway of Ctesiphon",
+      "publisher": "Amusing Planet",
+      "author": "Amusing Planet",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-taq",
+      "url": "https://www.openstreetmap.org/node/13337155458",
+      "title": "OpenStreetMap node 13337155458 (Iwan of Ctesiphon (Taq Kasra))",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A single iwan 43.50 m deep by 25.50 m wide in a blind facade stretching 46 m either side of its centre line; roofed by a parabolic brick vault (Encyclopaedia Iranica).",
+      "source": "src-iranica-kesra",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "source": "src-iranica-kesra",
+      "measurements": [
+        {
+          "part": "facade height to cornice (original)",
+          "value": 35,
+          "unit": "m",
+          "source": "src-iranica-kesra",
+          "note": "\"stood originally 35 m above ground level to the height of its cornice\""
+        },
+        {
+          "part": "iwan (arch) width",
+          "value": 25.5,
+          "unit": "m",
+          "source": "src-iranica-kesra",
+          "note": "\"43.50 m deep by 25.50 m wide\""
+        },
+        {
+          "part": "iwan depth",
+          "value": 43.5,
+          "unit": "m",
+          "source": "src-iranica-kesra"
+        },
+        {
+          "part": "facade extent either side of centre line",
+          "value": 46,
+          "unit": "m",
+          "source": "src-iranica-kesra",
+          "note": "\"stretches 46 m in either direction from the center line\""
+        },
+        {
+          "part": "arch height (Amusing Planet)",
+          "value": 37,
+          "unit": "m",
+          "source": "src-amusing-taq",
+          "note": "\"37 meters tall and 26 meters across\""
+        },
+        {
+          "part": "arch span (Amusing Planet)",
+          "value": 26,
+          "unit": "m",
+          "source": "src-amusing-taq"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a tall brick facade block with a single great arch at true size"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block with an arched iwan at the sourced width, depth and height"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 241,
+        "end_year": 600,
+        "state": "construction",
+        "description": "Built between the reign of Shapur I (r. 241-72) and the 6th century CE; the date is disputed (Encyclopaedia Iranica).",
+        "source": "src-iranica-kesra"
+      },
+      {
+        "start_year": 600,
+        "end_year": 1888,
+        "state": "intact",
+        "description": "The pages opened give no dated changes between building and 1888; Amusing Planet says floods later destroyed the rest of Ctesiphon.",
+        "source": "src-amusing-taq"
+      },
+      {
+        "start_year": 1888,
+        "end_year": 1972,
+        "state": "altered",
+        "description": "Floods of 1888 destroyed one third of the standing ruin (Encyclopaedia Iranica).",
+        "source": "src-iranica-kesra"
+      },
+      {
+        "start_year": 1972,
+        "end_year": null,
+        "state": "restored",
+        "description": "Iraq completed restoration of the south wing in 1972; reconstruction of the collapsed north wing began in 1975.",
+        "source": "src-iranica-kesra"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 241,
+        "to_year": null,
+        "material": "brick (parabolic vault of brick laid on edge)",
+        "source": "src-iranica-kesra"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block (facade with arched iwan). Iranica gives the facade 35 m high and the iwan 25.5 m wide; Amusing Planet gives a 37 m high, 26 m wide arch. These differ (they may measure different points) and I used Iranica first. Date is contested (Shapur I vs 6th century), so the 241-600 construction span is wide. The 600-1888 intact phase is a bridge; the Iranica article is dated 2017 and does not say who restored what after 1975. Pin is an OSM node for the iwan.",
+  "author": "historian-agent:m-12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:46:36.907Z"
+}

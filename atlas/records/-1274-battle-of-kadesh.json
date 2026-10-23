@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-1274-battle-of-kadesh",
+  "kind": "event",
+  "title": "Battle of Kadesh",
+  "summary": "In 1274 BCE, Egyptian forces under Pharaoh Ramesses II clashed with King Muwatalli II's Hittite army near the fortress of Kadesh on the Orontes River. After a massive chariot ambush and fierce fighting ended in a tactical stalemate, the prolonged rivalry culminated decades later in the 1258 BCE Egyptian-Hittite peace treaty, the earliest surviving international peace accord.",
+  "when": {
+    "start": {
+      "year": -1273
+    },
+    "end": {
+      "year": -1273
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 1,
+      "end_minus_years": 1,
+      "end_plus_years": 1,
+      "note": "Conventionally dated to 1274 BCE (regnal year 5 of Ramesses II); chronologies range between 1275 and 1274 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "his account of his victory at The Battle of Kadesh in 1274 BCE is legendary",
+        "source": "src-worldhistory-kadesh"
+      },
+      {
+        "calendar": "BC",
+        "value": "The original clay tablet treaty, dated 1269 BC, was signed by Hattusilli III, King of the Hittites, and Ramses, Pharaoh of the Egyptians.",
+        "source": "src-un-kadesh"
+      },
+      {
+        "calendar": "BCE",
+        "value": "An Egyptian poem about the battle of Kadesh Date ca. 1274 BCE",
+        "source": "src-livius-kadesh-poem"
+      }
+    ],
+    "display": "c. 1274 BCE"
+  },
+  "where": {
+    "lat": 34.557,
+    "lon": 36.5194,
+    "elevation_m": 500,
+    "modern_name": "Tell Nebi Mend, Homs Governorate, Syria",
+    "historical_name": "Qadesh on the Orontes, disputed territory between the Egyptian New Kingdom and the Hittite Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-pleiades-kadesh"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "One of antiquity's largest chariot battles, leading to the earliest surviving international peace treaty."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-hittite-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-abu-simbel",
+      "type": "related"
+    },
+    {
+      "id": "place-karnak-temple-complex",
+      "type": "related"
+    },
+    {
+      "id": "-1280-treaty-of-muwatalli-ii-and-alaksandu",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-worldhistory-kadesh",
+      "url": "https://www.worldhistory.org/article/78/the-battle-of-kadesh--the-first-peace-treaty/",
+      "title": "The Battle of Kadesh & the First Peace Treaty",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2012-01-18",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-un-kadesh",
+      "url": "https://www.un.org/ungifts/replica-peace-treaty-between-hattusilis-and-ramses-ii",
+      "title": "Replica of Peace Treaty between Hattusilis and Ramses II",
+      "publisher": "United Nations",
+      "author": "United Nations Gifts",
+      "date_published": "1970-09-24",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-kadesh-poem",
+      "url": "https://www.livius.org/pictures/a/egypt/19th-dynasty/poem-about-the-battle-of-kadesh/",
+      "title": "Poem about the Battle of Kadesh",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "2020-09-14",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-pleiades-kadesh",
+      "url": "https://pleiades.stoa.org/places/668291/json",
+      "title": "Tell el-Nebi Mendu/Qadesh on the Orontes (Pleiades 668291 JSON)",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Jeffrey Becker et al.",
+      "date_published": "2023-10-25",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1273",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "In 1274 BCE, Ramesses II clashed with Muwatalli II near Kadesh in a massive chariot battle.",
+        "source": "src-worldhistory-kadesh"
+      },
+      {
+        "span": "-1258",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Decades of stalemate resulted in the Egyptian-Hittite peace treaty, the earliest known international accord.",
+        "source": "src-un-kadesh",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of casualty numbers, which are omitted from official Egyptian inscriptions and Hittite tablet archives.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:25.442Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1945-08-17-proclamation-of-indonesian-independence",
+  "kind": "event",
+  "title": "Proclamation of Indonesian Independence, Jakarta",
+  "summary": "On the morning of 17 August 1945, two days after the Japanese occupation ended, the nationalist leader Sukarno read a short declaration of Indonesian independence from the porch of his house in Jakarta. Next day he became president with Mohammad Hatta as vice president. Dutch sovereignty was transferred only after about four and a half years of conflict, in December 1949.",
+  "when": {
+    "start": {
+      "year": 1945,
+      "month": 8,
+      "day": 17
+    },
+    "end": {
+      "year": 1945,
+      "month": 8,
+      "day": 17
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "10:00 a.m. on 17 August 1945",
+        "source": "src-sbs-1945"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "17 August 1945",
+        "source": "src-rijks-sukarno"
+      }
+    ],
+    "display": "17 August 1945"
+  },
+  "where": {
+    "lat": -6.175278,
+    "lon": 106.826944,
+    "elevation_m": null,
+    "modern_name": "Jakarta, Indonesia (Sukarno's house, Jalan Pegangsaan Timur 56, now Taman Proklamasi; pin is the city centre)",
+    "historical_name": "Jakarta, Japanese-occupied Java, formerly Dutch East Indies",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 6,
+    "coordinate_sources": [
+      "src-wd-jakarta"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Founding act of the Republic of Indonesia and a landmark of 20th-century decolonisation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1945-08-15-jewel-voice-broadcast",
+      "type": "caused_by",
+      "because": "The proclamation followed Japan's surrender, which ended the occupation of the Indonesian archipelago."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rijks-sukarno",
+      "url": "https://www.rijksmuseum.nl/en/stories/exhibitions/revolusi/story/story-sukarno",
+      "title": "Sukarno (Revolusi exhibition story)",
+      "publisher": "Rijksmuseum, Amsterdam",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sbs-1945",
+      "url": "https://www.sbs.com.au/language/indonesian/en/article/independence-of-the-republic-of-indonesia-august-17-1945/4smm3mdn2",
+      "title": "Important events leading to Independence of the Republic of Indonesia - August 17, 1945",
+      "publisher": "SBS Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-jakarta",
+      "url": "https://www.wikidata.org/wiki/Q3630",
+      "title": "Wikidata item Q3630 (Jakarta), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Date, time and the house location are confirmed on two opened pages. The pin is Jakarta's centre, not the house site; coordinates of Taman Proklamasi were not confirmed on an opened page. The next-day presidency and the December 1949 transfer of sovereignty come from the Rijksmuseum page only.",
+  "author": "historian-agent:o-s12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T04:54:53.397Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On the morning of 17 August 1945, two days after the Japanese occupation ended, the nationalist leader Sukarno read a short declaration of Indonesian independence from the porch…",
+        "source": "src-rijks-sukarno"
+      },
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Next day he became president with Mohammad Hatta as vice president.",
+        "source": "src-rijks-sukarno",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

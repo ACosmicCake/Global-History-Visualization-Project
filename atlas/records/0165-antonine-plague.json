@@ -1,0 +1,152 @@
+{
+  "id": "0165-antonine-plague",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Antonine Plague",
+  "summary": "A major epidemic in the Roman Empire from 165 CE, most likely smallpox according to World History Encyclopedia, which says Roman troops met it at Seleucia on the Tigris and carried it west; Lucius Verus died of it in 169. Mortality estimates range from 1-2% above ordinary mortality (Gilliam) to over half the Empire (Seeck).",
+  "when": {
+    "start": {
+      "year": 165
+    },
+    "end": {
+      "year": 189
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "WHE: erupted 165 CE, first phase to 180; PMC study: 165 to ca. 189 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "165 CE",
+        "source": "src-whe-antonine"
+      },
+      {
+        "calendar": "CE",
+        "value": "from 165 to ca. 189 CE",
+        "source": "src-pmc-antonine"
+      }
+    ],
+    "display": "165-c. 189 CE"
+  },
+  "where": {
+    "lat": 33.137222,
+    "lon": 44.517222,
+    "elevation_m": null,
+    "modern_name": "Seleucia on the Tigris, Iraq (proxy: where Roman troops caught the disease)",
+    "historical_name": "Seleucia on the Tigris, on the eastern frontier of the Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Major pandemic whose death toll scholars still dispute, from small to very large shares of the Empire."
+  },
+  "confidence": "contested",
+  "audience_note": "Describes epidemic mortality, including large-scale death tolls, and symptoms recorded by Galen.",
+  "related": [
+    {
+      "id": "polity-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "0541-plague-of-justinian",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-antonine",
+      "url": "https://www.worldhistory.org/Antonine_Plague/",
+      "title": "Antonine Plague",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pmc-antonine",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11824979/",
+      "title": "Comparative SIR/SEIR modeling of the Antonine Plague in Rome",
+      "publisher": "National Library of Medicine (PubMed Central)",
+      "author": "Karasaridis and Chalupa",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-harper",
+      "url": "https://www.cambridge.org/core/journals/journal-of-economic-history/article/div-classtitlepeople-plagues-and-prices-in-the-roman-world-the-evidence-from-egyptdiv/50D27EAD5045D12C1573DFFB5D5C029C",
+      "title": "People, Plagues, and Prices in the Roman World: The Evidence from Egypt",
+      "publisher": "Cambridge University Press (Journal of Economic History)",
+      "author": "Kyle Harper",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q1136681",
+      "title": "Seleucia on the Tigris",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Cause and toll are contested. PMC lists ranges by author: Gilliam 1-2% above ordinary (500,000-1,000,000), Littman 7-10%, Scheidel about 25%, Harris 16-22%, Harper 8-10% empire-wide; Harper (Cambridge): earlier estimates 2-50%, recent 10-30%. Pin is a proxy.",
+  "author": "historian-agent:o-s111",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:04:57.917Z"
+}

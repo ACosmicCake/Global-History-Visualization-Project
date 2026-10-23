@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "scale": "civilization",
+  "confidence": "probable",
+  "audience_note": null,
+  "author": "historian-agent:m-18",
+  "updated": "2026-10-22",
+  "id": "place-benin-city-walls",
+  "title": "Benin City earthworks (Iya)",
+  "summary": "Ditch-and-bank earthworks known as the Iya surround Benin City in southern Nigeria. Bournemouth University's African Legacy project describes a linear cluster 16,000 km long and gives an initial dating of the 13th to 15th century AD, later extended back to the early 8th century at Ekhor. World History Encyclopedia says excavations show the city was once surrounded by high earthworks with many gaps.",
+  "when": {
+    "start": {
+      "year": 1200
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 500,
+      "start_plus_years": 300,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Bournemouth: initial dating C13th–C15th A.D.; later dating back to the early C8th A.D. at Ekhor n'Iro, east of Benin. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (Bournemouth University)",
+        "value": "C13th–C15th A.D.",
+        "source": "src-bournemouth-iya"
+      },
+      {
+        "calendar": "AD (Bournemouth University)",
+        "value": "early C8th A.D.",
+        "source": "src-bournemouth-iya"
+      }
+    ],
+    "display": "dated 13th–15th century CE, with 8th-century dates at Ekhor; earthworks remain"
+  },
+  "where": {
+    "lat": 6.3330586,
+    "lon": 5.6221058,
+    "elevation_m": null,
+    "modern_name": "Benin City, Edo State, Nigeria (earthworks encircle and extend around the city)",
+    "historical_name": "Benin City earthworks (Iya), Kingdom of Benin",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-benin"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "A very long network of earthworks, called the world's longest ancient earthworks on the Bournemouth page."
+  },
+  "related": [
+    {
+      "id": "polity-kingdom-of-benin",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bournemouth-iya",
+      "url": "https://csweb.bournemouth.ac.uk/africanlegacy/benin_Iya_earthworks.htm",
+      "title": "Benin Iya - worlds longest ancient earthworks",
+      "publisher": "Bournemouth University (African Legacy, School of Conservation Sciences)",
+      "author": "Bournemouth University (African Legacy, School of Conservation Sciences)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-benin",
+      "url": "https://www.worldhistory.org/Kingdom_of_Benin/",
+      "title": "Kingdom of Benin",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-benin",
+      "url": "https://nominatim.openstreetmap.org/search?q=Benin+City&format=json",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors (Nominatim)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Linear work (model.linear would be true) with no model: no opened page gives a wall height (Bournemouth says ditch and bank 4 m deep; the Met and WMF pages giving 18 m and 1,200 km could not be opened), and no point on the wall line was sourced to 1 km. Pin is the city centre, uncertainty 10 km. Least sure: dating, since the project reports C13th–C15th and early C8th dates for different sites.",
+  "published_at": "2026-10-22T13:44:42.082Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1520-toxcatl-massacre",
+  "kind": "event",
+  "title": "Toxcatl massacre at the Templo Mayor",
+  "summary": "In May 1520, during the Toxcatl festival, Pedro de Alvarado and Spanish troops attacked unarmed Mexica nobles gathered in the Templo Mayor precinct of Tenochtitlan while Cortés was away on the coast. The killings set off a sustained Mexica assault, the death of Moctezuma and the Spaniards' flight from the city in the Noche Triste.",
+  "when": {
+    "start": {
+      "year": 1520
+    },
+    "end": {
+      "year": 1520
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources agree on May 1520. Kruell gives 23 May; other accounts differ by a few days. Julian date, not converted."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian, as given by the author",
+        "value": "23 de mayo de 1520",
+        "source": "src-kruell"
+      },
+      {
+        "calendar": "Julian, month only",
+        "value": "In May 1520",
+        "source": "src-doaks"
+      }
+    ],
+    "display": "May 1520 (23 May per one source)"
+  },
+  "where": {
+    "lat": 19.435,
+    "lon": -99.1314,
+    "elevation_m": null,
+    "modern_name": "Templo Mayor, Historic Centre of Mexico City, Mexico",
+    "historical_name": "Templo Mayor precinct of Mexico-Tenochtitlan, capital of the Mexica (Aztec) Triple Alliance",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-geonames-tm"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The massacre turned a tense Spanish occupation into open war, ending in the Spaniards' expulsion and the 1521 conquest campaign."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the mass killing of unarmed civilians at a religious ceremony.",
+  "related": [
+    {
+      "id": "place-tenochtitlan",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-kruell",
+      "url": "https://www.noticonquista.unam.mx/sites/default/files/2020-05/kruell_-_la_fiesta_de_toxcatl_-_final.pdf",
+      "title": "La fiesta de Tóxcatl y la matanza del Templo Mayor",
+      "publisher": "UNAM, Noticonquista",
+      "author": "Gabriel Kruell",
+      "date_published": "2020",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-doaks",
+      "url": "https://www.doaks.org/resources/online-exhibits/epidemics/epidemics-english/fall-of-tenochtitlan/festival-of-toxcatl",
+      "title": "The Massacre of Toxcatl (Colonial Epidemics and Mesoamerican Medicine in Sixteenth-Century Mexico)",
+      "publisher": "Dumbarton Oaks Research Library and Collection (Harvard University)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-tm",
+      "url": "https://www.geonames.org/search.html?q=Templo+Mayor",
+      "title": "GeoNames search: Templo Mayor",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the day: Kruell says 23 May while other accounts give 20–22 May; the Spanish justification (an alleged plot) is contested and not assessed here.",
+  "author": "historian-agent:o-s5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:43:29.312Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "id": "place-gol-gumbaz-bijapur",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Gol Gumbaz, Bijapur",
+  "summary": "Gol Gumbaz in Bijapur (Vijayapura), Karnataka, is the 17th-century mausoleum of Sultan Muhammad Adil Shah II of the Adil Shahi dynasty. Completed in 1659 CE, the monument is celebrated for its colossal unsupported hemispherical dome, spanning nearly 38 meters in diameter across interlocking arch pendentives without central pillars, and its famed whispering gallery with remarkable acoustic properties.",
+  "when": {
+    "start": {
+      "year": 1659
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 3,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Archaeological Survey of India (ASI) dates completion to 1659 CE following the death of Muhammad Adil Shah II (reigned 1627-1657 CE); UNESCO dates Adil Shahi monuments at Bijapur from the late 15th to late 17th centuries. Standing today."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Archaeological Survey of India)",
+        "value": "Built in 1659 CE, at the architectural zenith of the Adil Shahis",
+        "source": "src-asi-gol-gumbaz"
+      },
+      {
+        "calendar": "CE (Archaeological Survey of India)",
+        "value": "mausoleum of Muhammad Adil shah II (1627-57 CE)",
+        "source": "src-asi-gol-gumbaz"
+      },
+      {
+        "calendar": "UNESCO Tentative List",
+        "value": "Gol Gumbaz,at Bijapur, still dominates the city as it has done for four hundred years",
+        "source": "src-unesco-5887"
+      }
+    ],
+    "display": "Completed 1659 CE; standing today"
+  },
+  "where": {
+    "lat": 16.8296,
+    "lon": 75.736,
+    "elevation_m": null,
+    "modern_name": "Gol Gumbaz, Vijayapura (Bijapur), Karnataka, India",
+    "historical_name": "Gol Gumbaz, Bijapur, Adil Shahi Sultanate of Bijapur",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-gol-gumbaz"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "One of the largest dome chambers ever constructed in the pre-modern world and a masterpiece of Deccan Sultanate Indo-Islamic architecture."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-taj-mahal",
+      "type": "related"
+    },
+    {
+      "id": "place-hagia-sophia",
+      "type": "related"
+    },
+    {
+      "id": "place-qutb-minar",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-asi-gol-gumbaz",
+      "url": "https://asidharwadcircle.in/monuments/gol-gumbaz/",
+      "title": "Gol Gumbaz - Archaeological Survey of India, Dharwad Circle",
+      "publisher": "Archaeological Survey of India, Dharwad Circle",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-unesco-5887",
+      "url": "https://whc.unesco.org/en/tentativelists/5887/",
+      "title": "Monuments and Forts of the Deccan Sultanate (UNESCO Tentative List no. 5887)",
+      "publisher": "UNESCO World Heritage Centre",
+      "date_published": "2014-04-15",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-osm-gol-gumbaz",
+      "url": "https://www.openstreetmap.org/way/55302213",
+      "title": "Gol Gumbaz (OpenStreetMap Way 55302213)",
+      "publisher": "OpenStreetMap",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Model omitted at outline tier because Archnet returned HTTP 429; construction date 1659 CE and dome description are confirmed directly from the Archaeological Survey of India (ASI).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:37:45.466Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square mausoleum hall under a single dome; plan dimension taken from the ASI statement of internal dome diameter (37.92 m); the ASI Kannada text gives 205 ft per side, not used.",
+      "source": "src-asi-gol-gumbaz",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "domed_building",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-asi-gol-gumbaz",
+      "measurements": [
+        {
+          "part": "Gol Gumbaz mausoleum, internal dome diameter",
+          "value": 37.92,
+          "unit": "m",
+          "source": "src-asi-gol-gumbaz",
+          "note": "ASI English text: internal diameter 37.92 m"
+        },
+        {
+          "part": "Gol Gumbaz mausoleum, building height",
+          "value": 60.96,
+          "unit": "m",
+          "source": "src-asi-gol-gumbaz",
+          "note": "ASI Kannada text: 200 ft (building height); external dome diameter there is 144 ft"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "domed block at true height and dome diameter"
+      },
+      {
+        "level": "local",
+        "representation": "square mausoleum with hemispherical dome and corner towers (schematic)"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1659,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Mausoleum of Muhammad Adil Shah II completed in 1659 CE and standing today.",
+        "source": "src-asi-gol-gumbaz"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

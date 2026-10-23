@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "person-ali-qushji",
+  "kind": "person",
+  "title": "Ali Qushji, astronomer of Samarkand and Constantinople",
+  "summary": "Ali Qushji, born in Samarkand in 1403, worked on Ulugh Beg's astronomical tables at the Samarkand observatory until 1449. He then moved through Herat and Tabriz and settled in Constantinople around 1472, where Mehmed II welcomed him; he taught at Ottoman madrasas, including Hagia Sophia, and died there in 1474.",
+  "when": {
+    "start": {
+      "year": 1403
+    },
+    "end": {
+      "year": 1474
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "born 1403, Samarkand; died 16 December 1474, Constantinople",
+        "source": "src-mactutor"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Istanbul (Turkey), 1474",
+        "source": "src-mcgill"
+      }
+    ],
+    "display": "1403–16 December 1474"
+  },
+  "where": {
+    "lat": 39.674722,
+    "lon": 67.005556,
+    "elevation_m": null,
+    "modern_name": "Ulugh Beg Observatory, Samarkand, Uzbekistan (pin for his main working base; later life in Istanbul)",
+    "historical_name": "Samarkand, capital of Ulugh Beg's Timurid realm",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 39.674722,
+          "lon": 67.005556,
+          "date": "1449",
+          "note": "Samarkand observatory work ends with Ulugh Beg's death",
+          "source": "src-mactutor",
+          "year": 1449
+        },
+        {
+          "lat": 34.341944,
+          "lon": 62.203056,
+          "date": "1449",
+          "note": "Herat, after Ulugh Beg's death",
+          "source": "src-mcgill",
+          "year": 1449
+        },
+        {
+          "lat": 38.073889,
+          "lon": 46.296111,
+          "date": "1469",
+          "note": "Tabriz, after Abu Said was defeated by Uzun Hasan",
+          "source": "src-mcgill",
+          "year": 1469
+        },
+        {
+          "lat": 41.01,
+          "lon": 28.960278,
+          "date": "1472",
+          "note": "Constantinople (Istanbul), around 1472",
+          "source": "src-mcgill",
+          "year": 1472
+        }
+      ]
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-obs",
+      "src-wd-cities"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "people"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Leading astronomer of the Samarkand school whose commentary on the Zij of Ulugh Beg and teaching texts carried that tradition into Ottoman scholarship."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1453-fall-of-constantinople",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1449",
+        "action": "path.trace {}",
+        "caption": "After Ulugh Beg's assassination in 1449 ended the Samarkand observatory's work, Ali Qushji left for Herat.",
+        "source": "src-mactutor"
+      },
+      {
+        "span": "1469",
+        "action": "path.trace {}",
+        "caption": "Following Sultan Abu Said's defeat by Uzun Hasan in 1469 he relocated to Tabriz.",
+        "source": "src-mcgill"
+      },
+      {
+        "span": "1472",
+        "action": "path.trace {}",
+        "caption": "Around 1472 he settled in Constantinople, taught at the Sahn-i Seman madrasa and headed the Hagia Sophia madrasa, shaping Ottoman learning.",
+        "source": "src-mcgill",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-mactutor",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Qushji/",
+      "title": "Ala al-Din Ali ibn Muhammed Ali Qushji",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mcgill",
+      "url": "https://islamsci.mcgill.ca/RASI/BEA/Qushji_BEA.htm",
+      "title": "Qushji (Ali Qushji), Biographical Encyclopedia of Astronomers entry",
+      "publisher": "Rare Arabic and Islamic Science Index, McGill University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-wd-obs",
+      "url": "https://www.wikidata.org/wiki/Q608580",
+      "title": "Wikidata item Q608580 (Ulugh Beg Observatory), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wd-cities",
+      "url": "https://www.wikidata.org/wiki/Q45313",
+      "title": "Wikidata item Q45313 (Herat; also Q80053 Tabriz and Q406 Istanbul), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth year 1403 comes from MacTutor only; McGill gives no birth year. Arrival in Constantinople is 1470 on MacTutor and about 1472 in McGill; 1472 used. The pin is the Samarkand observatory, not Constantinople. Herat, Tabriz and Istanbul waypoints use city-centre Wikidata coordinates.",
+  "published_at": "2026-10-22T04:45:16.585Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

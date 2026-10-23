@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s26",
+  "updated": "2026-10-22",
+  "id": "-505my-bright-angel-biota-grand-canyon",
+  "kind": "event",
+  "title": "Bright Angel biota of the Grand Canyon",
+  "summary": "About 505 million years ago, in a shallow Cambrian sea, the sediments of the Bright Angel Formation in what is now the Grand Canyon buried trilobites, brachiopods and trace fossils. A 2025 study added exceptionally preserved small fossils of priapulid worms, crustaceans and molluscs.",
+  "when": {
+    "start": {
+      "year": -507000000
+    },
+    "end": {
+      "year": -502000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 3000000,
+      "start_plus_years": 3000000,
+      "end_minus_years": 2000000,
+      "end_plus_years": 2000000,
+      "note": "The 2025 paper gives the formation as middle Cambrian, about 507 to 502 million years old, and about 505 Ma in its introduction; the National Park Service gives the wider Tonto Group as roughly 510 to 500 million years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (million years ago)",
+        "value": "middle Cambrian (~507 to 502 million years)",
+        "source": "src-mussini2025"
+      },
+      {
+        "calendar": "Ma (million years ago)",
+        "value": "Tonto Group deposited between about 510 and 500 million years ago",
+        "source": "src-nps-grca"
+      }
+    ],
+    "display": "c. 507-502 million years ago"
+  },
+  "where": {
+    "lat": 36.0975,
+    "lon": -112.0953,
+    "elevation_m": null,
+    "modern_name": "Grand Canyon, Arizona, USA (fossils from the central canyon, Bright Angel Formation)",
+    "historical_name": "Shallow marine shelf near the Shinumo archipelago on the Laurentian margin (no polities)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wd-q118841",
+      "src-mussini2025"
+    ],
+    "paleo": {
+      "lat": 11.05,
+      "lon": -154.37,
+      "age_ma": 505,
+      "plate_model": "MERDITH2021 via GPlates Web Service",
+      "source": "src-gplates-bab",
+      "note": "Modern Grand Canyon point reconstructed to 505 Ma; the PALEOMAP model gives 0.07, -95.12 for the same point, so the models differ."
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 2,
+    "justification": "A regional Cambrian fauna that shows life on an oxygenated shelf beside better-known sites like the Burgess Shale."
+  },
+  "related": [
+    {
+      "id": "place-burgess-shale",
+      "type": "related"
+    },
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-grca",
+      "url": "https://www.nps.gov/subjects/fossils/case-study-grand-canyon-evolution.htm",
+      "title": "Case Study: Grand Canyon Evolution through the Ages",
+      "publisher": "U.S. National Park Service",
+      "author": "U.S. National Park Service",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-mussini2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12285723/",
+      "title": "Evolutionary escalation in an exceptionally preserved Cambrian biota from the Grand Canyon (Arizona, USA)",
+      "publisher": "Science Advances (via PubMed Central)",
+      "author": "Giovanni Mussini and colleagues",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-q118841",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q118841.json",
+      "title": "Wikidata item Q118841 (Grand Canyon), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-bab",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-112.0953,36.0975&time=505&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021, 505 Ma",
+      "publisher": "GPlates Web Service (EarthByte Group)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the paleo position, since plate models disagree for this point. The pin is the Grand Canyon centre, not a fossil locality. Brachiopod and trilobite genera were not named from an opened page.",
+  "published_at": "2026-10-22T07:37:40.181Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

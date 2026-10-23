@@ -1,0 +1,217 @@
+{
+  "id": "place-akashi-kaikyo-bridge",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Akashi Kaikyo Bridge",
+  "aliases": [
+    "Akashi-Kaikyo Bridge"
+  ],
+  "summary": "The Akashi Kaikyo Bridge is a suspension bridge across the Akashi Strait between Kobe and Awaji Island in Japan. On-site construction began on 1 May 1988 and it opened on 5 April 1998. It is 3,911 m long overall with a central span of 1,991 m, and its towers rise 282.8 m.",
+  "when": {
+    "start": {
+      "year": 1988
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "On-site construction start (1 May 1988) and opening (5 April 1998) are from the operator; EBSCO also gives 1988 and 1998. The ground-breaking ceremony was 26 April 1986. End is the present: the bridge is in use."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Honshu-Shikoku Bridge Expressway Co.)",
+        "value": "Commenced on-Site Construction： May 1, 1988 Opened to Traffic： April 5, 1998",
+        "source": "src-honshi-akashi"
+      },
+      {
+        "calendar": "CE (EBSCO Research Starters)",
+        "value": "Construction of the Akashi Kaikyo Bridge began in 1988; opened on April 5, 1998",
+        "source": "src-ebsco-akashi"
+      }
+    ],
+    "display": "Built 1988–1998"
+  },
+  "where": {
+    "lat": 34.6166407,
+    "lon": 135.0208814,
+    "elevation_m": null,
+    "modern_name": "Akashi Kaikyo Bridge, Kobe and Awaji, Hyōgo Prefecture, Japan",
+    "historical_name": "Akashi-Kaikyo Bridge across the Akashi Strait, Japan (Honshu-Shikoku bridge project)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-akashi"
+    ]
+  },
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "Three-span suspension bridge, 3,911 m long, crossing the Akashi Strait between Kobe and Awaji Island; drawn by the viewer as a path.",
+      "source": "src-honshi-akashi",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-honshi-akashi",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 282.8,
+          "unit": "m",
+          "source": "src-roadsbridges-akashi",
+          "note": "\"At a height of 282.8 m\" (towers); EBSCO: towers \"built to a height of 282.8 meters\"; the operator says \"about 300 m\""
+        },
+        {
+          "part": "length",
+          "value": 3911,
+          "unit": "m",
+          "source": "src-honshi-akashi",
+          "note": "\"total length is 3,911 m long\"; Roads & Bridges: \"3,911 m long\""
+        },
+        {
+          "part": "central span",
+          "value": 1991,
+          "unit": "m",
+          "source": "src-honshi-akashi",
+          "note": "\"center span length (between the towers) ... is 1,991 m\"; EBSCO and Roads & Bridges agree"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "bridge drawn as a path across the Akashi Strait at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural suspension span 3,911 m long, towers 282.8 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1988,
+        "end_year": 1998,
+        "state": "construction",
+        "description": "On-site construction commenced 1 May 1988 (ground-breaking ceremony 26 April 1986) and the bridge opened 5 April 1998 (Honshu-Shikoku Bridge Expressway Co.).",
+        "source": "src-honshi-akashi"
+      },
+      {
+        "start_year": 1998,
+        "end_year": null,
+        "state": "intact",
+        "description": "Open to traffic since 5 April 1998.",
+        "source": "src-honshi-akashi"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "EBSCO calls its 1,991 m central span the longest of its kind globally."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-honshi-akashi",
+      "url": "https://www.jb-honshi.co.jp/english/corp_index/technology/introduction/introduction_akashi.html",
+      "title": "Akashi-Kaikyo Bridge",
+      "publisher": "Honshu-Shikoku Bridge Expressway Company Limited",
+      "author": "Honshu-Shikoku Bridge Expressway Company Limited",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-roadsbridges-akashi",
+      "url": "https://www.roadsbridges.com/bridges/article/10582389/akashi-kaikyo-bridge",
+      "title": "Akashi Kaikyo Bridge",
+      "publisher": "Roads & Bridges",
+      "author": "Roads & Bridges",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-ebsco-akashi",
+      "url": "https://www.ebsco.com/research-starters/history/opening-worlds-largest-suspension-bridge",
+      "title": "Opening of the World's Largest Suspension Bridge",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO Research Starters",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-akashi",
+      "url": "https://nominatim.openstreetmap.org/search?q=Akashi+Kaikyo+Bridge&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: 明石海峡大橋, way 400448368 (34.6166407, 135.0208814)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape wall with linear true. Tower height: the operator says \"about 300 m\"; Roads & Bridges and EBSCO say 282.8 m (Roads & Bridges also gives 282.2 m in one place), so 282.8 m is used. EBSCO gives overall length as 3.8 km, the operator and Roads & Bridges 3,911 m. Point is an OSM way on the bridge; no end-point coordinates in sources so no geometry path.",
+  "author": "historian-agent:m-13",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:17:30.788Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-3600ka-megalodon-extinction",
+  "kind": "event",
+  "title": "Megalodon Extinction",
+  "summary": "The giant shark Otodus megalodon, found in seas almost worldwide, vanished from the fossil record in the Pliocene. A 2019 reassessment of its youngest reliable fossils put the extinction near 3.6 million years ago (median estimate 3.51 Ma), earlier than a previous Pliocene-Pleistocene estimate of 2.6 Ma.",
+  "when": {
+    "start": {
+      "year": -3600000
+    },
+    "end": {
+      "year": -3600000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 100000,
+      "start_plus_years": 1000000,
+      "end_minus_years": 100000,
+      "end_plus_years": 1000000,
+      "note": "Estimates differ: about 3.6 Ma and median 3.51 Ma (PeerJ 2019); an earlier study proposed 2.6 Ma. Uncertainty values are rough, from that spread."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (million years ago), as recorded",
+        "value": "3.6 million years ago",
+        "source": "src-ucla"
+      },
+      {
+        "calendar": "Ma, as recorded",
+        "value": "3.51 Ma",
+        "source": "src-peerj"
+      },
+      {
+        "calendar": "Ma, as recorded",
+        "value": "3.6 Ma",
+        "source": "src-peerj"
+      }
+    ],
+    "display": "about 3.6 million years ago"
+  },
+  "where": {
+    "lat": 32.7157,
+    "lon": -117.1647,
+    "elevation_m": null,
+    "modern_name": "San Diego, California, USA (proxy pin for the eastern North Pacific fossil study area; the species lived almost worldwide)",
+    "historical_name": "Pliocene global oceans (no polity)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10000,
+    "coordinate_sources": [
+      "src-geonames"
+    ],
+    "paleo": {
+      "not_applicable": "Outline record; global extinction, pin is a proxy only."
+    }
+  },
+  "regions": [
+    "oceans"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Loss of the largest known predatory shark lineage, which spanned the Paleocene to the Pliocene."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-si-ocean",
+      "url": "https://ocean.si.edu/ocean-life/sharks-rays/megalodon",
+      "title": "Megalodon",
+      "publisher": "Smithsonian Institution (Ocean Portal)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-peerj",
+      "url": "https://peerj.com/articles/6088/",
+      "title": "The Early Pliocene extinction of the mega-toothed shark Otodus megalodon: a view from the eastern North Pacific",
+      "publisher": "PeerJ",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ucla",
+      "url": "https://newsroom.ucla.edu/releases/megalodon-warm-blooded-extinct-shark",
+      "title": "Megalodon was no cold-blooded killer",
+      "publisher": "UCLA Newsroom",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/5391811",
+      "title": "San Diego",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Extinction date is an estimate that varies by study (3.6, 3.51, 2.6 Ma). Pin is a proxy (San Diego) for a global event; coordinates from GeoNames.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:25:11.257Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

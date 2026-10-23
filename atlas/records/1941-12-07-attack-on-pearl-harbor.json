@@ -1,0 +1,157 @@
+{
+  "id": "1941-12-07-attack-on-pearl-harbor",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Attack on Pearl Harbor",
+  "summary": "On the morning of 7 December 1941, carrier-launched aircraft of the Imperial Japanese Navy executed a surprise aerial attack against the United States Pacific Fleet anchored at Pearl Harbor on Oahu, Hawaii. The raid sank or damaged eight battleships, destroyed nearly two hundred aircraft, and killed over 2,400 Americans. The devastating assault abruptly shattered American isolationism, prompting Congress to declare war on Japan the following day and precipitating German and Italian declarations of war that unified World War II across the Pacific and Atlantic.",
+  "when": {
+    "start": {
+      "year": 1941,
+      "iso": "1941-12-07"
+    },
+    "end": {
+      "year": 1941,
+      "iso": "1941-12-07"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "December 7, 1941",
+        "source": "src-nps-pearl-harbor"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "December 7, 1941",
+        "source": "src-archives-day-of-infamy"
+      }
+    ],
+    "display": "7 December 1941"
+  },
+  "where": {
+    "lat": 21.34475,
+    "lon": -157.97739,
+    "elevation_m": 0,
+    "modern_name": "Pearl Harbor, Oahu, Hawaii, United States",
+    "historical_name": "Pearl Harbor, Territory of Hawaii, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-pearl-harbor"
+    ]
+  },
+  "regions": [
+    "oceania",
+    "northern_america",
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The attack drew the United States into World War II, shattering American neutrality and initiating the Pacific War while prompting Axis declarations of war that consolidated global hostilities."
+  },
+  "confidence": "established",
+  "audience_note": "Military attack involving significant loss of life, battleship sinkings, and aerial bombardment.",
+  "related": [
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-09-nagasaki-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-15-jewel-voice-broadcast",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-pearl-harbor",
+      "url": "https://www.nps.gov/valr/learn/historyculture/index.htm",
+      "title": "History and Culture - Pearl Harbor National Memorial",
+      "publisher": "U.S. National Park Service",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "what"
+      ]
+    },
+    {
+      "id": "src-archives-day-of-infamy",
+      "url": "https://www.archives.gov/education/lessons/day-of-infamy",
+      "title": "Franklin D. Roosevelt's Day of Infamy Address",
+      "publisher": "U.S. National Archives and Records Administration",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "what",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-pearl-harbor",
+      "url": "https://www.geonames.org/10057006",
+      "title": "GeoNames entry for Pearl Harbor (GeoNameId 10057006)",
+      "publisher": "GeoNames",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Attack commenced at 7:55 a.m. local Hawaiian time on Sunday, December 7, 1941; coordinates point to Pearl Harbor, Oahu via GeoNames 10057006.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1941-12-07",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On the morning of 7 December 1941, carrier-launched aircraft of the Imperial Japanese Navy executed a surprise aerial attack against the United States Pacific Fleet anchored at Pearl…",
+        "source": "src-nps-pearl-harbor"
+      },
+      {
+        "span": "1941",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The raid sank or damaged eight battleships, destroyed nearly two hundred aircraft, and killed over 2,400 Americans.",
+        "source": "src-nps-pearl-harbor",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T04:34:10.622Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

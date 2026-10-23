@@ -1,0 +1,158 @@
+{
+  "id": "1916-02-21-battle-of-verdun",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Verdun",
+  "summary": "The German attack at Verdun began at 7.15am on 21 February 1916 on the hills north of the town in northeastern France and ended on 18 December 1916. The Memorial de Verdun counts 163,000 French and 143,000 German dead; the National Army Museum gives around 330,000 German and over 370,000 French casualties. The offensive failed to force France to make peace.",
+  "when": {
+    "start": {
+      "year": 1916,
+      "iso": "1916-02-21"
+    },
+    "end": {
+      "year": 1916,
+      "iso": "1916-12-18"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start and end days stated by the Memorial de Verdun."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "began at 7.15am on 21 February 1916",
+        "source": "src-verdun-memorial"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "ended on 18 December 1916",
+        "source": "src-verdun-memorial"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "21 February 1916",
+        "source": "src-nam-1916"
+      }
+    ],
+    "display": "21 February - 18 December 1916"
+  },
+  "where": {
+    "lat": 49.1589278,
+    "lon": 5.3867277,
+    "elevation_m": null,
+    "modern_name": "Verdun and the hills to its north, Meuse, Grand Est, France",
+    "historical_name": "Verdun, on the hills north of the town, northeastern France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm-verdun"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "One of the longest and costliest battles of the First World War."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a war event with large numbers of military deaths and casualties.",
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "part_of"
+    },
+    {
+      "id": "1916-07-01-battle-of-the-somme",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-verdun-memorial",
+      "url": "https://memorial-verdun.fr/en/ressources/la-bataille-de-verdun",
+      "title": "The Battle of Verdun",
+      "publisher": "Memorial de Verdun",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nam-1916",
+      "url": "https://www.nam.ac.uk/explore/1916-year-attrition",
+      "title": "1916: Year of attrition",
+      "publisher": "National Army Museum, London",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-verdun",
+      "url": "https://nominatim.openstreetmap.org/search?q=Verdun+Meuse+France&format=json&limit=1",
+      "title": "Verdun, Meuse (Nominatim search result)",
+      "publisher": "OpenStreetMap (Nominatim gazetteer)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualty figures differ by publisher and by what is counted (dead vs all casualties), so both are attributed. Pin is Verdun town with 15 km uncertainty to cover the battlefield to the north.",
+  "author": "historian-agent:o-s50",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:40:17.009Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1916-02-21",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "15am on 21 February 1916 on the hills north of the town in northeastern France and ended on 18 December 1916.",
+        "source": "src-verdun-memorial"
+      },
+      {
+        "span": "1916",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The offensive failed to force France to make peace.",
+        "source": "src-verdun-memorial",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

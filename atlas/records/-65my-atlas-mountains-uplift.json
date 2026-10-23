@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s99",
+  "updated": "2026-10-22",
+  "id": "-65my-atlas-mountains-uplift",
+  "kind": "process",
+  "title": "Uplift of the Atlas Mountains",
+  "summary": "The High and Middle Atlas of Morocco are intraplate mountain belts formed by Cenozoic inversion of Jurassic rifts under compression from the Europe-Africa plate boundary. Orogeny in the High Atlas began in the Middle Eocene (Lutetian), thrusting has continued from the Oligocene to recent times, and mantle-related uplift that began about 15 Ma produced much of the high topography in the last 5 Ma.",
+  "when": {
+    "start": {
+      "year": -47800000
+    },
+    "end": {
+      "year": 2025
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 6600000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Teson et al. date the start of High Atlas orogeny to the Middle Eocene (Lutetian). The International Chronostratigraphic Chart places the Lutetian at 47.8 to 41.2 Ma, so start is 47.8 Ma with range to 41.2 Ma. Teson et al. say thrusting continued until recent times, so end is set to the present as an ongoing marker. Other authors propose a Late Cretaceous onset; that was not opened."
+    },
+    "as_recorded": [
+      {
+        "calendar": "geological",
+        "value": "The initiation of orogeny in the High Atlas hinterland is dated in Middle Eocene times (Lutetian)",
+        "source": "src-teson2010"
+      },
+      {
+        "calendar": "Ma",
+        "value": "main episode of long-wavelength, mantle-related uplift started some 15 Ma",
+        "source": "src-babault2008"
+      },
+      {
+        "calendar": "Ma",
+        "value": "Lutetian 47.8 to 41.2 Ma (International Chronostratigraphic Chart)",
+        "source": "src-ics"
+      }
+    ],
+    "display": "Middle Eocene (c. 47.8-41.2 Ma) to present"
+  },
+  "where": {
+    "lat": 31.061944444444,
+    "lon": -7.9161111111111,
+    "elevation_m": null,
+    "modern_name": "High and Middle Atlas, Morocco",
+    "historical_name": "Atlas Mountains of Northwest Africa; no polity at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wikidata-q584279"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Explains how a mountain belt more than 2000 m high formed in the interior of the African plate."
+  },
+  "confidence": "probable",
+  "sources": [
+    {
+      "id": "src-teson2010",
+      "url": "https://reunido.uniovi.es/index.php/TDG/article/download/195/192/381",
+      "title": "Intraplate tectonics: insights from mountain building in the Moroccan Atlas and related subsidence in the Ouarzazate foreland basin (Trabajos de Geologia 30:266-272)",
+      "publisher": "Universidad de Oviedo (Trabajos de Geologia)",
+      "author": "E. Teson, A. Teixell, M. L. Arboleya",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-babault2008",
+      "url": "https://webs.uab.cat/ateixell/wp-content/uploads/sites/96/2016/09/07.-ter_794.pdf",
+      "title": "A Late Cenozoic age for long-wavelength surface uplift of the Atlas Mountains of Morocco (Terra Nova 20:102-107)",
+      "publisher": "Terra Nova (Blackwell), hosted by Universitat Autonoma de Barcelona",
+      "author": "Julien Babault, Antonio Teixell, Maria Luisa Arboleya, Mohammed Charroud",
+      "date_published": "2008",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2023-09.pdf",
+      "title": "International Chronostratigraphic Chart v2023/09",
+      "publisher": "International Commission on Stratigraphy",
+      "author": "International Commission on Stratigraphy",
+      "date_published": "2023-09",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-wikidata-q584279",
+      "url": "https://www.wikidata.org/wiki/Q584279",
+      "title": "High Atlas (Wikidata Q584279)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: start. Phases differ across studies (a Late Cretaceous onset is proposed elsewhere, not opened); this uses the Middle Eocene from Teson et al. with Lutetian numbers from the ICS chart. The two main papers share authors (Teixell, Arboleya) but have different publishers. The point is the High Atlas centre.",
+  "published_at": "2026-10-22T17:57:16.066Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-47800000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The High and Middle Atlas of Morocco are intraplate mountain belts formed by Cenozoic inversion of Jurassic rifts under compression from the Europe-Africa plate boundary.",
+        "source": "src-teson2010"
+      },
+      {
+        "span": "2025",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Orogeny in the High Atlas began in the Middle Eocene (Lutetian), thrusting has continued from the Oligocene to recent times, and mantle-related uplift that began about 15 Ma…",
+        "source": "src-teson2010",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

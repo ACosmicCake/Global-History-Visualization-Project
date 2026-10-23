@@ -1,0 +1,160 @@
+{
+  "id": "0375-hunnic-advance-into-europe",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Hunnic advance north of the Black Sea",
+  "summary": "Around 375 CE, nomadic Hunnic forces advancing westward across the Don attacked the Alans and invaded the Gothic territory of the Greuthungi north of the Black Sea. The aged Gothic king Ermanaric committed suicide in despair, and his realm collapsed under Hunnic assault. This sudden advance shattered tribal defenses across the Pontic steppe, driving thousands of displaced Tervingi and Greuthungi Goths westward toward the Danube frontier, triggering the Gothic migration and subsequent crisis within the Roman Empire.",
+  "when": {
+    "start": {
+      "year": 375
+    },
+    "end": {
+      "year": 375
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 1,
+      "end_minus_years": 5,
+      "end_plus_years": 1,
+      "note": "Hunnic campaigns began c. 370 with the subjugation of the Alans and culminated in the collapse of the Greuthungi realm c. 375, leading directly to the Gothic Danube crossing in 376."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Common Era",
+        "value": "invasion of the Huns in 375 CE",
+        "source": "src-whe-ostrogoth"
+      },
+      {
+        "calendar": "Julian / Roman reckoning",
+        "value": "in company with these they made the more boldly a sudden inroad into the extensive and rich cantons of Ermenrichus",
+        "source": "src-ammianus-31"
+      }
+    ],
+    "display": "c. 375 CE"
+  },
+  "where": {
+    "lat": 48.46664,
+    "lon": 35.04066,
+    "elevation_m": null,
+    "modern_name": "Dnipro, Ukraine (proxy for the Pontic steppe region north of the Black Sea where the Greuthungi realm was overwhelmed)",
+    "historical_name": "Pontic-Caspian steppe north of the Black Sea (Pontus Euxinus), Greuthungi territory under Ermanaric",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-geonames-dnipro"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "human_evolution_migration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Hunnic destruction of the Greuthungi realm north of the Black Sea initiated the Great Migration, driving Goths into the Roman Empire and triggering the chain of Gothic wars that culminated in the fall of the Western Roman Empire."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "caused",
+      "because": "The Hunnic advance displaced Gothic populations across the Danube into the Roman Empire, initiating the Gothic wars and imperial decline."
+    },
+    {
+      "id": "0406-rhine-crossing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-ostrogoth",
+      "url": "https://www.worldhistory.org/Ostrogoth/",
+      "title": "Ostrogoth",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ammianus-31",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Ammian/31*.html",
+      "title": "Ammianus Marcellinus, Roman Antiquities, Book XXXI",
+      "publisher": "LacusCurtius / University of Chicago",
+      "author": "Ammianus Marcellinus (trans. J.C. Rolfe)",
+      "date_published": "1939",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-dnipro",
+      "url": "https://www.geonames.org/709930",
+      "title": "Dnipro, Ukraine (GeoNames 709930)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "375",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Nomadic Huns advancing from the east attack the Alans and overrun the Greuthungi Gothic kingdom north of the Black Sea.",
+        "source": "src-ammianus-31"
+      },
+      {
+        "span": "376",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Fleeing the Hunnic onslaught, displaced Gothic tribes march toward the Danube frontier seeking refuge in the Roman Empire.",
+        "source": "src-whe-ostrogoth",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Dating follows modern consensus linking Ermanaric's death and the fall of the Greuthungi realm to c. 375 CE, based on Ammianus Marcellinus Book 31. Coordinates use Dnipro on the lower Dnieper as an honest regional proxy with a 250 km uncertainty radius for the Pontic steppe.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:25.195Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

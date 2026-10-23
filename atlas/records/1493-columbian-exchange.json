@@ -1,0 +1,172 @@
+{
+  "id": "1493-columbian-exchange",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Columbian Exchange",
+  "summary": "After Columbus's voyages of 1492, plants, animals and diseases crossed between the Old World and the Americas. On his second voyage (1493-1496) horses, cattle, pigs and chickens reached the New World, while maize, potatoes, tomatoes and tobacco travelled east. Smallpox and other diseases are linked with an estimated 90% loss of native populations by 1650.",
+  "when": {
+    "start": {
+      "year": 1493
+    },
+    "end": {
+      "year": 1650
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "note": "World History Encyclopedia says the exchange began in the aftermath of the 1492 voyages; 1493 is the second voyage. End 1650 is the date by which it estimates 90% of native populations had perished. The 90% figure is an estimate."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "The exchange began in the aftermath of Christopher Columbus' voyages in 1492",
+        "source": "src-wh-colex"
+      },
+      {
+        "calendar": "CE",
+        "value": "On Columbus' second voyage (1493-1496)",
+        "source": "src-wh-colex"
+      },
+      {
+        "calendar": "CE",
+        "value": "by 1650 it has been estimated that 90% of the native populations perished",
+        "source": "src-wh-colex"
+      }
+    ],
+    "display": "1493 to c. 1650"
+  },
+  "where": {
+    "lat": 19,
+    "lon": -71,
+    "elevation_m": null,
+    "modern_name": "Hispaniola (island centre; the exchange spans the Atlantic world)",
+    "historical_name": "Hispaniola, where Columbus landed in 1492; the process spans the Old and New Worlds",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-hispaniola"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "trade_exploration",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Reshaped diets, farming and populations on both sides of the Atlantic."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "caused_by",
+      "because": "The exchange began in the aftermath of Columbus's voyages (World History Encyclopedia)."
+    },
+    {
+      "id": "1520-smallpox-epidemic-in-mexico",
+      "type": "related"
+    },
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wh-colex",
+      "url": "https://www.worldhistory.org/Columbian_Exchange/",
+      "title": "Columbian Exchange",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ency-colex",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/columbian-exchange",
+      "title": "Columbian Exchange",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Encyclopedia.com (Gale)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-hispaniola",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q25277.json",
+      "title": "Wikidata entry for Hispaniola (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1492",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Columbus lands at Hispaniola with horses and cattle, the first such animals seen in the Western Hemisphere.",
+        "source": "src-ency-colex",
+        "consequence": false
+      },
+      {
+        "span": "1493-1496",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "On the second voyage, horses, cattle, pigs and chickens are introduced to the New World.",
+        "source": "src-wh-colex",
+        "consequence": false
+      },
+      {
+        "span": "1650",
+        "action": "region.fill { radius_km: 1500 }",
+        "caption": "Smallpox, measles and other imported diseases devastate Indigenous peoples; an estimated 90% of native populations perish by 1650.",
+        "source": "src-wh-colex",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: the 90% figure is an estimate the source frames two ways; Encyclopedia.com has Columbus landing at Hispaniola in 1492 with horses and cattle, which conflicts with World History Encyclopedia placing animals on the second voyage, so the 1492 beat leans on Encyclopedia.com alone. Point is an island centre standing for a global process.",
+  "author": "historian-agent:o-s55",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:13:36.707Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

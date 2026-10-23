@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s40",
+  "updated": "2026-10-22",
+  "id": "1979-iranian-revolution",
+  "kind": "event",
+  "title": "Iranian Revolution",
+  "summary": "The Iranian Revolution of 1978-1979 ended the rule of Shah Mohammad Reza Pahlavi. The Shah left Iran on 16 January 1979, Ayatollah Khomeini returned on 1 February, and an Islamic Republic was declared on 1 April after a referendum with one option on the ballot. Accounts differ on its meaning: one calls the result a repressive theocracy, while another describes opposition to Pahlavi modernisation as defence of Islamic identity.",
+  "when": {
+    "start": {
+      "year": 1978
+    },
+    "end": {
+      "year": 1979
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO dates the active phase from January 1978 (Qom protests); World History Encyclopedia gives the revolution as 1978-1979, the referendum on 30-31 March and the declaration on 1 April 1979."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "1978-1979; Shah fled 16 January 1979; Khomeini returned 1 February 1979; Islamic Republic declared 1 April 1979",
+        "source": "src-whe-iranian-revolution"
+      },
+      {
+        "calendar": "CE (EBSCO)",
+        "value": "January 16, 1979: the shah abdicates and leaves Iran; February 1979: Khomeini returns from exile",
+        "source": "src-ebsco-iranian-revolution"
+      }
+    ],
+    "display": "1978-1979 (Islamic Republic declared 1 April 1979)"
+  },
+  "where": {
+    "lat": 35.68889,
+    "lon": 51.38972,
+    "elevation_m": null,
+    "modern_name": "Tehran, Iran",
+    "historical_name": "Tehran, capital of Imperial Iran under the Pahlavi dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-tehran"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "religion_philosophy"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "It ended the Pahlavi monarchy and created the Islamic Republic of Iran."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "perspectives": [
+    {
+      "holder": "EBSCO (John P. Dunn)",
+      "account": "Iranians overturned a long monarchy but established a repressive theocracy; the article quotes diplomat John D. Stempel calling Khomeini the shah's mirror image in clerical dress.",
+      "sources": [
+        "src-ebsco-iranian-revolution"
+      ]
+    },
+    {
+      "holder": "World History Encyclopedia (Scarlett Hart)",
+      "account": "Many clerics and traditional Iranians saw the Pahlavi modernisation drive as Western immorality and an erosion of Islamic identity; the 1977 protests were mainly middle-class and secular, the 1978 ones religious-led.",
+      "sources": [
+        "src-whe-iranian-revolution"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-iranian-revolution",
+      "url": "https://www.worldhistory.org/Iranian_Revolution/",
+      "title": "Iranian Revolution",
+      "publisher": "World History Encyclopedia",
+      "author": "Scarlett Hart",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ebsco-iranian-revolution",
+      "url": "https://www.ebsco.com/research-starters/history/iranian-revolution/",
+      "title": "Iranian Revolution (Research Starters)",
+      "publisher": "EBSCO Information Services",
+      "author": "John P. Dunn",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-tehran",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3616.json",
+      "title": "Wikidata entry for Tehran (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Contested interpretation; perspectives are attributed. Least sure of the start (EBSCO: January 1978 Qom; WHE: 1978) and of the referendum date, given as 30-31 March by WHE. The pin is Tehran, a national event.",
+  "published_at": "2026-10-22T09:57:09.916Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1978",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Iranian Revolution of 1978-1979 ended the rule of Shah Mohammad Reza Pahlavi.",
+        "source": "src-whe-iranian-revolution"
+      },
+      {
+        "span": "1979",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Accounts differ on its meaning: one calls the result a repressive theocracy, while another describes opposition to Pahlavi modernisation as defence of Islamic identity.",
+        "source": "src-whe-iranian-revolution",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

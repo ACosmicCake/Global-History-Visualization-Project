@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s24",
+  "updated": "2026-10-22",
+  "id": "-513my-sinsk-extinction-event",
+  "kind": "event",
+  "title": "Sinsk extinction event",
+  "summary": "About 513.5 million years ago, early in Cambrian Stage 4, marine life suffered a sharp extinction named after the Sinsk Formation of the Siberian Platform. Reef-building archaeocyath sponges and many small shelly animals were hit hardest, while brachiopods and trilobites fared better. Studies estimate 45 to over 60 percent loss, and causes are debated.",
+  "when": {
+    "start": {
+      "year": -514000000
+    },
+    "end": {
+      "year": -512000000
+    },
+    "precision": "million_years",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Geological time, Ma",
+        "value": "About 513.5 million years ago",
+        "source": "src-rspb"
+      },
+      {
+        "calendar": "Geological time, Ma (U-Pb bracketing dates)",
+        "value": "514.45 ± 0.36 Ma below and 511.87 ± 0.14 Ma above; roughly 514 to 512 Ma",
+        "source": "src-sciadv"
+      }
+    ],
+    "display": "c. 513.5 million years ago (514–512 Ma)"
+  },
+  "where": {
+    "lat": 61.1306,
+    "lon": 126.8361,
+    "elevation_m": null,
+    "modern_name": "Sinsk, Lena River, Sakha Republic (Yakutia), Russia (Sinsk Formation type area; representative site for a global event)",
+    "historical_name": "Open-marine shelf basin on the Siberian Platform, Early Cambrian",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-sinsk",
+      "src-app"
+    ],
+    "body": null,
+    "paleo": {
+      "lat": -7.31,
+      "lon": -79.85,
+      "age_ma": 513.5,
+      "plate_model": "MERDITH2021 via GPlates Web Service",
+      "source": "src-gplates",
+      "note": "Village coordinates reconstructed with the event date; single-model value."
+    },
+    "historical_geography_source": "src-gplates"
+  },
+  "regions": [
+    "global",
+    "central_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 3,
+    "justification": "The first major extinction of the Phanerozoic, which ended the archaeocyath reef ecosystems of the early Cambrian."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rspb",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12364573/",
+      "title": "Changes in metazoan functional diversity across the Cambrian Radiation and the first Phanerozoic mass extinction: the Cambrian Sinsk Event",
+      "publisher": "Proceedings of the Royal Society B (Royal Society)",
+      "author": "Royal Society B authors",
+      "date_published": "2025",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-sciadv",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10980278/",
+      "title": "Tectonic trigger to the first major extinction of the Phanerozoic: The early Cambrian Sinsk event",
+      "publisher": "Science Advances (AAAS)",
+      "author": "Science Advances authors",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-app",
+      "url": "https://www.app.pan.pl/archive/published/app44/app44-455.pdf",
+      "title": "A new trilobite-like arthropod from the Lower Cambrian of the Siberian Platform (Phytophilaspis)",
+      "publisher": "Acta Palaeontologica Polonica (Polish Academy of Sciences)",
+      "author": "Ivantsov",
+      "date_published": "1999",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-wd-sinsk",
+      "url": "https://www.wikidata.org/wiki/Q13666997",
+      "title": "Wikidata item Q13666997 (Sinsk, Khangalassky District), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=126.8361,61.1306&time=513.5&model=MERDITH2021",
+      "title": "GPlates Web Service point reconstruction (MERDITH2021) at 513.5 Ma",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo",
+        "where.historical_geography_source"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the village of Sinsk, opposite which the Sinsk Formation type locality lies on the Lena River (Ivantsov 1999); exact outcrop coordinates were not found. Magnitude differs by paper (about 45 percent of genera vs over 60 percent of species). Queue id says 513 Ma; sources give 513.5.",
+  "published_at": "2026-10-22T07:15:50.420Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-514000000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "5 million years ago, early in Cambrian Stage 4, marine life suffered a sharp extinction named after the Sinsk Formation of the Siberian Platform.",
+        "source": "src-rspb"
+      },
+      {
+        "span": "-512000000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Reef-building archaeocyath sponges and many small shelly animals were hit hardest, while brachiopods and trilobites fared better.",
+        "source": "src-rspb",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

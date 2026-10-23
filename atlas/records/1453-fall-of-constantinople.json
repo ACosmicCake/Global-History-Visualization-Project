@@ -1,0 +1,164 @@
+{
+  "id": "1453-fall-of-constantinople",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Fall of Constantinople",
+  "summary": "Ottoman forces under Sultan Mehmed II began their assault on Constantinople on 6 April 1453; EBSCO counts about 120,000 attackers against about 7,000 defenders under Emperor Constantine XI. After a siege of nearly two months, the final assault on 29 May broke through the walls, with the Janissaries entering. The city was looted for three days and became Mehmed's capital, ending centuries of Byzantine rule.",
+  "when": {
+    "start": {
+      "year": 1453
+    },
+    "end": {
+      "year": 1453
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Siege began 6 April 1453 (EBSCO); final assault and fall 29 May 1453 (EBSCO, University of Cincinnati Libraries)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (EBSCO Research Starters)",
+        "value": "the Ottomans began their assault on April 6, 1453",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "CE (EBSCO Research Starters)",
+        "value": "On May 29, the Ottomans launched a final, overwhelming assault",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "CE (University of Cincinnati Libraries)",
+        "value": "On a Tuesday May 29, 1453 ... captured the city of Constantinople after a 53-day siege",
+        "source": "src-uc"
+      }
+    ],
+    "display": "6 April – 29 May 1453"
+  },
+  "where": {
+    "lat": 41.0138429552247,
+    "lon": 28.9496612548828,
+    "elevation_m": null,
+    "modern_name": "Istanbul, Turkey (the historic city of Constantinople)",
+    "historical_name": "Constantinople, capital of the Byzantine (Eastern Roman) Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-istanbul"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "It ended centuries of Byzantine rule and made the city the Ottoman capital, with a strong psychological effect on Europe (EBSCO; University of Cincinnati Libraries)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-eastern-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "polity-ottoman-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-hagia-sophia",
+      "type": "related"
+    },
+    {
+      "id": "1450-gutenberg-printing-press",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/siege-constantinople-1453/",
+      "title": "Siege of Constantinople (1453)",
+      "publisher": "EBSCO Information Services (Research Starters)",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-uc",
+      "url": "https://libapps.libraries.uc.edu/liblog/2019/05/on-may-29-the-classics-library-remembers-the-fall-of-constantinople-and-the-byzantine-empire/",
+      "title": "On May 29, the Classics Library Remembers the Fall of Constantinople and the Byzantine Empire",
+      "publisher": "University of Cincinnati Libraries",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-istanbul",
+      "url": "https://www.geonames.org/search.html?q=Istanbul",
+      "title": "GeoNames search results",
+      "publisher": "GeoNames",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the GeoNames city point for Istanbul, not a specific wall section. EBSCO gives about 7,000 defenders and the UC Libraries post about 5,000 Greeks plus under 2,000 foreigners, so forces are approximate; the fate of Constantine XI is not stated because the pages disagree in detail. UC Libraries gives an Ottoman army of ca. 80,000 where EBSCO says about 120,000, and 7,000 defenders; the army size is therefore not in the record's claims beyond the attributed EBSCO count.",
+  "author": "historian-agent:o-s48",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:41:26.061Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1453",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Ottoman forces under Sultan Mehmed II began their assault on Constantinople on 6 April 1453; EBSCO counts about 120,000 attackers against about 7,000 defenders under Emperor Constantine XI.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1453",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The city was looted for three days and became Mehmed's capital, ending centuries of Byzantine rule.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0412-flight-of-the-enslaved-from-attica",
+  "kind": "event",
+  "title": "Flight of enslaved people from Attica during the Spartan occupation of Decelea",
+  "summary": "Beginning in the spring of 413 BCE, after Sparta fortified the Attic deme of Decelea during the Peloponnesian War, more than twenty thousand enslaved people fled Athenian territory, a great part of them skilled artisans by Thucydides' account. The desertion deprived Athens of labour and income during its final struggle against Sparta.",
+  "when": {
+    "start": {
+      "year": -412
+    },
+    "end": {
+      "year": -403
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Spartan fortification of Decelea began in the spring of 413 BCE (archon year 414/3 BCE) and the garrison remained until Athens surrendered in 404 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Stanford Encyclopedia of Philosophy)",
+        "value": "414 (winter) Sparta reenters the war, following Alcibiades’s advice, takes and fortifies the deme of Decelea, encouraging Athenian slaves to escape",
+        "source": "src-sep-socrates"
+      },
+      {
+        "calendar": "BCE (Thucydides 7.27.5, trans. Richard Crawley)",
+        "value": "more than twenty thousand slaves had deserted, a great part of them artisans",
+        "source": "src-thucydides-mit"
+      }
+    ],
+    "display": "413–404 BCE"
+  },
+  "where": {
+    "lat": 38.133028,
+    "lon": 23.791872,
+    "elevation_m": null,
+    "modern_name": "Tatoi, Acharnes, Attica, Greece",
+    "historical_name": "Dekeleia, Attic inland deme, fortified Spartan base in the Peloponnesian War",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-pleiades-dekeleia"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The mass flight of over twenty thousand enslaved laborers and artisans crippled Athenian silver mining and wartime finances, decisively altering the balance of the Peloponnesian War."
+  },
+  "confidence": "established",
+  "audience_note": "Details ancient chattel slavery, forced mine labor at Laurion, and mass wartime desertion under Spartan occupation.",
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "-0482-laurion-silver-and-the-themistoclean-fleet",
+      "type": "related"
+    },
+    {
+      "id": "polity-sparta",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sep-socrates",
+      "url": "https://plato.stanford.edu/entries/socrates/",
+      "title": "Socrates",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "author": "Debra Nails, S. Sara Monoson",
+      "date_published": "2022-05-26",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-thucydides-mit",
+      "url": "http://classics.mit.edu/Thucydides/pelopwar.7.seventh.html",
+      "title": "The History of the Peloponnesian War, Book VII",
+      "publisher": "The Internet Classics Archive (MIT)",
+      "author": "Thucydides; trans. Richard Crawley",
+      "date_published": "1994",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-decelea",
+      "url": "https://www.livius.org/articles/place/decelea/",
+      "title": "Decelea",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "2020-10-15",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-dekeleia",
+      "url": "https://pleiades.stoa.org/places/579907/json",
+      "title": "Dekeleia: a Pleiades place resource",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-412",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "In 413 BCE, Spartan forces under King Agis II fortify Decelea, establishing a permanent base in northern Attica.",
+        "source": "src-livius-decelea"
+      },
+      {
+        "span": "-412",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "More than twenty thousand enslaved artisans and miners flee Attica, devastating Athenian public revenue and manufacturing.",
+        "source": "src-thucydides-mit",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the exact proportion of runaway slaves employed in the Laurion silver mines versus urban craft workshops, as Thucydides specifies cheirotechnai broadly.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:26.901Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

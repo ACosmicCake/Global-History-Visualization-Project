@@ -1,0 +1,172 @@
+{
+  "id": "-635my-marinoan-snowball-earth",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "End of the Marinoan glaciation",
+  "summary": "The Marinoan glaciation, a Cryogenian ice age, ended about 635 million years ago. Uranium-lead zircon ages from Tasmania, Namibia and China fall between 636.4 and 635.2 million years and are used to argue for a globally synchronous deglaciation. In South China, sediments record an episode of intense chemical weathering as the ice ended.",
+  "when": {
+    "start": {
+      "year": -636410000
+    },
+    "end": {
+      "year": -635230000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 450000,
+      "start_plus_years": 450000,
+      "end_minus_years": 840000,
+      "end_plus_years": 840000,
+      "note": "Start is the Tasmanian zircon age 636.41 ± 0.45 Ma and end the Chinese ash-bed age 635.23 ± 0.84 Ma, both from Calver et al. (2013); they date the deglaciation, not the start of the glaciation. Years are Ma counted back from the present with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "636.41 ± 0.45 Ma (Cottons Breccia, Tasmania); 635.51 ± 0.82 Ma (Namibia); 635.23 ± 0.84 Ma (China)",
+        "source": "src-calver2013"
+      },
+      {
+        "calendar": "Ma",
+        "value": "635 Ma Marinoan glaciation; Nantuo Formation dated between 654 ± 3.8 Ma and 635.2 ± 0.6 Ma; Cryogenian ~720–635 Ma",
+        "source": "src-huang2016"
+      }
+    ],
+    "display": "c. 636–635 million years ago (end of the glaciation)"
+  },
+  "where": {
+    "lat": -39.8725,
+    "lon": 143.98555555556,
+    "elevation_m": null,
+    "modern_name": "King Island, Tasmania, Australia (Cottons Breccia, a dated site; the event was worldwide)",
+    "historical_name": "King Island, between mainland Australia and Tasmania; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wikidata-kingisland"
+    ],
+    "paleo": {
+      "lat": -9.31,
+      "lon": 123.49,
+      "age_ma": 635,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "The end of a Cryogenian ice age, dated on several continents."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-717my-sturtian-snowball-earth",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-calver2013",
+      "url": "https://scholarworks.boisestate.edu/geo_facpubs/173",
+      "title": "Globally Synchronous Marinoan Deglaciation Indicated by U-Pb Geochronology of the Cottons Breccia, Tasmania, Australia (Geology 41(10):1127-1130)",
+      "publisher": "Boise State University ScholarWorks (Geology, GSA)",
+      "author": "C. R. Calver et al.",
+      "date_published": "2013",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-huang2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5206532",
+      "title": "Episode of intense chemical weathering during the termination of the 635 Ma Marinoan glaciation (PNAS 113(52):14904-14909)",
+      "publisher": "PNAS via PubMed Central (NIH)",
+      "author": "K.-J. Huang et al.",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-kingisland",
+      "url": "https://www.wikidata.org/wiki/Q794502",
+      "title": "Wikidata item Q794502 (King Island), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=143.98555555556,-39.8725&time=635&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the event was worldwide and King Island is only the site of one dated sample, so uncertainty is 5000 km. The id says 635 Ma and \"Snowball Earth\", but the opened pages date the end of the glaciation at 636.4-635.2 Ma and I did not open a page using the Snowball Earth hypothesis, so the title says only what the pages state. The start of the glaciation is not given as a single number on the opened pages.",
+  "author": "historian-agent:o-s67",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:35:43.375Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-636410000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Marinoan glaciation, a Cryogenian ice age, ended about 635 million years ago.",
+        "source": "src-calver2013"
+      },
+      {
+        "span": "-635230000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In South China, sediments record an episode of intense chemical weathering as the ice ended.",
+        "source": "src-calver2013",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

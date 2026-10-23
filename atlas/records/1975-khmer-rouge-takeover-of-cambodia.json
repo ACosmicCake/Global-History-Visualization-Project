@@ -1,0 +1,157 @@
+{
+  "id": "1975-khmer-rouge-takeover-of-cambodia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Khmer Rouge takeover of Cambodia",
+  "summary": "On 17 April 1975 Khmer Rouge forces led by Pol Pot entered Phnom Penh and ordered the city's roughly two million residents out at gunpoint; thousands died on the crowded roads. The regime ruled until Vietnamese forces ended it in 1979. Ben Kiernan estimates 1.5 to 2 million people were murdered, about a fifth of the population.",
+  "when": {
+    "start": {
+      "year": 1975,
+      "month": 4,
+      "day": 17
+    },
+    "end": {
+      "year": 1975,
+      "month": 4,
+      "day": 17
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On April 17, 1975, the Khmer Rouge entered Phnom Penh victorious.",
+        "source": "src-ushmm"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On April 17, 1975, Khmer Rouge forces entered Phnom Penh.",
+        "source": "src-ihm"
+      }
+    ],
+    "display": "17 April 1975"
+  },
+  "where": {
+    "lat": 11.569583,
+    "lon": 104.921028,
+    "elevation_m": null,
+    "modern_name": "Phnom Penh, Cambodia",
+    "historical_name": "Phnom Penh, capital of Cambodia, held by the government until its fall",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-pp"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Start of a regime whose forced labour, executions and starvation killed a large share of Cambodia's population."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a mass atrocity and genocide: forced evacuation at gunpoint, executions, and deaths from starvation and forced labour. Death-toll figures are contested estimates.",
+  "related": [
+    {
+      "id": "1955-vietnam-war",
+      "type": "related"
+    },
+    {
+      "id": "place-angkor-wat",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ushmm",
+      "url": "https://www.ushmm.org/genocide-prevention/countries/cambodia/day-one",
+      "title": "Day One: April 17, 1975",
+      "publisher": "United States Holocaust Memorial Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ihm",
+      "url": "https://www.ilholocaustmuseum.org/cambodian-genocide/",
+      "title": "Cambodian Genocide",
+      "publisher": "Illinois Holocaust Museum & Education Center",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-wd-pp",
+      "url": "https://www.wikidata.org/wiki/Q1850",
+      "title": "Wikidata item Q1850 (Phnom Penh), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of death totals: the 1.5-2 million figure is Kiernan as cited by the Illinois museum; other estimates run higher. The pin is the capital, not the whole country. The end of the regime in 1979 is on the Illinois museum page (7 July 1979).",
+  "author": "historian-agent:o-s27",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T07:49:31.619Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1975",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 17 April 1975 Khmer Rouge forces led by Pol Pot entered Phnom Penh and ordered the city's roughly two million residents out at gunpoint; thousands died on…",
+        "source": "src-ushmm"
+      },
+      {
+        "span": "1975",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The regime ruled until Vietnamese forces ended it in 1979.",
+        "source": "src-ushmm",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

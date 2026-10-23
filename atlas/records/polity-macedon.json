@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "polity-macedon",
+  "kind": "polity",
+  "title": "Kingdom of Macedon",
+  "summary": "Ancient kingdom in the north of the Greek peninsula, founded c. 7th century BCE according to World History Encyclopedia, ruled first from Aigai (Vergina) and later from Pella. Philip II reigned 359–336 BCE and Alexander III 336–323 BCE. Rome defeated King Perseus at Pydna in June 168 BCE, and Macedon was annexed around 146 BCE; the same page also gives 148 and c. 150 BCE for provincial status.",
+  "when": {
+    "start": {
+      "year": -650
+    },
+    "end": {
+      "year": -145
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 3,
+      "end_plus_years": 3,
+      "note": "Start is the midpoint of the 7th century BCE (c. -650), flagged as legendary-founder tradition; end -145 = 146 BCE. The source also gives 148 BCE and c. 150 BCE for the province."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "founded circa 7th century BCE by Caranus; annexed by Rome, along with the rest of Greece, circa 146 BCE",
+        "source": "src-whe-macedon"
+      },
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "Philip II 359-336 BCE; Alexander III 336-323 BCE; Pydna June 168 BCE",
+        "source": "src-whe-macedon"
+      },
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "Pella: capital from shortly before 400 BCE (King Archelaus); after Pydna in 168 BCE Macedonia split into three republics",
+        "source": "src-livius-pella"
+      }
+    ],
+    "display": "c. 7th century BCE – c. 146 BCE"
+  },
+  "where": {
+    "lat": 40.7604079,
+    "lon": 22.5271118,
+    "elevation_m": null,
+    "modern_name": "Pella, Central Macedonia, Greece (capital in Philip II and Alexander's time)",
+    "historical_name": "Kingdom of Macedon, capital Pella (earlier Aigai)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 80,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The kingdom of Philip II and Alexander the Great, ended by Rome in the 2nd century BCE."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "person-alexander-the-great",
+      "type": "related"
+    },
+    {
+      "id": "-0168-battle-of-pydna",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-republic",
+      "type": "related"
+    },
+    {
+      "id": "-0323-death-of-alexander-the-great",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-macedon",
+      "url": "https://www.worldhistory.org/macedon/",
+      "title": "Macedon",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-pella",
+      "url": "https://www.livius.org/articles/place/pella/",
+      "title": "Pella",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Pella+Greece&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start (a legendary founder date, c. 7th century BCE from one page) and of the end year, since the source gives 168, 148, c. 150 and 146 BCE for different steps. The pin is the Pella capital; the kingdom covered a wider area.",
+  "published_at": "2026-10-22T10:55:45.772Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

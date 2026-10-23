@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-sheikh-zayed-grand-mosque",
+  "kind": "place",
+  "title": "Sheikh Zayed Grand Mosque",
+  "summary": "A large mosque in Abu Dhabi that the UAE's founder, Sheikh Zayed bin Sultan Al Nahyan, wished to build. Construction began on 5 November 1996 and it opened for worship on Eid Al Adha 2007. Google Arts & Culture gives its four corner minarets as 107 m high.",
+  "when": {
+    "start": {
+      "year": 1996
+    },
+    "end": {
+      "year": 2007
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Opening is given as Eid Al Adha 2007 by the mosque centre; no day stated on the page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 5th, 1996",
+        "source": "src-szgmc"
+      },
+      {
+        "calendar": "Islamic festival, as recorded",
+        "value": "Eid Al Adha 2007",
+        "source": "src-szgmc"
+      }
+    ],
+    "display": "1996–2007"
+  },
+  "where": {
+    "lat": 24.412844,
+    "lon": 54.474577,
+    "elevation_m": null,
+    "modern_name": "Sheikh Zayed Grand Mosque, Abu Dhabi, United Arab Emirates",
+    "historical_name": "Abu Dhabi, United Arab Emirates",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-coord"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Prominent national landmark and one of the largest mosques in the world, per the mosque centre."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-szgmc",
+      "url": "https://www.szgmc.gov.ae/",
+      "title": "Sheikh Zayed Grand Mosque Center",
+      "publisher": "Sheikh Zayed Grand Mosque Centre (Abu Dhabi government)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gac",
+      "url": "https://artsandculture.google.com/story/sheikh-zayed-grand-mosque/DwWhqXM6tFWobQ?hl=en",
+      "title": "Sheikh Zayed Grand Mosque",
+      "publisher": "Google Arts & Culture",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-coord",
+      "url": "https://www.findlatitudeandlongitude.com/l/sheikh+zayed+grand+mosque,+abu+dhabi/1813511/",
+      "title": "Sheikh Zayed Grand Mosque, Abu Dhabi coordinates",
+      "publisher": "findlatitudeandlongitude.com",
+      "author": null,
+      "class": "other",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-szgmc-minarets",
+      "url": "https://www.szgmc.gov.ae/en/islamic-architecture/the-minarets",
+      "title": "The Minarets",
+      "publisher": "Sheikh Zayed Grand Mosque Centre (Abu Dhabi government)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model"
+      ]
+    },
+    {
+      "id": "src-szgmc-domes",
+      "url": "https://www.szgmc.gov.ae/en/islamic-architecture/The%20Domes",
+      "title": "The Domes",
+      "publisher": "Sheikh Zayed Grand Mosque Centre (Abu Dhabi government)",
+      "author": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "date_published": null,
+      "supports": [
+        "model"
+      ]
+    }
+  ],
+  "model": {
+    "no_mesh": "Institutional figures are for separate parts (minaret about 107 m; main dome about 32.6 m across and 84 m high per the mosque centre, while Google Arts & Culture gives 85 m and 32.8 m), and no institutional overall plan dimension was found, so no single-structure mesh is drawn.",
+    "footprint": {
+      "description": "No building outline measured; the mosque centre gives only a total site area of more than 555,000 square metres, which is not a building footprint.",
+      "source": "src-szgmc",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "domed_building",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-szgmc-domes",
+      "measurements": [
+        {
+          "part": "minaret height",
+          "value": 107,
+          "unit": "m",
+          "source": "src-szgmc-minarets",
+          "note": "about 107 meters, four minarets"
+        },
+        {
+          "part": "main dome height",
+          "value": 84,
+          "unit": "m",
+          "source": "src-szgmc-domes"
+        },
+        {
+          "part": "main dome diameter",
+          "value": 32.6,
+          "unit": "m",
+          "source": "src-szgmc-domes",
+          "note": "approximately"
+        }
+      ]
+    },
+    "phases": [
+      {
+        "start_year": 1996,
+        "end_year": 2007,
+        "state": "construction",
+        "description": "Construction began 5 November 1996; the mosque opened for worship on Eid Al Adha 2007.",
+        "source": "src-szgmc"
+      },
+      {
+        "start_year": 2007,
+        "end_year": null,
+        "state": "intact",
+        "description": "In use as a mosque after opening.",
+        "source": "src-szgmc"
+      }
+    ]
+  },
+  "reviewer_note": "Minaret height differs by source: 107 m (Google Arts & Culture) vs 106 m (re-thinkingthefuture, not cited). Coordinates from a coordinate aggregator, approximate mosque centre.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:41:11.088Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "enriched"
+    }
+  ]
+}

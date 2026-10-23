@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-hwaseong-fortress",
+  "kind": "place",
+  "title": "Hwaseong Fortress",
+  "summary": "Hwaseong Fortress in Suwon was built between 1794 and 1796 under King Jeongjo, in about two and a half years. Its rampart is 5.7 km long, averaging 5 m in height, with four main gates. Jeong Yak-yong is credited with leading its construction, and it was inscribed on the UNESCO World Heritage List in 1997.",
+  "when": {
+    "start": {
+      "year": 1794
+    },
+    "end": {
+      "year": 1796
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Construction years as stated; individual structures were finished on specific dates within the span."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1794 to 1796",
+        "source": "src-cha-hwaseong"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1794 to 1796",
+        "source": "src-koreaherald-hwaseong"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1794 to 1796",
+        "source": "src-gac-hwaseong"
+      }
+    ],
+    "display": "1794–1796"
+  },
+  "where": {
+    "lat": 37.2867876,
+    "lon": 127.0114366,
+    "elevation_m": null,
+    "modern_name": "Hwaseong Fortress, Suwon, Gyeonggi Province, South Korea (OpenStreetMap castle node)",
+    "historical_name": "Hwaseong, Suwon, Gyeonggi Province, Joseon Korea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1.5,
+    "coordinate_sources": [
+      "src-osm-hwaseong"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "UNESCO-listed fortified city built to a planned design by the Joseon court."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-cha-hwaseong",
+      "url": "https://english.khs.go.kr/cop/bbs/selectBoardArticle.do?ctgryLrcls=CTGRY209&nttId=57995&bbsId=BBSMSTR_1205&uniq=0&mn=EN_03_01",
+      "title": "World Heritage: Hwaseong Fortress",
+      "publisher": "Cultural Heritage Administration of Korea",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-koreaherald-hwaseong",
+      "url": "https://www.koreaherald.com/article/2205400",
+      "title": "Look into King Jeongjo's dream city: Hwaseong Fortress",
+      "publisher": "The Korea Herald (Herald Corporation)",
+      "author": "Song Su-hyun",
+      "date_published": "2020-01-17",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gac-hwaseong",
+      "url": "https://artsandculture.google.com/story/suwon-hwaseong-fortress-suwon-city/sQWBo3ZQ5R_CLQ?hl=en",
+      "title": "Suwon Hwaseong Fortress",
+      "publisher": "Google Arts & Culture (partner: Suwon Hwaseong Fortress)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-hwaseong",
+      "url": "https://nominatim.openstreetmap.org/search?q=%EC%88%98%EC%9B%90%ED%99%94%EC%84%B1&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Hwaseong Fortress",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Wall length 5.7 km (CHA) vs 5.74 km (Korea Herald, Google Arts & Culture). Pin is the OSM castle node on the fortress, not the centre. Jeong Yak-yong credit is from the Korea Herald only; the summary says \"credited\". Wall shape chosen as closest; no_mesh set.",
+  "author": "historian-agent:o-s100",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Oval rampart enclosing the walled city of Suwon, 5.7 km long.",
+      "source": "src-cha-hwaseong",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "wall",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-cha-hwaseong",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 5,
+          "unit": "m",
+          "source": "src-cha-hwaseong",
+          "note": "\"averages 5 meters in height\"; battlements 1.2 m high"
+        },
+        {
+          "part": "length",
+          "value": 5700,
+          "unit": "m",
+          "source": "src-cha-hwaseong",
+          "note": "rampart \"5.7 kilometers\"; Korea Herald and Google Arts & Culture give 5.74 km"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "walled-city outline"
+      },
+      {
+        "level": "local",
+        "representation": "wall path with four main gates"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1794,
+        "end_year": 1796,
+        "state": "construction",
+        "description": "Built in two and a half years under King Jeongjo.",
+        "source": "src-cha-hwaseong"
+      },
+      {
+        "start_year": 1796,
+        "end_year": null,
+        "state": "altered",
+        "description": "Originally 48 military facilities, 41 remain today (Cultural Heritage Administration).",
+        "source": "src-cha-hwaseong"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1794,
+        "to_year": null,
+        "material": "brick battlements",
+        "source": "src-cha-hwaseong"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "A closed rampart 5.7 km around a city is drawn as a path, not a raised block; height and length are kept as data."
+  },
+  "published_at": "2026-10-22T18:09:25.384Z"
+}

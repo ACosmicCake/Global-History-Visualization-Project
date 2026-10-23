@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "scale": "civilization",
+  "confidence": "probable",
+  "audience_note": null,
+  "author": "historian-agent:m-18",
+  "updated": "2026-10-22",
+  "id": "place-mausoleum-at-halicarnassus",
+  "title": "Mausoleum at Halicarnassus",
+  "summary": "The Mausoleum at Halicarnassus, now Bodrum in Turkey, was a monumental tomb for Maussollos, satrap of Karia, who died in 353 BC. A podium carried an Ionic colonnade, a 24-step pyramid and a chariot group, about 42 m high per Pliny. Little was visible when Hospitallers arrived in 1407, and they dismantled the remains in 1522.",
+  "when": {
+    "start": {
+      "year": -366
+    },
+    "end": {
+      "year": 1522
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 16,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Getty CONA: construction began ca. 367 BCE; World History Encyclopedia: c. 367 to 350 BCE; Cambridge: no exact start or end given, sculptures c. 350 BC. End is the 1522 dismantling recorded by the Cambridge chapter; the collapse date is unknown."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Getty CONA)",
+        "value": "ca. 367 BCE",
+        "source": "src-getty-cona"
+      },
+      {
+        "calendar": "BC (Cambridge University Press)",
+        "value": "353 BC",
+        "source": "src-cup-pedersen"
+      },
+      {
+        "calendar": "CE (Cambridge University Press)",
+        "value": "1522",
+        "source": "src-cup-pedersen"
+      }
+    ],
+    "display": "built c. 367–350 BCE; dismantled by 1522 CE"
+  },
+  "where": {
+    "lat": 37.0378827,
+    "lon": 27.4241455,
+    "elevation_m": null,
+    "modern_name": "Mausoleum site, Bodrum, Muğla Province, Türkiye",
+    "historical_name": "Maussolleion, Halikarnassos, Karia under the satrap Maussollos",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.15,
+    "coordinate_sources": [
+      "src-osm-halic",
+      "src-getty-cona"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "A tomb counted among the Seven Wonders of the Ancient World per the Getty and World History Encyclopedia entries."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-cup-pedersen",
+      "url": "https://www.cambridge.org/core/books/afterlife-of-the-mausoleum-of-halicarnassus/maussolleion-at-halikarnassos/888E2C34B0964AD50D5D80786DADD3BE",
+      "title": "The Maussolleion at Halikarnassos (Chapter 1), The Afterlife of the Mausoleum of Halicarnassus",
+      "publisher": "Cambridge University Press",
+      "author": "Poul Pedersen",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-whe-mausoleum",
+      "url": "https://www.worldhistory.org/Mausoleum_at_Halicarnassus/",
+      "title": "Mausoleum at Halicarnassus",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "model"
+      ]
+    },
+    {
+      "id": "src-getty-cona",
+      "url": "https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700008972",
+      "title": "CONA Full Record, Mausoleum at Halicarnassus",
+      "publisher": "J. Paul Getty Trust (Cultural Objects Name Authority)",
+      "author": "J. Paul Getty Trust (Cultural Objects Name Authority)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-halic",
+      "url": "https://nominatim.openstreetmap.org/search?q=Mausoleum+at+Halicarnassus+Bodrum&format=json",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors (Nominatim)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Destroyed monument; model is a reconstruction from ancient-source and excavation figures. Shape choice: stepped_pyramid (podium plus 24-step pyramid; no closer shape exists, so the silhouette is approximate). Height about 42 m is Pliny's 140 ft as reported by the Cambridge chapter (Getty gives 43 m; WHE 45 m). Podium 38 x 32 m is from WHE; Livius (not cited) reads the substructure as 32 x 26 m. Least sure: height, and the date of collapse (unknown; possibly earthquake).",
+  "model": {
+    "footprint": {
+      "description": "Podium of 38 x 32 m per modern excavation as summarised by World History Encyclopedia; Newton excavated the site in 1856–1857 and Danish excavations followed in 1966–1977 (Cambridge). No survey polygon opened.",
+      "source": "src-whe-mausoleum",
+      "method": "surveyed"
+    },
+    "geometry": {
+      "type": "reconstruction",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural reconstruction from published ancient-source and excavation figures",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-cup-pedersen",
+      "measurements": [
+        {
+          "part": "height (total, per Pliny)",
+          "value": 42,
+          "unit": "m",
+          "source": "src-cup-pedersen",
+          "note": "about 42 m (137 ft 10 in); Pliny: 140 feet"
+        },
+        {
+          "part": "podium height",
+          "value": 25,
+          "unit": "m",
+          "source": "src-cup-pedersen",
+          "note": "cube-shaped podium about 25 m"
+        },
+        {
+          "part": "podium length",
+          "value": 38,
+          "unit": "m",
+          "source": "src-whe-mausoleum",
+          "note": "\"38 x 32 metres\""
+        },
+        {
+          "part": "podium width",
+          "value": 32,
+          "unit": "m",
+          "source": "src-whe-mausoleum"
+        },
+        {
+          "part": "pyramid roof height",
+          "value": 7.2,
+          "unit": "m",
+          "source": "src-cup-pedersen",
+          "note": "24 steps, each about 30 cm"
+        },
+        {
+          "part": "tiers (pyramid steps)",
+          "value": 24,
+          "unit": "count",
+          "source": "src-cup-pedersen"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "podium-and-pyramid block at about 42 m, labelled reconstruction"
+      },
+      {
+        "level": "local",
+        "representation": "procedural reconstruction: podium, Ionic colonnade, 24-step pyramid and chariot group"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -366,
+        "end_year": -349,
+        "state": "construction",
+        "description": "Built c. 367 to 350 BCE for Maussollos (died 353 BC).",
+        "source": "src-whe-mausoleum"
+      },
+      {
+        "start_year": -348,
+        "end_year": 1406,
+        "state": "intact",
+        "description": "Stood for several centuries; the date of its collapse is unknown.",
+        "source": "src-cup-pedersen"
+      },
+      {
+        "start_year": 1407,
+        "end_year": 1521,
+        "state": "ruined",
+        "description": "Little visible when Hospitaller crusaders arrived in 1407; they quarried the ruins for their castle.",
+        "source": "src-cup-pedersen"
+      },
+      {
+        "start_year": 1522,
+        "end_year": null,
+        "state": "destroyed",
+        "description": "Remains dismantled in 1522; only foundations and fragments recovered by later excavation.",
+        "source": "src-cup-pedersen"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T13:44:40.518Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "-234my-carnian-pluvial-event",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Carnian Pluvial Episode",
+  "summary": "The Carnian Pluvial Episode, around 234 to 232 million years ago in the Late Triassic, was a time of rising global humidity and temperature linked to volcanism in the Wrangellia large igneous province. Pulses of carbon-depleted CO2 are tied to negative carbon-isotope shifts and wetter conditions. The Dolomites of Italy hold an age-constrained record with plant turnover and the oldest fossil amber, and the episode is linked to dinosaur and conifer diversification.",
+  "when": {
+    "start": {
+      "year": -234000000
+    },
+    "end": {
+      "year": -232000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Roghi et al. (2022) give around 234 to 232 Ma; Lu et al. (2021) give ca. 234.0 to 232.4 Ma in the Jiyuan Basin, North China, with U-Pb zircon ages of 233.1 ± 1.3 and 232.9 ± 2.1 Ma. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "around 234 to 232 Ma",
+        "source": "src-roghi"
+      },
+      {
+        "calendar": "Ma",
+        "value": "ca. 234.0 to 232.4 Ma",
+        "source": "src-lu"
+      }
+    ],
+    "display": "c. 234 to 232 million years ago"
+  },
+  "where": {
+    "lat": 46.613056,
+    "lon": 12.163056,
+    "elevation_m": null,
+    "modern_name": "Dolomites, Italy (reference section; the episode is global and linked to Wrangellia volcanism in western North America)",
+    "historical_name": "Dolomites area on the western Tethys margin of Pangaea; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-dolo"
+    ],
+    "paleo": {
+      "lat": 13.82,
+      "lon": 29.35,
+      "age_ma": 234,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "global",
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A global climate shift coinciding with turnover in land plants and the rise of dinosaurs."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-roghi",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.900586/pdf",
+      "title": "An Exceptionally Preserved Terrestrial Record of LIP Effects on Plants in the Carnian (Upper Triassic) Amber-Bearing Section of the Dolomites, Italy (Frontiers in Earth Science 10:900586)",
+      "publisher": "Frontiers Media",
+      "author": "Guido Roghi, Piero Gianolla, Evelyn Kustatscher, Alexander R. Schmidt, Leyla J. Seyfullah",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lu",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8501800",
+      "title": "Volcanically driven lacustrine ecosystem changes during the Carnian Pluvial Episode (Late Triassic) (PNAS 118)",
+      "publisher": "PNAS via PubMed Central (NIH)",
+      "author": "Jing Lu, Peixin Zhang, Jacopo Dal Corso et al.",
+      "date_published": "2021",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-dolo",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1283.json",
+      "title": "Wikidata entry for Dolomites (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=12.163056,46.613056&time=234&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the episode is global, so the Dolomites point (Roghi et al.'s best age-constrained section) is a reference locality, hence the 5000 km uncertainty. Lu et al. note that the cause-effect chain with Wrangellia is not fully resolved and a local volcanic source is possible for their basin.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:25.469Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

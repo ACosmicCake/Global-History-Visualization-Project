@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s103",
+  "updated": "2026-10-22",
+  "id": "place-kinkaku-ji",
+  "kind": "place",
+  "title": "Kinkaku-ji (Golden Pavilion), Kyoto",
+  "summary": "Kinkaku-ji's Relics Hall, known as the Golden Pavilion, stands in Kyoto on ground where the shogun Ashikaga Yoshimitsu began building his Kitayama residence in 1397. The original pavilion was burned down in 1950 and rebuilt in 1955, and the temple was designated a UNESCO World Heritage Site in 1994.",
+  "when": {
+    "start": {
+      "year": 1397
+    },
+    "end": {
+      "year": 1955
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of the Kitayama residence; end is the rebuilding of the pavilion in 1955 after the 1950 fire. The temple continues to stand."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (Shokoku-ji)",
+        "value": "began the construction of his new residence, the Kitayama palace, in 1397",
+        "source": "src-shokoku"
+      },
+      {
+        "calendar": "Gregorian (JNTO)",
+        "value": "rebuilt in 1955",
+        "source": "src-jnto"
+      }
+    ],
+    "display": "residence begun 1397; rebuilt 1955"
+  },
+  "where": {
+    "lat": 35.0395293,
+    "lon": 135.7295373,
+    "elevation_m": null,
+    "modern_name": "Kinkaku-ji, Kita Ward, Kyoto, Japan",
+    "historical_name": "Ashikaga Yoshimitsu's Kitayama residence",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-kinkaku"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A UNESCO World Heritage temple whose gold-leafed pavilion was rebuilt after a 1950 fire."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-shokoku",
+      "url": "https://www.shokoku-ji.jp/en/kinkakuji/about/",
+      "title": "Kinkaku-ji: About",
+      "publisher": "Shokoku-ji (owner, religious corporation)",
+      "author": "Shokoku-ji",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jnto",
+      "url": "https://www.japan.travel/en/spot/1152/",
+      "title": "Kinkakuji Temple",
+      "publisher": "Japan National Tourism Organization",
+      "author": "Japan National Tourism Organization",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-kinkaku",
+      "url": "https://www.openstreetmap.org/way/98115917",
+      "title": "OpenStreetMap way 98115917, Kinkaku-ji, 35.0395293, 135.7295373",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pavilion's own date: Shokoku-ji gives 1397 for the residence only, and does not mention the 1950 fire or 1955 rebuild, which come from JNTO alone. Shape not chosen; no model drawn.",
+  "published_at": "2026-10-22T18:10:00.409Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

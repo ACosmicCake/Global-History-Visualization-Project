@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "scale": "civilization",
+  "author": "historian-agent:m-3",
+  "updated": "2026-10-22",
+  "id": "place-bamiyan-buddhas",
+  "title": "Buddhas of Bamiyan",
+  "summary": "The two giant standing Buddhas of Bamiyan in central Afghanistan, about 55 m and 38 m tall, were carved from the valley cliff in the 6th and early 7th centuries CE within a Buddhist monastic complex. The Taliban destroyed both with explosives in March 2001. The empty niches are part of a UNESCO World Heritage cultural landscape.",
+  "when": {
+    "start": {
+      "year": 550
+    },
+    "end": {
+      "year": 2001
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Radiocarbon dates place the Eastern Buddha in the second half of the sixth century CE and the Western Buddha at the start of the seventh (UNESCO Publishing volume); start is 550 with a spread to cover both. End is the destruction in March 2001."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (UNESCO Publishing / Springer)",
+        "value": "second half of the sixth century CE",
+        "source": "src-unesco-future"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "destroyed by the Taliban in 2001",
+        "source": "src-unesco-208"
+      },
+      {
+        "calendar": "CE (UNESCO Publishing / Springer)",
+        "value": "In March 2001, two Buddha statues",
+        "source": "src-unesco-future"
+      }
+    ],
+    "display": "Carved 6th-early 7th century CE; destroyed March 2001"
+  },
+  "where": {
+    "lat": 34.83056,
+    "lon": 67.82234,
+    "elevation_m": null,
+    "modern_name": "Bamiyan Buddha niches, Bamyan Province, Afghanistan",
+    "historical_name": "Bamiyan, a Buddhist monastic centre on the Silk Road (before the Islamic period)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.6,
+    "coordinate_sources": [
+      "src-osm-bamiyan"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "The tallest standing Buddhas in the world, whose deliberate destruction in 2001 prompted international condemnation and a UNESCO declaration on intentional destruction of heritage."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-208",
+      "url": "https://whc.unesco.org/en/list/208",
+      "title": "Cultural Landscape and Archaeological Remains of the Bamiyan Valley (World Heritage List no. 208)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "heights"
+      ]
+    },
+    {
+      "id": "src-unesco-future",
+      "url": "https://whc.unesco.org/document/222817",
+      "title": "The Future of the Bamiyan Buddha Statues: Heritage Reconstruction in Theory and Practice",
+      "publisher": "UNESCO Publishing / Springer",
+      "author": "UNESCO Publishing / Springer",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "heights",
+        "dates"
+      ]
+    },
+    {
+      "id": "src-mei-bamiyan",
+      "url": "https://mei.edu/publication/death-buddhas-bamiyan/",
+      "title": "The Death of the Buddhas of Bamiyan",
+      "publisher": "Middle East Institute",
+      "author": "Middle East Institute",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "heights",
+        "destruction"
+      ]
+    },
+    {
+      "id": "src-osm-bamiyan",
+      "url": "https://nominatim.openstreetmap.org/search?q=Buddhas+of+Bamiyan&format=json",
+      "title": "OpenStreetMap Nominatim: Buddhas of Bamiyan, nodes 5442972741 (34.8316562, 67.8266233) and 4421574131 (34.8294679, 67.8180135); the record uses their midpoint",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No model written: UNESCO gives heights (55 m and 38 m; the UNESCO Publishing volume says 56 m for the Western Buddha) but no source opened gives a niche or statue width, so the plan-dimension rule is not met. Least sure of the dates: the statues are dated only by radiocarbon to the second half of the 6th century (East) and start of the 7th (West), and other sources date them differently. Point is the midpoint of the two OSM nodes, about 0.8 km apart.",
+  "published_at": "2026-10-22T04:53:53.429Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

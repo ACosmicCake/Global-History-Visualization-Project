@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1556-shaanxi-earthquake",
+  "kind": "event",
+  "title": "Shaanxi Earthquake of 1556",
+  "summary": "A great earthquake struck Shaanxi Province, China, on 23 January 1556, centred on the Wei River valley near Huaxian, Weinan and Huayin. An estimated 830,000 people died, making it the deadliest earthquake on record; densely settled land and weak buildings added to the toll.",
+  "when": {
+    "start": {
+      "year": 1556
+    },
+    "end": {
+      "year": 1556
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Aftershocks continued into the next morning per History.com."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "January 23, 1556",
+        "source": "src-history"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "January 23, 1556",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "as recorded (CE)",
+        "value": "1556 CE",
+        "source": "src-oxford"
+      }
+    ],
+    "display": "23 January 1556"
+  },
+  "where": {
+    "lat": 34.5118,
+    "lon": 109.757,
+    "elevation_m": null,
+    "modern_name": "Huazhou District (formerly Huaxian), Weinan, Shaanxi, China",
+    "historical_name": "Huaxian, Shaanxi Province, Ming China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-mapcarta"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "atrocity_injustice"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Described as the deadliest earthquake on record, with an estimated 830,000 deaths."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes a natural disaster with very large loss of life.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/this-day-in-history/january-23/deadliest-earthquake-in-history-rocks-china",
+      "title": "Deadliest earthquake in recorded history rocks China",
+      "publisher": "HISTORY (A&E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/earth-and-atmospheric-sciences/deadliest-earthquake-record-shaanxi-province-china/",
+      "title": "Deadliest earthquake on record: Shaanxi Province, China",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-oxford",
+      "url": "https://ora.ox.ac.uk/objects/uuid:dd9ba030-8324-4725-9eb6-a9d23409a974",
+      "title": "Oxford Research Archive record on the 1556 Huaxian earthquake",
+      "publisher": "University of Oxford",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-frontiers",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2024.1287450/full",
+      "title": "Frontiers in Earth Science article on Weihe Basin earthquakes",
+      "publisher": "Frontiers Media",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mapcarta",
+      "url": "https://mapcarta.com/15959692",
+      "title": "Huazhou District",
+      "publisher": "Mapcarta (OpenStreetMap data)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy: centre of Huazhou District (former Huaxian), not an epicentre; coordinates from Mapcarta/OSM. Death toll is an estimate (830,000).",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:55:44.761Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1556",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "A great earthquake struck Shaanxi Province, China, on 23 January 1556, centred on the Wei River valley near Huaxian, Weinan and Huayin.",
+        "source": "src-history"
+      },
+      {
+        "span": "1556",
+        "action": "pulse { radius_km: 96 }",
+        "caption": "An estimated 830,000 people died, making it the deadliest earthquake on record; densely settled land and weak buildings added to the toll.",
+        "source": "src-history",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0480-battle-of-thermopylae",
+  "kind": "event",
+  "title": "Battle of Thermopylae",
+  "summary": "In 480 BCE a small Greek force under the Spartan king Leonidas held the narrow pass of Thermopylae for three days against Xerxes' Persian army. A mountain path let the Persians outflank them; Leonidas stayed behind with a rearguard that died, and the battle became a celebrated symbol of resistance against great odds.",
+  "when": {
+    "start": {
+      "year": -479
+    },
+    "end": {
+      "year": -479
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give August 480 BCE or late summer 480 BCE; the Wikipedia article says between July and September. Astronomical year -479 = 480 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (proleptic), BCE",
+        "value": "August 480 bce",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "Gregorian (proleptic), BCE",
+        "value": "late summer of 480 b.c.e.",
+        "source": "src-byu"
+      },
+      {
+        "calendar": "Gregorian (proleptic), BCE",
+        "value": "August 480 BCE",
+        "source": "src-whe"
+      }
+    ],
+    "display": "August 480 BCE"
+  },
+  "where": {
+    "lat": 38.8,
+    "lon": 22.53333,
+    "elevation_m": null,
+    "modern_name": "Thermopylae, Lamia, Phthiotis, Greece",
+    "historical_name": "Thermopylae (the Hot Gates), pass in central Greece",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of the best-known battles of the Greco-Persian Wars and a lasting symbol of a last stand."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/place/Thermopylae",
+      "title": "Thermopylae",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-byu",
+      "url": "https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=1091&context=studiaantiqua",
+      "title": "The Battle of Thermopylae (Studia Antiqua)",
+      "publisher": "Brigham Young University ScholarsArchive",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/thermopylae/",
+      "title": "Battle of Thermopylae",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Thermopylae&oldid=1381239482",
+      "title": "Battle of Thermopylae (Wikipedia, revision 1381239482)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "wiki_quality": "GA",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/252944/thermopylae.html",
+      "title": "Thermopylae (pass), GeoNames 252944",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Month is only 'August' or 'late summer'; Wikipedia gives a July-September window. Pin is the GeoNames pass point, a proxy for the battlefield.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:10:33.606Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-479",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 480 BCE a small Greek force under the Spartan king Leonidas held the narrow pass of Thermopylae for three days against Xerxes' Persian army.",
+        "source": "src-britannica"
+      },
+      {
+        "span": "-479",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A mountain path let the Persians outflank them; Leonidas stayed behind with a rearguard that died, and the battle became a celebrated symbol of resistance against great odds.",
+        "source": "src-britannica",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

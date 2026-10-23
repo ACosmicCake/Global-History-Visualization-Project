@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1783-09-03-treaty-of-paris",
+  "kind": "event",
+  "title": "Treaty of Paris (1783)",
+  "summary": "On 3 September 1783 David Hartley for Britain and John Adams, Benjamin Franklin and John Jay for the United States signed the Treaty of Paris. Britain recognised the thirteen states as free, sovereign and independent and the treaty fixed their boundaries. It formally ended the American Revolutionary War.",
+  "when": {
+    "start": {
+      "year": 1783,
+      "iso": "1783-09-03"
+    },
+    "end": {
+      "year": 1783,
+      "iso": "1783-09-03"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Article text gives the date; ratification by Congress followed on 14 January 1784."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Done at Paris, this third day of September, in the year of our Lord one thousand seven hundred and eighty-three",
+        "source": "src-tah-paris"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "signed on September 3, 1783",
+        "source": "src-hist-paris"
+      }
+    ],
+    "display": "3 September 1783"
+  },
+  "where": {
+    "lat": 48.856667,
+    "lon": 2.352222,
+    "elevation_m": null,
+    "modern_name": "Paris, France",
+    "historical_name": "Paris, Kingdom of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-paris"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Treaty by which Britain recognised United States independence."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1781-10-19-siege-of-yorktown",
+      "type": "related"
+    },
+    {
+      "id": "1783-black-loyalist-evacuation-to-nova-scotia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-tah-paris",
+      "url": "https://teachingamericanhistory.org/document/treaty-of-paris/",
+      "title": "Treaty of Paris",
+      "publisher": "Ashbrook Center, Teaching American History",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hist-paris",
+      "url": "https://www.history.com/this-day-in-history/treaty-of-paris-signed",
+      "title": "Treaty of Paris signed",
+      "publisher": "HISTORY (A+E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-paris",
+      "url": "https://www.wikidata.org/wiki/Q90",
+      "title": "Paris (Wikidata Q90), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is central Paris; the pages I opened name Paris but not the building, so uncertainty is 5 km.",
+  "author": "historian-agent:o-s38",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:44:07.260Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1783-09-03",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 3 September 1783 David Hartley for Britain and John Adams, Benjamin Franklin and John Jay for the United States signed the Treaty of Paris.",
+        "source": "src-tah-paris"
+      },
+      {
+        "span": "1783",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It formally ended the American Revolutionary War.",
+        "source": "src-tah-paris",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

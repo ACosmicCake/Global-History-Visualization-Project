@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1951-syntex-norethindrone",
+  "kind": "event",
+  "title": "Syntex Norethindrone Synthesis",
+  "summary": "At the pharmaceutical company Syntex in Mexico City, chemist Luis Miramontes, assisted by Carl Djerassi and George Rosenkranz, synthesised norethindrone in 1951. It was an orally active synthetic progestin effective at low doses, unlike progesterone, and later became a key ingredient of birth control pills.",
+  "when": {
+    "start": {
+      "year": 1951
+    },
+    "end": {
+      "year": 1951
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Britannica dates the step to 15 October 1951; the Embryo Project says only 1951 and credits Djerassi alone."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October 15, 1951",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "In 1951",
+        "source": "src-asu"
+      }
+    ],
+    "display": "1951 (15 October 1951 per Britannica)"
+  },
+  "where": {
+    "lat": 19.4285,
+    "lon": -99.1277,
+    "elevation_m": null,
+    "modern_name": "Mexico City, Mexico",
+    "historical_name": "Mexico City, Mexico (Syntex laboratories)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First synthesis of an orally effective progestin later used in birth control pills."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/today-in-history/October-15-1951-developing-the-birth-control-pill",
+      "title": "Today in History October 15: Putting the Power of Birth Control in a Pill",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-asu",
+      "url": "https://embryo.asu.edu/pages/progestin-synthetic-progesterone",
+      "title": "Progestin: Synthetic Progesterone",
+      "publisher": "Arizona State University, Embryo Project Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/3530597/mexico-city.html",
+      "title": "Mexico City, Mexico",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on credit: Britannica names Miramontes with Djerassi and Rosenkranz assisting; Embryo Project names Djerassi only. Pin is Mexico City centre (proxy for the Syntex lab).",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T23:22:24.001Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1951",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At the pharmaceutical company Syntex in Mexico City, chemist Luis Miramontes, assisted by Carl Djerassi and George Rosenkranz, synthesised norethindrone in 1951.",
+        "source": "src-britannica"
+      },
+      {
+        "span": "1951",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It was an orally active synthetic progestin effective at low doses, unlike progesterone, and later became a key ingredient of birth control pills.",
+        "source": "src-britannica",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

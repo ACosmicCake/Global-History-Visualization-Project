@@ -1,0 +1,159 @@
+{
+  "id": "1950-10-19-chinese-intervention-in-korea",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Chinese intervention in the Korean War",
+  "summary": "On 19 October 1950, as United Nations forces pushed north through Korea, Chinese People's Volunteers crossed the Yalu River in force after Mao Zedong set that evening as the deadline; some advance elements had entered a couple of days earlier. China's entry halted the UN advance and turned a limited conflict into a much longer war.",
+  "when": {
+    "start": {
+      "year": 1950,
+      "iso": "1950-10-19"
+    },
+    "end": {
+      "year": 1950,
+      "iso": "1950-10-19"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Chen Jian (Wilson Center) writes that Mao set the evening of 19 October as the deadline for crossing, while a regiment of the Forty-second Army entered Korea early on 17 October; the army.mil timeline also files the entry under 19 October. First crossings span 17-19 October."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 19 October 1950, Chinese troops crossed the Yalu.",
+        "source": "src-chen"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "October 19, 1950",
+        "source": "src-armymil"
+      }
+    ],
+    "display": "19 October 1950"
+  },
+  "where": {
+    "lat": 40.1167,
+    "lon": 124.3833,
+    "elevation_m": null,
+    "modern_name": "Yalu River crossings at Dandong (China) and Sinuiju (North Korea)",
+    "historical_name": "Yalu River border between Manchuria (People's Republic of China) and North Korea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd-dandong"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "China's entry transformed the Korean War from a UN advance into a prolonged conflict and shaped Cold War alignments in East Asia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1950-korean-war",
+      "type": "related"
+    },
+    {
+      "id": "1949-chinese-communist-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1953-07-27-korean-armistice-agreement",
+      "type": "caused",
+      "because": "The war that Chinese entry prolonged ended only with the July 1953 armistice."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-chen",
+      "url": "https://www.wilsoncenter.org/sites/default/files/media/documents/publication/ACFAE7.pdf",
+      "title": "The Sino-Soviet Alliance and China's Entry into the Korean War (CWIHP Working Paper No. 1)",
+      "publisher": "Woodrow Wilson International Center for Scholars",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-armymil",
+      "url": "https://www.army.mil/article-amp/248681/the_korean_war",
+      "title": "The Korean War",
+      "publisher": "U.S. Army (army.mil)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-dandong",
+      "url": "https://www.wikidata.org/wiki/Q75110",
+      "title": "Wikidata item Q75110 (Dandong), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact crossing date: Chen Jian describes units crossing from 17 October and a 19 October deadline. The army.mil page gives only a timeline entry for 19 October, and the pin is a border stretch, not one crossing point.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1950-10-19",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "On the evening Mao set as the deadline, Chinese People's Volunteers began crossing the Yalu River into North Korea.",
+        "source": "src-chen"
+      },
+      {
+        "span": "1950-10",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Chinese forces went on to defeat outnumbered United Nations units and inflict heavy casualties, widening the war.",
+        "source": "src-armymil",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:40:48.518Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

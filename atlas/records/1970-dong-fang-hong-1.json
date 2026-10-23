@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1970-dong-fang-hong-1",
+  "kind": "event",
+  "title": "Launch of Dong Fang Hong 1",
+  "summary": "On 24 April 1970 China launched Dong Fang Hong 1, its first satellite, on a Long March 1 rocket from the Jiuquan missile base. The 173 kg satellite broadcast a patriotic song, and the launch made China the fifth nation to put a satellite into orbit on its own rocket.",
+  "when": {
+    "start": {
+      "year": 1970
+    },
+    "end": {
+      "year": 1970
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day given by all three sources; launch time given as 21:35 and 9:35 p.m."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "April 24, 1970 at 9:35 p.m.",
+        "source": "src-cgtn"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "24 April, 21:35",
+        "source": "src-chinaspaceflight"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "April 24, 1970",
+        "source": "src-viasat"
+      }
+    ],
+    "display": "24 April 1970"
+  },
+  "where": {
+    "lat": 40.9675,
+    "lon": 100.27861111,
+    "elevation_m": null,
+    "modern_name": "Jiuquan Satellite Launch Center, Gansu, China",
+    "historical_name": "Jiuquan missile base (Base 22), People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-q692677"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "China's first satellite launch, which made it the fifth nation to orbit a satellite on its own rocket."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1957-launch-of-sputnik-1",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-cgtn",
+      "url": "https://news.cgtn.com/news/2026-04-24/56th-anniversary-of-the-launch-of-Dongfanghong-1-1MBu2xTmRSU/p.html",
+      "title": "56th anniversary of the launch of Dongfanghong-1",
+      "publisher": "CGTN",
+      "author": "CGTN",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-chinaspaceflight",
+      "url": "https://chinaspaceflight.wordpress.com/2019/05/27/early-space-history-part-10-dong-fang-hong-1/",
+      "title": "Early space history (Part 10): Dong Fang Hong 1",
+      "publisher": "Chinese Spaceflight (blog)",
+      "author": "SinoX",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-viasat",
+      "url": "https://www.satellitetoday.com/uncategorized/2010/03/11/sspi-timeline-1970-dong-fang-hong-1/",
+      "title": "SSPI Timeline: 1970 - Dong Fang Hong 1",
+      "publisher": "Via Satellite",
+      "author": "Staff Writer",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q692677",
+      "url": "https://www.wikidata.org/wiki/Q692677",
+      "title": "Wikidata item Q692677 (Jiuquan Satellite Launch Center), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the launch site wording: only the SinoX blog names Jiuquan (Base 22), so the pin is the Wikidata point for the launch centre with a wide radius. Other sources vary on orbit figures and broadcast duration (Via Satellite says 28 days), which are not claimed.",
+  "author": "historian-agent:o-s92",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1970",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 24 April 1970 China launched Dong Fang Hong 1, its first satellite, on a Long March 1 rocket from the Jiuquan missile base.",
+        "source": "src-cgtn"
+      },
+      {
+        "span": "1970",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The 173 kg satellite broadcast a patriotic song, and the launch made China the fifth nation to put a satellite into orbit on its own rocket.",
+        "source": "src-cgtn",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T17:18:41.219Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

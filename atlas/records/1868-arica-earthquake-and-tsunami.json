@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1868-arica-earthquake-and-tsunami",
+  "kind": "event",
+  "title": "Arica Earthquake and Tsunami",
+  "summary": "A great offshore earthquake near Arica, then in Peru and now in Chile, struck on 13 August 1868 and sent a tsunami across the Pacific. Waves damaged towns along the Peruvian and Chilean coast and reached the Chatham Islands and New Zealand on 15 August, where they destroyed Tupuangi village.",
+  "when": {
+    "start": {
+      "year": 1868
+    },
+    "end": {
+      "year": 1868
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Quake on 13 August local time per Pararas-Carayannis; the tsunami reached New Zealand on 15 August (NZ date per GeoNet)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, local time",
+        "value": "August 13, 1868",
+        "source": "src-pararas"
+      },
+      {
+        "calendar": "Gregorian, New Zealand date",
+        "value": "15 August 1868",
+        "source": "src-geonet"
+      }
+    ],
+    "display": "13 August 1868 (tsunami reached New Zealand 15 August)"
+  },
+  "where": {
+    "lat": -18.47552,
+    "lon": -70.30058,
+    "elevation_m": null,
+    "modern_name": "Arica, Chile (proxy pin for an offshore epicentre)",
+    "historical_name": "Arica, Peru",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-geonames",
+      "src-pararas"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Source of the largest recorded distant tsunami to strike New Zealand and an early subject of detailed scientific tsunami analysis."
+  },
+  "confidence": "probable",
+  "audience_note": "Deaths in the disaster ran to hundreds or thousands; sources disagree on totals.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-geonet",
+      "url": "https://www.geonet.org.nz/news/6QkxQCLs0E4A0QQqgKMQiC",
+      "title": "Remembering the 1868 Arica tsunami",
+      "publisher": "GeoNet (GNS Science, New Zealand)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-teara",
+      "url": "https://teara.govt.nz/en/tsunamis/page-2",
+      "title": "Tsunamis (Peru–Chile tsunami, 1868)",
+      "publisher": "Te Ara – The Encyclopedia of New Zealand (Ministry for Culture and Heritage)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pararas",
+      "url": "http://www.drgeorgepc.com/Tsunami1868Chile.html",
+      "title": "Earthquake and tsunami of 13 August 1868 in Arica, Peru",
+      "publisher": "Dr. George Pararas-Carayannis Disaster Pages",
+      "author": "George Pararas-Carayannis",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/3899361",
+      "title": "Arica, Chile",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Arica city, a proxy; epicentre offshore (~70 km per one source, with an incomplete longitude). Local quake date rests on Pararas-Carayannis, a personal disaster site; magnitude and death tolls vary by source (8.5 to 9.0; 300-350 in Arica vs thousands regionally) so left out.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:10.082Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1868",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "A great offshore earthquake near Arica, then in Peru and now in Chile, struck on 13 August 1868 and sent a tsunami across the Pacific.",
+        "source": "src-geonet"
+      },
+      {
+        "span": "1868",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Waves damaged towns along the Peruvian and Chilean coast and reached the Chatham Islands and New Zealand on 15 August, where they destroyed Tupuangi village.",
+        "source": "src-geonet",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

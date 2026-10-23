@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1410-battle-of-grunwald",
+  "kind": "event",
+  "title": "Battle of Grunwald",
+  "summary": "On 15 July 1410 the allied armies of the Kingdom of Poland and the Grand Duchy of Lithuania, under Władysław II Jagiełło and Vytautas, decisively beat the Teutonic Order, whose Grand Master Ulrich von Jungingen was killed. It was one of the largest medieval European battles and began the Order's decline.",
+  "when": {
+    "start": {
+      "year": 1410
+    },
+    "end": {
+      "year": 1410
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "All three sources agree on 15 July 1410."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "15 July 1410",
+        "source": "src-wiki"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 15, 1410",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 15, 1410",
+        "source": "src-mop"
+      }
+    ],
+    "display": "15 July 1410"
+  },
+  "where": {
+    "lat": 53.4963178,
+    "lon": 20.1360512,
+    "elevation_m": null,
+    "modern_name": "Near Stębark and Grunwald, Warmian-Masurian Voivodeship, Poland",
+    "historical_name": "Near Tannenberg and Grünfelde, State of the Teutonic Order (Prussia)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "One of the largest medieval European battles; it shifted the balance of power in Central and Eastern Europe toward Poland-Lithuania."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wiki",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Grunwald&oldid=1381399761",
+      "title": "Battle of Grunwald (Wikipedia, revision 1381399761)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "wiki_quality": "GA",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/event/Battle-of-Grunwald-1410",
+      "title": "Battle of Grunwald (1410)",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mop",
+      "url": "https://bitwy.muzeum.kolobrzeg.pl/en/battle-of-grunwald/",
+      "title": "Battle of Grunwald 1410",
+      "publisher": "Muzeum Oręża Polskiego w Kołobrzegu (Museum of Polish Arms, Kołobrzeg)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://geonames.org/search.html?country=&q=Tannenberg",
+      "title": "GeoNames: Stębark (Tannenberg)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is GeoNames' Stębark (Tannenberg) village centre, a proxy; Wikipedia says 2014–2017 excavations put the actual site south of Grunwald village. Casualty numbers omitted as sources vary.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:10:34.090Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1410",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 15 July 1410 the allied armies of the Kingdom of Poland and the Grand Duchy of Lithuania, under Władysław II Jagiełło and Vytautas, decisively beat the Teutonic…",
+        "source": "src-wiki"
+      },
+      {
+        "span": "1410",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It was one of the largest medieval European battles and began the Order's decline.",
+        "source": "src-wiki",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

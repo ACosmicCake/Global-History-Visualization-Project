@@ -1,0 +1,225 @@
+{
+  "id": "place-toji-pagoda",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Five-Storied Pagoda of Tō-ji",
+  "aliases": [
+    "Tō-ji pagoda",
+    "Toji pagoda"
+  ],
+  "summary": "The five-storied pagoda of Tō-ji in Kyoto is about 55 m tall and is described as the highest pagoda in Japan. The present pagoda was built in 1644 with support from the third Tokugawa shogun, Iemitsu. The first on the site dates to the 9th century, and its successors burned down four times.",
+  "when": {
+    "start": {
+      "year": 1644
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "1644 is the present pagoda (Tō-ji, MLIT, World History Encyclopedia). Tō-ji says the first was built in the 9th century; World History Encyclopedia gives 826 for that first pagoda. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Tō-ji)",
+        "value": "The present pagoda was built in 1644.",
+        "source": "src-toji-official"
+      },
+      {
+        "calendar": "CE (MLIT)",
+        "value": "rebuilt most recently in 1644 with support from Tokugawa Iemitsu",
+        "source": "src-mlit-toji"
+      }
+    ],
+    "display": "Present pagoda built 1644"
+  },
+  "where": {
+    "lat": 34.9798715,
+    "lon": 135.7487226,
+    "elevation_m": null,
+    "modern_name": "Five-storied pagoda, Tō-ji, Minami-ku, Kyoto, Japan",
+    "historical_name": "Five-storied pagoda of Tō-ji (Kyōōgokoku-ji), Edo-period Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-outline"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Square pagoda plan of about 20.7 m x 20.4 m (OpenStreetMap outline), five storeys.",
+      "source": "src-osm-outline",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pagoda",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-toji-official",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 55,
+          "unit": "m",
+          "source": "src-toji-official",
+          "note": "\"measuring 55m (187 feet)\"; MLIT: \"about 55 meters\""
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 20.7,
+          "unit": "m",
+          "source": "src-osm-outline",
+          "note": "minimum bounding rectangle of the mapped outline"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 20.4,
+          "unit": "m",
+          "source": "src-osm-outline",
+          "note": "minimum bounding rectangle of the mapped outline"
+        },
+        {
+          "part": "tiers",
+          "value": 5,
+          "unit": "count",
+          "source": "src-toji-official",
+          "note": "\"five-storied pagoda\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "five-storied pagoda in the Tō-ji temple precinct"
+      },
+      {
+        "level": "local",
+        "representation": "procedural five-storey pagoda 55 m high on a plan of about 20.7 m x 20.4 m"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1644,
+        "end_year": 1644,
+        "state": "construction",
+        "description": "Present pagoda built in 1644 with support from Tokugawa Iemitsu; earlier pagodas on the site burned down four times.",
+        "source": "src-toji-official"
+      },
+      {
+        "start_year": 1644,
+        "end_year": null,
+        "state": "intact",
+        "description": "Standing since 1644; Tō-ji says it has never been knocked over in an earthquake.",
+        "source": "src-toji-official"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The temple calls it the highest pagoda in Japan."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-toji-official",
+      "url": "https://toji.or.jp/en/inside/pagoda.html",
+      "title": "Pagoda | To-ji Temple",
+      "publisher": "To-ji Temple",
+      "author": "To-ji Temple",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-mlit-toji",
+      "url": "https://www.mlit.go.jp/tagengo-db/en/R1-00303.html",
+      "title": "Five-Storied Pagoda",
+      "publisher": "Ministry of Land, Infrastructure, Transport and Tourism (Japan)",
+      "author": "Ministry of Land, Infrastructure, Transport and Tourism (Japan)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-whe-toji",
+      "url": "https://www.worldhistory.org/To-ji/",
+      "title": "To-ji",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-outline",
+      "url": "https://www.openstreetmap.org/way/187657226",
+      "title": "OpenStreetMap outline of 五重塔",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape pagoda, 5 tiers. Height 55 m from the temple and MLIT (a travel site and others give 54.8 m, not used). OSM way 187657226 (building=pagoda) gives plan 20.7 x 20.4 m; it is probably the roof outline rather than the base. Record covers the present pagoda; World History Encyclopedia says the first pagoda was built in 826, Tō-ji says 9th century.",
+  "author": "historian-agent:m-23",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:53:39.005Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

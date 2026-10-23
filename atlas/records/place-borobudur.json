@@ -1,0 +1,246 @@
+{
+  "id": "place-borobudur",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Borobudur",
+  "summary": "Borobudur, in the Kedu Valley of Central Java, is a Buddhist stupa built in the 8th and 9th centuries CE under the Syailendra dynasty. Five square terraces and three circular platforms rise around a hill to a central stupa, 72 smaller openwork stupas each hold a Buddha, and carved reliefs cover the walls. It was restored with UNESCO's help in the 1970s.",
+  "when": {
+    "start": {
+      "year": 701
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 99,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO says Borobudur was built in the 8th and 9th centuries AD during the Syailendra Dynasty and gives no more exact years; the start year 701 is the first year of the 8th century, so the true start is later within that span. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (UNESCO)",
+        "value": "built in the 8th and 9th centuries AD",
+        "source": "src-unesco-592"
+      }
+    ],
+    "display": "Built in the 8th–9th centuries CE; restored 1970s"
+  },
+  "where": {
+    "lat": -7.60796,
+    "lon": 110.20382,
+    "elevation_m": null,
+    "modern_name": "Borobudur Temple, Magelang Regency, Central Java, Indonesia",
+    "historical_name": "Borobudur, a Buddhist monument of the Syailendra dynasty in the Kedu Valley, central Java",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-unesco-xml",
+      "src-osm-borobudur"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "One of the greatest Buddhist monuments in the world (UNESCO), with a cosmological plan of base, terraces and stupa."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-592",
+      "url": "https://whc.unesco.org/en/list/592",
+      "title": "Borobudur Temple Compounds (World Heritage List no. 592)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-jaxa-borobudur",
+      "url": "https://earth.jaxa.jp/en/earthview/2010/01/06/540/index.html",
+      "title": "The Ruins of Borobudur: Glory of an Ancient Dynasty",
+      "publisher": "Japan Aerospace Exploration Agency (JAXA), Earth Observation Research Center",
+      "author": "Japan Aerospace Exploration Agency (JAXA), Earth Observation Research Center",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-borobudur",
+      "url": "https://nominatim.openstreetmap.org/search?q=Borobudur&format=json",
+      "title": "OpenStreetMap Nominatim: Borobudur, way 122741626 (-7.6079583, 110.2038245)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 592, third geolocation (-7.60778, 110.20386)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A square base with five concentric square terraces stepping up to three circular platforms, built round a natural hill. JAXA gives the base as 120 m a side; other sources vary on the footprint with the base's projections. Register figures only.",
+      "source": "src-jaxa-borobudur",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "stupa",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-jaxa-borobudur",
+      "measurements": [
+        {
+          "part": "height (total)",
+          "value": 35,
+          "unit": "m",
+          "source": "src-jaxa-borobudur",
+          "note": "\"a total height of 35 meters\""
+        },
+        {
+          "part": "base side length (square base)",
+          "value": 120,
+          "unit": "m",
+          "source": "src-jaxa-borobudur",
+          "note": "\"a square base of 120 meters a side\""
+        },
+        {
+          "part": "square terraces",
+          "value": 5,
+          "unit": "count",
+          "source": "src-unesco-592",
+          "note": "five concentric square terraces"
+        },
+        {
+          "part": "circular platforms",
+          "value": 3,
+          "unit": "count",
+          "source": "src-unesco-592"
+        },
+        {
+          "part": "openwork stupas on the circular platforms",
+          "value": 72,
+          "unit": "count",
+          "source": "src-unesco-592",
+          "note": "each holding a statue of the Buddha"
+        },
+        {
+          "part": "relief surface area",
+          "value": 2520,
+          "unit": "m2",
+          "source": "src-unesco-592",
+          "note": "2,520 m2 in the Outstanding Universal Value text (2,500 m2 on the older description)"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "square-based stepped monument at true base and total height on the Kedu plain"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stupa: square base, five square terraces, three circular platforms with 72 small stupas, and the great central stupa"
+      },
+      {
+        "level": "street",
+        "representation": "relief panels on the walls and balustrades as a labelled schematic texture; the stupas as openwork lattices"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 701,
+        "end_year": 900,
+        "state": "construction",
+        "description": "Built in the 8th and 9th centuries AD during the Syailendra Dynasty (UNESCO); no finer dates are given in the sources opened.",
+        "source": "src-unesco-592"
+      },
+      {
+        "start_year": 900,
+        "end_year": 1970,
+        "state": "ruined",
+        "description": "The ruins were found by the British lieutenant-governor Raffles in 1814 (UNESCO, Japanese-language description). When and why the monument fell out of use is not given in the sources opened; this phase starts where recorded construction ends.",
+        "source": "src-unesco-592"
+      },
+      {
+        "start_year": 1970,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "Restored with UNESCO's help in the 1970s and inscribed as a World Heritage property.",
+        "source": "src-unesco-592"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 701,
+        "to_year": 2026,
+        "material": "carved stone (the type of stone is not named in the sources opened), with low reliefs on walls and balustrades",
+        "source": "src-unesco-592"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stupa: UNESCO calls the main temple 'a stupa built in three tiers', so stupa fits better than stepped_pyramid. Least sure of the dates (UNESCO gives only 'the 8th and 9th centuries'; 701 and 900 are the span, not claims) and of the 900-1970 'ruined' phase, whose start is unsourced; it is bridged only because the 1814 discovery of ruins shows it stood. Base 120 m a side is JAXA's; an e-museum copy of a UNESCO publication gives 113 m (123 m overall with projections) and 'nearly 35 m' high, which agrees on height. The 1814 reference appears only in the Japanese text of UNESCO's page.",
+  "author": "historian-agent:m-1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:35:36.719Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "polity-mali-empire",
+  "kind": "polity",
+  "title": "Mali Empire",
+  "summary": "The Mali Empire was a West African state that World History Encyclopedia dates from around 1240, when Sundiata Keita founded it with Niani as capital. It controlled gold-producing regions and the gold-for-salt trade, doubled in size under Mansa Musa, and lost power in the 1460s after civil wars and the rise of Songhai; a small western remnant lasted longer.",
+  "when": {
+    "start": {
+      "year": 1240
+    },
+    "end": {
+      "year": 1468
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 5,
+      "end_minus_years": 10,
+      "end_plus_years": 10,
+      "note": "Start follows c. 1240 in two sources; the encyclopedia also prints 1235 and 1230 for the origin in other places. End is the c. 1468 Songhai conquest of the rump state; a small western pocket survived to the mid-17th century (World History Encyclopedia gives 1645 or c. 1672 as outer end dates)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Mali Empire (1240-1645)",
+        "source": "src-whe-mali"
+      },
+      {
+        "calendar": "CE",
+        "value": "founded the kingdom of Mali \"around 1240 CE\"",
+        "source": "src-encyc-sunjata"
+      },
+      {
+        "calendar": "CE",
+        "value": "Around 1468, King Sunni Ali of the Songhai Empire (r. 1464-1492) conquered the rump",
+        "source": "src-whe-mali"
+      }
+    ],
+    "display": "c. 1240 to the 1460s (remnant to the 17th century)"
+  },
+  "where": {
+    "lat": 11.3797,
+    "lon": -8.3842,
+    "elevation_m": null,
+    "modern_name": "Niani area, Kankan Region, Guinea (probable capital site; the empire spanned parts of Mali, Guinea, Senegal, Gambia and Mauritania)",
+    "historical_name": "Niani, capital of the Mali Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-gn-niani"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of the largest West African states, tied to the trans-Saharan gold trade and to Mansa Musa."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1235-battle-of-kirina",
+      "type": "related"
+    },
+    {
+      "id": "person-mansa-musa",
+      "type": "related"
+    },
+    {
+      "id": "polity-songhai-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-timbuktu",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-mali",
+      "url": "https://www.worldhistory.org/Mali_Empire/",
+      "title": "Mali Empire",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-sunjata",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/sunjata",
+      "title": "Sunjata",
+      "publisher": "Encyclopedia.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-niani",
+      "url": "https://www.geonames.org/search.html?q=Niani&country=GN",
+      "title": "Niani, Guinea (GeoNames)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end date (sources print 1460s, 1645 and c. 1672) and of the exact Niani site: the pages say only that it was probably on a plain near the Sankarani River, so the pin uses the GeoNames village of Niani with a wide radius.",
+  "author": "historian-agent:o-s34",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:04:53.946Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

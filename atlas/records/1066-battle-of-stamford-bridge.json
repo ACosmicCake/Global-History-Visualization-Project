@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1066-battle-of-stamford-bridge",
+  "kind": "event",
+  "title": "Battle of Stamford Bridge",
+  "summary": "On 25 September 1066 King Harold of England surprised and defeated an invading Norwegian army under Harald Hardrada and Harold's brother Tostig at Stamford Bridge, on the River Derwent east of York. Both leaders were killed, and the Norwegians lost most of their force, but Harold then had to face William of Normandy in the south.",
+  "when": {
+    "start": {
+      "year": 1066
+    },
+    "end": {
+      "year": 1066
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day given as Monday 25 September 1066 by English Heritage and Historic England."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "25 September 1066",
+        "source": "src-he-report"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Monday 25 September",
+        "source": "src-eh"
+      }
+    ],
+    "display": "25 September 1066"
+  },
+  "where": {
+    "lat": 53.9885,
+    "lon": -0.91547,
+    "elevation_m": null,
+    "modern_name": "Stamford Bridge, East Riding of Yorkshire, England",
+    "historical_name": "Stamford Bridge, Kingdom of England (Yorkshire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Destroyed a Norwegian invasion bid for the English throne weeks before the Norman invasion of 1066."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-he-report",
+      "url": "https://historicengland.org.uk/content/docs/listing/battlefields/stamford-bridge/",
+      "title": "English Heritage Battlefield Report: Stamford Bridge 1066",
+      "publisher": "Historic England",
+      "author": null,
+      "date_published": "1995",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eh",
+      "url": "https://www.english-heritage.org.uk/learn/histories/1066-and-the-norman-conquest/northern-battles-1066/",
+      "title": "Fulford and Stamford Bridge: The Northern Battles of 1066",
+      "publisher": "English Heritage",
+      "author": "Roy Porter",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2637102/stamford-bridge.html",
+      "title": "Stamford Bridge (GeoNames 2637102)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the modern village centre (proxy); exact battlefield is debated and the 2020 finds are not sourced here. Harold is the king of England in the summary; Historic England and English Heritage are separate bodies but the former hosts a 1995 English Heritage report.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:41:31.095Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1066",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 25 September 1066 King Harold of England surprised and defeated an invading Norwegian army under Harald Hardrada and Harold's brother Tostig at Stamford Bridge, on the River…",
+        "source": "src-he-report"
+      },
+      {
+        "span": "1066",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Both leaders were killed, and the Norwegians lost most of their force, but Harold then had to face William of Normandy in the south.",
+        "source": "src-he-report",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

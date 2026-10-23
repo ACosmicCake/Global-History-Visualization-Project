@@ -1,0 +1,132 @@
+{
+  "id": "place-ciudad-perdida-teyuna",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Teyuna (Ciudad Perdida)",
+  "summary": "Teyuna, known as Ciudad Perdida, is a Tairona-period town of stone-walled terraces and house rings on a ridge in the upper Buritaca basin of Colombia's Sierra Nevada de Santa Marta, between 900 and 1,200 m above sea level. Its oldest dwellings date to about 650 CE. The settlement was abandoned between about 1580 and 1650; archaeologists of ICANH began recording and restoring it in 1976.",
+  "when": {
+    "start": {
+      "year": 650
+    },
+    "end": {
+      "year": 1615
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 35,
+      "end_plus_years": 35,
+      "note": "ICANH says the oldest dwelling zones date to about 650 CE (earlier estimates put construction at about 1000 CE) and that the site was abandoned between about 1580 and 1650, so end 1615 is the midpoint of that range. A photo caption in the same guide dates the oldest structures to the 6th century CE, which does not agree with 650."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICANH visitor guide, Spanish)",
+        "value": "las zonas de vivienda más antiguas datan de alrededor del 650 d. C.",
+        "source": "src-icanh-teyuna"
+      },
+      {
+        "calendar": "CE (ICANH visitor guide, Spanish)",
+        "value": "fueron abandonados entre 1580 y 1650 d. C., aproximadamente",
+        "source": "src-icanh-teyuna"
+      },
+      {
+        "calendar": "CE (ICANH visitor guide, Spanish)",
+        "value": "Desde su descubrimiento oficial en 1976",
+        "source": "src-icanh-teyuna"
+      }
+    ],
+    "display": "Settled from c. 650 CE; abandoned c. 1580–1650"
+  },
+  "where": {
+    "lat": 11.0378546,
+    "lon": -73.9257754,
+    "elevation_m": null,
+    "modern_name": "Teyuna-Ciudad Perdida Archaeological Park, Sierra Nevada de Santa Marta, Magdalena, Colombia",
+    "historical_name": "Teyuna, a Tairona town on a ridge above the Buritaca river in the Sierra Nevada de Santa Marta",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-teyuna"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "ICANH says Ciudad Perdida seems to have been the most extensive, important and monumental of the 26 archaeological sites found so far in the Buritaca basin, probably the seat of political power there."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-icanh-teyuna",
+      "url": "https://www.icanh.gov.co/wp-content/uploads/2025/06/Guia_teyuna.pdf",
+      "title": "Parque Arqueológico Teyuna – Ciudad Perdida: Guía para visitantes",
+      "publisher": "Instituto Colombiano de Antropología e Historia (ICANH)",
+      "author": "Instituto Colombiano de Antropología e Historia (ICANH)",
+      "date_published": "2025-06",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-ghf-teyuna",
+      "url": "https://globalheritagefund.org/docs/GHFCiudadPerdidaBrochure.pdf",
+      "title": "Teyuna-Ciudad Perdida Archaeological Park, Colombia (brochure)",
+      "publisher": "Global Heritage Fund",
+      "author": "Global Heritage Fund",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-teyuna",
+      "url": "https://nominatim.openstreetmap.org/search?q=Ciudad+Perdida+Teyuna&format=json",
+      "title": "OpenStreetMap Nominatim: Ciudad Perdida (Teyuna), node 13449309362 (11.0378546, -73.9257754)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No model: it is a complex of terraces over about 33 ha (ICANH), with no single structure's height and plan in the pages opened. The Global Heritage Fund brochure gives a different area (about 60 ha) and says looters found the site in 1975 or the early 1970s; ICANH says 1975 for the looters' find and 1976 for the official discovery. Coordinate is a single OSM point, so uncertainty is 0.5 km. Least sure of the start year (650 versus the 6th-century caption) and the end midpoint.",
+  "author": "historian-agent:m-17",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:20:03.891Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

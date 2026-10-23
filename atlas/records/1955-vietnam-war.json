@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 3,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes a war with heavy military and civilian death tolls, including bombing of Laos and Cambodia; casualty figures are estimates that vary widely by source and method.",
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "1955-vietnam-war",
+  "kind": "event",
+  "title": "Vietnam War",
+  "summary": "War between communist North Vietnam and anti-communist South Vietnam, which the United States and others supported, dated by one school-history source from 1 November 1955 to the fall of Saigon on 30 April 1975. Counts differ widely: the US National Archives lists 58,220 US military fatal casualty records, while a 2008 BMJ study estimated 3.8 million Vietnamese violent war deaths in 1955–2002.",
+  "when": {
+    "start": {
+      "year": 1955
+    },
+    "end": {
+      "year": 1975
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start dates for the war are conventional and debated; 1 November 1955 is the date given by the Henrico County school-history page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Start: November 1, 1955; End: April 30, 1975, the fall of Saigon",
+        "source": "src-hcps-vietnam"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Saigon fell to the North Vietnamese Army on April 30, 1975",
+        "source": "src-diplomacy-saigon"
+      }
+    ],
+    "display": "1 November 1955 – 30 April 1975"
+  },
+  "where": {
+    "lat": 21.0283334,
+    "lon": 105.854041,
+    "elevation_m": null,
+    "modern_name": "Hanoi, Vietnam (pin stands for the whole country; fighting also reached Laos and Cambodia)",
+    "historical_name": "Vietnam, divided into North Vietnam (capital Hanoi) and South Vietnam (capital Saigon, now Ho Chi Minh City)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A prolonged war that divided Vietnam and drew in the United States; its casualty counts and dating remain debated."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1954-battle-of-dien-bien-phu",
+      "type": "related"
+    }
+  ],
+  "numbers": [
+    {
+      "field": "deaths",
+      "label": "US military fatal casualty records (National Archives Vietnam Conflict Extract Data File)",
+      "low": 58220,
+      "high": 58220,
+      "unit": "people",
+      "estimate": false,
+      "as_of": "records dated June 8, 1956 to May 28, 2006",
+      "source": "src-nara-vietnam",
+      "note": "Records of US service members only."
+    },
+    {
+      "field": "deaths",
+      "label": "Vietnamese violent war deaths 1955–2002, World Health Survey sibling-history estimate (point estimate)",
+      "low": 3800000,
+      "high": 3800000,
+      "unit": "people",
+      "estimate": true,
+      "as_of": "1955–2002",
+      "source": "src-bmj-vietnam",
+      "note": "The paper reports 3.8 million for Vietnam; its per-country confidence interval was not confirmed on the opened page."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hcps-vietnam",
+      "url": "https://worldhistory.hcps.org/pages/specialdoc22.html",
+      "title": "Vietnam War: 1955-1975",
+      "publisher": "Henrico County Public Schools",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-diplomacy-saigon",
+      "url": "https://diplomacy.state.gov/stories/fall-of-saigon-1975-american-diplomats-refugees/",
+      "title": "The Fall of Saigon (1975)",
+      "publisher": "National Museum of American Diplomacy, US Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nara-vietnam",
+      "url": "https://www.archives.gov/research/military/vietnam-war/casualty-statistics",
+      "title": "Vietnam War U.S. Military Fatal Casualty Statistics",
+      "publisher": "US National Archives",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-bmj-vietnam",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2440905/",
+      "title": "Fifty years of violent war deaths from Vietnam to Bosnia: analysis of data from the world health survey programme",
+      "publisher": "BMJ (via PubMed Central)",
+      "author": "Obermeyer, Murray, Gakidou",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "numbers",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Hanoi&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the framing of 1955 as the start (the school-history source gives it; the National Archives page gives no official start). Vietnamese death estimates range from under 1 million to over 3 million across sources; only the BMJ-cited figures were read on an opened page.",
+  "published_at": "2026-10-22T10:55:43.909Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 3,
+      "change": "outline"
+    }
+  ]
+}

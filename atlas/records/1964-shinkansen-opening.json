@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "1964-shinkansen-opening",
+  "kind": "event",
+  "title": "Opening of the Tokaido Shinkansen",
+  "summary": "On 1 October 1964 the Tokaido Shinkansen began service between Tokyo and Osaka, nine days before the opening ceremony of the Tokyo Olympics. The Diet had approved the plan in March 1959 to relieve capacity shortages on the Tokaido corridor. The new 515 km line is described as the world's first high-speed rail service.",
+  "when": {
+    "start": {
+      "year": 1964,
+      "iso": "1964-10-01"
+    },
+    "end": {
+      "year": 1964,
+      "iso": "1964-10-01"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 1 October 1964",
+        "source": "src-embjapan-shinkansen"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On the 1st of October, 1964, the inaugural service of the Shinkansen began with much fanfare.",
+        "source": "src-hsrail-shinkansen"
+      }
+    ],
+    "display": "1 October 1964"
+  },
+  "where": {
+    "lat": 35.689444,
+    "lon": 139.691667,
+    "elevation_m": null,
+    "modern_name": "Tokyo, Japan (western terminus; the line ran to Osaka)",
+    "historical_name": "Tokyo, Japan (Japanese National Railways line between Tokyo and Osaka)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-tokyo",
+      "src-embjapan-shinkansen"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The first high-speed rail line, which set the model for fast intercity rail around the world."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-embjapan-shinkansen",
+      "url": "https://www.uk.emb-japan.go.jp/en/webmagazine/2014/11/shinkansen.html",
+      "title": "A milestone for the Shinkansen: Fifty years of bullet trains in Japan",
+      "publisher": "Embassy of Japan in the United Kingdom",
+      "author": "Embassy of Japan in the UK",
+      "date_published": "2014-11",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-hsrail-shinkansen",
+      "url": "https://www.hsrail.org/blog/the-shinkansen-how-high-speed-rail-transformed-a-nation/",
+      "title": "The Shinkansen: How high-speed rail transformed a nation",
+      "publisher": "High Speed Rail Alliance",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-wd-tokyo",
+      "url": "https://www.wikidata.org/wiki/Q1490",
+      "title": "Wikidata item Q1490 (Tokyo), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the sources name Tokyo and Osaka as the ends of the line, so the pin is Tokyo (Wikidata point for the city) with 25 km uncertainty; Osaka is not drawn. The \"nine days before\" gap is from the Embassy page; other pages say ten days.",
+  "published_at": "2026-10-22T16:17:45.906Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1964-10-01",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 1 October 1964 the Tokaido Shinkansen began service between Tokyo and Osaka, nine days before the opening ceremony of the Tokyo Olympics.",
+        "source": "src-embjapan-shinkansen"
+      },
+      {
+        "span": "1964",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The new 515 km line is described as the world's first high-speed rail service.",
+        "source": "src-embjapan-shinkansen",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

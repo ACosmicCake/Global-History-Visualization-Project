@@ -1,0 +1,239 @@
+{
+  "id": "place-fort-jesus-mombasa",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Fort Jesus, Mombasa",
+  "summary": "Fort Jesus stands on a coral-rock spur at the southern edge of Mombasa Old Town, Kenya. The Portuguese built it in 1593–96 to designs by the Italian military architect Giovanni Battista Cairati, with four bastions around a central courtyard. The Omani Arabs drove the Portuguese out in 1696, and from 1895 to 1958 the fort served as a prison.",
+  "when": {
+    "start": {
+      "year": 1593
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of the Portuguese building in 1593, completed in 1596 (ICOMOS: erected in 1593-96). End is the present: the fort stands as a protected property."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "Fort Jesus, Mombasa, was erected in 1593-96 to the designs of Giovanni Battista Cairati",
+        "source": "src-icomos-1295"
+      },
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "until 1696 when the Omani Arabs besieged Fort Jesus, Mombasa, and eventually drove out the Portuguese",
+        "source": "src-icomos-1295"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "Built by the Portuguese at the end of the 16th century",
+        "source": "src-unesco-1295"
+      }
+    ],
+    "display": "Built 1593–96; Omani capture 1696; prison 1895–1958"
+  },
+  "where": {
+    "lat": -4.062778,
+    "lon": 39.679444,
+    "elevation_m": null,
+    "modern_name": "Fort Jesus, Mombasa Old Town, Mombasa, Kenya",
+    "historical_name": "Fort Jesus, a Portuguese fort at the southern edge of the town of Mombasa on the East African coast, built 1593–96 under Portuguese control",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-unesco-1295",
+      "src-osm-fortjesus"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "wars_conflict",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO inscribed it in 2011 as a Renaissance-theory fort that bears witness to the first Western attempt to rule the Indian Ocean trade routes, and to the interchange of peoples who fought for the port."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1498-vasco-da-gama-reaches-calicut",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-1295",
+      "url": "https://whc.unesco.org/en/list/1295/",
+      "title": "Fort Jesus, Mombasa (World Heritage List no. 1295)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-icomos-1295",
+      "url": "https://whc.unesco.org/document/152278",
+      "title": "Advisory Body Evaluation (ICOMOS): Fort Jesus, Mombasa, no. 1295rev",
+      "publisher": "ICOMOS",
+      "author": "ICOMOS",
+      "date_published": "2011-03-10",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-fortjesus",
+      "url": "https://nominatim.openstreetmap.org/search?q=Fort+Jesus+Mombasa&format=json",
+      "title": "OpenStreetMap Nominatim: Fort Jesus, way 94444068 (-4.0626321, 39.6796406)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "The landward defences of the fort: walls cut back from solid coral rock, with a dry moat round the three landward sides and bastions at the corners (ICOMOS). The sources opened give thicknesses and heights, not a perimeter length, so this wall model has no plan length.",
+      "source": "src-icomos-1295",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-icomos-1295",
+      "measurements": [
+        {
+          "part": "landward wall, height of the scarp including the moat",
+          "value": 17,
+          "unit": "m",
+          "source": "src-icomos-1295",
+          "note": "\"The height of the scarp, including the 5m deep and wide moat, is c 17m.\""
+        },
+        {
+          "part": "landward wall, thickness",
+          "value": 4.27,
+          "unit": "m",
+          "source": "src-icomos-1295",
+          "note": "\"the walls were 4.27m thick with a parapet 2.75m wide and 1m high\""
+        },
+        {
+          "part": "moat, depth and width",
+          "value": 5,
+          "unit": "m",
+          "source": "src-icomos-1295",
+          "note": "\"the 5m deep and wide moat\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a wall outline round the fort at its published scarp height and thickness"
+      },
+      {
+        "level": "local",
+        "representation": "procedural walls with four bastions and a moat on the landward sides; interior buildings not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1593,
+        "end_year": 1596,
+        "state": "construction",
+        "description": "Built by the Portuguese in 1593-96, completed three years after work began (ICOMOS).",
+        "source": "src-icomos-1295"
+      },
+      {
+        "start_year": 1634,
+        "end_year": 1639,
+        "state": "altered",
+        "description": "After a revolt, curtain walls were built on the landward side, new walls added on three bastions, and an elliptical bastion and second gate added at the main gate (ICOMOS).",
+        "source": "src-icomos-1295"
+      },
+      {
+        "start_year": 1696,
+        "end_year": 1696,
+        "state": "altered",
+        "description": "The Omani Arabs besieged the fort and drove out the Portuguese; further modifications repaired and reinforced the damaged fort (ICOMOS).",
+        "source": "src-icomos-1295"
+      },
+      {
+        "start_year": 1895,
+        "end_year": 1958,
+        "state": "altered",
+        "description": "Converted to a prison under British rule, with a kitchen and a gallows among the added buildings (ICOMOS).",
+        "source": "src-icomos-1295"
+      },
+      {
+        "start_year": 1958,
+        "end_year": null,
+        "state": "intact",
+        "description": "Designated a National Park in 1958 to protect the fort and a 100 m strip round it; protected today under the National Museums and Heritage Act 2006 (ICOMOS).",
+        "source": "src-icomos-1295"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1593,
+        "to_year": null,
+        "material": "coral, lime, sand and clay, with yellow ochre plaster on the facades",
+        "source": "src-icomos-1295"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape wall (linear), as briefed, but the pages opened give no wall length or perimeter, so the model has height and thickness only and may fail the 'height plus plan dimension' rule if the reviewer wants a plan length; a courtyard-and-bastion plan is not sourced. Height 17 m is the scarp including the 5 m moat, not the freestanding wall. All three values are ICOMOS figures for the landward defences. The coordinate (UNESCO S4°3'46\", E39°40'46\", converted to decimal) is within about 25 m of the OSM point. Least sure of: the plan-dimension gap.",
+  "author": "historian-agent:m-17",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:20:04.755Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

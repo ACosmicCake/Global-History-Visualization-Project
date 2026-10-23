@@ -1,0 +1,128 @@
+{
+  "id": "1914-09-06-first-battle-of-the-marne",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "First Battle of the Marne",
+  "summary": "From 5 to 12 September 1914 French and British armies fought German forces along the River Marne, southeast of Paris. The French Sixth Army and the Fifth and Ninth Armies engaged alongside the British Expeditionary Force. The Allied victory stopped the German advance on Paris, gave the Allies the initiative and marked the failure of the Schlieffen Plan.",
+  "when": {
+    "start": {
+      "year": 1914,
+      "iso": "1914-09-05"
+    },
+    "end": {
+      "year": 1914,
+      "iso": "1914-09-12"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The National Army Museum gives 5-12 September; the Long, Long Trail gives 7-10 September for the British phase. The record id uses 6 September."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "5-12 September 1914",
+        "source": "src-nam-marne"
+      },
+      {
+        "calendar": "Gregorian; page heading gives the range 7 to 10 September 1914 for the British Expeditionary Force phase",
+        "value": "10 September 1914: the Battle of the Marne",
+        "source": "src-llt"
+      }
+    ],
+    "display": "5-12 September 1914"
+  },
+  "where": {
+    "lat": 48.9502287,
+    "lon": 3.1296757,
+    "elevation_m": null,
+    "modern_name": "River Marne valley east of Paris, centred on La Ferte-sous-Jouarre, Seine-et-Marne, France",
+    "historical_name": "River Marne, southeast of Paris, France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-osm-marne"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The Allied victory that stopped the German advance on Paris and ended the Schlieffen Plan."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a war event with large numbers of military deaths and casualties.",
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam-marne",
+      "url": "https://ww1.nam.ac.uk/timeline/first-battle-marne/",
+      "title": "First Battle of the Marne",
+      "publisher": "National Army Museum, London",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-llt",
+      "url": "https://www.longlongtrail.co.uk/?p=1936",
+      "title": "The Battle of the Marne, 1914",
+      "publisher": "The Long, Long Trail",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-marne",
+      "url": "https://nominatim.openstreetmap.org/search?q=La+Fert%C3%A9-sous-Jouarre&format=json&limit=1",
+      "title": "La Ferte-sous-Jouarre (Nominatim search result)",
+      "publisher": "OpenStreetMap (Nominatim gazetteer)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is an area marker at La Ferte-sous-Jouarre, a place the Long, Long Trail names in the British phase; the battle had no single site, hence 60 km. Dates disagree (5-12 vs 7-10 September); the id date of 6 September was not confirmed on either page.",
+  "author": "historian-agent:o-s50",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:40:16.707Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

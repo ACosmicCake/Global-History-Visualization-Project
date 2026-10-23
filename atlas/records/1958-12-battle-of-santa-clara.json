@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "1958-12-battle-of-santa-clara",
+  "kind": "event",
+  "title": "Battle of Santa Clara, December 1958",
+  "summary": "In late December 1958 Che Guevara's column of about 300 rebels attacked Santa Clara, defended by a garrison of roughly 3,500 soldiers. His men derailed an armoured train with a bulldozer and forced its troops out; the train surrendered at 7 pm on 30 December. The city's fall dealt a decisive blow to Batista, who fled within hours.",
+  "when": {
+    "start": {
+      "year": 1958
+    },
+    "end": {
+      "year": 1958
+    },
+    "precision": "month",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "the armoured train surrendered at 7pm on 30 December 1958",
+        "source": "src-cubasi"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "late 1958",
+        "source": "src-pbs"
+      }
+    ],
+    "display": "late December 1958 (train surrender 30 December)"
+  },
+  "where": {
+    "lat": 22.406667,
+    "lon": -79.953056,
+    "elevation_m": null,
+    "modern_name": "Santa Clara, Villa Clara Province, Cuba",
+    "historical_name": "Santa Clara, Las Villas Province, Republic of Cuba",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-santaclara"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive rebel victory of the Cuban Revolution; Batista left the island within hours of the city falling."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "person-che-guevara",
+      "type": "related"
+    },
+    {
+      "id": "1953-cuban-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "related"
+    },
+    {
+      "id": "1952-03-10-batista-coup",
+      "type": "caused_by",
+      "because": "The rebellion that ended at Santa Clara was fought against the military regime Batista installed in 1952."
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 22,
+    "beats": [
+      {
+        "span": "1958-12",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "About 300 guerrillas under Che Guevara faced a garrison of roughly 3,500 in Santa Clara and derailed the armoured train by removing track.",
+        "source": "src-cubasi"
+      },
+      {
+        "span": "1958-12-30",
+        "action": "pulse { radius_km: 8 }",
+        "caption": "Molotov cocktails forced the train's soldiers out, and it surrendered at 7 pm.",
+        "source": "src-cubasi"
+      },
+      {
+        "span": "1958-12-31",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "Batista fled the island within twelve hours of the city being captured, and the captured weapons strengthened Castro's forces.",
+        "source": "src-cubasi",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-cubasi",
+      "url": "https://cuba-solidarity.org.uk/cubasi/article/158/a-revolutionary-train-of-thought",
+      "title": "CubaSi: A revolutionary train of thought",
+      "publisher": "Cuba Solidarity Campaign",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-pbs",
+      "url": "https://www.pbs.org/wgbh/americanexperience/features/castro-che-guevara-1928-1967/",
+      "title": "Che Guevara (1928-1967)",
+      "publisher": "PBS American Experience",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-santaclara",
+      "url": "https://www.wikidata.org/wiki/Q211590",
+      "title": "Wikidata item Q211590 (Santa Clara, Cuba), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start of the fighting (often given as 28 December) was not on an opened page, so the date is 'late December 1958'. Both sources are secondary; the Cuba Solidarity Campaign article is an advocacy publication. Beat dated 1958-12-31 is placed by the 'within 12 hours' wording relative to the 30 December surrender and the capture; the exact capture day was not confirmed on an opened page. Garrison size and rebel numbers are given as the source states them.",
+  "published_at": "2026-10-22T04:45:22.052Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

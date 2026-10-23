@@ -1,0 +1,177 @@
+{
+  "id": "2008-russo-georgian-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Russo-Georgian War",
+  "summary": "In August 2008 Russia, together with South Ossetian and Abkhaz forces, fought Georgia after fighting around Tskhinvali in South Ossetia escalated into open warfare on 7 August. A ceasefire was signed on 12 August, and about 192,000 people were displaced. On 26 August Russia recognised South Ossetia and Abkhazia as independent states.",
+  "when": {
+    "start": {
+      "year": 2008
+    },
+    "end": {
+      "year": 2008
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources differ on who began the fighting; one source dates hostilities from 1 August, others from 7 August."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "7 August 2008",
+        "source": "src-pace"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "12 August 2008",
+        "source": "src-pace"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August 7th, 2008",
+        "source": "src-osu"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August 26th",
+        "source": "src-osu"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August 2008",
+        "source": "src-wp"
+      }
+    ],
+    "display": "7–12 August 2008 (war); ceasefire 12 August"
+  },
+  "where": {
+    "lat": 42.22764,
+    "lon": 43.96861,
+    "elevation_m": null,
+    "modern_name": "Tskhinvali, South Ossetia, Georgia (proxy pin: city where open warfare began; the war spread across Georgia)",
+    "historical_name": "Tskhinvali, South Ossetia, Georgia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-atlas"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Regarded as the first European war of the 21st century; led to Russian recognition of two breakaway regions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-pace",
+      "url": "https://assembly.coe.int/nw/xml/XRef/Xref-XML2HTML-en.asp?fileid=17681",
+      "title": "The consequences of the war between Georgia and Russia",
+      "publisher": "Parliamentary Assembly of the Council of Europe",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osu",
+      "url": "http://georgica.tsu.edu.ge/files/05-Security/Jones-2008.pdf",
+      "title": "Clash in the Caucasus: Georgia, Russia, and the Fate of South Ossetia (Origins, Nov 2008)",
+      "publisher": "Ivane Javakhishvili Tbilisi State University (Georgica repository)",
+      "author": "Stephen Jones",
+      "date_published": "2008-11",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Russo-Georgian_War&oldid=1380945541",
+      "title": "Russo-Georgian War (Wikipedia, revision 1380945541)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "wiki_quality": "GA",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-atlas",
+      "url": "https://www.sitesatlas.com/city/GG-Tskhinvali/",
+      "title": "Ts'khinvali, Georgia (World Sites Atlas)",
+      "publisher": "Sitesatlas",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Tskhinvali as proxy; war also covered Abkhazia and other Georgian cities. Sources differ on start (1 vs 7 August) and on responsibility; coordinates from a commercial gazetteer.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:35:42.894Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2008",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In August 2008 Russia, together with South Ossetian and Abkhaz forces, fought Georgia after fighting around Tskhinvali in South Ossetia escalated into open warfare on 7 August.",
+        "source": "src-pace"
+      },
+      {
+        "span": "2008",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "A ceasefire was signed on 12 August, and about 192,000 people were displaced.",
+        "source": "src-pace",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

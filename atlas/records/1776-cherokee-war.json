@@ -1,0 +1,175 @@
+{
+  "id": "1776-cherokee-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Cherokee War of 1776",
+  "summary": "In 1776 Cherokee warriors, including followers of Dragging Canoe, attacked frontier settlements. South Carolina, North Carolina and Virginia forces answered by burning Cherokee towns in the Lower, Valley and Overhill areas; sources count 36 to 52 towns and crops destroyed. Older leaders Little Carpenter and Oconostota accepted neutrality and land cessions, while Dragging Canoe led followers to Chickamauga Creek.",
+  "when": {
+    "start": {
+      "year": 1776,
+      "iso": "1776-07-20"
+    },
+    "end": {
+      "year": 1776
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 20 July 1776 clash near the Holston River (American Indian magazine); armies marched from late July to mid-October, so the end is given to the year only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "July 20, 1776",
+        "source": "src-aim"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "at the end of July",
+        "source": "src-ncp"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Mid-October",
+        "source": "src-ncp"
+      }
+    ],
+    "display": "July to October 1776"
+  },
+  "where": {
+    "lat": 35.555,
+    "lon": -84.13111,
+    "elevation_m": null,
+    "modern_name": "Chota, Monroe County, Tennessee, USA (Overhill Cherokee towns; campaign also covered western North Carolina and upper South Carolina)",
+    "historical_name": "Cherokee homeland: Overhill, Middle, Valley and Lower Towns, on the colonial frontier of Virginia, North Carolina and South Carolina",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wd-chota"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Broke Cherokee power in the southern Appalachians, cost land, and split the nation between accommodation and the Chickamauga resistance."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the burning of dozens of Cherokee towns and food stores, which displaced many people, some of whom fled to Florida.",
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "1779-sullivan-expedition",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-aim",
+      "url": "https://www.americanindianmagazine.org/story/demand-blood-cherokee-war-1776",
+      "title": "A Demand of Blood: The Cherokee War of 1776",
+      "publisher": "American Indian magazine, Smithsonian National Museum of the American Indian",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ncp",
+      "url": "https://www.ncpedia.org/rutherfords-campaign",
+      "title": "Rutherford's Campaign",
+      "publisher": "NCpedia, State Library of North Carolina",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-te",
+      "url": "https://tennesseeencyclopedia.net/entries/dragging-canoe/",
+      "title": "Dragging Canoe",
+      "publisher": "Tennessee Encyclopedia (Tennessee Historical Society)",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-chota",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5105371.json",
+      "title": "Wikidata: Chota",
+      "publisher": "Wikidata",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: town counts (36 per NCpedia, 52 per the NMAI magazine) and the pin, which is Chota as the centre of a wide area. Not confirmed on a Cherokee Nation page.",
+  "author": "historian-agent:o-s32",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:44:23.756Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1776-07-20",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In 1776 Cherokee warriors, including followers of Dragging Canoe, attacked frontier settlements.",
+        "source": "src-aim"
+      },
+      {
+        "span": "1776",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "South Carolina, North Carolina and Virginia forces answered by burning Cherokee towns in the Lower, Valley and Overhill areas; sources count 36 to 52 towns and crops destroyed.",
+        "source": "src-aim",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s3",
+  "updated": "2026-10-22",
+  "audience_note": "Describes an execution by burning and colonial violence against Indigenous people.",
+  "id": "1511-hatuey-resistance",
+  "kind": "event",
+  "title": "Hatuey's resistance to the Spanish conquest of Cuba",
+  "summary": "Hatuey, a Taíno leader from Hispaniola, crossed to Cuba to warn its people about the Spaniards. After Diego Velázquez's conquest began in 1511, he resisted, was captured, and was burned at the stake at Yara on 2 February 1512. His reported refusal of baptism, recorded by Bartolomé de las Casas, made him a symbol of Indigenous resistance in Cuba.",
+  "when": {
+    "start": {
+      "year": 1511
+    },
+    "end": {
+      "year": 1512
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Start is the year the Velázquez conquest of Cuba began, per the World History Encyclopedia page; no opened page dates Hatuey's own arrival in Cuba. The execution date comes from a single popular source."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as dated by the source)",
+        "value": "On this date in 1512 [post dated 2 February], the Taino Indian cacique Hatuey was burned alive at Yara, Cuba",
+        "source": "src-executedtoday"
+      },
+      {
+        "calendar": "Gregorian (as dated by the source)",
+        "value": "Spanish conquest of Cuba led by Diego Velázquez de Cuéllar in 1511-13",
+        "source": "src-whe-hatuey"
+      }
+    ],
+    "display": "1511–1512 (executed 2 February 1512)"
+  },
+  "where": {
+    "lat": 20.27417,
+    "lon": -76.95227,
+    "elevation_m": null,
+    "modern_name": "Yara, Granma Province, Cuba",
+    "historical_name": "Yara, eastern Cuba (Oriente), Spanish Indies under the Crown of Castile; Taíno territory under conquest",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-geonames-yara"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Hatuey is Cuba's best-known Indigenous resister and an early, widely taught example of Taíno resistance to Spanish conquest."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-executedtoday",
+      "url": "https://www.executedtoday.com/2008/02/02/1512-hatuey/",
+      "title": "1512: Hatuey, defied Spanish colonization",
+      "publisher": "Executed Today",
+      "author": null,
+      "date_published": "2008-02-02",
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-hatuey",
+      "url": "https://www.worldhistory.org/image/16145/statue-of-hatuey/",
+      "title": "Statue of Hatuey",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-yara",
+      "url": "https://www.geonames.org/search.html?q=Yara&country=CU",
+      "title": "GeoNames search results: Yara, Granma, Cuba",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Place and day (Yara, 2 Feb 1512) rest on one popular site; the World History page gives only the year 1512. Another account places the burning at Baracoa. The Las Casas account was not opened directly. Hatuey's arrival date in Cuba is unverified, so the start is the conquest year.",
+  "published_at": "2026-10-22T03:32:02.127Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1511",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Hatuey, a Taíno leader from Hispaniola, crossed to Cuba to warn its people about the Spaniards.",
+        "source": "src-executedtoday"
+      },
+      {
+        "span": "1512",
+        "action": "pulse { radius_km: 64 }",
+        "caption": "After Diego Velázquez's conquest began in 1511, he resisted, was captured, and was burned at the stake at Yara on 2 February 1512.",
+        "source": "src-executedtoday",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

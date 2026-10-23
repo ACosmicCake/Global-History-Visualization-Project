@@ -1,0 +1,202 @@
+{
+  "id": "place-kuelap-fortress",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Kuélap",
+  "aliases": [
+    "Kuelap"
+  ],
+  "summary": "Kuélap is a walled stone citadel of the Chachapoya people on a limestone promontory about 3,000 m above sea level in Amazonas, northern Peru. Its perimeter wall is 10 to 20 m high and the citadel is about 584 m long. Andina dates its construction to the 11th to 16th centuries.",
+  "when": {
+    "start": {
+      "year": 1001
+    },
+    "end": {
+      "year": 1600
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 500,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Andina: built between the 11th and 16th centuries AD. Mincetur dates the occupation from about the 5th century to the early Spanish presence in the 16th, so the start is uncertain."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Andina)",
+        "value": "entre los siglos XI y XVI d.C.",
+        "source": "src-andina-kuelap"
+      },
+      {
+        "calendar": "CE (Mincetur)",
+        "value": "siglo V de nuestra era",
+        "source": "src-mincetur-kuelap"
+      }
+    ],
+    "display": "Built 11th–16th centuries"
+  },
+  "where": {
+    "lat": -6.4173588,
+    "lon": -77.9239114,
+    "elevation_m": null,
+    "modern_name": "Kuélap, Tingo district, Luya province, Amazonas, Peru",
+    "historical_name": "Kuélap, Chachapoya citadel, Utcubamba valley",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-kuelap"
+    ]
+  },
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "Hilltop citadel enclosed by a perimeter wall, about 584 m long and 110 m across at the widest, on a limestone promontory.",
+      "source": "src-mincetur-kuelap",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-mincetur-kuelap",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 20,
+          "unit": "m",
+          "source": "src-mincetur-kuelap",
+          "note": "\"varía entre 10 y 20 metros de alto\"; Andina: up to 19 m in places"
+        },
+        {
+          "part": "length",
+          "value": 584,
+          "unit": "m",
+          "source": "src-mincetur-kuelap",
+          "note": "citadel \"cerca de 584 metros de largo\"; Andina: \"casi 600 metros\""
+        },
+        {
+          "part": "width",
+          "value": 110,
+          "unit": "m",
+          "source": "src-mincetur-kuelap",
+          "note": "\"promedio de 110 metros en la parte más ancha\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "citadel drawn as a path at about 584 m"
+      },
+      {
+        "level": "local",
+        "representation": "procedural perimeter wall 584 m long, up to 20 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1001,
+        "end_year": 1600,
+        "state": "construction",
+        "description": "Built between the 11th and 16th centuries AD (Andina); Mincetur dates the occupation from about the 5th century to the early Spanish presence in the 16th.",
+        "source": "src-andina-kuelap"
+      },
+      {
+        "start_year": 1601,
+        "end_year": null,
+        "state": "intact",
+        "description": "Standing as an archaeological site after the early Spanish presence in the 16th century (Mincetur).",
+        "source": "src-mincetur-kuelap"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Peru's tourism ministry inventories it as a monumental archaeological zone, and its perimeter wall rises 10 to 20 m."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-mincetur-kuelap",
+      "url": "https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=754",
+      "title": "Zona Arqueológica Monumental Kuélap - Recursos Turísticos",
+      "publisher": "Ministerio de Comercio Exterior y Turismo (Mincetur), Peru",
+      "author": "Ministerio de Comercio Exterior y Turismo (Mincetur), Peru",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-andina-kuelap",
+      "url": "https://andina.pe/agencia/noticia-kuelap-monumental-conoce-importancia-esta-joya-cultural-y-turistica-amazonas-878670.aspx",
+      "title": "Kuélap monumental: conoce la importancia de esta joya cultural y turística de Amazonas",
+      "publisher": "Agencia Andina",
+      "author": "Agencia Andina",
+      "date_published": "2022-01-31",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-kuelap",
+      "url": "https://nominatim.openstreetmap.org/search?q=Kuelap&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Kuélap, AM-111, Tingo, Luya, Amazonas, way 157862627 (-6.4173588, -77.9239114)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape wall with linear true, as instructed. Height, length and width are Mincetur (one structure: the citadel and its perimeter wall); height 20 m is the upper end of \"10 a 20 m\", Andina says up to 19 m. Start 1001 is the Andina construction period; Mincetur says occupation begins about the 5th century. The Ministry of Culture page on gob.pe could not be opened. The 1601 \"intact\" phase is only a placeholder meaning the site still stands.",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:07.369Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

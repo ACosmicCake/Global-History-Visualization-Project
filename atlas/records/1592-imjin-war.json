@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1592-imjin-war",
+  "kind": "event",
+  "title": "Imjin War (Japanese invasions of Korea)",
+  "summary": "From 1592 to 1598 Toyotomi Hideyoshi's armies invaded Korea, aiming to conquer Ming China. They took Seoul and Pyongyang in 1592, but Admiral Yi Sun-sin's navy, Ming troops and Korean irregulars stalled the advance. A second invasion in 1597 fared worse, and Japan withdrew after Hideyoshi died in September 1598.",
+  "when": {
+    "start": {
+      "year": 1592
+    },
+    "end": {
+      "year": 1598
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The army sailed in May 1592; Hideyoshi died in September 1598 and the invasion was abandoned."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "The two Japanese invasions of Korea between 1592 and 1598 CE, otherwise known as the Imjin Wars",
+        "source": "src-whe-imjin"
+      },
+      {
+        "calendar": "CE",
+        "value": "invaded Chosŏn Korea in 1592 ... the Imjin War ended after the Japanese withdrew their troops from Korea in 1598",
+        "source": "src-ucla-imjin"
+      }
+    ],
+    "display": "1592–1598"
+  },
+  "where": {
+    "lat": 35.18,
+    "lon": 129.075,
+    "elevation_m": 0,
+    "modern_name": "Busan, South Korea (landing point; the war spread across the peninsula)",
+    "historical_name": "Pusan (Busan), fort and port at the southeast tip of the Korean peninsula, Joseon Korea",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 35.18,
+          "lon": 129.075,
+          "year": 1592,
+          "date": "May 1592 (the army sailed in May and captured the fort near Pusan)",
+          "label": "Busan: landing and capture of the fort.",
+          "source": "src-whe-imjin",
+          "coordinate_source": "src-wd-busan"
+        },
+        {
+          "lat": 37.56,
+          "lon": 126.99,
+          "year": 1592,
+          "date": "12 June 1592",
+          "label": "Seoul: captured; King Seonjo fled north.",
+          "source": "src-whe-imjin",
+          "coordinate_source": "src-wd-seoul"
+        },
+        {
+          "lat": 39.0167,
+          "lon": 125.7475,
+          "year": 1592,
+          "date": "23 July 1592",
+          "label": "Pyongyang: captured by Konishi Yukinaga's force.",
+          "source": "src-whe-imjin",
+          "coordinate_source": "src-wd-pyongyang"
+        }
+      ]
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-busan"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "One of the largest military operations in East Asia before the 20th century, with lasting effects on Korea, China and Japan."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass killing, mutilation of victims and the removal of prisoners.",
+  "related": [
+    {
+      "id": "person-yi-sun-sin",
+      "type": "related"
+    },
+    {
+      "id": "place-himeji-castle",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-imjin",
+      "url": "https://www.worldhistory.org/article/1398/the-japanese-invasion-of-korea-1592-8-ce/",
+      "title": "The Japanese Invasion of Korea, 1592-8 CE",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2019-06-11",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ucla-imjin",
+      "url": "https://koreanhistory.humspace.ucla.edu/items/show/94",
+      "title": "Blood and Water - How Chosŏn Korea Won Against Hideyoshi’s Japan, 1592-1598",
+      "publisher": "UCLA Korean History and Culture Digital Museum",
+      "author": "Luna Choi",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-busan",
+      "url": "https://www.wikidata.org/wiki/Q16520",
+      "title": "Busan (Wikidata Q16520)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-seoul",
+      "url": "https://www.wikidata.org/wiki/Q8684",
+      "title": "Seoul (Wikidata Q8684)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-pyongyang",
+      "url": "https://www.wikidata.org/wiki/Q18808",
+      "title": "Pyongyang (Wikidata Q18808)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1592",
+        "action": "path.trace {}",
+        "caption": "A Japanese army landed near Busan in May 1592, took Seoul on 12 June and Pyongyang on 23 July.",
+        "source": "src-whe-imjin"
+      },
+      {
+        "span": "1593",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The first invasion stalled in 1593 under pressure from the Korean navy, Ming troops and local rebels.",
+        "source": "src-whe-imjin"
+      },
+      {
+        "span": "1598",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Hideyoshi died in September 1598 and Japan withdrew; one estimate counts at least 125,000 Korean deaths.",
+        "source": "src-whe-imjin",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of casualty and force figures: World History Encyclopedia gives 158,000 invaders plus 9,200 mariners in 1592 and at least 125,000 Korean dead; the UCLA essay says only that hundreds of thousands fought. Pyongyang coordinates are a Wikidata point.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s36",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:32:43.337Z"
+}

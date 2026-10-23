@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1858-first-transatlantic-telegraph-cable",
+  "kind": "event",
+  "title": "First transatlantic telegraph cable",
+  "summary": "In August 1858 the telegraph ships Niagara and Agamemnon, having spliced the cable mid-Atlantic on 29 July, landed its two ends at Trinity Bay, Newfoundland, and Valentia Island, Ireland, by 5 August. Queen Victoria and President Buchanan exchanged the first official messages from 16 August, but the cable failed within a few weeks.",
+  "when": {
+    "start": {
+      "year": 1858
+    },
+    "end": {
+      "year": 1858
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "IEEE Spectrum has the Niagara arriving in Newfoundland on 4 August; Scientific American has her anchoring at 1:45 A.M. on 5 August. Sources give no exact failure date (valentiaisland.ie: within three weeks)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 29 July, as Field recorded in his journal, the two ships spliced",
+        "source": "src-ieee-cable"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On 5 August 1858, both ships reached their destinations",
+        "source": "src-valentia-cable"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On 16 August communication was established",
+        "source": "src-valentia-cable"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "At 5 15 A. M. the telegraph cable was landed",
+        "source": "src-sciam-cable"
+      }
+    ],
+    "display": "29 July – August 1858"
+  },
+  "where": {
+    "lat": 51.9,
+    "lon": -10.35,
+    "elevation_m": null,
+    "modern_name": "Valentia Island, County Kerry, Ireland and Trinity Bay, Newfoundland (cable ends)",
+    "historical_name": "Valentia, Ireland and Trinity Bay, Newfoundland (cable ends; Newfoundland telegraph house at the head of Bull Arm per Scientific American)",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 48.18,
+          "lon": -53.26,
+          "year": 1858.59,
+          "date": "4-5 August 1858 (IEEE gives 4 August arrival, Scientific American 5 August landing)",
+          "label": "Trinity Bay, Newfoundland: western end; the telegraph house was at the head of Bull Arm. Point is the bay.",
+          "source": "src-sciam-cable",
+          "coordinate_source": "src-wd-trinity"
+        },
+        {
+          "lat": 51.9,
+          "lon": -10.35,
+          "year": 1858.592,
+          "date": "5 August 1858",
+          "label": "Valentia Island, Ireland: eastern end, landed 5 August. Point is the island centre.",
+          "source": "src-valentia-cable",
+          "coordinate_source": "src-wd-valentia"
+        }
+      ]
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wd-valentia",
+      "src-wd-trinity"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america",
+    "oceans"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The first working telegraph link between continents, even though it failed within weeks."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ieee-cable",
+      "url": "https://spectrum.ieee.org/the-first-transatlantic-telegraph-cable-was-a-bold-beautiful-failure",
+      "title": "The First Transatlantic Telegraph Cable Was a Bold, Beautiful Failure",
+      "publisher": "IEEE Spectrum",
+      "author": "IEEE Spectrum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-sciam-cable",
+      "url": "https://www.scientificamerican.com/article/the-atlantic-cable-1858-08-21/",
+      "title": "The Atlantic Cable (21 August 1858)",
+      "publisher": "Scientific American",
+      "author": "Scientific American",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-valentia-cable",
+      "url": "https://valentiaisland.ie/valentia-transatlantic-cable-station-post/",
+      "title": "Valentia Transatlantic Cable Station",
+      "publisher": "Valentia Island community website (valentiaisland.ie)",
+      "author": "Valentia Island community website (valentiaisland.ie)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-valentia",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1146838.json",
+      "title": "Wikidata entry for Valentia Island (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-trinity",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2274444.json",
+      "title": "Wikidata entry for Trinity Bay, Newfoundland (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the 4 vs 5 August landing at Newfoundland (sources differ), and the failure date (sources say only within a few weeks). IEEE and Scientific American give different mid-Atlantic splice coordinates, so none is used.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1858-07-29",
+        "action": "path.trace {}",
+        "caption": "The Niagara and Agamemnon splice the cable mid-Atlantic, then each steams toward its own shore, paying the cable out behind.",
+        "source": "src-ieee-cable",
+        "consequence": false
+      },
+      {
+        "span": "1858-08-05",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The cable is landed at Trinity Bay in Newfoundland and at Valentia in Ireland, joining the two continents.",
+        "source": "src-valentia-cable",
+        "consequence": false
+      },
+      {
+        "span": "1858-08-16",
+        "action": "region.fill { radius_km: 120 }",
+        "caption": "Queen Victoria and President Buchanan exchange the first official messages, but the cable stops working within a few weeks.",
+        "source": "src-ieee-cable",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:51.355Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

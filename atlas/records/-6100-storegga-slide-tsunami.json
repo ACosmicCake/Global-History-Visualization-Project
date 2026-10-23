@@ -1,0 +1,147 @@
+{
+  "id": "-6100-storegga-slide-tsunami",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Storegga Slide and tsunami",
+  "summary": "The Storegga Slide, a submarine landslide off the Norwegian coast, displaced a sediment volume of 2400 to 3200 km³ over c. 95 000 km² of seabed. Its tsunami, about 8,150 calendar years ago, left deposits at least 20 m above the sea level of the time in Shetland, 10–12 m in western Norway and 1.5–5.5 m in Denmark.",
+  "when": {
+    "start": {
+      "year": -6200
+    },
+    "end": {
+      "year": -6200
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Source states \"about 8,150 calendar years ago\"; converted with year = 1950 - 8150 = -6200, assuming calendar BP means before 1950. The plus/minus of 100 years is a placeholder for \"about\", not a sourced figure. Wikidata lists the event as 6225-6170 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "calendar years BP",
+        "value": "ca 8150 calendar years BP",
+        "source": "src-bondevik2003"
+      },
+      {
+        "calendar": "years ago",
+        "value": "~8150 yr ago",
+        "source": "src-fruergaard2015"
+      }
+    ],
+    "display": "c. 8,150 calendar years ago (about 6200 BCE)"
+  },
+  "where": {
+    "lat": 63.7,
+    "lon": 0.1,
+    "elevation_m": null,
+    "modern_name": "Storegga Slide, Norwegian Sea off western Norway",
+    "historical_name": "Norwegian continental slope; no polities (Mesolithic coastal peoples)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata-storegga"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "europe"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "One of the largest mapped Holocene submarine slides, with a tsunami recorded across the North Sea."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-6200-8-2-kiloyear-event",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bondevik2003",
+      "url": "https://discovery.dundee.ac.uk/en/publications/record-breaking-height-for-8000-year-old-tsunami-in-the-north-atl/",
+      "title": "Record-breaking height for 8000-year-old tsunami in the North Atlantic (Eos 84(31):289-293)",
+      "publisher": "Eos, Transactions American Geophysical Union; University of Dundee research portal",
+      "author": "Bondevik, Mangerud, Dawson, Dawson, Lohne",
+      "date_published": "2003-08-05",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers.runup"
+      ]
+    },
+    {
+      "id": "src-fruergaard2015",
+      "url": "https://pub.geus.dk/en/publications/tsunami-propagation-over-a-wide-shallow-continental-shelf-caused-/",
+      "title": "Tsunami propagation over a wide, shallow continental shelf caused by the Storegga slide (Geology 43:1047-1050)",
+      "publisher": "Geology (Geological Society of America); Geological Survey of Denmark and Greenland (GEUS)",
+      "author": "Fruergaard et al.",
+      "date_published": "2015-12",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "numbers.runup"
+      ]
+    },
+    {
+      "id": "src-haflidason2004",
+      "url": "https://nora.nerc.ac.uk/id/eprint/114883/",
+      "title": "The Storegga Slide: architecture, geometry and slide development (Marine Geology 213:201-234)",
+      "publisher": "Marine Geology (Elsevier); NERC Open Research Archive",
+      "author": "Haflidason et al.",
+      "date_published": "2004",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "numbers.volume"
+      ]
+    },
+    {
+      "id": "src-wikidata-storegga",
+      "url": "https://www.wikidata.org/wiki/Q1288535",
+      "title": "Wikidata item Q1288535 (Storegga Slide), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the id: it says 6100 BCE but the sources give about 8,150 cal BP (about 6200 BCE). Pin is the Wikidata point for the slide, not a precise scar location. A 2023 revision splitting off an earlier \"Nyegga Slide\" appeared only in a search result and was not opened.",
+  "author": "historian-agent:o-s63",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:14:25.806Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

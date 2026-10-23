@@ -1,0 +1,133 @@
+{
+  "id": "1223-battle-of-the-kalka-river",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of the Kalka River",
+  "summary": "On the Kalka River, a Mongol army under Jebe and Subutai defeated a coalition of Rus' principalities and Cumans led by two Mstislavs. The Rus' pursued a feigned retreat, were scattered, and were routed; Mstislav of Kiev's men surrendered and were slaughtered. It was the first significant Mongol engagement in Europe.",
+  "when": {
+    "start": {
+      "year": 1223
+    },
+    "end": {
+      "year": 1223
+    },
+    "precision": "day",
+    "display": "31 May 1223",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The battle was fought on May 31, 1223",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "on May 31, 1223",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 47.25079,
+    "lon": 37.49569,
+    "elevation_m": null,
+    "modern_name": "Kalka River, thought to be the Kalchyk, present-day Donetsk Oblast, Ukraine",
+    "historical_name": "Kalka River",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "First significant Mongol military engagement in Europe, with a decisive victory over the Rus' princes."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions the slaughter of surrendered soldiers and execution of a prince.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_the_Kalka_River&oldid=1380978350",
+      "title": "Battle of the Kalka River (Wikipedia, revision 1380978350)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "GA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20260109033447/https://www.britannica.com/event/Battle-of-the-Kalka-River",
+      "title": "Battle of the Kalka River (1223) | Description & Significance | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q570204",
+      "title": "Wikidata Q570204 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The river's exact location is unknown; sources only suggest the Kalchyk. Army sizes are disputed among historians, so none are given in the summary. The Wikipedia text is truncated at the Aftermath section. (Drafted by the Wikipedia pipeline from Wikipedia, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:29.476Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1223",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "On the Kalka River, a Mongol army under Jebe and Subutai defeated a coalition of Rus' principalities and Cumans led by two Mstislavs.",
+        "source": "src-wp"
+      },
+      {
+        "span": "1223",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "It was the first significant Mongol engagement in Europe.",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

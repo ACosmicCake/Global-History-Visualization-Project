@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-great-barrier-reef",
+  "kind": "place",
+  "title": "Great Barrier Reef",
+  "summary": "The Great Barrier Reef, off the Queensland coast of Australia, is the world's most extensive coral reef ecosystem. GBRMPA says its northernmost part began to form about half a million years ago, and UNESCO says reefs have grown on the continental shelf over the past 15,000 years. It has over 3,000 separate reefs and about 1,050 islands, and was inscribed as World Heritage in 1981.",
+  "when": {
+    "start": {
+      "year": -500000
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 100000,
+      "start_plus_years": 100000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "GBRMPA: northernmost part began to form approximately half a million years ago (rounded). UNESCO: reefs have grown on the continental shelf over the past 15,000 years, so the living reef is younger. End is the present: the reef survives."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "Approximately half a million years ago, the northernmost part of the Great Barrier began to form",
+        "source": "src-gbrmpa-reef"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "over the past 15,000 years reefs have grown on the continental shelf",
+        "source": "src-unesco-gbr"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Practically the entire ecosystem was inscribed as World Heritage in 1981",
+        "source": "src-unesco-gbr"
+      }
+    ],
+    "display": "Forming for c. 500,000 years; World Heritage since 1981"
+  },
+  "where": {
+    "lat": -18.286111,
+    "lon": 147.7,
+    "elevation_m": null,
+    "modern_name": "Great Barrier Reef, off Queensland, Australia",
+    "historical_name": "Great Barrier Reef, off the east coast of the Queensland mainland; the reef spans about 10 degrees S to 24 degrees S",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 700,
+    "coordinate_sources": [
+      "src-unesco-gbr"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "World's most extensive coral reef ecosystem, inscribed on the World Heritage List in 1981."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-gbrmpa-reef",
+      "url": "https://www.gbrmpa.gov.au/learn/world-heritage-area",
+      "title": "World Heritage Area",
+      "publisher": "Great Barrier Reef Marine Park Authority",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-gbr",
+      "url": "https://whc.unesco.org/en/list/154/",
+      "title": "Great Barrier Reef",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates mix geological and heritage time: the half-million-year figure is for the oldest northern part, the 15,000-year figure for reef growth on the shelf. The pin is the UNESCO reference point; the property is about 348,000 km2 across 14 degrees of latitude.",
+  "published_at": "2026-10-22T08:21:39.025Z"
+}

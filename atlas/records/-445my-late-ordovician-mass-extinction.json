@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "-445my-late-ordovician-mass-extinction",
+  "kind": "event",
+  "title": "Late Ordovician mass extinction",
+  "summary": "A global study of brachiopods across the Late Ordovician to Early Silurian found two phases of loss: 51.0% of genera eliminated in the first and 41.3% in the second, for a total of 69.0% of genera. The Ordovician–Silurian boundary at Dob's Linn, Scotland, is modelled at 443 million years ago, with a stated uncertainty of 1.5 million years.",
+  "when": {
+    "start": {
+      "year": -444500000
+    },
+    "end": {
+      "year": -441500000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1500000,
+      "start_plus_years": 1500000,
+      "end_minus_years": 1500000,
+      "end_plus_years": 1500000,
+      "note": "No opened page dates the extinction itself. The span is the Ordovician/Silurian boundary age of 443 +/-1.5 Ma from the Geological Society page; the extinction phases fall in the Late Ordovician (Hirnantian) to Early Silurian."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon",
+        "value": "443±1.5 Ma for the Ordovician/Silurian boundary",
+        "source": "src-geolsoc"
+      }
+    ],
+    "display": "c. 445–442 million years ago"
+  },
+  "where": {
+    "lat": 55.4298,
+    "lon": -3.2706,
+    "elevation_m": null,
+    "modern_name": "Dob's Linn, near Moffat, Dumfries and Galloway, Scotland (Ordovician–Silurian boundary section; the event was global)",
+    "historical_name": "Margin of the Iapetus Ocean (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-osm-dobslinn"
+    ],
+    "paleo": {
+      "lat": -18.15,
+      "lon": -79.94,
+      "age_ma": 443,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point -3.27, 55.43 reconstructed to 443 Ma."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "One of the five largest mass extinctions of marine life."
+  },
+  "related": [
+    {
+      "id": "-485my-great-ordovician-biodiversification-event",
+      "type": "related"
+    },
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-geolsoc",
+      "url": "https://www.geolsoc.org.uk/science-and-policy/specialist-groups/stratigraphy-commission/proposed-and-ratified-gssps-in-britain/gssp-dobbs-linn/",
+      "title": "Rhuddanian GSSP, Dob's Linn, Moffat, Scotland",
+      "publisher": "Geological Society of London",
+      "author": "Geological Society of London",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-usgs-brach",
+      "url": "https://www.usgs.gov/publications/global-analyses-brachiopod-faunas-through-ordovician-and-silurian-transition-reducing",
+      "title": "Global analyses of brachiopod faunas through the Ordovician and Silurian transition",
+      "publisher": "U.S. Geological Survey",
+      "author": "U.S. Geological Survey",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-dobslinn",
+      "url": "https://nominatim.openstreetmap.org/search?q=Dob's+Linn&format=json",
+      "title": "OpenStreetMap Nominatim: Dob's Linn, Scotland",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the date. Opened pages date only the boundary (443 +/-1.5 Ma), not the extinction; the id's 445 Ma is not on an opened page. Brachiopod percentages are one group's losses, not the overall extinction magnitude. Pin is the GSSP section, chosen as a sourced key section.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:47.185Z"
+}

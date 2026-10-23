@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0509-expulsion-of-the-peisistratids",
+  "kind": "event",
+  "title": "Expulsion of the Peisistratid tyrants from Athens",
+  "summary": "In 510 BCE the Spartan king Cleomenes I besieged the tyrant Hippias on the Acropolis and expelled him from Athens, after the exiled Cleisthenes had won Sparta's help. Power passed to the Athenian magistrates, and Cleisthenes later introduced reforms that gave power to the demos.",
+  "when": {
+    "start": {
+      "year": -509
+    },
+    "end": {
+      "year": -509
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 1,
+      "end_plus_years": 0,
+      "note": "Livius.org gives 510 BCE on its Athens page and 511/510 BCE on its Cleisthenes page; 511 BCE is astronomical -510."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Livius.org, Athens)",
+        "value": "510 BCE: Hippias, the son of Pisistratus, is expelled",
+        "source": "src-livius-athens"
+      },
+      {
+        "calendar": "BCE (Livius.org, Cleisthenes)",
+        "value": "511/510 BCE",
+        "source": "src-livius-cleisthenes"
+      },
+      {
+        "calendar": "B.C.E. (EBSCO)",
+        "value": "510 B.C.E.",
+        "source": "src-ebsco-hippias"
+      }
+    ],
+    "display": "510 BCE (511/510 in one source)"
+  },
+  "where": {
+    "lat": 37.9755648,
+    "lon": 23.7348324,
+    "elevation_m": null,
+    "modern_name": "Athens, Greece (the siege was on the Acropolis)",
+    "historical_name": "Athens, polis in Attica, ruled by the tyrant Hippias",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm-athens"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "End of the Peisistratid tyranny, the step before the Cleisthenic reforms."
+  },
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "place-acropolis-of-athens",
+      "type": "related"
+    },
+    {
+      "id": "-0489-battle-of-marathon",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-athens",
+      "url": "https://www.livius.org/articles/place/athens/",
+      "title": "Athens",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-cleisthenes",
+      "url": "https://www.livius.org/articles/person/cleisthenes/",
+      "title": "Cleisthenes",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-hippias",
+      "url": "https://www.ebsco.com/research-starters/history/hippias-athens/",
+      "title": "Hippias of Athens (Research Starter)",
+      "publisher": "EBSCO Information Services",
+      "author": "Richard M. Berthold",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-athens",
+      "url": "https://nominatim.openstreetmap.org/search?q=Athens+Greece&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Athens, node 441183 (37.9755648, 23.7348324)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates differ by one year between sources (510 vs 511/510). Coordinates are the OSM city node; the siege site is the Acropolis, about 1 km away. Livius says Cleisthenes bribed the Pythian priestess; the summary leaves this out.",
+  "published_at": "2026-10-22T10:33:51.206Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

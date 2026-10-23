@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "1280-polynesian-settlement-of-new-zealand",
+  "kind": "movement",
+  "title": "Polynesian settlement of New Zealand",
+  "summary": "Radiocarbon dates on Pacific rat bones and rat-gnawed seeds show the rat reached both main islands of New Zealand around AD 1280, a millennium later than earlier estimates. Because the rat travelled with voyagers, this marks the first human arrival, making it the point at which human history in New Zealand begins.",
+  "when": {
+    "start": {
+      "year": 1280
+    },
+    "end": {
+      "year": 1300
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "note": "Wilmshurst et al. (2008) give about 1280 AD for introduction of the Pacific rat; a Landcare Research summary states 1280-1300 AD as the earliest evidence. Dates are calibrated radiocarbon ages. Not to be confused with the 2011 East Polynesia chronology in the linked record."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Calibrated radiocarbon, AD",
+        "value": "Pacific rat was introduced to both main islands of New Zealand ≈1280 A.D.",
+        "source": "src-anu-wilmshurst"
+      },
+      {
+        "calendar": "Calibrated radiocarbon, AD",
+        "value": "earliest evidence for human colonization is about 1280-1300 AD",
+        "source": "src-sciencedaily"
+      }
+    ],
+    "display": "c. AD 1280–1300"
+  },
+  "where": {
+    "lat": -41.2,
+    "lon": 174,
+    "elevation_m": null,
+    "modern_name": "New Zealand (national centroid)",
+    "historical_name": "Aotearoa / New Zealand before first settlement; no recorded name at that date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-nz"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Marks the first human arrival in New Zealand, one of the last large lands to be settled by people."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1000-polynesian-settlement-of-east-polynesia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-anu-wilmshurst",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/dating-the-late-prehistoric-dispersal-of-polynesians-to-new-zeala/",
+      "title": "Dating the late prehistoric dispersal of Polynesians to New Zealand using the commensal Pacific rat (PNAS 105:7676-7680)",
+      "publisher": "Australian National University Research Portal (PNAS)",
+      "author": "Australian National University Research Portal (PNAS)",
+      "date_published": "2008-06-03",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sciencedaily",
+      "url": "https://www.sciencedaily.com/releases/2008/06/080603162919.htm",
+      "title": "New Zealand colonised 1000 years later than thought (Landcare Research release)",
+      "publisher": "ScienceDaily",
+      "author": "ScienceDaily",
+      "date_published": "2008-06-03",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-nz",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q664.json",
+      "title": "Wikidata entry for New Zealand (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Rat introduction dates human arrival indirectly; the 1280-1300 range is from a press summary of the paper, while the abstract says about 1280.",
+  "published_at": "2026-10-22T08:18:28.660Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1280",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Radiocarbon dates on Pacific rat bones and rat-gnawed seeds show the rat reached both main islands of New Zealand around AD 1280, a millennium later than earlier estimates.",
+        "source": "src-anu-wilmshurst"
+      },
+      {
+        "span": "1300",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Because the rat travelled with voyagers, this marks the first human arrival, making it the point at which human history in New Zealand begins.",
+        "source": "src-anu-wilmshurst",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1591-battle-of-tondibi",
+  "kind": "event",
+  "title": "Battle of Tondibi",
+  "summary": "In March 1591 a Moroccan army under Djudar Pasha defeated the Songhai army of Askia Ishak II at Tondibi, about 56 km from Gao. Moroccan firearms outgunned Songhai spears and bows. Djudar seized the deserted Gao, and Morocco took Timbuktu and Djenné; the defeat is regarded as the end of the Songhai Empire.",
+  "when": {
+    "start": {
+      "year": 1591
+    },
+    "end": {
+      "year": 1591
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "One page says the army had reached Tondibi by March 12; the other gives only 1591. The battle day is not stated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "The army \"had reached Tondibi\" by March 12 (1591)",
+        "source": "src-ebsco-songhai-fall"
+      },
+      {
+        "calendar": "CE",
+        "value": "The invasion began \"in 1591\"",
+        "source": "src-adf-tondibi"
+      }
+    ],
+    "display": "March 1591"
+  },
+  "where": {
+    "lat": 16.6531,
+    "lon": -0.2281,
+    "elevation_m": null,
+    "modern_name": "Tondibi, Gao Region, Mali",
+    "historical_name": "Tondibi, near Gao, Songhai Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-gn-tondibi"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive Moroccan victory that ended the Songhai Empire."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-songhai-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-timbuktu",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-songhai-fall",
+      "url": "https://www.ebsco.com/research-starters/history/fall-songhai-empire/",
+      "title": "Fall of the Songhai Empire (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-adf-tondibi",
+      "url": "https://adf-magazine.com/2026/09/a-16th-century-battle-changed-west-africa/",
+      "title": "A 16th Century Battle Changed West Africa",
+      "publisher": "Africa Defense Forum (US Africa Command)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-tondibi",
+      "url": "https://www.geonames.org/search.html?q=Tondibi&country=ML",
+      "title": "Tondibi (GeoNames)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the battle day (not stated on opened pages) and of the site: GeoNames Tondibi is a village whose distance from Gao roughly fits the 56 km in the EBSCO page.",
+  "author": "historian-agent:o-s34",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "March 1591",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "Moroccan musket-armed troops defeated the larger Songhai army at Tondibi.",
+        "source": "src-ebsco-songhai-fall"
+      },
+      {
+        "span": "1591",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Morocco then captured Gao, Timbuktu and Djenne, and the Songhai Empire is considered to have ended.",
+        "source": "src-adf-tondibi",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T09:04:55.469Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

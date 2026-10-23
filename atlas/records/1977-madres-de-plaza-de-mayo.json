@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1977-madres-de-plaza-de-mayo",
+  "kind": "event",
+  "title": "First march of the Madres de Plaza de Mayo",
+  "summary": "On Saturday 30 April 1977, mothers of people who had disappeared under Argentina's military dictatorship (1976 to 1983) met in Plaza de Mayo in front of the Casa Rosada. Told they could not stand still, they began walking in circles. The marches became a weekly Thursday ritual that carried on for decades.",
+  "when": {
+    "start": {
+      "year": 1977
+    },
+    "end": {
+      "year": 1977
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The first meeting is dated 30 April 1977; the marches continued weekly, paused only during the pandemic (Buenos Aires Herald)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "30 de abril de 1977",
+        "source": "src-madres-site"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "April 30, 1977",
+        "source": "src-bah-madres"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "22 de agosto de 1979",
+        "source": "src-madres-site"
+      }
+    ],
+    "display": "30 April 1977 (weekly marches continue)"
+  },
+  "where": {
+    "lat": -34.6084453,
+    "lon": -58.3721787,
+    "elevation_m": null,
+    "modern_name": "Plaza de Mayo, Buenos Aires, Argentina",
+    "historical_name": "Plaza de Mayo, Buenos Aires, Argentina, under military rule (1976–1983)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-plazademayo"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The start of a long-running public protest by relatives of the disappeared under Argentina's military dictatorship."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns enforced disappearances under a military dictatorship, including the disappearance of three of the group's founders.",
+  "sources": [
+    {
+      "id": "src-bah-madres",
+      "url": "https://buenosairesherald.com/human-rights/46-years-of-the-mothers-of-plaza-de-mayo",
+      "title": "46 years of the Mothers of Plaza de Mayo",
+      "publisher": "Buenos Aires Herald",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-madres-site",
+      "url": "https://madresplazademayolf.org.ar/madres/historia/",
+      "title": "Historia",
+      "publisher": "Madres de Plaza de Mayo Linea Fundadora (official site)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-plazademayo",
+      "url": "https://nominatim.openstreetmap.org/search?q=Plaza+de+Mayo+Buenos+Aires&format=json",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The number of mothers at the first meeting was not stated on either opened page (search snippets said 14, not confirmed), so it is left out. The association's founding act is dated 22 August 1979 on the official site. Mexico City was suggested as a link; no connection appears in the opened pages, so no link was made.",
+  "author": "historian-agent:o-s56",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:05:16.746Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1977",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On Saturday 30 April 1977, mothers of people who had disappeared under Argentina's military dictatorship (1976 to 1983) met in Plaza de Mayo in front of the Casa…",
+        "source": "src-bah-madres"
+      },
+      {
+        "span": "1977",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Told they could not stand still, they began walking in circles.",
+        "source": "src-bah-madres",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "id": "place-petra",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Petra and Al-Khazneh (the Treasury)",
+  "aliases": [
+    "Al-Khazneh",
+    "Khaznat al-Fir'awn",
+    "the Treasury"
+  ],
+  "summary": "Petra, the rock-cut capital of the Nabataeans in southern Jordan, was a caravan crossroads in Hellenistic and Roman times. Its best-known monument, Al-Khazneh or the Treasury, was carved into a cliff above the Siq in the late first century BCE or early first century CE, probably as a royal tomb. Its facade is about 39 m tall.",
+  "when": {
+    "start": {
+      "year": -8
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 30,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the carving of Al-Khazneh, dated by the MIT Libraries / Aga Khan record to 'ca. 9 BCE-ca. 40 CE' by its probable link to Aretas IV. The city itself was 'inhabited since prehistoric times' (UNESCO); this pin dates the modelled facade, not the founding of Petra. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE/CE (MIT Libraries, Aga Khan Visual Archive)",
+        "value": "ca. 9 BCE-ca. 40 CE",
+        "source": "src-mit-khazneh"
+      },
+      {
+        "calendar": "BC/AD (UNESCO)",
+        "value": "first centuries BC to AD",
+        "source": "src-unesco-326"
+      }
+    ],
+    "display": "Facade carved c. 9 BCE–40 CE; Nabataean city of the Hellenistic and Roman periods"
+  },
+  "where": {
+    "lat": 30.32208,
+    "lon": 35.45153,
+    "elevation_m": null,
+    "modern_name": "Al-Khazneh (the Treasury), Petra, Ma'an Governorate, Jordan",
+    "historical_name": "Nabataean capital, later within the Roman province of Arabia; Al-Khazneh stands above the Siq entrance",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-khazneh",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of the world's richest archaeological sites (UNESCO) and a caravan capital of the incense and silk trades; Al-Khazneh is among the most recognised facades in the world."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-326",
+      "url": "https://whc.unesco.org/en/list/326",
+      "title": "Petra (World Heritage List no. 326)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-mit-khazneh",
+      "url": "https://dome.mit.edu/handle/1721.3/55431",
+      "title": "Khaznat al-Fir'awn at Petra, Aga Khan Visual Archive",
+      "publisher": "MIT Libraries (Dome)",
+      "author": "June Williamson (photograph); description from Archnet",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-khazneh",
+      "url": "https://nominatim.openstreetmap.org/search?q=Al-Khazneh+Petra&format=json",
+      "title": "OpenStreetMap Nominatim: Al-Khazneh, way 488848937 (30.3220755, 35.4515251)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 326, geolocation (30.33056, 35.44333)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A single carved facade cut into the cliff face above the Siq, 24.90 m wide plus 4.70 m of side cutting, opening into a chamber hall. The depth of the interior is not given in the sources opened. UNESCO's property point lies about 0.9 km west of the facade, so the pin uses the OpenStreetMap way for Al-Khazneh.",
+      "source": "src-mit-khazneh",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-mit-khazneh",
+      "measurements": [
+        {
+          "part": "height (to the top of the urn)",
+          "value": 38.77,
+          "unit": "m",
+          "source": "src-mit-khazneh",
+          "note": "\"rises to a height of 38.77 m to the top of the urn\""
+        },
+        {
+          "part": "width (facade)",
+          "value": 24.9,
+          "unit": "m",
+          "source": "src-mit-khazneh",
+          "note": "\"24.90 m wide, plus an additional 4.70 m in side cutting\""
+        },
+        {
+          "part": "side cutting, width",
+          "value": 4.7,
+          "unit": "m",
+          "source": "src-mit-khazneh"
+        },
+        {
+          "part": "portico columns (Nabataean Corinthian)",
+          "value": 6,
+          "unit": "count",
+          "source": "src-mit-khazneh"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a red rock face with the facade as a flat block at true width and height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural facade block: lower order with six columns and pediment, upper order with the central circular tholos and urn"
+      },
+      {
+        "level": "street",
+        "representation": "niches, floral decoration and the interior chamber as labelled schematic reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -8,
+        "end_year": 40,
+        "state": "construction",
+        "description": "Carved c. 9 BCE-c. 40 CE, dated by its probable link to King Aretas IV rather than by inscription.",
+        "source": "src-mit-khazneh"
+      },
+      {
+        "start_year": 40,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "The facade survives; the half-round figures in its niches are badly eroded. No destruction or alteration is recorded in the sources opened.",
+        "source": "src-mit-khazneh"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -8,
+        "to_year": 2026,
+        "material": "cut from the cliff of Petra's red sandstone landscape, with diagonal dressing inside the tomb chamber",
+        "source": "src-unesco-326"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block, not a freestanding temple: Al-Khazneh is a rock-cut facade, so a flat block at the sourced width and height with a cut-in portico is the closest of the available shapes, and the depth is unsourced. Least sure of the date: it rests on the Aretas IV attribution, which the MIT record itself calls probable. The pin dates the monument, not the city. The sandstone material is UNESCO's description of the landscape, not of the facade specifically; MIT lists only 'stone'. Google Arts & Culture gives a smaller 23 x 30 m, treated as an outlier against the MIT/Archnet survey figures.",
+  "author": "historian-agent:m-1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:35:34.862Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

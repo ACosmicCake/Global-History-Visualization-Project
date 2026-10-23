@@ -1,0 +1,147 @@
+{
+  "id": "1565-battle-of-talikota",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Talikota (Rakshasi-Tengadi)",
+  "summary": "On 23 January 1565 the allied armies of the Deccan sultanates defeated Vijayanagar at Talikota, also called Rakshasi-Tengadi. Rama Raya was captured on the field and beheaded, and the city of Vijayanagar was plundered and destroyed. Encyclopedia.com says the defeat ended the 200-year-old empire and opened the way for the later Mughal conquest of the Deccan.",
+  "when": {
+    "start": {
+      "year": 1565
+    },
+    "end": {
+      "year": 1565
+    },
+    "precision": "day",
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "battle of Talikota, also known as the battle of Rakshasi-Tengadi, on January 23, 1565",
+        "source": "src-enc-mogul"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "the Battle of Talikota in 1565",
+        "source": "src-ebsco-vwars"
+      }
+    ],
+    "display": "23 January 1565"
+  },
+  "where": {
+    "lat": 16.473306,
+    "lon": 76.311833,
+    "elevation_m": null,
+    "modern_name": "Talikota area, Vijayapura district, Karnataka, India",
+    "historical_name": "Rakshasi-Tengadi, near Talikota, Vijayanagar Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-talikota"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Encyclopedia.com says the defeat ended the 200-year-old Vijayanagar empire."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "place-hampi",
+      "type": "caused",
+      "because": "Encyclopedia.com records that the great city of Vijayanagar was plundered and destroyed after the defeat."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-enc-mogul",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/mogul-conquest-india-1526-1707",
+      "title": "Mogul Conquest of India (1526–1707)",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-vwars",
+      "url": "https://www.ebsco.com/research-starters/history/vijayanagar-wars/",
+      "title": "Vijayanagar Wars",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-talikota",
+      "url": "https://www.wikidata.org/wiki/Q1362188",
+      "title": "Wikidata item Q1362188 (Battle of Talikota), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Proxy pin: the battle site as placed by the Wikidata item for the battle, near Talikota; the opened pages name no exact field, so uncertainty is 25 km. EBSCO names the combined Muslim states and Rama Raja; Encyclopedia.com says \"the allied armies of the Deccan\". Causes of the defeat (betrayal and similar) were not on the opened pages and are not claimed. Linked to place-hampi, whose record covers the site.",
+  "audience_note": null,
+  "author": "historian-agent:o-s106",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T18:36:12.936Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1565",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 23 January 1565 the allied armies of the Deccan sultanates defeated Vijayanagar at Talikota, also called Rakshasi-Tengadi.",
+        "source": "src-enc-mogul"
+      },
+      {
+        "span": "1565",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Rama Raya was captured on the field and beheaded, and the city of Vijayanagar was plundered and destroyed.",
+        "source": "src-enc-mogul",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

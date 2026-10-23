@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "needs_review",
+  "id": "1920-haiyuan-earthquake",
+  "kind": "event",
+  "title": "Haiyuan earthquake",
+  "summary": "A very large earthquake struck Haiyuan County, then part of Gansu Province in the Chinese Republic, on the evening of 16 December 1920. It produced 675 major loess landslides. A historians' account gives more than 200,000 deaths, with county-based estimates ranging from 234,117 to 314,092.",
+  "when": {
+    "start": {
+      "year": 1920,
+      "iso": "1920-12-16"
+    },
+    "end": {
+      "year": 1920,
+      "iso": "1920-12-16"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date given by two opened pages; the DisasterHistory page gives only the evening. Aftershocks are reported to have continued for three years; they are not dated here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "occurred on December 16 in Haiyuan County",
+        "source": "src-historydraft"
+      },
+      {
+        "calendar": "Gregorian, local time as recorded by the source",
+        "value": "the evening of the 16 th of December",
+        "source": "src-disasterhistory"
+      }
+    ],
+    "display": "16 December 1920"
+  },
+  "where": {
+    "lat": 36.699333,
+    "lon": 105.399889,
+    "elevation_m": null,
+    "modern_name": "Haiyuan County, Ningxia Hui Autonomous Region, China (county-centre proxy, not the epicentre)",
+    "historical_name": "Haiyuan County, Gansu Province, Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-findlatitude"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "DisasterHistory calls it the world's second deadliest earthquake of the twentieth century, and it caused widespread destruction across rural Gansu and Ningxia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-disasterhistory",
+      "url": "https://disasterhistory.org/gansu-earthquake-1920",
+      "title": "Haiyuan earthquake, 1920",
+      "publisher": "DisasterHistory.org (collaboration of historians, author Pierre Fuller)",
+      "author": "Pierre Fuller",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers.deaths",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-historydraft",
+      "url": "https://historydraft.com/story/disasters-with-highest-death-tolls/1920-haiyuan-earthquake/481/7449",
+      "title": "1920 Haiyuan Earthquake - Disasters with highest death tolls",
+      "publisher": "Historydraft (Codenteam)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-findlatitude",
+      "url": "https://www.findlatitudeandlongitude.com/l/Haiyuan+County,+Zhongwei+City,+Ningxia,+China/5895775/",
+      "title": "Haiyuan County, Zhongwei City, Ningxia, China (coordinates)",
+      "publisher": "Find Latitude and Longitude",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: it is a county-centre proxy from findlatitudeandlongitude (36.699, 105.400), about 35 km from GeoNames/Wikidata county coordinates (about 36.56, 105.64) that I could not open; uncertainty set to 40 km. Death toll varies widely across sources; the USGS and Verisk pages I opened could not be re-checked by spotcheck and are not used.",
+  "author": "historian-agent:claude-api-haiku-5-5",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

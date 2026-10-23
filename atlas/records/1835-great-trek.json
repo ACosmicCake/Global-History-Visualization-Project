@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1835-great-trek",
+  "kind": "process",
+  "title": "The Great Trek",
+  "summary": "From 1835 to around 1845 Voortrekker families left the Cape and moved north and east, a migration EBSCO puts at 12,000 to 14,000 people by its end. The Vaal River was crossed in January 1836. Fighting with the Ndebele and Zulu followed, including the killing of Piet Retief's party in February 1838 and the Voortrekker victory at Blood River on 16 December 1838. Boer republics emerged by the 1850s.",
+  "when": {
+    "start": {
+      "year": 1835
+    },
+    "end": {
+      "year": 1845
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 5,
+      "note": "EBSCO: \"from 1835 to around 1845\"; Encyclopedia.com (Oxford entry) gives 1835-40 and about 12,000 migrants."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "from 1835 to around 1845",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "1835–40",
+        "source": "src-encyc"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "After setting out in September 1835, they crossed the Vaal River in January, 1836",
+        "source": "src-collector"
+      }
+    ],
+    "display": "1835 – c. 1845"
+  },
+  "where": {
+    "lat": -26.9804245,
+    "lon": 27.2004463,
+    "elevation_m": null,
+    "modern_name": "Cape to the Vaal River and Natal, South Africa (reference point on the Vaal River)",
+    "historical_name": "Cape Colony, the Orange and Vaal river country and Natal (Voortrekker route)",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -26.9804245,
+          "lon": 27.2004463,
+          "year": 1836.04,
+          "date": "January 1836 (Vaal River crossed)",
+          "label": "Vaal River: the crossing place is not named on the opened pages; the point is the OSM river reference point and is approximate.",
+          "source": "src-collector",
+          "coordinate_source": "src-osm-vaal"
+        },
+        {
+          "lat": -28.1032632,
+          "lon": 30.5365662,
+          "year": 1838.96,
+          "date": "16 December 1838 (Battle of Blood River)",
+          "label": "Blood River Heritage Site, beside the Ncome River in Natal.",
+          "source": "src-ebsco",
+          "coordinate_source": "src-osm-br"
+        }
+      ]
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-osm-vaal",
+      "src-osm-br"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Mass migration that led to the Boer republics and several wars with the Ndebele and Zulu."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns a colonial migration and the violent conflicts it produced with the Ndebele and Zulu, including massacres. Casualty figures come from single secondary sources and are disputed.",
+  "related": [
+    {
+      "id": "person-shaka-zulu",
+      "type": "related"
+    },
+    {
+      "id": "1879-battle-of-isandlwana",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/great-trek/",
+      "title": "Great Trek (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc",
+      "url": "https://www.encyclopedia.com/history/asia-and-africa/southern-african-history/great-trek",
+      "title": "Great Trek",
+      "publisher": "Encyclopedia.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-collector",
+      "url": "https://www.thecollector.com/what-was-the-great-trek/",
+      "title": "What Was the Great Trek?",
+      "publisher": "TheCollector",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-vaal",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Vaal%20River",
+      "title": "OpenStreetMap Nominatim: Vaal River",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-br",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Blood%20River%20Heritage%20Site",
+      "title": "OpenStreetMap Nominatim: Bloedrivier Erfenisterrein",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualty figures conflict and are mostly left out: Blood River Zulu dead \"about 3,000\" (TheCollector, which says historians dispute it) versus \"thousands\" (EBSCO); Retief party about 100 and Weenen 534 killed (TheCollector only); total migrants 12,000 (Encyclopedia.com), 12,000-14,000 (EBSCO). The Retief killing is dated February 1838 by TheCollector; Encyclopedia.com gives no date. sahistory.org.za returned 403. The Vaal crossing is a river reference point with a very rough location, and the Vegkop battle (October 1836 per Encyclopedia.com) is not mapped because no reliable coordinate was found. Coordinates of the Blood River Heritage Site are OSM, on the west bank of the Blood River; the Ncome museum is across the river.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 35,
+    "beats": [
+      {
+        "span": "1835",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "In September 1835 the first wave of Voortrekkers sets out from the Cape.",
+        "source": "src-collector",
+        "consequence": false
+      },
+      {
+        "span": "1836",
+        "action": "path.trace {}",
+        "caption": "They cross the Vaal River in January 1836 and push on toward the highveld and Natal.",
+        "source": "src-collector",
+        "consequence": false
+      },
+      {
+        "span": "1838-12-16",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At Blood River on 16 December 1838 Voortrekkers in a wagon laager defeat a Zulu force led against them.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:08.180Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "2022-hunga-tonga-hunga-haapai-eruption",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2022 eruption of Hunga Tonga-Hunga Haapai",
+  "summary": "On 15 January 2022 the undersea volcano Hunga Tonga-Hunga Haapai in the Kingdom of Tonga erupted violently. NASA analysis put the plume at 58 km, higher than Pinatubo’s 35 km. Tsunamis reached up to 65 feet above sea level on Tongan islands, destroyed hundreds of structures, displaced more than 1,500 people and killed four there, and struck Pacific shores, causing two deaths and an oil spill in Peru.",
+  "when": {
+    "start": {
+      "year": 2022,
+      "iso": "2022-01-15"
+    },
+    "end": {
+      "year": 2022,
+      "iso": "2022-01-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The eruption is dated 15 January 2022 by NOAA and NASA; USGS says it began at about 5 p.m. local time."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On January 15, 2022, the Hunga Tonga-Hunga Ha’apai volcano (HTHH) experienced an explosive eruption",
+        "source": "src-noaa-hthh"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On 15 January at about 5 p.m. local time",
+        "source": "src-usgs-hthh"
+      }
+    ],
+    "display": "15 January 2022"
+  },
+  "where": {
+    "lat": -20.545,
+    "lon": -175.3925,
+    "elevation_m": null,
+    "modern_name": "Hunga Tonga-Hunga Haapai, Tonga",
+    "historical_name": "Kingdom of Tonga",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-hthh"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Plume reached the mesosphere (58 km) and tsunamis crossed the Pacific, per NASA and USGS."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-usgs-hthh",
+      "url": "https://www.usgs.gov/centers/pcmsc/news/depth-surprising-tsunamis-caused-explosive-eruption-tonga",
+      "title": "In depth: Surprising tsunamis caused by explosive eruption in Tonga",
+      "publisher": "U.S. Geological Survey",
+      "author": "U.S. Geological Survey",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-noaa-hthh",
+      "url": "https://www.ncei.noaa.gov/news/january-15-2022-tonga-volcanic-eruption-and-tsunami",
+      "title": "January 15, 2022 Tonga Volcanic Eruption and Tsunami",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "author": "NOAA NCEI",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nasa-hthh",
+      "url": "https://science.nasa.gov/earth/earth-observatory/tonga-volcano-plume-reached-the-mesosphere-149474/",
+      "title": "Tonga Volcano Plume Reached the Mesosphere",
+      "publisher": "NASA Earth Observatory",
+      "author": "NASA Earth Observatory",
+      "date_published": "2022-02-17",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-hthh",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3143318.json",
+      "title": "Wikidata entry for Hunga Tonga-Hunga Haapai (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "15 January 2022",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The initial blast rose from the ocean surface to 58 km in about 30 minutes, reaching the mesosphere.",
+        "source": "src-nasa-hthh",
+        "consequence": false
+      },
+      {
+        "span": "15 January 2022",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "Tsunamis reached up to 65 feet above sea level on Tongan islands and struck shores around the Pacific.",
+        "source": "src-usgs-hthh",
+        "consequence": false
+      },
+      {
+        "span": "15 January 2022",
+        "action": "numbers.counter { range: [0, 1500] }",
+        "caption": "More than 1,500 people were displaced and four died in Tonga, a low toll linked to daytime timing and tsunami awareness.",
+        "source": "src-noaa-hthh",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: death toll varies by source (USGS and NOAA say four in Tonga; other offices differ), so only those two figures are used. Coordinates are the Wikidata location of the volcano. The NASA 58 km figure is a satellite estimate; the Pinatubo 35 km comparison is from the same NASA page.",
+  "author": "historian-agent:o-s91",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:11:10.292Z"
+}

@@ -1,0 +1,148 @@
+{
+  "id": "1918-influenza-pandemic",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1918 influenza pandemic",
+  "summary": "The 1918 influenza pandemic, caused by an H1N1 virus with avian-origin genes, spread worldwide during 1918–1919. The CDC estimates about 500 million people, one-third of the world's population, were infected and at least 50 million died worldwide, about 675,000 in the United States; other accounts put deaths as high as 100 million. There is no universal consensus on where it began; in the United States it was first identified in military personnel in spring 1918.",
+  "when": {
+    "start": {
+      "year": 1918
+    },
+    "end": {
+      "year": 1919
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "CDC: spread worldwide during 1918-1919. The CDC EID article dates the first wave from March 1918 and a third wave in early 1919; HISTORY says the pandemic lasted two years from its outbreak in the U.S."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (CDC)",
+        "value": "it spread worldwide during 1918-1919",
+        "source": "src-cdc"
+      },
+      {
+        "calendar": "CE (CDC Emerging Infectious Diseases)",
+        "value": "The first (spring) wave began in March 1918; third wave in early 1919",
+        "source": "src-eid"
+      }
+    ],
+    "display": "1918–1919"
+  },
+  "where": {
+    "lat": 0,
+    "lon": 0,
+    "elevation_m": null,
+    "modern_name": "Worldwide (no agreed point of origin)",
+    "historical_name": "Global; the CDC says there is not universal consensus on where the virus originated",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-cdc"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The CDC calls it the most severe pandemic in recent history, with at least 50 million deaths worldwide."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-cdc",
+      "url": "https://archive.cdc.gov/www_cdc_gov/flu/pandemic-resources/1918-commemoration/1918-pandemic-history.htm",
+      "title": "History of 1918 Flu Pandemic",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "numbers",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eid",
+      "url": "https://wwwnc.cdc.gov/eid/article/12/1/05-0979_article",
+      "title": "1918 Influenza: the Mother of All Pandemics",
+      "publisher": "Emerging Infectious Diseases (US Centers for Disease Control and Prevention)",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/articles/spanish-flu",
+      "title": "Spanish flu",
+      "publisher": "HISTORY (A&E Television Networks)",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "numbers",
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Planet-wide pin by design: no single origin site is sourced (CDC: no universal consensus; EID: 'its origin remains puzzling'). HISTORY states the disease was first recorded in Haskell County, Kansas, in January 1918 and that it lasted two years; the CDC does not support a single origin, so the pin was not set there. Death estimates: CDC at least 50 million; EID about 50 million, arguably as high as 100 million; HISTORY 50–100 million.",
+  "author": "historian-agent:o-s48",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:41:25.748Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1918",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The 1918 influenza pandemic, caused by an H1N1 virus with avian-origin genes, spread worldwide during 1918–1919.",
+        "source": "src-cdc"
+      },
+      {
+        "span": "1919",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The CDC estimates about 500 million people, one-third of the world's population, were infected and at least 50 million died worldwide, about 675,000 in the United States; other…",
+        "source": "src-cdc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

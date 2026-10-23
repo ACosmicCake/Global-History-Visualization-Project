@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1808-spanish-american-wars-of-independence",
+  "kind": "event",
+  "title": "Spanish American wars of independence",
+  "summary": "Napoleon's invasion of Spain in 1808 set off political upheaval in Spain's American colonies, and wars of independence followed across South America. Leaders such as Simón Bolívar and José de San Martín emerged, and the revolutionaries ended Spanish colonial rule on the continent. Between 1810 and 1822, fifteen Latin American colonies declared independence from Spain.",
+  "when": {
+    "start": {
+      "year": 1808
+    },
+    "end": {
+      "year": 1826
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO dates the conflict 1808–1826; the State Department museum notes declarations of independence between 1810 and 1822."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1808–1826",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Between 1810 and 1822",
+        "source": "src-nmad"
+      }
+    ],
+    "display": "1808–1826"
+  },
+  "where": {
+    "lat": 10.5,
+    "lon": -66.9167,
+    "elevation_m": null,
+    "modern_name": "Caracas, Venezuela (proxy pin for a continent-wide conflict)",
+    "historical_name": "Spanish American colonies (Spanish Empire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-nationsonline"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Ended Spanish colonial rule across mainland Spanish America and produced many new independent states."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-simon-bolivar",
+      "type": "related"
+    },
+    {
+      "id": "1808-portuguese-court-flight-to-brazil",
+      "type": "contemporary"
+    },
+    {
+      "id": "1822-brazilian-independence",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/south-american-wars-independence/",
+      "title": "South American Wars of Independence",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nmad",
+      "url": "https://diplomacy.state.gov/stories/the-monroe-doctrine-the-united-states-and-latin-american-independence/",
+      "title": "The Monroe Doctrine: The United States and Latin American Independence",
+      "publisher": "National Museum of American Diplomacy (U.S. Department of State)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nationsonline",
+      "url": "https://www.nationsonline.org/oneworld/map/google_map_Caracas.htm",
+      "title": "Satellite View and Map of Caracas, Venezuela",
+      "publisher": "Nations Online Project",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "EBSCO frames the wars as South American only; pin is a Caracas proxy for a continent-wide conflict. Oxford Research Encyclopedia (1809–1825) was dropped because spotcheck got HTTP 403.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:53:43.856Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1808",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Napoleon's invasion of Spain in 1808 set off political upheaval in Spain's American colonies, and wars of independence followed across South America.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1826",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Leaders such as Simón Bolívar and José de San Martín emerged, and the revolutionaries ended Spanish colonial rule on the continent.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

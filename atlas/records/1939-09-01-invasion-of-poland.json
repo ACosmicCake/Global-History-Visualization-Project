@@ -1,0 +1,170 @@
+{
+  "id": "1939-09-01-invasion-of-poland",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "German invasion of Poland",
+  "summary": "Germany invaded Poland on 1 September 1939; the battleship Schleswig-Holstein opened fire at 4:43 a.m. and Wielun was flattened that day. Britain and France declared war on 3 September, and the Soviet Union invaded from the east on 17 September. Germany and the USSR partitioned Poland, and the last organised Polish resistance ended on 6 October. The National WWII Museum cites over 20,000 Warsaw civilians killed.",
+  "when": {
+    "start": {
+      "year": 1939,
+      "iso": "1939-09-01"
+    },
+    "end": {
+      "year": 1939,
+      "iso": "1939-10-06"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The USHMM dates the Warsaw surrender to 28 September; the National WWII Museum gives 27 September."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In the gray morning light of September 1, 1939",
+        "source": "src-nww2-poland"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On September 1, 1939, Germany invaded Poland.",
+        "source": "src-ushmm-poland"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The last resistance of Polish units ended on October 6.",
+        "source": "src-ushmm-poland"
+      }
+    ],
+    "display": "1 September - 6 October 1939"
+  },
+  "where": {
+    "lat": 54.4093117,
+    "lon": 18.6699661,
+    "elevation_m": null,
+    "modern_name": "Westerplatte, Gdansk, Poland (site of the opening attack; the campaign covered all of Poland)",
+    "historical_name": "Westerplatte, Free City of Danzig area, Poland (opening attack; the campaign covered the whole Second Polish Republic)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-westerplatte"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Opened the Second World War in Europe."
+  },
+  "confidence": "established",
+  "audience_note": "Describes aerial bombing of towns, civilian deaths and mass killing.",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    },
+    {
+      "id": "person-adolf-hitler",
+      "type": "related"
+    },
+    {
+      "id": "person-joseph-stalin",
+      "type": "related"
+    },
+    {
+      "id": "1944-08-01-warsaw-uprising",
+      "type": "related"
+    },
+    {
+      "id": "1943-04-19-warsaw-ghetto-uprising",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nww2-poland",
+      "url": "https://www.nationalww2museum.org/war/articles/invasion-poland-september-1939",
+      "title": "The Invasion of Poland",
+      "publisher": "The National WWII Museum",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ushmm-poland",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/invasion-of-poland-fall-1939",
+      "title": "Invasion of Poland, Fall 1939",
+      "publisher": "United States Holocaust Memorial Museum",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-westerplatte",
+      "url": "https://nominatim.openstreetmap.org/search?q=Westerplatte+Gdansk&format=json&limit=1",
+      "title": "Westerplatte, Gdansk (Nominatim search result)",
+      "publisher": "OpenStreetMap (Nominatim gazetteer)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The National WWII Museum puts the Westerplatte attack at the start; the pin marks that opening attack, not the whole campaign. Warsaw surrender date differs (27 vs 28 September) so it is left out of the summary. Does not claim a link between the firing and Westerplatte beyond the museum's wording.",
+  "author": "historian-agent:o-s50",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:40:18.316Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1939-09-01",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "m.",
+        "source": "src-nww2-poland"
+      },
+      {
+        "span": "1939",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Germany and the USSR partitioned Poland, and the last organised Polish resistance ended on 6 October.",
+        "source": "src-nww2-poland",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

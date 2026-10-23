@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0067-introduction-of-buddhism-to-china",
+  "kind": "event",
+  "title": "Introduction of Buddhism to China",
+  "summary": "Tradition says Emperor Ming of the Eastern Han dreamed of a golden figure and sent envoys west. They returned to Luoyang with monks, images and texts, and the White Horse Temple, the first Buddhist temple in China, was built. Sources date this to the 60s CE.",
+  "when": {
+    "start": {
+      "year": 60
+    },
+    "end": {
+      "year": 68
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 7,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Legendary account; EBSCO gives c. 60-68 C.E., China Culture gives temple construction starting in 68. The id year 67 is only a lookup key."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "c. 60-68 C.E.",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Chinese reign year with CE equivalent",
+        "value": "11th year (68)",
+        "source": "src-chinaculture"
+      }
+    ],
+    "display": "c. 60–68 CE (traditional)"
+  },
+  "where": {
+    "lat": 34.7239,
+    "lon": 112.5997,
+    "elevation_m": null,
+    "modern_name": "White Horse Temple, Luoyang, Henan, China",
+    "historical_name": "Luoyang, capital of the Eastern Han dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-sacred"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Traditional starting point of Buddhism's official presence in China, with the first Buddhist temple."
+  },
+  "confidence": "legendary",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0500-rise-of-buddhism",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/buddhism-enters-china/",
+      "title": "Buddhism Enters China",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chinaculture",
+      "url": "https://en.chinaculture.org/library/2008-02/15/content_34384.htm",
+      "title": "White Horse Temple",
+      "publisher": "China Culture (Ministry of Culture of China portal)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sacred",
+      "url": "http://www.sacred-destinations.com/china/white-horse-temple",
+      "title": "White Horse Temple",
+      "publisher": "Sacred Destinations",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Legend-based; sources disagree on date (c. 60-68 vs 68). The 67 in the id was not confirmed on an opened page. Pin is the temple site, a proxy for the event.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:28:46.836Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "60",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Tradition says Emperor Ming of the Eastern Han dreamed of a golden figure and sent envoys west.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "68",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "They returned to Luoyang with monks, images and texts, and the White Horse Temple, the first Buddhist temple in China, was built.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-66my-chicxulub-tsunami",
+  "kind": "event",
+  "title": "Chicxulub impact tsunami and Gulf of Mexico megaflood deposits",
+  "summary": "The Chicxulub asteroid impact about 66 million years ago set off a tsunami. Drilled rock from the crater peak ring records floodwaters carrying land debris into the crater within days, with waves several hundred metres high, and seismic images under Louisiana show giant ripples interpreted as the tsunami marking the Gulf floor.",
+  "when": {
+    "start": {
+      "year": -66000000
+    },
+    "end": {
+      "year": -66000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 500000,
+      "start_plus_years": 500000,
+      "end_minus_years": 500000,
+      "end_plus_years": 500000,
+      "note": "Both sources say \"66 million years ago\" / \"66 million year old\"; the bracket is a rounding allowance. The atlas Chicxulub record places the K-Pg boundary at 66.043 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "66 million years ago; the wave flooded the crater within days",
+        "source": "src-curtin"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "66 million year old Chicxulub Impact tsunami; seismic reflections from about 1500 m underground",
+        "source": "src-ull"
+      }
+    ],
+    "display": "c. 66 million years ago"
+  },
+  "where": {
+    "lat": 21.4,
+    "lon": -89.5167,
+    "elevation_m": null,
+    "modern_name": "Chicxulub crater, Yucatan Peninsula, Mexico (centre; deposits extend across the Gulf of Mexico)",
+    "historical_name": "Impact site on the Yucatan carbonate platform, Gulf of Mexico (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd-chicxulub"
+    ],
+    "paleo": {
+      "lat": 25.05,
+      "lon": -62.12,
+      "age_ma": 66,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 21.40, -89.52 reconstructed to 66 Ma. PALEOMAP gives 25.49 N, 71.07 W. The spread in absolute position between models reflects differing reference frames."
+    }
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "northern_america",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Physical evidence of the immediate ocean-scale effects of the impact that ended the Cretaceous."
+  },
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "part_of",
+      "because": "The tsunami was a direct consequence of the impact."
+    },
+    {
+      "id": "1991-identification-of-chicxulub-crater",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-curtin",
+      "url": "https://www.curtin.edu.au/news/media-release/curtin-research-reveals-tsunami-followed-dinosaur-killing-asteroid/",
+      "title": "Curtin research reveals tsunami followed dinosaur-killing asteroid",
+      "publisher": "Curtin University",
+      "author": "Curtin University",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ull",
+      "url": "https://geology.louisiana.edu/node/318",
+      "title": "Chicxulub impact tsunami megaripples, Louisiana (Kinsland et al.)",
+      "publisher": "University of Louisiana at Lafayette",
+      "author": "University of Louisiana at Lafayette",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-chicxulub",
+      "url": "https://www.wikidata.org/wiki/Q55816",
+      "title": "Wikidata: Chicxulub crater (Q55816)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is the crater centre; the megaripple field in Louisiana is about 1,000 km away. Wave height is as stated by Curtin. The ULL page does not state ripple dimensions, so none are given.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:26.947Z"
+}

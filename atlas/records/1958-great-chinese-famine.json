@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1958-great-chinese-famine",
+  "kind": "event",
+  "title": "Great Chinese Famine",
+  "summary": "A famine in China, dated by Smil from spring 1959 to the end of 1961, followed the Great Leap Forward. Death estimates vary: American demographers first put it at 16.5 to 23 million, later studies at 23 to 30 million, and Carnegie Council cites an official figure of 15 million. Smil calls it largely man-made; Carnegie notes authorities blamed drought and Soviet debt.",
+  "when": {
+    "start": {
+      "year": 1959
+    },
+    "end": {
+      "year": 1961
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give roughly 1959-1961; the Carnegie Council article places the official \"Three Years of Natural Disasters\" at 1960-62."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "between the spring of 1959 and the end of 1961 some 30 million Chinese starved to death",
+        "source": "src-smil-famine"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "roughly 1959-1961",
+        "source": "src-carnegie-famine"
+      }
+    ],
+    "display": "1959–1961"
+  },
+  "where": {
+    "lat": 34.5412252,
+    "lon": 108.9237067,
+    "elevation_m": null,
+    "modern_name": "China",
+    "historical_name": "People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-osm-china"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "disease",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Described by Smil as the largest famine in human history, with deaths estimated in the tens of millions."
+  },
+  "confidence": "contested",
+  "audience_note": "This record concerns mass starvation. Death tolls are disputed and range widely by estimate, and interpretations of responsibility differ between scholars and official accounts. Figures here are attributed to their authors.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-smil-famine",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1127087/",
+      "title": "China's great famine: 40 years later",
+      "publisher": "BMJ (via PubMed Central)",
+      "author": "Vaclav Smil",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-carnegie-famine",
+      "url": "https://www.carnegiecouncil.org/media/series/100-for-100/the-other-china-hunger-part-i-the-three-red-flags-of-death",
+      "title": "The Other China: Hunger Part I - The Three Red Flags of Death",
+      "publisher": "Carnegie Council for Ethics in International Affairs",
+      "author": "Carnegie Council",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-china",
+      "url": "https://nominatim.openstreetmap.org/search?q=China&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for China (relation 270056)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: the Carnegie \"official 15 million\" figure, which that article does not source; pin is the country centroid. Id says 1958 but the cited sources date the famine from 1959.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1959",
+        "action": "region.fill { radius_km: 1000 }",
+        "caption": "Smil dates the famine from spring 1959, following the Great Leap Forward.",
+        "source": "src-smil-famine"
+      },
+      {
+        "span": "1961",
+        "action": "region.fill { radius_km: 1500 }",
+        "caption": "Estimates of the dead vary by author, from 16.5 million to about 30 million in Smil's account.",
+        "source": "src-smil-famine",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:11:47.307Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-130my-opening-of-the-south-atlantic",
+  "kind": "event",
+  "title": "Opening of the South Atlantic Ocean",
+  "summary": "South America and Africa split apart in the Early Cretaceous, forming the South Atlantic. Breakup of the Pelotas Basin margin propagated from south to north in three stages between about 130 and 113 million years ago, following the Parana-Etendeka flood basalts that erupted from about 137 to 127 million years ago.",
+  "when": {
+    "start": {
+      "year": -130000000
+    },
+    "end": {
+      "year": -113000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 3000000,
+      "start_plus_years": 3000000,
+      "end_minus_years": 3000000,
+      "end_plus_years": 3000000,
+      "note": "Stages from Stica et al. (130-127.5, 127.5-125, 125-113 Ma). Turner et al. (1994) date Parana-Etendeka magmatism, which preceded the main rifting, to 137-127 Ma. Other studies place first breakup a little earlier."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "Breakup propagated from south to north in three stages (130-127.5; 127.5-125; 125-113 Ma)",
+        "source": "src-stica"
+      },
+      {
+        "calendar": "40Ar/39Ar",
+        "value": "Parana-Etendeka flood basalts erupted between 137 and 127 Ma",
+        "source": "src-turner"
+      }
+    ],
+    "display": "c. 130–113 million years ago"
+  },
+  "where": {
+    "lat": -32.1111,
+    "lon": -48.9306,
+    "elevation_m": null,
+    "modern_name": "Pelotas Basin, offshore southern Brazil (centre point)",
+    "historical_name": "South Atlantic rift margin between South America and Africa (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-pelotas"
+    ],
+    "paleo": {
+      "not_applicable": "The pin lies on seafloor formed after 130 Ma, so MERDITH2021 returns no plate position at 130 Ma. A point on the adjacent continent (-52.34, -31.77) reconstructs to -31.95, -10.19 at 130 Ma but is not a sourced location."
+    }
+  },
+  "regions": [
+    "oceans",
+    "latin_america_caribbean",
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Separated South America from Africa and completed the Atlantic as an ocean basin."
+  },
+  "related": [
+    {
+      "id": "-200my-breakup-of-pangaea",
+      "type": "part_of"
+    },
+    {
+      "id": "-190my-opening-of-the-central-atlantic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-stica",
+      "url": "https://www.searchanddiscovery.com/abstracts/html/2014/90194ice/abstracts/1948468.html",
+      "title": "The Volcanic Margin of the Pelotas Basin: Evolution of Rifting, SDR Formation and the Breakup of Gondwana (Stica, Zalan, Ferrari)",
+      "publisher": "AAPG Search and Discovery",
+      "author": "AAPG Search and Discovery",
+      "date_published": "2014",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-turner",
+      "url": "https://researchers.mq.edu.au/en/publications/magmatism-and-continental-break-up-in-the-south-atlantic-high-pre/",
+      "title": "Magmatism and continental break-up in the South Atlantic: high precision 40Ar-39Ar geochronology (Turner et al., EPSL 121:333-348)",
+      "publisher": "Macquarie University Research Portal",
+      "author": "Macquarie University Research Portal",
+      "date_published": "1994",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-pelotas",
+      "url": "https://www.wikidata.org/wiki/Q39791256",
+      "title": "Wikidata: Pelotas Basin (Q39791256)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates are for the southern Brazilian margin only; breakup continued northward to about 113 Ma and other sources date first breakup earlier. Pin is Wikidata Pelotas Basin centre (offshore); no paleo-position is possible for it.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:25.322Z"
+}

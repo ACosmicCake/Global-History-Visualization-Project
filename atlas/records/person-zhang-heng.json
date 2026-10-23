@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s54",
+  "updated": "2026-10-22",
+  "id": "person-zhang-heng",
+  "kind": "person",
+  "title": "Zhang Heng",
+  "summary": "Zhang Heng, a native of Nanyang, lived from AD 78 to 139 under the Eastern Han dynasty and served at court as chief astrologer. MacTutor credits him with China's first equatorial armillary sphere and a seismograph invented in 132, a date China Culture also gives for his seismoscope.",
+  "when": {
+    "start": {
+      "year": 78
+    },
+    "end": {
+      "year": 139
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give 78 and 139."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD",
+        "value": "Born AD 78",
+        "source": "src-mactutor"
+      },
+      {
+        "calendar": "AD",
+        "value": "Died AD 139",
+        "source": "src-mactutor"
+      },
+      {
+        "calendar": "CE",
+        "value": "(78-139)",
+        "source": "src-chinaculture"
+      }
+    ],
+    "display": "78–139"
+  },
+  "where": {
+    "lat": 33.0010496,
+    "lon": 112.5292693,
+    "elevation_m": null,
+    "modern_name": "Nanyang, Henan, China",
+    "historical_name": "Nanyang, Eastern Han dynasty (his native place)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "people",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Credited with an early seismoscope and with the first equatorial armillary sphere in China."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-han-dynasty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mactutor",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Zhang_Heng/",
+      "title": "Zhang Heng (78 - 139)",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "author": "J J O'Connor and E F Robertson",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chinaculture",
+      "url": "http://en.chinaculture.org/library/2008-02/01/content_26299.htm",
+      "title": "Zhang Heng",
+      "publisher": "China Culture (en.chinaculture.org)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Nanyang+Henan+China&format=json&limit=1",
+      "title": "Nanyang, Henan, China",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is his native Nanyang as both sources state; he worked at court in Luoyang. MacTutor and China Culture phrase the device differently (seismograph vs seismoscope).",
+  "published_at": "2026-10-22T11:03:01.004Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

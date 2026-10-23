@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "2000-argo-float-programme",
+  "kind": "organization",
+  "title": "Argo float programme",
+  "summary": "Argo is an international programme of autonomous profiling floats that measure temperature and salinity in the upper 2,000 meters of the global ocean. NOAA says it began in 1998 when the Argo Science Team proposed a global array, with float deployments starting in 1999, and that the 3,000-float goal was reached in November 2007. It now involves 34 countries and has deployed more than 15,000 floats.",
+  "when": {
+    "start": {
+      "year": 1999
+    },
+    "end": {
+      "year": 2007
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "The id says 2000; the pages give 1998 (proposal), 1999 (first deployments) and Oct or Nov 2007 (3,000 floats). The programme continues. End year marks the 3,000-float milestone."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The program began in 1998 when the Argo Science Team proposed a global array",
+        "source": "src-noaa-argo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Deployments of Argo floats began in 1999",
+        "source": "src-noaa-argo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "the 3,000-float goal was reached in November 2007",
+        "source": "src-noaa-argo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "During the month of October 2007, over 100 floats were deployed ... to reach 3000 active Argo floats",
+        "source": "src-argo-ucsd"
+      }
+    ],
+    "display": "1999 (first deployments) to 2007 (3,000-float goal); continuing"
+  },
+  "where": {
+    "lat": 0,
+    "lon": -150,
+    "elevation_m": null,
+    "modern_name": "Global ocean (nominal pin in the Pacific; floats are spread over the open ocean worldwide)",
+    "historical_name": "Global open ocean array, international programme",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 10000,
+    "coordinate_sources": [
+      "src-noaa-argo"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A worldwide float array that gives continuous temperature and salinity profiles of the upper 2,000 m of the ocean."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-noaa-argo",
+      "url": "https://www.aoml.noaa.gov/two-decades-argo-program/",
+      "title": "The Argo Program: Two Decades of Ocean Observations",
+      "publisher": "NOAA Atlantic Oceanographic and Meteorological Laboratory",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-argo-ucsd",
+      "url": "https://argo.ucsd.edu/?p=2923",
+      "title": "Argo reaches its goal of 3000 active floats!",
+      "publisher": "Argo Program Office, UC San Diego",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the dates: the id says 2000 but pages give 1998 and 1999 for the start; NOAA says the 3,000 goal was met in November 2007, the Argo page says October 2007. Pin is nominal.",
+  "published_at": "2026-10-22T18:32:00.228Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

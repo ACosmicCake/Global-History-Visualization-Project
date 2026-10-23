@@ -1,0 +1,217 @@
+{
+  "id": "place-jantar-mantar-jaipur",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Jantar Mantar, Jaipur (Brihat Samrat Yantra)",
+  "aliases": [
+    "Jantar Mantar Observatory"
+  ],
+  "summary": "Jantar Mantar in Jaipur, India, is an astronomical observatory of about twenty large masonry instruments built for Maharajah Jai Singh II. Construction was linked to the plan for his new capital in the late 1720s and culminated in 1734-35, continuing to 1738. Its Brihat Samrat Yantra, a huge sundial, is about 27 metres high.",
+  "when": {
+    "start": {
+      "year": 1727
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 11,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "ICOMOS: planned with the new capital in the late 1720s, construction culminated in 1734-35 and continued until 1738; Sky at Night: completed in 1734. The start year is an approximation of \"late 1720s\". End is the present: the observatory is preserved."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "Construction work seems to have culminated in 1734-35",
+        "source": "src-icomos-jm"
+      },
+      {
+        "calendar": "CE (Sky at Night)",
+        "value": "completed in 1734",
+        "source": "src-skynight-jm"
+      }
+    ],
+    "display": "Built late 1720s–1738 (culminating 1734-35)"
+  },
+  "where": {
+    "lat": 26.924722222222,
+    "lon": 75.825,
+    "elevation_m": null,
+    "modern_name": "Jantar Mantar, Jaipur, Rajasthan, India",
+    "historical_name": "Jaipur observatory of Maharajah Jai Singh II, Jaipur state",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-jm"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "The Brihat Samrat Yantra only: a triangular gnomon about 45 m long set on a horizontal sundial, with quadrant scales either side. The rest of the Jaipur observatory is not modelled.",
+      "source": "src-skynight-jm",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-icomos-jm",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 27,
+          "unit": "m",
+          "source": "src-icomos-jm",
+          "note": "ICOMOS evaluation: \"Brihat Samrat Yantra (27m)\"; the same document gives the gnomon wall as 22.6 m including 3.5 m below ground, hypotenuse 50.1 m; Sky at Night: 27.5 m"
+        },
+        {
+          "part": "base length",
+          "value": 45,
+          "unit": "m",
+          "source": "src-skynight-jm",
+          "note": "\"27.5m high and 45m long triangle\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "stone observatory instruments in the old city of Jaipur"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block standing for the Samrat Yantra, 27 m high and 45 m long"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1727,
+        "end_year": 1738,
+        "state": "construction",
+        "description": "Linked to the plan for the new capital in the late 1720s; construction culminated in 1734-35 and continued until 1738 (ICOMOS).",
+        "source": "src-icomos-jm"
+      },
+      {
+        "start_year": 1738,
+        "end_year": 1800,
+        "state": "intact",
+        "description": "Observatory in use for astronomy; maintained in 1771.",
+        "source": "src-icomos-jm"
+      },
+      {
+        "start_year": 1800,
+        "end_year": 1876,
+        "state": "altered",
+        "description": "Astronomical activity ended around 1800; a metallurgical furnace pit was dug next to the Great Samrat Yantra and two instruments elsewhere were dismantled for a temple.",
+        "source": "src-icomos-jm"
+      },
+      {
+        "start_year": 1876,
+        "end_year": null,
+        "state": "restored",
+        "description": "First substantial restoration completed in 1876.",
+        "source": "src-icomos-jm"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1727,
+        "to_year": null,
+        "material": "masonry",
+        "source": "src-icomos-jm"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "ICOMOS calls the Brihat Samrat Yantra probably the largest instrument of its type in the world."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-icomos-jm",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/1338.pdf",
+      "title": "Jantar Mantar (India) No 1338, ICOMOS evaluation",
+      "publisher": "ICOMOS (for UNESCO World Heritage Committee)",
+      "author": "ICOMOS",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-skynight-jm",
+      "url": "https://www.skyatnightmagazine.com/space-science/jantar-mantar-jaipur",
+      "title": "Jantar Mantar, the enormous stone observatories of northern India",
+      "publisher": "BBC Sky at Night Magazine",
+      "author": "BBC Sky at Night Magazine",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-wd-jm",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q508634.json",
+      "title": "Wikidata entry for Jantar Mantar, Jaipur (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Block for the Samrat Yantra only. Height conflict: ICOMOS 27 m for the Brihat Samrat Yantra, 22.6 m for its gnomon wall (incl. 3.5 m below ground), Sky at Night 27.5 m. Plan length 45 m is only from Sky at Night (Border Sundials says 44 m; not cited). Construction start 1727 is my approximation of \"late 1720s\" and is not a stated year. The OSM way is the whole site and was not used.",
+  "author": "historian-agent:m-25",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T16:51:08.433Z"
+}

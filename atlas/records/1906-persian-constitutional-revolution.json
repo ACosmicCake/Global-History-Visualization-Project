@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1906-persian-constitutional-revolution",
+  "kind": "movement",
+  "title": "Persian Constitutional Revolution",
+  "summary": "In 1906 Mozafar o-Din Shah of Persia, forced by opposition to corruption and foreign manipulation, issued a decree for a constitution and an elected parliament, the Majlis; Belgium's constitution served as the model for the Fundamental Law. On 24 June 1908 the shah placed the Majlis under siege and bombarded it, and the struggle continued until the second Majlis ended in December 1911.",
+  "when": {
+    "start": {
+      "year": 1906
+    },
+    "end": {
+      "year": 1911
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Iran Chamber dates the decree to 5 August 1906 and the period 1906–1911; EBSCO says the shah conceded in December 1906 and dates its own article October 1906 to October 1907."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "Constitutional Revolution, 1906 - 1911",
+        "source": "src-iranchamber"
+      },
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "August 5, 1906",
+        "source": "src-iranchamber"
+      },
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "In December 1906",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "1906–1911"
+  },
+  "where": {
+    "lat": 35.68888888888889,
+    "lon": 51.389722222222225,
+    "elevation_m": null,
+    "modern_name": "Tehran, Iran (proxy pin)",
+    "historical_name": "Tehran, capital of Qajar Persia (proxy pin: the movement spread across Persia, including Tabriz, Rasht, Isfahan and Shiraz)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "First elected parliament and written constitution in Persia, ending unrestricted royal rule."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1908-young-turk-revolution",
+      "type": "contemporary"
+    },
+    {
+      "id": "1979-iranian-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-iranchamber",
+      "url": "https://www.iranchamber.com/history/constitutional_revolution/constitutional_revolution.php",
+      "title": "Constitutional Revolution, 1906 - 1911",
+      "publisher": "Iran Chamber Society",
+      "author": "Shahrzad Rouzrokh",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/politics-and-government/persia-adopts-constitution/",
+      "title": "Persia Adopts a Constitution",
+      "publisher": "EBSCO Research Starters",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3616.json",
+      "title": "Tehran (Wikidata Q3616)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the decree date: sources disagree between 5 August and December 1906.",
+  "author": "historian-agent:o-s101",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1906",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "In 1906 Mozafar o-Din Shah of Persia, forced by opposition to corruption and foreign manipulation, issued a decree for a constitution and an elected parliament, the Majlis; Belgium's…",
+        "source": "src-iranchamber"
+      },
+      {
+        "span": "1911",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "On 24 June 1908 the shah placed the Majlis under siege and bombarded it, and the struggle continued until the second Majlis ended in December 1911.",
+        "source": "src-iranchamber",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T18:12:40.656Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

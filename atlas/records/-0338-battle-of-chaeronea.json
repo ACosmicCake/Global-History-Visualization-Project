@@ -1,0 +1,134 @@
+{
+  "id": "-0338-battle-of-chaeronea",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Chaeronea",
+  "summary": "In August 338 BC, near Chaeronea in Boeotia, Philip II of Macedon defeated an alliance of Greek city-states led by Athens and Thebes. The allied line broke and fled, ending effective resistance. Philip then imposed a settlement, the League of Corinth, and Macedonian dominance in Greece began.",
+  "when": {
+    "start": {
+      "year": -337
+    },
+    "end": {
+      "year": -337
+    },
+    "precision": "month",
+    "display": "August 338 BC",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "the Battle of Chaeronea did not occur until August 338 BC",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "Battle of Chaeronea , (August 338 bce )",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 38.495,
+    "lon": 22.8475,
+    "elevation_m": null,
+    "modern_name": "Chaeronea (now Khairónia), Boeotia, Greece",
+    "historical_name": "Chaeronea, Boeotia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive battle that ended Greek city-state resistance and established Macedonian hegemony over Greece."
+  },
+  "confidence": "established",
+  "audience_note": "Describes battle deaths, including the annihilation of the Sacred Band of Thebes.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Chaeronea_(338_BC)&oldid=1377878687",
+      "title": "Battle of Chaeronea (338 BC) (Wikipedia, revision 1377878687)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "GA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20260622034846/https://www.britannica.com/event/Battle-of-Chaeronea",
+      "title": "Battle of Chaeronea | History, Interpretations, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q200716",
+      "title": "Wikidata Q200716 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Both sources give August 338 BC, so the year is -337 astronomically; Wikidata's month matches. Sources differ in interpretation of the tactics (feigned retreat versus plain phalanx fight), which the summary leaves out. Exact site coordinates are not given, so the uncertainty is approximate. (Drafted by the Wikipedia pipeline from Wikipedia, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:21.369Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-337",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In August 338 BC, near Chaeronea in Boeotia, Philip II of Macedon defeated an alliance of Greek city-states led by Athens and Thebes.",
+        "source": "src-wp"
+      },
+      {
+        "span": "-337",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Philip then imposed a settlement, the League of Corinth, and Macedonian dominance in Greece began.",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

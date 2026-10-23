@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2004-12-26-indian-ocean-tsunami",
+  "kind": "event",
+  "title": "2004 Indian Ocean earthquake and tsunami",
+  "summary": "A magnitude 9.1 earthquake off northwest Sumatra on 26 December 2004 generated a tsunami that struck coasts across the Indian Ocean and was observed worldwide. NOAA's data center lists 227,898 dead or missing, USGS cites more than 200,000 casualties, and Indonesia was the worst-hit country; no tsunami in recorded history had killed more people.",
+  "when": {
+    "start": {
+      "year": 2004,
+      "iso": "2004-12-26"
+    },
+    "end": {
+      "year": 2004,
+      "iso": "2004-12-26"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "NOAA NGDC gives the date as December 26, 2004; USGS says the tsunami struck in the early hours of that date. Local and UTC dates are not distinguished on the pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "December 26, 2004",
+        "source": "src-ngdc-2004"
+      },
+      {
+        "calendar": "CE",
+        "value": "December 26, 2004",
+        "source": "src-usgs-2004"
+      }
+    ],
+    "display": "26 December 2004"
+  },
+  "where": {
+    "lat": 3.316,
+    "lon": 95.854,
+    "elevation_m": null,
+    "modern_name": "Off the northwest coast of Sumatra, Indonesia (earthquake epicentre)",
+    "historical_name": "Offshore Aceh, northern Sumatra, Republic of Indonesia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-ngdc-2004",
+      "src-usgs-2004"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "southern_asia",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "The deadliest tsunami in recorded history, with impacts in many Indian Ocean countries."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a disaster with very large loss of life. Death tolls are given as sourced ranges and include missing persons.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ngdc-2004",
+      "url": "https://www.ngdc.noaa.gov/hazard/data/publications/2004_1226.pdf",
+      "title": "December 26, 2004 Sumatra, Indonesia Earthquake and Tsunami – Tenth Anniversary update",
+      "publisher": "NOAA National Centers for Environmental Information (NGDC)",
+      "author": "NOAA NGDC",
+      "date_published": "2014-12-11",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-usgs-2004",
+      "url": "https://www.usgs.gov/news/featured-story/indian-ocean-tsunami-remembered-scientists-reflect-2004-indian-ocean-killed",
+      "title": "Indian Ocean Tsunami Remembered",
+      "publisher": "U.S. Geological Survey",
+      "author": "USGS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "2004-12-26",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "A magnitude 9.1 earthquake off northwest Sumatra sends waves that reach northern Sumatra in about 30 minutes.",
+        "source": "src-usgs-2004",
+        "consequence": false
+      },
+      {
+        "span": "2004-12-26",
+        "action": "region.fill { radius_km: 2500 }",
+        "caption": "Thailand is hit after about 1.5 to 2 hours and Sri Lanka after about 2 to 3 hours.",
+        "source": "src-usgs-2004",
+        "consequence": false
+      },
+      {
+        "span": "2004-12-26",
+        "action": "numbers.counter { range: [200000, 227898] }",
+        "caption": "Sources give more than 200,000 casualties (USGS) and 227,898 dead or missing (NOAA NGDC).",
+        "source": "src-ngdc-2004",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: death toll is a range of attributed figures (USGS: more than 200,000 casualties; Indonesia alone at least 108,100 killed and 127,700 missing presumed dead; NOAA NGDC: 227,898 dead or missing, which includes the missing). Animation radii are visual. Epicentre coordinates are NGDC's (3.316 N, 95.854 E); uncertainty is my estimate. The NGDC PDF was read by rendering its pages.",
+  "author": "historian-agent:o-s71",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:24:48.635Z"
+}

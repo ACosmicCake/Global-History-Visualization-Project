@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0132-tribunate-of-tiberius-gracchus",
+  "kind": "event",
+  "title": "Tribunate and killing of Tiberius Gracchus (133 BCE)",
+  "summary": "In 133 BCE, Roman tribune Tiberius Sempronius Gracchus bypassed the conservative Senate to pass the Lex Sempronia Agraria through the popular assembly, redistributing public land to impoverished Roman citizens. When Tiberius sought immediate re-election to protect his agrarian law, a senatorial mob led by Pontifex Maximus Scipio Nasica attacked him on the Capitoline Hill. Tiberius and hundreds of supporters were beaten to death, inaugurating a century of factional bloodshed that destabilized and ultimately destroyed the Roman Republic.",
+  "when": {
+    "start": {
+      "year": -132
+    },
+    "end": {
+      "year": -132
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Tribunate and subsequent killing took place in 133 BCE during the consulship of Publius Mucius Scaevola and Lucius Calpurnius Piso Frugi."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Velleius Paterculus, Roman History 2.2–3, trans. Frederick W. Shipley, Loeb Classical Library)",
+        "value": "In the consulship of Publius Mucius Scaevola and Lucius Calpurnius... 133 B.C.",
+        "source": "src-velleius"
+      },
+      {
+        "calendar": "BCE (World History Encyclopedia, Donald L. Wasson)",
+        "value": "Serving in 133 BCE, Tiberius introduced a land reform but was beaten to death after his term",
+        "source": "src-worldhistory-gracchus"
+      }
+    ],
+    "display": "133 BCE"
+  },
+  "where": {
+    "lat": 41.889977,
+    "lon": 12.491258,
+    "elevation_m": null,
+    "modern_name": "Capitoline Hill, Rome, Lazio, Italy",
+    "historical_name": "Mons Capitolinus, Roma, capital of the Roman Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-pleiades-roma"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The murder of Tiberius Gracchus on the Capitoline was the first major political assassination of a tribune in republican history, beginning a century of factional violence that ended the Roman Republic."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "part_of"
+    },
+    {
+      "id": "person-tiberius-gracchus",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-republic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-velleius",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Velleius_Paterculus/2A*.html",
+      "title": "Velleius Paterculus, Roman History, Book II, chapters 2–3",
+      "publisher": "LacusCurtius, University of Chicago (Loeb Classical Library, 1924)",
+      "author": "Velleius Paterculus; trans. Frederick W. Shipley",
+      "date_published": "1924",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-worldhistory-gracchus",
+      "url": "https://www.worldhistory.org/Tiberius_Gracchus/",
+      "title": "Gracchi Brothers",
+      "publisher": "World History Encyclopedia",
+      "author": "Donald L. Wasson",
+      "date_published": "2021-08-16",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-roma",
+      "url": "https://pleiades.stoa.org/places/423025/json",
+      "title": "Roma: a Pleiades place resource",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-132",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "In 133 BCE, Tribune Tiberius Gracchus passes agrarian redistribution through the assembly despite fierce senatorial resistance.",
+        "source": "src-worldhistory-gracchus"
+      },
+      {
+        "span": "-132",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "A senatorial mob murders Tiberius on the Capitoline Hill, inaugurating a century of political violence that destabilizes the Republic.",
+        "source": "src-velleius",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the exact casualty tally of Gracchus's supporters killed alongside him on the Capitoline Hill, as ancient estimates vary from roughly three hundred to several hundred.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:28.111Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

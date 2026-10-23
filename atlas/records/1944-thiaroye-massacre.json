@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1944-thiaroye-massacre",
+  "kind": "event",
+  "title": "Thiaroye massacre",
+  "summary": "On 1 December 1944, French officers shot West African soldiers (tirailleurs sénégalais) at the Thiaroye camp near Dakar. The men, freed from German captivity and awaiting demobilisation, had demanded back pay they were owed. French archives, read literally, record 35 deaths; earlier research suggests 300 to 400. A 2025 Senegalese white paper reported that a senior officer planned the repression.",
+  "when": {
+    "start": {
+      "year": 1944
+    },
+    "end": {
+      "year": 1944
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Exact day given by both sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "at dawn on 1 December 1944",
+        "source": "src-conversation"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "1 December 1944",
+        "source": "src-le360"
+      }
+    ],
+    "display": "1 December 1944"
+  },
+  "where": {
+    "lat": 14.756,
+    "lon": -17.377,
+    "elevation_m": null,
+    "modern_name": "Thiaroye, Dakar region, Senegal",
+    "historical_name": "Thiaroye military camp, near Dakar, French West Africa (colonial Senegal)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-q303059"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A colonial army killed returning African soldiers over unpaid wages; the toll and the cover-up are still being investigated."
+  },
+  "confidence": "established",
+  "audience_note": "Describes soldiers shot by army officers and a disputed death toll; no graphic detail.",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-conversation",
+      "url": "https://allafrica.com/stories/202512100002.html",
+      "title": "Senegal: Thiaroye Massacre - Report On the French Killing of Senegalese Troops in 1944 Exposes a Painful History",
+      "publisher": "The Conversation Africa (republished by AllAfrica)",
+      "author": "Martin Mourre",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-le360",
+      "url": "https://afrique.le360.ma/societe/massacre-du-camp-de-thiaroye-a-dakar-une-plaie-encore-beante_W7E2DAEWAFA6FO3N7BO64FHCWE/",
+      "title": "Massacre du camp de Thiaroye: à Dakar, une plaie encore béante",
+      "publisher": "Le360 Afrique",
+      "author": "Moustapha Cissé",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q303059",
+      "url": "https://www.wikidata.org/wiki/Q303059",
+      "title": "Wikidata item Q303059 (Thiaroye Massacre), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the death toll, which is disputed (35 in French archives; 300-400 in earlier research; Le360 gives no figure). Pin is the Wikidata point for the massacre at Thiaroye camp, about 15 km from Dakar per Le360, not a surveyed camp boundary.",
+  "author": "historian-agent:o-s92",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 1 December 1944, French officers shot West African soldiers (tirailleurs sénégalais) at the Thiaroye camp near Dakar.",
+        "source": "src-conversation"
+      },
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The men, freed from German captivity and awaiting demobilisation, had demanded back pay they were owed.",
+        "source": "src-conversation",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T17:18:38.069Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

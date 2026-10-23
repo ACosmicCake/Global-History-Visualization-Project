@@ -1,0 +1,166 @@
+{
+  "id": "1791-haitian-revolution",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Haitian Revolution",
+  "summary": "In August 1791 enslaved people in northern Saint-Domingue, France's richest colony, began a mass rebellion that grew into a thirteen-year struggle involving free people of colour, planters, and French, Spanish and British forces. It ended in 1804 with the independent state of Haiti, the second independent country in the Americas.",
+  "when": {
+    "start": {
+      "year": 1791,
+      "iso": "1791-08-22"
+    },
+    "end": {
+      "year": 1804
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "The Office of the Historian dates the rebellion to 22 August 1791; the Bois Caiman ceremony is placed in August 1791 by a university text, which notes its details cannot be known. End year 1804 is from the Office of the Historian title; the day of independence was not confirmed on an opened page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "a massive rebellion which began on August 22, 1791",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "August 1791 ... the 13 year long Haitian Revolution",
+        "source": "src-cuny"
+      }
+    ],
+    "display": "August 1791 - 1804"
+  },
+  "where": {
+    "lat": 19.75,
+    "lon": -72.2,
+    "elevation_m": null,
+    "modern_name": "Northern Haiti, around Cap-Haitien",
+    "historical_name": "Northern Plain of Saint-Domingue near Cap-Francais, French colony of Saint-Domingue",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Only successful slave revolt to found a state; reshaped the Atlantic world."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a slave revolt and war with heavy civilian suffering, destruction and refugee flight.",
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "related",
+      "because": "The French Revolution split the colony's white minority and gave the mixed-race population and the enslaved an opening (Office of the Historian)."
+    },
+    {
+      "id": "1794-french-abolition-of-slavery",
+      "type": "related"
+    },
+    {
+      "id": "1802-napoleonic-restoration-of-slavery",
+      "type": "related"
+    },
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1784-1800/haitian-rev",
+      "title": "The United States and the Haitian Revolution, 1791-1804",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cuny",
+      "url": "https://pressbooks.cuny.edu/thecaribbeansincecolumbushist277/chapter/haiti-or-the-beginning-of-the-end/",
+      "title": "Haiti, or the Beginning of the End",
+      "publisher": "CUNY Pressbooks (The Caribbean since Columbus)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q216835",
+      "title": "Cap-Haitien (Wikidata Q216835), coordinates 19.75 N, -72.2 E",
+      "publisher": "Wikidata (Wikimedia Foundation)",
+      "author": "",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Queue tagged this \"oceans\"; region set from sources. Pin is Cap-Haitien as the centre of the northern uprising, with wide uncertainty. Toussaint Louverture's role in 1791 is not asserted. No casualty figures on opened pages. Independence day (1 January 1804) was not on an opened page.",
+  "author": "historian-agent:o-s18",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1791-08-22",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Enslaved people in northern Saint-Domingue began a massive rebellion.",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1793",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Rival factions fought for Cap-Francais; the fighting and fire destroyed much of the capital and sent refugees to ports in the United States.",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1804",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "The revolution ended with independent Haiti, the second independent country in the Americas.",
+        "source": "src-histstate",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:26:14.486Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

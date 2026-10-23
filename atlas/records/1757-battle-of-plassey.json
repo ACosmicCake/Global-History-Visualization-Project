@@ -1,0 +1,150 @@
+{
+  "id": "1757-battle-of-plassey",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Plassey",
+  "summary": "On 23 June 1757 Robert Clive's East India Company force defeated the Nawab of Bengal, Siraj ud-Daulah, near Plassey on the Bhagirathi. Mir Jafar, commanding the Nawab's cavalry, held back after a secret deal. Mir Jafar became nawab as a Company-dependent ruler, a step towards British rule in India.",
+  "when": {
+    "start": {
+      "year": 1757
+    },
+    "end": {
+      "year": 1757
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources agree."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "23 June 1757",
+        "source": "src-nam-plassey"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "23 June 1757",
+        "source": "src-whe-plassey"
+      }
+    ],
+    "display": "23 June 1757"
+  },
+  "where": {
+    "lat": 23.78977,
+    "lon": 88.25828,
+    "elevation_m": null,
+    "modern_name": "Palashi (Plassey), Nadia district, West Bengal, India",
+    "historical_name": "Plassey, on the Bhagirathi, in the Nawabate of Bengal",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-q3346548",
+      "src-nam-plassey"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Gave the East India Company control of Bengal and is taken as the start of British dominance in India."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nam-plassey",
+      "url": "https://www.nam.ac.uk/explore/battle-plassey",
+      "title": "Battle of Plassey",
+      "publisher": "National Army Museum",
+      "author": "National Army Museum",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-plassey",
+      "url": "https://www.worldhistory.org/article/2107",
+      "title": "Battle of Plassey",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q3346548",
+      "url": "https://www.wikidata.org/wiki/Q3346548",
+      "title": "Wikidata item Q3346548 (Palashi), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Figures differ and are left out of the summary: Nawab's army about 50,000 (both); Company about 3,000 (NAM) versus roughly 2,100 plus sailors (WHE); Company dead 22 killed and 50 wounded (NAM) versus about 50 fatalities (WHE); Nawab over 500 casualties. 'Secret deal' with Mir Jafar: WHE says he promised not to fight; the bribe detail was not read on an opened page. Pin is the village of Palashi, not the exact field.",
+  "author": "historian-agent:o-s29",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:04:27.225Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1757",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 23 June 1757 Robert Clive's East India Company force defeated the Nawab of Bengal, Siraj ud-Daulah, near Plassey on the Bhagirathi.",
+        "source": "src-nam-plassey"
+      },
+      {
+        "span": "1757",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Mir Jafar became nawab as a Company-dependent ruler, a step towards British rule in India.",
+        "source": "src-nam-plassey",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

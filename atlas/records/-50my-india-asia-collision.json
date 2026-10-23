@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-50my-india-asia-collision",
+  "kind": "event",
+  "title": "India-Asia collision and rise of the Himalaya",
+  "summary": "India, moving north after leaving Gondwana, collided with Asia along what is now the Yarlung Zangbo suture in Tibet, raising the Himalaya and Tibetan Plateau. Dating is disputed: one provenance study puts collision onset at about 59 million years ago, another near 55, with full collision around 40, and the US Geological Survey says 40 to 50 million years ago.",
+  "when": {
+    "start": {
+      "year": -59000000
+    },
+    "end": {
+      "year": -40000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 5000000,
+      "start_plus_years": 5000000,
+      "end_minus_years": 5000000,
+      "end_plus_years": 5000000,
+      "note": "Onset 59 +/-1 Ma (Hu et al.) or 55 +/-5 Ma (SUSTech, rotation-based); complete collision 40 +/-5 Ma (SUSTech). USGS: roughly 40 to 50 Ma. Timing remains debated; the atlas id uses -50."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "collision onset as middle Palaeocene (59 +/-1 Ma)",
+        "source": "src-hu"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "first contact around 55 +/-5 Ma; complete collision around 40 +/-5 Ma",
+        "source": "src-sustech"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "India and Eurasia collided roughly 40 to 50 million years ago",
+        "source": "src-usgs"
+      }
+    ],
+    "display": "c. 59–40 million years ago (debated)"
+  },
+  "where": {
+    "lat": 29.65,
+    "lon": 91.1,
+    "elevation_m": null,
+    "modern_name": "Lhasa, Tibet, China (proxy point on the Yarlung Zangbo suture zone)",
+    "historical_name": "Yarlung Zangbo suture between the Indian plate and Eurasia (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-geonames-lhasa"
+    ],
+    "paleo": {
+      "lat": 17.38,
+      "lon": 86.83,
+      "age_ma": 55,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 29.65, 91.10 reconstructed to 55 Ma (mid-range of the 59-50 Ma onset estimates). PALEOMAP gives 14.99 N, 79.92 E."
+    }
+  },
+  "regions": [
+    "eastern_asia",
+    "southern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "Created the Himalaya and Tibetan Plateau, reshaping Asian climate, river systems and monsoon patterns."
+  },
+  "related": [
+    {
+      "id": "-84my-india-madagascar-separation",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hu",
+      "url": "https://goldschmidtabstracts.info/2017/1719.pdf",
+      "title": "Constraining precisely the timing of the India-Asia continental collision by provenance change (Hu, Wang, An, Garzanti, Li; Goldschmidt 2017 abstract)",
+      "publisher": "Nanjing University / Geochemical Society (Goldschmidt)",
+      "author": "Nanjing University / Geochemical Society (Goldschmidt)",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sustech",
+      "url": "https://newshub.sustech.edu.cn/en/?p=41068",
+      "title": "Paleogene India-Eurasia collision constrained by observed plate rotation (news item on Nature Communications paper)",
+      "publisher": "Southern University of Science and Technology (SUSTech)",
+      "author": "Southern University of Science and Technology (SUSTech)",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usgs",
+      "url": "https://pubs.usgs.gov/gip/dynamic/himalaya.html",
+      "title": "This Dynamic Earth: Collision of India with Eurasia",
+      "publisher": "U.S. Geological Survey",
+      "author": "U.S. Geological Survey",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-lhasa",
+      "url": "https://www.geonames.org/search.html?q=Lhasa",
+      "title": "GeoNames: Lhasa, China",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Collision age is genuinely disputed (59 vs 55 vs 50 vs 40 Ma). The pin is Lhasa as a proxy for the long east-west suture zone, so the uncertainty is large.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:25.658Z"
+}

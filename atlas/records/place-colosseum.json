@@ -1,0 +1,261 @@
+{
+  "id": "place-colosseum",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Colosseum (Flavian Amphitheatre)",
+  "aliases": [
+    "Flavian Amphitheatre",
+    "Amphitheatrum Flavium",
+    "Colosseo"
+  ],
+  "summary": "The Colosseum, or Flavian Amphitheatre, in the centre of Rome, is the largest amphitheatre in the world. Begun under Vespasian in 70 CE and finished under his son Titus in 80, it staged gladiator fights and animal hunts for about 50,000 spectators. Games were banned in 438 CE, and in the Middle Ages the ruin was quarried for stone.",
+  "when": {
+    "start": {
+      "year": 70
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the year construction began, 70 AD (Roma Capitale tourism office); Texas Tech's record has it 'begun ad 75' and gives 75-96 as the creation dates. Completion in 80 AD under Titus. End is the present: the ruin stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (Roma Capitale)",
+        "value": "began in 70 AD",
+        "source": "src-turismoroma"
+      },
+      {
+        "calendar": "AD (Roma Capitale)",
+        "value": "ended in 80 A.D.",
+        "source": "src-turismoroma"
+      },
+      {
+        "calendar": "AD (Texas Tech University Libraries)",
+        "value": "begun ad 75",
+        "source": "src-ttu-colosseum"
+      },
+      {
+        "calendar": "AD (Roma Capitale)",
+        "value": "In 438, Valentinian III abolished the gladiator games",
+        "source": "src-turismoroma"
+      }
+    ],
+    "display": "Built 70–80 CE; ruined from the 5th century; standing today"
+  },
+  "where": {
+    "lat": 41.889373,
+    "lon": 12.492438,
+    "elevation_m": null,
+    "modern_name": "Colosseum, Piazza del Colosseo, Rome, Lazio, Italy",
+    "historical_name": "Amphitheatrum Flavium (Flavian Amphitheatre), Rome, capital of the Roman Empire under the Flavian dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-turismoroma",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Still the largest amphitheatre in the world and a symbol of Rome; must be visible from whole-planet view."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-rome",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-turismoroma",
+      "url": "https://turismoroma.it/en/node/1155",
+      "title": "The Flavian Amphitheatre (The Colosseum)",
+      "publisher": "Roma Capitale, Turismo Roma (city tourism office)",
+      "author": "Roma Capitale, Turismo Roma (city tourism office)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "model"
+      ]
+    },
+    {
+      "id": "src-ttu-colosseum",
+      "url": "https://exhibits.lib.ttu.edu/s/archlib/item/18830",
+      "title": "Colosseum (Flavian Amphitheatre), Arch Design Images",
+      "publisher": "Texas Tech University Libraries",
+      "author": "Texas Tech University Libraries",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 91, Italian component geolocation (41.89022, 12.49231)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Elliptical plan 189 m by 156 m (Roma Capitale; Texas Tech gives 188 x 156 m) covering about 24,000 square metres, with an oval wooden arena floor over underground chambers. Register figures only; no survey polygon opened.",
+      "source": "src-turismoroma",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "arena",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-turismoroma",
+      "measurements": [
+        {
+          "part": "height (outer wall)",
+          "value": 48,
+          "unit": "m",
+          "source": "src-turismoroma",
+          "note": "\"over 48 meters high\"; Texas Tech gives the travertine facade as 48.5 m"
+        },
+        {
+          "part": "length (long axis)",
+          "value": 189,
+          "unit": "m",
+          "source": "src-turismoroma",
+          "note": "Texas Tech: 188 m"
+        },
+        {
+          "part": "width (short axis)",
+          "value": 156,
+          "unit": "m",
+          "source": "src-turismoroma"
+        },
+        {
+          "part": "arena length",
+          "value": 76,
+          "unit": "m",
+          "source": "src-turismoroma",
+          "note": "Roma Capitale: wooden arena 76 m by 46 m; Texas Tech gives the arena as 86 x 54 m"
+        },
+        {
+          "part": "arena width",
+          "value": 46,
+          "unit": "m",
+          "source": "src-turismoroma"
+        },
+        {
+          "part": "arched entrances at ground level",
+          "value": 80,
+          "unit": "count",
+          "source": "src-ttu-colosseum"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "elliptical four-storey ring at true axes, with the arena as an oval cut-out"
+      },
+      {
+        "level": "local",
+        "representation": "procedural amphitheatre: three tiers of 80 arches and an attic storey, cavea, arena and a dated ruin state"
+      },
+      {
+        "level": "street",
+        "representation": "arch orders (Doric, Ionic, Corinthian half-columns) and the underground arena chambers from the Texas Tech plans, labelled reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 70,
+        "end_year": 80,
+        "state": "construction",
+        "description": "Commissioned by Vespasian on the site of Nero's artificial lake; construction began in 70 AD and ended in 80 AD under Titus (Texas Tech has it begun in 75).",
+        "source": "src-turismoroma"
+      },
+      {
+        "start_year": 80,
+        "end_year": 438,
+        "state": "intact",
+        "description": "Gladiator fights (munera), animal hunts (venationes) and naumachiae staged for about 50,000 spectators; a fire damaged the whole monument (its date is not given in the source).",
+        "source": "src-turismoroma"
+      },
+      {
+        "start_year": 438,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "After Valentinian III abolished the games in 438 the building 'underwent a progressive decline'; in the Middle Ages and Renaissance it was a quarry, an animal shelter and a place of workshops and homes.",
+        "source": "src-turismoroma"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 70,
+        "to_year": 2026,
+        "material": "travertine facade with half-columns in three orders",
+        "source": "src-ttu-colosseum"
+      },
+      {
+        "from_year": 80,
+        "to_year": 438,
+        "material": "brick tiers covered in marble (the cavea) and a wooden arena floor covered with sand",
+        "source": "src-turismoroma"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape arena. Least sure of the start year (70 AD per Roma Capitale, 75 per Texas Tech) and the arena size (76 x 46 m vs 86 x 54 m; the wooden floor is lost, so both are reconstructions). Height 48 m is the lower figure; Texas Tech gives 48.5 m. Material span for the cavea and wooden floor is limited to the period of use (80-438) because later survival is not sourced. Coordinates are the POINT printed on the Turismo Roma page, matching UNESCO's Italian component point.",
+  "author": "historian-agent:m-1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:35:34.214Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

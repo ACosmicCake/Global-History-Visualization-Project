@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0100-austronesian-settlement-of-madagascar",
+  "kind": "process",
+  "title": "Austronesian settlement of Madagascar",
+  "summary": "Madagascar's people combine African ancestry with Austronesian-speaking settlers who came across the Indian Ocean. The date is disputed: a late first millennium BC settlement was once increasingly accepted, but a 2019 review finds no convincing evidence before the mid-first millennium AD. Asian crops such as rice and mung bean at sites dated about 650-1200 CE give the first archaeobotanical trace.",
+  "when": {
+    "start": {
+      "year": 500
+    },
+    "end": {
+      "year": 1200
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Years are astronomical (AD = same number). Start 500 reflects Mitchell (2019): no convincing evidence before the \"mid-first millennium AD\". End 1200 is the upper limit of the 18 crop sites (about 650-1200 cal CE) in Crowther et al. 2016. Earlier claims (late first millennium BC; stone tools at Lakaton'i Anja; cut-marked bones at Christmas River and Lamboharana) are rejected by Mitchell and not included in the range. The id year -0100 reflects the earlier BC view."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD",
+        "value": "no convincing evidence that Madagascar was settled before the mid-first millennium AD",
+        "source": "src-mitchell2019"
+      },
+      {
+        "calendar": "BC",
+        "value": "late first-millennium BC date for the first settlement",
+        "source": "src-mitchell2019"
+      },
+      {
+        "calendar": "cal CE",
+        "value": "dating between approximately 650 and 1200 calibrated years (cal) CE",
+        "source": "src-crowther2016"
+      }
+    ],
+    "display": "Mid-first millennium CE to c. 1200 CE (earlier claims from the first millennium BC disputed)"
+  },
+  "where": {
+    "lat": -20,
+    "lon": 47,
+    "elevation_m": null,
+    "modern_name": "Madagascar",
+    "historical_name": "Island of Madagascar before any unified polity; settlers arrived across the Indian Ocean (Island Southeast Asian source favoured by Crowther et al.)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-mada"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "oceans"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Westward Austronesian expansion across the Indian Ocean shaped the language, genetics and farming of Madagascar."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3000-austronesian-expansion",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mitchell2019",
+      "url": "https://ora.ox.ac.uk/objects/uuid:41477924-8b71-47df-a50c-8ed73665b22c",
+      "title": "Settling Madagascar: when did people first colonise the world's largest island?",
+      "publisher": "University of Oxford (Oxford University Research Archive)",
+      "author": "Peter Mitchell",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-crowther2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4914162",
+      "title": "Ancient crops provide first archaeological signature of the westward Austronesian expansion",
+      "publisher": "PNAS (via PubMed Central)",
+      "author": "Alison Crowther et al.",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-mada",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1019.json",
+      "title": "Wikidata entry for Madagascar (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the start date. Sources disagree (late first millennium BC accepted by some, rejected by Mitchell 2019); I use Mitchell and the crop dates and mark confidence contested. Point is the island centre, not a landing site. Publication year of both papers is from their citations.",
+  "author": "historian-agent:o-s74",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:56:59.076Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "500",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Madagascar's people combine African ancestry with Austronesian-speaking settlers who came across the Indian Ocean.",
+        "source": "src-mitchell2019"
+      },
+      {
+        "span": "1200",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The date is disputed: a late first millennium BC settlement was once increasingly accepted, but a 2019 review finds no convincing evidence before the mid-first millennium AD.",
+        "source": "src-mitchell2019",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

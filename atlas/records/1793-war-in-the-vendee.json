@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": "Describes the mass killing of civilians and prisoners, including executions and drownings; casualty figures vary widely by source.",
+  "id": "1793-war-in-the-vendee",
+  "kind": "event",
+  "title": "War in the Vendée",
+  "summary": "From March 1793 western France's Vendée region rose against the Republic, which in February had called for 300,000 soldiers and threatened lot-drawn conscription, amid anger over the revolutionaries' policy toward the Church. World History Encyclopedia dates the fighting to 1796 and says at least 170,000 Vendeans were killed, about a fifth of the population, with the 1794 'infernal columns' killing an estimated 50,000.",
+  "when": {
+    "start": {
+      "year": 1793
+    },
+    "end": {
+      "year": 1796
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Sources differ on the start (4 or 11 March 1793) and on the end (1795 or 1796)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 11 March, an army of peasants swarmed the village [Machecoul]; In March 1793",
+        "source": "src-whe-vendee"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 4 to December 23, 1793",
+        "source": "src-ebsco-vendee"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "from 1793 to 1796",
+        "source": "src-whe-vendee"
+      }
+    ],
+    "display": "1793–1796"
+  },
+  "where": {
+    "lat": 46.67056,
+    "lon": -1.42667,
+    "elevation_m": null,
+    "modern_name": "Vendée, Pays de la Loire, France",
+    "historical_name": "Vendée and Bas-Poitou, western France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wd-q12798"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Counter-revolutionary war in western France with a very high civilian death toll."
+  },
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "1793-reign-of-terror",
+      "type": "related"
+    },
+    {
+      "id": "1789-08-26-declaration-of-the-rights-of-man",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-vendee",
+      "url": "https://www.worldhistory.org/War_in_the_Vendee/",
+      "title": "War in the Vendée",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-vendee",
+      "url": "https://www.ebsco.com/research-starters/history/war-vendee/",
+      "title": "War in the Vendée",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-q12798",
+      "url": "https://www.wikidata.org/wiki/Q12798",
+      "title": "Wikidata: Vendée",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The 170,000 and 50,000 figures are from World History Encyclopedia alone; EBSCO gives only partial figures. Start and end dates differ between the two pages. Pin is the department centre, not a single battle.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s47",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1793",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "From March 1793 western France's Vendée region rose against the Republic, which in February had called for 300,000 soldiers and threatened lot-drawn conscription, amid anger over the revolutionaries'…",
+        "source": "src-whe-vendee"
+      },
+      {
+        "span": "1796",
+        "action": "pulse { radius_km: 96 }",
+        "caption": "World History Encyclopedia dates the fighting to 1796 and says at least 170,000 Vendeans were killed, about a fifth of the population, with the 1794 'infernal columns' killing…",
+        "source": "src-whe-vendee",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T10:28:51.918Z"
+}

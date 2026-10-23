@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-mansa-musa",
+  "kind": "person",
+  "title": "Mansa Musa",
+  "summary": "Mansa Musa ruled the Mali Empire from 1312 to 1337, according to World History Encyclopedia. In 1324 he set out on pilgrimage to Mecca, reaching Cairo in July for a three-month stay. Accounts say his spending there lowered the gold dinar's value by about 20 percent. He also had mosques built at Gao and Timbuktu.",
+  "when": {
+    "start": {
+      "year": 1312
+    },
+    "end": {
+      "year": 1337
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Reign dates only; the page gives no birth or death dates. The journey is dated 1324-25."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "took power in 1312; would reign until 1337",
+        "source": "src-whe-musa"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 1324 Musa embarked on the hajj",
+        "source": "src-northwestern-hajj"
+      },
+      {
+        "calendar": "CE",
+        "value": "set off for a pilgrimage to Mecca in 1324; arrived in Cairo in July of that year; given a palace for his three-month stay",
+        "source": "src-whe-musa"
+      }
+    ],
+    "display": "reigned 1312-1337; pilgrimage 1324-1325"
+  },
+  "where": {
+    "lat": 11.3797,
+    "lon": -8.3842,
+    "elevation_m": null,
+    "modern_name": "Niani area, Guinea (start of the pilgrimage route to Cairo and Mecca)",
+    "historical_name": "Niani, capital of the Mali Empire",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 30.0444,
+          "lon": 31.2358,
+          "year": 1324,
+          "date": "July 1324",
+          "label": "Cairo, about three months",
+          "source": "src-whe-musa",
+          "coordinate_source": "src-wd-cairo"
+        },
+        {
+          "lat": 21.4225,
+          "lon": 39.8261,
+          "year": 1325,
+          "date": "1324-1325",
+          "label": "Mecca, destination of the pilgrimage",
+          "source": "src-northwestern-hajj",
+          "coordinate_source": "src-wd-mecca"
+        }
+      ]
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-gn-niani"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "northern_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "people",
+    "trade_exploration",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Ruler of Mali at its height; his Cairo visit made the empire's wealth known across the Islamic world."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-mali-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-timbuktu",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-musa",
+      "url": "https://www.worldhistory.org/Mansa_Musa_I/",
+      "title": "Mansa Musa I",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-northwestern-hajj",
+      "url": "https://caravans.library.northwestern.edu/tour/mansa-musas-hajj-to-mecca",
+      "title": "Mansa Musa's Hajj to Mecca",
+      "publisher": "Northwestern University Libraries",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whc-umari",
+      "url": "https://worldhistorycommons.org/al-umaris-account-mansa-musas-visit-cairo",
+      "title": "Al-Umari's Account of Mansa Musa's Visit to Cairo",
+      "publisher": "World History Commons (Roy Rosenzweig Center for History and New Media)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-niani",
+      "url": "https://www.geonames.org/search.html?q=Niani&country=GN",
+      "title": "Niani, Guinea (GeoNames)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-cairo",
+      "url": "https://www.wikidata.org/wiki/Q85",
+      "title": "Cairo (Q85)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-mecca",
+      "url": "https://www.wikidata.org/wiki/Q5806",
+      "title": "Mecca (Q5806)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the route: the start point is assumed to be Niani; Walata is not on any opened page as a stop, so it is omitted; Mecca arrival date is only \"1324-25\". The Niani pin is approximate.",
+  "author": "historian-agent:o-s34",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 32,
+    "beats": [
+      {
+        "span": "1324",
+        "action": "path.trace {}",
+        "caption": "In 1324 Mansa Musa set out from Mali on the hajj, heading for Mecca by way of Cairo.",
+        "source": "src-northwestern-hajj"
+      },
+      {
+        "span": "July 1324",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "He reached Cairo in July 1324 for a three-month stay, spending gold lavishly.",
+        "source": "src-whe-musa"
+      },
+      {
+        "span": "1324",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "His spending reportedly cut the gold dinar's value by about 20 percent; recovery took around twelve years.",
+        "source": "src-whe-musa",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T09:04:54.511Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

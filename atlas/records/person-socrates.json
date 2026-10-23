@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s51",
+  "updated": "2026-10-22",
+  "id": "person-socrates",
+  "kind": "person",
+  "title": "Socrates",
+  "summary": "Socrates of Athens, living from about 469 to 399 BCE, belonged to the Athenian deme of Alopece; his father was a stoneworker and his mother a midwife. He insisted he was not a teacher and took no payment. Tried in 399 BCE for irreverence, he was found guilty, sentenced to death and drank hemlock.",
+  "when": {
+    "start": {
+      "year": -468
+    },
+    "end": {
+      "year": -398
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Stanford gives 469-399 B.C.E.; World History Encyclopedia gives c. 470/469-399 BCE. Start is 469 BCE (-468); 470 BCE would be -469."
+    },
+    "as_recorded": [
+      {
+        "calendar": "B.C.E. (SEP)",
+        "value": "469–399 B.C.E.",
+        "source": "src-sep-socrates"
+      },
+      {
+        "calendar": "BCE (WHE)",
+        "value": "l. c. 470/469-399 BCE",
+        "source": "src-whe-socrates"
+      }
+    ],
+    "display": "c. 469–399 BCE"
+  },
+  "where": {
+    "lat": 37.9755648,
+    "lon": 23.7348324,
+    "elevation_m": null,
+    "modern_name": "Athens, Greece",
+    "historical_name": "Athens, polis in Attica (SEP names his deme as Alopece, outside the city wall)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-athens"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Athenian whose trial and death are among the best known episodes of ancient philosophy."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-0398-trial-of-socrates",
+      "type": "related"
+    },
+    {
+      "id": "-0507-classical-athens",
+      "type": "related"
+    },
+    {
+      "id": "-0430-peloponnesian-war",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sep-socrates",
+      "url": "https://plato.stanford.edu/entries/socrates/",
+      "title": "Socrates",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-socrates",
+      "url": "https://www.worldhistory.org/Socrates/",
+      "title": "Socrates",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-athens",
+      "url": "https://nominatim.openstreetmap.org/search?q=Athens+Greece&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Athens (37.9755648, 23.7348324)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth year differs by a year between pages (469 vs 470/469). Pin is the Athens city node; no birthplace beyond deme Alopece is stated. WHE calls the father a sculptor, SEP a stoneworker; the summary follows SEP. Trial detail lives in -0398-trial-of-socrates.",
+  "published_at": "2026-10-22T10:53:11.503Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

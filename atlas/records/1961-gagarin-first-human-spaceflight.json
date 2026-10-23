@@ -1,0 +1,170 @@
+{
+  "id": "1961-gagarin-first-human-spaceflight",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Yuri Gagarin, first human in space (Vostok 1)",
+  "summary": "On 12 April 1961 Soviet cosmonaut Yuri Gagarin was launched from the Baikonur Cosmodrome in Vostok 1 and made one orbit of Earth in a flight of 108 minutes, becoming the first human in space. He ejected about 7 km up and parachuted down, landing near Engels in the Saratov region.",
+  "when": {
+    "start": {
+      "year": 1961
+    },
+    "end": {
+      "year": 1961
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Single-day flight; launch 06:07 UTC per ESA."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "12 April 1961",
+        "source": "src-esa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "April 12, 1961",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "12 April 1961",
+        "source": "src-tps"
+      }
+    ],
+    "display": "12 April 1961"
+  },
+  "where": {
+    "lat": 45.9178932,
+    "lon": 63.4083721,
+    "elevation_m": null,
+    "modern_name": "Baikonur Cosmodrome, Kyzylorda Region, Kazakhstan",
+    "historical_name": "Baikonur Cosmodrome (then called Tyratam), Kazakh SSR, Soviet Union",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The first human spaceflight, a landmark of the Space Race."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1957-launch-of-sputnik-1",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-esa",
+      "url": "https://www.esa.int/About_Us/50_years_of_ESA/50_years_of_humans_in_space/The_flight_of_Vostok_1",
+      "title": "The flight of Vostok 1",
+      "publisher": "European Space Agency",
+      "author": "European Space Agency",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/resource/yuri-gagarin-first-human-in-space/",
+      "title": "Yuri Gagarin: First Human in Space",
+      "publisher": "NASA Science",
+      "author": "NASA Science",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tps",
+      "url": "https://planetary.org/space-missions/vostok-1",
+      "title": "Yuri Gagarin and Vostok 1, the First Human Spaceflight",
+      "publisher": "The Planetary Society",
+      "author": "The Planetary Society",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Baikonur+Cosmodrome&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Baikonur Cosmodrome (relation 6725906)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the launch site (OSM centroid of a large cosmodrome, hence 30 km); the landing site is about 51N 45E per ESA. ESA does not itself state the 108-minute duration (NASA and Planetary Society do).",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1961-04-12",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Vostok 1 lifts off from Baikonur with Gagarin aboard.",
+        "source": "src-esa",
+        "consequence": false
+      },
+      {
+        "span": "1961-04-12",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "After one orbit and 108 minutes he ejects about 7 km up and lands near Engels, the first human to reach space.",
+        "source": "src-tps",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:35.212Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

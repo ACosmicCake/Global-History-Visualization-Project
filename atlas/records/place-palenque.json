@@ -1,0 +1,245 @@
+{
+  "id": "place-palenque",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Palenque",
+  "summary": "Palenque, in Chiapas, Mexico, was a Classic Maya capital known for refined architecture and sculpted reliefs. It rose to regional power around 500 CE and was ruled in the seventh century by K'inich Janaab' Pakal, whose tomb lies inside the Temple of the Inscriptions. The city was abandoned around the ninth century.",
+  "when": {
+    "start": {
+      "year": 400
+    },
+    "end": {
+      "year": 900
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "INAH's site card gives 400-900 AD; UNESCO says the city was founded in the Late Preclassic, became a powerful capital around AD 500, and was abandoned about the 9th century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD",
+        "value": "A dazzling city (400 - 900 AD)",
+        "source": "src-inah-lugares-palenque"
+      },
+      {
+        "calendar": "AD",
+        "value": "reinado de K'inich Janahb Pakal (615-683 d.C.)",
+        "source": "src-inah-whc-palenque"
+      }
+    ],
+    "display": "c. 400-900 CE"
+  },
+  "where": {
+    "lat": 17.484167,
+    "lon": -92.046389,
+    "elevation_m": null,
+    "modern_name": "Palenque, Chiapas, Mexico",
+    "historical_name": "Palenque, Classic Maya city-state (the Baakal kingdom), Chiapas lowlands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wikidata-palenque"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Capital of Pakal and a leading Classic Maya centre; the Temple of the Inscriptions holds one of the longest Maya glyphic texts."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0250-classic-maya-period",
+      "type": "part_of"
+    },
+    {
+      "id": "0800-terminal-classic-maya-collapse",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-411",
+      "url": "https://whc.unesco.org/en/list/411",
+      "title": "Pre-Hispanic City and National Park of Palenque (World Heritage List no. 411)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-inah-whc-palenque",
+      "url": "https://patrimoniomundialmexico.inah.gob.mx/publico/lista_detalle.php?idLista=MTQ%3D",
+      "title": "Ciudad Prehispánica y parque nacional de Palenque",
+      "publisher": "Instituto Nacional de Antropología e Historia (INAH)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-inah-lugares-palenque",
+      "url": "https://lugares.inah.gob.mx/en/node/4529",
+      "title": "Palenque",
+      "publisher": "Instituto Nacional de Antropología e Historia (INAH)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wikidata-palenque",
+      "url": "https://www.wikidata.org/wiki/Q181427",
+      "title": "Wikidata item Q181427, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-osm-inscriptions",
+      "url": "https://www.openstreetmap.org/way/160083187",
+      "title": "OpenStreetMap outline of Templo de las Inscripciones",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start (400 versus 'founded in the Late Preclassic'). No model written: INAH gives the Temple of the Inscriptions as eight levels and nearly 23 m high, but no base dimensions from an acceptable page (a tourism page gives 60 by 42.5 m and 27.2 m, which disagree with INAH on height); skipped. Model added: shape stepped_pyramid (INAH counts eight levels); height from INAH, plan from OSM outline of the same temple; construction span is the reign, not a dated build.",
+  "author": "historian-agent:m-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T05:38:17.707Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Pyramid base of the Temple of the Inscriptions, 40.3 x 31.3 m minimum bounding rectangle of the OpenStreetMap outline tagged as that temple (way/160083187).",
+      "source": "src-osm-inscriptions",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from INAH height and mapped outline",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "stepped_pyramid",
+      "source": "src-inah-whc-palenque",
+      "measurements": [
+        {
+          "part": "height (Temple of the Inscriptions)",
+          "value": 23,
+          "unit": "m",
+          "source": "src-inah-whc-palenque",
+          "note": "INAH: \"casi 23 metros\" (nearly 23 m), eight levels"
+        },
+        {
+          "part": "tiers (Temple of the Inscriptions)",
+          "value": 8,
+          "unit": "count",
+          "source": "src-inah-whc-palenque",
+          "note": "INAH: \"ocho niveles\""
+        },
+        {
+          "part": "footprint length (Temple of the Inscriptions, OSM outline)",
+          "value": 40.3,
+          "unit": "m",
+          "source": "src-osm-inscriptions"
+        },
+        {
+          "part": "footprint width (Temple of the Inscriptions, OSM outline)",
+          "value": 31.3,
+          "unit": "m",
+          "source": "src-osm-inscriptions"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "stepped pyramid footprint"
+      },
+      {
+        "level": "local",
+        "representation": "procedural eight-level stepped pyramid, 23 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 615,
+        "end_year": 683,
+        "state": "construction",
+        "description": "Built during or around the reign of K'inich Janaab' Pakal (615-683 CE per INAH); the temple holds his tomb.",
+        "source": "src-inah-whc-palenque"
+      },
+      {
+        "start_year": 683,
+        "end_year": 900,
+        "state": "intact",
+        "description": "Stood while the city was occupied; Palenque was abandoned about the 9th century (UNESCO).",
+        "source": "src-unesco-411"
+      },
+      {
+        "start_year": 900,
+        "end_year": null,
+        "state": "ruined",
+        "description": "Ruin in the abandoned city; restored and conserved as an archaeological monument.",
+        "source": "src-unesco-411"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2011-tohoku-earthquake-and-tsunami",
+  "kind": "event",
+  "title": "Tohoku Earthquake and Tsunami",
+  "summary": "On 11 March 2011 a great thrust earthquake on the Japan Trench, off the northeast coast of Honshu, generated a tsunami that reached the coast within 30 minutes and overtopped seawalls. NOAA reports over 18,000 dead, and the tsunami disabled three Fukushima Daiichi reactors. Magnitude is given as 9.0 or 9.1 depending on source.",
+  "when": {
+    "start": {
+      "year": 2011
+    },
+    "end": {
+      "year": 2011
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources disagree on magnitude (9.0 vs 9.1), not on date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 11, 2011",
+        "source": "src-ncei"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 11, 2011",
+        "source": "src-iris"
+      }
+    ],
+    "display": "11 March 2011"
+  },
+  "where": {
+    "lat": 38.322,
+    "lon": 142.369,
+    "elevation_m": null,
+    "modern_name": "Off the east coast of Honshu, Japan (epicentre)",
+    "historical_name": "Offshore northeast Honshu, Japan; Pacific coast of Tohoku region",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-iris"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Largest earthquake recorded in Japan, with a deadly tsunami and the Fukushima Daiichi accident; NOAA calls it the most expensive natural disaster in history."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a disaster with many thousands of deaths, including victims never recovered.",
+  "related": [
+    {
+      "id": "2011-fukushima-daiichi-disaster",
+      "type": "caused",
+      "because": "The tsunami disabled power and cooling at three Fukushima Daiichi reactors."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ncei",
+      "url": "https://www.ncei.noaa.gov/news/day-2011-japan-earthquake-and-tsunami",
+      "title": "On This Day: 2011 Tohoku Earthquake and Tsunami",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "author": null,
+      "date_published": "2021-03-11",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-iris",
+      "url": "https://ds.iris.edu/ds/nodes/dmc/specialevents/2011/03/11/tohoku-japan-earthquake/",
+      "title": "Tohoku, Japan Earthquake special event page",
+      "publisher": "EarthScope (IRIS) Data Management Center",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-si",
+      "url": "https://ocean.si.edu/planet-ocean/waves-storms-tsunamis/understanding-japan-earthquake-and-tsunami",
+      "title": "Understanding the Japan Earthquake and Tsunami",
+      "publisher": "Smithsonian Ocean Portal",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude differs: NOAA 9.1, IRIS/Smithsonian 9.0. Pin is IRIS epicentre (offshore), not a coastal site. NOAA death toll text is 'over 18,000'.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:08.056Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

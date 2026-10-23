@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:m-8",
+  "updated": "2026-10-22",
+  "id": "place-uxmal",
+  "title": "Uxmal",
+  "summary": "Uxmal is a Maya town of the Puuc region in Yucatan, founded around 700 CE and home to some 25,000 people, with buildings dating from 700 to 1000. ICOMOS records that it was abandoned around 1200. The Pyramid of the Soothsayer, also called the Pyramid of the Magician, dominates the ceremonial centre; it is 35 m high and elliptical in plan, made of five superimposed elements.",
+  "when": {
+    "start": {
+      "year": 700
+    },
+    "end": {
+      "year": 1200
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 'founded c. A.D. 700' (UNESCO); buildings date 700-1000 (UNESCO) and the town was 'abandoned around 1200' (ICOMOS evaluation)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (UNESCO)",
+        "value": "was founded c. A.D. 700",
+        "source": "src-unesco-791"
+      },
+      {
+        "calendar": "AD (ICOMOS evaluation)",
+        "value": "it was abandoned around 1200",
+        "source": "src-icomos-791"
+      }
+    ],
+    "display": "Founded c. 700 CE; buildings 700–1000; abandoned c. 1200"
+  },
+  "where": {
+    "lat": 20.36082,
+    "lon": -89.76964,
+    "elevation_m": null,
+    "modern_name": "Pyramid of the Magician, Uxmal, Yucatán, Mexico",
+    "historical_name": "Uxmal, Puuc region, Late Classic Maya town",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-wikidata-q3034708",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO counts Uxmal with Kabah, Labna and Sayil among the high points of Maya art and architecture."
+  },
+  "related": [
+    {
+      "id": "0800-terminal-classic-maya-collapse",
+      "type": "related"
+    },
+    {
+      "id": "place-chichen-itza",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-791",
+      "url": "https://whc.unesco.org/en/list/791",
+      "title": "Pre-Hispanic Town of Uxmal (World Heritage List no. 791)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-icomos-791",
+      "url": "https://whc.unesco.org/document/154286",
+      "title": "ICOMOS evaluation of Uxmal (World Heritage List no. 791)",
+      "publisher": "ICOMOS / UNESCO World Heritage Centre",
+      "author": "ICOMOS / UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-whe-uxmal",
+      "url": "https://www.worldhistory.org/Uxmal/",
+      "title": "Uxmal",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-wikidata-q3034708",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3034708.json",
+      "title": "Wikidata Q3034708: Pyramid of the Magician, coordinates 20.36082, -89.76964",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 791, geolocation 20.3616667, -89.7702778 (and three other points)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Elliptical pyramid with rounded north and south ends, made of five superimposed elements with monumental stairways on two sides, plan 85 by 50 m. No survey polygon opened.",
+      "source": "src-icomos-791",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-icomos-791",
+      "measurements": [
+        {
+          "part": "height (Pyramid of the Soothsayer / Magician)",
+          "value": 35,
+          "unit": "m",
+          "source": "src-icomos-791",
+          "note": "\"35 m high\""
+        },
+        {
+          "part": "base length (major axis, elliptical plan)",
+          "value": 85,
+          "unit": "m",
+          "source": "src-icomos-791",
+          "note": "\"elliptical (85 m x 50 m) in plan\""
+        },
+        {
+          "part": "base width (minor axis, elliptical plan)",
+          "value": 50,
+          "unit": "m",
+          "source": "src-icomos-791"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "elliptical pyramid at true plan on the Uxmal terrace"
+      },
+      {
+        "level": "local",
+        "representation": "procedural oval stepped pyramid with west and east stairways"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 700,
+        "end_year": 1050,
+        "state": "construction",
+        "description": "The pyramid is of the Late Classic Period (AD 700-900); the final phase, Temple V, was built around 1000-1050.",
+        "source": "src-icomos-791"
+      },
+      {
+        "start_year": 1050,
+        "end_year": 1200,
+        "state": "intact",
+        "description": "No further building phase is recorded after Temple V; the town was abandoned around 1200.",
+        "source": "src-icomos-791"
+      },
+      {
+        "start_year": 1200,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "Uxmal was abandoned around 1200 according to the ICOMOS evaluation and the Spanish later renamed its buildings.",
+        "source": "src-icomos-791"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 700,
+        "to_year": null,
+        "material": "limestone",
+        "source": "src-whe-uxmal"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Pyramid modelled as stepped_pyramid although the plan is elliptical; the 35 m height and 85 x 50 m ellipse are from the 1996 ICOMOS evaluation (the PDF's text layer garbles the plan, I read '85 m x 50 m' from the page image). Popular accounts (not opened) give a smaller base; the ICOMOS value is the only one cited. The 'ruined' phase from 1200 is a loose reading: ICOMOS says the town was abandoned around 1200 but also that inhabitants returned and it was a pilgrimage place until the Spanish. Materials: WHE says the buildings of Uxmal are limestone.",
+  "published_at": "2026-10-22T09:01:47.957Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

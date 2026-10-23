@@ -1,0 +1,153 @@
+{
+  "id": "1919-anti-jewish-pogroms-ukraine",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Anti-Jewish Pogroms in Ukraine (1918-1920)",
+  "summary": "During the Russian Civil War, Jews in Ukraine suffered waves of pogroms by Directory troops, independent otamans, Bolshevik units and the Volunteer Army. N. Gergel counted 887 major pogroms and 349 lesser attacks in 1918-20, with 31,071 killed; other estimates reach 60,000. About 80 percent occurred in Right-Bank Ukraine, and Kyiv saw mass pogroms in October 1919.",
+  "when": {
+    "start": {
+      "year": 1918
+    },
+    "end": {
+      "year": 1920
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dates 1918-20 per the Encyclopedia of Ukraine; pogroms peaked in 1919 (934 of the counted attacks)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "in Ukraine in 1918-20",
+        "source": "src-encukraine-pogrom"
+      }
+    ],
+    "display": "1918-1920 (peak 1919)"
+  },
+  "where": {
+    "lat": 50.45,
+    "lon": 30.523611,
+    "elevation_m": null,
+    "modern_name": "Kyiv, Ukraine (representative site; pogroms covered Right-Bank Ukraine)",
+    "historical_name": "Kiev, then contested between the Ukrainian Directory, Bolsheviks and the Volunteer Army (Ukraine, former Russian Empire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-kyiv",
+      "src-obp-shtif"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Among the largest waves of anti-Jewish violence before the Holocaust, with estimated deaths in the tens of thousands."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes mass killing, including of children. Figures are historians' estimates and differ between sources.",
+  "related": [
+    {
+      "id": "1917-russian-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1941-the-holocaust",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encukraine-pogrom",
+      "url": "https://www.encyclopediaofukraine.com/pages%5CP%5CO%5CPogrom.htm",
+      "title": "Pogrom",
+      "publisher": "Encyclopedia of Ukraine (Canadian Institute of Ukrainian Studies, University of Alberta)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-obp-shtif",
+      "url": "https://books.openbookpublishers.com/10.11647/obp.0176/ch2.xhtml",
+      "title": "II. Before the Pogroms and During the Pogroms (N. Shtif, in The Pogroms in Ukraine, 1918-19, ed. M. Wolfthal)",
+      "publisher": "Open Book Publishers",
+      "author": "Nokhem Shtif",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-kyiv",
+      "url": "https://www.wikidata.org/wiki/Q1899",
+      "title": "Wikidata item Q1899 (Kyiv), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll is contested: Gergel 31,071, up to 60,000 per other estimates; Shtif and Heifetz give differing Fastiv figures (600 vs 1,500-1,800), and the Encyclopedia says about 1,500. Kyiv is a representative pin only (mass pogroms 17-22 October 1919 per Shtif); events were spread over Ukraine.",
+  "author": "historian-agent:o-s43",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:16:56.499Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1918",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "During the Russian Civil War, Jews in Ukraine suffered waves of pogroms by Directory troops, independent otamans, Bolshevik units and the Volunteer Army.",
+        "source": "src-encukraine-pogrom"
+      },
+      {
+        "span": "1920",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Gergel counted 887 major pogroms and 349 lesser attacks in 1918-20, with 31,071 killed; other estimates reach 60,000.",
+        "source": "src-encukraine-pogrom",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

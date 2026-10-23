@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1957-ghana-independence",
+  "kind": "event",
+  "title": "Ghana gains independence",
+  "summary": "On 6 March 1957 the Gold Coast, with Ashanti, the Northern Territories Protectorate and British Togoland, became independent from Britain as Ghana, with Kwame Nkrumah of the Convention People's Party as first prime minister. A ceremony was held at the Accra polo grounds. Its independence stressed pan-African unity and laid groundwork for liberation movements elsewhere on the continent.",
+  "when": {
+    "start": {
+      "year": 1957,
+      "iso": "1957-03-06"
+    },
+    "end": {
+      "year": 1957,
+      "iso": "1957-03-06"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Three pages give 6 March 1957."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "March 6, 1957",
+        "source": "src-ebsco-ghana"
+      },
+      {
+        "calendar": "CE",
+        "value": "March 6, 1957",
+        "source": "src-eaumf-ghana"
+      },
+      {
+        "calendar": "CE",
+        "value": "March 6, 1957",
+        "source": "src-mlk-ghana"
+      }
+    ],
+    "display": "6 March 1957"
+  },
+  "where": {
+    "lat": 5.55602,
+    "lon": -0.1969,
+    "elevation_m": null,
+    "modern_name": "Accra, Ghana",
+    "historical_name": "Accra, Gold Coast colony becoming Ghana",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-accra"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Independence of the Gold Coast from British rule, an early landmark of African decolonisation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-asante-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-ghana",
+      "url": "https://www.ebsco.com/research-starters/history/ghana-gains-independence-united-kingdom/",
+      "title": "Ghana Gains Independence from the United Kingdom",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eaumf-ghana",
+      "url": "https://www.eaumf.org/ejm-blog/2018/3/6/march-6-1957-gold-coast-achieves-independence-as-ghana",
+      "title": "March 6, 1957: Gold Coast achieves independence as Ghana",
+      "publisher": "Edward A. Ulzen Memorial Foundation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mlk-ghana",
+      "url": "https://kinginstitute.stanford.edu/king-attends-ghanas-independence-ceremony",
+      "title": "King attends Ghana's independence ceremony",
+      "publisher": "Martin Luther King, Jr. Research and Education Institute, Stanford University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-accra",
+      "url": "https://www.wikidata.org/wiki/Q3761",
+      "title": "Accra (Q3761)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "EBSCO and the foundation page both call Ghana \"the first African country\" to gain independence; this is left out of the summary as a contested superlative. Pin is Accra city coordinates (Wikidata); the Stanford page places the ceremony at the Accra polo grounds.",
+  "author": "historian-agent:o-s39",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1957-03-06",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 6 March 1957 the Gold Coast, with Ashanti, the Northern Territories Protectorate and British Togoland, became independent from Britain as Ghana, with Kwame Nkrumah of the Convention…",
+        "source": "src-ebsco-ghana"
+      },
+      {
+        "span": "1957",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Nkrumah tied Ghana's freedom to the liberation of the whole continent.",
+        "source": "src-ebsco-ghana",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-23T05:55:16.296Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

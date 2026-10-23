@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s99",
+  "updated": "2026-10-22",
+  "id": "1450-inca-khipu",
+  "kind": "work",
+  "title": "Inca khipu record-keeping",
+  "summary": "Khipus were knotted, coloured cords used by the Inca Empire as a data-recording device. Officials used them for censuses, tribute and other accounts; trained khipu makers produced and read them, and runners carried them between way stations. Knot rows follow a base-10 system. Surviving Inca khipus date to about 1400-1534, and any narrative content remains undeciphered.",
+  "when": {
+    "start": {
+      "year": 1400
+    },
+    "end": {
+      "year": 1534
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "NIST gives 1400-1534 A.D. for surviving Inca khipus and 1450-1534 for the empire; Hyperallergic says the surviving khipus date from the 15th to 16th centuries. Start 1400 is the earlier bound; the id year 1450 is only a lookup key."
+    },
+    "as_recorded": [
+      {
+        "calendar": "A.D.",
+        "value": "1400-1534 A.D. (surviving Inca khipus)",
+        "source": "src-nist-khipu"
+      },
+      {
+        "calendar": "centuries",
+        "value": "dating from the 15th to 16th centuries",
+        "source": "src-hyperallergic-khipu"
+      }
+    ],
+    "display": "c. 1400-1534"
+  },
+  "where": {
+    "lat": -13.516944444444444,
+    "lon": -71.9786111111111,
+    "elevation_m": null,
+    "modern_name": "Cusco, Peru (reference point; the empire ran from the Pasto region of Colombia to Santiago, Chile)",
+    "historical_name": "Inca (Inka) Empire, Andes of South America",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2000,
+    "coordinate_sources": [
+      "src-wikidata-q5582862"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "science_technology",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Inca Empire ran its administration on a knotted-cord recording system, an important non-alphabetic record-keeping technology."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-nist-khipu",
+      "url": "https://www.nist.gov/blogs/taking-measure/historic-measures-how-standards-and-technology-enabled-inca-empire-thrive",
+      "title": "Historic Measures: How Standards and Technology Enabled the Inca Empire to Thrive",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-hyperallergic-khipu",
+      "url": "https://hyperallergic.com/277483/unraveling-the-lost-inca-language-of-knots/",
+      "title": "Unraveling the Lost Inca Language of Knots",
+      "publisher": "Hyperallergic",
+      "author": null,
+      "date_published": "2016-02-24",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q5582862",
+      "url": "https://www.wikidata.org/wiki/Q5582862",
+      "title": "Cusco (Wikidata Q5582862)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the point is Cusco as a reference marker for an empire spanning thousands of km; no opened page names Cusco as a khipu site. NIST (1,000 khipus) and Hyperallergic (600 survive) differ on counts, so none is stated.",
+  "published_at": "2026-10-22T17:57:15.062Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

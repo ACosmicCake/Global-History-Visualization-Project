@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1865-us-thirteenth-amendment",
+  "kind": "event",
+  "title": "Ratification of the Thirteenth Amendment",
+  "summary": "Congress passed the Thirteenth Amendment in January 1865, and it was ratified on 6 December 1865. It abolished slavery and involuntary servitude throughout the United States, except as punishment for a crime of which a person has been duly convicted, and gave Congress power to enforce it.",
+  "when": {
+    "start": {
+      "year": 1865,
+      "month": 1,
+      "day": 31,
+      "iso": "1865-01-31"
+    },
+    "end": {
+      "year": 1865,
+      "month": 12,
+      "day": 6,
+      "iso": "1865-12-06"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is House passage; the Senate had passed it in April 1864. End is completion of ratification."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "January 31, 1865",
+        "source": "src-history-13th"
+      },
+      {
+        "calendar": "CE",
+        "value": "Ratified: December 6, 1865",
+        "source": "src-nara-13th"
+      }
+    ],
+    "display": "31 January – 6 December 1865"
+  },
+  "where": {
+    "lat": 38.8897,
+    "lon": -77.0092,
+    "elevation_m": null,
+    "modern_name": "United States Capitol, Washington, D.C., USA",
+    "historical_name": "Washington, D.C., United States (Congress); ratified by state legislatures",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 700,
+    "coordinate_sources": [
+      "src-wd-capitol"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Constitutional abolition of chattel slavery in the United States."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1888-brazil-lei-aurea",
+      "type": "related"
+    },
+    {
+      "id": "1794-french-abolition-of-slavery",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nara-13th",
+      "url": "https://www.archives.gov/milestone-documents/13th-amendment",
+      "title": "13th Amendment to the U.S. Constitution: Abolition of Slavery (1865)",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-13th",
+      "url": "https://www.history.com/topics/black-history/thirteenth-amendment",
+      "title": "13th Amendment",
+      "publisher": "HISTORY (A+E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-capitol",
+      "url": "https://www.wikidata.org/wiki/Q54109",
+      "title": "United States Capitol (Wikidata Q54109)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Capitol where Congress passed it; ratification was by state legislatures nationwide. NARA gives January 31, 1865 as the date of congressional passage and 1 February 1865 for presidential approval of the resolution.",
+  "author": "historian-agent:o-s33",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:54:08.407Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1865-01-31",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Congress passed the Thirteenth Amendment in January 1865, and it was ratified on 6 December 1865.",
+        "source": "src-nara-13th"
+      },
+      {
+        "span": "1865",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It abolished slavery and involuntary servitude throughout the United States, except as punishment for a crime of which a person has been duly convicted, and gave Congress power…",
+        "source": "src-nara-13th",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

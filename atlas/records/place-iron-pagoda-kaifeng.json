@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:o-s110",
+  "updated": "2026-10-22",
+  "id": "place-iron-pagoda-kaifeng",
+  "kind": "place",
+  "title": "Iron Pagoda, Kaifeng",
+  "summary": "The Iron Pagoda of Kaifeng, also called the Youguo Temple Pagoda, is an octagonal thirteen-storey brick tower built in 1049 under the Northern Song, after lightning burned an earlier tower in 1044. Brown glazed bricks give it an iron-like colour. China Daily and CGTN give its height as 55.08 metres.",
+  "when": {
+    "start": {
+      "year": 1049
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "China Daily gives 1049; China Culture gives the first year of the Huangtuo reign (1049) and lightning damage in 1044. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (China Daily)",
+        "value": "1049",
+        "source": "src-chinadaily-iron"
+      },
+      {
+        "calendar": "CE (China Culture)",
+        "value": "1044",
+        "source": "src-chinaculture-iron"
+      },
+      {
+        "calendar": "CE (China Culture)",
+        "value": "1049",
+        "source": "src-chinaculture-iron"
+      }
+    ],
+    "display": "Built 1049; standing today"
+  },
+  "where": {
+    "lat": 34.8166321,
+    "lon": 114.3648677,
+    "elevation_m": null,
+    "modern_name": "Iron Pagoda, Tieta Subdistrict, Shunhe Hui District, Kaifeng, Henan, China",
+    "historical_name": "Pagoda of Youguo Temple, Kaifeng (Northern Song)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-iron"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A first-batch national protected site and a surviving Northern Song brick pagoda."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-chinadaily-iron",
+      "url": "https://govt.chinadaily.com.cn/s/202204/13/WS62569720498e6a12c1229e2e/youguo-temple-pagoda-kaifeng-henan-province.html",
+      "title": "Youguo Temple Pagoda, Kaifeng, Henan province",
+      "publisher": "China Daily (government portal)",
+      "author": "China Daily",
+      "date_published": "2022-04-13",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model.geometry"
+      ]
+    },
+    {
+      "id": "src-cgtn-iron",
+      "url": "https://news.cgtn.com/news/2026-04-23/Iron-Pagoda-A-millennium-old-masterpiece-in-Kaifeng-1MzZucBueRi/p.html",
+      "title": "Iron Pagoda: A millennium-old masterpiece in Kaifeng",
+      "publisher": "CGTN",
+      "author": "CGTN",
+      "date_published": "2026-04-23",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry"
+      ]
+    },
+    {
+      "id": "src-chinaculture-iron",
+      "url": "http://en.chinaculture.org/library/2008-02/15/content_34729.htm",
+      "title": "Tower in Youguo Temple",
+      "publisher": "China Culture (China Daily)",
+      "author": "China Daily",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-iron",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E9%93%81%E5%A1%94%20%E5%BC%80%E5%B0%81&format=json",
+      "title": "OpenStreetMap Nominatim: 铁塔, way 455884241 (34.8166321, 114.3648677)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "id": "src-osm-outline-iron",
+      "url": "https://www.openstreetmap.org/way/455884241",
+      "title": "OpenStreetMap outline of 铁塔",
+      "publisher": "OpenStreetMap contributors",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "No mesh: the height (55.08 m, China Daily and CGTN; 55 m on China Culture) appears only in state media, with no heritage body, government agency or scholarly source opened, so it is kept as data. Plan from OSM outline (10.9 by 10.8 m).",
+  "model": {
+    "footprint": {
+      "description": "Plan of about 10.9 m by 10.8 m from the OpenStreetMap outline tagged as the pagoda (way 455884241). Shape chosen: pagoda, 13 storeys.",
+      "source": "src-osm-outline-iron",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pagoda",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-chinadaily-iron",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 55.08,
+          "unit": "m",
+          "source": "src-chinadaily-iron",
+          "note": "\"55.08 meters\"; CGTN agrees; China Culture says 55 meters"
+        },
+        {
+          "part": "tiers",
+          "value": 13,
+          "unit": "count",
+          "source": "src-chinadaily-iron",
+          "note": "13 storeys, octagonal"
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 10.9,
+          "unit": "m",
+          "source": "src-osm-outline-iron"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 10.8,
+          "unit": "m",
+          "source": "src-osm-outline-iron"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "octagonal 13-storey brick pagoda"
+      },
+      {
+        "level": "local",
+        "representation": "procedural pagoda on its mapped plan"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1049,
+        "end_year": 1049,
+        "state": "construction",
+        "description": "Built in 1049 under the Northern Song.",
+        "source": "src-chinadaily-iron"
+      },
+      {
+        "start_year": 1050,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Still stands intact; spared when a Yellow River flood destroyed the other Kaifeng temples (China Culture).",
+        "source": "src-chinadaily-iron"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1049,
+        "to_year": 2026,
+        "material": "brick with brown glazed bricks",
+        "source": "src-chinadaily-iron"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "Height and storeys come only from state media (China Daily, CGTN); no heritage-body, government, museum or scholarly source was opened, so the figures are kept as data and the tower is not drawn."
+  },
+  "published_at": "2026-10-22T19:16:40.994Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

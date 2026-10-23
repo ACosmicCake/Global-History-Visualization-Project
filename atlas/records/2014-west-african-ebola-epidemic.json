@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2014-west-african-ebola-epidemic",
+  "kind": "event",
+  "title": "West African Ebola epidemic",
+  "summary": "WHO says an Ebola outbreak began silently spreading in a village in Guinea on 26 December 2013; the disease was identified on 21 March 2014 and announced publicly on 23 March with 49 cases and 29 deaths. CDC reports a death count of more than 11,300 people in Guinea, Liberia and Sierra Leone.",
+  "when": {
+    "start": {
+      "year": 2013
+    },
+    "end": {
+      "year": 2016
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start from WHO; end year taken from the 2014-2016 label on the CDC page, which dates its own response to 31 March 2016."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "began silently spreading in a small village in Guinea on 26 December 2013",
+        "source": "src-who-ebola"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "2014-2016 Ebola response",
+        "source": "src-cdc-ebola"
+      }
+    ],
+    "display": "2013–2016"
+  },
+  "where": {
+    "lat": 8.622353,
+    "lon": -10.064537,
+    "elevation_m": null,
+    "modern_name": "Meliandou, Guéckédou, Guinea",
+    "historical_name": "Meliandou, Republic of Guinea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-osm-meliandou"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Largest Ebola epidemic recorded, with more than 11,300 deaths in three countries."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1918-influenza-pandemic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-who-ebola",
+      "url": "https://www.who.int/news-room/spotlight/one-year-into-the-ebola-epidemic/origins-of-the-2014-ebola-epidemic",
+      "title": "Origins of the 2014 Ebola epidemic",
+      "publisher": "World Health Organization",
+      "author": "WHO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cdc-ebola",
+      "url": "https://archive.cdc.gov/www_cdc_gov/media/releases/2016/p0707-history-ebola-response.html",
+      "title": "CDC Releases Detailed History of the 2014-2016 Ebola Response in MMWR",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "author": "CDC",
+      "date_published": "2016-07-07",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-osm-meliandou",
+      "url": "https://nominatim.openstreetmap.org/search?q=Meliandou+Guinea&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for Meliandou (node 2742838078)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: end year (CDC page dates its response, not the epidemic itself) and the pin, which marks the origin village though the epidemic spanned three countries.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "2013-12-26",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "WHO says the outbreak began silently spreading in a village in Guinea.",
+        "source": "src-who-ebola"
+      },
+      {
+        "span": "2014-03-23",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "WHO announced the outbreak publicly, reporting 49 cases and 29 deaths.",
+        "source": "src-who-ebola"
+      },
+      {
+        "span": "2016",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "CDC reported a death count of more than 11,300 people in Guinea, Liberia and Sierra Leone.",
+        "source": "src-cdc-ebola",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:11:46.967Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

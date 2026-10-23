@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1868-meiji-restoration",
+  "kind": "event",
+  "title": "Meiji Restoration",
+  "summary": "In January 1868 forces from Satsuma and Choshu took the Imperial Palace in Kyoto and issued an edict restoring imperial rule, ending the Tokugawa shogunate. The Boshin War followed; Edo Castle surrendered peacefully and the last resisters yielded in June 1869. Emperor Meiji's government then abolished the feudal domains and modernised Japan.",
+  "when": {
+    "start": {
+      "year": 1868
+    },
+    "end": {
+      "year": 1869
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The palace edict was in January 1868; the last bakufu supporters surrendered at Hakodate in June 1869."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "In January 1868, they took control of the Imperial Palace in Kyoto and issued an edict restoring imperial rule",
+        "source": "src-whe-meiji"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 1868 the Tokugawa shogun ... lost his power and the emperor was restored",
+        "source": "src-afe-meiji"
+      }
+    ],
+    "display": "January 1868–June 1869"
+  },
+  "where": {
+    "lat": 35.025278,
+    "lon": 135.762222,
+    "elevation_m": null,
+    "modern_name": "Kyoto Imperial Palace, Kyoto, Japan",
+    "historical_name": "Imperial Palace, Kyoto, Japan under the Tokugawa shogunate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-kyotopalace"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Ended the Tokugawa shogunate and is widely regarded as the dividing line between traditional and modern Japan."
+  },
+  "confidence": "established",
+  "audience_note": "Includes civil-war deaths in the Boshin War.",
+  "related": [
+    {
+      "id": "1839-first-opium-war",
+      "type": "caused_by",
+      "because": "China's defeat in the Opium War signalled to the Japanese government that Japan was under real threat from foreign powers."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-meiji",
+      "url": "https://www.worldhistory.org/Meiji_Restoration/",
+      "title": "Meiji Restoration",
+      "publisher": "World History Encyclopedia",
+      "author": "Graham Squires",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-afe-meiji",
+      "url": "https://afe.easia.columbia.edu/special/japan_1750_meiji.htm",
+      "title": "The Meiji Restoration and Modernization",
+      "publisher": "Asia for Educators, Columbia University",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-kyotopalace",
+      "url": "https://www.wikidata.org/wiki/Q1202239",
+      "title": "Kyoto Imperial Palace (Wikidata Q1202239)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1868-01",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "In January 1868 Satsuma and Choshu forces seized the Imperial Palace in Kyoto and issued an edict restoring imperial rule.",
+        "source": "src-whe-meiji"
+      },
+      {
+        "span": "1869-06",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The Boshin War ended in June 1869; about 8,200 of roughly 120,000 men mobilised are thought to have died.",
+        "source": "src-whe-meiji"
+      },
+      {
+        "span": "1871",
+        "action": "region.fill { radius_km: 80 }",
+        "caption": "In 1871 the feudal domains were abolished and turned into prefectures of a unified central state.",
+        "source": "src-afe-meiji",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the Boshin War casualty figure, which World History Encyclopedia introduces with \"it is thought\". Dating spans the January 1868 edict to the June 1869 surrender; the pin is the Kyoto palace point from Wikidata.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s36",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:32:44.269Z"
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-rome",
+  "kind": "place",
+  "title": "Rome",
+  "summary": "Rome is a historic city on the Tiber River in central Italy, traditionally founded on the Palatine Hill in 753 BCE. Serving successively as the heart of the Roman Kingdom, Republic, and Empire, the city became the administrative and monumental center of the Mediterranean world. Later emerging as the spiritual seat of western Christianity and the modern capital of unified Italy, Rome has exerted lasting influence on architecture, urbanism, and civil law.",
+  "when": {
+    "start": {
+      "year": -752
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "753 BCE is the traditional Varronian foundation date recorded in Roman legend; archaeological evidence indicates pastoral settlements on the Palatine and Capitoline hills dating from the 10th to 8th centuries BCE. The city remains inhabited to the present day."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (UNESCO World Heritage Centre)",
+        "value": "Founded, according to legend, by Romulus and Remus in 753 BC",
+        "source": "src-unesco-91"
+      },
+      {
+        "calendar": "B.C. (Open Yale Courses, Lecture 2)",
+        "value": "specifically on the 21st of April in 753 B.C., because it was on the 21st of April in 753 B.C. that, according to legend, Romulus founded the city of Rome.",
+        "source": "src-kleiner-yale"
+      }
+    ],
+    "display": "Founded traditionally 753 BCE; continuously inhabited to the present"
+  },
+  "where": {
+    "lat": 41.89193,
+    "lon": 12.51133,
+    "elevation_m": null,
+    "modern_name": "Rome, Lazio, Italy",
+    "historical_name": "Roma, Latium",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Capital of the Roman Republic and Empire, seat of the Papacy, and cradle of Western legal and architectural traditions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-colosseum",
+      "type": "has_part"
+    },
+    {
+      "id": "person-julius-caesar",
+      "type": "related"
+    },
+    {
+      "id": "person-augustus",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-91",
+      "url": "https://whc.unesco.org/en/list/91/",
+      "title": "Historic Centre of Rome, the Properties of the Holy See in that City Enjoying Extraterritorial Rights and San Paolo Fuori le Mura",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-kleiner-yale",
+      "url": "https://oyc.yale.edu/history-art/hsar-252/lecture-2",
+      "title": "HSAR 252: Roman Architecture, Lecture 2: It Takes a City: The Founding of Rome and the Beginnings of Urbanism in Italy",
+      "publisher": "Open Yale Courses, Yale University",
+      "author": "Diana E. E. Kleiner",
+      "date_published": "2009",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070",
+      "title": "Rome (GeoNames 3169070)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the earliest urban consolidation date: the 753 BCE founding date is legendary, whereas archaeological traces of settlement go back to at least the 10th–9th centuries BCE.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:31.524Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

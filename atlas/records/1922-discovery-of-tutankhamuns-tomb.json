@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1922-discovery-of-tutankhamuns-tomb",
+  "kind": "event",
+  "title": "Discovery of Tutankhamun's Tomb",
+  "summary": "On 4 November 1922, British archaeologist Howard Carter and his Egyptian excavation team uncovered the entrance steps to the subterranean tomb of Pharaoh Tutankhamun (KV62) in the Valley of the Kings. Opened on 26 November with financial backer Lord Carnarvon, the virtually undisturbed four-room tomb yielded thousands of intact royal artifacts, including golden shrines and the young pharaoh's sarcophagus, transforming global public interest in ancient Egyptian civilization.",
+  "when": {
+    "start": {
+      "year": 1922,
+      "iso": "1922-11-04"
+    },
+    "end": {
+      "year": 1922,
+      "iso": "1922-11-26"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "First entrance step uncovered 4 November 1922; inner doorway first breached and entered on 26 November 1922."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "After a day of clearing, on 4 November, one of the workmen discovered a step cut into the valley floor",
+        "source": "src-worldhistory-tut-tomb"
+      },
+      {
+        "calendar": "BCE (UNESCO World Heritage Centre)",
+        "value": "it suffices to note the tombs of the Valley of the Kings (1500 – 1000 BCE), among which is that of Tutankhamun",
+        "source": "src-unesco-thebes"
+      }
+    ],
+    "display": "4–26 November 1922"
+  },
+  "where": {
+    "lat": 25.74027,
+    "lon": 32.60157,
+    "elevation_m": 188,
+    "modern_name": "Valley of the Kings (KV62), Luxor Governorate, Egypt",
+    "historical_name": "The Great and Majestic Necropolis of the Millions of Years of the Pharaoh, Life, Strength, Health in the West of Thebes, Kingdom of Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-geonames-valley-kings"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world",
+    "art_music_literature"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The only nearly intact royal tomb ever discovered in the Valley of the Kings, preserving thousands of New Kingdom artifacts."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-karnak-temple-complex",
+      "type": "related"
+    },
+    {
+      "id": "person-hatshepsut",
+      "type": "related"
+    },
+    {
+      "id": "place-giza-pyramids",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-worldhistory-tut-tomb",
+      "url": "https://www.worldhistory.org/article/2063/the-discovery-of-tutankhamuns-tomb/",
+      "title": "The Discovery of Tutankhamun's Tomb",
+      "publisher": "World History Encyclopedia",
+      "author": "Oxford University Press",
+      "date_published": "2022-10-17",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-thebes",
+      "url": "https://whc.unesco.org/en/list/87/",
+      "title": "Ancient Thebes with its Necropolis",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1979",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-valley-kings",
+      "url": "https://www.geonames.org/353494/maqabir-al-muluk.html",
+      "title": "Maqābir al Mulūk (Valley of the Kings, GeoNames 353494)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1922-11-04",
+        "action": "pulse { radius_km: 2 }",
+        "caption": "On 4 November 1922, Howard Carter's team uncovered the top entrance step of tomb KV62 in the Valley of the Kings.",
+        "source": "src-worldhistory-tut-tomb"
+      },
+      {
+        "span": "1922-11-26",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "On 26 November 1922, Carter and Carnarvon breached the inner doorway, discovering thousands of intact pharaonic treasures.",
+        "source": "src-worldhistory-tut-tomb",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of whether ancient robbers breached the burial chamber or only the antechamber during the two New Kingdom robberies.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:25.723Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

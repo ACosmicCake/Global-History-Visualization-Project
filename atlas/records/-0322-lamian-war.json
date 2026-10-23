@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0322-lamian-war",
+  "kind": "event",
+  "title": "Lamian War",
+  "summary": "Following the death of Alexander the Great in 323 BCE, an Athenian-led coalition of Greek cities revolted against Macedonian hegemony, besieging the regent Antipater at Lamia in Thessaly. After Macedonian reinforcements arrived, the Greek fleet was defeated at Amorgos and its army broken at Crannon on 5 September 322 BCE. Antipater imposed an oligarchic constitution requiring a 2,000-drachma property rating, disfranchising over 12,000 poorer Athenian citizens while leaving roughly 9,000, installed a Macedonian garrison at Munychia, and ended classical Athenian democracy.",
+  "when": {
+    "start": {
+      "year": -322
+    },
+    "end": {
+      "year": -321
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Hostilities began in summer 323 BCE upon confirmation of Alexander's death; concluded with the Battle of Crannon on 5 September 322 BCE (Dinsmoor chronology) and the surrender of Athens."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Diodorus Siculus 18.18, trans. Russell M. Geer, Loeb Classical Library)",
+        "value": "Dinsmoor (Archons in the Hellenistic Age, 329) places the Battle of Crannon on September 5, 322 B.C.",
+        "source": "src-diodorus-18"
+      },
+      {
+        "calendar": "BCE (Diodorus Siculus 18.18, trans. Russell M. Geer, Loeb Classical Library)",
+        "value": "and that those possessing more than two thousand drachmas should be in control of the government and of the elections. He removed from the body of citizens all who possessed... These men, more than twelve thousand in number, were removed from their fatherland; but those who possessed the stated rating, being about nine thousand",
+        "source": "src-diodorus-18"
+      },
+      {
+        "calendar": "BCE (Livius.org, Jona Lendering)",
+        "value": "insurrection of the Greek city states after the death of Alexander the Great (323/322)",
+        "source": "src-livius-lamian"
+      }
+    ],
+    "display": "323–322 BCE (Battle of Crannon, 5 September 322 BCE)"
+  },
+  "where": {
+    "lat": 38.902996,
+    "lon": 22.442593,
+    "elevation_m": null,
+    "modern_name": "Lamia, Phthiotis, Central Greece",
+    "historical_name": "Lamia, Phthiotis, stronghold besieged by allied Greek forces",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-pleiades-lamia"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Macedonian victory in the Lamian War ended the autonomy of the Greek poleis and permanently abolished classical Athenian democracy through a restrictive wealth qualification."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "-0323-death-of-alexander-the-great",
+      "type": "caused_by",
+      "because": "Alexander's death in Babylon in June 323 BCE inspired Athens and allied Greek city-states to rebel against Macedonian domination."
+    },
+    {
+      "id": "polity-macedon",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-diodorus-18",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/18A*.html",
+      "title": "Diodorus Siculus, Library of History, Book XVIII, chapters 8–18",
+      "publisher": "LacusCurtius, University of Chicago (Loeb Classical Library vol. IX, 1947)",
+      "author": "Diodorus Siculus; trans. Russell M. Geer",
+      "date_published": "1947",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-lamian",
+      "url": "https://www.livius.org/articles/concept/lamian-war/",
+      "title": "Lamian War",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "2020-04-12",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-lamia",
+      "url": "https://pleiades.stoa.org/places/540902/json",
+      "title": "Lamia: a Pleiades place resource",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-322",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "In 323 BCE, allied Greek forces revolt following Alexander's death and besiege Antipater in the fortress of Lamia.",
+        "source": "src-livius-lamian"
+      },
+      {
+        "span": "-321",
+        "action": "pulse { radius_km: 75 }",
+        "caption": "Macedonian victory at Crannon ends the insurrection and forces Athens to accept an oligarchy restricting citizenship to wealthy property holders.",
+        "source": "src-diodorus-18",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the exact sequence and dates of the naval engagements at Amorgos and the Echinades that destroyed Athenian naval resistance prior to Crannon.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:27.512Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

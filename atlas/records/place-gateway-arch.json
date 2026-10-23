@@ -1,0 +1,198 @@
+{
+  "id": "place-gateway-arch",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Gateway Arch",
+  "aliases": [
+    "Jefferson National Expansion Memorial arch"
+  ],
+  "summary": "The Gateway Arch is a monument in St. Louis, Missouri. Construction began on 12 February 1963 and it was completed in 1965. The National Park Service describes it as 630 feet tall and 630 feet from leg to leg at the ground level.",
+  "when": {
+    "start": {
+      "year": 1963
+    },
+    "end": {
+      "year": 1965
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 12 February 1963 (FHWA); NPS says February 1963 and a finish 32 months later, in October 1965."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (FHWA)",
+        "value": "construction began on February 12, 1963",
+        "source": "src-fhwa-arch"
+      },
+      {
+        "calendar": "Gregorian (FHWA)",
+        "value": "completed in 1965",
+        "source": "src-fhwa-arch"
+      },
+      {
+        "calendar": "Gregorian (NPS)",
+        "value": "finished 32 months later",
+        "source": "src-nps-arch"
+      }
+    ],
+    "display": "Built February 1963 – October 1965"
+  },
+  "where": {
+    "lat": 38.62461,
+    "lon": -90.18497,
+    "elevation_m": null,
+    "modern_name": "Gateway Arch, St. Louis, Missouri, United States",
+    "historical_name": "Jefferson National Expansion Memorial, St. Louis, Missouri, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Landmark memorial arch; the FHWA profile calls it the tallest structure in Missouri."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nps-arch",
+      "url": "https://home.nps.gov/articles/gateway-arch-national-park-and-lewis-and-clark.htm",
+      "title": "Gateway Arch National Park and Lewis and Clark",
+      "publisher": "National Park Service",
+      "author": "National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fhwa-arch",
+      "url": "https://www.fhwa.dot.gov/ipd/project_profiles/mo_gateway_arch.aspx",
+      "title": "Gateway Arch project profile",
+      "publisher": "Federal Highway Administration",
+      "author": "Federal Highway Administration",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q2027162",
+      "title": "Wikidata Q2027162: Gateway Arch (coordinate 38.62461111111111, -90.18497222222223)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Arch 630 feet from leg to leg at the ground level (NPS); the span is the plan.",
+      "source": "src-nps-arch",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "block",
+      "source": "src-nps-arch",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 192.02,
+          "unit": "m",
+          "source": "src-nps-arch",
+          "note": "630 feet as written (NPS, 630 feet tall; FHWA 630 feet tall); converted to metres"
+        },
+        {
+          "part": "base width (leg to leg at ground level)",
+          "value": 192.02,
+          "unit": "m",
+          "source": "src-nps-arch",
+          "note": "630 feet as written (NPS 630 feet from leg to leg at the ground level; FHWA 630 feet wide); converted to metres"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "block at height and span"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block standing in for the arch at its true height and span"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1963,
+        "end_year": 1965,
+        "state": "construction",
+        "description": "Construction began 12 February 1963 and finished in October 1965.",
+        "source": "src-fhwa-arch"
+      },
+      {
+        "start_year": 1965,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed in 1965; still standing.",
+        "source": "src-fhwa-arch"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "An arch cannot be drawn with the available procedural shapes; its height and span are kept as data."
+  },
+  "reviewer_note": "Shape block (no arch shape in the enum), span used as the plan as instructed. 630 ft = 192.02 m, converted from the feet on the pages. The 28 October 1965 completion day is not used.",
+  "author": "historian-agent:m-22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:54:26.824Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

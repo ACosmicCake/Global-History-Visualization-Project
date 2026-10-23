@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-ludwig-van-beethoven",
+  "kind": "person",
+  "title": "Ludwig van Beethoven",
+  "summary": "Beethoven was baptized in Bonn on 17 December 1770. In November 1792 he went to Vienna to study with Haydn, and after the 1794 French occupation of the Rhineland the trip became a permanent move. He died in the Schwarzspanierhaus in Vienna on 26 March 1827.",
+  "when": {
+    "start": {
+      "year": 1770
+    },
+    "end": {
+      "year": 1827,
+      "iso": "1827-03-26"
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Beethoven-Haus gives only a baptism date (17 December 1770); World History Encyclopedia gives 16 December 1770 as the birth date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Ludwig van Beethoven is baptized on 17 December",
+        "source": "src-beethovenhaus-bonn"
+      },
+      {
+        "calendar": "CE",
+        "value": "dies on 26 March in the 'Schwarzspanierhaus' in Vienna",
+        "source": "src-beethovenhaus-wien"
+      },
+      {
+        "calendar": "CE",
+        "value": "died in Vienna on 26 March 1827",
+        "source": "src-whe-beethoven"
+      }
+    ],
+    "display": "baptized 17 December 1770 - 26 March 1827"
+  },
+  "where": {
+    "lat": 48.208333,
+    "lon": 16.3725,
+    "elevation_m": null,
+    "modern_name": "Vienna, Austria (pinned for his work from 1792 to his death; born in Bonn)",
+    "historical_name": "Vienna",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-q1741"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "art_music_literature"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "Composer who spent his career from 1792 in Vienna, documented by the Beethoven-Haus chronologies."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-beethovenhaus-bonn",
+      "url": "https://www.beethoven.de/en/g/zeittafel-beethoven-in-bonn",
+      "title": "Chronology Beethoven in Bonn",
+      "publisher": "Beethoven-Haus Bonn",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-beethovenhaus-wien",
+      "url": "https://www.beethoven.de/en/g/zeittafel-beethoven-in-wien",
+      "title": "Chronology Beethoven in Vienna",
+      "publisher": "Beethoven-Haus Bonn",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-beethoven",
+      "url": "https://www.worldhistory.org/Ludwig_van_Beethoven/",
+      "title": "Ludwig van Beethoven",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2023-07-05",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q1741",
+      "url": "https://www.wikidata.org/wiki/Q1741",
+      "title": "Wikidata item Q1741 (Vienna), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the birth date: Beethoven-Haus gives baptism 17 December, World History Encyclopedia says born 16 December 1770. The summary uses the baptism date only. The Beethoven-Haus pages do not name a publisher; the site header reads Beethoven-Haus Bonn.",
+  "author": "historian-agent:o-s42",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:07:07.213Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

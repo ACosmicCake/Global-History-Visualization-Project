@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0072-spartacus-revolt",
+  "kind": "event",
+  "title": "Spartacus slave revolt (73–71 BCE)",
+  "summary": "In 73 BCE, approximately seventy gladiators led by the Thracian Spartacus escaped from a training school in Capua, establishing a stronghold on Mount Vesuvius. The rebellion rapidly attracted over 70,000 escaped rural slaves and pastoral workers, defeating successive Roman praetors and consular legions across Italy. Marcus Licinius Crassus eventually trapped the rebel army in Lucania in 71 BCE, killing Spartacus in battle and crucifying roughly 6,000 captured survivors along the Via Appia from Capua to Rome to deter future insurrections.",
+  "when": {
+    "start": {
+      "year": -72
+    },
+    "end": {
+      "year": -70
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Began with the gladiator breakout at Capua in 73 BCE and ended with the decisive defeat in Lucania and the mass crucifixions in 71 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Livius.org, Jona Lendering)",
+        "value": "Spartacus: leader of an army of runaway slaves that shook Italy in 73-71 BCE. He was defeated by the Roman general Crassus.",
+        "source": "src-livius-spartacus"
+      },
+      {
+        "calendar": "BCE (Appian, Civil Wars 1.120, trans. Horace White, Loeb Classical Library)",
+        "value": "until they all perished except 6000, who were captured and crucified along the whole road from Capua to Rome",
+        "source": "src-appian-cw1"
+      }
+    ],
+    "display": "73–71 BCE"
+  },
+  "where": {
+    "lat": 41.086093,
+    "lon": 14.250207,
+    "elevation_m": null,
+    "modern_name": "Santa Maria Capua Vetere (ancient Capua), Caserta, Campania, Italy",
+    "historical_name": "Capua, Campania, gladiator school of Lentulus Batiatus and epicenter of the revolt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-pleiades-capua"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Third Servile War was the largest and most threatening slave rebellion against the Roman Republic, exposing severe internal demographic and military vulnerabilities."
+  },
+  "confidence": "established",
+  "audience_note": "Details brutal armed conflict, mass casualties, and the punitive mass crucifixion of 6,000 prisoners along the Via Appia.",
+  "related": [
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "part_of"
+    },
+    {
+      "id": "polity-roman-republic",
+      "type": "related"
+    },
+    {
+      "id": "person-spartacus",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-spartacus",
+      "url": "https://www.livius.org/articles/person/spartacus/",
+      "title": "Spartacus",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "2020-04-12",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-appian-cw1",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Appian/Civil_Wars/1*.html",
+      "title": "Appian, The Civil Wars, Book I, chapters 116–121",
+      "publisher": "LacusCurtius, University of Chicago (Loeb Classical Library, 1913)",
+      "author": "Appian; trans. Horace White",
+      "date_published": "1913",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-capua",
+      "url": "https://pleiades.stoa.org/places/432754/json",
+      "title": "Capua: a Pleiades place resource",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-72",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "In 73 BCE, gladiators breakout at Capua and rally tens of thousands of rural slaves across Campania and southern Italy.",
+        "source": "src-livius-spartacus"
+      },
+      {
+        "span": "-70",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Crassus destroys the rebel army and crucifies roughly 6,000 captured slaves along the Via Appia from Capua to Rome.",
+        "source": "src-appian-cw1",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the exact peak headcount of the insurgent army (ancient sources range from 70,000 to 120,000) and whether Spartacus's original strategic goal was to cross the Alps or remain in Italy.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:28.400Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

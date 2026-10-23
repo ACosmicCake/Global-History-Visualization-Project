@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-india-gate",
+  "kind": "place",
+  "title": "India Gate",
+  "summary": "India Gate in New Delhi is a 42 m high arch commemorating Indian soldiers who died in the First World War. The Duke of Connaught laid its foundation stone in 1921 and Viceroy Lord Irwin dedicated it ten years later; Edwin Lutyens designed it.",
+  "when": {
+    "start": {
+      "year": 1921
+    },
+    "end": {
+      "year": 1931
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Foundation stone 1921 and dedication ten years later (1931), per the Delhi government page; ThePrint gives 10 February 1921 and February 1931."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "The foundation stone of India Gate was laid by His Royal Highness, the Duke of Connaught in 1921",
+        "source": "src-delhigov-indiagate"
+      },
+      {
+        "calendar": "CE",
+        "value": "The monument was dedicated to the nation 10 years later by the then Viceroy, Lord Irwin",
+        "source": "src-delhigov-indiagate"
+      },
+      {
+        "calendar": "CE",
+        "value": "unveiled in February 1931",
+        "source": "src-theprint-indiagate"
+      }
+    ],
+    "display": "1921-1931"
+  },
+  "where": {
+    "lat": 28.6129332,
+    "lon": 77.2294928,
+    "elevation_m": null,
+    "modern_name": "India Gate, New Delhi, India",
+    "historical_name": "All India War Memorial, New Delhi, British India",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-outline"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "National war memorial and landmark of New Delhi."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-delhigov-indiagate",
+      "url": "https://dmnewdelhi.delhi.gov.in/tourist-place/india-gate",
+      "title": "India Gate",
+      "publisher": "District New Delhi, Government of NCT of Delhi",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-theprint-indiagate",
+      "url": "https://theprint.in/india/india-gate-foundation-laid-101-years-ago-bowl-on-top-was-built-to-house-flame/826939/",
+      "title": "India Gate foundation laid 101 years ago; bowl on top was built to house flame",
+      "publisher": "ThePrint (PTI)",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-outline",
+      "url": "https://www.openstreetmap.org/way/361709652",
+      "title": "OpenStreetMap outline of India Gate",
+      "publisher": "OpenStreetMap contributors",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "model.geometry"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "OpenStreetMap outline of India Gate (way 361709652, building=monument): 27.4 m x 17.8 m minimum bounding rectangle.",
+      "source": "src-osm-outline",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "block",
+      "source": "src-delhigov-indiagate",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 42,
+          "unit": "m",
+          "source": "src-delhigov-indiagate",
+          "note": "42 m high, as written by the Delhi government page; ThePrint also gives 42 m"
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 27.4,
+          "unit": "m",
+          "source": "src-osm-outline"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 17.8,
+          "unit": "m",
+          "source": "src-osm-outline"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "block at height and plan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block standing in for the arch at its mapped footprint and 42 m height"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1921,
+        "end_year": 1931,
+        "state": "construction",
+        "description": "Foundation stone laid in 1921; dedicated about ten years later.",
+        "source": "src-delhigov-indiagate"
+      },
+      {
+        "start_year": 1931,
+        "end_year": null,
+        "state": "intact",
+        "description": "Unveiled in February 1931 and still standing.",
+        "source": "src-theprint-indiagate"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1921,
+        "to_year": null,
+        "material": "buff sandstone arch on a base of red sandstone",
+        "source": "src-theprint-indiagate"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "An arch cannot be drawn with the available procedural shapes; its height and OSM plan are kept as data."
+  },
+  "reviewer_note": "Shape block (no arch shape in the enum), hence no_mesh. Height 42 m is from the Delhi government page (also ThePrint); plan from the OSM outline tool (27.4 x 17.8 m, name India Gate, building=monument), a mapped outline that may exclude the surrounding base. Pin is the OSM way centre (Nominatim).",
+  "author": "historian-agent:o-s98",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:45:08.358Z"
+}

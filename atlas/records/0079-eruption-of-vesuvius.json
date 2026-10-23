@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0079-eruption-of-vesuvius",
+  "kind": "event",
+  "title": "Eruption of Vesuvius in 79 CE",
+  "summary": "The eruption of Mount Vesuvius in 79 CE buried Pompeii in ash and pumice, and waves of superheated ash killed the remaining townspeople. The traditional date, 24 August, rests on Pliny the Younger's letters. A charcoal inscription dated 17 October found in 2018, and other finds, have led some to argue for autumn; the day remains disputed.",
+  "when": {
+    "start": {
+      "year": 79
+    },
+    "end": {
+      "year": 79
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Year not in dispute in the sources; the day is: 24 August (Pliny the Younger's letters) versus October or later, with 17 October from a 2018 charcoal inscription."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "On the morning of 24th of August 79 CE",
+        "source": "src-wh-pompeii"
+      },
+      {
+        "calendar": "CE",
+        "value": "some time in mid-October",
+        "source": "src-wh-pompeii"
+      },
+      {
+        "calendar": "CE",
+        "value": "August 24",
+        "source": "src-history-vesuvius"
+      }
+    ],
+    "display": "79 CE (traditionally 24 August; autumn proposed)"
+  },
+  "where": {
+    "lat": 40.8213963,
+    "lon": 14.4261967,
+    "elevation_m": null,
+    "modern_name": "Mount Vesuvius, Campania, Italy",
+    "historical_name": "Mount Vesuvius, Roman Empire (Pompeii and Herculaneum below the volcano)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm-vesuvio"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Destroyed Pompeii and Herculaneum and preserved Roman towns; among the best-known eruptions in history."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the deaths of a town's inhabitants in a volcanic eruption.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wh-pompeii",
+      "url": "https://www.worldhistory.org/pompeii/",
+      "title": "Pompeii",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-vesuvius",
+      "url": "https://www.history.com/articles/pompeii-vesuvius-destruction-date",
+      "title": "Why the Date of Pompeii's Destruction Is Still Debated",
+      "publisher": "History (A&E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-natgeo-vesuvius",
+      "url": "https://www.nationalgeographic.com/history/article/mount-vesuvius-eruption-pompeii",
+      "title": "When did Mount Vesuvius erupt? Experts can't seem to agree",
+      "publisher": "National Geographic",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-vesuvio",
+      "url": "https://nominatim.openstreetmap.org/search?q=Vesuvio&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Vesuvio",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the day. The sources conflict on the Pompeii park's stance: History.com says the park said in 2024 that Pliny may have been wrong, while National Geographic says the park withdrew the October reading; the summary avoids attributing a position to the park. Sources: World History Encyclopedia (reference) with two journalism pages. No Pompeii record exists to link.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:12:15.188Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "79",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The eruption of Mount Vesuvius in 79 CE buried Pompeii in ash and pumice, and waves of superheated ash killed the remaining townspeople.",
+        "source": "src-wh-pompeii"
+      },
+      {
+        "span": "79",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A charcoal inscription dated 17 October found in 2018, and other finds, have led some to argue for autumn; the day remains disputed.",
+        "source": "src-wh-pompeii",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

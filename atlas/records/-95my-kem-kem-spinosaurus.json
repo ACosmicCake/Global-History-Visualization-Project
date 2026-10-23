@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "-95my-kem-kem-spinosaurus",
+  "kind": "place",
+  "title": "Kem Kem beds, home of Spinosaurus",
+  "summary": "The Kem Kem Group of eastern Morocco, made of the lower Gara Sbaa and upper Douira formations, holds Cenomanian-age deltaic sediments with a fauna of large theropods that includes Spinosaurus. A partial Spinosaurus aegyptiacus skeleton was found by a local collector at Zrigat, about 20 km north of Erfoud, and isolated Spinosaurus teeth are reported from the Gara Sbaa Formation. Juvenile spinosaurines are also described from these beds.",
+  "when": {
+    "start": {
+      "year": -99000000
+    },
+    "end": {
+      "year": -93500000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Range from Table 7 of the ZooKeys monograph; its text says the age of initial deposition is best estimated as Early Cenomanian. The id says 95 Ma; no opened page gives 95. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "Cenomanian, 99.0–93.5 Ma (Table 7)",
+        "source": "src-ibrahim2020"
+      },
+      {
+        "calendar": "Ma",
+        "value": "Cenomanian (~94 Mya)",
+        "source": "src-ibrahim2020"
+      },
+      {
+        "calendar": "stage",
+        "value": "the middle Cretaceous (Cenomanian) Kem Kem beds of Morocco",
+        "source": "src-lakin2019"
+      }
+    ],
+    "display": "Cenomanian, c. 99.0 to 93.5 Ma"
+  },
+  "where": {
+    "lat": 31.436111,
+    "lon": -4.232778,
+    "elevation_m": null,
+    "modern_name": "Kem Kem region near Erfoud, Errachidia Province, eastern Morocco (proxy pin at Erfoud; Zrigat is about 20 km north)",
+    "historical_name": "Kem Kem Group deltaic basin, northwestern Gondwana (Africa), Cenomanian; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd-erfoud"
+    ],
+    "paleo": {
+      "lat": 21.96,
+      "lon": 6.26,
+      "age_ma": 96,
+      "plate_model": "MERDITH2021 (via GPlates Web Service)",
+      "source": "src-gplates",
+      "note": "Erfoud proxy at 96 Ma. MULLER2019 gives 12.92 N, 9.42 W and PALEOMAP 18.84 N, 4.48 W at 95 Ma, so the models disagree by about 10 degrees."
+    }
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A well-studied Cenomanian deposit that yields Spinosaurus and other large theropods."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ibrahim2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7188693",
+      "title": "Geology and paleontology of the Upper Cretaceous Kem Kem Group of eastern Morocco",
+      "publisher": "ZooKeys (Pensoft), via PubMed Central",
+      "author": null,
+      "date_published": "2020",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lakin2019",
+      "url": "https://researchportal.bath.ac.uk/en/publications/juvenile-spinosaurs-theropoda-spinosauridae-from-the-middle-creta/",
+      "title": "Juvenile spinosaurs (Theropoda: Spinosauridae) from the middle Cretaceous of Morocco",
+      "publisher": "University of Bath Research Portal (Cretaceous Research 93, 129-142)",
+      "author": null,
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-erfoud",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q648987.json",
+      "title": "Wikidata item Q648987 (Erfoud), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-4.2328,31.4361&time=96&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age: the id says 95 Ma but the ZooKeys monograph gives Cenomanian, 99.0-93.5 Ma. I read only the first 100,000 characters of that very long page. The pin is a proxy at Erfoud.",
+  "published_at": "2026-10-22T18:32:01.601Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

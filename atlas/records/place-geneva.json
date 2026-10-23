@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "place-geneva",
+  "kind": "place",
+  "title": "Geneva",
+  "summary": "Geneva lies where the Rhône leaves Lake Geneva and appears as Genava in Julius Caesar's account of 58 BC. On 21 May 1536 its General Council voted to adopt the Gospel, making it officially Protestant, and it joined the Swiss Confederation as the 22nd canton on 19 May 1815. The International Committee of the Red Cross first met there in February 1863, and the League of Nations opened there in November 1920.",
+  "when": {
+    "start": {
+      "year": -57
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the first written mention in Caesar (58 BC = -57); settlement may be older but no earlier date was read. End year is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC / AD (Gregorian)",
+        "value": "Roman era (58 BC onward): Julius Caesar's soldiers tore down a bridge over the Rhone; the town appears in his account as Genava",
+        "source": "src-geneva-tourism"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1536 (21 May), 1815 (19 May), 1863, 1920 (November)",
+        "source": "src-geneva-tourism"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "February 1863: met for the first time in Geneva, Switzerland",
+        "source": "src-icrc-history"
+      }
+    ],
+    "display": "From 58 BCE (first appearance in Caesar) to present"
+  },
+  "where": {
+    "lat": 46.2017559,
+    "lon": 6.1466014,
+    "elevation_m": null,
+    "modern_name": "Geneva (Genève), Switzerland",
+    "historical_name": "Genava (58 BC, in Caesar); later a Protestant republic from 1536; Swiss canton from 1815",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The base of the Red Cross and the Geneva Conventions, the League of Nations and the UN in Europe."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "org-international-committee-of-the-red-cross",
+      "type": "related"
+    },
+    {
+      "id": "1864-08-22-first-geneva-convention",
+      "type": "related"
+    },
+    {
+      "id": "1949-08-12-geneva-conventions",
+      "type": "related"
+    },
+    {
+      "id": "1925-06-17-geneva-gas-protocol",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-geneva-tourism",
+      "url": "https://www.genevatourism.org/history-of-geneva/",
+      "title": "History of Geneva: From Roman Settlement to Global City",
+      "publisher": "Geneva Tourism Guide (genevatourism.org)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-icrc-history",
+      "url": "https://www.icrc.org/en/who-we-are/history",
+      "title": "History of the ICRC",
+      "publisher": "International Committee of the Red Cross",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Gen%C3%A8ve&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the tourism-site source for Caesar and Reformation dates; other sources differ on the Roman date (121 BC conquest in one result) and on admission to the Confederation. The pin is Nominatim's first result for Genève.",
+  "published_at": "2026-10-22T10:55:45.345Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

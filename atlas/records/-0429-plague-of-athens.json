@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0429-plague-of-athens",
+  "kind": "event",
+  "title": "Plague of Athens",
+  "summary": "In 430 BCE, the second year of the Peloponnesian War, a plague entered Athens through Piraeus and persisted until 426 BCE, killing upwards of one-third of the population according to World History Encyclopedia. Thucydides records that physicians died in greatest numbers, and Pericles died of it in 429 BCE.",
+  "when": {
+    "start": {
+      "year": -429
+    },
+    "end": {
+      "year": -425
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "World History Encyclopedia says the illness died out in 426 BCE, but titles its article 430-427 BCE; EBSCO says 430–426 b.c.e."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "In the second year of the Peloponnesian War, 430 BCE",
+        "source": "src-whe-plague"
+      },
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "until finally dying out in 426 BCE",
+        "source": "src-whe-plague"
+      },
+      {
+        "calendar": "b.c.e. (EBSCO)",
+        "value": "430–426 b.c.e.",
+        "source": "src-ebsco-peloponnesian"
+      }
+    ],
+    "display": "430–426 BCE"
+  },
+  "where": {
+    "lat": 37.9431594,
+    "lon": 23.6470593,
+    "elevation_m": null,
+    "modern_name": "Piraeus, Attica, Greece (port of entry)",
+    "historical_name": "Piraeus, port of Athens, in the polis of Athens",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-piraeus"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Epidemic that killed about a third of Athens' population during the war and took Pericles."
+  },
+  "related": [
+    {
+      "id": "-0430-peloponnesian-war",
+      "type": "part_of"
+    },
+    {
+      "id": "person-pericles",
+      "type": "related"
+    },
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-plague",
+      "url": "https://www.worldhistory.org/article/939/the-plague-at-athens-430-427-bce/",
+      "title": "The Plague at Athens, 430-427 BCE",
+      "publisher": "World History Encyclopedia",
+      "author": "John Horgan",
+      "date_published": "2016-08-24",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mit-thucydides",
+      "url": "https://classics.mit.edu/Thucydides/pelopwar.2.second.html",
+      "title": "The History of the Peloponnesian War, Book 2 (Crawley translation)",
+      "publisher": "MIT Internet Classics Archive",
+      "author": "Thucydides, translated by Richard Crawley",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-peloponnesian",
+      "url": "https://www.ebsco.com/research-starters/history/peloponnesian-wars-military-history",
+      "title": "Peloponnesian Wars (military history) (Research Starter)",
+      "publisher": "EBSCO Information Services",
+      "author": "Thomas T. Lewis",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-pericles",
+      "url": "https://www.worldhistory.org/Pericles/",
+      "title": "Pericles",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2018-03-28",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-piraeus",
+      "url": "https://nominatim.openstreetmap.org/search?q=Piraeus+Greece&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Piraeus, node 154089041 (37.9431594, 23.6470593)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pericles' death in 429 BCE is from WHE's Pericles article. Crawley's Thucydides says the plague first attacked Piraeus and does not give a year. Pin is Piraeus, the entry point; the city of Athens is about 8 km away.",
+  "published_at": "2026-10-22T10:33:53.360Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

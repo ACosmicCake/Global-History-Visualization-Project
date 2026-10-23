@@ -1,0 +1,187 @@
+{
+  "id": "0030-origins-of-early-christianity",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Origins of early Christianity",
+  "summary": "Christianity emerged in the first century CE from a small sect of Second Temple Judaism. In the Acts account, the first community formed in Jerusalem around Pentecost, when about three thousand people were baptised; one essay says it was led by Jesus's family. Gentile converts later became the majority. Acts is religious tradition, so the early details are debated.",
+  "when": {
+    "start": {
+      "year": 30
+    },
+    "end": {
+      "year": 100
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 4,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources place the crucifixion between 26 and 36 CE; the Apostolic Council c. 49 CE; gentile converts dominated by the end of the century. Start year 30 is the id marker only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "the 1st century CE",
+        "source": "src-whe-chr"
+      },
+      {
+        "calendar": "CE",
+        "value": "between 26-36 CE",
+        "source": "src-whe-chr"
+      },
+      {
+        "calendar": "traditional",
+        "value": "the day of Pentecost",
+        "source": "src-acts"
+      }
+    ],
+    "display": "1st century CE (from c. 30 CE)"
+  },
+  "where": {
+    "lat": 31.776679,
+    "lon": 35.234156,
+    "elevation_m": null,
+    "modern_name": "Jerusalem",
+    "historical_name": "Jerusalem, Roman province of Judea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd-jerusalem"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The beginning of what became a major world religion, in a Jewish setting."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-jesus-of-nazareth",
+      "type": "caused_by",
+      "because": "The movement began among followers of Jesus after his death."
+    },
+    {
+      "id": "0030-crucifixion-of-jesus",
+      "type": "caused_by",
+      "because": "Disciples began preaching after Jesus was crucified."
+    },
+    {
+      "id": "0062-execution-of-james-brother-of-jesus",
+      "type": "related"
+    },
+    {
+      "id": "0064-neronian-persecution-of-christians",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-chr",
+      "url": "https://www.worldhistory.org/article/1205/early-christianity/",
+      "title": "Early Christianity",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-acts",
+      "url": "https://www.biblegateway.com/passage/?search=Acts+2%3A1-47&version=NRSV",
+      "title": "Acts 2:1-47 (NRSV)",
+      "publisher": "BibleGateway (text of the National Council of Churches)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mcnamer",
+      "url": "https://bibleinterp.arizona.edu/articles/mcnamer",
+      "title": "The First One Hundred Years of Christianity in Jerusalem",
+      "publisher": "The Bible and Interpretation, University of Arizona",
+      "author": "Elizabeth McNamer",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-jerusalem",
+      "url": "https://www.wikidata.org/wiki/Q1218",
+      "title": "Wikidata item Q1218 (Jerusalem), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Religious subject: the Jerusalem origin and Pentecost come from Acts and one essay, treated as tradition. The World History Encyclopedia page does not name a place. Start year 30 matches the record id but is not stated on any opened page; sourced range is the 26-36 CE crucifixion window and the 1st century.",
+  "author": "historian-agent:o-s37",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "30",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Christianity emerged in the first century CE from a small sect of Second Temple Judaism.",
+        "source": "src-whe-chr"
+      },
+      {
+        "span": "100",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "In the Acts account, the first community formed in Jerusalem around Pentecost, when about three thousand people were baptised; one essay says it was led by Jesus's family.",
+        "source": "src-whe-chr",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T09:45:45.054Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

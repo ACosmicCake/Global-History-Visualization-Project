@@ -1,0 +1,160 @@
+{
+  "id": "-2220my-lomagundi-jatuli-excursion",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Lomagundi–Jatuli carbon isotope excursion",
+  "summary": "Between about 2.3 and 2.1 billion years ago marine carbonates record the Lomagundi–Jatuli Event, described as the largest positive carbon-isotope excursion in Earth history in both amplitude and duration. Its timing is disputed: one review brackets its duration between 128 and 249 million years, and a 2026 Bayesian analysis puts the onset at 2,445 Ma. It is discussed alongside Earth's oxygenation.",
+  "when": {
+    "start": {
+      "year": -2300000000
+    },
+    "end": {
+      "year": -2100000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range follows Prave et al. (2021), \"between 2.3–2.1 Ga\". Martin et al. (2013) bracket it between 2221 ± 5 to 2106 ± 8 Ma (minimum) and 2306 ± 9 to 2057 ± 1 Ma (maximum) if synchronous; Edmonsond and Dyer (2026) give 2,445 to 2,018 Ma. The id uses 2220 Ma. Years are Ga with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ga",
+        "value": "between 2.3–2.1 Ga",
+        "source": "src-prave2021"
+      },
+      {
+        "calendar": "Ma",
+        "value": "249 +/- 9 Myr (2306 +/- 9 Ma to 2057 +/- 1 Ma)",
+        "source": "src-martin2013"
+      },
+      {
+        "calendar": "Ma",
+        "value": "128 +/- 9.4 Myr (2221 +/- 5 Ma to 2106 +/- 8 Ma)",
+        "source": "src-martin2013"
+      },
+      {
+        "calendar": "Ma",
+        "value": "began to increase at 2,445 Ma",
+        "source": "src-edmonsond2026"
+      }
+    ],
+    "display": "c. 2.3–2.1 billion years ago"
+  },
+  "where": {
+    "lat": 63.816667,
+    "lon": 33,
+    "elevation_m": null,
+    "modern_name": "Global signal in marine carbonates; pin at Karelia, NW Russia (Wikidata point), where Prave et al. measured LJE-bearing successions",
+    "historical_name": "Paleoproterozoic world; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wikidata-karelia",
+      "src-prave2021"
+    ],
+    "paleo": {
+      "not_applicable": "Age is beyond the 1000 Ma limit of the MERDITH2021 plate model."
+    }
+  },
+  "regions": [
+    "global",
+    "europe"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "The largest recorded carbonate carbon-isotope excursion, linked in the literature to Earth's oxygenation."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-2400my-great-oxidation-event",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-prave2021",
+      "url": "https://research-portal.st-andrews.ac.uk/en/publications/the-grandest-of-them-all-the-lomagundi-jatuli-event-and-earths-ox/",
+      "title": "The grandest of them all: the Lomagundi–Jatuli Event and Earth's oxygenation (Journal of the Geological Society)",
+      "publisher": "Geological Society of London, record on University of St Andrews research portal",
+      "author": "A.R. Prave, K. Kirsimäe, A. Lepland, et al.",
+      "date_published": "2021",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-martin2013",
+      "url": "https://research-portal.st-andrews.ac.uk/en/publications/a-review-of-temporal-constraints-for-the-palaeoproterozoic-large-/",
+      "title": "A review of temporal constraints for the Palaeoproterozoic large, positive carbonate carbon isotope excursion (the Lomagundi-Jatuli Event) (Earth-Science Reviews 127:242-261)",
+      "publisher": "Elsevier (Earth-Science Reviews), record on University of St Andrews research portal",
+      "author": "A.P. Martin, D.J. Condon, A.R. Prave, A. Lepland",
+      "date_published": "2013",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-edmonsond2026",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12799107",
+      "title": "Timing and magnitude of the Lomagundi–Jatuli carbon isotope excursion (PNAS 123:e2512767123)",
+      "publisher": "PNAS, via PubMed Central",
+      "author": "S. Edmonsond, B. Dyer",
+      "date_published": "2026",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-karelia",
+      "url": "https://www.wikidata.org/wiki/Q1914",
+      "title": "Wikidata item Q1914 (Karelia)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: dates differ widely by source (2.3-2.1 Ga; 2221-2106 Ma minimum; 2445-2018 Ma Bayesian), so the range follows Prave et al. and the rest are in as_recorded. The pin is a generic Karelia point at 5000 km; the Prave page says \"NW Russia\" only.",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:09.857Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

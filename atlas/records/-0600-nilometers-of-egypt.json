@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0600-nilometers-of-egypt",
+  "kind": "process",
+  "title": "Nilometers of Egypt",
+  "summary": "Nilometers were wells, staircases or rock-cut gauges used to measure the Nile's annual flood, which signalled the harvest and helped set taxes. EBSCO credits Sesostris I, who ruled 1971-1926 BCE, with the first, and National Geographic dates one at Thmuis to the third century BCE; fewer than two dozen are known.",
+  "when": {
+    "start": {
+      "year": -1970
+    },
+    "end": {
+      "year": -1926
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO attributes the first nilometer to Sesostris I, written as ruling 1971-26 B.C.E. (astronomical -1970 to -1926). National Geographic says a nilometer found at Thmuis was likely built in the third century B.C. and used for roughly a thousand years, so use continued long after the range given. The attribution to one king is the source's wording and was not independently confirmed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "Sesostris I (who ruled 1971–26 B.C.E.)",
+        "source": "src-ebsco-energy"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "Likely constructed during the third century B.C.",
+        "source": "src-natgeo-nilometer"
+      }
+    ],
+    "display": "attributed to Sesostris I (ruled 1971-1926 BCE); in use for centuries after"
+  },
+  "where": {
+    "lat": 24.09,
+    "lon": 32.89,
+    "elevation_m": null,
+    "modern_name": "Elephantine Island, Aswan, Egypt (one of the oldest known sites; nilometers lie along the Nile)",
+    "historical_name": "Elephantine, on the Nile in ancient Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-elephantine"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Flood gauges let rulers forecast harvests and fix tax levies in a country that depended on the Nile."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-energy",
+      "url": "https://www.ebsco.com/research-starters/technology/history-energy-ancient-egypt",
+      "title": "History of energy in Ancient Egypt",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-natgeo-nilometer",
+      "url": "https://www.nationalgeographic.com/history/article/160517-nilometer-discovered-ancient-egypt-nile-river-archaeology",
+      "title": "Ancient Device for Determining Taxes Discovered in Egypt",
+      "publisher": "National Geographic",
+      "author": "Nick Romeo",
+      "date_published": "2016-05-18",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-elephantine",
+      "url": "https://www.wikidata.org/wiki/Q284009",
+      "title": "Wikidata item Q284009 (Elephantine), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: the id suggests c. 600 BCE, but the opened sources give a Middle Kingdom attribution (EBSCO, unverified) and a third-century BCE example; I dated from their wording. The pin at Elephantine follows EBSCO's list of oldest finds; the place of the earliest nilometer is uncertain.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:13.935Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1970",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Nilometers were wells, staircases or rock-cut gauges used to measure the Nile's annual flood, which signalled the harvest and helped set taxes.",
+        "source": "src-ebsco-energy"
+      },
+      {
+        "span": "-1926",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "EBSCO credits Sesostris I, who ruled 1971-1926 BCE, with the first, and National Geographic dates one at Thmuis to the third century BCE; fewer than two dozen are…",
+        "source": "src-ebsco-energy",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

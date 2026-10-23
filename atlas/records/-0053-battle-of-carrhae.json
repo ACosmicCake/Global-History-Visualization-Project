@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0053-battle-of-carrhae",
+  "kind": "event",
+  "title": "Battle of Carrhae",
+  "summary": "In May 53 BCE a Parthian force under a general of the Surena family defeated the Roman army of the triumvir Crassus near Carrhae in Mesopotamia. Crassus was killed and about 10,000 Romans were taken captive. Encyclopaedia Iranica says the victory halted Roman expansion and made the Euphrates the boundary between the two powers.",
+  "when": {
+    "start": {
+      "year": -52
+    },
+    "end": {
+      "year": -52
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Encyclopaedia Iranica gives May 53 BC; BMCR gives 53 BC. Astronomical year -52. The id's -0053 is only a lookup key. Day not confirmed by an opened source."
+    },
+    "as_recorded": [
+      {
+        "calendar": "as recorded (BC)",
+        "value": "May 53 b.c.",
+        "source": "src-iranica"
+      },
+      {
+        "calendar": "as recorded (BC)",
+        "value": "53 BC",
+        "source": "src-bmcr"
+      }
+    ],
+    "display": "May 53 BCE"
+  },
+  "where": {
+    "lat": 36.866351,
+    "lon": 39.028865,
+    "elevation_m": null,
+    "modern_name": "Harran (ancient Carrhae), Şanlıurfa Province, Turkey",
+    "historical_name": "Carrhae, Mesopotamia, on the Roman–Parthian frontier (pin is the town, a proxy for the battlefield)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-nomisma"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive Parthian victory over a Roman army that, per Encyclopaedia Iranica, halted Roman expansion and fixed the Euphrates as the boundary."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a battle with mass death, the killing of a commander in a failed parley, and mutilation of his body.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-iranica",
+      "url": "https://www.iranicaonline.org/articles/carrhae-harran-town-in-mesopotamia-where-in-may-53-b/",
+      "title": "Carrhae",
+      "publisher": "Encyclopaedia Iranica (Encyclopaedia Iranica Foundation)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-bmcr",
+      "url": "https://bmcr.brynmawr.edu/2009/2009.03.24/",
+      "title": "Review of G. C. Sampson, The Defeat of Rome: Crassus, Carrhae, and the Invasion of the East",
+      "publisher": "Bryn Mawr Classical Review (Bryn Mawr College)",
+      "author": "Jason M. Schlude",
+      "date_published": "2009-03-24",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nomisma",
+      "url": "http://nomisma.org/id/carrhae",
+      "title": "Carrhae",
+      "publisher": "Nomisma.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the town of Carrhae (Harran) as proxy; battlefield not located by an opened source. Month from Iranica only; day not confirmed.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:27.787Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-52",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "In May 53 BCE a Parthian force under a general of the Surena family defeated the Roman army of the triumvir Crassus near Carrhae in Mesopotamia.",
+        "source": "src-iranica"
+      },
+      {
+        "span": "-52",
+        "action": "pulse { radius_km: 64 }",
+        "caption": "Crassus was killed and about 10,000 Romans were taken captive.",
+        "source": "src-iranica",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

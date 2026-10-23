@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s9",
+  "updated": "2026-10-22",
+  "id": "place-tlatelolco",
+  "kind": "place",
+  "title": "Tlatelolco",
+  "summary": "Tlatelolco was the Mexica twin city of Tenochtitlan on the island lake, founded around 1338 by a group that split from the Tenochca. Its great market served both islands and the Triple Alliance. After defeat by Axayacatl of Tenochtitlan in 1473 it came under its rival's control.",
+  "when": {
+    "start": {
+      "year": 1338
+    },
+    "end": {
+      "year": 1473
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Founding date follows chronicles cited by INAH. The end marks loss of independence; the city continued under Tenochtitlan until the Spanish conquest."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, from Mexica chronicles",
+        "value": "founded around 1338",
+        "source": "src-inah"
+      },
+      {
+        "calendar": "Gregorian; Mexica year 7 Calli",
+        "value": "independent until 1473; conquest under Axayacatl (year 7 casa, 1473)",
+        "source": "src-unam"
+      }
+    ],
+    "display": "c. 1338-1473 (independent altepetl)"
+  },
+  "where": {
+    "elevation_m": null,
+    "geometry": {
+      "type": "point"
+    },
+    "lat": 19.4511,
+    "lon": -99.1375,
+    "modern_name": "Tlatelolco, Cuauhtemoc borough, Mexico City, Mexico",
+    "historical_name": "Tlatelolco, Mexica altepetl on the island of Lake Texcoco, twin of Mexico-Tenochtitlan",
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-q796925"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A major Mexica city whose market was the commercial hub of the island capitals and the Triple Alliance."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-tenochtitlan",
+      "type": "related"
+    },
+    {
+      "id": "1428-aztec-triple-alliance",
+      "type": "related"
+    },
+    {
+      "id": "1521-siege-of-tenochtitlan",
+      "type": "related"
+    },
+    {
+      "id": "1968-10-02-tlatelolco-massacre",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-inah",
+      "url": "https://lugares.inah.gob.mx/en/mundial/6438",
+      "title": "Zona arqueologica de Tlatelolco",
+      "publisher": "Instituto Nacional de Antropologia e Historia (Mexico)",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unam",
+      "url": "https://www.noticonquista.unam.mx/sites/default/files/2020-02/davila_-_el_mercado_de_tlatelolco_-_final.pdf",
+      "title": "El mercado de Tlatelolco (Alejandra Davila Montoya)",
+      "publisher": "Universidad Nacional Autonoma de Mexico (Noticonquista)",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q796925",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q796925.json",
+      "title": "Wikidata entry (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates are from chronicles; INAH and UNAM agree on 1473. The 1968 massacre is a separate stub (1968-10-02-tlatelolco-massacre) and was not researched here. The 1521 end of Mexica rule was not on the opened pages.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1338",
+        "action": "pulse { radius_km: 3 }",
+        "caption": "Mexica chronicles place the founding of Tlatelolco after a group split from the Tenochca of Tenochtitlan.",
+        "source": "src-inah"
+      },
+      {
+        "span": "1473",
+        "action": "pulse { radius_km: 4 }",
+        "caption": "Its great market was a trading hub for both islands and the Triple Alliance.",
+        "source": "src-inah"
+      },
+      {
+        "span": "1473",
+        "action": "pulse { radius_km: 6 }",
+        "caption": "Tlatelolco lost independence after fighting Tenochtitlan; control of the market passed to the victors, who held it when the Spanish arrived.",
+        "source": "src-unam",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:29:44.551Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

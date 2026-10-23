@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Living Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: full-bleed globe; translucent instrument panels pinned to the edges, like an observatory console. */
+  :root {
+    --ink: #04070c; --deep: #0a1220; --glass: rgba(10, 16, 28, 0.78); --glass-strong: rgba(10, 16, 28, 0.94);
+    --rule: rgba(190, 205, 230, 0.13); --rule-strong: rgba(190, 205, 230, 0.26);
+    --text: #e9edf4; --soft: #b6c0d1; --muted: #7f8aa0;
+    --brass: #d9b36a; --brass-dim: rgba(217, 179, 106, 0.18); --alert: #e0705f;
+    --f-display: "Spectral", "Iowan Old Style", Georgia, serif;
+    --f-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+    --r: 10px; --gut: max(16px, env(safe-area-inset-left, 0px));
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; height: 100%; background: var(--ink); color: var(--text); font: 14px/1.5 var(--f-ui); overflow: hidden; -webkit-font-smoothing: antialiased; }
+  button, input { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+  #globe { position: absolute; inset: 0; }
+  #globe::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(4,7,12,.55) 100%); }
+
+  .glass { background: var(--glass); border: 1px solid var(--rule); border-radius: var(--r); backdrop-filter: blur(14px) saturate(120%); -webkit-backdrop-filter: blur(14px) saturate(120%); }
+
+  /* ---------- masthead */
+  #masthead { position: absolute; top: max(14px, env(safe-area-inset-top, 0px)); left: var(--gut); display: flex; flex-direction: column; gap: 10px; width: min(340px, calc(100vw - 32px)); z-index: 3; }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand h1 { margin: 0; font: 600 24px/1 var(--f-display); letter-spacing: .01em; }
+  .brand .count { font: 500 11px var(--f-mono); color: var(--brass); letter-spacing: .04em; }
+  .tagline { margin: -4px 0 0; color: var(--muted); font-size: 12px; }
+  .search { position: relative; }
+  .search input { width: 100%; padding: 9px 12px 9px 34px; border-radius: 8px; border: 1px solid var(--rule); background: var(--glass); color: var(--text); font-size: 13px; }
+  .search input::placeholder { color: var(--muted); }
+  .search svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); opacity: .6; }
+  #results { list-style: none; margin: 4px 0 0; padding: 4px; max-height: 280px; overflow-y: auto; }
+  #results li button { width: 100%; text-align: left; display: grid; grid-template-columns: 8px 1fr; gap: 2px 10px; align-items: center; padding: 7px 8px; border: 0; border-radius: 6px; background: transparent; }
+  #results li button:hover, #results li button:focus-visible { background: var(--brass-dim); }
+  #results .dot { width: 18px; height: 18px; flex: none; }
+  #results .t { font-size: 13px; }
+  #results .d { grid-column: 2; font: 11px var(--f-mono); color: var(--muted); display: flex; gap: 8px; justify-content: space-between; }
+  #results .imp { color: var(--brass); letter-spacing: 1px; font-size: 8px; white-space: nowrap; align-self: center; }
+
+  /* ---------- legend / layers */
+  #legend { padding: 10px 12px; }
+  .legend-head { display: flex; width: 100%; align-items: center; justify-content: space-between; border: 0; background: transparent; padding: 0; color: var(--muted); }
+  .legend-head h2 { margin: 0 !important; }
+  .legend-head svg { transition: transform .2s; }
+  #legend.collapsed .legend-head svg { transform: rotate(-90deg); }
+  #legend.collapsed #legend-body { display: none; }
+  #legend-body { margin-top: 8px; }
+  #legend h2, .eyebrow { margin: 0 0 8px; font: 500 10px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  #legend ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; }
+  #legend li button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 3px 4px; border: 0; background: transparent; border-radius: 5px; font-size: 12px; color: var(--soft); text-align: left; }
+  #legend li button:hover { background: rgba(255,255,255,.05); }
+  #legend li button[aria-pressed="false"] { opacity: .35; }
+  .imp-filter { margin: 10px 0 4px; }
+  .imp-filter h3 { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px 4px; }
+  #imp-levels { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; }
+  #imp-levels button { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 3px 6px; border: 0; background: transparent; border-radius: 5px; color: var(--soft); font-size: 12px; }
+  #imp-levels button:hover { background: rgba(255,255,255,.05); }
+  #imp-levels button[aria-pressed="false"] { opacity: .35; }
+  #imp-levels .dots { color: var(--brass); letter-spacing: 2px; font-size: 9px; }
+  #imp-levels .n { font: 10px var(--f-mono); color: var(--muted); }
+  #legend .sw { width: 20px; height: 20px; flex: none; margin: -2px -2px -2px -4px; }
+  #legend .n { margin-left: auto; font: 10px var(--f-mono); color: var(--muted); }
+  .sky-note { margin: 10px 0 0; font-size: 11px; color: var(--muted); }
+  .toggles { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
+  .toggle { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 11px; color: var(--soft); }
+  .toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
+
+  /* ---------- notices */
+  #notice { position: absolute; left: 50%; transform: translateX(-50%); top: max(16px, env(safe-area-inset-top, 0px)); max-width: min(520px, calc(100vw - 32px)); padding: 7px 12px; font-size: 12px; color: var(--soft); z-index: 2; text-align: center; }
+  @media (max-width: 1100px) { #notice { top: 136px; background: rgba(8,12,20,0.55); border-radius: 8px; } }
+  #empty { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); text-align: center; padding: 14px 18px; max-width: 320px; z-index: 2; }
+  #empty p { margin: 0 0 8px; color: var(--soft); }
+  #empty button { border: 1px solid var(--brass); color: var(--brass); background: var(--brass-dim); border-radius: 999px; padding: 4px 12px; font-size: 12px; }
+  #emphasis-flag { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: max(16px, env(safe-area-inset-top, 0px)); font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); padding: 4px 8px; border-radius: 6px; z-index: 2; }
+  #hint { position: absolute; left: 50%; bottom: 200px; transform: translateX(-50%); padding: 6px 14px; font-size: 12px; color: var(--soft); white-space: nowrap; z-index: 2; transition: opacity .8s; pointer-events: none; }
+  #hint.fade { opacity: 0; }
+  /* planet-wide records (no meaningful single place) sit above the time console instead of on the globe */
+  #planet { position: absolute; left: 50%; bottom: 236px; transform: translateX(-50%); display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: center; max-width: min(720px, calc(100vw - 32px)); padding: 6px 10px; z-index: 2; font-size: 12px; }
+  #planet > span { color: var(--soft); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; margin-right: 2px; }
+  #planet button { font: inherit; color: var(--ink, #e9edf4); background: rgba(255,255,255,0.06); border: 1px solid var(--rule); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+  #planet button:hover { background: rgba(255,255,255,0.12); }
+  @media (max-width: 760px) { #hint { white-space: normal; text-align: center; width: calc(100vw - 48px); bottom: 170px; } }
+  #loading { position: absolute; inset: 0; display: grid; place-items: center; z-index: 5; background: var(--ink); transition: opacity .6s; font: 12px var(--f-mono); letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+  #loading.gone { opacity: 0; pointer-events: none; }
+
+  /* ---------- time console */
+  #time { position: absolute; left: var(--gut); right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(14px, env(safe-area-inset-bottom, 0px)); padding: 12px 16px 12px; z-index: 3; }
+  .time-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  #now { font: 500 22px/1 var(--f-display); font-variant-numeric: tabular-nums; min-width: 9ch; }
+  #now small { display: block; font: 10px var(--f-mono); letter-spacing: .12em; color: var(--muted); text-transform: uppercase; margin-top: 4px; }
+  #levels { display: flex; gap: 2px; padding: 3px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--rule); flex-wrap: wrap; }
+  #levels button { border: 0; background: transparent; color: var(--soft); padding: 5px 10px; border-radius: 6px; font-size: 12px; white-space: nowrap; }
+  #levels button:hover { color: var(--text); background: rgba(255,255,255,.05); }
+  #levels button.on { background: var(--brass); color: #1a1305; font-weight: 600; }
+  #play { margin-left: auto; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--rule-strong); background: transparent; display: grid; place-items: center; }
+  #play:hover { border-color: var(--brass); }
+  #context { position: relative; height: 18px; margin-top: 12px; border-radius: 4px; overflow: hidden; cursor: pointer; display: flex; }
+  #context .eon { height: 100%; position: relative; }
+  #context .eon span { position: absolute; left: 6px; top: 50%; transform: translateY(-50%); font: 9px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.6); white-space: nowrap; pointer-events: none; }
+  #context .win { position: absolute; top: 0; bottom: 0; border: 1.5px solid var(--brass); background: rgba(217,179,106,.18); border-radius: 3px; min-width: 4px; pointer-events: none; }
+  #context .humans { position: absolute; right: 0; top: 0; bottom: 0; width: 5px; background: #f0a35e; }
+  .ctx-labels { display: flex; justify-content: space-between; font: 10px var(--f-mono); color: var(--muted); margin-top: 3px; }
+  .track { position: relative; margin-top: 10px; }
+  #density { display: block; width: 100%; height: 26px; }
+  #slider { -webkit-appearance: none; appearance: none; width: 100%; height: 26px; background: transparent; position: absolute; left: 0; top: 0; margin: 0; }
+  #slider::-webkit-slider-runnable-track { height: 26px; background: transparent; }
+  #slider::-webkit-slider-thumb { -webkit-appearance: none; width: 4px; height: 30px; margin-top: -2px; background: #fff3d6; border-radius: 2px; box-shadow: 0 0 0 3px var(--brass), 0 0 14px rgba(217,179,106,.8); }
+  #slider::-moz-range-thumb { width: 4px; height: 30px; background: #fff3d6; border: 0; border-radius: 2px; box-shadow: 0 0 0 3px var(--brass); }
+  .ticks { display: flex; justify-content: space-between; font: 10px var(--f-mono); color: var(--muted); margin-top: 4px; }
+
+  /* ---------- record panel */
+  #panel { position: absolute; top: max(14px, env(safe-area-inset-top, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); bottom: 178px; width: min(460px, calc(100vw - 32px)); z-index: 4; display: flex; flex-direction: column; overflow: hidden; background: var(--glass-strong); }
+  #panel[hidden] { display: none; }
+  .p-head { position: relative; flex: none; }
+  .p-hero { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; background: var(--deep); }
+  .p-credit { font-size: 10px; color: var(--muted); padding: 4px 18px 0; }
+  .p-credit a { color: var(--muted); }
+  a.badge.wiki-badge { color: #9cc3ff; border-color: rgba(156,195,255,.4); text-decoration: none; }
+  a.badge.wiki-badge:hover { background: rgba(156,195,255,.12); }
+  .p-close { position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--rule-strong); background: rgba(4,7,12,.65); display: grid; place-items: center; }
+  .p-body { overflow-y: auto; padding: 14px 20px 22px; min-width: 0; }
+  .p-kicker { font: 500 10px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+  .p-body h2 { font: 600 24px/1.2 var(--f-display); margin: 6px 0 4px; text-wrap: balance; }
+  .p-when { font: 13px var(--f-mono); color: var(--soft); }
+  .p-where { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .badges { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0 0; }
+  .badge { font: 500 10px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--rule-strong); color: var(--soft); }
+  .badge.conf-established { border-color: #5aa47a; color: #8fd0aa; }
+  .badge.conf-probable { border-color: #b39a4c; color: #e2c779; }
+  .badge.conf-contested { border-color: #b86a5c; color: #eda393; }
+  .badge.conf-legendary { border-color: #8a75b8; color: #c2b0ea; }
+  .outline-note { margin: 0 0 12px; padding: 8px 12px; border: 1px dashed var(--rule-strong); border-radius: 8px; font-size: 12px; color: var(--soft); background: rgba(255,255,255,.02); }
+  .warn { margin: 12px 0 0; padding: 8px 12px; border-left: 3px solid var(--alert); background: rgba(224,112,95,.08); font-size: 12px; color: var(--soft); border-radius: 0 6px 6px 0; }
+  .lede { font: italic 400 16px/1.55 var(--f-display); color: var(--text); margin: 14px 0 0; }
+  .p-body section { margin-top: 20px; }
+  .p-body h3 { font: 500 10px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+  .prose p { font: 400 15px/1.65 var(--f-display); color: #d9dfe9; margin: 0 0 10px; max-width: 62ch; }
+  .persp { border-left: 2px solid var(--rule-strong); padding: 2px 0 2px 12px; margin-bottom: 10px; }
+  .persp b { display: block; font-size: 12px; color: var(--soft); margin-bottom: 2px; }
+  .persp span { font: 14px/1.55 var(--f-display); color: #d9dfe9; }
+  .nums { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .nums td { padding: 6px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .nums td:last-child { text-align: right; font-family: var(--f-mono); color: var(--brass); white-space: nowrap; padding-left: 12px; }
+  .wiki h3 { display: flex; align-items: center; gap: 8px; }
+  .wiki .wq { font: 500 9px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: #d9b36a; border: 1px solid rgba(217,179,106,.45); border-radius: 999px; padding: 2px 7px; }
+  .wiki-body { font-size: 13px; line-height: 1.55; color: var(--soft); }
+  .wiki-text { margin: 0 0 8px; }
+  .wiki-link { display: inline-block; font-size: 12.5px; color: #9cc3ff; text-decoration: none; margin-bottom: 6px; }
+  .wiki-link:hover { text-decoration: underline; }
+  .wiki-note { font: 10px var(--f-mono); color: var(--muted); }
+  .srcs { margin: 0; padding-left: 18px; font-size: 12px; color: var(--soft); }
+  .srcs li { margin-bottom: 5px; }
+  .srcs a { color: #9cc3ff; text-decoration: none; }
+  .srcs a:hover { text-decoration: underline; }
+  .srcs .cls { font: 9px var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-left: 4px; }
+  details summary { cursor: pointer; list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary h3 { display: flex; justify-content: space-between; }
+  details summary h3::after { content: "+"; }
+  details[open] summary h3::after { content: "–"; }
+  .meta-line { font: 10px var(--f-mono); color: var(--muted); margin-top: 18px; }
+  .rel { display: flex; flex-wrap: wrap; gap: 6px; }
+  .rel button { border: 1px solid var(--rule); background: rgba(255,255,255,.03); border-radius: 6px; padding: 4px 8px; font-size: 11px; color: var(--soft); text-align: left; }
+  .rel button:hover { border-color: var(--brass); }
+  .rel button i { font-style: normal; color: var(--muted); font-family: var(--f-mono); font-size: 9px; text-transform: uppercase; margin-right: 4px; }
+  .rel button[disabled] { opacity: .45; cursor: default; }
+
+  .play-seq { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--brass); background: var(--brass-dim); color: var(--brass); font-size: 12px; font-weight: 500; }
+  .play-seq:hover { background: rgba(217,179,106,.28); }
+  #seqbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 186px; width: min(620px, calc(100vw - 32px)); padding: 12px 16px 14px; z-index: 5; background: var(--glass-strong); }
+  .seq-top { display: flex; align-items: center; gap: 10px; }
+  #seq-title { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }
+  #seq-dots { display: flex; gap: 4px; }
+  #seq-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--rule-strong); cursor: pointer; position: relative; }
+  #seq-dots i::after { content: ''; position: absolute; inset: -6px -2px; } /* a bigger target than the 6px dot */
+  #seq-dots i.now { box-shadow: 0 0 0 2px var(--brass); }
+  #seq-dots i.on { background: var(--brass); }
+  #seq-dots i.cons { box-shadow: 0 0 0 2px rgba(217,179,106,.35); }
+  .seq-top button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--rule-strong); background: transparent; display: grid; place-items: center; flex: none; }
+  #seq-caption { margin: 8px 0 0; font: 400 16px/1.5 var(--f-display); color: var(--text); text-wrap: pretty; }
+  #seq-num { font: 500 22px var(--f-mono); color: var(--brass); margin-top: 4px; }
+  #seq-num:empty { display: none; }
+  @media (max-width: 760px) { #seqbar { bottom: 150px; } #seq-caption { font-size: 14px; } }
+  .tip { font: 12px/1.45 var(--f-ui); max-width: 280px; }
+  .tip b { display: block; font: 600 14px/1.25 var(--f-display); margin-bottom: 2px; }
+  .tip .d { font: 10px var(--f-mono); color: var(--brass); }
+  .tip p { margin: 4px 0 0; color: var(--soft); }
+  .float-tooltip-kap, .scene-tooltip { background: var(--glass-strong) !important; border: 1px solid var(--rule-strong) !important; border-radius: 8px !important; padding: 9px 11px !important; color: var(--text) !important; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+  /* globe.gl leaves the tooltip in place, empty, when nothing is hovered: hide it rather than show an empty box */
+  .float-tooltip-kap:empty, .scene-tooltip:empty { display: none !important; }
+
+  @media (max-width: 760px) {
+    #masthead { width: calc(100vw - 32px); }
+    .tagline { display: none; }
+    #panel { top: auto; bottom: 0; right: 0; left: 0; width: 100%; height: 66vh; border-radius: 16px 16px 0 0; z-index: 6; box-shadow: 0 -12px 40px rgba(0,0,0,.5); }
+    #panel::before { content: ""; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 36px; height: 4px; border-radius: 2px; background: var(--rule-strong); z-index: 2; }
+    #time { padding: 10px 12px; }
+    .time-top { flex-wrap: nowrap; gap: 10px; }
+    #now { font-size: 17px; min-width: 0; flex: none; }
+    #now small { display: none; }
+    #levels { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1; }
+    #levels::-webkit-scrollbar { display: none; }
+    #levels button { padding: 4px 8px; font-size: 11px; }
+    #play { margin-left: 0; flex: none; width: 30px; height: 30px; }
+    .ctx-labels { display: none; }
+    #context .eon span { display: none; }
+    #emphasis-flag { top: auto; bottom: 168px; }
+    #hint { bottom: 204px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div id="globe" aria-label="Interactive globe"></div>
+<div id="loading">Loading the atlas…</div>
+
+<div id="masthead">
+  <div>
+    <div class="brand"><h1>Living Atlas</h1><span class="count" id="count">—</span></div>
+    <p class="tagline">Earth and human history, placed where and when it happened.</p>
+  </div>
+  <div class="search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search events, people, places" autocomplete="off" aria-label="Search the atlas">
+    <ul id="results" class="glass" hidden></ul>
+  </div>
+  <div id="legend" class="glass">
+    <button id="legend-toggle" class="legend-head" aria-expanded="true"><h2>Domains &amp; layers</h2><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <div id="legend-body">
+    <ul id="domains"></ul>
+    <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div></div>
+    <p class="sky-note">The Moon is always at its real position for the date shown, and the Sun is too in the one-year view or with Real sunlight on. Distances are not to scale.</p>
+    <div class="toggles">
+      <button class="toggle" id="whole" aria-pressed="false" title="Show every record in this time level, not only those near the date">Whole period</button>
+      <button class="toggle" id="paths" aria-pressed="false">Routes</button>
+      <button class="toggle" id="clouds" aria-pressed="true">Clouds</button>
+      <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth from the Sun’s true position for the date shown; rotate to the night side to see it">Real sunlight</button>
+      <button class="toggle" id="mapstyle" aria-pressed="false" title="Flat map style with land outlines instead of satellite imagery">Map style</button>
+      <button class="toggle" id="outlines" aria-pressed="true" title="Show outline records: sourced pins whose full record is still to come">Outlines</button>
+      <button class="toggle" id="emph" aria-pressed="false" title="Show 3D monument models (enlarged on screen so they can be found from far away; the enlargement is labelled)">3D models</button>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div id="notice" class="glass" hidden></div>
+<div id="empty" class="glass" hidden><p id="empty-text"></p><button id="empty-btn">Show the whole period</button></div>
+<div id="emphasis-flag" class="glass" hidden>Monuments enlarged for visibility</div>
+<div id="planet" class="glass" hidden aria-label="Planet-wide records"></div>
+<div id="hint" class="glass">Drag to rotate · scroll or pinch to zoom · click a pin to read its record</div>
+
+<section id="panel" class="glass" hidden aria-live="polite"></section>
+<section id="seqbar" class="glass" hidden aria-live="polite" aria-label="Sequence">
+  <div class="seq-top"><span id="seq-title"></span><div id="seq-dots" aria-hidden="true"></div>
+    <button id="seq-prev" aria-label="Previous beat" title="Previous beat (←)"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h2v10H2zM11 1v10L4.5 6z" fill="currentColor"/></svg></button>
+    <button id="seq-pause" aria-label="Pause sequence"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></svg></button>
+    <button id="seq-next" aria-label="Next beat" title="Next beat (→)"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1h2v10H8zM1 1v10l6.5-5z" fill="currentColor"/></svg></button>
+    <button id="seq-stop" aria-label="Stop sequence"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+  <p id="seq-caption"></p><div id="seq-num"></div>
+</section>
+
+<section id="time" class="glass" aria-label="Time">
+  <div class="time-top">
+    <div id="now"></div>
+    <div id="levels" role="tablist" aria-label="Time scale"></div>
+    <button id="play" aria-label="Play through time"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg></button>
+  </div>
+  <div id="context" title="All of Earth's history. Click to jump there; the orange sliver at the right edge is human history."></div>
+  <div class="ctx-labels"><span>4.54 billion years ago</span><span>today</span></div>
+  <div class="track">
+    <canvas id="density" aria-hidden="true"></canvas>
+    <input id="slider" type="range" min="0" max="1000" step="1" aria-label="Date within this time scale">
+  </div>
+  <div class="ticks"><span id="t0"></span><span id="tm"></span><span id="t1"></span></div>
+</section>
+
+<script>window.__errs = []; addEventListener("error", e => window.__errs.push(e.error && e.error.stack ? e.error.stack.slice(0, 400) : e.message));</script>
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js"></script>
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="space.js"></script>
+<script src="sequence.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

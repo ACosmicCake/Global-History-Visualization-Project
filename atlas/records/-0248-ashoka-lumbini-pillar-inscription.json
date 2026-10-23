@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0248-ashoka-lumbini-pillar-inscription",
+  "kind": "event",
+  "title": "Ashoka's pillar inscription at Lumbini",
+  "summary": "Twenty years after his anointing, the Mauryan king Ashoka visited Lumbini, worshipped there and had a stone pillar set up recording that the Buddha was born at the spot. The inscription also freed Lumbini village from taxes beyond an eighth of its produce. The pillar was identified in 1896.",
+  "when": {
+    "start": {
+      "year": -248
+    },
+    "end": {
+      "year": -248
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 2,
+      "end_minus_years": 2,
+      "end_plus_years": 2,
+      "note": "The inscription gives only the twentieth year after consecration; World History Encyclopedia converts this to 249 BCE, which depends on the dating of Ashoka's reign (268-232 BCE)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Regnal years, as translated",
+        "value": "consecrated as king twenty years; dated 249 BCE",
+        "source": "src-wh-lumbini"
+      },
+      {
+        "calendar": "Regnal years, as translated",
+        "value": "having been anointed twenty years",
+        "source": "src-ntu-lumbini"
+      }
+    ],
+    "display": "249 BCE (20th year after Ashoka's consecration)"
+  },
+  "where": {
+    "lat": 27.48619,
+    "lon": 83.27714,
+    "elevation_m": null,
+    "modern_name": "Lumbini, Rupandehi District, Lumbini Province, Nepal",
+    "historical_name": "Lummini village, within the Mauryan empire of Ashoka",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-gn-lumbini"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "built_world",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Oldest dated inscription naming the Buddha's birthplace; identified Lumbini when the pillar was found in 1896."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-lumbini",
+      "type": "same_place"
+    },
+    {
+      "id": "person-ashoka",
+      "type": "related"
+    },
+    {
+      "id": "polity-maurya-empire",
+      "type": "related"
+    },
+    {
+      "id": "person-siddhartha-gautama",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wh-lumbini",
+      "url": "https://worldhistory.org/Lumbini",
+      "title": "Lumbini",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ntu-lumbini",
+      "url": "https://dlbs.liberal.ntu.edu.tw/FULLTEXT/JR-ENG/buh.htm",
+      "title": "The Discovery of Buddha's Birthplace",
+      "publisher": "Digital Library & Museum of Buddhist Studies, National Taiwan University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wh-ashoka",
+      "url": "https://www.worldhistory.org/Ashoka/",
+      "title": "Ashoka",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-lumbini",
+      "url": "https://www.geonames.org/search.html?q=Lumbini&country=NP",
+      "title": "GeoNames: Lumbini",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Absolute year (249 BCE) is World History Encyclopedia's conversion of 'twenty years'. Discoverer: NTU page credits Dr. Fuhrer (1 Dec 1896); World History Encyclopedia credits Khadga Shumsher Rana. Pillar coordinates use GeoNames Lumbini (populated place); UNESCO page could not be opened (403).",
+  "author": "historian-agent:o-s31",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:35:54.037Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-248",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Twenty years after his anointing, the Mauryan king Ashoka visited Lumbini, worshipped there and had a stone pillar set up recording that the Buddha was born at the…",
+        "source": "src-wh-lumbini"
+      },
+      {
+        "span": "-248",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The inscription also freed Lumbini village from taxes beyond an eighth of its produce.",
+        "source": "src-wh-lumbini",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

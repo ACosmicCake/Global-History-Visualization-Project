@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 3,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:m-8",
+  "updated": "2026-10-22",
+  "id": "place-horyu-ji",
+  "title": "Hōryū-ji Buddhist monuments",
+  "summary": "Hōryū-ji, near Nara, is a Buddhist temple founded in 607 by Prince Shotoku. A fire destroyed the original buildings in 670, and rebuilding began almost at once and ran into the early 8th century. Eleven surviving structures date from the late 7th or 8th century, among the oldest wooden buildings in the world. UNESCO inscribed the 48-structure property in 1993.",
+  "when": {
+    "start": {
+      "year": 607
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the founding date given by World History Encyclopedia; UNESCO says the original buildings burned in 670 and rebuilding ran into the early 8th century, so the standing buildings are later than the start. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "founded in 607 CE by Prince Shotoku",
+        "source": "src-whe-horyuji"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "a fire destroyed the original Horyu-ji buildings in 670",
+        "source": "src-unesco-660"
+      }
+    ],
+    "display": "Founded 607; burned 670; rebuilt by the early 8th century"
+  },
+  "where": {
+    "lat": 34.614472,
+    "lon": 135.734222,
+    "elevation_m": null,
+    "modern_name": "Hōryū-ji, Ikaruga, Nara Prefecture, Japan",
+    "historical_name": "Hōryū-ji (Western Precinct, Sai-in), Asuka-period Yamato",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.4,
+    "coordinate_sources": [
+      "src-unesco-xml",
+      "src-osm-horyuji"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "built_world",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO calls these the earliest Buddhist monuments in Japan, some of the oldest surviving wooden buildings in the world, with lasting influence on later religious architecture."
+  },
+  "related": [
+    {
+      "id": "-0500-rise-of-buddhism",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-660",
+      "url": "https://whc.unesco.org/en/list/660",
+      "title": "Buddhist Monuments in the Horyu-ji Area (World Heritage List no. 660)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-whe-horyuji",
+      "url": "https://www.worldhistory.org/Horyuji/",
+      "title": "Horyuji",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 660, geolocation 34.614472, 135.734222 and 34.622806, 135.746139",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-osm-horyuji",
+      "url": "https://nominatim.openstreetmap.org/search?q=Horyu-ji&format=json",
+      "title": "OpenStreetMap Nominatim: Horyu-ji, way 43549741 (34.614013, 135.7360432)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-jh-horyuji-pagoda",
+      "url": "https://japanheritage.jp/nara/heritage/horyuji/five-storied-pagoda",
+      "title": "Horyuji Temple Five-Storied Pagoda: 594 Pillar and Clay Scenes of 711",
+      "publisher": "Japan Heritage (Agency for Cultural Affairs programme)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry",
+        "model.phases"
+      ]
+    }
+  ],
+  "reviewer_note": "No model: the five-storey pagoda's height (about 32 m in search snippets) was not stated with a plan dimension on any page I could open (the World History Encyclopedia gives only the central column, over 35 m). UNESCO's XML lists two points (Horyu-ji and Hokki-ji, about 1.8 km apart); I used the one that agrees with the OSM Horyu-ji way (about 0.2 km away). The 607 founding date is from World History Encyclopedia only; UNESCO gives no founding year.",
+  "published_at": "2026-10-22T09:01:45.804Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 3,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square plan, three bays on a side, with a mokoshi (skirt roof) on the ground floor; ground-floor side about 6.42 m (21.18 shaku), the fifth storey half that. Standing on a double terrace beside the Golden Hall in the Western Precinct.",
+      "source": "src-jh-horyuji-pagoda",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pagoda",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-jh-horyuji-pagoda",
+      "measurements": [
+        {
+          "part": "height (five-storied pagoda, from stone platform)",
+          "value": 32.5,
+          "unit": "m",
+          "source": "src-jh-horyuji-pagoda",
+          "note": "\"about 32.5 meters from its stone platform\""
+        },
+        {
+          "part": "base side (ground floor)",
+          "value": 6.42,
+          "unit": "m",
+          "source": "src-jh-horyuji-pagoda",
+          "note": "21.18 shaku; fifth storey exactly half"
+        },
+        {
+          "part": "tiers",
+          "value": 5,
+          "unit": "storeys",
+          "source": "src-jh-horyuji-pagoda"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "five-storey tapering tower at true height and base"
+      },
+      {
+        "level": "local",
+        "representation": "procedural pagoda with five diminishing roofs and the ground-floor skirt roof"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 700,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Standing by the end of the seventh century, as the source dates it; the exact building years are not given.",
+        "source": "src-jh-horyuji-pagoda"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 670,
+        "to_year": 2026,
+        "material": "timber frame with a central pillar of cypress felled in 594",
+        "source": "src-jh-horyuji-pagoda"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "-35my-chesapeake-bay-impact-crater",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Chesapeake Bay impact",
+  "summary": "About 35 million years ago a comet or asteroid struck the shallow shelf of what is now southeastern Virginia, leaving the Chesapeake Bay impact crater, described by ASU as the largest impact crater in the US. USGS reports a 90-km-diameter structure; ASU gives a 25-mile diameter. It lies buried beneath the bay, where a 1,766-m-deep test hole was drilled in 2005 and 2006.",
+  "when": {
+    "start": {
+      "year": -35000000
+    },
+    "end": {
+      "year": -35000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both pages say about 35 million years ago. Years are Ma with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "About 35 million years ago",
+        "source": "src-usgs-cbic"
+      },
+      {
+        "calendar": "Ma",
+        "value": "About 35 million years ago",
+        "source": "src-asu2019"
+      }
+    ],
+    "display": "c. 35 million years ago"
+  },
+  "where": {
+    "lat": 37.283333,
+    "lon": -76.016667,
+    "elevation_m": null,
+    "modern_name": "Chesapeake Bay impact crater, buried beneath the lower Chesapeake Bay, Virginia, USA",
+    "historical_name": "Atlantic continental shelf of eastern North America, Late Eocene; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata-cbic",
+      "src-usgs-cbic",
+      "src-asu2019"
+    ],
+    "paleo": {
+      "lat": 33.6,
+      "lon": -58.83,
+      "age_ma": 35,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "The largest known impact crater in the US, buried under a major estuary."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-35my-popigai-impact",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-usgs-cbic",
+      "url": "https://www.usgs.gov/centers/virginia-and-west-virginia-water-science-center/chesapeake-bay-impact-crater",
+      "title": "The Chesapeake Bay Impact Crater",
+      "publisher": "U.S. Geological Survey, Virginia and West Virginia Water Science Center",
+      "author": "USGS",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-asu2019",
+      "url": "https://news.asu.edu/20190808-asu-researchers-study-largest-impact-crater-us-buried-35-million-years",
+      "title": "ASU researchers study largest impact crater in the US, buried for 35 million years",
+      "publisher": "Arizona State University, ASU News",
+      "author": "ASU News",
+      "date_published": "2019-08-08",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-cbic",
+      "url": "https://www.wikidata.org/wiki/Q1070547",
+      "title": "Wikidata item Q1070547 (Chesapeake Bay impact crater)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-76.0167,37.2833&time=35&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: sources disagree on size (USGS 90 km structure; ASU 25-mile diameter) and neither opened page gives coordinates, so the Wikidata point is used at 50 km. Other age estimates were not opened.",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:10.208Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1934-long-march",
+  "kind": "event",
+  "title": "The Long March",
+  "summary": "In October 1934 about 86,000 Communist troops broke out of the Jiangxi Soviet base area and marched through southern and western China, reaching Shaanxi in October 1935. Estimates of those who arrived range from about 4,000 (EBSCO) to 7,000–8,000 (Model Diplomat). The Zunyi Conference of January 1935 consolidated Mao Zedong's leadership, and a new base grew around Yan'an. Distances cited run from 6,000 miles to about 12,500 km.",
+  "when": {
+    "start": {
+      "year": 1934
+    },
+    "end": {
+      "year": 1935
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO gives October 1934 to December 1935 as the overall period; Model Diplomat gives arrival in Shaanxi in October 1935."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "break out in October, 1934",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "October 1935, when the First Red Army arrived in Shaanxi province",
+        "source": "src-modeld"
+      }
+    ],
+    "display": "October 1934 – October 1935"
+  },
+  "where": {
+    "lat": 27.6898179,
+    "lon": 106.9153158,
+    "elevation_m": null,
+    "modern_name": "Jiangxi to Wuqi, Shaanxi, China (route; point is Zunyi)",
+    "historical_name": "Republic of China: Jiangxi Soviet base area to northern Shaanxi",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 28,
+          "lon": 116,
+          "year": 1934.79,
+          "date": "October 1934 (breakout from the Jiangxi Soviet)",
+          "label": "Jiangxi: the sources name only the province and base area, so the point is the OSM province reference point, not a town.",
+          "source": "src-ebsco",
+          "coordinate_source": "src-osm-jx"
+        },
+        {
+          "lat": 27.6898179,
+          "lon": 106.9153158,
+          "year": 1935.04,
+          "date": "January 1935 (Zunyi Conference)",
+          "label": "Zunyi, Guizhou: the Zunyi Conference; the point is the city reference point.",
+          "source": "src-modeld",
+          "coordinate_source": "src-osm-zy"
+        },
+        {
+          "lat": 29.9144973,
+          "lon": 102.2302051,
+          "year": 1935.4,
+          "date": "27 May 1935 (Luding Bridge)",
+          "label": "Luding Bridge over the Dadu River, where EBSCO says Yang Chengwu led his battalion across under fire; other sources vary on the date.",
+          "source": "src-ebsco",
+          "coordinate_source": "src-osm-ld"
+        },
+        {
+          "lat": 36.9825,
+          "lon": 108.159444,
+          "year": 1935.79,
+          "date": "October 1935 (arrival in Shaanxi)",
+          "label": "Wuqi, Shaanxi: EBSCO says the armies arrived here, completing the march; the point is the OSM county reference point.",
+          "source": "src-ebsco",
+          "coordinate_source": "src-osm-wq"
+        },
+        {
+          "lat": 36.602796,
+          "lon": 109.4873978,
+          "year": 1935.96,
+          "date": "December 1935 (Yenan base)",
+          "label": "Yenan (Yan'an), where EBSCO says Mao established a new political centre by December 1935; the point is the city reference point.",
+          "source": "src-ebsco",
+          "coordinate_source": "src-osm-ya"
+        }
+      ]
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-osm-zy",
+      "src-osm-jx",
+      "src-osm-ld",
+      "src-osm-wq",
+      "src-osm-ya"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Retreat that shaped Mao Zedong's rise and the Communist base in northern Shaanxi."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns a military retreat in which most of those who set out did not arrive. Figures for losses vary widely between sources.",
+  "related": [
+    {
+      "id": "1949-chinese-communist-revolution",
+      "type": "caused",
+      "because": "The Zunyi Conference consolidated Mao Zedong's leadership of the CCP, according to Model Diplomat."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/long-march/",
+      "title": "Long March (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-modeld",
+      "url": "https://modeldiplomat.com/learn/glossary/long-march",
+      "title": "Long March",
+      "publisher": "Model Diplomat",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-jx",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Jiangxi",
+      "title": "OpenStreetMap Nominatim: Jiangxi province",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-zy",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Zunyi",
+      "title": "OpenStreetMap Nominatim: Zunyi",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-ld",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Luding%20Bridge",
+      "title": "OpenStreetMap Nominatim: Luding Bridge",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-wq",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Wuqi%20County",
+      "title": "OpenStreetMap Nominatim: Wuqi County",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-ya",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Yan'an",
+      "title": "OpenStreetMap Nominatim: Yan'an",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources conflict on: distance (EBSCO about 6,000 miles; Model Diplomat Chinese official accounts roughly 12,500 km, which Sun Shuyun argues is overstated); survivors (EBSCO about 4,000; Model Diplomat 7,000-8,000); end date (EBSCO says completed on arrival at Wuqi and gives October 1934 to December 1935; Model Diplomat says October 1935). Luding Bridge date 27 May 1935 is EBSCO only; Model Diplomat gives no date; the \"Liuding\" spelling in EBSCO is as given there. Start town Ruijin is not named on opened pages so the start point is the Jiangxi province reference point, very approximate. The Xiang River and Tucheng crossings (EBSCO) are left unmapped. Related link \"caused\" rests on Model Diplomat only.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 40,
+    "beats": [
+      {
+        "span": "1934-10",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "In October 1934 about 86,000 troops break out of the Jiangxi Soviet base area.",
+        "source": "src-ebsco",
+        "consequence": false
+      },
+      {
+        "span": "1935",
+        "action": "path.trace {}",
+        "caption": "The march passes Zunyi in January 1935 and the Dadu River at Luding Bridge in late May.",
+        "source": "src-modeld",
+        "consequence": false
+      },
+      {
+        "span": "1935-10",
+        "action": "numbers.counter { range: [4000, 8000] }",
+        "caption": "By October 1935 only about 4,000 to 8,000 reach Shaanxi, where a new base forms around Yan'an.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:08.880Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

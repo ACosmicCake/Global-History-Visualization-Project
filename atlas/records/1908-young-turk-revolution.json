@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s104",
+  "updated": "2026-10-22",
+  "id": "1908-young-turk-revolution",
+  "kind": "event",
+  "title": "Young Turk Revolution",
+  "summary": "In July 1908 army officers backing the Committee of Union and Progress rose in Macedonia, led at first by Major Ahmed Niyazi. On 24 July Sultan Abdulhamid II, in Constantinople, restored the 1876 constitution and agreed to elections. The revolution opened the Second Constitutional Period of the Ottoman Empire.",
+  "when": {
+    "start": {
+      "year": 1908,
+      "iso": "1908-07-03"
+    },
+    "end": {
+      "year": 1908,
+      "iso": "1908-07-24"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 3 July uprising and end is the 24 July restoration, both as given in the cited pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "July 24, 1908",
+        "source": "src-ebsco-youngturks"
+      },
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "began on 3 July 1908",
+        "source": "src-imperialottoman-yt"
+      },
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "On 24 July 1908, the sultan issued a rescript restoring the constitution",
+        "source": "src-imperialottoman-yt"
+      }
+    ],
+    "display": "3-24 July 1908"
+  },
+  "where": {
+    "lat": 41.01,
+    "lon": 28.960277777778,
+    "elevation_m": null,
+    "modern_name": "Istanbul, Turkey (proxy pin)",
+    "historical_name": "Constantinople, capital of the Ottoman Empire (proxy pin: the revolt began in the mountains of Macedonia and the constitution was restored in Constantinople)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wd-istanbul"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Forced the restoration of the 1876 constitution and opened the Second Constitutional Period of the Ottoman Empire."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-ottoman-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-youngturks",
+      "url": "https://www.ebsco.com/research-starters/history/young-turks-stage-coup-ottoman-empire/",
+      "title": "Young Turks Stage a Coup in the Ottoman Empire",
+      "publisher": "EBSCO Research Starters",
+      "author": "Byron D. Cannon",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-imperialottoman-yt",
+      "url": "https://www.imperialottoman.com/history/young-turk-revolution",
+      "title": "Young Turk Revolution",
+      "publisher": "Imperial Ottoman",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-camb-secondconst",
+      "url": "https://www.cambridge.org/core/books/cambridge-history-of-turkey/second-constitutional-period-19081918/2619E59AD2DA03113550FE8FF32909D6",
+      "title": "The Second Constitutional Period, 1908-1918",
+      "publisher": "Cambridge University Press",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-istanbul",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q406.json",
+      "title": "Istanbul (Wikidata Q406)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Proxy pin at Constantinople. The 3 July start rests on a reference site without a named author; the 24 July date is on EBSCO.",
+  "published_at": "2026-10-22T18:25:13.311Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1908-07-03",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In July 1908 army officers backing the Committee of Union and Progress rose in Macedonia, led at first by Major Ahmed Niyazi.",
+        "source": "src-ebsco-youngturks"
+      },
+      {
+        "span": "1908",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The revolution opened the Second Constitutional Period of the Ottoman Empire.",
+        "source": "src-ebsco-youngturks",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

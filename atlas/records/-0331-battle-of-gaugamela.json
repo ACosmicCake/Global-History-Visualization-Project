@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0331-battle-of-gaugamela",
+  "kind": "event",
+  "title": "Battle of Gaugamela",
+  "summary": "On 1 October 331 BCE Alexander of Macedon defeated the Persian army of Darius III at Gaugamela, also called the Battle of Arbela. Darius fled and the Persian line broke. Sources describe Alexander as then holding Babylon, Persepolis and Susa, while Darius was later deposed and killed by his nobles.",
+  "when": {
+    "start": {
+      "year": -330
+    },
+    "end": {
+      "year": -330
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give the same day."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (BCE)",
+        "value": "October 1, 331 B.C.E.",
+        "source": "src-ebsco-gaugamela"
+      },
+      {
+        "calendar": "Gregorian (BCE)",
+        "value": "1st October 331 BCE",
+        "source": "src-whe-gaugamela"
+      }
+    ],
+    "display": "1 October 331 BCE"
+  },
+  "where": {
+    "lat": 36.6247222,
+    "lon": 43.4377778,
+    "elevation_m": null,
+    "modern_name": "Gaugamela battlefield, Nineveh Governorate, Iraq (PROXY pin; exact site uncertain)",
+    "historical_name": "Gaugamela, Persian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-osm-gaugamela"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Both sources present the victory as giving Alexander control of the Persian heartland."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "person-alexander-the-great",
+      "type": "related"
+    },
+    {
+      "id": "polity-achaemenid-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-persepolis",
+      "type": "caused",
+      "because": "EBSCO states Persian provinces including Babylonia and Persepolis fell to Alexander after the battle."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-gaugamela",
+      "url": "https://www.ebsco.com/research-starters/history/battle-gaugamela",
+      "title": "Battle of Gaugamela",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-whe-gaugamela",
+      "url": "https://www.worldhistory.org/Battle_of_Gaugamela/",
+      "title": "Battle of Gaugamela",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-gaugamela",
+      "url": "https://nominatim.openstreetmap.org/search?q=Gaugamela&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Gaugamela",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "PROXY PIN: the sources say the site is near Tel Gomel (World History Encyclopedia: \"thought to be\"), in northern Iraq; the pin is an OpenStreetMap node labelled as the Gaugamela battlefield, not a surveyed site, hence a 100 km uncertainty. No coordinate was computed. EBSCO says Darius II in one place at Issus; the Key Figures list names Darius III.",
+  "audience_note": null,
+  "author": "historian-agent:o-s109",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:01:01.547Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-330",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "On 1 October 331 BCE Alexander of Macedon defeated the Persian army of Darius III at Gaugamela, also called the Battle of Arbela.",
+        "source": "src-ebsco-gaugamela"
+      },
+      {
+        "span": "-330",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Sources describe Alexander as then holding Babylon, Persepolis and Susa, while Darius was later deposed and killed by his nobles.",
+        "source": "src-ebsco-gaugamela",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

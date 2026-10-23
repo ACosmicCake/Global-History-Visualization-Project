@@ -1,0 +1,165 @@
+{
+  "id": "1794-french-abolition-of-slavery",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "French abolition of slavery (decree of 16 Pluviôse Year II)",
+  "summary": "On 16 Pluviôse Year II (4 February 1794) the National Convention, after speeches by Dufay and Danton, voted by acclamation a text drafted by Lacroix. It declared slavery abolished in all the colonies and made all men there French citizens regardless of colour. It was not applied everywhere, and in 1802 Bonaparte had a law drafted to maintain slavery where it had not been abolished.",
+  "when": {
+    "start": {
+      "year": 1794,
+      "iso": "1794-02-04"
+    },
+    "end": {
+      "year": 1794,
+      "iso": "1794-02-04"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Séance of 16 pluviôse an II, equated by both sources with 4 February 1794."
+    },
+    "as_recorded": [
+      {
+        "calendar": "French Republican calendar",
+        "value": "Séance du 16 pluviôse an II (4 février 1794)",
+        "source": "src-an-abolition"
+      },
+      {
+        "calendar": "French Republican calendar",
+        "value": "16 pluviôse an II (4 février 1794)",
+        "source": "src-outremers"
+      }
+    ],
+    "display": "4 February 1794 (16 Pluviôse Year II)"
+  },
+  "where": {
+    "lat": 48.856667,
+    "lon": 2.352222,
+    "elevation_m": null,
+    "modern_name": "Paris, France",
+    "historical_name": "Paris, French Republic (seat of the National Convention)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-an-abolition",
+      "src-wd-paris"
+    ]
+  },
+  "regions": [
+    "europe",
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "The first abolition of slavery by the French state, decreed for all colonies and later reversed in part."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1791-haitian-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1793-reign-of-terror",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-an-abolition",
+      "url": "https://www2.assemblee-nationale.fr/15/evenements/2021/abolition-de-l-esclavage-1794-et-1848/1794-la-premiere-abolition",
+      "title": "1794 : la première abolition",
+      "publisher": "Assemblée nationale (France)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-outremers",
+      "url": "https://outremers360.com/bassin-atlantique-appli/histoire-le-4-fevrier-1794-la-france-abolissait-pour-la-premiere-fois-lesclavage-avant-de-le-retablir-huit-ans-plus-tard",
+      "title": "Le 4 février 1794, la France abolissait pour la première fois l'esclavage, avant de le rétablir huit ans plus tard",
+      "publisher": "Outremers 360",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-paris",
+      "url": "https://www.wikidata.org/wiki/Q90",
+      "title": "Wikidata item Q90 (Paris), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the Assemblée nationale page says Saint-Domingue sent its deputy to Paris, to the Convention, but names no hall; the pin is Paris. That page gives 3 February 1793 once in error for the deputies; the 1794 date is used. The decree wording and the 1802 law come from the Outremers 360 page only.",
+  "author": "historian-agent:o-s45",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:27:47.341Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1794-02-04",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 16 Pluviôse Year II (4 February 1794) the National Convention, after speeches by Dufay and Danton, voted by acclamation a text drafted by Lacroix.",
+        "source": "src-an-abolition"
+      },
+      {
+        "span": "1794",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It declared slavery abolished in all the colonies and made all men there French citizens regardless of colour.",
+        "source": "src-an-abolition",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

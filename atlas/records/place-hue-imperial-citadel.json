@@ -1,0 +1,217 @@
+{
+  "id": "place-hue-imperial-citadel",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Hue Citadel (Capital City and Inner City), Vietnam",
+  "summary": "The Nguyen dynasty's walled capital at Hue, Vietnam, planned in 1803-1805 and completed in 1832, after Hue became capital of unified Viet Nam in 1802. Its outer Capital City is a square of 2,235 m a side inside walls 6.6 m high; it was damaged in 1885, 1947 and 1968.",
+  "when": {
+    "start": {
+      "year": 1803
+    },
+    "end": {
+      "year": 1832
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "ICOMOS: planning from 1803 to 1805, construction complete in 1832. UNESCO: capital of unified Viet Nam established in 1802."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "from 1803 to 1805",
+        "source": "src-icomos-678"
+      },
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "not until 1832 that construction was complete",
+        "source": "src-icomos-678"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "in 1802",
+        "source": "src-unesco-678"
+      }
+    ],
+    "display": "Planned 1803-1805; completed 1832"
+  },
+  "where": {
+    "lat": 16.4689726,
+    "lon": 107.5781266,
+    "elevation_m": null,
+    "modern_name": "Hue Citadel, Hue, Thua Thien-Hue Province, Vietnam",
+    "historical_name": "Kinh Thanh (Capital City) of Hue, capital of unified Viet Nam under the Nguyen dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-hue"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO World Heritage Site: the political, cultural and religious centre of Viet Nam under the Nguyen dynasty from 1802 to 1945."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-678",
+      "url": "https://whc.unesco.org/en/list/678/",
+      "title": "Complex of Hue Monuments (World Heritage List no. 678)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "where"
+      ]
+    },
+    {
+      "id": "src-icomos-678",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/678.pdf",
+      "title": "Hue Monuments: ICOMOS advisory body evaluation",
+      "publisher": "ICOMOS (published by UNESCO World Heritage Centre)",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-hue",
+      "url": "https://www.openstreetmap.org/node/5182931945",
+      "title": "OpenStreetMap node 5182931945 (Hoang Thanh Hue)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square enceinte (Kinh Thanh) 2,235 m a side enclosing 520 ha, with six bastions per side and ten gates; the Inner City inside it measures 622 by 604 m (ICOMOS).",
+      "source": "src-icomos-678",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "source": "src-icomos-678",
+      "measurements": [
+        {
+          "part": "Capital City wall height",
+          "value": 6.6,
+          "unit": "m",
+          "source": "src-icomos-678",
+          "note": "\"originally 21 m thick and 6.6 m high\" (OCR reads \"21 rn\" for the thickness)"
+        },
+        {
+          "part": "Capital City side length",
+          "value": 2235,
+          "unit": "m",
+          "source": "src-icomos-678",
+          "note": "\"square in plan, each side measuring 2235 m\""
+        },
+        {
+          "part": "Inner City wall height",
+          "value": 4.16,
+          "unit": "m",
+          "source": "src-icomos-678",
+          "note": "\"brick walls 4.16 m high and 1.04 m thick\"; Inner City 622 m by 604 m"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a 2.2 km square wall enclosure with the Inner City inside"
+      },
+      {
+        "level": "local",
+        "representation": "procedural square enclosure wall at the sourced side length and height"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1803,
+        "end_year": 1832,
+        "state": "construction",
+        "description": "Planning lasted from 1803 to 1805; construction was complete in 1832 (ICOMOS).",
+        "source": "src-icomos-678"
+      },
+      {
+        "start_year": 1832,
+        "end_year": 1885,
+        "state": "intact",
+        "description": "Capital of unified Viet Nam under the Nguyen dynasty until 1945; the pages opened give no dated alterations before 1885.",
+        "source": "src-unesco-678"
+      },
+      {
+        "start_year": 1885,
+        "end_year": null,
+        "state": "altered",
+        "description": "The complex suffered considerably from military operations in 1885, 1947 and 1968 (ICOMOS).",
+        "source": "src-icomos-678"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1803,
+        "to_year": null,
+        "material": "brick (Inner City walls)",
+        "source": "src-icomos-678"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape wall (square enceinte, side 2,235 m, height 6.6 m); the ICOMOS PDF is OCR and prints 'm' as 'rn', which I read as metres. The 'originally 6.6 m' height is the Capital City wall as built. Pin is OSM's Hoang Thanh (Imperial City) node inside the Inner City, within 1 km of the enclosure's centre but I did not open a coordinate for the citadel centre. 'Intact 1832-1885' bridges an undated period.",
+  "author": "historian-agent:m-12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:46:35.568Z"
+}

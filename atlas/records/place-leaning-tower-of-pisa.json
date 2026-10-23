@@ -1,0 +1,237 @@
+{
+  "id": "place-leaning-tower-of-pisa",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Leaning Tower of Pisa",
+  "aliases": [
+    "Torre di Pisa",
+    "Campanile of Pisa Cathedral"
+  ],
+  "summary": "The Leaning Tower of Pisa is the bell tower of the cathedral on Piazza del Duomo in Pisa, Italy. Building began in August 1173 and continued for roughly two centuries with two long interruptions. The Opera della Primaziale Pisana gives its height as 58.36 m and its external diameter as 15 m.",
+  "when": {
+    "start": {
+      "year": 1173
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 1173 (Visit Tuscany: August 1173; Smithsonian: 1173); the Opera della Primaziale quotes Vasari for 1174. Sources opened disagree on completion (Italia.it: not completed until 1300), so the end is the present; the tower stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (Visit Tuscany)",
+        "value": "began in August of 1173",
+        "source": "src-visittuscany"
+      },
+      {
+        "calendar": "Gregorian (Smithsonian Magazine)",
+        "value": "Construction began in 1173",
+        "source": "src-smithsonian-pisa"
+      },
+      {
+        "calendar": "Gregorian (Opera della Primaziale Pisana, quoting Vasari)",
+        "value": "in the year 1174",
+        "source": "src-opa-tower"
+      },
+      {
+        "calendar": "Gregorian (Italia.it)",
+        "value": "not completed until 1300",
+        "source": "src-italia-pisa"
+      }
+    ],
+    "display": "Building began 1173; completion date differs between sources"
+  },
+  "where": {
+    "lat": 43.72301,
+    "lon": 10.396624,
+    "elevation_m": null,
+    "modern_name": "Leaning Tower of Pisa, Piazza del Duomo, Pisa, Italy",
+    "historical_name": "Campanile of the cathedral of Pisa, Republic of Pisa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Bell tower of the UNESCO-listed Piazza del Duomo, known worldwide for its lean."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-opa-tower",
+      "url": "https://www.opapisa.it/en/square-of-miracles/tower/",
+      "title": "Tower",
+      "publisher": "Opera della Primaziale Pisana",
+      "author": "Opera della Primaziale Pisana",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-visittuscany",
+      "url": "https://www.visittuscany.com/en/attractions/the-leaning-tower/",
+      "title": "Leaning Tower of Pisa",
+      "publisher": "Visit Tuscany",
+      "author": "Visit Tuscany",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-smithsonian-pisa",
+      "url": "https://www.smithsonianmag.com/travel/the-leaning-tower-straightens-up-75064764/",
+      "title": "The Leaning Tower Straightens Up",
+      "publisher": "Smithsonian Magazine",
+      "author": "Smithsonian Magazine",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-italia-pisa",
+      "url": "https://www.italia.it/en/tuscany/pisa/tower-of-pisa",
+      "title": "Tower of Pisa",
+      "publisher": "Italia.it",
+      "author": "Italia.it",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-unesco-395",
+      "url": "https://whc.unesco.org/en/list/395/",
+      "title": "Piazza del Duomo, Pisa",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q39054",
+      "title": "Wikidata Q39054: Leaning Tower of Pisa (coordinate 43.72301, 10.396624)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Round bell tower; external diameter 15 m (Opera della Primaziale Pisana).",
+      "source": "src-opa-tower",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "tower",
+      "source": "src-opa-tower",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 58.36,
+          "unit": "m",
+          "source": "src-opa-tower",
+          "note": "Opera della Primaziale Pisana: 58,36 metres; Italia.it agrees, Visit Tuscany gives 56 m"
+        },
+        {
+          "part": "diameter (external)",
+          "value": 15,
+          "unit": "m",
+          "source": "src-opa-tower",
+          "note": "15 metres (external diameter)"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "round tower at true diameter"
+      },
+      {
+        "level": "local",
+        "representation": "procedural cylindrical bell tower, shown without its lean"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1173,
+        "end_year": null,
+        "state": "construction",
+        "description": "Building began in 1173 and ran for about two centuries with two long interruptions (Visit Tuscany); the sources opened do not agree on a completion year.",
+        "source": "src-visittuscany"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape tower, round (sourced diameter). The model is drawn upright; the lean is not modelled. Completion year is unsourced on any page I could open (Italia.it says 1300; common accounts say 1372 but the ICE page was blocked), so the single phase is open-ended. Heights differ by source (58.36 m OPA/Italia.it; 56 m Visit Tuscany); OPA used.",
+  "author": "historian-agent:m-22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:54:25.053Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

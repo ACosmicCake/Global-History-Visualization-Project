@@ -1,0 +1,164 @@
+{
+  "id": "-62my-north-atlantic-igneous-province",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "North Atlantic Igneous Province",
+  "summary": "The North Atlantic Igneous Province is the Paleogene volcanic province of the northern North Atlantic, with magmatism normally dated to 63 to 55 Ma and traditionally tied to the Iceland hotspot. In Northern Ireland the Antrim Lava Group gives a weighted mean age of 62.63 ± 0.31 Ma, and newer uranium-lead work dates activity there from about 61.6 to 55.9 Ma. Whether a plume or rifting drove it is still contested.",
+  "when": {
+    "start": {
+      "year": -63000000
+    },
+    "end": {
+      "year": -55000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "note": "Ganerød et al. (2010): NAIP magmatism normally 63 to 55 Ma; Antrim Lava Group weighted mean 62.63 ± 0.31 Ma. Cooper et al. (2026): Northern Ireland segment ca. 61.6 to 55.9 Ma, shortening its duration to 5.5 Myr. The id says 62 Ma. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "pre- and syn-breakup North Atlantic magmatism (63–55 Ma)",
+        "source": "src-ganerod"
+      },
+      {
+        "calendar": "Ma",
+        "value": "activity from ca. 61.6 Ma to 55.9 Ma",
+        "source": "src-cooper"
+      }
+    ],
+    "display": "c. 63 to 55 million years ago"
+  },
+  "where": {
+    "lat": 55.1,
+    "lon": -6.2,
+    "elevation_m": null,
+    "modern_name": "Antrim, Northern Ireland (study area of both pages; the province also spans western Scotland, the Faroes, Iceland and Greenland)",
+    "historical_name": "Rift margin of the opening northern North Atlantic, Paleogene; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-wd-antrim"
+    ],
+    "paleo": {
+      "lat": 44.44,
+      "lon": 1.67,
+      "age_ma": 63,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "europe",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A large early Cenozoic volcanic province formed as the North Atlantic opened."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ganerod",
+      "url": "https://www.geologist.nl/wp-content/uploads/2016/11/2010_Ganerod_GJI.pdf",
+      "title": "The North Atlantic Igneous Province reconstructed and its relation to the Plume Generation Zone: the Antrim Lava Group revisited (Geophysical Journal International 182)",
+      "publisher": "Geophysical Journal International (Oxford University Press, Royal Astronomical Society)",
+      "author": "M. Ganerød et al.",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cooper",
+      "url": "https://nora.nerc.ac.uk/id/eprint/542097/1/g54157.1.pdf",
+      "title": "Feeling the pulse? Paleogene chronostratigraphy of Northern Ireland and the north of Ireland temporally coupled to the North Atlantic Igneous Province (Geology)",
+      "publisher": "Geological Society of America (Geology), via NERC Open Research Archive",
+      "author": "Mark R. Cooper, Simon Tapster, Daniel J. Condon",
+      "date_published": "2026",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-antrim",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3626011.json",
+      "title": "Wikidata entry for Antrim Mountains (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-6.2,55.1&time=63&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the Wikidata point for the Antrim Mountains stands in for a province that spans from Greenland to Scotland, so uncertainty is 2500 km. The id says 62 Ma; the opened pages give 63 to 55 Ma overall. The BGS page that would have listed the 59 and 55 Ma pulses returned a maintenance page and was not used.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:26.659Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-63000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The North Atlantic Igneous Province is the Paleogene volcanic province of the northern North Atlantic, with magmatism normally dated to 63 to 55 Ma and traditionally tied to…",
+        "source": "src-ganerod"
+      },
+      {
+        "span": "-55000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Whether a plume or rifting drove it is still contested.",
+        "source": "src-ganerod",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

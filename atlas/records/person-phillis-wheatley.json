@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s82",
+  "updated": "2026-10-22",
+  "id": "person-phillis-wheatley",
+  "kind": "person",
+  "title": "Phillis Wheatley",
+  "summary": "Born in West Africa around 1753 and brought to Boston as an enslaved child in 1761, Phillis Wheatley was taught to read and write in the household of John and Susanna Wheatley. Her first published poem appeared in 1767, and her Poems on Various Subjects, Religious and Moral, published in London in 1773, is the first known book of poetry by a Black woman. She was freed after returning to Boston and died in December 1784.",
+  "when": {
+    "start": {
+      "year": 1753
+    },
+    "end": {
+      "year": 1784
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "The Massachusetts Historical Society gives birth in West Africa as about 1753 and arrival in Boston on 11 July 1761; the Poetry Foundation dates her purchase to August 1761. Both give death in 1784 (December per the Society)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "As recorded by source",
+        "value": "Born in West Africa about 1753",
+        "source": "src-mhs-wheatley"
+      },
+      {
+        "calendar": "As recorded by source",
+        "value": "that brought her to Boston on 11 July 1761",
+        "source": "src-mhs-wheatley"
+      },
+      {
+        "calendar": "As recorded by source",
+        "value": "Phillis Wheatley 1753—1784",
+        "source": "src-pf-wheatley"
+      },
+      {
+        "calendar": "As recorded by source",
+        "value": "in the month of August 1761",
+        "source": "src-pf-wheatley"
+      },
+      {
+        "calendar": "As recorded by source",
+        "value": "in December of that year both she and her third child passed away",
+        "source": "src-mhs-wheatley"
+      }
+    ],
+    "display": "c. 1753 – December 1784"
+  },
+  "where": {
+    "lat": 42.3588336,
+    "lon": -71.0578303,
+    "elevation_m": null,
+    "modern_name": "Boston, Massachusetts, United States (pinned to the city where she lived in the Wheatley household and was published; she was born in West Africa, in Senegal/Gambia per the Poetry Foundation)",
+    "historical_name": "Boston, Province of Massachusetts Bay, British North America",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-boston"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "people",
+    "art_music_literature",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The Massachusetts Historical Society identifies her as the author of the first known book of poetry by a Black woman, published in London in 1773."
+  },
+  "confidence": "established",
+  "audience_note": "This record describes a life that began in enslavement, including capture from West Africa as a child and sale in Boston.",
+  "related": [
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mhs-wheatley",
+      "url": "https://www.masshist.org/features/endofslavery/wheatley",
+      "title": "Phillis Wheatley (African Americans and the End of Slavery in Massachusetts)",
+      "publisher": "Massachusetts Historical Society",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-pf-wheatley",
+      "url": "https://www.poetryfoundation.org/poets/phillis-wheatley",
+      "title": "Phillis Wheatley",
+      "publisher": "Poetry Foundation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-boston",
+      "url": "https://nominatim.openstreetmap.org/search?q=Boston%2C%20Massachusetts&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Boston",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on her origin (West Africa generally vs Senegal/Gambia) and on the arrival month (11 July vs August 1761). The Poetry Foundation page gives 1771 for her London departure, which conflicts with the Society's 1773, so that trip is left out. Her place of death is not stated in the opened pages. The pin is a city centroid.",
+  "published_at": "2026-10-22T15:49:54.624Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

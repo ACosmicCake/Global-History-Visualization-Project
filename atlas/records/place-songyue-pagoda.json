@@ -1,0 +1,214 @@
+{
+  "id": "place-songyue-pagoda",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Songyue Pagoda",
+  "aliases": [
+    "Songyue Temple Pagoda"
+  ],
+  "summary": "The Songyue Temple Pagoda stands at the southern foot of the Songshan Mountains in Dengfeng, Henan. Chinese sources date it to 520 or 523, in the Northern Dynasties. The brick pagoda is about 39.8 m high, has a twelve-sided plan and fifteen tiers of eaves, and is described as the oldest large pagoda still standing in China.",
+  "when": {
+    "start": {
+      "year": 520
+    },
+    "end": {
+      "year": 523
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "china.org.cn says constructed in 520; China Daily says completed in 523. The span runs from the earlier to the later date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (china.org.cn)",
+        "value": "It was constructed in 520 during the Northern Dynasties.",
+        "source": "src-chinaorg-songyue"
+      },
+      {
+        "calendar": "CE (China Daily)",
+        "value": "was completed in 523 during the Northern Dynasty (386-581)",
+        "source": "src-chinadaily-songyue"
+      }
+    ],
+    "display": "520–523 CE"
+  },
+  "where": {
+    "lat": 34.50161111,
+    "lon": 113.01591667,
+    "elevation_m": null,
+    "modern_name": "Songyue Temple Pagoda, Dengfeng, Henan, China",
+    "historical_name": "Songyue Temple Pagoda, Northern Dynasties China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wd-songyue"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Twelve-sided pagoda on a low twelve-sided pedestal, ground-floor diameter 10.6 m including walls 2.5 m thick (china.org.cn).",
+      "source": "src-chinaorg-songyue",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pagoda",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-chinaorg-songyue",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 39.8,
+          "unit": "m",
+          "source": "src-chinaorg-songyue",
+          "note": "\"about 39.8 meters\"; China Daily says \"40 meters high\""
+        },
+        {
+          "part": "diameter",
+          "value": 10.6,
+          "unit": "m",
+          "source": "src-chinaorg-songyue",
+          "note": "ground floor diameter including walls 2.5 m thick"
+        },
+        {
+          "part": "tiers",
+          "value": 15,
+          "unit": "count",
+          "source": "src-chinadaily-songyue",
+          "note": "\"15 stories\"; china.org.cn counts fifteen pent roofs above the first storey"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "twelve-sided brick pagoda with tiered eaves, at the foot of Mount Song"
+      },
+      {
+        "level": "local",
+        "representation": "procedural pagoda 39.8 m high, 15 eave tiers, twelve-sided plan 10.6 m across at ground floor"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 520,
+        "end_year": 523,
+        "state": "construction",
+        "description": "Built from 520 (china.org.cn) and completed in 523 (China Daily).",
+        "source": "src-chinaorg-songyue"
+      },
+      {
+        "start_year": 523,
+        "end_year": null,
+        "state": "intact",
+        "description": "Still standing at Dengfeng; china.org.cn calls it the oldest extant large pagoda in China.",
+        "source": "src-chinaorg-songyue"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 520,
+        "to_year": null,
+        "material": "yellowish bricks held together by clay",
+        "source": "src-chinaorg-songyue"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "Measurements come only from news or non-institutional pages; kept as data until a heritage or scholarly source confirms them."
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "china.org.cn calls it the oldest extant large pagoda in China and the only twelve-sided pagoda in the country."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-chinaorg-songyue",
+      "url": "http://www.china.org.cn/english/TR-e/43208.htm",
+      "title": "Songyue Temple Pagoda in Dengfeng of Henan Province",
+      "publisher": "China.org.cn",
+      "author": "China.org.cn",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-chinadaily-songyue",
+      "url": "https://govt.chinadaily.com.cn/s/202204/13/WS62569803498e6a12c1229e2f/the-songyue-temple-pagoda-dengfeng-henan-province.html",
+      "title": "The Songyue Temple Pagoda, Dengfeng, Henan province",
+      "publisher": "China Daily",
+      "author": "China Daily",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-wd-songyue",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2046262.json",
+      "title": "Wikidata entry for Songyue Pagoda (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape pagoda, 15 tiers (China Daily \"15 stories\"; china.org.cn \"fifteen pent roofs\"). Date conflict 520 vs 523 kept as a span. Height 39.8 m (china.org.cn) vs 40 m (China Daily). Diameter is the ground floor, twelve-sided, so a nominal figure.",
+  "author": "historian-agent:m-23",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:53:38.669Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ]
+}

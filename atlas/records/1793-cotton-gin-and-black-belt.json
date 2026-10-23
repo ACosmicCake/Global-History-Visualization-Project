@@ -1,0 +1,169 @@
+{
+  "id": "1793-cotton-gin-and-black-belt",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Cotton gin and the cotton boom in the Black Belt",
+  "summary": "Eli Whitney applied for a patent for his cotton gin in October 1793 and received it in March 1794. Cotton and slavery then spread into Georgia, Mississippi and Alabama. In Alabama most cotton plantations lay in the Black Belt, and the state's enslaved population grew from 47,449 in 1820 to 435,080 by 1860.",
+  "when": {
+    "start": {
+      "year": 1793
+    },
+    "end": {
+      "year": 1794
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Patent application October 1793; patent granted March 1794 (14 March per EBSCO). The Alabama figures run to 1860."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "October 1793",
+        "source": "src-bori"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Patented on March 14, 1794",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "1793-1794 (growth through 1860)"
+  },
+  "where": {
+    "lat": 32.32597,
+    "lon": -87.10648,
+    "elevation_m": null,
+    "modern_name": "Black Belt of central Alabama, USA (pin at Dallas County)",
+    "historical_name": "Central Alabama, then Mississippi Territory and later the state of Alabama",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-gn-dallas"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Mechanised short-staple cotton processing and underpinned the expansion of plantation slavery into the interior South."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns the expansion of chattel slavery, including a forced interstate trade that separated enslaved families.",
+  "related": [
+    {
+      "id": "1787-abolition-of-slavery",
+      "type": "related"
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bori",
+      "url": "https://billofrightsinstitute.org/essays/eli-whitney-and-the-cotton-gin/",
+      "title": "Eli Whitney and the Cotton Gin",
+      "publisher": "Bill of Rights Institute",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/law/cotton-gin-and-us-patent-legislation",
+      "title": "Cotton gin and US patent legislation",
+      "publisher": "EBSCO Research Starters",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-eoa",
+      "url": "https://encyclopediaofalabama.org/article/plantation-agriculture/",
+      "title": "Plantation Agriculture",
+      "publisher": "Encyclopedia of Alabama (Alabama Humanities Alliance / Auburn University)",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-dallas",
+      "url": "https://www.geonames.org/search.html?q=Dallas+County&country=US",
+      "title": "GeoNames: Dallas County, Alabama",
+      "publisher": "GeoNames",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the pin. Dallas County is only an approximate point in the Black Belt (no opened page names it). The gin was built in Georgia; the Black Belt statements come from the Encyclopedia of Alabama.",
+  "author": "historian-agent:o-s32",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:44:24.354Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1793",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Eli Whitney applied for a patent for his cotton gin in October 1793 and received it in March 1794.",
+        "source": "src-bori"
+      },
+      {
+        "span": "1794",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "Cotton and slavery then spread into Georgia, Mississippi and Alabama.",
+        "source": "src-bori",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

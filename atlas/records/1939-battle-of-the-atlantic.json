@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1939-battle-of-the-atlantic",
+  "kind": "event",
+  "title": "Battle of the Atlantic",
+  "summary": "The Battle of the Atlantic was the long Second World War campaign, from 3 September 1939 to 8 May 1945, to protect Allied shipping lines between North America and Britain from German U-boats. The Canadian War Museum counts more than 3,000 Allied ships lost, and the contest turned in the Allies' favour in May 1943.",
+  "when": {
+    "start": {
+      "year": 1939
+    },
+    "end": {
+      "year": 1945
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Sources agree on September 1939 to May 1945. Veterans Affairs Canada gives exact dates; the Canadian War Museum and the Battle of the Atlantic Story page give months."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "3 September 1939 - 8 May 1945",
+        "source": "src-vac-atlantic"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "September 1939",
+        "source": "src-cwm-atlantic"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "May 1943",
+        "source": "src-cwm-atlantic"
+      }
+    ],
+    "display": "3 September 1939 – 8 May 1945"
+  },
+  "where": {
+    "lat": 47,
+    "lon": -33,
+    "elevation_m": null,
+    "modern_name": "North Atlantic Ocean",
+    "historical_name": "North Atlantic sea lanes between North America and Britain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-wd-natlantic"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The longest campaign of the Second World War, which decided whether Britain could be supplied."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    },
+    {
+      "id": "1944-06-06-d-day-normandy-landings",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-vac-atlantic",
+      "url": "https://veterans.gc.ca/en/remembrance/military-history/second-world-war/battle-atlantic",
+      "title": "Battle of the Atlantic",
+      "publisher": "Veterans Affairs Canada",
+      "author": "Veterans Affairs Canada",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cwm-atlantic",
+      "url": "https://www.warmuseum.ca/cwm/exhibitions/newspapers/operations/atlantic_e.html",
+      "title": "Democracy at War: The Battle of the Atlantic",
+      "publisher": "Canadian War Museum",
+      "author": "Canadian War Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-bota",
+      "url": "https://www.battleoftheatlantic.org/history",
+      "title": "What Was the Battle of the Atlantic?",
+      "publisher": "Battle of the Atlantic Story (Merseyside)",
+      "author": "Battle of the Atlantic Story (Merseyside)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-natlantic",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q350134.json",
+      "title": "Wikidata entry for North Atlantic Ocean (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: loss figures differ by source (Canadian War Museum: more than 3,000 Allied ships; Battle of the Atlantic Story: 3,500+ ships), so only the Canadian War Museum figure is used. The point is the middle of the North Atlantic, not a single site. D-Day link is only thematic.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1939-09-16",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The first convoy sails from Halifax for the United Kingdom, starting the escorted crossings that the campaign was fought over.",
+        "source": "src-vac-atlantic",
+        "consequence": false
+      },
+      {
+        "span": "1943-03",
+        "action": "numbers.counter { range: [0, 108] }",
+        "caption": "In March 1943, at the height of the battle, 108 Allied ships are sunk and 16 U-boats destroyed.",
+        "source": "src-vac-atlantic",
+        "consequence": false
+      },
+      {
+        "span": "1943-05",
+        "action": "region.fill { radius_km: 1500 }",
+        "caption": "Strong convoy defence in May 1943 forces Germany to change U-boat strategy in the North Atlantic, the turning point of the battle.",
+        "source": "src-vac-atlantic",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:51.671Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

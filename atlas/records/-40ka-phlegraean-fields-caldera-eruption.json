@@ -1,0 +1,157 @@
+{
+  "id": "-40ka-phlegraean-fields-caldera-eruption",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Campanian Ignimbrite eruption, Phlegraean Fields",
+  "summary": "A very large explosive eruption in the Campanian region of southern Italy, the Campanian Ignimbrite (Y-5), is dated by argon-argon measurement to 39.85 ± 0.14 ka and described as the largest known volcanic event in the Mediterranean area. The authors link it to the end of the Uluzzian and Proto-Aurignacian techno-complexes. An earlier study argued the magma came from fissures along Apennine faults, not ring fractures of a Campi Flegrei caldera.",
+  "when": {
+    "start": {
+      "year": -37900
+    },
+    "end": {
+      "year": -37900
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 1000,
+      "start_plus_years": 300,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Ages are quoted in ka by the sources; converted as year = 1950 minus age, so 39.85 ka gives -37900. The range covers 39.28 ± 0.11 ka (de Vivo et al. 2001) to the 38.5-39.0 ka cal BP radiocarbon result; the sources do not state their zero point, so the conversion is approximate."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ka, 40Ar/39Ar",
+        "value": "39.85 ± 0.14 ka (95% confidence level); calibrated 14C 38.5–39.0 ka cal BP (IntCal13)",
+        "source": "src-giaccio2017"
+      },
+      {
+        "calendar": "ka, 40Ar/39Ar",
+        "value": "39.28 ± 0.11 ka",
+        "source": "src-devivo2001"
+      }
+    ],
+    "display": "c. 40,000 years ago (39.85 ± 0.14 ka)"
+  },
+  "where": {
+    "lat": 40.827,
+    "lon": 14.139,
+    "elevation_m": null,
+    "modern_name": "Phlegraean Fields (Campi Flegrei), Campania, Italy",
+    "historical_name": "Phlegraean Fields, Campanian Plain, southern Italy; no polity at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-cf"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Described by the cited authors as the largest known volcanic event in the Mediterranean area, with possible links to cultural change in the Early Upper Palaeolithic."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-45ka-uluzzian-technocomplex",
+      "type": "related"
+    },
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-giaccio2017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5382912",
+      "title": "High-precision 14C and 40Ar/39Ar dating of the Campanian Ignimbrite (Y-5) reconciles the time-scales of climatic-cultural processes at 40 ka",
+      "publisher": "Scientific Reports (Springer Nature)",
+      "author": "Giaccio, Hajdas, Isaia, Deino, Nomade",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-devivo2001",
+      "url": "https://www.usgs.gov/publications/new-constraints-pyroclastic-eruptive-history-campanian-volcanic-plain-italy",
+      "title": "New constraints on the pyroclastic eruptive history of the Campanian volcanic Plain (Italy)",
+      "publisher": "U.S. Geological Survey (publication record)",
+      "author": "de Vivo, Rolandi, Gans and others",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-cf",
+      "url": "https://www.wikidata.org/wiki/Q755123",
+      "title": "Wikidata item Q755123 (Phlegraean Fields), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact zero point of the ka ages and of where the vent lay: the 2001 study argues for fissures along Apennine faults, so the Campi Flegrei pin is regional (15 km). Giaccio et al. place the eruption in southern Italy via the label Campi Flegrei in their Figure 1; the pin rests on that caption and the Wikidata coordinate for the Phlegraean Fields.",
+  "author": "historian-agent:o-s45",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:27:44.353Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-37900",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "14 ka and described as the largest known volcanic event in the Mediterranean area.",
+        "source": "src-giaccio2017"
+      },
+      {
+        "span": "-37900",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The authors link it to the end of the Uluzzian and Proto-Aurignacian techno-complexes.",
+        "source": "src-giaccio2017",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

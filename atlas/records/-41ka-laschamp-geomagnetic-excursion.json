@@ -1,0 +1,127 @@
+{
+  "id": "-41ka-laschamp-geomagnetic-excursion",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Laschamp geomagnetic excursion",
+  "summary": "The Laschamp event was a short excursion of the Earth's magnetic field, named for its type site in the Massif Central of France. Paleomagnetic study with K/Ar and 40Ar/39Ar dating of 37 lava flows in the Chaîne des Puys puts it at 41.3 ± 0.6 thousand years ago, lasting under a thousand years. It has been found in sediments and lavas worldwide and may serve as a geochronological marker.",
+  "when": {
+    "start": {
+      "year": -41900
+    },
+    "end": {
+      "year": -40700
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "note": "Laj et al. (EGU 2014): 41.3 ± 0.6 ka (2 sigma); Sier et al. (2024): around 41 ka BP, duration under one thousand years. ka values are used as stated, with no 1950 offset applied."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ka (K/Ar and 40Ar/39Ar)",
+        "value": "41.3 ± 0.6 ka (2sigma)",
+        "source": "src-laj"
+      },
+      {
+        "calendar": "ka BP",
+        "value": "~41 ka BP; duration of less than one thousand years",
+        "source": "src-sier"
+      }
+    ],
+    "display": "c. 41,300 years ago (± 600)"
+  },
+  "where": {
+    "lat": 45.783361,
+    "lon": 2.957917,
+    "elevation_m": null,
+    "modern_name": "Chaîne des Puys, Massif Central, France (type site area; the event is recorded worldwide)",
+    "historical_name": "Volcanic chain in what is now central France; no polities or place names exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-puys"
+    ]
+  },
+  "regions": [
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A well-dated global magnetic marker, used to tie together sediment, ice-core and archaeological chronologies."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-laj",
+      "url": "https://opac.geologie.ac.at/ais312/dokumente/EGU/EGU2014-2340.pdf",
+      "title": "Dynamics of the Earth Magnetic Field during the period of high variability covering the Laschamp and Mono Lake excursions (EGU2014-2340)",
+      "publisher": "European Geosciences Union (Geophysical Research Abstracts 16)",
+      "author": "Carlo Laj, Hervé Guillou, Catherine Kissel",
+      "date_published": "2014",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sier",
+      "url": "https://cir.cenieh.es/bitstream/20.500.12136/3437/1/The%20Laschamps%20event%20%28~41%20ka%20BP%29%20straddles%20the%20Mousterian-Ch%c3%a2telperronian%20transition%20in%20Western%20Europe_Sier%2c%20M._et%20al_2024.pdf",
+      "title": "The Laschamps event (~41 ka BP) straddles the Mousterian-Châtelperronian transition in Western Europe (poster)",
+      "publisher": "CENIEH, Burgos (Utrecht University and Leiden University authors)",
+      "author": "Mark J. Sier, Ola T. Lygre, Igor Djakovic, Marie Soressi",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-puys",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1068630.json",
+      "title": "Wikidata entry for Chaîne des Puys (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the wording on spread: Sier et al. say the event has been found in sediments and lavas across the planet, citing another paper. The pin is the Wikidata point for the Chaîne des Puys, not the village of Laschamp. The ± 0.6 ka range is the 2 sigma error quoted by Laj et al.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:27.030Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "id": "place-soltaniyeh-mausoleum",
+  "title": "Mausoleum of Oljeitu (Dome of Soltaniyeh), Soltaniyeh",
+  "summary": "The mausoleum of Oljeitu at Soltaniyeh, capital of the Ilkhanid dynasty in north-western Iran, was built between 1302 and 1312. A massive drum on an octagonal base carries a brick dome about 50 m high and 25 m across, built as a double shell. It is a key monument of Persian Islamic architecture.",
+  "when": {
+    "start": {
+      "year": 1302
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the first year of construction given by UCLA's Iran Gazetteer and UNESCO (1302-12); Negareh gives 704 AH for the dome's introduction and 712 AH for the tomb's erection. End is the present: the building stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Iran Gazetteer, UCLA)",
+        "value": "built between A.D. 1302 and 1312",
+        "source": "src-ucla-soltaniyeh"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "constructed in 1302-12",
+        "source": "src-unesco-1188"
+      },
+      {
+        "calendar": "Hijri (Negareh Journal)",
+        "value": "introduced in 704 AH ... in 712 AH the tomb of Oljaito was erected",
+        "source": "src-negareh-soltaniyeh"
+      }
+    ],
+    "display": "Built 1302–1312; standing today"
+  },
+  "where": {
+    "lat": 36.4340458,
+    "lon": 48.796073,
+    "elevation_m": null,
+    "modern_name": "Dome of Soltaniyeh, Soltaniyeh, Zanjan Province, Iran",
+    "historical_name": "Mausoleum of Oljeitu at Soltaniyeh, capital of the Ilkhanid dynasty (Mongol Ilkhanate), Persia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-ucla-soltaniyeh",
+      "src-osm-soltaniyeh"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO World Heritage mausoleum; the nomination file calls it a key monument in the development of Islamic architecture in Persia, with an innovative double-shelled dome."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ucla-soltaniyeh",
+      "url": "https://irangazetteer.ucla.edu/catalogue/sultaniyeh",
+      "title": "Sultaniyeh (Iran Gazetteer catalogue entry)",
+      "publisher": "Pourdavoud Institute for the Study of the Iranian World, UCLA (Iran Gazetteer)",
+      "author": "Pourdavoud Institute for the Study of the Iranian World, UCLA (Iran Gazetteer)",
+      "date_published": "2022-05-26",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where",
+        "model"
+      ]
+    },
+    {
+      "id": "src-negareh-soltaniyeh",
+      "url": "https://negareh.shahed.ac.ir/article_3174_en.html",
+      "title": "Interpretation of Numerical Concepts and Geometric Codes Hidden in the Decoration and Architecture of Soltaniyeh Dome (Negareh Journal 18(62))",
+      "publisher": "Negareh Journal, Shahed University",
+      "author": "Negareh Journal, Shahed University",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-unesco-1188",
+      "url": "https://whc.unesco.org/uploads/nominations/1188.pdf",
+      "title": "World Heritage nomination file: Soltaniyeh (no. 1188)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "2005",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-soltaniyeh",
+      "url": "https://www.openstreetmap.org/node/5097629092",
+      "title": "OpenStreetMap node 5097629092, Dome of Soltaniyeh (36.4340458, 48.7960730)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "model.geometry"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Octagonal drum on an octagonal base carrying a dome; the Iran Gazetteer gives the drum an interior diameter of 26 m. Register-level figures only; no survey plan is stored.",
+      "source": "src-ucla-soltaniyeh",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "domed_building",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-ucla-soltaniyeh",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 50,
+          "unit": "m",
+          "source": "src-ucla-soltaniyeh",
+          "note": "dome rises \"to a height of approximately 50 m. above ground level\"; Negareh gives 48.50 m"
+        },
+        {
+          "part": "diameter",
+          "value": 25,
+          "unit": "m",
+          "source": "src-ucla-soltaniyeh",
+          "note": "\"The dome, spanning 25 m.\"; the UNESCO file gives 25 m internal diameter"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "an octagonal drum carrying a large dome, at the published dome height and span"
+      },
+      {
+        "level": "local",
+        "representation": "procedural drum and dome; the eight minarets and the decoration are not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1302,
+        "end_year": 1312,
+        "state": "construction",
+        "description": "Built between A.D. 1302 and 1312 (Iran Gazetteer; UNESCO).",
+        "source": "src-ucla-soltaniyeh"
+      },
+      {
+        "start_year": 1313,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed monument, described in the present tense by the Iran Gazetteer; later repairs are not dated in the sources opened.",
+        "source": "src-ucla-soltaniyeh"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1302,
+        "to_year": null,
+        "material": "brick (called the largest brick dome in the world)",
+        "source": "src-negareh-soltaniyeh"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape domed_building. Height 50 m is the Iran Gazetteer value (UNESCO file: over 50 m; Negareh: 48.50 m). Diameter 25 m is the dome span (UNESCO: internal diameter 25 m; it gives 38 m externally). The Gazetteer point 36°26'00.5\"N 48°47'46.9\"E agrees with the OSM node to about 0.1 km. Phase 2 starts the year after the sourced completion; later alterations are not dated.",
+  "author": "historian-agent:m-24",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:55:34.204Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2005-tulip-revolution",
+  "kind": "event",
+  "title": "Tulip Revolution",
+  "summary": "Disputed parliamentary elections in February and March 2005 set off protests across Kyrgyzstan. On 24 March thousands stormed the government building in Bishkek, and President Askar Akayev fled with his family. He resigned on 4 April 2005, and Kurmanbek Bakiyev became acting president.",
+  "when": {
+    "start": {
+      "year": 2005
+    },
+    "end": {
+      "year": 2005
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Swarthmore dates the campaign 27 February to 24 March 2005; CRS gives Akayev's resignation as 4 April."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "February 27, 2005 to March 24, 2005",
+        "source": "src-gnad"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "24 March 2005",
+        "source": "src-rferl"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 4",
+        "source": "src-crs"
+      }
+    ],
+    "display": "27 February – 4 April 2005"
+  },
+  "where": {
+    "lat": 42.87,
+    "lon": 74.59,
+    "elevation_m": null,
+    "modern_name": "Bishkek, Kyrgyzstan",
+    "historical_name": "Bishkek, Kyrgyz Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Popular uprising that ended Askar Akayev's presidency of Kyrgyzstan."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-gnad",
+      "url": "https://nvdatabase.swarthmore.edu/content/kyrgyz-citizens-overthrow-president-ayakev-tulip-revolution-2005",
+      "title": "Kyrgyz citizens overthrow President Ayakev (Tulip Revolution), 2005",
+      "publisher": "Global Nonviolent Action Database, Swarthmore College",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-crs",
+      "url": "https://www.everycrsreport.com/reports/RL32864.html",
+      "title": "Coup in Kyrgyzstan: Developments and Implications (CRS RL32864)",
+      "publisher": "Congressional Research Service (via EveryCRSReport.com)",
+      "author": null,
+      "date_published": "2005-04-14",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rferl",
+      "url": "https://www.rferl.org/a/1058132.html",
+      "title": "Revolution In Kyrgyzstan: A Timeline",
+      "publisher": "RFE/RL",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "http://www.geonames.org/search.html?q=Bishkek%2C+Kyrgyzstan",
+      "title": "GeoNames search: Bishkek, Kyrgyzstan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Bishkek as a proxy; protests also ran in Jalal-Abad and Osh. Wikipedia gives 3 April for resignation; CRS says April 4. Bakiyev's acting presidency rests on CRS only.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-23T03:49:58.432Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2005",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Disputed parliamentary elections in February and March 2005 set off protests across Kyrgyzstan.",
+        "source": "src-gnad"
+      },
+      {
+        "span": "2005",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "On 24 March thousands stormed the government building in Bishkek, and President Askar Akayev fled with his family.",
+        "source": "src-gnad",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

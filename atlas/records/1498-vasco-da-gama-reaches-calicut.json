@@ -1,0 +1,269 @@
+{
+  "id": "1498-vasco-da-gama-reaches-calicut",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Vasco da Gama reaches Calicut",
+  "summary": "Vasco da Gama's fleet left the Tagus near Lisbon on 8 July 1497, rounded the Cape of Good Hope in November, called at Mombasa and Malindi on the East African coast, and reached the Malabar coast near Calicut on 18 May 1498. The ships returned to Portugal separately in July and August 1499.",
+  "when": {
+    "start": {
+      "year": 1497
+    },
+    "end": {
+      "year": 1499
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Voyage span 8 July 1497 to mid-1499; the arrival near Calicut is 18 May 1498 in World History Encyclopedia (\"May 1498\" in HISTORY). Dates are as given by the sources (calendar not stated)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "as given in source",
+        "value": "8 July 1497",
+        "source": "src-wh-gama"
+      },
+      {
+        "calendar": "as given in source",
+        "value": "near Calicut on the Malabar coast on 18 May",
+        "source": "src-wh-gama"
+      },
+      {
+        "calendar": "as given in source",
+        "value": "the coast of India at Calicut (now Kozhikode) in May 1498",
+        "source": "src-hist-gama"
+      }
+    ],
+    "display": "8 July 1497 to 1499; at Calicut 18 May 1498"
+  },
+  "where": {
+    "lat": 11.247777777778,
+    "lon": 75.780277777778,
+    "elevation_m": null,
+    "modern_name": "Kozhikode (Calicut), Kerala, India",
+    "historical_name": "Calicut on the Malabar coast of India",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 38.708042,
+          "lon": -9.139016,
+          "year": 1497,
+          "date": "8 July 1497",
+          "label": "Mouth of the Tagus near Lisbon: departure. Point is Lisbon.",
+          "source": "src-wh-gama",
+          "coordinate_source": "src-wd-lisbon"
+        },
+        {
+          "lat": -34.358055555556,
+          "lon": 18.471944444444,
+          "year": 1497,
+          "date": "7 and 22 November 1497",
+          "label": "Cape of Good Hope: reached 7 November and rounded 22 November (World History Encyclopedia).",
+          "source": "src-wh-gama",
+          "coordinate_source": "src-wd-cape"
+        },
+        {
+          "lat": -4.05,
+          "lon": 39.666666666667,
+          "year": 1498,
+          "date": "7 April 1498",
+          "label": "Mombasa: reached 7 April 1498.",
+          "source": "src-wh-gama",
+          "coordinate_source": "src-wd-mombasa"
+        },
+        {
+          "lat": -3.2194444444444,
+          "lon": 40.116666666667,
+          "year": 1498,
+          "date": "15 April 1498",
+          "label": "Malindi: arrived 15 April, left 24 April 1498.",
+          "source": "src-wh-gama",
+          "coordinate_source": "src-wd-malindi"
+        },
+        {
+          "lat": 11.247777777778,
+          "lon": 75.780277777778,
+          "year": 1498,
+          "date": "18 May 1498",
+          "label": "Near Calicut on the Malabar coast. Point is the city.",
+          "source": "src-wh-gama",
+          "coordinate_source": "src-wd-kozhikode"
+        }
+      ]
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-kozhikode",
+      "src-wd-lisbon",
+      "src-wd-cape",
+      "src-wd-mombasa",
+      "src-wd-malindi"
+    ]
+  },
+  "regions": [
+    "southern_asia",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Linked Portugal and the Malabar coast of India by a sea route round Africa."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1511-portuguese-capture-of-malacca",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wh-gama",
+      "url": "https://www.worldhistory.org/Vasco_da_Gama/",
+      "title": "Vasco da Gama",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-hist-gama",
+      "url": "https://www.history.com/articles/vasco-da-gama",
+      "title": "Vasco da Gama",
+      "publisher": "HISTORY (A&E Television Networks)",
+      "author": "HISTORY (A&E Television Networks)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-lisbon",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q597.json",
+      "title": "Wikidata entry for Lisbon (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-cape",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q4092.json",
+      "title": "Wikidata entry for Cape of Good Hope (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-mombasa",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q225641.json",
+      "title": "Wikidata entry for Mombasa (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-malindi",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q271411.json",
+      "title": "Wikidata entry for Malindi (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-kozhikode",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q28729.json",
+      "title": "Wikidata entry for Kozhikode (Calicut) (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 35,
+    "beats": [
+      {
+        "span": "8 July 1497",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Four vessels leave the mouth of the Tagus near Lisbon and sail south along Africa.",
+        "source": "src-hist-gama",
+        "consequence": false
+      },
+      {
+        "span": "7 April 1498",
+        "action": "path.trace {}",
+        "caption": "After rounding the Cape of Good Hope the fleet stops at Mombasa and Malindi, then reaches the Malabar coast near Calicut on 18 May.",
+        "source": "src-wh-gama",
+        "consequence": false
+      },
+      {
+        "span": "July and August 1499",
+        "action": "region.fill { radius_km: 200 }",
+        "caption": "The ships reach Portugal separately, more than two years after leaving, having completed the voyage to India and back.",
+        "source": "src-hist-gama",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: Mozambique and Quelimane stops are omitted (no clear dates on opened pages); arrival date is 18 May in World History Encyclopedia versus May 1498 in HISTORY, and other sources give 20 May (not opened). Calicut point is the city, while landing was reportedly at Kappad (page not reachable).",
+  "author": "historian-agent:o-s55",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:13:35.035Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

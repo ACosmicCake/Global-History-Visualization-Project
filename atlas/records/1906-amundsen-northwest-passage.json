@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s103",
+  "updated": "2026-10-22",
+  "id": "1906-amundsen-northwest-passage",
+  "kind": "event",
+  "title": "Amundsen completes the Northwest Passage in Gjøa",
+  "summary": "Roald Amundsen left Norway in the small ship Gjøa on 16 June 1903 with a crew of six. The expedition wintered twice at Gjøa Haven on King William Island and reached Nome, Alaska on 30 August 1906, completing the passage by sea. The Fram Museum calls Gjøa the first ship sailed through the entire Northwest Passage.",
+  "when": {
+    "start": {
+      "year": 1903
+    },
+    "end": {
+      "year": 1906
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the departure from Kristiania on 16 June 1903; end is the arrival at Nome on 30 August 1906. Linda Hall dates the emergence into the Beaufort Sea to 17 August 1905."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (Fram Museum)",
+        "value": "Nome, Alaska on 30 August 1906",
+        "source": "src-fram"
+      },
+      {
+        "calendar": "Gregorian (Linda Hall Library)",
+        "value": "On June 16, 1903, Amundsen and a crew of six left Norway",
+        "source": "src-lindahall"
+      },
+      {
+        "calendar": "Gregorian (NOVA)",
+        "value": "reaches Nome on August 30, 1906",
+        "source": "src-nova"
+      }
+    ],
+    "display": "1903–1906"
+  },
+  "where": {
+    "lat": 64.4975098,
+    "lon": -165.4061701,
+    "elevation_m": null,
+    "modern_name": "Nome, Alaska (arrival port); route from Oslo via Gjøa Haven, Nunavut",
+    "historical_name": "Kristiania, Norway to Gjøa Haven on King William Island, then Nome, Alaska",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 59.9133301,
+          "lon": 10.7389701,
+          "date": "16 June 1903",
+          "label": "Gjøa leaves Kristiania (modern Oslo), Norway, with a crew of six.",
+          "source": "src-fram",
+          "coordinate_source": "src-osm-oslo",
+          "year": 1903
+        },
+        {
+          "lat": 68.6425276,
+          "lon": -95.878297,
+          "date": "13 August 1905 (NOVA: leaving Gjoa Haven)",
+          "label": "Gjøa Haven on King William Island, the site of two winterings.",
+          "source": "src-nova",
+          "coordinate_source": "src-osm-gjoa",
+          "year": 1905
+        },
+        {
+          "lat": 64.4975098,
+          "lon": -165.4061701,
+          "date": "30 August 1906",
+          "label": "Gjøa reaches Nome, Alaska.",
+          "source": "src-fram",
+          "coordinate_source": "src-osm-nome",
+          "year": 1906
+        }
+      ]
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-nome",
+      "src-osm-oslo",
+      "src-osm-gjoa"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "The expedition is credited by the Fram Museum as the first sailing through the entire Northwest Passage."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1903-06-16",
+        "action": "path.trace {}",
+        "caption": "Gjøa sails from Kristiania with Amundsen and a crew of six.",
+        "source": "src-lindahall",
+        "consequence": false
+      },
+      {
+        "span": "1905-08-13",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "After two winters on King William Island, the expedition leaves Gjøa Haven, and the passage is reported complete.",
+        "source": "src-nova",
+        "consequence": false
+      },
+      {
+        "span": "1906-08-30",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Gjøa reaches Nome on 30 August 1906; NOVA says Amundsen charted the long-sought passage with relative ease.",
+        "source": "src-nova",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-fram",
+      "url": "https://frammuseum.no/en/polar-history/vessels/the-polar-ship-gjoa/",
+      "title": "The Polar Ship Gjøa",
+      "publisher": "Fram Museum",
+      "author": "Fram Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lindahall",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/roald-amundsen/",
+      "title": "Roald Amundsen (Scientist of the Day)",
+      "publisher": "Linda Hall Library",
+      "author": "William B. Ashworth, Jr.",
+      "date_published": "2015-07-16",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nova",
+      "url": "https://www.pbs.org/wgbh/nova/arctic/expe-nf.html",
+      "title": "Arctic Passage: expedition timeline",
+      "publisher": "NOVA (PBS/WGBH)",
+      "author": "NOVA",
+      "date_published": "2006-02",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-osm-nome",
+      "url": "https://www.openstreetmap.org/relation/16770751",
+      "title": "OpenStreetMap relation 16770751, Nome, Alaska, 64.4975098, -165.4061701",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-osm-oslo",
+      "url": "https://www.openstreetmap.org/relation/406091",
+      "title": "OpenStreetMap relation 406091, Oslo, 59.9133301, 10.7389701",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-osm-gjoa",
+      "url": "https://www.openstreetmap.org/way/437472437",
+      "title": "OpenStreetMap way 437472437, Gjoa Haven, 68.6425276, -95.878297",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of 'first': taken from the Fram Museum page as read; NOVA does not use the word. Sources date completing the passage differently (NOVA: leaving Gjoa Haven 13 August 1905; Linda Hall: emerged into the Beaufort Sea 17 August 1905). The path is schematic: only three waypoints.",
+  "published_at": "2026-10-22T18:10:00.833Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

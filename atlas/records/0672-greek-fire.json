@@ -1,0 +1,149 @@
+{
+  "id": "0672-greek-fire",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Introduction of Greek fire (traditionally 672)",
+  "summary": "Greek fire, an incendiary weapon projected from siphons on ships and burning even on water, is traditionally dated to 672, in the reign of Constantine Pogonatus, and credited to Callinicus, an architect from Heliopolis. The Byzantines used it in naval warfare, including at Constantinople. Its composition remains unknown, and scholars question the dating: Theophanes places the destruction of the Arab fleet in 676/7 or 677/8.",
+  "when": {
+    "start": {
+      "year": 672
+    },
+    "end": {
+      "year": 678
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Royal Museums Greenwich gives 672; Theophanes (via Medievalists.net) dates the destruction of the Arab fleet with Greek fire to 676/7 or 677/8, and other authors give 673/4. The range runs from 672 to 678."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "672 AD",
+        "source": "src-rmg-gf"
+      },
+      {
+        "calendar": "Byzantine chronicle dating (Theophanes)",
+        "value": "676/7 or 677/8",
+        "source": "src-med-gf"
+      }
+    ],
+    "display": "672 (traditional); fleet destroyed 676/7 or 677/8 per Theophanes"
+  },
+  "where": {
+    "lat": 41.01224,
+    "lon": 28.976018,
+    "elevation_m": null,
+    "modern_name": "Istanbul (historic peninsula), Turkey (proxy pin for the waters off Constantinople)",
+    "historical_name": "Constantinople, capital of the Byzantine Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-constantinople"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A Byzantine naval weapon used against Arab fleets whose recipe is unknown."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-rmg-gf",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/greek-fire",
+      "title": "Greek fire",
+      "publisher": "Royal Museums Greenwich",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-med-gf",
+      "url": "https://www.medievalists.net/2022/07/was-constantinople-besieged-in-674-78/",
+      "title": "Was Constantinople besieged in 674-78?",
+      "publisher": "Medievalists.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-constantinople",
+      "url": "https://www.wikidata.org/wiki/Q16869",
+      "title": "Wikidata item Q16869 (Constantinople), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The 672 date comes from Royal Museums Greenwich, stated without qualification; Medievalists.net questions the Theophanes chronology and notes the inconsistency of Constantine IV equipping the fleet with Greek fire a year before Kallinikos invents it. The pin is a proxy for Constantinople; the RMG page gives no year for the siege.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:56.561Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "672",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Greek fire, an incendiary weapon projected from siphons on ships and burning even on water, is traditionally dated to 672, in the reign of Constantine Pogonatus, and credited…",
+        "source": "src-rmg-gf"
+      },
+      {
+        "span": "678",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Its composition remains unknown, and scholars question the dating: Theophanes places the destruction of the Arab fleet in 676/7 or 677/8.",
+        "source": "src-rmg-gf",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

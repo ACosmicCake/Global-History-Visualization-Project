@@ -1,0 +1,208 @@
+{
+  "id": "place-huaca-del-sol-moche",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Huaca del Sol (Moche)",
+  "aliases": [
+    "Huaca del Sol o Capuxaida"
+  ],
+  "summary": "The Huaca del Sol is a huge adobe platform of the Moche culture near Trujillo on Peru's north coast. The Huacas de Moche project says it originally measured about 345 m by 160 m and 40 m high, built with some 140 million adobes. Treasure hunters badly damaged it in the 17th century.",
+  "when": {
+    "start": {
+      "year": 1
+    },
+    "end": {
+      "year": 700
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "No opened page gives the Huaca del Sol's own building dates. Mincetur says the Moche culture developed in the 1st to 7th centuries AD; those bounds are used."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Mincetur)",
+        "value": "Durante los siglos I al VII d.c. la cultura Moche",
+        "source": "src-mincetur-huaca-sol"
+      },
+      {
+        "calendar": "CE (Huacas de Moche)",
+        "value": "siglo XVII",
+        "source": "src-huacasdemoche"
+      }
+    ],
+    "display": "Moche period, 1st–7th centuries"
+  },
+  "where": {
+    "lat": -8.1316071,
+    "lon": -78.9945392,
+    "elevation_m": null,
+    "modern_name": "Huaca del Sol, Moche, Trujillo, La Libertad, Peru",
+    "historical_name": "Huaca del Sol (Capuxaida), Moche culture, Moche valley",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-huaca-sol"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Stepped adobe platform, originally about 345 m by 160 m; only about a third survives.",
+      "source": "src-huacasdemoche",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-huacasdemoche",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 40,
+          "unit": "m",
+          "source": "src-huacasdemoche",
+          "note": "\"40 metros de altura\" (original)"
+        },
+        {
+          "part": "base length",
+          "value": 345,
+          "unit": "m",
+          "source": "src-huacasdemoche",
+          "note": "\"345 metros de largo\" (original)"
+        },
+        {
+          "part": "base width",
+          "value": 160,
+          "unit": "m",
+          "source": "src-huacasdemoche",
+          "note": "\"160 metros de ancho\" (original)"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "platform outline at 345 m by 160 m"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped adobe platform 345 m by 160 m, 40 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1,
+        "end_year": 700,
+        "state": "construction",
+        "description": "Built during the Moche period, which Mincetur places in the 1st to 7th centuries AD; the building's own dates are not given.",
+        "source": "src-mincetur-huaca-sol"
+      },
+      {
+        "start_year": 1601,
+        "end_year": null,
+        "state": "altered",
+        "description": "Severely affected in the 17th century by treasure hunters; only about a third of the structure survives.",
+        "source": "src-huacasdemoche"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1,
+        "to_year": null,
+        "material": "adobe (about 140 million adobes)",
+        "source": "src-huacasdemoche"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Huacas de Moche project describes a structure originally 345 m long and 40 m high, built from some 140 million adobes."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-huacasdemoche",
+      "url": "https://huacasdemoche.pe/huacas-de-moche/",
+      "title": "Huaca del Sol o Capuxaida",
+      "publisher": "Proyecto Arqueológico Huacas de Moche (Universidad Nacional de Trujillo)",
+      "author": "Proyecto Arqueológico Huacas de Moche (Universidad Nacional de Trujillo)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-mincetur-huaca-sol",
+      "url": "https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=114",
+      "title": "Huacas del Sol y la Luna - Recursos Turísticos",
+      "publisher": "Ministerio de Comercio Exterior y Turismo (Mincetur), Peru",
+      "author": "Ministerio de Comercio Exterior y Turismo (Mincetur), Peru",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-huaca-sol",
+      "url": "https://nominatim.openstreetmap.org/search?q=Huaca+del+Sol+Moche&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Huaca del Sol, Moche, Trujillo, way 1313530088 (-8.1316071, -78.9945392)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape stepped_pyramid (Mincetur describes platforms of several bodies at different levels). Dimensions are the project's 'original' size (345 x 160 x 40 m), a single source; other estimates differ. Dates are the Moche culture span, not the building's own, so start 1 and end 700 are placeholders for a reviewer to replace.",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:08.112Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

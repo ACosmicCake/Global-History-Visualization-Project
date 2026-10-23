@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1948-palestinian-nakba",
+  "kind": "event",
+  "title": "Palestinian Nakba",
+  "summary": "In 1948, around the first Arab-Israeli war, an estimated 700,000 Palestinians fled or were expelled from their homes, according to EBSCO; the scholar Darweish writes of about 750,000. Palestinians call these events the Nakba, or catastrophe. Accounts of cause differ: some Jewish leaders cited Arab broadcasts, while historians point to flight or expulsion. UN General Assembly Resolution 194 followed in December 1948.",
+  "when": {
+    "start": {
+      "year": 1948
+    },
+    "end": {
+      "year": 1948
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Year only; the sources tie the events to the war that followed May 1948."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "displacement, and dispossession experienced by Palestinians in 1948 would become known as the Nakba",
+        "source": "src-ebsco-nakba"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Nakba which began on May 15 1948",
+        "source": "src-conv-nakba"
+      }
+    ],
+    "display": "1948"
+  },
+  "where": {
+    "lat": 31.7788472,
+    "lon": 35.2257856,
+    "elevation_m": null,
+    "modern_name": "Former Mandatory Palestine (Israel and the Palestinian territories); pin at Jerusalem",
+    "historical_name": "Palestine mandate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-osm-jerusalem"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Displacement of several hundred thousand Palestinians in 1948 that shaped the later refugee question and Palestinian national memory."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns mass displacement and violence in a conflict that remains politically contested. Figures and causes are attributed to their sources; Palestinian and Israeli accounts differ on cause and terminology.",
+  "related": [
+    {
+      "id": "1917-balfour-declaration",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-nakba",
+      "url": "https://www.ebsco.com/research-starters/political-science/palestinian-refugees",
+      "title": "Palestinian Refugees",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-conv-nakba",
+      "url": "https://theconversation.com/the-nakba-how-the-palestinians-were-expelled-from-israel-205151",
+      "title": "The Nakba: how the Palestinians were expelled from Israel",
+      "publisher": "The Conversation",
+      "author": "Darweish (as quoted)",
+      "date_published": "2023-05-11",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-state-1948",
+      "url": "https://history.state.gov/milestones/1945-1952/arab-israeli-war",
+      "title": "The Arab-Israeli War of 1948",
+      "publisher": "US Department of State, Office of the Historian",
+      "author": "Office of the Historian",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-jerusalem",
+      "url": "https://nominatim.openstreetmap.org/search?q=Jerusalem&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for Jerusalem (relation 1381350)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: place (regional event; Jerusalem is a loose anchor not named on the cited pages) and the sources are two (EBSCO, Conversation) that differ on 700,000 vs 750,000.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:11:47.665Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

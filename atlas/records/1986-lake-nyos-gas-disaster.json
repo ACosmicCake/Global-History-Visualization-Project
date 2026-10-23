@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1986-lake-nyos-gas-disaster",
+  "kind": "event",
+  "title": "Lake Nyos gas disaster",
+  "summary": "On the night of 21 August 1986, a large release of carbon dioxide from volcanic Lake Nyos in Cameroon flowed down surrounding valleys and suffocated people and animals. EBSCO gives about 1,700 human deaths and 8,000 livestock; History.com says nearly 2,000 people died. Four villages were hit and buildings and plants were left unharmed.",
+  "when": {
+    "start": {
+      "year": 1986,
+      "iso": "1986-08-21"
+    },
+    "end": {
+      "year": 1986
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give 21 August 1986; History.com gives about 9:30 p.m. local time."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "August 21, 1986",
+        "source": "src-ebsco-nyos"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "August 21, 1986",
+        "source": "src-history-nyos"
+      }
+    ],
+    "display": "21 August 1986"
+  },
+  "where": {
+    "lat": 6.438056,
+    "lon": 10.298889,
+    "elevation_m": null,
+    "modern_name": "Lake Nyos, Northwest Region, Cameroon",
+    "historical_name": "Lake Nyos, Republic of Cameroon",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-nyos"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "One of the deadliest gas disasters from a volcanic lake, it drew attention to limnic hazards."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the deaths of about 1,700 people by suffocation, including entire villages.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-nyos",
+      "url": "https://www.ebsco.com/research-starters/environmental-sciences/african-lake-emits-toxic-gas",
+      "title": "African Lake Emits Toxic Gas",
+      "publisher": "EBSCO Research Starters",
+      "author": "Steven I. Dutch",
+      "date_published": "2021",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-nyos",
+      "url": "https://www.history.com/this-day-in-history/august-21/gas-cloud-kills-cameroon-villagers",
+      "title": "Gas cloud kills Cameroon villagers",
+      "publisher": "HISTORY.com",
+      "author": "HISTORY.com Editors",
+      "date_published": "2009-11-13",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-nyos",
+      "url": "https://www.wikidata.org/wiki/Q332628",
+      "title": "Wikidata item Q332628 (Lake Nyos), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the death toll: EBSCO says about 1,700 and History.com nearly 2,000; the summary gives both. Cause is only described as a carbon dioxide release; I did not state the trigger. Pin is the lake.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:11.033Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1986-08-21",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On the night of 21 August 1986, a large release of carbon dioxide from volcanic Lake Nyos in Cameroon flowed down surrounding valleys and suffocated people and animals.",
+        "source": "src-ebsco-nyos"
+      },
+      {
+        "span": "1986",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Four villages were hit and buildings and plants were left unharmed.",
+        "source": "src-ebsco-nyos",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

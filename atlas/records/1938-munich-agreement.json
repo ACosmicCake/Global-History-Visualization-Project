@@ -1,0 +1,138 @@
+{
+  "id": "1938-munich-agreement",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Munich Agreement",
+  "summary": "Leaders of Germany, Britain, France and Italy met in Munich and reached a settlement permitting German annexation of the Sudetenland in western Czechoslovakia. Czechoslovakia was not consulted. Intended as appeasement to avert war, it became a byword for the futility of appeasing expansionist states.",
+  "when": {
+    "start": {
+      "year": 1938
+    },
+    "end": {
+      "year": 1938
+    },
+    "precision": "day",
+    "display": "30 September 1938",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Munich Agreement , (September 30, 1938)",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "signed on 30 September 1938",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 48.1461,
+    "lon": 11.5678,
+    "elevation_m": null,
+    "modern_name": "Munich, Germany",
+    "historical_name": "Munich (Führerbau); concerned the Sudetenland, Czechoslovakia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Emblematic act of appeasement that dismembered Czechoslovakia on the eve of World War II."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260103140506/https://www.britannica.com/event/Munich-Agreement",
+      "title": "Munich Agreement | Definition, Summary, & Significance | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.worldhistory.org/Munich_Agreement/",
+      "title": "Munich Agreement - World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q154255",
+      "title": "Wikidata Q154255 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources agree on 30 September 1938 as the signing date; the conference ran 29-30 September (World History Encyclopedia) and the meeting began on 29 September (Britannica). The second source text is truncated.  Britannica says Chamberlain met Hitler at Godesberg on 22 September; World History says 22 September too, but gives 15 September for Berchtesgaden visit while Britannica says mid-September.  Place coordinates are approximate.} (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, World History Encyclopedia; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T01:45:53.755Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-23",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1938",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Leaders of Germany, Britain, France and Italy met in Munich and reached a settlement permitting German annexation of the Sudetenland in western Czechoslovakia.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1938",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Intended as appeasement to avert war, it became a byword for the futility of appeasing expansionist states.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

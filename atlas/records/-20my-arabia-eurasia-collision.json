@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-20my-arabia-eurasia-collision",
+  "kind": "process",
+  "title": "Arabia-Eurasia collision",
+  "summary": "The Arabian plate collided with Eurasia along a zone from eastern Anatolia to the Zagros, and when it began is debated. Mouthereau (2011) places initiation between 35 and 20 million years ago, with collision at the Bitlis thrust zone in the early Miocene, about 20 Ma. Darin and Umhoefer (2022) argue it began by about 42 Ma in eastern Anatolia and reached the southeastern Zagros by 25 to 15 Ma.",
+  "when": {
+    "start": {
+      "year": -42000000
+    },
+    "end": {
+      "year": -15000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years are Ma counted back from the present. Mouthereau: initiation between 35 and 20 Ma, Bitlis c. 20 Ma. Darin and Umhoefer: soft collision by ca. 42 Ma in eastern Anatolia; central Zagros 35 to 25 Ma; southeastern Zagros 25 to 15 Ma; earlier estimates ranged from about 50 to 10 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "started to collide along the Bitlis thrust zone in Early Miocene time",
+        "source": "src-mouthereau"
+      },
+      {
+        "calendar": "Ma",
+        "value": "by ca. 42 Ma",
+        "source": "src-darin"
+      }
+    ],
+    "display": "Estimates from about 42 to 15 million years ago; c. 20 Ma at the Bitlis thrust zone"
+  },
+  "where": {
+    "lat": 38.4950867,
+    "lon": 42.1678372,
+    "elevation_m": null,
+    "modern_name": "Bitlis, eastern Türkiye (proxy pin for the Bitlis thrust zone, part of the collision zone)",
+    "historical_name": "Arabia-Eurasia collision zone (Bitlis thrust zone to the Zagros); no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-osm-bitlis"
+    ],
+    "paleo": {
+      "lat": 33.39,
+      "lon": 37.54,
+      "age_ma": 20,
+      "plate_model": "MULLER2019",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "The plate collision that built the Zagros and East Anatolian belts."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "perspectives": [
+    {
+      "holder": "Mouthereau (2011)",
+      "account": "Initiation between 35 and 20 Ma; plates collided along the Bitlis thrust zone in the early Miocene, c. 20 Ma.",
+      "sources": [
+        "src-mouthereau"
+      ]
+    },
+    {
+      "holder": "Darin and Umhoefer (2022)",
+      "account": "Diachronous: soft collision by ca. 42 Ma in eastern Anatolia, reaching the southeastern Zagros between about 25 and 15 Ma.",
+      "sources": [
+        "src-darin"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mouthereau",
+      "url": "https://www.cambridge.org/core/journals/geological-magazine/article/timing-of-uplift-in-the-zagros-beltiranian-plateau-and-accommodation-of-late-cenozoic-arabiaeurasia-convergence/19E9DEA9D3C59A77EFB14BFA4B36A1E2",
+      "title": "Timing of uplift in the Zagros belt/Iranian plateau and accommodation of late Cenozoic Arabia-Eurasia convergence",
+      "publisher": "Cambridge University Press (Geological Magazine)",
+      "author": "F. Mouthereau",
+      "date_published": "2011",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-darin",
+      "url": "https://experts.nau.edu/en/publications/diachronous-initiation-of-arabiaeurasia-collision-from-eastern-an",
+      "title": "Diachronous initiation of Arabia-Eurasia collision from eastern Anatolia to the southeastern Zagros Mountains since middle Eocene time",
+      "publisher": "Northern Arizona University (International Geology Review, Taylor & Francis)",
+      "author": "Michael H. Darin and Paul J. Umhoefer",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-bitlis",
+      "url": "https://nominatim.openstreetmap.org/search?q=Bitlis,Turkey&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Bitlis, Turkey",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=42.17,38.49&time=20&model=MULLER2019",
+      "title": "GPlates Web Service reconstruction, MULLER2019 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age, which the sources disagree on; the id says 20 Ma but the range here is 42 to 15 Ma. Pin is a proxy (Bitlis). Paleo from the GPlates service for 42.17E 38.49N at 20 Ma: MULLER2019 33.39N 37.54E (used), MERDITH2021 31.02N 39.63E, PALEOMAP 35.59N 40.62E; the models disagree.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:12:16.678Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-42000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Arabian plate collided with Eurasia along a zone from eastern Anatolia to the Zagros, and when it began is debated.",
+        "source": "src-mouthereau"
+      },
+      {
+        "span": "-15000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Darin and Umhoefer (2022) argue it began by about 42 Ma in eastern Anatolia and reached the southeastern Zagros by 25 to 15 Ma.",
+        "source": "src-mouthereau",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

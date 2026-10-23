@@ -1,0 +1,149 @@
+{
+  "id": "1987-montreal-protocol",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Montreal Protocol on Substances that Deplete the Ozone Layer",
+  "summary": "The Montreal Protocol was concluded at Montreal on 16 September 1987 and entered into force on 1 January 1989. It set limits on consumption and production of controlled ozone-depleting substances, beginning with a freeze at 1986 levels.",
+  "when": {
+    "start": {
+      "year": 1987
+    },
+    "end": {
+      "year": 1987
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Adoption date; entry into force 1 January 1989."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Concluded at Montreal on 16 September 1987; registered ex officio on 1 January 1989",
+        "source": "src-un"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Montreal Protocol is adopted on 16 September.",
+        "source": "src-unep"
+      }
+    ],
+    "display": "16 September 1987"
+  },
+  "where": {
+    "lat": 45.5031824,
+    "lon": -73.5698065,
+    "elevation_m": null,
+    "modern_name": "Montreal, Quebec, Canada",
+    "historical_name": "Montreal, Quebec, Canada",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The treaty to phase out ozone-depleting substances."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1985-ozone-hole-discovery",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-un",
+      "url": "https://treaties.un.org/doc/publication/unts/volume%201522/volume-1522-i-26369-english.pdf",
+      "title": "Montreal Protocol on Substances that Deplete the Ozone Layer (UN Treaty Series No. 26369)",
+      "publisher": "United Nations Treaty Collection",
+      "author": "United Nations Treaty Collection",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unep",
+      "url": "https://ozone.unep.org/ozone-timeline",
+      "title": "Ozone Timeline",
+      "publisher": "UNEP Ozone Secretariat",
+      "author": "UNEP Ozone Secretariat",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Montreal&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Montreal (relation 1634158)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Montreal city, not the conference venue. The UN treaty PDF was read via text extraction. The 1986 freeze comes from the treaty text. Effects on the ozone layer are not claimed.",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1987-09-16",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The Montreal Protocol is concluded at Montreal.",
+        "source": "src-unep",
+        "consequence": false
+      },
+      {
+        "span": "1989-01-01",
+        "action": "region.fill { radius_km: 1000 }",
+        "caption": "The Protocol enters into force, limiting production and consumption of controlled substances.",
+        "source": "src-un",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:37.553Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

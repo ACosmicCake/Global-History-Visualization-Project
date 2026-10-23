@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1943-burma-thailand-death-railway",
+  "kind": "event",
+  "title": "Burma–Thailand Railway (Death Railway)",
+  "summary": "The Burma–Thailand Railway, 415 km between Nong Pladuk in Thailand and Thanbyuzayat in Burma, was begun in October 1942 and completed on 16 October 1943. The Australian War Memorial says about 60,000 Allied prisoners of war and 200,000 romusha, or Asian labourers, were used. Allied prisoner deaths are given as over 12,000; romusha deaths are estimated at 75,000 to 100,000.",
+  "when": {
+    "start": {
+      "year": 1942
+    },
+    "end": {
+      "year": 1943
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is October 1942 and completion 16 October 1943 (Burma Thailand Railway Memorial Association); the AWM says only \"completed in October 1943\"."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "Begun in October 1942 and completed on 16 October 1943",
+        "source": "src-btrma"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "completed in October 1943",
+        "source": "src-awm"
+      }
+    ],
+    "display": "October 1942 – 16 October 1943"
+  },
+  "where": {
+    "lat": 15.974251,
+    "lon": 97.7223821,
+    "elevation_m": null,
+    "modern_name": "Burma–Thailand Railway between Thanbyuzayat (Myanmar) and Nong Pladuk (Thailand)",
+    "historical_name": "Japanese-occupied Burma and Thailand (Burma–Thailand Railway)",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 13.8176814,
+          "lon": 99.9108786,
+          "year": 1942.79,
+          "date": "October 1942 (work started)",
+          "label": "Nong Pladuk, Thailand: the eastern terminus; the OSM point is the railway junction.",
+          "source": "src-btrma",
+          "coordinate_source": "src-osm-np"
+        },
+        {
+          "lat": 15.974251,
+          "lon": 97.7223821,
+          "year": 1943.79,
+          "date": "16 October 1943 (railway completed)",
+          "label": "Thanbyuzayat, Burma: the western terminus. Completion date applies to the whole line; the point where the two sections met is not named on the opened pages.",
+          "source": "src-btrma",
+          "coordinate_source": "src-osm-tb"
+        }
+      ]
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-osm-tb",
+      "src-osm-np"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A Second World War forced-labour project that cost tens of thousands of Allied and Asian lives."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns forced labour, starvation, disease and mass death among prisoners of war and Asian labourers. Death tolls are estimates and are given as attributed ranges.",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-awm",
+      "url": "https://www.awm.gov.au/visit/exhibitions/stolenyears/ww2/japan/burmathai",
+      "title": "Stolen Years: The Burma-Thailand Railway",
+      "publisher": "Australian War Memorial",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-btrma",
+      "url": "https://www.btrma.org.au/?p=173",
+      "title": "The Death Railway",
+      "publisher": "Burma Thailand Railway Memorial Association",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-tb",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Thanbyuzayat%20railway%20station",
+      "title": "OpenStreetMap Nominatim: Thanbyuzayat railway station",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-np",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Nong%20Pla%20Duk%20Junction%20railway%20station",
+      "title": "OpenStreetMap Nominatim: Nong Pla Duk Junction",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The AWM gives the length as 420 km; the BTRMA gives 415 km (used). Death tolls: AWM, at least 2,815 Australians, over 11,000 other Allied prisoners and perhaps 75,000 romusha; BTRMA, over 12,000 POWs (over 2,700 Australians) and romusha \"probably up to 90 000\" or \"between 75 000 and 100 000\", record keeping being poor. Search leads (not opened) gave other completion dates and higher romusha tolls up to 100,000 or more. The DVA Anzac Portal pages timed out and were not used. Hellfire Pass is left out of waypoints for lack of an opened dated source.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1942-10",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Work on the line begins in October 1942.",
+        "source": "src-btrma",
+        "consequence": false
+      },
+      {
+        "span": "1943-10-16",
+        "action": "path.trace {}",
+        "caption": "The 415 km railway between Nong Pladuk and Thanbyuzayat is completed on 16 October 1943.",
+        "source": "src-btrma",
+        "consequence": false
+      },
+      {
+        "span": "1943-10",
+        "action": "numbers.counter { range: [75000, 100000] }",
+        "caption": "Estimates of romusha deaths run from 75,000 to 100,000; over 12,000 Allied prisoners also died.",
+        "source": "src-btrma",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:07.415Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

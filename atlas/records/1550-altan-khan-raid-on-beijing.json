@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s7",
+  "updated": "2026-10-22",
+  "id": "1550-altan-khan-raid-on-beijing",
+  "kind": "event",
+  "title": "Altan Khan's raid on Beijing (Gengxu incident)",
+  "summary": "In autumn 1550 the Mongol leader Altan Khan broke through the northern frontier near Gubeikou, reached Tongzhou and besieged Beijing, plundering its suburbs for several days before withdrawing. Ming garrisons failed to respond effectively. The raid followed refusals to open border trade and exposed weaknesses that led to defence reforms.",
+  "when": {
+    "start": {
+      "year": 1550
+    },
+    "end": {
+      "year": 1550
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "Raid began in July 1550; Beijing was besieged from 1 October according to the EBSCO account."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On October 1, the Mongols besieged the city of Beijing",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "in 1550, Mongols under Altan Khan approached Beijing and placed the city under a brief siege",
+        "source": "src-hkbu"
+      }
+    ],
+    "display": "July–October 1550"
+  },
+  "where": {
+    "lat": 39.904,
+    "lon": 116.4075,
+    "elevation_m": null,
+    "modern_name": "Beijing, China (raid route from Gubeikou via Tongzhou)",
+    "historical_name": "Beijing (capital of the Ming dynasty under the Jiajing Emperor)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wd",
+      "src-ebsco"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Only the second time the Ming capital was threatened by steppe forces, it prompted wall and garrison reforms."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-great-wall-of-china",
+      "type": "related"
+    },
+    {
+      "id": "1368-ming-great-wall",
+      "type": "related"
+    },
+    {
+      "id": "1449-tumu-crisis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/mongols-raid-beijing/",
+      "title": "Mongols Raid Beijing",
+      "publisher": "EBSCO Research Starters",
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hkbu",
+      "url": "https://scholars.hkbu.edu.hk/en/publications/crossing-the-frontiers-and-working-for-the-mongols-migration-and-/",
+      "title": "Crossing the Frontiers and Working for the Mongols: Migration and Militarization Along the Northern Frontiers in 16th-Century Ming China",
+      "publisher": "Hong Kong Baptist University",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q956.json",
+      "title": "Wikidata entry for Beijing (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact dates (1 October siege and 26/30 September approach come from one reference source) and the length of the plundering (three vs eight days in other accounts).",
+  "published_at": "2026-10-22T03:55:55.356Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1550",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "In autumn 1550 the Mongol leader Altan Khan broke through the northern frontier near Gubeikou, reached Tongzhou and besieged Beijing, plundering its suburbs for several days before withdrawing.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1550",
+        "action": "pulse { radius_km: 96 }",
+        "caption": "Ming garrisons failed to respond effectively.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

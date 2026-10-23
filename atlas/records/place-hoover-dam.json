@@ -1,0 +1,213 @@
+{
+  "id": "place-hoover-dam",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Hoover Dam",
+  "summary": "Hoover Dam is a concrete dam in Black Canyon on the Colorado River between Arizona and Nevada, about 30 miles southeast of Las Vegas. Contractors had seven years from 20 April 1931; the first concrete went in on 6 June 1933 and all features were complete on 1 March 1936. It is 726.4 feet high.",
+  "when": {
+    "start": {
+      "year": 1931
+    },
+    "end": {
+      "year": 1936
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the contract date of 20 April 1931 (Bureau of Reclamation); end is 1 March 1936, when all features were completed. ASCE gives completion as 1935 and dedication on 30 September 1935 by Franklin D. Roosevelt."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Bureau of Reclamation)",
+        "value": "April 20, 1931",
+        "source": "src-usbr-hoover"
+      },
+      {
+        "calendar": "CE (Bureau of Reclamation)",
+        "value": "March 1, 1936",
+        "source": "src-usbr-hoover"
+      },
+      {
+        "calendar": "CE (ASCE)",
+        "value": "September 30, 1935",
+        "source": "src-asce-hoover"
+      }
+    ],
+    "display": "Built 1931–1936"
+  },
+  "where": {
+    "lat": 36.0157189,
+    "lon": -114.7374858,
+    "elevation_m": null,
+    "modern_name": "Hoover Dam, Black Canyon of the Colorado River, Arizona–Nevada, United States",
+    "historical_name": "Hoover Dam in Black Canyon on the Colorado River, between Arizona and Nevada, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-hoover"
+    ]
+  },
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "Concrete dam spanning Black Canyon, 1,244 ft (379.2 m) long at the crest; drawn by the viewer as a path.",
+      "source": "src-asce-hoover",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-usbr-hoover",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 221.4,
+          "unit": "m",
+          "source": "src-usbr-hoover",
+          "note": "\"726.4 feet from foundation rock to the crest roadway\" (Bureau of Reclamation); ASCE says 726 feet above bedrock; converted from feet"
+        },
+        {
+          "part": "length",
+          "value": 379.2,
+          "unit": "m",
+          "source": "src-asce-hoover",
+          "note": "\"1,244 feet\" crest length across Black Canyon (ASCE); converted from feet"
+        },
+        {
+          "part": "base thickness",
+          "value": 201.2,
+          "unit": "m",
+          "source": "src-asce-hoover",
+          "note": "\"660 feet\" (ASCE); converted from feet"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "dam drawn as a path across Black Canyon at crest length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural dam 379.2 m long and 221.4 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1931,
+        "end_year": 1936,
+        "state": "construction",
+        "description": "Contractors had seven years from 20 April 1931; first concrete 6 June 1933, last concrete 29 May 1935, all features complete 1 March 1936 (Bureau of Reclamation).",
+        "source": "src-usbr-hoover"
+      },
+      {
+        "start_year": 1936,
+        "end_year": null,
+        "state": "intact",
+        "description": "All features completed 1 March 1936; ASCE records the dedication on 30 September 1935.",
+        "source": "src-usbr-hoover"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1933,
+        "to_year": null,
+        "material": "concrete (about three and one-quarter million cubic yards in the dam)",
+        "source": "src-usbr-hoover"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "ASCE lists it as a historic civil engineering landmark; the Bureau of Reclamation records 21,000 men working on it."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-usbr-hoover",
+      "url": "https://www.usbr.gov/lc/hooverdam/faqs/damfaqs.html",
+      "title": "Hoover Dam Frequently Asked Questions: Dam",
+      "publisher": "U.S. Bureau of Reclamation",
+      "author": "U.S. Bureau of Reclamation",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-asce-hoover",
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/hoover-dam",
+      "title": "Hoover Dam",
+      "publisher": "American Society of Civil Engineers",
+      "author": "American Society of Civil Engineers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-hoover",
+      "url": "https://nominatim.openstreetmap.org/search?q=Hoover+Dam&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Hoover Dam, Clark County, Nevada, way 49938932 (36.0157189, -114.7374858)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape wall with linear true (the dam is drawn as a path). Height 726.4 ft is the Bureau of Reclamation figure (ASCE: 726 ft); lengths converted from feet to metres. Dates: the Bureau gives a start as the contract date; ASCE gives completion as 1935 and dedication 30 September 1935, the Bureau gives all features complete 1 March 1936; 1936 used as the end. The OSM way is on the dam.",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:08.795Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "id": "1975-fall-of-saigon",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Fall of Saigon",
+  "summary": "On 30 April 1975 North Vietnamese tanks rolled through the gate of the Presidential Palace in Saigon, effectively ending the Vietnam War. A last-minute evacuation of Americans and at-risk South Vietnamese ended hours before. The National Archives says 1.6 million Vietnamese refugees fled the communist regime in the years that followed.",
+  "when": {
+    "start": {
+      "year": 1975
+    },
+    "end": {
+      "year": 1975
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The offensive began in March 1975; the event is the capture of the palace on 30 April."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "April 30, 1975",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "April 30, 1975: North Vietnamese tanks crash gates of Imperial Palace",
+        "source": "src-nara"
+      }
+    ],
+    "display": "30 April 1975"
+  },
+  "where": {
+    "lat": 10.7770348,
+    "lon": 106.695488,
+    "elevation_m": null,
+    "modern_name": "Independence Palace, Ho Chi Minh City, Vietnam",
+    "historical_name": "Presidential Palace, Saigon, capital of the Republic of Vietnam (South Vietnam)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The end of the Vietnam War and of South Vietnam."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns the end of a war with heavy civilian and military casualties.",
+  "related": [
+    {
+      "id": "1955-vietnam-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1969-1976/ending-vietnam",
+      "title": "Ending the Vietnam War (Milestones)",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": "U.S. Department of State, Office of the Historian",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nara",
+      "url": "https://visit.archives.gov/whats-on/explore-exhibits/episode-12-fall-saigon",
+      "title": "Episode 12: Fall of Saigon",
+      "publisher": "U.S. National Archives",
+      "author": "U.S. National Archives",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Independence+Palace+Ho+Chi+Minh+City&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Dinh Doc Lap (way 39598493)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Scope is the 30 April event only; the war itself is in 1955-vietnam-war. The two sources name the palace differently (Presidential vs Imperial); the OSM way is Independence Palace.",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1975-03-10",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "North Vietnam launches an offensive in the Central Highlands.",
+        "source": "src-nara",
+        "consequence": false
+      },
+      {
+        "span": "1975-04-30",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "North Vietnamese tanks crash through the palace gates in Saigon, effectively ending the war.",
+        "source": "src-histstate",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:36.205Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

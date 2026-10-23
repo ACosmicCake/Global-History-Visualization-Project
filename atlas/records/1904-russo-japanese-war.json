@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1904-russo-japanese-war",
+  "kind": "event",
+  "title": "Russo-Japanese War",
+  "summary": "War between Russia and Japan, 1904–1905, after years of dispute over control of Manchuria. It opened with a Japanese attack on the Russian fleet at Port Arthur and included the costly battle of Mukden. The Treaty of Portsmouth, signed on 5 September 1905 with US mediation, gave Japan control in Korea and southern Sakhalin.",
+  "when": {
+    "start": {
+      "year": 1904
+    },
+    "end": {
+      "year": 1905
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources opened give a year-level span; the treaty signing date is given as September 5, 1905."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1904–05",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 5, 1905",
+        "source": "src-trc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1904-1905",
+        "source": "src-trc"
+      }
+    ],
+    "display": "1904–1905"
+  },
+  "where": {
+    "lat": 38.85095,
+    "lon": 121.2568,
+    "elevation_m": null,
+    "modern_name": "Lüshunkou, Dalian, China",
+    "historical_name": "Port Arthur, Liaodong Peninsula (Russian-held); proxy pin at the site of the opening attack",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-mapcarta",
+      "src-distcalc"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "War between two empires that reshaped control of Manchuria and Korea and ended through a US-mediated treaty."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1899-1913/portsmouth-treaty",
+      "title": "The Treaty of Portsmouth and the Russo-Japanese War, 1904–1905",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-trc",
+      "url": "https://www.theodorerooseveltcenter.org/encyclopedia/foreign-affairs/treaty-of-portsmouth/",
+      "title": "Treaty of Portsmouth",
+      "publisher": "Theodore Roosevelt Center, Dickinson State University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mapcarta",
+      "url": "https://mapcarta.com/Dalian/L%C3%BCshunkou",
+      "title": "Lüshunkou (Mapcarta)",
+      "publisher": "Mapcarta (OpenStreetMap-derived)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-distcalc",
+      "url": "https://www.distancecalculator.net/from-lushun-to-dalian",
+      "title": "Distance between Lüshun and Dalian",
+      "publisher": "distancecalculator.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy: Port Arthur, where fighting opened; the war spanned Manchuria, Korea and seas. Sources give only years for the start; exact start date not confirmed on an opened page.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:49:59.738Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1904",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "War between Russia and Japan, 1904–1905, after years of dispute over control of Manchuria.",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1905",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It opened with a Japanese attack on the Russian fleet at Port Arthur and included the costly battle of Mukden.",
+        "source": "src-histstate",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

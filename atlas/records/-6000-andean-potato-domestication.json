@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s117",
+  "updated": "2026-10-22",
+  "id": "-6000-andean-potato-domestication",
+  "kind": "process",
+  "title": "Domestication of the potato in the Andes",
+  "summary": "Cultivated potatoes were probably first selected from wild Solanum relatives in the southern Andes of Peru, north of Lake Titicaca, between about 6,000 and 10,000 years ago. A second source places the origin in the Lake Titicaca region and notes that tubers were in use around 7,000 years ago.",
+  "when": {
+    "start": {
+      "year": -8000
+    },
+    "end": {
+      "year": -4000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Source says \"between 6,000 and 10,000 years ago\" (probable). Years ago are counted from the present and rounded to astronomical years -8000 to -4000; no calibration is stated. A second source gives tuber use around 7,000 years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago (as stated)",
+        "value": "Las primeras papas cultivadas probablemente fueron seleccionadas entre 6.000 y 10.000 años atrás",
+        "source": "src-unal"
+      },
+      {
+        "calendar": "years ago (as stated)",
+        "value": "Archaeological evidence shows that potato tubers were already used around 7000 years ago",
+        "source": "src-cgn"
+      }
+    ],
+    "display": "c. 8000-4000 BCE (6,000-10,000 years ago)"
+  },
+  "where": {
+    "lat": -15.825,
+    "lon": -69.325,
+    "elevation_m": null,
+    "modern_name": "Lake Titicaca region, Peru and Bolivia (pin is the lake; source places selection north of the lake in southern Peru)",
+    "historical_name": "Southern Andes, region around Lake Titicaca; no polities at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wikidata-titicaca",
+      "src-unal"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Origin of a crop now grown worldwide, from the Andean highlands."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-4000-domestication-of-llama-and-alpaca",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unal",
+      "url": "https://revistas.unal.edu.co/index.php/agrocol/article/view/17588",
+      "title": "Origen y evolución de la papa cultivada. Una revisión (Origins and evolution of cultivated potato. A review)",
+      "publisher": "Universidad Nacional de Colombia (Agronomía Colombiana)",
+      "author": "Luis Ernesto Rodríguez",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cgn",
+      "url": "https://potato.pgrportal.nl/posts/origin-and-taxonomy-of-potato",
+      "title": "Origin and taxonomy of potato",
+      "publisher": "Centre for Genetic Resources, the Netherlands (CGN), Potato Genetic Resources Portal",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-titicaca",
+      "url": "https://www.wikidata.org/wiki/Q35342",
+      "title": "Wikidata item Q35342 (Titicaca), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: the main source says 6,000-10,000 years ago and \"probably\"; the second gives only 7,000 years for tuber use. The pin is Lake Titicaca (Wikidata), not an excavation site; the review places the first selection north of the lake in southern Peru while the second source says the region around the lake.",
+  "published_at": "2026-10-22T19:36:28.316Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

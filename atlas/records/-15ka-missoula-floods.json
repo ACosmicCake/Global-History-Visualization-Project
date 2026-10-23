@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "-15ka-missoula-floods",
+  "kind": "event",
+  "title": "Missoula floods",
+  "summary": "Near the end of the last ice age, an ice dam in western Montana repeatedly failed, releasing Glacial Lake Missoula across Idaho, Washington and Oregon. Sources describe dozens to as many as 100 floods and date them between roughly 18,000 and 13,000 years ago. They scoured the Channeled Scablands of eastern Washington.",
+  "when": {
+    "start": {
+      "year": -16050
+    },
+    "end": {
+      "year": -11050
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 500,
+      "start_plus_years": 2000,
+      "end_minus_years": 1000,
+      "end_plus_years": 500,
+      "note": "UC Santa Cruz: 18,000-15,500 years ago; National Park Service: 15,000-13,000 years ago. Range spans both; years ago converted by subtracting from 1950."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "the Missoula megafloods occurred between 18,000 and 15,500 years ago",
+        "source": "src-ucsc-missoula"
+      },
+      {
+        "calendar": "years ago",
+        "value": "between 15,000 and 13,000 years ago the ice containing Lake Missoula failed as many as 100 separate times",
+        "source": "src-nps-missoula"
+      }
+    ],
+    "display": "c. 18,000-13,000 years ago"
+  },
+  "where": {
+    "lat": 46.9389,
+    "lon": -114.144,
+    "elevation_m": null,
+    "modern_name": "Glacial Lake Missoula basin, western Montana, USA (floods reached eastern Washington)",
+    "historical_name": "Glacial Lake Missoula, no polity (Pleistocene)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wikidata-q1801015"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "Among the largest known glacial outburst floods, reshaping the Pacific Northwest."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-10950-younger-dryas",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-missoula",
+      "url": "https://www.nps.gov/articles/000/ice-age-floods.htm",
+      "title": "Ice Age Floods",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ucsc-missoula",
+      "url": "https://news.ucsc.edu/2022/02/missoula-megafloods/",
+      "title": "Tilting of Earth's crust governed the flow of ancient megafloods",
+      "publisher": "University of California, Santa Cruz",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-q1801015",
+      "url": "https://www.wikidata.org/wiki/Q1801015",
+      "title": "Lake Missoula (Wikidata Q1801015)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: dates (the two sources overlap only at 15,500-15,000) and flood count. Point is the lake basin; floods reached far beyond.",
+  "published_at": "2026-10-22T11:14:58.939Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

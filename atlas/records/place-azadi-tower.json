@@ -1,0 +1,201 @@
+{
+  "id": "place-azadi-tower",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Azadi Tower",
+  "aliases": [
+    "Shahyad Tower"
+  ],
+  "summary": "The Azadi Tower in Tehran, designed by Hossein Amanat, is about 45 m high and 64 m wide. A national design competition was held in 1967 and the monument opened in 1972 as the Shahyad Tower. ArchDaily gives a 1966 competition and 1971 completion. It is built of poured concrete clad in white marble.",
+  "when": {
+    "start": {
+      "year": 1967
+    },
+    "end": {
+      "year": 1972
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "VisitIran: competition 1967, operation 1972. ArchDaily: competition 1966, completion 1971. The span follows VisitIran."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (VisitIran)",
+        "value": "A national design competition was held in 1967; put into operation under the name of Shahyad Tower in 1972",
+        "source": "src-visitiran-azadi"
+      },
+      {
+        "calendar": "CE (ArchDaily)",
+        "value": "Competition 1966; Completion 1971",
+        "source": "src-archdaily-azadi"
+      }
+    ],
+    "display": "Competition 1967, opened 1972"
+  },
+  "where": {
+    "lat": 35.69972222222222,
+    "lon": 51.33805555555556,
+    "elevation_m": null,
+    "modern_name": "Azadi Tower, Tehran, Iran",
+    "historical_name": "Shahyad Tower, Tehran, Iran",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-wd-azadi"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Monument about 64 m wide (VisitIran), standing in Tehran's Azadi square.",
+      "source": "src-visitiran-azadi",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-visitiran-azadi",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 45,
+          "unit": "m",
+          "source": "src-visitiran-azadi",
+          "note": "\"about 45 meters from the ground\""
+        },
+        {
+          "part": "base width",
+          "value": 64,
+          "unit": "m",
+          "source": "src-visitiran-azadi",
+          "note": "\"The width of this building is 64 meters\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "monument at the centre of a large plaza in Tehran"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block 45 m high and 64 m wide, a stand-in for the arched form"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1967,
+        "end_year": 1972,
+        "state": "construction",
+        "description": "Design competition 1967 and opening 1972 per VisitIran; ArchDaily gives competition 1966 and completion 1971. Construction start year not stated.",
+        "source": "src-visitiran-azadi"
+      },
+      {
+        "start_year": 1972,
+        "end_year": null,
+        "state": "intact",
+        "description": "Opened 1972 as the Shahyad Tower and still stands in Tehran.",
+        "source": "src-visitiran-azadi"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1971,
+        "to_year": null,
+        "material": "reinforced poured-in-place concrete clad in white marble",
+        "source": "src-archdaily-azadi"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "ArchDaily describes it as the focal point of a plaza over 120,000 square metres."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-visitiran-azadi",
+      "url": "https://www.visitiran.ir/attraction/azadi-tower",
+      "title": "Azadi Tower",
+      "publisher": "VisitIran",
+      "author": "VisitIran",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-archdaily-azadi",
+      "url": "https://www.archdaily.com/774683/ad-classics-azadi-tower-hossein-amanat",
+      "title": "AD Classics: Azadi Tower / Hossein Amanat",
+      "publisher": "ArchDaily",
+      "author": "ArchDaily",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-wd-azadi",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1140026.json",
+      "title": "Wikidata entry for Azadi Tower (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape block: closest available; the real form is an inverted-Y arch on a podium, so the block is a bounding stand-in. Height 45 m and width 64 m both from VisitIran only; the 64 m width may be the monument's overall width rather than a base side. Dates conflict between sources (1967/1972 vs 1966/1971).",
+  "author": "historian-agent:m-23",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:53:39.687Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

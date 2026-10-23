@@ -1,0 +1,234 @@
+{
+  "id": "place-petronas-towers",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Petronas Towers, Kuala Lumpur",
+  "summary": "Twin 88-storey towers in Kuala Lumpur, designed by the architect César Pelli with Thornton Tomasetti as structural engineer, reaching 452 m to their pinnacle tips. Each floor plate is based on an eight-pointed star, and a central core with 16 concrete perimeter columns carries the structure. Completed in 1998.",
+  "when": {
+    "start": {
+      "year": 1998
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Skyscraper Museum and Thornton Tomasetti give completion in 1998; Pelli Clarke Pelli's page gives 1997. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Skyscraper Museum)",
+        "value": "As completed in 1998",
+        "source": "src-skyscraper-petronas"
+      },
+      {
+        "calendar": "CE (Thornton Tomasetti)",
+        "value": "completed in 1998",
+        "source": "src-tt-petronas"
+      }
+    ],
+    "display": "Completed 1998"
+  },
+  "where": {
+    "lat": 3.1579679,
+    "lon": 101.7112048,
+    "elevation_m": null,
+    "modern_name": "Petronas Twin Towers, Kuala Lumpur City Centre, Kuala Lumpur, Malaysia",
+    "historical_name": "Petronas Twin Towers, Kuala Lumpur, Malaysia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-petronas"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Presented by the Skyscraper Museum as a landmark concrete skyscraper scheme with an eight-pointed-star plan."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-skyscraper-petronas",
+      "url": "https://www.skyscraper.org/the-modern-concrete-skyscraper/",
+      "title": "The Modern Concrete Skyscraper",
+      "publisher": "Skyscraper Museum",
+      "author": "Skyscraper Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-tt-petronas",
+      "url": "https://www.thorntontomasetti.com/project/petronas-twin-towers",
+      "title": "Petronas Twin Towers",
+      "publisher": "Thornton Tomasetti",
+      "author": "Thornton Tomasetti",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-petronas-official",
+      "url": "https://www.petronastwintowers.com.my/the-towers/design-structure/",
+      "title": "Design + Structure, PETRONAS Twin Towers official website",
+      "publisher": "Petronas Twin Towers (official website)",
+      "author": "PETRONAS Twin Towers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "importance"
+      ]
+    },
+    {
+      "id": "src-osm-petronas",
+      "url": "https://www.openstreetmap.org/way/279944536",
+      "title": "OpenStreetMap way 279944536 (Menara Berkembar Petronas)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "id": "src-osm-outline-petronas",
+      "url": "https://www.openstreetmap.org/way/279944536",
+      "title": "OpenStreetMap outline of Menara Berkembar Petronas",
+      "publisher": "OpenStreetMap contributors",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "No model written: pages opened (Skyscraper Museum, Thornton Tomasetti, the official site) give 452 m and 88 floors but no plan dimension (only floor area, a 58.4 m skybridge, and an eight-pointed-star plan); CTBUH, Wiley and ScienceDirect pages were blocked. Completion is 1998 on two pages but 1997 on Pelli Clarke Pelli's page; Pelli Clarke Pelli and the official site were opened but only the latter is cited.",
+  "author": "historian-agent:m-12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:46:35.917Z",
+  "model": {
+    "footprint": {
+      "description": "Combined plan of the twin towers about 165.1 m by 83.7 m, measured from the OpenStreetMap outline tagged Menara Berkembar Petronas (way 279944536); the outline covers both towers together. Shape chosen: tower, count 2.",
+      "source": "src-osm-outline-petronas",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-skyscraper-petronas",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 452,
+          "unit": "m",
+          "source": "src-skyscraper-petronas",
+          "note": "to the tips of the pinnacles; 1,483 ft; 88 floors"
+        },
+        {
+          "part": "count",
+          "value": 2,
+          "unit": "count",
+          "source": "src-skyscraper-petronas",
+          "note": "twin towers"
+        },
+        {
+          "part": "footprint length (OSM outline, both towers)",
+          "value": 165.1,
+          "unit": "m",
+          "source": "src-osm-outline-petronas"
+        },
+        {
+          "part": "footprint width (OSM outline, both towers)",
+          "value": 83.7,
+          "unit": "m",
+          "source": "src-osm-outline-petronas"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "two extruded towers at sourced height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural twin towers on the mapped outline"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1998,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Completed in 1998 and standing today.",
+        "source": "src-skyscraper-petronas"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1998,
+        "to_year": 2026,
+        "material": "reinforced concrete structure (central core with 16 perimeter columns)",
+        "source": "src-skyscraper-petronas"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "The mapped outline covers both towers and their podium together, so it does not give one tower's plan; height and outline are kept as data."
+  }
+}

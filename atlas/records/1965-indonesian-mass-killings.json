@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1965-indonesian-mass-killings",
+  "kind": "event",
+  "title": "Indonesian mass killings of 1965-66",
+  "summary": "After senior Indonesian generals were kidnapped and killed on 30 September 1965, an anti-leftist purge of suspected communists swept Indonesia in 1965-66. Death-toll estimates differ: about 500,000 in scholarly accounts, 600,000 to 1 million from the National Commission on Human Rights, and 2 million from one former general. Robinson argues the Army led a deliberate campaign, with more than a million detained.",
+  "when": {
+    "start": {
+      "year": 1965
+    },
+    "end": {
+      "year": 1966
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give the span as 1965-66, with the generals killed on 30 September 1965."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "the shocking antileftist purge that gripped Indonesia in 1965–66",
+        "source": "src-princeton-killing"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The anti-communist killings of 1965–66",
+        "source": "src-chandra-jas"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "kidnapping and killing of senior Indonesian generals on Sept. 30, 1965",
+        "source": "src-npr-purge"
+      }
+    ],
+    "display": "1965-1966"
+  },
+  "where": {
+    "lat": -7.3117,
+    "lon": 109.4183,
+    "elevation_m": null,
+    "modern_name": "Java, Indonesia (killings also elsewhere in the archipelago)",
+    "historical_name": "Republic of Indonesia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-java"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "One of the largest and swiftest mass killings of its era, according to its publisher blurb, with a contested toll."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass killing and mass detention of suspected communists. Death tolls are contested estimates that vary widely by source and method.",
+  "related": [
+    {
+      "id": "1945-08-17-proclamation-of-indonesian-independence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-princeton-killing",
+      "url": "https://press.princeton.edu/books/hardcover/9780691161389/the-killing-season",
+      "title": "The Killing Season: A History of the Indonesian Massacres, 1965-66",
+      "publisher": "Princeton University Press",
+      "author": "Geoffrey B. Robinson",
+      "date_published": "2018",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chandra-jas",
+      "url": "https://www.cambridge.org/core/product/A53ACF4B79AD100D81C0324F0834C7EB",
+      "title": "New Findings on the Indonesian Killings of 1965–66",
+      "publisher": "Cambridge University Press (Journal of Asian Studies)",
+      "author": "Siddharth Chandra",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-npr-purge",
+      "url": "https://www.kunc.org/npr-news/2012-04-09/exposing-indonesias-cold-war-communist-purge",
+      "title": "Exposing Indonesia’s Cold War communist purge",
+      "publisher": "NPR (via KUNC)",
+      "author": null,
+      "date_published": "2012-04-09",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-java",
+      "url": "https://www.wikidata.org/wiki/Q3757",
+      "title": "Java (Wikidata Q3757)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1965-09-30",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Senior Indonesian generals were kidnapped and killed on 30 September 1965; a purge of suspected communists followed.",
+        "source": "src-npr-purge"
+      },
+      {
+        "span": "1966",
+        "action": "numbers.counter { range: [600000, 1000000] }",
+        "caption": "Indonesia’s National Commission on Human Rights estimated the purge killed between 600,000 and 1 million people; other estimates differ.",
+        "source": "src-npr-purge"
+      },
+      {
+        "span": "1966",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "Robinson concludes the violence was a deliberate Army-led campaign that left some 500,000 dead and over a million detained.",
+        "source": "src-princeton-killing",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Toll is attributed, not asserted: ~500,000 (Princeton UP blurb, Chandra), 600,000-1 million (National Commission on Human Rights via NPR, 2012), about 2 million (a former general, per NPR). Pin is Java as a coarse locator; killings were archipelago-wide. Least sure: exact start date of the purge.",
+  "author": "historian-agent:o-s60",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:36:56.595Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

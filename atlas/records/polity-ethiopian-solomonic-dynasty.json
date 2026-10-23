@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s80",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "polity-ethiopian-solomonic-dynasty",
+  "kind": "polity",
+  "title": "Solomonic dynasty of Ethiopia",
+  "summary": "The Solomonic dynasty ruled Ethiopia from the 1270s to the 1970s. It began when Yekuno Amlak, an Amhara noble, drove out the last Zagwe ruler about 1270. Its legitimacy rested on a claimed descent from Solomon and the Queen of Sheba, told in the Kebra Nagast; that claim lost its place as state ideology with the 1974 takeover.",
+  "when": {
+    "start": {
+      "year": 1270
+    },
+    "end": {
+      "year": 1974
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 5,
+      "note": "Start: 1270 (WHE, Country Studies \"About 1270\"). End: WHE ties the end of the Solomonic claim as state ideology to \"the communist takeover of 1974\"; the page also gives Haile Selassie's dates as 1892-1975."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "ruled Ethiopia from the 1270s to the 1970s",
+        "source": "src-whe-solomonic"
+      },
+      {
+        "calendar": "CE",
+        "value": "About 1270",
+        "source": "src-countrystudies"
+      }
+    ],
+    "display": "c. 1270-1974"
+  },
+  "where": {
+    "lat": 11.6608,
+    "lon": 37.9578,
+    "elevation_m": null,
+    "modern_name": "Amhara Region, Ethiopia",
+    "historical_name": "Amhara heartland of the Ethiopian kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-wd-amhara"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The long-lived ruling line of the Ethiopian highlands whose claimed Solomonic descent shaped national identity."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "polity-kingdom-of-aksum",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-solomonic",
+      "url": "https://www.worldhistory.org/article/1875/solomonic-descent-in-ethiopian-history/",
+      "title": "Solomonic Descent in Ethiopian History",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-countrystudies",
+      "url": "https://countrystudies.us/ethiopia/8.htm",
+      "title": "Ethiopia: The \"Restoration\" of the \"Solomonic\" Line",
+      "publisher": "Library of Congress Country Studies (countrystudies.us)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-amhara",
+      "url": "https://www.wikidata.org/wiki/Q203009",
+      "title": "Wikidata item Q203009 (Amhara Region), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin and end: the dynasty had no single capital named on an opened page, so the pin is the centre of the Amhara Region (the source calls Amhara the geographic and political centre) with 200 km uncertainty; WHE does not say who ended the dynasty in 1974, so the end year is its \"takeover of 1974\". The Met essay was not readable (HTTP 429). The Solomonic descent is treated as a claim.",
+  "published_at": "2026-10-22T15:30:11.019Z"
+}

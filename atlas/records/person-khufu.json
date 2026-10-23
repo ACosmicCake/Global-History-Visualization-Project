@@ -1,0 +1,160 @@
+{
+  "id": "person-khufu",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "title": "Khufu (Cheops)",
+  "summary": "Khufu, called Cheops by the Greeks, was the second king of Egypt's 4th Dynasty and the builder of the Great Pyramid at Giza. Egypt's antiquities ministry dates his reign to about 2589–2566 BCE, though its length is debated. Papyri from Wadi al-Jarf date from near its end.",
+  "when": {
+    "start": {
+      "year": -2588
+    },
+    "end": {
+      "year": -2565
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 40,
+      "start_plus_years": 80,
+      "end_minus_years": 40,
+      "end_plus_years": 80,
+      "note": "Reign dates differ by source (c. 2589–2566 BC; 2590–2568 BC; c. 2585–2560 BCE). Length is disputed: the Turin canon gives 23 years, but Tallet reads a logbook dated to Year 26."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Egyptian regnal chronology, years BC",
+        "value": "Khufu c.2589–2566 BC",
+        "source": "src-mota-great-pyramid"
+      },
+      {
+        "calendar": "Reference work, B.C.E.",
+        "value": "reign circa 2585-2560 b.c.e. in one entry; the Turin Canon lists twenty-three years",
+        "source": "src-encyclopedia-khufu"
+      },
+      {
+        "calendar": "Egyptian civil calendar",
+        "value": "year after the 13th census of Cheops (Year 26), the last known year of this king's reign",
+        "source": "src-tallet2017"
+      }
+    ],
+    "display": "r. c. 2589–2566 BCE"
+  },
+  "where": {
+    "lat": 29.97904,
+    "lon": 31.13401,
+    "elevation_m": null,
+    "modern_name": "Great Pyramid, Giza, Egypt (Khufu's tomb)",
+    "historical_name": "Memphite royal necropolis at Giza, Old Kingdom Egypt (4th Dynasty)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-geonames-greatpyramid"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "people",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Builder of the Great Pyramid, the best-known monument of the Old Kingdom."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-2588-construction-of-the-great-pyramid",
+      "type": "caused",
+      "because": "He commissioned the Great Pyramid as his tomb."
+    },
+    {
+      "id": "-2565-diary-of-merer",
+      "type": "related"
+    },
+    {
+      "id": "place-giza-pyramids",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mota-great-pyramid",
+      "url": "https://egymonuments.gov.eg/en/monuments/the-great-pyramid",
+      "title": "The Great Pyramid (monument page)",
+      "publisher": "Ministry of Tourism and Antiquities, Egypt",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyclopedia-khufu",
+      "url": "https://www.encyclopedia.com/people/history/ancient-history-egypt-biographies/khufu",
+      "title": "Khufu",
+      "publisher": "Encyclopedia.com (ancient Egypt biographies)",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-tallet2017",
+      "url": "https://www.orient-mediterranee.com/wp-content/uploads/2022/04/1705_tallet.pdf",
+      "title": "Les papyrus de la mer Rouge I: Le journal de Merer (Papyrus Jarf A et B), MIFAO 136 (extract with English translation, annexe I)",
+      "publisher": "Institut français d'archéologie orientale (IFAO), Cairo; extract hosted by UMR 8167 Orient & Méditerranée",
+      "author": "Pierre Tallet",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-greatpyramid",
+      "url": "https://www.geonames.org/356475",
+      "title": "GeoNames 356475, The Great Pyramid at Giza",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Reign length is the weak point: Year 26 (Tallet) conflicts with 23 years (Turin canon). Coordinates are his tomb.",
+  "author": "historian-agent:o-s23",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:01:40.490Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

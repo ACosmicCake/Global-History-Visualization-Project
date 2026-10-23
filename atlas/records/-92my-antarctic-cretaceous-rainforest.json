@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "-92my-antarctic-cretaceous-rainforest",
+  "kind": "place",
+  "title": "Cretaceous rainforest of West Antarctica",
+  "summary": "A sediment core drilled in February 2017 in the Amundsen Sea off West Antarctica, near the Pine Island Glacier, contained a land-formed layer of forest soil 27 to 30 m below the seafloor, dated to roughly 90 million years ago. The plant evidence points to 93 to 83 million years ago. Researchers reconstruct temperate rainforest within 900 km of the South Pole, with a mean annual air temperature of about 12 degrees C.",
+  "when": {
+    "start": {
+      "year": -93000000
+    },
+    "end": {
+      "year": -83000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "The id says 92 Ma; the opened pages give about 90 Ma, with plant evidence at 93 to 83 Ma. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "About 90 million years old, from the Cretaceous period",
+        "source": "src-imperial"
+      },
+      {
+        "calendar": "Ma",
+        "value": "roughly 90 million years ago; plant evidence points to 93 to 83 million years ago",
+        "source": "src-awi"
+      }
+    ],
+    "display": "c. 90 Ma (plant evidence 93 to 83 Ma)"
+  },
+  "where": {
+    "lat": -75.1667,
+    "lon": -100,
+    "elevation_m": null,
+    "modern_name": "Amundsen Sea seabed near Pine Island Glacier, West Antarctica (proxy pin at Pine Island Glacier)",
+    "historical_name": "West Antarctic coastal lowland, Cretaceous, within 900 km of the South Pole; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-pig"
+    ],
+    "paleo": {
+      "lat": -75.32,
+      "lon": -93.27,
+      "age_ma": 90,
+      "plate_model": "MERDITH2021 (via GPlates Web Service)",
+      "source": "src-gplates",
+      "note": "Pine Island Glacier proxy at 90 Ma. MULLER2019 gives 73.80 S, 133.73 W and PALEOMAP 80.41 S, 100.98 W."
+    }
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Direct evidence of temperate forest near the South Pole during peak Cretaceous warmth."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-imperial",
+      "url": "https://www.imperial.ac.uk/news/196516/traces-ancient-rainforest-antarctica-point-warmer/",
+      "title": "Traces of ancient rainforest in Antarctica point to a warmer prehistoric world",
+      "publisher": "Imperial College London",
+      "author": null,
+      "date_published": "2020-04-01",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-awi",
+      "url": "https://idw-online.de/de/news743865",
+      "title": "Press release on temperate rainforest traces in West Antarctica (Alfred Wegener Institute)",
+      "publisher": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research (via Informationsdienst Wissenschaft)",
+      "author": null,
+      "date_published": "2020-04-01",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-pig",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1514989.json",
+      "title": "Wikidata item Q1514989 (Pine Island Glacier), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-100,-75.1667&time=90&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the core site is only described as in the Amundsen Sea near Pine Island Glacier (Imperial: near the Pine Island and Thwaites glaciers). The id says 92 Ma; the pages say about 90 Ma. The AWI release was read through the idw aggregator.",
+  "published_at": "2026-10-22T18:32:03.011Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

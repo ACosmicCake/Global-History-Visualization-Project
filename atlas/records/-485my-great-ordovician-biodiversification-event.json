@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s24",
+  "updated": "2026-10-22",
+  "id": "-485my-great-ordovician-biodiversification-event",
+  "kind": "process",
+  "title": "Great Ordovician Biodiversification Event",
+  "summary": "During the Early and Middle Ordovician, from about 485 to 460 million years ago, marine biodiversity rose sharply, roughly tripling at order, family and genus level in a span of about 25 million years. Warm climates, high sea levels, dispersed continents and plankton changes are among the proposed drivers.",
+  "when": {
+    "start": {
+      "year": -485000000
+    },
+    "end": {
+      "year": -460000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Geological time, Ma",
+        "value": "Early and Middle Ordovician (485-460 Ma); a short time span of 25 Ma",
+        "source": "src-gsa"
+      }
+    ],
+    "display": "c. 485–460 million years ago"
+  },
+  "where": {
+    "lat": 30.8605,
+    "lon": 110.374,
+    "elevation_m": null,
+    "modern_name": "Huanghuachang section, near Yichang, Hubei, China (representative Ordovician reference section; the event was global)",
+    "historical_name": "Ordovician shelf sea on the South China block (Gondwana margin)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-ics"
+    ],
+    "body": null,
+    "paleo": {
+      "lat": -21.04,
+      "lon": 95.6,
+      "age_ma": 485,
+      "plate_model": "MERDITH2021 via GPlates Web Service",
+      "source": "src-gplates",
+      "note": "Reconstructed with the 485 Ma onset age; single-model value."
+    },
+    "historical_geography_source": "src-gplates"
+  },
+  "regions": [
+    "global",
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "The most sustained rise in marine diversity in Earth history, which built the Paleozoic marine ecosystems."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "related"
+    },
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gsa",
+      "url": "https://rock.geosociety.org/net/gsatoday/archive/19/4/pdf/i1052-5173-19-4-4.pdf",
+      "title": "Understanding the Great Ordovician Biodiversification Event (GOBE): Influences of paleogeography, paleoclimate, or paleoecology?",
+      "publisher": "Geological Society of America (GSA Today)",
+      "author": "Servais et al.",
+      "date_published": "2009",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-ics",
+      "url": "https://stratigraphy.org/gssps/dapingian",
+      "title": "GSSP for Dapingian Stage (Huanghuachang section)",
+      "publisher": "International Commission on Stratigraphy",
+      "author": "ICS",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=110.374,30.8605&time=485&model=MERDITH2021",
+      "title": "GPlates Web Service point reconstruction (MERDITH2021) at 485 Ma",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo",
+        "where.historical_geography_source"
+      ]
+    }
+  ],
+  "reviewer_note": "No single place hosts a global event; Huanghuachang (Dapingian GSSP, South China, which GSA Today names as a GOBE study region) is a representative reference section, not an origin. The ICS page does not mention the GOBE. Sources differ on when the diversification began (some say early Floian or all of the Early Ordovician); I recorded the 485 to 460 Ma span of the GSA Today review.",
+  "published_at": "2026-10-22T07:15:50.120Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

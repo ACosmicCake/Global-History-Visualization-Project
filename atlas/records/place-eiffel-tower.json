@@ -1,0 +1,232 @@
+{
+  "id": "place-eiffel-tower",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Eiffel Tower, Paris",
+  "summary": "The Eiffel Tower is a 300 m iron lattice tower on the Champ de Mars in Paris, built by Gustave Eiffel's company from January 1887 to March 1889 for the Exposition Universelle. It was the tallest structure in the world until 1930 and became the emblem of Paris.",
+  "when": {
+    "start": {
+      "year": 1887
+    },
+    "end": {
+      "year": 1889
+    },
+    "precision": "month",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Construction of the Eiffel Tower began in January, 1887",
+        "source": "src-ebsco-eiffel"
+      },
+      {
+        "calendar": "CE",
+        "value": "completed in March, 1889",
+        "source": "src-ebsco-eiffel"
+      }
+    ],
+    "display": "January 1887 - March 1889"
+  },
+  "where": {
+    "lat": 48.858389,
+    "lon": 2.2945,
+    "elevation_m": null,
+    "modern_name": "Eiffel Tower, Champ de Mars, Paris, France",
+    "historical_name": "Tour Eiffel, built for the 1889 Exposition Universelle, Paris, Third Republic of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-asce-eiffel",
+      "src-wikidata-eiffel"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The emblem of Paris and a landmark of 19th-century iron engineering, the world's tallest structure from 1889 to 1930."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1789-07-14-storming-of-the-bastille",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-asce-eiffel",
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/eiffel-tower",
+      "title": "Eiffel Tower (ASCE Historic Landmark)",
+      "publisher": "American Society of Civil Engineers",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "model.geometry.measurements",
+        "model.materials",
+        "when"
+      ]
+    },
+    {
+      "id": "src-ebsco-eiffel",
+      "url": "https://www.ebsco.com/research-starters/history/eiffel-tower-dedicated/",
+      "title": "Eiffel Tower Is Dedicated (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-history-eiffel",
+      "url": "https://www.history.com/articles/eiffel-tower",
+      "title": "Eiffel Tower",
+      "publisher": "HISTORY",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-wikidata-eiffel",
+      "url": "https://www.wikidata.org/wiki/Q243",
+      "title": "Wikidata item Q243 (Eiffel Tower), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: tower. Height 300 m is the as-built height (ASCE, EBSCO); today's figure with antennas is about 330 m. The base is 125 m a side (EBSCO). ASCE calls the material cast iron, EBSCO elsewhere mentions wrought iron, so the material is given as iron. The official Eiffel Tower site could not be fetched.",
+  "model": {
+    "footprint": {
+      "description": "Four piers on a square base 125 m (410 ft) on a side, rising and joining near the top (EBSCO).",
+      "source": "src-ebsco-eiffel",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-asce-eiffel",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 300,
+          "unit": "m",
+          "source": "src-asce-eiffel",
+          "note": "as built; EBSCO gives 984 ft"
+        },
+        {
+          "part": "base side",
+          "value": 125,
+          "unit": "m",
+          "source": "src-ebsco-eiffel",
+          "note": "410 ft, square base"
+        },
+        {
+          "part": "base width",
+          "value": 125,
+          "unit": "m",
+          "source": "src-ebsco-eiffel"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "slender lattice tower on four legs"
+      },
+      {
+        "level": "local",
+        "representation": "procedural lattice with two platforms and curved legs"
+      },
+      {
+        "level": "street",
+        "representation": "girder detail not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1887,
+        "end_year": 1889,
+        "state": "construction",
+        "description": "Built January 1887 to March 1889 for the Exposition Universelle.",
+        "source": "src-ebsco-eiffel"
+      },
+      {
+        "start_year": 1889,
+        "end_year": 1957,
+        "state": "intact",
+        "description": "Tallest structure in the world until 1930.",
+        "source": "src-history-eiffel"
+      },
+      {
+        "start_year": 1957,
+        "end_year": null,
+        "state": "altered",
+        "description": "An antenna added in 1957 raised the height by 65 feet.",
+        "source": "src-history-eiffel"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1887,
+        "to_year": null,
+        "material": "iron (18,038 pieces; cast iron per ASCE)",
+        "source": "src-asce-eiffel"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:37.928Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

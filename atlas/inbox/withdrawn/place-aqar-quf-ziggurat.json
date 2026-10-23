@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "needs_review",
+  "id": "place-aqar-quf-ziggurat",
+  "kind": "place",
+  "title": "Ziggurat of Aqar Quf (Dur-Kurigalzu)",
+  "summary": "The ziggurat at Aqar Quf, in the ancient Kassite city of Dur-Kurigalzu near Baghdad, was built by King Kurigalzu; the city dates to around 1400 BCE. The mudbrick tower is roughly square, about 69 by 67.6 m at the base, and still stands tens of metres high. Iraq's Directorate of Antiquities excavated it in 1942 to 1946.",
+  "when": {
+    "start": {
+      "year": -1399
+    },
+    "end": {
+      "year": -1399
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 50,
+      "end_plus_years": 50,
+      "note": "Founding date of the city, c. 1400 B.C., from the Historical Dictionary of Mesopotamia; Penn Museum names the builder but gives no date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "founded around 1400 B.C.",
+        "source": "src-histdict-dk"
+      }
+    ],
+    "display": "c. 1400 BCE"
+  },
+  "where": {
+    "lat": 33.3537592,
+    "lon": 44.2022489,
+    "elevation_m": null,
+    "modern_name": "Aqar Quf ziggurat, Abu Ghraib, Baghdad Governorate, Iraq",
+    "historical_name": "Dur-Kurigalzu, Kassite royal city (Babylonia)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-dk",
+      "src-wd-dk"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "One of the best-preserved ziggurats of Mesopotamia, in the Kassite royal city, on Iraq's UNESCO Tentative List since January 2025."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-penn-dk",
+      "url": "https://www.penn.museum/sites/bulletin/3023/",
+      "title": "Iraqi Excavations During the War Years",
+      "publisher": "Penn Museum (University of Pennsylvania)",
+      "author": "Samuel Noah Kramer",
+      "date_published": "1948",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-histdict-dk",
+      "url": "https://mesopotamia.en-academic.com/125/DUR-KURIGALZU",
+      "title": "Dur-Kurigalzu",
+      "publisher": "Historical Dictionary of Mesopotamia (EdwART, 2012), via en-academic.com",
+      "author": null,
+      "date_published": "2012",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-esteri-dk",
+      "url": "https://www.esteri.it/en/sala_stampa/archivionotizie/retediplomatica/2026/10/iraq-inaugurato-il-primo-settore-del-parco-archeologico-di-aqar-quf/",
+      "title": "Iraq, the first section of the Aqar Quf archaeological park inaugurated",
+      "publisher": "Italian Ministry of Foreign Affairs",
+      "author": null,
+      "date_published": "2026-10-21",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-dk",
+      "url": "https://nominatim.openstreetmap.org/search?q=Dur-Kurigalzu&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Dur-Kurigalzu ziggurat",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-dk",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q622719.json",
+      "title": "Wikidata entry for Dur-Kurigalzu (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Roughly square ziggurat base, 69 by 67.60 m (Historical Dictionary); Kramer gives close to seventy metres on a side, with seven shallow buttresses per side.",
+      "source": "src-histdict-dk",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "ziggurat",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-histdict-dk",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 57,
+          "unit": "m",
+          "source": "src-histdict-dk",
+          "note": "still stands to a height of 57 meters today; Penn Museum (1948) says it towers more than two hundred feet above the plain, so the surviving height is not settled"
+        },
+        {
+          "part": "base length",
+          "value": 69,
+          "unit": "m",
+          "source": "src-histdict-dk",
+          "note": "69 by 67.60 meters"
+        },
+        {
+          "part": "base width",
+          "value": 67.6,
+          "unit": "m",
+          "source": "src-histdict-dk",
+          "note": "69 by 67.60 meters"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "square footprint marker"
+      },
+      {
+        "level": "local",
+        "representation": "not drawn: sources disagree on surviving height"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -1399,
+        "end_year": null,
+        "state": "construction",
+        "description": "Built by the Kassite king Kurigalzu at the founding of Dur-Kurigalzu, around 1400 B.C.; the tower still stands.",
+        "source": "src-histdict-dk"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "Two sources disagree on the surviving height (57 m in the Historical Dictionary of Mesopotamia; more than two hundred feet in a 1948 Penn Museum bulletin), and neither is a measured survey, so the figures stay as data and no mesh is drawn."
+  },
+  "reviewer_note": "Least sure of the height: 57 m (Historical Dictionary, hosted on en-academic.com) vs more than 200 feet (Penn 1948); no measured institutional survey found, hence no_mesh. Shape ziggurat is the closest form. The date is the city foundation, not a dated ziggurat build.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

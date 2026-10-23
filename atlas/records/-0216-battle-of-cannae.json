@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0216-battle-of-cannae",
+  "kind": "event",
+  "title": "Battle of Cannae",
+  "summary": "On 2 August 216 BCE, during the Second Punic War, Hannibal's Carthaginian and allied army surrounded and crushed a larger Roman army near Cannae in Apulia, southeastern Italy. Ancient writers give very high Roman death tolls, while modern historians put them nearer 30,000. The battle became a model of the double-envelopment tactic.",
+  "when": {
+    "start": {
+      "year": -215
+    },
+    "end": {
+      "year": -215
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give 216 BC (-215 astronomical). Day-level date follows Dickinson College Commentaries; Britannica gives only the year."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given by source)",
+        "value": "August 2, 216 BC",
+        "source": "src-dcc"
+      },
+      {
+        "calendar": "Gregorian (as given by source)",
+        "value": "216 bc",
+        "source": "src-brit"
+      }
+    ],
+    "display": "2 August 216 BCE"
+  },
+  "where": {
+    "lat": 41.2964,
+    "lon": 16.1515,
+    "elevation_m": null,
+    "modern_name": "Cannae (Canne della Battaglia), Apulia (Puglia), Italy",
+    "historical_name": "Cannae, Apulia, Roman Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-topos"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Regarded as a classic battle of annihilation and a model of double envelopment in military thought."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a battle with very high loss of life.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-dcc",
+      "url": "https://dcc.dickinson.edu/nepos-hannibal-essays/4",
+      "title": "Chapter 4: The Battle of Cannae",
+      "publisher": "Dickinson College Commentaries",
+      "author": "Bret Mulligan",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brit",
+      "url": "https://www.britannica.com/summary/Battle-of-Cannae",
+      "title": "Battle of Cannae summary",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-topos",
+      "url": "https://topostext.org/place/413162UCan",
+      "title": "Cannae (Apulia)",
+      "publisher": "ToposText",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the ancient village site per ToposText, used as a proxy for the battlefield. Day date rests on Dickinson only; Britannica gives just the year.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:10:37.737Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-215",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 2 August 216 BCE, during the Second Punic War, Hannibal's Carthaginian and allied army surrounded and crushed a larger Roman army near Cannae in Apulia, southeastern Italy.",
+        "source": "src-dcc"
+      },
+      {
+        "span": "-215",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The battle became a model of the double-envelopment tactic.",
+        "source": "src-dcc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

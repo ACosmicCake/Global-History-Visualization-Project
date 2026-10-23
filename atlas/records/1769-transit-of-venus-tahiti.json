@@ -1,0 +1,153 @@
+{
+  "id": "1769-transit-of-venus-tahiti",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Transit of Venus at Tahiti",
+  "summary": "On 3 June 1769 James Cook, astronomer Charles Green and the Endeavour's crew watched Venus cross the Sun from Point Venus, Tahiti. The transit was one motivation for the voyage, since such observations helped determine the size of the solar system.",
+  "when": {
+    "start": {
+      "year": 1769
+    },
+    "end": {
+      "year": 1769
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day given by NASA as June 3, 1769."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 3, 1769",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1769",
+        "source": "src-rmg"
+      }
+    ],
+    "display": "3 June 1769"
+  },
+  "where": {
+    "lat": -17.495274,
+    "lon": -149.494401,
+    "elevation_m": null,
+    "modern_name": "Point Venus (Pointe Vénus), Tahiti, French Polynesia",
+    "historical_name": "Point Venus, Matavai Bay, Tahiti (Otaheite)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-tt"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Famous scientific observation, a stated motivation of Cook's first voyage."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1768-cook-endeavour-voyage",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/earth/earth-observatory/cooks-view-of-the-transit-of-venus-78158/",
+      "title": "Cook's View of the Transit of Venus",
+      "publisher": "NASA Earth Observatory",
+      "author": "Michael Carlowicz",
+      "date_published": "2012-06-03",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rmg",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-13416",
+      "title": "View from Point Venus, Island of Otaheite [Tahiti]",
+      "publisher": "Royal Museums Greenwich",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tt",
+      "url": "https://www.tahititourisme.com/natural-heritage/plage-de-la-pointe-venus/",
+      "title": "Plage de la Pointe Vénus",
+      "publisher": "Tahiti Tourisme",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates are the Point Venus beach/headland from a tourism-board map link, not the exact Fort Venus site. Solar-parallax purpose is worded only as 'size of the solar system' per NASA.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:28:42.628Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1769",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 3 June 1769 James Cook, astronomer Charles Green and the Endeavour's crew watched Venus cross the Sun from Point Venus, Tahiti.",
+        "source": "src-nasa"
+      },
+      {
+        "span": "1769",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The transit was one motivation for the voyage, since such observations helped determine the size of the solar system.",
+        "source": "src-nasa",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

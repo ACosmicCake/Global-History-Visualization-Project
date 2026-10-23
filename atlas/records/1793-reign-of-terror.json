@@ -1,0 +1,162 @@
+{
+  "id": "1793-reign-of-terror",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "period",
+  "title": "Reign of Terror",
+  "summary": "Between September 1793 and July 1794, French revolutionary authorities arrested hundreds of thousands of people and executed thousands after trial. The Law of Suspects was enacted on 17 September 1793, and the period ended with Robespierre's fall on 9 Thermidor (27 July 1794). World History Encyclopedia gives 16,594 formal executions and a total death toll of roughly 30,000 to 50,000.",
+  "when": {
+    "start": {
+      "year": 1793,
+      "iso": "1793-09-05"
+    },
+    "end": {
+      "year": 1794,
+      "iso": "1794-07-28"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start 5 September 1793 and end 28 July 1794 per the World History Encyclopedia timeline; its text also says Robespierre fell on 9 Thermidor Year II (27 July 1794). The LRB article notes that one historian sees the execution of Louis XVI on 21 January 1793 as the start of a killing Terror."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "between September 1793 and July 1794; timeline 5 Sep 1793 to 28 Jul 1794",
+        "source": "src-whe-terror"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "fratricidal phase between September 1793 and July 1794",
+        "source": "src-lrb-jacobson"
+      }
+    ],
+    "display": "September 1793 – July 1794"
+  },
+  "where": {
+    "lat": 48.856667,
+    "lon": 2.352222,
+    "elevation_m": null,
+    "modern_name": "Paris, France (the Terror also reached other French cities)",
+    "historical_name": "Paris, French Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-whe-terror",
+      "src-wd-paris"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A period of mass political repression and executions during the French Revolution that ended with the fall of Robespierre."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass political killing, including executions by guillotine, drownings and deaths in prison. Death-toll figures are estimates and differ between sources.",
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1789-07-14-storming-of-the-bastille",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-terror",
+      "url": "https://www.worldhistory.org/Reign_of_Terror/",
+      "title": "Reign of Terror",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-lrb-jacobson",
+      "url": "https://www.lrb.co.uk/the-paper/v39/n06/gavin-jacobson/there-is-no-more-vendee",
+      "title": "There Is No More Vendée",
+      "publisher": "London Review of Books",
+      "author": "Gavin Jacobson",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-paris",
+      "url": "https://www.wikidata.org/wiki/Q90",
+      "title": "Wikidata item Q90 (Paris), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the figures: WHE gives 16,594 executions after trial, about 10,000 prison deaths and total tolls of 30-50,000 (elsewhere 45,000), while the LRB piece says about 17,000 executed and 40,000 total not unlikely. Paris is named as a site of guillotine executions on the WHE page; the pin is Paris with a 20 km radius, and the Terror spread to Nantes, Lyon and other cities.",
+  "author": "historian-agent:o-s45",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:27:47.031Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1793-09-05",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Between September 1793 and July 1794, French revolutionary authorities arrested hundreds of thousands of people and executed thousands after trial.",
+        "source": "src-whe-terror"
+      },
+      {
+        "span": "1794",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Law of Suspects was enacted on 17 September 1793, and the period ended with Robespierre's fall on 9 Thermidor (27 July 1794).",
+        "source": "src-whe-terror",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

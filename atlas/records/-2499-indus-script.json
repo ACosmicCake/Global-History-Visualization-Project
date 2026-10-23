@@ -1,0 +1,166 @@
+{
+  "id": "-2499-indus-script",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Indus (Harappan) script (undeciphered)",
+  "summary": "The Indus or Harappan script is a set of about 400 mostly pictographic signs, used on stamp seals, tablets and other objects of the Indus civilization in the third millennium BCE. Inscriptions are very short, no bilingual text has been found, and the language is unknown, so the script remains undeciphered despite many proposed readings.",
+  "when": {
+    "start": {
+      "year": -2499
+    },
+    "end": {
+      "year": -1999
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 300,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Penn Museum dates a Harappan inscribed seal to 2800-2000 BCE (astronomical -2799 to -1999); -2499 is the mid-third-millennium date used as the record anchor. The script was in use across the Mature Harappan period; its earliest and latest uses are not fixed by the opened sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "Date Made 2800 - 2000 BCE",
+        "source": "src-penn"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "bookkeeping practices in the 3rd millennium BC",
+        "source": "src-rao-archaeopress"
+      }
+    ],
+    "display": "c. 2500 BCE (in use c. 2800-2000 BCE)"
+  },
+  "where": {
+    "lat": 27.329167,
+    "lon": 68.138889,
+    "elevation_m": null,
+    "modern_name": "Indus Valley, Pakistan and India (pin at Mohenjo-daro, Sindh)",
+    "historical_name": "Cities of the Indus (Harappan) civilization; no named polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wikidata-mohenjodaro"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "art_music_literature",
+    "civilizations_empires"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "One of the few early writing systems of the ancient world still unread, limiting understanding of the Indus civilization."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3300-invention-of-writing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-penn",
+      "url": "https://collections.penn.museum/collections/object/83829",
+      "title": "Seal Fragment L-141-159 (Harappan, Indus Script)",
+      "publisher": "Penn Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-harappa-script",
+      "url": "https://www.harappa.com/content/indus-script-8",
+      "title": "The Indus Script (Pictorial Interpretation of the Indus Signs)",
+      "publisher": "Harappa Archaeological Research Project (Harappa.com)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rao-archaeopress",
+      "url": "https://www.harappa.com/sites/default/files/pdf/The-Indus-Script.pdf",
+      "title": "Rao, The Indus Script and Economics, in Walking with the Unicorn (Archaeopress/ISMEO 2018)",
+      "publisher": "Archaeopress Publishing / ISMEO",
+      "author": "Rajesh P. N. Rao",
+      "date_published": "2018",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wikidata-mohenjodaro",
+      "url": "https://www.wikidata.org/wiki/Q5725",
+      "title": "Wikidata item Q5725 (Mohenjo-daro), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin and span: the script is spread over a region of about a million square kilometres, so the Mohenjo-daro pin carries a 600 km uncertainty, and the dates come from one museum object plus a general chapter. Sign-count estimates range from about 400 to hundreds more depending on counting method.",
+  "author": "historian-agent:o-s6",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:55:51.541Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-2499",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Indus or Harappan script is a set of about 400 mostly pictographic signs, used on stamp seals, tablets and other objects of the Indus civilization in the…",
+        "source": "src-penn"
+      },
+      {
+        "span": "-1999",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Inscriptions are very short, no bilingual text has been found, and the language is unknown, so the script remains undeciphered despite many proposed readings.",
+        "source": "src-penn",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

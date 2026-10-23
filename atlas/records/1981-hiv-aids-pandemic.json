@@ -1,0 +1,158 @@
+{
+  "id": "1981-hiv-aids-pandemic",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Start of the HIV/AIDS pandemic (first reported cases, 1981)",
+  "summary": "On 5 June 1981 the US Centers for Disease Control reported Pneumocystis pneumonia in five young men in Los Angeles, two of whom died; these are recognised as the first reported cases of what became known as AIDS. By 1985 the UN stated that every region of the world had reported at least one HIV case. WHO attributes about 44.2 million deaths (range 33.8–61.1 million) to HIV-related causes since the epidemic began.",
+  "when": {
+    "start": {
+      "year": 1981
+    },
+    "end": {
+      "year": 1981
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Start is the date of the first CDC report; the pandemic continues. A later editorial note refers to it as the June 4 report. The WHO page does not state the year of its cumulative totals."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "June 5, 1981 (MMWR 1981;30:250-2)",
+        "source": "src-mmwr"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On June 5, the CDC's MMWR described a rare lung infection",
+        "source": "src-hivgov"
+      }
+    ],
+    "display": "from 5 June 1981"
+  },
+  "where": {
+    "lat": 34.0536923,
+    "lon": -118.2427676,
+    "elevation_m": null,
+    "modern_name": "Los Angeles, California, United States (site of the first reported cases; the pandemic is global)",
+    "historical_name": "Los Angeles, California, USA (three hospitals), 1980–81",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A pandemic that has caused tens of millions of deaths and reshaped global public health."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a deadly pandemic and its death toll. Figures are WHO estimates with wide uncertainty ranges.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-mmwr",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/lmrk077.htm",
+      "title": "Pneumocystis Pneumonia — Los Angeles (MMWR)",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "author": "U.S. Centers for Disease Control and Prevention",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hivgov",
+      "url": "https://www.hiv.gov/hiv-basics/overview/history/hiv-and-aids-timeline",
+      "title": "A Timeline of HIV and AIDS",
+      "publisher": "HIV.gov (U.S. Department of Health and Human Services)",
+      "author": "HIV.gov (U.S. Department of Health and Human Services)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-who",
+      "url": "https://www.who.int/data/gho/data/themes/hiv-aids",
+      "title": "HIV/AIDS — Global Health Observatory",
+      "publisher": "World Health Organization",
+      "author": "World Health Organization",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Los+Angeles&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Los Angeles (relation 207359)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Los Angeles, the sourced first-reported location, not an origin of the virus (origin is not claimed). WHO cumulative death range is given as printed with no stated year. CDC page itself notes June 4 vs 5; 5 June used.",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1981-06-05",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "CDC reports Pneumocystis pneumonia in five young men at three Los Angeles hospitals; two died.",
+        "source": "src-mmwr",
+        "consequence": false
+      },
+      {
+        "span": "1985",
+        "action": "region.fill { radius_km: 2000 }",
+        "caption": "The United Nations states that every region of the world has reported at least one HIV case.",
+        "source": "src-hivgov",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:34.901Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

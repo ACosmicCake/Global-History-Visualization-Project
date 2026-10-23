@@ -1,0 +1,251 @@
+{
+  "id": "place-chichen-itza",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "El Castillo (Temple of Kukulcan), Chichen Itza",
+  "summary": "El Castillo, also called the Temple of Kukulcan, is the nine-terraced stepped pyramid at the centre of Chichen Itza, a Maya-Toltec city in Yucatan, Mexico. Geophysical work dates the standing pyramid to about 900-1000 CE, and it encloses an older pyramid. The city has been a UNESCO World Heritage site since 1988.",
+  "when": {
+    "start": {
+      "year": 900
+    },
+    "end": {
+      "year": 1000
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 50,
+      "end_plus_years": 50,
+      "note": "The authors give the date of the standing pyramid as approximate; the Exploratorium says roughly AD 1000."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "dated approximately between the years 900 and 1000 AD",
+        "source": "src-geofisica"
+      },
+      {
+        "calendar": "CE",
+        "value": "built in roughly AD 1000",
+        "source": "src-exploratorium"
+      }
+    ],
+    "display": "c. 900-1000 CE"
+  },
+  "where": {
+    "lat": 20.682739,
+    "lon": -88.568654,
+    "elevation_m": null,
+    "modern_name": "El Castillo, Chichen Itza archaeological zone, Tinum, Yucatan, Mexico",
+    "historical_name": "El Castillo (Temple of Kukulcan), Chichen Itza, Maya-Toltec city, northern Yucatan peninsula",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-unesco483"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The best-known building of a UNESCO-listed Maya-Toltec city, whose equinox shadow display draws visitors worldwide."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0800-terminal-classic-maya-collapse",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco483",
+      "url": "https://whc.unesco.org/en/list/483",
+      "title": "Pre-Hispanic City of Chichen-Itza (World Heritage List no. 483)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": "1988",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-isprs-castillo",
+      "url": "https://isprs-archives.copernicus.org/articles/XLVIII-M-9-2025/1303/2025/isprs-archives-XLVIII-M-9-2025-1303-2025.pdf",
+      "title": "A Reexamination of the Substructure Inside the Castillo at Chichen Itza, Yucatan, Mexico",
+      "publisher": "ISPRS Archives (Copernicus Publications)",
+      "author": "Rissolo, D. et al.",
+      "date_published": "2025",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.footprint"
+      ]
+    },
+    {
+      "id": "src-geofisica",
+      "url": "https://www.redalyc.org/pdf/568/56850598006.pdf",
+      "title": "Interior Imaging of El Castillo Pyramid, Chichen Itza, Mexico, Using ERT-3D Methods: Preliminary Results",
+      "publisher": "Geofisica Internacional (UNAM), via Redalyc",
+      "author": "Chavez, R. E. et al.",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.materials",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-exploratorium",
+      "url": "https://annex.exploratorium.edu/ancientobs/chichen/HTML/castillo.html",
+      "title": "Ancient Observatories: Chichen Itza, El Castillo",
+      "publisher": "Exploratorium",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "model.footprint"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: stepped_pyramid (nine terraces, four stairs, summit temple). Height 24 m excludes the 6 m summit temple. Coordinates are the UNESCO property point, within about 0.1 km of the pyramid. Least sure of the facing stone; the opened papers say the infill is mostly limestone and give no facing material. Restoration dates (1930s) are from the same papers, not an INAH page.",
+  "model": {
+    "footprint": {
+      "description": "Square plan about 55.5 m on a side with nine terraces and a stairway on each of the four sides; the terrace and stair geometry is largely the result of 20th-century consolidation, while height and basal extent reflect the pre-abandonment form (ISPRS).",
+      "source": "src-isprs-castillo",
+      "method": "surveyed"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-isprs-castillo",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 24,
+          "unit": "m",
+          "source": "src-isprs-castillo",
+          "note": "pyramid without the summit temple; the temple adds 6 m"
+        },
+        {
+          "part": "base length",
+          "value": 55.5,
+          "unit": "m",
+          "source": "src-isprs-castillo",
+          "note": "approximately, per side of the square base"
+        },
+        {
+          "part": "base width",
+          "value": 55.5,
+          "unit": "m",
+          "source": "src-isprs-castillo",
+          "note": "square plan"
+        },
+        {
+          "part": "summit temple height",
+          "value": 6,
+          "unit": "m",
+          "source": "src-isprs-castillo"
+        },
+        {
+          "part": "tiers",
+          "value": 9,
+          "unit": "count",
+          "source": "src-geofisica",
+          "note": "nine bodies (levels) in the paper"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "square nine-terrace extrusion at true base and height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped pyramid with four stairways and a summit temple block"
+      },
+      {
+        "level": "street",
+        "representation": "nested earlier pyramid inside, per the ERT and scan studies, left unmodelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 900,
+        "end_year": 1000,
+        "state": "construction",
+        "description": "The standing pyramid was built, dated approximately 900-1000 CE; an earlier inner pyramid dates to about 850 CE.",
+        "source": "src-geofisica"
+      },
+      {
+        "start_year": 1000,
+        "end_year": 1929,
+        "state": "intact",
+        "description": "Pyramid stands; later use and reoccupation are not modelled.",
+        "source": "src-geofisica"
+      },
+      {
+        "start_year": 1930,
+        "end_year": null,
+        "state": "restored",
+        "description": "Restored in the 1930s, with further consolidation in the 20th century.",
+        "source": "src-geofisica"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 900,
+        "to_year": null,
+        "material": "limestone (infill; facing stone not stated in opened sources)",
+        "source": "src-geofisica"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:34.353Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

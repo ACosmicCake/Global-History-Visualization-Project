@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-maimonides",
+  "kind": "person",
+  "title": "Maimonides",
+  "summary": "Maimonides was born in Cordoba, Spain, in 1138 (EBSCO gives 1135), left Spain with his family after the Almohad invasion of 1148, reached Fez in 1160 and Egypt in 1166. He settled in Fustat in Cairo, completed his Guide of the Perplexed in 1190, became a noted physician, and died in 1204.",
+  "when": {
+    "start": {
+      "year": 1138
+    },
+    "end": {
+      "year": 1204
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 3,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth year differs: 1138 (Stanford) vs 1135 (EBSCO)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Born: 1138, Cordova, Spain",
+        "source": "src-sep-maimonides"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1135–1204",
+        "source": "src-ebsco-maimonides"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Died: 1204",
+        "source": "src-sep-maimonides"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "completed 1190",
+        "source": "src-sep-maimonides"
+      }
+    ],
+    "display": "1138–1204"
+  },
+  "where": {
+    "lat": 30.007548,
+    "lon": 31.2349526,
+    "elevation_m": null,
+    "modern_name": "Fustat, Cairo, Egypt (pin on his settled home and place of death per SEP)",
+    "historical_name": "Fustat, Ayyubid Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm-fustat"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "religion_philosophy",
+    "science_technology"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "Sources note his Guide of the Perplexed and his fame as a physician in Egypt."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-sep-maimonides",
+      "url": "https://plato.stanford.edu/entries/maimonides/",
+      "title": "Maimonides",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ebsco-maimonides",
+      "url": "https://www.ebsco.com/research-starters/history/moses-maimonides-writes-guide-perplexed",
+      "title": "Moses Maimonides Writes The Guide of the Perplexed",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-fustat",
+      "url": "https://nominatim.openstreetmap.org/search?q=Fustat+Cairo&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Fustat",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth year disputed between sources (1138 vs 1135). The Stanford entry text was read through a summarizing tool; the Fustat/Cordova wording is as it spelled it (\"Fostat\", \"Cordova\"). The Library of Congress page returned 403 and was not used.",
+  "audience_note": null,
+  "author": "historian-agent:o-s109",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:01:05.005Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "id": "-183my-karoo-ferrar-volcanism",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "event",
+  "title": "Karoo-Ferrar volcanism",
+  "summary": "Around 183 million years ago during the Early Jurassic, the Karoo-Ferrar large igneous province erupted vast volumes of flood basalt across southern Gondwana, spanning southern Africa and Antarctica. Magma sills intruded organic-rich sedimentary strata, releasing massive quantities of thermogenic greenhouse gases into the atmosphere. This provoked intense global warming and triggered the Toarcian Oceanic Anoxic Event, driving widespread marine deoxygenation and an extinction pulse among marine invertebrates.",
+  "when": {
+    "start": {
+      "year": -183000000
+    },
+    "end": {
+      "year": -182000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1000000,
+      "start_plus_years": 1000000,
+      "end_minus_years": 1000000,
+      "end_plus_years": 1000000,
+      "note": "High-precision radiometric dating places peak Karoo-Ferrar magmatism and carbon release at approximately 183 Ma, coinciding with the early Toarcian oceanic anoxic event (Ruhl et al. 2022; Font et al. 2022)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "oceanic anoxic event (T-OAE; ~183 Ma), has been linked to Karoo-Ferrar LIP emplacement",
+        "source": "src-ruhl2022-pmc"
+      },
+      {
+        "calendar": "Early Jurassic",
+        "value": "Karoo–Ferrar magmatism during the early Toarcian oceanic anoxic event",
+        "source": "src-font2022-pmc"
+      }
+    ],
+    "display": "c. 183 million years ago (Early Jurassic, Toarcian)"
+  },
+  "where": {
+    "lat": -30.4983,
+    "lon": 25.9793,
+    "elevation_m": null,
+    "modern_name": "Karoo Basin, South Africa (also spanning Ferrar province, Antarctica)",
+    "historical_name": "Southern Gondwana continental interior, Early Jurassic; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2000,
+    "coordinate_sources": [
+      "src-geonames-bethulie"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "antarctica"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Massive continental flood basalt volcanism triggered intense global warming, carbon cycle disruption, and the Toarcian Oceanic Anoxic Event."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-183my-toarcian-oceanic-anoxic-event",
+      "type": "caused",
+      "because": "Greenhouse gases released by Karoo-Ferrar flood basalts drove global warming and caused widespread marine deoxygenation during the Toarcian Oceanic Anoxic Event."
+    },
+    {
+      "id": "-200my-breakup-of-pangaea",
+      "type": "part_of"
+    },
+    {
+      "id": "-130my-opening-of-the-south-atlantic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ruhl2022-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9462690/",
+      "title": "Reduced plate motion controlled timing of Early Jurassic Karoo-Ferrar large igneous province volcanism",
+      "publisher": "Science Advances (AAAS, via PubMed Central)",
+      "author": "Micha Ruhl, Stephen P. Hesselbo, et al.",
+      "date_published": "2022-09-09",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-font2022-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8921222/",
+      "title": "Rapid light carbon releases and increased aridity linked to Karoo–Ferrar magmatism during the early Toarcian oceanic anoxic event",
+      "publisher": "Scientific Reports (Springer Nature, via PubMed Central)",
+      "author": "Eric Font, Luís Vítor Duarte, Mark J. Dekkers",
+      "date_published": "2022-03-14",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-bethulie",
+      "url": "https://www.geonames.org/1020641/bethulie.html",
+      "title": "Bethulie, Free State, South Africa (Karoo Basin)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the relative greenhouse contribution of mantle-derived volcanic degassing versus thermogenic methane and carbon dioxide generated by magma sills baking organic-rich sediments.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-183000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Around 183 million years ago during the Early Jurassic, the Karoo-Ferrar large igneous province erupted vast volumes of flood basalt across southern Gondwana, spanning southern Africa and Antarctica.",
+        "source": "src-ruhl2022-pmc"
+      },
+      {
+        "span": "-182000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "This provoked intense global warming and triggered the Toarcian Oceanic Anoxic Event, driving widespread marine deoxygenation and an extinction pulse among marine invertebrates.",
+        "source": "src-ruhl2022-pmc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T14:01:39.550Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

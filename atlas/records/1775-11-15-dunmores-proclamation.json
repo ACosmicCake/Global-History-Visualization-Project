@@ -1,0 +1,163 @@
+{
+  "id": "1775-11-15-dunmores-proclamation",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Lord Dunmore's Proclamation",
+  "summary": "Virginia's royal governor, Lord Dunmore, issued a proclamation dated 7 November 1775 and made public on 15 November. It declared martial law and freed indentured servants and enslaved people of rebels who could bear arms and joined the King's forces. It was reprinted in all thirteen colonies; about 300 freed people sailed with Dunmore to New York in early 1776.",
+  "when": {
+    "start": {
+      "year": 1775,
+      "iso": "1775-11-15"
+    },
+    "end": {
+      "year": 1775,
+      "iso": "1775-11-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dated 7 November 1775 (issued aboard a ship off Norfolk) but publicly announced 15 November; the record uses the announcement date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "7th Day of November, in the Sixteenth Year of His Majesty's Reign",
+        "source": "src-abt"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "publicly announced on November 15",
+        "source": "src-ev"
+      }
+    ],
+    "display": "15 November 1775 (dated 7 November)"
+  },
+  "where": {
+    "lat": 36.84681,
+    "lon": -76.28522,
+    "elevation_m": null,
+    "modern_name": "Norfolk, Virginia, USA (issued aboard a ship off Norfolk)",
+    "historical_name": "Off Norfolk, Virginia, British colony of Virginia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-gn-norfolk"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First large-scale British offer of freedom to enslaved people of rebels, which shaped Black enlistment and flight during the Revolutionary War."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "1783-black-loyalist-evacuation-to-nova-scotia",
+      "type": "caused",
+      "because": "Encyclopedia Virginia notes that roughly half of the 3,000 African Americans evacuated from Manhattan in 1783 had fled the coast largely because of the proclamation."
+    },
+    {
+      "id": "1792-black-loyalist-migration-sierra-leone",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ev",
+      "url": "https://encyclopediavirginia.org/entries/lord-dunmores-proclamation/",
+      "title": "Lord Dunmore's Proclamation",
+      "publisher": "Encyclopedia Virginia (Virginia Humanities)",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-abt",
+      "url": "https://battlefields.org/learn/primary-sources/lord-dunmores-proclamation-1775",
+      "title": "Lord Dunmore's Proclamation of 1775",
+      "publisher": "American Battlefield Trust",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-norfolk",
+      "url": "https://www.geonames.org/4776222/norfolk.html",
+      "title": "GeoNames: Norfolk",
+      "publisher": "GeoNames",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the battlefields.org page dates the proclamation 7 November; Encyclopedia Virginia gives 15 November for public announcement. Record id and date use 15 November. Coordinates are Norfolk city; the ship's position is not stated.",
+  "author": "historian-agent:o-s32",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:44:22.884Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1775-11-15",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Virginia's royal governor, Lord Dunmore, issued a proclamation dated 7 November 1775 and made public on 15 November.",
+        "source": "src-ev"
+      },
+      {
+        "span": "1775",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It declared martial law and freed indentured servants and enslaved people of rebels who could bear arms and joined the King's forces.",
+        "source": "src-ev",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

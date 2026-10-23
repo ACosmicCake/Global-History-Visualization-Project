@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-sterkfontein-cradle-of-humankind",
+  "kind": "place",
+  "title": "Sterkfontein Caves, Cradle of Humankind",
+  "summary": "Sterkfontein is a group of limestone caves in Gauteng, South Africa, within UNESCO's Fossil Hominid Sites of South Africa. Its deposits run from about 3.67 million to about 250,000 years ago and have yielded over 800 fossils from four hominin species, including the skull nicknamed Mrs Ples and the skeleton called Little Foot.",
+  "when": {
+    "start": {
+      "year": -3668050
+    },
+    "end": {
+      "year": -248050
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Converted as year = 1950 minus age. Popular Archaeology gives deposits from about 3.67 million to about 250,000 years ago; Mrs Ples 2.05-2.01 Ma and Little Foot 3.67 Ma (most recent estimate, classification debated)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "Deposits span from about 3.67 million years ago to about 250,000 years ago",
+        "source": "src-popular-arch"
+      }
+    ],
+    "display": "c. 3.67 million to 250,000 years ago"
+  },
+  "where": {
+    "lat": -26.0108,
+    "lon": 27.7334,
+    "elevation_m": null,
+    "modern_name": "Sterkfontein Caves, near Krugersdorp, Gauteng, South Africa",
+    "historical_name": "Sterkfontein Valley dolomite caves; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-saho-sterk",
+      "src-wd-sterk"
+    ],
+    "paleo": {
+      "lat": -27.83,
+      "lon": 28.08,
+      "age_ma": 3.67,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Reconstruction to 3.67 Ma moves the point about 210 km south."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "Richest source of Australopithecus africanus fossils and home of Little Foot, a core site of the Cradle of Humankind."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-homo-naledi",
+      "type": "related"
+    },
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related"
+    },
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-popular-arch",
+      "url": "https://popular-archaeology.com/article/sterkfontein-a-history-of-evolution-in-the-cradle-of-humanity/",
+      "title": "Sterkfontein: A History of Evolution in the Cradle of Humanity",
+      "publisher": "Popular Archaeology",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-915",
+      "url": "https://whc.unesco.org/en/list/915/",
+      "title": "Fossil Hominid Sites of South Africa",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-saho-sterk",
+      "url": "https://sahistory.org.za/ts/place/sterkfontein-caves-krugersdorp-within-cradle-humankind-world-heritage-site",
+      "title": "Sterkfontein Caves, Krugersdorp (within the Cradle of Humankind World Heritage Site)",
+      "publisher": "South African History Online",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-sterk",
+      "url": "https://www.wikidata.org/wiki/Q1476862",
+      "title": "Wikidata Q1476862: Sterkfontein, -26.01604, 27.73456",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=27.7334,-26.0108&time=3.67&model=MERDITH2021",
+      "title": "GPlates Web Service point reconstruction (MERDITH2021)",
+      "publisher": "GPlates Web Service (EarthByte Group, University of Sydney)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Main date is the full deposit span from Popular Archaeology; Little Foot is 3.67 Ma. Popular Archaeology says World Heritage declaration was 2000 while UNESCO dates the original listing 1999, so the summary gives no year. SAHO (-26.0108, 27.7334) and Wikidata (-26.01604, 27.73456) agree within 1 km. No cave height is on opened pages, so no 3D model was written. UNESCO page read via script fetch.",
+  "author": "historian-agent:o-s41",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:06:17.377Z"
+}

@@ -1,0 +1,141 @@
+{
+  "id": "1968-birth-of-reggae",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Birth of reggae",
+  "summary": "In 1968 the Maytals, led by Toots Hibbert, released \"Do the Reggay\". Bostonia says Hibbert coined the term reggae with that hit, and the Recording Academy calls him the first known artist to use the word on a record. The band had formed in Kingston, Jamaica, in 1962.",
+  "when": {
+    "start": {
+      "year": 1968
+    },
+    "end": {
+      "year": 1968
+    },
+    "precision": "year",
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "coined the term in 1968 with his hit \"Do the Reggay\"",
+        "source": "src-bostonia"
+      },
+      {
+        "calendar": "CE",
+        "value": "the first known artist to use the word \"reggae\" on a record ... 1968 song \"Do The Reggay\"",
+        "source": "src-grammy"
+      }
+    ],
+    "display": "1968"
+  },
+  "where": {
+    "lat": 17.99702,
+    "lon": -76.79358,
+    "elevation_m": null,
+    "modern_name": "Kingston, Jamaica",
+    "historical_name": "Kingston, Jamaica (independent from 1962)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-gn-kingston"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "art_music_literature"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The 1968 record is credited with giving reggae its name, and the genre became a major Jamaican export."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-bostonia",
+      "url": "https://www.bu.edu/bostonia/summer08/reggae/index.shtml",
+      "title": "The Rise of Reggae",
+      "publisher": "Bostonia, Boston University",
+      "author": "n.d.",
+      "date_published": "2008",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-grammy",
+      "url": "https://www.grammy.com/news/toots-hibbert-dead-toots-and-maytals/",
+      "title": "Toots Hibbert, GRAMMY-Winning Reggae Pioneer And Founder Of Toots And The Maytals, Dies At 77",
+      "publisher": "Recording Academy (Grammy.com)",
+      "author": "John Ochoa",
+      "date_published": "2020-09-13",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-kingston",
+      "url": "https://www.geonames.org/search.html?q=Kingston&country=JM",
+      "title": "Kingston, Jamaica",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Reggae as a sound emerged over time; this record dates only the 1968 naming record. Neither page says the song was recorded in Kingston; the pin is the band's home city as stated by the Recording Academy. No Bob Marley record exists in the atlas yet to link.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:45.526Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1968",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1968 the Maytals, led by Toots Hibbert, released \"Do the Reggay\".",
+        "source": "src-bostonia"
+      },
+      {
+        "span": "1968",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Bostonia says Hibbert coined the term reggae with that hit, and the Recording Academy calls him the first known artist to use the word on a record.",
+        "source": "src-bostonia",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

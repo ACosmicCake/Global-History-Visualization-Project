@@ -1,0 +1,320 @@
+{
+  "id": "place-acropolis-of-athens",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Acropolis of Athens",
+  "summary": "The Acropolis is the rocky hill above Athens, fortified from the 13th century BCE and a sanctuary of Athena from the 8th. Pericles' building programme added the Parthenon, built 447-438 BCE. The Parthenon later served as a church and a mosque and was wrecked in 1687 when Venetian bombardment struck an Ottoman powder store.",
+  "when": {
+    "start": {
+      "year": -1299
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the first fortification wall of the 13th century BC (UNESCO), astronomical -1299 to -1200; the Parthenon in the model was built 447-438 BC (Greek Ministry of Culture), with sculpture to 432 BC (MIT Libraries). End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (UNESCO)",
+        "value": "built during the 13th century BC",
+        "source": "src-unesco-404"
+      },
+      {
+        "calendar": "BC (Hellenic Ministry of Culture)",
+        "value": "Built between 447 and 438 BC",
+        "source": "src-gr-parthenon"
+      },
+      {
+        "calendar": "BCE (MIT Libraries)",
+        "value": "447 BCE-432 BCE",
+        "source": "src-mit-parthenon"
+      },
+      {
+        "calendar": "CE (Hellenic Ministry of Culture)",
+        "value": "on September 26th bombarded and destroyed the Parthenon",
+        "source": "src-gr-history"
+      }
+    ],
+    "display": "Fortified from the 13th century BCE; Parthenon built 447–438 BCE; wrecked 1687"
+  },
+  "where": {
+    "lat": 37.9715,
+    "lon": 23.72662,
+    "elevation_m": 156,
+    "modern_name": "Parthenon, Acropolis of Athens, Athens, Greece",
+    "historical_name": "Athenian Acropolis, sanctuary of Athena Polias, in the polis of Athens (Attica); later Frankish and Ottoman garrison hill",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-parthenon",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The most complete ancient Greek monumental complex still existing (UNESCO), whose Parthenon is a global symbol of classical Athens and must be visible from whole-planet view."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0507-classical-athens",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-404",
+      "url": "https://whc.unesco.org/en/list/404",
+      "title": "Acropolis, Athens (World Heritage List no. 404)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-gr-parthenon",
+      "url": "http://odysseus.culture.gr/h/2/eh251.jsp?obj_id=912",
+      "title": "Parthenon (Acropolis of Athens)",
+      "publisher": "Hellenic Ministry of Culture and Sports",
+      "author": "Hellenic Ministry of Culture and Sports",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-gr-history",
+      "url": "http://odysseus.culture.gr/h/3/eh351.jsp?obj_id=2384",
+      "title": "Acropolis of Athens: history",
+      "publisher": "Hellenic Ministry of Culture and Sports (Odysseus, history page)",
+      "author": "Hellenic Ministry of Culture and Sports (Odysseus, history page)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-mit-parthenon",
+      "url": "https://dome.mit.edu/handle/1721.3/155754?show=full",
+      "title": "Parthenon (Temple of Athena Parthenos), Richard Langendorf Collection",
+      "publisher": "MIT Libraries (Dome)",
+      "author": "MIT Libraries (Dome)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-ysma-trail",
+      "url": "https://www.ysma.gr/wp-content/uploads/2023/09/Acropolis_Parthenon_trail.pdf",
+      "title": "Acropolis Trail: the Parthenon",
+      "publisher": "Acropolis Restoration Service (Hellenic Ministry of Culture)",
+      "author": "Acropolis Restoration Service (Hellenic Ministry of Culture)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-parthenon",
+      "url": "https://nominatim.openstreetmap.org/search?q=Parthenon+Athens&format=json",
+      "title": "OpenStreetMap Nominatim: Parthenon, way 910010406 (37.9715034, 23.7266177)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 404, geolocation (37.97087, 23.72618)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Rectangular double-peripteral Doric temple on a stepped platform (top step) 69.5 m by 30.9 m, with eight columns on each short side and seventeen on the long sides, on the highest part of the Acropolis hill. Taken from the Ministry description and the MIT Libraries record; no survey polygon was opened.",
+      "source": "src-mit-parthenon",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "temple_colonnade",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-mit-parthenon",
+      "measurements": [
+        {
+          "part": "length (Parthenon)",
+          "value": 69.5,
+          "unit": "m",
+          "source": "src-mit-parthenon",
+          "note": "MIT record: \"length: 69.5 m\""
+        },
+        {
+          "part": "width (Parthenon)",
+          "value": 30.9,
+          "unit": "m",
+          "source": "src-mit-parthenon",
+          "note": "MIT record: \"width: 30.9  m\""
+        },
+        {
+          "part": "column height (each Doric column; the height to the roof is not given in the sources opened)",
+          "value": 10.43,
+          "unit": "m",
+          "source": "src-ysma-trail",
+          "note": "\"The total height of each column is 10.43m.\""
+        },
+        {
+          "part": "columns on each short side",
+          "value": 8,
+          "unit": "count",
+          "source": "src-gr-parthenon"
+        },
+        {
+          "part": "columns on each long side",
+          "value": 17,
+          "unit": "count",
+          "source": "src-gr-parthenon"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "rectangular colonnaded temple at true plan on the Acropolis rock"
+      },
+      {
+        "level": "local",
+        "representation": "procedural peripteral temple: 8 x 17 column peristyle, cella and pediments, in the state for the date"
+      },
+      {
+        "level": "street",
+        "representation": "pediments, metopes (92) and the cella frieze as labelled schematic reconstruction; the post-1687 ruin with its missing central columns"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -446,
+        "end_year": -437,
+        "state": "construction",
+        "description": "Periklean Parthenon (Parthenon III) built 447-438 BC by Iktinos and Kallikrates under Pheidias, replacing an earlier marble temple (Parthenon II) destroyed by the Persians in 480 BC.",
+        "source": "src-gr-parthenon"
+      },
+      {
+        "start_year": -437,
+        "end_year": -431,
+        "state": "construction",
+        "description": "Sculptural decoration completed (the MIT Libraries record dates the work 447-432 BCE).",
+        "source": "src-mit-parthenon"
+      },
+      {
+        "start_year": -431,
+        "end_year": 450,
+        "state": "intact",
+        "description": "The temple 'remained unchanged until the fifth century AD'; the end year is the midpoint of that century.",
+        "source": "src-gr-parthenon"
+      },
+      {
+        "start_year": 450,
+        "end_year": 1687,
+        "state": "altered",
+        "description": "Converted into a church dedicated first to Saint Sophia and later to the Panagia; under Turkish rule a mosque. The Venetians under Morosini besieged the Acropolis in 1687.",
+        "source": "src-gr-parthenon"
+      },
+      {
+        "start_year": 1687,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "On 26 September 1687 the Venetians bombarded the Parthenon, then used as a munitions store, and largely destroyed it; Lord Elgin removed much sculpture in the early nineteenth century. Conservation took place in 1896-1900 and 1922-1933 and a restoration programme has run since 1975.",
+        "source": "src-gr-parthenon"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -446,
+        "to_year": 2026,
+        "material": "marble",
+        "source": "src-mit-parthenon"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape temple_colonnade for the Parthenon; the place record is the whole Acropolis (UNESCO: about 170 by 350 m, hill 156 m). Least sure of the building's full height: only column height (10.43 m, Acropolis Restoration Service) was sourced, not the roof ridge, so treat it as a minimum. The 'intact' end year is the midpoint of 'the fifth century AD'. The MIT length and width sit in the page's embedded metadata JSON, which spotcheck strips; confirmed by reading the raw page. Coordinates are the Parthenon way in OpenStreetMap, about 70 m from UNESCO's point for the property.",
+  "author": "historian-agent:m-1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:35:33.610Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

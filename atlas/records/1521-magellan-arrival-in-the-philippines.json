@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1521-magellan-arrival-in-the-philippines",
+  "kind": "event",
+  "title": "Magellan arrives in the Philippines",
+  "summary": "Magellan's fleet reached the islands later called the Philippines in March 1521, first meeting inhabitants on Homonhon on 17 March. It moved on to Limasawa for an Easter Mass on 31 March and to Cebu on 7 April. Magellan was killed fighting on Mactan on 27 April.",
+  "when": {
+    "start": {
+      "year": 1521
+    },
+    "end": {
+      "year": 1521
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The Cebu timeline page says the expedition reached the islands on 16 March; the Library of Congress blog says contact on Homonhon was on 17 March. The Genoese pilot's account places Magellan's death on 28 April; the other sources say 27 April."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "March 17, 1521",
+        "source": "src-loc-philippines"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 16",
+        "source": "src-cebu500"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 31",
+        "source": "src-cebu500"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "27th April, 1521",
+        "source": "src-loc-philippines"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "28th day of April",
+        "source": "src-fordham-magellan2"
+      }
+    ],
+    "display": "16 March – 27 April 1521"
+  },
+  "where": {
+    "lat": 10.73333,
+    "lon": 125.71667,
+    "elevation_m": null,
+    "modern_name": "Homonhon Island, Eastern Samar, Philippines (first contact)",
+    "historical_name": "Islands later called the Philippines (San Lazarus Archipelago to the expedition); no unified polity",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 10.73333,
+          "lon": 125.71667,
+          "year": 1521.205,
+          "date": "March 17, 1521",
+          "label": "Homonhon: Magellan's crew first meet inhabitants. Point is the island.",
+          "source": "src-loc-philippines",
+          "coordinate_source": "src-wd-homonhon"
+        },
+        {
+          "lat": 9.931111,
+          "lon": 125.074444,
+          "year": 1521.244,
+          "date": "March 31, 1521",
+          "label": "Limasawa: the Spaniards hold the first Easter Sunday Mass. Point is the island.",
+          "source": "src-cebu500",
+          "coordinate_source": "src-wd-limasawa"
+        },
+        {
+          "lat": 10.293,
+          "lon": 123.902,
+          "year": 1521.263,
+          "date": "April 7, 1521",
+          "label": "Cebu: Magellan's three ships anchor at the port. Point is Cebu City.",
+          "source": "src-cebu500",
+          "coordinate_source": "src-wd-cebu"
+        },
+        {
+          "lat": 10.3,
+          "lon": 123.966667,
+          "year": 1521.318,
+          "date": "April 27, 1521",
+          "label": "Mactan Island, off Cebu: Magellan is killed. Point is the island.",
+          "source": "src-loc-philippines",
+          "coordinate_source": "src-wd-mactan"
+        }
+      ]
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wd-homonhon",
+      "src-wd-limasawa",
+      "src-wd-cebu",
+      "src-wd-mactan"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The first recorded European arrival in the Philippine islands, with lasting Spanish consequences."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1519-magellan-elcano-circumnavigation",
+      "type": "part_of"
+    },
+    {
+      "id": "1520-strait-of-magellan-passage",
+      "type": "caused_by",
+      "because": "The fleet reached the Philippines after crossing the Pacific it had entered through the strait."
+    },
+    {
+      "id": "1565-manila-galleon-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc-philippines",
+      "url": "https://blogs.loc.gov/international-collections/2021/10/negotiating-empire-part-i-from-magellan-to-the-founding-of-manila-16th-18th-centuries/",
+      "title": "Negotiating Empire, Part I: From Magellan to the Founding of Manila, 16th-18th Centuries",
+      "publisher": "Library of Congress",
+      "author": "Library of Congress",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cebu500",
+      "url": "https://500yoccebu.ph/timeline-towards-the-arrival-of-christianity-in-cebu-historical-account-from-march-16-1521-april-27-1521/",
+      "title": "Timeline towards the arrival of Christianity in Cebu: March 16, 1521 - April 27, 1521",
+      "publisher": "500 Years of Christianity in Cebu (500yoccebu.ph)",
+      "author": "500 Years of Christianity in Cebu (500yoccebu.ph)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-pmc-magellan",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9262276/",
+      "title": "Ferdinand Magellan (1480-1521) - 500 years from the expedition: the first step towards globalization",
+      "publisher": "National Library of Medicine (PubMed Central)",
+      "author": "National Library of Medicine (PubMed Central)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-fordham-magellan2",
+      "url": "https://sourcebooks.fordham.edu/mod/1519magellan.asp",
+      "title": "Account of Magellan's voyage by a Genoese pilot",
+      "publisher": "Fordham University, Internet History Sourcebooks",
+      "author": "Fordham University, Internet History Sourcebooks",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-homonhon",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1626237.json",
+      "title": "Wikidata entry for Homonhon (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-limasawa",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q31826201.json",
+      "title": "Wikidata entry for Limasawa (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-cebu",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1467.json",
+      "title": "Wikidata entry for Cebu City (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-mactan",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q685318.json",
+      "title": "Wikidata entry for Mactan (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the arrival date (16 vs 17 March) and Magellan's death date (27 vs 28 April); the Cebu timeline does not name Homonhon, and the Library of Congress blog does not date Limasawa or Cebu. Other pages date Cebu events differently and were not used. The wider voyage is in 1519-magellan-elcano-circumnavigation.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1521-03-17",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "The fleet makes first contact with inhabitants on Homonhon Island, then holds an Easter Mass at Limasawa on 31 March.",
+        "source": "src-loc-philippines",
+        "consequence": false
+      },
+      {
+        "span": "1521-04-07 / 1521-04-27",
+        "action": "path.trace {}",
+        "caption": "Three ships anchor at Cebu on 7 April; on 27 April Magellan attacks Mactan, is overpowered, and is killed.",
+        "source": "src-cebu500",
+        "consequence": false
+      },
+      {
+        "span": "1521-04-27",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "After Magellan's death, Spain gained no lasting foothold until Legazpi reached Cebu in 1565 and Manila became a Spanish city in 1571.",
+        "source": "src-loc-philippines",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:53.638Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

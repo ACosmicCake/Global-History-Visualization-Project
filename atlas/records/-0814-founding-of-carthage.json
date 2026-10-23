@@ -1,0 +1,158 @@
+{
+  "id": "-0814-founding-of-carthage",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Founding of Carthage",
+  "summary": "By tradition, Phoenician settlers from Tyre founded Carthage on the coast of North Africa in 814 BCE. Later accounts name Elissa, a Tyrian princess better known as Dido, as the founder, but the story is legendary. Carthage began as a minor port and was a major centre of trade by the 4th century BCE.",
+  "when": {
+    "start": {
+      "year": -813
+    },
+    "end": {
+      "year": -813
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "814 BCE is the traditional date (astronomical -813). World History Encyclopedia says the founder's historicity has been challenged but the founding dates to about this time; the account is legendary."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE, traditional",
+        "value": "founded c. 814 BCE by the legendary Phoenician queen Dido",
+        "source": "src-wh-carthage"
+      },
+      {
+        "calendar": "BCE, tradition",
+        "value": "according to tradition, Carthage was founded in 814 BCE by a Phoenician princess named Elissa",
+        "source": "src-livius-found"
+      }
+    ],
+    "display": "814 BCE (traditional)"
+  },
+  "where": {
+    "lat": 36.853056,
+    "lon": 10.323056,
+    "elevation_m": null,
+    "modern_name": "Carthage, Tunis Governorate, Tunisia",
+    "historical_name": "Carthage, a colony of Tyre on the North African coast; the settlement was on the hill later called Byrsa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-pleiades-carthage"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Origin of the city that became a major Mediterranean trading centre and Rome's rival."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0263-punic-wars",
+      "type": "related"
+    },
+    {
+      "id": "-0145-destruction-of-carthage",
+      "type": "related"
+    },
+    {
+      "id": "0439-vandal-capture-of-carthage",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wh-carthage",
+      "url": "https://www.worldhistory.org/carthage/",
+      "title": "Carthage",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-livius-found",
+      "url": "https://livius.org/sources/content/the-founding-of-carthage",
+      "title": "Pompeius Trogus on the Founding of Carthage",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-pleiades-carthage",
+      "url": "https://pleiades.stoa.org/places/314921/json",
+      "title": "Pleiades gazetteer entry for Carthage (coordinates)",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades gazetteer (ISAW, New York University)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "814 BCE",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Tradition has Elissa of Tyre land on the African coast, win ground by the ox-hide trick, and found the city.",
+        "source": "src-livius-found",
+        "consequence": false
+      },
+      {
+        "span": "4th century BCE",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "The minor port that served Phoenician traders has become a major centre of trade.",
+        "source": "src-wh-carthage",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: the date is traditional and the founder legendary; the record marks it contested. Livius adds that Carthage was founded seventy-two years before Rome. 813 vs 814 BCE variants (Timaeus) were not on the opened pages. Pleiades point is a representative site point.",
+  "author": "historian-agent:o-s55",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:13:34.397Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

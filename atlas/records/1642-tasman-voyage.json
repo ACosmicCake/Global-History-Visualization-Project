@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1642-tasman-voyage",
+  "kind": "event",
+  "title": "Abel Tasman's voyage of 1642-43",
+  "summary": "In 1642 Abel Tasman left Batavia with the Dutch East India Company ships Heemskerck and Zeehaen to search for the Southern Continent. He sighted Van Diemen's Land (Tasmania) on 24 November, reached New Zealand's South Island on 13 December, where a deadly clash followed at Murderers Bay (now Golden Bay), then went on to Tonga and Fiji and returned to Batavia on 15 June 1643.",
+  "when": {
+    "start": {
+      "year": 1642,
+      "iso": "1642-08-14"
+    },
+    "end": {
+      "year": 1643,
+      "iso": "1643-06-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Departure and return dates from the Princeton University Library page (corroborated for departure by New Zealand Geographic). Dutch-calendar dates are given as in the sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "As in source",
+        "value": "On August 14, 1642, Tasman departed from Batavia with two ships, the Heemskerck and Zeehaen",
+        "source": "src-princeton"
+      },
+      {
+        "calendar": "As in source",
+        "value": "He arrived back safely on June 15, 1643",
+        "source": "src-princeton"
+      },
+      {
+        "calendar": "As in source",
+        "value": "reached the Dutch provisioning base at Mauritius on September 5, 1642, having left the roadstead at Batavia on August 14",
+        "source": "src-nzgeo"
+      }
+    ],
+    "display": "14 August 1642 - 15 June 1643"
+  },
+  "where": {
+    "lat": -6.134836,
+    "lon": 106.813222,
+    "elevation_m": null,
+    "modern_name": "Batavia (now Jakarta), Indonesia (departure) via Mauritius, Tasmania and New Zealand",
+    "historical_name": "Batavia, Dutch East India Company (VOC), Dutch East Indies",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -6.134836,
+          "lon": 106.813222,
+          "year": 1642.616,
+          "date": "14 August 1642",
+          "label": "Batavia: Heemskerck and Zeehaen depart.",
+          "source": "src-princeton",
+          "coordinate_source": "src-wd-batavia"
+        },
+        {
+          "lat": -20.2,
+          "lon": 57.5,
+          "year": 1642.677,
+          "date": "5 September 1642",
+          "label": "Mauritius: arrival at the Dutch provisioning base (island centre shown).",
+          "source": "src-nzgeo",
+          "coordinate_source": "src-wd-mauritius"
+        },
+        {
+          "lat": -42.883333,
+          "lon": 147.316667,
+          "year": 1642.921,
+          "date": "December 1642 (journal entry of 3 December; land first sighted 24 November)",
+          "label": "Van Diemen's Land, in the vicinity of today's Hobart (the page gives no exact landing point).",
+          "source": "src-princeton",
+          "coordinate_source": "src-wd-hobart"
+        },
+        {
+          "lat": -40.666667,
+          "lon": 172.833333,
+          "year": 1642.948,
+          "date": "13 December 1642",
+          "label": "Murderers Bay (today's Golden Bay), South Island: land sighted; clash with local Māori follows.",
+          "source": "src-princeton",
+          "coordinate_source": "src-wd-goldenbay"
+        },
+        {
+          "lat": -34.158,
+          "lon": 172.092,
+          "year": 1643.014,
+          "date": "6 January 1643",
+          "label": "Three Kings Islands: reached; surf and reefs prevent landing.",
+          "source": "src-princeton",
+          "coordinate_source": "src-wd-threekings"
+        },
+        {
+          "lat": -6.134836,
+          "lon": 106.813222,
+          "year": 1643.452,
+          "date": "15 June 1643",
+          "label": "Batavia: Tasman returns, having covered more than five thousand miles.",
+          "source": "src-princeton",
+          "coordinate_source": "src-wd-batavia"
+        }
+      ]
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wd-batavia",
+      "src-wd-mauritius",
+      "src-wd-hobart",
+      "src-wd-goldenbay",
+      "src-wd-threekings"
+    ]
+  },
+  "regions": [
+    "oceania",
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "First recorded European contact with Van Diemen's Land and New Zealand; neither was visited again by Europeans for over a century."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1602-dutch-east-india-company",
+      "type": "related"
+    },
+    {
+      "id": "1768-cook-endeavour-voyage",
+      "type": "related"
+    },
+    {
+      "id": "1280-polynesian-settlement-of-new-zealand",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-princeton",
+      "url": "https://static-prod.lib.princeton.edu/visual_materials/maps/websites/pacific/tasman/tasman.html",
+      "title": "Abel Janszoon Tasman (Maps of the Pacific, Princeton University Library)",
+      "publisher": "Princeton University Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nzgeo",
+      "url": "https://www.nzgeo.com/stories/abel-tasman/",
+      "title": "Abel Tasman",
+      "publisher": "New Zealand Geographic",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-batavia",
+      "url": "https://www.wikidata.org/wiki/Q1199713",
+      "title": "Wikidata: Batavia",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-mauritius",
+      "url": "https://www.wikidata.org/wiki/Q1027",
+      "title": "Wikidata: Mauritius",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-hobart",
+      "url": "https://www.wikidata.org/wiki/Q40191",
+      "title": "Wikidata: Hobart",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-goldenbay",
+      "url": "https://www.wikidata.org/wiki/Q1512616",
+      "title": "Wikidata: Golden Bay",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-threekings",
+      "url": "https://www.wikidata.org/wiki/Q2093907",
+      "title": "Wikidata: Manawatāwhi / Three Kings Islands",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources disagree on the Murderers Bay losses: Princeton says four of Tasman's men were killed; New Zealand Geographic says three were killed and a fourth mortally injured. The summary avoids a number. Tonga and Fiji are named by New Zealand Geographic (Tonga and Fiji) and Princeton (Fiji) without dates, so they have no waypoints. Hobart is only the page's \"vicinity\" pointer, and the Golden Bay waypoint is where land was first met on 13 December, not the clash date. Māori are named as in the source (\"local Māori\"); the incident is described from Dutch records.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 34,
+    "beats": [
+      {
+        "span": "1642-11-24",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Tasman sights new land and names it Van Diemen's Land after the Dutch East India Company's governor-general at Batavia.",
+        "source": "src-princeton",
+        "consequence": false
+      },
+      {
+        "span": "1642-12-13",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "The ships reach New Zealand's South Island; the first European meeting with Māori ends in deaths and the place is named Murderers Bay.",
+        "source": "src-princeton",
+        "consequence": false
+      },
+      {
+        "span": "1643-06-15",
+        "action": "path.trace {}",
+        "caption": "Tasman returns to Batavia; for over a century, until Cook's first voyage, no other European visits Tasmania or New Zealand.",
+        "source": "src-princeton",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s59",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:39:20.521Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "polity-asante-empire",
+  "kind": "polity",
+  "title": "Asante Empire",
+  "summary": "Asante, centred on Kumasi in what is now Ghana, was established around 1680 under Osei Tutu and overthrew Denkyira in 1701. Its rulers sat on the Golden Stool, and the state sold gold and enslaved people to European traders for firearms. It fought Britain repeatedly between 1824 and 1902, when it became a British Crown colony.",
+  "when": {
+    "start": {
+      "year": 1680
+    },
+    "end": {
+      "year": 1902
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 21,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Pages give the founding as \"about 1680\" (Encyclopedia.com) and 1670 (ACONA), with Denkyira overthrown in 1701; end is the annexation as a Crown colony on 1 January 1902 per Encyclopedia.com. ACONA instead says annexation in January 1896 or 26 September 1901."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "In about 1680",
+        "source": "src-encycl-asante"
+      },
+      {
+        "calendar": "CE",
+        "value": "January 1, 1902: Ashanti became a British Crown colony",
+        "source": "src-encycl-asante"
+      },
+      {
+        "calendar": "CE",
+        "value": "The Asante kingdom was established in 1670",
+        "source": "src-acona-asante"
+      },
+      {
+        "calendar": "CE",
+        "value": "The Asante defeated Denkyira (1701)",
+        "source": "src-acona-asante"
+      }
+    ],
+    "display": "c. 1680 to 1902"
+  },
+  "where": {
+    "lat": 6.7,
+    "lon": -1.625,
+    "elevation_m": null,
+    "modern_name": "Kumasi, Ashanti Region, Ghana",
+    "historical_name": "Kumasi, capital of the Asante Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-kumasi"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Major West African state that resisted British expansion for decades."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions the sale of enslaved people to European traders.",
+  "related": [
+    {
+      "id": "person-yaa-asantewaa",
+      "type": "related"
+    },
+    {
+      "id": "1957-ghana-independence",
+      "type": "related"
+    },
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encycl-asante",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/ashanti-empire",
+      "title": "Ashanti Empire",
+      "publisher": "Encyclopedia.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-acona-asante",
+      "url": "https://www.acona.org/asante-history",
+      "title": "Asante History",
+      "publisher": "Asanteman Association of North America",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-kumasi",
+      "url": "https://www.wikidata.org/wiki/Q182059",
+      "title": "Kumasi (Q182059)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Founding date varies by page (1670, about 1680, 1701 for the Denkyira defeat). Pin is Kumasi as capital. Sources are reference-level; a scholarly check is advisable.",
+  "author": "historian-agent:o-s39",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:55:19.636Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

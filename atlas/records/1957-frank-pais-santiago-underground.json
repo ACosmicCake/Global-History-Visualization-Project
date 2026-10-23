@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes a killing by police.",
+  "author": "historian-agent:o-s14",
+  "updated": "2026-10-22",
+  "id": "1957-frank-pais-santiago-underground",
+  "kind": "event",
+  "title": "Santiago de Cuba urban underground and the death of Frank País, 30 July 1957",
+  "summary": "Frank País led the 26th of July Movement's underground in Santiago de Cuba, including the failed uprising of 30 November 1956 meant to support Castro's Granma landing. Police killed him in Santiago on 30 July 1957, a loss to the movement's urban network.",
+  "when": {
+    "start": {
+      "year": 1957
+    },
+    "end": {
+      "year": 1957
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Death date is consistent across both sources; the underground activity began earlier (the Santiago uprising was on 30 November 1956)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "b. 1934; d. 30 July 1957",
+        "source": "src-enc-pais"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On July 30, 1957, the National Coordinator of the “26 of July Movement,” Frank País was killed",
+        "source": "src-cubacenter-pais"
+      }
+    ],
+    "display": "30 July 1957"
+  },
+  "where": {
+    "lat": 20.021667,
+    "lon": -75.829444,
+    "elevation_m": null,
+    "modern_name": "Santiago de Cuba, Cuba",
+    "historical_name": "Santiago de Cuba, Oriente Province, Republic of Cuba",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-santiago"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "people"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Death of the 26th of July Movement's urban coordinator, central to the revolution's city underground."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1953-cuban-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "1956-12-02-granma-landing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-enc-pais",
+      "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/pais-frank-1934-1957",
+      "title": "País, Frank (1934–1957)",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Gale",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-cubacenter-pais",
+      "url": "https://cubacenter.org/cuban-history/2018/07/23/this-day-in-cuban-history-1-9/",
+      "title": "This Day in Cuban History: The death of Frank País",
+      "publisher": "Cuba Center",
+      "author": "Cuba Center",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-santiago",
+      "url": "https://www.wikidata.org/wiki/Q117040",
+      "title": "Wikidata item Q117040 (Santiago de Cuba), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Both sources give 30 July 1957 in Santiago. Accounts of the circumstances (safe house, betrayal, street) differ and are left out; the pin is the city centre. The 30 November 1956 uprising is confirmed on the Encyclopedia.com page.",
+  "published_at": "2026-10-22T05:06:29.242Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1957",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Frank País led the 26th of July Movement's underground in Santiago de Cuba, including the failed uprising of 30 November 1956 meant to support Castro's Granma landing.",
+        "source": "src-enc-pais"
+      },
+      {
+        "span": "1957",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Police killed him in Santiago on 30 July 1957, a loss to the movement's urban network.",
+        "source": "src-enc-pais",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1972-ho-chi-minh-trail",
+  "kind": "process",
+  "title": "Ho Chi Minh Trail (Truong Son Strategic Supply Route)",
+  "summary": "In May 1959 North Vietnam ordered a \"special trail\", run by the 559th Transportation Group, that became the Truong Son Strategic Supply Route along the Laos border mountains. Trucks left Vinh and crossed passes into Laos; the route shifted into Laos in early 1961. Vietnamese state media count about 20,000 km of roads. A US Air Force historian describes the interdiction of the trail as failing to stop stockpiling for the 1972 Easter offensive.",
+  "when": {
+    "start": {
+      "year": 1959
+    },
+    "end": {
+      "year": 1975
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 1,
+      "end_plus_years": 0,
+      "note": "Start is May 1959; the VNA article gives a 1959-1975 construction period but states no operating end date, so 1975 is inferred from that period."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "In May 1959, the Lao Dong, the Communist Party of Vietnam, ordered the creation of a \"special trail\"",
+        "source": "src-afa"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "From 1959-1975",
+        "source": "src-vna"
+      }
+    ],
+    "display": "1959–1975 (interdiction essentially ended early 1972)"
+  },
+  "where": {
+    "lat": 17.6719466,
+    "lon": 105.765391,
+    "elevation_m": null,
+    "modern_name": "Truong Son route from Vinh through Mu Gia Pass, Laos, to Tchepone (Xepon)",
+    "historical_name": "Democratic Republic of Vietnam and the Kingdom of Laos (Truong Son Strategic Supply Route)",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 18.7358406,
+          "lon": 105.6906101,
+          "year": 1959.38,
+          "date": "May 1959 (trail ordered)",
+          "label": "Vinh: the source says trucks left Vinh for Laos; the date is that of the order, not of a Vinh departure.",
+          "source": "src-afa",
+          "coordinate_source": "src-osm-vinh"
+        },
+        {
+          "lat": 17.6719466,
+          "lon": 105.765391,
+          "year": 1961.1,
+          "date": "early 1961 (route shifted into Laos)",
+          "label": "Mu Gia Pass: one of three passes (with Ban Karai and Ban Raving) named for truck crossings into Laos.",
+          "source": "src-afa",
+          "coordinate_source": "src-osm-mugia"
+        },
+        {
+          "lat": 16.7854884,
+          "lon": 106.2895542,
+          "year": 1961.2,
+          "date": "early 1961 (route shifted into Laos)",
+          "label": "Tchepone (Xepon): the source gives 80 miles from Mu Gia to Tchepone; the point is the OSM district centre.",
+          "source": "src-afa",
+          "coordinate_source": "src-osm-xepon"
+        }
+      ]
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-osm-mugia",
+      "src-osm-vinh",
+      "src-osm-xepon"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The main North Vietnamese supply network during the Vietnam War and a main target of US air interdiction."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1955-vietnam-war",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-afa",
+      "url": "https://www.airandspaceforces.com/article/1105trail/",
+      "title": "The Ho Chi Minh Trail",
+      "publisher": "Air & Space Forces Magazine",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-vna",
+      "url": "https://vietnam.vnanet.vn/english/exhibition-recalls-memories-of-historic-ho-chi-minh-trail/417418.html",
+      "title": "Exhibition recalls memories of historic Ho Chi Minh Trail",
+      "publisher": "Vietnam News Agency",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-mugia",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Mu%20Gia%20Pass",
+      "title": "OpenStreetMap Nominatim: Mu Gia Pass",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-vinh",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Vinh%20Nghe%20An",
+      "title": "OpenStreetMap Nominatim: Vinh",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-xepon",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Xepon%20Laos",
+      "title": "OpenStreetMap Nominatim: Xepon district",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The record id says 1972; the Air & Space Forces article says interdiction essentially ended in early 1972 and the Easter offensive began on 30 March 1972, but the trail itself ran 1959-1975 per VNA. The end year 1975 is inferred from VNA (\"1959 to 1975\"). The 20,000 km figure is Vietnamese state media; the same AFA article gives John Prados at about 12,000 miles, so lengths conflict. Waypoint years are the dates the source attaches to the trail stage (May 1959 order; early 1961 shift into Laos), not dates of passage at each point. Bombing totals conflict across sources and are omitted.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1959-05",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "In May 1959 the Lao Dong party orders a \"special trail\" run by the 559th Transportation Group.",
+        "source": "src-afa",
+        "consequence": false
+      },
+      {
+        "span": "1961",
+        "action": "path.trace {}",
+        "caption": "In early 1961 North Vietnam shifts the route into Laos; trucks cross from Vinh through passes such as Mu Gia.",
+        "source": "src-afa",
+        "consequence": false
+      },
+      {
+        "span": "1972",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "In early 1972 interdiction ends; a US general concludes it failed to stop stockpiling for the March Easter offensive.",
+        "source": "src-afa",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:07.043Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

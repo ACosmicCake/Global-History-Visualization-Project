@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": "Describes mass killing and sexual violence against civilians, including children. Offer a skip option and avoid graphic imagery.",
+  "author": "historian-agent:o-s16",
+  "updated": "2026-10-22",
+  "id": "1994-rwandan-genocide",
+  "kind": "event",
+  "title": "Rwandan Genocide",
+  "summary": "From 6 April 1994, after the presidents of Rwanda and Burundi died in a plane crash, systematic massacres killed a large share of Rwanda's Tutsi population. Killing continued until the RPF took military control on 4 July. Estimates run from at least 500,000 (Human Rights Watch) to more than one million (UN).",
+  "when": {
+    "start": {
+      "year": 1994,
+      "iso": "1994-04-06"
+    },
+    "end": {
+      "year": 1994,
+      "iso": "1994-07-04"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start per the UN page; HRW calls 6 April the date the genocide is generally understood to begin. The UN says killings continued in some areas until 4 July."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "6 April 1994",
+        "source": "src-un"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "4 July 1994",
+        "source": "src-un"
+      }
+    ],
+    "display": "6 April – 4 July 1994"
+  },
+  "where": {
+    "lat": -1.94995,
+    "lon": 30.05885,
+    "elevation_m": null,
+    "modern_name": "Rwanda (national scale; pin at Kigali)",
+    "historical_name": "Republic of Rwanda",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-geonames-kigali"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "One of the 20th century's defining genocides, with lasting effects on international law and intervention policy."
+  },
+  "numbers": [
+    {
+      "field": "deaths",
+      "label": "Killed, UN historical background",
+      "low": 1000000,
+      "high": null,
+      "unit": "people",
+      "estimate": true,
+      "source": "src-un",
+      "note": "UN page: more than one million estimated to have perished."
+    },
+    {
+      "field": "deaths",
+      "label": "Killed, HRW conclusion",
+      "low": 500000,
+      "high": null,
+      "unit": "people",
+      "estimate": true,
+      "source": "src-hrw",
+      "note": "HRW concludes at least half a million; its own calculation gives about 507,000 Tutsi."
+    },
+    {
+      "field": "deaths",
+      "label": "Rwandans who died April-July 1994, UN expert cited by HRW",
+      "low": 800000,
+      "high": 800000,
+      "unit": "people",
+      "estimate": true,
+      "source": "src-hrw",
+      "note": "HRW notes this figure includes deaths from causes other than genocide."
+    }
+  ],
+  "related": [
+    {
+      "id": "1948-12-09-genocide-convention",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-un",
+      "url": "https://www.un.org/en/preventgenocide/rwanda/historical-background.shtml",
+      "title": "The Genocide against the Tutsi in Rwanda: Historical Background",
+      "publisher": "United Nations Outreach Programme on the Rwanda Genocide",
+      "author": "United Nations Outreach Programme on the Rwanda Genocide",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "numbers.deaths",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hrw",
+      "url": "https://www.hrw.org/legacy/reports/1999/rwanda/Geno1-3-04.htm",
+      "title": "Leave None to Tell the Story: Genocide in Rwanda (death toll section)",
+      "publisher": "Human Rights Watch",
+      "author": "Human Rights Watch",
+      "date_published": "1999",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "numbers.deaths",
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames-kigali",
+      "url": "https://www.geonames.org/search.html?q=Kigali&country=RW",
+      "title": "GeoNames: Kigali, Rwanda",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll is contested (HRW 500,000+ vs UN more than 1 million); the pin is the capital, not a site. Who carried out the killings is deliberately not stated here because the pages I opened give it only indirectly.",
+  "published_at": "2026-10-22T05:24:14.137Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

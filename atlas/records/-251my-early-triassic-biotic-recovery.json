@@ -1,0 +1,146 @@
+{
+  "id": "-251my-early-triassic-biotic-recovery",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "event",
+  "title": "Early Triassic biotic recovery",
+  "summary": "Following the end-Permian mass extinction, terrestrial and marine ecosystems endured a protracted recovery spanning the five million years of the Early Triassic until the Middle Triassic Anisian stage. Suppressed by repeated thermal crises and widespread ocean anoxia, global biodiversity remained low while opportunistic disaster taxa dominated, until rebuilt trophic networks and ecological niches allowed modern marine faunas, archosaurs, and early ancestors of dinosaurs and mammals to radiate.",
+  "when": {
+    "start": {
+      "year": -251902000
+    },
+    "end": {
+      "year": -246700000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 24000,
+      "start_plus_years": 24000,
+      "note": "Start is the Permian-Triassic boundary at 251.902 ± 0.024 Ma (ICS Chart 2024/12); end is the Early-Middle Triassic boundary (base of Anisian) at ~246.7 Ma when complex trophic webs and reef ecosystems reappeared."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ICS chronostratigraphic chart v2024/12 (Ma)",
+        "value": "251.902 ±0.024",
+        "source": "src-ics-chart"
+      },
+      {
+        "calendar": "Geological duration, tetrapod diversification",
+        "value": "sustained through the Early and Middle Triassic",
+        "source": "src-sahney-benton-2008"
+      }
+    ],
+    "display": "c. 251.9–246.7 Ma (Early Triassic, ~5 million years)"
+  },
+  "where": {
+    "lat": 0,
+    "lon": 0,
+    "elevation_m": null,
+    "modern_name": "Global marine and terrestrial biospheres (global process)",
+    "historical_name": "Pangaean terrestrial and Panthalassan marine biospheres",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-sahney-benton-2008"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "The five-million-year biotic recovery following the end-Permian extinction reshaped the biosphere, enabling the emergence of the modern evolutionary fauna and the evolutionary radiation of archosaurs."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "caused_by",
+      "because": "The catastrophic loss of over 80 percent of marine and terrestrial species required an extensive restructuring of ecological food webs across the Early Triassic."
+    },
+    {
+      "id": "-252my-karoo-basin-terrestrial-turnover",
+      "type": "related"
+    },
+    {
+      "id": "species-lystrosaurus",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ics-chart",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2024-12.pdf",
+      "title": "International Chronostratigraphic Chart (version 2024/12)",
+      "publisher": "International Commission on Stratigraphy",
+      "author": "K. M. Cohen, D. A. T. Harper, P. L. Gibbard, J.-X. Fan",
+      "date_published": "2024-12",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-sahney-benton-2008",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2596898/",
+      "title": "Recovery from the most profound mass extinction of all time (Proceedings of the Royal Society B: Biological Sciences 275:759–765)",
+      "publisher": "The Royal Society (via PubMed Central)",
+      "author": "Sarda Sahney, Michael J. Benton",
+      "date_published": "2008-01-15",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "importance"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the relative roles of episodic heat spikes versus persistent oceanic anoxia in delaying reef and benthic ecosystem recovery until the Middle Triassic.",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-251902000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Following the end-Permian mass extinction, terrestrial and marine ecosystems endured a protracted recovery spanning the five million years of the Early Triassic until the Middle Triassic Anisian stage.",
+        "source": "src-ics-chart"
+      },
+      {
+        "span": "-246700000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Suppressed by repeated thermal crises and widespread ocean anoxia, global biodiversity remained low while opportunistic disaster taxa dominated, until rebuilt trophic networks and ecological niches allowed modern marine…",
+        "source": "src-ics-chart",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T07:06:48.679Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

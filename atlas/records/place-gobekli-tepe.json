@@ -1,0 +1,243 @@
+{
+  "id": "place-gobekli-tepe",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Göbekli Tepe",
+  "summary": "Göbekli Tepe, on a limestone ridge near Şanlıurfa in south-eastern Türkiye, holds circular enclosures of T-shaped limestone pillars built by hunter-gatherers in the Pre-Pottery Neolithic, about 9600-8800 BCE. Its two central pillars stand about 5.5 m tall. The enclosures were deliberately backfilled and have been excavated since 1996.",
+  "when": {
+    "start": {
+      "year": -9599
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 200,
+      "start_plus_years": 400,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of the PPNA, 'ca. 9600-8800 BCE' for the Layer III enclosures (Penn Museum, citing DAI); the DAI project page gives 9600-8000 calBC for the early and middle PPN as a whole and UNESCO the 10th-9th millennia BC. End is the present: the site is excavated and preserved."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Penn Museum, citing DAI)",
+        "value": "9600–8800 BCE",
+        "source": "src-penn-expedition"
+      },
+      {
+        "calendar": "calBC (DAI)",
+        "value": "9600-8000 calBC",
+        "source": "src-dai-tepe"
+      },
+      {
+        "calendar": "BC (UNESCO)",
+        "value": "10th-9th millennia BC",
+        "source": "src-unesco-1572"
+      }
+    ],
+    "display": "Enclosures built c. 9600–8800 BCE; excavated since 1996"
+  },
+  "where": {
+    "lat": 37.22324,
+    "lon": 38.92236,
+    "elevation_m": null,
+    "modern_name": "Göbekli Tepe, Örencik, Haliliye, Şanlıurfa Province, Türkiye",
+    "historical_name": "Göbekli Tepe, a hilltop sanctuary of Pre-Pottery Neolithic hunter-gatherers in Upper Mesopotamia; no polity or place-name is recorded for this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 5,
+    "justification": "One of the first manifestations of monumental architecture (UNESCO), built before farming, it changes the story of how settled life began."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-1572",
+      "url": "https://whc.unesco.org/en/list/1572",
+      "title": "Göbekli Tepe (World Heritage List no. 1572)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-penn-expedition",
+      "url": "https://www.penn.museum/sites/expedition/cult-as-a-driving-force-of-human-history/",
+      "title": "Cult as a Driving Force of Human History",
+      "publisher": "Penn Museum (Expedition Magazine)",
+      "author": "DAI Göbekli Tepe Research Project authors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-dai-tepe",
+      "url": "https://tepetelegrams.wordpress.com/the-research-project/",
+      "title": "The Site (Göbekli Tepe Research Project)",
+      "publisher": "German Archaeological Institute (DAI), Tepe Telegrams",
+      "author": "German Archaeological Institute (DAI), Tepe Telegrams",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 1572, geolocation",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Several round to oval enclosures of T-shaped pillars linked by limestone walls and benches, with two larger pillars standing in the centre of each; Enclosure D is the largest and best preserved. Diameters are published only as a range (10-20 m, DAI; 10-30 m, Penn Museum). No georeferenced plan was opened.",
+      "source": "src-dai-tepe",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "ring",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-dai-tepe",
+      "measurements": [
+        {
+          "part": "height (central pillars)",
+          "value": 5.5,
+          "unit": "m",
+          "source": "src-unesco-1572",
+          "note": "UNESCO: pillars \"up to 5.50 meters tall\"; Penn Museum and DAI: central pair about 5.5 m"
+        },
+        {
+          "part": "height (ring pillars)",
+          "value": 4,
+          "unit": "m",
+          "source": "src-penn-expedition",
+          "note": "Penn Museum: ring pillars \"up to 4 m high\""
+        },
+        {
+          "part": "enclosure diameter (upper end of the published range)",
+          "value": 20,
+          "unit": "m",
+          "source": "src-dai-tepe",
+          "note": "DAI: \"The circles measure 10-20 m.\"; Penn Museum gives 10- to 30-m-wide enclosures"
+        },
+        {
+          "part": "central pillars per enclosure",
+          "value": 2,
+          "unit": "count",
+          "source": "src-dai-tepe",
+          "note": "\"two bigger pillars\" in the centre of each enclosure"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "ring of T-shaped pillars at the true enclosure diameter on the tell"
+      },
+      {
+        "level": "local",
+        "representation": "procedural enclosure: ring of T-pillars joined by walls and benches, with the two taller central pillars"
+      },
+      {
+        "level": "street",
+        "representation": "pillar-level detail only where a source gives it (low-relief belts and loincloths, animals) as a schematic, labelled reconstruction"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -9599,
+        "end_year": -8799,
+        "state": "construction",
+        "description": "Layer III: the monumental enclosures of T-shaped pillars built in the PPNA, ca. 9600-8800 BCE, and perhaps into the very early PPNB.",
+        "source": "src-penn-expedition"
+      },
+      {
+        "start_year": -8799,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "All enclosures were intentionally backfilled and buried at the end of their use-lives (the date of the backfilling is not stated in the sources opened); smaller rectangular buildings of Layer II (9th millennium BC) follow. Excavated since 1996.",
+        "source": "src-penn-expedition"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -9599,
+        "to_year": 2026,
+        "material": "monolithic T-shaped limestone pillars, each carved from one piece of limestone, set in limestone walls and benches",
+        "source": "src-dai-tepe"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape ring (enclosures of T-pillars, per the brief). Least sure of the enclosure diameter: the only published figures are ranges (DAI 10-20 m; Penn Museum 10-30 m), so 20 m is the upper end of the DAI range, not a measured diameter of Enclosure D. The date the enclosures were backfilled is unsourced, so the 'ruined' phase begins at the end of the PPNA range. The DAI's own blog (dainst.blog) was unreachable, so the Tepe Telegrams mirror on wordpress.com is cited.",
+  "author": "historian-agent:m-1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:35:32.968Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "id": "place-lighthouse-of-alexandria",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Lighthouse of Alexandria (Pharos)",
+  "aliases": [
+    "Pharos of Alexandria"
+  ],
+  "summary": "The Pharos was a lighthouse built on the island of Pharos at the entrance to Alexandria's harbour in Egypt, c. 300–280 BCE under Ptolemy I and II. Modern estimates of its height run from 100 to 140 m. Earthquakes damaged it repeatedly, and one account says a quake in 1375 reduced what stood to rubble; Sultan Qaitbay later built a fort on its foundation.",
+  "when": {
+    "start": {
+      "year": -299
+    },
+    "end": {
+      "year": 1375
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 5,
+      "note": "Start is c. 300 BCE (astronomical -299) from World History Encyclopedia, which gives c. 300–280 BCE; the Suda date of 297 BC and Eusebius dates of 284/283 BC are in the Chicago page. End is 1375, when the Chicago page says an earthquake seems finally to have reduced the remains to rubble; World History Encyclopedia puts the final collapse in the 1330s and the Muslim Heritage page cites 1365 (Vrettos), so the end is uncertain."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "c. 300 - 280 BCE, during the reigns of Ptolemy I and II",
+        "source": "src-whe-pharos"
+      },
+      {
+        "calendar": "BC (Encyclopaedia Romana, University of Chicago)",
+        "value": "constructed by Ptolemy I in 297 BC",
+        "source": "src-chicago-pharos"
+      },
+      {
+        "calendar": "CE (Encyclopaedia Romana, University of Chicago)",
+        "value": "Another earthquake in 1375 seems finally to have reduced whatever might still have been standing to rubble.",
+        "source": "src-chicago-pharos"
+      }
+    ],
+    "display": "Built c. 300–280 BCE; ruined by earthquakes by the 14th century CE"
+  },
+  "where": {
+    "lat": 31.2136787,
+    "lon": 29.8854132,
+    "elevation_m": null,
+    "modern_name": "Citadel of Qaitbay, Alexandria, Egypt (built on the foundation of the Pharos)",
+    "historical_name": "Pharos, on the island of Pharos at the entrance to the harbour of Alexandria, Ptolemaic Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-qaitbay"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of the best-known lighthouses of the ancient Mediterranean, described by Strabo and Pliny the Elder (World History Encyclopedia)."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-whe-pharos",
+      "url": "https://www.worldhistory.org/Lighthouse_of_Alexandria/",
+      "title": "Lighthouse of Alexandria",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-chicago-pharos",
+      "url": "https://penelope.uchicago.edu/encyclopaedia_romana/greece/paganism/pharos.html",
+      "title": "Pharos: The Lighthouse at Alexandria",
+      "publisher": "University of Chicago, LacusCurtius (Encyclopaedia Romana)",
+      "author": "University of Chicago, LacusCurtius (Encyclopaedia Romana)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-mh-pharos",
+      "url": "https://muslimheritage.com/lighthouse-of-alexandria/",
+      "title": "Lighthouse of Alexandria in the sources from Islamic Civilisation",
+      "publisher": "Muslim Heritage (FSTC)",
+      "author": "Cem Nizamoglu",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-qaitbay",
+      "url": "https://nominatim.openstreetmap.org/search?q=Citadel+of+Qaitbay+Alexandria&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Qaitbay Castle, way 28826432 (31.2136787, 29.8854132)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A square base of about 30 by 30 m (McKenzie, as reported by Muslim Heritage), under a tower of three stages: rectangular, octagonal and cylindrical (Chicago page, citing al-Balawi). The tower no longer exists.",
+      "source": "src-mh-pharos",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "tower",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-chicago-pharos",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 122,
+          "unit": "m",
+          "source": "src-chicago-pharos",
+          "note": "the 1195 measurement of three sections (121, 81 and 31 dhira) gives about 244 dhira or \"122 meters (400 feet)\"; modern estimates range from 100 to 140 m (World History Encyclopedia); Behrens-Abouseif gives about 132 m, or 106 m with a shorter unit"
+        },
+        {
+          "part": "base length",
+          "value": 30,
+          "unit": "m",
+          "source": "src-mh-pharos",
+          "note": "\"on a base c. 30 by 30 m [98 by 98 ft] square\" (McKenzie, via Muslim Heritage)"
+        },
+        {
+          "part": "base width",
+          "value": 30,
+          "unit": "m",
+          "source": "src-mh-pharos"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "tower at the harbour entrance, drawn only while the phases say it stood"
+      },
+      {
+        "level": "local",
+        "representation": "procedural square-based tower about 122 m high on a 30 x 30 m base; height is an estimate"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -299,
+        "end_year": -279,
+        "state": "construction",
+        "description": "Begun by Ptolemy I and completed some 20 years later by Ptolemy II (c. 300-280 BCE).",
+        "source": "src-whe-pharos"
+      },
+      {
+        "start_year": -279,
+        "end_year": 796,
+        "state": "intact",
+        "description": "The pages opened record no damage before the earthquake of AD 796.",
+        "source": "src-chicago-pharos"
+      },
+      {
+        "start_year": 796,
+        "end_year": 1303,
+        "state": "altered",
+        "description": "The 796 earthquake left only the square section standing; a wooden cupola was built on top in about AD 875; earthquakes in 950/951 and 955/956 threw down about thirty cubits.",
+        "source": "src-chicago-pharos"
+      },
+      {
+        "start_year": 1303,
+        "end_year": 1375,
+        "state": "ruined",
+        "description": "A destructive tremor in 1303 that al-Mansuri said destroyed the Pharos; by 1349 it was too ruinous to enter.",
+        "source": "src-chicago-pharos"
+      },
+      {
+        "start_year": 1375,
+        "end_year": null,
+        "state": "destroyed",
+        "description": "An earthquake in 1375 seems finally to have reduced the remains to rubble; in 1479 Sultan Qaitbay used the stones for a fort on its foundation. Other pages date the final collapse to the 1330s or 1365.",
+        "source": "src-chicago-pharos"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape tower; the real form was three stages, so a plain tower is an approximation. Confidence contested: height estimates run 100-200 m across pages (World History Encyclopedia 100-140; Muslim Heritage 103-118 or 140-183); I used the 122 m of the 1195 measurement from the Chicago page. The 30 x 30 m base is a modern scholar (McKenzie) quoted on Muslim Heritage, a non-institutional site (class other). Destruction date differs by page (1303 damage, 1330s, 1365, 1375); I used 1375 from Chicago. Coordinates are the Qaitbay Citadel, which the Chicago page says stands on the Pharos foundation.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:36.019Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

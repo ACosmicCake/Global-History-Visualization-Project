@@ -1,0 +1,166 @@
+{
+  "id": "0455-vandal-sack-of-rome",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Vandal sack of Rome",
+  "summary": "In June 455 CE, King Gaiseric's Vandals landed from Carthage and thoroughly plundered Rome for fourteen days following the assassination of Emperor Petronius Maximus. Pope Leo I negotiated an entry without slaughter, but the Vandals stripped the city's wealth, temples, and palaces and took thousands of captives.",
+  "when": {
+    "start": {
+      "year": 455,
+      "iso": "0455-06-02"
+    },
+    "end": {
+      "year": 455,
+      "iso": "0455-06-16"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Chronicler Prosper dates entry to 2 June 455 for 14 days; Mathisen notes some sources suggest late May 455."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian (Victor of Tonnena / modern scholarly encyclopedia)",
+        "value": "fourteen whole days denuded the city of all its riches and took with him the daughters and wife of Valentinian",
+        "source": "src-dir-petmax"
+      },
+      {
+        "calendar": "Historical narrative (Procopius, Wars 3.5.4)",
+        "value": "plundered also the temple of Jupiter Capitolinus",
+        "source": "src-procopius-vandal-1b"
+      }
+    ],
+    "display": "2–16 June 455 CE"
+  },
+  "where": {
+    "lat": 41.8902,
+    "lon": 12.4922,
+    "elevation_m": null,
+    "modern_name": "Rome, Italy (Palatine, Capitoline, Forum)",
+    "historical_name": "Roma, Western Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The fourteen-day systematic stripping of Rome's monumental wealth and capture of the imperial family left the western empire powerless and fiscally ruined."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0410-sack-of-rome-by-alaric",
+      "type": "related"
+    },
+    {
+      "id": "0439-vandal-capture-of-carthage",
+      "type": "caused_by",
+      "because": "Vandal control of Carthage provided the naval base and maritime fleet to attack Rome."
+    },
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "455-06",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "In June 455, Gaiseric's Vandals systematically plunder Rome's palaces and temples over fourteen days.",
+        "source": "src-dir-petmax",
+        "consequence": false
+      },
+      {
+        "span": "455",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "The Vandals carry off Rome's treasure and the imperial family to Carthage, crippling the Western empire.",
+        "source": "src-procopius-vandal-1b",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-dir-petmax",
+      "url": "https://roman-emperors.sites.luc.edu/petmax.htm",
+      "title": "Petronius Maximus (17 March 455 - 22 May 455)",
+      "publisher": "De Imperatoribus Romanis: An Online Encyclopedia of Roman Rulers (Loyola University Chicago)",
+      "author": "Ralph W. Mathisen",
+      "date_published": "1997",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-procopius-vandal-1b",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Procopius/Wars/3B*.html",
+      "title": "Procopius, History of the Wars, Book III: The Vandalic War (Part 2)",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+      "author": "Procopius; translated by H. B. Dewing",
+      "date_published": "1916",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "where",
+        "what",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070/rome.html",
+      "title": "Rome, Italy",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact start date (2 June 455 in Prosper versus 24 May in Mathisen's commentary on Fasti Vindobonenses).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:34.397Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

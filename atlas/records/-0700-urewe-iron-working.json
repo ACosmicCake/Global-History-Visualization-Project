@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s99",
+  "updated": "2026-10-22",
+  "id": "-0700-urewe-iron-working",
+  "kind": "period",
+  "title": "Urewe culture and early iron working in Great Lakes Africa",
+  "summary": "Archaeologists date the Urewe culture of Great Lakes Africa from about 500 BC to AD 800, a span that includes early iron production. A burial in Rwanda dated to the mid-first millennium AD held iron-production products. Studies of smelting debris from Rwanda and Burundi note that African iron smelting is attested from at least the first part of the 1st millennium BC, with slag-pit furnaces the earliest type.",
+  "when": {
+    "start": {
+      "year": -499
+    },
+    "end": {
+      "year": 800
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 100,
+      "end_plus_years": 100,
+      "note": "Span as stated by Giblin, Clement and Humphris: approximately 500 BC to AD 800. 500 BC converted to astronomical year -499. The Historical Metallurgy abstract says smelting is attested from at least the first part of the 1st millennium BC in West and East Africa generally, so the id year -700 is only a lookup key."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC/AD",
+        "value": "from approximately 500 BC to AD 800",
+        "source": "src-azania2010"
+      },
+      {
+        "calendar": "BC/AD",
+        "value": "attested from at least the first part of the 1st millennium BC",
+        "source": "src-hms2007"
+      }
+    ],
+    "display": "c. 500 BC to AD 800"
+  },
+  "where": {
+    "lat": -1,
+    "lon": 33,
+    "elevation_m": null,
+    "modern_name": "Lake Victoria region, Great Lakes Africa",
+    "historical_name": "Great Lakes Africa, no polity named in the sources",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wikidata-q5505"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "science_technology",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Marks the long Early Iron Age tradition of Great Lakes Africa in which iron smelting was practised."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-0500-nok-culture-iron-metallurgy",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-azania2010",
+      "url": "https://researchers.westernsydney.edu.au/en/publications/an-urewe-burial-in-rwanda-exchange-health-wealth-and-violence-c-a/",
+      "title": "An Urewe burial in Rwanda: exchange, health, wealth and violence c. AD 400 (Azania 45(3):276-297), publication record and abstract",
+      "publisher": "Western Sydney University research portal (Azania, Taylor & Francis)",
+      "author": "John Giblin, Anna Clement, Jane Humphris",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-hms2007",
+      "url": "https://www.hmsjournal.org/index.php/home/article/view/218",
+      "title": "Early Iron Age iron-smelting debris from Rwanda and Burundi, East Africa (Historical Metallurgy 41(1):1-14)",
+      "publisher": "Historical Metallurgy Society (Historical Metallurgy journal)",
+      "author": "Paul Craddock, Ian Freestone, Andrew Middleton, Marie-Claude Van Grunderbeek",
+      "date_published": "2007",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q5505",
+      "url": "https://www.wikidata.org/wiki/Q5505",
+      "title": "Lake Victoria (Wikidata Q5505)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the point is Lake Victoria as a rough centre of Great Lakes Africa; neither source names a site there. The id year (-700) differs from the sourced 500 BC start. The HMS abstract was read only as an abstract.",
+  "published_at": "2026-10-22T17:57:14.101Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-499",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Archaeologists date the Urewe culture of Great Lakes Africa from about 500 BC to AD 800, a span that includes early iron production.",
+        "source": "src-azania2010"
+      },
+      {
+        "span": "800",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "A burial in Rwanda dated to the mid-first millennium AD held iron-production products.",
+        "source": "src-azania2010",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

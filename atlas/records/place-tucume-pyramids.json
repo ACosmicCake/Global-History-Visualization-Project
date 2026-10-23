@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-tucume-pyramids",
+  "kind": "place",
+  "title": "Túcume pyramids (Huaca Larga)",
+  "summary": "Túcume, in Lambayeque in northern Peru, is a complex of adobe pyramids (huacas), also called Cerro La Raya. It was an elite urban centre from at least AD 1000 until the Spanish arrived in 1532, used by the Lambayeque, then the Chimú and the Inca. Huaca Larga, 700 m by 280 m and about 30 m high, is probably the most extensive building in the Americas.",
+  "when": {
+    "start": {
+      "year": 1000
+    },
+    "end": {
+      "year": 1532
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Mincetur dates the elite urban centre from at least AD 1000 to the Spaniards' arrival in 1532 and also notes abandonment around 1533."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "al menos el año 1000 d.C.",
+        "source": "src-mincetur-tucume"
+      },
+      {
+        "calendar": "CE",
+        "value": "alrededor del año 1,000 d.C.",
+        "source": "src-huacas-tucume"
+      }
+    ],
+    "display": "c. 1000 to 1532 CE"
+  },
+  "where": {
+    "lat": -6.5128983,
+    "lon": -79.839213,
+    "elevation_m": null,
+    "modern_name": "Túcume Archaeological Complex, Túcume district, Lambayeque, Peru (pin at the Huaca Larga monument node)",
+    "historical_name": "Túcume, Lambayeque (Sicán) centre, later under Chimú and Inca rule",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-huacalarga"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Large adobe pyramid city of the Lambayeque, Chimú and Inca periods in coastal Peru."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-tawantinsuyu",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mincetur-tucume",
+      "url": "https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=3792",
+      "title": "Complejo Arqueológico Túcume (tourism resource inventory)",
+      "publisher": "MINCETUR, Peru (Ministry of Foreign Trade and Tourism)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-huacas-tucume",
+      "url": "https://www.huacasdelperu.com/tucume.html",
+      "title": "Túcume, capital de los Lambayeque",
+      "publisher": "Huacas del Perú (Lizardo Tavera)",
+      "author": "Lizardo Tavera",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-huacalarga",
+      "url": "https://nominatim.openstreetmap.org/search?q=Huaca+Larga+T%C3%BAcume&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Huaca Larga, Túcume",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Huaca Larga platform pyramid, 700 m long and an average 280 m wide, from the Peruvian government tourism-resource inventory.",
+      "source": "src-mincetur-tucume",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "mound",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-mincetur-tucume",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 30,
+          "unit": "m",
+          "source": "src-mincetur-tucume",
+          "note": "Huaca Larga, \"alrededor de 30 m de alto\""
+        },
+        {
+          "part": "base length",
+          "value": 700,
+          "unit": "m",
+          "source": "src-mincetur-tucume",
+          "note": "Huaca Larga, 700 m de largo"
+        },
+        {
+          "part": "base width",
+          "value": 280,
+          "unit": "m",
+          "source": "src-mincetur-tucume",
+          "note": "Huaca Larga, 280 m de ancho (average)"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "elongated platform footprint 700 m by 280 m"
+      },
+      {
+        "level": "local",
+        "representation": "procedural long platform mound about 30 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1000,
+        "end_year": 1375,
+        "state": "construction",
+        "description": "Lambayeque builders founded Túcume and its first huacas from about AD 1000.",
+        "source": "src-huacas-tucume"
+      },
+      {
+        "start_year": 1375,
+        "end_year": 1532,
+        "state": "altered",
+        "description": "Chimú builders enlarged Huaca Larga; a Chimú mural dates to about 1375; it was the seat of power under Chimú and Inca occupations.",
+        "source": "src-mincetur-tucume"
+      },
+      {
+        "start_year": 1533,
+        "end_year": null,
+        "state": "ruined",
+        "description": "City abandoned around 1533, soon after the Spanish conquest.",
+        "source": "src-mincetur-tucume"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Model covers Huaca Larga only (700 by 280 by about 30 m, one government inventory; a travel page gives 270 m width and a news page 270 m). Least sure of when Huaca Larga itself was built; the phase dates come from the occupation sequence. Shape mound chosen as closest to a long adobe platform. The huacasdelperu site is a personal site, so the second independent publisher is weak.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:12:12.713Z"
+}

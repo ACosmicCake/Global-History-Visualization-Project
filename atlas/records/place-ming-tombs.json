@@ -1,0 +1,147 @@
+{
+  "id": "place-ming-tombs",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Ming Tombs, Beijing",
+  "summary": "The Ming Tombs are the burial grounds of thirteen Ming emperors, laid out in a valley at the foot of Tianshou Mountain north of Beijing after the capital moved there. Building began with the tomb of Emperor Chengzu in 1409, and later emperors placed theirs on both sides over about 200 years. A sacred avenue of about 7.3 km serves the individual tombs.",
+  "when": {
+    "start": {
+      "year": 1409
+    },
+    "end": {
+      "year": 1659
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of the Changling tomb of Emperor Chengzu in 1409 (ICOMOS). End 1659 is the last year of the Siling tomb, given as 1642-59 in the same ICOMOS list; ICOMOS also says the tombs were built 'over the period of 200 years'. The tombs still stand."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "The construction of these tombs started with the tomb of Emperor Chengzu, in 1409.",
+        "source": "src-icomos-1004bis"
+      },
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "The subsequent emperors built their tombs on both sides of the first over the period of 200 years",
+        "source": "src-icomos-1004bis"
+      },
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "Siling (1642-59)",
+        "source": "src-icomos-1004bis"
+      }
+    ],
+    "display": "Begun 1409; built over about 200 years"
+  },
+  "where": {
+    "lat": 40.253333,
+    "lon": 116.2175,
+    "elevation_m": null,
+    "modern_name": "Ming Tombs, Changping District, Beijing, China",
+    "historical_name": "The Ming imperial tombs in a valley at the foot of Tianshou Mountain, north of Beijing, the Ming capital",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-mingtombs",
+      "src-osm-mingtombs"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "ICOMOS describes the site as the funeral grounds of 13 Ming emperors, laid out along a sacred way of about 7.3 km; UNESCO lists the Ming Tombs in Beijing as an addition (2003) to the Imperial Tombs of the Ming and Qing Dynasties."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-icomos-1004bis",
+      "url": "https://whc.unesco.org/document/151507",
+      "title": "Advisory Body Evaluation (ICOMOS): Extension of the Royal Tombs of the Ming and Qing Dynasties, no. 1004bis",
+      "publisher": "ICOMOS",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-unesco-1004",
+      "url": "https://whc.unesco.org/en/list/1004/",
+      "title": "Imperial Tombs of the Ming and Qing Dynasties (World Heritage List no. 1004)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance"
+      ]
+    },
+    {
+      "id": "src-wikidata-mingtombs",
+      "url": "https://www.wikidata.org/wiki/Q41135",
+      "title": "Wikidata Q41135: Ming tombs, coordinate location (40.25333, 116.2175)",
+      "publisher": "Wikimedia Foundation (Wikidata)",
+      "author": "Wikimedia Foundation (Wikidata)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-osm-mingtombs",
+      "url": "https://nominatim.openstreetmap.org/search?q=Ming+Tombs+Beijing&format=json",
+      "title": "OpenStreetMap Nominatim: scenic-area station (40.2386353, 116.2018465)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No model: the ICOMOS text gives distances and the 7.3 km avenue but no height and plan for a single structure. The tombs spread over a valley, so the point is a general location (Wikidata; the OSM point is a visitor station about 1.7 km away) with a 5 km uncertainty; UNESCO's page gives no coordinate for this component. Title avoids a 'Thirteen Tombs' name because the pages opened do not use it.",
+  "author": "historian-agent:m-17",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T13:20:02.889Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

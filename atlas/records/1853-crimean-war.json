@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1853-crimean-war",
+  "kind": "event",
+  "title": "Crimean War",
+  "summary": "War in which Russia fought Turkey and its allies Britain, France and Sardinia-Piedmont. It began with Russia's occupation of Moldavia and Wallachia in 1853. The allies landed in the Crimea in September 1854 and besieged Sevastopol, which Russia gave up in September 1855. The Treaty of Paris of 30 March 1856 neutralised the Black Sea.",
+  "when": {
+    "start": {
+      "year": 1853
+    },
+    "end": {
+      "year": 1856
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources differ on start: the Internet Encyclopedia of Ukraine gives 1853 (Russian occupation of the Danubian principalities in June 1853); the National Army Museum gives 1854-56 (the British-involved war)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1853-6",
+        "source": "src-ieu"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 1853",
+        "source": "src-ieu"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1854-56",
+        "source": "src-nam"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "30 March 1856",
+        "source": "src-nam"
+      }
+    ],
+    "display": "1853–1856"
+  },
+  "where": {
+    "lat": 44.6172,
+    "lon": 33.4941,
+    "elevation_m": null,
+    "modern_name": "Sevastopol, Crimea (proxy pin for the main theatre of war)",
+    "historical_name": "Sevastopol, Crimea, Russian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Major 19th-century European war between Russia and Britain, France and the Ottomans, ended by the Treaty of Paris and the neutralisation of the Black Sea."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nam",
+      "url": "https://www.nam.ac.uk/explore/crimean-war",
+      "title": "Crimean War",
+      "publisher": "National Army Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ieu",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CR%5CCrimeanWar.htm",
+      "title": "Crimean War",
+      "publisher": "Internet Encyclopedia of Ukraine (Canadian Institute of Ukrainian Studies, University of Alberta)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://wiki.openstreetmap.org/wiki/Sevastopol",
+      "title": "Sevastopol - OpenStreetMap Wiki",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start year 1853 vs 1854 differs by source; Sevastopol's fall is 8 Sept (NAM) vs 2 Sept 1855 (IEU), so summary says only September 1855. Pin is a proxy; fighting also occurred elsewhere.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T00:04:39.844Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1853",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "War in which Russia fought Turkey and its allies Britain, France and Sardinia-Piedmont.",
+        "source": "src-nam"
+      },
+      {
+        "span": "1856",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It began with Russia's occupation of Moldavia and Wallachia in 1853.",
+        "source": "src-nam",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-252my-siberian-traps-magmatism",
+  "kind": "event",
+  "title": "Siberian Traps large igneous province",
+  "summary": "Vast lava, ash and sill eruptions built the Siberian Traps in northern Russia around 252 million years ago, starting some 300,000 years before the end-Permian extinction. About two-thirds of the volcanic material erupted over roughly 300,000 years, and the minimum total volume was about 3 million cubic kilometres.",
+  "when": {
+    "start": {
+      "year": -252240000
+    },
+    "end": {
+      "year": -251400000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 120000,
+      "start_plus_years": 120000,
+      "end_minus_years": 120000,
+      "end_plus_years": 120000,
+      "note": "Burgess and Bowring (2015): base of Maymecha-Kotuy lavas at least 252.24 +/-0.12 Ma; lavas continued for at least 500 ky after the extinction ended. The end date is derived by the agent from the extinction age (about 251.9 Ma) plus 500 ky, as a lower bound."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon",
+        "value": "base of the Maymecha-Kotuy lava section is at least 252.24 +/-0.12 Ma; eruptions began roughly 300 ky before extinction onset",
+        "source": "src-burgess"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "extinction peaked about 252.3 million years ago",
+        "source": "src-scinews"
+      }
+    ],
+    "display": "c. 252.2–251.4 million years ago"
+  },
+  "where": {
+    "lat": 69.3535,
+    "lon": 88.2027,
+    "elevation_m": null,
+    "modern_name": "Noril'sk, Krasnoyarsk Krai, Russia (northern Siberian Traps lava section; the province spans the Siberian platform)",
+    "historical_name": "Siberian platform, northern margin of Pangaea (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames-norilsk"
+    ],
+    "paleo": {
+      "lat": 61.85,
+      "lon": 35.38,
+      "age_ma": 252,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 69.35, 88.20 reconstructed to 252 Ma. PALEOMAP gives 53.46 N, 36.49 E."
+    }
+  },
+  "regions": [
+    "europe",
+    "central_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The largest continental volcanic event linked to the end-Permian extinction, the most severe in Earth history."
+  },
+  "related": [
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "caused",
+      "because": "Dating shows the main eruptions began about 300,000 years before the extinction and continued through it."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-burgess",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4643808",
+      "title": "High-precision geochronology confirms voluminous magmatism before, during, and after Earth's most severe extinction (Burgess and Bowring, Science Advances 1:e1500470)",
+      "publisher": "Science Advances / AAAS (via PubMed Central)",
+      "author": "Science Advances / AAAS (via PubMed Central)",
+      "date_published": "2015",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-scinews",
+      "url": "https://www.sci.news/paleontology/science-end-permian-mass-extinction-01756.html",
+      "title": "End-Permian mass extinction took only 60,000 years, say researchers",
+      "publisher": "Sci.News",
+      "author": "Sci.News",
+      "date_published": "2014-02-11",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames-norilsk",
+      "url": "https://www.geonames.org/search.html?q=Norilsk",
+      "title": "GeoNames: Noril'sk, Russia",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Regions follow UN M49 (Russia is Eastern Europe) with Central Asia as a secondary tag, a judgement call. The pin is Noril'sk, a northern lava-section locality; the province centre lies further south. The source gave no coordinates for the traps. Volume: Burgess and Bowring give a minimum of about 3 x 10^6 km3 and a broader range of 1 to over 10 x 10^6 km3.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:26.614Z"
+}

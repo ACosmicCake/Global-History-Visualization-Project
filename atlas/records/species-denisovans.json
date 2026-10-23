@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s3",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "species-denisovans",
+  "kind": "species",
+  "title": "Denisovans",
+  "summary": "Denisovans were an archaic human population first identified in 2010 from DNA of a finger bone found in Denisova Cave in the Altai Mountains of Siberia. A sister group to Neanderthals, they occupied the cave from at least 200,000 years ago until about 50,000 years ago, and some modern populations, such as Melanesians, carry their DNA.",
+  "when": {
+    "start": {
+      "year": -200000
+    },
+    "end": {
+      "year": -50000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "note": "Dates are for the Denisova Cave occupation; the species range across Asia is not established here. Years ago converted to year numbers without a 1950 adjustment (error far smaller than the uncertainty)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago, radiocarbon and luminescence dating",
+        "value": "occupied the cave from at least 200,000 years ago; disappeared around 50,000 years ago",
+        "source": "src-shh"
+      }
+    ],
+    "display": "from at least 200,000 to about 50,000 years ago"
+  },
+  "where": {
+    "lat": 51.3976,
+    "lon": 84.6762,
+    "elevation_m": null,
+    "modern_name": "Denisova Cave, Altai Mountains, Russia",
+    "historical_name": "Denisova Cave, Altai foothills, southern Siberia; no polities at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames-denisova"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "The first archaic human group defined from DNA alone, it reshaped understanding of human evolution and interbreeding."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "species-homo-neanderthalensis",
+      "type": "related"
+    },
+    {
+      "id": "-47ka-neanderthal-modern-human-interbreeding",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-shh",
+      "url": "https://www.shh.mpg.de/1192251/denisovan-neanderthal-douka",
+      "title": "New Studies Reveal Deep History of Denisovans and Neanderthals in Southern Siberia",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "author": null,
+      "date_published": "2019-01-30",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ucsc",
+      "url": "https://news.ucsc.edu/2010/12/denisovans/",
+      "title": "Denisovans: Fossils reveal secrets about mysterious humans",
+      "publisher": "University of California, Santa Cruz",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-denisova",
+      "url": "https://www.geonames.org/search.html?q=Denisova+Cave",
+      "title": "GeoNames search results: Denisova Cave",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Outline is for the species via its type locality. Pages disagree on age of the original finger bone (UCSC 2010 says about 30,000 years, later work much older), so no bone age is given. Coordinates match the existing Neanderthal record; GeoNames summary was returned by the fetch tool secondhand.",
+  "published_at": "2026-10-22T03:32:04.716Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

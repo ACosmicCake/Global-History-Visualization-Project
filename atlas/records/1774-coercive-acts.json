@@ -1,0 +1,168 @@
+{
+  "id": "1774-coercive-acts",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Coercive Acts (Intolerable Acts)",
+  "summary": "In 1774 the British Parliament passed the Coercive Acts—called the Intolerable Acts in America—to punish Massachusetts for the Boston Tea Party. The four statutes closed Boston Harbor to commercial shipping, altered the colonial charter to curtail town meetings, and permitted trials of crown officials outside the colony. Rather than isolating Boston, the acts galvanized resistance throughout the thirteen colonies, prompted the First Continental Congress, and precipitated the armed clashes of 1775 that began the American Revolutionary War.",
+  "when": {
+    "start": {
+      "year": 1774,
+      "iso": "1774-03-31"
+    },
+    "end": {
+      "year": 1774,
+      "iso": "1774-06-02"
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Parliament passed the series of acts between March and June 1774; the Boston Port Act took effect on 1 June 1774."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Parliament passed the bill on March 31, 1774",
+        "source": "src-mountvernon-coercive"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "closes the port of Boston on 1 June 1774",
+        "source": "src-masshist-coercive"
+      }
+    ],
+    "display": "1774"
+  },
+  "where": {
+    "lat": 51.4998,
+    "lon": -0.1246,
+    "elevation_m": null,
+    "modern_name": "Palace of Westminster, London, United Kingdom",
+    "historical_name": "Palace of Westminster, London, Kingdom of Great Britain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-unesco-426"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The punitive legislation unified colonial resistance behind Massachusetts, spurred the First Continental Congress, and led directly to the outbreak of the American Revolution."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "caused",
+      "because": "The punitive acts led directly to armed colonial resistance and the dispatch of British regulars to seize military stores."
+    },
+    {
+      "id": "1775-04-19-battles-of-lexington-and-concord",
+      "type": "caused",
+      "because": "Military enforcement of the Coercive Acts provoked the armed standoff at Lexington and Concord."
+    },
+    {
+      "id": "1776-07-04-declaration-of-independence",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1774-03-31",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Parliament passes the Boston Port Act on 31 March 1774 to punish Massachusetts for the tea party.",
+        "source": "src-mountvernon-coercive"
+      },
+      {
+        "span": "1774-06-01",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "The Royal Navy closes Boston harbor on 1 June 1774, provoking colonial resistance that leads to revolution.",
+        "source": "src-masshist-coercive",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-mountvernon-coercive",
+      "url": "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/the-coercive-intolerable-acts-of-1774/",
+      "title": "The Coercive (Intolerable) Acts of 1774",
+      "publisher": "George Washington's Mount Vernon",
+      "author": "Caroline Eisenhuth",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-masshist-coercive",
+      "url": "https://www.masshist.org/revolution/coercive.php",
+      "title": "The Coming of the American Revolution: The Coercive/Intolerable Acts",
+      "publisher": "Massachusetts Historical Society",
+      "author": "Massachusetts Historical Society",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-unesco-426",
+      "url": "https://whc.unesco.org/en/list/426/",
+      "title": "Palace of Westminster and Westminster Abbey including Saint Margaret's Church (World Heritage List no. 426)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1987",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pinned at the Palace of Westminster where the British Parliament enacted the legislation; the punitive statutes targeted Boston and the Province of Massachusetts Bay.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T09:33:31.852Z"
+}

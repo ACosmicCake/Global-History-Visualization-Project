@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1989-11-09-fall-of-the-berlin-wall",
+  "kind": "event",
+  "title": "Fall of the Berlin Wall",
+  "summary": "On the evening of 9 November 1989, Politburo member Günter Schabowski announced new East German travel rules at a press conference. Because of a mix-up over when they took effect, East Berliners crowded the border crossings and pressed guards to apply them at once. Bornholmer Straße opened first, and shortly after midnight all crossings were open.",
+  "when": {
+    "start": {
+      "year": 1989,
+      "iso": "1989-11-09"
+    },
+    "end": {
+      "year": 1989,
+      "iso": "1989-11-10"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Evening of 9 November; sources say all crossings were open shortly after midnight."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "the night of 9 November 1989",
+        "source": "src-revolution89-wall"
+      },
+      {
+        "calendar": "CE",
+        "value": "9 November 1989 (evening press conference; Bornholmer Straße opened at half past eleven that evening)",
+        "source": "src-bundesregierung-9nov"
+      }
+    ],
+    "display": "9 November 1989"
+  },
+  "where": {
+    "lat": 52.55472222,
+    "lon": 13.39861111,
+    "elevation_m": null,
+    "modern_name": "Bornholmer Straße border crossing, Berlin, Germany (first crossing to open)",
+    "historical_name": "Bornholmer Straße crossing, East Berlin, German Democratic Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-q895863"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "The opening of the Berlin Wall crossings on the night of 9 November 1989 is the event that came to mark the fall of the Wall."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-revolution89-wall",
+      "url": "https://revolution89.de/en/revolution/fall-of-the-wall",
+      "title": "Fall of the Wall",
+      "publisher": "Robert-Havemann-Gesellschaft (Revolution 89)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bundesregierung-9nov",
+      "url": "https://www.bundesregierung.de/breg-en/service/archive/archive/9-november-a-historically-signficant-date-479436",
+      "title": "9 November - a historically signficant date",
+      "publisher": "Press and Information Office of the Federal Government (Bundesregierung)",
+      "author": null,
+      "date_published": "2017-11-09",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q895863",
+      "url": "https://www.wikidata.org/wiki/Q895863",
+      "title": "Wikidata item Q895863 (Bornholmer Straße border crossing), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: it is the Bornholmer Straße crossing, the first to open per both pages, not the whole Wall. The government page gives 23:30 for its opening; no other time was checked.",
+  "author": "historian-agent:o-s42",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1989-11-09",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On the evening of 9 November 1989, Politburo member Günter Schabowski announced new East German travel rules at a press conference.",
+        "source": "src-revolution89-wall"
+      },
+      {
+        "span": "1989",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Bornholmer Straße opened first, and shortly after midnight all crossings were open.",
+        "source": "src-revolution89-wall",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T10:07:04.905Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

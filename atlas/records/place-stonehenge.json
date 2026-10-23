@@ -1,0 +1,285 @@
+{
+  "id": "place-stonehenge",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Stonehenge",
+  "summary": "Stonehenge, on Salisbury Plain in Wiltshire, England, is a Neolithic and Bronze Age monument. A circular ditch and bank were dug about 3000 BCE, the sarsen and bluestone settings were raised from about 2500 BCE, and the stones were rearranged over the following centuries. UNESCO calls it the most architecturally sophisticated prehistoric stone circle in the world.",
+  "when": {
+    "start": {
+      "year": -2999
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the digging of the circular ditch and banks, 'about 3000 BC' (English Heritage); astronomical year -2999. The stones were set up 'in about 2500 BC' and the Y and Z holes are radiocarbon dated to 1800-1500 BC. UNESCO places the whole complex's 2000 years of use between circa 3700 and 1600 BC. End is the present: the monument stands as a ruin."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (English Heritage)",
+        "value": "built about 3000 BC",
+        "source": "src-eh-history"
+      },
+      {
+        "calendar": "BC (English Heritage)",
+        "value": "In about 2500 BC the stones were set up",
+        "source": "src-eh-history"
+      },
+      {
+        "calendar": "BC (UNESCO)",
+        "value": "between circa 3700 and 1600 BC",
+        "source": "src-unesco-373"
+      }
+    ],
+    "display": "Ditch c. 3000 BCE; stones from c. 2500 BCE; standing today"
+  },
+  "where": {
+    "lat": 51.17886,
+    "lon": -1.82544,
+    "elevation_m": null,
+    "modern_name": "Stonehenge, near Amesbury, Wiltshire, England, United Kingdom",
+    "historical_name": "Stonehenge on Salisbury Plain, southern Britain; no polity or contemporary place-name is recorded in the opened sources for this prehistoric date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 5,
+    "justification": "The most architecturally sophisticated prehistoric stone circle in the world (UNESCO) and a monument visitors look for from whole-planet view."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-eh-history",
+      "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/history-and-stories/history/",
+      "title": "The history of Stonehenge (construction phases)",
+      "publisher": "English Heritage",
+      "author": "English Heritage",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-eh-stones",
+      "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/things-to-do/stone-circle/stones-of-stonehenge/",
+      "title": "Discover more about the Stones",
+      "publisher": "English Heritage (stones guide)",
+      "author": "English Heritage (stones guide)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-eh-news",
+      "url": "https://www.english-heritage.org.uk/about-us/search-news/research-reveals-origin-of-stonehenge-stones/",
+      "title": "Research reveals origin of Stonehenge stones",
+      "publisher": "English Heritage (news)",
+      "author": "English Heritage (news)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-unesco-373",
+      "url": "https://whc.unesco.org/en/list/373",
+      "title": "Stonehenge, Avebury and Associated Sites (World Heritage List no. 373)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 373, geolocations",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Concentric plan: a circular ditch with inner and outer banks enclosing an area about 100 m across, inside it an outer sarsen circle 30 m in diameter capped by lintels, an inner sarsen horseshoe, and bluestones set between them. No georeferenced survey polygon was opened; the plan is taken from English Heritage descriptions.",
+      "source": "src-eh-history",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "ring",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-eh-stones",
+      "measurements": [
+        {
+          "part": "height (tallest sarsens, uprights of the central horseshoe)",
+          "value": 7,
+          "unit": "m",
+          "source": "src-eh-news",
+          "note": "English Heritage: sarsens stand \"up to 7 metres tall\"; the outer circle is lower"
+        },
+        {
+          "part": "outer sarsen circle, lintel underside height above ground",
+          "value": 4,
+          "unit": "m",
+          "source": "src-eh-stones",
+          "note": "\"suspended 4m above the ground\""
+        },
+        {
+          "part": "outer sarsen circle, diameter",
+          "value": 30,
+          "unit": "m",
+          "source": "src-eh-stones",
+          "note": "complete ring \"30m in diameter\" if it was ever completed"
+        },
+        {
+          "part": "bank and ditch enclosure, diameter",
+          "value": 100,
+          "unit": "m",
+          "source": "src-eh-history",
+          "note": "\"about 100 metres in diameter\""
+        },
+        {
+          "part": "sarsen uprights in outer circle (planned)",
+          "value": 30,
+          "unit": "count",
+          "source": "src-eh-stones",
+          "note": "\"a circle of 30 upright sarsens\", if completed"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "ring of sarsen uprights and lintels at true diameter, with the ditch as a circle"
+      },
+      {
+        "level": "local",
+        "representation": "procedural sarsen circle, horseshoe of trilithons, bluestones and ditch in the phase shown for the date"
+      },
+      {
+        "level": "street",
+        "representation": "individual uprights with lintels, mortice-and-tenon joints and the tallest trilithon (stone 56), from English Heritage descriptions"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -2999,
+        "end_year": -2499,
+        "state": "construction",
+        "description": "Circular ditch with inner and outer banks, about 100 m across with two entrances, dug about 3000 BC; the stones follow.",
+        "source": "src-eh-history"
+      },
+      {
+        "start_year": -2499,
+        "end_year": -2299,
+        "state": "construction",
+        "description": "Stones set up in the centre in about 2500 BC; sarsens near the entrance and the four Station Stones raised at about the same time.",
+        "source": "src-eh-history"
+      },
+      {
+        "start_year": -2299,
+        "end_year": -1799,
+        "state": "altered",
+        "description": "About 200 or 300 years later the central bluestones were rearranged into a circle and inner oval, later altered to a horseshoe; the Avenue built.",
+        "source": "src-eh-history"
+      },
+      {
+        "start_year": -1799,
+        "end_year": -1499,
+        "state": "altered",
+        "description": "The Y and Z holes were dug, radiocarbon dated to 1800-1500 BC; they may mark a rearrangement never completed.",
+        "source": "src-eh-history"
+      },
+      {
+        "start_year": -1499,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "Only six lintels of the outer sarsen circle remain in place. The sources opened do not date the collapse or removal of stones; this phase starts where recorded construction ends.",
+        "source": "src-eh-stones"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -2499,
+        "to_year": 2026,
+        "material": "sarsen sandstone for the outer circle, lintels and horseshoe trilithons, sourced from an area about 15 miles north of the site",
+        "source": "src-eh-news"
+      },
+      {
+        "from_year": -2499,
+        "to_year": 2026,
+        "material": "'bluestones' (up to 80, brought from the Preseli Hills in south-west Wales)",
+        "source": "src-eh-stones"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape ring: the outer sarsen circle (30 m across) and its concentric settings. Least sure of the height: English Heritage gives sarsens 'up to 7 metres tall' (the central horseshoe trilithons) and the outer circle's lintel underside at 4 m, but no figure for the top of the outer lintels, so the 7 m height is the tallest stones, not the ring. The start of the ruined phase is not sourced; only the end of recorded construction is. Coordinates are UNESCO's first listed point for property 373 (the other lies at Avebury).",
+  "author": "historian-agent:m-1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:35:32.177Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

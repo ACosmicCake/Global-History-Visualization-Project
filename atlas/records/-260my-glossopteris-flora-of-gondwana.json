@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "-260my-glossopteris-flora-of-gondwana",
+  "kind": "species",
+  "title": "Glossopteris flora of Gondwana",
+  "summary": "Glossopteris was a woody, seed-bearing shrub or tree that appeared in the Early Permian, about 299 million years ago, and dominated Gondwana through the Permian. Its fossils are found in Australia, South Africa, South America, India and Antarctica, a spread that served as early evidence of continental drift. A USGS-hosted study describes its strap-shaped leaves in the Late Permian of the Beardmore Glacier region, Antarctica.",
+  "when": {
+    "start": {
+      "year": -299000000
+    },
+    "end": {
+      "year": -254000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "note": "Start from the Geological Society page; end is the RSV figure for the Permian flora fossils (254 Ma), since the Geological Society page says only that it died out at the end of the Permian. The id says 260 Ma. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "emerged in the Early Permian, about 299 million years ago",
+        "source": "src-geolsoc"
+      },
+      {
+        "calendar": "Ma",
+        "value": "The Permian Gondwanan flora fossils are 254 million years old",
+        "source": "src-rsv"
+      },
+      {
+        "calendar": "stage",
+        "value": "dominated Gondwana during the Permian",
+        "source": "src-usgs"
+      }
+    ],
+    "display": "Permian, from about 299 Ma"
+  },
+  "where": {
+    "lat": -83.75,
+    "lon": 171,
+    "elevation_m": null,
+    "modern_name": "Beardmore Glacier region, Central Transantarctic Mountains, Antarctica (proxy pin; fossils occur on five continents)",
+    "historical_name": "Gondwana, Permian, at high southern latitude; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-beardmore"
+    ],
+    "paleo": {
+      "lat": -89.31,
+      "lon": 127.66,
+      "age_ma": 280,
+      "plate_model": "MERDITH2021 (via GPlates Web Service)",
+      "source": "src-gplates",
+      "note": "Beardmore Glacier proxy at 280 Ma, near the pole. PALEOMAP gives 87.71 S, 170.85 W; MULLER2019 does not cover 280 Ma."
+    }
+  },
+  "regions": [
+    "antarctica",
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Widespread fossil plant whose distribution supported the idea that the southern continents were once joined."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1912-01-06-wegener-continental-drift-lecture",
+      "type": "related"
+    },
+    {
+      "id": "person-alfred-wegener",
+      "type": "related"
+    },
+    {
+      "id": "-335my-assembly-of-pangaea",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-geolsoc",
+      "url": "https://www.geolsoc.org.uk/Plate-Tectonics/Chap1-Pioneers-of-Plate-Tectonics/Alfred-Wegener/Fossil-Evidence-from-the-Southern-Hemisphere",
+      "title": "Fossil Evidence from the Southern Hemisphere",
+      "publisher": "The Geological Society of London",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usgs",
+      "url": "https://pubs.usgs.gov/publication/ofr20071047SRP082",
+      "title": "Glossopterid seed ferns from the Late Permian of the Beardmore Glacier region, Antarctica (USGS Open-File Report 2007-1047)",
+      "publisher": "U.S. Geological Survey",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-rsv",
+      "url": "https://www.rsv.org.au/articles/gondwanan-floras",
+      "title": "The Gondwanan Floras of the Antarctic Fossil Record",
+      "publisher": "Royal Society of Victoria",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-beardmore",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q791644.json",
+      "title": "Wikidata item Q791644 (Beardmore Glacier), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=171,-83.75&time=280&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end date: only the RSV page gives a number (254 Ma) and it describes fossil age, not extinction. The pin is a proxy in Antarctica; Glossopteris occurs on five continents. MULLER2019 does not reach 280 Ma.",
+  "published_at": "2026-10-22T18:32:04.517Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

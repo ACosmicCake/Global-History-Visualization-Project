@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-85my-kimberlite-eruptions-kimberley",
+  "kind": "event",
+  "title": "Kimberlite Eruptions at Kimberley",
+  "summary": "Around 84 to 87 million years ago, during the Cretaceous, a cluster of kimberlite pipes erupted in the area of present Kimberley, South Africa. Isotopic dating of these rocks showed the diamonds they brought up were far older than the eruptions. The pipes later became the Kimberley diamond mines, including the Big Hole.",
+  "when": {
+    "start": {
+      "year": -87000000
+    },
+    "end": {
+      "year": -84000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1000000,
+      "start_plus_years": 1000000,
+      "end_minus_years": 1000000,
+      "end_plus_years": 1000000,
+      "note": "Sources give about 86 Ma and 84 Ma (GIA) and 84 to 87 Ma (PorterGeo); other literature gives older or younger clusters, not opened."
+    },
+    "as_recorded": [
+      {
+        "calendar": "radiometric, as recorded",
+        "value": "about 86 million years ago",
+        "source": "src-gia"
+      },
+      {
+        "calendar": "radiometric, as recorded",
+        "value": "84 million years ago",
+        "source": "src-gia"
+      },
+      {
+        "calendar": "radiometric, as recorded",
+        "value": "between 84 and 87 Ma",
+        "source": "src-porter"
+      }
+    ],
+    "display": "about 84–87 million years ago (Cretaceous)"
+  },
+  "where": {
+    "lat": -28.738611,
+    "lon": 24.758333,
+    "elevation_m": null,
+    "modern_name": "Kimberley (Big Hole) kimberlite pipe, Northern Cape, South Africa",
+    "historical_name": "Area of the future Kimberley, southern Africa (no polity; pin is the Kimberley pipe, a proxy for the whole pipe cluster)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-porter"
+    ],
+    "paleo": {
+      "lat": -45.06,
+      "lon": 15.61,
+      "age_ma": 85,
+      "plate_model": "MERDITH2021",
+      "source": "GPlates Web Service reconstruction of 24.7583E, 28.7386S at 85 Ma (MULLER2019 gives -48.76, 6.22; PALEOMAP -44.98, 9.74)"
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Type locality of kimberlite and the source of the Kimberley diamond mines; dating showed diamonds predate the eruptions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-gia",
+      "url": "https://www.gia.edu/gems-gemology/summer-2019-kimberlites-earths-diamond-delivery-system",
+      "title": "Kimberlites: Earth's Diamond Delivery System",
+      "publisher": "Gemological Institute of America (Gems & Gemology)",
+      "author": "Karen V. Smit, Steven B. Shirey",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-porter",
+      "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn930",
+      "title": "Kimberley, Dutoitspan, Bultfontein, Wesselton, De Beers, Northern Cape, South Africa",
+      "publisher": "Porter GeoConsultancy",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Ages differ slightly between sources (84, 86, 84-87 Ma); other literature (not opened) cites ~90 or ~95 Ma. Pin is the Kimberley pipe in DMS converted to decimal; PorterGeo is a commercial reference publisher.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:47:00.338Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-87000000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Around 84 to 87 million years ago, during the Cretaceous, a cluster of kimberlite pipes erupted in the area of present Kimberley, South Africa.",
+        "source": "src-gia"
+      },
+      {
+        "span": "-84000000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The pipes later became the Kimberley diamond mines, including the Big Hole.",
+        "source": "src-gia",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

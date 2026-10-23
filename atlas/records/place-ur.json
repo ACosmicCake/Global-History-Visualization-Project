@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "confidence": "established",
+  "scale": "civilization",
+  "audience_note": null,
+  "author": "historian-agent:m-6",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-ur",
+  "title": "Ur",
+  "summary": "Ur, now Tell el-Muqayyar near Nasiriyah in southern Iraq, was one of the main Sumerian cities, with a moon-god temple precinct and the Royal Cemetery dug by Woolley in 1922-1934. Settlement began in the Ubaid period, perhaps in the fifth millennium BCE, and the last occupation was in the fourth century BCE.",
+  "when": {
+    "start": {
+      "year": -4500
+    },
+    "end": {
+      "year": -349
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 500,
+      "start_plus_years": 500,
+      "end_minus_years": 50,
+      "end_plus_years": 50,
+      "note": "Start: Penn Museum (Mallowan, 1960) says settlement began perhaps in the fifth millennium B.C. in the Al Ubaid period. End: the last occupation in the fourth century B.C."
+    },
+    "as_recorded": [
+      {
+        "calendar": "B.C. (Penn Museum, Expedition 1960)",
+        "value": "perhaps in the fifth millennium B.C. at what is known as the Al 'Ubaid period",
+        "source": "src-penn-woolley"
+      },
+      {
+        "calendar": "B.C. (Penn Museum, Expedition 1960)",
+        "value": "until the last occupation in the fourth century B.C.",
+        "source": "src-penn-woolley"
+      },
+      {
+        "calendar": "BCE (UNESCO)",
+        "value": "between the 4th and the 3rd millennium BCE",
+        "source": "src-unesco-1481-ur"
+      }
+    ],
+    "display": "Settled c. 5th millennium BCE; last occupied 4th century BCE"
+  },
+  "where": {
+    "lat": 30.96306,
+    "lon": 46.10306,
+    "elevation_m": null,
+    "modern_name": "Ur (Tell el-Muqayyar), Dhi Qar Governorate, Iraq",
+    "historical_name": "Ur, Sumerian city of the moon god Nanna, southern Mesopotamia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world",
+    "religion_philosophy"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "One of the great cities of Sumer, with the best-preserved ziggurat of Mesopotamia and the Royal Cemetery, part of a UNESCO World Heritage property."
+  },
+  "related": [
+    {
+      "id": "place-ziggurat-of-ur",
+      "type": "has_part"
+    },
+    {
+      "id": "place-ahwar-of-southern-iraq",
+      "type": "part_of"
+    },
+    {
+      "id": "place-uruk",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-penn-woolley",
+      "url": "https://www.penn.museum/sites/expedition/sir-leonard-woolley/",
+      "title": "Sir Leonard Woolley (Expedition Magazine 3(1))",
+      "publisher": "Penn Museum",
+      "author": "M. E. L. Mallowan",
+      "date_published": "1960-09",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-unesco-1481-ur",
+      "url": "https://whc.unesco.org/en/list/1481",
+      "title": "The Ahwar of Southern Iraq: Refuge of Biodiversity and the Relict Landscape of the Mesopotamian Cities (no. 1481)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): geolocation entries",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start: the 1960 Penn text says perhaps the fifth millennium. The city point is the same UNESCO coordinate as the ziggurat record place-ziggurat-of-ur (the ziggurat is modelled there, not here).",
+  "published_at": "2026-10-22T06:22:11.778Z"
+}

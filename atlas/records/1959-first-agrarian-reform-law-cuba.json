@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s9",
+  "updated": "2026-10-22",
+  "id": "1959-first-agrarian-reform-law-cuba",
+  "kind": "event",
+  "title": "First Agrarian Reform Law of Cuba, 17 May 1959",
+  "summary": "On 17 May 1959 Cuba's Council of Ministers issued the First Agrarian Reform Law in the Sierra Maestra. It capped holdings at 30 caballerias (about 403 hectares) and expropriated or redistributed the excess, paying owners in 20-year state bonds. United States officials protested over compensation and sugar supply.",
+  "when": {
+    "start": {
+      "year": 1959,
+      "iso": "1959-05-17"
+    },
+    "end": {
+      "year": 1959,
+      "iso": "1959-05-17"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Date from the German History Docs page; a US memorandum of 27 May 1959 describes the law as recently issued."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "law dates from May 17, 1959",
+        "source": "src-ghdi"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Memorandum of a Conversation, May 27, 1959 (law recently issued)",
+        "source": "src-frus-cuba"
+      }
+    ],
+    "display": "17 May 1959"
+  },
+  "where": {
+    "elevation_m": null,
+    "geometry": {
+      "type": "point"
+    },
+    "lat": 20.0697,
+    "lon": -76.4256,
+    "modern_name": "Sierra Maestra, southeastern Cuba",
+    "historical_name": "Sierra Maestra, Oriente Province, Republic of Cuba",
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-wd-q654527"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "It broke up large estates, including US-owned ones, and set Cuba on the path to confrontation with Washington."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1953-cuban-revolution",
+      "type": "caused_by",
+      "because": "It was a flagship measure of the revolutionary government."
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ghdi",
+      "url": "https://germanhistorydocs.org/en/occupation-and-the-emergence-of-two-states-1945-1961/cuba-s-land-reforms-move-forward-april-1st-1960",
+      "title": "Cuba's Land Reforms Move Forward (April 1, 1960)",
+      "publisher": "German Historical Institute Washington",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-frus-cuba",
+      "url": "https://history.state.gov/historicaldocuments/frus1958-60v06/d310",
+      "title": "Memorandum of a Conversation, Department of State, May 27, 1959",
+      "publisher": "Office of the Historian, US Department of State",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q654527",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q654527.json",
+      "title": "Wikidata entry (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Sierra Maestra range as a whole; other searched sources name the Comandancia de La Plata but I did not open one that confirms it. The 30-caballeria cap and bond terms come from one source.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1959-05-17",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The Council of Ministers issued the law in the Sierra Maestra, capping holdings at 30 caballerias (about 403 hectares).",
+        "source": "src-ghdi"
+      },
+      {
+        "span": "1959-05-17",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Land above the cap was expropriated or given to landless peasants; owners received state bonds redeemable after 20 years at 4.5 percent.",
+        "source": "src-ghdi"
+      },
+      {
+        "span": "1959-05-27",
+        "action": "pulse { radius_km: 90 }",
+        "caption": "US officials feared for sugar supply and compensation; Cuba's ambassador said the sugar quota was not endangered.",
+        "source": "src-frus-cuba",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:29:43.579Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

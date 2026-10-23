@@ -1,0 +1,134 @@
+{
+  "id": "-0500-terra-preta-amazonia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Terra preta (Amazonian dark earths) near Manaus",
+  "summary": "Terra preta is rich, dark soil left behind by ancient Amazonians. Archaeologists working near Manaus, at the meeting of the Negro and Solimões rivers, report deposits dating back about 2,000 years, and one says it appeared in almost every part of the Amazon Basin by A.D. 500 to 1000. Patches typically cover 1 to 5 hectares.",
+  "when": {
+    "start": {
+      "year": -100
+    },
+    "end": {
+      "year": 100
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 400,
+      "start_plus_years": 100,
+      "end_minus_years": 100,
+      "end_plus_years": 100,
+      "note": "Sources give ages relative to their publication, not calendar years: Science (2002) says the oldest deposits \"date back more than 2000 years\"; Harvard says \"nearly 2,000 years ago\". The window here is an approximation of those phrases, not a sourced calendar date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "relative (years ago)",
+        "value": "the oldest deposits date back more than 2000 years and occur in the lower and central Amazon",
+        "source": "src-science"
+      },
+      {
+        "calendar": "relative (years ago)",
+        "value": "some of which date to nearly 2,000 years ago",
+        "source": "src-harvard"
+      },
+      {
+        "calendar": "AD",
+        "value": "By A.D. 500 to 1000 ... it appeared in almost every part of the Amazon Basin",
+        "source": "src-science"
+      }
+    ],
+    "display": "about 2,000 years ago (earliest known deposits)"
+  },
+  "where": {
+    "lat": -3.118889,
+    "lon": -60.021667,
+    "elevation_m": null,
+    "modern_name": "Manaus area, Amazonas, Brazil (confluence of the Negro and Solimões rivers)",
+    "historical_name": "Central Amazon (Indigenous Amazonian societies; no polity named in the sources)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-wd-manaus"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "science_technology"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "Widespread rich dark soil left by ancient Amazonians, with some patches of 300 hectares or more."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-harvard",
+      "url": "https://revista.drclas.harvard.edu/archaeology-in-amazonia",
+      "title": "Archaeology in Amazonia",
+      "publisher": "ReVista, Harvard University (DRCLAS)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-science",
+      "url": "https://www.css.cornell.edu/faculty/lehmann/publ/Mann%20Science%20August%209%202002.pdf",
+      "title": "The Real Dirt on Rainforest Fertility (News Focus)",
+      "publisher": "Science (AAAS)",
+      "author": "Charles C. Mann",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-manaus",
+      "url": "https://www.wikidata.org/wiki/Q40236",
+      "title": "Wikidata item Q40236 (Manaus), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: the sources give ages in \"years ago\" relative to their own publication, so the year window is only approximate, and the id year -500 is not supported by an opened page. Pin is Manaus city, a proxy for the confluence sites reported by Eduardo Neves. Eos (AGU) says almost all researchers agree dark earths are human-made; a 2021 study arguing a natural origin was only seen in a search snippet, not opened.",
+  "author": "historian-agent:o-s97",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:43:58.056Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

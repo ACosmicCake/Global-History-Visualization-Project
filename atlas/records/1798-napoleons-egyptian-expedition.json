@@ -1,0 +1,165 @@
+{
+  "id": "1798-napoleons-egyptian-expedition",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Napoleon's Egyptian expedition",
+  "summary": "In 1798 General Napoleon Bonaparte led a French military expedition to Egypt to secure French influence in the eastern Mediterranean and disrupt British access to India. Although French forces evacuated in 1801 following British and Ottoman victories, the expedition's accompanying commission of scholars and scientists founded the Institut d'Égypte and discovered the Rosetta Stone, launching modern scientific Egyptology and the decipherment of hieroglyphs.",
+  "when": {
+    "start": {
+      "year": 1798
+    },
+    "end": {
+      "year": 1801
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "French forces landed in July 1798 and evacuated in 1801 following capitulation."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "From 1798 to 1801, an Anglo-Ottoman alliance competed with the French for control of Egypt.",
+        "source": "src-nam-egypt"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On July 1, 1798, Napoleon landed in Egypt with 400 ships and 54,000 men",
+        "source": "src-lindahall-egypt"
+      }
+    ],
+    "display": "1798–1801"
+  },
+  "where": {
+    "lat": 30.0444,
+    "lon": 31.2358,
+    "elevation_m": null,
+    "modern_name": "Cairo, Egypt",
+    "historical_name": "Cairo, Ottoman Egypt (under French military occupation)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wikidata-cairo"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The expedition initiated European colonial rivalry in modern Egypt and uncovered the Rosetta Stone, which enabled the decipherment of ancient Egyptian hieroglyphic script."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-giza-pyramids",
+      "type": "same_place"
+    },
+    {
+      "id": "1869-opening-of-the-suez-canal",
+      "type": "related"
+    },
+    {
+      "id": "-2588-construction-of-the-great-pyramid",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam-egypt",
+      "url": "https://www.nam.ac.uk/explore/egyptian-campaign",
+      "title": "Egyptian Campaign",
+      "publisher": "National Army Museum",
+      "author": "National Army Museum",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lindahall-egypt",
+      "url": "https://www.lindahall.org/experience/digital-exhibitions/napoleon-and-the-scientific-expedition-to-egypt/01-the-napoleonic-invasion-of-egypt/",
+      "title": "The Napoleonic Invasion of Egypt (Napoleon and the Scientific Expedition to Egypt)",
+      "publisher": "Linda Hall Library",
+      "author": "Linda Hall Library",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-cairo",
+      "url": "https://www.wikidata.org/wiki/Q85",
+      "title": "Wikidata item Q85 (Cairo), coordinate location",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: whether to anchor the pin at Cairo (headquarters of Bonaparte and the Institut d'Égypte) or Alexandria (landing and surrender site). Coordinates are modern central Cairo from Wikidata.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1798",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1798 General Napoleon Bonaparte led a French military expedition to Egypt to secure French influence in the eastern Mediterranean and disrupt British access to India.",
+        "source": "src-nam-egypt"
+      },
+      {
+        "span": "1801",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Although French forces evacuated in 1801 following British and Ottoman victories, the expedition's accompanying commission of scholars and scientists founded the Institut d'Égypte and discovered the Rosetta Stone…",
+        "source": "src-nam-egypt",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T08:26:27.266Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

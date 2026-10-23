@@ -1,0 +1,133 @@
+{
+  "id": "2015-nepal-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "April 2015 Nepal earthquake",
+  "summary": "A magnitude 7.8 earthquake struck near Kathmandu in central Nepal on April 25, 2015. About 9,000 people died, many thousands were injured, and over 600,000 structures were damaged or destroyed. It triggered landslides and an Everest avalanche, and prompted a state of emergency and international aid.",
+  "when": {
+    "start": {
+      "year": 2015
+    },
+    "end": {
+      "year": 2015
+    },
+    "precision": "day",
+    "display": "25 April 2015",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "struck near the city of Kathmandu in central Nepal on April 25, 2015",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "2015-04-25 06:11:26",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 28.165,
+    "lon": 84.725,
+    "elevation_m": null,
+    "modern_name": "Central Nepal, near Kathmandu (epicentre east-southeast of Lamjung)",
+    "historical_name": "Central Nepal, near Kathmandu (epicentre east-southeast of Lamjung)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Major regional disaster with about 9,000 deaths and millions displaced, but not world-historical."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass death and injury from a natural disaster.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251222231527/https://www.britannica.com/topic/Nepal-earthquake-of-2015",
+      "title": "Nepal earthquake of 2015 | Magnitude, Death Toll, Aftermath, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=607208674",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q19830062",
+      "title": "Wikidata Q19830062 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ slightly on magnitude (Britannica 7.8; ISC lists Mw 7.9 from GCMT) and depth (about 15 km vs 13.4 km). The disease domain tag is a poor fit; no better available domain for disaster impact. The ISC source is a bibliography listing, useful mainly for the origin time.} (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, isc.ac.uk; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:34.807Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2015",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "8 earthquake struck near Kathmandu in central Nepal on April 25, 2015.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2015",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "About 9,000 people died, many thousands were injured, and over 600,000 structures were damaged or destroyed.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

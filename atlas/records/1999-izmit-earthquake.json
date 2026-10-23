@@ -1,0 +1,135 @@
+{
+  "id": "1999-izmit-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1999 İzmit earthquake",
+  "summary": "A magnitude 7.4 earthquake struck near İzmit in northwestern Turkey on August 17, 1999, on the northernmost strand of the North Anatolian fault system. More than 17,000 people died and about 500,000 were left homeless. Public anger fell on contractors and officials over poor construction and unenforced building codes; Greek aid helped ease relations.",
+  "when": {
+    "start": {
+      "year": 1999
+    },
+    "end": {
+      "year": 1999
+    },
+    "precision": "day",
+    "display": "17 August 1999",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "struck near the city of İzmit in northwestern Turkey on August 17, 1999",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "1999-08-17 00:01:40",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 40.702,
+    "lon": 29.987,
+    "elevation_m": null,
+    "modern_name": "İzmit, Kocaeli Province, northwestern Turkey",
+    "historical_name": "İzmit, Kocaeli Province, northwestern Turkey",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Deadly regional earthquake with over 17,000 deaths that prompted public outcry over building practices."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a disaster with mass death and displacement.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=1655218",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251231200454/https://www.britannica.com/event/Izmit-earthquake-of-1999",
+      "title": "İzmit earthquake of 1999 | Marmara Region, Magnitude 7.4, Aftershocks | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q367449",
+      "title": "Wikidata Q367449 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude varies across sources: Britannica gives 7.4, while ISC lists Mw(GCMT) 7.6 and cited papers give 7.4 or 7.5. The summary uses Britannica's figure. ISC origin time is UTC, consistent with Britannica's local time just after 3:00 am.} (Drafted by the Wikipedia pipeline from isc.ac.uk, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:48.088Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1999",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "4 earthquake struck near İzmit in northwestern Turkey on August 17, 1999, on the northernmost strand of the North Anatolian fault system.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1999",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Public anger fell on contractors and officials over poor construction and unenforced building codes; Greek aid helped ease relations.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

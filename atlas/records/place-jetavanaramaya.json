@@ -1,0 +1,234 @@
+{
+  "id": "place-jetavanaramaya",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Jetavanaramaya",
+  "aliases": [
+    "Jethawanaramaya"
+  ],
+  "summary": "The Jetavanaramaya is a stupa at Jetavana in Anuradhapura, Sri Lanka, begun by King Mahasena, whose reign one page gives as 273 to 301 CE, and finished by his son. Guinness World Records gives a base area of 233,000 m2 and a height of 70.4 m today, 122 m with its lost original spire. A 12th-century restoration under Parakramabahu I lowered it.",
+  "when": {
+    "start": {
+      "year": 273
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 3,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of Mahasena's reign as given by Ceylon History (273 to 301); Amazing Lanka gives 276 to 303; Guinness says 'When completed in 301'. End is the present: the stupa stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Ceylon History)",
+        "value": "King Mahasena ruled from 273 to 301 CE",
+        "source": "src-ceylon-jeta"
+      },
+      {
+        "calendar": "CE (Amazing Lanka)",
+        "value": "King Mahasen (276–303 CE)",
+        "source": "src-amazing-jeta"
+      },
+      {
+        "calendar": "CE (Guinness World Records)",
+        "value": "When completed in 301",
+        "source": "src-guinness-jeta"
+      }
+    ],
+    "display": "Built c. 273–301 CE; reduced in the 12th century"
+  },
+  "where": {
+    "lat": 8.3516411,
+    "lon": 80.403653,
+    "elevation_m": null,
+    "modern_name": "Jetavanaramaya, Anuradhapura, Sri Lanka",
+    "historical_name": "Jetavana stupa, Anuradhapura Kingdom (reign of Mahasena)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-jeta"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Guinness World Records lists it as the largest ancient stupa by base area."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-guinness-jeta",
+      "url": "https://www.guinnessworldrecords.com/world-records/400372-largest-ancient-stupa",
+      "title": "Largest ancient stupa",
+      "publisher": "Guinness World Records",
+      "author": "Guinness World Records",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-ceylon-jeta",
+      "url": "https://ceylonhistory.com/en/stories/jetavanaramaya/",
+      "title": "The Jetavanaramaya: Ancient Engineering Marvel That Pierced the Heavens",
+      "publisher": "Ceylon History Stories",
+      "author": "Ceylon History Stories",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-amazing-jeta",
+      "url": "https://amazinglanka.com/wp/jethavanaramaya/",
+      "title": "Jethawanaramaya of Anuradhapura Kingdom",
+      "publisher": "Amazing Lanka",
+      "author": "Amazing Lanka",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-jeta",
+      "url": "https://nominatim.openstreetmap.org/search?q=Jetavanarama+Anuradhapura&format=json&limit=5",
+      "title": "OpenStreetMap Nominatim: Jethavana Dagoba, way 115767725 (8.3516411, 80.4036530)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A stupa on a square stone-paved platform (Salapatala Maluwa) of about 177 m by 177 m (Amazing Lanka); Ceylon History gives one side of 176 m and a base area of 233,000 m2, and Guinness gives the same base area. No page opened gives a diameter.",
+      "source": "src-amazing-jeta",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "stupa",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-guinness-jeta",
+      "measurements": [
+        {
+          "part": "height (original, with spire)",
+          "value": 122,
+          "unit": "m",
+          "source": "src-guinness-jeta",
+          "note": "\"With its original spire, which is no longer standing, it reached 122 m\"; Ceylon History and Amazing Lanka also give 122 m (400 ft)"
+        },
+        {
+          "part": "height (present)",
+          "value": 70.4,
+          "unit": "m",
+          "source": "src-guinness-jeta",
+          "note": "\"reaching 70.4 m high\"; Ceylon History says 71 m, Amazing Lanka 71 m (232 ft)"
+        },
+        {
+          "part": "base length (square platform)",
+          "value": 177,
+          "unit": "m",
+          "source": "src-amazing-jeta",
+          "note": "\"about 177 metres by 177 metres (580 feet by 580 feet)\"; Ceylon History: \"One side of the stupa measures 176 metres\""
+        },
+        {
+          "part": "base width (square platform)",
+          "value": 177,
+          "unit": "m",
+          "source": "src-amazing-jeta"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "stupa on its square platform at true size"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stupa, 122 m high before the 12th-century restoration and about 70 m after, on a 177 m square platform"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 273,
+        "end_year": 301,
+        "state": "construction",
+        "description": "Begun by King Mahasena (reign 273-301 per Ceylon History) and completed by his son; Guinness says \"When completed in 301\". Amazing Lanka gives Mahasena as 276-303.",
+        "source": "src-ceylon-jeta"
+      },
+      {
+        "start_year": 301,
+        "end_year": 1100,
+        "state": "intact",
+        "description": "Stands at its full original height until the 12th-century restoration; the pages opened record no earlier alteration.",
+        "source": "src-guinness-jeta"
+      },
+      {
+        "start_year": 1101,
+        "end_year": null,
+        "state": "altered",
+        "description": "In the 12th century King Parakramabahu I began restoration, which lowered the stupa from its original height to about 71 m (Amazing Lanka); 70.4 m per Guinness. Year is the start of the 12th century; the pages give no exact year.",
+        "source": "src-amazing-jeta"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stupa. Least sure of: (1) all three publishers are non-institutional (Guinness classed reference); no government, museum or university page opened, and the Sunday Observer, CNN and Lakpura pages were blocked. (2) No diameter on any opened page: the platform side of 177 m is used as the plan size; the circumference of 366 m (Amazing Lanka) is not used. (3) The 12th-century phase start 1101 is a placeholder for \"12th century\". (4) Reign dates differ: 273-301 vs 276-303.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:37.693Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

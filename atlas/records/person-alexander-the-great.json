@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "person-alexander-the-great",
+  "kind": "person",
+  "title": "Alexander the Great",
+  "summary": "Alexander III of Macedon was born at Pella in 356 BCE and became king in 336 BCE. His campaign took him through Asia Minor, to the battles at the Granicus, Issus and Gaugamela, and east to the Hydaspes in India, where he defeated King Porus in 326 BCE. He died in Babylon in June 323 BCE, after which his empire was divided among his generals.",
+  "when": {
+    "start": {
+      "year": -355
+    },
+    "end": {
+      "year": -322
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Astronomical years: 356 BCE = -355, 323 BCE = -322. The two sources differ on the death day (10 or 11 June)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "21 July 356 BCE (birth); 10 or 11 June 323 BCE (death)",
+        "source": "src-whe-alexander"
+      },
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "*356 (birth); r. 336-323; died on 11 June 323",
+        "source": "src-livius-alexander"
+      }
+    ],
+    "display": "356–323 BCE (born 21 July 356 BCE; died 10 or 11 June 323 BCE)"
+  },
+  "where": {
+    "lat": 40.7604079,
+    "lon": 22.5271118,
+    "elevation_m": null,
+    "modern_name": "Pella, Central Macedonia, Greece (birthplace; campaign path runs to the Hydaspes/Jhelum in Pakistan and Babylon in Iraq)",
+    "historical_name": "Pella, capital of the kingdom of Macedon",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 40.7604079,
+          "lon": 22.5271118,
+          "date": "-0355-07-21",
+          "label": "Pella, birthplace (Livius: born and educated in the royal palace there)",
+          "source": "src-livius-pella",
+          "year": -355
+        },
+        {
+          "lat": 40.0909928,
+          "lon": 27.1534556,
+          "date": "-0333-05",
+          "label": "Granicus (Biga Çayı), northwest Anatolia; May 334 BCE",
+          "source": "src-livius-granicus",
+          "year": -333
+        },
+        {
+          "lat": 36.7669311,
+          "lon": 36.2093457,
+          "date": "-0332-11-05",
+          "label": "Issus campaign: Pinarus (modern Payas), about 15 km south of Issus; 5 November 333 BCE",
+          "source": "src-livius-issus",
+          "year": -332
+        },
+        {
+          "lat": 32.9247256,
+          "lon": 73.719388,
+          "date": "-0325-05",
+          "label": "Hydaspes (Jhelum), near the modern city of Jhelum; May 326 BCE",
+          "source": "src-livius-hydaspes",
+          "year": -325
+        },
+        {
+          "lat": 32.5377918,
+          "lon": 44.4270029,
+          "date": "-0322-06-10",
+          "label": "Babylon, death; 10 or 11 June 323 BCE",
+          "source": "src-whe-alexander",
+          "year": -322
+        }
+      ]
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-livius-pella",
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia",
+    "southern_asia"
+  ],
+  "domains": [
+    "people",
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The Macedonian king whose campaigns reached from Anatolia to India and whose empire was divided among his generals after his death."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "polity-macedon",
+      "type": "related"
+    },
+    {
+      "id": "-0323-death-of-alexander-the-great",
+      "type": "related"
+    },
+    {
+      "id": "polity-achaemenid-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-babylon",
+      "type": "same_place"
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "-0333-05",
+        "action": "path.trace {}",
+        "caption": "Alexander fights at the Granicus river in May 334 BCE, then at Issus on 5 November 333 BCE.",
+        "source": "src-whe-alexander"
+      },
+      {
+        "span": "-0330-10-01",
+        "action": "path.trace {}",
+        "caption": "Gaugamela follows on 1 October 331 BCE; by May 326 BCE he fights Porus at the Hydaspes in India.",
+        "source": "src-whe-alexander"
+      },
+      {
+        "span": "-0322-06-10",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "Alexander dies in Babylon on 10 or 11 June 323 BCE; his empire is divided among the Diadochi.",
+        "source": "src-whe-alexander",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-whe-alexander",
+      "url": "https://www.worldhistory.org/Alexander_the_Great/",
+      "title": "Alexander the Great",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-livius-alexander",
+      "url": "https://www.livius.org/articles/person/alexander-the-great/",
+      "title": "Alexander the Great",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-pella",
+      "url": "https://www.livius.org/articles/place/pella/",
+      "title": "Pella",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-livius-granicus",
+      "url": "https://www.livius.org/articles/battle/granicus/",
+      "title": "Granicus (334 BCE)",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-livius-issus",
+      "url": "https://www.livius.org/articles/battle/issus/",
+      "title": "Issus (333 BCE)",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-livius-gaugamela",
+      "url": "https://www.livius.org/articles/battle/gaugamela-331-bce/",
+      "title": "Gaugamela (331 BCE)",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-livius-hydaspes",
+      "url": "https://www.livius.org/articles/battle/hydaspes/",
+      "title": "Hydaspes (326 BCE)",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.geometry"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Pella+Greece; Babylon+Iraq; Jhelum; Biga+Cayi; Payas+Hatay; Irbil (separate queries)&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the waypoint pins: Livius gives no coordinates, so Granicus is the midpoint of the Biga Çayı, Issus is Payas (the Pinarus), Gaugamela is computed 75 km northwest of Irbil, Hydaspes is Jhelum city; each is approximate. Birth and death day differ by source.",
+  "published_at": "2026-10-22T10:55:43.573Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1873-aceh-war",
+  "kind": "event",
+  "title": "Aceh War begins",
+  "summary": "On 26 March 1873 a Dutch warship opened fire on the coast of Aceh, and Dutch East Indies troops were sent to take the sultan's palace in Kutaraja. A museum exhibition describes the Dutch invasion as the start of a forty-year conflict marked by strong Acehnese resistance. In a 1904 massacre at Kutö Réh, Dutch colonial troops killed 313 men, 189 women and 59 children.",
+  "when": {
+    "start": {
+      "year": 1873
+    },
+    "end": {
+      "year": 1873
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the first Dutch bombardment (26 March 1873) per Seasia; the war itself is described by the exhibition as lasting forty years, so the record is anchored on the start only."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 26, 1873",
+        "source": "src-seasia"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "forty-year conflict",
+        "source": "src-gac"
+      }
+    ],
+    "display": "From 26 March 1873"
+  },
+  "where": {
+    "lat": 5.55,
+    "lon": 95.3175,
+    "elevation_m": null,
+    "modern_name": "Banda Aceh, Aceh, Indonesia",
+    "historical_name": "Kutaraja (Banda Aceh), Sultanate of Aceh",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-q5779"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A decades-long Dutch colonial war that ended the Aceh sultanate and killed many civilians."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a colonial war including massacres of civilians; stated in general terms.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-seasia",
+      "url": "https://seasia.co/2026/07/26/the-letter-that-gave-the-dutch-an-excuse-to-invade-aceh",
+      "title": "The letter that gave the Dutch an excuse to invade Aceh",
+      "publisher": "Seasia.co",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gac",
+      "url": "https://artsandculture.google.com/story/keuneubah-aceh-museum-nasional-indonesia/TgUxT3md37YQBA?hl=en",
+      "title": "Keuneubah Aceh (Museum Nasional Indonesia)",
+      "publisher": "Google Arts & Culture / Museum Nasional Indonesia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q5779",
+      "url": "https://www.wikidata.org/wiki/Q5779",
+      "title": "Wikidata item Q5779 (Banda Aceh), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the war's end: the exhibition says a forty-year conflict, other sources give 1904 or later, so no end year is claimed. The Kutö Réh figures are stated by the exhibition; a Dutch-side source should confirm. The Seasia piece did not mention Banda Aceh by name; the pin follows the exhibition naming Banda Aceh as an early target.",
+  "author": "historian-agent:o-s96",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:43:42.886Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1873",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 26 March 1873 a Dutch warship opened fire on the coast of Aceh, and Dutch East Indies troops were sent to take the sultan's palace in Kutaraja.",
+        "source": "src-seasia"
+      },
+      {
+        "span": "1873",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "In a 1904 massacre at Kutö Réh, Dutch colonial troops killed 313 men, 189 women and 59 children.",
+        "source": "src-seasia",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

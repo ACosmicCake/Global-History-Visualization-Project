@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1830-french-conquest-of-algiers",
+  "kind": "event",
+  "title": "French Conquest of Algiers",
+  "summary": "A French army landed at Sidi Ferruch, in the bay west of Algiers, on 14 June 1830. The Dey of Algiers surrendered on 5 July 1830, and France took control of the city, its first step in occupying Algeria.",
+  "when": {
+    "start": {
+      "year": 1830
+    },
+    "end": {
+      "year": 1830
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Landing 14 June 1830; capitulation 5 July 1830."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "14 June 1830",
+        "source": "src-armee"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "5 July 1830",
+        "source": "src-armee"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "14 June",
+        "source": "src-napoleon"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "5 July",
+        "source": "src-napoleon"
+      }
+    ],
+    "display": "14 June – 5 July 1830"
+  },
+  "where": {
+    "lat": 36.73225,
+    "lon": 3.08746,
+    "elevation_m": null,
+    "modern_name": "Algiers, Algeria (pin is the city as a proxy; landing was at Sidi Ferruch nearby)",
+    "historical_name": "Algiers, Regency of Algiers (Ottoman vassal state)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-geodatos"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Start of the French conquest and colonisation of Algeria."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1962-algerian-independence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-armee",
+      "url": "https://www.musee-armee.fr/ExpositionAlgerie/the-end-of-the-ottoman-regency-and-the-limited-occupation-of-algeria.html",
+      "title": "Algérie 1830 | 1962 - The end of the Ottoman Regency and the limited occupation of Algeria",
+      "publisher": "Musée de l'Armée",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-napoleon",
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/abd-el-kader-algeria-and-the-french/",
+      "title": "Abd el-Kader, Algeria and the French (timeline)",
+      "publisher": "Fondation Napoléon",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geodatos",
+      "url": "https://www.geodatos.net/en/coordinates/algeria/algiers",
+      "title": "Algiers Geographic coordinates",
+      "publisher": "geodatos.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Algiers city centre as a proxy; Sidi Ferruch landing site not separately pinned. Only two content sources, both give 5 July as capitulation/surrender; coordinates from a commercial coordinates site.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:10.770Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1830",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A French army landed at Sidi Ferruch, in the bay west of Algiers, on 14 June 1830.",
+        "source": "src-armee"
+      },
+      {
+        "span": "1830",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Dey of Algiers surrendered on 5 July 1830, and France took control of the city, its first step in occupying Algeria.",
+        "source": "src-armee",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

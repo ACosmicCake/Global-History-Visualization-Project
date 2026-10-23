@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s14",
+  "updated": "2026-10-22",
+  "id": "-330ka-middle-pleistocene-green-sahara",
+  "kind": "process",
+  "title": "Middle Pleistocene green Sahara episodes",
+  "summary": "Over the Middle Pleistocene the Sahara repeatedly turned wetter, with grassland, lakes and rivers spreading across what is now desert. Orbital changes in sunshine strengthened the African monsoon in step with the precession cycle, and large ice sheets during glacial periods suppressed many of these humid episodes.",
+  "when": {
+    "start": {
+      "year": -799999
+    },
+    "end": {
+      "year": -128000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The start is the 800,000-year window of the model study; the end is where the Eemian green Sahara (122–128 kyr BP) begins. Individual episodes are spaced by the precession cycle; none is dated individually here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years before present (kyr BP), model with proxy comparison",
+        "value": "20 modelled North African Humid Periods over 0-800 kyr BP, paced by precession",
+        "source": "src-armstrong2023"
+      },
+      {
+        "calendar": "kyr BP",
+        "value": "Eemian GSP (122–128 kyr BP); each GSP took 2–3 kyr to develop, peaked over 4–8 kyr",
+        "source": "src-larrasoana2013"
+      }
+    ],
+    "display": "c. 800,000–128,000 years ago (repeated episodes)"
+  },
+  "where": {
+    "lat": 23.079722,
+    "lon": 12.612222,
+    "elevation_m": null,
+    "modern_name": "Sahara, North Africa (central point of the desert)",
+    "historical_name": "Sahara; no polities or place names at this date",
+    "geometry": {
+      "type": "regions",
+      "regions": [
+        {
+          "name": "Murzuq Basin, southwestern Libya",
+          "lat": 25,
+          "lon": 13,
+          "note": "Reference cited by Armstrong et al. 2023: Middle Pleistocene Al Mahruqah Formation in the Murzuq Basin, Libya, as evidence for orbitally forced humid episodes during the last 500,000 years.",
+          "source": "src-armstrong2023"
+        },
+        {
+          "name": "Southern Sahara (13–18°N)",
+          "lat": 15.5,
+          "lon": 12.6,
+          "note": "Band where dated humid-condition sediments were compiled by Larrasoana et al. 2013.",
+          "source": "src-larrasoana2013"
+        }
+      ]
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-wd-sahara",
+      "src-wd-murzuq"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "geology_climate",
+    "human_evolution_migration"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Repeated humid phases opened the Sahara as habitat and a plausible corridor for plants, animals and hominins."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-larrasoana2013",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0076514",
+      "title": "Dynamics of Green Sahara Periods and Their Role in Hominin Evolution (PLoS ONE 8(10): e76514)",
+      "publisher": "PLOS ONE",
+      "author": "Juan C. Larrasoaña, Andrew P. Roberts, Eelco J. Rohling",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-armstrong2023",
+      "url": "https://www.nature.com/articles/s41467-023-41219-4",
+      "title": "North African humid periods over the past 800,000 years (Nature Communications 14: 5549)",
+      "publisher": "Nature Communications (Springer Nature)",
+      "author": "Edward Armstrong et al.",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-sahara",
+      "url": "https://www.wikidata.org/wiki/Q6583",
+      "title": "Wikidata item Q6583 (Sahara), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wd-murzuq",
+      "url": "https://www.wikidata.org/wiki/Q3326866",
+      "title": "Wikidata item Q3326866 (Murzuq Desert), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The id carries -330ka, but neither paper dates an episode at 330 ka, so no single date is claimed; the range is the 800,000-year model window up to the Eemian. I did not source the formal boundaries of the Middle Pleistocene. The Murzuq Basin is named only in a reference title in Armstrong et al., not a data result I read. Needs a full review for episode-level dates.",
+  "published_at": "2026-10-22T05:06:30.073Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

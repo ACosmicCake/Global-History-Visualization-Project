@@ -1,0 +1,135 @@
+{
+  "id": "-4404my-jack-hills-zircon",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "event",
+  "title": "Oldest known terrestrial zircon, Jack Hills (4.404 Ga)",
+  "summary": "Ion-microprobe uranium-lead dating of detrital zircon grain W74/2-36 from metamorphosed conglomerate at Jack Hills, Western Australia, established an age of 4,404 ± 8 million years. Enriched oxygen isotope ratios in this crystal demonstrated that continental crust and liquid surface water existed within 160 million years of Earth's formation, refuting earlier models of a dry, uniformly molten Hadean surface.",
+  "when": {
+    "start": {
+      "year": -4404000000
+    },
+    "end": {
+      "year": -4404000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 8000000,
+      "start_plus_years": 8000000,
+      "note": "2-sigma analytical uncertainty from ion microprobe U-Pb isotopic analysis on grain W74/2-36 (Wilde et al. 2001)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon (Myr), ion microprobe",
+        "value": "age as old as 4,404 ± 8 Myr",
+        "source": "src-wilde2001"
+      },
+      {
+        "calendar": "Geological age (Ga), detrital zircons",
+        "value": "detrital zircons with ages 4.4-4.0 ga",
+        "source": "src-iugs-erawondoo"
+      }
+    ],
+    "display": "c. 4.404 Ga (4,404 ± 8 Ma)"
+  },
+  "where": {
+    "lat": -26.1828,
+    "lon": 116.9325,
+    "elevation_m": null,
+    "modern_name": "Erawondoo Hill, Jack Hills, Western Australia, Australia",
+    "historical_name": "Hadean protocrust, prior to any named cratonic or plate configurations",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-iugs-erawondoo",
+      "src-geonames-jackhills"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Detrital zircon grain W74/2-36 from Jack Hills is the oldest dated mineral grain discovered on Earth, providing geochemical evidence that liquid water and differentiated crust formed during the Hadean eon."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-4540my-formation-of-earth",
+      "type": "caused_by",
+      "because": "Planetary accretion and early differentiation produced the protocrust in which the Hadean zircons crystallized."
+    },
+    {
+      "id": "-4031my-acasta-gneiss",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wilde2001",
+      "url": "https://www.nature.com/articles/35051550",
+      "title": "Evidence from detrital zircons for the existence of continental crust and oceans on the Earth 4.4 Gyr ago (Nature 409:175–178)",
+      "publisher": "Nature (Springer Nature)",
+      "author": "Simon A. Wilde, John W. Valley, William H. Peck, Colin M. Graham",
+      "date_published": "2001-01-11",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-iugs-erawondoo",
+      "url": "https://iugs-geoheritage.org/?p=2848",
+      "title": "Archean Zircons of Erawondoo Hill (The First 100 IUGS Geological Heritage Sites)",
+      "publisher": "IUGS International Commission on Geoheritage",
+      "author": "IUGS International Commission on Geoheritage",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where",
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-jackhills",
+      "url": "https://www.geonames.org/8657140",
+      "title": "GeoNames entry: Jack Hills, Western Australia (8657140)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure whether earlier magma ocean crystallization or localized impact melting formed the parent magma of grain W74/2-36.",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:06:48.073Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

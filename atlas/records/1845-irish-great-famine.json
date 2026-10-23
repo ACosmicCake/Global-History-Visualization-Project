@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1845-irish-great-famine",
+  "kind": "event",
+  "title": "Great Irish Famine",
+  "summary": "Potato crop failures beginning in 1845 brought famine to Ireland, which lasted until about 1852. A University College Cork atlas project says it is now widely accepted that a million people died and at least one and a quarter million left, mostly for North America.",
+  "when": {
+    "start": {
+      "year": 1845
+    },
+    "end": {
+      "year": 1852
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UCC gives 1845-52; History.com says crops did not fully recover until 1852."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1845-52",
+        "source": "src-ucc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1852",
+        "source": "src-history"
+      }
+    ],
+    "display": "1845–1852"
+  },
+  "where": {
+    "lat": 53,
+    "lon": -8,
+    "elevation_m": null,
+    "modern_name": "Island of Ireland (pin is a proxy at the island's approximate centre)",
+    "historical_name": "Ireland, United Kingdom of Great Britain and Ireland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-wpe"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "UCC calls it probably the most pivotal event in modern Irish history, with global reach."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns mass starvation, disease and death of a large share of a population.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ucc",
+      "url": "https://www.ucc.ie/en/cacsss/research/researchimpact/atlasofthegreatirishfamine1845-1852/",
+      "title": "Atlas of the Great Irish Famine 1845-1852",
+      "publisher": "University College Cork",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/articles/irish-potato-famine",
+      "title": "Irish Potato Famine: Date, Cause & Great Hunger",
+      "publisher": "History.com (A&E Television Networks)",
+      "author": null,
+      "date_published": "2017-10-17",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wpe",
+      "url": "https://www.worldplacesexplained.com/islands/ireland",
+      "title": "Ireland Coordinates (53.0000° N, 8.0000° W)",
+      "publisher": "World Places Explained",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy for the whole island from a weak coordinate source; death toll is approximate (History.com says estimates vary). Britannica gives 1845-49 for the crop failures but was not opened.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:22.111Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

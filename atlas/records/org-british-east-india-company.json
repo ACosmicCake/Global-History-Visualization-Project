@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s75",
+  "updated": "2026-10-22",
+  "id": "org-british-east-india-company",
+  "kind": "organization",
+  "title": "British East India Company",
+  "summary": "English trading company chartered by Elizabeth I in 1600 with exclusive rights to trade to India and the Far East. Its first trading post in India was at Surat. From 1757 it controlled its own territory there, and in 1858 the government took over its possessions.",
+  "when": {
+    "start": {
+      "year": 1600
+    },
+    "end": {
+      "year": 1858
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Charter date given as 1600 (Royal Museums Greenwich) and 31 December 1600 (World History Encyclopedia). The 1858 end is the year the company was dissolved (RMG) and the government took over its possessions (WHE); WHE also says Parliament formally dissolved it on 1 June 1874."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Its royal charter, granted by Queen Elizabeth I in 1600",
+        "source": "src-rmg"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "A royal charter created the English East India Company on 31 December 1600",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1858 the company was dissolved",
+        "source": "src-rmg"
+      }
+    ],
+    "display": "1600–1858"
+  },
+  "where": {
+    "lat": 21.2094892,
+    "lon": 72.8317058,
+    "elevation_m": null,
+    "modern_name": "Surat, Gujarat, India (site of the company's first trading post in India; the sources do not name a London base)",
+    "historical_name": "Surat, where the company set up its first trading post in India (1607 per RMG; permission for a factory secured 1612–1619 per WHE)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm-surat"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A chartered trading company that grew into the ruler of much of India, the means by which Britain conducted its policies in Asia according to the World History Encyclopedia."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1757-battle-of-plassey",
+      "type": "related"
+    },
+    {
+      "id": "1857-indian-rebellion",
+      "type": "related"
+    },
+    {
+      "id": "1602-dutch-east-india-company",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rmg",
+      "url": "https://www.rmg.co.uk/discover/researchers/research-guides/research-guide-f5-east-india-company",
+      "title": "Research guide F5: East India Company",
+      "publisher": "Royal Museums Greenwich",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/East_India_Company/",
+      "title": "East India Company",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-surat",
+      "url": "https://nominatim.openstreetmap.org/search?q=Surat+Gujarat&format=json",
+      "title": "OpenStreetMap Nominatim result for Surat",
+      "publisher": "OpenStreetMap Nominatim",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pinned at Surat because neither opened page names a London base. The dissolution is dated 1858 by RMG but WHE gives both 1858 (government takeover of possessions) and 1874 (Parliament dissolves the company); the 1857 rebellion link is by chronology only. Surat first-post date differs: 1607 (RMG) versus 1612–1619 (WHE).",
+  "published_at": "2026-10-22T14:07:24.761Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

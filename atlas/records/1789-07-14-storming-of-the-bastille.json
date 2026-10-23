@@ -1,0 +1,159 @@
+{
+  "id": "1789-07-14-storming-of-the-bastille",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Storming of the Bastille",
+  "summary": "On 14 July 1789 a crowd in Paris, seeking gunpowder and arms, attacked the Bastille fortress after royal troops had massed near the city and minister Necker had been dismissed. Fighting broke out and the garrison surrendered. Seven prisoners were found inside. Governor de Launay was killed by the crowd on the way to the Hôtel de Ville.",
+  "when": {
+    "start": {
+      "year": 1789,
+      "iso": "1789-07-14"
+    },
+    "end": {
+      "year": 1789,
+      "iso": "1789-07-14"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dated 14 July 1789 on both sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "14 July 1789",
+        "source": "src-whe-bastille"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "14 juillet 1789",
+        "source": "src-histoire-image"
+      }
+    ],
+    "display": "14 July 1789"
+  },
+  "where": {
+    "lat": 48.85311,
+    "lon": 2.369163,
+    "elevation_m": null,
+    "modern_name": "Place de la Bastille, Paris, France",
+    "historical_name": "The Bastille fortress, Paris, Kingdom of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-geonames-bastille"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "A turning point that diminished royal power; the date is now France's national holiday."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a killing by a crowd, with the head of the governor carried on a pike.",
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1788-french-fiscal-crisis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-bastille",
+      "url": "https://www.worldhistory.org/Storming_of_the_Bastille/",
+      "title": "Storming of the Bastille",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-histoire-image",
+      "url": "https://histoire-image.org/etudes/arrestation-gouverneur-bastille-14-juillet-1789",
+      "title": "L'arrestation du gouverneur de la Bastille, le 14 juillet 1789",
+      "publisher": "Histoire par l'image",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-geonames-bastille",
+      "url": "https://www.geonames.org/search.html?q=Place+de+la+Bastille&country=FR",
+      "title": "GeoNames: Place de la Bastille, Paris",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the class of histoire-image.org (an educational image-analysis site). The pin is Place de la Bastille, the former fortress site as listed by GeoNames. Casualty counts differ between sources and are not given.",
+  "author": "historian-agent:o-s45",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:27:46.401Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1789-07-14",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 14 July 1789 a crowd in Paris, seeking gunpowder and arms, attacked the Bastille fortress after royal troops had massed near the city and minister Necker had…",
+        "source": "src-whe-bastille"
+      },
+      {
+        "span": "1789",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Governor de Launay was killed by the crowd on the way to the Hôtel de Ville.",
+        "source": "src-whe-bastille",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

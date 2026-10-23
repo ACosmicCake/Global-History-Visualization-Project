@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0330-christianity-in-aksum",
+  "kind": "process",
+  "title": "Adoption of Christianity in the Kingdom of Aksum",
+  "summary": "During the reign of King Ezana (about 330–360), the Kingdom of Aksum in northern Ethiopia adopted Christianity, one of the earliest states to do so. The change shows in his later inscriptions and in new symbols on his coins. Tradition credits Frumentius, a Syrian Christian who tutored Ezana and became bishop; the exact date is debated.",
+  "when": {
+    "start": {
+      "year": 330
+    },
+    "end": {
+      "year": 360
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 10,
+      "end_minus_years": 10,
+      "end_plus_years": 10,
+      "note": "Dates bracket the reign of Ezana (ca. 330–360, Butts 2025). The conversion itself is placed no earlier than the mid-330s and more likely in the 340s (EBSCO); scholars disagree and no explicit record of the event survives."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Anno Domini, regnal estimate",
+        "value": "Ezana (ca. 330–360)",
+        "source": "src-butts2025"
+      },
+      {
+        "calendar": "Anno Domini, scholarly estimate",
+        "value": "conversion probably not earlier than the mid-330s; more likely the 340s",
+        "source": "src-ebsco-ezana"
+      },
+      {
+        "calendar": "Anno Domini, century",
+        "value": "introduction of Christianity in the 4th century AD",
+        "source": "src-unesco-15"
+      }
+    ],
+    "display": "c. 330–360 (conversion probably 330s–340s)"
+  },
+  "where": {
+    "lat": 14.1302,
+    "lon": 38.7186,
+    "elevation_m": null,
+    "modern_name": "Aksum (Axum), Tigray, Ethiopia",
+    "historical_name": "Aksum, capital of the Kingdom of Aksum (Aksumite kingdom) in the northern Ethiopian highlands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-unesco-15"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Aksum was among the first states anywhere to adopt Christianity, only decades after Constantine, and the faith became lasting in the Ethiopian highlands."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0615-first-migration-to-abyssinia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-butts2025",
+      "url": "https://journals.sub.uni-hamburg.de/aethiopica/article/download/2433/2360/7842",
+      "title": "Ezana of Aksum: The First Christian African King (Aethiopica 28:7–38)",
+      "publisher": "Aethiopica, University of Hamburg",
+      "author": "Aaron Michael Butts",
+      "date_published": "2025",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-ezana",
+      "url": "https://www.ebsco.com/research-starters/history/ezana/",
+      "title": "Ezana (Research Starter)",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-15",
+      "url": "https://whc.unesco.org/en/list/15",
+      "title": "Aksum",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "when.as_recorded"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: sources place the conversion anywhere from the mid-330s to the 340s, and Butts treats the Frumentius story as a late outside narrative; the span given is Ezana's reign, not a pinned event date.",
+  "author": "historian-agent:o-s5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:43:26.038Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "330",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "During the reign of King Ezana (about 330–360), the Kingdom of Aksum in northern Ethiopia adopted Christianity, one of the earliest states to do so.",
+        "source": "src-butts2025"
+      },
+      {
+        "span": "360",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Tradition credits Frumentius, a Syrian Christian who tutored Ezana and became bishop; the exact date is debated.",
+        "source": "src-butts2025",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

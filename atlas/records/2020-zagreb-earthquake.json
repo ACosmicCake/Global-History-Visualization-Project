@@ -1,0 +1,133 @@
+{
+  "id": "2020-zagreb-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2020 Zagreb earthquake",
+  "summary": "A very strong earthquake of magnitude 5.5, with its epicentre near Markuševac by Zagreb, struck on the morning of 22 March 2020 and was followed by a 5.0 shock. It injured people in Zagreb and surrounding counties and damaged many central buildings, including most museums, during the coronavirus restrictions.",
+  "when": {
+    "start": {
+      "year": 2020
+    },
+    "end": {
+      "year": 2020
+    },
+    "precision": "day",
+    "display": "22 March 2020",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Objavljeno: 22.03.2020.",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "ZAGREB, March 23, 2020",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 45.897,
+    "lon": 15.966,
+    "elevation_m": null,
+    "modern_name": "Zagreb, Croatia (epicentre near Markuševec)",
+    "historical_name": "Zagreb, Croatia (epicentre near Markuševec)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Damaging national-scale earthquake in a European capital, with many injuries and heavy damage to cultural buildings."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://civilna-zastita.gov.hr/vijesti/vijesti/potresi-na-zagrebackom-podrucju/2285",
+      "title": "Ravnateljstvo civilne zaštite - Potresi na zagrebačkom području",
+      "publisher": "civilna-zastita.gov.hr",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20200324135413/https://www.total-croatia-news.com/lifestyle/42336-museums",
+      "title": "Most of Zagreb's Museums Damaged by Earthquakes",
+      "publisher": "total-croatia-news.com",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q88259708",
+      "title": "Wikidata Q88259708 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give the epicentre as Markuševac (Markuševec in the Croatian text is spelled 'Markuševca'), so the spelling is least certain. Total casualties and damage are not given beyond injuries in the first-day report. The date rests on the publication date plus the text saying 'this morning'.} (Drafted by the Wikipedia pipeline from civilna-zastita.gov.hr, total-croatia-news.com; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:48.674Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2020",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "0 shock.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2020",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It injured people in Zagreb and surrounding counties and damaged many central buildings, including most museums, during the coronavirus restrictions.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

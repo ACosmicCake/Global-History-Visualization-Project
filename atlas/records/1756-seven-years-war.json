@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1756-seven-years-war",
+  "kind": "event",
+  "title": "Seven Years' War",
+  "summary": "A global conflict between Britain, France and their allies, dated 1756 to 1763 in one account. Its North American part is called the French and Indian War. Britain declared war on France in 1756, and the Treaty of Paris, in effect on 10 February 1763, ended the war between Britain and France.",
+  "when": {
+    "start": {
+      "year": 1756
+    },
+    "end": {
+      "year": 1763
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The US Office of the Historian dates the war 1754-63, counting its North American beginnings; HISTORY gives 1756-1763 for the global war."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1756-1763",
+        "source": "src-history"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1754–63",
+        "source": "src-oh"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "February 10, 1763",
+        "source": "src-oh-paris"
+      }
+    ],
+    "display": "1756–1763"
+  },
+  "where": {
+    "lat": 48.85667,
+    "lon": 2.35222,
+    "elevation_m": null,
+    "modern_name": "Paris, France (proxy pin: treaty city; the war was global)",
+    "historical_name": "Paris, Kingdom of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10000,
+    "coordinate_sources": [
+      "src-coord"
+    ]
+  },
+  "regions": [
+    "global",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Global war that ended with France ceding Canada to Britain, per Mount Vernon and the Office of the Historian."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-oh",
+      "url": "https://history.state.gov/milestones/1750-1775/french-indian-war",
+      "title": "French and Indian War/Seven Years' War, 1754-63",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-oh-paris",
+      "url": "https://history.state.gov/milestones/1750-1775/treaty-of-paris",
+      "title": "Treaty of Paris, 1763",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/articles/seven-years-war",
+      "title": "Seven Years' War",
+      "publisher": "A&E Television Networks (HISTORY)",
+      "author": "Becky Little",
+      "date_published": "2025-11-17",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mv",
+      "url": "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/seven-years-war/",
+      "title": "Seven Years' War",
+      "publisher": "George Washington's Mount Vernon",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-coord",
+      "url": "https://www.wikidata.org/wiki/Q90",
+      "title": "Wikidata Q90 (Paris, coordinate location P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date: 1754 (Office of the Historian, Mount Vernon) vs 1756 (HISTORY); I used 1756 per the id. Pin is a proxy at Paris for a global war.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T00:36:33.913Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1756",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A global conflict between Britain, France and their allies, dated 1756 to 1763 in one account.",
+        "source": "src-oh"
+      },
+      {
+        "span": "1763",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Britain declared war on France in 1756, and the Treaty of Paris, in effect on 10 February 1763, ended the war between Britain and France.",
+        "source": "src-oh",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

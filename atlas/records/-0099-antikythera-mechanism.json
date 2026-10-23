@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "-0099-antikythera-mechanism",
+  "kind": "work",
+  "title": "Antikythera Mechanism",
+  "summary": "The Antikythera Mechanism is a fragmentary Hellenistic astronomical machine with bronze gearwheels, made about the second century BCE. Sponge divers found a first-century BCE shipwreck off the Greek island of Antikythera in 1900, and the mechanism was recovered from it in 1901; its 82 fragments are in the National Archaeological Museum, Athens. Its gearing could predict the movements of the Sun, Moon and planets and the timing of eclipses.",
+  "when": {
+    "start": {
+      "year": -99
+    },
+    "end": {
+      "year": -99
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 105,
+      "start_plus_years": 50,
+      "end_minus_years": 105,
+      "end_plus_years": 50,
+      "note": "ISAW: letter forms best fit the second half of the 2nd century BCE, though a date from the end of the 3rd century to the middle of the 1st century BCE cannot be excluded. Year -99 is the midpoint of the century, not a recorded year."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC",
+        "value": "made about the second century B.C.",
+        "source": "src-isaw-antikythera"
+      },
+      {
+        "calendar": "BC",
+        "value": "The Greek inscriptions are carved by the same hand and date the device in the 2nd c. BC.",
+        "source": "src-asme-antikythera"
+      }
+    ],
+    "display": "c. 100 BCE (second century BCE)"
+  },
+  "where": {
+    "lat": 35.864167,
+    "lon": 23.305,
+    "elevation_m": null,
+    "modern_name": "Antikythera wreck site, east side of Antikythera island, Greece",
+    "historical_name": "Waters off Antikythera, Aegean-Mediterranean (the wreck of a Roman-era cargo ship); the mechanism's place of manufacture is uncertain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-wd-antikythera",
+      "src-whoi-antikythera"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The oldest known complex geared device, far beyond any other surviving ancient technology."
+  },
+  "confidence": "probable",
+  "sources": [
+    {
+      "id": "src-isaw-antikythera",
+      "url": "http://dlib.nyu.edu/awdl/isaw/isaw-papers/4/",
+      "title": "The Cosmos in the Antikythera Mechanism (ISAW Papers 4)",
+      "publisher": "Institute for the Study of the Ancient World, New York University",
+      "author": "Tony Freeth and Alexander Jones",
+      "date_published": "2012-02",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-asme-antikythera",
+      "url": "https://www.asme.org/getmedia/248c6ed7-94a0-4bcf-aa3c-bdbb0e3431d5/271_1.pdf",
+      "title": "The Antikythera Mechanism, Historical Mechanical Engineering Landmark (National Archaeological Museum, Athens)",
+      "publisher": "American Society of Mechanical Engineers",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-whoi-antikythera",
+      "url": "https://www.whoi.edu/know-your-ocean/ocean-topics/ocean-human-lives/underwater-archaeology/antikythera-shipwreck",
+      "title": "Antikythera shipwreck",
+      "publisher": "Woods Hole Oceanographic Institution",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "what"
+      ]
+    },
+    {
+      "id": "src-wd-antikythera",
+      "url": "https://www.wikidata.org/wiki/Q213730",
+      "title": "Wikidata item Q213730 (Antikythera), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date, which is a century-wide estimate. The pin is the wreck site (east side of Antikythera island), where it was found; the Wikidata point is the island itself, so uncertainty is 8 km. ASME says it was probably built on Rhodes but that this is not certain, so the place of manufacture is not claimed.",
+  "published_at": "2026-10-22T16:17:44.948Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

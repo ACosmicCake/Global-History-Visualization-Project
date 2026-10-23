@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s99",
+  "updated": "2026-10-22",
+  "id": "-0500-chinese-cast-iron-blast-furnace",
+  "kind": "process",
+  "title": "Cast iron smelting in ancient China",
+  "summary": "Chinese ironworkers were casting iron by the 5th century BC or earlier, and cast iron was used widely in farming, warfare and crafts. Researchers note that iron production in the Central Plains has been largely based on cast iron smelting since about then. A forced air blast, furnace design and the bronze-casting tradition lay behind the shift from bloomery iron to cast iron.",
+  "when": {
+    "start": {
+      "year": -499
+    },
+    "end": {
+      "year": -400
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 300,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Han and Chen: invention occurred during the 5th century BC or earlier. 5th century BC converted to astronomical years -499 to -400; \"or earlier\" is why the start range extends back. Cast iron fragments from Tianma-Qucun and a Liuhe tomb are mentioned as earlier (8th century BC) but it is unclear whether they were intentional."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC",
+        "value": "a significant invention that occurred during the 5th century BC or earlier",
+        "source": "src-pku-castiron"
+      },
+      {
+        "calendar": "BC",
+        "value": "cast iron smelting since ca. fifth century BC",
+        "source": "src-cam-castiron"
+      }
+    ],
+    "display": "5th century BC or earlier"
+  },
+  "where": {
+    "lat": 34.46031,
+    "lon": 113.02803,
+    "elevation_m": null,
+    "modern_name": "Central Plains, Henan, China (Dengfeng, near the Yangcheng smelting site)",
+    "historical_name": "Central Plains of Warring States period China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wikidata-q877609"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Early cast iron allowed widespread iron tools and weapons in China, which the sources link to farming and state power."
+  },
+  "confidence": "probable",
+  "sources": [
+    {
+      "id": "src-pku-castiron",
+      "url": "https://archaeology.pku.edu.cn/2013Casting-iron-in-ancient-China.pdf",
+      "title": "Casting iron in ancient China",
+      "publisher": "Peking University School of Archaeology and Museology (hosted paper)",
+      "author": "Han Rubin, Chen Jianli",
+      "date_published": "2013",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-cam-castiron",
+      "url": "https://www.repository.cam.ac.uk/items/8b261a7f-8a8d-4490-b757-c8a34d9c46a4",
+      "title": "Iron decarburisation techniques in the eastern Guanzhong Plain, China, during Late Warring States period (Archaeological and Anthropological Sciences 11)",
+      "publisher": "University of Cambridge Apollo repository (Springer Nature journal)",
+      "author": "Yaxiong Liu, Marcos Martinon-Torres, Jianli Chen, Weigang Sun, Kunlong Chen",
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q877609",
+      "url": "https://www.wikidata.org/wiki/Q877609",
+      "title": "Dengfeng (Wikidata Q877609)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the target id says blast furnace, but the sources opened only say higher temperatures are reached in a blast furnace and date cast iron to the 5th century BC or earlier; no dated blast-furnace remains were found. The pin is Dengfeng as a Central Plains marker. Chen is an author of both papers.",
+  "published_at": "2026-10-22T17:57:15.557Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-499",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Chinese ironworkers were casting iron by the 5th century BC or earlier, and cast iron was used widely in farming, warfare and crafts.",
+        "source": "src-pku-castiron"
+      },
+      {
+        "span": "-400",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "A forced air blast, furnace design and the bronze-casting tradition lay behind the shift from bloomery iron to cast iron.",
+        "source": "src-pku-castiron",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

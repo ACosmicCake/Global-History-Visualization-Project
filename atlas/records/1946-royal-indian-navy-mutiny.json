@@ -1,0 +1,153 @@
+{
+  "id": "1946-royal-indian-navy-mutiny",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Royal Indian Navy Mutiny",
+  "summary": "On 18 February 1946 petty officers and ratings at HMIS Talwar, a signals establishment in Bombay, refused to work. The strike spread to shore bases and ships across South Asia, involving nearly 20,000 sailors in five days. Violence in Bombay and Karachi left many dead, and the action ended on 23 February 1946 with an amnesty-based settlement.",
+  "when": {
+    "start": {
+      "year": 1946
+    },
+    "end": {
+      "year": 1946
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start 18 February 1946 (both sources); end 23 February 1946 per EPW."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "February the 18th 1946",
+        "source": "src-liverpool"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "18–23 February 1946",
+        "source": "src-epw"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "23 February 1946",
+        "source": "src-epw"
+      }
+    ],
+    "display": "18–23 February 1946"
+  },
+  "where": {
+    "lat": 19.07283,
+    "lon": 72.88261,
+    "elevation_m": null,
+    "modern_name": "Mumbai, India (proxy pin: city centre point; HMIS Talwar was in downtown Bombay)",
+    "historical_name": "Bombay, British India",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Large-scale naval mutiny of nearly 20,000 sailors against British authority in India in 1946."
+  },
+  "confidence": "established",
+  "audience_note": "Includes deaths of civilians and sailors in clashes with armed forces; casualty figures differ between sources (about 200 vs 300 killed in Bombay).",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-liverpool",
+      "url": "https://livrepository.liverpool.ac.uk/3024559/1/Global%20Networks%20Special%20Issue%20Paper%20FINAL%20REVISION%20for%20upload%20to%20repositories.pdf",
+      "title": "Transnational connections and anti-colonial radicalism in the Royal Indian Navy Mutiny, 1946",
+      "publisher": "University of Liverpool (repository)",
+      "author": "Andrew Davies",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-epw",
+      "url": "https://www.epw.in/engage/article/unwrapping-uprising-hastened-indian-independence",
+      "title": "Unwrapping an Uprising that hastened Indian Independence",
+      "publisher": "Economic and Political Weekly (Engage)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/1275339",
+      "title": "Mumbai, India",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll differs (about 200 in Liverpool paper vs 300 in EPW); omitted from summary. Pin is a Mumbai city proxy.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:28:42.086Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1946",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 18 February 1946 petty officers and ratings at HMIS Talwar, a signals establishment in Bombay, refused to work.",
+        "source": "src-liverpool"
+      },
+      {
+        "span": "1946",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The strike spread to shore bases and ships across South Asia, involving nearly 20,000 sailors in five days.",
+        "source": "src-liverpool",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

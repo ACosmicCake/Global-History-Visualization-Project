@@ -1,0 +1,140 @@
+{
+  "id": "place-elmina-castle",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Elmina Castle",
+  "summary": "Elmina Castle (São Jorge da Mina), on the coast of present-day Ghana, was built by the Portuguese in 1482 to trade in gold. Taken by the Dutch in 1637 and ceded to Britain in 1872, it later became a main centre of the transatlantic slave trade. It is part of a UNESCO World Heritage site.",
+  "when": {
+    "start": {
+      "year": 1482
+    },
+    "end": {
+      "year": 1872
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the Portuguese construction date; end is the 1872 cession to Britain, the last transfer between European powers (the castle still stands)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "built in 1482",
+        "source": "src-unesco-34"
+      },
+      {
+        "calendar": "CE",
+        "value": "Erected by the Portuguese in 1482 (Diogo de Azambuja)",
+        "source": "src-exea-elmina"
+      },
+      {
+        "calendar": "CE",
+        "value": "Captured by the Dutch in 1637. Ceded to the British in 1872.",
+        "source": "src-exea-elmina"
+      }
+    ],
+    "display": "1482 (built) to 1872 (ceded to Britain)"
+  },
+  "where": {
+    "lat": 5.08274,
+    "lon": -1.348211,
+    "elevation_m": null,
+    "modern_name": "Elmina, Central Region, Ghana",
+    "historical_name": "Castelo de São Jorge da Mina (Portuguese, 1482); Elmina Castle under the Dutch (1637-1872); Gold Coast fortress",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wikidata-elmina",
+      "src-exea-elmina"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration",
+    "atrocity_injustice",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Oldest European building in sub-Saharan Africa, first a gold-trade post and later a major node of the transatlantic slave trade."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a fortress used in the transatlantic slave trade.",
+  "related": [
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-34",
+      "url": "https://whc.unesco.org/en/list/34",
+      "title": "Forts and Castles, Volta, Greater Accra, Central and Western Regions (World Heritage List no. 34)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-exea-elmina",
+      "url": "https://www.museuexea.org/en/fortificacoes/castelo-de-elmina",
+      "title": "Elmina Castle (Castelo de São Jorge da Mina / St. George's Castle)",
+      "publisher": "Museu EXEA (virtual exhibition of Portuguese fortifications)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded",
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wikidata-elmina",
+      "url": "https://www.wikidata.org/wiki/Q55264655",
+      "title": "Wikidata item Q55264655, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end-date convention (1872 cession used as the end of the European-power era; the castle still stands). No model written: I found no sourced height from an acceptable page; Museu EXEA gives only an area of about 9,000 square metres.",
+  "author": "historian-agent:m-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T05:38:18.504Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

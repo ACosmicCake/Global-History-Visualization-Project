@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1870-franco-prussian-war",
+  "kind": "event",
+  "title": "Franco-Prussian War",
+  "summary": "War in which a coalition of German states led by Prussia defeated France. France declared war on 19 July 1870, and the Treaty of Frankfurt of 10 May 1871 ended it, with France ceding Alsace and the northern part of Lorraine and owing an indemnity. It ended French hegemony in continental Europe and produced a unified Germany.",
+  "when": {
+    "start": {
+      "year": 1870
+    },
+    "end": {
+      "year": 1871
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources end the war with the Treaty of Frankfurt on 10 May 1871; Chemins de memoire also lists an armistice on 26 January 1871."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 19, 1870",
+        "source": "src-brit"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 10, 1871",
+        "source": "src-brit"
+      },
+      {
+        "calendar": "Gregorian, as recorded (French)",
+        "value": "19 juillet",
+        "source": "src-cdm"
+      },
+      {
+        "calendar": "Gregorian, as recorded (French)",
+        "value": "10 mai",
+        "source": "src-cdm"
+      }
+    ],
+    "display": "19 July 1870 – 10 May 1871"
+  },
+  "where": {
+    "lat": 48.8534,
+    "lon": 2.3488,
+    "elevation_m": null,
+    "modern_name": "Paris, France (proxy pin: the besieged capital; the war was fought across northeastern France and German states)",
+    "historical_name": "Paris, Second French Empire, then Government of National Defense",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-llf"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Ended French hegemony in continental Europe and created a unified Germany."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1870-battle-of-sedan",
+      "type": "has_part"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-brit",
+      "url": "https://www.britannica.com/event/Franco-German-War",
+      "title": "Franco-German War",
+      "publisher": "Encyclopaedia Britannica",
+      "author": "Britannica Editors",
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cdm",
+      "url": "https://www.cheminsdememoire.gouv.fr/en/revue/understanding-franco-prussian-war-0",
+      "title": "Understanding the Franco-Prussian War",
+      "publisher": "Chemins de memoire (French Ministry of the Armed Forces)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-llf",
+      "url": "https://www.latlongfinder.net/coordinates/france/paris",
+      "title": "Paris coordinates",
+      "publisher": "LatLongFinder",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy (Paris), not a battlefield. Britannica read via page metadata; the French-language Chemins de memoire list gives the 10 May treaty, Alsace/northern Lorraine cession and indemnity.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:35:38.824Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1870",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "War in which a coalition of German states led by Prussia defeated France.",
+        "source": "src-brit"
+      },
+      {
+        "span": "1871",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "France declared war on 19 July 1870, and the Treaty of Frankfurt of 10 May 1871 ended it, with France ceding Alsace and the northern part of Lorraine…",
+        "source": "src-brit",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

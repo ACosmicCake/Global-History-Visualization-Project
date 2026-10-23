@@ -1,0 +1,225 @@
+{
+  "id": "place-chand-baori",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Chand Baori, Abhaneri",
+  "aliases": [
+    "Chand Bawdi",
+    "Abhaneri Stepwell"
+  ],
+  "summary": "Chand Baori is a stepwell at Abhaneri in Dausa district, Rajasthan, built in the 8th-9th century; Lonely Planet credits the Hindu king Raja Chanda. Rajasthan Tourism gives it as 19.5 m deep with 13 storeys, and Lonely Planet as about 35 m across, with some 3,500 steps arranged in a criss-cross pattern down the sides of the central tank.",
+  "when": {
+    "start": {
+      "year": 800
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Incredible India (Dausa page) gives the 8th-9th century; Rajasthan Tourism says the eighth century and Lonely Planet the ninth, so the range is 700-900 CE. End is the present: the well stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Incredible India, Dausa)",
+        "value": "Built in the 8th–9th century",
+        "source": "src-incredibleindia-chand"
+      },
+      {
+        "calendar": "CE (Rajasthan Tourism)",
+        "value": "Built back in the eighth century",
+        "source": "src-rajtourism-chand"
+      },
+      {
+        "calendar": "CE (Lonely Planet)",
+        "value": "constructed by the Hindu king Raja Chanda in the 9th century",
+        "source": "src-lonelyplanet-chand"
+      }
+    ],
+    "display": "Built 8th–9th century CE; standing today"
+  },
+  "where": {
+    "lat": 27.0072695,
+    "lon": 76.6066348,
+    "elevation_m": null,
+    "modern_name": "Chand Baori, Abhaneri, Dausa district, Rajasthan, India",
+    "historical_name": "Stepwell at Abhaneri, Rajasthan (name of the town then not given in sources)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-chand"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Square stepwell about 35 m across and 19.5 m deep, with steps on three sides and a temple on the fourth.",
+      "source": "src-lonelyplanet-chand",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-rajtourism-chand",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 19.5,
+          "unit": "m",
+          "source": "src-rajtourism-chand",
+          "note": "\"19.5 meters in depth\" (depth below ground, used as height); Incredible India Jaipur page says over 98 feet"
+        },
+        {
+          "part": "base length",
+          "value": 35,
+          "unit": "m",
+          "source": "src-lonelyplanet-chand",
+          "note": "\"35m across from side to side\""
+        },
+        {
+          "part": "base width",
+          "value": 35,
+          "unit": "m",
+          "source": "src-lonelyplanet-chand",
+          "note": "Described as square (Incredible India: \"The step well has a square shape\"); same 35 m figure"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "square stepwell footprint"
+      },
+      {
+        "level": "local",
+        "representation": "procedural square stepped pit 35 m across and 19.5 m deep, 13 storeys"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 701,
+        "end_year": 900,
+        "state": "construction",
+        "description": "Built in the 8th-9th century (Incredible India, Dausa page); Rajasthan Tourism says the eighth century; Lonely Planet says the lower tiers were built in the 9th century.",
+        "source": "src-incredibleindia-chand"
+      },
+      {
+        "start_year": 900,
+        "end_year": null,
+        "state": "intact",
+        "description": "Stands today; Lonely Planet says the Mughals added pavilions and arcades to the upper levels in the 18th century.",
+        "source": "src-lonelyplanet-chand"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "A stepwell descends below ground; its depth and side are kept as data, but it is not drawn as a raised block."
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Rajasthan Tourism describes it as one of the deepest and largest step wells in India."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-rajtourism-chand",
+      "url": "https://www.tourism.rajasthan.gov.in/dausa.html",
+      "title": "Dausa Tourism: Places to Visit in Dausa",
+      "publisher": "Rajasthan Tourism (Government of Rajasthan)",
+      "author": "Rajasthan Tourism (Government of Rajasthan)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-incredibleindia-chand",
+      "url": "https://www.incredibleindia.gov.in/en/rajasthan/dausa",
+      "title": "Dausa: Rajasthan's Gateway of Heritage and Legends",
+      "publisher": "Incredible India (Ministry of Tourism, Government of India)",
+      "author": "Incredible India (Ministry of Tourism, Government of India)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-lonelyplanet-chand",
+      "url": "https://www.lonelyplanet.com/articles/india-best-step-wells-to-visit",
+      "title": "India's most beautiful stepwells and how to visit them",
+      "publisher": "Lonely Planet",
+      "author": "Lonely Planet",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-chand",
+      "url": "https://nominatim.openstreetmap.org/search?q=Chand+Baori+Abhaneri&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Chand Baori Step Well, relation 8102876 (27.0072695, 76.6066348)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape block (stepwell, per instructions): the height is depth below ground and the plan is the side. The 35 m side is from Lonely Planet only; I did not find a heritage-body or scholarly page giving a plan dimension (ASI page unreachable), so the plan is less sure than the 19.5 m depth. Depth conflicts: 19.5 m (Rajasthan Tourism, a published paper repeating it) vs about 98 feet (Incredible India Jaipur page). Step count also conflicts: 1,000 (Rajasthan Tourism) vs 3,500 (Incredible India, Lonely Planet), so no step count is used. Date range wide on purpose.",
+  "author": "historian-agent:m-13",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:17:29.436Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "id": "1916-07-01-battle-of-the-somme",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of the Somme",
+  "summary": "The British and French offensive on the Somme in northern France opened on 1 July 1916 on a front of about 25 miles and was shut down by Haig on 18 November. The British Army lost 57,000 men on the first day, or 57,470 including missing with 19,240 killed per Military History Matters. The National Army Museum says it failed to secure a breakthrough.",
+  "when": {
+    "start": {
+      "year": 1916,
+      "iso": "1916-07-01"
+    },
+    "end": {
+      "year": 1916,
+      "iso": "1916-11-18"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start and end days stated by the National Army Museum; a preliminary bombardment began on 24 June."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "began on 1 July 1916",
+        "source": "src-nam-somme"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "18 November 1916",
+        "source": "src-nam-somme"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1 July 1916",
+        "source": "src-mhm-somme"
+      }
+    ],
+    "display": "1 July - 18 November 1916"
+  },
+  "where": {
+    "lat": 50.0542332,
+    "lon": 2.6888876,
+    "elevation_m": null,
+    "modern_name": "Somme front around Thiepval, Hauts-de-France, France",
+    "historical_name": "River Somme front, northern France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-osm-somme"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The British Army's bloodiest day and the costliest Allied offensive of 1916."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a war event with large numbers of military deaths and casualties.",
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "part_of"
+    },
+    {
+      "id": "1916-02-21-battle-of-verdun",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam-somme",
+      "url": "https://www.nam.ac.uk/explore/battle-somme",
+      "title": "Battle of the Somme",
+      "publisher": "National Army Museum, London",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mhm-somme",
+      "url": "https://www.military-history.org/cover-feature/somme-1916.htm",
+      "title": "Somme, 1916",
+      "publisher": "Military History Matters",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-somme",
+      "url": "https://nominatim.openstreetmap.org/search?q=Thiepval+Somme&format=json&limit=1",
+      "title": "Thiepval, Somme (Nominatim search result)",
+      "publisher": "OpenStreetMap (Nominatim gazetteer)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Total casualty figures differ by publisher (British Empire 420,000; French 200,000 or 204,000; German at least 450,000 or possibly 670,000), so only first-day figures are in the summary. Pin is Thiepval, chosen as a place on the front; the sources name no centre point.",
+  "author": "historian-agent:o-s50",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:40:17.325Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1916-07-01",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The British and French offensive on the Somme in northern France opened on 1 July 1916 on a front of about 25 miles and was shut down by…",
+        "source": "src-nam-somme"
+      },
+      {
+        "span": "1916",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The British Army lost 57,000 men on the first day, or 57,470 including missing with 19,240 killed per Military History Matters.",
+        "source": "src-nam-somme",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

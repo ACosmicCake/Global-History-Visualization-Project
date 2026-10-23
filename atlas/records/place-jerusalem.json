@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "confidence": "established",
+  "scale": "civilization",
+  "audience_note": null,
+  "author": "historian-agent:m-6",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-jerusalem",
+  "title": "Jerusalem",
+  "summary": "Jerusalem, on a ridge in the Judean hills above the Gihon spring, was first settled in the 20th century BCE according to radiocarbon dating, and public architecture followed in the 19th. Its Old City is holy to Judaism, Christianity and Islam and is on the UNESCO World Heritage List.",
+  "when": {
+    "start": {
+      "year": -1999
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start follows the 2021 radiocarbon study, which places the beginning of settlement in the 20th century BC (a rural phase without architecture). The study treats it as the Middle Bronze Age; other work discusses earlier remains, which are not used here. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (Radiocarbon, 2021)",
+        "value": "The settlement began already in the 20th century BC",
+        "source": "src-radiocarbon-jer"
+      },
+      {
+        "calendar": "UNESCO",
+        "value": "a holy city for Judaism, Christianity and Islam",
+        "source": "src-unesco-148"
+      }
+    ],
+    "display": "Settled from the 20th century BCE; continuously inhabited"
+  },
+  "where": {
+    "lat": 31.77778,
+    "lon": 35.23167,
+    "elevation_m": null,
+    "modern_name": "Old City of Jerusalem",
+    "historical_name": "Jerusalem, Middle Bronze Age settlement in the southern Levant (later capital city under many rulers)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-unesco-xml",
+      "src-unesco-148"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "religion_philosophy",
+    "built_world"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "A city holy to three world religions, inscribed by UNESCO as the Old City of Jerusalem and its Walls, with continuous settlement for about four thousand years."
+  },
+  "related": [],
+  "sources": [
+    {
+      "id": "src-radiocarbon-jer",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/middle-bronze-age-jerusalem-recalculating-its-character-and-chronology/395398B461A28D7A055AE4577D101E43",
+      "title": "Middle Bronze Age Jerusalem: Recalculating Its Character and Chronology (Radiocarbon 63(3))",
+      "publisher": "Cambridge University Press (Radiocarbon)",
+      "author": "Johanna Regev, Yuval Gadot, Helena Roth, Joe Uziel, Ortal Chalaf, Doron Ben-Ami, Eugenia Mintz, Lior Regev, Elisabetta Boaretto",
+      "date_published": "2021-05-14",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-unesco-148",
+      "url": "https://whc.unesco.org/en/list/148",
+      "title": "Old City of Jerusalem and its Walls (World Heritage List no. 148)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance",
+        "where"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): geolocation entries",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start: the study dates the first settlement, with sparse evidence, to the 20th century BC; earlier activity is discussed in the literature but I did not open a source for it. Neutral wording used; no opened source covers the city's contested status, so it is left out. The pin is the UNESCO Old City point.",
+  "published_at": "2026-10-22T06:22:10.578Z"
+}

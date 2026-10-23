@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "confidence": "established",
+  "scale": "civilization",
+  "audience_note": null,
+  "author": "historian-agent:m-6",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-memphis-and-its-necropolis",
+  "title": "Memphis and its Necropolis",
+  "summary": "Memphis, near Mit Rahina south of Cairo, was the capital of Egypt in the Old Kingdom, and its necropolis stretches along the desert edge as a chain of pyramid fields from Giza to Dahshur. UNESCO inscribed the property in 1979 for its pyramids, mastabas, rock tombs and temples.",
+  "when": {
+    "start": {
+      "year": -2624
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of the Old Kingdom, 2625 B.C. in the Penn source, when Memphis was the capital. The city and its cemeteries may be older and the Penn page gives no founding date. End is the present: the site survives."
+    },
+    "as_recorded": [
+      {
+        "calendar": "B.C. (Penn)",
+        "value": "capital city of Egypt during the Old Kingdom (2625-2130 B.C.)",
+        "source": "src-penn-memphis"
+      },
+      {
+        "calendar": "UNESCO inscription",
+        "value": "The capital of the Old Kingdom of Egypt has some extraordinary funerary monuments",
+        "source": "src-unesco-86"
+      }
+    ],
+    "display": "Old Kingdom capital from c. 2625 BCE; UNESCO property since 1979"
+  },
+  "where": {
+    "lat": 29.84954,
+    "lon": 31.25512,
+    "elevation_m": null,
+    "modern_name": "Memphis (Mit Rahina) and the pyramid fields, Giza Governorate, Egypt",
+    "historical_name": "Men-nefer (Memphis), capital of Egypt in the Old Kingdom, and its necropolis",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-osm-memphis",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world",
+    "religion_philosophy"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "The Old Kingdom capital and its pyramid necropolis, a UNESCO World Heritage property that includes Giza, Saqqara and Dahshur."
+  },
+  "related": [
+    {
+      "id": "place-giza-pyramids",
+      "type": "has_part"
+    },
+    {
+      "id": "place-saqqara-step-pyramid",
+      "type": "has_part"
+    },
+    {
+      "id": "place-dahshur-pyramids",
+      "type": "has_part"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-penn-memphis",
+      "url": "https://aamw.sas.upenn.edu/node/4076",
+      "title": "Memphis (Egypt)",
+      "publisher": "University of Pennsylvania, School of Arts and Sciences (Art and Archaeology of the Mediterranean World)",
+      "author": "Graduate Group in Art and Archaeology of the Mediterranean World",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-unesco-86",
+      "url": "https://whc.unesco.org/en/list/86",
+      "title": "Memphis and its Necropolis - the Pyramid Fields from Giza to Dahshur (World Heritage List no. 86)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance",
+        "when"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): geolocation entries",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-memphis",
+      "url": "https://nominatim.openstreetmap.org/search?q=Mit+Rahina+Memphis+Egypt&format=json",
+      "title": "OpenStreetMap Nominatim: Memphis open-air museum, way 653703866 (29.8495393, 31.2551183)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start: the Penn page dates the Old Kingdom capital only, and tradition places Memphis earlier. The pin sits on the open-air museum at Mit Rahina, 1 km from the UNESCO point; the necropolis itself spans some 30 km, hence 2 km uncertainty.",
+  "published_at": "2026-10-22T06:22:10.222Z"
+}

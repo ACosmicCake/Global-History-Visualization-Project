@@ -1,0 +1,151 @@
+{
+  "id": "-5677-eruption-of-mount-mazama",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Eruption of Mount Mazama",
+  "summary": "Mount Mazama, a cluster of overlapping Cascade volcanoes, was destroyed by an enormous explosive eruption about 7,700 years ago. So much molten rock was expelled that the summit collapsed into a caldera, which later filled with water to form Crater Lake, the deepest lake in the United States. Ash fell over much of the western United States and southwestern Canada, covering about 1.7 million km2.",
+  "when": {
+    "start": {
+      "year": -5677
+    },
+    "end": {
+      "year": -5677
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Both sources say \"7,700 years ago\", with no calendar year or error given. The year -5677 is an approximate conversion from 7,700 years ago (reference year 2023) and the id; treat it as rounded to the century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "7,700 years ago",
+        "source": "src-usgs-mazama"
+      },
+      {
+        "calendar": "years ago",
+        "value": "about 7,700 years ago",
+        "source": "src-nps-mazama"
+      }
+    ],
+    "display": "c. 7,700 years ago"
+  },
+  "where": {
+    "lat": 42.9165186,
+    "lon": -122.0844711,
+    "elevation_m": null,
+    "modern_name": "Crater Lake caldera, Crater Lake National Park, USA",
+    "historical_name": "Mount Mazama volcano of the Cascade Range (prehistoric, unnamed polity)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-mazama"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "Created Crater Lake and left a widely used ash marker layer, per the National Park Service."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-usgs-mazama",
+      "url": "https://pubs.usgs.gov/fs/2002/fs092-02",
+      "title": "Mount Mazama and Crater Lake: Growth and Destruction of a Cascade Volcano (Fact Sheet 092-02)",
+      "publisher": "U.S. Geological Survey",
+      "author": "U.S. Geological Survey",
+      "date_published": "2002",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nps-mazama",
+      "url": "https://home.nps.gov/articles/nps-geodiversity-atlas-crater-lake-national-park.htm",
+      "title": "NPS Geodiversity Atlas: Crater Lake National Park",
+      "publisher": "U.S. National Park Service",
+      "author": "National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-mazama",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1201788.json",
+      "title": "Wikidata entry for Mount Mazama (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "7,700 years ago",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "A towering column of pumice and ash begins the eruption that destroys the Mount Mazama volcanic cluster.",
+        "source": "src-usgs-mazama",
+        "consequence": false
+      },
+      {
+        "span": "7,700 years ago",
+        "action": "numbers.counter { range: [0, 1700000] }",
+        "caption": "Ash settles over the western United States and southwestern Canada, blanketing about 1.7 million square kilometres.",
+        "source": "src-nps-mazama",
+        "consequence": false
+      },
+      {
+        "span": "after the eruption",
+        "action": "region.fill { radius_km: 10 }",
+        "caption": "The summit collapses into a caldera that fills with water as Crater Lake; the ash becomes a stratigraphic marker.",
+        "source": "src-nps-mazama",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: the year -5677 is a conversion from \"7,700 years ago\", with no sourced error. The caldera is 8 x 10 km per NPS, so the point is the Wikidata location of Mount Mazama with a 10 km uncertainty. Whether \"Oregon\" is stated on the pages was not used in the summary.",
+  "author": "historian-agent:o-s91",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:11:05.419Z"
+}

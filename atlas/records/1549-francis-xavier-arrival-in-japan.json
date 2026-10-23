@@ -1,0 +1,143 @@
+{
+  "id": "1549-francis-xavier-arrival-in-japan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Francis Xavier arrives in Japan",
+  "summary": "In 1549 the Jesuit missionary Francis Xavier arrived at Kagoshima on Kyushu with two other Spanish Jesuits, having set out the year before. World History Encyclopedia dates the arrival of Christianity in Japan to the moment Jesuits first set foot in Kagoshima.",
+  "when": {
+    "start": {
+      "year": 1549
+    },
+    "end": {
+      "year": 1549
+    },
+    "precision": "year",
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "In 1549, Xavier arrived in Kagoshima in Kyushu, Japan.",
+        "source": "src-jta"
+      },
+      {
+        "calendar": "CE",
+        "value": "Christianity arrived in Japan in 1549 when Jesuits first set foot in Kagoshima.",
+        "source": "src-whe-xj"
+      }
+    ],
+    "display": "1549"
+  },
+  "where": {
+    "lat": 31.566667,
+    "lon": 130.55,
+    "elevation_m": null,
+    "modern_name": "Kagoshima, Kyushu, Japan",
+    "historical_name": "Kagoshima, Kyushu, Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-gn-kago"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Xavier's landing is given as the point at which Christianity reached Japan."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-jta",
+      "url": "https://www.mlit.go.jp/tagengo-db/en/H30-01148.html",
+      "title": "The Mission (1549–)",
+      "publisher": "Japan Tourism Agency (JTA Sightseeing Database)",
+      "author": "Japan Tourism Agency",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-xj",
+      "url": "https://www.worldhistory.org/article/2503/christianity-in-japan/",
+      "title": "Christianity in Japan",
+      "publisher": "World History Encyclopedia",
+      "author": "Matthew Allison",
+      "date_published": "2024-07-23",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-kago",
+      "url": "https://www.geonames.org/search.html?q=Kagoshima&country=JP",
+      "title": "Kagoshima, Japan",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Neither opened page gives a day or month. The JTA page misplaces Malacca; only its 1548 departure, 1549 arrival and Kagoshima claims are used.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:41.831Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1549",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1549 the Jesuit missionary Francis Xavier arrived at Kagoshima on Kyushu with two other Spanish Jesuits, having set out the year before.",
+        "source": "src-jta"
+      },
+      {
+        "span": "1549",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "World History Encyclopedia dates the arrival of Christianity in Japan to the moment Jesuits first set foot in Kagoshima.",
+        "source": "src-jta",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

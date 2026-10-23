@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-1800my-assembly-of-nuna",
+  "kind": "process",
+  "title": "Assembly of Nuna (Columbia)",
+  "summary": "Nuna, also called Columbia, is described as an early supercontinent that came together in the Paleoproterozoic. One 2024 study puts a first stage of amalgamation at 2.0–1.8 billion years ago and a second stage at 1.8–1.6; a review dates the supercontinent itself to 1.9–1.8 billion years ago.",
+  "when": {
+    "start": {
+      "year": -2000000000
+    },
+    "end": {
+      "year": -1800000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources differ: 2.0–1.8 Ga for first-stage amalgamation (Scientific Reports); 1.9–1.8 Ga for the supercontinent (Reddy and Evans). The same study gives a second stage at 1.8–1.6 Ga. No error bars given."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "2.0–1.8",
+        "source": "src-scirep"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "1.8 Ga supercontinent Nuna",
+        "source": "src-yale"
+      }
+    ],
+    "display": "c. 2.0–1.8 billion years ago (first stage)"
+  },
+  "where": {
+    "lat": 71.706936,
+    "lon": -42.604303,
+    "elevation_m": null,
+    "modern_name": "Greenland (proxy pin only; the assembly involved many cratons and has no single location)",
+    "historical_name": "Nuna/Columbia supercontinent (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-geodatos"
+    ],
+    "paleo": {
+      "not_applicable": "Predates reliable plate reconstructions; the pin is a proxy and the process is global."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Described as Earth's first supercontinent in one source, marking early global plate-tectonic organisation."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-1000my-assembly-of-rodinia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-scirep",
+      "url": "https://www.nature.com/articles/s41598-024-56691-1",
+      "title": "Metamorphic turnover at 2 Ga related to two-stage assembly of Columbia",
+      "publisher": "Nature Publishing Group (Scientific Reports)",
+      "author": "Kirscher, Uwe et al.",
+      "date_published": "2024-03-18",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-yale",
+      "url": "https://earth.yale.edu/sites/default/files/2024-10/Evans%20doc%2057.pdf",
+      "title": "Palaeoproterozoic supercontinents and global evolution: correlations from core to atmosphere",
+      "publisher": "Yale University, Department of Earth and Planetary Sciences (paper by Reddy and Evans)",
+      "author": "S. M. Reddy and D. A. D. Evans",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geodatos",
+      "url": "https://www.geodatos.net/en/coordinates/greenland",
+      "title": "Greenland Geographic coordinates",
+      "publisher": "Geodatos",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates differ between sources (2.0–1.8 vs 1.9–1.8 Ga); pin is a Greenland proxy, not a location. The Yale PDF text has a garbled dash, so the as_recorded entry omits the 1.9.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:55:15.251Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

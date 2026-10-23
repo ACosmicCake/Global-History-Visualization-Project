@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0166-roman-sack-of-epirus",
+  "kind": "event",
+  "title": "Roman sack of Epirus and enslavement of its population (167 BCE)",
+  "summary": "In the autumn of 167 BCE, following Rome's defeat of Macedon at Pydna, the Roman Senate ordered proconsul Lucius Aemilius Paullus to punish the Molossian and Epirote cities that had supported King Perseus. In a coordinated single-day operation, Roman legions systematically plundered and destroyed seventy walled settlements across Epirus, seizing hundreds of talents of gold and silver and enslaving approximately 150,000 inhabitants. This punitive atrocity eliminated Epirote urban infrastructure and supplied massive slave labor to Roman Italy.",
+  "when": {
+    "start": {
+      "year": -166
+    },
+    "end": {
+      "year": -166
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Executed in late autumn 167 BCE under proconsul Lucius Aemilius Paullus following the conclusion of the Third Macedonian War."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Plutarch, Life of Aemilius Paulus 29, trans. Bernadotte Perrin, Loeb Classical Library)",
+        "value": "in a single hour a hundred and fifty thousand persons were made slaves, and seventy cities were sacked",
+        "source": "src-perseids-aemilius"
+      },
+      {
+        "calendar": "BCE (Vyron Antoniadis and Georgia Pliakou, Phoibos Verlag 2022)",
+        "value": "In 167 B. C., the army of Aemilius Paullus, according to Polybius, destroyed by decree of the Senate, 70 Epirote walled settlements in a single day and 150, 000 people, mostly Molos- sians, were sold into slavery",
+        "source": "src-antoniadis2022"
+      }
+    ],
+    "display": "167 BCE"
+  },
+  "where": {
+    "lat": 39.775795,
+    "lon": 20.64762,
+    "elevation_m": null,
+    "modern_name": "Epirus (Ioannina region), northwestern Greece",
+    "historical_name": "Molossis, Epirus, Epirote League territory sacked by Roman legions",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-pleiades-molossis"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The destruction of seventy Epirote towns and enslavement of 150,000 people was one of the largest state-directed enslavement operations in Roman Republican history."
+  },
+  "confidence": "established",
+  "audience_note": "Details systematic destruction of seventy settlements, widespread pillage, and mass enslavement of 150,000 civilians.",
+  "related": [
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "part_of"
+    },
+    {
+      "id": "-0168-battle-of-pydna",
+      "type": "caused_by",
+      "because": "Rome's victory over Perseus of Macedon at Pydna in 168 BCE prompted the Senate to order the reprisal sack of Molossian Epirus in 167 BCE."
+    },
+    {
+      "id": "polity-roman-republic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-perseids-aemilius",
+      "url": "https://cts.perseids.org/read/greekLit/tlg0007/tlg019/perseus-eng2/28.11-29.5",
+      "title": "Plutarch, Life of Aemilius Paulus, chapters 28.11–29.5",
+      "publisher": "Perseids / Perseus Digital Library (Tufts University)",
+      "author": "Plutarch; trans. Bernadotte Perrin",
+      "date_published": "1918",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-antoniadis2022",
+      "url": "https://helios.eie.gr/helios/bitstream/10442/18297/1/3.Antoniadis.The_Archaeology_of_Dead_Cities_Ceramic_E.pdf",
+      "title": "The Archaeology of 'Dead Cities': Ceramic Evidence from Late Hellenistic and Roman Epirus",
+      "publisher": "Phoibos Verlag, Vienna (in Helios repository, National Hellenic Research Foundation)",
+      "author": "Vyron Antoniadis, Georgia Pliakou",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-molossis",
+      "url": "https://pleiades.stoa.org/places/531003/json",
+      "title": "Molossis: a Pleiades place resource",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-166",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 167 BCE, Roman legions under Aemilius Paullus execute senatorial orders to sack seventy allied Epirote settlements in a single day.",
+        "source": "src-perseids-aemilius"
+      },
+      {
+        "span": "-166",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Approximately 150,000 Molossian and Epirote inhabitants are enslaved and deported to Roman slave markets.",
+        "source": "src-perseids-aemilius",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of whether all seventy settlements were completely depopulated as literary sources claim, as recent excavations documented by Antoniadis and Pliakou indicate ceramic continuity at several sites.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:27.828Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

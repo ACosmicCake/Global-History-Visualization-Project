@@ -1,0 +1,181 @@
+{
+  "id": "1533-spanish-capture-of-cusco",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Spanish capture of Cusco (1533)",
+  "summary": "In November 1533 Francisco Pizarro's Spanish force entered Cusco, the Inca capital, months after the execution of Atahualpa. Sources give 8 or 15 November. The Spaniards installed Manco Inca as a puppet ruler, and Spanish control of the Andes began from this city.",
+  "when": {
+    "start": {
+      "year": 1533
+    },
+    "end": {
+      "year": 1533
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Gale and World History Encyclopedia say 15 November 1533; Archaeology magazine says 8 November. Month is agreed, day is not."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Pizarro's main force entered Cuzco on 15 November 1533",
+        "source": "src-gale-conquest"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "taken with ease on 15 November 1533; Manco crowned 16 November 1533",
+        "source": "src-whe-pizarro"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Pizarro entered the city on November 8, 1533",
+        "source": "src-archaeology-cuzco"
+      }
+    ],
+    "display": "November 1533"
+  },
+  "where": {
+    "lat": -13.53188,
+    "lon": -71.96701,
+    "elevation_m": null,
+    "modern_name": "Cusco, Peru",
+    "historical_name": "Cuzco, capital of Tawantinsuyu, southern Peruvian Andes",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames-cusco"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Marked the loss of the Inca capital to Spain and the start of colonial rule in the Andes."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-cusco",
+      "type": "same_place"
+    },
+    {
+      "id": "polity-tawantinsuyu",
+      "type": "caused",
+      "because": "Loss of the capital ended Inca central control."
+    },
+    {
+      "id": "1536-siege-of-cusco",
+      "type": "caused",
+      "because": "Manco Inca later rose against the Spanish garrison in the city."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gale-conquest",
+      "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/conquest-through-independence-1",
+      "title": "From the Conquest Through Independence (Encyclopedia of Latin American History and Culture)",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-pizarro",
+      "url": "https://www.worldhistory.org/Francisco_Pizarro/",
+      "title": "Francisco Pizarro",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-archaeology-cuzco",
+      "url": "https://archive.archaeology.org/online/features/peru/cuzco.html",
+      "title": "Exploring the Inca Heartland: Cusco and Nearby Sites",
+      "publisher": "Archaeology magazine (Archaeological Institute of America)",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-cusco",
+      "url": "https://www.geonames.org/3941584",
+      "title": "GeoNames 3941584, Cusco",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "8 versus 15 November is unresolved. Sources describe the city as taken with little fighting; no casualty figures were found.",
+  "author": "historian-agent:o-s23",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:01:41.895Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1533",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In November 1533 Francisco Pizarro's Spanish force entered Cusco, the Inca capital, months after the execution of Atahualpa.",
+        "source": "src-gale-conquest"
+      },
+      {
+        "span": "1533",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Spaniards installed Manco Inca as a puppet ruler, and Spanish control of the Andes began from this city.",
+        "source": "src-gale-conquest",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

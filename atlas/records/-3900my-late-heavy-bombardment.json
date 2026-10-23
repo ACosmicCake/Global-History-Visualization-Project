@@ -1,0 +1,156 @@
+{
+  "id": "-3900my-late-heavy-bombardment",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Late Heavy Bombardment",
+  "summary": "A hypothesised surge of asteroid impacts on the inner solar system, inferred from Apollo moon-rock impact melts that cluster near 3.9 billion years old. It was thought to follow a shift in giant-planet orbits. Whether it was a true spike or only the tail of earlier impacts is still debated.",
+  "when": {
+    "start": {
+      "year": -3920000000
+    },
+    "end": {
+      "year": -3850000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Interval as given by the University of Hawai'i PSRD article; NASA says only around 4 billion years ago with a duration of 20 to 200 million years. Existence of the spike is itself disputed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age, as recorded",
+        "value": "between 3.92 and 3.85 billion years ago",
+        "source": "src-psrd"
+      },
+      {
+        "calendar": "Geological age, as recorded",
+        "value": "Around 4 billion years ago",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "Geological age, as recorded",
+        "value": "about 3.9 billion years ago",
+        "source": "src-astronomy"
+      }
+    ],
+    "display": "c. 3.9 billion years ago (disputed)"
+  },
+  "where": {
+    "lat": 0,
+    "lon": 0,
+    "elevation_m": null,
+    "modern_name": "Inner solar system, evidenced chiefly on the Moon (global pin, proxy)",
+    "historical_name": "Early inner solar system; no human geography",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-nasa",
+      "src-psrd"
+    ],
+    "body": "Moon",
+    "paleo": {
+      "not_applicable": "Global, off-Earth evidence; pin is a placeholder at 0,0 not a place."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Long-debated hypothesis about the impact history of the Moon and the inner planets, relevant to early Earth."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/moon/lunar-craters/what-is-the-late-heavy-bombardment/",
+      "title": "What is the Late Heavy Bombardment?",
+      "publisher": "NASA Science",
+      "author": null,
+      "date_published": "2024-12-19",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-psrd",
+      "url": "http://www.psrd.hawaii.edu/Aug06/cataclysmDynamics.html",
+      "title": "Wandering Gas Giants and Lunar Bombardment",
+      "publisher": "Planetary Science Research Discoveries, University of Hawai'i",
+      "author": "G. Jeffrey Taylor",
+      "date_published": "2006-08-24",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-astronomy",
+      "url": "https://www.astronomy.com/science/cataclysm-in-the-early-solar-system/",
+      "title": "Cataclysm in the early solar system",
+      "publisher": "Astronomy magazine (Kalmbach Media)",
+      "author": null,
+      "date_published": "2020-02-05",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a 0,0 placeholder. Interval 3.92-3.85 Ga is from a 2006 article; NASA gives c. 4 Ga; the lead's 4.1-3.8 Ga was not found on an opened page.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:41:16.789Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3920000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "9 billion years old.",
+        "source": "src-nasa"
+      },
+      {
+        "span": "-3850000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Whether it was a true spike or only the tail of earlier impacts is still debated.",
+        "source": "src-nasa",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

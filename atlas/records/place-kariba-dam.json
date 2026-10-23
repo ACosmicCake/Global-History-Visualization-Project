@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": "The reservoir forced the relocation of more than 57,000 people from the lower Zambezi valley (Gwembe Tonga, per the scholarly article).",
+  "id": "place-kariba-dam",
+  "title": "Kariba Dam, Zambezi River",
+  "summary": "Kariba Dam across the Zambezi between Zambia and Zimbabwe was designed by the French engineer André Coyne, and its wall and power station contract went to the Italian consortium Impresit on 16 July 1956. Excavation, construction and the first generator took place between 1956 and 1960. Its reservoir displaced more than 57,000 people.",
+  "when": {
+    "start": {
+      "year": 1956
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 4,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Zambezi River Authority gives 1956 to 1960 for excavation, construction and commissioning of the first generator. End is the present: the dam operates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years CE (Zambezi River Authority)",
+        "value": "took place between 1956 and 1960",
+        "source": "src-zra-kariba"
+      },
+      {
+        "calendar": "Date CE (Zambezi River Authority)",
+        "value": "was awarded to the Italian consortium Impresit on 16 July 1956",
+        "source": "src-zra-kariba"
+      }
+    ],
+    "display": "Built 1956–1960; operating today"
+  },
+  "where": {
+    "lat": -16.5214425,
+    "lon": 28.761459,
+    "elevation_m": null,
+    "modern_name": "Kariba Dam, Zambezi River, Zambia and Zimbabwe",
+    "historical_name": "Kariba Dam, Zambezi River",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-kariba"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The Zambezi River Authority operates it as a dam wall 128 m high and 617 m long, and a scholarly article records that its reservoir displaced more than 57,000 people."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-zra-kariba",
+      "url": "https://www.zambezira.org/hydro-electric-schemes/kariba-hes",
+      "title": "Kariba HES",
+      "publisher": "Zambezi River Authority",
+      "author": "Zambezi River Authority",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-zra-kariba-tech",
+      "url": "https://www.zambezira.org/hydro-electric-schemes/kariba-hes/kariba-hes-technical-data",
+      "title": "Kariba HES Technical Data",
+      "publisher": "Zambezi River Authority",
+      "author": "Zambezi River Authority",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model"
+      ]
+    },
+    {
+      "id": "src-scielo-kariba",
+      "url": "https://scielo.org.za/scielo.php?script=sci_arttext&pid=S1011-76012015000200007",
+      "title": "An encroachment of ecological sacred sites and its threat to the interconnectedness of sacred rituals: A case study of the Tonga people in the Gwembe valley",
+      "publisher": "SciELO South Africa",
+      "author": "SciELO South Africa",
+      "date_published": "2015",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-osm-kariba",
+      "url": "https://www.openstreetmap.org/relation/18274317",
+      "title": "OpenStreetMap relation 18274317, Kariba Dam (centre -16.5214425, 28.7614590)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "A concrete dam wall across the Zambezi 617 m long at the crest and 128 m high, between Zambia and Zimbabwe. Drawn as a path.",
+      "source": "src-zra-kariba-tech",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "wall",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-zra-kariba-tech",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 128,
+          "unit": "m",
+          "source": "src-zra-kariba-tech",
+          "note": "Dam wall height 128 metres"
+        },
+        {
+          "part": "length (crest)",
+          "value": 617,
+          "unit": "m",
+          "source": "src-zra-kariba-tech",
+          "note": "Crest length 617 metres"
+        },
+        {
+          "part": "width (crest thickness)",
+          "value": 13,
+          "unit": "m",
+          "source": "src-zra-kariba-tech",
+          "note": "Crest thickness 13 metres; base thickness 24 metres"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "dam drawn as a path across the Zambezi"
+      },
+      {
+        "level": "local",
+        "representation": "wall 617 m long and 128 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1956,
+        "end_year": 1960,
+        "state": "construction",
+        "description": "Excavation, construction and commissioning of the first generator took place between 1956 and 1960.",
+        "source": "src-zra-kariba"
+      },
+      {
+        "start_year": 1960,
+        "end_year": null,
+        "state": "intact",
+        "description": "In operation after the first generator was commissioned.",
+        "source": "src-zra-kariba"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "A dam is not one of the procedural shapes; height and crest length are kept as data and the dam is drawn as a path."
+  },
+  "reviewer_note": "Crest length is 617 m on the ZRA technical page; other pages give 579 m and one ZRA press release 716 m, which I did not open. The ZRA page gives 1956–1960 and does not say the wall was complete in 1959. 57,000 is the scholarly article's figure (citing Colson 2006); it is not a ZRA figure.",
+  "author": "historian-agent:o-s116",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:44:12.843Z"
+}

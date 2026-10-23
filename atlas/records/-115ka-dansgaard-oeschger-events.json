@@ -1,0 +1,108 @@
+{
+  "id": "-115ka-dansgaard-oeschger-events",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Dansgaard-Oeschger events",
+  "summary": "Dansgaard-Oeschger events are abrupt warmings of the Last Glacial recorded in Greenland ice cores, where oxygen-isotope profiles swing between cold stadial and milder interstadial phases. NorthGRIP data for the glacial inception, about 123 to 100 thousand years ago, show warmings of 10 ± 2.5 and 16 ± 2.5 degrees C for events 23 and 24. The events are commonly linked to changes in Atlantic overturning circulation.",
+  "when": {
+    "start": {
+      "year": -123000
+    },
+    "end": {
+      "year": -100000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "note": "The range is only the glacial-inception window of the NorthGRIP study (~123-100 kyears BP, events 25, 24 and 23); Capron et al. (2021) study abrupt warming transitions down to 112 ka b2k and describe D-O events as recurring through the Last Glacial, so the full process is longer than this range. The id says 115 ka. ka values are used as stated with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "kyears BP",
+        "value": "last glacial inception (~123-100 kyears BP) encompassing Dansgaard-Oeschger events (DO) 25, 24 and 23",
+        "source": "src-nbi"
+      },
+      {
+        "calendar": "ka b2k (thousand years before 2000 CE)",
+        "value": "anatomy of the D-O warming transitions down to 112 ka b2k",
+        "source": "src-capron"
+      }
+    ],
+    "display": "Last Glacial; earliest events studied c. 123 to 100 thousand years ago"
+  },
+  "where": {
+    "lat": 75,
+    "lon": -42.3,
+    "elevation_m": null,
+    "modern_name": "NorthGRIP ice-core site, Greenland (75°N, 42.3°W)",
+    "historical_name": "Greenland ice sheet; no polities or place names exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-capron"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "The best-documented series of abrupt climate shifts of the last glacial period, with counterparts well beyond Greenland."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-capron",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8032679",
+      "title": "The anatomy of past abrupt warmings recorded in Greenland ice (Nature Communications)",
+      "publisher": "Nature Communications via PubMed Central (NIH)",
+      "author": "E. Capron, S. O. Rasmussen, T. J. Popp et al.",
+      "date_published": "2021",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nbi",
+      "url": "https://www.iceandclimate.nbi.ku.dk/publications/papers/abstracts/Abstract218/",
+      "title": "The glacial inception as recorded in the NorthGRIP Greenland ice core: timing, structure and associated abrupt temperature changes (abstract)",
+      "publisher": "Niels Bohr Institute, University of Copenhagen (Centre for Ice and Climate)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date range: the id says 115 ka and the events recur through the whole Last Glacial, but the only dated window on an opened page is the ~123-100 ka inception, so the range is narrower than the process. The NBI abstract page text does not name its authors or year. The pin uses the NorthGRIP coordinates printed in Capron et al.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:27.401Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "id": "1488-dias-rounding-the-cape",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Dias rounds the Cape of Good Hope",
+  "summary": "Three ships under Bartolomeu Dias left Lisbon in August 1487. Storms carried two of them around the Cape of Good Hope, and on 3 February 1488 the crew found a bay they called Sao Bras, now Mossel Bay. Dias set up a stone marker at Kwaaihoek on 12 March 1488, the easternmost point reached, and was back in Lisbon in December 1488. King John II later proposed the name Cape of Good Hope.",
+  "when": {
+    "start": {
+      "year": 1487
+    },
+    "end": {
+      "year": 1488
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO gives the departure as August 1487 and the return as December 1488 after sixteen months and seventeen days."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "In August 1487, Dias' trio of ships departed from the port of Lisbon, Portugal.",
+        "source": "src-history-dias"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "The crew sighted land on February 3, 1488",
+        "source": "src-history-dias"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "A padrão planted there on March 12, 1488",
+        "source": "src-history-dias"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "Return to Lisbon: December 1488",
+        "source": "src-ebsco-dias"
+      }
+    ],
+    "display": "1487–1488"
+  },
+  "where": {
+    "lat": 38.72508933,
+    "lon": -9.14979803,
+    "elevation_m": null,
+    "modern_name": "Lisbon, Portugal, to Mossel Bay and Kwaaihoek, South Africa",
+    "historical_name": "Lisbon; Golfo de Sao Bras; Kwaaihoek",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 38.72508933,
+          "lon": -9.14979803,
+          "year": 1487.6,
+          "date": "August 1487 (left Lisbon)",
+          "label": "Lisbon: departure of the three ships.",
+          "source": "src-history-dias",
+          "coordinate_source": "src-gn-lisbon"
+        },
+        {
+          "lat": -34.183067,
+          "lon": 22.146048,
+          "year": 1488.09,
+          "date": "February 3, 1488 (sighted land; Sao Bras)",
+          "label": "Mossel Bay, called Sao Bras by the crew: first landfall beyond the Cape.",
+          "source": "src-history-dias",
+          "coordinate_source": "src-gn-mossel"
+        },
+        {
+          "lat": -33.718776,
+          "lon": 26.62721,
+          "year": 1488.2,
+          "date": "March 12, 1488 (padrao planted)",
+          "label": "Kwaaihoek, Eastern Cape: easternmost point of the voyage, marked with a padrao.",
+          "source": "src-history-dias",
+          "coordinate_source": "src-gn-kwaaihoek"
+        },
+        {
+          "lat": 38.72508933,
+          "lon": -9.14979803,
+          "year": 1488.92,
+          "date": "December 1488 (returned to Lisbon)",
+          "label": "Lisbon: return after sixteen months and seventeen days.",
+          "source": "src-ebsco-dias",
+          "coordinate_source": "src-gn-lisbon"
+        }
+      ]
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-gn-lisbon",
+      "src-gn-mossel",
+      "src-gn-kwaaihoek"
+    ]
+  },
+  "regions": [
+    "europe",
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The voyage the sources describe as rounding the Cape of Good Hope, with a turnaround point on the south-east African coast."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1498-vasco-da-gama-reaches-calicut",
+      "type": "related"
+    },
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-history-dias",
+      "url": "https://www.history.com/articles/bartolomeu-dias",
+      "title": "Bartolomeu Dias: Biography, Expedition of the Cape of Good Hope",
+      "publisher": "History.com (A&E Television Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ebsco-dias",
+      "url": "https://www.ebsco.com/research-starters/history/bartolomeu-dias-rounds-cape-good-hope/",
+      "title": "Bartolomeu Dias Rounds the Cape of Good Hope",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-lisbon",
+      "url": "https://www.geonames.org/search.html?q=Lisbon&country=PT",
+      "title": "GeoNames: Lisbon",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-mossel",
+      "url": "https://www.geonames.org/search.html?q=Mossel+Bay&country=ZA",
+      "title": "GeoNames: Mossel Bay",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-kwaaihoek",
+      "url": "https://www.geonames.org/search.html?q=Kwaaihoek&country=ZA",
+      "title": "GeoNames: Kwaaihoek",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "History.com puts the turnaround at Kwaaihoek (12 March 1488) and does not mention Algoa Bay or the Great Fish River; EBSCO names the Great Fish River as the limit, 520 miles (837 km) east of the Cape, with no dates. EBSCO says sixteen months and seventeen days; History.com says 15 months at sea. The Cape sighting is undated in both. Mossel Bay as the site of Sao Bras is given by History.com. Waypoint years are month and day-of-year fractions. Lisbon appears at both ends of the path.",
+  "author": "historian-agent:o-s66",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1487-08",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Three ships under Dias leave Lisbon in August 1487, carrying stone markers to claim stretches of the African coast.",
+        "source": "src-history-dias",
+        "consequence": false
+      },
+      {
+        "span": "1488-03-12",
+        "action": "path.trace {}",
+        "caption": "After a storm carries them round the Cape, the ships find Sao Bras on 3 February and plant a marker at Kwaaihoek on 12 March.",
+        "source": "src-history-dias",
+        "consequence": false
+      },
+      {
+        "span": "1488-12",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Dias reaches Lisbon in December 1488; King John II later proposes renaming the cape Cabo da Boa Esperanza.",
+        "source": "src-ebsco-dias",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T12:37:19.909Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

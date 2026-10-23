@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "confidence": "established",
+  "scale": "civilization",
+  "audience_note": null,
+  "author": "historian-agent:m-6",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-machu-picchu",
+  "title": "Machu Picchu",
+  "summary": "Machu Picchu is an Inca mountain estate of terraces, ramps and stone buildings on an Andean ridge above the Urubamba valley, tied by colonial sources to the emperor Pachacuti. Radiocarbon dates on burials show it was in use from about 1420 until the Spanish conquest era, some two decades earlier than texts implied.",
+  "when": {
+    "start": {
+      "year": 1420
+    },
+    "end": {
+      "year": 1532
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 20,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start and end are the AMS radiocarbon range of c. AD 1420-1532 from Burger et al. 2021; Yale reports the same study as about 1420 to 1530. Textual sources had placed the start after 1438 or as late as 1450."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD, radiocarbon (Antiquity 2021)",
+        "value": "the site was occupied from c. AD 1420–1532",
+        "source": "src-burger2021"
+      },
+      {
+        "calendar": "A.D. (Yale News)",
+        "value": "in use from about A.D. 1420 to A.D. 1530",
+        "source": "src-yale-mp"
+      }
+    ],
+    "display": "Occupied c. 1420–1532 CE"
+  },
+  "where": {
+    "lat": -13.18493,
+    "lon": -72.53344,
+    "elevation_m": 2430,
+    "modern_name": "Historic Sanctuary of Machu Picchu, Cusco Region, Peru",
+    "historical_name": "Inca royal estate in the Urubamba valley, Tawantinsuyu (Inca Empire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1.5,
+    "coordinate_sources": [
+      "src-unesco-xml",
+      "src-unesco-274"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "The best-known Inca site, a UNESCO World Heritage property since 1983, and a central image of the Andean past."
+  },
+  "related": [
+    {
+      "id": "person-pachacuti",
+      "type": "related"
+    },
+    {
+      "id": "place-cusco",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-burger2021",
+      "url": "https://cambridge.org/core/journals/antiquity/article/new-ams-dates-for-machu-picchu-results-and-implications/323804857B6EE4DD85B5B337F9E3C933",
+      "title": "New AMS dates for Machu Picchu: results and implications (Antiquity 95(383))",
+      "publisher": "Cambridge University Press (Antiquity)",
+      "author": "Richard L. Burger, Lucy C. Salazar, Jason Nesbitt, Eden Washburn, Lars Fehren-Schmitz",
+      "date_published": "2021-08-04",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-yale-mp",
+      "url": "https://news.yale.edu/2021/08/04/machu-picchu-older-expected-study-reveals",
+      "title": "Machu Picchu is older than expected, study reveals",
+      "publisher": "Yale University (Yale News)",
+      "author": "Yale News",
+      "date_published": "2021-08-04",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-unesco-274",
+      "url": "https://whc.unesco.org/en/list/274",
+      "title": "Historic Sanctuary of Machu Picchu (World Heritage List no. 274)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): geolocation entries",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end year: the Antiquity abstract says 1532 while Yale says about 1530. UNESCO point 13.1849 S, 72.5334 W is the sanctuary property, not a single building, so uncertainty is set at 1.5 km. No model: no height and plan of one structure were opened.",
+  "published_at": "2026-10-22T06:22:08.957Z"
+}

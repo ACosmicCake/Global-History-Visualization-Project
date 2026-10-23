@@ -1,0 +1,121 @@
+{
+  "id": "1911-triangle-shirtwaist-fire",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Triangle Shirtwaist Factory Fire",
+  "summary": "On 25 March 1911 a fire began on the eighth floor of the Asch Building in New York City, at the Triangle Waist Factory. Within 18 minutes 146 people were dead, making it the city's deadliest industrial disaster and prompting demands for stronger workplace safety protections.",
+  "when": {
+    "start": {
+      "year": 1911
+    },
+    "end": {
+      "year": 1911
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "NPS gives the date as March 25, 1911; the Cornell page gives the same date in styled capitals."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 25, 1911",
+        "source": "src-nps"
+      }
+    ],
+    "display": "25 March 1911"
+  },
+  "where": {
+    "lat": 40.729757,
+    "lon": -73.99531,
+    "elevation_m": null,
+    "modern_name": "Brown Building, 23-29 Washington Place, Greenwich Village, New York City, USA",
+    "historical_name": "Asch Building, New York City, New York, USA",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-hmdb"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Deadliest industrial disaster in New York City history; spurred demands for workplace safety protections."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a deadly workplace fire in which garment workers died; no graphic detail given here.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nps",
+      "url": "https://www.nps.gov/places/triangle-shirtwaist-factory-brown-building.htm",
+      "title": "Triangle Shirtwaist Factory (Brown Building)",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cornell",
+      "url": "https://trianglefire.ilr.cornell.edu/",
+      "title": "The Triangle Factory Fire",
+      "publisher": "Cornell University ILR School, Kheel Center",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hmdb",
+      "url": "https://www.hmdb.org/m.asp?m=54878",
+      "title": "Historical Marker Database entry, Washington Place and Greene Street marker",
+      "publisher": "Historical Marker Database",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the HMDB marker location at the building, a proxy for the site; HMDB is crowd-compiled. Cornell's date text is split by styling, so only NPS is in as_recorded.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:11.108Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

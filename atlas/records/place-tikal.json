@@ -1,0 +1,137 @@
+{
+  "id": "place-tikal",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Tikal",
+  "summary": "Tikal, in the Petén rainforest of northern Guatemala, was one of the largest Classic Maya cities, with palaces, temples, ball courts and reservoirs. People settled there from the Preclassic, and building and rule continued until the city's decline around 900 CE. It is a UNESCO site, listed in 1979.",
+  "when": {
+    "start": {
+      "year": -599
+    },
+    "end": {
+      "year": 900
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 200,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": "UNESCO dates the architectural remains from the Preclassic (600 BC) to the decline around 900 AD and gives first settlers as 800 BC; Penn Museum reports at least 700 years of Preclassic development."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC/AD",
+        "value": "remains from the Preclassic Period (600 BC) to the decline and eventual collapse of the urban centre around 900 AD",
+        "source": "src-unesco-64"
+      }
+    ],
+    "display": "c. 600 BCE - c. 900 CE"
+  },
+  "where": {
+    "lat": 17.222094,
+    "lon": -89.623614,
+    "elevation_m": null,
+    "modern_name": "Tikal National Park, Petén, Guatemala",
+    "historical_name": "Tikal, Classic Maya lowland city-state (rulers of the Mutal dynasty), in the southern Maya lowlands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wikidata-tikal"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of the largest Classic Maya cities and a long-running rival of Calakmul and Caracol; major tall temple-pyramids survive."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0250-classic-maya-period",
+      "type": "part_of"
+    },
+    {
+      "id": "0695-tikal-victory-over-calakmul",
+      "type": "related"
+    },
+    {
+      "id": "place-calakmul",
+      "type": "related"
+    },
+    {
+      "id": "place-tikal-temple-i",
+      "type": "has_part"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-64",
+      "url": "https://whc.unesco.org/en/list/64",
+      "title": "Tikal National Park (World Heritage List no. 64)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-penn-tikal",
+      "url": "https://www.penn.museum/sites/expedition/tikal-2/",
+      "title": "Tikal (Expedition Magazine)",
+      "publisher": "Penn Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-tikal",
+      "url": "https://www.wikidata.org/wiki/Q181172",
+      "title": "Wikidata item Q181172, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start: UNESCO's 600 BC and its 800 BC first-settler date differ. No model written for the city record: Penn Museum gives Temple IV as about 228 ft (about 70 m) above the plaza, but I found no museum, university or heritage-body plan dimensions for it, and Temple I already has its own record.",
+  "author": "historian-agent:m-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T05:38:17.429Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

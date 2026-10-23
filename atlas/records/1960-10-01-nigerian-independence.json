@@ -1,0 +1,168 @@
+{
+  "id": "1960-10-01-nigerian-independence",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Nigeria becomes independent",
+  "summary": "Nigeria became independent from Britain on 1 October 1960, with the Union Flag lowered and the green-white-green flag raised at midnight at the Race Course in Lagos. Princess Alexandra represented the Queen, and Abubakar Tafawa Balewa took the oath as Prime Minister. The Queen remained ceremonial head of state; Nnamdi Azikiwe became governor-general on 16 November 1960.",
+  "when": {
+    "start": {
+      "year": 1960
+    },
+    "end": {
+      "year": 1960
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Flag change at midnight between 30 September and 1 October 1960."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "October 1, 1960",
+        "source": "src-horniman-nigeria"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "1 October 1960",
+        "source": "src-hn-nigeria"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "October 1, 1960",
+        "source": "src-fro-nigeria"
+      }
+    ],
+    "display": "1 October 1960"
+  },
+  "where": {
+    "lat": 6.447074,
+    "lon": 3.4015101,
+    "elevation_m": null,
+    "modern_name": "Tafawa Balewa Square (former Race Course), Lagos, Nigeria",
+    "historical_name": "Race Course, Lagos, capital of the Federation of Nigeria",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-tbs"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Independence of Africa's most populous country from British rule."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-horniman-nigeria",
+      "url": "https://www.horniman.ac.uk/story/nigeria60-realisation-of-a-99-year-dream/",
+      "title": "Nigeria60: Realisation of a 99-year dream",
+      "publisher": "Horniman Museum and Gardens",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hn-nigeria",
+      "url": "https://historicalnigeria.com/nigerias-independence-in-1960-events-and-celebrations/",
+      "title": "Nigeria's Independence in 1960: Events and Celebrations",
+      "publisher": "Historical Nigeria",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fro-nigeria",
+      "url": "https://history.state.gov/countries/nigeria",
+      "title": "U.S. Relations with Nigeria",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-tbs",
+      "url": "https://www.openstreetmap.org/way/671991288",
+      "title": "OpenStreetMap way 671991288 (Tafawa Balewa Square, Lagos)",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The venue is the Race Course (now Tafawa Balewa Square) per Horniman and Historical Nigeria; the OSM pin is the present square. Sources differ on whether the flag change fell just before or after midnight; the summary says midnight only.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:55.344Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1960",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Nigeria became independent from Britain on 1 October 1960, with the Union Flag lowered and the green-white-green flag raised at midnight at the Race Course in Lagos.",
+        "source": "src-horniman-nigeria"
+      },
+      {
+        "span": "1960",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Queen remained ceremonial head of state; Nnamdi Azikiwe became governor-general on 16 November 1960.",
+        "source": "src-horniman-nigeria",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

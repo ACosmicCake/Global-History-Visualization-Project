@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s52",
+  "updated": "2026-10-22",
+  "id": "-0500-rise-of-buddhism",
+  "kind": "movement",
+  "title": "Rise of Buddhism",
+  "summary": "Buddhism was founded in northeast India around 500 BCE by Siddhartha Gautama, whose traditional dates one scholar gives as 546–486 BCE. World History Encyclopedia describes it as a relatively minor school until the reign of Ashoka of the Mauryan Empire (268–232 BCE). A university course outline says missionaries travelled in his time to Sri Lanka and much of Southeast Asia.",
+  "when": {
+    "start": {
+      "year": -499
+    },
+    "end": {
+      "year": -231
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give different Buddha dates (546–486 or c. 563–483 BCE); start is the \"ca. 500 BCE\" founding date, end is the last year of Ashoka's reign (232 BCE = -231)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "Founded in northeast India ca. 500 BCE by Siddhartha Gautama (traditional dates 546-486 BCE)",
+        "source": "src-uga-buddhism"
+      },
+      {
+        "calendar": "BCE (proleptic Gregorian)",
+        "value": "c. 563 BCE - c. 483 BCE (generally accepted dates of the life of Siddhartha Gautama); Ashoka the Great (268-232 BCE)",
+        "source": "src-whe-buddhism"
+      }
+    ],
+    "display": "c. 500 BCE – 232 BCE (founding to the end of Ashoka's reign)"
+  },
+  "where": {
+    "lat": 24.6959303,
+    "lon": 84.9913903,
+    "elevation_m": null,
+    "modern_name": "Mahabodhi Temple, Bodh Gaya, Bihar, India (representative point in northeast India)",
+    "historical_name": "Northeast India (no polity named by the sources)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The origin of a world religion that spread across Asia."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-0527-enlightenment-of-the-buddha",
+      "type": "related"
+    },
+    {
+      "id": "-0482-parinirvana-of-the-buddha",
+      "type": "related"
+    },
+    {
+      "id": "person-ashoka",
+      "type": "related"
+    },
+    {
+      "id": "-0248-ashoka-lumbini-pillar-inscription",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-uga-buddhism",
+      "url": "https://religion.uga.edu/sites/default/files/inline-files/BDMGID.pdf",
+      "title": "The Origins of Buddhism",
+      "publisher": "University of Georgia, Department of Religion",
+      "author": "Russell Kirkland",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-buddhism",
+      "url": "https://www.worldhistory.org/Buddhism/",
+      "title": "Buddhism",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Mahabodhi+Temple+Bodh+Gaya&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim search results",
+      "publisher": "OpenStreetMap Foundation (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the source says northeast India, so the point at Bodh Gaya is representative with a wide uncertainty, not a founding site. Buddha dates differ between sources.",
+  "published_at": "2026-10-22T10:55:44.945Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

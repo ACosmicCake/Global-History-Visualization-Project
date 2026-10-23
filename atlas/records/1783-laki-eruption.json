@@ -1,0 +1,175 @@
+{
+  "id": "1783-laki-eruption",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Laki fissure eruption",
+  "summary": "The Laki fissure in southern Iceland opened on 8 June 1783 and erupted until February 1784, producing roughly 14.7 to 15 km³ of lava. Gases from the eruption caused a dry fog over Europe from about 16 June 1783, and by 1785 about a fifth of Iceland's population had died of hunger and disease, along with much of its livestock.",
+  "when": {
+    "start": {
+      "year": 1783
+    },
+    "end": {
+      "year": 1784
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start 8 June 1783; Kleemann gives 7 February 1784 as the end, GeoExPro gives February 1784."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "June 8, 1783",
+        "source": "src-kleemann"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "February 7, 1784",
+        "source": "src-kleemann"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "June 8, 1783",
+        "source": "src-geoexpro"
+      }
+    ],
+    "display": "8 June 1783 – 7 February 1784"
+  },
+  "where": {
+    "lat": 64.0675,
+    "lon": -18.23,
+    "elevation_m": null,
+    "modern_name": "Laki (Lakagígar) fissure, southern Iceland",
+    "historical_name": "Laki fissure, Iceland under the Danish crown",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wikidata-laki"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The largest recorded lava output in historic time, followed by famine in Iceland and a haze over Europe."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1815-eruption-of-mount-tambora",
+      "type": "related"
+    },
+    {
+      "id": "1883-krakatoa-eruption",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-kleemann",
+      "url": "https://www.encyclopedie-environnement.org/?p=10521",
+      "title": "The Laki Fissure eruption, 1783-1784",
+      "publisher": "Encyclopedia of the Environment (Association des Encyclopedies de l'Environnement et de l'Energie, Univ. Grenoble Alpes)",
+      "author": "Katrin Kleemann",
+      "date_published": "2025-01-05",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-geoexpro",
+      "url": "https://geoexpro.com/?p=45873",
+      "title": "Laki 1783 eruption article (GeoExPro)",
+      "publisher": "GeoExPro (GXP Publishing AS)",
+      "author": "Jane Whaley",
+      "date_published": "2014-12-09",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-laki",
+      "url": "https://www.wikidata.org/wiki/Q203726",
+      "title": "Wikidata item Q203726 (Laki), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of mortality and gas figures: the sources differ (fissure 25 vs 27 km, 130 vs 140 craters, livestock percentages), so only the figures where they agree are in the summary. Pin is the Wikidata point for Laki, not the fissure midpoint. The GeoExPro URL was opened but its exact title was not read, so the title field is descriptive.",
+  "author": "historian-agent:o-s63",
+  "updated": "2026-10-22",
+  "numbers": [
+    {
+      "field": "lava_volume",
+      "label": "Lava volume",
+      "low": 14.7,
+      "high": 15,
+      "unit": "km3",
+      "estimate": true,
+      "as_of": "1783-1784",
+      "source": "src-kleemann",
+      "note": "14.7 km3 in Kleemann; roughly 15 km3 of magma in GeoExPro"
+    }
+  ],
+  "published_at": "2026-10-22T12:14:26.724Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1783",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "7 to 15 km³ of lava.",
+        "source": "src-kleemann"
+      },
+      {
+        "span": "1784",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Gases from the eruption caused a dry fog over Europe from about 16 June 1783, and by 1785 about a fifth of Iceland's population had died of hunger…",
+        "source": "src-kleemann",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1920-haiyuan-earthquake",
+  "kind": "event",
+  "title": "Haiyuan Earthquake",
+  "summary": "A very large earthquake struck the Haiyuan area of eastern Gansu on the evening of 16 December 1920. It killed more than 200,000 people and badly damaged some 20,000 square kilometres, and about 200 km of surface faulting was seen. Its magnitude is given as 7.8 by the USGS and 8.5 by the Chinese Earthquake Administration.",
+  "when": {
+    "start": {
+      "year": 1920
+    },
+    "end": {
+      "year": 1920
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date as given by DisasterHistory.org (evening of 16 December); USGS lists it under 16 December 1920."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "evening of the 16 th of December",
+        "source": "src-dh"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1920",
+        "source": "src-usgs"
+      }
+    ],
+    "display": "16 December 1920"
+  },
+  "where": {
+    "lat": 36.6,
+    "lon": 105.3,
+    "elevation_m": null,
+    "modern_name": "Haiyuan County, Ningxia Hui Autonomous Region, China (pin is a published hypocentre estimate)",
+    "historical_name": "Haiyuan, Gansu Province, Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-sr"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Described as the second deadliest earthquake of the twentieth century, with more than 200,000 deaths."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a natural disaster with very large loss of life.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-dh",
+      "url": "https://disasterhistory.org/gansu-earthquake-1920",
+      "title": "Haiyuan earthquake, 1920",
+      "publisher": "DisasterHistory.org (collaboration of historians)",
+      "author": "Pierre Fuller",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usgs",
+      "url": "https://earthquake.usgs.gov/learn/today/index.php?month=12&day=16&submit=View+Date",
+      "title": "Today in Earthquake History: 16 December",
+      "publisher": "U.S. Geological Survey",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sr",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7930187/",
+      "title": "Structure-controlled asperities of the 1920 Haiyuan M8.5 and 1927 Gulang M8 earthquakes, NE Tibet, China, revealed by high-resolution seismic tomography",
+      "publisher": "Scientific Reports (Springer Nature), via PubMed Central",
+      "author": "Quan Sun et al.",
+      "date_published": "2021-03-03",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a published hypocentre estimate (105.3E, 36.6N), not a surveyed site; magnitude disagrees (USGS 7.8 vs Chinese 8.5). Death toll 'more than 200,000' is a round figure.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:06.627Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1920",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A very large earthquake struck the Haiyuan area of eastern Gansu on the evening of 16 December 1920.",
+        "source": "src-dh"
+      },
+      {
+        "span": "1920",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It killed more than 200,000 people and badly damaged some 20,000 square kilometres, and about 200 km of surface faulting was seen.",
+        "source": "src-dh",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "-2my-dmanisi-hominins",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "event",
+  "title": "Dmanisi hominins",
+  "summary": "Excavations at Dmanisi in the Republic of Georgia revealed well-preserved fossil skulls, jaws, and Oldowan-style stone tools dated to roughly 1.8 to 1.75 million years ago. Classified as early Homo erectus (or Homo erectus georgicus), these hominins represent the earliest securely dated human ancestors found outside of Africa. Their relatively small braincases and primitive limb proportions proved that hominins dispersed from Africa far earlier and with simpler technologies than paleoanthropologists had long assumed.",
+  "when": {
+    "start": {
+      "year": -1800000
+    },
+    "end": {
+      "year": -1750000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 50000,
+      "start_plus_years": 50000,
+      "end_minus_years": 20000,
+      "end_plus_years": 20000,
+      "note": "Basalt lava underlying the fossil layers is dated to ca. 1.80 ± 0.01 Ma during the Olduvai subchron; the hominin-bearing sediments date to approximately 1.77–1.75 Ma (UNESCO; Smithsonian)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "dated ca. 1.8±0.01 Ma and correlated with Olduvai subchron",
+        "source": "src-unesco-dmanisi"
+      },
+      {
+        "calendar": "years old",
+        "value": "About 1.77 million years old",
+        "source": "src-si-d2282"
+      }
+    ],
+    "display": "c. 1.8–1.75 million years ago"
+  },
+  "where": {
+    "lat": 41.33083,
+    "lon": 44.34889,
+    "elevation_m": 950,
+    "modern_name": "Dmanisi, Kvemo Kartli, Georgia",
+    "historical_name": "Dmanisi promontory, southern Caucasus, Early Pleistocene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-geonames-dmanisi",
+      "src-unesco-dmanisi"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "Oldest securely dated hominin fossils found outside of Africa, demonstrating an early dispersal of small-brained Homo."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-1800ka-homo-erectus-dispersal-from-africa",
+      "type": "part_of"
+    },
+    {
+      "id": "-1500ka-turkana-boy",
+      "type": "related"
+    },
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-dmanisi",
+      "url": "https://whc.unesco.org/en/tentativelists/5225/",
+      "title": "Dmanisi Hominid Archaeological Site",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "Georgian National Commission for UNESCO",
+      "date_published": "2007-10-24",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-si-d2282",
+      "url": "https://humanorigins.si.edu/evidence/human-fossils/fossils/d2282",
+      "title": "D2282 (Homo erectus cranium, Dmanisi)",
+      "publisher": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "author": "Smithsonian Human Origins Program",
+      "date_published": "2010-01-28",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-dmanisi",
+      "url": "https://www.geonames.org/614749/dmanisi.html",
+      "title": "Dmanisi, Georgia",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of taxonomic status: whether the Dmanisi specimens represent a distinct geographic subspecies (Homo erectus georgicus), early Homo erectus sensu lato, or a single variable lineage spanning Homo habilis and erectus.",
+  "published_at": "2026-10-22T14:01:39.110Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

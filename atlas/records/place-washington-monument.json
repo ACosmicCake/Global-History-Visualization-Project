@@ -1,0 +1,209 @@
+{
+  "id": "place-washington-monument",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Washington Monument",
+  "aliases": [],
+  "summary": "The Washington Monument is an obelisk in Washington, D.C. Its cornerstone was laid on 4 July 1848; work stopped in 1854 with the column at 152 feet, and the capstone was set on 6 December 1884. The National Park Service gives its height as 555 feet 5 1/8 inches.",
+  "when": {
+    "start": {
+      "year": 1848
+    },
+    "end": {
+      "year": 1884
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the cornerstone of 4 July 1848; end is the capstone of 6 December 1884. Work paused from 1854 until Congress voted to resume in 1876. The monument stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (NPS)",
+        "value": "July 4, 1848",
+        "source": "src-nps-timeline"
+      },
+      {
+        "calendar": "Gregorian (NPS)",
+        "value": "December 6, 1884",
+        "source": "src-nps-timeline"
+      },
+      {
+        "calendar": "Gregorian (U.S. National Archives)",
+        "value": "December 6, 1884",
+        "source": "src-nara-monument"
+      }
+    ],
+    "display": "Cornerstone 4 July 1848; capstone 6 December 1884"
+  },
+  "where": {
+    "lat": 38.889475,
+    "lon": -77.035244,
+    "elevation_m": null,
+    "modern_name": "Washington Monument, Washington, D.C., United States",
+    "historical_name": "Washington National Monument, Washington, D.C., United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Obelisk completed in 1884 at 555 feet 5 1/8 inches according to the National Park Service."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nps-timeline",
+      "url": "https://www.nps.gov/wamo/learn/historyculture/monumentconstruction.htm",
+      "title": "Washington Monument Construction Timeline",
+      "publisher": "National Park Service",
+      "author": "National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-faq",
+      "url": "https://www.nps.gov/wamo/faqs.htm",
+      "title": "Frequently Asked Questions - Washington Monument",
+      "publisher": "National Park Service",
+      "author": "National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nara-monument",
+      "url": "https://www.archives.gov/publications/prologue/2016/spring/monument",
+      "title": "The Men—and the Women—Who Built the Washington Monument",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": "U.S. National Archives and Records Administration",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q178114",
+      "title": "Wikidata Q178114: Washington Monument (coordinate 38.889475, -77.03524444444)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square obelisk, 55 feet 1½ inches wide at the base (National Archives); NPS says 55 feet wide at the base.",
+      "source": "src-nara-monument",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "obelisk",
+      "source": "src-nara-monument",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 169.29,
+          "unit": "m",
+          "source": "src-nara-monument",
+          "note": "555 feet, 5 1/8 inches as written (National Archives; NPS FAQ 555 feet and 5 1/8 inches tall); converted to metres"
+        },
+        {
+          "part": "base width (square)",
+          "value": 16.8,
+          "unit": "m",
+          "source": "src-nara-monument",
+          "note": "55 feet, 1½ inches as written (National Archives); converted to metres"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "obelisk at true base and height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural square tapering obelisk with pyramidion"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1848,
+        "end_year": 1884,
+        "state": "construction",
+        "description": "Cornerstone laid 4 July 1848; work halted in December 1854 at 152 feet and resumed after Congress acted in 1876; capstone set 6 December 1884.",
+        "source": "src-nara-monument"
+      },
+      {
+        "start_year": 1884,
+        "end_year": null,
+        "state": "intact",
+        "description": "Finished in 1884; dedicated 21 February 1885 per NPS timeline.",
+        "source": "src-nps-timeline"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape obelisk. Metre values are converted from the feet and inches printed on the pages (555 ft 5 1/8 in = 169.29 m; 55 ft 1½ in = 16.80 m); the 1884-85 height is a historical figure. The 152 ft pause figure is on both NPS and National Archives pages.",
+  "author": "historian-agent:m-22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:54:26.107Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

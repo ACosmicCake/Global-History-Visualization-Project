@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1945-august-revolution-vietnam",
+  "kind": "event",
+  "title": "August Revolution (Vietnam, 1945)",
+  "summary": "After Japan's surrender in August 1945, the Viet Minh seized power: in Hanoi on 19 August, in Hue by 23 August and in Saigon on 25 August. Sources date Emperor Bao Dai's abdication to 25 or 30 August. On 2 September Ho Chi Minh read the Declaration of Independence at Ba Dinh Square in Hanoi, founding the Democratic Republic of Vietnam.",
+  "when": {
+    "start": {
+      "year": 1945,
+      "iso": "1945-08-19"
+    },
+    "end": {
+      "year": 1945,
+      "iso": "1945-09-02"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Library of Congress study dates the start of the uprising to 16-17 August. Bao Dai abdication: 25 August (LoC) or 30 August (Vietcetera)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On August 19, the Viet Minh and the people of Hanoi organized a massive demonstration.",
+        "source": "src-vietcetera-aug"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Saigon fell on August 25 to the Viet Minh",
+        "source": "src-loc-vn-uprising"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On September 2, 1945, at Ba Dinh Square in Hanoi, President Ho Chi Minh reads the Declaration of Independence.",
+        "source": "src-vna-aug"
+      }
+    ],
+    "display": "19 August to 2 September 1945"
+  },
+  "where": {
+    "lat": 21.0245,
+    "lon": 105.8412,
+    "elevation_m": null,
+    "modern_name": "Hanoi, Vietnam (also Hue and Saigon/Ho Chi Minh City)",
+    "historical_name": "Hanoi, Tonkin, French Indochina under Japanese occupation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-hanoi"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Founded the Democratic Republic of Vietnam; the sources place it at the start of the independence period."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1945-08-15-jewel-voice-broadcast",
+      "type": "caused_by",
+      "because": "Japan’s surrender left no ruling power in place in Vietnam, which the Viet Minh moved to fill."
+    },
+    {
+      "id": "1954-battle-of-dien-bien-phu",
+      "type": "related"
+    },
+    {
+      "id": "1955-vietnam-war",
+      "type": "related"
+    },
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc-vn-uprising",
+      "url": "https://countrystudies.us/vietnam/22.htm",
+      "title": "The General Uprising and Independence (Vietnam: A Country Study)",
+      "publisher": "Library of Congress Federal Research Division",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-vna-aug",
+      "url": "https://happyvietnam.vnanet.vn/en/1945-august-revolution-a-triumph-of-patriotism-and-the-aspiration-for-national-independence/61095.html",
+      "title": "1945 August Revolution: A triumph of patriotism and the aspiration for national independence",
+      "publisher": "Vietnam News Agency",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-vietcetera-aug",
+      "url": "https://vietcetera.com/en/19th-august-what-happened-in-vietnam-80-years-ago",
+      "title": "19th August: What Happened In Vietnam 80 Years Ago?",
+      "publisher": "Vietcetera",
+      "author": null,
+      "date_published": "2025",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-hanoi",
+      "url": "https://www.wikidata.org/wiki/Q1858",
+      "title": "Hanoi (Wikidata Q1858)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945-08-19",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "On 19 August 1945 crowds and self-defence forces in Hanoi seized the Northern Palace.",
+        "source": "src-vna-aug"
+      },
+      {
+        "span": "1945-08-25",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "Hue had come under revolutionary control by 23 August, and Saigon followed on 25 August.",
+        "source": "src-vietcetera-aug"
+      },
+      {
+        "span": "1945-09-02",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "On 2 September at Ba Dinh Square, Ho Chi Minh read the Declaration of Independence, marking the founding of the Democratic Republic of Vietnam.",
+        "source": "src-vna-aug",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Two sources are Vietnamese outlets (state news agency and a media company); the Library of Congress study is the independent anchor. Dates conflict on Bao Dai abdication (25 vs 30 August) and on the start (16-19 August); the summary states both abdication dates.",
+  "audience_note": null,
+  "author": "historian-agent:o-s60",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:36:55.155Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

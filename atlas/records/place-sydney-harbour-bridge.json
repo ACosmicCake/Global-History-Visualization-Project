@@ -1,0 +1,227 @@
+{
+  "id": "place-sydney-harbour-bridge",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Sydney Harbour Bridge",
+  "summary": "A steel arch bridge across Sydney Harbour between Dawes Point and Milsons Point, built under a contract signed in March 1924 and opened on 19 March 1932. Its arch spans 503 m and its top stands 134.5 m above water level.",
+  "when": {
+    "start": {
+      "year": 1924
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the contract date (24 March 1924); opening was 19 March 1932. End is the present: the bridge still stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (Engineers Australia)",
+        "value": "24 March 1924",
+        "source": "src-engaust-shb"
+      },
+      {
+        "calendar": "Gregorian (Engineers Australia)",
+        "value": "19 March 1932",
+        "source": "src-engaust-shb"
+      },
+      {
+        "calendar": "CE (ASCE)",
+        "value": "1932",
+        "source": "src-asce-shb"
+      }
+    ],
+    "display": "1924 (contract) to 1932 (opened)"
+  },
+  "where": {
+    "lat": -33.8521165,
+    "lon": 151.2107812,
+    "elevation_m": null,
+    "modern_name": "Sydney Harbour Bridge, Sydney, New South Wales, Australia",
+    "historical_name": "Sydney Harbour Bridge, Sydney, New South Wales (Commonwealth of Australia)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-shb",
+      "src-asce-shb"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Engineers Australia calls it the largest single-span steel arch bridge in the world when designed; a national engineering landmark."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-engaust-shb",
+      "url": "https://portal.engineersaustralia.org.au/system/files/engineering-heritage-australia/nomination-title/Sydney%20Harbour%20Bridge%20%20Nomination.pdf",
+      "title": "Sydney Harbour Bridge (Engineering Heritage Australia nomination)",
+      "publisher": "Engineers Australia (Engineering Heritage Australia)",
+      "author": "Engineers Australia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-asce-shb",
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/sydney-harbour-bridge",
+      "title": "Sydney Harbour Bridge (ASCE Historic Landmark)",
+      "publisher": "American Society of Civil Engineers",
+      "author": "American Society of Civil Engineers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "model.geometry.measurements",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-osm-shb",
+      "url": "https://www.openstreetmap.org/relation/3178788",
+      "title": "OpenStreetMap relation 3178788 (Sydney Harbour Bridge)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "A steel arch carrying a roadway 46 m wide between Dawes Point and Milsons Point, 1,163 m long with its approaches; drawn by the viewer as a path.",
+      "source": "src-engaust-shb",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "source": "src-engaust-shb",
+      "measurements": [
+        {
+          "part": "height of arch top above water",
+          "value": 134.5,
+          "unit": "m",
+          "source": "src-engaust-shb",
+          "note": "\"134.5m (445 ft.) above water level\""
+        },
+        {
+          "part": "total length including approaches",
+          "value": 1163,
+          "unit": "m",
+          "source": "src-engaust-shb",
+          "note": "\"1,163 m (3816 ft)\""
+        },
+        {
+          "part": "arch span",
+          "value": 503,
+          "unit": "m",
+          "source": "src-engaust-shb",
+          "note": "\"1650 ft (503m) between bearings\"; ASCE also gives 503 m"
+        },
+        {
+          "part": "roadway width",
+          "value": 46,
+          "unit": "m",
+          "source": "src-engaust-shb",
+          "note": "\"46m (150 ft.) wide\""
+        },
+        {
+          "part": "roadway height above water",
+          "value": 52,
+          "unit": "m",
+          "source": "src-engaust-shb",
+          "note": "\"52m (170 ft.) above the water level\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "bridge drawn as a path across the harbour at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural arch and deck at the sourced dimensions"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1924,
+        "end_year": 1932,
+        "state": "construction",
+        "description": "Contract signed 24 March 1924; opened 19 March 1932 (Engineers Australia).",
+        "source": "src-engaust-shb"
+      },
+      {
+        "start_year": 1932,
+        "end_year": null,
+        "state": "intact",
+        "description": "In use since the opening of 19 March 1932.",
+        "source": "src-engaust-shb"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1924,
+        "to_year": null,
+        "material": "steel (52,000 tons per ASCE)",
+        "source": "src-asce-shb"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Linear model (shape wall as the nearest path form). Length 1,163 m is the Engineers Australia figure with approaches; ASCE says '2 3/4 miles' for the bridge and approaches, a different total. Heights are to the arch top above water. Pin is the OSM relation centre, which agrees with ASCE's DMS coordinates.",
+  "author": "historian-agent:m-12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:46:34.266Z"
+}

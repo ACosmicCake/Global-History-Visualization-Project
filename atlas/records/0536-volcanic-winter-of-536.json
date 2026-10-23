@@ -1,0 +1,177 @@
+{
+  "id": "0536-volcanic-winter-of-536",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Volcanic winter of 536",
+  "summary": "Large volcanic eruptions in AD 536 and 540 created a dust veil that historical accounts from the Mediterranean to eastern Asia say dimmed the sun for more than a year. Tree-ring records show strong, synchronised cooling across much of the Northern Hemisphere, and the cold phase from 536 to about 660 is called the Late Antique Little Ice Age. Authors link it to famine, the Justinianic plague and political upheaval.",
+  "when": {
+    "start": {
+      "year": 536
+    },
+    "end": {
+      "year": 537
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "The dust veil is dated to AD 536 and said to last more than a year; the cooling phase runs 536 to about 660 AD. Further eruptions are given for 540 and 547. The source volcano is not located in the pages I opened."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "volcanic eruptions of AD 536 and 540",
+        "source": "src-sci-536"
+      },
+      {
+        "calendar": "CE",
+        "value": "a cluster of large volcanic eruptions in 536, 540 and 547 AD",
+        "source": "src-ngeo-536"
+      },
+      {
+        "calendar": "CE",
+        "value": "Three large volcanic eruptions in the years 536, 540 and 547 AD",
+        "source": "src-med-536"
+      }
+    ],
+    "display": "AD 536–537"
+  },
+  "where": {
+    "lat": 38,
+    "lon": 17,
+    "elevation_m": null,
+    "modern_name": "Northern Hemisphere (no single site; map anchor in the Mediterranean)",
+    "historical_name": "Late Antique Mediterranean and Eurasia (Eastern Roman Empire, Sasanian Empire)",
+    "geometry": {
+      "type": "area"
+    },
+    "uncertainty_km": 8000,
+    "coordinate_sources": [
+      "src-wd-med"
+    ]
+  },
+  "regions": [
+    "global",
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Cooling phase that the authors link to plague, imperial change and migration in Late Antiquity."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0431-ilopango-tbj-eruption",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ngeo-536",
+      "url": "https://www.nature.com/articles/ngeo2652",
+      "title": "Cooling and societal change during the Late Antique Little Ice Age from 536 to around 660 AD",
+      "publisher": "Nature Geoscience",
+      "author": "Ulf Buntgen et al.",
+      "date_published": "2016-02-08",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-sci-536",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5778132",
+      "title": "Volcanic dust veils from sixth century tree-ring isotopes linked to reduced irradiance, primary production and human health",
+      "publisher": "Scientific Reports (via PubMed Central)",
+      "author": "Samuli Helama et al.",
+      "date_published": "2018-01-22",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-med-536",
+      "url": "https://www.medievalists.net/2016/02/researchers-discover-a-little-ice-age-in-the-6th-century/",
+      "title": "Researchers discover a Little Ice Age in the 6th century",
+      "publisher": "Medievalists.net",
+      "author": "Medievalists.net",
+      "date_published": "2016-02-10",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-med",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q4918.json",
+      "title": "Wikidata entry for Mediterranean Sea (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "AD 536",
+        "action": "pulse { radius_km: 5000 }",
+        "caption": "A dust veil from the 536 eruption dims the sun for more than a year, according to accounts from the Mediterranean to eastern Asia.",
+        "source": "src-sci-536",
+        "consequence": false
+      },
+      {
+        "span": "536 to about 660 AD",
+        "action": "region.fill { radius_km: 5000 }",
+        "caption": "Tree rings show unprecedented, long-lasting, synchronised cooling across most of the Northern Hemisphere.",
+        "source": "src-ngeo-536",
+        "consequence": false
+      },
+      {
+        "span": "536 to about 660 AD",
+        "action": "pulse { radius_km: 5000 }",
+        "caption": "The authors link the cold phase to the Justinianic plague, upheaval in the eastern Roman empire and political upheaval in China.",
+        "source": "src-ngeo-536",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: the eruption source and location. Opened pages do not locate the volcano, so the point is only a Mediterranean map anchor with 8000 km uncertainty (Mediterranean cited by Helama for the accounts; Altai and Alps for the tree rings). The Scientific Reports and Nature Geoscience papers share a parent publisher (Springer Nature); Medievalists.net is a separate publisher.",
+  "author": "historian-agent:o-s91",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:11:06.638Z"
+}

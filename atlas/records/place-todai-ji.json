@@ -1,0 +1,267 @@
+{
+  "id": "place-todai-ji",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Tōdai-ji and the Great Buddha Hall",
+  "summary": "Tōdai-ji in Nara was begun in 745 under Emperor Shōmu as the head temple of Japan's provincial temples; its Great Buddha was dedicated in 752. The Great Buddha Hall burned in 1180 and 1567. The present hall, rebuilt in 1709 at about sixty percent of the original width, is 57 m wide and 49 m high.",
+  "when": {
+    "start": {
+      "year": 745
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO ICOMOS says Tōdai-ji was built in 745; a second page says the temple was constructed in 752, the year of the Buddha's dedication. The present Great Buddha Hall was dedicated in 1709. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "in 745 as the central provincial temple in Japan",
+        "source": "src-icomos-nara"
+      },
+      {
+        "calendar": "CE (Tōdai-ji)",
+        "value": "The Great Buddha Hall was completed in 751, and in the fourth month of 752 a grand consecration ceremony was held",
+        "source": "src-todaiji-8th"
+      },
+      {
+        "calendar": "CE (Tōdai-ji)",
+        "value": "dedicated with great fanfare in 1709",
+        "source": "src-todaiji-history"
+      }
+    ],
+    "display": "Founded 745; Great Buddha dedicated 752; present hall 1709"
+  },
+  "where": {
+    "lat": 34.68349,
+    "lon": 135.8407,
+    "elevation_m": null,
+    "modern_name": "Tōdai-ji Daibutsuden (Great Buddha Hall), Nara, Nara Prefecture, Japan",
+    "historical_name": "Tōdai-ji, head temple of the provincial temples (kokubunji) of Japan, in the Nara-period capital",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-todaiji"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Home of the Great Buddha and the largest wooden building in the world (by the temple), a core monument of Nara and of Japanese Buddhism."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-todaiji-hall",
+      "url": "https://www.todaiji.or.jp/en/information/daibutsuden/",
+      "title": "Daibutsu-den (Great Buddha Hall)",
+      "publisher": "Tōdai-ji (Kegon sect head temple)",
+      "author": "Tōdai-ji",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-todaiji-history",
+      "url": "https://www.todaiji.or.jp/en/?p=8019",
+      "title": "History: 17-18th century (Kōkei and the rebuilding)",
+      "publisher": "Tōdai-ji (Kegon sect head temple)",
+      "author": "Tōdai-ji",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "model.phases",
+        "when"
+      ]
+    },
+    {
+      "id": "src-icomos-nara",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/870.pdf",
+      "title": "Advisory body evaluation: Historic Monuments of Ancient Nara (870)",
+      "publisher": "UNESCO World Heritage Centre (ICOMOS evaluation)",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-todaiji-8th",
+      "url": "https://www.todaiji.or.jp/en/?p=8005",
+      "title": "History: 8th century (Emperor Shōmu and the Great Buddha)",
+      "publisher": "Tōdai-ji (Kegon sect head temple)",
+      "author": "Tōdai-ji",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-todaiji",
+      "url": "https://nominatim.openstreetmap.org/search?q=Daibutsuden+Todaiji&format=json",
+      "title": "OpenStreetMap Nominatim result for Todai-ji Daibutsuden",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A rectangular timber hall, seven bays wide (reduced from eleven in 1709), on a raised stone platform; width 57.012 m, length (depth) 50.480 m by the temple's own figures. Register figures.",
+      "source": "src-todaiji-hall",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-todaiji-hall",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 48.742,
+          "unit": "m",
+          "source": "src-todaiji-hall",
+          "note": "\"Height 48.742m\"; height and depth equal the original hall"
+        },
+        {
+          "part": "base width (frontage, present hall)",
+          "value": 57.012,
+          "unit": "m",
+          "source": "src-todaiji-hall",
+          "note": "\"Width 57.012m\"; the original and 1195 halls were eleven bays wide"
+        },
+        {
+          "part": "base length (depth)",
+          "value": 50.48,
+          "unit": "m",
+          "source": "src-todaiji-hall",
+          "note": "\"Length 50.480m\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a very large rectangular double-roofed timber hall on a stone platform in the Nara temple precinct"
+      },
+      {
+        "level": "local",
+        "representation": "procedural double-hipped hall at 57 m by 50 m and 49 m high, with the earlier eleven-bay width as a labelled outline"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 745,
+        "end_year": 751,
+        "state": "construction",
+        "description": "Emperor Shōmu built Tōdai-ji from 745 (ICOMOS); work on the Great Buddha began that year after the capital returned to Nara, and the Great Buddha Hall was completed in 751 and consecrated in 752 (Tōdai-ji).",
+        "source": "src-todaiji-8th"
+      },
+      {
+        "start_year": 751,
+        "end_year": 1180,
+        "state": "intact",
+        "description": "The first Great Buddha Hall stood, eleven bays wide.",
+        "source": "src-todaiji-hall"
+      },
+      {
+        "start_year": 1180,
+        "end_year": 1195,
+        "state": "destroyed",
+        "description": "Tōdai-ji was burnt to the ground in 1180 in a period of internal strife (ICOMOS).",
+        "source": "src-icomos-nara"
+      },
+      {
+        "start_year": 1195,
+        "end_year": 1567,
+        "state": "restored",
+        "description": "The hall was rebuilt in 1195, again eleven bays wide.",
+        "source": "src-todaiji-hall"
+      },
+      {
+        "start_year": 1567,
+        "end_year": 1709,
+        "state": "destroyed",
+        "description": "The temple was torched in 1567 by the Miyoshi and Matsunaga armies, destroying the hall; the Great Buddha stood in the open for almost one hundred years until the monk Kōkei led rebuilding.",
+        "source": "src-todaiji-history"
+      },
+      {
+        "start_year": 1709,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "The present hall, seven bays wide and about sixty percent of the original width, was dedicated in 1709.",
+        "source": "src-todaiji-history"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 745,
+        "to_year": 2026,
+        "material": "timber frame (the largest wooden structure in the world, per the temple)",
+        "source": "src-todaiji-hall"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block. The model uses the present (1709) hall's official dimensions; the earlier halls were about a third wider (eleven bays) with the same height and depth, which the viewer could draw as an outline. Start 745 is ICOMOS's founding year; the hall was completed in 751 and consecrated in 752 (Tōdai-ji). Least sure of the exact end of the 1195 rebuild phase and the 1180-1195 'destroyed' gap, whose end is the rebuilding year on the hall page.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:13:01.413Z"
+}

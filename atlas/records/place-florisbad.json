@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s21",
+  "updated": "2026-10-22",
+  "id": "place-florisbad",
+  "kind": "place",
+  "title": "Florisbad spring site and hominin cranium (South Africa)",
+  "summary": "Florisbad is a thermal-spring site in South Africa's Free State where T. F. Dreyer found a partial hominin skull in 1932, named Homo helmei. An electron spin resonance date on an associated tooth gave about 259,000 years, but the tooth-skull link and the age are disputed.",
+  "when": {
+    "start": {
+      "year": -294000
+    },
+    "end": {
+      "year": -224000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "note": "ESR date 259 +/- 35 ka on a tooth presumed to belong to the skull (Grün et al. 1996, as reported by Hawks); the association and age are contested. The skull was found in 1932."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years before present, ESR on tooth enamel",
+        "value": "259,000 ± 35,000 years old",
+        "source": "src-hawks"
+      },
+      {
+        "calendar": "CE",
+        "value": "1932, by Dreyer during his Florisbad excavations",
+        "source": "src-s2a3"
+      }
+    ],
+    "display": "c. 259,000 years ago (ESR, disputed); skull found 1932"
+  },
+  "where": {
+    "lat": -28.7667,
+    "lon": 26.0667,
+    "elevation_m": null,
+    "modern_name": "Florisbad, near Bloemfontein, Free State, South Africa",
+    "historical_name": "Spring and salt pan in the interior highveld of southern Africa, Middle Pleistocene; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd",
+      "src-s2a3"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Among the oldest candidate Homo sapiens-lineage fossils in Africa, though its age is contested."
+  },
+  "confidence": "contested",
+  "related": [
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "part_of"
+    },
+    {
+      "id": "species-homo-naledi",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-s2a3",
+      "url": "http://www.s2a3.org.za/bio/Biograph_final.php?serial=779",
+      "title": "Dreyer, Prof Thomas Francis (Biographical Database of Southern African Science)",
+      "publisher": "S2A3 Biographical Database of Southern African Science",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-hawks",
+      "url": "https://www.johnhawks.net/p/how-old-is-the-early-homo-sapiens-skull-from-florisbad",
+      "title": "How old is the \"early Homo sapiens\" skull from Florisbad?",
+      "publisher": "John Hawks (University of Wisconsin-Madison paleoanthropologist, personal site)",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5461901.json",
+      "title": "Wikidata entry for Florisbad archaeological and paleontological site (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age: the 259 ka ESR date rests on a tooth-skull association that Berger and Hawks dispute. S2A3 describes the site as a salt pan north-east of Bloemfontein; Wikidata gives the pin. Hawks is a personal site (class other).",
+  "audience_note": null,
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:51:29.930Z"
+}

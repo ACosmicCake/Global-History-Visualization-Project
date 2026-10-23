@@ -1,0 +1,165 @@
+{
+  "id": "-13ka-megafaunal-extinction-in-the-americas",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Late Pleistocene megafaunal extinction in the Americas",
+  "summary": "During the terminal Pleistocene, more than thirty-five genera of large mammals vanished from North America and over fifty from South America, including mammoths, mastodons, ground sloths, saber-toothed cats, and dire wolves. High-precision dating demonstrates a concentrated extinction window between roughly 13,800 and 11,400 calibrated years ago, culminating around 12,900 years ago. This catastrophic biotic turnover permanently transformed Western Hemisphere ecosystems and was driven by interacting pressures from abrupt climate warming, fire-driven vegetation shifts, and human hunting.",
+  "when": {
+    "start": {
+      "year": -11850
+    },
+    "end": {
+      "year": -9450
+    },
+    "precision": "millennium",
+    "as_recorded": [
+      {
+        "calendar": "Radiocarbon, calibrated years BP (approximate calendar years)",
+        "value": "synchronous event that took place 12,000–10,000 radiocarbon years B.P. (≈13,800–11,400 calendar years B.P.)",
+        "source": "src-faith-surovell-2009"
+      },
+      {
+        "calendar": "Thousands of years ago (ka)",
+        "value": "abrupt disappearance of Ice Age megafauna",
+        "source": "src-nhm-la-brea"
+      }
+    ],
+    "display": "c. 13,800–11,400 cal BP (12,000–10,000 14C yr BP; peak collapse c. 12.9 ka)"
+  },
+  "where": {
+    "lat": 34.0522,
+    "lon": -118.2437,
+    "elevation_m": 50,
+    "modern_name": "Rancho La Brea (La Brea Tar Pits), Los Angeles, California, United States (reference asphalt deposit and type locality for Late Pleistocene mammalian extirpation)",
+    "historical_name": "Rancho La Brea asphalt seeps and coastal coastal sage scrub plain, southern California, North America",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "The Late Pleistocene extinction eliminated the Western Hemisphere's megafauna, restructuring terrestrial trophic networks, plant communities, and human subsistence patterns across the Americas."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-23ka-peopling-of-the-americas",
+      "type": "related"
+    },
+    {
+      "id": "-13ka-clovis-complex",
+      "type": "contemporary"
+    },
+    {
+      "id": "-26ka-last-glacial-maximum",
+      "type": "related"
+    },
+    {
+      "id": "person-anzick-1",
+      "type": "contemporary"
+    },
+    {
+      "id": "-23ka-white-sands-human-footprints",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-faith-surovell-2009",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791611/",
+      "title": "Synchronous extinction of North America's Pleistocene mammals (PNAS 106:20641–20645)",
+      "publisher": "Proceedings of the National Academy of Sciences of the USA (via PubMed Central)",
+      "author": "J. Tyler Faith, Todd A. Surovell",
+      "date_published": "2009-12-08",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nhm-la-brea",
+      "url": "https://nhm.org/press/new-study-scientists-la-brea-tar-pits-finds-extinction-ice-age-mammals-southern-california",
+      "title": "New Study by Scientists at La Brea Tar Pits Finds Extinction of Ice Age Mammals in Southern California Linked to Climate Change, Humans, and Fire",
+      "publisher": "Natural History Museum of Los Angeles County",
+      "author": "Natural History Museum of Los Angeles County",
+      "date_published": "2023-08-17",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where.historical_name",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/5368361",
+      "title": "GeoNames gazetteer entry for Los Angeles, United States (5368361)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the relative weights of human hunting versus climate-driven fire regimes in causing the synchrony across North and South America.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:30.353Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-11850",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "During the terminal Pleistocene, more than thirty-five genera of large mammals vanished from North America and over fifty from South America, including mammoths, mastodons, ground sloths, saber-toothed cats…",
+        "source": "src-faith-surovell-2009"
+      },
+      {
+        "span": "-9450",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "This catastrophic biotic turnover permanently transformed Western Hemisphere ecosystems and was driven by interacting pressures from abrupt climate warming, fire-driven vegetation shifts, and human hunting.",
+        "source": "src-faith-surovell-2009",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

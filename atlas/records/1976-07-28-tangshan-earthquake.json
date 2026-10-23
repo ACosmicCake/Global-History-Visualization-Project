@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1976-07-28-tangshan-earthquake",
+  "kind": "event",
+  "title": "Tangshan earthquake",
+  "summary": "A magnitude 7.8 earthquake struck Tangshan, an industrial and coal-mining city in Hebei, at 3:42 a.m. on 28 July 1976. Official counts give about 240,000 to 242,000 dead, while estimates in the first two years ranged from 650,000 to 800,000; USGS says the exact number will almost certainly never be known.",
+  "when": {
+    "start": {
+      "year": 1976,
+      "iso": "1976-07-28"
+    },
+    "end": {
+      "year": 1976,
+      "iso": "1976-07-28"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "USGS gives 3:42 a.m. on July 28, 1976, without a time zone; EBSCO gives the date and a magnitude range of 7.5 to 8.2 across the main shock and aftershocks."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "3:42 a.m. on July 28, 1976",
+        "source": "src-usgs-tang"
+      },
+      {
+        "calendar": "CE",
+        "value": "July 28, 1976",
+        "source": "src-ebsco-tang"
+      }
+    ],
+    "display": "28 July 1976"
+  },
+  "where": {
+    "lat": 39.629444444444,
+    "lon": 118.17388888889,
+    "elevation_m": null,
+    "modern_name": "Tangshan, Hebei, China (city point; epicentre not stated on the opened pages)",
+    "historical_name": "Tangshan, Hebei Province, People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-tang"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "One of the deadliest earthquakes of the twentieth century, destroying an industrial city."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a disaster with very large loss of life. Death tolls are given as attributed, disputed figures.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-usgs-tang",
+      "url": "https://www.usgs.gov/publications/tangshan-six-years-later",
+      "title": "Tangshan, six years later",
+      "publisher": "U.S. Geological Survey",
+      "author": "R. E. Wallace",
+      "date_published": "1983",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ebsco-tang",
+      "url": "https://www.ebsco.com/research-starters/politics-and-government/deadly-earthquake-strikes-china",
+      "title": "Deadly Earthquake Strikes China",
+      "publisher": "EBSCO Research Starters",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-tang",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q58422.json",
+      "title": "Wikidata entry for Tangshan (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1976-07-28",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "At 3:42 a.m. a magnitude 7.8 earthquake strikes Tangshan, a city of about one million on a fault line.",
+        "source": "src-usgs-tang",
+        "consequence": false
+      },
+      {
+        "span": "1976-07-28",
+        "action": "numbers.counter { range: [240000, 800000] }",
+        "caption": "Official counts are 240,000 to 242,000 dead; estimates in the first two years ranged from 650,000 to 800,000.",
+        "source": "src-usgs-tang",
+        "consequence": false
+      },
+      {
+        "span": "1979",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The government issued its official toll of 242,000 only in 1979, three years later, and critics cite far higher figures.",
+        "source": "src-ebsco-tang",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: the pin is the city point, not the epicentre (no opened page gives epicentre coordinates). Death toll ranges: USGS official 240,000 and 650,000-800,000 estimates; EBSCO official 242,000 (issued 1979) and 655,000 attributed to the Hebei Revolutionary Committee as cited by critics. Magnitude 7.8 is USGS; EBSCO gives 7.5-8.2.",
+  "author": "historian-agent:o-s71",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:24:49.011Z"
+}

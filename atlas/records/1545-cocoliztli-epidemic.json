@@ -1,0 +1,135 @@
+{
+  "id": "1545-cocoliztli-epidemic",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1545 cocoliztli epidemic in Mexico",
+  "summary": "The cocoliztli epidemic struck large parts of Mexico and Guatemala from 1545 to 1550. A cemetery at Teposcolula-Yucundaa in Oaxaca is estimated to hold about 800 individuals. Ancient DNA from ten burials there contained Salmonella enterica Paratyphi C, which the researchers call a strong candidate cause, not a confirmed one. Death estimates range from five to 15 million.",
+  "when": {
+    "start": {
+      "year": 1545
+    },
+    "end": {
+      "year": 1550
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both opened pages give 1545 to 1550."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "1545-1550",
+        "source": "src-cordis"
+      },
+      {
+        "calendar": "CE",
+        "value": "1545 to 1550",
+        "source": "src-natgeo"
+      }
+    ],
+    "display": "1545–1550"
+  },
+  "where": {
+    "lat": 17.550556,
+    "lon": -97.425,
+    "elevation_m": null,
+    "modern_name": "Near San Juan Teposcolula, Oaxaca, Mexico (the cemetery study town; the epidemic spanned a wider area)",
+    "historical_name": "Mixteca Alta, New Spain; the epidemic affected large parts of Mexico and Guatemala",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-tepos"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "One of the deadliest epidemics in the early colonial Americas; ancient DNA recently gave a candidate pathogen."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes a mass-mortality epidemic among Indigenous people of colonial Mexico, with death estimates in the millions. Death tolls are uncertain, and the cause is still debated.",
+  "related": [
+    {
+      "id": "1520-smallpox-epidemic-in-mexico",
+      "type": "related"
+    },
+    {
+      "id": "1428-aztec-triple-alliance",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-cordis",
+      "url": "https://cordis.europa.eu/article/id/122799-ancient-dna-reveals-possible-cause-of-epidemic-in-early-colonialera-mexico",
+      "title": "Ancient DNA reveals possible cause of epidemic in early colonial-era Mexico",
+      "publisher": "CORDIS, European Commission",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-natgeo",
+      "url": "https://www.nationalgeographic.com/history/article/cocoliztli-salmonella-outbreak-mexico-dna-spd",
+      "title": "Deadly Aztec Epidemic \"Cocoliztli\" Linked to Salmonella",
+      "publisher": "National Geographic",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-tepos",
+      "url": "https://www.wikidata.org/wiki/Q61272458",
+      "title": "Wikidata item Q61272458 (San Juan Teposcolula), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: it marks the cemetery study town (epidemic covered a far larger area; uncertainty 500 km). Death toll of 5-15 million comes from one popular source and is an estimate. Cause stated as a candidate only. The Nature paper and the bioRxiv copy were not openable (redirect, HTTP 429).",
+  "author": "historian-agent:o-s37",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:45:43.987Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

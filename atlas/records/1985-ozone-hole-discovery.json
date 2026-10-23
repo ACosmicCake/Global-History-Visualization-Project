@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "1985-ozone-hole-discovery",
+  "kind": "event",
+  "title": "Discovery of the ozone hole",
+  "summary": "British Antarctic Survey scientists Joe Farman, Brian Gardiner and Jonathan Shanklin published a paper in Nature on 16 May 1985 showing a steady springtime loss of ozone over Antarctica, measured at Halley. By 1984 the ozone layer there was only about two-thirds as thick as in earlier decades. The finding spurred international action on CFCs.",
+  "when": {
+    "start": {
+      "year": 1985
+    },
+    "end": {
+      "year": 1985
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Date is the publication of the Nature paper; the measurements span the late 1970s to 1984."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "exactly 28 years ago yesterday (on 16 May 1985)",
+        "source": "src-nature-blog"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "published in a seminal Nature paper in May 1985",
+        "source": "src-ukri"
+      }
+    ],
+    "display": "16 May 1985"
+  },
+  "where": {
+    "lat": -75.57349,
+    "lon": -25.46696,
+    "elevation_m": null,
+    "modern_name": "Halley Research Station, Brunt Ice Shelf, Antarctica",
+    "historical_name": "Halley Bay station (British Antarctic Survey), Brunt Ice Shelf, Antarctica",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd-halley"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "science_technology",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Revealed human-made ozone depletion and led to the Montreal Protocol."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1959-antarctic-treaty",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1984",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Data from Halley show the ozone layer there only about two-thirds as thick as in earlier decades.",
+        "source": "src-ukri",
+        "consequence": false
+      },
+      {
+        "span": "1985-05-16",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Farman, Gardiner and Shanklin publish the Halley record in Nature, reporting a yearly springtime drop.",
+        "source": "src-nature-blog",
+        "consequence": false
+      },
+      {
+        "span": "1987",
+        "action": "region.fill { radius_km: 1000 }",
+        "caption": "The Montreal Protocol aims to freeze production and consumption of ozone-depleting substances at then-current rates.",
+        "source": "src-ukri",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-nature-blog",
+      "url": "https://blogs.nature.com/blog/co-discoverer-of-ozone-hole-dies/",
+      "title": "Co-discoverer of ozone hole dies",
+      "publisher": "Nature (Springer Nature)",
+      "author": "Nature (Springer Nature)",
+      "date_published": "2013-05-17",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ukri",
+      "url": "https://www.ukri.org/news-and-events/responding-to-climate-change/topical-stories/the-story-behind-the-discovery-of-the-ozone-hole",
+      "title": "The story behind the discovery of the ozone hole",
+      "publisher": "UK Research and Innovation",
+      "author": "UK Research and Innovation",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-halley",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1571679.json",
+      "title": "Wikidata entry for Halley Research Station (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The Halley station has been rebuilt on the moving Brunt Ice Shelf, so the pin is the modern station within 100 km; the Nature paper itself was not opened.",
+  "published_at": "2026-10-22T08:18:30.474Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

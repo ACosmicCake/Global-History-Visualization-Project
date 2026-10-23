@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1929-mau-movement-samoa",
+  "kind": "movement",
+  "title": "Mau Movement in Samoa",
+  "summary": "The Mau was a nonviolent Samoan movement against colonial rule, formed in Apia in 1926 under New Zealand's administration. Its crisis came on 28 December 1929, 'Black Saturday', when police fired on a Mau parade in Apia; Tupua Tamasese Lealofi III was among those killed. Sources differ on the total of Samoan dead.",
+  "when": {
+    "start": {
+      "year": 1926
+    },
+    "end": {
+      "year": 1929
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Window covers formation (1926) to Black Saturday (28 December 1929); the movement itself continued afterwards. Commons Library traces earlier roots to 1908."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Saturday 28 December 1929",
+        "source": "src-nzh"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "28 December, 1929",
+        "source": "src-commons"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "In 1926",
+        "source": "src-commons"
+      }
+    ],
+    "display": "1926–1929 (Black Saturday: 28 December 1929)"
+  },
+  "where": {
+    "lat": -13.832124,
+    "lon": -171.752014,
+    "elevation_m": null,
+    "modern_name": "Apia, Samoa",
+    "historical_name": "Apia, Western Samoa (New Zealand-administered territory)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-mapcarta"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Major anticolonial movement in Samoa; Black Saturday is described as the worst incident in New Zealand's relationship with Samoa."
+  },
+  "confidence": "established",
+  "audience_note": "Describes police shootings of unarmed demonstrators, with deaths.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nzh",
+      "url": "https://nzhistory.govt.nz/politics/samoa/black-saturday",
+      "title": "Black Saturday (New Zealand's administration of Samoa, 1920-35, page 7)",
+      "publisher": "NZ Ministry for Culture and Heritage (NZHistory)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-commons",
+      "url": "https://commonslibrary.org/mau-movement/",
+      "title": "The Mau Movement for Samoan Independence",
+      "publisher": "The Commons Social Change Library",
+      "author": "Iain Murray",
+      "date_published": "2019-03-28",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mapcarta",
+      "url": "https://mapcarta.com/Apia",
+      "title": "Apia Map - Tuamasaga, Upolu, Samoa",
+      "publisher": "Mapcarta (OpenStreetMap-based)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll differs: NZHistory gives eight Samoans plus one NZ policeman (Tamasese mortally wounded); Commons says Tamasese and ten others; Commons also says 'Black Sunday'. Toll left out of numbers. Pin is Apia centre (proxy, Mapcarta).",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:27.266Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1926",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Mau was a nonviolent Samoan movement against colonial rule, formed in Apia in 1926 under New Zealand's administration.",
+        "source": "src-nzh"
+      },
+      {
+        "span": "1929",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Its crisis came on 28 December 1929, 'Black Saturday', when police fired on a Mau parade in Apia; Tupua Tamasese Lealofi III was among those killed.",
+        "source": "src-nzh",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

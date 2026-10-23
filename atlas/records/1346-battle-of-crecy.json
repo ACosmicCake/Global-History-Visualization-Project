@@ -1,0 +1,133 @@
+{
+  "id": "1346-battle-of-crecy",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Crécy",
+  "summary": "On 26 August 1346 in northern France, an English army under Edward III defeated a larger French army under Philip VI during the Hundred Years' War. Longbowmen and dismounted men-at-arms broke repeated French charges, causing heavy French losses. The English then besieged Calais, which fell the following year, and the battle established the longbow's effectiveness.",
+  "when": {
+    "start": {
+      "year": 1346
+    },
+    "end": {
+      "year": 1346
+    },
+    "precision": "day",
+    "display": "26 August 1346",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The Battle of Crécy took place on 26 August 1346 in northern France",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "battle on August 26, 1346",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 50.25639,
+    "lon": 1.88778,
+    "elevation_m": null,
+    "modern_name": "Crécy-en-Ponthieu, northern France",
+    "historical_name": "Crécy-en-Ponthieu",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Major Hundred Years' War battle that showed the longbow's power over cavalry and led to the fall of Calais."
+  },
+  "confidence": "established",
+  "audience_note": "Describes battlefield mass death, including thousands of casualties.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Cr%C3%A9cy&oldid=1374385242",
+      "title": "Battle of Crécy (Wikipedia, revision 1374385242)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "FA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20260201124402/https://www.britannica.com/event/Battle-of-Crecy",
+      "title": "Battle of Crécy | Description, Significance, & Casualties | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q27759",
+      "title": "Wikidata Q27759 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on army sizes and casualty figures (Wikipedia gives wide estimates; Britannica gives its own figures), so I gave none in the summary. Wikipedia calls the French crossbowmen mercenaries while Britannica calls them Italian. Wikipedia text is truncated. (Drafted by the Wikipedia pipeline from Wikipedia, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:23.935Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1346",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 26 August 1346 in northern France, an English army under Edward III defeated a larger French army under Philip VI during the Hundred Years' War.",
+        "source": "src-wp"
+      },
+      {
+        "span": "1346",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The English then besieged Calais, which fell the following year, and the battle established the longbow's effectiveness.",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

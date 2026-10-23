@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1864-paraguayan-war",
+  "kind": "event",
+  "title": "Paraguayan War (War of the Triple Alliance)",
+  "summary": "A long war in which Paraguay fought Argentina, Brazil and Uruguay, from November 1864 to March 1870. It ended in Paraguay's defeat: Francisco Solano López was killed by Brazilian cavalry at Cerro Corá on 1 March 1870, though Paraguay stayed independent.",
+  "when": {
+    "start": {
+      "year": 1864
+    },
+    "end": {
+      "year": 1870
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Britannica gives the start as 1864/65; Encyclopedia.com gives November 1864."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 1864–March 1870",
+        "source": "src-encyc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1 March 1870",
+        "source": "src-encyc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1864/65–70",
+        "source": "src-brit"
+      }
+    ],
+    "display": "November 1864 – March 1870"
+  },
+  "where": {
+    "lat": -25.278177,
+    "lon": -57.585442,
+    "elevation_m": null,
+    "modern_name": "Asunción, Paraguay (proxy pin for the Paraguayan side; fighting ranged over Paraguay, Brazil and Argentina)",
+    "historical_name": "Asunción, Republic of Paraguay (capital of the main belligerent)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Britannica calls it the bloodiest conflict in Latin American history."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-encyc",
+      "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/war-triple-alliance",
+      "title": "War of the Triple Alliance",
+      "publisher": "Encyclopedia.com (Encyclopedia of Latin American History and Culture, Cengage)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brit",
+      "url": "https://www.britannica.com/event/War-of-the-Triple-Alliance",
+      "title": "War of the Triple Alliance",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brown",
+      "url": "https://library.brown.edu/create/fivecenturiesofchange/4-1-the-paraguayan-war/",
+      "title": "4.1 The Paraguayan War",
+      "publisher": "Brown University Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://www.latlong.net/place/asunci-n-capital-city-of-paraguay-34350.html",
+      "title": "Asunción: Capital City of Paraguay",
+      "publisher": "LatLong.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date varies (Nov 1864 vs 1864/65). Pin is Asunción as a proxy; coordinate source is a low-grade aggregator. Cerro Corá death is on Encyclopedia.com; not placed as separate pin.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:02.279Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1864",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "A long war in which Paraguay fought Argentina, Brazil and Uruguay, from November 1864 to March 1870.",
+        "source": "src-encyc"
+      },
+      {
+        "span": "1870",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "It ended in Paraguay's defeat: Francisco Solano López was killed by Brazilian cavalry at Cerro Corá on 1 March 1870, though Paraguay stayed independent.",
+        "source": "src-encyc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

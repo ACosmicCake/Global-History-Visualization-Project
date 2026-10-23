@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1400-zeami-and-noh-theatre",
+  "kind": "process",
+  "title": "Zeami and the shaping of Noh theatre",
+  "summary": "Zeami, the son of the sarugaku performer Kan'ami, gained the patronage of the shogun Ashikaga Yoshimitsu after Yoshimitsu saw their troupe perform near Kyoto in 1374. His first treatise on the aesthetics of Noh, the Fushikaden, is dated 1400–1402 by one source, while another says it was completed in 1418. He was exiled to Sado Island in 1434.",
+  "when": {
+    "start": {
+      "year": 1400
+    },
+    "end": {
+      "year": 1418
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO gives 1400 to 1402 for writing the Fushikaden; the-NOH.com says completed in 1418. The range spans both."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "From 1400 to 1402, Zeami wrote his first treatise",
+        "source": "src-ebsco-zeami"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "completed in 1418",
+        "source": "src-noh-zeami"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1374",
+        "source": "src-ebsco-zeami"
+      }
+    ],
+    "display": "c. 1400–1418"
+  },
+  "where": {
+    "lat": 35.0115754,
+    "lon": 135.7681441,
+    "elevation_m": null,
+    "modern_name": "Kyoto, Japan (city centroid; proxy pin)",
+    "historical_name": "Kyoto, Muromachi Japan (capital under the Ashikaga shogunate)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm-kyoto"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Source of an early surviving theory of Noh, still a performed theatre form."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-zeami",
+      "url": "https://www.ebsco.com/research-starters/biography/zeami-motokiyo/",
+      "title": "Zeami Motokiyo (Research Starters)",
+      "publisher": "EBSCO Information Services",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-noh-zeami",
+      "url": "https://www.the-noh.com/en/zeami/index.html",
+      "title": "The Words of Zeami: His Dramatic Life",
+      "publisher": "the-NOH.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-kyoto",
+      "url": "https://nominatim.openstreetmap.org/search?q=Kyoto%20Japan&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Kyoto",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The two sources disagree on the date of Fushikaden (1400-1402 vs 1418), and the-NOH.com places the meeting with Yoshimitsu at Imakumano without a year. Pin is a city-centroid proxy; no source gives a single site. Kind and date range are my framing of a person/work.",
+  "author": "historian-agent:o-s100",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T18:09:27.361Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1400",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Zeami, the son of the sarugaku performer Kan'ami, gained the patronage of the shogun Ashikaga Yoshimitsu after Yoshimitsu saw their troupe perform near Kyoto in 1374.",
+        "source": "src-ebsco-zeami"
+      },
+      {
+        "span": "1418",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "His first treatise on the aesthetics of Noh, the Fushikaden, is dated 1400–1402 by one source, while another says it was completed in 1418.",
+        "source": "src-ebsco-zeami",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

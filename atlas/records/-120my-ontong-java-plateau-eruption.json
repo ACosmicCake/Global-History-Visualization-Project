@@ -1,0 +1,148 @@
+{
+  "id": "-120my-ontong-java-plateau-eruption",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Ontong Java Plateau eruption",
+  "summary": "The Ontong Java Plateau in the southwestern Pacific is described as the largest of the world's large igneous provinces, with an area of about 1.6 million square kilometres. Ocean Drilling Program basement lavas record eruptive episodes at 122 ± 3 and 90 ± 4 million years, while newer argon dating of dredged rocks gives ages of about 96 to 116 million years.",
+  "when": {
+    "start": {
+      "year": -122000000
+    },
+    "end": {
+      "year": -90000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 3000000,
+      "start_plus_years": 3000000,
+      "end_minus_years": 4000000,
+      "end_plus_years": 4000000,
+      "note": "Start and end are the two eruptive episodes in the ODP Leg 192 prospectus (122 ± 3 Ma and 90 ± 4 Ma). Tejada et al. (2023) report 40Ar-39Ar ages of ~96-116 Ma, with one dredge sample at 115.56 ± 0.36 Ma; the id uses 120 Ma. Years are Ma counted back from the present with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "122 ± 3 Ma and 90 ± 4 Ma",
+        "source": "src-odp192"
+      },
+      {
+        "calendar": "Ma",
+        "value": "~96–116 Ma and 67–68 Ma 40Ar-39Ar age data; 115.56 ± 0.36 Ma for sample D3-02",
+        "source": "src-tejada2023"
+      }
+    ],
+    "display": "c. 122–90 million years ago (two eruptive episodes)"
+  },
+  "where": {
+    "lat": -3.05,
+    "lon": 160.38333333,
+    "elevation_m": null,
+    "modern_name": "Ontong Java Plateau, southwestern Pacific Ocean, north of the Solomon Islands",
+    "historical_name": "Ontong Java Plateau on the Pacific plate, Cretaceous; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 700,
+    "coordinate_sources": [
+      "src-wikidata-ojp"
+    ],
+    "paleo": {
+      "lat": -34.71,
+      "lon": -132.05,
+      "age_ma": 122,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "oceans",
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Described as the largest of the world's large igneous provinces, a single huge volcanic outpouring on the Pacific seafloor."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-odp192",
+      "url": "https://www-odp.tamu.edu/publications/prosp/192_prs/192abstr.html",
+      "title": "Ocean Drilling Program Leg 192 Scientific Prospectus (Ontong Java Plateau)",
+      "publisher": "Ocean Drilling Program, Texas A&M University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tejada2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10213030/",
+      "title": "New evidence for the Ontong Java Nui hypothesis (Scientific Reports 13:8486)",
+      "publisher": "Scientific Reports via PubMed Central (NIH)",
+      "author": "M. L. G. Tejada et al.",
+      "date_published": "2023",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-ojp",
+      "url": "https://www.wikidata.org/wiki/Q4364598",
+      "title": "Wikidata item Q4364598 (Ontong Java Plateau), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=160.38333333,-3.05&time=122&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age: the id says 120 Ma, but the opened pages give 122 ± 3 and 90 ± 4 Ma (ODP prospectus) and newer 96-116 Ma argon ages; Tejada et al. call some of the older drill-site ages poor quality. The 700 km pin uncertainty is my own estimate from the stated 1.6 million km2 area, not a sourced figure; the Wikidata point is the plateau centre.",
+  "author": "historian-agent:o-s67",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:35:46.523Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

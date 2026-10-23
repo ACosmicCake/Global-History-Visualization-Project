@@ -1,0 +1,147 @@
+{
+  "id": "1900-galveston-hurricane",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Galveston Hurricane",
+  "summary": "A hurricane struck Galveston, Texas, on 8 September 1900 and drove a storm surge over most of Galveston Island. Much of the city was destroyed. The National Weather Service calls it the greatest natural disaster to hit the United States; death tolls cited run from at least 6,000 to about 12,000.",
+  "when": {
+    "start": {
+      "year": 1900
+    },
+    "end": {
+      "year": 1900
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date stated on both pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 8, 1900",
+        "source": "src-nws"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Saturday, September 8, 1900",
+        "source": "src-tsha"
+      }
+    ],
+    "display": "8 September 1900"
+  },
+  "where": {
+    "lat": 29.3013,
+    "lon": -94.7977,
+    "elevation_m": null,
+    "modern_name": "Galveston, Texas, United States",
+    "historical_name": "Galveston, Texas, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Described by the National Weather Service as the greatest natural disaster to strike the United States."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a mass-casualty disaster; sources mention thousands of deaths.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nws",
+      "url": "https://vlab.noaa.gov/web/nws-heritage/-/galveston-storm-of-1900",
+      "title": "Galveston Storm of 1900",
+      "publisher": "NOAA National Weather Service Heritage",
+      "author": "NWS Heritage Projects Editorial Staff",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tsha",
+      "url": "https://www.tshaonline.org/handbook/entries/galveston-hurricane-of-1900",
+      "title": "Galveston Hurricane of 1900",
+      "publisher": "Texas State Historical Association",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/4692883",
+      "title": "Galveston",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll varies: NWS 'at least 6,000'; TSHA 6,000-8,000 in the city and 10,000-12,000 island-wide. Pin is Galveston city (proxy), not the landfall point.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:07.541Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1900",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A hurricane struck Galveston, Texas, on 8 September 1900 and drove a storm surge over most of Galveston Island.",
+        "source": "src-nws"
+      },
+      {
+        "span": "1900",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Much of the city was destroyed.",
+        "source": "src-nws",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

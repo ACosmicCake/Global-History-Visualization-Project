@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s14",
+  "updated": "2026-10-22",
+  "id": "-3299-clay-token-envelopes",
+  "kind": "event",
+  "title": "Clay tokens and sealed envelopes (bullae) of the Late Uruk period",
+  "summary": "In the Late Uruk period, accountants at Susa and in southern Mesopotamia sealed clay tokens, standing for goods such as grain and animals, inside hollow clay balls called bullae or envelopes. Impressing the tokens on the outside let the contents be checked unbroken, an accounting step scholars link to the first writing.",
+  "when": {
+    "start": {
+      "year": -3349
+    },
+    "end": {
+      "year": -3099
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 150,
+      "start_plus_years": 250,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The University of Texas pages give c. 3300 BC for the Susa envelope and 3350–3100 BC for the first impressed texts; the BnF dates a sealed Susa bulla c. 3300 BC; the Louvre catalogue gives c. 3500–2900 BC (Proto-urban) for its SB 1932 bulla."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "Envelope from Susa, Iran, ca. 3300 BC",
+        "source": "src-ut-tokens"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "Date Vers 3300 avant J.-C.",
+        "source": "src-bnf-bulla"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "Proto-urbain (Vers 3500-2900 av. J.-C.)",
+        "source": "src-louvre-sb1932"
+      }
+    ],
+    "display": "c. 3350–3100 BCE (Late Uruk); Susa envelope c. 3300 BCE"
+  },
+  "where": {
+    "lat": 32.194167,
+    "lon": 48.243611,
+    "elevation_m": null,
+    "modern_name": "Shush, Khuzestan, Iran (site of ancient Susa)",
+    "historical_name": "Susa, in Susiana at the edge of the Iranian plateau, in the Uruk-period Mesopotamian sphere",
+    "geometry": {
+      "type": "regions",
+      "regions": [
+        {
+          "name": "Susa, Khuzestan, Iran",
+          "lat": 32.194167,
+          "lon": 48.243611,
+          "note": "Findspot of the Louvre bullae (excavated by Roland de Mecquenem).",
+          "source": "src-louvre-sb1932"
+        },
+        {
+          "name": "Uruk (Warka), Iraq",
+          "lat": 31.3259,
+          "lon": 45.6374,
+          "note": "Tokens from Uruk, ca. 3300 BC, are held in Berlin and Heidelberg; the BnF names Uruk or Susa.",
+          "source": "src-ut-writing"
+        }
+      ]
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-shush",
+      "src-wd-uruk"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A recordkeeping device that preceded, and Schmandt-Besserat argues led to, cuneiform writing."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-3300-invention-of-writing",
+      "type": "caused",
+      "because": "In Schmandt-Besserat's account, impressing tokens on envelopes and then on clay tablets led to the first written signs."
+    },
+    {
+      "id": "-3200-uruk-expansion",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ut-tokens",
+      "url": "https://sites.utexas.edu/dsb/tokens/tokens/",
+      "title": "Tokens: their Significance for the Origin of Counting and Writing",
+      "publisher": "University of Texas at Austin (Denise Schmandt-Besserat)",
+      "author": "Denise Schmandt-Besserat",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-ut-writing",
+      "url": "https://sites.utexas.edu/dsb/tokens/from-accounting-to-writing/",
+      "title": "From Accounting to Writing",
+      "publisher": "University of Texas at Austin (Denise Schmandt-Besserat)",
+      "author": "Denise Schmandt-Besserat",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-louvre-sb1932",
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010175963",
+      "title": "Bulle avec empreinte et jetons, SB 1932 (Louvre collections)",
+      "publisher": "Musée du Louvre, Département des Antiquités orientales",
+      "author": "Musée du Louvre",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-bnf-bulla",
+      "url": "https://essentiels.bnf.fr/fr/image/2a59ae81-76d6-4921-b648-c21a8ae51c7e-bulle-enveloppe-scellee-et-calculi",
+      "title": "Bulle-enveloppe scellée et calculi (SB 1940)",
+      "publisher": "Bibliothèque nationale de France, BnF Essentiels",
+      "author": "Bibliothèque nationale de France",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-shush",
+      "url": "https://www.wikidata.org/wiki/Q4168823",
+      "title": "Wikidata item Q4168823 (Shush), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wd-uruk",
+      "url": "https://www.wikidata.org/wiki/Q168518",
+      "title": "Wikidata item Q168518 (Uruk), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates differ: Schmandt-Besserat and the BnF say c. 3300 BC; the Louvre catalogue gives a wider range and uses \"Proto-urbain\", not \"Late Uruk\". The \"envelope as step to writing\" reading is Schmandt-Besserat's theory and is debated; I did not open critiques. Pin is modern Shush beside the Susa ruins.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3299",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Around 3300 BCE tokens for grain and flocks were enclosed in a hollow clay envelope at Susa.",
+        "source": "src-ut-tokens"
+      },
+      {
+        "span": "-3299",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Their shapes were pressed into the outer surface so the contents could be checked without breaking the envelope.",
+        "source": "src-ut-writing"
+      },
+      {
+        "span": "-3099",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Schmandt-Besserat argues the flattened impressions became signs on solid clay tablets, an early step toward writing.",
+        "source": "src-ut-writing",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T05:06:30.693Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

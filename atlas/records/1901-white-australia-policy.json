@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1901-white-australia-policy",
+  "kind": "event",
+  "title": "White Australia Policy",
+  "summary": "The Immigration Restriction Act became law on 23 December 1901, among the first measures of Australia's new federal parliament. It aimed to limit non-British migration and let officers impose a 50-word dictation test, which formally established the White Australia policy. The test ended in 1958 and the policy was eased from March 1966.",
+  "when": {
+    "start": {
+      "year": 1901
+    },
+    "end": {
+      "year": 1966
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the Act's commencement as law; end is when restrictions were announced as eased (March 1966), not a clean end of all effects."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "23 December 1901",
+        "source": "src-nma"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "March 1966",
+        "source": "src-dos"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1958",
+        "source": "src-dos"
+      }
+    ],
+    "display": "23 December 1901 (Act); eased from March 1966"
+  },
+  "where": {
+    "lat": -37.814,
+    "lon": 144.96332,
+    "elevation_m": null,
+    "modern_name": "Melbourne, Victoria, Australia (proxy pin for the national policy)",
+    "historical_name": "Melbourne, seat of the federal Parliament of the Commonwealth of Australia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geo"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Foundational national immigration law that shaped Australian migration policy for decades."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a racially discriminatory immigration policy; source material includes racist attitudes of the era.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nma",
+      "url": "https://www.nma.gov.au/defining-moments/resources/white-australia-policy",
+      "title": "White Australia policy",
+      "publisher": "National Museum of Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dos",
+      "url": "https://dictionaryofsydney.org/artefact/immigration_restriction_act_1901",
+      "title": "Immigration Restriction Act 1901",
+      "publisher": "Dictionary of Sydney (State Library of NSW)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-peo",
+      "url": "https://peo.gov.au/understand-our-parliament/your-questions-on-notice/questions/where-was-parliament-held-from-1901-1927",
+      "title": "Where was parliament held from 1901 to 1927?",
+      "publisher": "Parliamentary Education Office",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-geo",
+      "url": "https://www.geodatos.net/en/coordinates/australia/melbourne",
+      "title": "Melbourne Geographic coordinates",
+      "publisher": "geodatos.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Melbourne as proxy (parliament seat 1901-1927 per PEO); policy applied nationally. End date 1966 is when easing was announced.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:12.654Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1901",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Immigration Restriction Act became law on 23 December 1901, among the first measures of Australia's new federal parliament.",
+        "source": "src-nma"
+      },
+      {
+        "span": "1966",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It aimed to limit non-British migration and let officers impose a 50-word dictation test, which formally established the White Australia policy.",
+        "source": "src-nma",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

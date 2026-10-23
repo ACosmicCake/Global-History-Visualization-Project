@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Describes mass death and injury from toxic gas, with contested and widely varying death tolls.",
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "1984-bhopal-gas-disaster",
+  "kind": "event",
+  "title": "Bhopal gas disaster",
+  "summary": "On the night of 2-3 December 1984, water entered a methyl isocyanate tank at the Union Carbide India pesticide plant in Bhopal, releasing roughly 40 tons of toxic gas over densely populated neighbourhoods. One review counts at least 3,800 immediate deaths, other estimates run up to 10,000 in the first days, and over half a million people were exposed. It is described as the worst industrial disaster in history.",
+  "when": {
+    "start": {
+      "year": 1984,
+      "iso": "1984-12-02"
+    },
+    "end": {
+      "year": 1984,
+      "iso": "1984-12-03"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The release spanned the night of 2-3 December; sources name either date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On the night of December 2, 1984",
+        "source": "src-chemm-bhopal"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On December 3 1984, more than 40 tons of methyl isocyanate gas leaked",
+        "source": "src-pmc-bhopal"
+      }
+    ],
+    "display": "Night of 2-3 December 1984"
+  },
+  "where": {
+    "lat": 23.280833,
+    "lon": 77.410556,
+    "elevation_m": null,
+    "modern_name": "Bhopal, Madhya Pradesh, India",
+    "historical_name": "Union Carbide India Limited pesticide plant, Bhopal, Madhya Pradesh, India",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wikidata-bhopal"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Described by a US government source as the worst industrial disaster in history, with thousands dead and hundreds of thousands injured."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-pmc-bhopal",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1142333/",
+      "title": "The Bhopal disaster and its aftermath: a review",
+      "publisher": "Environmental Health (BioMed Central, via PubMed Central)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-chemm-bhopal",
+      "url": "https://chemm.hhs.gov/practice/case-studies/the-bhopal-methyl-isocyanate-disaster",
+      "title": "The Bhopal Methyl Isocyanate Disaster",
+      "publisher": "CHEMM, US Department of Health and Human Services",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-wikidata-bhopal",
+      "url": "https://www.wikidata.org/wiki/Q129029",
+      "title": "Wikidata item Q129029 (Bhopal disaster), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death tolls are attributed, not reconciled: the review says at least 3,800 immediately, with early estimates up to 10,000 (Sharma, cited therein) and 15,000-20,000 premature deaths over two decades (same citation); the Indian government reported more than half a million exposed. The Wikidata pin is the disaster location, not a surveyed plant gate.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1984-12-03",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "Water enters a methyl isocyanate tank at the Bhopal plant and about 40 metric tons of toxic gas escape over populated neighbourhoods.",
+        "source": "src-chemm-bhopal"
+      },
+      {
+        "span": "1984-12-03",
+        "action": "numbers.counter { range: [3800, 10000] }",
+        "caption": "Estimates of deaths in the first days range from at least 3,800 up to 10,000, depending on who is counting.",
+        "source": "src-pmc-bhopal",
+        "consequence": true
+      },
+      {
+        "span": "1984-12",
+        "action": "region.fill { radius_km: 8 }",
+        "caption": "The Indian government reported more than half a million people exposed to the gas.",
+        "source": "src-pmc-bhopal",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T08:21:37.773Z"
+}

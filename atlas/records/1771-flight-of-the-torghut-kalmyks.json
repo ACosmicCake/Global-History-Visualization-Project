@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1771-flight-of-the-torghut-kalmyks",
+  "kind": "event",
+  "title": "Flight of the Torghut Kalmyks to Dzungaria",
+  "summary": "In January 1771 about 169,000 Kalmyks left Russia for Dzungaria, according to Gale; Kalmyk oral history records that Ubashi Khan led them. Roughly a fifth of their kinsmen stayed behind on the Volga because the river did not freeze. Only a fraction reached Dzungaria in July 1771, after heavy losses of people, livestock and property.",
+  "when": {
+    "start": {
+      "year": 1771
+    },
+    "end": {
+      "year": 1771
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "Gale gives departure in January 1771 and arrival in July 1771; no day is stated on the pages I opened. Other publications give different head counts and departure days; only the Gale figure is used here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "In January 1771 approximately 169,000 people fled Russia to Dzungaria",
+        "source": "src-gale-kalmyks"
+      },
+      {
+        "calendar": "CE",
+        "value": "Only a fraction reached Dzungaria in July 1771",
+        "source": "src-gale-kalmyks"
+      },
+      {
+        "calendar": "CE",
+        "value": "in 1771 Ubashi Khan took the Kalmyks back to China",
+        "source": "src-cam-ubashi"
+      }
+    ],
+    "display": "January-July 1771"
+  },
+  "where": {
+    "lat": 46.566666666667,
+    "lon": 45.316666666667,
+    "elevation_m": null,
+    "modern_name": "Kalmykia, southern Russia (departure region; route ends in Dzungaria, northwest China)",
+    "historical_name": "Kalmyk Khanate steppe on the lower Volga, subject to the Russian Empire under Catherine II",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 46.566666666667,
+          "lon": 45.316666666667,
+          "date": "January 1771",
+          "year": 1771,
+          "label": "Kalmyk lands on the Volga: the flight began here; those on the west bank could not cross.",
+          "source": "src-gale-kalmyks",
+          "coordinate_source": "src-wd-kalmykia"
+        },
+        {
+          "lat": 45,
+          "lon": 85,
+          "date": "July 1771",
+          "year": 1771,
+          "label": "Dzungaria: only a fraction of the migrants arrived. Point is the region centre.",
+          "source": "src-gale-kalmyks",
+          "coordinate_source": "src-wd-dzungaria"
+        }
+      ]
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-kalmykia"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "europe"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A mass migration of most Kalmyks out of the Russian Empire that ended their khanate on the Volga and split the people."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1465-kazakh-khanate",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gale-kalmyks",
+      "url": "https://www.encyclopedia.com/people/history/historians-european-biographies/kalmyks",
+      "title": "Kalmyks",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Gale",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cam-ubashi",
+      "url": "https://www.repository.cam.ac.uk/items/f325b600-2dce-4ecc-a563-5fe46d1e40e8",
+      "title": "Ksenia Konchieva, About Ubashi Khan and the 1771 Exodus",
+      "publisher": "University of Cambridge (Kalmyk Cultural Heritage Documentation Project)",
+      "author": "Elvira Churyumova and Tsagan Seleeva",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-kalmykia",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3953.json",
+      "title": "Wikidata entry for Kalmykia (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-dzungaria",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q284027.json",
+      "title": "Wikidata entry for Dzungaria (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: head count (169,000 is one Gale figure; I saw other figures only in search snippets, not on opened pages) and named intermediate stops, which no opened page gives, so the route has only start and end. Cambridge page is oral history, used for the leader's name only. Related link to the Kazakh Khanate follows the task note; no opened page states the connection. Start point is the Kalmykia republic centre, a stand-in for the Volga steppe.",
+  "author": "historian-agent:o-s74",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "January 1771",
+        "action": "path.trace {}",
+        "caption": "About 169,000 Kalmyks leave the Volga steppe for Dzungaria; a fifth stay behind because the river is not frozen.",
+        "source": "src-gale-kalmyks",
+        "consequence": false
+      },
+      {
+        "span": "July 1771",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Only a fraction reach Dzungaria, after great losses of people, livestock and property.",
+        "source": "src-gale-kalmyks",
+        "consequence": false
+      },
+      {
+        "span": "1771",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Kalmyk oral history says the wealthy followed the Khan while the poor remained, dividing the people between Russia and China.",
+        "source": "src-cam-ubashi",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:57:00.109Z"
+}

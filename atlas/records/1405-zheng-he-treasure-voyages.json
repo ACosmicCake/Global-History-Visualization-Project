@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1405-zheng-he-treasure-voyages",
+  "kind": "event",
+  "title": "Zheng He treasure voyages",
+  "summary": "From 1405 to 1433 the Ming admiral Zheng He led seven fleet voyages from China through Southeast Asia to India and, on later voyages, to Hormuz and the East African coast. Sources count the large fleets at roughly 200 to 317 ships and 27,500 to 30,000 men. An edict ended the voyages in 1424, though a seventh went out in 1431.",
+  "when": {
+    "start": {
+      "year": 1405,
+      "iso": "1405-07-11"
+    },
+    "end": {
+      "year": 1433
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Collector dates the first departure to 11 July 1405. Voyage spans differ slightly between sources: first voyage 1405-1407 (Collector) or 1405-1406 (Asia Society); fourth voyage 1413-1415 or 1414-15."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "From 1405 to 1433 CE, the Chinese admiral Zheng He led seven great voyages",
+        "source": "src-collector-zhenghe"
+      },
+      {
+        "calendar": "CE",
+        "value": "First Voyage 1405–1406 ... Seventh Voyage 1431–1433",
+        "source": "src-asiasociety-zhenghe"
+      },
+      {
+        "calendar": "CE",
+        "value": "seven sea voyages (1405-1433)",
+        "source": "src-utc-zhenghe"
+      }
+    ],
+    "display": "1405–1433"
+  },
+  "where": {
+    "lat": 32.060833,
+    "lon": 118.778889,
+    "elevation_m": null,
+    "modern_name": "Nanjing, Jiangsu, China (route start as drawn on a 17th-century print)",
+    "historical_name": "Nanjing, Ming capital until the court moved to Beijing (decided 1415)",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 32.060833,
+          "lon": 118.778889,
+          "year": 1405,
+          "date": "1405 (first voyage; sailed 11 July 1405)",
+          "label": "Nanjing: route start on a printed map, per The Collector; the Asia Society timeline places the Ming court there until 1415.",
+          "source": "src-collector-zhenghe",
+          "coordinate_source": "src-wd-nanjing"
+        },
+        {
+          "lat": 2.188889,
+          "lon": 102.251111,
+          "year": 1405,
+          "date": "first voyage, 1405-1407 (Collector); the Asia Society dates the stop that recognised its ruler to the third voyage, 1409-1411",
+          "label": "Malacca: Malay peninsula port on the route.",
+          "source": "src-collector-zhenghe",
+          "coordinate_source": "src-wd-malacca"
+        },
+        {
+          "lat": 11.247778,
+          "lon": 75.780278,
+          "year": 1405,
+          "date": "first voyage, 1405-1406; arrival date not given",
+          "label": "Calicut: reached on the first voyage.",
+          "source": "src-asiasociety-zhenghe",
+          "coordinate_source": "src-wd-calicut"
+        },
+        {
+          "lat": 27.095,
+          "lon": 56.452778,
+          "year": 1414,
+          "date": "fourth voyage, 1414-15 (Asia Society) / 1413-1415 (Collector)",
+          "label": "Hormuz: Persian Gulf port.",
+          "source": "src-asiasociety-zhenghe",
+          "coordinate_source": "src-wd-hormuz"
+        },
+        {
+          "lat": 2.039167,
+          "lon": 45.341944,
+          "year": 1417,
+          "date": "fifth voyage, 1417-19",
+          "label": "Mogadishu: one of the East African ports where ambassadors were returned.",
+          "source": "src-asiasociety-zhenghe",
+          "coordinate_source": "src-wd-mogadishu"
+        }
+      ]
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-nanjing"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "south_eastern_asia",
+    "southern_asia",
+    "western_asia",
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Seven Ming fleet expeditions that reached the Indian Ocean, Arabia and East Africa and shaped diplomacy with Malacca and other ports."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1511-portuguese-capture-of-malacca",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-asiasociety-zhenghe",
+      "url": "https://asiasociety.org/education/chinese-trade-indian-ocean",
+      "title": "Chinese Trade in the Indian Ocean",
+      "publisher": "Asia Society",
+      "author": "Jean Johnson",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-collector-zhenghe",
+      "url": "https://www.thecollector.com/zheng-he-seven-voyages/",
+      "title": "The Seven Voyages of Zheng He: When China Ruled the Seas",
+      "publisher": "TheCollector",
+      "author": "Vedran Bileta",
+      "date_published": "2022-11-27",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-utc-zhenghe",
+      "url": "https://www.utc.edu/sites/default/files/2021-01/hillm2.pdf",
+      "title": "The Legacy of Zheng He and the Ming Dynasty Sea Voyages",
+      "publisher": "Asia Program, University of Tennessee at Chattanooga (NCTA teaching module)",
+      "author": "Jane Hill",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-nanjing",
+      "url": "https://www.wikidata.org/wiki/Q16666",
+      "title": "Nanjing (Wikidata Q16666)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-malacca",
+      "url": "https://www.wikidata.org/wiki/Q61089",
+      "title": "Malacca (Wikidata Q61089)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-calicut",
+      "url": "https://www.wikidata.org/wiki/Q28729",
+      "title": "Kozhikode (Calicut) (Wikidata Q28729)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-hormuz",
+      "url": "https://www.wikidata.org/wiki/Q888643",
+      "title": "Hormuz (Wikidata Q888643)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-mogadishu",
+      "url": "https://www.wikidata.org/wiki/Q2449",
+      "title": "Mogadishu (Wikidata Q2449)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 36,
+    "beats": [
+      {
+        "span": "1405-07-11",
+        "action": "numbers.counter { range: [200, 317] }",
+        "caption": "The first fleet sailed on 11 July 1405; sources count the large fleets at roughly 200 to 317 ships.",
+        "source": "src-collector-zhenghe"
+      },
+      {
+        "span": "1409",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "On the third voyage the Chinese recognised Paramesawara as Malacca's ruler and declared it a Chinese vassal.",
+        "source": "src-asiasociety-zhenghe",
+        "consequence": true
+      },
+      {
+        "span": "1417",
+        "action": "path.trace {}",
+        "caption": "By the fifth voyage (1417-1419) the fleet reached Hormuz, Aden and East African ports including Mogadishu and Mombasa.",
+        "source": "src-asiasociety-zhenghe"
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of ship and crew figures: The Collector and Asia Society give 317 ships and almost 28,000 men for 1405, Asia Society 300 ships and about 27,500 men for 1431, and the Tennessee module says larger fleets had at least 200-300 ships and 28,000-30,000 men. The sources disagree on when Malacca was first called at (first vs third voyage). Waypoint dates are voyage spans, not port arrival dates, which none of the opened pages gives.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s36",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:32:43.635Z"
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s104",
+  "updated": "2026-10-22",
+  "id": "1650-cusco-school-painting",
+  "kind": "movement",
+  "title": "Cusco School of painting",
+  "summary": "The Cusco School was a colonial painting tradition of the Viceroyalty of Peru centred on the Cusco region. It developed in the 17th and 18th centuries, with its style forming after the 1650 earthquake as artists rebuilding churches combined European influences with local elements. Many works were made collectively in workshops, so authorship is often unknown.",
+  "when": {
+    "start": {
+      "year": 1650
+    },
+    "end": {
+      "year": 1800
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Kubiak gives the 17th and 18th centuries; MASP says the tradition developed mainly after the 1650 earthquake. Start is 1650 and the start margin reaches back into the 17th century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "17th and 18th centuries",
+        "source": "src-kubiak-cusco"
+      },
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "earthquake of 1650",
+        "source": "src-masp-cusco"
+      }
+    ],
+    "display": "17th-18th centuries (mainly after 1650)"
+  },
+  "where": {
+    "lat": -13.516944444444,
+    "lon": -71.978611111111,
+    "elevation_m": null,
+    "modern_name": "Cusco, Peru",
+    "historical_name": "Cusco (Cuzco), Viceroyalty of Peru",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-cusco"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The best-known school of colonial Andean religious painting, produced in Cusco workshops."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-kubiak-cusco",
+      "url": "https://ojs.tnkul.pl/index.php/rh/article/view/6581",
+      "title": "Painting of the Cusco School (Esquela Cusquena) as a Manifestation of the Andean Identity Past and Present",
+      "publisher": "Roczniki Humanistyczne (John Paul II Catholic University of Lublin)",
+      "author": "Ewa Kubiak",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-masp-cusco",
+      "url": "https://masp.org.br/en/collections/works/our-lady-of-remedios",
+      "title": "Our Lady of Remedios",
+      "publisher": "Museu de Arte de Sao Paulo (MASP)",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-cusco",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5582862.json",
+      "title": "Cusco (Wikidata Q5582862)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates are century-level and the two sources frame the start differently (17th century vs after 1650). Pin is the city of Cusco, not a workshop.",
+  "published_at": "2026-10-22T18:25:13.716Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1650",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Cusco School was a colonial painting tradition of the Viceroyalty of Peru centred on the Cusco region.",
+        "source": "src-kubiak-cusco"
+      },
+      {
+        "span": "1800",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It developed in the 17th and 18th centuries, with its style forming after the 1650 earthquake as artists rebuilding churches combined European influences with local elements.",
+        "source": "src-kubiak-cusco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1946-bikini-atoll-nuclear-tests",
+  "kind": "event",
+  "title": "Nuclear tests at Bikini Atoll",
+  "summary": "The United States carried out 23 nuclear tests at Bikini Atoll in the Marshall Islands between 1946 and 1958, beginning with Operation Crossroads. In 1946 the Navy moved the 167 Bikinians to Rongerik Atoll, where they suffered severe malnutrition; they were moved to Kwajalein in March 1948 and 184 settled on Kili Island that November. The page gives the tests a combined yield of 78.6 megatons.",
+  "when": {
+    "start": {
+      "year": 1946
+    },
+    "end": {
+      "year": 1958
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Test series years as given by the Livermore page; the removal of the Bikinians began in March 1946 (Charles Sturt University page)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "23 near-surface nuclear tests on Bikini between 1946 and 1958",
+        "source": "src-llnl"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "The nuclear legacy of the Bikinians began in March of 1946 when they were first removed from their islands in preparation for Operation Crossroads",
+        "source": "src-csu"
+      }
+    ],
+    "display": "1946–1958"
+  },
+  "where": {
+    "lat": 11.5388875,
+    "lon": 165.2722315,
+    "elevation_m": null,
+    "modern_name": "Bikini Atoll, Ralik Chain, Republic of the Marshall Islands",
+    "historical_name": "Bikini Atoll, Marshall Islands, under US Navy administration (1946)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-osm-bk",
+      "src-llnl"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "wars_conflict",
+    "science_technology",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Site of 23 US nuclear tests and the displacement of the Bikini community."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns nuclear weapons testing and the removal of a community from its home atoll. It mentions malnutrition and later health effects among the displaced.",
+  "related": [
+    {
+      "id": "1945-07-16-trinity-test",
+      "type": "related"
+    },
+    {
+      "id": "1942-manhattan-project",
+      "type": "related"
+    },
+    {
+      "id": "1954-03-01-castle-bravo-and-daigo-fukuryu-maru",
+      "type": "related"
+    },
+    {
+      "id": "1949-semipalatinsk-first-soviet-nuclear-test",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-09-nagasaki-bombing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-llnl",
+      "url": "https://marshallislands.llnl.gov/affected-areas/bikini-atoll",
+      "title": "Bikini Atoll",
+      "publisher": "Lawrence Livermore National Laboratory, Marshall Islands Dose Assessment and Radioecology Program",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-csu",
+      "url": "https://marshall.csu.edu.au/Marshalls/html/History_Varia/Bikini_History/Bikini_History.html",
+      "title": "A Short History of the People of Bikini Atoll",
+      "publisher": "Charles Sturt University (Marshall Islands history pages)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-bk",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Bikini%20Atoll",
+      "title": "OpenStreetMap Nominatim: Bikini Atoll",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Livermore says Operation Crossroads began in \"July 1946\"; other accounts (not opened) place the Able test on 30 June 1946, so the start year is firm but the month is not stated here. Livermore gives 167 people moved to Rongerik; the Charles Sturt page agrees. The 184 who sailed to Kili in November 1948 is a different count (Livermore and CSU both give 184). Livermore text lists coordinates \"about 11°36′N 165°23′E\"; OSM atoll centre used instead. The US Navy Crossroads page failed a certificate check and UNESCO returned 403. Tolls and health effects are left to the full record.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1946",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "In 1946 the Navy relocates the 167 people of Bikini to Rongerik so that Operation Crossroads can proceed.",
+        "source": "src-csu",
+        "consequence": false
+      },
+      {
+        "span": "1946",
+        "action": "numbers.counter { range: [0, 23] }",
+        "caption": "The atoll then hosts 23 US nuclear tests between 1946 and 1958.",
+        "source": "src-llnl",
+        "consequence": false
+      },
+      {
+        "span": "1948-11",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "By November 1948, 184 Bikinians had sailed to Kili Island, their third relocation in two years.",
+        "source": "src-csu",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:06.693Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

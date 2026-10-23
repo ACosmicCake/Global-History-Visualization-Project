@@ -1,0 +1,144 @@
+{
+  "id": "polity-fatimid-caliphate",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "polity",
+  "title": "Fatimid Caliphate",
+  "summary": "The Fatimid Caliphate was an Ismaili Shi'i caliphate founded in 909 in Ifriqiya (modern Tunisia) by Abd Allah al-Mahdi Billah, claiming descent from the Prophet Muhammad's daughter Fatima. After expanding across North Africa and the Levant, the Fatimids conquered Egypt and founded Cairo (al-Qahira) as their imperial capital in 969. The dynasty became a major Mediterranean trading and cultural power before Saladin overthrew the caliphate in 1171, restoring Sunni governance in Egypt.",
+  "when": {
+    "start": {
+      "year": 909
+    },
+    "end": {
+      "year": 1171
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Established in 297 AH / 909 CE in Tunisia; overthrown by Saladin in 567 AH / 1171 CE in Cairo."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Hijri (AH) and Gregorian (CE)",
+        "value": "Established in 297/909 in Tunisia, the seat of the Fatimids was later transferred to Egypt in 362/973... overthrown by Salah-al-Din (Saladin) in 567/1171",
+        "source": "src-iis-fatimids"
+      },
+      {
+        "calendar": "Gregorian (AD)",
+        "value": "Cairo was founded as the headquarter of the Fatimid Caliphate in 969 AD.",
+        "source": "src-unesco-89"
+      }
+    ],
+    "display": "909–1171 CE"
+  },
+  "where": {
+    "lat": 30.0444,
+    "lon": 31.2621,
+    "elevation_m": null,
+    "modern_name": "Historic Cairo, Egypt",
+    "historical_name": "al-Qahira (Cairo), Fatimid Caliphate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "religion_philosophy",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Fatimids established the premier Shi'i caliphate in Islamic history, challenging Abbasid authority, founding Cairo, and patronizing major theological and scientific institutions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0632-origins-of-the-caliphate",
+      "type": "related"
+    },
+    {
+      "id": "1356-mosque-of-sultan-hasan",
+      "type": "same_place"
+    },
+    {
+      "id": "1798-napoleons-egyptian-expedition",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-iis-fatimids",
+      "url": "https://www.iis.ac.uk/scholarly-contributions/fatimids/",
+      "title": "Fatimids",
+      "publisher": "The Institute of Ismaili Studies",
+      "author": "The Institute of Ismaili Studies",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-89",
+      "url": "https://whc.unesco.org/en/list/89/",
+      "title": "Historic Cairo (World Heritage List no. 89)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "1979",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where.historical_name",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 89, Historic Cairo geolocations",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: geographic anchor between Mahdia/Raqqada (early Tunisian seat) and Cairo (dynastic capital from 969 to 1171); selected Historic Cairo as the enduring seat and monument of the empire.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:27.924Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

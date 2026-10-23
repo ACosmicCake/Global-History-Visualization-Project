@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1881-french-protectorate-of-tunisia",
+  "kind": "event",
+  "title": "French Protectorate of Tunisia",
+  "summary": "France established control over Tunisia by the Treaty of Bardo, signed 12 May 1881, after growing political and economic influence there. The La Marsa Convention of 8 June 1883 stated outright that Tunisia was a French protectorate and ended Tunisian power to conduct foreign diplomacy.",
+  "when": {
+    "start": {
+      "year": 1881
+    },
+    "end": {
+      "year": 1956
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the Treaty of Bardo; the US Office of the Historian heading dates French control 1881-1956. The 1883 La Marsa Convention formalised the protectorate."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 12, 1881",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 8, 1883",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1881-1956",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 1881",
+        "source": "src-fanack"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "(1883)",
+        "source": "src-fanack"
+      }
+    ],
+    "display": "12 May 1881 – 1956 (La Marsa Convention 8 June 1883)"
+  },
+  "where": {
+    "lat": 36.81897,
+    "lon": 10.16579,
+    "elevation_m": null,
+    "modern_name": "Tunis, Tunisia",
+    "historical_name": "Tunis, Regency of Tunis under the Bey",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-dti",
+      "src-mow"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Began French colonial control of Tunisia, which lasted until 1956."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/countries/tunisia",
+      "title": "U.S. Relations with Tunisia",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fanack",
+      "url": "https://fanack.com/tunisia/history-of-tunisia/tunisia-european-influence/",
+      "title": "Tunisia: European Influence",
+      "publisher": "Fanack",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dti",
+      "url": "https://dateandtime.info/citycoordinates.php?id=2464470",
+      "title": "Geographic coordinates of Tunis",
+      "publisher": "dateandtime.info",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-mow",
+      "url": "https://www.mapsofworld.com/lat_long/tunisia-lat-long.html",
+      "title": "Tunisia Latitude and Longitude",
+      "publisher": "Maps of World",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Tunis (capital, a proxy), not Bardo or La Marsa where treaties were signed. End year 1956 comes only from a State Dept section heading. Springer abstract also gave these dates but spotcheck could not verify it, so dropped.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:20.839Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1881",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "France established control over Tunisia by the Treaty of Bardo, signed 12 May 1881, after growing political and economic influence there.",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1956",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The La Marsa Convention of 8 June 1883 stated outright that Tunisia was a French protectorate and ended Tunisian power to conduct foreign diplomacy.",
+        "source": "src-histstate",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

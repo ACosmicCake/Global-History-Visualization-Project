@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1967-biafran-war",
+  "kind": "event",
+  "title": "Nigerian Civil War (Biafran War)",
+  "summary": "After a coup, anti-Igbo killings and failed talks, Nigeria's Eastern Region declared itself the Republic of Biafra on 30 May 1967, and the federal government went to war. A blockade cut Biafra off and caused severe famine. Biafra surrendered in January 1970 and rejoined Nigeria. Estimates of civilian deaths vary widely.",
+  "when": {
+    "start": {
+      "year": 1967
+    },
+    "end": {
+      "year": 1970
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO gives the war as ending on January 15, 1970; Encyclopedia.com gives January 12, 1970 for the surrender; History.com says Biafra surrendered four days after Owerri fell on January 11, 1970."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "May 30, 1967",
+        "source": "src-ebsco-biafra"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 12, 1970",
+        "source": "src-encyc-biafra"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 15, 1970",
+        "source": "src-ebsco-biafra"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "war between Nigeria and Biafra broke out in July 1967",
+        "source": "src-history-biafra"
+      }
+    ],
+    "display": "30 May 1967 - January 1970"
+  },
+  "where": {
+    "lat": 6.45,
+    "lon": 7.5,
+    "elevation_m": null,
+    "modern_name": "Former Eastern Region (Biafra), southeastern Nigeria",
+    "historical_name": "Republic of Biafra (seceded Eastern Region of the Federation of Nigeria)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wikidata-biafra"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A secession war that caused mass famine and shaped Nigerian politics and international humanitarian aid."
+  },
+  "confidence": "established",
+  "audience_note": "Discusses mass starvation and civilian deaths, including children, caused by wartime blockade; death estimates are disputed.",
+  "related": [
+    {
+      "id": "1960-year-of-africa",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-biafra",
+      "url": "https://www.ebsco.com/research-starters/history/nigeria-biafra-civil-war-ends",
+      "title": "Nigeria-Biafra Civil War Ends",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": "2019",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-biafra",
+      "url": "https://www.history.com/this-day-in-history/july-6/civil-war-in-nigeria",
+      "title": "Civil war breaks out in Nigeria",
+      "publisher": "HISTORY.com",
+      "author": "HISTORY.com Editors",
+      "date_published": "2009-10-22",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-biafra",
+      "url": "https://www.encyclopedia.com/international/encyclopedias-almanacs-transcripts-and-maps/biafranigeria",
+      "title": "Biafra/Nigeria",
+      "publisher": "Encyclopedia.com",
+      "author": "Gale",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-biafra",
+      "url": "https://www.wikidata.org/wiki/Q178469",
+      "title": "Wikidata item Q178469 (Biafra), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of death counts: Encyclopedia.com says about three million Biafrans lost their lives (about one million from malnutrition) while History.com says about one million died of malnutrition; neither figure is in the summary. Pin is a regional centroid from Wikidata.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:10.204Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1967",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "After a coup, anti-Igbo killings and failed talks, Nigeria's Eastern Region declared itself the Republic of Biafra on 30 May 1967, and the federal government went to war.",
+        "source": "src-ebsco-biafra"
+      },
+      {
+        "span": "1970",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "A blockade cut Biafra off and caused severe famine.",
+        "source": "src-ebsco-biafra",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

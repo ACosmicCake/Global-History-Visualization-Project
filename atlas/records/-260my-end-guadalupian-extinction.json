@@ -1,0 +1,120 @@
+{
+  "id": "-260my-end-guadalupian-extinction",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "event",
+  "title": "End-Guadalupian (Capitanian) mass extinction",
+  "summary": "Occurring around 260 million years ago near the end of the Guadalupian (Capitanian) epoch, this severe extinction eliminated 74–80% of terrestrial vertebrate genera in southern Africa alongside catastrophic losses among marine reef builders and brachiopods globally. Associated with flood-basalt volcanism of the Emeishan Large Igneous Province, it reorganized terrestrial tetrapod communities and marine ecosystems just eight to ten million years before the even larger end-Permian mass extinction.",
+  "when": {
+    "start": {
+      "year": -260259000
+    },
+    "end": {
+      "year": -259510000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 81000,
+      "start_plus_years": 81000,
+      "note": "Start is the late Capitanian terrestrial extinction pulse dated to 260.259 ± 0.081 Ma in the Karoo Basin (Day et al. 2015); end is the Guadalupian-Lopingian boundary (base of Wuchiapingian) at 259.51 ± 0.21 Ma (ICS Chart 2024/12; 259.857 ± 0.084 Ma at the Penglaitan GSSP)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon CA-TIMS (Ma), top of Tapinocephalus AZ",
+        "value": "260.259 ± 0.081 Ma",
+        "source": "src-day-2015"
+      },
+      {
+        "calendar": "ICS GSSP Table (Ma), base of Wuchiapingian",
+        "value": "Wuchiapingian 259.857 ± 0.084 Penglaitan, Guanxi Province, South China 109.3211, 23.6953",
+        "source": "src-ics-gssp"
+      }
+    ],
+    "display": "c. 260.3–259.5 Ma (late Capitanian, ~800,000 years)"
+  },
+  "where": {
+    "lat": 23.6953,
+    "lon": 109.3211,
+    "elevation_m": null,
+    "modern_name": "Penglaitan GSSP section, Laibin, Guangxi, China (reference section for the Guadalupian–Lopingian boundary)",
+    "historical_name": "South China carbonate platform in the eastern Tethys Ocean",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-ics-gssp"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "The end-Guadalupian mass extinction wiped out 74–80% of terrestrial vertebrate genera and decimated marine carbonate ecosystems, demonstrating that major biotic crisis accompanied the Emeishan volcanism prior to the Permian-Triassic boundary."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "related"
+    },
+    {
+      "id": "-252my-karoo-basin-terrestrial-turnover",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-day-2015",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4528552/",
+      "title": "When and how did the terrestrial mid-Permian mass extinction occur? Evidence from the tetrapod record of the Karoo Basin, South Africa (Proceedings of the Royal Society B: Biological Sciences 282:20150834)",
+      "publisher": "The Royal Society (via PubMed Central)",
+      "author": "Michael O. Day, Jahandar Ramezani, Samuel A. Bowring, PM Sadier, BS Rubidge",
+      "date_published": "2015-07-08",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-ics-gssp",
+      "url": "https://stratigraphy.org/gssps/",
+      "title": "GSSP Table - Global Boundary Stratotype Section and Points",
+      "publisher": "International Commission on Stratigraphy",
+      "author": "International Commission on Stratigraphy",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact temporal overlap and causal kill mechanism connecting the terrestrial tetrapod extinction pulse in the Karoo with the explosive phase of the Emeishan Large Igneous Province in southwestern China.",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:06:48.970Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

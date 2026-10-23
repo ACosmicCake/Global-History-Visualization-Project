@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1760-tackys-war",
+  "kind": "event",
+  "title": "Tacky's War",
+  "summary": "On Easter Monday 1760 (one source says the next day), enslaved Akan people led by Tacky rose at Frontier plantation in St Mary parish, Jamaica, and seized arms at Fort Haldane in Port Maria. Revolts spread to other parishes. Treaty Maroons helped crush it; Tacky was killed, hundreds of rebels died or were transported, and about 60 white people were killed.",
+  "when": {
+    "start": {
+      "year": 1760
+    },
+    "end": {
+      "year": 1761
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources differ on the first night: Monday 7 April (Our History) or Tuesday 8 April (Understanding Slavery Initiative). Rebellions continued into the following year (Our History)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Monday, 7 April 1760",
+        "source": "src-ourhistory-tacky"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Tuesday, 8 April",
+        "source": "src-usi-tacky"
+      }
+    ],
+    "display": "7 April 1760–1761"
+  },
+  "where": {
+    "lat": 18.3732372,
+    "lon": -76.8938277,
+    "elevation_m": null,
+    "modern_name": "Port Maria, Saint Mary, Jamaica (pin is the town of the Fort Haldane raid; the revolt began at Frontier plantation nearby)",
+    "historical_name": "Port Maria and Frontier plantation, St Mary parish, British colony of Jamaica",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm-portmaria"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A large rising of enslaved people in British Jamaica, with revolts across the island lasting into the next year."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes the killing, mass execution, beheading and forced transport of enslaved people, and the deaths of white colonists.",
+  "related": [
+    {
+      "id": "person-nanny-of-the-maroons",
+      "type": "related"
+    },
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    },
+    {
+      "id": "1831-jamaican-baptist-war",
+      "type": "related"
+    },
+    {
+      "id": "1791-haitian-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ourhistory-tacky",
+      "url": "https://www.ourhistory.org.uk/tackys-rebellion/",
+      "title": "Tacky's Rebellion",
+      "publisher": "Our History",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usi-tacky",
+      "url": "https://understandingslavery.com/casestudy/tackys-rebellion/",
+      "title": "Tacky's Rebellion",
+      "publisher": "Understanding Slavery Initiative",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-portmaria",
+      "url": "https://nominatim.openstreetmap.org/search?q=Port+Maria+Jamaica&format=json",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of casualty figures: Our History says 400 to 500 enslaved people killed, the Understanding Slavery Initiative says about 400 executed and about 600 sent to the Bay of Honduras; the summary keeps only \"hundreds\". Frontier plantation has no gazetteer coordinates, so the pin is Port Maria. BlackPast and FutureLearn pages were blocked.",
+  "author": "historian-agent:o-s56",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:05:16.096Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1760",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On Easter Monday 1760 (one source says the next day), enslaved Akan people led by Tacky rose at Frontier plantation in St Mary parish, Jamaica, and seized arms…",
+        "source": "src-ourhistory-tacky"
+      },
+      {
+        "span": "1761",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Revolts spread to other parishes.",
+        "source": "src-ourhistory-tacky",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

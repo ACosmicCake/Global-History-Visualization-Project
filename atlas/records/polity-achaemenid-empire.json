@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s40",
+  "updated": "2026-10-22",
+  "id": "polity-achaemenid-empire",
+  "kind": "polity",
+  "title": "Achaemenid Empire",
+  "summary": "The Achaemenid Persian Empire was founded by Cyrus the Great, who became king of Persis in 559 BCE, defeated Astyages of Media in 550 and captured Babylon in 539. Under Darius it stretched from Macedonia to Pakistan, with capitals at Pasargadae and Persepolis. It ended in 330 BCE after Alexander defeated Darius III at Issus and Gaugamela.",
+  "when": {
+    "start": {
+      "year": -549
+    },
+    "end": {
+      "year": -329
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 0,
+      "end_minus_years": 1,
+      "end_plus_years": 1,
+      "note": "World History Encyclopedia gives c. 550-330 BCE and a founding date of 553 BCE in its timeline; Livius gives Cyrus as king of Persis from 559 BCE and Darius III murdered in 330 BCE. The start is taken as c. 550 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "c. 550-330 BCE",
+        "source": "src-whe-achaemenid"
+      },
+      {
+        "calendar": "BCE (Livius)",
+        "value": "559: Cyrus becomes king of Persis; 550: Cyrus defeats Astyages of Media; 330: Darius is murdered",
+        "source": "src-livius-achaemenids"
+      }
+    ],
+    "display": "c. 550-330 BCE"
+  },
+  "where": {
+    "lat": 30.19383,
+    "lon": 53.16729,
+    "elevation_m": null,
+    "modern_name": "Pasargadae, Fars Province, Iran (pin at the first capital; the empire spanned Western Asia and beyond)",
+    "historical_name": "Pasargadae, first dynastic capital of the Achaemenid Empire, in Pars",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-unesco-pasargadae",
+      "src-wd-pasargadae"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "It was the first great multicultural empire in Western Asia and was ended by Alexander the Great."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-cyrus-the-great",
+      "type": "related"
+    },
+    {
+      "id": "place-persepolis",
+      "type": "related"
+    },
+    {
+      "id": "place-babylon",
+      "type": "related"
+    },
+    {
+      "id": "-0489-battle-of-marathon",
+      "type": "related"
+    },
+    {
+      "id": "person-alexander-the-great",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-achaemenids",
+      "url": "https://www.livius.org/articles/dynasty/achaemenids/",
+      "title": "Achaemenids",
+      "publisher": "Livius.org (Jona Lendering)",
+      "author": "Jona Lendering",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-whe-achaemenid",
+      "url": "https://www.worldhistory.org/Achaemenid_Empire/",
+      "title": "Achaemenid Empire",
+      "publisher": "World History Encyclopedia",
+      "author": "Peter Davidson",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-unesco-pasargadae",
+      "url": "https://whc.unesco.org/en/list/1106/",
+      "title": "Pasargadae",
+      "publisher": "UNESCO World Heritage Centre",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-pasargadae",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q230025.json",
+      "title": "Wikidata entry for Pasargadae (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start year (550 vs 553 vs 559 BCE in the pages opened). The pin is the first capital, not the whole empire.",
+  "published_at": "2026-10-22T09:57:08.280Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

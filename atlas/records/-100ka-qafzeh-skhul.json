@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s103",
+  "updated": "2026-10-22",
+  "id": "-100ka-qafzeh-skhul",
+  "kind": "place",
+  "title": "Qafzeh and Skhul caves, Israel: early modern human burials",
+  "summary": "Qafzeh Cave, on a hillside near Nazareth, and Skhul Cave on Mount Carmel, both in Israel, hold clusters of Paleolithic burials. Thermoluminescence and electron spin resonance readings date the two clusters to about 120,000–90,000 years ago, which made them the oldest modern human fossils found outside Africa until the Misliya find.",
+  "when": {
+    "start": {
+      "year": -120000
+    },
+    "end": {
+      "year": -90000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years before present in the sources are written here as negative calendar years without subtracting 1950; the sources give rounded ages. Qafzeh thermoluminescence on burnt flint gave a mean of 92,000 ± 5,000 (Valladas et al. 1988) and ESR on enamel about 115 ka (Schwarcz et al. 1988), as reported in PALEO."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ka BP (TL and ESR)",
+        "value": "ca. 120-90 Ka BP",
+        "source": "src-paleo"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "90,000-120,000 years ago",
+        "source": "src-leakey"
+      }
+    ],
+    "display": "c. 120,000–90,000 years ago"
+  },
+  "where": {
+    "lat": 32.6885184,
+    "lon": 35.31799793,
+    "elevation_m": null,
+    "modern_name": "Qafzeh Cave near Nazareth (Lower Galilee) and Skhul Cave on Mount Carmel, Israel",
+    "historical_name": "Wadi el-Hajj hillside near Nazareth and Mount Carmel, Israel; no polity applies at this date",
+    "geometry": {
+      "type": "regions",
+      "regions": [
+        {
+          "name": "Qafzeh Cave",
+          "lat": 32.6885184,
+          "lon": 35.31799793,
+          "note": "Cave on the flank of a hill near Nazareth, in Wadi el-Hajj (PALEO).",
+          "source": "src-wd-qafzeh"
+        },
+        {
+          "name": "Skhul Cave",
+          "lat": 32.62586389,
+          "lon": 34.95851944,
+          "note": "Cave on Mount Carmel, excavated 1931-1932 (PALEO).",
+          "source": "src-wd-skhul"
+        }
+      ]
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-qafzeh",
+      "src-wd-skhul"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Together the sites held the oldest modern human fossils found outside Africa before the Misliya discovery (Leakey Foundation)."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-paleo",
+      "url": "https://journals.openedition.org/paleo/4848",
+      "title": "The Paleolithic Burials at Qafzeh Cave, Israel (PALEO 30-1)",
+      "publisher": "PALEO, Revue d'archéologie préhistorique (OpenEdition Journals)",
+      "author": "Bernard Vandermeersch, Ofer Bar-Yosef",
+      "date_published": "2020-05-29",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-leakey",
+      "url": "https://leakeyfoundation.org/earliest-modern-human-outside-of-africa-unearthed-in-israel/",
+      "title": "Earliest Modern Human Outside of Africa Unearthed in Israel",
+      "publisher": "The Leakey Foundation (from American Friends of Tel Aviv University)",
+      "author": "Leakey Foundation",
+      "date_published": "2018-01-26",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-qafzeh",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2121357.json",
+      "title": "Wikidata item Q2121357, Qafzeh Cave, coordinates 32.6885184, 35.31799793",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-wd-skhul",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q287341.json",
+      "title": "Wikidata item Q287341, Skhul Cave, coordinates 32.62586389, 34.95851944",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the two caves are about 40 km apart, so the main point sits at Qafzeh and Skhul is a second region. Wikidata labels Qafzeh's country differently from the PALEO article, which places it in Galilee, Israel; the article was followed. The dates are those quoted in the sources, not recomputed.",
+  "published_at": "2026-10-22T18:09:57.546Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

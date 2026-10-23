@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1901-federation-of-australia",
+  "kind": "event",
+  "title": "Federation of Australia",
+  "summary": "On 1 January 1901 the six colonies of New South Wales, Victoria, South Australia, Queensland, Tasmania and Western Australia were united as the Commonwealth of Australia at a ceremony in Centennial Park, Sydney. Lord Hopetoun, the first Governor-General, took his oath and swore in the first ministers under Edmund Barton. Centennial Parklands reports about 60,000 people attended.",
+  "when": {
+    "start": {
+      "year": 1901
+    },
+    "end": {
+      "year": 1901
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Exact day given by both sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "1 January 1901",
+        "source": "src-cpl"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "The Commonwealth of Australia was established on 1 January 1901",
+        "source": "src-senate"
+      }
+    ],
+    "display": "1 January 1901"
+  },
+  "where": {
+    "lat": -33.8977778,
+    "lon": 151.2338889,
+    "elevation_m": null,
+    "modern_name": "Centennial Park, Sydney, New South Wales, Australia",
+    "historical_name": "Centennial Park, Sydney, colony of New South Wales (inaugural ceremony site, 1901)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-cp"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Founding of the Australian nation-state from six colonies."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1788-first-fleet-arrival-at-sydney",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-cpl",
+      "url": "https://www.centennialparklands.com.au/visit/history-and-heritage/history-of-the-parklands/birthplace-of-the-nation",
+      "title": "Birthplace of the nation",
+      "publisher": "Centennial Parklands",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-senate",
+      "url": "https://firstparliament.senate.gov.au/origins/declaration",
+      "title": "Declaration of the Commonwealth (Origins)",
+      "publisher": "Senate of the Parliament of Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-cp",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Centennial%20Park%20Sydney",
+      "title": "OpenStreetMap Nominatim: Centennial Park, Sydney",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The 60,000 crowd figure is Centennial Parklands only; the Australian Parliament pages reportedly give other figures (not opened). Parliament House APH, peo.gov.au and Museums of History NSW returned 403 and were not used. Queen Victoria proclamation date (17 September 1900) is on the Senate page but left out of the summary. Coordinates are the OSM park centre, not the Federation Pavilion.",
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:05.953Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1901",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 1 January 1901 the six colonies of New South Wales, Victoria, South Australia, Queensland, Tasmania and Western Australia were united as the Commonwealth of Australia at a…",
+        "source": "src-cpl"
+      },
+      {
+        "span": "1901",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Lord Hopetoun, the first Governor-General, took his oath and swore in the first ministers under Edmund Barton.",
+        "source": "src-cpl",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "1872-challenger-expedition",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Challenger expedition",
+  "summary": "Between December 1872 and May 1876, the British Royal Navy corvette HMS Challenger undertook a 68,890-nautical-mile global scientific voyage directed by civilian chief scientist Charles Wyville Thomson. Establishing 362 oceanographic observation stations across the Atlantic, Southern, and Pacific oceans, the expedition sounded deep trenches including the Mariana Trench, disproved the azoic hypothesis of a lifeless deep sea, and collected thousands of new marine species, establishing modern oceanography.",
+  "when": {
+    "start": {
+      "year": 1872
+    },
+    "end": {
+      "year": 1876
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Departed Portsmouth in December 1872 (21 December) and returned to England in May 1876 (24 May)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Leaving Portsmouth in December and spending 1,250 days at sea, the expedition traveled 68,890 nautical miles across the Atlantic and Pacific oceans. Led by Chief Scientist Wyville Thomson, the crew established 362 observation stations",
+        "source": "src-noc-challenger"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Challenger returned to England in May of 1876",
+        "source": "src-whoi-challenger"
+      }
+    ],
+    "display": "1872–1876"
+  },
+  "where": {
+    "lat": 50.79899,
+    "lon": -1.09125,
+    "elevation_m": 0,
+    "modern_name": "Portsmouth, Hampshire, England, United Kingdom",
+    "historical_name": "Portsmouth, Hampshire, England, United Kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-portsmouth"
+    ]
+  },
+  "regions": [
+    "europe",
+    "oceans"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Established the scientific discipline of modern oceanography through the first global systematic survey of ocean depths, temperatures, currents, and marine life."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1869-opening-of-the-suez-canal",
+      "type": "related",
+      "because": "The opening of the Suez Canal transformed global maritime routes and spurred British naval interest in global marine surveying."
+    },
+    {
+      "id": "1883-krakatoa-eruption",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1872",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "HMS Challenger sails from Portsmouth as the first dedicated oceanographic research vessel.",
+        "source": "src-noc-challenger",
+        "consequence": false
+      },
+      {
+        "span": "1876",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The expedition returns to England with 362 stations completed, laying the foundation of modern oceanography.",
+        "source": "src-whoi-challenger",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-noc-challenger",
+      "url": "https://www.noc.ac.uk/who-we-are/our-history/the-challenger-expedition",
+      "title": "The Challenger Expedition",
+      "publisher": "National Oceanography Centre",
+      "author": "National Oceanography Centre",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-whoi-challenger",
+      "url": "https://divediscover.whoi.edu/history-of-oceanography/the-challenger-expedition/",
+      "title": "The Challenger Expedition",
+      "publisher": "Woods Hole Oceanographic Institution (Dive and Discover)",
+      "author": "Woods Hole Oceanographic Institution",
+      "date_published": "2020",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-portsmouth",
+      "url": "https://www.geonames.org/2639996/portsmouth.html",
+      "title": "Portsmouth (GeoNames entry 2639996)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of exact day-level dates across secondary summaries versus log dates (21 December 1872 departure from Portsmouth and 24 May 1876 return to Spithead).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:30.872Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

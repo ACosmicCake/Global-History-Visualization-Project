@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1940-armistice-of-22-june-1940",
+  "kind": "event",
+  "title": "Armistice of 22 June 1940",
+  "summary": "France and Germany signed an armistice in the Compiègne forest on 22 June 1940, in the place where the 1918 armistice had been signed, a site Hitler chose. It took effect on 25 June, and divided France into occupied and unoccupied zones, with Germany holding the north and the Atlantic coast.",
+  "when": {
+    "start": {
+      "year": 1940
+    },
+    "end": {
+      "year": 1940
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Signed 22 June 1940; in force 25 June 1940 (USHMM). Avalon text gives signing time as 6:50 p.m. German summer time."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 22, 1940",
+        "source": "src-ghdi"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 22, 1940",
+        "source": "src-ushmm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 25, 1940",
+        "source": "src-ushmm"
+      },
+      {
+        "calendar": "Gregorian, German summer time",
+        "value": "6:50 p.m., German summer time",
+        "source": "src-avalon"
+      }
+    ],
+    "display": "22 June 1940 (in force 25 June 1940)"
+  },
+  "where": {
+    "lat": 49.4272,
+    "lon": 2.90639,
+    "elevation_m": null,
+    "modern_name": "Clairière de l'Armistice, Compiègne forest, France",
+    "historical_name": "Forest of Compiègne, French Third Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-aroundus"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Ended the fighting between France and Germany in 1940 and set up the divided France of the occupation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1940-battle-of-france",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ghdi",
+      "url": "https://germanhistorydocs.org/en/nazi-germany-1933-1945/signing-of-the-franco-german-armistice-at-compiegne-june-22-1940",
+      "title": "Signing of the Franco-German Armistice at Compiègne (June 22, 1940)",
+      "publisher": "German History in Documents and Images (German Historical Institute Washington)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-avalon",
+      "url": "https://avalon.law.yale.edu/wwii/frgearm.asp",
+      "title": "Franco-German Armistice : June 25, 1940",
+      "publisher": "The Avalon Project, Yale Law School",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ushmm",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/france",
+      "title": "France",
+      "publisher": "United States Holocaust Memorial Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-aroundus",
+      "url": "https://aroundus.com/p/7425858-glade-of-the-armistice",
+      "title": "Glade of the Armistice",
+      "publisher": "AroundUs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Armistice Glade in Compiègne forest from a travel-site coordinate (proxy, ~2 km). Signing time is from the Avalon text only.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:08:04.574Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1940",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "France and Germany signed an armistice in the Compiègne forest on 22 June 1940, in the place where the 1918 armistice had been signed, a site Hitler chose.",
+        "source": "src-ghdi"
+      },
+      {
+        "span": "1940",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It took effect on 25 June, and divided France into occupied and unoccupied zones, with Germany holding the north and the Atlantic coast.",
+        "source": "src-ghdi",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

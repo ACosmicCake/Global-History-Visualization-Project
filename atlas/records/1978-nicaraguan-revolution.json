@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1978-nicaraguan-revolution",
+  "kind": "event",
+  "title": "Nicaraguan Revolution",
+  "summary": "The killing of newspaper publisher Pedro Joaquín Chamorro in January 1978 set off demonstrations that grew into civil war against President Anastasio Somoza, a close US ally. In July 1979 the Sandinista movement prevailed, and the Somoza regime fell. The US under Carter tried to moderate the outcome.",
+  "when": {
+    "start": {
+      "year": 1978
+    },
+    "end": {
+      "year": 1979
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Phase covered is the 1978-79 uprising and overthrow; the wider revolutionary process is dated differently by other accounts and is not covered here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "January 1978",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "In July 1979",
+        "source": "src-histstate"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "in 1979",
+        "source": "src-brown"
+      }
+    ],
+    "display": "January 1978 – July 1979"
+  },
+  "where": {
+    "lat": 12.136389,
+    "lon": -86.251389,
+    "elevation_m": null,
+    "modern_name": "Managua, Nicaragua (proxy pin for a nationwide event)",
+    "historical_name": "Nicaragua under the Somoza government (pin: capital Managua)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Overthrew a long-ruling US-allied dictatorship and shaped Cold War policy in Central America."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns civil war, political killing and repression.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1977-1980/central-america-carter",
+      "title": "Central America, 1977–1980",
+      "publisher": "Office of the Historian, US Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brown",
+      "url": "https://www.brown.edu/Research/Understanding_the_Iran_Contra_Affair/n-contrasus.php",
+      "title": "Understanding the Iran-Contra Affair: The Contra War",
+      "publisher": "Brown University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://www.latlong.net/place/managua-nicaragua-5653.html",
+      "title": "Managua, Nicaragua",
+      "publisher": "LatLong.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Managua pin is a proxy; coordinates from a non-institutional site. Exact day of fall (19 July) not confirmed by an opened non-Wikipedia page, so omitted. Start date 1978 uses the Chamorro killing per State Dept.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:00:53.083Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1978",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The killing of newspaper publisher Pedro Joaquín Chamorro in January 1978 set off demonstrations that grew into civil war against President Anastasio Somoza, a close US ally.",
+        "source": "src-histstate"
+      },
+      {
+        "span": "1979",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "In July 1979 the Sandinista movement prevailed, and the Somoza regime fell.",
+        "source": "src-histstate",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

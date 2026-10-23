@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-3200ka-lucy-australopithecus-afarensis",
+  "kind": "species",
+  "title": "Lucy, Australopithecus afarensis skeleton (AL 288-1)",
+  "summary": "Lucy is a skeleton of the early hominin Australopithecus afarensis, found in 1974 at Hadar in Ethiopia and dated to about 3.2 million years ago. About 40% of one skeleton was recovered, and the pelvis showed she was female and that her species walked on two legs. It is described as the best preserved skeleton of the species found.",
+  "when": {
+    "start": {
+      "year": -3198050
+    },
+    "end": {
+      "year": -3198050
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Converted as year = 1950 minus age. Both opened pages give \"3.2 million\" with no error range; zeros mean not stated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "3.2 million-year-old",
+        "source": "src-si-afarensis"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "Age: 3.2 million years old",
+        "source": "src-ausmus"
+      }
+    ],
+    "display": "c. 3.2 million years ago"
+  },
+  "where": {
+    "lat": 11.1667,
+    "lon": 40.6333,
+    "elevation_m": null,
+    "modern_name": "Hadar, Afar Region, Ethiopia",
+    "historical_name": "Hadar, Awash Valley, Pliocene East Africa; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-hadar",
+      "src-cho-hadar"
+    ],
+    "paleo": {
+      "lat": 9.75,
+      "lon": 40.46,
+      "age_ma": 3.2,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Reconstruction to 3.2 Ma moves the point about 190 km south-southwest."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "The best-preserved skeleton of Australopithecus afarensis, a reference specimen for early upright walking."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related"
+    },
+    {
+      "id": "-1800ka-homo-erectus-dispersal-from-africa",
+      "type": "related"
+    },
+    {
+      "id": "place-omo-kibish",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-si-afarensis",
+      "url": "https://humanorigins.si.edu/evidence/human-fossils/species/australopithecus-afarensis",
+      "title": "Australopithecus afarensis",
+      "publisher": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ausmus",
+      "url": "https://australian.museum/learn/science/human-evolution/australopithecus-afarensis/",
+      "title": "Australopithecus afarensis",
+      "publisher": "The Australian Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-gac-lucy",
+      "url": "https://artsandculture.google.com/story/ygVREVFi46uRrA",
+      "title": "Meet Lucy: The Famous Early Human",
+      "publisher": "Google Arts & Culture (with Smithsonian National Museum of Natural History)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-hadar",
+      "url": "https://www.geonames.org/search.html?q=Hadar+Ethiopia&country=ET",
+      "title": "GeoNames search: Hadar, Ethiopia (11.1667 / 40.6333)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-cho-hadar",
+      "url": "https://culturalheritageonline.com/places/hadar/",
+      "title": "Hadar",
+      "publisher": "Cultural Heritage Online",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=40.6333,11.1667&time=3.2&model=MERDITH2021",
+      "title": "GPlates Web Service point reconstruction (MERDITH2021)",
+      "publisher": "GPlates Web Service (EarthByte Group, University of Sydney)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Hadar village coordinates from GeoNames (11.1667, 40.6333); Cultural Heritage Online gives 11.1167, 40.5833, about 8 km away, and no opened page gives the AL 288-1 find spot, so uncertainty is 15 km. The 1974 year and the 40% figure come from the Google Arts and Culture story (24 November, Johanson and Tom Gray); the Smithsonian page gives no discovery date. Summary omits finders. Species ranges differ between museums (3.85-2.95 vs 3.9-2.8 Ma).",
+  "author": "historian-agent:o-s41",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:06:16.368Z"
+}

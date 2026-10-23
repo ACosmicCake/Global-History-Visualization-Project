@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "species-sahelanthropus-tchadensis",
+  "kind": "species",
+  "title": "Sahelanthropus tchadensis",
+  "summary": "Sahelanthropus tchadensis is known from a nearly complete cranium nicknamed Toumaï, found in 2001 at locality TM 266 in the Djurab Desert of northern Chad by a team led by Michel Brunet. Cosmogenic nuclide dating gives about 7.04 million years, and whether it belongs on the human line is debated.",
+  "when": {
+    "start": {
+      "year": -7218050
+    },
+    "end": {
+      "year": -6858050
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Converted as year = 1950 minus age. Cosmogenic dating gives 7.04 +/-0.18 Ma (bounds 6.86-7.22 Ma used here); the Australian Museum gives 6-7 million years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Cosmogenic nuclide",
+        "value": "an age of 7.04 ± 0.18 Ma for Sahelanthropus tchadensis",
+        "source": "src-pnas-sahel"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "The remains are dated to 6-7 million years old",
+        "source": "src-ausmus"
+      }
+    ],
+    "display": "c. 7 million years ago"
+  },
+  "where": {
+    "lat": 16.25,
+    "lon": 17.4833,
+    "elevation_m": null,
+    "modern_name": "Toros-Menalla locality TM 266, Djurab Desert, northern Chad",
+    "historical_name": "Lake-margin and savanna landscape, central Africa (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-pnas-sahel"
+    ],
+    "paleo": {
+      "lat": 12.59,
+      "lon": 17.31,
+      "age_ma": 7,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 17.48, 16.25 reconstructed to 7 Ma."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "One of the oldest fossils claimed for the human line; its status is debated."
+  },
+  "related": [
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pnas-sahel",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2265126/",
+      "title": "Cosmogenic nuclide dating of Sahelanthropus tchadensis and Australopithecus bahrelghazali: Mio-Pliocene hominids from Chad (PNAS)",
+      "publisher": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "author": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "date_published": "2008",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ausmus",
+      "url": "https://australian.museum/learn/science/human-evolution/sahelanthropus-tchadensis/",
+      "title": "Sahelanthropus tchadensis",
+      "publisher": "Australian Museum",
+      "author": "Australian Museum",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-si-sahel",
+      "url": "https://humanorigins.si.edu/evidence/human-fossils/fossils/tm-266-01-060-1",
+      "title": "TM 266-01-060-1",
+      "publisher": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "author": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates come from the PNAS abstract (16 15 N, 17 29 E, whole degrees-minutes), hence 10 km uncertainty. Age sources differ in method: cosmogenic (about 7.04 Ma) vs faunal (6-7 Ma). Hominin status is debated and the summary says so.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:48.904Z"
+}

@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1942-kokoda-track-campaign",
+  "kind": "event",
+  "title": "Kokoda Track campaign",
+  "summary": "From late July to mid-November 1942 Australian militia and then AIF troops fought a Japanese force that landed at Gona on the north Papuan coast and advanced over the Owen Stanley Range along the Kokoda Track toward Port Moresby. The Australians fell back to Imita Ridge, about 50 km from Port Moresby; the Japanese then withdrew and were pursued back across the range, with Papua New Guinean carriers vital to supply.",
+  "when": {
+    "start": {
+      "year": 1942,
+      "iso": "1942-07-21"
+    },
+    "end": {
+      "year": 1942,
+      "iso": "1942-11-16"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the night of 21-22 July 1942 when the Japanese began landing at Gona; end is 15-16 November, the close of the final phase of the battle on the track (Department of Veterans' Affairs). The wider Papuan campaign ran to 22 January 1943 (ANZAC Day Commemoration Committee)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "During the night of 21-22 July, a Japanese invasion force from Rabaul, New Britain, began landing at Gona Mission",
+        "source": "src-dva"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The final phase of the Battle of Kokoda Track lasted from 28 September to 15-16 November",
+        "source": "src-dva"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In July 1942 ... the Japanese landed troops at Buna and Gona on the Papuan north coast",
+        "source": "src-adcc"
+      }
+    ],
+    "display": "21-22 July to 15-16 November 1942"
+  },
+  "where": {
+    "lat": -8.877778,
+    "lon": 147.7375,
+    "elevation_m": null,
+    "modern_name": "Kokoda, Oro Province, Papua New Guinea (track runs to the Owen Stanley Range and Port Moresby)",
+    "historical_name": "Kokoda, Territory of Papua, Australian-administered",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -8.6195,
+          "lon": 148.2902,
+          "year": 1942.553,
+          "date": "night of 21-22 July 1942",
+          "label": "Gona, north Papuan coast: Japanese invasion force begins landing.",
+          "source": "src-dva",
+          "coordinate_source": "src-osm-gona"
+        },
+        {
+          "lat": -8.877778,
+          "lon": 147.7375,
+          "year": 1942.573,
+          "date": "29 July 1942",
+          "label": "Kokoda village falls after a sharp engagement.",
+          "source": "src-dva",
+          "coordinate_source": "src-wd-kokoda"
+        },
+        {
+          "lat": -9,
+          "lon": 147.733333,
+          "year": 1942.649,
+          "date": "26 August 1942",
+          "label": "Isurava: lead elements of the 2/14th Battalion reach the defensive position.",
+          "source": "src-dva",
+          "coordinate_source": "src-wd-isurava"
+        },
+        {
+          "lat": -9.1575,
+          "lon": 147.6639,
+          "year": 1942.685,
+          "date": "8 September 1942",
+          "label": "Efogi: Japanese attack at dawn and cut the track behind forward Australian positions.",
+          "source": "src-dva",
+          "coordinate_source": "src-osm-efogi"
+        },
+        {
+          "lat": -9.3412,
+          "lon": 147.5243,
+          "year": 1942.718,
+          "date": "20 September 1942",
+          "label": "Imita Ridge: end of the Australian fighting withdrawal; no further withdrawal ordered.",
+          "source": "src-dva",
+          "coordinate_source": "src-osm-imita"
+        }
+      ]
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-kokoda",
+      "src-wd-isurava",
+      "src-osm-gona",
+      "src-osm-efogi",
+      "src-osm-imita"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The overland Japanese drive on Port Moresby was halted about 50 km from the town, and Australian troops then pursued the Japanese back across the Owen Stanley Range."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    },
+    {
+      "id": "1942-02-19-bombing-of-darwin",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dva",
+      "url": "https://anzacportal.dva.gov.au/node/2601",
+      "title": "Kokoda 1942",
+      "publisher": "Australian Government Department of Veterans' Affairs (Anzac Portal)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-adcc",
+      "url": "https://anzacday.org.au/kokoda",
+      "title": "The Kokoda Track",
+      "publisher": "ANZAC Day Commemoration Committee (Queensland)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-kokoda",
+      "url": "https://www.wikidata.org/wiki/Q1771884",
+      "title": "Wikidata: Kokoda",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-isurava",
+      "url": "https://www.wikidata.org/wiki/Q6089467",
+      "title": "Wikidata: Isurava",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-gona",
+      "url": "https://www.openstreetmap.org/node/302477184",
+      "title": "OpenStreetMap: Gona",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-efogi",
+      "url": "https://www.openstreetmap.org/node/715956234",
+      "title": "OpenStreetMap: Efogi 1",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-imita",
+      "url": "https://www.openstreetmap.org/way/1493115173",
+      "title": "OpenStreetMap: Imita Ridge",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualty figures differ between the opened pages (ANZAC Day committee: Australian casualties over 6000 and about 13,000 of 20,000 Japanese lost; these span the wider Papuan campaign) and are omitted. Isurava date is when the 2/14th began arriving, not the battle date (attacks began 26 August per other sources; the battle date was not checked). Efogi point is OSM's Efogi 1 node. The Japanese withdrawal reason (supply and fear of an American attack on Buna) is from the ANZAC Day committee page only.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 32,
+    "beats": [
+      {
+        "span": "1942-07-22",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "A Japanese force from Rabaul begins landing at Gona, ordered to take Port Moresby by a thrust across the mountains if feasible.",
+        "source": "src-dva",
+        "consequence": false
+      },
+      {
+        "span": "1942-09-20",
+        "action": "path.trace {}",
+        "caption": "The Australians complete a fighting withdrawal to Imita Ridge, about 50 km from Port Moresby, where they are ordered to hold.",
+        "source": "src-adcc",
+        "consequence": false
+      },
+      {
+        "span": "1942-11-16",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "The Japanese advance becomes a retreat, and the Australians pursue them back over the Owen Stanley Range until mid-November.",
+        "source": "src-adcc",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s59",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:39:20.177Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

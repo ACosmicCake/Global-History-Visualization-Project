@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s21",
+  "updated": "2026-10-22",
+  "id": "place-heit-el-ghurab",
+  "kind": "place",
+  "title": "Heit el-Ghurab, the \"Lost City of the Pyramids\" (Giza)",
+  "summary": "Heit el-Ghurab is a Fourth Dynasty settlement on the Giza Plateau, about 400 m south of the Sphinx. Its bakeries, workshops, barracks and a royal grain store served the pyramid projects of Khafre and Menkaure. The Ancient Egypt Research Associates have dug it since 1988.",
+  "when": {
+    "start": {
+      "year": -2599
+    },
+    "end": {
+      "year": -2500
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Sources give c. 2600 BC and the 4th Dynasty; the end year is a rounded bound since AERA says it was decommissioned after Menkaure's pyramid was completed. No reign years were opened."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC",
+        "value": "c. 2600 BC",
+        "source": "src-daes"
+      },
+      {
+        "calendar": "Dynastic",
+        "value": "4th Dynasty, Old Kingdom",
+        "source": "src-aera"
+      },
+      {
+        "calendar": "CE",
+        "value": "December 1988",
+        "source": "src-aera"
+      }
+    ],
+    "display": "c. 2600 BCE (4th Dynasty)"
+  },
+  "where": {
+    "lat": 29.9761,
+    "lon": 31.1328,
+    "elevation_m": null,
+    "modern_name": "Heit el-Ghurab (\"Wall of the Crow\"), Giza Plateau, Egypt (pin is the Giza pyramid complex, not the site itself)",
+    "historical_name": "Workers' and administrative town south of the Giza pyramids, Fourth Dynasty Old Kingdom Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1.5,
+    "coordinate_sources": [
+      "src-wd",
+      "src-aera"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The best-documented town of pyramid-building workers and administrators, central to how Giza was staffed and supplied."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "place-giza-pyramids",
+      "type": "part_of"
+    },
+    {
+      "id": "person-khufu",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-aera",
+      "url": "https://www.aeraweb.org/lost-city/",
+      "title": "The Lost City of the Pyramids",
+      "publisher": "Ancient Egypt Research Associates (AERA)",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-daes",
+      "url": "https://daes.dk/rescuing-more-of-the-lost-city-of-the-pyramids/",
+      "title": "Rescuing more of the Lost City of the Pyramids",
+      "publisher": "Danish Egyptological Society",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q12508&props=labels|claims&languages=en&format=json",
+      "title": "Wikidata entry for the Giza pyramid complex (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates are the Giza pyramid complex (Wikidata Q12508), not the site: no source I opened gives coordinates for Heit el-Ghurab, which AERA places about 400 m south of the Sphinx on the Giza Plateau. Uncertainty set to 1.5 km. Dates are rounded (c. 2600 BC; no reign years opened).",
+  "audience_note": null,
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:53:26.918Z"
+}

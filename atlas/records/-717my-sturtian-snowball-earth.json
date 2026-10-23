@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "-717my-sturtian-snowball-earth",
+  "kind": "period",
+  "title": "Sturtian snowball Earth glaciation",
+  "summary": "The Sturtian glaciation began about 717 million years ago, a date set from volcanic rocks of the Mt. Harper Volcanic Complex in the Ogilvie Mountains, Yukon. The Franklin large igneous province of northern North America was emplaced roughly 0.9 to 1.6 million years earlier, and a Re-Os date on postglacial rocks suggests the glacial epoch lasted about 55 million years.",
+  "when": {
+    "start": {
+      "year": -717400000
+    },
+    "end": {
+      "year": -662400000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 500000,
+      "start_plus_years": 500000,
+      "end_minus_years": 3900000,
+      "end_plus_years": 3900000,
+      "note": "Onset is given as between 717.4 +/-0.2 and 716.9 +/-0.4 Ma (Pu et al.); the end is a postglacial Re-Os date of 662.4 +/-3.9 Ma (Rooney et al.). Start uncertainty is widened to cover the 717.4-716.9 span."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon",
+        "value": "onset between 717.4 ± 0.2 and 716.9 ± 0.4 Ma ago",
+        "source": "src-pu"
+      },
+      {
+        "calendar": "Re-Os",
+        "value": "postglacial Re-Os date of 662.4 ± 3.9 Mya",
+        "source": "src-rooney"
+      }
+    ],
+    "display": "c. 717–662 million years ago"
+  },
+  "where": {
+    "lat": 64.6177,
+    "lon": -138.2487,
+    "elevation_m": null,
+    "modern_name": "Ogilvie Mountains, Yukon, Canada (Mt. Harper Volcanic Complex dates the onset; the glaciation was global)",
+    "historical_name": "Margin of Laurentia, low latitude (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-osm-ogilvie"
+    ],
+    "paleo": {
+      "lat": 2.32,
+      "lon": -142.9,
+      "age_ma": 717,
+      "plate_model": "PALEOMAP via GPlates Web Service (MERDITH2021 returns no reconstruction for this point)",
+      "source": "src-gplates-gws",
+      "note": "Point -138.25, 64.62 reconstructed to 717 Ma; MERDITH2021 returned 999.99 (no plate)."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The first of the Cryogenian snowball Earth glaciations, with ice reaching low latitudes."
+  },
+  "related": [
+    {
+      "id": "-1000my-assembly-of-rodinia",
+      "type": "related"
+    },
+    {
+      "id": "-575my-ediacaran-biota",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pu",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9683727/",
+      "title": "Emplacement of the Franklin large igneous province and initiation of the Sturtian Snowball Earth (Science Advances)",
+      "publisher": "Science Advances / AAAS (via PubMed Central)",
+      "author": "Science Advances / AAAS (via PubMed Central)",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-rooney",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3890860",
+      "title": "Re-Os geochronology and coupled Os-Sr isotope constraints on the Sturtian snowball Earth (Rooney et al., PNAS)",
+      "publisher": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "author": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "date_published": "2014",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-ogilvie",
+      "url": "https://nominatim.openstreetmap.org/search?q=Ogilvie+Mountains+Yukon&format=json",
+      "title": "OpenStreetMap Nominatim: Ogilvie Mountains, Yukon, Canada",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Ogilvie Mountains, where the onset is dated, with a planet-scale uncertainty because the glaciation was global. Paleo position from PALEOMAP because MERDITH2021 has no plate at the point. Onset age varies by study (about 717 Ma; Franklin about 719.9-718.6 Ma).",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:46.543Z"
+}

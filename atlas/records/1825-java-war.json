@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1825-java-war",
+  "kind": "event",
+  "title": "Java War (Diponegoro War)",
+  "summary": "The Java War began in 1825 when a Dutch road survey crossed the property of Prince Diponegoro of Yogyakarta, and troops sent against him destroyed Tegalrejo. It ended in 1830 after he was captured at Magelang on 28 March and exiled. Sources record more than 200,000 Javanese deaths, and Java came fully under colonial control.",
+  "when": {
+    "start": {
+      "year": 1825
+    },
+    "end": {
+      "year": 1830
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give 1825-1830; Diponegoro halted the war in February 1830 and was captured at Magelang on 28 March 1830."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Java War (1825–1830)",
+        "source": "src-encyc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1825-1830",
+        "source": "src-onwar"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "captured on March 28",
+        "source": "src-encyc"
+      }
+    ],
+    "display": "1825–1830"
+  },
+  "where": {
+    "lat": -7.800456766490443,
+    "lon": 110.39128022985493,
+    "elevation_m": null,
+    "modern_name": "Yogyakarta, Java, Indonesia (war across central and east Java)",
+    "historical_name": "Yogyakarta Sultanate, Dutch East Indies",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd-q7568"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A five-year uprising that cost very many Javanese lives and secured Dutch control of Java."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns a colonial war with very high civilian mortality from fighting, famine and disease; stated in general terms.",
+  "related": [
+    {
+      "id": "1830-dutch-cultivation-system-java",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyc",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/java-war-1825-1830",
+      "title": "Java War (1825-1830)",
+      "publisher": "Encyclopedia.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-onwar",
+      "url": "https://www.onwar.com/data/java1825.html",
+      "title": "Great Java War 1825-1830",
+      "publisher": "OnWar.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q7568",
+      "url": "https://www.wikidata.org/wiki/Q7568",
+      "title": "Wikidata item Q7568 (Yogyakarta), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll \"more than 200,000 Javanese\" (Encyclopedia.com) and \"as many as 200,000 ... in fighting or from indirect causes\" (OnWar) are older-style estimates, not demographic research. Encyclopedia.com also gives more than 8,000 European and 7,000 local soldiers dead, not in the summary. Pin is Yogyakarta; fighting ranged across Java.",
+  "author": "historian-agent:o-s96",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:43:43.241Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1825",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The Java War began in 1825 when a Dutch road survey crossed the property of Prince Diponegoro of Yogyakarta, and troops sent against him destroyed Tegalrejo.",
+        "source": "src-encyc"
+      },
+      {
+        "span": "1830",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "It ended in 1830 after he was captured at Magelang on 28 March and exiled.",
+        "source": "src-encyc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

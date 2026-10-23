@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1850-taiping-rebellion",
+  "kind": "event",
+  "title": "Taiping Rebellion",
+  "summary": "The Taiping Rebellion, led by Hong Xiuquan, lasted from 1850 to 1864. EBSCO says the rebels seized Wuchang in 1853 and then captured Nanjing, making it their capital, until Manchu troops took it in 1864. Estimates of the dead differ: about 20 million per EBSCO, and between 20 million and 70 million per History.com.",
+  "when": {
+    "start": {
+      "year": 1850
+    },
+    "end": {
+      "year": 1864
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years as given by EBSCO and History.com."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1850–1864",
+        "source": "src-ebsco-taiping"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "lasted from 1850 to 1864",
+        "source": "src-history-taiping"
+      }
+    ],
+    "display": "1850–1864"
+  },
+  "where": {
+    "lat": 32.0438284,
+    "lon": 118.7788631,
+    "elevation_m": null,
+    "modern_name": "Nanjing, Jiangsu, China (rebel capital)",
+    "historical_name": "Nanjing, rebel capital in China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-osm-nanjing"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "One of the deadliest conflicts on record, with estimates of tens of millions of deaths."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns a war with mass civilian deaths from fighting, famine and disease. Casualty figures are attributed estimates and vary widely.",
+  "related": [
+    {
+      "id": "1839-first-opium-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-taiping",
+      "url": "https://www.ebsco.com/research-starters/history/taiping-rebellion",
+      "title": "Taiping Rebellion",
+      "publisher": "EBSCO Research Starters",
+      "author": "Richard D. Fitzgerald",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-history-taiping",
+      "url": "https://www.history.com/articles/taiping-rebellion",
+      "title": "Taiping Rebellion",
+      "publisher": "HISTORY",
+      "author": "HISTORY.com Editors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-nanjing",
+      "url": "https://nominatim.openstreetmap.org/search?q=Nanjing+China&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for Nanjing (relation 2131524)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: the pin (Nanjing is the rebel capital, but the rebellion spanned much of southern and central China) and the wide casualty range.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1853",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The rebels seized Wuchang and then captured Nanjing, which became their capital.",
+        "source": "src-ebsco-taiping"
+      },
+      {
+        "span": "1864",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "Manchu troops seized Nanjing, ending the rebellion; EBSCO estimates about 20 million deaths.",
+        "source": "src-ebsco-taiping",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:11:48.381Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

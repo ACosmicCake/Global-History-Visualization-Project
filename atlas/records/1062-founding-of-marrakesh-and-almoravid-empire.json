@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1062-founding-of-marrakesh-and-almoravid-empire",
+  "kind": "event",
+  "title": "Founding of Marrakesh as the Almoravid capital",
+  "summary": "Marrakesh in Morocco was founded as the capital of the Almoravids, who ruled northwestern Africa and parts of southern Spain from 1056 to 1147. EBSCO and an Oxford-derived entry date the founding to 1062, crediting Yusuf ibn Tashfin, while UNESCO gives 1070-72. The Almohads took the city in 1147 and made it their capital.",
+  "when": {
+    "start": {
+      "year": 1062
+    },
+    "end": {
+      "year": 1072
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The opened sources disagree: 1062 (EBSCO; an Oxford-derived entry in Encyclopedia.com), about 1060 (Encyclopedia.com Marrakech entry), and 1070-72 (UNESCO). The range runs from 1062 to 1072."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The year 1062 marks the founding of Marrakesh",
+        "source": "src-ebsco-almoravid"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Founded in 1062 by the Almoravids",
+        "source": "src-encyc-marrakech"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Founded in 1070",
+        "source": "src-unesco-marrakesh"
+      }
+    ],
+    "display": "1062 (UNESCO: 1070-72)"
+  },
+  "where": {
+    "lat": 31.62947,
+    "lon": -7.98108,
+    "elevation_m": null,
+    "modern_name": "Marrakesh, Morocco",
+    "historical_name": "Marrakesh, capital of the Almoravid state",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-marrakech"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A city founded as the Almoravid capital became a political and cultural centre of the western Muslim world and later an Almohad capital."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0900-trans-saharan-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-almoravid",
+      "url": "https://www.ebsco.com/research-starters/history/almoravid-empire",
+      "title": "Almoravid Empire",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-marrakech",
+      "url": "https://www.encyclopedia.com/places/africa/morocco-political-geography/marrakech",
+      "title": "Marrakech",
+      "publisher": "Encyclopedia.com",
+      "author": "Gale",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-marrakesh",
+      "url": "https://whc.unesco.org/en/list/331/",
+      "title": "Medina of Marrakesh",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-marrakech",
+      "url": "https://www.wikidata.org/wiki/Q101625",
+      "title": "Wikidata item Q101625 (Marrakech), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date and the founder: 1062 vs 1070-72 is unresolved among opened sources; the Encyclopedia.com Yusuf ibn Tashfin entry credits the foundation to him without a year. Pin is the modern city.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:09.255Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1062",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Marrakesh in Morocco was founded as the capital of the Almoravids, who ruled northwestern Africa and parts of southern Spain from 1056 to 1147.",
+        "source": "src-ebsco-almoravid"
+      },
+      {
+        "span": "1072",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Almohads took the city in 1147 and made it their capital.",
+        "source": "src-ebsco-almoravid",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

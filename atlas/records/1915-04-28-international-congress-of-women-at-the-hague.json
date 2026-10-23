@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1915-04-28-international-congress-of-women-at-the-hague",
+  "kind": "event",
+  "title": "International Congress of Women at The Hague",
+  "summary": "From 28 April to 1 May 1915, women from twelve countries met at The Hague during the First World War. UNC records that Dutch suffragist Aletta Jacobs called it and Jane Addams chaired. WILPF counts 1,136 participants. It produced a twelve-point resolution and a committee later renamed the Women's International League for Peace and Freedom.",
+  "when": {
+    "start": {
+      "year": 1915,
+      "iso": "1915-04-28"
+    },
+    "end": {
+      "year": 1915,
+      "iso": "1915-05-01"
+    },
+    "precision": "day",
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "April 28 to May 1, 1915",
+        "source": "src-unc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "28 April 1915",
+        "source": "src-wilpf"
+      }
+    ],
+    "display": "28 April - 1 May 1915"
+  },
+  "where": {
+    "lat": 52.08,
+    "lon": 4.31,
+    "elevation_m": null,
+    "modern_name": "The Hague, Netherlands",
+    "historical_name": "The Hague, Kingdom of the Netherlands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "A wartime international gathering of women that led to the body now called WILPF."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unc",
+      "url": "https://hist259.web.unc.edu/international-womens-peace-conference-in-the-hague-april-28-may-1-1915/",
+      "title": "International Women's Peace Conference in The Hague (April 28 - May 1, 1915)",
+      "publisher": "University of North Carolina at Chapel Hill (HIST 259)",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wilpf",
+      "url": "https://www.wilpf.org/about-us/history-old/",
+      "title": "History",
+      "publisher": "Women's International League for Peace and Freedom",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Q36600",
+      "title": "The Hague (Wikidata Q36600), coordinates",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "WILPF page gives 28 April 1915 and the year; UNC gives the span. Venue not named, so city-level pin. 1,136 is WILPF's figure; UNC says more than a thousand.",
+  "author": "historian-agent:o-s46",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:24:09.298Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1915-04-28",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 28 April to 1 May 1915, women from twelve countries met at The Hague during the First World War.",
+        "source": "src-unc"
+      },
+      {
+        "span": "1915",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It produced a twelve-point resolution and a committee later renamed the Women's International League for Peace and Freedom.",
+        "source": "src-unc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

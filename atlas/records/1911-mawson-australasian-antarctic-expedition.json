@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1911-mawson-australasian-antarctic-expedition",
+  "kind": "event",
+  "title": "Mawson's Australasian Antarctic Expedition",
+  "summary": "The Australasian Antarctic Expedition, led by Douglas Mawson, sailed from Hobart in the Aurora on 2 December 1911. It set up a main base at Cape Denison on Commonwealth Bay, a western base on the Shackleton Ice Shelf and a station on Macquarie Island, and explored over 6,400 km of Antarctic land before it ended in 1914.",
+  "when": {
+    "start": {
+      "year": 1911
+    },
+    "end": {
+      "year": 1914
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "The Australian Antarctic Division gives only the years 1911 to 1914; the State Library of South Australia guide gives day dates for individual events. The Cape Denison landing is dated only as early January 1912."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "2 December 1911",
+        "source": "src-slsa-aae"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "early January 1912",
+        "source": "src-slsa-aae"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "on 15 February decided to land the party",
+        "source": "src-slsa-aae"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1911 to 1914",
+        "source": "src-aad-aae"
+      }
+    ],
+    "display": "2 December 1911 – 1914"
+  },
+  "where": {
+    "lat": -67,
+    "lon": 142.667,
+    "elevation_m": null,
+    "modern_name": "Cape Denison, Commonwealth Bay, Antarctica (main base)",
+    "historical_name": "Main Base, Commonwealth Bay, Adélie Land (Australasian Antarctic Expedition)",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -42.883333,
+          "lon": 147.316667,
+          "year": 1911.918,
+          "date": "2 December 1911",
+          "label": "Hobart, Tasmania: the Aurora sails for Antarctica.",
+          "source": "src-slsa-aae",
+          "coordinate_source": "src-wd-hobart"
+        },
+        {
+          "lat": -67,
+          "lon": 142.667,
+          "year": 1912.02,
+          "date": "Early January 1912",
+          "label": "Cape Denison, Commonwealth Bay: the main base; the landing began in early January and continued for 10 days.",
+          "source": "src-slsa-aae",
+          "coordinate_source": "src-wd-denison"
+        },
+        {
+          "lat": -66,
+          "lon": 100,
+          "year": 1912.123,
+          "date": "15 February 1912",
+          "label": "Shackleton Ice Shelf: the Western Base party lands. Point is the ice shelf, not the hut site.",
+          "source": "src-slsa-aae",
+          "coordinate_source": "src-wd-shackleton"
+        }
+      ]
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wd-hobart",
+      "src-wd-denison",
+      "src-wd-shackleton"
+    ]
+  },
+  "regions": [
+    "antarctica",
+    "oceania",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Australia's first large Antarctic expedition; it mapped long stretches of coast and gathered extensive scientific records."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1911-amundsen-reaches-south-pole",
+      "type": "contemporary"
+    },
+    {
+      "id": "1914-endurance-expedition",
+      "type": "related"
+    },
+    {
+      "id": "1959-antarctic-treaty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-aad-aae",
+      "url": "https://www.antarctica.gov.au/about-antarctica/history/people/douglas-mawson/",
+      "title": "Sir Douglas Mawson (1882 to 1958)",
+      "publisher": "Australian Antarctic Division",
+      "author": "Australian Antarctic Division",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-slsa-aae",
+      "url": "https://guides.slsa.sa.gov.au/c.php?g=410313&p=2795583",
+      "title": "Australasian Antarctic Expedition 1911-14 - Douglas Mawson",
+      "publisher": "State Library of South Australia",
+      "author": "State Library of South Australia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-hobart",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q40191.json",
+      "title": "Wikidata entry for Hobart (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-denison",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q857326.json",
+      "title": "Wikidata entry for Cape Denison (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-shackleton",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1389927.json",
+      "title": "Wikidata entry for the Shackleton Ice Shelf (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the exact end date (sources give only 1914) and the Cape Denison landing day (early January 1912). The Macquarie Island party is not a waypoint because no opened page dates its landing. The Ninnis and Mertz deaths on the Far Eastern sledging journey have no sourced location.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 35,
+    "beats": [
+      {
+        "span": "1911-12-02 / 1912-02-15",
+        "action": "path.trace {}",
+        "caption": "The Aurora sails from Hobart, lands the main party at Cape Denison in January, then puts the Western Base party on the Shackleton Ice Shelf.",
+        "source": "src-slsa-aae",
+        "consequence": false
+      },
+      {
+        "span": "1912-12-14 / 1913-01-08",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "On the Far Eastern sledging journey Ninnis falls into a crevasse and Mertz later dies, leaving Mawson alone.",
+        "source": "src-slsa-aae",
+        "consequence": false
+      },
+      {
+        "span": "1911 / 1914",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "The expedition explores over 6,400 km of Adélie Land, King George V Land and Queen Mary Land, and its science fills 22 volumes.",
+        "source": "src-aad-aae",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:52.294Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

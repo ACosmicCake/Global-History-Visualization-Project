@@ -1,0 +1,250 @@
+{
+  "id": "0900-trans-saharan-trade",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Trans-Saharan gold and salt trade",
+  "summary": "Camel caravans carried salt, gold and enslaved people between North Africa and West Africa. Large caravans took off in the 8th century CE and reached a golden period from the 9th. One route ran from Sijilmasa through Taghaza and Walata to Timbuktu, and the trade peaked in the 14th to 16th centuries under the Mali and Songhai empires.",
+  "when": {
+    "start": {
+      "year": 701
+    },
+    "end": {
+      "year": 1600
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Sources differ on the start: World History Encyclopedia says large caravans really took off from the 8th century CE (golden period from the 9th); Encyclopedia.com says regular trans-Saharan trade began in the fourth century. This record follows the 8th-century start; end is the close of the 16th century, the last century of the peak."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, centuries",
+        "value": "reached their golden period from the 9th century CE onwards",
+        "source": "src-wh-sahara"
+      },
+      {
+        "calendar": "CE, centuries",
+        "value": "really took off from the 8th century CE",
+        "source": "src-wh-sahara"
+      },
+      {
+        "calendar": "CE, centuries",
+        "value": "this trading system reached its peak during the fourteenth through sixteenth centuries",
+        "source": "src-ency-sahara"
+      }
+    ],
+    "display": "8th to 16th century CE"
+  },
+  "where": {
+    "lat": 16.773333055556,
+    "lon": -2.9994438888889,
+    "elevation_m": null,
+    "modern_name": "Timbuktu, Mali (southern terminus; route starts at Sijilmasa, Morocco)",
+    "historical_name": "Timbuktu on the Niger bend, a southern destination of caravans; Sijilmasa was the northern rendezvous station",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 31.28,
+          "lon": -4.28,
+          "date": "Undated stage (sample caravan, Encyclopedia.com)",
+          "label": "Sijilmasa: rendezvous station where merchants gathered supplies before heading south; the sample caravan leaves with salt from Taghaza.",
+          "source": "src-ency-sahara",
+          "coordinate_source": "src-wd-sijilmasa"
+        },
+        {
+          "lat": 23,
+          "lon": -4.2,
+          "date": "Undated stage (Encyclopedia.com)",
+          "label": "Taghaza: salt-mining centre on the route to Timbuktu. Wikidata point for the abandoned centre.",
+          "source": "src-ency-sahara",
+          "coordinate_source": "src-wd-taghaza"
+        },
+        {
+          "lat": 17.297833333333,
+          "lon": -7.0235,
+          "date": "Undated stage (Encyclopedia.com, Tichitt-Walata)",
+          "label": "Walata (Tichitt-Walata in the source): stop before Timbuktu. Point is the commune.",
+          "source": "src-ency-sahara",
+          "coordinate_source": "src-wd-walata"
+        },
+        {
+          "lat": 16.773333055556,
+          "lon": -2.9994438888889,
+          "date": "Undated stage (Encyclopedia.com)",
+          "label": "Timbuktu: caravan destination on the Niger.",
+          "source": "src-ency-sahara",
+          "coordinate_source": "src-wd-timbuktu"
+        }
+      ]
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-timbuktu",
+      "src-wd-sijilmasa",
+      "src-wd-taghaza",
+      "src-wd-walata"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Connected West African gold and Saharan salt to Mediterranean markets for centuries and underpinned the Ghana, Mali and Songhai states."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-mali-empire",
+      "type": "related"
+    },
+    {
+      "id": "polity-songhai-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-timbuktu",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wh-sahara",
+      "url": "https://www.worldhistory.org/article/1344/the-gold-trade-of-ancient-west-africa/",
+      "title": "The Gold Trade of Ancient West Africa (camel caravans of the Sahara)",
+      "publisher": "World History Encyclopedia",
+      "author": "World History Encyclopedia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ency-sahara",
+      "url": "https://www.encyclopedia.com/history/news-wires-white-papers-and-books/trans-saharan-caravan-trade",
+      "title": "The Trans-Saharan Caravan Trade",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Encyclopedia.com (Gale)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-sijilmasa",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1334331.json",
+      "title": "Wikidata entry for Sijilmasa (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-taghaza",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q966431.json",
+      "title": "Wikidata entry for Taghaza (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-walata",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q162281.json",
+      "title": "Wikidata entry for Walata (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-timbuktu",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q9427.json",
+      "title": "Wikidata entry for Timbuktu (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "8th century CE",
+        "action": "path.trace {}",
+        "caption": "Caravans leave Sijilmasa with salt, cross by Taghaza and Walata, and reach Timbuktu; gold and forest goods come back lighter.",
+        "source": "src-ency-sahara",
+        "consequence": false
+      },
+      {
+        "span": "9th century CE",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The camel caravans reach their golden period.",
+        "source": "src-wh-sahara",
+        "consequence": false
+      },
+      {
+        "span": "fourteenth through sixteenth centuries",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "The trading system peaks under the Mali and Songhai empires, and Mali captures the Taghaza salt mines.",
+        "source": "src-ency-sahara",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: start date (4th vs 8th century in the two sources); waypoints are an undated sample route, not a dated itinerary; Taghaza point is an abandoned site per Wikidata. Metmuseum essay was rate-limited and not opened. Caravan size differs between sources (500 vs 1,000 camels), so none is given.",
+  "author": "historian-agent:o-s55",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:13:34.716Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

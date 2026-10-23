@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "id": "1778-02-06-franco-american-alliance",
+  "kind": "event",
+  "title": "Franco-American alliance and Treaty of Amity and Commerce",
+  "summary": "On 6 February 1778 the American colonies and France signed a military Treaty of Alliance at Paris, formalizing French financial and military support for the revolutionary government. A companion Treaty of Amity and Commerce promoted trade and recognized the United States as an independent nation. The alliance barred either party from making a separate peace with Britain.",
+  "when": {
+    "start": {
+      "year": 1778
+    },
+    "end": {
+      "year": 1778
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Single-day signing."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "signed this military treaty on February 6, 1778",
+        "source": "src-archives"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "February 6, 1778",
+        "source": "src-histstate"
+      }
+    ],
+    "display": "6 February 1778"
+  },
+  "where": {
+    "lat": 48.85667,
+    "lon": 2.35222,
+    "elevation_m": null,
+    "modern_name": "Paris, France",
+    "historical_name": "Paris, Kingdom of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-q90"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Brought France into the American Revolution as an ally."
+  },
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "1776-07-04-declaration-of-independence",
+      "type": "related"
+    },
+    {
+      "id": "1777-10-17-battle-of-saratoga",
+      "type": "related"
+    },
+    {
+      "id": "1781-10-19-siege-of-yorktown",
+      "type": "related"
+    },
+    {
+      "id": "1783-09-03-treaty-of-paris",
+      "type": "related"
+    },
+    {
+      "id": "1779-spain-in-the-american-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1788-french-fiscal-crisis",
+      "type": "related"
+    },
+    {
+      "id": "1789-french-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-archives",
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-alliance-with-france",
+      "title": "Treaty of Alliance with France (1778)",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1776-1783/french-alliance",
+      "title": "French Alliance, French Assistance, and European Diplomacy during the American Revolution, 1778-1782",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q90",
+      "url": "https://www.wikidata.org/wiki/Q90",
+      "title": "Wikidata: Paris",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Paris is stated in the treaty text on the Archives page (\"Done at Paris\"). Pin is the city, not the signing building.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s47",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1778",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 6 February 1778 the American colonies and France signed a military Treaty of Alliance at Paris, formalizing French financial and military support for the revolutionary government.",
+        "source": "src-archives"
+      },
+      {
+        "span": "1778",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A companion Treaty of Amity and Commerce promoted trade and recognized the United States as an independent nation.",
+        "source": "src-archives",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T10:28:52.548Z"
+}

@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0030-battle-of-actium",
+  "kind": "event",
+  "title": "Battle of Actium",
+  "summary": "On 2 September 31 BCE, the naval forces of Octavian, commanded by Marcus Vipsanius Agrippa, decisively defeated the joint fleets of Mark Antony and Cleopatra VII off the promontory of Actium in western Greece. Antony and Cleopatra fled to Alexandria, where both committed suicide the following year. Octavian's victory brought an end to the civil wars that destroyed the Roman Republic, leaving him unchallenged master of the Mediterranean and leading directly to the establishment of the Roman Principate.",
+  "when": {
+    "start": {
+      "year": -30,
+      "iso": "-0030-09-02"
+    },
+    "end": {
+      "year": -30,
+      "iso": "-0030-09-02"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Fought on the afternoon of 2 September 31 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "The decisive battle was fought on 2 September 31, during the afternoon",
+        "source": "src-livius-actium"
+      },
+      {
+        "calendar": "BCE",
+        "value": "The Battle of Actium (2 September 31 BCE, fought in the Ionian Sea off Actium, Greece) was the decisive engagement of the civil war",
+        "source": "src-worldhistory-actium"
+      }
+    ],
+    "display": "2 September 31 BCE"
+  },
+  "where": {
+    "lat": 38.953891,
+    "lon": 20.765852,
+    "elevation_m": 0,
+    "modern_name": "Ionian Sea off Cape Aktio (Actium), Preveza, Epirus, Greece",
+    "historical_name": "Actium promontory at the mouth of the Ambracian Gulf, Roman Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-pleiades-actium"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The naval battle that concluded the civil wars of the Roman Republic and established Octavian as Augustus, founding the Roman Empire."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-augustus",
+      "type": "related"
+    },
+    {
+      "id": "person-cleopatra-vii",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "caused",
+      "because": "Octavian's victory at Actium eliminated his last political rivals and enabled the constitutional establishment of the Principate."
+    },
+    {
+      "id": "polity-roman-republic",
+      "type": "related"
+    },
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-actium",
+      "url": "https://www.livius.org/articles/battle/actium-31-bce/",
+      "title": "Actium (31 BCE)",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "2020-04-12",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-worldhistory-actium",
+      "url": "https://www.worldhistory.org/Battle_of_Actium/",
+      "title": "Battle of Actium",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2019-11-18",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-actium",
+      "url": "https://pleiades.stoa.org/places/530771/json",
+      "title": "Actium/Áktion (Pleiades 530771 JSON)",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "W.M. Murray et al.",
+      "date_published": "2023-06-08",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-0030-09-02",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "On 2 September 31 BCE, Agrippa's fleet defeated Antony and Cleopatra off Actium in the Ionian Sea.",
+        "source": "src-livius-actium"
+      },
+      {
+        "span": "-0029",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The victory ended the Roman Republic's civil wars and paved the way for Octavian to become emperor Augustus.",
+        "source": "src-worldhistory-actium",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the exact size of each opposing fleet, which ancient sources likely inflated for rhetorical dramatic effect.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:26.303Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

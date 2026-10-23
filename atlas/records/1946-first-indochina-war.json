@@ -1,0 +1,133 @@
+{
+  "id": "1946-first-indochina-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "First Indochina War",
+  "summary": "A war between France and the Viet Minh led by Ho Chi Minh, beginning in 1946 and lasting eight years. The US increasingly funded the French effort. It ended after the Viet Minh defeated the French at Dien Bien Phu in May 1954 and the Geneva Conference settled it.",
+  "when": {
+    "start": {
+      "year": 1946
+    },
+    "end": {
+      "year": 1954
+    },
+    "precision": "year",
+    "display": "1946–1954",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "First Indochina War | 1946–1954",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "the Geneva Conference of April 26–July 21, 1954",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 21.03333,
+    "lon": 105.85,
+    "elevation_m": null,
+    "modern_name": "Vietnam, Laos and Cambodia (proxy pin: French Indochina, the location Wikidata lists)",
+    "historical_name": "French Indochina",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Ended French colonial rule in Indochina and set the stage for the Vietnam War and the partition of Vietnam."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a war with heavy casualties.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260105171731/https://www.britannica.com/event/First-Indochina-War",
+      "title": "First Indochina War | 1946–1954 | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20110806004651/http://www.mtholyoke.edu/acad/intrel/pentagon/pent5.htm",
+      "title": "The Pentagon Papers, Gravel Edition, Chapter 2, \"US Involvement in the Franco-Viet Minh War, 1950-1954",
+      "publisher": "mtholyoke.edu",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q185682",
+      "title": "Wikidata Q185682 (French Indochina, coordinates of the location Wikidata gives for Q748780)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give the start as 1946 without a day; the Wikidata 19 December 1946 date is not confirmed in them. The end is given through the Geneva Conference, with the Dien Bien Phu defeat on 7 May 1954. Place is described only as Indochina, so the uncertainty is approximate. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, mtholyoke.edu; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:52:32.562Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1946",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A war between France and the Viet Minh led by Ho Chi Minh, beginning in 1946 and lasting eight years.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1954",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It ended after the Viet Minh defeated the French at Dien Bien Phu in May 1954 and the Geneva Conference settled it.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

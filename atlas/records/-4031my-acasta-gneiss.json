@@ -1,0 +1,135 @@
+{
+  "id": "-4031my-acasta-gneiss",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "event",
+  "title": "Acasta Gneiss, oldest known rocks (c. 4.03 Ga)",
+  "summary": "Exposed along the Acasta River in Canada's Northwest Territories, tonalitic and granodioritic orthogneisses of the Acasta Gneiss Complex yielded zircon uranium-lead ages of 4.00 to 4.03 billion years, with the International Commission on Stratigraphy fixing the Hadean-Archean boundary at 4031 ± 3 million years. As Earth's oldest known coherent rock formation, the complex records the transition from primordial mafic crust to evolved continental crust.",
+  "when": {
+    "start": {
+      "year": -4031000000
+    },
+    "end": {
+      "year": -4031000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 3000000,
+      "start_plus_years": 3000000,
+      "note": "Chronostratigraphic boundary uncertainty on the base of the Archean (4031 ± 3 Ma) from U-Pb dating of the Idiwhaa tonalitic orthogneiss in the Acasta Gneiss Complex (ICS Chronostratigraphic Chart v2024/12; Bowring and Williams 1999)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "ICS chronostratigraphic chart v2024/12 (Ma)",
+        "value": "4031 ± 3",
+        "source": "src-ics-chart"
+      },
+      {
+        "calendar": "Geological age (Ga), U-Pb zircon",
+        "value": "Priscoan (4.00–4.03 Ga) orthogneisses from northwestern Canada",
+        "source": "src-aarons2020"
+      }
+    ],
+    "display": "c. 4.031 Ga (4031 ± 3 Ma)"
+  },
+  "where": {
+    "lat": 64.7838,
+    "lon": -116.3362,
+    "elevation_m": null,
+    "modern_name": "Acasta River area, Slave Craton, Northwest Territories, Canada",
+    "historical_name": "Hadean-Eoarchean protocrust, Slave cratonic nucleus",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-acasta"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "The Acasta Gneiss Complex preserves Earth's oldest known intact rock units, providing physical evidence for early crustal differentiation and defining the formal chronological boundary between the Hadean and Archean eons."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-4404my-jack-hills-zircon",
+      "type": "related"
+    },
+    {
+      "id": "-4540my-formation-of-earth",
+      "type": "caused_by",
+      "because": "Planetary cooling and early crustal differentiation formed the magmatic protoliths of the Acasta gneisses."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ics-chart",
+      "url": "https://stratigraphy.org/ICSchart/ChronostratChart2024-12.pdf",
+      "title": "International Chronostratigraphic Chart (version 2024/12)",
+      "publisher": "International Commission on Stratigraphy",
+      "author": "K. M. Cohen, D. A. T. Harper, P. L. Gibbard, J.-X. Fan",
+      "date_published": "2024-12",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-aarons2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7725461/",
+      "title": "Titanium isotopes constrain a magmatic transition at the Hadean-Archean boundary in the Acasta Gneiss Complex (Science Advances 6:eabc9959)",
+      "publisher": "American Association for the Advancement of Science (via PubMed Central)",
+      "author": "Sarah M. Aarons, Jesse R. Reimink, Nicolas D. Greber, Andy W. Heard, Zhe Zhang, Nicolas Dauphas",
+      "date_published": "2020-12-09",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-acasta",
+      "url": "https://www.geonames.org/5882041",
+      "title": "GeoNames entry: Acasta River, Northwest Territories, Canada (5882041)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact tectonic setting—shallow impact melting versus subduction initiation—that produced the felsic protoliths of the Idiwhaa unit.",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:06:48.379Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

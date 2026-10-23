@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s44",
+  "updated": "2026-10-22",
+  "id": "1811-luddite-uprisings",
+  "kind": "movement",
+  "title": "Luddite uprisings",
+  "summary": "Framework knitters gathered in Nottingham market place on 11 March 1811 and marched to Arnold, where between about 50 and 63 stocking frames were destroyed in an evening. The attacks on machinery spread through the textile districts of the Midlands, northern England and Flintshire in the years from March 1811 to April 1817.",
+  "when": {
+    "start": {
+      "year": 1811
+    },
+    "end": {
+      "year": 1817
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "See as_recorded."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "the years between March 1811 and April 1817",
+        "source": "src-murray-luddites"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "11th March, 1811",
+        "source": "src-gedling-luddites"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Monday 11th March",
+        "source": "src-elh-luddites"
+      }
+    ],
+    "display": "March 1811 – April 1817"
+  },
+  "where": {
+    "lat": 53,
+    "lon": -1.133333,
+    "elevation_m": null,
+    "modern_name": "Arnold, Nottinghamshire, England (where the first attack took place; the movement spread across several counties)",
+    "historical_name": "Arnold, Nottinghamshire, England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames-arnold"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A university source names the March 1811 attack as the first incident of the most intense Luddite activity."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-murray-luddites",
+      "url": "https://campus.murraystate.edu/academic/faculty/kBinfield/luddites/LudditeHistory.htm",
+      "title": "Luddite history",
+      "publisher": "Murray State University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gedling-luddites",
+      "url": "https://www.gedling.gov.uk/arnot-hill-park/sculptures/theluddites",
+      "title": "The Luddites",
+      "publisher": "Gedling Borough Council",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-elh-luddites",
+      "url": "https://www.englishlocalhistory.org/wp/2026/02/19/frame-breaking-in-nottingham-1811/",
+      "title": "Frame breaking in Nottingham, 1811",
+      "publisher": "English Local History",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-arnold",
+      "url": "https://www.geonames.org/2657030",
+      "title": "GeoNames: Arnold",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Frame counts differ by source (63 at the council page, \"no less than sixty\" and \"upwards of fifty\" at the local-history page), so the summary gives a range. End date 1817 is from one scholarly source; activity ended earlier in some regions. Pin is the first attack only.",
+  "published_at": "2026-10-22T10:16:08.087Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1811",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Framework knitters gathered in Nottingham market place on 11 March 1811 and marched to Arnold, where between about 50 and 63 stocking frames were destroyed in an evening.",
+        "source": "src-murray-luddites"
+      },
+      {
+        "span": "1817",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The attacks on machinery spread through the textile districts of the Midlands, northern England and Flintshire in the years from March 1811 to April 1817.",
+        "source": "src-murray-luddites",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

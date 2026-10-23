@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0728-kushite-conquest-of-egypt",
+  "kind": "event",
+  "title": "Kushite conquest of Egypt under Piye",
+  "summary": "Piye, a king of Kush ruling from Napata, conquered Upper Egypt and founded the Twenty-fifth Dynasty of Kushite pharaohs. His victory stela, dated c. 725 BCE, records a campaign against Tefnakht, who had seized the west and sailed southward, and Piye sailing north to Memphis. Egypt had been divided among rival rulers in the Third Intermediate Period.",
+  "when": {
+    "start": {
+      "year": -741
+    },
+    "end": {
+      "year": -724
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 12,
+      "note": "Sources do not give one date for the conquest. EBSCO gives Piye r. 742-716 B.C.E. and BlackPast 743 to 712 BC; the Attalus translation dates the victory stela c. 725 B.C. (regnal year 21). Start is the 742 BCE accession year (astronomical -741); end is c. 725 BCE (-724). Conversions use year = 1 - BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "r. 742-716 B.C.E.",
+        "source": "src-ebsco-piye"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "ruling from 743 to 712 BC",
+        "source": "src-blackpast-25th"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic); regnal year",
+        "value": "Date: c. 725 B.C.",
+        "source": "src-attalus-piye"
+      }
+    ],
+    "display": "8th century BCE (stela dated c. 725 BCE; Piye r. 742-716 BCE per EBSCO)"
+  },
+  "where": {
+    "lat": 29.844667,
+    "lon": 31.250917,
+    "elevation_m": null,
+    "modern_name": "Memphis, Egypt (ruins south of modern Cairo)",
+    "historical_name": "Memphis, Egypt, in the Third Intermediate Period when rival rulers divided the country",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wikidata-memphis"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A Nubian kingdom took control of Egypt and ruled it as the Twenty-fifth Dynasty, linking the Nile Valley under Kushite kings."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-kingdom-of-kush",
+      "type": "related"
+    },
+    {
+      "id": "person-taharqa",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-piye",
+      "url": "https://www.ebsco.com/research-starters/history/kushite-king-piye",
+      "title": "Kushite King Piye",
+      "publisher": "EBSCO Research Starters",
+      "author": "Randall Fegley",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-blackpast-25th",
+      "url": "https://www.blackpast.org/global-african-history/25th-dynasty-ancient-egypt-ca-746-bc-653-bc/",
+      "title": "25th Dynasty, Ancient Egypt (ca. 746 BC to 653 BC)",
+      "publisher": "BlackPast.org",
+      "author": "Kathleen Kemezis",
+      "date_published": "2010-01-27",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-attalus-piye",
+      "url": "https://www.attalus.org/egypt/piye.html",
+      "title": "Egyptian Texts: The Stela of Piye (translated by R. K. Ritner)",
+      "publisher": "Attalus",
+      "author": "R. K. Ritner (translator)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-memphis",
+      "url": "https://www.wikidata.org/wiki/Q5715",
+      "title": "Wikidata item Q5715 (Memphis), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: the opened sources give Piye's reign as 742-716 and 743-712 BCE and the stela as c. 725 BCE, and none dates the conquest itself, so the range runs from accession to the stela. Pin is Memphis (the stela has the king sailing north to Memphis); Napata was the Kushite seat. Tefnakht details come from the stela translation only.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:08.396Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-741",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Piye, a king of Kush ruling from Napata, conquered Upper Egypt and founded the Twenty-fifth Dynasty of Kushite pharaohs.",
+        "source": "src-ebsco-piye"
+      },
+      {
+        "span": "-724",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Egypt had been divided among rival rulers in the Third Intermediate Period.",
+        "source": "src-ebsco-piye",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

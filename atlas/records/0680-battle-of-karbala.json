@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0680-battle-of-karbala",
+  "kind": "event",
+  "title": "Battle of Karbala",
+  "summary": "On 10 October 680 a small party led by Husayn ibn Ali, grandson of Muhammad, was destroyed at Karbala in southern Iraq by troops of the Umayyad caliph Yazid I. Husayn was killed and his surviving family taken captive; the event later helped crystallise a separate Shi'a identity and sparked Kufan revolts.",
+  "when": {
+    "start": {
+      "year": 680
+    },
+    "end": {
+      "year": 680
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources give 10 October 680 (10 Muharram 61 AH)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian with Islamic (AH) equivalent",
+        "value": "10 October 680",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "Hijri/Gregorian",
+        "value": "10 October 680",
+        "source": "src-iranica"
+      }
+    ],
+    "display": "10 October 680 (10 Muharram 61 AH)"
+  },
+  "where": {
+    "lat": 32.61603,
+    "lon": 44.02488,
+    "elevation_m": null,
+    "modern_name": "Karbala, Iraq (pin is the modern city, a proxy for the battlefield)",
+    "historical_name": "Karbala plain, Umayyad Caliphate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames",
+      "src-wp"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Foundational event for Shi'a religious identity and the Second Fitna, commemorated by millions."
+  },
+  "confidence": "established",
+  "audience_note": "Describes the killing of a family and companions, decapitation, and captivity of women and children.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Karbala&oldid=1380718336",
+      "title": "Battle of Karbala (Wikipedia, revision 1380718336)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "wiki_quality": "GA",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-iranica",
+      "url": "http://www.iranicaonline.org/articles/hosayn-b-ali-i",
+      "title": "ḤOSAYN B. ʿALI i. Life and Death",
+      "publisher": "Encyclopaedia Iranica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/94824",
+      "title": "Karbala, Iraq",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Karbala city, a proxy; battlefield's exact spot not sourced. Iranica page checked for date/place and Karbala battle; most summary detail rests on the Wikipedia GA article.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T22:41:27.535Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "680",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 10 October 680 a small party led by Husayn ibn Ali, grandson of Muhammad, was destroyed at Karbala in southern Iraq by troops of the Umayyad caliph…",
+        "source": "src-wp"
+      },
+      {
+        "span": "680",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Husayn was killed and his surviving family taken captive; the event later helped crystallise a separate Shi'a identity and sparked Kufan revolts.",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

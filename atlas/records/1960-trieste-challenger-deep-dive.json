@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s102",
+  "updated": "2026-10-22",
+  "confidence": "established",
+  "id": "1960-trieste-challenger-deep-dive",
+  "kind": "event",
+  "title": "Trieste dive to the Challenger Deep",
+  "summary": "On 23 January 1960 the bathyscaphe Trieste, carrying US Navy Lieutenant Don Walsh and Swiss scientist Jacques Piccard, descended to the Challenger Deep in the Mariana Trench. The dive reached 35,800 feet below the surface of the Pacific Ocean.",
+  "when": {
+    "start": {
+      "year": 1960,
+      "month": 1,
+      "day": 23
+    },
+    "end": {
+      "year": 1960,
+      "month": 1,
+      "day": 23
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Single day."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "reached the Challenger Deep ... on Jan. 23, 1960",
+        "source": "src-onr-trieste"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 23, 1960; 35,800 feet below the surface of the Pacific Ocean",
+        "source": "src-ebsco-trieste"
+      }
+    ],
+    "display": "23 January 1960"
+  },
+  "where": {
+    "lat": 11.373333,
+    "lon": 142.591667,
+    "elevation_m": null,
+    "modern_name": "Challenger Deep, Mariana Trench, western Pacific Ocean (feature reference point)",
+    "historical_name": "Challenger Deep, Mariana Trench, western Pacific Ocean",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-q459173"
+    ]
+  },
+  "regions": [
+    "oceans"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First crewed descent to the deepest known point of the ocean."
+  },
+  "sources": [
+    {
+      "id": "src-onr-trieste",
+      "url": "https://www.onr.navy.mil/media-center/news-releases/lucky-day-navy-celebrates-60th-anniversary-deepest-ocean-dive",
+      "title": "Lucky Day: Navy Celebrates 60th Anniversary of Deepest Ocean Dive",
+      "publisher": "Office of Naval Research",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-trieste",
+      "url": "https://www.ebsco.com/research-starters/history/deepest-underwater-dive-history/",
+      "title": "Deepest Underwater Dive in History",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q459173",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q459173.json",
+      "title": "Wikidata Q459173 (Challenger Deep)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Depth is quoted differently across sources (35,800 ft vs about 36,000 ft); pin is the Challenger Deep reference point from Wikidata, not the dive position.",
+  "published_at": "2026-10-22T18:11:17.589Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

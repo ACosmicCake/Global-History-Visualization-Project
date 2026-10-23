@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s7",
+  "updated": "2026-10-22",
+  "id": "1449-tumu-crisis",
+  "kind": "event",
+  "title": "Tumu crisis (Ming defeat at Tumu Fortress)",
+  "summary": "In 1449 the Oirat leader Esen invaded Ming China, and the Zhengtong Emperor, urged on by the eunuch Wang Zhen, led a large army out against him. The army was trapped and destroyed at Tumu Fortress and the emperor captured. His brother took the throne, and Yu Qian led the defence of Beijing.",
+  "when": {
+    "start": {
+      "year": 1449
+    },
+    "end": {
+      "year": 1450
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "One reference source has the army camping at Tumubao on 31 August; other accounts date the capture to 1 September, and a travel source has the encirclement on 15 August. The emperor was released in 1450."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On August 31, the Chinese army camped at Tumubao",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Oirat army surrounded it and cut off its water on August 15",
+        "source": "src-tcg"
+      }
+    ],
+    "display": "July–September 1449"
+  },
+  "where": {
+    "lat": 40.38,
+    "lon": 115.6075,
+    "elevation_m": null,
+    "modern_name": "Tumubao (Tumu Fortress), Huailai County, Hebei, China",
+    "historical_name": "Tumubao, a frontier post of Ming China northwest of Beijing",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd",
+      "src-tcg"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "The capture of a reigning Ming emperor marked a turning point in Ming defence against the steppe."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1368-ming-great-wall",
+      "type": "related"
+    },
+    {
+      "id": "place-great-wall-of-china",
+      "type": "related"
+    },
+    {
+      "id": "1550-altan-khan-raid-on-beijing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/restoration-zhengtong/",
+      "title": "Restoration of Zhengtong",
+      "publisher": "EBSCO Research Starters",
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tcg",
+      "url": "https://www.travelchinaguide.com/china_great_wall/military-defense/tumu-crisis.htm",
+      "title": "Tumu Crisis, Battle of Tumu Fortress of Great Wall in Hebei",
+      "publisher": "Travel China Guide",
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1554916.json",
+      "title": "Wikidata entry for Tumubao (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the day: sources disagree (31 August, 1 September, lunar 15th day of the 8th month); troop numbers in the travel source were not used.",
+  "published_at": "2026-10-22T03:55:56.563Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1449",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1449 the Oirat leader Esen invaded Ming China, and the Zhengtong Emperor, urged on by the eunuch Wang Zhen, led a large army out against him.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1450",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The army was trapped and destroyed at Tumu Fortress and the emperor captured.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "id": "-380my-gilboa-fossil-forest",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Gilboa fossil forest",
+  "summary": "Near Gilboa in Schoharie County, New York, Devonian tree fossils from about 380 million years ago were first noted in the Schoharie Creek in 1850 by an amateur naturalist. A 2007 Nature paper described the Gilboa stumps, an intact Wattieza crown attached to an Eospermatopteris trunk, and reconstructed a tree-fern-like plant at least 8 m tall.",
+  "when": {
+    "start": {
+      "year": -380000000
+    },
+    "end": {
+      "year": -380000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "\"380 million years ago\" (Gilboa Fossils museum). Years are Ma with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "380 million years ago, during the Devonian Period",
+        "source": "src-gilboa-museum"
+      }
+    ],
+    "display": "c. 380 million years ago"
+  },
+  "where": {
+    "lat": 42.397222,
+    "lon": -74.446111,
+    "elevation_m": null,
+    "modern_name": "Gilboa, Schoharie County, New York, USA",
+    "historical_name": "Gilboa area on the Schoharie Creek, Devonian; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-gilboa",
+      "src-gilboa-museum"
+    ],
+    "paleo": {
+      "lat": -31.41,
+      "lon": -58.75,
+      "age_ma": 380,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Described as the Earth's earliest forest stumps, a key record of early trees."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-372my-late-devonian-extinction",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gilboa-museum",
+      "url": "https://www.gilboafossils.org/gilboa-today/",
+      "title": "Gilboa Today",
+      "publisher": "Gilboa Fossils (Gilboa Museum)",
+      "author": "Gilboa Museum",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-stein2007",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nature05705&resultType=core&format=json",
+      "title": "Giant cladoxylopsid trees resolve the enigma of the Earth's earliest forest stumps at Gilboa (Nature 446:904-907), Europe PMC record",
+      "publisher": "Nature (Springer Nature), record from Europe PMC (EMBL-EBI)",
+      "author": "W.E. Stein, F. Mannolini, L.V. Hernick, E. Landing, C.M. Berry",
+      "date_published": "2007",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-gilboa",
+      "url": "https://www.wikidata.org/wiki/Q3708388",
+      "title": "Wikidata item Q3708388 (Gilboa)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-74.4461,42.3972&time=380&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: only the museum page gives the 380 Ma figure; NY State Museum pages that may give 380-385 could not be opened (certificate error). The Nature abstract record does not itself state the county.",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:10.608Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

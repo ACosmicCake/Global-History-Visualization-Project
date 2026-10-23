@@ -1,0 +1,205 @@
+{
+  "id": "place-edzna-five-story-building",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Edificio de los Cinco Pisos, Edzná",
+  "aliases": [
+    "Building of the Five Floors",
+    "Five-Story Building"
+  ],
+  "summary": "The Edificio de los Cinco Pisos is described by INAH as the most iconic monumental structure of the Maya city of Edzná in Campeche, Mexico. INAH says it is 31.50 m high with a base 60 m per side. Its earliest traces belong to the Petén phase of 200 to 600 CE, with later additions to about 1450.",
+  "when": {
+    "start": {
+      "year": 200
+    },
+    "end": {
+      "year": 1450
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 400,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of the Petén phase (200-600 CE) whose traces INAH found at the foot of the south side; end is the close of the Postclassic remains (1200-1450 CE) in the upper levels. The building was enlarged in stages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (INAH release)",
+        "value": "entre los años 200 y 600 d.C.",
+        "source": "src-brunoticias"
+      },
+      {
+        "calendar": "Gregorian (INAH release)",
+        "value": "(1200-1450 d.C.)",
+        "source": "src-brunoticias"
+      },
+      {
+        "calendar": "Gregorian (INAH)",
+        "value": "between 400 and 1000 AD",
+        "source": "src-inah-edzna"
+      }
+    ],
+    "display": "Built in stages, c. 200–1450 CE"
+  },
+  "where": {
+    "lat": 19.596778,
+    "lon": -90.229083,
+    "elevation_m": null,
+    "modern_name": "Edzná archaeological zone, Campeche, Mexico",
+    "historical_name": "Edificio de los Cinco Pisos in the Great Acropolis of Edzná, a Maya city",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The most prominent structure of Edzná, a regional Maya capital between 400 and 1000 AD according to INAH."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-inah-edzna",
+      "url": "https://lugares.inah.gob.mx/en/node/4339",
+      "title": "Edzná",
+      "publisher": "Instituto Nacional de Antropología e Historia",
+      "author": "Instituto Nacional de Antropología e Historia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model",
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brunoticias",
+      "url": "https://brunoticias.com/liberan-edificio-5-pisos-en-la-zona-arqueologica-edzna/",
+      "title": "Liberan pirámide de 5 pisos en la zona arqueológica de Edzná",
+      "publisher": "Brunoticias",
+      "author": "Brunoticias",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model",
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q774512",
+      "title": "Wikidata Q774512: Edzná site (coordinate 19.596778, -90.229083)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Stepped base measuring 60 m per side from the central courtyard of the Acropolis; INAH says the original base, still unknown, is larger.",
+      "source": "src-inah-edzna",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "stepped_pyramid",
+      "source": "src-inah-edzna",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 31.5,
+          "unit": "m",
+          "source": "src-inah-edzna",
+          "note": "It reaches a height of 31.50 meters (INAH release reprinted by Brunoticias: 31.50 metros). INAH also prints 118 feet from the eastern plaza."
+        },
+        {
+          "part": "base length (per side)",
+          "value": 60,
+          "unit": "m",
+          "source": "src-inah-edzna",
+          "note": "its base measures 60 m per side"
+        },
+        {
+          "part": "base width (per side)",
+          "value": 60,
+          "unit": "m",
+          "source": "src-inah-edzna",
+          "note": "square base, 60 m per side"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "stepped square base at true side and height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped pyramid with the temple on top"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 200,
+        "end_year": 1450,
+        "state": "construction",
+        "description": "Built and enlarged in stages: Petén-phase traces (200-600 CE), Late architecture about 800 CE, Postclassic remains 1200-1450 CE (INAH release).",
+        "source": "src-brunoticias"
+      },
+      {
+        "start_year": 1959,
+        "end_year": null,
+        "state": "restored",
+        "description": "Clearing began in 1959 on the west side; INAH finished freeing all four sides in 2018.",
+        "source": "src-brunoticias"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stepped_pyramid. The second source is an INAH press release reprinted by a news outlet, so it is not fully independent of INAH. Coordinate is the Wikidata point for the Edzná site, not the building itself (about 0.5 km uncertainty). The phases leave a gap between 1450 and 1959 because no page opened describes its condition then. The name refers to five visible levels but the release counts nine.",
+  "author": "historian-agent:m-22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:54:27.222Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

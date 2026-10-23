@@ -1,0 +1,238 @@
+{
+  "id": "place-mesa-verde-cliff-palace",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Cliff Palace, Mesa Verde",
+  "summary": "Cliff Palace, in a sandstone alcove at Mesa Verde in south-west Colorado, is the largest cliff dwelling in North America, with about 150 rooms and 23 kivas. Ancestral Pueblo people built it between about AD 1190 and 1280, most of it in the last twenty years, and left it in the 13th century.",
+  "when": {
+    "start": {
+      "year": 1190
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The National Park Service gives construction as ongoing from AD 1190 to AD 1280, with the main phase 1260-1280; tree-ring dates run from 1190-1191 to at least 1280. End is the present: the ruin stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (NPS)",
+        "value": "AD 1190 to AD 1280",
+        "source": "src-nps-cliffpalace"
+      },
+      {
+        "calendar": "AD (NPS)",
+        "value": "between AD 1260",
+        "source": "src-nps-cliffpalace"
+      }
+    ],
+    "display": "Built c. AD 1190–1280; abandoned in the 13th century"
+  },
+  "where": {
+    "lat": 37.16663,
+    "lon": -108.473,
+    "elevation_m": null,
+    "modern_name": "Cliff Palace, Mesa Verde National Park, Montezuma County, Colorado, United States",
+    "historical_name": "Cliff Palace, an Ancestral Pueblo cliff dwelling in an alcove of Cliff Canyon (later Chapin Mesa, Mesa Verde National Park)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-cliffpalace"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The largest cliff dwelling in North America and the best-known monument of the Ancestral Pueblo world, within a UNESCO World Heritage park."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nps-cliffpalace",
+      "url": "https://npshistory.com/publications/meve/brochures/cliff-palace-2012.pdf",
+      "title": "Cliff Palace (Mesa Verde National Park brochure, 2012)",
+      "publisher": "US National Park Service",
+      "author": "US National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-nps-1920",
+      "url": "https://npshistory.com/publications/meve/brochures/1920/sec4.htm",
+      "title": "Mesa Verde National Park: Rules and Regulations (1920), Cliff Palace",
+      "publisher": "US National Park Service (historic brochure)",
+      "author": "US National Park Service",
+      "date_published": "1920",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-ucar-cliffpalace",
+      "url": "https://www2.hao.ucar.edu/education/prehistoric-southwest/cliff-palace",
+      "title": "Cliff Palace (Solar Astronomy in the Prehistoric Southwest)",
+      "publisher": "UCAR High Altitude Observatory",
+      "author": "UCAR High Altitude Observatory",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "importance"
+      ]
+    },
+    {
+      "id": "src-osm-cliffpalace",
+      "url": "https://nominatim.openstreetmap.org/search?q=Cliff+Palace&format=json",
+      "title": "OpenStreetMap Nominatim result for Cliff Palace",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A long curved row of room blocks, plazas and towers filling an alcove about 215 feet wide and 90 feet deep, with the dwelling itself about 300 feet long (NPS 1920). No surveyed footprint is stored; register figures only.",
+      "source": "src-nps-cliffpalace",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-nps-cliffpalace",
+      "measurements": [
+        {
+          "part": "height (alcove, upper bound for the buildings)",
+          "value": 18.3,
+          "unit": "m",
+          "source": "src-nps-cliffpalace",
+          "note": "\"60 feet high\" alcove; the tallest structure, a tower, rises nearly to the cave roof"
+        },
+        {
+          "part": "length (alcove width)",
+          "value": 65.5,
+          "unit": "m",
+          "source": "src-nps-cliffpalace",
+          "note": "\"about 215 feet wide\""
+        },
+        {
+          "part": "width (alcove depth)",
+          "value": 27.4,
+          "unit": "m",
+          "source": "src-nps-cliffpalace",
+          "note": "\"about 90 feet deep\""
+        },
+        {
+          "part": "length (dwelling overall)",
+          "value": 91.4,
+          "unit": "m",
+          "source": "src-nps-1920",
+          "note": "\"approximately 300 feet\""
+        },
+        {
+          "part": "rooms",
+          "value": 150,
+          "unit": "count",
+          "source": "src-nps-cliffpalace",
+          "note": "about 150 rooms, 75 open areas, 21 kivas and 2 kiva-like structures"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a long low block of stacked rooms under a rock overhang on the canyon wall"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block group, about 91 m long, in an alcove 65 m wide and 18 m high, with round kiva pits and a four-storey tower as labelled schematics"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1190,
+        "end_year": 1280,
+        "state": "construction",
+        "description": "Tree-ring dates show building from AD 1190-1191 and from 1209 through at least 1280; the main phase was 1260-1280.",
+        "source": "src-nps-cliffpalace"
+      },
+      {
+        "start_year": 1280,
+        "end_year": 1909,
+        "state": "ruined",
+        "description": "Unpeopled since the thirteenth century; the Wetherills found it in December 1888. The start year is the end of dated construction, not a documented departure.",
+        "source": "src-nps-cliffpalace"
+      },
+      {
+        "start_year": 1909,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "Jesse Walter Fewkes excavated the alcove and repaired the crumbling walls in 1909.",
+        "source": "src-nps-cliffpalace"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1190,
+        "to_year": 2026,
+        "material": "hand-shaped Cliff House Sandstone blocks laid in mud mortar",
+        "source": "src-nps-cliffpalace"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block (a group of room blocks; closest available). The only sourced height is the alcove's 60 ft, so the model's height is an upper bound for the buildings, not a measured wall height; the overhang is not modelled. Room counts vary by source (150 NPS, 217 UCAR). Least sure of that height and of the 'ruined' start 1280.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:12:58.516Z"
+}

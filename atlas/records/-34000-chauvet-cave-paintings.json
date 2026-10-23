@@ -1,0 +1,128 @@
+{
+  "id": "-34000-chauvet-cave-paintings",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "work",
+  "title": "Chauvet Cave paintings",
+  "summary": "The Chauvet-Pont d'Arc cave, by the entrance to the Gorges of the Ardèche in southern France beside the Pont d'Arc natural archway, holds cave paintings that CNRS describes as the world's oldest, dating back 36,000 years. World History Encyclopedia gives a later range of about 33,000 to 30,000 years ago.",
+  "when": {
+    "start": {
+      "year": -34000
+    },
+    "end": {
+      "year": -28000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 2000,
+      "start_plus_years": 2000,
+      "end_minus_years": 2000,
+      "end_plus_years": 2000,
+      "note": "Years are rounded from the sources' \"years ago\" figures (36,000 to 30,000 years ago); the two sources differ."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "the world's oldest cave paintings, dating back 36,000 years",
+        "source": "src-cnrs"
+      },
+      {
+        "calendar": "years ago",
+        "value": "Now reliably dated to between c. 33,000 and c. 30,000 years ago.",
+        "source": "src-whe-chauvet"
+      }
+    ],
+    "display": "c. 36,000–30,000 years ago"
+  },
+  "where": {
+    "lat": 44.38761,
+    "lon": 4.414058,
+    "elevation_m": null,
+    "modern_name": "Chauvet-Pont d'Arc Cave, near Vallon-Pont-d'Arc, Ardèche, France",
+    "historical_name": "Cave near the Pont d'Arc, Ardèche; no polity at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-gn-chauvet"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "art_music_literature"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "The paintings are cited by CNRS as the oldest known cave paintings."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-cnrs",
+      "url": "https://www.cnrs.fr/en/when-chauvet-cave-artists-created-its-artwork-pont-darc-was-already-there",
+      "title": "When Chauvet Cave artists created its artwork, the Pont d'Arc was already there",
+      "publisher": "CNRS (French National Centre for Scientific Research)",
+      "author": "CNRS",
+      "date_published": "2021-04-26",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-chauvet",
+      "url": "https://www.worldhistory.org/Chauvet_Cave/",
+      "title": "Chauvet Cave",
+      "publisher": "World History Encyclopedia",
+      "author": "Emma Groeneveld",
+      "date_published": "2017-02-12",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-chauvet",
+      "url": "https://www.geonames.org/search.html?q=Vallon-Pont-d%27Arc&country=FR",
+      "title": "Chauvet-Pont-d'Arc Cave, France",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The two sources disagree on the age (36,000 vs about 33,000-30,000 years ago); both are kept. Years are rounded conversions of \"years ago\" figures.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:42.619Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

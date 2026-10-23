@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-ramesses-ii",
+  "kind": "person",
+  "title": "Ramesses II",
+  "summary": "Ramesses II, called the Great, was a pharaoh of Egypt's Nineteenth Dynasty and son of Seti I. He fought the Hittites at the Battle of Kadesh, built temples including Abu Simbel, and founded a new capital, Pi-Ramesses. Sources date his reign 1279-1213 BCE (EBSCO) or 1304-1237 BC (an older Encyclopedia.com entry).",
+  "when": {
+    "start": {
+      "year": -1278
+    },
+    "end": {
+      "year": -1212
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 25,
+      "start_plus_years": 0,
+      "end_minus_years": 24,
+      "end_plus_years": 0,
+      "note": "The dates are the span of the reign, not birth and death. EBSCO gives 1279 to 1213 BCE (astronomical -1278 to -1212); the older Encyclopedia.com entry gives 1304-1237 B.C. (-1303 to -1236), so start may be up to 25 years earlier and end up to 24 years earlier. Conversions use year = 1 - BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "reigned from 1279 to 1213 BCE",
+        "source": "src-ebsco-ramses"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "reigned 1304-1237 B.C.",
+        "source": "src-encyc-ramses"
+      }
+    ],
+    "display": "reigned 1279-1213 BCE (EBSCO); 1304-1237 BC (Encyclopedia.com)"
+  },
+  "where": {
+    "lat": 30.79937,
+    "lon": 31.834217,
+    "elevation_m": null,
+    "modern_name": "Pi-Ramesses area, eastern Nile Delta, Egypt",
+    "historical_name": "Pi-Ramesses, capital of Egypt in the Nineteenth Dynasty (New Kingdom)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-piramesses"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "people",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of the best-known pharaohs, a long-reigning builder and war leader of Egypt's New Kingdom."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-1274-battle-of-kadesh",
+      "type": "related"
+    },
+    {
+      "id": "polity-hittite-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-ramses",
+      "url": "https://www.ebsco.com/research-starters/history/ramses-ii",
+      "title": "Ramses II",
+      "publisher": "EBSCO Research Starters",
+      "author": "Rita E. Freed",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-ramses",
+      "url": "https://www.encyclopedia.com/people/history/ancient-history-egypt-biographies/pharaoh-egypt-ramses-ii",
+      "title": "Pharaoh of Egypt Ramses II",
+      "publisher": "Encyclopedia.com",
+      "author": "Gale",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-piramesses",
+      "url": "https://www.wikidata.org/wiki/Q937930",
+      "title": "Wikidata item Q937930 (Pi-Ramesses), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the reign dates: the two opened sources differ by 25 years. Birth and death years were not given on an opened page. Pin is Pi-Ramesses, the capital both sources name; it is a modern Wikidata coordinate for the site, not a birthplace.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:11.425Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

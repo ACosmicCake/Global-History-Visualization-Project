@@ -1,0 +1,162 @@
+{
+  "id": "0378-battle-of-adrianople",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Adrianople",
+  "summary": "On 9 August 378 CE, a confederation of Gothic rebels under Fritigern routed the Eastern Roman field army outside Adrianople. Emperor Valens and approximately two-thirds of his forces were killed, inflicting an unprecedented military catastrophe that permanently weakened Roman frontiers.",
+  "when": {
+    "start": {
+      "year": 378,
+      "iso": "0378-08-09"
+    },
+    "end": {
+      "year": 378,
+      "iso": "0378-08-09"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "9 August 378 in the Julian calendar (10 August 378 proleptic Gregorian)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Roman Julian (Ammianus Marcellinus 31.12.10)",
+        "value": "fifth before the Ides of August",
+        "source": "src-ammianus-31"
+      },
+      {
+        "calendar": "Julian / Gregorian (modern scholarly encyclopedia)",
+        "value": "August 9, 378",
+        "source": "src-dir-valens"
+      }
+    ],
+    "display": "9 August 378 CE (Julian)"
+  },
+  "where": {
+    "lat": 41.67719,
+    "lon": 26.55597,
+    "elevation_m": null,
+    "modern_name": "Edirne, Turkey (ancient Adrianople)",
+    "historical_name": "Hadrianopolis, Haemimontus, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-edirne"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "The destruction of the Eastern Roman field army and death of Emperor Valens crippled Roman military manpower and forced the empire to accommodate autonomous barbarian nations within its borders."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0376-gothic-crossing-of-the-danube",
+      "type": "caused_by",
+      "because": "The battle was the climax of the Gothic War following the crossing of the Danube in 376."
+    },
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "378-08-09",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "On 9 August 378, Gothic cavalry charges Roman lines outside Adrianople, crushing Valens' army.",
+        "source": "src-ammianus-31",
+        "consequence": false
+      },
+      {
+        "span": "378-08-09",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Emperor Valens and two-thirds of the eastern field army perish, shattering Roman military dominance in Thrace.",
+        "source": "src-dir-valens",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-ammianus-31",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Ammian/31*.html",
+      "title": "Ammianus Marcellinus, Roman History (Res Gestae), Book XXXI",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+      "author": "Ammianus Marcellinus; translated by John C. Rolfe",
+      "date_published": "1939",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "what",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-dir-valens",
+      "url": "https://roman-emperors.sites.luc.edu/valens.htm",
+      "title": "Valens (364-378 A.D.)",
+      "publisher": "De Imperatoribus Romanis: An Online Encyclopedia of Roman Rulers (Loyola University Chicago)",
+      "author": "Noel Lenski",
+      "date_published": "1997",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-edirne",
+      "url": "https://www.geonames.org/747712/edirne.html",
+      "title": "Edirne, Turkey",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact tactical coordinates of the battlefield ridge outside Edirne, recorded by Ammianus as roughly eight Roman miles from the city.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:33.226Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

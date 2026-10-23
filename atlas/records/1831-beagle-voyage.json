@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s62",
+  "updated": "2026-10-22",
+  "id": "1831-beagle-voyage",
+  "kind": "event",
+  "title": "Second voyage of HMS Beagle",
+  "summary": "HMS Beagle left Plymouth on 27 December 1831 under Robert FitzRoy on a survey voyage meant to last two years but lasting five, with the young naturalist Charles Darwin aboard. It called at the Galápagos in 1835, crossed the Pacific to Tahiti and Sydney, and reached Falmouth on 2 October 1836.",
+  "when": {
+    "start": {
+      "year": 1831
+    },
+    "end": {
+      "year": 1836
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The CITiZAN page gives departure from Devonport on 10 December 1831; Darwin Online records two earlier attempts in December being put back and sailing on 27 December."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "December 27 sailed on Beagle",
+        "source": "src-darwinonline-beagle"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "27 December 1831",
+        "source": "src-nmmc-beagle"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "September 16 - October 20 Galapagos Islands",
+        "source": "src-darwinonline-beagle"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "on 2 October 1836",
+        "source": "src-nmmc-beagle"
+      }
+    ],
+    "display": "27 December 1831 – 2 October 1836"
+  },
+  "where": {
+    "lat": 50.371389,
+    "lon": -4.142222,
+    "elevation_m": null,
+    "modern_name": "Plymouth, Devon, England (departure); voyage circled the globe",
+    "historical_name": "Plymouth (Devonport dockyard), England",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 50.371389,
+          "lon": -4.142222,
+          "year": 1831.986,
+          "date": "27 December 1831",
+          "label": "Plymouth, England: the Beagle sails.",
+          "source": "src-nmmc-beagle",
+          "coordinate_source": "src-wd-plymouth"
+        },
+        {
+          "lat": -0.666667,
+          "lon": -90.55,
+          "year": 1835.707,
+          "date": "September 16 - October 20, 1835",
+          "label": "Galápagos Islands: Darwin spends a month here. Point is the archipelago centre.",
+          "source": "src-darwinonline-beagle",
+          "coordinate_source": "src-wd-galapagos"
+        },
+        {
+          "lat": -17.666667,
+          "lon": -149.466667,
+          "year": 1835.874,
+          "date": "November 15 - 26, 1835",
+          "label": "Tahiti. Point is the island.",
+          "source": "src-darwinonline-beagle",
+          "coordinate_source": "src-wd-tahiti2"
+        },
+        {
+          "lat": -33.867778,
+          "lon": 151.21,
+          "year": 1836.03,
+          "date": "January 12 - 30, 1836",
+          "label": "Sydney, Australia.",
+          "source": "src-darwinonline-beagle",
+          "coordinate_source": "src-wd-sydney"
+        },
+        {
+          "lat": -34.358056,
+          "lon": 18.471944,
+          "year": 1836.413,
+          "date": "May 31 - June 18, 1836",
+          "label": "Cape of Good Hope, South Africa. Point is the headland.",
+          "source": "src-darwinonline-beagle",
+          "coordinate_source": "src-wd-cape"
+        },
+        {
+          "lat": 50.15,
+          "lon": -5.066667,
+          "year": 1836.751,
+          "date": "2 October 1836",
+          "label": "Falmouth, Cornwall: the Beagle arrives home.",
+          "source": "src-nmmc-beagle",
+          "coordinate_source": "src-wd-falmouth"
+        }
+      ]
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wd-plymouth",
+      "src-wd-galapagos",
+      "src-wd-tahiti2",
+      "src-wd-sydney",
+      "src-wd-cape",
+      "src-wd-falmouth"
+    ]
+  },
+  "regions": [
+    "global",
+    "oceans",
+    "latin_america_caribbean",
+    "oceania",
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A five-year survey voyage that carried Charles Darwin around the world."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1768-cook-endeavour-voyage",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-darwinonline-beagle",
+      "url": "https://darwin-online.org.uk/EditorialIntroductions/vanWyhe_Itinerary_of_Charles_Darwin.html",
+      "title": "Itinerary of Charles Darwin (van Wyhe)",
+      "publisher": "Darwin Online (John van Wyhe, National University of Singapore)",
+      "author": "Darwin Online (John van Wyhe, National University of Singapore)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nmmc-beagle",
+      "url": "https://nmmc.co.uk/2025/07/following-hms-beagle-to-falmouth/",
+      "title": "Following HMS Beagle to Falmouth",
+      "publisher": "National Maritime Museum Cornwall",
+      "author": "National Maritime Museum Cornwall",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-citizan-beagle",
+      "url": "https://citizan.org.uk/blog/2020/May/05/hms-beagle-200th-anniversary/",
+      "title": "HMS Beagle 200th Anniversary",
+      "publisher": "CITiZAN (Museum of London Archaeology)",
+      "author": "CITiZAN (Museum of London Archaeology)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-plymouth",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q43382.json",
+      "title": "Wikidata entry for Plymouth (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-galapagos",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q38095.json",
+      "title": "Wikidata entry for the Galápagos Islands (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-tahiti2",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q42000.json",
+      "title": "Wikidata entry for Tahiti (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-sydney",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3130.json",
+      "title": "Wikidata entry for Sydney (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-cape",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q4092.json",
+      "title": "Wikidata entry for the Cape of Good Hope (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-falmouth",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q478029.json",
+      "title": "Wikidata entry for Falmouth (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the departure day (27 December per Darwin Online and the museum; 10 December per CITiZAN). Where Darwin Online gives a date range for a port, the waypoint year is its first day. Darwin Online has no Cape Town entry, only the Cape of Good Hope. No Darwin or Galápagos record exists yet to link.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 40,
+    "beats": [
+      {
+        "span": "1831-12-27",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "After two attempts in December were put back, the Beagle sails from Plymouth, with Darwin aboard.",
+        "source": "src-darwinonline-beagle",
+        "consequence": false
+      },
+      {
+        "span": "1835-09-16 / 1836-01-30",
+        "action": "path.trace {}",
+        "caption": "The ship reaches the Galápagos, where Darwin spends a month, then crosses the Pacific to Tahiti and Sydney.",
+        "source": "src-darwinonline-beagle",
+        "consequence": false
+      },
+      {
+        "span": "1836-10-02",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "The Beagle reaches Falmouth after five years, instead of the two that were planned.",
+        "source": "src-nmmc-beagle",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:59:52.979Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

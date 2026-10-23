@@ -1,0 +1,166 @@
+{
+  "id": "0395-division-of-the-roman-empire",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Division of the Roman Empire on the death of Theodosius I",
+  "summary": "On 17 January 395 CE, Emperor Theodosius I died at Milan after briefly reuniting the Roman world. Imperial authority was divided between his young sons: eighteen-year-old Arcadius in the East at Constantinople and ten-year-old Honorius in the West at Milan. Although conceived as administrative partitioning of a single empire, separate courts, rival ministers, and independent military commands permanently split the state, leaving the West vulnerable to disintegration while the Eastern Roman Empire endured.",
+  "when": {
+    "start": {
+      "year": 395,
+      "month": 1,
+      "day": 17,
+      "iso": "0395-01-17"
+    },
+    "end": {
+      "year": 395,
+      "month": 1,
+      "day": 17,
+      "iso": "0395-01-17"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Exact day recorded in contemporary accounts including Ambrose's De obitu Theodosii."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian",
+        "value": "17 January 395: natural death... death of Theodosius in Milan... Succeeded by: Arcadius (east) and Honorius (west)",
+        "source": "src-livius-theodosius"
+      },
+      {
+        "calendar": "Julian / Common Era",
+        "value": "in 395, when Theodosius died, Honorius and his brother Arcadius jointly succeeded... This year marked the beginning of the true de facto division of the empire",
+        "source": "src-dir-honorius"
+      }
+    ],
+    "display": "17 January 395 CE"
+  },
+  "where": {
+    "lat": 45.46427,
+    "lon": 9.18951,
+    "elevation_m": null,
+    "modern_name": "Milan, Lombardy, Italy (Mediolanum, imperial residence where Theodosius I died)",
+    "historical_name": "Mediolanum, imperial court residence, Western Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-milan"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Permanently divided the Roman Empire into separate eastern and western administrations; the two halves never reunited, setting the West on a path to military collapse while the East survived as the Byzantine Empire."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "caused",
+      "because": "The division in 395 isolated the Western Roman Empire with fewer fiscal and military resources to counter barbarian migrations."
+    },
+    {
+      "id": "0406-rhine-crossing",
+      "type": "caused",
+      "because": "Rivalry between the courts of Ravenna and Constantinople after 395 prevented coordinated defenses against frontier crossings."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-theodosius",
+      "url": "https://www.livius.org/articles/person/theodosius-i/",
+      "title": "Theodosius I",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-dir-honorius",
+      "url": "https://roman-emperors.sites.luc.edu/honorius.htm",
+      "title": "Honorius (395-423 A.D.)",
+      "publisher": "De Imperatoribus Romanis / Loyola University Chicago",
+      "author": "Walter E. Roberts",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-milan",
+      "url": "https://www.geonames.org/3173435",
+      "title": "Milano, Italy (GeoNames 3173435)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "395-01-17",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Emperor Theodosius I dies at Milan, bequeathing imperial administration to his sons Arcadius and Honorius.",
+        "source": "src-livius-theodosius"
+      },
+      {
+        "span": "395",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The partition creates permanently independent eastern and western courts, isolating the western empire during subsequent barbarian migrations.",
+        "source": "src-dir-honorius",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Dating to 17 January 395 CE is fixed by contemporary sources including Ambrose's funeral oration De obitu Theodosii. The pin marks Mediolanum (Milan), the western imperial residence where Theodosius died and where the division took effect.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:25.464Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

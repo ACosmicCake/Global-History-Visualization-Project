@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-shanghai-tower",
+  "kind": "place",
+  "title": "Shanghai Tower",
+  "summary": "The Shanghai Tower is a 128-floor skyscraper in the Lujiazui finance and trade zone of Shanghai, China, with a height of 632 m (2,073 ft per CTBUH). Construction began in 2009 and it was completed in 2015; the Institution of Civil Engineers says it opened to the public in 2016.",
+  "when": {
+    "start": {
+      "year": 2009
+    },
+    "end": {
+      "year": 2015
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Construction start 2009 and completion 2015 per CTBUH; public opening 2016 per ICE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "2015",
+        "source": "src-ctbuh"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "2009",
+        "source": "src-ctbuh"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "completed in 2015",
+        "source": "src-ice"
+      }
+    ],
+    "display": "Built 2009–2015"
+  },
+  "where": {
+    "lat": 31.233501,
+    "lon": 121.50576,
+    "elevation_m": null,
+    "modern_name": "Shanghai Tower, Lujiazui, Pudong, Shanghai, China",
+    "historical_name": "Shanghai Tower, Lujiazui, Pudong, Shanghai, People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "A supertall skyscraper, described as China's tallest building by ICE, in Shanghai's Lujiazui district."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ice",
+      "url": "https://www.ice.org.uk/what-is-civil-engineering/infrastructure-projects/shanghai-tower",
+      "title": "Shanghai Tower",
+      "publisher": "Institution of Civil Engineers",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "height"
+      ]
+    },
+    {
+      "id": "src-ctbuh",
+      "url": "https://www.skyscrapercenter.com/building/shanghai-tower/56",
+      "title": "Shanghai Tower",
+      "publisher": "Council on Tall Buildings and Urban Habitat (CTBUH)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "height"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://www.latlong.net/place/shanghai-tower-lujiazui-pudong-xinqu-shanghai-shi-china-22524.html",
+      "title": "Shanghai Tower coordinates",
+      "publisher": "latlong.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-osm-outline",
+      "url": "https://www.openstreetmap.org/way/165792123",
+      "title": "OpenStreetMap outline of 上海中心大厦",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates come from a commercial lat/long site (pin on the tower itself); 'China's tallest' is from ICE's wording, not independently checked in CTBUH text.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:41:09.200Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "enriched"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Plan from the OpenStreetMap outline of the tower (minimum bounding rectangle 93.2 m x 90.8 m); a mapped outline, not a survey.",
+      "source": "src-osm-outline",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-ctbuh",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 632,
+          "unit": "m",
+          "source": "src-ctbuh",
+          "note": "2,073 ft; ICE gives 632 m (2,074 ft)"
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 93.2,
+          "unit": "m",
+          "source": "src-osm-outline"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 90.8,
+          "unit": "m",
+          "source": "src-osm-outline"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "slim tower silhouette"
+      },
+      {
+        "level": "local",
+        "representation": "simple tower prism at sourced height and OSM plan"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 2009,
+        "end_year": 2015,
+        "state": "construction",
+        "description": "Construction from 2009 to completion in 2015.",
+        "source": "src-ctbuh"
+      },
+      {
+        "start_year": 2015,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed in 2015.",
+        "source": "src-ctbuh"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 2015,
+        "to_year": null,
+        "material": "concrete-steel composite structure",
+        "source": "src-ctbuh"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "Height is from CTBUH and ICE, but the plan comes only from a community-mapped OpenStreetMap outline, not an institutional source, so no mesh is drawn; the twisting, tapering form is not captured by a prism."
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1919-03-01-march-first-movement",
+  "kind": "event",
+  "title": "March First Movement",
+  "summary": "On 1 March 1919 Koreans under Japanese rule declared independence in Seoul, where a declaration was read at Tapgol Park while thirty-three leaders signed it at a restaurant and were arrested. Mass, mostly nonviolent protests spread nationwide and met harsh repression; they led to a Korean Provisional Government in Shanghai.",
+  "when": {
+    "start": {
+      "year": 1919,
+      "iso": "1919-03-01"
+    },
+    "end": {
+      "year": 1919,
+      "iso": "1919-03-01"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The movement began on 1 March 1919; demonstrations continued for months and were suppressed about a year later (sources say this loosely)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "At 2 p.m. on March 1, 1919",
+        "source": "src-mofa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Began March 1, 1919, and was suppressed about a year later",
+        "source": "src-kcp"
+      }
+    ],
+    "display": "1 March 1919"
+  },
+  "where": {
+    "lat": 37.5711,
+    "lon": 126.988,
+    "elevation_m": null,
+    "modern_name": "Tapgol Park, Jongno District, Seoul, South Korea",
+    "historical_name": "Keijo (Gyeongseong), Seoul, Korea under Japanese rule",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-tapgol"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Nationwide independence uprising against Japanese colonial rule; its aftermath led to the Provisional Government and it is commemorated as a national holiday."
+  },
+  "confidence": "established",
+  "audience_note": "Covers the violent suppression of protests, including killings and mass arrests; casualty figures are disputed.",
+  "sources": [
+    {
+      "id": "src-mofa",
+      "url": "https://overseas.mofa.go.kr/us-houston-en/brd/m_5573/view.do?seq=759814",
+      "title": "Address on the 102nd March First Independence Movement Day (unofficial translation)",
+      "publisher": "Ministry of Foreign Affairs, Republic of Korea (consulate Houston)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-kcp",
+      "url": "https://koreancultureproject.org/newsletter/this-month-in-korean-history-mar-2025",
+      "title": "This Month in Korean History, March 2025",
+      "publisher": "Korean Culture Project",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-times",
+      "url": "https://www.koreatimes.co.kr/amp/southkorea/society/20190213/tracing-the-footsteps-of-march-1-independence-movement-part-1",
+      "title": "Tracing the footsteps of March 1 Independence Movement: Part 1",
+      "publisher": "The Korea Times",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-tapgol",
+      "url": "https://www.wikidata.org/wiki/Q483357",
+      "title": "Wikidata item Q483357 (Tapgol Park), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1919-03-01",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "At Tapgol Park in Seoul a student read the independence declaration from the pavilion while the thirty-three leaders signed it elsewhere.",
+        "source": "src-times"
+      },
+      {
+        "span": "1919-03-01",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Marchers carried copies home and protests spread nationwide: an estimated two million people in 1,500 to 1,800 demonstrations.",
+        "source": "src-kcp"
+      },
+      {
+        "span": "1919-04",
+        "action": "pulse { radius_km: 900 }",
+        "caption": "Independence was not won, but the movement led to the Korean Provisional Government in Shanghai and some limited cultural freedoms.",
+        "source": "src-kcp",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Casualty totals are left out of the summary because sources disagree; the Korean Culture Project page gives over 7,000 killed, about 16,000 wounded and about 47,000 arrested, and lower Japanese-era counts were not verified on an opened page. The identity of the student who read the declaration is disputed and left unstated. The Provisional Government is given without a day; its April 1919 span is a beat month only. The Korea Culture Project page is a nonprofit newsletter, not scholarship.",
+  "author": "historian-agent:o-s13",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T04:53:20.547Z"
+}

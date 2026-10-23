@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0212-qin-straight-road",
+  "kind": "event",
+  "title": "Qin Straight Road",
+  "summary": "The first emperor's military road, the Straight Road (Qinzhidao), was begun in 212 BCE and finished five years later by Sima Qian's account. It ran roughly 900 km from Yunyang near Xianyang north to Jiuyuan, now Baotou, letting troops and orders reach the northern frontier. A 13 km section was identified in Yulin in 2025.",
+  "when": {
+    "start": {
+      "year": -211
+    },
+    "end": {
+      "year": -206
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 1,
+      "end_plus_years": 1,
+      "note": "212 BC start and five-year build are from Sima Qian as reported by Futura Sciences; Global Times also gives 212 BC. Id -0212 corresponds to 213 BCE; sources say 212 BC, which is year -211. Completion year -206 (207 BC) is start plus five years, not stated directly."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC, Sima Qian as reported",
+        "value": "began in 212 B.C. and finished five years later",
+        "source": "src-futura-road"
+      },
+      {
+        "calendar": "BC, as recorded",
+        "value": "first built in 212BC",
+        "source": "src-globaltimes-road"
+      }
+    ],
+    "display": "212 BCE - c. 207 BCE"
+  },
+  "where": {
+    "lat": 34.8272222,
+    "lon": 108.5588889,
+    "elevation_m": null,
+    "modern_name": "Chunhua County, Shaanxi, to Baotou, Inner Mongolia, China (route; surveyed section in Yulin)",
+    "historical_name": "Qinzhidao, from Yunyang to Jiuyuan in the Qin empire",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 34.8272222,
+          "lon": 108.5588889,
+          "year": -211,
+          "date": "212 BC (construction begins)",
+          "label": "Yunyang (today Chunhua County, Shaanxi): southern end of the road.",
+          "source": "src-globaltimes-road",
+          "coordinate_source": "src-gn-chunhua"
+        },
+        {
+          "lat": 41.655,
+          "lon": 110.235,
+          "year": -206,
+          "date": "about 207 BC (five years after the start)",
+          "label": "Jiuyuan (now Baotou, Inner Mongolia): northern end. Point is the Baotou prefecture centroid.",
+          "source": "src-futura-road",
+          "coordinate_source": "src-gn-baotou"
+        }
+      ]
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-gn-chunhua",
+      "src-gn-baotou"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "One of the largest Qin infrastructure projects, built to move troops to the northern frontier."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-qin-shi-huang",
+      "type": "related"
+    },
+    {
+      "id": "polity-qin-dynasty",
+      "type": "related"
+    },
+    {
+      "id": "person-meng-tian",
+      "type": "related"
+    },
+    {
+      "id": "-0214-qin-campaign-against-the-xiongnu",
+      "type": "related"
+    },
+    {
+      "id": "-0220-qin-great-wall",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-futura-road",
+      "url": "https://www.futura-sciences.com/en/china-uncovers-a-2200-year-old-imperial-road-that-rivals-modern-highways_23010/",
+      "title": "China uncovers a 2,200-year-old imperial road that rivals modern highways",
+      "publisher": "Futura Sciences",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-globaltimes-road",
+      "url": "https://www.globaltimes.cn/page/202512/1350311.shtml",
+      "title": "New section of state-level thoroughfare of Qin Dynasty uncovered",
+      "publisher": "Global Times",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-kongming-mengtian",
+      "url": "https://kongming.net/encyclopedia/Meng-Tian",
+      "title": "Meng Tian",
+      "publisher": "Kongming.net encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-chunhua",
+      "url": "https://www.geonames.org/search.html?q=Chunhua&country=CN",
+      "title": "GeoNames: Chunhua",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-baotou",
+      "url": "https://www.geonames.org/search.html?q=Baotou&country=CN",
+      "title": "GeoNames: Baotou",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-yulin",
+      "url": "https://www.geonames.org/search.html?q=Yulin&country=CN",
+      "title": "GeoNames: Yulin / Hengshan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Meng Tian's role is stated only on Kongming.net (other), not by Futura or Global Times; omitted from the summary. Futura calls it 'Qin Imperial Road' and gives the 900 km length; Global Times gives only the 13 km section. Total length rests on Futura alone. Hengshan (Yulin) surveyed section: GeoNames 37.87, 109.41.",
+  "author": "historian-agent:o-s31",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "-211",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Work begins in 212 BCE on a road starting at Yunyang, near the Qin capital.",
+        "source": "src-globaltimes-road",
+        "consequence": false
+      },
+      {
+        "span": "-206",
+        "action": "path.trace {}",
+        "caption": "The road is reported finished five years later, running about 900 km north to Jiuyuan, now Baotou.",
+        "source": "src-futura-road",
+        "consequence": false
+      },
+      {
+        "span": "2025",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "In 2025 archaeologists identify a 13 km section in Yulin, clarifying the road's route.",
+        "source": "src-globaltimes-road",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T08:35:55.884Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

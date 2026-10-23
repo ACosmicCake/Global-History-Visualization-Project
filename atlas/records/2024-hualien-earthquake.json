@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2024-hualien-earthquake",
+  "kind": "event",
+  "title": "2024 Hualien earthquake",
+  "summary": "A Mw 7.4 earthquake struck off the east coast of Taiwan on 3 April 2024, with the strongest shaking in Hualien County. Reports give 18 deaths, three missing and over 1,100 injured. Damage was comparatively low, which a reconnaissance team credited to seismic resilience gains since the 1999 Chi-Chi earthquake.",
+  "when": {
+    "start": {
+      "year": 2024
+    },
+    "end": {
+      "year": 2024
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Local time 07:58 on 3 April 2024 (UTC+8) per UCL; magnitude differs by agency (local 7.2 vs Mw 7.4)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, local time (UTC+8)",
+        "value": "On April 3rd, 2024 at 7:58:09 local time",
+        "source": "src-ucl"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "3 April 2024",
+        "source": "src-nzsee"
+      }
+    ],
+    "display": "3 April 2024"
+  },
+  "where": {
+    "lat": 23.77,
+    "lon": 121.67,
+    "elevation_m": null,
+    "modern_name": "Offshore Hualien, eastern Taiwan",
+    "historical_name": "Offshore Hualien County, Taiwan (Republic of China)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-ucl"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Strongest Taiwan earthquake in decades, with 18 deaths and widespread disruption, but limited damage relative to size."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ucl",
+      "url": "https://www.ucl.ac.uk/epicentre/news/2024/apr/hualien-earthquake-taiwan-april-3-2024",
+      "title": "Hualien Earthquake in Taiwan on April 3, 2024",
+      "publisher": "UCL EPICentre",
+      "author": null,
+      "date_published": "15 April 2024",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nzsee",
+      "url": "https://bulletin.nzsee.org.nz/article/view/1762",
+      "title": "The 2024 Hualien, Taiwan earthquake: NZSEE learning from earthquakes reconnaissance report",
+      "publisher": "Bulletin of the New Zealand Society for Earthquake Engineering",
+      "author": "Tomomi Suzuki et al.",
+      "date_published": "2026-06-01",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Epicenter pin is the CWA-based coordinate quoted by UCL; USGS/other agencies place it slightly differently. Death toll varies across reports (18 vs 19). UCL page's early casualty figures are outdated.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:36.472Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "-0299-san-bartolo-early-maya-writing",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Early Maya writing at San Bartolo",
+  "summary": "At San Bartolo in the Petén of Guatemala, a block bearing ten glyphs was found in 2005 by Boris Beltrán. Radiocarbon dates on associated charcoal place it in the third century BCE, making it the earliest known Maya writing and showing that Maya literacy began earlier than once thought.",
+  "when": {
+    "start": {
+      "year": -299
+    },
+    "end": {
+      "year": -199
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range is the source range of 300 to 200 BCE, converted to astronomical years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (radiocarbon-based)",
+        "value": "as early as 300 BC and no later than 200 BC",
+        "source": "src-mesoweb"
+      },
+      {
+        "calendar": "BC (radiocarbon-based)",
+        "value": "dated to 300 to 200 B.C.",
+        "source": "src-harvard"
+      }
+    ],
+    "display": "300–200 BCE"
+  },
+  "where": {
+    "lat": 17.55167,
+    "lon": -89.40889,
+    "elevation_m": null,
+    "modern_name": "San Bartolo archaeological site, Petén, Guatemala",
+    "historical_name": "San Bartolo, Maya lowlands (Late Preclassic); no unified polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-sanbartolo"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "art_music_literature",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Earliest known Maya writing, which shifts the start of lowland Maya literacy back by centuries."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3300-invention-of-writing",
+      "type": "related"
+    },
+    {
+      "id": "0250-classic-maya-period",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mesoweb",
+      "url": "https://www.mesoweb.org/reports/SanBartoloWriting.html",
+      "title": "Early Maya Writing at San Bartolo, Guatemala (report)",
+      "publisher": "Mesoweb",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-harvard",
+      "url": "https://news.harvard.edu/gazette/story/2008/03/the-story-behind-storied-walls",
+      "title": "The story behind storied walls",
+      "publisher": "Harvard Gazette, Harvard University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-sanbartolo",
+      "url": "https://www.wikidata.org/wiki/Q795599",
+      "title": "Wikidata item Q795599, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The claim depends on what counts as writing; the Mesoweb report notes the glyphs may relate to the Isthmian script and only a few signs are readable. The nearby murals are later (about 100 BCE) and are not the dated writing.",
+  "author": "historian-agent:o-s11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:44:58.796Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-299",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At San Bartolo in the Petén of Guatemala, a block bearing ten glyphs was found in 2005 by Boris Beltrán.",
+        "source": "src-mesoweb"
+      },
+      {
+        "span": "-199",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Radiocarbon dates on associated charcoal place it in the third century BCE, making it the earliest known Maya writing and showing that Maya literacy began earlier than once…",
+        "source": "src-mesoweb",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

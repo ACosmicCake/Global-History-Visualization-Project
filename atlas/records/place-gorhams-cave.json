@@ -1,0 +1,157 @@
+{
+  "id": "place-gorhams-cave",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Gorham's Cave Complex, Gibraltar",
+  "summary": "Gorham's Cave Complex is a group of four caves on the eastern side of the Rock of Gibraltar, inscribed as a UNESCO World Heritage Site in 2016. Neanderthals inhabited the caves for more than 100,000 years; the date of the last occupation is debated, and a 2006 excavation report put most dated objects at about 28,000 years old.",
+  "when": {
+    "start": {
+      "year": -100000
+    },
+    "end": {
+      "year": -30050
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 20000,
+      "start_plus_years": 0,
+      "end_minus_years": 2000,
+      "end_plus_years": 0,
+      "note": "Start: 'more than 100,000 years' of Neanderthal occupation (EBSCO), so only a minimum span; end: 'about 32,000 years ago' (EBSCO; year approximated as -30050), but a 2006 report gave about 28,000 and the final date is debated."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "Neanderthal habitation over a period exceeding 100,000 years, extending up to around 32,000 years ago; date of final occupation still debated",
+        "source": "src-ebsco-gorham"
+      },
+      {
+        "calendar": "Radiocarbon years",
+        "value": "most objects about 28,000 years old, the youngest about 24,000",
+        "source": "src-nature2006"
+      },
+      {
+        "calendar": "Years",
+        "value": "inscription wording: period spanning more than 120,000 years",
+        "source": "src-gibmuseum"
+      }
+    ],
+    "display": "c. 100,000 to c. 32,000 years ago (final Neanderthal occupation debated)"
+  },
+  "where": {
+    "lat": 36.120771,
+    "lon": -5.342395,
+    "elevation_m": null,
+    "modern_name": "Gorham's Cave, Rock of Gibraltar",
+    "historical_name": "Gorham's Cave, on the east side of the Rock of Gibraltar; no polity at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wd-gorham",
+      "src-gibmuseum"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 3,
+    "justification": "A World Heritage cave complex central to the debate over when Neanderthals last lived in Europe."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "same_place"
+    },
+    {
+      "id": "species-homo-neanderthalensis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nature2006",
+      "url": "https://www.nature.com/news/2006/060911/full/news060911-8.html",
+      "title": "Neanderthal's last stand",
+      "publisher": "Nature News",
+      "author": "David Brill",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-ebsco-gorham",
+      "url": "https://ebsco.com/research-starters/geology/gorhams-cave-complex",
+      "title": "Gorham's Cave Complex",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-gibmuseum",
+      "url": "https://gibmuseum.gi/world-heritage/gorhams-cave-complex",
+      "title": "Gorham's Cave Complex",
+      "publisher": "Gibraltar National Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-gorham",
+      "url": "https://www.wikidata.org/wiki/Q1355749",
+      "title": "Wikidata item Q1355749 (Gorham's Cave), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the occupation span: sources give different last dates (about 28,000 radiocarbon years, about 32,000 years ago). The pin is the cave itself per Wikidata; the Gibraltar Museum page gives no coordinates and the UNESCO page could not be fetched. The 2006 dates are uncalibrated radiocarbon and a cited archaeologist cautions they may be too young.",
+  "author": "historian-agent:o-s45",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:27:45.027Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

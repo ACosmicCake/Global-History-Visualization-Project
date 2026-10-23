@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "polity-gupta-empire",
+  "kind": "polity",
+  "title": "Gupta Empire",
+  "summary": "The Gupta Empire dominated northern India from about 320 CE, when Chandragupta I became its first sovereign ruler. At its height it stretched across northern, central and parts of southern India, with Pataliputra, near modern Patna, as Samudragupta's capital. It is remembered as a Golden Age; Hun invasions ended it, around 550 CE by one reckoning and 500 CE by another.",
+  "when": {
+    "start": {
+      "year": 320
+    },
+    "end": {
+      "year": 550
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 50,
+      "end_plus_years": 0,
+      "note": "World History Encyclopedia gives c. 320-550 CE; the Columbia timeline gives 320-500 CE and dates the Hun invasions ca. 455-528 CE. End year 550 is the WHE figure; 500 is the lower bound."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "between c. 320 and 550 CE",
+        "source": "src-whe-gupta"
+      },
+      {
+        "calendar": "CE",
+        "value": "320-500 CE Gupta Empire",
+        "source": "src-columbia-gupta"
+      }
+    ],
+    "display": "c. 320-550 CE"
+  },
+  "where": {
+    "lat": 25.61,
+    "lon": 85.141389,
+    "elevation_m": null,
+    "modern_name": "Patna, Bihar, India (near ancient Pataliputra)",
+    "historical_name": "Pataliputra, capital of the Gupta Empire under Samudragupta",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wikidata-patna"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Dominant northern Indian empire of the classical period, known as a Golden Age of arts and sciences."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "polity-maurya-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-gupta",
+      "url": "https://www.worldhistory.org/Gupta_Empire/",
+      "title": "Gupta Empire",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-columbia-gupta",
+      "url": "https://afe.easia.columbia.edu/timelines/southasia_timeline.htm",
+      "title": "Timelines: South Asia",
+      "publisher": "Asia for Educators, Columbia University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-patna",
+      "url": "https://www.wikidata.org/wiki/Q80484",
+      "title": "Wikidata item Q80484 (Patna), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "End date varies (550 vs 500 CE). The pin is modern Patna, not an excavated Pataliputra site; the empire's extent is much larger than a point.",
+  "published_at": "2026-10-22T08:21:36.863Z"
+}

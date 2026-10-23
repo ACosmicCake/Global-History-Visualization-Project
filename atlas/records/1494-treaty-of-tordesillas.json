@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1494-treaty-of-tordesillas",
+  "kind": "event",
+  "title": "Treaty of Tordesillas",
+  "summary": "On 7 June 1494 Ferdinand II of Aragon, Isabella I of Castile and John II of Portugal set a line of demarcation running from pole to pole, 370 leagues west of the Cape Verde islands. It placed the eastern end of Brazil in the Portuguese zone; the line was approximate, and later disputes over the Spice Islands and the River Plate followed.",
+  "when": {
+    "start": {
+      "year": 1494,
+      "iso": "1494-06-07"
+    },
+    "end": {
+      "year": 1494,
+      "iso": "1494-06-07"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date as given on both pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "The Treaty of Tordesillas of 7 June 1494",
+        "source": "src-unesco-tordesillas"
+      },
+      {
+        "calendar": "CE",
+        "value": "7 June 1494",
+        "source": "src-whe-tordesillas"
+      }
+    ],
+    "display": "7 June 1494"
+  },
+  "where": {
+    "lat": 41.5008635,
+    "lon": -5.0004844,
+    "elevation_m": null,
+    "modern_name": "Tordesillas, Spain (World History Encyclopedia names the town as the location of the meeting)",
+    "historical_name": "Tordesillas, Castile",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-q286004"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Divided Atlantic claims between Spain and Portugal; UNESCO lists it in the Memory of the World register."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related"
+    },
+    {
+      "id": "1502-hispaniola-encomienda",
+      "type": "related"
+    },
+    {
+      "id": "1519-magellan-elcano-circumnavigation",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-tordesillas",
+      "url": "https://www.unesco.org/en/memory-world/treaty-tordesillas",
+      "title": "Treaty of Tordesillas",
+      "publisher": "UNESCO Memory of the World",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-tordesillas",
+      "url": "https://www.worldhistory.org/Treaty_of_Tordesillas/",
+      "title": "Treaty of Tordesillas",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2021-08-11",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q286004",
+      "url": "https://www.wikidata.org/wiki/Q286004",
+      "title": "Wikidata item Q286004 (Tordesillas), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the UNESCO page does not give the signing place, and World History Encyclopedia names Tordesillas only as the location of the meeting. Links to Columbus, Hispaniola and Magellan-Elcano are plain related links, as the pages read do not state a causal tie.",
+  "author": "historian-agent:o-s42",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1494-06-07",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 7 June 1494 Ferdinand II of Aragon, Isabella I of Castile and John II of Portugal set a line of demarcation running from pole to pole, 370…",
+        "source": "src-unesco-tordesillas"
+      },
+      {
+        "span": "1494",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It placed the eastern end of Brazil in the Portuguese zone; the line was approximate, and later disputes over the Spice Islands and the River Plate followed.",
+        "source": "src-unesco-tordesillas",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T10:07:07.504Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

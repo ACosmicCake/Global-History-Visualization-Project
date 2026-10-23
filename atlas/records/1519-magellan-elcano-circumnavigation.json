@@ -1,0 +1,166 @@
+{
+  "id": "1519-magellan-elcano-circumnavigation",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Magellan-Elcano circumnavigation",
+  "summary": "Between 1519 and 1522, an expedition commissioned by the Spanish crown and initially led by Ferdinand Magellan achieved the first recorded circumnavigation of the globe. After navigating a strait into the Pacific Ocean, Magellan was killed in the Philippines in 1521; Basque navigator Juan Sebastián Elcano subsequently brought the sole surviving ship, the Victoria, back to Spain across the Indian Ocean, empirically proving the Earth's circumference and interconnected marine routes.",
+  "when": {
+    "start": {
+      "year": 1519
+    },
+    "end": {
+      "year": 1522
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Fleet sailed downriver from Seville on 10 August 1519 and departed Sanlúcar de Barrameda into the open Atlantic on 20 September 1519; Victoria returned to Sanlúcar on 6 September 1522."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian",
+        "value": "Saturday the 6th of September of the year 1522, we entered the bay of San Lucar",
+        "source": "src-pigafetta-gutenberg"
+      },
+      {
+        "calendar": "Julian",
+        "value": "The expedition set sail August 10, 1519",
+        "source": "src-fordham-magellan"
+      }
+    ],
+    "display": "1519–1522"
+  },
+  "where": {
+    "lat": 36.7781,
+    "lon": -6.3515,
+    "elevation_m": 0,
+    "modern_name": "Sanlúcar de Barrameda, Andalusia, Spain",
+    "historical_name": "Sanlúcar de Barrameda, Kingdom of Seville, Crown of Castile",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-sanlucar"
+    ]
+  },
+  "regions": [
+    "europe",
+    "oceans",
+    "latin_america_caribbean",
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Completed the first global circumnavigation, empirically demonstrating Earth's spherical geometry and interconnected ocean systems."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related",
+      "because": "Columbus's voyage established the Spanish transatlantic crossing that Magellan sought to extend westward to the Spice Islands."
+    },
+    {
+      "id": "1511-portuguese-capture-of-malacca",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1519",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Magellan's fleet of five ships departs Spain seeking a westward passage to the Spice Islands.",
+        "source": "src-fordham-magellan",
+        "consequence": false
+      },
+      {
+        "span": "1522",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The Victoria returns to Sanlúcar de Barrameda under Elcano, completing the first global circumnavigation.",
+        "source": "src-pigafetta-gutenberg",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-pigafetta-gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/74723.html.images",
+      "title": "The First Voyage Round the World, by Magellan: Translated from the Accounts of Pigafetta, and Other Contemporary Writers",
+      "publisher": "Project Gutenberg (Hakluyt Society edition, translated by Lord Stanley of Alderley)",
+      "author": "Antonio Pigafetta",
+      "date_published": "1874",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-fordham-magellan",
+      "url": "https://sourcebooks.fordham.edu/mod/1519magellan.asp",
+      "title": "Modern History Sourcebook: Ferdinand Magellan's Voyage Round the World, 1519-1522 CE",
+      "publisher": "Fordham University",
+      "author": "Paul Halsall (ed.)",
+      "date_published": "1998",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-sanlucar",
+      "url": "https://www.geonames.org/2511306/sanlucar-de-barrameda.html",
+      "title": "Sanlúcar de Barrameda (GeoNames entry 2511306)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of differing arrival dates given across accounts between Sanlúcar de Barrameda (6 September) and Seville (8 September).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:29.548Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "place-basilica-yamoussoukro",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Basilica of Our Lady of Peace, Yamoussoukro",
+  "aliases": [
+    "Basilique Notre-Dame de la Paix"
+  ],
+  "summary": "The Basilica of Our Lady of Peace in Yamoussoukro, Cote d'Ivoire, is a very large domed church. Its cornerstone was laid on 10 August 1985, it was built between 1985 and 1989, and Pope John Paul II consecrated it on 10 September 1990. Sources give its height as 158 metres and its dome as 90 metres across.",
+  "when": {
+    "start": {
+      "year": 1985
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Cornerstone 10 August 1985; Sacred Destinations: built between 1985 and 1989; consecrated 10 September 1990. Start is the cornerstone year; one source starts work in 1986. End is the present: the basilica is in use."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Space Group)",
+        "value": "cornerstone laid August 10, 1985; consecration September 10, 1990",
+        "source": "src-spacegroup-yam"
+      },
+      {
+        "calendar": "CE (Sacred Destinations)",
+        "value": "built between 1985 and 1989",
+        "source": "src-sacreddest-yam"
+      }
+    ],
+    "display": "Built 1985–1989; consecrated 1990"
+  },
+  "where": {
+    "lat": 6.811111111111111,
+    "lon": -5.296944444444445,
+    "elevation_m": null,
+    "modern_name": "Basilica of Our Lady of Peace, Yamoussoukro, Cote d'Ivoire",
+    "historical_name": "Basilica of Our Lady of Peace, Yamoussoukro, Cote d'Ivoire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-yam"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Domed basilica on a site covering about 30,000 square metres; the dome is 90 m across.",
+      "source": "src-spacegroup-yam",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "domed_building",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-spacegroup-yam",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 158,
+          "unit": "m",
+          "source": "src-spacegroup-yam",
+          "note": "\"reaches a height of 158 meters\"; Sacred Destinations: 158 meters (518 feet); other pages give 149 m for the dome alone"
+        },
+        {
+          "part": "dome diameter",
+          "value": 90,
+          "unit": "m",
+          "source": "src-spacegroup-yam",
+          "note": "Cultural Heritage Online: 90 metres, against 41 metres for St. Peter's dome"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "very large dome beside the town of Yamoussoukro, Cote d'Ivoire"
+      },
+      {
+        "level": "local",
+        "representation": "procedural domed building 158 m high with a dome 90 m across"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1985,
+        "end_year": 1989,
+        "state": "construction",
+        "description": "Cornerstone laid on 10 August 1985; built between 1985 and 1989 (Sacred Destinations).",
+        "source": "src-sacreddest-yam"
+      },
+      {
+        "start_year": 1989,
+        "end_year": null,
+        "state": "intact",
+        "description": "Consecrated by Pope John Paul II on 10 September 1990.",
+        "source": "src-sacreddest-yam"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "Measurements come only from non-institutional pages; kept as data until a heritage or scholarly source confirms them."
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Sources present it as one of the largest churches in the world, with a dome 90 m across."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-spacegroup-yam",
+      "url": "https://www.spacegroup.no/158-meter-dome-with-18000-seats-in-ivory-coast-savannah-a-bush-town-turned-capital-seven-years-earlier/",
+      "title": "158-Meter Dome With 18,000 Seats in Ivory Coast Savannah",
+      "publisher": "Space Group",
+      "author": "Space Group",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-sacreddest-yam",
+      "url": "https://www.sacred-destinations.com/ivory-coast/yamoussoukro-basilica-of-our-lady-of-peace",
+      "title": "Basilica of Our Lady of Peace, Ivory Coast",
+      "publisher": "Sacred Destinations",
+      "author": "Sacred Destinations",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-cho-yam",
+      "url": "https://culturalheritageonline.com/places/basilica-notre-dame-paix-yamoussoukro/",
+      "title": "The Basilica of Our Lady of Peace",
+      "publisher": "Cultural Heritage Online",
+      "author": "Cultural Heritage Online",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-wd-yam",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q815584.json",
+      "title": "Wikidata entry for Basilica of Our Lady of Peace (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape domed_building. Height and dome diameter come from a Norwegian architecture firm and a travel reference, not a heritage body (Britannica was blocked); needs a better source. Dome-only height is 149 m on other pages. No OSM outline found. Intact phase starts 1989 (end of the 1985-1989 build) with consecration in 1990.",
+  "author": "historian-agent:m-25",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T16:51:07.589Z"
+}

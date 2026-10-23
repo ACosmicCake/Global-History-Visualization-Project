@@ -1,0 +1,227 @@
+{
+  "id": "place-rapa-nui-moai",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Moai of Rapa Nui (Easter Island)",
+  "summary": "The moai are about 887 monolithic human figures carved by the Polynesian society of Rapa Nui (Easter Island), Chile, between roughly the 10th and 16th centuries, most of them at the Rano Raraku quarry. The average statue is about 4 m tall. The island park has been a UNESCO World Heritage site since 1995.",
+  "when": {
+    "start": {
+      "year": 900
+    },
+    "end": {
+      "year": 1600
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO says the shrines and moai were built from the 10th to the 16th century; the exact start is not given."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "From the 10th to the 16th century this society built shrines and erected enormous stone figures known as moai",
+        "source": "src-unesco715"
+      }
+    ],
+    "display": "10th-16th century CE"
+  },
+  "where": {
+    "lat": -27.124933,
+    "lon": -109.286253,
+    "elevation_m": null,
+    "modern_name": "Rano Raraku quarry, Rapa Nui National Park, Easter Island, Chile",
+    "historical_name": "Moai statue group and Rano Raraku quarry, Rapa Nui (Easter Island), Polynesian society",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-rr"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "built_world",
+    "art_music_literature",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The island's monumental statues are among the best-known works of Polynesian culture and anchor a UNESCO World Heritage cultural landscape."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco715",
+      "url": "https://whc.unesco.org/en/list/715",
+      "title": "Rapa Nui National Park (World Heritage List no. 715)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": "1995",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded",
+        "model.phases",
+        "model.materials",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-nova-moai",
+      "url": "https://www.pbs.org/wgbh/nova/easter/civilization/giants.html",
+      "title": "Secrets of Easter Island: Stone Giants",
+      "publisher": "PBS NOVA",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-smithsonian-moai",
+      "url": "https://www.smithsonianmag.com/travel/the-statues-of-easter-island-11248888/",
+      "title": "The Statues of Easter Island",
+      "publisher": "Smithsonian Magazine",
+      "author": null,
+      "date_published": "2008-01",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-wikidata-rr",
+      "url": "https://www.wikidata.org/wiki/Q49005362",
+      "title": "Wikidata item Q49005362 (Rano Raraku quarry), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: statue_group. The pin is the Rano Raraku quarry, where 397 statues remain; the 887 are spread over the island on scattered platforms. Typical height 13 ft (about 4 m) is NOVA's average; UNESCO gives a 2-20 m range. The plan dimension is the island length (14 miles, Smithsonian Magazine). The date range is UNESCO's; other sources date carving to 1250-1500.",
+  "model": {
+    "footprint": {
+      "description": "Statues stand on stone platforms (ahu) around the coast of an island about 14 miles long, with 397 still in the Rano Raraku quarry (NOVA, quoting a 1989 survey).",
+      "source": "src-nova-moai",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "statue_group",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-nova-moai",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 3.96,
+          "unit": "m",
+          "source": "src-nova-moai",
+          "note": "average statue, 13 ft"
+        },
+        {
+          "part": "tallest height",
+          "value": 20,
+          "unit": "m",
+          "source": "src-unesco715",
+          "note": "upper end of the UNESCO height range of 2-20 m"
+        },
+        {
+          "part": "count",
+          "value": 887,
+          "unit": "count",
+          "source": "src-nova-moai",
+          "note": "monolithic statues located by a 1989 survey; 288 moved to platforms, 397 in the quarry"
+        },
+        {
+          "part": "island length",
+          "value": 22531,
+          "unit": "m",
+          "source": "src-smithsonian-moai",
+          "note": "14 miles"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "scattered statue markers along the coast"
+      },
+      {
+        "level": "local",
+        "representation": "procedural statues of average height on platforms; the quarry cluster at Rano Raraku"
+      },
+      {
+        "level": "street",
+        "representation": "individual moai heads-and-torsos, sizes drawn from the 2-20 m range"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 900,
+        "end_year": 1600,
+        "state": "construction",
+        "description": "Moai carved and erected from the 10th to the 16th century.",
+        "source": "src-unesco715"
+      },
+      {
+        "start_year": 1600,
+        "end_year": null,
+        "state": "ruined",
+        "description": "The statues survive as an archaeological landscape in the national park.",
+        "source": "src-unesco715"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 900,
+        "to_year": 1600,
+        "material": "yellow-brown lava tuff carved with basalt picks",
+        "source": "src-unesco715"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:37.006Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

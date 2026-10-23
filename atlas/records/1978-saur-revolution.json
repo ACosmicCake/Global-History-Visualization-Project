@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1978-saur-revolution",
+  "kind": "event",
+  "title": "Saur Revolution",
+  "summary": "On 27 April 1978 troops allied with the People's Democratic Party of Afghanistan attacked the presidential palace in Kabul. President Daoud and most of his family were shot there the next day. Royal-dynasty rule ended, and a communist-led government took power, which a diplomatic-history source calls a prelude to the Soviet invasion.",
+  "when": {
+    "start": {
+      "year": 1978,
+      "iso": "1978-04-27"
+    },
+    "end": {
+      "year": 1978,
+      "iso": "1978-04-28"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources agree on 27 April; the Library of Congress study places Daoud's death on the following day."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 27, 1978",
+        "source": "src-loc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 27, 1978",
+        "source": "src-adst"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 27, 1978",
+        "source": "src-unc"
+      }
+    ],
+    "display": "27–28 April 1978"
+  },
+  "where": {
+    "lat": 34.52813,
+    "lon": 69.17233,
+    "elevation_m": null,
+    "modern_name": "Kabul, Afghanistan (pin is the city centre, a proxy for the palace and fighting across the city)",
+    "historical_name": "Kabul, Republic of Afghanistan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Communist-led seizure of power in Afghanistan that preceded the Soviet invasion."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a violent coup in which a president and members of his family were killed.",
+  "related": [
+    {
+      "id": "1979-soviet-afghan-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc",
+      "url": "https://countrystudies.us/afghanistan/28.htm",
+      "title": "Afghanistan - Daoud's Republic, July 1973 - April 1978",
+      "publisher": "U.S. Library of Congress (Federal Research Division country study, hosted at countrystudies.us)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-adst",
+      "url": "https://adst.org/2016/04/the-saur-revolution-prelude-to-the-soviet-invasion-of-afghanistan/",
+      "title": "The Saur Revolution: Prelude to the Soviet Invasion of Afghanistan",
+      "publisher": "Association for Diplomatic Studies & Training",
+      "author": null,
+      "date_published": "2016",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unc",
+      "url": "http://americandiplomacy.web.unc.edu/2019/02/1978-revolution-in-afghanistan/",
+      "title": "The 1978 Revolution in Afghanistan",
+      "publisher": "University of North Carolina at Chapel Hill (American Diplomacy)",
+      "author": "Larry Clinton Thompson",
+      "date_published": "2019",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/1138958",
+      "title": "Kabul, Afghanistan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Kabul city centre, not the Arg palace. 'Communist-led' from the UNC eyewitness account. Death toll not stated.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:00:55.097Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1978-04-27",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 27 April 1978 troops allied with the People's Democratic Party of Afghanistan attacked the presidential palace in Kabul.",
+        "source": "src-loc"
+      },
+      {
+        "span": "1978",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Royal-dynasty rule ended, and a communist-led government took power, which a diplomatic-history source calls a prelude to the Soviet invasion.",
+        "source": "src-loc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

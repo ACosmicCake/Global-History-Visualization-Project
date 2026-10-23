@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "-25my-formation-of-the-east-african-rift",
+  "kind": "process",
+  "title": "Formation of the East African Rift",
+  "summary": "The East African Rift formed in the Miocene, roughly 25 million years ago, starting at the Afar triple junction in Ethiopia and extending southward over time. Its eastern branch through Ethiopia and Kenya is thought to have formed first; the western branch from Uganda to Malawi came later.",
+  "when": {
+    "start": {
+      "year": -25000000
+    },
+    "end": {
+      "year": -25000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 3000000,
+      "start_plus_years": 3000000,
+      "end_minus_years": 3000000,
+      "end_plus_years": 3000000,
+      "note": "Geological Society says approximately 25 million years ago; the Springer chapter gives Late Oligocene to Early Miocene without numbers. The margin is a placeholder."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "formed in the Miocene approximately 25 million years ago",
+        "source": "src-geolsoc-ear"
+      },
+      {
+        "calendar": "epoch",
+        "value": "started in Late Oligocene to Early Miocene time",
+        "source": "src-woldegabriel"
+      }
+    ],
+    "display": "c. 25 million years ago"
+  },
+  "where": {
+    "lat": 11.5,
+    "lon": 41,
+    "elevation_m": null,
+    "modern_name": "Afar Triangle (Afar triple junction), Ethiopia",
+    "historical_name": "Afar triple junction, no polity (Miocene)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wikidata-q217223"
+    ],
+    "paleo": {
+      "lat": 5.13,
+      "lon": 40.39,
+      "age_ma": 25,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 41, 11.5 reconstructed to 25 Ma."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "The rift system that hosts many early-human fossil sites and is pulling the African plate apart."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    },
+    {
+      "id": "place-olduvai-gorge",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-geolsoc-ear",
+      "url": "https://www.geolsoc.org.uk/science-and-policy/plate-tectonic-stories/east-african-rift-valley/",
+      "title": "East African Rift Valley, East Africa",
+      "publisher": "The Geological Society of London",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-woldegabriel",
+      "url": "https://laro.lanl.gov/esploro/outputs/bookChapter/Genesis-of-the-East-African-Rift/9916370480803761",
+      "title": "Genesis of the East African Rift System",
+      "publisher": "Los Alamos National Laboratory research repository (WoldeGabriel et al., Springer 2016)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-q217223",
+      "url": "https://www.wikidata.org/wiki/Q217223",
+      "title": "Afar Triangle (Wikidata Q217223)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=41,11.5&time=25&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruct_points, MERDITH2021, 25 Ma",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the start date (other accounts give 30-35 Ma for Afar). Point is only the Afar origin of a system thousands of km long. Paleo position pending (GPlates down).",
+  "published_at": "2026-10-22T11:14:58.617Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-25000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The East African Rift formed in the Miocene, roughly 25 million years ago, starting at the Afar triple junction in Ethiopia and extending southward over time.",
+        "source": "src-geolsoc-ear"
+      },
+      {
+        "span": "-25000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Its eastern branch through Ethiopia and Kenya is thought to have formed first; the western branch from Uganda to Malawi came later.",
+        "source": "src-geolsoc-ear",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

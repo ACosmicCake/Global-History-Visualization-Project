@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1781-10-19-siege-of-yorktown",
+  "kind": "event",
+  "title": "Siege of Yorktown",
+  "summary": "From 28 September to 19 October 1781, George Washington's American troops and Rochambeau's French allies besieged Lord Cornwallis's British army at Yorktown, Virginia. Cornwallis surrendered on 19 October. The surrender virtually ended the fighting of the American Revolution and led to the peace negotiations that produced the 1783 Treaty of Paris.",
+  "when": {
+    "start": {
+      "year": 1781,
+      "iso": "1781-09-28"
+    },
+    "end": {
+      "year": 1781,
+      "iso": "1781-10-19"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "One source dates the siege itself from 30 September; the allied advance began 28 September."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Sep 28 - Oct 19, 1781",
+        "source": "src-abt-york"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "October 19, 1781: Articles of Capitulation signed and the British marched out at 2 p.m.",
+        "source": "src-nps-york"
+      }
+    ],
+    "display": "28 September – 19 October 1781"
+  },
+  "where": {
+    "lat": 37.2308,
+    "lon": -76.5025,
+    "elevation_m": null,
+    "modern_name": "Yorktown, Virginia, USA",
+    "historical_name": "Yorktown, Virginia, British America (then in revolt)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-york"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Decisive engagement of the American Revolution."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1778-02-06-franco-american-alliance",
+      "type": "related"
+    },
+    {
+      "id": "1783-09-03-treaty-of-paris",
+      "type": "caused",
+      "because": "The American Battlefield Trust says the surrender led to peace negotiations and the 1783 Treaty of Paris."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-abt-york",
+      "url": "https://www.battlefields.org/learn/revolutionary-war/battles/yorktown",
+      "title": "Yorktown",
+      "publisher": "American Battlefield Trust",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-york",
+      "url": "https://gutenberg.org/cache/epub/54080/pg54080-images.html",
+      "title": "Yorktown and the Siege of 1781 (National Park Service Historical Handbook)",
+      "publisher": "Project Gutenberg (reprint of U.S. National Park Service handbook)",
+      "author": "Charles E. Hatch",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-york",
+      "url": "https://www.wikidata.org/wiki/Q459447",
+      "title": "Siege of Yorktown (Wikidata Q459447), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The Hatch handbook counts the siege from 28 September for the allied advance but also cites Washington's own start of 30 September; I used the Trust's 28 September. I read only the first 100,000 characters of the handbook.",
+  "author": "historian-agent:o-s38",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:44:06.927Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1781-09-28",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 28 September to 19 October 1781, George Washington's American troops and Rochambeau's French allies besieged Lord Cornwallis's British army at Yorktown, Virginia.",
+        "source": "src-abt-york"
+      },
+      {
+        "span": "1781",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The surrender virtually ended the fighting of the American Revolution and led to the peace negotiations that produced the 1783 Treaty of Paris.",
+        "source": "src-abt-york",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

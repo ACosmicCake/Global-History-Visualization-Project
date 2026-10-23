@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "1922-discovery-of-insulin",
+  "kind": "event",
+  "title": "Discovery and first clinical use of insulin",
+  "summary": "At the University of Toronto, Frederick Banting, Charles Best and J. J. R. Macleod began experiments on 17 May 1921 to extract a blood-sugar-lowering substance from the pancreas, and James Collip later purified it. In January 1922 Leonard Thompson, aged 14, became the first person to receive insulin; Banting and Macleod shared the 1923 Nobel Prize.",
+  "when": {
+    "start": {
+      "year": 1921,
+      "iso": "1921-05-17"
+    },
+    "end": {
+      "year": 1922,
+      "iso": "1922-01-23"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The record spans the research from 17 May 1921 to the first injections of January 1922 (11 and 23 January)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 17 May 1921 Banting, Best and Macleod first got together to begin their research",
+        "source": "src-diabetesuk-insulin"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "11 January 1922 – insulin was first used to treat a person with diabetes",
+        "source": "src-diabetesuk-insulin"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Beginning on January 11, 1922, insulin (initially called isletin) was administered to 14-year old Leonard Thompson",
+        "source": "src-tpl-insulin"
+      }
+    ],
+    "display": "17 May 1921 – January 1922 (first injection 11 January 1922)"
+  },
+  "where": {
+    "lat": 43.662917,
+    "lon": -79.395746,
+    "elevation_m": null,
+    "modern_name": "University of Toronto, Toronto, Ontario, Canada",
+    "historical_name": "University of Toronto (research) and Toronto General Hospital (first injection), Toronto, Ontario, Canada",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-uoft",
+      "src-tpl-insulin"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Made insulin available as a treatment for diabetes, saving millions of lives."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-diabetesuk-insulin",
+      "url": "https://diabetes.org.uk/research/research-impact/insulin",
+      "title": "Who discovered insulin? (100 years of insulin)",
+      "publisher": "Diabetes UK",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "who"
+      ]
+    },
+    {
+      "id": "src-tpl-insulin",
+      "url": "https://blogs.tpl.ca/local-history-genealogy/2016/07/remembering-sir-frederick-banting-and-insulin-july-27-snapshots-in-history/",
+      "title": "Remembering Sir Frederick Banting and insulin: July 27: Snapshots in History",
+      "publisher": "Toronto Public Library",
+      "author": null,
+      "date_published": "2016-07",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nobel-insulin",
+      "url": "https://www.nobelprize.org/prizes/medicine/1923/banting/facts/",
+      "title": "Frederick G. Banting – Facts (Nobel Prize in Physiology or Medicine 1923)",
+      "publisher": "Nobel Prize Outreach",
+      "author": "Nobel Prize Outreach",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-uoft",
+      "url": "https://www.wikidata.org/wiki/Q180865",
+      "title": "Wikidata item Q180865 (University of Toronto), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start: Diabetes UK dates the start of the experiments to 17 May 1921; the exact day insulin was \"discovered\" is not fixed on the pages. Collip's purification and the second injection (23 January 1922, per Diabetes UK) are only summarised. The pin is the university campus, not the hospital.",
+  "published_at": "2026-10-22T16:17:44.504Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1921-05-17",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "At the University of Toronto, Frederick Banting, Charles Best and J.",
+        "source": "src-diabetesuk-insulin"
+      },
+      {
+        "span": "1922",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Macleod began experiments on 17 May 1921 to extract a blood-sugar-lowering substance from the pancreas, and James Collip later purified it.",
+        "source": "src-diabetesuk-insulin",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

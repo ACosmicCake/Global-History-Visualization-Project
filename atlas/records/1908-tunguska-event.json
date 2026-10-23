@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1908-tunguska-event",
+  "kind": "event",
+  "title": "Tunguska event",
+  "summary": "On 30 June 1908, at about 7:15 am local time, an object exploded in the air over remote Siberia near the Podkamennaya Tunguska River. NASA describes an asteroid that burst in the atmosphere, leaving an 830-square-mile area of destruction and very few human casualties; no impact crater has been found.",
+  "when": {
+    "start": {
+      "year": 1908,
+      "iso": "1908-06-30"
+    },
+    "end": {
+      "year": 1908,
+      "iso": "1908-06-30"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date as given by both sources; time of day is approximate."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as written by the source)",
+        "value": "June 30, 1908",
+        "source": "src-worldatlas-tunguska"
+      },
+      {
+        "calendar": "Gregorian (as written by the source)",
+        "value": "June 30, 1908, at about 7:15 am local time",
+        "source": "src-nasa-tunguska"
+      }
+    ],
+    "display": "30 June 1908"
+  },
+  "where": {
+    "lat": 60.916666666667,
+    "lon": 101.95,
+    "elevation_m": null,
+    "modern_name": "Near the Podkamennaya Tunguska River, central Siberia, Russia",
+    "historical_name": "Remote East Siberian taiga near the Podkamennaya Tunguska River, Russian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata-q125953"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "A large atmospheric explosion that flattened forest over hundreds of square miles."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-worldatlas-tunguska",
+      "url": "https://www.worldatlas.com/articles/what-was-the-tunguska-event.html",
+      "title": "What Was the Tunguska Event?",
+      "publisher": "WorldAtlas",
+      "author": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa-tunguska",
+      "url": "https://www.nasa.gov/johnson/115-years-ago-the-tunguska-asteroid-impact-event",
+      "title": "115 Years Ago: The Tunguska Asteroid Impact Event",
+      "publisher": "NASA",
+      "author": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q125953",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q125953.json",
+      "title": "Tunguska event (Wikidata Q125953)",
+      "publisher": "Wikidata",
+      "author": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the location: neither opened prose page gives coordinates, so the point comes from Wikidata with 50 km uncertainty. Area flattened differs: WorldAtlas 770 square miles (later 830), NASA 830.",
+  "author": "historian-agent:o-s79",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:08:03.482Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

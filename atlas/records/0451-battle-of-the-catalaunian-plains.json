@@ -1,0 +1,156 @@
+{
+  "id": "0451-battle-of-the-catalaunian-plains",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of the Catalaunian Plains",
+  "summary": "In mid-451 CE, a coalition of Western Romans under Flavius Aetius and Visigoths under King Theodorid I checked the westward invasion of Gaul by Attila the Hun on the Catalaunian Plains. Theodorid died in the fighting, but Attila was forced to retreat east of the Rhine.",
+  "when": {
+    "start": {
+      "year": 451
+    },
+    "end": {
+      "year": 451
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Fought in summer 451 CE; modern reconstructions often place the battle around 20 June 451."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian (Jordanes, Getica XXXVIII)",
+        "value": "BATTLE OF THE CATALAUNIAN PLAINS A.D. 451",
+        "source": "src-jordanes-getica"
+      },
+      {
+        "calendar": "Julian / Gregorian (modern scholarly history)",
+        "value": "summer A.D. 451",
+        "source": "src-bury-later-roman-empire-9"
+      }
+    ],
+    "display": "c. June 451 CE"
+  },
+  "where": {
+    "lat": 48.95393,
+    "lon": 4.36724,
+    "elevation_m": null,
+    "modern_name": "Châlons-en-Champagne, France (Catalaunian / Mauriac Plains)",
+    "historical_name": "Campi Catalaunici, Gallia Lugdunensis / Belgica, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-geonames-chalons"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Checked the western military expansion of Attila's Hunnic Empire into Gaul, representing the last major military victory achieved by a Roman-led army in the West."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "451",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "In 451, Roman and Visigothic forces confront Attila's Huns on the Catalaunian Plains in Champagne.",
+        "source": "src-jordanes-getica",
+        "consequence": false
+      },
+      {
+        "span": "451",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Attila's advance into Gaul is checked, forcing the Hunnic army to retreat eastward across the Rhine.",
+        "source": "src-bury-later-roman-empire-9",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-jordanes-getica",
+      "url": "https://www.gutenberg.org/cache/epub/14809/pg14809.html",
+      "title": "Jordanes, The Origin and Deeds of the Goths (Getica)",
+      "publisher": "Project Gutenberg",
+      "author": "Jordanes; translated by Charles Christopher Mierow",
+      "date_published": "1908",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "what",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-bury-later-roman-empire-9",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/secondary/BURLAT/9*.html",
+      "title": "History of the Later Roman Empire, Vol. 1, Chapter IX: The Empire of Attila",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+      "author": "J. B. Bury",
+      "date_published": "1923",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "what",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-chalons",
+      "url": "https://www.geonames.org/3027487/chalons-en-champagne.html",
+      "title": "Châlons-en-Champagne, France",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact location of the battlefield within Champagne, debated between Châlons-en-Champagne (Catalaunum) and the Mauriac plain near Troyes (Méry-sur-Seine).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:34.114Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

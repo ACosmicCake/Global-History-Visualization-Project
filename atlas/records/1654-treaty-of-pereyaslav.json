@@ -1,0 +1,134 @@
+{
+  "id": "1654-treaty-of-pereyaslav",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Treaty of Pereyaslav",
+  "summary": "On 18 January 1654 a Cossack council at Pereyaslav submitted Ukraine to the Russian tsar Alexis, and his emissaries accepted. Ukraine became a protectorate of the tsar. The agreement set off a Russo-Polish war (1654–67), and historians still dispute how the lost terms should be read.",
+  "when": {
+    "start": {
+      "year": 1654
+    },
+    "end": {
+      "year": 1654
+    },
+    "precision": "day",
+    "display": "18 January 1654",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Jan. 18 [Jan. 8, Old Style], 1654",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "On January 18, 1654 Ukrainian and Muscovite (now Russian) delegates met",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 50.065,
+    "lon": 31.445,
+    "elevation_m": null,
+    "modern_name": "Pereyaslav, Ukraine (proxy pin: Pereiaslav, the location Wikidata lists)",
+    "historical_name": "Pereyaslav",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Linked Cossack Ukraine to Muscovy and triggered the Russo-Polish war, with long-term effects on Ukrainian history."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260111141941/https://www.britannica.com/event/Pereyaslav-Agreement",
+      "title": "Pereyaslav Agreement | Ukraine, Cossacks, Treaty | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20060318025140/http://www.personal.psu.edu/users/j/d/jdr243/pereyaslav%20treaty_Julian%20Romeu.htm",
+      "title": "On January 18, 1654 Ukrainian and Muscovite (now Russian) delegates met in the Ukrainian city of Pereyaslav to ratify a formal",
+      "publisher": "personal.psu.edu",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q639839",
+      "title": "Wikidata Q639839 (Pereiaslav, coordinates of the location Wikidata gives for Q525758)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Both sources agree on 18 January 1654 (Britannica adds the Old Style date). The treaty's terms are disputed because the original documents were lost. The student source is a weak, opinionated secondary source, and I used only its basic facts. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, personal.psu.edu; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:49:54.554Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1654",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "On 18 January 1654 a Cossack council at Pereyaslav submitted Ukraine to the Russian tsar Alexis, and his emissaries accepted.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1654",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Ukraine became a protectorate of the tsar.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

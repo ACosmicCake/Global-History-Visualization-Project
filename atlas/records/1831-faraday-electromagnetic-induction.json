@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1831-faraday-electromagnetic-induction",
+  "kind": "event",
+  "title": "Faraday discovers electromagnetic induction",
+  "summary": "In 1831 Michael Faraday showed that magnets and changing currents could produce electric current. On 29 August 1831, in the basement laboratory of the Royal Institution in London, an iron ring wound with two coils produced a brief current in one coil when current passed through the other. Joseph Henry independently made the same discovery in 1832.",
+  "when": {
+    "start": {
+      "year": 1831,
+      "iso": "1831-08-29"
+    },
+    "end": {
+      "year": 1831
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Ring-coil success dated 29 August 1831 by the Royal Institution; Computer History Museum gives only 1831 for the lectures describing the results."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "29 August 1831",
+        "source": "src-ri"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "August 1831",
+        "source": "src-ri"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1831",
+        "source": "src-chm"
+      }
+    ],
+    "display": "29 August 1831"
+  },
+  "where": {
+    "lat": 51.509915,
+    "lon": -0.142561,
+    "elevation_m": null,
+    "modern_name": "Royal Institution, 21 Albemarle Street, Mayfair, London, UK",
+    "historical_name": "Royal Institution of Great Britain, London, United Kingdom of Great Britain and Ireland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-radiomuseum"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Faraday's discovery of electromagnetic induction underlies Faraday's law and later electric machines."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ri",
+      "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-ring-coil-apparatus",
+      "title": "Michael Faraday's ring-coil apparatus",
+      "publisher": "Royal Institution",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chm",
+      "url": "https://www.computerhistory.org/storageengine/faraday-describes-electro-magnetic-induction/",
+      "title": "1831: Faraday describes electro-magnetic induction",
+      "publisher": "Computer History Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-radiomuseum",
+      "url": "https://www.radiomuseum.org/museum/gb/faraday-museum-of-the-royal-institution-of-great-britain-london/",
+      "title": "Faraday Museum of the Royal Institution of Great Britain, London",
+      "publisher": "Radiomuseum.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Royal Institution building (coordinates from radiomuseum.org museum listing, a weak source). The RI says 29 August 1831 for the ring success; CHM gives only 1831. Generator/electrification impact not sourced, so omitted.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:53:43.296Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1831-08-29",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1831 Michael Faraday showed that magnets and changing currents could produce electric current.",
+        "source": "src-ri"
+      },
+      {
+        "span": "1831",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Joseph Henry independently made the same discovery in 1832.",
+        "source": "src-ri",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

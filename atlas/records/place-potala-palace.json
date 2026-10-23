@@ -1,0 +1,228 @@
+{
+  "id": "place-potala-palace",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Potala Palace",
+  "summary": "The Potala Palace stands on Red Mountain above Lhasa in Tibet, at 3,700 m. The Fifth Dalai Lama's government began rebuilding it in 1645 on the site of a 7th-century palace; the White Palace was finished three years later and the Red Palace in 1694. It is over 110 m high.",
+  "when": {
+    "start": {
+      "year": 1645
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO ICOMOS: reconstruction began in 1645, with the White Palace complete three years later and the Red Palace finished in 1694. End is the present: the palace stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "Reconstruction began in 1645",
+        "source": "src-icomos-potala"
+      },
+      {
+        "calendar": "CE (ICOMOS)",
+        "value": "completed four years later, in 1694",
+        "source": "src-icomos-potala"
+      }
+    ],
+    "display": "Rebuilt 1645–1694; standing today"
+  },
+  "where": {
+    "lat": 29.65757,
+    "lon": 91.11702,
+    "elevation_m": null,
+    "modern_name": "Potala Palace, Chengguan District, Lhasa, Tibet Autonomous Region, China",
+    "historical_name": "Potala Palace (Potrang Karpo and Potrang Marpo), the seat of the Dalai Lamas on Red Mountain, Lhasa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-potala",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The winter palace and seat of government of the Dalai Lamas, a symbol of Tibetan Buddhism (UNESCO) and one of the world's great high-altitude buildings."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-707",
+      "url": "https://whc.unesco.org/en/list/707/",
+      "title": "Historic Ensemble of the Potala Palace, Lhasa (World Heritage List no. 707)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance",
+        "when"
+      ]
+    },
+    {
+      "id": "src-icomos-potala",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/707ter.pdf",
+      "title": "Advisory body evaluation: Historic Ensemble of the Potala Palace, Lhasa (707ter)",
+      "publisher": "UNESCO World Heritage Centre (ICOMOS evaluation)",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-potala",
+      "url": "https://nominatim.openstreetmap.org/search?q=Potala+Palace&format=json",
+      "title": "OpenStreetMap Nominatim result for Potala Palace",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List dataset (syndication XML)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A terraced fortress-like complex on Red Mountain, with the White Palace covering about 320 m east-west by 200 m north-south and the whole complex over 130,000 sq m. Register figures; the plan dimensions given are for the White Palace.",
+      "source": "src-icomos-potala",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-icomos-potala",
+      "measurements": [
+        {
+          "part": "height (complex, more than)",
+          "value": 110,
+          "unit": "m",
+          "source": "src-icomos-potala",
+          "note": "\"stands more than 110 m high\"; secondary sources give 117 m"
+        },
+        {
+          "part": "base length (White Palace, east-west)",
+          "value": 320,
+          "unit": "m",
+          "source": "src-icomos-potala",
+          "note": "\"c. 320 m east-west\""
+        },
+        {
+          "part": "base width (White Palace, north-south)",
+          "value": 200,
+          "unit": "m",
+          "source": "src-icomos-potala",
+          "note": "\"c. 200 m north-south\""
+        },
+        {
+          "part": "area (complex)",
+          "value": 130000,
+          "unit": "m2",
+          "source": "src-icomos-potala",
+          "note": "\"over 130,000 m2\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "one large stepped block rising from a hill, white lower mass with a red central block"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block group on a terraced hill with inward-sloping walls, the White and Red Palaces as distinct masses"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1645,
+        "end_year": 1694,
+        "state": "construction",
+        "description": "Reconstruction began in 1645; the White Palace was finished three years later and the Red Palace begun eight years after the Fifth Dalai Lama's death and completed in 1694.",
+        "source": "src-icomos-potala"
+      },
+      {
+        "start_year": 1694,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Funerary stupas were added for later Dalai Lamas; the palace remains in use as a monument. The sources opened give no dated damage.",
+        "source": "src-icomos-potala"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1645,
+        "to_year": 2026,
+        "material": "rammed earth and stone walls, white-painted for the White Palace",
+        "source": "src-icomos-potala"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block. UNESCO's 'more than 110 m' is the only opened height; other pages give 117 m. The plan dimensions are for the White Palace, not the whole complex, so the model understates the red central block's footprint. Least sure of the dimension mix and of the 'intact' phase (bridged).",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:13:00.887Z"
+}

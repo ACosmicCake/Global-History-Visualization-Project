@@ -1,0 +1,163 @@
+{
+  "id": "0439-vandal-capture-of-carthage",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Vandal capture of Carthage",
+  "summary": "On 19 October 439 CE, Vandal king Gaiseric captured Carthage without a formal siege, ending centuries of Roman rule over Africa Proconsularis. The loss stripped the Western Roman Empire of its wealthiest province, crucial grain supplies, and vital tax revenues, while establishing Vandal Mediterranean naval supremacy.",
+  "when": {
+    "start": {
+      "year": 439,
+      "iso": "0439-10-19"
+    },
+    "end": {
+      "year": 439,
+      "iso": "0439-10-19"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Prosper of Aquitaine records 19 October 439; the Chronicon Paschale gives 23 October 439."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian (historical chronicle via J. B. Bury)",
+        "value": "Carthage was taken (October 19, A.D. 439)",
+        "source": "src-bury-later-roman-empire-8"
+      },
+      {
+        "calendar": "Julian / Gregorian (modern scholarly encyclopedia)",
+        "value": "By 439, nearly all of North Africa was effectively lost to the Vandals",
+        "source": "src-dir-valentinian3"
+      }
+    ],
+    "display": "19 October 439 CE (Julian)"
+  },
+  "where": {
+    "lat": 36.8531,
+    "lon": 10.3231,
+    "elevation_m": null,
+    "modern_name": "Carthage, Tunisia",
+    "historical_name": "Carthago, Africa Proconsularis, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-carthage"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The fall of Carthage cut off Italy from its primary agricultural grain supply and tax base, effectively dooming the Western Roman Empire's fiscal survival."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0455-vandal-sack-of-rome",
+      "type": "caused",
+      "because": "Holding Carthage provided Gaiseric with the naval base and fleet used to mount the sack of Rome in 455."
+    },
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "439-10-19",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "On 19 October 439, Gaiseric's Vandals seize Carthage, establishing it as their royal capital.",
+        "source": "src-bury-later-roman-empire-8",
+        "consequence": false
+      },
+      {
+        "span": "439",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "The loss of Carthage deprives the western empire of grain and taxes, altering Mediterranean balance of power.",
+        "source": "src-dir-valentinian3",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-bury-later-roman-empire-8",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/secondary/BURLAT/8*.html",
+      "title": "History of the Later Roman Empire, Vol. 1, Chapter VIII: The Dismemberment of the Empire in the West",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+      "author": "J. B. Bury",
+      "date_published": "1923",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "what",
+        "when.as_recorded",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-dir-valentinian3",
+      "url": "https://roman-emperors.sites.luc.edu/valenIII.htm",
+      "title": "Valentinian III (425-455 A.D.)",
+      "publisher": "De Imperatoribus Romanis: An Online Encyclopedia of Roman Rulers (Loyola University Chicago)",
+      "author": "Ralph W. Mathisen",
+      "date_published": "1999",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-carthage",
+      "url": "https://www.geonames.org/2468244/carthage.html",
+      "title": "Carthage, Tunisia",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the secondary chronicle date of 23 October in the Chronicon Paschale versus the widely accepted 19 October in Prosper of Aquitaine.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:33.791Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

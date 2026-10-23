@@ -1,0 +1,161 @@
+{
+  "id": "-7my-formation-of-the-sahara",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "process",
+  "title": "Formation of the Sahara desert",
+  "summary": "During the Tortonian stage of the Late Miocene, about seven to eleven million years ago, the shrinkage of the ancient Tethys Sea weakened the African summer monsoon. This triggered progressive aridification across North Africa, initiating the formation of the modern Sahara desert. The transition created the largest hot desert on Earth, profoundly altering regional atmospheric circulation and continental ecosystems.",
+  "when": {
+    "start": {
+      "year": -11000000
+    },
+    "end": {
+      "year": -7000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Climate modeling dates the primary Tortonian aridification trigger to approximately 7 to 11 million years ago (Zhang et al. 2014); eolian sand dune deposits in northern Chad confirm desert conditions by approximately 7 Ma (Schuster et al. 2006)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "Tortonian stage (∼7–11 Myr ago)",
+        "source": "src-nature-zhang2014"
+      },
+      {
+        "calendar": "years ago",
+        "value": "Tortonian stage (~7-11 million years ago)",
+        "source": "src-sciencedaily-sahara"
+      }
+    ],
+    "display": "c. 11–7 million years ago (Tortonian stage)"
+  },
+  "where": {
+    "lat": 23.079722,
+    "lon": 12.612222,
+    "elevation_m": null,
+    "modern_name": "Sahara, North Africa",
+    "historical_name": "Northern Africa, Late Miocene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-wikidata-sahara"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Created the largest hot desert on Earth, profoundly altering African atmospheric circulation and terrestrial habitats."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-330ka-middle-pleistocene-green-sahara",
+      "type": "related"
+    },
+    {
+      "id": "-3000-end-of-the-african-humid-period",
+      "type": "related"
+    },
+    {
+      "id": "species-sahelanthropus-tchadensis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nature-zhang2014",
+      "url": "https://www.nature.com/articles/nature13705",
+      "title": "Aridification of the Sahara desert caused by Tethys Sea shrinkage during the Late Miocene",
+      "publisher": "Nature (Springer Nature)",
+      "author": "Zhongshi Zhang, Gilles Ramstein, Mathieu Schuster, Camille Li, Camille Contoux, Qing Yan",
+      "date_published": "2014-09-17",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sciencedaily-sahara",
+      "url": "https://www.sciencedaily.com/releases/2014/09/140918091030.htm",
+      "title": "Is Sahara Desert several million years older than previously thought?",
+      "publisher": "ScienceDaily",
+      "author": "Uni Research",
+      "date_published": "2014-09-18",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-sahara",
+      "url": "https://www.wikidata.org/wiki/Q6583",
+      "title": "Sahara (Wikidata Q6583)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact onset date: climate models identify Tortonian Tethys shrinkage (~7–11 Ma), while eolian dune deposits in Chad confirm desert conditions by ~7 Ma.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-11000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "During the Tortonian stage of the Late Miocene, about seven to eleven million years ago, the shrinkage of the ancient Tethys Sea weakened the African summer monsoon.",
+        "source": "src-nature-zhang2014"
+      },
+      {
+        "span": "-7000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The transition created the largest hot desert on Earth, profoundly altering regional atmospheric circulation and continental ecosystems.",
+        "source": "src-nature-zhang2014",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T14:01:37.536Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

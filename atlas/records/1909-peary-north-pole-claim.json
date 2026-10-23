@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1909-peary-north-pole-claim",
+  "kind": "event",
+  "title": "Peary North Pole Claim",
+  "summary": "Robert Peary, with Matthew Henson and a small team, claimed to have reached the North Pole on 6 April 1909. A National Geographic Society committee endorsed his account, but Frederick Cook also claimed the pole, and doubts about Peary's proof persist today.",
+  "when": {
+    "start": {
+      "year": 1909
+    },
+    "end": {
+      "year": 1909
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date is the claimed day; whether the pole was reached is disputed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 6, 1909",
+        "source": "src-capitol"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 6, 1909",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "6 April 1909 (claimed)"
+  },
+  "where": {
+    "lat": 90,
+    "lon": 0,
+    "elevation_m": null,
+    "modern_name": "Arctic Ocean, near the geographic North Pole (proxy pin at 90°N; actual position of the party unverified)",
+    "historical_name": "Arctic sea ice, no sovereign territory",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-capitol"
+    ]
+  },
+  "regions": [
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Contested claim to the first arrival at the North Pole, involving a congressional honour and a rival claim."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-capitol",
+      "url": "https://www.visitthecapitol.gov/artifact/commander-robert-pearys-handwritten-calculations-north-pole-april-6-1909",
+      "title": "Commander Robert Peary's handwritten calculations at the North Pole, April 6, 1909",
+      "publisher": "U.S. Capitol Visitor Center",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/peary-and-henson-reach-north-pole/",
+      "title": "Peary and Henson Reach the North Pole",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy at 90N, not a verified position. Only two publishers; Capitol page gives Peary's recorded latitude 89°57′11″ and says experts doubt the final run.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:28:41.152Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1909",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Robert Peary, with Matthew Henson and a small team, claimed to have reached the North Pole on 6 April 1909.",
+        "source": "src-capitol"
+      },
+      {
+        "span": "1909",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "A National Geographic Society committee endorsed his account, but Frederick Cook also claimed the pole, and doubts about Peary's proof persist today.",
+        "source": "src-capitol",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

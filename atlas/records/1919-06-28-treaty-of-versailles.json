@@ -1,0 +1,173 @@
+{
+  "id": "1919-06-28-treaty-of-versailles",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Treaty of Versailles",
+  "summary": "The Treaty of Versailles was signed on 28 June 1919 at Versailles, closing the Paris Peace Conference, between the Allied and Associated Powers and Germany. Its 440 articles in 15 parts capped the German army at 100,000 men, cost Germany 13 percent of its territory and made it accept responsibility for the war. The treaty also established the League of Nations.",
+  "when": {
+    "start": {
+      "year": 1919,
+      "iso": "1919-06-28"
+    },
+    "end": {
+      "year": 1919,
+      "iso": "1919-06-28"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Signing day stated by both opened sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Signed on 28 June 1919",
+        "source": "src-tna-versailles"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "28 June 1919",
+        "source": "src-nam-versailles"
+      }
+    ],
+    "display": "28 June 1919"
+  },
+  "where": {
+    "lat": 48.8044252,
+    "lon": 2.1202853,
+    "elevation_m": null,
+    "modern_name": "Palace of Versailles, Versailles, Yvelines, France",
+    "historical_name": "Versailles, near Paris, France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-versailles"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The peace settlement with Germany after the First World War, whose terms shaped interwar politics."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "related"
+    },
+    {
+      "id": "1914-06-28-assassination-of-archduke-franz-ferdinand",
+      "type": "related"
+    },
+    {
+      "id": "1918-03-03-treaty-of-brest-litovsk",
+      "type": "related"
+    },
+    {
+      "id": "1939-world-war-ii",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-tna-versailles",
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/stories/the-treaty-of-versailles/",
+      "title": "The Treaty of Versailles",
+      "publisher": "The National Archives (UK)",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nam-versailles",
+      "url": "https://ww1.nam.ac.uk/timeline/treaty-versailles/",
+      "title": "Treaty of Versailles",
+      "publisher": "National Army Museum, London",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-ushmm-versailles",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/treaty-of-versailles",
+      "title": "Treaty of Versailles",
+      "publisher": "United States Holocaust Memorial Museum",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-versailles",
+      "url": "https://nominatim.openstreetmap.org/search?q=Ch%C3%A2teau+de+Versailles&format=json&limit=1",
+      "title": "Chateau de Versailles (Nominatim search result)",
+      "publisher": "OpenStreetMap (Nominatim gazetteer)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Chateau de Versailles; the opened pages say only \"Done at Versailles\". The USHMM page gives 7 May 1919 for presentation of the treaty to Germany, not the signing, so it supports only the army and territory terms.",
+  "author": "historian-agent:o-s50",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:40:17.639Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1919-06-28",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Treaty of Versailles was signed on 28 June 1919 at Versailles, closing the Paris Peace Conference, between the Allied and Associated Powers and Germany.",
+        "source": "src-tna-versailles"
+      },
+      {
+        "span": "1919",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Its 440 articles in 15 parts capped the German army at 100,000 men, cost Germany 13 percent of its territory and made it accept responsibility for the war.",
+        "source": "src-tna-versailles",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

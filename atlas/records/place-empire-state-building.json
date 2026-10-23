@@ -1,0 +1,241 @@
+{
+  "id": "place-empire-state-building",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Empire State Building",
+  "summary": "The Empire State Building is a 102-story Art Deco skyscraper at 350 Fifth Avenue in Manhattan, designed by Shreve, Lamb & Harmon and built in 1930–31 on the former Waldorf-Astoria hotel site. At 1,250 feet it was the world's tallest building until the 1970s.",
+  "when": {
+    "start": {
+      "year": 1930
+    },
+    "end": {
+      "year": 1931
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Landmarks Preservation Commission gives \"Built 1930-31\" and completion in April 1931; the building's own site gives 17 March 1930 to 1 May 1931."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (NYC Landmarks Preservation Commission)",
+        "value": "Built 1930-31",
+        "source": "src-lpc-esb"
+      },
+      {
+        "calendar": "CE (Skyscraper Museum)",
+        "value": "completed in April 1931",
+        "source": "src-skyscraper-esb"
+      },
+      {
+        "calendar": "CE (Empire State Building site)",
+        "value": "March 17, 1930",
+        "source": "src-esb-official"
+      }
+    ],
+    "display": "Built 1930–1931"
+  },
+  "where": {
+    "lat": 40.7484421,
+    "lon": -73.9856589,
+    "elevation_m": null,
+    "modern_name": "Empire State Building, 350 Fifth Avenue, Manhattan, New York City, United States",
+    "historical_name": "Empire State Building, 350 Fifth Avenue, Borough of Manhattan, New York City, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-esb"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Landmarks Preservation Commission calls it the best-known symbol of New York City and notes it stayed the world's tallest until the 1970s."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-lpc-esb",
+      "url": "https://s-media.nyc.gov/agencies/lpc/lp/2000.pdf",
+      "title": "Empire State Building, Designation List 143, LP-2000",
+      "publisher": "New York City Landmarks Preservation Commission",
+      "author": "New York City Landmarks Preservation Commission",
+      "date_published": "1981-05-19",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-skyscraper-esb",
+      "url": "https://www.skyscraper.org/tallest-towers/empire-state-building/",
+      "title": "Empire State Building",
+      "publisher": "Skyscraper Museum",
+      "author": "Skyscraper Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-esb-official",
+      "url": "https://www.esbnyc.com/about/history",
+      "title": "Empire State Building History: 1928 to Today",
+      "publisher": "Empire State Building",
+      "author": "Empire State Building",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-esb",
+      "url": "https://nominatim.openstreetmap.org/search?q=Empire+State+Building&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Empire State Building, 350 5th Avenue, Manhattan, way 34633854 (40.7484421, -73.9856589)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "id": "src-osm-outline-esb",
+      "url": "https://www.openstreetmap.org/way/34633854",
+      "title": "OpenStreetMap outline of Empire State Building",
+      "publisher": "OpenStreetMap contributors",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "model.geometry"
+      ]
+    }
+  ],
+  "reviewer_note": "No model: the landmark report, the Skyscraper Museum and the building's own site give height (1,250 ft; 1,454 ft with antenna) but no plan dimension on a page I could read (the NPS nomination PDF is a scanned image). Shape would be tower. The LPC PDF is OCR text; it gives completion in April 1931, the building site gives opening 1 May 1931.",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:09.127Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Base plan about 129.4 m by 59.6 m, measured from the OpenStreetMap outline tagged as the Empire State Building (way 34633854). Shape chosen: tower.",
+      "source": "src-osm-outline-esb",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-skyscraper-esb",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 381,
+          "unit": "m",
+          "source": "src-skyscraper-esb",
+          "note": "1250 feet; same figure in the LPC landmark report; 102 storeys"
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 129.4,
+          "unit": "m",
+          "source": "src-osm-outline-esb"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 59.6,
+          "unit": "m",
+          "source": "src-osm-outline-esb"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "extruded tower at sourced height on its mapped base"
+      },
+      {
+        "level": "local",
+        "representation": "procedural setback tower on the mapped base plan"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1930,
+        "end_year": 1931,
+        "state": "construction",
+        "description": "First structural columns set April 1930; steel frame topped out six months later; completed 1931.",
+        "source": "src-skyscraper-esb"
+      },
+      {
+        "start_year": 1931,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "Opened 1 May 1931 and stands today.",
+        "source": "src-esb-official"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1930,
+        "to_year": 2026,
+        "material": "structural steel frame with limestone exterior",
+        "source": "src-lpc-esb"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  }
+}

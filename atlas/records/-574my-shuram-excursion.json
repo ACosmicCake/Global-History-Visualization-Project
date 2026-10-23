@@ -1,0 +1,175 @@
+{
+  "id": "-574my-shuram-excursion",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Shuram excursion (Ediacaran carbon isotope excursion)",
+  "summary": "The Shuram excursion is the most negative carbon-isotope swing in Earth history, recorded in Ediacaran carbonate rocks in Oman, South Australia, south China and the southwestern United States. In the Wonoka Formation of South Australia it spans about 17 permil. It is placed after the roughly 580 Ma Gaskiers glaciation and before about 551 Ma, and whether it records the ocean or later rock alteration is still debated.",
+  "when": {
+    "start": {
+      "year": -580000000
+    },
+    "end": {
+      "year": -551000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "note": "Husson et al. (2015): hosted in sediments younger than the 580 Ma Gaskiers glaciation and older than a 551 Ma ash bed in south China (551.1 ± 0.7 Ma, recovery only). Duration estimates range from 5 to 50 Myr and Le Guerroué (2010) says none of these excursions is firmly time constrained, so start and end are the bracketing ages, not an onset and end. Years are Ma counted back from the present with no 1950 offset. The id says 574 Ma; no opened page gives that figure."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "younger than the 580 Ma Gaskiers glaciation and older than a 551 Ma ash",
+        "source": "src-husson"
+      },
+      {
+        "calendar": "Ma",
+        "value": "Ediacaran Period [635-541 Ma]",
+        "source": "src-husson"
+      },
+      {
+        "calendar": "Ma",
+        "value": "spans several tens of millions of years",
+        "source": "src-leguerroue"
+      }
+    ],
+    "display": "Ediacaran, bracketed between c. 580 and c. 551 million years ago"
+  },
+  "where": {
+    "lat": 21,
+    "lon": 57,
+    "elevation_m": null,
+    "modern_name": "Oman (Shuram Formation, the excursion's namesake; equivalents on four continents)",
+    "historical_name": "Ediacaran shelf basins on the margins of Neoproterozoic continents; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-oman"
+    ],
+    "paleo": {
+      "lat": -12.43,
+      "lon": 65.39,
+      "age_ma": 580,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "global",
+    "western_asia",
+    "oceania"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "The deepest carbon-isotope excursion in the geological record, tied in time to the rise of the Ediacaran biota."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-580my-gaskiers-glaciation",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-husson",
+      "url": "https://ajsonline.org/api/v1/articles/60916-stratigraphic-expression-of-earth-s-deepest-13-c-excursion-in-the-wonoka-formation-of-south-australia.pdf",
+      "title": "Stratigraphic expression of Earth's deepest 13C excursion in the Wonoka Formation of South Australia (American Journal of Science 315)",
+      "publisher": "American Journal of Science (Yale University)",
+      "author": "J. M. Husson, A. C. Maloof, B. Schoene, C. Y. Chen, J. A. Higgins",
+      "date_published": "2015",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-leguerroue",
+      "url": "https://comptes-rendus.academie-sciences.fr/geoscience/item/10.1016/j.crte.2009.12.008.pdf",
+      "title": "Duration and synchroneity of the largest negative carbon isotope excursion on Earth: the Shuram/Wonoka anomaly (C. R. Geoscience 342)",
+      "publisher": "Comptes Rendus Geoscience (Académie des sciences)",
+      "author": "Erwan Le Guerroué",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-oman",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q842.json",
+      "title": "Wikidata entry for Oman (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=57,21&time=580&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: the id says 574 Ma but no opened page does; I used the bracketing ages in Husson et al. (younger than Gaskiers at 580 Ma, older than 551 Ma), while Le Guerroué argues for tens of millions of years. The pin is Oman (Wikidata country point) because the Shuram Formation named it, with 5000 km uncertainty because the excursion is recorded on four continents; no opened page gives coordinates for a type section.",
+  "author": "historian-agent:o-s90",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:05:24.430Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-580000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Shuram excursion is the most negative carbon-isotope swing in Earth history, recorded in Ediacaran carbonate rocks in Oman, South Australia, south China and the southwestern United States.",
+        "source": "src-husson"
+      },
+      {
+        "span": "-551000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It is placed after the roughly 580 Ma Gaskiers glaciation and before about 551 Ma, and whether it records the ocean or later rock alteration is still debated.",
+        "source": "src-husson",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

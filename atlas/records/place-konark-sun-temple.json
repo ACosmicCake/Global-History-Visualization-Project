@@ -1,0 +1,194 @@
+{
+  "id": "place-konark-sun-temple",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Konark Sun Temple",
+  "summary": "The Sun Temple at Konark, on the Bay of Bengal coast in Odisha, was built in the 13th century as a colossal stone chariot of the sun god Surya, with carved wheels and a team of horses. It is one of the best-known Brahmanical sanctuaries in India and is now partly in ruins.",
+  "when": {
+    "start": {
+      "year": 1201
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 99,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources say only that it was built in the 13th century; 1201 is the first year of that century. UNESCO and the ASI count the wheels and horses differently (24 wheels and six horses vs twelve pairs and seven horses), which does not affect the date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "Built in the 13th century",
+        "source": "src-unesco-246"
+      },
+      {
+        "calendar": "CE (ASI)",
+        "value": "Built in the thirteenth century",
+        "source": "src-asi-konark"
+      }
+    ],
+    "display": "Built in the 13th century CE; partly ruined today"
+  },
+  "where": {
+    "lat": 19.8875,
+    "lon": 86.0947,
+    "elevation_m": null,
+    "modern_name": "Sun Temple, Konark, Puri district, Odisha, India",
+    "historical_name": "Sun Temple at Konarak, Odisha",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "A UNESCO World Heritage monument (1984) and one of India's best-known temples, designed as a monumental chariot of the sun god."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-246",
+      "url": "https://whc.unesco.org/en/list/246",
+      "title": "Sun Temple, Konârak (World Heritage List no. 246)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-asi-konark",
+      "url": "https://asi.nic.in/pages/WorldHeritageKonarak",
+      "title": "Sun Temple, Konarak (1984), Odisha",
+      "publisher": "Archaeological Survey of India",
+      "author": "Archaeological Survey of India",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List data (XML export), geolocation of the property",
+      "publisher": "UNESCO World Heritage Centre (list XML)",
+      "author": "UNESCO World Heritage Centre (list XML)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape block for the jagamohana, the only part with a height and a plan size on the ASI page (30 m square, 30 m high); a pyramidal-roofed hall is approximated as a block. The sanctum height (over 68 m) is \"presumably\", so it is not used. Phase start 1201 is the first year of the 13th century; no date for the roof losses was found. Single ASI source for the figures.",
+  "author": "historian-agent:m-7",
+  "updated": "2026-10-22",
+  "aliases": [
+    "Konarak"
+  ],
+  "model": {
+    "footprint": {
+      "description": "Square plan of the jagamohana (porch hall), 30 m on a side, standing on the temple's east-west axis in front of the sanctum and in line with the detached dance hall. Register figures only; no surveyed plan was opened.",
+      "source": "src-asi-konark",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-asi-konark",
+      "measurements": [
+        {
+          "part": "jagamohana (porch hall), height",
+          "value": 30,
+          "unit": "m",
+          "source": "src-asi-konark",
+          "note": "ASI: jagamohana \"30. m. square and 30. m. high\""
+        },
+        {
+          "part": "jagamohana (porch hall), base length",
+          "value": 30,
+          "unit": "m",
+          "source": "src-asi-konark",
+          "note": "30 m square"
+        },
+        {
+          "part": "jagamohana (porch hall), base width",
+          "value": 30,
+          "unit": "m",
+          "source": "src-asi-konark",
+          "note": "30 m square"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "30 m square block marking the jagamohana on the temple axis"
+      },
+      {
+        "level": "local",
+        "representation": "procedural block 30 m x 30 m x 30 m for the jagamohana; the sanctum (shikhara) is not modelled because the ASI gives its height only as \"presumably over 68 m\""
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1201,
+        "end_year": null,
+        "state": "altered",
+        "description": "Built in the 13th century as a solar chariot temple; the ASI notes that the sanctum and the dance hall have lost their roofs. Dates of the roof losses are not given on the page.",
+        "source": "src-asi-konark"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T07:52:08.630Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

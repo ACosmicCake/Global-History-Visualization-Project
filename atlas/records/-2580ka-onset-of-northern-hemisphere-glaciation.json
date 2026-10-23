@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s58",
+  "updated": "2026-10-22",
+  "id": "-2580ka-onset-of-northern-hemisphere-glaciation",
+  "kind": "process",
+  "title": "Onset of Northern Hemisphere glaciation",
+  "summary": "Around 2.7 million years ago, large ice sheets began to build across the Northern Hemisphere. One study of a western subarctic Pacific sediment core links the start to warmer late summers and cooler winters that supplied snow to northern North America. Another places the intensification across the Pliocene-Pleistocene transition, 2.58 million years ago.",
+  "when": {
+    "start": {
+      "year": -2700000
+    },
+    "end": {
+      "year": -2580000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 50000,
+      "start_plus_years": 50000,
+      "end_minus_years": 50000,
+      "end_plus_years": 50000,
+      "note": "Sources give both about 2.7 Ma and 2.58 Ma for the intensification; the range spans both."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "the timing of the onset of significant Northern Hemisphere glaciation 2.7 million years ago",
+        "source": "src-haug2005"
+      },
+      {
+        "calendar": "Ma",
+        "value": "Intensification of northern hemisphere glaciation (iNHG), ~2.7 million years ago (Ma)",
+        "source": "src-ao2024"
+      },
+      {
+        "calendar": "Ma",
+        "value": "across the Pliocene–Pleistocene transition (2.58 Ma)",
+        "source": "src-ao2024"
+      }
+    ],
+    "display": "c. 2.7-2.58 million years ago"
+  },
+  "where": {
+    "lat": 79.13864,
+    "lon": -3.23897,
+    "elevation_m": null,
+    "modern_name": "Northern Hemisphere high latitudes (Arctic Ocean reference point)",
+    "historical_name": "Northern Hemisphere, no polity (Pliocene-Pleistocene)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 6000,
+    "coordinate_sources": [
+      "src-wikidata-q788"
+    ],
+    "paleo": {
+      "lat": 77.68,
+      "lon": -1.89,
+      "age_ma": 2.7,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point -3.23897, 79.13864 reconstructed to 2.7 Ma."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Start of the Quaternary ice-age cycles that shaped later human and animal evolution."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-haug2005",
+      "url": "https://nora.nerc.ac.uk/id/eprint/18656/",
+      "title": "North Pacific seasonality and the glaciation of North America 2.7 million years ago",
+      "publisher": "NERC Open Research Archive (Haug et al., Nature 2005)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ao2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11031568/",
+      "title": "Orbital- and millennial-scale Asian winter monsoon variability across the Pliocene-Pleistocene glacial intensification",
+      "publisher": "PubMed Central, US National Library of Medicine (Ao et al., Nature Communications 2024)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q788",
+      "url": "https://www.wikidata.org/wiki/Q788",
+      "title": "Arctic Ocean (Wikidata Q788)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-3.23897,79.13864&time=2.7&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruct_points, MERDITH2021, 2.7 Ma",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: which date to call the onset (2.7 vs 2.58 Ma) and the placeholder location for a planet-wide process. Paleo position pending (GPlates down).",
+  "published_at": "2026-10-22T11:14:58.298Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

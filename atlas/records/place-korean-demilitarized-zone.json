@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s21",
+  "updated": "2026-10-22",
+  "id": "place-korean-demilitarized-zone",
+  "kind": "place",
+  "title": "Korean Demilitarized Zone",
+  "summary": "The Korean Demilitarized Zone is a buffer strip about 4 km wide and roughly 250 km long across the Korean Peninsula, created by the armistice that took effect on 27 July 1953. A fence marks the Military Demarcation Line at its centre. Decades without farming or development turned it into an unplanned wildlife refuge.",
+  "when": {
+    "start": {
+      "year": 1953
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Start is the armistice date of 27 July 1953; the zone still exists, so the end is the present. South Korea did not sign, and no peace treaty followed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "July 27, 1953",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "CE",
+        "value": "took effect on July 27, 1953",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "Since 27 July 1953"
+  },
+  "where": {
+    "lat": 38.32,
+    "lon": 127.2,
+    "elevation_m": null,
+    "modern_name": "Korean Demilitarized Zone, between North and South Korea",
+    "historical_name": "Armistice buffer zone along the 38th parallel, set up by the 1953 armistice between the UN Command and the North Korean and Chinese commands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wd",
+      "src-nasa"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The most heavily militarised frontier in the world, still the line dividing the Koreas, with an unintended wildlife refuge."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1953-07-27-korean-armistice-agreement",
+      "type": "caused_by",
+      "because": "The armistice terms required both sides to pull back, which created the buffer zone."
+    },
+    {
+      "id": "1950-korean-war",
+      "type": "caused_by",
+      "because": "The zone follows the front line where the Korean War stopped."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/earth/earth-observatory/korean-demilitarized-zone-3660/",
+      "title": "Korean Demilitarized Zone",
+      "publisher": "NASA Earth Observatory",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/korean-demilitarized-zone-dmz",
+      "title": "Korean Demilitarized Zone (DMZ)",
+      "publisher": "EBSCO Research Starters",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q331990.json",
+      "title": "Wikidata entry for Korean Demilitarized Zone (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "audience_note": "Concerns an unresolved military confrontation; the zone remains heavily armed.",
+  "reviewer_note": "Length figures differ: NASA 250 km, EBSCO 258 km (160 miles); the summary says roughly 250 km. \"Most heavily militarised\" in the importance text is not from an opened source. The pin is Wikidata's centre; the zone is a line, not a point.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:51:31.280Z"
+}

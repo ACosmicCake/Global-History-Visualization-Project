@@ -1,0 +1,126 @@
+{
+  "id": "1683-battle-of-vienna",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Vienna",
+  "summary": "On 12 September 1683 a relief army under King John III Sobieski of Poland attacked the Ottoman army besieging Vienna from the Kahlenberg, north of the city. The Ottoman force under Grand Vizier Kara Mustafa was beaten and he fled. The victory is linked to the later liberation of Hungary from Ottoman rule.",
+  "when": {
+    "start": {
+      "year": 1683
+    },
+    "end": {
+      "year": 1683
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Battle day 12 September 1683; the siege itself began on 14 July per Wien Geschichte Wiki."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "12. September 1683",
+        "source": "src-wgw"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "12. September 1683",
+        "source": "src-habsburger"
+      }
+    ],
+    "display": "12 September 1683"
+  },
+  "where": {
+    "lat": 48.27621,
+    "lon": 16.33307,
+    "elevation_m": null,
+    "modern_name": "Kahlenberg, Vienna, Austria",
+    "historical_name": "Kahlenberg near Vienna, Habsburg Monarchy (Holy Roman Empire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wgw-kahlenberg"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive relief of the Ottoman siege of Vienna, followed by the Habsburg offensive against the Ottomans."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wgw",
+      "url": "https://www.geschichtewiki.wien.gv.at/Zweite_T%C3%BCrkenbelagerung_(1683)",
+      "title": "Zweite Türkenbelagerung (1683)",
+      "publisher": "Wien Geschichte Wiki (Stadt Wien)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-habsburger",
+      "url": "https://www.habsburger.net/de/kapitel/der-tuercke-vor-wien-episode-2",
+      "title": "Der \"Türcke\" vor Wien: Episode 2",
+      "publisher": "Die Welt der Habsburger",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wgw-kahlenberg",
+      "url": "https://www.geschichtewiki.wien.gv.at/Kahlenberg",
+      "title": "Kahlenberg",
+      "publisher": "Wien Geschichte Wiki (Stadt Wien)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Kahlenberg summit (Wien Geschichte Wiki gives 48°16'34.36\" N, 16°19'59.05\" E; converted to decimals). Fighting spread over slopes and villages north-west of the city. Both publishers are Austrian; troop numbers omitted as they vary.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T22:10:38.377Z"
+}

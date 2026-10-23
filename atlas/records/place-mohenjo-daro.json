@@ -1,0 +1,261 @@
+{
+  "id": "place-mohenjo-daro",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Mohenjo-daro (citadel mound and Great Bath)",
+  "summary": "Mohenjo-daro, on the Indus in Sindh, Pakistan, was one of the largest cities of the Indus civilization, flourishing between about 2600 and 1900 BCE. Its western citadel mound, built up of mud-brick platforms and holding the Great Bath, a brick tank about 12 by 7 m, rose as much as 12 m above today's plain.",
+  "when": {
+    "start": {
+      "year": -2599
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 99,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Harappa.com says the city flourished between 2600 and 1900 BCE, while UNESCO says the Indus civilization flourished between 2,500 and 1,500 BC. Start -2599 is 2600 BCE; the true start may lie later in the range. End is the present: the ruins survive."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Harappa.com)",
+        "value": "between 2600 and 1900 BCE",
+        "source": "src-harappa-mohenjo"
+      },
+      {
+        "calendar": "BC (UNESCO)",
+        "value": "flourished between 2,500-1,500 BC",
+        "source": "src-unesco-138"
+      }
+    ],
+    "display": "Flourished c. 2600–1900 BCE; ruins survive"
+  },
+  "where": {
+    "lat": 27.32533,
+    "lon": 68.13494,
+    "elevation_m": null,
+    "modern_name": "Mohenjo-daro Archaeological Ruins, Larkana District, Sindh, Pakistan",
+    "historical_name": "Mohenjo-daro, a city of the Indus (Harappan) civilization with a western citadel and an eastern lower town",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.7,
+    "coordinate_sources": [
+      "src-osm-mohenjo",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The best-preserved urban settlement of the Indus civilization (UNESCO) and the site of the earliest known public water tank."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-2499-indus-script",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-138",
+      "url": "https://whc.unesco.org/en/list/138/",
+      "title": "Archaeological Ruins at Moenjodaro (World Heritage List no. 138)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-harappa-mohenjo",
+      "url": "https://www.harappa.com/slideshows/mohenjo-daro",
+      "title": "Mohenjo-daro! (slideshow by Jonathan Mark Kenoyer)",
+      "publisher": "Harappa.com (Harappa Archaeological Research Project)",
+      "author": "Jonathan Mark Kenoyer",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-humanjourney-mohenjo",
+      "url": "https://humanjourney.us/ideas/connecting-with-the-gods/mohenjo-daro-indus-civilization/",
+      "title": "Mohenjo-Daro (2600-1900 BCE)",
+      "publisher": "The Human Journey",
+      "author": "Sally Mallam",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-mohenjo",
+      "url": "https://nominatim.openstreetmap.org/search?q=Mohenjo-daro&format=json",
+      "title": "OpenStreetMap Nominatim result for Mohenjo-daro",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List dataset (syndication XML)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A rectangular brick platform at the top of a high mud-brick mound. The Great Bath and its associated building complex measure about 180 by 108 feet, with the tank itself about 12 by 7 m. The citadel mound as a whole has no sourced plan dimension here.",
+      "source": "src-humanjourney-mohenjo",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-humanjourney-mohenjo",
+      "measurements": [
+        {
+          "part": "height (mound above the modern plain, up to)",
+          "value": 12,
+          "unit": "m",
+          "source": "src-humanjourney-mohenjo",
+          "note": "\"high mounds reaching as high as 12 meters above the modern plain level\""
+        },
+        {
+          "part": "base length (Great Bath complex)",
+          "value": 54.9,
+          "unit": "m",
+          "source": "src-humanjourney-mohenjo",
+          "note": "\"180 feet by 108 feet\"; the text is ambiguous about what exactly is measured"
+        },
+        {
+          "part": "base width (Great Bath complex)",
+          "value": 32.9,
+          "unit": "m",
+          "source": "src-humanjourney-mohenjo",
+          "note": "108 feet"
+        },
+        {
+          "part": "Great Bath tank length (north-south)",
+          "value": 12,
+          "unit": "m",
+          "source": "src-harappa-mohenjo",
+          "note": "\"approximately 12 meters north-south\""
+        },
+        {
+          "part": "Great Bath tank width",
+          "value": 7,
+          "unit": "m",
+          "source": "src-harappa-mohenjo",
+          "note": "\"7 meters wide\""
+        },
+        {
+          "part": "Great Bath tank depth (maximum)",
+          "value": 2.4,
+          "unit": "m",
+          "source": "src-harappa-mohenjo",
+          "note": "\"maximum depth of 2.4 meters\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a long low mound above the Indus plain with a brick complex on its summit"
+      },
+      {
+        "level": "local",
+        "representation": "procedural mud-brick mound with a brick platform and sunken Great Bath tank at the sourced size"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -2599,
+        "end_year": -1900,
+        "state": "construction",
+        "description": "The city grew on mud-brick platforms and debris over the period 2600-1900 BCE; the sources opened do not date the citadel mound or Great Bath separately.",
+        "source": "src-harappa-mohenjo"
+      },
+      {
+        "start_year": -1900,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "The city was abandoned after its flourishing period; a Buddhist stupa was built on the citadel over the ruins in the 2nd century AD (UNESCO). The start year is the end of the flourishing range, not a dated abandonment.",
+        "source": "src-unesco-138"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -2599,
+        "to_year": -1900,
+        "material": "mud-brick platforms with fired red brick structures",
+        "source": "src-harappa-mohenjo"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "The sourced height (mounds, up to 12 m) and the sourced plan (Great Bath complex) describe different features, so no single solid is built."
+  },
+  "reviewer_note": "Shape block. Least sure of the model overall: the 12 m height is a general 'mounds' figure from a non-expert page and the plan (180 by 108 ft) is for the Great Bath complex, not the whole mound, so the two refer to different features and the model is schematic. Britannica-type sources give 6 to 12 m for the citadel platform. Dates are the flourishing range, not the mound's construction.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:13:01.869Z"
+}

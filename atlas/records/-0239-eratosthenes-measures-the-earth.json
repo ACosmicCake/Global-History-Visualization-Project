@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "-0239-eratosthenes-measures-the-earth",
+  "kind": "event",
+  "title": "Eratosthenes measures the circumference of the Earth",
+  "summary": "Eratosthenes of Cyrene, working as librarian at Alexandria, compared the noon Sun on the summer solstice at Syene (modern Aswan), where it shone down a well, with the shadow cast at Alexandria. Taking the cities as 5,000 stadia apart and the angle as 7.2 degrees, he reached 250,000 stadia for the whole circumference; other accounts give 252,000.",
+  "when": {
+    "start": {
+      "year": -239
+    },
+    "end": {
+      "year": -239
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 20,
+      "end_minus_years": 5,
+      "end_plus_years": 20,
+      "note": "The opened pages date the measurement to about 240 BCE (Encyclopedia.com) and about 220 BCE (Linda Hall Library); another page opened for context gives about 245 BCE (ABC News). The range runs from 245 to 220 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (proleptic)",
+        "value": "in approximately 240 b.c., Eratosthenes of Cyrene",
+        "source": "src-encyclopedia-erat"
+      },
+      {
+        "calendar": "BCE",
+        "value": "Eratosthenes, about 220 B.C.E., not only knew that the Earth is round",
+        "source": "src-lindahall-erat"
+      }
+    ],
+    "display": "c. 240 BCE (sources range from 245 to 220 BCE)"
+  },
+  "where": {
+    "lat": 31.1975,
+    "lon": 29.8925,
+    "elevation_m": null,
+    "modern_name": "Alexandria, Egypt (Syene is modern Aswan, 24.0889 N, 32.8997 E)",
+    "historical_name": "Alexandria (where Eratosthenes worked) and Syene, Ptolemaic Egypt",
+    "geometry": {
+      "type": "regions",
+      "regions": [
+        {
+          "name": "Alexandria",
+          "lat": 31.1975,
+          "lon": 29.8925,
+          "note": "Where the shadow was measured",
+          "source": "src-lindahall-erat"
+        },
+        {
+          "name": "Syene (modern Aswan)",
+          "lat": 24.088919,
+          "lon": 32.89973,
+          "note": "Where the noon Sun was overhead at the solstice",
+          "source": "src-lindahall-erat"
+        }
+      ]
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-alexandria",
+      "src-wd-aswan",
+      "src-ufl-erat"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "An early geometric estimate of the size of the Earth that was later repeated and debated for centuries."
+  },
+  "confidence": "probable",
+  "sources": [
+    {
+      "id": "src-encyclopedia-erat",
+      "url": "https://www.encyclopedia.com/people/science-and-technology/astronomy-biographies/eratosthenes-cyrene",
+      "title": "Eratosthenes of Cyrene (276 b.c.–194 b.c.)",
+      "publisher": "Encyclopedia.com (Gale, World of Earth Science)",
+      "author": null,
+      "date_published": "2018-05-14",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "what",
+        "where",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-lindahall-erat",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/eratosthenes-of-cyrene/",
+      "title": "Eratosthenes of Cyrene (Scientist of the Day)",
+      "publisher": "Linda Hall Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "what",
+        "where",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-ufl-erat",
+      "url": "https://web.mae.ufl.edu/uhk/ERATOSTHENES-CIRCUMFERENCE.pdf",
+      "title": "Eratosthenes and the Earth's circumference",
+      "publisher": "University of Florida, Mechanical and Aerospace Engineering",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-wd-alexandria",
+      "url": "https://www.wikidata.org/wiki/Q87",
+      "title": "Wikidata item Q87 (Alexandria), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wd-aswan",
+      "url": "https://www.wikidata.org/wiki/Q29888",
+      "title": "Wikidata item Q29888 (Aswan), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: three opened pages give about 240 BCE, about 220 BCE, and (on a page used only as context) about 245 BCE, so the year is a decade-level approximation. Pin is Alexandria; Syene (Aswan) is the second point. The 250,000 and 252,000 stadia figures both appear in opened pages; no conversion to kilometres is claimed.",
+  "published_at": "2026-10-22T16:17:41.259Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

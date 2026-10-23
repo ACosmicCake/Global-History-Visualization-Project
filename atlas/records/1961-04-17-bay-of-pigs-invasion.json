@@ -1,0 +1,178 @@
+{
+  "id": "1961-04-17-bay-of-pigs-invasion",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Bay of Pigs invasion",
+  "summary": "On 17 April 1961 Brigade 2506, about 1,400 CIA-trained Cuban exiles launched from Guatemala, landed at the Bay of Pigs on Cuba's southern coast. Cuban forces under Fidel Castro defeated them within two days; most were imprisoned. The failure strengthened Castro, who moved toward socialism and closer ties with the Soviet Union.",
+  "when": {
+    "start": {
+      "year": 1961,
+      "iso": "1961-04-17"
+    },
+    "end": {
+      "year": 1961,
+      "iso": "1961-04-19"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Office of the Historian gives the landing as 17 April 1961 and the defeat within two days; the CIA page gives 17 April as D-Day. The end date 19 April is the span of \"within two days\" and is not itself stated on the page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "landed at the Bay of Pigs on April 17, 1961 ... defeated within 2 days",
+        "source": "src-ooh"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "April 17, 1961 (\"D-Day\")",
+        "source": "src-cia"
+      }
+    ],
+    "display": "17 April 1961 (defeated within two days)"
+  },
+  "where": {
+    "lat": 22.216667,
+    "lon": -81.166667,
+    "elevation_m": null,
+    "modern_name": "Bay of Pigs (Bahía de Cochinos), Matanzas Province, Cuba",
+    "historical_name": "Bay of Pigs, southern coast of the Republic of Cuba",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-bop"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "A failed US-backed invasion that deepened the US-Cuba break and fed into Operation Mongoose and the 1962 missile crisis."
+  },
+  "confidence": "established",
+  "audience_note": "Armed invasion with deaths and mass imprisonment; the numbers of killed and captured differ across sources.",
+  "related": [
+    {
+      "id": "1953-cuban-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "related"
+    },
+    {
+      "id": "1960-10-19-us-embargo-on-cuba",
+      "type": "related"
+    },
+    {
+      "id": "1962-10-cuban-missile-crisis",
+      "type": "caused",
+      "because": "The failed invasion led to Operation Mongoose and pushed Cuba toward the Soviet Union, whose arms shipments culminated in the 1962 missile crisis (Office of the Historian)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ooh",
+      "url": "https://history.state.gov/milestones/1961-1968/bay-of-pigs",
+      "title": "The Bay of Pigs and the Aftermath, 1961-1962 (Milestones)",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cia",
+      "url": "https://www.cia.gov/stories/story/the-bay-of-pigs-invasion/",
+      "title": "The Bay of Pigs Invasion",
+      "publisher": "Central Intelligence Agency",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-bop",
+      "url": "https://www.wikidata.org/wiki/Q208508",
+      "title": "Wikidata item Q208508 (Bay of Pigs), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the bay, not a beach: the opened pages do not name Playa Girón or Playa Larga. Brigade size is 1,400 on the CIA page (other accounts say 1,400-1,500). Killed and captured totals are not on the Office of the Historian page; the CIA page gives more than 75 percent imprisoned and 1,113 held. Death count deliberately omitted. The 19 April end date is \"within two days\" and not a stated date.",
+  "author": "historian-agent:o-s22",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1961-04-17",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Brigade 2506, a CIA-trained exile force launched from Guatemala, lands at the Bay of Pigs.",
+        "source": "src-ooh",
+        "consequence": false
+      },
+      {
+        "span": "1961-04",
+        "action": "region.fill { radius_km: 25 }",
+        "caption": "Without air support, the outnumbered brigade surrenders or withdraws into the water; more than three quarters end up in Cuban prisons.",
+        "source": "src-cia",
+        "consequence": false
+      },
+      {
+        "span": "1961-11",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Castro declares intent to adopt socialism, and Kennedy approves Operation Mongoose, a covert program aimed at removing him.",
+        "source": "src-ooh",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:51:48.976Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

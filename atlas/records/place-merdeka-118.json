@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-merdeka-118",
+  "kind": "place",
+  "title": "Merdeka 118",
+  "summary": "Merdeka 118 in Kuala Lumpur is a 118-storey tower 678.9 m high, which Arup calls the second-tallest building in the world. Fender Katsalidis began construction in 2016, according to Dezeen, and the tower topped out in December 2021. PNB Merdeka Ventures is the client.",
+  "when": {
+    "start": {
+      "year": 2016
+    },
+    "end": {
+      "year": 2021
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Construction began 2016 and the tower reached full height with its spire by the Dezeen article of 13 December 2021; the architect lists completion 2023."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Fender Katsalidis began construction of Merdeka 118 in 2016",
+        "source": "src-dezeen-merdeka"
+      },
+      {
+        "calendar": "CE",
+        "value": "Completion 2023",
+        "source": "src-fk-merdeka"
+      }
+    ],
+    "display": "Construction from 2016; topped out 2021"
+  },
+  "where": {
+    "lat": 3.1416214,
+    "lon": 101.7006856,
+    "elevation_m": null,
+    "modern_name": "Merdeka 118 (Menara Merdeka Maybank), Kuala Lumpur, Malaysia",
+    "historical_name": "Merdeka 118, Kuala Lumpur, Malaysia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-outline"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Described by its structural engineer as the second-tallest building in the world."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-dezeen-merdeka",
+      "url": "https://www.dezeen.com/2021/12/13/worlds-second-tallest-skyscraper-merdeka-118-tops-out/",
+      "title": "World's second-tallest skyscraper Merdeka 118 tops out in Malaysia",
+      "publisher": "Dezeen",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-arup-merdeka",
+      "url": "https://www.arup.com/en-us/projects/merdeka-118/",
+      "title": "Merdeka 118: one of the world's tallest buildings",
+      "publisher": "Arup",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-fk-merdeka",
+      "url": "https://fkaustralia.com/project/merdeka-118/",
+      "title": "Merdeka 118",
+      "publisher": "Fender Katsalidis",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-outline",
+      "url": "https://www.openstreetmap.org/way/645604854",
+      "title": "OpenStreetMap outline of Menara Merdeka Maybank",
+      "publisher": "OpenStreetMap contributors",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "model.geometry"
+      ]
+    },
+    {
+      "id": "src-mkn-merdeka",
+      "url": "https://www.mkn.gov.my/web/ms/2024/01/31/7-fakta-menarik-tentang-menara-merdeka-118/",
+      "title": "7 Fakta Menarik Tentang Menara Merdeka 118",
+      "publisher": "Majlis Keselamatan Negara (Government of Malaysia)",
+      "author": "n.d.",
+      "date_published": "2024-01-31",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "OpenStreetMap outline of Menara Merdeka Maybank (way 645604854, building=office): 66.0 m x 41.9 m minimum bounding rectangle.",
+      "source": "src-osm-outline",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "tower",
+      "source": "src-mkn-merdeka",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 678.9,
+          "unit": "m",
+          "source": "src-mkn-merdeka",
+          "note": "ketinggian 678.9 meter (Malaysian National Security Council page)"
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 66,
+          "unit": "m",
+          "source": "src-osm-outline"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 41.9,
+          "unit": "m",
+          "source": "src-osm-outline"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "tower at height and plan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural tower at its mapped footprint"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 2016,
+        "end_year": 2021,
+        "state": "construction",
+        "description": "Construction began in 2016; topped out in December 2021.",
+        "source": "src-dezeen-merdeka"
+      },
+      {
+        "start_year": 2023,
+        "end_year": null,
+        "state": "intact",
+        "description": "Architect lists completion 2023.",
+        "source": "src-fk-merdeka"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Model kept as data with no_mesh: the 678.9 m height is on Arup and Dezeen pages only (no owner or operator page opened). Plan is the OSM outline. Sources are class other and journalism; Dezeen supplies the 2016 start. Completion 2023 is the architect's claim; 2021 is the topping-out report.",
+  "author": "historian-agent:o-s98",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T17:45:08.862Z"
+}

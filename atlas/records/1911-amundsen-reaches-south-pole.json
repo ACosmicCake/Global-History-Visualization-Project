@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "1911-amundsen-reaches-south-pole",
+  "kind": "event",
+  "title": "Amundsen reaches the South Pole",
+  "summary": "Norwegian explorer Roald Amundsen and four companions reached the geographic South Pole on 14 December 1911, five weeks before Robert Falcon Scott's party. They travelled with dogs from the base Framheim on the Bay of Whales. The round trip took 99 days and covered about 3,000 km.",
+  "when": {
+    "start": {
+      "year": 1911
+    },
+    "end": {
+      "year": 1912
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Fram Museum gives departure on 20 October 1911 and return on 26 January 1912 (years implied by context); other accounts differ by a day. The Pole date, 14 December 1911, is given by both sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "reached the South Pole on 14 December 1911",
+        "source": "src-fram"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Amundsen reached the South Pole on December 14 1911, five weeks before Scott",
+        "source": "src-npolar"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "on 20 October",
+        "source": "src-fram"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "arrived back at Framheim on 26 January",
+        "source": "src-fram"
+      }
+    ],
+    "display": "20 October 1911 – 26 January 1912; Pole 14 December 1911"
+  },
+  "where": {
+    "lat": -89.9975,
+    "lon": 139.2728,
+    "elevation_m": null,
+    "modern_name": "Geographic South Pole (Amundsen-Scott South Pole Station), Antarctica",
+    "historical_name": "Geographic South Pole, Antarctica",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -78.5,
+          "lon": -164,
+          "year": 1911,
+          "date": "20 October 1911",
+          "label": "Framheim, Bay of Whales: departure for the Pole.",
+          "source": "src-fram",
+          "coordinate_source": "src-wd-framheim"
+        },
+        {
+          "lat": -89.9975,
+          "lon": 139.2728,
+          "year": 1911,
+          "date": "14 December 1911",
+          "label": "Geographic South Pole: the Norwegian party arrives. Longitude is arbitrary at the Pole.",
+          "source": "src-fram",
+          "coordinate_source": "src-wd-pole"
+        },
+        {
+          "lat": -78.5,
+          "lon": -164,
+          "year": 1912,
+          "date": "26 January 1912",
+          "label": "Return to Framheim.",
+          "source": "src-fram",
+          "coordinate_source": "src-wd-framheim"
+        }
+      ]
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-pole",
+      "src-wd-framheim"
+    ]
+  },
+  "regions": [
+    "antarctica"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First expedition to reach the geographic South Pole, a milestone of polar exploration."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1914-endurance-expedition",
+      "type": "related"
+    },
+    {
+      "id": "1959-antarctic-treaty",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "20 October 1911",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Amundsen and four companions leave the base Framheim on the Bay of Whales with dog teams, heading south.",
+        "source": "src-fram",
+        "consequence": false
+      },
+      {
+        "span": "20 October 1911 / 14 December 1911",
+        "action": "path.trace {}",
+        "caption": "The party travels across the ice to the geographic South Pole, which they reach on 14 December.",
+        "source": "src-fram",
+        "consequence": false
+      },
+      {
+        "span": "14 December 1911",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "The Norwegian flag is planted at the Pole five weeks before Scott's party arrives, so Norway wins the race to the Pole.",
+        "source": "src-npolar",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-fram",
+      "url": "https://frammuseum.no/polar-history/expeditions/the-third-fram-expedition-1910-1914/",
+      "title": "The Third Fram Expedition 1910-1914",
+      "publisher": "Fram Museum, Oslo",
+      "author": "Fram Museum, Oslo",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-npolar",
+      "url": "https://nettarkiv.npolar.no/www.nansenamundsen.no/en/galleries/amundsen/south-pole-1911/index.html",
+      "title": "South Pole 1911 (Nansen-Amundsen Year 2011)",
+      "publisher": "Norwegian Polar Institute",
+      "author": "Norwegian Polar Institute",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-pole",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q243307.json",
+      "title": "Wikidata entry for Amundsen-Scott South Pole Station (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-framheim",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q515604.json",
+      "title": "Wikidata entry for Framheim (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Departure (19 vs 20 October) and return (25 vs 26 January) vary between accounts; the Fram Museum wording is used and years are implied by context.",
+  "published_at": "2026-10-22T08:18:29.532Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

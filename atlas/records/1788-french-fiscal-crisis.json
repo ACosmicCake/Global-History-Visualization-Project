@@ -1,0 +1,154 @@
+{
+  "id": "1788-french-fiscal-crisis",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "French fiscal crisis and calling of the Estates-General, 1787-1789",
+  "summary": "France's royal finances were in deficit: for 1788 expenses were estimated at 629 million livres against revenue of 503 million. After the Assembly of Notables of 1787 rejected the finance minister Calonne's reforms and the parlements refused new taxes, the king agreed in 1788 to convene the Estates-General, which met at Versailles on 5 May 1789, the first time since 1614.",
+  "when": {
+    "start": {
+      "year": 1787
+    },
+    "end": {
+      "year": 1789
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Span runs from the Assembly of Notables (February 1787) to the Estates-General meeting (5 May 1789); the summons is dated August 1788 by EBSCO and only 1788 by TutorChase."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In August of 1788, Louis called for a meeting of the Estates-General, to take place the following May; it met on May 5, 1789",
+        "source": "src-ebsco-fiscal"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Assembly of Notables convened in February 1787; king agreed in 1788 to convene the Estates-General",
+        "source": "src-tutorchase"
+      }
+    ],
+    "display": "1787–1789 (Estates-General summoned August 1788)"
+  },
+  "where": {
+    "lat": 48.805,
+    "lon": 2.135,
+    "elevation_m": null,
+    "modern_name": "Versailles, France",
+    "historical_name": "Versailles, Kingdom of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-ebsco-fiscal",
+      "src-wd-versailles"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The financial crisis of the monarchy led to the Estates-General of 1789, the first since 1614."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-fiscal",
+      "url": "https://www.ebsco.com/research-starters/history/louis-xvi-calls-estates-general",
+      "title": "Louis XVI calls the Estates-General",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-tutorchase",
+      "url": "https://www.tutorchase.com/notes/aqa-a-level/history/19-1-3-financial-crisis-and-the-failures-of-reform",
+      "title": "Financial crisis and the failures of reform",
+      "publisher": "TutorChase",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-versailles",
+      "url": "https://www.wikidata.org/wiki/Q621",
+      "title": "Wikidata item Q621 (Versailles), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: it marks Versailles, where the Estates-General met, not where the crisis arose. The sources give no total debt figure. The EBSCO page names Calonne, Necker and Turgot as failed reformers; Brienne is not covered on an opened page.",
+  "author": "historian-agent:o-s45",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:27:46.048Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1787",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "France's royal finances were in deficit: for 1788 expenses were estimated at 629 million livres against revenue of 503 million.",
+        "source": "src-ebsco-fiscal"
+      },
+      {
+        "span": "1789",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "After the Assembly of Notables of 1787 rejected the finance minister Calonne's reforms and the parlements refused new taxes, the king agreed in 1788 to convene the Estates-General…",
+        "source": "src-ebsco-fiscal",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

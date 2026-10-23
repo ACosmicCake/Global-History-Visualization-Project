@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s21",
+  "updated": "2026-10-22",
+  "id": "place-sirius-passet",
+  "kind": "place",
+  "title": "Sirius Passet Lagerstätte (North Greenland)",
+  "summary": "Sirius Passet is a remote fossil site in Peary Land, northern Greenland, found by chance in 1984. Its dark mudstones preserve soft parts of early Cambrian animals, mostly arthropods, from low-oxygen seas. It is among the oldest exceptionally preserved faunas from the Cambrian explosion.",
+  "when": {
+    "start": {
+      "year": -521000000
+    },
+    "end": {
+      "year": -514000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "note": "Stage 3 of the Cambrian is given as 521-514 Ma by Park et al. (2019); the exact age of the fauna within the stage is not fixed by the sources opened. Paleo-position is computed at 517.5 Ma, the stage midpoint."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological time scale",
+        "value": "equated with Stage 3 of the Cambrian Period (521–514 Ma)",
+        "source": "src-park2019"
+      },
+      {
+        "calendar": "Geological time scale",
+        "value": "Cambrian Series 2, Stage 3",
+        "source": "src-geus"
+      }
+    ],
+    "display": "Early Cambrian, Stage 3 (521–514 million years ago)"
+  },
+  "where": {
+    "lat": 82.7931,
+    "lon": -42.2256,
+    "elevation_m": null,
+    "modern_name": "Sirius Passet, Peary Land, North Greenland",
+    "historical_name": "Slope setting at the edge of the Portfjeld carbonate platform on the Laurentian margin, early Cambrian; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-iugs",
+      "src-wd"
+    ],
+    "paleo": {
+      "lat": -9.03,
+      "lon": -112.77,
+      "age_ma": 517.5,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "One of the oldest Cambrian Lagerstätten, showing soft-bodied animals early in the Cambrian explosion."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-geus",
+      "url": "https://pub.geus.dk/en/publications/the-extent-of-the-sirius-passet-lagerstatte-early-cambrian-of-nor/",
+      "title": "The extent of the Sirius Passet Lagerstätte (early Cambrian) of North Greenland",
+      "publisher": "Geological Survey of Denmark and Greenland (GEUS)",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-iugs",
+      "url": "https://iugs-geoheritage.org/geoheritage_sites/the-cambrian-explosion-in-sirius-passet-peary-land-north-greenland/",
+      "title": "The Cambrian Explosion in Sirius Passet, Peary Land, North Greenland",
+      "publisher": "IUGS International Commission on Geoheritage",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-cup",
+      "url": "https://www.cambridge.org/core/product/03AB14E8EA81F8830977B3CF27DE46E5",
+      "title": "The Sirius Passet Fauna",
+      "publisher": "Cambridge University Press",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q427909.json",
+      "title": "Wikidata entry for Sirius Passet (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-42.2256,82.7931&time=517.5&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 at 517.5 Ma",
+      "publisher": "GPlates Web Service (EarthByte)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    },
+    {
+      "id": "src-park2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6586032/",
+      "title": "The Sirius Passet Lagerstätte of North Greenland—A geochemical window on early Cambrian low-oxygen environments and ecosystems",
+      "publisher": "Geobiology (Wiley), via PubMed Central",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Age is the Stage 3 range (521-514 Ma) from Park et al. 2019; the fauna is not dated more finely in sources opened. Wikidata (82.793, -42.245) and IUGS (82 47 35 N, 42 13 32 W) coordinates differ by about 2 km.",
+  "audience_note": null,
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:53:27.202Z"
+}

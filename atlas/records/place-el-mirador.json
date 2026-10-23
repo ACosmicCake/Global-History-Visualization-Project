@@ -1,0 +1,199 @@
+{
+  "id": "place-el-mirador",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "La Danta pyramid, El Mirador",
+  "aliases": [
+    "La Danta"
+  ],
+  "summary": "La Danta is a Preclassic Maya pyramid at El Mirador in the Petén region of northern Guatemala. Guinness World Records gives it a height of up to 72 m on a footprint of about 500 by 300 m, built between 300 BCE and 150 CE. A Yale eHRAF Archaeology abstract places the major structures at El Mirador in the Late Preclassic.",
+  "when": {
+    "start": {
+      "year": -299
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 300 BCE (astronomical -299) from Guinness World Records, which says the pyramid was built between 300 BCE and 150 CE; the Yale eHRAF abstract says only Late Preclassic. End is the present: the ruin still stands (Guinness: rising above the canopy)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE/CE (Guinness World Records)",
+        "value": "built between 300 BCE and 150 CE",
+        "source": "src-guinness-danta"
+      },
+      {
+        "calendar": "Maya period label (Yale eHRAF Archaeology)",
+        "value": "All of the major structures appear to be from the Late Preclassic.",
+        "source": "src-ehraf-mirador"
+      }
+    ],
+    "display": "Built c. 300 BCE–150 CE (Preclassic Maya)"
+  },
+  "where": {
+    "lat": 17.751701,
+    "lon": -89.902689,
+    "elevation_m": null,
+    "modern_name": "La Danta pyramid, El Mirador, Petén, Guatemala",
+    "historical_name": "La Danta, the highest pyramid-temple of the Preclassic Maya centre at El Mirador (polity name not given in the sources opened)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wikidata-danta"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Guinness World Records lists it as the largest Maya pyramid by volume (about 2.8 million m3)."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-guinness-danta",
+      "url": "https://www.guinnessworldrecords.com/world-records/779448-largest-maya-pyramid",
+      "title": "Largest Maya pyramid",
+      "publisher": "Guinness World Records",
+      "author": "Guinness World Records",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-ehraf-mirador",
+      "url": "https://ehrafarchaeology.yale.edu/traditions/ny52/documents/012",
+      "title": "El Mirador, Petén, Guatemala (abstract)",
+      "publisher": "Yale University, eHRAF Archaeology",
+      "author": "Yale University, eHRAF Archaeology",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-wikidata-danta",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q6076801.json",
+      "title": "Wikidata Q6076801, Pyramid of La Danta (P625 17.751701, -89.902689)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Guinness World Records gives the pyramid a footprint of approximately 500 x 300 m. The Yale eHRAF abstract speaks of two immense basal platforms of 72,000 sq. metres, which is not the same measure. Register figures only.",
+      "source": "src-guinness-danta",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-guinness-danta",
+      "measurements": [
+        {
+          "part": "height (La Danta)",
+          "value": 72,
+          "unit": "m",
+          "source": "src-guinness-danta",
+          "note": "\"stands up to 72 m (236 ft) tall\"; the Yale eHRAF abstract says \"the highest rising to 70 meters\""
+        },
+        {
+          "part": "base length (La Danta footprint)",
+          "value": 500,
+          "unit": "m",
+          "source": "src-guinness-danta",
+          "note": "\"footprint of approximately 500 x 300 m\""
+        },
+        {
+          "part": "base width (La Danta footprint)",
+          "value": 300,
+          "unit": "m",
+          "source": "src-guinness-danta"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "pyramid on its platform within the El Mirador site, at true size"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped pyramid 72 m high on a 500 x 300 m footprint"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -299,
+        "end_year": 150,
+        "state": "construction",
+        "description": "Built between 300 BCE and 150 CE (Guinness); the Yale abstract places the major structures in the Late Preclassic.",
+        "source": "src-guinness-danta"
+      },
+      {
+        "start_year": 150,
+        "end_year": null,
+        "state": "ruined",
+        "description": "Stands as a ruin rising above the jungle canopy (Guinness); the Yale abstract says the ruins were first found in 1926.",
+        "source": "src-ehraf-mirador"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stepped_pyramid. Least sure of the plan: Guinness gives 500 x 300 m for the footprint but does not say whether that is the pyramid with its platform; it is the only page with a plan size. Height differs between Guinness (72 m) and Yale (70 m); I used 72. Guinness classed reference. Coordinates are Wikidata P625 for the pyramid; no publisher page opened gives coordinates.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:35.705Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

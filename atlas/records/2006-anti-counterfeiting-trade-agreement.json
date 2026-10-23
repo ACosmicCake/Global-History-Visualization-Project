@@ -1,0 +1,134 @@
+{
+  "id": "2006-anti-counterfeiting-trade-agreement",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Anti-Counterfeiting Trade Agreement",
+  "summary": "ACTA was an intellectual property enforcement agreement led by Japan, the depositary. Australia, Canada, Japan, South Korea, Morocco, New Zealand, Singapore and the United States signed on 1 Oct 2011; the EU and 22 member states followed on 26 January 2012. Critics at a 2010 meeting said it threatened public interests.",
+  "when": {
+    "start": {
+      "year": 2011
+    },
+    "end": {
+      "year": 2012
+    },
+    "precision": "day",
+    "display": "1 October 2011 – 26 January 2012",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "signed the ACTA on 1 Oct 2011",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "January 26, 2012",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 35.68944,
+    "lon": 139.69167,
+    "elevation_m": null,
+    "modern_name": "Tokyo, Japan (proxy pin: Japan is the depositary, and the EU signing ceremony was held there)",
+    "historical_name": "Tokyo, Japan (Ministry of Foreign Affairs, EU signing ceremony)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "global",
+    "eastern_asia",
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 2,
+    "justification": "A contested multilateral IP enforcement treaty that drew wide public criticism, but of limited lasting effect per these sources."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.mofa.go.jp/policy/economy/i_property/acta1201.html",
+      "title": "MOFA: Signing Ceremony of the EU for the Anti-Counterfeiting Trade Agreement (ACTA) (Outline)",
+      "publisher": "mofa.go.jp",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20120120155721/http://www.wcl.american.edu/pijip/go/acta-communique",
+      "title": "PIJIP: - American University Washington College of Law",
+      "publisher": "wcl.american.edu",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q1490",
+      "title": "Wikidata Q1490 (Tokyo, coordinate location P625)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources do not cover negotiation start (2006 Wikidata lead) or entry into force; dates reflect signings only. Source 2 is an advocacy critique of the 2010 draft, so its claims are opinions. The EU ceremony was attended by 22 member states plus the EU per the text, though the note lists 22 states and the EU. (Drafted by the Wikipedia pipeline from mofa.go.jp, wcl.american.edu; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:35:38.209Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2011",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "ACTA was an intellectual property enforcement agreement led by Japan, the depositary.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2012",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Australia, Canada, Japan, South Korea, Morocco, New Zealand, Singapore and the United States signed on 1 Oct 2011; the EU and 22 member states followed on 26 January…",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

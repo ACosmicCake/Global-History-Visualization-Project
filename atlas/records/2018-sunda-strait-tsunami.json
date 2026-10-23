@@ -1,0 +1,133 @@
+{
+  "id": "2018-sunda-strait-tsunami",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2018 Sunda Strait tsunami",
+  "summary": "On 22 December 2018 the western flank of Anak Krakatau collapsed into the Sunda Strait, generating a tsunami that struck the Sumatran and Java coasts. It killed approximately 430 people, injured 14,000 and displaced 33,000. The collapse followed months of elevated eruptive activity and unmonitored flank motion.",
+  "when": {
+    "start": {
+      "year": 2018
+    },
+    "end": {
+      "year": 2018
+    },
+    "precision": "day",
+    "display": "22 December 2018",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "On 22 Dec 2018, a sector collapse event occurred at Anak Krakatau volcano",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "collapse of the volcano’s flank at 13:55 UTC",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": -6.103,
+    "lon": 105.423,
+    "elevation_m": null,
+    "modern_name": "Sunda Strait, Indonesia (Anak Krakatau volcano; coasts of Sumatra and Java)",
+    "historical_name": "Sunda Strait, Indonesia (Anak Krakatau volcano; coasts of Sumatra and Java)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Deadly volcano-induced tsunami in a densely populated region, scientifically significant for flank-collapse precursors."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions mass death and injury from a natural disaster.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6773710/",
+      "title": "Complex hazard cascade culminating in the Anak Krakatau sector collapse - PMC",
+      "publisher": "U.S. National Library of Medicine",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.nature.com/articles/s41467-019-12284-5?error=cookies_not_supported&code=a13b9600-b20f-4e27-8502-f745505d7d71",
+      "title": "Complex hazard cascade culminating in the Anak Krakatau sector collapse | Nature Communications",
+      "publisher": "Nature Portfolio",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q60042839",
+      "title": "Wikidata Q60042839 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give 430 fatalities as 'approximately 430' and 'over 430'; the figure is quoted as the sources state it. The Wikidata start date of 21 December is not supported; both sources say 22 December. The domains tag 'disease' is a poor fit and could be replaced. (Drafted by the Wikipedia pipeline from U.S. National Library of Medicine, Nature Portfolio; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:52.754Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2018",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "On 22 December 2018 the western flank of Anak Krakatau collapsed into the Sunda Strait, generating a tsunami that struck the Sumatran and Java coasts.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2018",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "It killed approximately 430 people, injured 14,000 and displaced 33,000.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

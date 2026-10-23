@@ -1,0 +1,215 @@
+{
+  "id": "place-red-fort-delhi",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Red Fort, Delhi",
+  "aliases": [
+    "Lal Qila",
+    "Red Fort Complex"
+  ],
+  "summary": "The Red Fort is the palace fort that the Mughal emperor Shah Jahan built in Delhi after moving his capital from Agra. Its red sandstone walls enclose an area of 656 by 328 metres and rise to 23 metres. Construction began in April 1639 and finished in 1648 as part of building Shahjahanabad.",
+  "when": {
+    "start": {
+      "year": 1639
+    },
+    "end": {
+      "year": 1648
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "ICOMOS gives construction begun in April 1639 and completed in 1648."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ICOMOS evaluation)",
+        "value": "begun in April, 1639 and completed in 1648",
+        "source": "src-icomos-redfort"
+      },
+      {
+        "calendar": "CE (Incredible India)",
+        "value": "In 1639, Shah Jahan decided to move his court from Agra to Delhi",
+        "source": "src-incredibleindia-redfort"
+      }
+    ],
+    "display": "Built 1639–1648"
+  },
+  "where": {
+    "lat": 28.656081,
+    "lon": 77.2407959,
+    "elevation_m": null,
+    "modern_name": "Red Fort (Lal Qila), Old Delhi, India",
+    "historical_name": "Red Fort (Lal Qila), the palace fort of Shahjahanabad, Mughal Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-redfort"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Octagonal walled palace fort; the red sandstone walls enclose 656 by 328 metres (ICOMOS).",
+      "source": "src-icomos-redfort",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-icomos-redfort",
+      "measurements": [
+        {
+          "part": "enclosure wall height",
+          "value": 23,
+          "unit": "m",
+          "source": "src-icomos-redfort",
+          "note": "\"rise to 23 metres in height\" (walls); Incredible India gives turrets of 108 feet on the city side and 59 feet on the river side"
+        },
+        {
+          "part": "enclosure length",
+          "value": 656,
+          "unit": "m",
+          "source": "src-icomos-redfort",
+          "note": "area enclosed \"656 by 328 metres\""
+        },
+        {
+          "part": "enclosure width",
+          "value": 328,
+          "unit": "m",
+          "source": "src-icomos-redfort",
+          "note": "area enclosed \"656 by 328 metres\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "fort outline at 656 by 328 m"
+      },
+      {
+        "level": "local",
+        "representation": "procedural walled block 656 m by 328 m, walls 23 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1639,
+        "end_year": 1648,
+        "state": "construction",
+        "description": "Begun in April 1639 and completed in 1648 as part of building Shahjahanabad (ICOMOS).",
+        "source": "src-icomos-redfort"
+      },
+      {
+        "start_year": 1648,
+        "end_year": null,
+        "state": "intact",
+        "description": "Standing since 1648; evaluated by ICOMOS in 2007 for the UNESCO World Heritage List.",
+        "source": "src-icomos-redfort"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1639,
+        "to_year": null,
+        "material": "red sandstone walls",
+        "source": "src-icomos-redfort"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility",
+    "linear": true
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "ICOMOS evaluated it for the UNESCO World Heritage List as the palace-fort of Shahjahan's new capital."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-icomos-redfort",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/231rev.pdf",
+      "title": "The Red Fort Complex (India) No 231 rev, ICOMOS evaluation",
+      "publisher": "ICOMOS / UNESCO World Heritage Centre",
+      "author": "ICOMOS / UNESCO World Heritage Centre",
+      "date_published": "2007",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-incredibleindia-redfort",
+      "url": "https://www.incredibleindia.gov.in/en/delhi/delhi/red-fort",
+      "title": "Red Fort",
+      "publisher": "Ministry of Tourism, Government of India (Incredible India)",
+      "author": "Ministry of Tourism, Government of India (Incredible India)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-redfort",
+      "url": "https://nominatim.openstreetmap.org/search?q=Red+Fort+Delhi&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Red Fort, Chandni Chowk, Old Delhi, way 264863907 (28.656081, 77.2407959)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape block, the closest available form to a walled enclosure; all three measurements describe the fort walls and the area they enclose (ICOMOS). Incredible India gives a different wall scale (turrets 108 ft city side, 59 ft river side) and no completion date; the ICOMOS figure is used. The ASI page could not be read.",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:06.686Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ]
+}

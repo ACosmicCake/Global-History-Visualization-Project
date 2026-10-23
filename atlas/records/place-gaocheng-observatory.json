@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "place-gaocheng-observatory",
+  "kind": "place",
+  "title": "Gaocheng Astronomical Observatory",
+  "summary": "The Yuan-dynasty observatory at Gaocheng town near Dengfeng, Henan, is credited to the astronomer Guo Shoujing. Its platform carries instruments for measuring the noon shadow of the sun through the year. The site is part of the Historic Monuments of Dengfeng, inscribed on the World Heritage List in July 2010.",
+  "when": {
+    "start": {
+      "year": 1279
+    },
+    "end": {
+      "year": 1279
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 3,
+      "start_plus_years": 0,
+      "end_minus_years": 3,
+      "end_plus_years": 0,
+      "note": "The UNESCO astronomy portal says built in 1279; the Henan provincial government page says 1276."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1279",
+        "source": "src-aha"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1276",
+        "source": "src-henan"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 2010",
+        "source": "src-aha"
+      }
+    ],
+    "display": "built 1276 or 1279 (sources differ)"
+  },
+  "where": {
+    "lat": 34.45875,
+    "lon": 113.067722,
+    "elevation_m": 380,
+    "modern_name": "Gaocheng town, Dengfeng, Henan, China",
+    "historical_name": "Gaocheng, Yuan dynasty China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-aha"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Surviving Yuan-era observatory linked to Guo Shoujing's calendar reform and part of a World Heritage property."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-guo-shoujing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-aha",
+      "url": "https://web.astronomicalheritage.net/index.php/show-entity?idunescowhc=1305",
+      "title": "Dengfeng Observatory (UNESCO Portal to the Heritage of Astronomy)",
+      "publisher": "UNESCO / International Astronomical Union",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-henan",
+      "url": "https://english.henan.gov.cn/2022/02-17/2400543.html",
+      "title": "The Dengfeng Observatory",
+      "publisher": "People's Government of Henan Province",
+      "author": null,
+      "date_published": "2022-02-17",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    }
+  ],
+  "model": {
+    "no_mesh": "Only one institutional source (UNESCO/IAU portal) gives dimensions: platform 9.45m high, sides over 16m at base. The Henan government page gives no measurements, so the figures are not corroborated; kept as data, no mesh drawn.",
+    "footprint": {
+      "description": "Brick platform in the shape of a truncated pyramid, sides over 16m long at the base and over 8m at the top, with a horizontal scale extending north (site 37m by 150m).",
+      "source": "src-aha",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "pyramid",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-aha",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 9.45,
+          "unit": "m",
+          "source": "src-aha",
+          "note": "platform; roof of the rooms on top is 12.62m above ground"
+        },
+        {
+          "part": "base length",
+          "value": 16,
+          "unit": "m",
+          "source": "src-aha",
+          "note": "'over 16m' (minimum)"
+        },
+        {
+          "part": "top length",
+          "value": 8,
+          "unit": "m",
+          "source": "src-aha",
+          "note": "'over 8m' (minimum)"
+        }
+      ]
+    },
+    "phases": [
+      {
+        "start_year": 1279,
+        "end_year": null,
+        "state": "construction",
+        "description": "Built in the Yuan period; the portal gives 1279, the Henan page 1276.",
+        "source": "src-aha"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1279,
+        "to_year": null,
+        "material": "brick (platform described as brick-built)",
+        "source": "src-aha"
+      }
+    ]
+  },
+  "reviewer_note": "Build date differs: 1279 (UNESCO portal) vs 1276 (Henan government). Pin uses the portal's DMS coordinates; Wikidata's differs by roughly 10 km (not used). Guo's role and Yuan framing are sourced; I did not open the whc.unesco.org page itself.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:41:10.478Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "enriched"
+    }
+  ]
+}

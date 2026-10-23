@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "place-laetoli-footprints",
+  "kind": "place",
+  "title": "Laetoli footprints",
+  "summary": "At Laetoli in northern Tanzania, hominin tracks pressed into volcanic ash some 3.66 million years ago are the oldest known hominin footprints. Mary Leakey and co-workers found them in 1976 and excavation was complete by 1978; the makers are most likely Australopithecus afarensis. A second set, reported in 2016 at Site S, was left by two individuals.",
+  "when": {
+    "start": {
+      "year": -3658050
+    },
+    "end": {
+      "year": -3658050
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Converted as year = 1950 minus age. Both opened pages give 3.66 million years with no error range."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "around 3.66 million years ago",
+        "source": "src-archaeology"
+      },
+      {
+        "calendar": "Years old",
+        "value": "3.66 million years old",
+        "source": "src-elife-laetoli"
+      }
+    ],
+    "display": "c. 3.66 million years ago"
+  },
+  "where": {
+    "lat": -2.9936,
+    "lon": 35.3511,
+    "elevation_m": null,
+    "modern_name": "Laetoli, Ngorongoro Conservation Area, Tanzania (about 50 km south of Olduvai Gorge)",
+    "historical_name": "Volcanic plain on the southern edge of the Serengeti (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-gn-laetoli"
+    ],
+    "paleo": {
+      "lat": -4.71,
+      "lon": 35.41,
+      "age_ma": 3.66,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 35.3511, -2.9936 (GeoNames) reconstructed to 3.66 Ma."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "The oldest known hominin footprints, direct evidence of upright walking."
+  },
+  "related": [
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    },
+    {
+      "id": "place-olduvai-gorge",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-archaeology",
+      "url": "https://archaeology.org/issues/online/collection/trenches-tanzania-hominin-footprints/",
+      "title": "Proof in the Prints",
+      "publisher": "Archaeology magazine (Archaeological Institute of America)",
+      "author": "Archaeology magazine (Archaeological Institute of America)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-elife-insight",
+      "url": "https://elifesciences.org/content/5/e22886",
+      "title": "Paleontology: These feet were made for walking (eLife Insight)",
+      "publisher": "eLife Sciences Publications",
+      "author": "eLife Sciences Publications",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-elife-laetoli",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5156529/",
+      "title": "New footprints from Laetoli (Tanzania) provide evidence for marked body size variation in early hominins (eLife)",
+      "publisher": "eLife (via PubMed Central)",
+      "author": "eLife (via PubMed Central)",
+      "date_published": "2016",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-olduvai",
+      "url": "https://nominatim.openstreetmap.org/search?q=Oldupai+Gorge&format=json",
+      "title": "OpenStreetMap Nominatim: Olduvai Gorge, Tanzania",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    },
+    {
+      "id": "src-gn-laetoli",
+      "url": "https://www.geonames.org/search.html?q=laetoli&country=TZ",
+      "title": "Laetoli, Tanzania (GeoNames)",
+      "publisher": "GeoNames",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is derived: the eLife paper puts Laetoli about 50 km south of Olduvai Gorge, and I offset the OSM Olduvai point by that distance, hence 40 km uncertainty. No opened page gives Laetoli coordinates. Discovery year conflicts: Archaeology and the eLife Insight say 1976 (excavated by 1978); the eLife paper says discovered in 1978. The Site G attribution to A. afarensis is called controversial in the paper.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:49.222Z"
+}

@@ -1,0 +1,133 @@
+{
+  "id": "1908-messina-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1908 Messina earthquake",
+  "summary": "A powerful earthquake centred under the Strait of Messina struck southern Italy on 28 December 1908, followed by a tsunami. Messina, Reggio di Calabria and dozens of nearby coastal towns were almost completely destroyed, and more than 80,000 people were killed. Some survivors were relocated within Italy, while others emigrated to the United States.",
+  "when": {
+    "start": {
+      "year": 1908
+    },
+    "end": {
+      "year": 1908
+    },
+    "precision": "day",
+    "display": "28 December 1908",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "devastated southern Italy on Dec. 28, 1908",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "1908-12-28 04:20:26",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 38.15,
+    "lon": 15.683,
+    "elevation_m": null,
+    "modern_name": "Strait of Messina, between Sicily and Calabria, Italy",
+    "historical_name": "Messina and Reggio di Calabria",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "One of the deadliest earthquakes in European history, with a tsunami, devastating a major Mediterranean region."
+  },
+  "confidence": "established",
+  "audience_note": "Mass death from earthquake and tsunami.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=16958009",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251230144243/https://www.britannica.com/event/Messina-earthquake-and-tsunami-of-1908",
+      "title": "Messina earthquake and tsunami of 1908 | Sicily, Catania, Calabria | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q1348910",
+      "title": "Wikidata Q1348910 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude differs between sources: Britannica and ISC give 7.5, while ISC bibliography titles cite Mw 7.1. The tsunami cause is debated (seafloor displacement versus underwater landslide). The death toll is given only as 'more than 80,000' by Britannica. (Drafted by the Wikipedia pipeline from isc.ac.uk, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1908",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "A powerful earthquake centred under the Strait of Messina struck southern Italy on 28 December 1908, followed by a tsunami.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1908",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Messina, Reggio di Calabria and dozens of nearby coastal towns were almost completely destroyed, and more than 80,000 people were killed.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-23T04:33:39.898Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

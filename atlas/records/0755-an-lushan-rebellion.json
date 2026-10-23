@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": "Details a civil war with mass death by war, repression and famine; reported tolls run to tens of millions and are disputed.",
+  "confidence": "established",
+  "author": "historian-agent:o-s110",
+  "updated": "2026-10-22",
+  "id": "0755-an-lushan-rebellion",
+  "kind": "event",
+  "title": "An Lushan Rebellion",
+  "summary": "In 755 the general An Lushan revolted against the Tang court, marching from a base in Hebei to take Luoyang and then Chang'an. The war lasted until 763. EBSCO reports the population falling from 53 million in 754 to 17 million in 764, while the China Project says tolls up to 36 million are generally considered too high. The Tang tax base shrank to a third.",
+  "when": {
+    "start": {
+      "year": 755
+    },
+    "end": {
+      "year": 763
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both sources date the revolt to 755; EBSCO dates the war to 755-763 and says it did not end until 763."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (EBSCO)",
+        "value": "An Lushan's rebellion (755-763)",
+        "source": "src-ebsco-lushan"
+      },
+      {
+        "calendar": "CE (China Project)",
+        "value": "In 755, An Lushan revolted against the Tang court",
+        "source": "src-chinaproject-lushan"
+      },
+      {
+        "calendar": "CE (EBSCO)",
+        "value": "did not end until 763",
+        "source": "src-ebsco-lushan"
+      }
+    ],
+    "display": "755-763"
+  },
+  "where": {
+    "lat": 34.6196539,
+    "lon": 112.4477046,
+    "elevation_m": null,
+    "modern_name": "Luoyang, Henan, China (proxy pin: the Eastern Capital An Lushan captured; the revolt spread from a base in Hebei to Luoyang and Chang'an)",
+    "historical_name": "Luoyang, the Eastern Capital of Tang China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-osm-luoyang"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "A civil war that EBSCO and the China Project both describe as crippling the Tang state."
+  },
+  "related": [
+    {
+      "id": "polity-tang-dynasty",
+      "type": "related"
+    },
+    {
+      "id": "0751-battle-of-talas",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-lushan",
+      "url": "https://www.ebsco.com/research-starters/biography/lushan/",
+      "title": "An Lushan (Research Starter)",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chinaproject-lushan",
+      "url": "https://thechinaproject.com/2021/02/03/the-end-of-chinas-golden-age/",
+      "title": "The end of China's golden age",
+      "publisher": "The China Project",
+      "author": "The China Project",
+      "date_published": "2021-02-03",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-luoyang",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E6%B4%9B%E9%98%B3%20%E6%B2%B3%E5%8D%97&format=json",
+      "title": "OpenStreetMap Nominatim: 洛阳市, relation 3246491 (34.6196539, 112.4477046)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll as sourced ranges: China Project, \"as high as 36 million\", called generally too high because census records are contested; EBSCO, population 53 million (754) to 17 million (764), uncited and census-based. Pin is a proxy (Luoyang) for a war across northern China. Least sure of the toll.",
+  "published_at": "2026-10-22T19:16:36.668Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

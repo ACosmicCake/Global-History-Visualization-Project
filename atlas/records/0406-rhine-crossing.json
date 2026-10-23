@@ -1,0 +1,167 @@
+{
+  "id": "0406-rhine-crossing",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Crossing of the Rhine by Vandals, Alans and Suevi",
+  "summary": "On 31 December 406 CE, a confederation of Vandals, Alans, and Suevi crossed the frozen Rhine near Mogontiacum (Mainz), overwhelming undermanned Roman frontier defenses. After overcoming resistance from Frankish allies, the migratory armies advanced across Gaul virtually unchecked, plundering major cities before crossing the Pyrenees into Hispania in 409. This breach collapsed imperial Rhine border defenses, triggered military usurpations in Britain and Gaul, and initiated the permanent loss of western provinces.",
+  "when": {
+    "start": {
+      "year": 406,
+      "month": 12,
+      "day": 31,
+      "iso": "0406-12-31"
+    },
+    "end": {
+      "year": 406,
+      "month": 12,
+      "day": 31,
+      "iso": "0406-12-31"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Traditionally dated to the eve of the Kalends of January 407 (31 December 406). Some modern historians propose the winter of 405/406, but 406/407 remains standard consensus."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian",
+        "value": "On the last day of the same year, hordes of Burgundians, Alans, Suevi, and Vandals crossed the frozen Rhine into Gaul",
+        "source": "src-dir-honorius"
+      },
+      {
+        "calendar": "Julian",
+        "value": "In the winter of 406/407, several tribes invaded the Roman empire. The Franks remained loyal to the central government and defeated the Vandals, but were in turn defeated by the Alans",
+        "source": "src-livius-germania"
+      }
+    ],
+    "display": "31 December 406 CE (winter 406/407)"
+  },
+  "where": {
+    "lat": 49.98185,
+    "lon": 8.28008,
+    "elevation_m": null,
+    "modern_name": "Mainz, Rhineland-Palatinate, Germany (Rhine crossing area near ancient Mogontiacum)",
+    "historical_name": "Rhine frontier near Mogontiacum, Germania Prima, Western Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames-mainz"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires",
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Irrevocably breached the northern Rhine frontier of the Roman Empire, devastating Gaul and enabling Germanic and Alan settlement across Hispania and North Africa, fatally weakening the Western Roman state."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "caused",
+      "because": "The Rhine crossing stripped the Western Roman Empire of Gaul, Hispania, and subsequently North Africa, starving the treasury of tax revenue and precipitating collapse."
+    },
+    {
+      "id": "0395-division-of-the-roman-empire",
+      "type": "caused_by",
+      "because": "Division of imperial armies and withdrawal of western legionary forces to Italy by Stilicho left the Rhine border stripped of troops."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dir-honorius",
+      "url": "https://roman-emperors.sites.luc.edu/honorius.htm",
+      "title": "Honorius (395-423 A.D.)",
+      "publisher": "De Imperatoribus Romanis / Loyola University Chicago",
+      "author": "Walter E. Roberts",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-germania",
+      "url": "https://www.livius.org/articles/place/germania-inferior/germania-inferior-13/",
+      "title": "Germania Inferior: The End (13)",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering & Arjen Bosman",
+      "date_published": "2012",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-mainz",
+      "url": "https://www.geonames.org/2874225",
+      "title": "Mainz, Germany (GeoNames 2874225)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "406-12-31",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Vandals, Alans, and Suevi cross the Rhine frontier near Mainz, defeating allied Frankish defenders.",
+        "source": "src-dir-honorius"
+      },
+      {
+        "span": "407",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "The invaders overrun the Gallic provinces unchecked, permanently shattering the Western Roman border defenses along the Rhine.",
+        "source": "src-livius-germania",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Dating follows Prosper of Aquitaine's chronicle placing the crossing on the day before the Kalends of January in the consulship of Arcadius and Probus (31 December 406). Mainz (Mogontiacum) is used as the focal crossing point recorded in classical accounts including Jerome.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:25.754Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

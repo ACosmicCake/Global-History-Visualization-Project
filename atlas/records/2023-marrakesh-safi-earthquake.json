@@ -1,0 +1,112 @@
+{
+  "id": "2023-marrakesh-safi-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2023 Marrakesh-Safi earthquake",
+  "summary": "A shallow magnitude 6.8 earthquake struck the Atlas Mountains of western Morocco on 8 September 2023, about 75 km southwest of Marrakech. Early reports cited at least 2,000 deaths. The USGS noted that the region is not prone to frequent earthquakes, and no M6 or larger event had been recorded within 500 km since 1900.",
+  "when": {
+    "start": {
+      "year": 2023
+    },
+    "end": {
+      "year": 2023
+    },
+    "precision": "day",
+    "display": "8 September 2023",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The shallow quake struck the Atlas Mountains of western Morocco September 8",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "2023-09-08 22:11:00",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 31.11009,
+    "lon": -8.44001,
+    "elevation_m": null,
+    "modern_name": "Atlas Mountains near Oukaïmedene, southwest of Marrakech, Morocco",
+    "historical_name": "Atlas Mountains near Oukaïmedene, southwest of Marrakech, Morocco",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Deadliest earthquake in a region with no prior recorded M6+ events nearby; major national disaster for Morocco."
+  },
+  "confidence": "established",
+  "audience_note": "Mass death and injury from an earthquake.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=626740945",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.usgs.gov/news/featured-story/major-earthquake-strikes-oukaimedene-morocco",
+      "title": "Major earthquake strikes Oukaïmedene, Morocco | U.S. Geological Survey",
+      "publisher": "usgs.gov",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q122351413",
+      "title": "Wikidata Q122351413 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude and depth differ by agency: USGS gives M6.8 at about 26 km, ISC lists Mw 6.9 at 18.5 km, and papers cite 6.8. The death toll in the sources is only an early figure (at least 2,000). Local time (11:11 pm) versus ISC origin time (22:11) is consistent with UTC+1 and not a conflict.}</br> (Drafted by the Wikipedia pipeline from isc.ac.uk, usgs.gov; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:35.399Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

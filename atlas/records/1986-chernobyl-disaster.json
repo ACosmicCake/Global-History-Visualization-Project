@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1986-chernobyl-disaster",
+  "kind": "event",
+  "title": "Chernobyl nuclear disaster",
+  "summary": "On 26 April 1986 an explosion and fires at the Chernobyl nuclear plant in Ukraine, then part of the Soviet Union, caused the largest uncontrolled radioactive release in the history of civil nuclear power. Pripyat, a new city about 3 km away, held 49,000 residents.",
+  "when": {
+    "start": {
+      "year": 1986
+    },
+    "end": {
+      "year": 1986
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Explosion date 26 April 1986; the radioactive release continued over the following days."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "26 April 1986",
+        "source": "src-who"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 26, 1986",
+        "source": "src-doe"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "26 April 1986",
+        "source": "src-nea"
+      }
+    ],
+    "display": "26 April 1986"
+  },
+  "where": {
+    "lat": 51.3894,
+    "lon": 30.0992,
+    "elevation_m": null,
+    "modern_name": "Chornobyl nuclear power plant, near Pripyat, Kyiv Oblast, Ukraine",
+    "historical_name": "Chernobyl Nuclear Power Plant, near Pripyat, Ukrainian SSR, Soviet Union",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-explorenuclear"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Largest uncontrolled radioactive release in civil nuclear history, with lasting health and environmental effects."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a nuclear accident with radiation sickness and deaths.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-who",
+      "url": "https://www.who.int/ionizing_radiation/chernobyl/20110423_FAQs_Chernobyl.pdf",
+      "title": "Chernobyl: the true scale of the accident / Questions and answers",
+      "publisher": "World Health Organization",
+      "author": null,
+      "date_published": "2011-04",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-doe",
+      "url": "https://www.energy.gov/management/april-26-1986-chernobyl",
+      "title": "April 26, 1986: Chernobyl",
+      "publisher": "U.S. Department of Energy",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nea",
+      "url": "https://oecd-nea.org/jcms/pl_28271/chernobyl-chapter-i-the-site-and-accident-sequence",
+      "title": "Chernobyl: Chapter I. The site and accident sequence",
+      "publisher": "OECD Nuclear Energy Agency",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-explorenuclear",
+      "url": "https://explorenuclear.com/maps/map-of-ukrainian-nuclear-sites/",
+      "title": "Map of Ukrainian nuclear sites",
+      "publisher": "Explore Nuclear",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates come only from a non-institutional site (plant pin, 51.3894 N 30.0992 E); worth confirming with an institutional gazetteer. Only the date and broad facts were checked.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T05:53:44.447Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

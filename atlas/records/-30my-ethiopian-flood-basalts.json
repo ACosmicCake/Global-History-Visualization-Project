@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "-30my-ethiopian-flood-basalts",
+  "kind": "event",
+  "title": "Ethiopian flood basalts",
+  "summary": "Most of the Ethiopian flood basalts erupted about 30 million years ago, over a period of one million years or less, according to a 1997 Nature study that tied them to the arrival of the Ethiopian-Afar plume head at the Earth's surface. The same study links the eruptions to a shift to colder, drier global climate and an Antarctic ice-sheet advance. A CNR page agrees on around 30 Ma and places plateau uplift at the same time or soon after.",
+  "when": {
+    "start": {
+      "year": -30000000
+    },
+    "end": {
+      "year": -30000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "The bulk erupted over 1 Myr or less according to Hofmann et al. (1997). Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Myr ago",
+        "value": "erupted approximately 30 Myr ago, over a period of 1 Myr or less",
+        "source": "src-hofmann1997"
+      },
+      {
+        "calendar": "Ma",
+        "value": "emplaced at around 30 Ma",
+        "source": "src-cnr"
+      }
+    ],
+    "display": "c. 30 Ma"
+  },
+  "where": {
+    "lat": 10,
+    "lon": 38.166667,
+    "elevation_m": null,
+    "modern_name": "Ethiopian Highlands, Ethiopia (proxy pin; the basalts cover the plateau)",
+    "historical_name": "Ethiopian plateau on the African plate near the Afar plume, Oligocene; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wd-ethhigh"
+    ],
+    "paleo": {
+      "lat": 2.31,
+      "lon": 37.76,
+      "age_ma": 30,
+      "plate_model": "MERDITH2021 (via GPlates Web Service)",
+      "source": "src-gplates",
+      "note": "Highlands proxy at 30 Ma. MULLER2019 gives 5.11 N, 31.59 E and PALEOMAP 6.74 N, 34.52 E."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A large flood-basalt eruption linked in the sources to the Afar plume and to global climate change."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-25my-formation-of-the-east-african-rift",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hofmann1997",
+      "url": "https://ideas.repec.org/a/nat/nature/v389y1997i6653d10.1038_39853.html",
+      "title": "Timing of the Ethiopian flood basalt event and implications for plume birth and global change (Nature 389:838-841)",
+      "publisher": "Nature (abstract on RePEc, IDEAS)",
+      "author": null,
+      "date_published": "1997-10",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cnr",
+      "url": "https://ethiopianrift.cnr.it/geologic-evolution/",
+      "title": "Geologic evolution",
+      "publisher": "Institute of Geosciences and Earth Resources, National Research Council of Italy (CNR)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-ethhigh",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q319288.json",
+      "title": "Wikidata item Q319288 (Ethiopian Highlands), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=38.1667,10&time=30&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: a proxy at the Ethiopian Highlands centre. The id and sources agree on about 30 Ma; the end year equals the start with the 1 Myr duration in the note. Hofmann was read through an abstract aggregator, not Nature.",
+  "published_at": "2026-10-22T18:32:02.520Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

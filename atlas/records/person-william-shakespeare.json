@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-william-shakespeare",
+  "kind": "person",
+  "title": "William Shakespeare",
+  "summary": "William Shakespeare was baptised in Stratford-upon-Avon on 26 April 1564; his birth date is unrecorded and 23 April is tradition. He appears in London records in 1592, was part-owner of the Lord Chamberlain's Men (later the King's Men) and co-financed the Globe, opened 1599. Credited with 38 plays, he left London for Stratford after 1613 and died on 23 April 1616, aged 52.",
+  "when": {
+    "start": {
+      "year": 1564,
+      "iso": "1564-04-26"
+    },
+    "end": {
+      "year": 1616,
+      "iso": "1616-04-23"
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the recorded baptism date (26 April 1564); no birth record survives, and 23 April is the traditional birthday. End is the death date given by World History Encyclopedia."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian, parish register",
+        "value": "baptism recorded at Holy Trinity Church, Stratford-upon-Avon, on Wednesday 26 April 1564",
+        "source": "src-sbt-born"
+      },
+      {
+        "calendar": "CE",
+        "value": "baptized in Stratford on 26 April 1564; died on 23 April 1616, aged 52",
+        "source": "src-whe-shakespeare"
+      }
+    ],
+    "display": "bapt. 26 April 1564 – 23 April 1616"
+  },
+  "where": {
+    "lat": 52.19166254897186,
+    "lon": -1.7073374947746267,
+    "elevation_m": null,
+    "modern_name": "Stratford-upon-Avon, Warwickshire, England",
+    "historical_name": "Stratford-upon-Avon, Warwickshire, in the Kingdom of England",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 52.19166254897186,
+          "lon": -1.7073374947746267,
+          "year": 1564.32,
+          "date": "26 April 1564 (baptism)",
+          "label": "Stratford-upon-Avon: baptised at Holy Trinity Church.",
+          "source": "src-sbt-born",
+          "coordinate_source": "src-gn-stratford"
+        },
+        {
+          "lat": 51.5085287758629,
+          "lon": -0.125741958618164,
+          "year": 1592,
+          "date": "1592 (appears in London records)",
+          "label": "London: part-owner of the Lord Chamberlain's Men; co-financed the Globe (opened 1599).",
+          "source": "src-whe-shakespeare",
+          "coordinate_source": "src-gn-london"
+        },
+        {
+          "lat": 52.19166254897186,
+          "lon": -1.7073374947746267,
+          "year": 1613,
+          "date": "after 1613 (Two Noble Kinsmen)",
+          "label": "Stratford-upon-Avon: leaves London for retirement; dies 23 April 1616.",
+          "source": "src-whe-shakespeare",
+          "coordinate_source": "src-gn-stratford"
+        }
+      ]
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-gn-stratford",
+      "src-gn-london"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "art_music_literature"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "Playwright and poet credited with 38 plays, the best known writer in English."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-sbt-born",
+      "url": "https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/william-shakespeare/when-was-shakespeare-born/",
+      "title": "When was Shakespeare born?",
+      "publisher": "Shakespeare Birthplace Trust",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-shakespeare",
+      "url": "https://www.worldhistory.org/William_Shakespeare/",
+      "title": "William Shakespeare",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-stratford",
+      "url": "https://www.geonames.org/search.html?q=Stratford-upon-Avon&country=GB",
+      "title": "GeoNames: Stratford-upon-Avon",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gn-london",
+      "url": "https://www.geonames.org/search.html?q=London&country=GB",
+      "title": "GeoNames: London",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1564",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "Shakespeare is baptised at Holy Trinity Church in Stratford-upon-Avon on 26 April 1564.",
+        "source": "src-sbt-born",
+        "consequence": false
+      },
+      {
+        "span": "1592",
+        "action": "path.trace {}",
+        "caption": "By 1592 he is in London records and becomes part-owner of the Lord Chamberlain's Men; the Globe he co-finances opens in 1599.",
+        "source": "src-whe-shakespeare",
+        "consequence": false
+      },
+      {
+        "span": "1623",
+        "action": "numbers.counter { range: [0, 36] }",
+        "caption": "After he leaves London for Stratford and dies in 1616, the 1623 First Folio gathers 36 of his plays.",
+        "source": "src-whe-shakespeare",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "No opened page names his place of death or burial, so none is stated. The 1592 and 1613 waypoint dates are from World History Encyclopedia only; the move to London is not dated by it. London pin is a city centroid.",
+  "author": "historian-agent:o-s65",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T12:13:01.564Z"
+}

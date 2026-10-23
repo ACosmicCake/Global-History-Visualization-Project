@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1991-draining-of-the-mesopotamian-marshes",
+  "kind": "process",
+  "title": "Draining of the Mesopotamian marshes and displacement of the Maʿdān",
+  "summary": "After the failed 1991 uprising in southern Iraq, the government turned a limited drainage scheme into a systematic effort to dry the marshes at the Tigris–Euphrates confluence. Satellite images showed the wetlands had lost most of their area by 2000. The Maʿdān, or Marsh Arabs, about 250,000 in 1991, were killed, expelled or made refugees, with under 40,000 left in their homeland by 2003.",
+  "when": {
+    "start": {
+      "year": 1991
+    },
+    "end": {
+      "year": 2003
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 2,
+      "end_plus_years": 0,
+      "note": "Draining began in the late 1980s as a limited scheme and became systematic after 1991 (RFE/RL). The end year is the date HRW described the campaign as ongoing (January 2003); reflooding is placed only in \"the early 2000s\" by UNESCO."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "a deliberate policy by Baghdad since 1991",
+        "source": "src-rferl"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Starting shortly after the end of the Gulf war in 1991",
+        "source": "src-hrw2003"
+      }
+    ],
+    "display": "1991–c. 2003"
+  },
+  "where": {
+    "lat": 30.7716,
+    "lon": 47.0422,
+    "elevation_m": null,
+    "modern_name": "Mesopotamian Marshes (al-Ahwar), southern Iraq; pin at Hawr al-Hammar",
+    "historical_name": "Marshes (ahwar) of southern Iraq around the Tigris–Euphrates confluence, under Baʿathist Iraq",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 80,
+    "coordinate_sources": [
+      "src-geonames-hammar"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A state-driven ecological disaster that destroyed one of the world's largest wetlands and the home of an ancient community."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns state violence against the Maʿdān, including killings, arrests and forced displacement.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-rferl",
+      "url": "https://www.rferl.org/a/1096710.html",
+      "title": "Iraq: Marshlands, part 1 (RFE/RL, 15 June 2001)",
+      "publisher": "Radio Free Europe/Radio Liberty",
+      "author": "Charles Recknagel",
+      "date_published": "2001-06-15",
+      "accessed": "2026-10-21",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hrw2003",
+      "url": "https://www.hrw.org/legacy/backgrounder/mena/marsharabs1.htm",
+      "title": "The Iraqi Government Assault on the Marsh Arabs",
+      "publisher": "Human Rights Watch",
+      "author": null,
+      "date_published": "2003-01",
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa-svs",
+      "url": "https://svs.gsfc.nasa.gov/stories/Mesopotamia_20010815/index.html",
+      "title": "Landsat Witnesses the Destruction of Mesopotamian Ecosystem",
+      "publisher": "NASA Scientific Visualization Studio (UNEP report summary)",
+      "author": null,
+      "date_published": "2001-08-15",
+      "accessed": "2026-10-21",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-hammar",
+      "url": "https://www.geonames.org/search.html?q=Hawr+al+Hammar&country=IQ",
+      "title": "GeoNames search: Hawr al Hammar, Iraq",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end year and area figures: NASA says about 85 percent area lost and HRW about 90 percent, and UNEP attributes part of the loss to upstream dams. The pin is a single point for a region about 100 km across.",
+  "author": "historian-agent:o-s5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:43:28.863Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1991",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "After the failed 1991 uprising in southern Iraq, the government turned a limited drainage scheme into a systematic effort to dry the marshes at the Tigris–Euphrates confluence.",
+        "source": "src-rferl"
+      },
+      {
+        "span": "2003",
+        "action": "pulse { radius_km: 128 }",
+        "caption": "The Maʿdān, or Marsh Arabs, about 250,000 in 1991, were killed, expelled or made refugees, with under 40,000 left in their homeland by 2003.",
+        "source": "src-rferl",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

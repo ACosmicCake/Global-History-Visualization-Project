@@ -1,0 +1,148 @@
+{
+  "id": "1944-06-06-d-day-normandy-landings",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "D-Day: Normandy landings",
+  "summary": "On 6 June 1944 Allied forces landed in Normandy, France: American divisions at Utah and Omaha, British at Sword and Gold, Canadians at Juno. Nearly 160,000 troops landed that day, supported by over 7,000 naval vessels. The National WWII Museum counts over 10,300 Allied casualties and the White House fact sheet about 10,000. By the end of June over 850,000 troops had landed.",
+  "when": {
+    "start": {
+      "year": 1944,
+      "iso": "1944-06-06"
+    },
+    "end": {
+      "year": 1944,
+      "iso": "1944-06-06"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day stated by both opened sources; the White House fact sheet says the assault began shortly after midnight."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The \"departure day\" or D-Day for the operation was set for June 6",
+        "source": "src-nww2-dday"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "began shortly after midnight on June 6, 1944",
+        "source": "src-wh-dday"
+      }
+    ],
+    "display": "6 June 1944"
+  },
+  "where": {
+    "lat": 49.370552,
+    "lon": -0.8789392,
+    "elevation_m": null,
+    "modern_name": "Normandy invasion beaches (Utah to Sword), Calvados and Manche, Normandy, France; pin at Omaha Beach",
+    "historical_name": "Nazi-controlled Normandy, France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-osm-omaha"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The largest amphibious invasion in history, opening the Allied campaign in northwest Europe."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a war event with large numbers of military deaths and casualties.",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nww2-dday",
+      "url": "https://www.nationalww2museum.org/students-teachers/student-resources/research-starters/research-starters-d-day",
+      "title": "Research Starters: D-Day - The Allied Invasion of Normandy",
+      "publisher": "The National WWII Museum",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wh-dday",
+      "url": "https://obamawhitehouse.archives.gov/the-press-office/2014/06/06/fact-sheet-normandy-landings",
+      "title": "FACT SHEET: Normandy Landings",
+      "publisher": "The White House (Obama administration archive, US National Archives)",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-omaha",
+      "url": "https://nominatim.openstreetmap.org/search?q=Omaha+Beach+Normandy&format=json&limit=1",
+      "title": "Omaha Beach (Nominatim search result)",
+      "publisher": "OpenStreetMap (Nominatim gazetteer)",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Omaha Beach, the middle of the five beaches, with 40 km uncertainty to cover Utah to Sword. Troop and casualty numbers are estimates; the museum quotes Ambrose that no exact figures are possible.",
+  "author": "historian-agent:o-s50",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:40:18.992Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1944-06-06",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "On 6 June 1944 Allied forces landed in Normandy, France: American divisions at Utah and Omaha, British at Sword and Gold, Canadians at Juno.",
+        "source": "src-nww2-dday"
+      },
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 64 }",
+        "caption": "By the end of June over 850,000 troops had landed.",
+        "source": "src-nww2-dday",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

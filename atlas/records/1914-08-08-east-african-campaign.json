@@ -1,0 +1,123 @@
+{
+  "id": "1914-08-08-east-african-campaign",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "East African campaign (First World War)",
+  "summary": "After the outbreak of war in 1914, with HMS Astraea bombarding Dar es Salaam on 8 August, British Empire forces fought a four-year campaign in German East Africa (now Tanzania, Burundi and Rwanda) against a German-led army that never numbered more than about 14,000, mostly African askaris. Its commander, Lettow-Vorbeck, surrendered on 25 November 1918. British Empire forces lost over 10,000 men; one estimate puts carrier and camp follower deaths at around 100,000.",
+  "when": {
+    "start": {
+      "year": 1914
+    },
+    "end": {
+      "year": 1918
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 8 August 1914 bombardment of Dar es Salaam (Conway's, via naval-history.net); the National Army Museum dates the campaign to the outbreak of war in 1914. End is Lettow-Vorbeck's surrender on 25 November 1918."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (naval-history.net, quoting Conway’s All the World’s Fighting Ships 1906-21)",
+        "value": "Bombarded Dar-es-Salaam on 8 August 1914",
+        "source": "src-nh"
+      },
+      {
+        "calendar": "CE (National Army Museum)",
+        "value": "On 25 November 1918, he surrendered his unbeaten force",
+        "source": "src-nam"
+      }
+    ],
+    "display": "8 August 1914 – 25 November 1918"
+  },
+  "where": {
+    "lat": -6.823488899188273,
+    "lon": 39.269514083862305,
+    "elevation_m": null,
+    "modern_name": "Dar es Salaam, Tanzania (site of the 8 August 1914 bombardment; the campaign ranged across German East Africa and neighbouring territory)",
+    "historical_name": "Dar es Salaam, German East Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames-dar"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "A four-year guerrilla campaign that tied down about ten times as many Allied troops and cost many African lives (National Army Museum)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam",
+      "url": "https://www.nam.ac.uk/explore/east-africa-campaign",
+      "title": "East Africa campaign",
+      "publisher": "National Army Museum, London",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "numbers",
+        "when"
+      ]
+    },
+    {
+      "id": "src-nh",
+      "url": "https://www.naval-history.net/OWShips-WW1-05-HMS_Astraea.htm",
+      "title": "HMS Astraea, 2nd class cruiser (British warships of World War 1)",
+      "publisher": "naval-history.net",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames-dar",
+      "url": "https://www.geonames.org/search.html?q=Dar+es+Salaam",
+      "title": "GeoNames search results",
+      "publisher": "GeoNames",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start date and the pin: only naval-history.net (quoting Conway's) gives 8 August 1914, and it dates one ship's bombardment, not the start of the campaign; the museum says only 'outbreak of war in 1914'. Dar es Salaam is the site of that bombardment, not the campaign's centre (500 km uncertainty). The 100,000 figure is one estimate (NAM) and covers both sides' carriers and camp followers.",
+  "author": "historian-agent:o-s48",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:41:24.755Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "id": "1291-fall-of-acre",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Fall of Acre to the Mamluks",
+  "summary": "Mamluk forces under Sultan al-Ashraf Khalil broke into Acre on 18 May 1291 after a siege that began in April. A massacre followed, and survivors were killed, evacuated or sold into slavery; the Templars held the south-west quarter about ten more days and the captured Templars were executed. Sidon, Tyre, Beirut, Tortosa and Athlit fell by August; the military orders moved to Cyprus.",
+  "when": {
+    "start": {
+      "year": 1291
+    },
+    "end": {
+      "year": 1291
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day-level date from World History Encyclopedia; EBSCO gives the year only. The siege start is given as 6 April 1291 by World History Encyclopedia."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "18 May 1291 CE",
+        "source": "src-whe-acre"
+      },
+      {
+        "calendar": "Gregorian (as given)",
+        "value": "captured by Mamlūk forces in 1291",
+        "source": "src-ebsco-ainjalut-acre"
+      }
+    ],
+    "display": "18 May 1291 (siege from April 1291)"
+  },
+  "where": {
+    "lat": 32.926111,
+    "lon": 35.083889,
+    "elevation_m": null,
+    "modern_name": "Acre (Akko), Israel",
+    "historical_name": "Acre, the main Christian-held port in the Levant, in the Kingdom of Jerusalem under King Henry of Cyprus-Jerusalem",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-acre"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The loss of Acre ended the main crusader foothold on the Levant coast and shifted the military orders to Cyprus."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a massacre of civilians and the enslavement of survivors following the capture of a city.",
+  "related": [
+    {
+      "id": "1250-mamluk-seizure-of-power-in-egypt",
+      "type": "related"
+    },
+    {
+      "id": "1260-battle-of-ain-jalut",
+      "type": "caused_by",
+      "because": "EBSCO says that after Ain Jalut the surrounded Crusader strongholds were captured one by one by the Mamluks between 1263 and 1291, ending with Acre."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-acre",
+      "url": "https://www.worldhistory.org/article/1267/the-siege-of-acre-1291-ce/",
+      "title": "The Siege of Acre, 1291 CE",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-ainjalut-acre",
+      "url": "https://www.ebsco.com/research-starters/history/battle-ain-jalut/",
+      "title": "Battle of Ain Jalut",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-acre",
+      "url": "https://www.wikidata.org/wiki/Q126084",
+      "title": "Wikidata item Q126084 (Acre), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The day-level date rests on one opened page (World History Encyclopedia); EBSCO confirms only 1291. Neither page gives death or captive figures, so none is stated. The summary says only April for the siege start because other web accounts say 5 April.",
+  "author": "historian-agent:o-s114",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:36:48.088Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1291",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Mamluk forces under Sultan al-Ashraf Khalil broke into Acre on 18 May 1291 after a siege that began in April.",
+        "source": "src-whe-acre"
+      },
+      {
+        "span": "1291",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "A massacre followed, and survivors were killed, evacuated or sold into slavery; the Templars held the south-west quarter about ten more days and the captured Templars were executed.",
+        "source": "src-whe-acre",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

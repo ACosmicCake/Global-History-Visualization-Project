@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "1980-alvarez-impact-hypothesis",
+  "kind": "event",
+  "title": "Alvarez iridium anomaly and impact hypothesis",
+  "summary": "In 1980, a team led by Luis and Walter Alvarez published the discovery of an enormous iridium anomaly in the Cretaceous–Tertiary boundary clay at Gubbio, Italy, and Stevns Klint, Denmark. Because iridium is depleted in Earth's crust but abundant in asteroids, they proposed that a ten-kilometer asteroid struck Earth 65 million years ago, launching dust that blocked sunlight and caused the dinosaur mass extinction.",
+  "when": {
+    "start": {
+      "year": 1980
+    },
+    "end": {
+      "year": 1980
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Seminal paper published in Science on 6 June 1980."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "seminal 1980 paper in Science magazine",
+        "source": "src-lbl"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Luis and Walter Alvarez in 1980",
+        "source": "src-calacademy"
+      }
+    ],
+    "display": "1980"
+  },
+  "where": {
+    "lat": 43.349955,
+    "lon": 12.573094,
+    "elevation_m": 522,
+    "modern_name": "Gubbio, Province of Perugia, Umbria, Italy (Bottaccione Gorge outcrop where Walter Alvarez sampled the K-T boundary clay with the anomalous iridium spike)",
+    "historical_name": "Gubbio, Italian Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-gubbio"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The Alvarez hypothesis revolutionized planetary science and paleontology by establishing asteroid impacts as drivers of biological mass extinctions."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related",
+      "because": "The Alvarez hypothesis predicted the existence of the giant impact crater that was later identified at Chicxulub."
+    },
+    {
+      "id": "1991-identification-of-chicxulub-crater",
+      "type": "caused",
+      "because": "The search for the impact crater predicted by the Alvarez team led to the identification of the buried Chicxulub crater in 1991."
+    },
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-lbl",
+      "url": "https://www2.lbl.gov/Science-Articles/Archive/dinosaur-extinction.html",
+      "title": "The Day the Mesozoic Died: The Asteroid and the Dinosaurs",
+      "publisher": "Lawrence Berkeley National Laboratory",
+      "author": "Jeff Miller",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-calacademy",
+      "url": "https://www.calacademy.org/explore-science/mind-the-gap",
+      "title": "Mind the Gap",
+      "publisher": "California Academy of Sciences",
+      "author": "California Academy of Sciences",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-gubbio",
+      "url": "https://www.geonames.org/search.html?q=Gubbio&country=IT",
+      "title": "GeoNames search results: Gubbio, Italy",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinates pin the Bottaccione Gorge section near Gubbio in Umbria where Walter Alvarez collected the original pelagic limestone samples and thin boundary clay layer that Frank Asaro and Helen Michel analyzed for iridium at Berkeley.",
+  "published_at": "2026-10-22T07:06:46.964Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1980",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1980, a team led by Luis and Walter Alvarez published the discovery of an enormous iridium anomaly in the Cretaceous–Tertiary boundary clay at Gubbio, Italy, and Stevns…",
+        "source": "src-lbl"
+      },
+      {
+        "span": "1980",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Because iridium is depleted in Earth's crust but abundant in asteroids, they proposed that a ten-kilometer asteroid struck Earth 65 million years ago, launching dust that blocked sunlight…",
+        "source": "src-lbl",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

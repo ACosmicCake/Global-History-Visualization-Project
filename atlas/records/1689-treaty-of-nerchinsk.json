@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1689-treaty-of-nerchinsk",
+  "kind": "event",
+  "title": "Treaty of Nerchinsk",
+  "summary": "Russia and Qing China signed a peace treaty at Nerchinsk in Transbaikalia in 1689, ending years of conflict over the Amur region. The border ran along the Argun and Gorbitsa rivers and the Stanovoi Range, Russia gave up the Amur valley and Albazin, and regular trade between the two states was opened.",
+  "when": {
+    "start": {
+      "year": 1689
+    },
+    "end": {
+      "year": 1689
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO gives 29 August 1689; Encyclopedia.com says signed in September 1689. Calendar not stated by either source."
+    },
+    "as_recorded": [
+      {
+        "calendar": "as recorded",
+        "value": "August 29, 1689",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "as recorded",
+        "value": "September 1689",
+        "source": "src-encyc"
+      }
+    ],
+    "display": "August–September 1689"
+  },
+  "where": {
+    "lat": 51.9833,
+    "lon": 116.583,
+    "elevation_m": null,
+    "modern_name": "Nerchinsk, Zabaykalsky Krai, Russia",
+    "historical_name": "Nerchinsk, Tsardom of Russia (Siberian frontier)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-dbcity"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "First Russian-Chinese border treaty; sources say it governed relations until 1858."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/treaty-nerchinsk-draws-russian-chinese-border/",
+      "title": "Treaty of Nerchinsk Draws Russian-Chinese Border",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/nerchinsk-treaty",
+      "title": "Nerchinsk, Treaty of",
+      "publisher": "Encyclopedia.com (Encyclopedia of Russian History, Gale)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-harvard",
+      "url": "https://russiaglobal.omeka.fas.harvard.edu/items/show/18",
+      "title": "The Treaty of Nerchinsk",
+      "publisher": "Harvard University, Russia in Global Perspective",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dbcity",
+      "url": "https://en.db-city.com/Russian-Federation--Zabaykalsky--Nerchinsky--Nerchinsk",
+      "title": "Nerchinsk, Nerchinsky, Zabaykalsky, Russia",
+      "publisher": "db-city.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Day/calendar differs between sources (29 Aug vs September 1689); pin is the town of Nerchinsk as a proxy for the negotiation site; Latin text not examined.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:01.032Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1689",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Russia and Qing China signed a peace treaty at Nerchinsk in Transbaikalia in 1689, ending years of conflict over the Amur region.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1689",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The border ran along the Argun and Gorbitsa rivers and the Stanovoi Range, Russia gave up the Amur valley and Albazin, and regular trade between the two states…",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

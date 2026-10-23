@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-harriet-tubman",
+  "kind": "person",
+  "title": "Harriet Tubman",
+  "summary": "Born into slavery on Maryland's Eastern Shore, Tubman escaped and made about 13 trips back into Maryland to bring out family and friends. In June 1863 she joined a Union raid on plantations along the Combahee River that freed more than 700 people. She bought a house in Auburn, New York, in 1859 and died there in 1913.",
+  "when": {
+    "start": {
+      "year": 1822
+    },
+    "end": {
+      "year": 1913
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth year differs by source: the NPS gives March 1822; the American Battlefield Trust gives 1820 or 1821."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "March, 1822",
+        "source": "src-nps-tubman"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1820 or 1821",
+        "source": "src-abt-tubman"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1859",
+        "source": "src-nps-tubman"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "June 1, 1863",
+        "source": "src-nps-tubman"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 10, 1913",
+        "source": "src-nps-tubman"
+      }
+    ],
+    "display": "c. 1822–1913"
+  },
+  "where": {
+    "lat": 42.911525,
+    "lon": -76.5637234,
+    "elevation_m": null,
+    "modern_name": "Harriet Tubman Home and Visitor Center, Auburn, Cayuga County, New York (pinned to her Auburn home, where she lived from 1859 and died; born in Dorchester County, Maryland)",
+    "historical_name": "Auburn, New York, home bought from William Seward in 1859",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-osm-tubman"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "people",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Escaped slavery, returned to Maryland to lead others out, and took part in the Combahee River raid; one of the best-known figures of the abolition era."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1865-us-thirteenth-amendment",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-tubman",
+      "url": "https://www.nps.gov/people/harriet-tubman.htm",
+      "title": "Harriet Tubman",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-abt-tubman",
+      "url": "https://www.battlefields.org/learn/biographies/harriet-tubman",
+      "title": "Harriet Tubman",
+      "publisher": "American Battlefield Trust",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-tubman",
+      "url": "https://nominatim.openstreetmap.org/search?q=Harriet+Tubman+Home+Auburn+New+York&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Harriet Tubman Home, Auburn",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth year is contested between sources (1820-1822); escape year is not stated on the NPS page, so it is not given. The pin is Auburn, not the Maryland routes or South Carolina.",
+  "author": "historian-agent:o-s68",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:47:01.019Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

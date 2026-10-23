@@ -1,0 +1,182 @@
+{
+  "id": "1980-mariel-boatlift",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Mariel Boatlift",
+  "summary": "After Fidel Castro allowed Cubans who wished to leave to depart from Mariel Harbor, about 125,000 people crossed to southern Florida by boat between April and October 1980. The exodus ended by agreement between the United States and Cuba and reshaped Miami's Cuban community.",
+  "when": {
+    "start": {
+      "year": 1980
+    },
+    "end": {
+      "year": 1980
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources date Castro's opening announcement differently (20 April per National Archives; 1 May speech per HISTORY); first boat reached Key West 21 April."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Between April and October of 1980",
+        "source": "src-fm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 21, 1980",
+        "source": "src-nara"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October 10, 1980",
+        "source": "src-fm"
+      }
+    ],
+    "display": "April–October 1980"
+  },
+  "where": {
+    "lat": 22.9939,
+    "lon": -82.7539,
+    "elevation_m": null,
+    "modern_name": "Mariel, Artemisa Province, Cuba (departure port; town centre used as proxy for Mariel Harbor)",
+    "historical_name": "Mariel Harbor, Republic of Cuba",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-dbcity",
+      "src-mapcarta"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "northern_america"
+  ],
+  "domains": [
+    "trade_exploration",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Largest single migration of Cubans to the United States, with lasting effects on Florida and US refugee policy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-fm",
+      "url": "https://www.floridamemory.com/items/show/332816",
+      "title": "The Mariel Boatlift of 1980",
+      "publisher": "Florida Memory, State Archives of Florida (Florida Department of State)",
+      "author": null,
+      "date_published": "2017-10-10",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nara",
+      "url": "https://text-message.blogs.archives.gov/2021/08/03/the-causes-and-effects-of-the-mariel-boatlift/",
+      "title": "Castro, Cuba, and a Fleet of Fishing Boats: The Causes and Effects of the Mariel Boatlift",
+      "publisher": "U.S. National Archives (The Text Message)",
+      "author": null,
+      "date_published": "2021-08-03",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-hist",
+      "url": "https://www.history.com/articles/mariel-boatlift-castro-carter-cold-war",
+      "title": "The Mariel Boatlift: How Cold War Politics Drove Thousands of Cubans to Florida in 1980",
+      "publisher": "A&E Television Networks (HISTORY)",
+      "author": "Karen Juanita Carrillo",
+      "date_published": "2020-09-28",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dbcity",
+      "url": "https://en.db-city.com/Cuba--Artemisa--Mariel",
+      "title": "Mariel, Artemisa, Cuba",
+      "publisher": "db-city",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-mapcarta",
+      "url": "https://mapcarta.com/19440872",
+      "title": "Mariel",
+      "publisher": "Mapcarta (OpenStreetMap data)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Mariel town as a proxy for the harbor; coordinates from non-authoritative aggregators. Sources differ on start (20 April vs 1 May announcement; first arrivals 21 April).",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:10:13.115Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1980",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "After Fidel Castro allowed Cubans who wished to leave to depart from Mariel Harbor, about 125,000 people crossed to southern Florida by boat between April and October 1980.",
+        "source": "src-fm"
+      },
+      {
+        "span": "1980",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The exodus ended by agreement between the United States and Cuba and reshaped Miami's Cuban community.",
+        "source": "src-fm",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

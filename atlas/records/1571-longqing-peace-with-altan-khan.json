@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "1571-longqing-peace-with-altan-khan",
+  "kind": "event",
+  "title": "Longqing peace with Altan Khan, 1571",
+  "summary": "In 1571 the Ming court under the Longqing emperor made peace with Altan Khan of the Tumed Mongols after decades of border war. Altan received the title Shunyi wang (prince of obedience and righteousness), border horse markets reopened, and annual tribute horses were exchanged for Chinese goods. The settlement followed the defection of his grandson and brought a lasting if imperfect calm.",
+  "when": {
+    "start": {
+      "year": 1571
+    },
+    "end": {
+      "year": 1571
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The settlement was reached in 1571 between Altan, Mongol khan (r. 1543-1582), and the Longqing emperor (r. 1567-1572)",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "regular horse markets were established in 1551 ... reinstated in 1571",
+        "source": "src-tas"
+      }
+    ],
+    "display": "1571"
+  },
+  "where": {
+    "lat": 40.093611,
+    "lon": 113.291389,
+    "elevation_m": null,
+    "modern_name": "Datong, Shanxi, China (garrison town whose governor-general opened the talks; markets lay along the northern frontier)",
+    "historical_name": "Datong, Ming frontier garrison on the Great Wall defence line",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-wd-datong"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Ended roughly two decades of large-scale Mongol raiding on the Ming northern frontier and set up regular horse trade that lasted to the end of the dynasty."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "person-altan-khan",
+      "type": "related"
+    },
+    {
+      "id": "1550-altan-khan-raid-on-beijing",
+      "type": "caused_by",
+      "because": "Decades of Altan Khan raids and failed trade requests, including the 1550 raid on Beijing, led to the later settlement."
+    },
+    {
+      "id": "1368-ming-great-wall",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1571",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "After Altan Khan's grandson defected, Datong's governor-general opened talks; Altan received the Shunyi wang title and agreed to return some defectors.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1571",
+        "action": "region.fill { radius_km: 250 }",
+        "caption": "Horse markets opened near Datong, Xuanfu and other frontier garrisons, and hostility between Ming and Mongols subsided, though skirmishes persisted.",
+        "source": "src-tas",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/mongols-raid-beijing/",
+      "title": "Mongols Raid Beijing (Research Starters)",
+      "publisher": "EBSCO Information Services",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-tas",
+      "url": "http://www.shehui.pku.edu.cn/upload/editor/file/20230508/20230508133730_9073.pdf",
+      "title": "Clients, double clients or brokers? The changing agency of intermediary tribal groups in the Ming empire (1368-1644)",
+      "publisher": "Theory and Society (Springer)",
+      "author": "Liping Wang and Geng Tian",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-datong",
+      "url": "https://www.wikidata.org/wiki/Q72877",
+      "title": "Wikidata item Q72877 (Datong), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The year 1571 is firm on both sources. The day-level dates in search results (title on 21 April, investiture 13 June) were not on an opened page and are not used. The pin is Datong as a stand-in for the frontier market towns, which spread across several garrisons (hence 250 km). Tribute figure of 500 horses a year is from EBSCO only.",
+  "published_at": "2026-10-22T04:45:19.214Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

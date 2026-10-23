@@ -1,0 +1,200 @@
+{
+  "id": "place-aswan-high-dam",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Aswan High Dam",
+  "aliases": [],
+  "summary": "The Aswan High Dam crosses the Nile in Egypt, about 7 km south of the city of Aswan. EBSCO gives it as 3,829 m long, 111 m high and 40 m wide at the crest, built between 1960 and 1970, and NASA calls it one of the largest earthen embankment dams in the world at 3,830 m long.",
+  "when": {
+    "start": {
+      "year": 1960
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start and completion (1960 to 1970) are stated by both EBSCO and NASA. End is the present: the dam operates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (EBSCO Research Starters)",
+        "value": "between 1960 and 1970",
+        "source": "src-ebsco-aswan"
+      },
+      {
+        "calendar": "CE (NASA Earth Observatory)",
+        "value": "started in 1960 and completed in 1970",
+        "source": "src-nasa-aswan"
+      }
+    ],
+    "display": "Built 1960–1970"
+  },
+  "where": {
+    "lat": 23.9704099,
+    "lon": 32.8748956,
+    "elevation_m": null,
+    "modern_name": "Aswan High Dam, Aswan Governorate, Egypt",
+    "historical_name": "Aswan High Dam (the High Dam), on the Nile, Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-aswan"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "NASA lists it among the largest earthen embankment dams in the world."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-aswan",
+      "url": "https://www.ebsco.com/research-starters/science/aswan-high-dam/",
+      "title": "Aswan High Dam",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO Research Starters",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-nasa-aswan",
+      "url": "https://science.nasa.gov/earth/earth-observatory/aswan-high-dam-85992/",
+      "title": "Aswan High Dam",
+      "publisher": "NASA Earth Observatory",
+      "author": "NASA Earth Observatory",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-aswan",
+      "url": "https://nominatim.openstreetmap.org/search?q=Aswan+High+Dam&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Al-Sad Al-Ali, way 5047035 (23.9704099, 32.8748956)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "A straight embankment wall across the Nile, 3,829 m long and 40 m wide at the crest (EBSCO); NASA says nearly 1,000 m wide. Drawn by the viewer as a path.",
+      "source": "src-ebsco-aswan",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-ebsco-aswan",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 111,
+          "unit": "m",
+          "source": "src-ebsco-aswan",
+          "note": "\"111 meters (364 feet) high\""
+        },
+        {
+          "part": "length (crest)",
+          "value": 3829,
+          "unit": "m",
+          "source": "src-ebsco-aswan",
+          "note": "\"It measures 3,829 meters (12,562 feet) long\"; NASA says 3,830 m"
+        },
+        {
+          "part": "width (crest)",
+          "value": 40,
+          "unit": "m",
+          "source": "src-ebsco-aswan",
+          "note": "\"40 meters (131 feet) wide at the crest\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "dam drawn as a path across the Nile at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural wall 3,829 m long, 111 m high and 40 m wide at the crest"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1960,
+        "end_year": 1970,
+        "state": "construction",
+        "description": "Built between 1960 and 1970 (EBSCO); started in 1960 and completed in 1970 (NASA).",
+        "source": "src-ebsco-aswan"
+      },
+      {
+        "start_year": 1970,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed in 1970 (EBSCO) and in service since.",
+        "source": "src-ebsco-aswan"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape wall with model.linear true as instructed. Egypt's State Information Service page (sis.gov.eg) gave a certificate error, so it is not used; the figures here are from EBSCO (reference) and NASA (government, no height). EBSCO says 'long' without saying it is the crest; I labelled it length (crest) because the page gives crest width right after. NASA says 3,830 m.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:37.338Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

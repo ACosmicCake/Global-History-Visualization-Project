@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1253-william-of-rubruck-mission",
+  "kind": "event",
+  "title": "William of Rubruck's mission to the Mongols",
+  "summary": "In 1253 the Flemish Franciscan William of Rubruck, sent by King Louis IX of France, travelled from Constantinople across the Black Sea and the steppe to the Mongol court. He reached the court of Mongke Khan on 27 December 1253, was near Karakorum by April 1254, and returned in 1255; his report to Louis survives.",
+  "when": {
+    "start": {
+      "year": 1253
+    },
+    "end": {
+      "year": 1255
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "UW page cites the journey as 1253-55; he reached the khan's camp on 27 December 1253 and was near Karakorum on Palm Sunday, 5 April 1254. The Sorbonne article says he reached the khan in late 1253 and returned in 1255."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Latin text, Roman calendar and feast days",
+        "value": "on the Nones of May (7th May)",
+        "source": "src-uw-rubruck"
+      },
+      {
+        "calendar": "CE years",
+        "value": "1253-55",
+        "source": "src-uw-rubruck"
+      },
+      {
+        "calendar": "CE years",
+        "value": "Upon his return in 1255",
+        "source": "src-sorbonne"
+      }
+    ],
+    "display": "1253–1255"
+  },
+  "where": {
+    "lat": 47.19753,
+    "lon": 102.82379,
+    "elevation_m": null,
+    "modern_name": "Karakorum (near Kharkhorin), Mongolia",
+    "historical_name": "Karakorum, capital of the Mongol Empire",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 41.01,
+          "lon": 28.960277777778,
+          "year": 1253,
+          "date": "1253",
+          "label": "Constantinople: the party sets out in 1253 and crosses the Black Sea.",
+          "source": "src-sorbonne",
+          "coordinate_source": "src-wd-ist"
+        },
+        {
+          "lat": 47.19753,
+          "lon": 102.82379,
+          "year": 1254,
+          "date": "5 April 1254",
+          "label": "Karakorum: the text says they were near Karakorum on Palm Sunday (5 April 1254), after reaching the khan's court on 27 December 1253.",
+          "source": "src-uw-rubruck",
+          "coordinate_source": "src-wd-kara"
+        }
+      ]
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-kara",
+      "src-wd-ist"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "eastern_asia",
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "First-hand European report on the Mongol heartland, written for Louis IX."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-uw-rubruck",
+      "url": "https://depts.washington.edu/silkroad/texts/rubruck.html",
+      "title": "William of Rubruck's Account of the Mongols",
+      "publisher": "University of Washington (Silk Road Seattle)",
+      "author": "Daniel C. Waugh (introduction and notes); W. W. Rockhill (translation)",
+      "date_published": "2002",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-sorbonne",
+      "url": "https://www.ccfs-sorbonne.fr/en/william-of-rubruck-the-french-monk-who-reached-mongolia-before-marco-polo/",
+      "title": "William of Rubruck before Marco Polo",
+      "publisher": "CCFS Sorbonne",
+      "author": "n.d.",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-ist",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q406.json",
+      "title": "Wikidata entry for Istanbul (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-kara",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q62677.json",
+      "title": "Wikidata entry for Karakorum (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1253",
+        "action": "path.trace {}",
+        "caption": "Louis IX sends Rubruck in 1253; he leaves Constantinople, crosses the Black Sea and rides east across the steppe.",
+        "source": "src-sorbonne",
+        "consequence": false
+      },
+      {
+        "span": "27 December 1253",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Rubruck reaches Mongke's court on 27 December and is near Karakorum by Palm Sunday 1254.",
+        "source": "src-uw-rubruck",
+        "consequence": false
+      },
+      {
+        "span": "1255",
+        "action": "region.fill { radius_km: 200 }",
+        "caption": "Back in 1255 he cannot report to Louis in person, so he writes a long letter, the Itinerarium.",
+        "source": "src-sorbonne",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: the UW page is a 1900 translation with modern notes, and I read only about 200,000 of its 287,000 characters, so the departure from Karakorum and the return route were not read. Sartaq and Batu are not waypoints. Dates in the translation use feast days; years are my reading of the page text. The Sorbonne publisher class is a judgment.",
+  "author": "historian-agent:o-s71",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:24:47.378Z"
+}

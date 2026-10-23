@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1992-mabo-decision",
+  "kind": "event",
+  "title": "Mabo v Queensland (No 2) decision",
+  "summary": "On 3 June 1992 the High Court of Australia decided Mabo v Queensland (No 2), a case begun in 1982 by Meriam people of Mer (Murray Island) in the Torres Strait, led by Eddie Mabo. By a six-to-one majority it overturned the doctrine of terra nullius, recognised the Meriam people's native title and applied the principles across Australia, paving the way for the Native Title Act 1993.",
+  "when": {
+    "start": {
+      "year": 1992,
+      "iso": "1992-06-03"
+    },
+    "end": {
+      "year": 1992,
+      "iso": "1992-06-03"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Decision date. The case began on 20 May 1982 (Queensland State Archives), a ten-year proceeding."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "3 June 1992",
+        "source": "src-moadoph"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "overturned in the High Court of Australia on 3 June 1992",
+        "source": "src-qsa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Decision date: 3 June 1992",
+        "source": "src-anu"
+      }
+    ],
+    "display": "3 June 1992"
+  },
+  "where": {
+    "lat": -9.9172,
+    "lon": 144.0516,
+    "elevation_m": null,
+    "modern_name": "Mer (Murray Island), Torres Strait, Queensland, Australia (the land at issue; judgment delivered by the High Court of Australia)",
+    "historical_name": "Murray Island, Torres Strait, Queensland, Commonwealth of Australia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-mer"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "The High Court rejected terra nullius and recognised native title, a basis for later Australian native title law."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1788-first-fleet-arrival-at-sydney",
+      "type": "related"
+    },
+    {
+      "id": "-65ka-peopling-of-sahul",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-moadoph",
+      "url": "https://explore.moadoph.gov.au/people/edward-koiki-mabo.html",
+      "title": "Edward Koiki Mabo",
+      "publisher": "Museum of Australian Democracy at Old Parliament House",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-qsa",
+      "url": "https://blogs.archives.qld.gov.au/2021/05/28/mabo-vs-qld/",
+      "title": "Mabo vs QLD",
+      "publisher": "Queensland State Archives",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-anu",
+      "url": "https://cass.anu.edu.au/news/1992-mabo-v-queensland",
+      "title": "1992 - Mabo v. Queensland",
+      "publisher": "ANU College of Arts & Social Sciences",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-mer",
+      "url": "https://www.wikidata.org/wiki/Q82593833",
+      "title": "Wikidata: Mer Island",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is on Mer, the land at issue; the judgment itself was delivered by the High Court of Australia (location not pinned). Eddie Mabo is described by the Museum of Australian Democracy as having led the legal action for the Meriam people. The 1993 Act is named by the MoAD and ANU pages.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1982-05-20",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "Eddie Mabo and four other Meriam plaintiffs begin legal proceedings against Queensland and the Commonwealth over their ancestral land.",
+        "source": "src-qsa",
+        "consequence": false
+      },
+      {
+        "span": "1992-06-03",
+        "action": "region.fill { radius_km: 30 }",
+        "caption": "The High Court rules that terra nullius should not have been applied; the Meriam people hold native title to their land.",
+        "source": "src-anu",
+        "consequence": false
+      },
+      {
+        "span": "1993",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The Native Title Act 1993 follows the decision, letting First Nations communities claim native title over traditional homelands.",
+        "source": "src-anu",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s59",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:39:18.792Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

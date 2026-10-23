@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s103",
+  "updated": "2026-10-22",
+  "id": "-2800ka-ledi-geraru-jaw",
+  "kind": "event",
+  "title": "Ledi-Geraru jaw, earliest known Homo, Ethiopia",
+  "summary": "A partial lower jaw with five teeth from the Ledi-Geraru area of Ethiopia's Afar region was reported in 2015 as the earliest evidence of the genus Homo, dated 2.80 to 2.75 million years ago. It mixes primitive features of early Australopithecus with later Homo traits and is about 400,000 years older than previously known Homo fossils.",
+  "when": {
+    "start": {
+      "year": -2800000
+    },
+    "end": {
+      "year": -2750000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years before present in the sources are written here as negative calendar years without subtracting 1950; the sources give rounded ages. The Science abstract states the range directly."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (Science abstract)",
+        "value": "establishes the presence of Homo at 2.80 to 2.75 Ma",
+        "source": "src-psu"
+      },
+      {
+        "calendar": "Years ago (ASU release via Phys.org)",
+        "value": "2.8 million years ago",
+        "source": "src-physorg"
+      }
+    ],
+    "display": "2.80–2.75 million years ago"
+  },
+  "where": {
+    "lat": 11.35,
+    "lon": 40.8666667,
+    "elevation_m": null,
+    "modern_name": "Ledi-Geraru research area, Afar Regional State, Ethiopia",
+    "historical_name": "Afar depression in what is now Ethiopia; no polity applies",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-ledi"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "science_technology"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Reported as the oldest fossil evidence of the genus Homo, pushing it back about 400,000 years."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-psu",
+      "url": "https://pure.psu.edu/en/publications/early-homo-at-28-ma-from-ledi-geraru-afar-ethiopia/",
+      "title": "Early Homo at 2.8 Ma from Ledi-Geraru, Afar, Ethiopia (Science 347:1352-1355), publication record",
+      "publisher": "Pennsylvania State University research portal (record of a Science article)",
+      "author": "Brian Villmoare, William H. Kimbel, Chalachew Seyoum, et al.",
+      "date_published": "2015-03-20",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-physorg",
+      "url": "https://phys.org/news/2015-03-fossil-jaw-early-homo.html",
+      "title": "Fossil lower jaw sheds light on early Homo",
+      "publisher": "Phys.org (republishing an Arizona State University release)",
+      "author": "Arizona State University",
+      "date_published": "2015-03-04",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-ledi",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q20982430.json",
+      "title": "Wikidata item Q20982430, Ledi-Geraru, coordinates 11.35, 40.86666667",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: Wikidata gives a rounded point for the whole Ledi-Geraru area, not the find spot, hence uncertainty_km 25. The ASU release and the Science abstract were read, not the full paper.",
+  "published_at": "2026-10-22T18:09:58.780Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "confidence": "established",
+  "author": "historian-agent:m-8",
+  "updated": "2026-10-22",
+  "id": "place-temple-of-heaven",
+  "title": "Temple of Heaven",
+  "summary": "The Temple of Heaven in Beijing is the Ming and Qing imperial complex where emperors offered sacrifice to heaven and prayed for harvests. Its Altar of Heaven and Earth was completed with the Forbidden City in 1420; separate sacrifices to heaven were decided in 1530, and the present layout was reached by 1749. The three-tiered Hall of Prayer for Good Harvests, about 38 m tall, was rebuilt after a fire in 1889.",
+  "when": {
+    "start": {
+      "year": 1420
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the completion of the original Altar of Heaven and Earth in 1420 (UNESCO); the circular Hall of Prayer was built in 1545 (Temple of Heaven Park) after the 1530 decision to separate sacrifices. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "the original Altar of Heaven and Earth was completed together with the Forbidden City in 1420",
+        "source": "src-unesco-881"
+      },
+      {
+        "calendar": "CE (Temple of Heaven Park)",
+        "value": "In 1545 (the 24th year of the Ming-dynasty Jiajing Emperor’s reign), it was rebuilt as a triple-eave circular structure",
+        "source": "src-tiantan-hall"
+      },
+      {
+        "calendar": "CE (UNESCO / ICOMOS evaluation)",
+        "value": "In 1889 the Hall of Prayers for Abundant Harvests was destroyed by fire",
+        "source": "src-icomos-881"
+      }
+    ],
+    "display": "Completed 1420; Hall rebuilt round 1545; burned 1889"
+  },
+  "where": {
+    "lat": 39.88225,
+    "lon": 116.40662,
+    "elevation_m": null,
+    "modern_name": "Hall of Prayer for Good Harvests, Temple of Heaven, Dongcheng District, Beijing, China",
+    "historical_name": "Altar of Heaven and Earth (Tiantan), Ming and Qing capital Beijing",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.15,
+    "coordinate_sources": [
+      "src-osm-hall",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO calls it the most complete existing imperial sacrificial building complex in China and the largest existing complex for offering sacrifice to heaven."
+  },
+  "related": [
+    {
+      "id": "place-forbidden-city",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-881",
+      "url": "https://whc.unesco.org/en/list/881",
+      "title": "Temple of Heaven: an Imperial Sacrificial Altar in Beijing (World Heritage List no. 881)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-icomos-881",
+      "url": "https://whc.unesco.org/document/154511",
+      "title": "ICOMOS evaluation of the Temple of Heaven (World Heritage List no. 881, 1997)",
+      "publisher": "ICOMOS / UNESCO World Heritage Centre",
+      "author": "ICOMOS / UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-tiantan-hall",
+      "url": "https://www.tiantanpark.cn/en/Scenic/detail/1396.html",
+      "title": "Hall of Prayer for Good Harvests (Temple of Heaven official website)",
+      "publisher": "Temple of Heaven Park (Beijing)",
+      "author": "Temple of Heaven Park (Beijing)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-beijing-hall",
+      "url": "https://english.beijing.gov.cn/specials/parktours/guidevisitors/templeofheaven/mustsee/202301/t20230112_2897330.html",
+      "title": "Hall of Prayer for Good Harvests",
+      "publisher": "Beijing Municipal People's Government",
+      "author": "Beijing Municipal People's Government",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-osm-hall",
+      "url": "https://nominatim.openstreetmap.org/search?q=Hall+of+Prayer+for+Good+Harvests&format=json",
+      "title": "OpenStreetMap Nominatim: Hall of Prayer for Good Harvests, way 43921139 (39.8822465, 116.4066228)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "World Heritage List syndication (XML): entry id_number 881, geolocation 39.8821667, 116.4066667",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre (syndication dataset)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Circular hall on a three-tiered white marble platform inside a square walled enclosure in the Altar of the God of Grain; plan is a circle about 24 m across between the outer eave columns. No survey polygon opened.",
+      "source": "src-tiantan-hall",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "round_hall",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-tiantan-hall",
+      "measurements": [
+        {
+          "part": "height (Hall of Prayer for Good Harvests)",
+          "value": 38,
+          "unit": "m",
+          "source": "src-tiantan-hall",
+          "note": "\"about 38 meters tall\"; the Beijing government page gives 38.2 m"
+        },
+        {
+          "part": "diameter (Hall of Prayer for Good Harvests, between outer eave columns)",
+          "value": 24,
+          "unit": "m",
+          "source": "src-tiantan-hall",
+          "note": "\"about 24 meters\"; the Beijing government page gives 24.2 m"
+        },
+        {
+          "part": "tiers (Hall of Prayer for Good Harvests roof)",
+          "value": 3,
+          "unit": "count",
+          "source": "src-unesco-881",
+          "note": "\"circular, three-tiered, conically roofed\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "circular triple-roofed hall on a three-tier marble platform at true plan"
+      },
+      {
+        "level": "local",
+        "representation": "procedural circular hall with conical triple roof in the state for the date"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1545,
+        "end_year": 1545,
+        "state": "construction",
+        "description": "The rectangular Great Sacrificial Hall of 1420 was rebuilt in 1545 as a triple-eave circular hall (the ICOMOS evaluation says the large hall was dismantled fifteen years after the 1530 decision and replaced by the round Hall of Daxiang).",
+        "source": "src-tiantan-hall"
+      },
+      {
+        "start_year": 1545,
+        "end_year": 1889,
+        "state": "intact",
+        "description": "In 1751 all roof tiles were replaced with blue ones and the hall took its present name, Hall of Prayers for Abundant Harvests.",
+        "source": "src-tiantan-hall"
+      },
+      {
+        "start_year": 1889,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "Destroyed by fire in 1889 and meticulously reconstructed soon afterwards with original materials and techniques; the year of completion is not given.",
+        "source": "src-icomos-881"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1545,
+        "to_year": null,
+        "material": "massive wooden framework",
+        "source": "src-icomos-881"
+      },
+      {
+        "from_year": 1545,
+        "to_year": null,
+        "material": "three-tiered white marble base",
+        "source": "src-icomos-881"
+      },
+      {
+        "from_year": 1751,
+        "to_year": null,
+        "material": "blue glazed roof tiles",
+        "source": "src-tiantan-hall"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Model is the Hall of Prayer for Good Harvests only, shape 'tower' (cylindrical hall with conical triple roof; closest allowed shape, domed_building was the alternative). Other web accounts give diameters of 30, 32 or 36 m (not opened); the two official pages opened agree on about 24 m between the outer eave columns, which is the column ring, not the marble base or eaves. The 'restored' phase starts at the fire year because the sources give no reconstruction date. Place point is the Hall (OSM way, matches UNESCO XML within 0.1 km); the whole property is 273 ha. Spotcheck cannot match the ICOMOS PDF phrases (1889 fire, fifteen years later) verbatim because its two-column layout interleaves lines; I confirmed them by reading the extracted text.",
+  "published_at": "2026-10-22T09:01:46.706Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ]
+}

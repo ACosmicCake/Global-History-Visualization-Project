@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1943-battle-of-kursk",
+  "kind": "event",
+  "title": "Battle of Kursk",
+  "summary": "In July and August 1943 German forces attacked the Soviet salient around Kursk in western Russia, beginning on 5 July. Soviet defences and minefields stopped the advance within days, and a Soviet counteroffensive from 12 July retook Orel and Kharkov. It was the last major German offensive on the Eastern Front.",
+  "when": {
+    "start": {
+      "year": 1943
+    },
+    "end": {
+      "year": 1943
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Britannica dates the battle 5 July to 23 August 1943; World History Encyclopedia gives July-August 1943."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 5–August 23, 1943",
+        "source": "src-britannica"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 5",
+        "source": "src-nww2"
+      }
+    ],
+    "display": "5 July – 23 August 1943"
+  },
+  "where": {
+    "lat": 51.72689,
+    "lon": 36.18457,
+    "elevation_m": null,
+    "modern_name": "Kursk, Kursk Oblast, Russia (city used as proxy for the salient)",
+    "historical_name": "Kursk salient, Soviet Union (RSFSR)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 120,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Described as the largest tank battle in history and the end of Germany's offensive capability in the east."
+  },
+  "confidence": "established",
+  "audience_note": "Battle with very large military casualties on both sides.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-britannica",
+      "url": "https://www.britannica.com/event/Battle-of-Kursk",
+      "title": "Battle of Kursk",
+      "publisher": "Encyclopaedia Britannica",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nww2",
+      "url": "https://www.nationalww2museum.org/war/articles/history-through-viewfinder-37",
+      "title": "History Through the Viewfinder",
+      "publisher": "The National WWII Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/538560/kursk.html",
+      "title": "Kursk, Russia",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the city of Kursk, a proxy for a salient roughly 240 km long. End date 23 August is Britannica's; other sources use different end points.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T23:22:20.141Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "place-merv",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Ancient Merv",
+  "summary": "Merv is the ruin field of an oasis city on the Silk Route in Turkmenistan, with monuments visible especially from the last two millennia. UNESCO says its remains span four thousand years, while a Turkmen government account says the city itself rose around the 7th century BC.",
+  "when": {
+    "start": {
+      "year": -699
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 99,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the 7th century BC when, according to the Turkmen government article, Merv rose at the site of Erk Kala (first year of that century in astronomical numbering, -699). UNESCO says the oasis remains span 4,000 years, so human use is older. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (Turkmenistan government)",
+        "value": "Merv rose about the VII century BC",
+        "source": "src-tm-merv"
+      },
+      {
+        "calendar": "UNESCO",
+        "value": "span 4,000 years of human history",
+        "source": "src-unesco-886"
+      }
+    ],
+    "display": "City from the 7th century BC; oasis settled over 4,000 years; ruins stand today"
+  },
+  "where": {
+    "lat": 37.6675,
+    "lon": 62.1775,
+    "elevation_m": null,
+    "modern_name": "State Historical and Cultural Park \"Ancient Merv\", Mary Region, Turkmenistan",
+    "historical_name": "Merv, oasis city on the Silk Route",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO calls it the oldest and best-preserved of the oasis cities on the Silk Route in Central Asia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-886",
+      "url": "https://whc.unesco.org/en/list/886",
+      "title": "State Historical and Cultural Park \"Ancient Merv\" (World Heritage List no. 886)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-tm-merv",
+      "url": "https://turkmenistan.gov.tm/en/post/3028/a-galaxy-of-ancient-merv",
+      "title": "A galaxy of ancient Merv",
+      "publisher": "Turkmenistan state information portal (turkmenistan.gov.tm)",
+      "author": "Turkmenistan state information portal (turkmenistan.gov.tm)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List data (XML export), geolocation of the property",
+      "publisher": "UNESCO World Heritage Centre (list XML)",
+      "author": "UNESCO World Heritage Centre (list XML)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Place pin only. Start year relies on a Turkmen government article that says \"rose about the VII century BC\" without citing evidence, while UNESCO implies older occupation; treat the start as uncertain. Coordinate is one UNESCO point for property 886 in the Sultan Kala and Erk Kala area; the list does not label it; uncertainty 5 km.",
+  "author": "historian-agent:m-7",
+  "updated": "2026-10-22",
+  "aliases": [
+    "Mary"
+  ],
+  "published_at": "2026-10-22T07:52:09.507Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

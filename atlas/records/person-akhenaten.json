@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-akhenaten",
+  "kind": "person",
+  "title": "Akhenaten",
+  "summary": "Akhenaten, born Amenhotep IV, was an Eighteenth Dynasty pharaoh who made the sun disk Aton Egypt's state god and moved the capital from Thebes to a new city, Akhetaten (modern Amarna). The sources date his reign differently, from about 1377-1360 BCE to about 1350-1334 BCE. His successors restored the traditional religion and returned the capital to Thebes.",
+  "when": {
+    "start": {
+      "year": -1376
+    },
+    "end": {
+      "year": -1359
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 27,
+      "end_minus_years": 0,
+      "end_plus_years": 26,
+      "note": "The dates are the span of the reign. EBSCO gives around 1377 to 1360 BCE (astronomical -1376 to -1359); Encyclopedia.com's Ikhnaton entry says he ruled about 1350 to 1334 bce (-1349 to -1333), and its other entry gives c. 1385-1350 B.C. so start and end may be up to 27 and 26 years later than the figures used."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "around 1377 to 1360 BCE",
+        "source": "src-ebsco-akhenaten"
+      },
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "from about 1350 to 1334 bce",
+        "source": "src-encyc-ikhnaton"
+      }
+    ],
+    "display": "reigned c. 1377-1360 BCE (EBSCO) or c. 1350-1334 BCE (Encyclopedia.com)"
+  },
+  "where": {
+    "lat": 27.661667,
+    "lon": 30.905556,
+    "elevation_m": null,
+    "modern_name": "Amarna (Tell el-Amarna), Minya Governorate, Egypt",
+    "historical_name": "Akhetaten, the capital Akhenaten founded, in the Egypt of the Eighteenth Dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-amarna"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "people",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "His state worship of Aton and the new capital at Amarna were a sharp break in Egyptian religion and art."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-ramesses-ii",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-akhenaten",
+      "url": "https://www.ebsco.com/research-starters/history/akhenaton",
+      "title": "Akhenaton",
+      "publisher": "EBSCO Research Starters",
+      "author": "Frank Day",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-ikhnaton",
+      "url": "https://www.encyclopedia.com/people/history/ancient-history-egypt-biographies/ikhnaton",
+      "title": "Ikhnaton / Akhenaten",
+      "publisher": "Encyclopedia.com",
+      "author": "Gale",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wikidata-amarna",
+      "url": "https://www.wikidata.org/wiki/Q5736",
+      "title": "Wikidata item Q5736 (Amarna), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the dates: opened sources disagree by about 25 years and Encyclopedia.com's two entries differ from each other, so the range is wide. I did not state the monotheism question. Pin is the Amarna site he founded, not a birthplace.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:11.826Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

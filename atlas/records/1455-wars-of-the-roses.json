@@ -1,0 +1,139 @@
+{
+  "id": "1455-wars-of-the-roses",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Wars of the Roses",
+  "summary": "A series of dynastic civil wars in England between the houses of Lancaster and York, both descended from Edward III. Beginning at St. Albans in 1455, they shook the nobility and ended with Henry Tudor's victory at Bosworth, after which his marriage united the two houses and began the Tudor line.",
+  "when": {
+    "start": {
+      "year": 1455
+    },
+    "end": {
+      "year": 1487
+    },
+    "precision": "year",
+    "display": "1455–1485 (or 1487)",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "The first battle of the wars, at St. Albans (May 22, 1455)",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "The Wars of the Roses (1455-1487) was a dynastic conflict",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "Wars of the Roses , (1455–85), in English history",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 52.06667,
+    "lon": -1.31667,
+    "elevation_m": null,
+    "modern_name": "England (proxy pin: Kingdom of England, the location Wikidata lists)",
+    "historical_name": "Kingdom of England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Dynastic civil wars that reshaped the English nobility and led to the Tudor dynasty."
+  },
+  "confidence": "established",
+  "audience_note": "Includes battles, executions and the reported murder of children.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251230130513/https://www.britannica.com/event/Wars-of-the-Roses",
+      "title": "Wars of the Roses | Summary, History, Family Tree, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.worldhistory.org/Wars_of_the_Roses/",
+      "title": "Wars of the Roses - World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q179876",
+      "title": "Wikidata Q179876 (Kingdom of England, coordinates of the location Wikidata gives for Q127751)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources disagree on the end date: Britannica gives 1455–85 but notes some historians prefer 16 June 1487, which World History Encyclopedia uses. I used 1487 as end_year following the Wikidata lead and both sources. The name was coined later, so the labelling is retrospective. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, World History Encyclopedia; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:35:37.514Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1455",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "A series of dynastic civil wars in England between the houses of Lancaster and York, both descended from Edward III.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1487",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Albans in 1455, they shook the nobility and ended with Henry Tudor's victory at Bosworth, after which his marriage united the two houses and began the Tudor line.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

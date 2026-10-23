@@ -1,0 +1,162 @@
+{
+  "id": "-25my-formation-of-lake-baikal",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "process",
+  "title": "Formation of Lake Baikal",
+  "summary": "Around twenty-five million years ago during the Late Oligocene, tectonic rifting tore open the Baikal Rift Zone across southern Siberia. Crustal subsidence created an immense continental graben that filled with freshwater, developing into Lake Baikal. As the deepest lake on Earth at 1,642 meters and holding one-fifth of the world's unfrozen surface freshwater, Baikal preserves a continuous twenty-five-million-year sedimentary climate archive and sustains an extraordinary ecosystem dominated by endemic species.",
+  "when": {
+    "start": {
+      "year": -25000000
+    },
+    "end": {
+      "year": -20000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 5000000,
+      "start_plus_years": 5000000,
+      "end_minus_years": 5000000,
+      "end_plus_years": 5000000,
+      "note": "Rifting in the Baikal depression began in the Late Oligocene, approximately 25 to 30 million years ago, creating an active continental rift system that continues to subside and deepen today (USGS; UNESCO)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years",
+        "value": "oldest (25 million years) and deepest (1,700 m) lake in the world",
+        "source": "src-unesco-baikal"
+      },
+      {
+        "calendar": "years old",
+        "value": "perhaps more than 25 million years old, the oldest as well",
+        "source": "src-usgs-baikal"
+      }
+    ],
+    "display": "c. 25–20 million years ago (Late Oligocene)"
+  },
+  "where": {
+    "lat": 53.3028,
+    "lon": 108.0047,
+    "elevation_m": 456,
+    "modern_name": "Lake Baikal, Siberia, Russia",
+    "historical_name": "Baikal rift depression, southern Siberia, Late Oligocene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata-baikal"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Earth's oldest and deepest freshwater lake, containing 20% of the planet's unfrozen surface freshwater in an active continental rift."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-25my-formation-of-the-east-african-rift",
+      "type": "related"
+    },
+    {
+      "id": "-23ka-peopling-of-the-americas",
+      "type": "related"
+    },
+    {
+      "id": "-26ka-beringian-standstill",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-baikal",
+      "url": "https://whc.unesco.org/en/list/754/",
+      "title": "Lake Baikal",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "1996",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usgs-baikal",
+      "url": "https://pubs.usgs.gov/fs/baikal/",
+      "title": "Lake Baikal - A Touchstone for Global Change and Rift Studies (USGS Fact Sheet)",
+      "publisher": "U.S. Geological Survey",
+      "author": "Deborah Hutchinson, Steve Colman",
+      "date_published": "1999",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-baikal",
+      "url": "https://www.wikidata.org/wiki/Q5513",
+      "title": "Lake Baikal (Wikidata Q5513)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact onset date of open lacustrine conditions versus initial shallow wetland rifting, with estimates ranging between 30 and 20 Ma.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-25000000",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Around twenty-five million years ago during the Late Oligocene, tectonic rifting tore open the Baikal Rift Zone across southern Siberia.",
+        "source": "src-unesco-baikal"
+      },
+      {
+        "span": "-20000000",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Crustal subsidence created an immense continental graben that filled with freshwater, developing into Lake Baikal.",
+        "source": "src-unesco-baikal",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T14:01:39.989Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

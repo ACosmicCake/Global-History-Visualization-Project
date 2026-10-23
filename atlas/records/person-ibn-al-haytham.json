@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s54",
+  "updated": "2026-10-22",
+  "id": "person-ibn-al-haytham",
+  "kind": "person",
+  "title": "Ibn al-Haytham (Alhazen)",
+  "summary": "Ibn al-Haytham, known in the West as Alhazen, is placed by MacTutor at about 965 to about 1040, possibly born in Basra and dying in Cairo. Working in Egypt under the Fatimid caliph al-Hakim, he wrote the seven-volume Book of Optics, which explained vision as light coming from objects into the eye.",
+  "when": {
+    "start": {
+      "year": 965
+    },
+    "end": {
+      "year": 1040
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 5,
+      "end_minus_years": 1,
+      "end_plus_years": 5,
+      "note": "MacTutor lists birth 965 and death 1040 as 'possibly' but its page title gives 1039."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Born 965 (possibly) Basra",
+        "source": "src-mactutor"
+      },
+      {
+        "calendar": "CE",
+        "value": "Died 1040 (possibly) Cairo",
+        "source": "src-mactutor"
+      }
+    ],
+    "display": "c. 965–c. 1040"
+  },
+  "where": {
+    "lat": 30.0443879,
+    "lon": 31.2357257,
+    "elevation_m": null,
+    "modern_name": "Cairo, Egypt",
+    "historical_name": "Cairo, Fatimid Caliphate (where he lived near the Azhar Mosque)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "people",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "His Book of Optics is called the leading optics treatise between Ptolemy and Kepler."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-fatimid-caliphate",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mactutor",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+      "title": "Ibn al-Haytham (965 - 1039)",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "author": "J J O'Connor and E F Robertson",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/biography/alhazen/",
+      "title": "Alhazen",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Cairo%2C+Egypt&format=json&limit=1",
+      "title": "Cairo, Egypt",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of birth and death years: MacTutor marks both as possible and its title says 1039. Pin is Cairo, where MacTutor and EBSCO place his later life; birthplace Basra is also uncertain.",
+  "published_at": "2026-10-22T11:03:00.645Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

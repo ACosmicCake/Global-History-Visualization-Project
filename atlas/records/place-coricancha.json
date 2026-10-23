@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "confidence": "established",
+  "scale": "civilization",
+  "audience_note": null,
+  "author": "historian-agent:m-6",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "place-coricancha",
+  "title": "Coricancha (Qorikancha), Cusco",
+  "summary": "Coricancha, the Inca Temple of the Sun in Cusco, was a walled temple complex dedicated to the sun god Inti and other deities, built on a sacred site in the 15th century and attributed to Pachacuti. After the Spanish conquest the Dominican church of Santo Domingo was raised over its walls, which still carry the church.",
+  "when": {
+    "start": {
+      "year": 1438
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 33,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The complex is commonly attributed to Pachacuti (reign 1438-1471); both sources say the exact chronology is unclear and give only the 15th century. End is the present: Inca walls still stand under the church."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "Pachacuti Inca Yupanqui, the 9th Inca ruler (1438-1471 CE)",
+        "source": "src-whe-coricancha"
+      },
+      {
+        "calendar": "Century (Getty CONA)",
+        "value": "Created in the 15th century",
+        "source": "src-getty-coricancha"
+      }
+    ],
+    "display": "Built 15th century CE; church of Santo Domingo above (consecrated 1654)"
+  },
+  "where": {
+    "lat": -13.52,
+    "lon": -71.97556,
+    "elevation_m": null,
+    "modern_name": "Qorikancha and Santo Domingo, Plazoleta Santo Domingo, Cusco, Peru",
+    "historical_name": "Inti Kancha / Qorikancha, the Temple of the Sun in Cusco, capital of Tawantinsuyu",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-getty-coricancha",
+      "src-osm-qorikancha"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "importance": {
+    "score": 4,
+    "justification": "The most important temple of the Inca capital, and the clearest example of Inca masonry carrying a colonial church."
+  },
+  "related": [
+    {
+      "id": "place-cusco",
+      "type": "part_of"
+    },
+    {
+      "id": "person-pachacuti",
+      "type": "caused_by",
+      "because": "Sources commonly attribute the building of the complex to Pachacuti, though the chronology is unclear."
+    },
+    {
+      "id": "1650-03-31-cusco-earthquake",
+      "type": "related"
+    },
+    {
+      "id": "1950-05-21-cusco-earthquake",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-coricancha",
+      "url": "https://worldhistory.org/Coricancha",
+      "title": "Coricancha",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2014-03-09",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-getty-coricancha",
+      "url": "https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700009284",
+      "title": "Coricancha Temple Complex (CONA 700009284)",
+      "publisher": "J. Paul Getty Trust (Getty Vocabularies)",
+      "author": "Getty Vocabulary Program",
+      "date_published": "2004",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-unesco-273",
+      "url": "https://whc.unesco.org/en/list/273",
+      "title": "City of Cuzco (World Heritage List no. 273)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "importance",
+        "related"
+      ]
+    },
+    {
+      "id": "src-osm-qorikancha",
+      "url": "https://nominatim.openstreetmap.org/search?q=Qorikancha+Cusco&format=json",
+      "title": "OpenStreetMap Nominatim: Qorikancha, node 803941090 (-13.5202622, -71.9751405)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the date: both sources only say 15th century and Pachacuti is an attribution. The church consecration year 1654 is Getty CONA only. No model: no wall height or plan dimension was found on an opened page.",
+  "published_at": "2026-10-22T06:22:09.298Z"
+}

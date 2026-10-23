@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1894-donghak-peasant-revolution",
+  "kind": "event",
+  "title": "Donghak Peasant Revolution",
+  "summary": "In 1894 a peasant army of Donghak followers, led by Jeon Bong-jun, rose at Gobu in Jeolla Province and took the provincial capital Jeonju. Korea asked Qing China for troops and Japan sent forces of its own, which helped trigger the Sino-Japanese War. Fighting with Japanese forces continued until December 1894; Jeon was captured that month and executed in March 1895.",
+  "when": {
+    "start": {
+      "year": 1894
+    },
+    "end": {
+      "year": 1894
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give the Gobu raid as 8 January 1894 or place the start in March 1894; the range is the year 1894, with Jeon's execution in March 1895 outside it."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "began in Jeolla Province in March 1894",
+        "source": "src-jacar-donghak"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "until December 1894",
+        "source": "src-jacar-donghak"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "January 8, 1894",
+        "source": "src-knowingkorea-jeon"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "May 4, 1894",
+        "source": "src-knowingkorea-jeon"
+      }
+    ],
+    "display": "1894"
+  },
+  "where": {
+    "lat": 35.60804,
+    "lon": 126.76409,
+    "elevation_m": null,
+    "modern_name": "Gobu-myeon, Jeongeup, North Jeolla, South Korea (administrative centroid)",
+    "historical_name": "Gobu, Jeolla Province, Korea (Joseon)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-gobu"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A nationwide peasant uprising whose foreign intervention is credited with helping start the Sino-Japanese War."
+  },
+  "confidence": "established",
+  "audience_note": "Concerns an armed peasant uprising, its suppression and a leader's execution; no graphic detail is given.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-jacar-donghak",
+      "url": "https://www.jacar.go.jp/english/jacarbl-fsjwar-e/smart/glossary/g004.html",
+      "title": "Donghak Peasant Rebellion (glossary)",
+      "publisher": "Japan Center for Asian Historical Records (National Archives of Japan)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-knowingkorea-jeon",
+      "url": "https://www.knowingkorea.org/contents/view/184/General-Jeon-Bong-jun-leader-of-the-Donghak-Peasant-Movement",
+      "title": "General Jeon Bong-jun, leader of the Donghak Peasant Movement",
+      "publisher": "Knowing Korea",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-gobu",
+      "url": "https://nominatim.openstreetmap.org/search?q=Gobu-myeon%20Jeongeup&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Gobu-myeon",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date differs between the two sources (March vs 8 January raid vs 4 May gathering). Pin is the Gobu township centroid, not a battle site. Jeonju capture date is stated differently (late May/early June by JACAR; \"within a month\" of May 4 by Knowing Korea) so it is not given.",
+  "author": "historian-agent:o-s100",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T18:09:23.789Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1894",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1894 a peasant army of Donghak followers, led by Jeon Bong-jun, rose at Gobu in Jeolla Province and took the provincial capital Jeonju.",
+        "source": "src-jacar-donghak"
+      },
+      {
+        "span": "1894",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Korea asked Qing China for troops and Japan sent forces of its own, which helped trigger the Sino-Japanese War.",
+        "source": "src-jacar-donghak",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

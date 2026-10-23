@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "id": "place-kerma-deffufa",
+  "title": "Western Deffufa, Kerma",
+  "summary": "The Western Deffufa at Kerma in Sudan is a mudbrick temple tower, about 19 m high today after erosion, with a base of roughly 27 by 52 m. Archaeology magazine says it was built some 4,000 years ago and enlarged from a chapel into a multistory temple that became the religious centre of the city.",
+  "when": {
+    "start": {
+      "year": -1999
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 500,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Archaeology magazine, published in 2020, says the temple was constructed some 4,000 years ago. It dates the founding of the city of Kerma to around 2500 B.C. and says a small chapel was built where the Deffufa later stood, without dating the chapel or the enlargement. End is the present: the structure stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago (Archaeology magazine, 2020)",
+        "value": "constructed some 4,000 years ago",
+        "source": "src-aia-deffufa"
+      },
+      {
+        "calendar": "Years BC (Archaeology magazine)",
+        "value": "a city that was founded there around 2500 B.C.",
+        "source": "src-aia-deffufa"
+      }
+    ],
+    "display": "Built c. 4,000 years ago; stands today"
+  },
+  "where": {
+    "lat": 19.6008337,
+    "lon": 30.4099059,
+    "elevation_m": null,
+    "modern_name": "Western Deffufa, Kerma, Northern State, Sudan",
+    "historical_name": "Temple of the Kerma culture (Kingdom of Kerma), Nubia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-deffufa"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Archaeology magazine calls it the religious center of Kerma, described as the earliest urban center in Africa outside Egypt."
+  },
+  "confidence": "probable",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-deffufa",
+      "url": "https://www.ebsco.com/research-starters/anthropology/kerma",
+      "title": "Kerma (Research Starters)",
+      "publisher": "EBSCO Information Services",
+      "author": "EBSCO Research Starters",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-aia-deffufa",
+      "url": "https://archaeology.org/issues/september-october-2020/features/sudan-kerma-nubian-kingdom/",
+      "title": "A Nubian Kingdom Rises",
+      "publisher": "Archaeology magazine (Archaeological Institute of America)",
+      "author": "Archaeology magazine",
+      "date_published": "2020-09",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-deffufa",
+      "url": "https://www.openstreetmap.org/way/184538219",
+      "title": "OpenStreetMap way 184538219, Western Deffufa (centre 19.6008337, 30.4099059)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A solid mudbrick block about 52 m by 27 m at the base (EBSCO Research Starters: 89 by 179 feet).",
+      "source": "src-ebsco-deffufa",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-ebsco-deffufa",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 19,
+          "unit": "m",
+          "source": "src-ebsco-deffufa",
+          "note": "present-day height about 62 feet (19 meters), reduced by erosion; Archaeology magazine says it looms 65 feet above the site"
+        },
+        {
+          "part": "base length",
+          "value": 52,
+          "unit": "m",
+          "source": "src-ebsco-deffufa",
+          "note": "about 89 by 179 feet (27 by 52 meters)"
+        },
+        {
+          "part": "base width",
+          "value": 27,
+          "unit": "m",
+          "source": "src-ebsco-deffufa",
+          "note": "about 89 by 179 feet (27 by 52 meters)"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "mudbrick block"
+      },
+      {
+        "level": "local",
+        "representation": "solid mudbrick block drawn from its published base and height"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -1999,
+        "end_year": null,
+        "state": "intact",
+        "description": "Constructed some 4,000 years ago and enlarged from a chapel into a multistory temple (Archaeology magazine); it stands today at about 19 m, reduced by erosion (EBSCO).",
+        "source": "src-aia-deffufa"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "Measurements come only from a reference encyclopedia (EBSCO), not a heritage body, museum or scholarly source; kept as data."
+  },
+  "reviewer_note": "Least sure: the measurements are from EBSCO Research Starters (a reference product, the same class used for the Aswan record) and the height matches Archaeology magazine within a metre; no heritage-body or excavation-report page was opened (UNESCO returned 403). Other pages give 45 x 27 m or 50 x 25 m. Block shape chosen as closest; the start year -1999 is only 4,000 years before the 2020 article, and no page gives a precise date for the chapel or the enlargement.",
+  "author": "historian-agent:o-s116",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:44:14.750Z"
+}

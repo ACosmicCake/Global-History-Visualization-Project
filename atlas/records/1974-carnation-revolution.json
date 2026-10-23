@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1974-carnation-revolution",
+  "kind": "event",
+  "title": "Carnation Revolution",
+  "summary": "On 25 April 1974 left-leaning Portuguese military officers, the Armed Forces Movement, overthrew the authoritarian Estado Novo government in a coup centred on Lisbon. Civilians joined the soldiers in the streets. The coup opened Portugal's democratic transition and the path to ending the colonial war and recognising independence for its African colonies in 1974–1975.",
+  "when": {
+    "start": {
+      "year": 1974
+    },
+    "end": {
+      "year": 1974
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Coup day 25 April 1974; aftermath continued through 1975–1976."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "April 25, 1974",
+        "source": "src-ptmuseum"
+      }
+    ],
+    "display": "25 April 1974"
+  },
+  "where": {
+    "lat": 38.7223,
+    "lon": -9.1393,
+    "elevation_m": null,
+    "modern_name": "Lisbon, Portugal",
+    "historical_name": "Lisbon, Portugal (Estado Novo regime)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Ended Portugal's authoritarian regime and began its democratic transition and decolonisation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ptmuseum",
+      "url": "https://portuguesemuseum.org/?page_id=1808&category=3&event=348",
+      "title": "Carnation Revolution: The Coup",
+      "publisher": "Portuguese Museum (San José)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-parlamento",
+      "url": "https://app.parlamento.pt/comunicar/V1/202104/72/artigos/art2.html",
+      "title": "A construção da democracia (1974-1976)",
+      "publisher": "Assembleia da República (Portuguese Parliament)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://latlong.info/portugal/lisbon",
+      "title": "Latitude and longitude of Lisbon, Portugal",
+      "publisher": "latlong.info",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy: Lisbon city centre. Coordinates come from a weak aggregator site, not an institution. Parliament page spotcheck failed to fetch, so its Portuguese date wording was dropped.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:31:31.422Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1974",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 25 April 1974 left-leaning Portuguese military officers, the Armed Forces Movement, overthrew the authoritarian Estado Novo government in a coup centred on Lisbon.",
+        "source": "src-ptmuseum"
+      },
+      {
+        "span": "1974",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The coup opened Portugal's democratic transition and the path to ending the colonial war and recognising independence for its African colonies in 1974–1975.",
+        "source": "src-ptmuseum",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

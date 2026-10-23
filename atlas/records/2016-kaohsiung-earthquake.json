@@ -1,0 +1,133 @@
+{
+  "id": "2016-kaohsiung-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2016 Kaohsiung earthquake",
+  "summary": "A magnitude 6.4 earthquake struck southern Taiwan early on 6 February 2016, at the start of the Lunar New Year holiday. It toppled a 17-story apartment building in Tainan, killing at least five people and trapping about 35. It also cut power to 168,000 households and damaged some chip wafers.",
+  "when": {
+    "start": {
+      "year": 2016
+    },
+    "end": {
+      "year": 2016
+    },
+    "precision": "day",
+    "display": "6 February 2016",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Feb 6, 2016 - 06:30",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "2016-02-05 19:57:27",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 22.93,
+    "lon": 120.54,
+    "elevation_m": null,
+    "modern_name": "Southern Taiwan (Tainan and Kaohsiung area; Meinong)",
+    "historical_name": "Southern Taiwan (Tainan and Kaohsiung area; Meinong)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 2,
+    "justification": "A deadly regional earthquake with building collapse and local economic effects, but limited wider historical reach."
+  },
+  "confidence": "established",
+  "audience_note": "Describes deaths, including an infant, in a building collapse.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20160206075727/http://www.swissinfo.ch/eng/magnitude-6.4-earthquake-hits-southern-taiwan---usgs/41943774",
+      "title": "Quake fells Taiwan apartment building, at least five dead - SWI swissinfo.ch",
+      "publisher": "swissinfo.ch",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=611838796",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q22662663",
+      "title": "Wikidata Q22662663 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give only an early death toll (at least five) and no final figure. ISC origin time is UTC on 5 February, while local time was 6 February. The Reuters magnitude of 6.4 matches ISC Mw, though other papers cite ML 6.6, and the sources do not mention the name Kaohsiung explicitly. (Drafted by the Wikipedia pipeline from swissinfo.ch, isc.ac.uk; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:52:30.134Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2016",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "4 earthquake struck southern Taiwan early on 6 February 2016, at the start of the Lunar New Year holiday.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2016",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It toppled a 17-story apartment building in Tainan, killing at least five people and trapping about 35.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

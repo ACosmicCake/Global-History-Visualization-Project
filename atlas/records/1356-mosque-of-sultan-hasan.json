@@ -1,0 +1,207 @@
+{
+  "id": "1356-mosque-of-sultan-hasan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Mosque-madrasa of Sultan Hasan, Cairo",
+  "summary": "Built from 1356 to about 1363 for the Mamluk sultan al-Nasir Hasan beside the Citadel in Cairo, this mosque, madrasa and tomb is among the largest medieval Islamic buildings in Egypt. Its north facade is about 145 m long and 38 m high, and its southern minaret rises 81.6 m.",
+  "when": {
+    "start": {
+      "year": 1356
+    },
+    "end": {
+      "year": 1363
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 1,
+      "end_minus_years": 1,
+      "end_plus_years": 1,
+      "note": "Sources differ on the end: Asharq Al-Awsat gives 1363, the museum catalogue gives completion of the mausoleum in AH 764 / AD 1362; Sultan Hasan died in 1361 with the work almost complete."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian years",
+        "value": "built by Sultan Al-Nasir Muhammad between 1356 and 1363",
+        "source": "src-aawsat-hasan"
+      },
+      {
+        "calendar": "Islamic (Hijri) and Gregorian",
+        "value": "Date of monument: Hegira 764 / AD 1362; mausoleum completed AH 764 / AD 1362",
+        "source": "src-museumwnf-hasan"
+      }
+    ],
+    "display": "1356–1363"
+  },
+  "where": {
+    "lat": 30.032006,
+    "lon": 31.256453,
+    "elevation_m": null,
+    "modern_name": "Mosque-Madrasa of Sultan Hasan, Citadel Square, Cairo, Egypt",
+    "historical_name": "Madrasa and mosque of Sultan Hasan, Cairo, Bahri Mamluk Sultanate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-geonames-hasan"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A landmark of Mamluk architecture, large for its time."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-giza-pyramids",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-museumwnf-hasan",
+      "url": "https://islamicart.museumwnf.org/database_item.php?id=monument%3Bisl%3Beg%3Bmon01%3B16%3Ben",
+      "title": "Madrasa and Mosque of Sultan Hasan",
+      "publisher": "Museum With No Frontiers (Discover Islamic Art)",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-aawsat-hasan",
+      "url": "https://english.aawsat.com/home/article/2918486/mosque-madrassa-sultan-hassan-pride-islamic-architecture-cairo",
+      "title": "Mosque-Madrassa of Sultan Hassan: Pride of Islamic Architecture in Cairo",
+      "publisher": "Asharq Al-Awsat",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-geonames-hasan",
+      "url": "https://www.geonames.org/search.html?q=sultan+hasan+mosque&country=EG",
+      "title": "GeoNames 7913951, Mosque-Madrassa of Sultan Hassan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape \"block\" for the whole complex (facade 38 m high x about 145 m long); the same page also gives a 36.7 m portal. The patron is named differently in the two sources (Hasan v. al-Nasir Muhammad). The Giza casing link is not confirmed on any page I opened, so no link is drawn.",
+  "author": "historian-agent:o-s23",
+  "updated": "2026-10-22",
+  "model": {
+    "footprint": {
+      "description": "Complex of about 7,906 square metres by Citadel Square, Cairo; principal north facade about 145 m long; square mausoleum 21 m a side (museum catalogue).",
+      "source": "src-museumwnf-hasan",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "block",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-museumwnf-hasan",
+      "measurements": [
+        {
+          "part": "height (principal facade)",
+          "value": 38,
+          "unit": "m",
+          "source": "src-museumwnf-hasan",
+          "note": "38 m"
+        },
+        {
+          "part": "facade length",
+          "value": 145,
+          "unit": "m",
+          "source": "src-museumwnf-hasan",
+          "note": "about 145 m, principal northern facade"
+        },
+        {
+          "part": "southern minaret height",
+          "value": 81.6,
+          "unit": "m",
+          "source": "src-museumwnf-hasan",
+          "note": "81.60 m"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "extruded block at the facade length and height"
+      },
+      {
+        "level": "local",
+        "representation": "block with the southern minaret as a thin tower, labelled procedural"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1356,
+        "end_year": 1363,
+        "state": "construction",
+        "description": "Mosque-madrasa built; a news source gives 1356 to 1363 and the museum catalogue gives 1362 for completion of the mausoleum.",
+        "source": "src-aawsat-hasan"
+      },
+      {
+        "start_year": 1363,
+        "end_year": null,
+        "state": "intact",
+        "description": "Complex stands; the minarets were renovated in the 20th century.",
+        "source": "src-museumwnf-hasan"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1356,
+        "to_year": null,
+        "material": "stone and marble, with copper door leaves",
+        "source": "src-museumwnf-hasan"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "published_at": "2026-10-22T07:01:40.205Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

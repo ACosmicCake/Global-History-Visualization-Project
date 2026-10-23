@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "1950-12-hungnam-evacuation",
+  "kind": "event",
+  "title": "Hungnam evacuation, December 1950",
+  "summary": "After General MacArthur decided to withdraw, US X Corps left northeast Korea by sea from Hungnam between 9 and 24 December 1950, taking out over 100,000 troops with their supplies. About 98,100 Korean refugees were also evacuated from Hungnam, Wonsan and Songjin, while a similar number were left behind for lack of ship space. The port was destroyed on departure.",
+  "when": {
+    "start": {
+      "year": 1950
+    },
+    "end": {
+      "year": 1950
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On Dec. 9, 1950, the first evacuations began ... Continuing through Dec. 24",
+        "source": "src-dvids"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Refugee Evacuation from Hungnam: 9-24 December 1950",
+        "source": "src-arsof"
+      }
+    ],
+    "display": "9–24 December 1950"
+  },
+  "where": {
+    "lat": 39.833333,
+    "lon": 127.616667,
+    "elevation_m": null,
+    "modern_name": "Hungnam, Hamhung, South Hamgyong Province, North Korea",
+    "historical_name": "Hungnam, North Korea (then held by UN forces; port of the Hamhung-Hungnam area)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-hungnam"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "One of the largest sea evacuations of the 20th century, ending the UN advance into North Korea and shaping Korean refugee migration southward."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1950-korean-war",
+      "type": "part_of"
+    },
+    {
+      "id": "1950-10-19-chinese-intervention-in-korea",
+      "type": "related"
+    },
+    {
+      "id": "1950-09-15-inchon-landing",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1950-12-09",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Mass evacuation of troops, supplies and refugees from Hungnam began on 9 December.",
+        "source": "src-dvids"
+      },
+      {
+        "span": "1950-12-24",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "The last X Corps units sailed on Christmas Eve and the port was destroyed.",
+        "source": "src-dvids"
+      },
+      {
+        "span": "1950-12",
+        "action": "numbers.counter { range: [0, 98100] }",
+        "caption": "About 98,100 refugees left from Hungnam, Wonsan and Songjin; an equal number were left behind for lack of space.",
+        "source": "src-dvids",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-dvids",
+      "url": "https://www.dvidshub.net/news/486875/x-corps-begins-mass-evacuations-hungnam-9-dec-1950",
+      "title": "X Corps Begins Mass Evacuations at Hungnam (9 DEC 1950)",
+      "publisher": "DVIDS, US Department of Defense",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-arsof",
+      "url": "https://arsof-history.org/articles/v7n1_hungnam_page_1.html",
+      "title": "The Refugee Evacuation from Hungnam: 9-24 December 1950",
+      "publisher": "Army Special Operations Forces history (arsof-history.org)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-hungnam",
+      "url": "https://www.wikidata.org/wiki/Q224982",
+      "title": "Wikidata item Q224982 (Hungnam), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Refugee figures vary by source (98,100 on the DVIDS page; navy-only counts are lower) and the counter uses the DVIDS figure. 'Over 100,000 troops' is from the DVIDS quote of a US Army history and the ARSOF article's reference to planning for 100,000 troops. The pin is Hungnam's Wikidata point.",
+  "published_at": "2026-10-22T04:45:24.341Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

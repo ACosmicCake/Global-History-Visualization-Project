@@ -1,0 +1,160 @@
+{
+  "id": "1913-natives-land-act",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Natives Land Act, South Africa, 1913",
+  "summary": "The Natives Land Act (Act No. 27 of 1913) came into effect on 19 June 1913. It barred Africans from buying or hiring land outside designated areas, confining them to about 7 percent of the country, and curtailed tenant farming and sharecropping on white-owned farms. It began the legal pattern of land dispossession later built on by apartheid.",
+  "when": {
+    "start": {
+      "year": 1913,
+      "iso": "1913-06-19"
+    },
+    "end": {
+      "year": 1913,
+      "iso": "1913-06-19"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources state the Act was passed and came into effect on 19 June 1913. Full enforcement was delayed and its effects unfolded over later years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "passing of the Natives Land Act (No: 27) on 19 June 1913",
+        "source": "src-saho"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "came into effect on June 19, 1913 (Act No. 27 of 1913)",
+        "source": "src-sanews"
+      }
+    ],
+    "display": "19 June 1913"
+  },
+  "where": {
+    "lat": -33.92527777777778,
+    "lon": 18.42388888888889,
+    "elevation_m": null,
+    "modern_name": "Cape Town, South Africa (symbolic pin; the Act applied across the Union)",
+    "historical_name": "Cape Town, Union of South Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wd-capetown"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Foundational law of racial land dispossession in South Africa, later extended by the 1936 Native Trust and Land Act and apartheid measures."
+  },
+  "confidence": "established",
+  "audience_note": "Describes legal dispossession and forced evictions of African families and farm tenants. It contains no graphic content.",
+  "related": [
+    {
+      "id": "1948-national-party-election-and-apartheid-legislation",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-saho",
+      "url": "https://www.sahistory.org.za/article/natives-land-act-1913",
+      "title": "The Natives Land Act of 1913",
+      "publisher": "South African History Online",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-sanews",
+      "url": "https://www.sanews.gov.za/south-africa/nyhontso-calls-bold-action-reverse-native-land-act-legacy",
+      "title": "Nyhontso calls for bold action to reverse Native Land Act legacy",
+      "publisher": "SAnews (South African Government News Agency)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-capetown",
+      "url": "https://www.wikidata.org/wiki/Q5465",
+      "title": "Wikidata item Q5465 (Cape Town), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: Cape Town is used as the Union legislature's seat, which none of the opened sources states; the Act applied nationwide, hence the 50 km uncertainty. The 7 percent figure is described differently across sources (all land vs arable land); SAHO and SAnews both say 7 percent of the land. 1936 expansion to 13.5 percent is from SAHO.",
+  "author": "historian-agent:o-s8",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1913-06-19",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The Natives Land Act (No. 27) came into effect on 19 June 1913.",
+        "source": "src-sanews"
+      },
+      {
+        "span": "1913-06-19",
+        "action": "region.fill { radius_km: 800 }",
+        "caption": "Africans were barred from buying or hiring land in about 93 percent of South Africa, leaving them about 7 percent.",
+        "source": "src-saho"
+      },
+      {
+        "span": "1936",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The 1936 Native Trust and Land Act raised the share for Africans to 13.5 percent, still a small fraction of the country.",
+        "source": "src-saho",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:36:06.484Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

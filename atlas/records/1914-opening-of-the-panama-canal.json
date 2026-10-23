@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1914-opening-of-the-panama-canal",
+  "kind": "event",
+  "title": "Opening of the Panama Canal",
+  "summary": "The United States finished the Panama Canal on 15 August 1914, joining the Atlantic and Pacific oceans by an 80-kilometre waterway of two-lane locks. It followed the 1903 Hay-Bunau-Varilla Treaty, which granted a ten-mile-wide strip, and a French attempt that began in 1880 and failed with about 20,000 lives lost. Panama took over operation at noon on 31 December 1999.",
+  "when": {
+    "start": {
+      "year": 1914,
+      "iso": "1914-08-15"
+    },
+    "end": {
+      "year": 1914,
+      "iso": "1914-08-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Embassy of Panama page gives 15 August 1914 as the date the United States \"would finish\" the canal; the State Department page says only \"Completed in 1914\"."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "finish on August 15, 1914",
+        "source": "src-embassy-panama"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Completed in 1914",
+        "source": "src-state-panama"
+      }
+    ],
+    "display": "15 August 1914"
+  },
+  "where": {
+    "lat": 9.12,
+    "lon": -79.75,
+    "elevation_m": null,
+    "modern_name": "Panama Canal, Panama",
+    "historical_name": "Canal Zone, Republic of Panama",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-wd-panama"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "trade_exploration",
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The canal that joined the Atlantic and Pacific for shipping and shaped US-Panama relations for decades."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3my-closure-of-isthmus-of-panama",
+      "type": "related"
+    },
+    {
+      "id": "1869-opening-of-the-suez-canal",
+      "type": "related"
+    },
+    {
+      "id": "1914-world-war-i",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-embassy-panama",
+      "url": "https://www.embassyofpanama.org/panama-canal",
+      "title": "Panama Canal",
+      "publisher": "Embassy of the Republic of Panama in the United States",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-state-panama",
+      "url": "https://history.state.gov/milestones/1899-1913/panama-canal",
+      "title": "Building the Panama Canal, 1903-1914",
+      "publisher": "US Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-panama",
+      "url": "https://www.wikidata.org/wiki/Q7350",
+      "title": "Wikidata Q7350: Panama Canal, 9.12, -79.75",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Single point on the canal from Wikidata (9.12, -79.75); the waterway is about 80 km long so uncertainty is 40 km. The 15 August date is on the Embassy of Panama page only; the State page says 1914. The first transit by SS Ancon is not on an opened government page, so it is not claimed. Least sure of the exact date being corroborated by a second publisher.",
+  "author": "historian-agent:o-s41",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:06:19.064Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1914-08-15",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The United States finished the Panama Canal on 15 August 1914, joining the Atlantic and Pacific oceans by an 80-kilometre waterway of two-lane locks.",
+        "source": "src-embassy-panama"
+      },
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 64 }",
+        "caption": "It followed the 1903 Hay-Bunau-Varilla Treaty, which granted a ten-mile-wide strip, and a French attempt that began in 1880 and failed with about 20,000 lives lost.",
+        "source": "src-embassy-panama",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

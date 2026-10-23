@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s30",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "id": "-40ka-niah-cave-modern-humans",
+  "kind": "event",
+  "title": "Modern human \"Deep Skull\" at Niah Cave, Borneo",
+  "summary": "In 1958 excavators in the West Mouth of Niah Cave, Sarawak, on Borneo, recovered a modern human skull called the Deep Skull. Later dating places it at about 45,000 to 39,000 years ago, most likely around 37,000, making it the earliest securely dated modern human remains in island Southeast Asia.",
+  "when": {
+    "start": {
+      "year": -38000
+    },
+    "end": {
+      "year": -38000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 7000,
+      "start_plus_years": 4000,
+      "end_minus_years": 7000,
+      "end_plus_years": 4000,
+      "note": "Sources give a range rather than a point: about 45,000-39,000 years ago with c. 37 ka most likely (Frontiers 2016), and an earlier radiocarbon date of c. 39,600 BP. Year -38000 is a rounded midpoint of -45000 to -34000 (St Andrews: human activity c. 46,000-34,000 years ago); BP-to-calendar conversion is approximate. The skull was found in 1958."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years BP (U-series and radiocarbon)",
+        "value": "c45-39 ka and mostly likely around 37 ka",
+        "source": "src-frontiers-niah"
+      },
+      {
+        "calendar": "Radiocarbon years BP",
+        "value": "c39,600 ± 1000 BP",
+        "source": "src-frontiers-niah"
+      },
+      {
+        "calendar": "Years before present",
+        "value": "ca. 40,000 years before the present",
+        "source": "src-standrews-niah"
+      }
+    ],
+    "display": "c. 45,000-37,000 years ago (excavated 1958)"
+  },
+  "where": {
+    "lat": 3.80429,
+    "lon": 113.78077,
+    "elevation_m": null,
+    "modern_name": "Niah Caves, Niah National Park, Sarawak, Malaysia",
+    "historical_name": "Niah Cave (Gua Niah), West Mouth, Borneo; no polity existed at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-unesco-niah"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 3,
+    "justification": "Earliest securely dated modern human remains in island Southeast Asia, bearing on early dispersal across the region."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-65ka-peopling-of-sahul",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-frontiers-niah",
+      "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2016.00075/full",
+      "title": "Deep Skull from Niah Cave and the Pleistocene peopling of Southeast Asia",
+      "publisher": "Frontiers in Ecology and Evolution (Frontiers Media)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-standrews-niah",
+      "url": "https://research-portal.st-andrews.ac.uk/en/publications/the-human-revolution-in-lowland-tropical-southeast-asia-the-antiq/",
+      "title": "The human revolution in lowland tropical Southeast Asia: the antiquity and behavior of anatomically modern humans at Niah Cave (Sarawak, Borneo)",
+      "publisher": "University of St Andrews Research Portal",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-niah",
+      "url": "https://whc.unesco.org/en/list/1014",
+      "title": "Archaeological Heritage of the Niah Caves Complex",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon",
+        "where.modern_name"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age: sources give 45-39 ka with c. 37 ka most likely, and the older c. 40,000 BP radiocarbon date was controversial. The pin is the UNESCO property centre, not the West Mouth trench.",
+  "published_at": "2026-10-22T08:21:36.575Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-38000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1958 excavators in the West Mouth of Niah Cave, Sarawak, on Borneo, recovered a modern human skull called the Deep Skull.",
+        "source": "src-frontiers-niah"
+      },
+      {
+        "span": "-38000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Later dating places it at about 45,000 to 39,000 years ago, most likely around 37,000, making it the earliest securely dated modern human remains in island Southeast Asia.",
+        "source": "src-frontiers-niah",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

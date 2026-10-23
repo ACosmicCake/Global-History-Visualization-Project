@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s17",
+  "updated": "2026-10-22",
+  "id": "-201my-end-triassic-extinction",
+  "kind": "event",
+  "title": "End-Triassic mass extinction",
+  "summary": "A mass extinction closed the Triassic about 201 million years ago, wiping out roughly three-quarters of marine and land species by one estimate. The Triassic-Jurassic boundary is defined at Kuhjoch in Austria, with an age of about 201.3 million years, and the timing coincides with Central Atlantic Magmatic Province volcanism.",
+  "when": {
+    "start": {
+      "year": -201300000
+    },
+    "end": {
+      "year": -201300000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1000000,
+      "start_plus_years": 1000000,
+      "end_minus_years": 1000000,
+      "end_plus_years": 1000000,
+      "note": "MIT News and EarthSky give \"more than 200 million years ago\", with older dating errors of one to two million years; the ICS boundary page gives about 201.3 Ma. The uncertainty is a rounding bracket, not a published error."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "about 201.3 Ma, based on recent radiometric investigations (Triassic-Jurassic boundary)",
+        "source": "src-ics-het"
+      },
+      {
+        "calendar": "Geological age",
+        "value": "more than 200 million years ago; 76 percent of marine and terrestrial species",
+        "source": "src-mit"
+      }
+    ],
+    "display": "c. 201.3 million years ago"
+  },
+  "where": {
+    "lat": 47.4839,
+    "lon": 11.5306,
+    "elevation_m": null,
+    "modern_name": "Kuhjoch pass, Karwendel Mountains, Tyrol, Austria (Triassic-Jurassic boundary GSSP)",
+    "historical_name": "Western Tethys shelf sea on the margin of Pangaea (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-ics-het"
+    ],
+    "paleo": {
+      "lat": 27.35,
+      "lon": 28.01,
+      "age_ma": 201,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 47.4839, 11.5306 reconstructed to 201 Ma. PALEOMAP gives 33.15 N, 15.86 E."
+    }
+  },
+  "regions": [
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of the five great mass extinctions, clearing ecological space for dinosaurs to dominate the Jurassic."
+  },
+  "related": [
+    {
+      "id": "-201my-central-atlantic-magmatic-province",
+      "type": "caused_by",
+      "because": "Dating links CAMP eruptions in time with the extinction."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ics-het",
+      "url": "https://stratigraphy.org/gssps/hettangian",
+      "title": "GSSP for the Hettangian Stage (base of the Jurassic), Kuhjoch, Austria",
+      "publisher": "International Commission on Stratigraphy",
+      "author": "International Commission on Stratigraphy",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-mit",
+      "url": "https://news.mit.edu/2013/volcanic-eruptions-triggered-end-triassic-extinction-0321",
+      "title": "Volcanic eruptions triggered end-Triassic extinction (MIT News)",
+      "publisher": "Massachusetts Institute of Technology",
+      "author": "Massachusetts Institute of Technology",
+      "date_published": "2013-03-21",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-earthsky",
+      "url": "https://earthsky.org/science-wire/before-dinosaurs-era-volcanic-eruptions-triggered-mass-extinction/",
+      "title": "Before dinosaurs era, volcanic eruptions triggered mass extinction (EarthSky Science Wire)",
+      "publisher": "EarthSky",
+      "author": "EarthSky",
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The extinction was global; the pin is the Triassic-Jurassic boundary GSSP, a reference section, not an extinction epicentre. The ICS page gives the boundary age but does not describe the extinction; the 76 percent figure is from MIT News.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T06:07:26.284Z"
+}

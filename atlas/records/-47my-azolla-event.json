@@ -1,0 +1,182 @@
+{
+  "id": "-47my-azolla-event",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Arctic Azolla event",
+  "summary": "Around 49 million years ago, at the end of the Early Eocene, the freshwater fern Azolla grew abundantly on the Arctic Ocean surface, as drill cores from the central Arctic show, pointing to a low-salinity surface setting. Researchers suggest burial of its organic matter may have helped lower atmospheric CO2, and the end of the phase coincides with the early shift from hothouse towards icehouse.",
+  "when": {
+    "start": {
+      "year": -49500000
+    },
+    "end": {
+      "year": -48500000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range follows the ~49.5-48.5 Myrs phase given by Brinkhuis (Oslo); the 2004 IODP release says only \"around 49 million years ago\". The atlas id uses 47 Ma. Years are Ma counted back from the present with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "~49.5-48.5 Myrs",
+        "source": "src-oslo-brinkhuis"
+      },
+      {
+        "calendar": "Ma",
+        "value": "the end of the Early Eocene (~49 Ma)",
+        "source": "src-oslo-brinkhuis"
+      },
+      {
+        "calendar": "Ma",
+        "value": "around 49 million years ago",
+        "source": "src-iodp-2004"
+      }
+    ],
+    "display": "c. 49.5–48.5 million years ago"
+  },
+  "where": {
+    "lat": 75,
+    "lon": 175,
+    "elevation_m": null,
+    "modern_name": "Lomonosov Ridge, central Arctic Ocean (pin is the Wikidata point for the ridge; the drilled interval lies elsewhere along it)",
+    "historical_name": "Arctic Ocean, Early Eocene; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-wikidata-lomonosov",
+      "src-iodp-2004",
+      "src-oslo-brinkhuis"
+    ],
+    "paleo": {
+      "lat": 87.33,
+      "lon": 136.05,
+      "age_ma": 49,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "oceans",
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "An Arctic bloom proposed as a carbon sink near the end of the Early Eocene hothouse."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-56my-paleocene-eocene-thermal-maximum",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-iodp-2004",
+      "url": "https://eurekalert.org/news-releases/704346",
+      "title": "New findings from Arctic Coring Expedition decipher Arctic climate puzzles",
+      "publisher": "Integrated Ocean Drilling Program Management International (via EurekAlert!)",
+      "author": "IODP-MI",
+      "date_published": "2004-11-17",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-oslo-brinkhuis",
+      "url": "https://mn.uio.no/ceed/english/research/news-and-events/events/guest-lectures/2022_autumn/HenkBrinkhuis.html",
+      "title": "Ending the Early Eocene Hothouse and the role of the Arctic Azolla phenomenon (seminar abstract)",
+      "publisher": "Centre for Earth Evolution and Dynamics (CEED), University of Oslo",
+      "author": "Henk Brinkhuis",
+      "date_published": "2022-09-15",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-lomonosov",
+      "url": "https://www.wikidata.org/wiki/Q1166029",
+      "title": "Wikidata item Q1166029 (Lomonosov Ridge)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=175,75&time=49&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the opened pages say only \"Arctic Ocean\" and \"central Arctic Ocean\" and give no drill-site coordinates, so the Wikidata ridge point is used with 2500 km uncertainty. The CO2 role is a hypothesis in the source.",
+  "author": "historian-agent:o-s83",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:55:06.636Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-49500000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Around 49 million years ago, at the end of the Early Eocene, the freshwater fern Azolla grew abundantly on the Arctic Ocean surface, as drill cores from the…",
+        "source": "src-iodp-2004"
+      },
+      {
+        "span": "-48500000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Researchers suggest burial of its organic matter may have helped lower atmospheric CO2, and the end of the phase coincides with the early shift from hothouse towards icehouse.",
+        "source": "src-iodp-2004",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "1952-03-10-batista-coup",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Batista's coup in Cuba",
+  "summary": "On 10 March 1952 General Fulgencio Batista, with army officers, seized control in Havana and deposed President Carlos Prío Socarrás shortly before a scheduled election. He took power with little resistance, became president on 4 April, suspended the constitution and ruled by force until the 1959 revolution.",
+  "when": {
+    "start": {
+      "year": 1952,
+      "iso": "1952-03-10"
+    },
+    "end": {
+      "year": 1952,
+      "iso": "1952-03-10"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both opened pages give 10 March 1952."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "March 10, 1952",
+        "source": "src-frus"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 10, 1952",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "10 March 1952"
+  },
+  "where": {
+    "lat": 23.136667,
+    "lon": -82.358889,
+    "elevation_m": null,
+    "modern_name": "Havana, Cuba (the coup was led from the main army camp in the capital)",
+    "historical_name": "Havana, Republic of Cuba",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-havana"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Ended Cuba's constitutional order and set the stage for the armed opposition that became the Cuban Revolution."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1953-cuban-revolution",
+      "type": "related"
+    },
+    {
+      "id": "person-fidel-castro",
+      "type": "related"
+    },
+    {
+      "id": "place-moncada-barracks",
+      "type": "related"
+    },
+    {
+      "id": "1956-12-02-granma-landing",
+      "type": "related"
+    },
+    {
+      "id": "1959-la-cabana-revolutionary-tribunals",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-frus",
+      "url": "https://history.state.gov/historicaldocuments/frus1952-54v04/d325",
+      "title": "Foreign Relations of the United States 1952-1954, Vol. IV, Editorial Note",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/batista-overthrows-cuban-government",
+      "title": "Batista Overthrows Cuban Government (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-wd-havana",
+      "url": "https://www.wikidata.org/wiki/Q1563",
+      "title": "Wikidata item Q1563 (Havana), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Havana city centre with 15 km uncertainty because the opened EBSCO page says only \"the main army camp in the capital\" (Camp Columbia is not named on an opened page). The election date is not on an opened page and is not stated.",
+  "author": "historian-agent:o-s22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:51:48.693Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1952-03-10",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 10 March 1952 General Fulgencio Batista, with army officers, seized control in Havana and deposed President Carlos Prío Socarrás shortly before a scheduled election.",
+        "source": "src-frus"
+      },
+      {
+        "span": "1952",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He took power with little resistance, became president on 4 April, suspended the constitution and ruled by force until the 1959 revolution.",
+        "source": "src-frus",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

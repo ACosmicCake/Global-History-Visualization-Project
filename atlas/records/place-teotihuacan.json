@@ -1,0 +1,216 @@
+{
+  "id": "place-teotihuacan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Teotihuacan and the Pyramid of the Sun",
+  "summary": "Teotihuacan, in the Basin of Mexico, was a large Mesoamerican city, and its Pyramid of the Sun, raised in roughly the first two centuries CE, is among the biggest pyramids of the ancient Americas. UNESCO inscribed the pre-Hispanic city in 1987.",
+  "when": {
+    "start": {
+      "year": 100
+    },
+    "end": {
+      "year": 200
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 25,
+      "end_minus_years": 25,
+      "end_plus_years": 50,
+      "note": "EBSCO dates the construction of the Pyramids of the Sun and Moon to c. 100-200 C.E. and says the Sun Pyramid was completed around 125 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "DATE c. 100-200 C.E.",
+        "source": "src-ebsco-teo"
+      },
+      {
+        "calendar": "CE",
+        "value": "completed around 125 CE",
+        "source": "src-ebsco-teo"
+      }
+    ],
+    "display": "c. 100-200 CE (Pyramid of the Sun)"
+  },
+  "where": {
+    "lat": 19.6925,
+    "lon": -98.8438,
+    "elevation_m": null,
+    "modern_name": "Pyramid of the Sun, Teotihuacan, State of Mexico, Mexico",
+    "historical_name": "Pyramid of the Sun, Teotihuacan, city of the Basin of Mexico",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wikidata-q29238",
+      "src-unesco414"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The largest monument of the first great city of Mesoamerica, a UNESCO World Heritage site."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0250-classic-maya-period",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco414",
+      "url": "https://whc.unesco.org/en/list/414",
+      "title": "Pre-Hispanic City of Teotihuacan (World Heritage List no. 414)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": "1987",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements",
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-ebsco-teo",
+      "url": "https://www.ebsco.com/research-starters/anthropology/pyramids-sun-and-moon-teotihuacan",
+      "title": "Pyramids of the Sun and Moon at Teotihuacan (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-wikidata-q29238",
+      "url": "https://www.wikidata.org/wiki/Q29238",
+      "title": "Wikidata item Q29238 (Pyramid of the Sun), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: stepped_pyramid. Height 75 m and base 225 x 222 m are UNESCO figures; EBSCO gives 212 feet (about 65 m), so the height is the least certain number. The stub at this id was overwritten. Coordinates: Wikidata point for the pyramid, about 0.2 km from the UNESCO property point (N19 41 30, W98 50 30).",
+  "model": {
+    "footprint": {
+      "description": "Roughly square base of 225 x 222 m on a 350 m square terrace (UNESCO).",
+      "source": "src-unesco414",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-unesco414",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 75,
+          "unit": "m",
+          "source": "src-unesco414",
+          "note": "UNESCO; EBSCO gives 212 ft (about 64.6 m)"
+        },
+        {
+          "part": "base length",
+          "value": 225,
+          "unit": "m",
+          "source": "src-unesco414"
+        },
+        {
+          "part": "base width",
+          "value": 222,
+          "unit": "m",
+          "source": "src-unesco414"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "single stepped extrusion at true base and height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped pyramid on its terrace"
+      },
+      {
+        "level": "street",
+        "representation": "rubble-core and adobe-veneer surface treatment"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 100,
+        "end_year": 200,
+        "state": "construction",
+        "description": "Pyramid of the Sun built in two main episodes, completed around 125 CE.",
+        "source": "src-ebsco-teo"
+      },
+      {
+        "start_year": 200,
+        "end_year": null,
+        "state": "intact",
+        "description": "Pyramid stands from its completion; its later history is not modelled.",
+        "source": "src-ebsco-teo"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 100,
+        "to_year": null,
+        "material": "rubble-core masonry with adobe-block and lime-plaster veneer",
+        "source": "src-ebsco-teo"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:40.025Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

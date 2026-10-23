@@ -1,0 +1,133 @@
+{
+  "id": "1337-hundred-years-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Hundred Years' War",
+  "summary": "An intermittent conflict between England and France, which by convention began in 1337 when Philip VI confiscated the English-held duchy of Guyenne. Disputes over English lands in France and the French succession drove it. French victories, notably Castillon in 1453, left England holding only Calais and strengthened the French crown.",
+  "when": {
+    "start": {
+      "year": 1337
+    },
+    "end": {
+      "year": 1453
+    },
+    "precision": "year",
+    "display": "24 May 1337 – 1453",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "By convention the war is said to have started on May 24, 1337",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "The Hundred Years' War (1337-1453) was an intermittent conflict",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 47,
+    "lon": 2,
+    "elevation_m": null,
+    "modern_name": "France (proxy pin: the war was fought mainly in France)",
+    "historical_name": "Kingdoms of France and England; duchy of Guyenne (Gascony)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A defining dynastic struggle that reshaped the French and English monarchies and western European power."
+  },
+  "confidence": "established",
+  "audience_note": "Involves warfare, civilian deaths and plunder.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260104131251/https://www.britannica.com/event/Hundred-Years-War",
+      "title": "Hundred Years’ War | Summary, Causes, Effects, Combatants, Timeline, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.worldhistory.org/Hundred_Years'_War/",
+      "title": "Hundred Years' War - World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q142",
+      "title": "Wikidata Q142 (France, coordinate location P625; proxy pin for the main theatre of Q12551)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "End date differs by source: World History Encyclopedia gives 1453 (Castillon), while Britannica says the 1475 Picquigny truce essentially marked the end and no peace treaty was signed. I used 1453 following the Wikidata lead and the convention.  The Britannica text is truncated, so the later sections are unseen. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, World History Encyclopedia; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T00:04:36.939Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1337",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "An intermittent conflict between England and France, which by convention began in 1337 when Philip VI confiscated the English-held duchy of Guyenne.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1453",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "French victories, notably Castillon in 1453, left England holding only Calais and strengthened the French crown.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

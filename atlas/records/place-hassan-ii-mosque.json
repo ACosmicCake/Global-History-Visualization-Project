@@ -1,0 +1,127 @@
+{
+  "id": "place-hassan-ii-mosque",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Hassan II Mosque",
+  "summary": "The Hassan II Mosque in Casablanca has a minaret 210 m high, among the tallest in the world. Construction began in 1986 and was meant to end for King Hassan II's 60th birthday in 1989, but it ran on to 1993. Its prayer hall holds about 25,000 people.",
+  "when": {
+    "start": {
+      "year": 1986
+    },
+    "end": {
+      "year": 1993
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "DLIFLC: construction began in 1986 and was delayed until 1993; Al Jazeera: inaugurated in 1993."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (DLIFLC)",
+        "value": "began in 1986",
+        "source": "src-dliflc-morocco"
+      },
+      {
+        "calendar": "CE (Al Jazeera)",
+        "value": "inaugurated in 1993",
+        "source": "src-aljazeera-hassan"
+      }
+    ],
+    "display": "Built 1986–1993"
+  },
+  "where": {
+    "lat": 33.6082243,
+    "lon": -7.6324728,
+    "elevation_m": null,
+    "modern_name": "Hassan II Mosque, Casablanca, Morocco",
+    "historical_name": "Hassan II Mosque, Casablanca, Kingdom of Morocco",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-hassan"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Defense Language Institute guide lists it as one of the largest mosques in the world, with a minaret 210 m high."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-dliflc-morocco",
+      "url": "https://fieldsupport.dliflc.edu/products/cip/morocco/website/morocco.pdf",
+      "title": "Morocco Country Familiarization Guide",
+      "publisher": "Defense Language Institute Foreign Language Center (DLIFLC)",
+      "author": "Defense Language Institute Foreign Language Center (DLIFLC)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-aljazeera-hassan",
+      "url": "https://www.aljazeera.com/news/2004/1/21/morocco-to-repair-grand-mosque",
+      "title": "Morocco to repair grand mosque",
+      "publisher": "Al Jazeera",
+      "author": "Al Jazeera",
+      "date_published": "2004-01-21",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-hassan",
+      "url": "https://nominatim.openstreetmap.org/search?q=Hassan+II+Mosque+Casablanca&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Mosquée Hassan II, Casablanca, relation 12679400 (33.6082243, -7.6324728)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No model: no opened institutional page gives a plan dimension (Bouygues and the Met pages were blocked; some travel pages give 200 m by 100 m and 200 m for the minaret, not used). Shape would be tower for the minaret. 210 m is from the DLIFLC guide only; Bouygues is said by a search snippet to give 200 m, not verified.",
+  "author": "historian-agent:m-16",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:56:05.966Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s7",
+  "updated": "2026-10-22",
+  "id": "-84my-india-madagascar-separation",
+  "kind": "process",
+  "title": "Separation of India from Madagascar",
+  "summary": "In the Late Cretaceous, volcanism along Madagascar's eastern margin accompanied the break-up of Madagascar from the Seychelles–India block. Argon dating gives about 87.6 million years for the lavas and dykes, and a recent study puts the second breakup near 90 million years ago. The Marion hotspot is widely linked to the event, though its exact role is debated.",
+  "when": {
+    "start": {
+      "year": -90000000
+    },
+    "end": {
+      "year": -87000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "87.6 ± 0.6 Ma for dated eastern-margin volcanics (Storey et al. 1995); about 90 Ma in a 2025 review; other studies report volcanism spanning roughly 84–92 Ma (not opened)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ar-40/Ar-39",
+        "value": "87.6 ± 0.6 million years ago",
+        "source": "src-nora"
+      },
+      {
+        "calendar": "Ma",
+        "value": "about 90 million years ago",
+        "source": "src-pmc"
+      }
+    ],
+    "display": "c. 90–87 Ma"
+  },
+  "where": {
+    "lat": -24.8,
+    "lon": 45.3,
+    "elevation_m": null,
+    "modern_name": "Androy, southern Madagascar (proposed Marion hotspot focus); breakup along the eastern margin",
+    "historical_name": "No polities; Madagascar–Seychelles–India block in the Southern Indian Ocean",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-wd",
+      "src-nora"
+    ],
+    "paleo": {
+      "lat": -47.86,
+      "lon": 32.47,
+      "age_ma": 88,
+      "plate_model": "MULLER2019 (Müller et al. 2019) via GPlates Web Service",
+      "source": "src-gplates",
+      "note": "Other models at 88 Ma: MERDITH2021 44.52° S, 41.30° E; PALEOMAP 43.60° S, 35.76° E. Latitudes differ by about 4°, longitudes by up to 9°."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "southern_asia",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "It isolated Madagascar and set India on its northward drift, shaping the island's unique fauna."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-200my-breakup-of-pangaea",
+      "type": "part_of"
+    },
+    {
+      "id": "-50my-india-asia-collision",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nora",
+      "url": "https://nora.nerc.ac.uk/id/eprint/152426/",
+      "title": "Timing of hot spot-related volcanism and the breakup of Madagascar and India (Storey et al. 1995, Science), abstract record",
+      "publisher": "NERC Open Research Archive",
+      "author": "Storey et al.",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12526473/",
+      "title": "Madagascar's landscape evolution: A tale of two rifts",
+      "publisher": "PubMed Central (Science Advances)",
+      "author": "Clementucci et al.",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q218981.json",
+      "title": "Wikidata entry for Androy (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=45.3,-24.8&time=88&model=MULLER2019",
+      "title": "GPlates Web Service reconstruction of 45.3°E, 24.8°S at 88 Ma",
+      "publisher": "EarthByte Group, University of Sydney",
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure whether 87.6 vs about 90 Ma best represents separation (volcanism versus drift onset), and the 84 Ma figure in the id label; the Androy point is a proxy for a margin-wide process.",
+  "published_at": "2026-10-22T03:55:57.179Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

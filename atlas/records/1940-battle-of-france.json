@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1940-battle-of-france",
+  "kind": "event",
+  "title": "Battle of France",
+  "summary": "Germany attacked the Low Countries and France on 10 May 1940. Paris fell on 14 June, and France signed an armistice with Germany on 22 June, ending a campaign of under six weeks. The armistice divided France into an occupied north and an unoccupied south governed from Vichy, and left Britain fighting Germany alone.",
+  "when": {
+    "start": {
+      "year": 1940
+    },
+    "end": {
+      "year": 1940
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start 10 May 1940; end taken as the 22 June 1940 armistice, as the sources give; fighting end-date conventions may differ."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 10, 1940",
+        "source": "src-ushmm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 14, 1940",
+        "source": "src-ushmm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 22",
+        "source": "src-ushmm"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 10, 1940",
+        "source": "src-nara"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 22, 1940",
+        "source": "src-nara"
+      }
+    ],
+    "display": "10 May – 22 June 1940"
+  },
+  "where": {
+    "lat": 48.85341,
+    "lon": 2.3488,
+    "elevation_m": null,
+    "modern_name": "Paris, France (proxy pin for a campaign across Belgium, the Netherlands, Luxembourg and France)",
+    "historical_name": "France (Third Republic) and the Low Countries",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Six-week German victory that removed France from the war and led to the Vichy regime and German occupation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ushmm",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/german-invasion-of-western-europe-may-1940",
+      "title": "German Invasion of Western Europe, May 1940",
+      "publisher": "United States Holocaust Memorial Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nara",
+      "url": "https://www.archives.gov/research/holocaust/finding-aid/civilian/rg-84-france.html",
+      "title": "RG 84: France",
+      "publisher": "U.S. National Archives",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2988507/paris.html",
+      "title": "Paris, France",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Paris as a proxy for a multi-country campaign. End date uses the armistice (22 June); the 25 June ceasefire date was not checked on an opened source.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T23:22:18.444Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1940",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Germany attacked the Low Countries and France on 10 May 1940.",
+        "source": "src-ushmm"
+      },
+      {
+        "span": "1940",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Paris fell on 14 June, and France signed an armistice with Germany on 22 June, ending a campaign of under six weeks.",
+        "source": "src-ushmm",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

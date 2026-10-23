@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1940-battle-of-dunkirk",
+  "kind": "event",
+  "title": "Battle of Dunkirk",
+  "summary": "After Germany's May 1940 invasion of France and the Low Countries pushed the British Expeditionary Force and French and Belgian troops back to the port of Dunkirk, the Royal Navy ran Operation Dynamo from 26 May to 4 June 1940, rescuing about 338,000 troops across the Channel.",
+  "when": {
+    "start": {
+      "year": 1940
+    },
+    "end": {
+      "year": 1940
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "IWM gives the evacuation as 26 May to 4 June 1940; it also says resistance ended at 9.30am on 4 June."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "26 May - 4 June 1940",
+        "source": "src-iwm"
+      }
+    ],
+    "display": "26 May – 4 June 1940"
+  },
+  "where": {
+    "lat": 51.0343684,
+    "lon": 2.3767763,
+    "elevation_m": null,
+    "modern_name": "Dunkirk (Dunkerque), France",
+    "historical_name": "Dunkirk (Dunkerque), France, 1940",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-gps"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Evacuation saved the BEF, Britain's only trained troops, per IWM, and shaped morale in summer 1940."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-iwm",
+      "url": "https://www.iwm.org.uk/history/what-you-need-to-know-about-the-dunkirk-evacuations",
+      "title": "What you Need to Know about the Dunkirk Evacuations",
+      "publisher": "Imperial War Museums",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-parl",
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/yourcountry/collections/churchillexhibition/churchill-the-orator/fight-on-the-beaches/",
+      "title": "'We shall fight on the beaches'",
+      "publisher": "UK Parliament",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gps",
+      "url": "https://www.gps-latitude-longitude.com/gps-coordinates-of-dunkirk",
+      "title": "Latitude, Longitude and GPS coordinates of Dunkirk",
+      "publisher": "gps-latitude-longitude.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the town centre of Dunkirk (a proxy for the perimeter and beaches). Coordinates come from a non-institutional site. UK Parliament page returned 403 to spotcheck, though it was read in fetch.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:21:35.766Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

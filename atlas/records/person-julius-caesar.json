@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-julius-caesar",
+  "kind": "person",
+  "title": "Gaius Julius Caesar",
+  "summary": "Gaius Julius Caesar was a Roman general, statesman, and dictator whose political and military career dismantled the constitutional framework of the Roman Republic. After conquering Gaul and winning the subsequent civil war against Pompey, he enacted far-reaching calendar, economic, and administrative reforms as perpetual dictator. His assassination by senatorial conspirators on the Ides of March in 44 BCE triggered renewed civil conflicts that ultimately gave rise to the Roman Empire under his adoptive heir Augustus.",
+  "when": {
+    "start": {
+      "year": -99,
+      "iso": "-0099-07-12"
+    },
+    "end": {
+      "year": -43,
+      "iso": "-0043-03-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth commonly dated to 12 or 13 July 100 BCE, though some scholars suggest 102 BCE based on the traditional ages of his magistracies. Death is securely dated to 15 March 44 BCE (the Ides of March)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "13 July 100 - 15 March 44 BCE",
+        "source": "src-livius-caesar"
+      },
+      {
+        "calendar": "Roman calendar (Suetonius, Divus Julius 80–81)",
+        "value": "meeting of the Senate was called for the Ides of March in the Hall of Pompey",
+        "source": "src-suetonius-julius"
+      }
+    ],
+    "display": "12/13 July 100 BCE – 15 March 44 BCE"
+  },
+  "where": {
+    "lat": 41.89193,
+    "lon": 12.51133,
+    "elevation_m": null,
+    "modern_name": "Rome, Lazio, Italy (birth and death site; military career spanned Gaul, Britain, Spain, Egypt, and Greece)",
+    "historical_name": "Roma, capital of the Roman Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "His military conquests and assumption of perpetual dictatorship precipitated the fall of the Roman Republic and laid the basis for the imperial monarchy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "related"
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "person-augustus",
+      "type": "related"
+    },
+    {
+      "id": "place-rome",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-livius-caesar",
+      "url": "https://www.livius.org/articles/person/caesar/",
+      "title": "Gaius Julius Caesar",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-suetonius-julius",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Julius*.html",
+      "title": "Suetonius, The Lives of the Twelve Caesars: The Deified Julius",
+      "publisher": "LacusCurtius (Bill Thayer, University of Chicago), public-domain Loeb text",
+      "author": "Suetonius; trans. J. C. Rolfe",
+      "date_published": "1913",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070",
+      "title": "Rome (GeoNames 3169070)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of his exact birth year: whether 100 BCE (the consensus) or 102 BCE (proposed by Mommsen to reconcile the cursus honorum ages).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:31.822Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

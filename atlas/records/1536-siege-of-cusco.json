@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s25",
+  "updated": "2026-10-22",
+  "id": "1536-siege-of-cusco",
+  "kind": "event",
+  "title": "Siege of Cusco (1536-37)",
+  "summary": "Beginning on 6 May 1536, an Inca army led by Manco Inca besieged the Spanish in Cusco and seized the fortress of Sacsayhuaman, which the Spanish later retook. The first siege was abandoned by August and a second broken by April 1537, after which Manco withdrew to Vilcabamba.",
+  "when": {
+    "start": {
+      "year": 1536,
+      "iso": "1536-05-06"
+    },
+    "end": {
+      "year": 1537
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "First siege began 6 May 1536 and was abandoned by August; a second siege was broken by April 1537, per the same source."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The siege of Cusco began on 6 May 1536.",
+        "source": "src-whe-cusco"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The second siege was broken",
+        "source": "src-whe-cusco"
+      }
+    ],
+    "display": "6 May 1536 – April 1537"
+  },
+  "where": {
+    "lat": -13.53188,
+    "lon": -71.96701,
+    "elevation_m": null,
+    "modern_name": "Cusco, Peru",
+    "historical_name": "Cusco (Cuzco), former Inca capital under Spanish occupation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-gn-cusco"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The main Inca attempt to expel the Spanish; its failure led Manco Inca to retreat toward Vilcabamba."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-cusco",
+      "type": "related"
+    },
+    {
+      "id": "polity-tawantinsuyu",
+      "type": "related"
+    },
+    {
+      "id": "1533-spanish-capture-of-cusco",
+      "type": "caused_by",
+      "because": "Spanish occupation of Cusco from 1533 set up the 1536 Inca rising."
+    },
+    {
+      "id": "polity-vilcabamba",
+      "type": "caused",
+      "because": "After the siege failed, Manco Inca withdrew to Vitcos and Vilcabamba."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-cusco",
+      "url": "https://www.worldhistory.org/article/2020/the-siege-of-cusco-in-1536-7/",
+      "title": "The Siege of Cusco in 1536-7",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2022-06-23",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-umn-outline",
+      "url": "https://users.pop.umn.edu/~rmccaa/colonial/conqperu/outline.htm",
+      "title": "Conquest of Peru course outline (University of Minnesota-hosted pages)",
+      "publisher": "University of Minnesota (hosted course materials)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-gn-cusco",
+      "url": "https://www.geonames.org/3941584/",
+      "title": "GeoNames entry: Cusco, Peru (3941584)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The UMN-hosted course page only confirms a 1536 siege by Manco Inca (class other); dates rest on the World History Encyclopedia article. Phases and end date are loosely bounded.",
+  "published_at": "2026-10-22T07:22:32.030Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1536-05-06",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Beginning on 6 May 1536, an Inca army led by Manco Inca besieged the Spanish in Cusco and seized the fortress of Sacsayhuaman, which the Spanish later retook.",
+        "source": "src-whe-cusco"
+      },
+      {
+        "span": "1537",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The first siege was abandoned by August and a second broken by April 1537, after which Manco withdrew to Vilcabamba.",
+        "source": "src-whe-cusco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

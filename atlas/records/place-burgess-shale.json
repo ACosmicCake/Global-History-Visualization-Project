@@ -1,0 +1,178 @@
+{
+  "id": "place-burgess-shale",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Burgess Shale",
+  "summary": "Fossil deposit in Yoho National Park, British Columbia, with exceptionally preserved soft-bodied Cambrian animals. Charles Walcott found the fossils in 1909 and collected thousands of specimens. The Burgess Shale Formation is about 507 million years old and a standard reference for early animal life.",
+  "when": {
+    "start": {
+      "year": -507000000
+    },
+    "end": {
+      "year": -507000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 2000000,
+      "start_plus_years": 2000000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The ROM species pages give \"around 507 million years old\" for the Burgess Shale Formation (Wuliuan Stage); the Burgess Shale Geoscience Foundation says 508 million. The range covers both."
+    },
+    "as_recorded": [
+      {
+        "calendar": "geological",
+        "value": "Middle Cambrian, Wuliuan stage, Burgess Shale Formation (around 507 million years old)",
+        "source": "src-rom-walcott"
+      },
+      {
+        "calendar": "geological",
+        "value": "508 million year old fossils; discovered 1909",
+        "source": "src-bsgf"
+      }
+    ],
+    "display": "about 507 million years ago (Middle Cambrian, Wuliuan)"
+  },
+  "where": {
+    "lat": 51.4333,
+    "lon": -116.467,
+    "elevation_m": null,
+    "modern_name": "Walcott Quarry, Fossil Ridge, Yoho National Park, British Columbia, Canada",
+    "historical_name": "Deep-water marine basin on the western margin of Laurentia; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-wd-burgess",
+      "src-rom-intro"
+    ],
+    "paleo": {
+      "lat": 1.43,
+      "lon": -79.97,
+      "age_ma": 507,
+      "plate_model": "PALEOMAP (Scotese) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "MERDITH2021 returned no reconstruction (999.99) for this point at 500-510 Ma, so the PALEOMAP value is stored. It is indicative only."
+    }
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "The classic Cambrian soft-bodied fossil site, whose 1909 discovery shaped views of early animal life."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "part_of"
+    },
+    {
+      "id": "place-chengjiang-fossil-site",
+      "type": "related"
+    },
+    {
+      "id": "-514my-emu-bay-shale-lagerstatte",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rom-walcott",
+      "url": "https://burgess-shale.rom.on.ca/fossil-ridge/walcott-quarry/",
+      "title": "Fossil Ridge: Walcott Quarry (The Burgess Shale, species pages)",
+      "publisher": "Royal Ontario Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bsgf",
+      "url": "https://www.burgess-shale.bc.ca/burgess-shale-fossils/",
+      "title": "Burgess Shale Fossils",
+      "publisher": "Burgess Shale Geoscience Foundation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rom-intro",
+      "url": "https://burgess-shale.rom.on.ca/introduction/",
+      "title": "Introduction: The Burgess Shale",
+      "publisher": "Royal Ontario Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-burgess",
+      "url": "https://www.wikidata.org/wiki/Q852085",
+      "title": "Wikidata Q852085: Burgess Shale (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Age differs between sources (ROM about 507 Ma; foundation 508 Ma). Coordinates are the Wikidata point for the formation (51.4333 N, 116.467 W), near the Walcott Quarry; UNESCO's Canadian Rockies listing gives only a park-wide point so it was not used. The ROM introduction page was used for location in Yoho National Park. MERDITH2021 failed for this point, hence the PALEOMAP fallback.",
+  "author": "historian-agent:o-s19",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:38:40.727Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "1944-08-01-warsaw-uprising",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Warsaw Uprising",
+  "summary": "On 1 August 1944 the Polish Home Army rose against German occupation in Warsaw, hoping to free the capital before the Red Army arrived. Planned to last several days, the fighting lasted 63 days and ended in surrender. Sources give 14,000-18,000 insurgents and 120,000-180,000 civilians killed, and more than 15,000 insurgents were taken prisoner.",
+  "when": {
+    "start": {
+      "year": 1944
+    },
+    "end": {
+      "year": 1944
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start 1 August 1944; end 2 October (TVN24, signed cessation) or 3 October (IPN, \"fell on October 3\")."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1 August 1944",
+        "source": "src-ipn-warsaw"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On 1 August 1944, an uprising broke out in Warsaw",
+        "source": "src-tvn24-warsaw"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On 2 October 1944",
+        "source": "src-tvn24-warsaw"
+      }
+    ],
+    "display": "1 August - 2/3 October 1944"
+  },
+  "where": {
+    "lat": 52.23,
+    "lon": 21.011111,
+    "elevation_m": null,
+    "modern_name": "Warsaw, Poland",
+    "historical_name": "Warschau, capital of the General Government (German-occupied Poland)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-warsaw",
+      "src-ipn-warsaw"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Historians call it the largest military effort by a resistance movement in German-occupied Europe, per TVN24; it ended in mass civilian deaths."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass killing, including of children. Figures are historians' estimates and differ between sources.",
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "part_of"
+    },
+    {
+      "id": "1939-09-01-invasion-of-poland",
+      "type": "related"
+    },
+    {
+      "id": "1943-04-19-warsaw-ghetto-uprising",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ipn-warsaw",
+      "url": "https://eng.ipn.gov.pl/en/news/1267,74th-anniversary-of-the-outbreak-of-the-Warsaw-Uprising-The-Institute-of-Nationa.html",
+      "title": "74th anniversary of the outbreak of the Warsaw Uprising",
+      "publisher": "Institute of National Remembrance (IPN), Poland",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-tvn24-warsaw",
+      "url": "https://tvn24.pl/tvn24-news-in-english/the-warsaw-uprising-63-days-of-lonely-struggle-ra761417-ls2472133",
+      "title": "The Warsaw Uprising. 63 Days of Lonely Struggle",
+      "publisher": "TVN24",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-warsaw",
+      "url": "https://www.wikidata.org/wiki/Q270",
+      "title": "Wikidata item Q270 (Warsaw), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Casualty figures conflict: IPN 16,000-18,000 Home Army and 150,000-180,000 civilians; TVN24 14,000-18,000 insurgents and 120,000-160,000 civilians. End date 2 vs 3 October differs. Pin is central Warsaw (Wikidata); fighting covered several districts. The W-Hour clock time is not on the opened pages and is omitted.",
+  "author": "historian-agent:o-s43",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:16:57.512Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 1 August 1944 the Polish Home Army rose against German occupation in Warsaw, hoping to free the capital before the Red Army arrived.",
+        "source": "src-ipn-warsaw"
+      },
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Planned to last several days, the fighting lasted 63 days and ended in surrender.",
+        "source": "src-ipn-warsaw",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

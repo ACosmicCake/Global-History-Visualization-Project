@@ -1,0 +1,156 @@
+{
+  "id": "-0110-han-conquest-of-nanyue-and-northern-vietnam",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Han conquest of Nanyue (111 BCE) and the commanderies of northern Vietnam",
+  "summary": "In 111 BCE the armies of Han emperor Wudi destroyed Nanyue, the southern kingdom founded by the former Qin official Zhao Tuo, and absorbed its lands. This brought parts of northern Vietnam under Chinese rule for the first time; the Red River region was organized within the Han circuit of Jiaozhi, opening a long era of Chinese administration.",
+  "when": {
+    "start": {
+      "year": -110
+    },
+    "end": {
+      "year": -110
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 1,
+      "end_plus_years": 0,
+      "note": "Year 111 BCE is astronomical -110. Sources give the fall of Nanyue as 111 BCE (\"ca.\" in the Columbia page); some accounts place the opening of the campaign in 112 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "ca. 111 BCE, Chinese emperor Han Wudi conquers southern kingdom of Nanyue",
+        "source": "src-columbia-afe"
+      },
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "In 111 BCE, the armies of the Han destroyed Nan Yue and incorporated its territory under Han rule",
+        "source": "src-cambridge-annan"
+      }
+    ],
+    "display": "111 BCE"
+  },
+  "where": {
+    "lat": 21.0245,
+    "lon": 105.84117,
+    "elevation_m": null,
+    "modern_name": "Red River Delta, northern Vietnam (pin at Hanoi)",
+    "historical_name": "Southern territory of the kingdom of Nanyue (Nan Yue), annexed by Han China and organized within the Jiaozhi circuit",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wikidata-hanoi"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Marks the start of the roughly thousand-year period of Chinese rule over northern Vietnam, central to Vietnamese and Chinese historiography."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-han-dynasty",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-columbia-afe",
+      "url": "https://afe.easia.columbia.edu/tps/1000bce_vn.htm",
+      "title": "Vietnam, 1000 BCE to 300 CE (Asia for Educators timeline)",
+      "publisher": "Asia for Educators, Columbia University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cambridge-annan",
+      "url": "https://www.cambridge.org/core/books/ming-china-and-vietnam/brief-history-of-annan/CD6E5A787696821ABFAFED6C47BC49A1",
+      "title": "A brief history of Annan (Chapter 1), Ming China and Vietnam",
+      "publisher": "Cambridge University Press",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-wikidata-hanoi",
+      "url": "https://www.wikidata.org/wiki/Q1858",
+      "title": "Wikidata item Q1858 (Hanoi), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin and the commandery detail. Opened sources confirm the 111 BCE conquest and the Jiaozhi circuit but not the exact list of commanderies (the Cambridge chapter names Jiaozhi, Jiuzhen and Rinan, with Jiuzhen and Rinan south of the delta); the pin is a regional centre at Hanoi, not a battle site, and the fall of Panyu (Guangzhou) was not confirmed in an opened source.",
+  "author": "historian-agent:o-s6",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:55:48.709Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-110",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In 111 BCE the armies of Han emperor Wudi destroyed Nanyue, the southern kingdom founded by the former Qin official Zhao Tuo, and absorbed its lands.",
+        "source": "src-columbia-afe"
+      },
+      {
+        "span": "-110",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "This brought parts of northern Vietnam under Chinese rule for the first time; the Red River region was organized within the Han circuit of Jiaozhi, opening a long…",
+        "source": "src-columbia-afe",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

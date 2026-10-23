@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0145-destruction-of-carthage",
+  "kind": "event",
+  "title": "Destruction of Carthage (146 BCE)",
+  "summary": "In the spring of 146 BCE, Roman legions commanded by Scipio Aemilianus breached the defenses of Carthage after a three-year siege, ending the Third Punic War. Roman soldiers burned the city over six days of street fighting, leveled its fortifications, and enslaved the roughly 50,000 surviving inhabitants. The complete annihilation of Carthage extinguished the Phoenician imperial presence in the western Mediterranean and converted Carthaginian territory into the Roman province of Africa.",
+  "when": {
+    "start": {
+      "year": -145
+    },
+    "end": {
+      "year": -145
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Final assault and burning of Carthage occurred in early to spring 146 BCE under Consul Publius Cornelius Scipio Aemilianus."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (UNESCO World Heritage Centre)",
+        "value": "Rome, which finally destroyed its rival in 146 B.C. A second – Roman – Carthage was then established on the ruins of the first.",
+        "source": "src-unesco-37"
+      },
+      {
+        "calendar": "BCE (Appian, The Punic Wars 126–130; Horace White translation, notes by Jona Lendering)",
+        "value": "Consul Publius Cornelius Scipio Aemilianus; early 146 BCE.",
+        "source": "src-appian-carthage"
+      }
+    ],
+    "display": "Spring 146 BCE"
+  },
+  "where": {
+    "lat": 36.853056,
+    "lon": 10.323056,
+    "elevation_m": null,
+    "modern_name": "Carthage, Tunis Governorate, Tunisia",
+    "historical_name": "Carthago, Byrsa citadel and lower city",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-pleiades-carthage"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The complete destruction of Carthage removed Rome's chief Mediterranean rival and established Roman provincial rule in North Africa."
+  },
+  "confidence": "established",
+  "audience_note": "Details siege warfare, house-to-house combat, mass civilian casualties, and the enslavement of approximately 50,000 surviving inhabitants.",
+  "related": [
+    {
+      "id": "-0263-punic-wars",
+      "type": "part_of"
+    },
+    {
+      "id": "-0508-rise-of-rome",
+      "type": "caused_by",
+      "because": "Rome's victory in the Third Punic War eliminated its major rival and created the province of Africa."
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-rome",
+      "type": "related"
+    },
+    {
+      "id": "polity-numidia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-37",
+      "url": "https://whc.unesco.org/en/list/37/",
+      "title": "Archaeological Site of Carthage",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-appian-carthage",
+      "url": "https://www.livius.org/sources/content/appian/appian-the-punic-wars/appian-the-punic-wars-26/",
+      "title": "Appian, The Punic Wars 126–130",
+      "publisher": "Livius.org",
+      "author": "Appian; trans. Horace White; notes by Jona Lendering",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-carthage",
+      "url": "https://pleiades.stoa.org/places/314921/json",
+      "title": "Carthago (Pleiades 314921 JSON record)",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "Pleiades contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-145",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "In 146 BCE, Roman legions under Scipio Aemilianus captured and leveled the city of Carthage after six days of urban combat.",
+        "source": "src-appian-carthage"
+      },
+      {
+        "span": "-145",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The destruction ended the Punic Wars, enslaved roughly 50,000 survivors, and converted Carthage's territory into the Roman province of Africa.",
+        "source": "src-appian-carthage",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the later legend that Rome sowed the ruins with salt: this is absent from ancient accounts including Appian and Polybius, first appearing in modern historiography.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:32.678Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

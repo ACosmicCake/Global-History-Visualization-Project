@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2024-noto-earthquake",
+  "kind": "event",
+  "title": "2024 Noto earthquake",
+  "summary": "A magnitude 7.5 earthquake struck at a shallow depth near the northern coast of the Noto Peninsula, Ishikawa, Japan, on 1 January 2024. It was the strongest to hit Ishikawa Prefecture since 1885, and it lifted land by up to 4 metres, moving the coastline seaward.",
+  "when": {
+    "start": {
+      "year": 2024
+    },
+    "end": {
+      "year": 2024
+    },
+    "precision": "minute",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Time given as local (JST) by both sources; NASA also gives 07:10 UT."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, local time",
+        "value": "January 1, 2024",
+        "source": "src-usgs"
+      },
+      {
+        "calendar": "Gregorian, local time",
+        "value": "4:10 p.m.",
+        "source": "src-usgs"
+      },
+      {
+        "calendar": "Gregorian, JST",
+        "value": "January 1, 2024",
+        "source": "src-nasa"
+      }
+    ],
+    "display": "1 January 2024, 4:10 p.m. JST"
+  },
+  "where": {
+    "lat": 37.4364,
+    "lon": 137.26,
+    "elevation_m": null,
+    "modern_name": "Noto Peninsula, Ishikawa Prefecture, Japan (pin at Suzu city centre, a proxy for the northern-peninsula epicentral area)",
+    "historical_name": "Noto Peninsula, Ishikawa Prefecture, Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-dbcity"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Strongest earthquake in Ishikawa Prefecture since 1885, with large coastal uplift and heavy damage on the Noto Peninsula."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-usgs",
+      "url": "https://www.usgs.gov/news/featured-story/new-years-day-m75-earthquake-shakes-japans-west-coast",
+      "title": "New Year’s Day M7.5 Earthquake Shakes Japan’s West Coast",
+      "publisher": "U.S. Geological Survey",
+      "author": null,
+      "date_published": "2024-01-02",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nasa",
+      "url": "https://science.nasa.gov/earth/earth-observatory/earthquake-lifts-the-noto-peninsula-152350/",
+      "title": "Earthquake Lifts the Noto Peninsula",
+      "publisher": "NASA Earth Observatory",
+      "author": null,
+      "date_published": "2024-01-25",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dbcity",
+      "url": "https://en.db-city.com/Japan--Ishikawa--Suzu",
+      "title": "Suzu, Ishikawa, Japan geography",
+      "publisher": "db-city",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Suzu city centre, a proxy; no opened source gave the epicentre coordinates (USGS event page needs JavaScript). Casualty figures not included.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:35.842Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "2005-kashmir-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2005 Kashmir earthquake",
+  "summary": "A magnitude 7.6 earthquake struck Pakistan-administered Kashmir and Pakistan's North-West Frontier Province, also affecting India and Afghanistan. At least 79,000 people died and more than 32,000 buildings collapsed in Kashmir, leaving an estimated four million homeless. Poor construction worsened the toll, and aftershocks and landslides hampered relief.",
+  "when": {
+    "start": {
+      "year": 2005
+    },
+    "end": {
+      "year": 2005
+    },
+    "precision": "day",
+    "display": "8 October 2005",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "occurred on October 8, 2005",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "2005-10-08 03:50:37",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 34.4931,
+    "lon": 73.6289,
+    "elevation_m": null,
+    "modern_name": "Kashmir region and Khyber Pakhtunkhwa, Pakistan; epicentre near Muzaffarabad",
+    "historical_name": "Pakistan-administered Kashmir and North-West Frontier Province",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "disease"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "One of the most destructive earthquakes of contemporary times, with tens of thousands dead and millions homeless."
+  },
+  "confidence": "established",
+  "audience_note": "Describes mass death, injury and displacement from a natural disaster.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=7703077",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251219045633/https://www.britannica.com/event/Kashmir-earthquake-of-2005",
+      "title": "Kashmir earthquake of 2005 | Impact, Response, & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q210137",
+      "title": "Wikidata Q210137 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Britannica gives an official toll of 79,000 but notes other sources put it at 86,000. The ISC source is mostly a bibliography and supplies only origin time, location and magnitude. Domain tagging of 'disease' is a loose fit; no better disaster category exists. (Drafted by the Wikipedia pipeline from isc.ac.uk, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:58:24.558Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2005",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "6 earthquake struck Pakistan-administered Kashmir and Pakistan's North-West Frontier Province, also affecting India and Afghanistan.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2005",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "At least 79,000 people died and more than 32,000 buildings collapsed in Kashmir, leaving an estimated four million homeless.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "id": "place-brasilia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Brasília (Pilot Plan)",
+  "aliases": [
+    "Brasilia"
+  ],
+  "summary": "Brasília, Brazil's capital, was created from nothing in the centre of the country in 1956-1960 by the planner Lucio Costa and the architect Oscar Niemeyer. UNESCO calls it a landmark in the history of town planning. The pin and 3D model are its Metropolitan Cathedral, a circular structure 70 m across and 40 m high with 16 columns, finished in 1970.",
+  "when": {
+    "start": {
+      "year": 1956
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO gives the creation of the capital as 1956 in English and 1956-1960 in French and Spanish. End is the present: the city is the capital. The cathedral's own dates (1958-1970) are in the model phases."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (UNESCO, English)",
+        "value": "a capital created ex nihilo in the centre of the country in 1956",
+        "source": "src-unesco-brasilia"
+      },
+      {
+        "calendar": "CE (UNESCO, French)",
+        "value": "créée ex nihilo au centre du pays en 1956-1960",
+        "source": "src-unesco-brasilia"
+      }
+    ],
+    "display": "Created 1956–1960; capital today"
+  },
+  "where": {
+    "lat": -15.7983445,
+    "lon": -47.8755465,
+    "elevation_m": null,
+    "modern_name": "Metropolitan Cathedral of Brasília, Plano Piloto, Distrito Federal, Brazil",
+    "historical_name": "Brasília, new federal capital of Brazil (Pilot Plan)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-brasilia"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Circular area 70 m across, 3 m below the level of the Esplanada, from which 16 curved concrete members rise (Arquivo Público do Distrito Federal).",
+      "source": "src-arquivo-df-brasilia",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "dome",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-arquivo-df-brasilia",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 40,
+          "unit": "m",
+          "source": "src-turismo-brasilia",
+          "note": "\"Possui 40 m de altura com 16 arcos de concreto armado\" (Brazilian Ministry of Tourism, Metropolitan Cathedral)"
+        },
+        {
+          "part": "diameter",
+          "value": 70,
+          "unit": "m",
+          "source": "src-arquivo-df-brasilia",
+          "note": "\"A porção de terra destinada a obra da Catedral, tem 70 metros de diâmetro\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "cathedral shown as a 70 m round footprint with 16 ribs"
+      },
+      {
+        "level": "local",
+        "representation": "procedural hyperboloid-like dome, 70 m across and 40 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1958,
+        "end_year": 1970,
+        "state": "construction",
+        "description": "Foundation stone laid 12 September 1958 (Visite Brasília); completed and dedicated 31 May 1970 (Arquivo Público do Distrito Federal). The Ministry of Tourism page says inaugurated 1967, so dates differ.",
+        "source": "src-arquivo-df-brasilia"
+      },
+      {
+        "start_year": 1970,
+        "end_year": null,
+        "state": "intact",
+        "description": "Dedicated 31 May 1970 once its glass panels were installed (Arquivo Público do Distrito Federal).",
+        "source": "src-arquivo-df-brasilia"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "UNESCO calls Brasilia a landmark in the history of town planning."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-brasilia",
+      "url": "https://whc.unesco.org/en/list/445",
+      "title": "Brasilia",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-turismo-brasilia",
+      "url": "http://antigo.turismo.gov.br/2020/17-ultimas-noticias/2966-a-modernidade-de-brasilia-a-seus-pes.html",
+      "title": "Copa 2014: pequenas maravilhas para explorar em Brasília",
+      "publisher": "Ministério do Turismo (Brazil)",
+      "author": "Ministério do Turismo (Brazil)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-arquivo-df-brasilia",
+      "url": "http://atom.arquivopublico.df.gov.br/index.php/catedral-metropolitana-nossa-senhora-aparecida-bras-lia-df",
+      "title": "Catedral Metropolitana Nossa Senhora Aparecida (Brasília, DF)",
+      "publisher": "Arquivo Público do Distrito Federal",
+      "author": "Arquivo Público do Distrito Federal",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-visitebrasilia-brasilia",
+      "url": "https://www.visitebrasilia.com.br/turismo/catedral-metropolitana-de-nossa-senhora-aparecida",
+      "title": "Catedral Metropolitana de Nossa Senhora Aparecida",
+      "publisher": "Visite Brasília (tourism site)",
+      "author": "Visite Brasília (tourism site)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-brasilia",
+      "url": "https://nominatim.openstreetmap.org/search?q=Catedral+Metropolitana+Nossa+Senhora+Aparecida+Brasilia&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Catedral Metropolitana Nossa Senhora Aparecida, way 66379902 (-15.7983445, -47.8755465)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The record is the city (UNESCO Pilot Plan), but the model describes ONE structure, the Metropolitan Cathedral, so the pin sits on the cathedral. Shape: dome (closest available to the hyperboloid of 16 members; mention for the reviewer). Height 40 m is from the Ministry of Tourism; a UnB thesis seen in search results gave 30 m but was not opened, so treat height as less sure than the 70 m diameter. Inauguration date conflicts: 1967 (Ministry of Tourism) versus 31 May 1970 (Arquivo Público DF); 1970 is used. The National Congress towers were not modelled because no opened page gave their height.",
+  "author": "historian-agent:m-13",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:17:28.402Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

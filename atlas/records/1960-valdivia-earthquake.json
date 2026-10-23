@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1960-valdivia-earthquake",
+  "kind": "event",
+  "title": "Valdivia (Great Chilean) earthquake of 1960",
+  "summary": "On 22 May 1960 a magnitude 9.5 earthquake struck southern Chile near Valdivia, called by NOAA the largest earthquake ever instrumentally recorded. Its tsunami crossed the Pacific, killing 61 people in Hawaii and damaging Japan and the Philippines. NOAA puts the Chilean death toll between 490 and 5,700, with nearly two million left homeless.",
+  "when": {
+    "start": {
+      "year": 1960
+    },
+    "end": {
+      "year": 1960
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Exact day given by sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "May 22, 1960",
+        "source": "src-ncei"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "At 3:11 p.m. the following afternoon, an 9.5-magnitude quake rocked southern Chile",
+        "source": "src-history"
+      }
+    ],
+    "display": "22 May 1960"
+  },
+  "where": {
+    "lat": -39.8141262,
+    "lon": -73.2459859,
+    "elevation_m": null,
+    "modern_name": "Offshore southern Chile near Valdivia (reference point is Valdivia city)",
+    "historical_name": "Valdivia, Province of Valdivia, Republic of Chile",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-osm-vd"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Largest instrumentally recorded earthquake, with a Pacific-wide tsunami."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns a natural disaster with thousands of deaths; figures are estimates.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ncei",
+      "url": "https://www.ncei.noaa.gov/node/171",
+      "title": "1960 Chile earthquake and tsunami",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/this-day-in-history/may-21/huge-earthquake-hits-chile",
+      "title": "Huge earthquake hits Chile",
+      "publisher": "History.com (A&E Television Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-noaa-sos",
+      "url": "https://sos.noaa.gov/catalog/datasets/tsunami-historical-series-chile-1960/",
+      "title": "Tsunami Historical Series: Chile 1960",
+      "publisher": "NOAA Science On a Sphere",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-vd",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Valdivia%20Chile",
+      "title": "OpenStreetMap Nominatim: Valdivia",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The epicentre coordinates were not found on any opened page (USGS event pages did not render; a USGS value seen only in a search snippet was not used), so the point is the OSM reference point for Valdivia city and uncertainty is set to 150 km; the rupture was much longer. Death tolls conflict: NOAA NCEI says 490 to 5,700 in Chile and at least 122 in the tsunami at Maullin, Quenuir and La Pasada; NOAA Science On a Sphere says an estimated 2,000 in Chile and 2,223 in total; History.com says 5,000 and a main quake at 3:11 p.m. on May 22 after a May 21 foreshock. Hawaii 61 deaths is NCEI. The NCEI page also says the shaking destroyed over 58,000 houses.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1960-05-22",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "At 3:11 p.m. on 22 May 1960 a magnitude 9.5 earthquake strikes near Valdivia.",
+        "source": "src-noaa-sos",
+        "consequence": false
+      },
+      {
+        "span": "1960-05-22",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "The tsunami becomes the first globally recorded, with damaging waves around the Pacific, including Hawaii, Japan and the Philippines.",
+        "source": "src-ncei",
+        "consequence": false
+      },
+      {
+        "span": "1960-05-22",
+        "action": "numbers.counter { range: [490, 5700] }",
+        "caption": "NOAA estimates the Chilean death toll between 490 and 5,700.",
+        "source": "src-ncei",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s64",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:16:09.230Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

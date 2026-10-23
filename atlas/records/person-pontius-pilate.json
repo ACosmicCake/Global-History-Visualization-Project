@@ -1,0 +1,155 @@
+{
+  "id": "person-pontius-pilate",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "title": "Pontius Pilate",
+  "summary": "Pontius Pilate governed Judea as prefect from 26 to 36 CE under Tiberius. An inscription found at Caesarea in 1961 confirms his title. Josephus reports clashes with Jewish subjects over Roman standards in Jerusalem and a temple-funded aqueduct, says he condemned Jesus to the cross, and records that Vitellius ordered him to Rome after Samaritan complaints.",
+  "when": {
+    "start": {
+      "year": 26
+    },
+    "end": {
+      "year": 36
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "The record covers his tenure as prefect; birth and death dates are not given on the opened pages. One page says he was summoned to Rome in 37 AD."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "26-36 CE",
+        "source": "src-cojs"
+      },
+      {
+        "calendar": "AD",
+        "value": "26-36 AD",
+        "source": "src-bar"
+      }
+    ],
+    "display": "prefect of Judea, 26–36 CE"
+  },
+  "where": {
+    "lat": 32.5011,
+    "lon": 34.8923,
+    "elevation_m": null,
+    "modern_name": "Caesarea Maritima, Israel (where the Pilate inscription was found)",
+    "historical_name": "Caesarea, seat of the Roman prefect of Judea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-caesarea"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "people",
+    "law_politics_rights"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 3,
+    "justification": "The Roman governor who, in Gospel and Josephus accounts, condemned Jesus; the Caesarea inscription is the main physical evidence of him."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-jesus-of-nazareth",
+      "type": "related"
+    },
+    {
+      "id": "0030-crucifixion-of-jesus",
+      "type": "related"
+    },
+    {
+      "id": "place-pilate-stone-caesarea-maritima",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-cojs",
+      "url": "https://cojs.org/pontius_pilate-s_tiberium_inscription-_26-36_ce/",
+      "title": "Pontius Pilate's Tiberium inscription, 26-36 CE",
+      "publisher": "Center for Online Judaic Studies",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jos",
+      "url": "https://penelope.uchicago.edu/josephus/ant-18.html",
+      "title": "Josephus, Antiquities of the Jews, Book XVIII (Whiston translation)",
+      "publisher": "LacusCurtius / Penelope, University of Chicago",
+      "author": "Flavius Josephus (trans. William Whiston)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bar",
+      "url": "https://biblearchaeologyreport.com/2019/10/11/pontius-pilate-an-archaeological-biography/",
+      "title": "Pontius Pilate: An Archaeological Biography",
+      "publisher": "Bible Archaeology Report",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-caesarea",
+      "url": "https://www.wikidata.org/wiki/Q319242",
+      "title": "Wikidata item Q319242 (Caesarea Maritima), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth and death are not sourced, so the record covers the 26-36 tenure only. Josephus points are from the Penelope page; the passage about Jesus is disputed in scholarship, so I attribute it to Josephus. Pin is Caesarea, his seat per the inscription find-spot; the Josephus page was read via a summarising fetch, check the wording.",
+  "author": "historian-agent:o-s37",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:45:44.711Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

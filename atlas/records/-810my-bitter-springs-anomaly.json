@@ -1,0 +1,162 @@
+{
+  "id": "-810my-bitter-springs-anomaly",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Bitter Springs Anomaly",
+  "summary": "The Bitter Springs Anomaly was a long-lived negative swing in the carbon-isotope ratio of seawater carbonates in the Tonian Period, dated to about 810–800 million years ago. Its best-known record is in the Amadeus Basin of central Australia, and it has also been found in Svalbard. It overlaps several signs of rising ocean and atmosphere oxygen.",
+  "when": {
+    "start": {
+      "year": -810000000
+    },
+    "end": {
+      "year": -800000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "note": "Sources give 810–800 Ma (Geochemical Perspectives Letters) and ca. 811 Ma (Science Advances paper, as a date for the excursion). Years are Ma counted back from the present with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "810–800 Ma",
+        "source": "src-gpl"
+      },
+      {
+        "calendar": "Ma",
+        "value": "ca. 811 Ma",
+        "source": "src-pmc"
+      },
+      {
+        "calendar": "Ma",
+        "value": "Tonian-aged (1000–720 Ma)",
+        "source": "src-anu"
+      }
+    ],
+    "display": "c. 810–800 million years ago (Tonian)"
+  },
+  "where": {
+    "lat": -23.5427,
+    "lon": 134.4572,
+    "elevation_m": null,
+    "modern_name": "Amadeus Basin, central Australia (pin is the NT Place Names Register point for a spring named Bitter Springs in Hart locality, a proxy; not confirmed as the formation's namesake)",
+    "historical_name": "Tonian-age Amadeus Basin sea, interior of a Neoproterozoic continent; no polities exist at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-ntpn"
+    ]
+  },
+  "regions": [
+    "oceania",
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "A widely used global chemostratigraphic marker of the Tonian, linked in the literature to ocean oxygenation."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-gpl",
+      "url": "https://www.geochemicalperspectivesletters.org/article1746/",
+      "title": "Iodine proxy evidence for increased ocean oxygenation during the Bitter Springs Anomaly",
+      "publisher": "Geochemical Perspectives Letters (European Association of Geochemistry)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5489269/",
+      "title": "Controlled hydroxyapatite biomineralization in an ~810 million-year-old unicellular eukaryote",
+      "publisher": "Science Advances via PubMed Central (NIH)",
+      "author": null,
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-anu",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/local-paleoenvironmental-controls-on-the-carbon-isotope-record-de/",
+      "title": "Local paleoenvironmental controls on the carbon-isotope record defining the Bitter Springs Anomaly",
+      "publisher": "Australian National University",
+      "author": "R. M. Klaebe, M. J. Kennedy, A. J. M. Jarrett, J. J. Brocks",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ntpn",
+      "url": "https://www.ntlis.nt.gov.au/placenames/view.jsp?id=10873",
+      "title": "NT Place Names Register extract: Bitter Springs (Hart)",
+      "publisher": "Northern Territory Government",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: it is a Northern Territory gazetteer spring named Bitter Springs, used only as a proxy for the Amadeus Basin; no opened page ties it to the formation's type section. Onset age differs between sources (810 vs ca. 811 Ma). Id says 810 Ma; start year uses that.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:25:15.135Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-810000000",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "The Bitter Springs Anomaly was a long-lived negative swing in the carbon-isotope ratio of seawater carbonates in the Tonian Period, dated to about 810–800 million years ago.",
+        "source": "src-gpl"
+      },
+      {
+        "span": "-800000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Its best-known record is in the Amadeus Basin of central Australia, and it has also been found in Svalbard.",
+        "source": "src-gpl",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

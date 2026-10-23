@@ -1,0 +1,200 @@
+{
+  "id": "place-dujiangyan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Dujiangyan Irrigation System",
+  "aliases": [
+    "Mount Qingcheng and the Dujiangyan Irrigation System"
+  ],
+  "summary": "Dujiangyan is a water-control system on the Minjiang River at the edge of the Chengdu plain in Sichuan, originally built around 256 BCE under Li Bing, a Qin official. UNESCO says it diverts water, drains sediment and controls floods and flow without dams, was enlarged under later dynasties, and now irrigates 668,700 hectares.",
+  "when": {
+    "start": {
+      "year": -255
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO says originally constructed around 256 BC (astronomical -255); Sixth Tone says completed in 251 BC (-250), so the start range allows 5 years later. End is the present: the system operates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (UNESCO World Heritage Centre)",
+        "value": "originally constructed around 256 BC",
+        "source": "src-unesco-dujiangyan"
+      },
+      {
+        "calendar": "BCE (ICOMOS nomination dossier)",
+        "value": "In 256 BCE Li Bing, Shu Kingdom magistrate of the Qin Dynasty",
+        "source": "src-icomos-dujiangyan"
+      },
+      {
+        "calendar": "BC (Sixth Tone)",
+        "value": "Completed in 251 BC",
+        "source": "src-sixthtone-dujiangyan"
+      }
+    ],
+    "display": "Built c. 256 BCE; in use today"
+  },
+  "where": {
+    "lat": 31.00167,
+    "lon": 103.60528,
+    "elevation_m": null,
+    "modern_name": "Dujiangyan Irrigation System, Dujiangyan City, Chengdu, Sichuan, China",
+    "historical_name": "Dujiangyan weir works on the Minjiang River, Shu commandery of Qin",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-unesco-dujiangyan"
+    ]
+  },
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "The Feishayan Floodgate (flying sand spillway), 240 m long, between the lower end of the Yuzui Bypass Dike and the V-Shaped Dike; drawn by the viewer as a path.",
+      "source": "src-icomos-dujiangyan",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-icomos-dujiangyan",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 2,
+          "unit": "m",
+          "source": "src-icomos-dujiangyan",
+          "note": "\"The Feiyashan Floodgate, 240m long and 2m high\" (the dossier's spelling of the Feishayan floodgate)"
+        },
+        {
+          "part": "length",
+          "value": 240,
+          "unit": "m",
+          "source": "src-icomos-dujiangyan",
+          "note": "\"240m long\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "floodgate drawn as a path beside the Minjiang headworks at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural low wall 240 m long and 2 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -255,
+        "end_year": -250,
+        "state": "construction",
+        "description": "UNESCO: originally constructed around 256 BC (the ICOMOS dossier says 256 BCE under Li Bing); Sixth Tone says completed in 251 BC.",
+        "source": "src-unesco-dujiangyan"
+      },
+      {
+        "start_year": -250,
+        "end_year": null,
+        "state": "intact",
+        "description": "The system was modified and enlarged under the Tang, Song, Yuan and Ming dynasties and still operates (UNESCO). Dates for the floodgate itself are not given.",
+        "source": "src-unesco-dujiangyan"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "UNESCO inscribed it in 2000 and describes it as an ecological engineering feat in use for over 2,250 years."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-dujiangyan",
+      "url": "https://whc.unesco.org/en/list/1001/",
+      "title": "Mount Qingcheng and the Dujiangyan Irrigation System",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where",
+        "importance",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-icomos-dujiangyan",
+      "url": "https://whc.unesco.org/document/151499",
+      "title": "Qingcheng/Dujiangyan (China) No 1001, nomination and ICOMOS evaluation",
+      "publisher": "UNESCO World Heritage Centre / ICOMOS",
+      "author": "UNESCO World Heritage Centre / ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-sixthtone-dujiangyan",
+      "url": "https://www.sixthtone.com/news/1008097",
+      "title": "Flood Defense in Ancient Times",
+      "publisher": "Sixth Tone",
+      "author": "Sixth Tone",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.phases"
+      ]
+    }
+  ],
+  "reviewer_note": "The model is the Feishayan floodgate only (240 m long, 2 m high, ICOMOS dossier, which spells it Feiyashan), because the dossier gives dimensions for each component separately and mixing them would not describe one structure; shape wall with linear true. Point is the UNESCO property coordinate (N31 0 6.012 E103 36 19.008); the headworks are within about 1 km of it but this was not measured. The dossier gives the floodgate no date of its own, so phases follow the system (256 BCE per UNESCO, 251 BCE completion per Sixth Tone).",
+  "author": "historian-agent:m-13",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:17:30.462Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

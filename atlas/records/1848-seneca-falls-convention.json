@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1848-seneca-falls-convention",
+  "kind": "event",
+  "title": "Seneca Falls Convention",
+  "summary": "On 19–20 July 1848 about 300 people met at the Wesleyan Chapel in Seneca Falls, New York, for a women's rights convention planned by five women. The Declaration of Sentiments, listing 16 grievances, was read on each day and signed by 100 attendees. GovInfo says the convention laid the foundation for the Nineteenth Amendment, which granted women the vote in 1920.",
+  "when": {
+    "start": {
+      "year": 1848,
+      "iso": "1848-07-19"
+    },
+    "end": {
+      "year": 1848,
+      "iso": "1848-07-20"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Two-day convention."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Held from July 19th to July 20th, 1848",
+        "source": "src-govinfo-seneca"
+      }
+    ],
+    "display": "19–20 July 1848"
+  },
+  "where": {
+    "lat": 42.9107839,
+    "lon": -76.7996858,
+    "elevation_m": null,
+    "modern_name": "Wesleyan Chapel, Seneca Falls, New York, United States",
+    "historical_name": "Wesleyan Chapel, Seneca Falls, New York",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-seneca"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "people"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "First women's rights convention in the United States, credited with laying the foundation for women's suffrage."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1893-new-zealand-womens-suffrage",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-govinfo-seneca",
+      "url": "https://www.govinfo.gov/features/seneca-falls-convention",
+      "title": "Seneca Falls Convention",
+      "publisher": "US Government Publishing Office (GovInfo)",
+      "author": "GovInfo",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nps-seneca",
+      "url": "https://www.nps.gov/wori/learn/historyculture/wesleyan-chapel.htm",
+      "title": "Wesleyan Chapel",
+      "publisher": "US National Park Service",
+      "author": "National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-seneca",
+      "url": "https://nominatim.openstreetmap.org/search?q=Wesleyan+Chapel+Seneca+Falls&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for Wesleyan Chapel (way 686716920)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: nothing material; the NPS page gives about 300 attendees and the year, GovInfo gives the dates and the signer count.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 22,
+    "beats": [
+      {
+        "span": "1848-07-19",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "The convention opened at the Wesleyan Chapel in Seneca Falls, planned by five women.",
+        "source": "src-govinfo-seneca"
+      },
+      {
+        "span": "1920",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "GovInfo says the convention laid the foundation for the Nineteenth Amendment, which granted women the vote in 1920.",
+        "source": "src-govinfo-seneca",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:11:48.733Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

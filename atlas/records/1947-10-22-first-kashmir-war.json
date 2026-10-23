@@ -1,0 +1,189 @@
+{
+  "id": "1947-10-22-first-kashmir-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "First Kashmir War",
+  "summary": "In October 1947 tribal militias from Pakistan's North-West Frontier entered the princely state of Jammu and Kashmir. Maharaja Hari Singh asked India for help and signed an instrument of accession; Indian troops were flown to Srinagar and the fighting spread across the state. A UN-supervised ceasefire was in place by January 1949.",
+  "when": {
+    "start": {
+      "year": 1947
+    },
+    "end": {
+      "year": 1949
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "Opened sources give only October 1947 for the invasion. The Maharaja's letter is dated 26 October; a US telegram says the accession was signed 27 October while its footnote says 26 October, and Mountbatten accepted on 27 October. UN observers arrived 24 January 1949, while the National Army Museum says a UN-sponsored ceasefire ended the war in 1948."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "tribal militias from Pakistan's Northwest Frontier Province invaded Kashmir in October 1947",
+        "source": "src-jstor"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "arrived in the mission area on 24 January of 1949",
+        "source": "src-unpk"
+      }
+    ],
+    "display": "October 1947 to January 1949"
+  },
+  "where": {
+    "lat": 34.0911,
+    "lon": 74.8061,
+    "elevation_m": null,
+    "modern_name": "Srinagar, Jammu and Kashmir (Kashmir Valley)",
+    "historical_name": "Princely State of Jammu and Kashmir",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wd-srn"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "It began the India-Pakistan dispute over Kashmir, which has driven later wars and remains unresolved."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1947-08-15-indian-independence",
+      "type": "caused_by",
+      "because": "Fighting broke out soon after independence and Partition, when Kashmir's ruler had not yet joined India or Pakistan."
+    },
+    {
+      "id": "org-united-nations",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-jstor",
+      "url": "https://daily.jstor.org/how-did-kashmirs-72-year-old-conflict-begin/",
+      "title": "How Did Kashmir's 72-Year-Old Conflict Begin?",
+      "publisher": "JSTOR Daily",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-frus",
+      "url": "https://history.state.gov/historicaldocuments/frus1947v03/d119",
+      "title": "Telegram from the Charge in Pakistan to the Secretary of State, 28 October 1947 (FRUS 1947, vol. III)",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unpk",
+      "url": "https://peacekeeping.un.org/en/factsheet/unmogip",
+      "title": "UNMOGIP fact sheet",
+      "publisher": "United Nations Peacekeeping",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nam",
+      "url": "https://www.nam.ac.uk/explore/independence-and-partition-1947",
+      "title": "Independence and Partition, 1947",
+      "publisher": "National Army Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.uncertainty"
+      ]
+    },
+    {
+      "id": "src-wd-srn",
+      "url": "https://www.wikidata.org/wiki/Q170115",
+      "title": "Wikidata item Q170115 (Srinagar), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start date: the record ID says 22 October but no opened page gave that day, so the date is month-level. Accession and ceasefire dates are disputed between sources. The pin is the Kashmir Valley, not a battle site.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1947-10",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Tribal militias from Pakistan entered Kashmir, and the Maharaja turned to India for help in exchange for accession.",
+        "source": "src-jstor"
+      },
+      {
+        "span": "1947-10-27",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Mountbatten accepted the accession and Indian troops were flown into Srinagar, where they repelled the invaders.",
+        "source": "src-nam"
+      },
+      {
+        "span": "1949-01-24",
+        "action": "region.fill { radius_km: 250 }",
+        "caption": "The first UN military observers arrived to supervise the India-Pakistan ceasefire in Jammu and Kashmir.",
+        "source": "src-unpk",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:40:50.188Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "id": "place-prambanan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Prambanan (Candi Siwa and the Loro Jonggrang temples)",
+  "summary": "Prambanan, on the plain east of Yogyakarta in Java, is the largest Hindu temple compound in Indonesia. Three main temples to Shiva, Vishnu and Brahma rise at its centre, with relief carvings of the Ramayana. The Shiva temple, about 47 m tall, was built in the 9th to 10th century CE.",
+  "when": {
+    "start": {
+      "year": 850
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 49,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO's list page says the compound was built in the 10th century, while its description dates Loro Jonggrang to the 9th century; the start 850 sits in the stated 9th-10th century span (801 to 1000). End is the present: the temples stand."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (UNESCO)",
+        "value": "Built in the 10th century",
+        "source": "src-unesco-642"
+      },
+      {
+        "calendar": "AD (UNESCO)",
+        "value": "dating from the 9th century",
+        "source": "src-unesco-642"
+      }
+    ],
+    "display": "Built in the 9th–10th century CE; standing today"
+  },
+  "where": {
+    "lat": -7.7520011,
+    "lon": 110.4911806,
+    "elevation_m": null,
+    "modern_name": "Candi Siwa, Prambanan Temple Compounds, Sleman, Yogyakarta, Indonesia",
+    "historical_name": "Siwa temple, the central shrine of the Loro Jonggrang Hindu complex on Java's Prambanan plain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-siwa",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The largest Hindu temple compound in Indonesia and a UNESCO World Heritage property, a counterpart to nearby Borobudur."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-borobudur",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-642",
+      "url": "https://whc.unesco.org/en/list/642/",
+      "title": "Prambanan Temple Compounds (World Heritage List no. 642)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-indonesia-travel",
+      "url": "https://www.indonesia.travel/uk-en/travel-ideas/candi-prambanan",
+      "title": "Prambanan Temple: Historical Heritage and the Legend of Roro Jonggrang",
+      "publisher": "Ministry of Tourism and Creative Economy of Indonesia (indonesia.travel)",
+      "author": "Indonesia Tourism",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-ki-demang-prambanan",
+      "url": "https://ki-demang.com/candi/index.php/candi-diy-sleman/90-41b-prambanan-loro-jonggrang",
+      "title": "Prambanan - Loro Jonggrang (Candi in Yogyakarta, Sleman)",
+      "publisher": "ki-demang.com (Candi of Java, an archaeological reference by Ki Demang)",
+      "author": "Ki Demang",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.footprint"
+      ]
+    },
+    {
+      "id": "src-osm-siwa",
+      "url": "https://nominatim.openstreetmap.org/search?q=Candi+Siwa+Prambanan&format=json",
+      "title": "OpenStreetMap Nominatim result for Candi Siwa",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List dataset (syndication XML)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A staggered (stepped-out) square base 27.5 m across, reached by four staircases and topped by a relief balustrade; the temple body is a staggered square of 17.5 m. Register figures from a site survey summary; no surveyed plan is stored.",
+      "source": "src-ki-demang-prambanan",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-ki-demang-prambanan",
+      "measurements": [
+        {
+          "part": "height (Shiva temple)",
+          "value": 47,
+          "unit": "m",
+          "source": "src-indonesia-travel",
+          "note": "\"a height of up to 47 meters\"; Brahma and Vishnu temples about 33 m"
+        },
+        {
+          "part": "base side length (staggered square)",
+          "value": 27.5,
+          "unit": "m",
+          "source": "src-ki-demang-prambanan",
+          "note": "\"staggered square measuring 27.50m\""
+        },
+        {
+          "part": "temple body side length (staggered square)",
+          "value": 17.5,
+          "unit": "m",
+          "source": "src-ki-demang-prambanan",
+          "note": "17.5m x 17.5m"
+        },
+        {
+          "part": "height (Brahma and Vishnu temples)",
+          "value": 33,
+          "unit": "m",
+          "source": "src-indonesia-travel",
+          "note": "\"about 33 meters\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a tall central tower-temple flanked by two shorter ones in a walled court, at sourced heights"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped tower on a 27.5 m square base with a balustraded terrace, Brahma and Vishnu temples beside it, and relief panels as labelled schematics"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 850,
+        "end_year": 950,
+        "state": "construction",
+        "description": "UNESCO dates the compound to the 10th century (list page) and Loro Jonggrang to the 9th century (description); exact years are not in the sources opened.",
+        "source": "src-unesco-642"
+      },
+      {
+        "start_year": 950,
+        "end_year": 2026,
+        "state": "intact",
+        "description": "The temples remain standing and are a World Heritage property; the sources opened give no dated collapse or restoration, so this phase is bridged.",
+        "source": "src-unesco-642"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 850,
+        "to_year": 2026,
+        "material": "carved stone (Hindu temples decorated with Ramayana reliefs)",
+        "source": "src-unesco-642"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape tower (a tall pointed temple on a stepped square base; stepped_pyramid was the alternative). Height 47 m is from a tourism ministry page and is widely quoted; the 27.5 m base is from one reference site's survey summary, not a heritage body, so it is the least certain. The 'intact' phase is bridged; earthquake damage is not recorded here.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:13:00.332Z"
+}

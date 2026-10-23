@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1870-battle-of-sedan",
+  "kind": "event",
+  "title": "Battle of Sedan",
+  "summary": "In the Franco-Prussian War, German forces encircled a French army at the fortress of Sedan in northern France. The French hoisted a white flag and Emperor Napoleon III was captured. His surrender ended the Second Empire, and a republic that continued the war was proclaimed in Paris.",
+  "when": {
+    "start": {
+      "year": 1870
+    },
+    "end": {
+      "year": 1870
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO dates the battle to 1 September 1870; Deutschlandmuseum lists 2 September 1870 (the capitulation date). Both in 1870."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 1, 1870",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Sep 2 1870",
+        "source": "src-dm"
+      }
+    ],
+    "display": "1–2 September 1870"
+  },
+  "where": {
+    "lat": 49.703,
+    "lon": 4.943,
+    "elevation_m": null,
+    "modern_name": "Sedan, Ardennes, France",
+    "historical_name": "Sedan, Second French Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-123ville"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Decisive defeat that captured the French emperor and ended the Second Empire during the Franco-Prussian War."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/battle-sedan/",
+      "title": "Battle of Sedan (Research Starters)",
+      "publisher": "EBSCO",
+      "author": "Marcus Colla",
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dm",
+      "url": "https://www.deutschlandmuseum.de/en/history/calendar/1870-09-02-battle-of-sedan/",
+      "title": "Battle of Sedan",
+      "publisher": "Deutschlandmuseum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-123ville",
+      "url": "https://123ville.fr/commune/sedan.html",
+      "title": "Sedan (08200) Ardennes",
+      "publisher": "123Ville.fr",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the town of Sedan (commune centre from a commercial gazetteer), not the battlefield extent. Sources differ on 1 vs 2 September; EBSCO page read only in part.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:21:35.155Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1870",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In the Franco-Prussian War, German forces encircled a French army at the fortress of Sedan in northern France.",
+        "source": "src-ebsco"
+      },
+      {
+        "span": "1870",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "His surrender ended the Second Empire, and a republic that continued the war was proclaimed in Paris.",
+        "source": "src-ebsco",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "id": "1815-fall-of-the-kandyan-kingdom",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Fall of the Kandyan Kingdom",
+  "summary": "Britain's war on the Kingdom of Kandy, proclaimed in January 1815, was over in forty days without notable military engagements. The king was captured and the Kandyan Convention ceded the kingdom to the British while keeping many of the chiefs' rights. After a rebellion in 1818, a British proclamation ended the Kandyan kingdom's earlier organization.",
+  "when": {
+    "start": {
+      "year": 1815
+    },
+    "end": {
+      "year": 1815
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 3,
+      "note": "Encyclopedia.com treats the 1818 proclamation as concluding the integration of the kingdom into the British colonial sphere; 1815 is the year of the war, capture and Convention."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The war against Kandy, proclaimed in January 1815",
+        "source": "src-enc-kandy"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The last king in Ceylon: The British and Sri Vikrama Rajasinha, 1815",
+        "source": "src-cup-banished"
+      }
+    ],
+    "display": "1815"
+  },
+  "where": {
+    "lat": 7.293056,
+    "lon": 80.635,
+    "elevation_m": null,
+    "modern_name": "Kandy, Central Province, Sri Lanka",
+    "historical_name": "Kandy, capital of the Kingdom of Kandy",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-kandy"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The last independent Sinhalese kingdom came under British rule; Encyclopedia.com links 1815 and 1818 to its integration into the British colonial sphere."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-enc-kandy",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/kandy-colonial-powers-relations-kingdom",
+      "title": "Kandy, Colonial Powers' Relations with the Kingdom of",
+      "publisher": "Encyclopedia.com (Gale, Encyclopedia of Western Colonialism since 1450)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cup-banished",
+      "url": "https://www.cambridge.org/core/books/abs/banished-potentates/last-king-in-ceylon-the-british-and-sri-vikrama-rajasinha-1815/CE7695A31FB11D85DCD8BD01F84FCABB",
+      "title": "The last king in Ceylon: The British and Sri Vikrama Rajasinha, 1815 (Chapter 2), Banished Potentates",
+      "publisher": "Cambridge University Press",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-kandy",
+      "url": "https://www.wikidata.org/wiki/Q203197",
+      "title": "Wikidata item Q203197 (Kandy), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end date: Encyclopedia.com gives 1815 (war, capture, Convention) and 1818 (proclamation after the rebellion) as different closing points; both are stated. Opened pages give no day for the Convention or the capture, so none is claimed. The Cambridge page is a chapter summary. Pin is Kandy city.",
+  "audience_note": null,
+  "author": "historian-agent:o-s106",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T18:36:13.441Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1815",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Britain's war on the Kingdom of Kandy, proclaimed in January 1815, was over in forty days without notable military engagements.",
+        "source": "src-enc-kandy"
+      },
+      {
+        "span": "1815",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "After a rebellion in 1818, a British proclamation ended the Kandyan kingdom's earlier organization.",
+        "source": "src-enc-kandy",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

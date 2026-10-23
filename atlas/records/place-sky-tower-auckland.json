@@ -1,0 +1,229 @@
+{
+  "id": "place-sky-tower-auckland",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Sky Tower, Auckland",
+  "aliases": [
+    "SkyCity Sky Tower"
+  ],
+  "summary": "The Sky Tower in Auckland, New Zealand, is a 328-metre concrete tower. Work began in 1994 and it was inaugurated on 3 August 1997, about two years and nine months after construction started. The AA describes it as the tallest freestanding structure in the southern hemisphere, and its shaft has an internal diameter of 12 metres.",
+  "when": {
+    "start": {
+      "year": 1994
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "We Build Value: work began in 1994, inauguration 3 August 1997; Great Towers: 1994-1997. End is the present: the tower is in use."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (We Build Value)",
+        "value": "Work began in 1994; inauguration 3 August 1997",
+        "source": "src-webuild-sky"
+      },
+      {
+        "calendar": "CE (Great Towers)",
+        "value": "Construction time 1994-1997",
+        "source": "src-greattowers-sky"
+      }
+    ],
+    "display": "Built 1994–1997"
+  },
+  "where": {
+    "lat": -36.84847222222222,
+    "lon": 174.76230555555554,
+    "elevation_m": null,
+    "modern_name": "Sky Tower, Auckland, New Zealand",
+    "historical_name": "Sky Tower, Auckland, New Zealand",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wd-sky"
+    ]
+  },
+  "model": {
+    "footprint": {
+      "description": "Slender concrete shaft with an internal diameter of 12 m, rising to a pod and mast.",
+      "source": "src-webuild-sky",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-webuild-sky",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 328,
+          "unit": "m",
+          "source": "src-aucklandnz-sky",
+          "note": "\"The iconic 328 metre Sky Tower\"; We Build Value: \"328 metres tall\""
+        },
+        {
+          "part": "shaft diameter (internal)",
+          "value": 12,
+          "unit": "m",
+          "source": "src-webuild-sky",
+          "note": "\"internal 12-metre diameter shaft\" housing three lifts"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "slender tower with a pod near the top in central Auckland"
+      },
+      {
+        "level": "local",
+        "representation": "procedural tower 328 m high on a shaft with a 12 m internal diameter"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1994,
+        "end_year": 1997,
+        "state": "construction",
+        "description": "Work began in 1994; inaugurated 3 August 1997 (We Build Value).",
+        "source": "src-webuild-sky"
+      },
+      {
+        "start_year": 1997,
+        "end_year": null,
+        "state": "intact",
+        "description": "In use after its 1997 opening.",
+        "source": "src-webuild-sky"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1994,
+        "to_year": null,
+        "material": "concrete",
+        "source": "src-aa-sky"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "The AA describes it as the tallest freestanding structure in the southern hemisphere."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-aucklandnz-sky",
+      "url": "https://www.aucklandnz.com/explore/sky-tower-skycity-auckland",
+      "title": "Sky Tower - SkyCity Auckland",
+      "publisher": "Tourism Auckland (Auckland Unlimited)",
+      "author": "Tourism Auckland (Auckland Unlimited)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-webuild-sky",
+      "url": "https://www.webuildvalue.com/en/facts/sky-tower-auckland.html",
+      "title": "The Sky Tower Auckland: features and facts",
+      "publisher": "We Build Value (Implenia)",
+      "author": "We Build Value (Implenia)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-aa-sky",
+      "url": "https://www.aa.co.nz/travel/editorial/spaces-and-places-auckland-sky-tower/",
+      "title": "Auckland Sky Tower",
+      "publisher": "AA New Zealand",
+      "author": "AA New Zealand",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-greattowers-sky",
+      "url": "https://www.great-towers.com/tower/sky-tower",
+      "title": "The Sky Tower",
+      "publisher": "Great Towers",
+      "author": "Great Towers",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-sky",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q722125.json",
+      "title": "Wikidata entry for Sky Tower (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape tower. Height from a tourism body and a corporate page, shaft diameter only on one corporate page (We Build Value); no engineering or heritage page opened, so needs a better plan source. The OSM relation for Sky Tower measures about 40 m, which is the base building, so it was not used. The AA page says 328 m \"above sea level\"; Tourism Auckland and We Build Value say 328 m.",
+  "author": "historian-agent:m-25",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T16:51:08.007Z"
+}

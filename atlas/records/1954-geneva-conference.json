@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1954-geneva-conference",
+  "kind": "event",
+  "title": "Geneva Conference",
+  "summary": "A diplomatic conference held in Geneva in 1954, with a Korea phase from 26 April to 15 June and an Indochina phase from 8 May to 21 July. The Indochina phase began the day after Dien Bien Phu fell; its results were announced on 21 July 1954, while the Korean question was left unresolved.",
+  "when": {
+    "start": {
+      "year": 1954
+    },
+    "end": {
+      "year": 1954
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Korea phase 26 April to 15 June; Indochina phase 8 May to 21 July 1954 (FRUS)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "April 26",
+        "source": "src-frus"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "May 8",
+        "source": "src-frus"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "July 21, 1954",
+        "source": "src-frus"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "July 21",
+        "source": "src-adst"
+      }
+    ],
+    "display": "26 April – 21 July 1954"
+  },
+  "where": {
+    "lat": 46.204391,
+    "lon": 6.143158,
+    "elevation_m": null,
+    "modern_name": "Geneva, Switzerland (pin is the city centre, a proxy for the conference venue)",
+    "historical_name": "Geneva, Switzerland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Negotiated settlement of the First Indochina War among the major powers."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1954-battle-of-dien-bien-phu",
+      "type": "related"
+    },
+    {
+      "id": "place-geneva",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-frus",
+      "url": "https://history.state.gov/historicaldocuments/frus1952-54v16",
+      "title": "Foreign Relations of the United States, 1952–1954, The Geneva Conference, Volume XVI",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-frus-note",
+      "url": "https://history.state.gov/historicaldocuments/frus1952-54v16/ch5subch1",
+      "title": "Note on Sources: The Geneva Conference on Indochina",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-adst",
+      "url": "https://adst.org/2015/06/sound-and-the-fury-the-1954-geneva-conference-on-vietnam-and-korea/",
+      "title": "Sound and the Fury — The 1954 Geneva Conference on Vietnam and Korea",
+      "publisher": "Association for Diplomatic Studies & Training",
+      "author": null,
+      "date_published": "2015-06",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://www.latlong.net/place/geneva-switzerland-18480.html",
+      "title": "Geneva, Switzerland coordinates",
+      "publisher": "LatLong.net",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Geneva's city centre, not the Palais des Nations. ADST is a diplomatic-history nonprofit (not a university or government body); FRUS is the institutional anchor.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1954",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A diplomatic conference held in Geneva in 1954, with a Korea phase from 26 April to 15 June and an Indochina phase from 8 May to 21 July.",
+        "source": "src-frus"
+      },
+      {
+        "span": "1954",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Indochina phase began the day after Dien Bien Phu fell; its results were announced on 21 July 1954, while the Korean question was left unresolved.",
+        "source": "src-frus",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-23T02:31:28.509Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

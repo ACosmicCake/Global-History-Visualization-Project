@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0939-eldgja-eruption",
+  "kind": "event",
+  "title": "Eldgjá eruption",
+  "summary": "The Eldgjá fissure eruption in southern Iceland began around 939 CE and produced about 20 km3 of lava and tephra; the Icelandic Met Office calls it the largest effusive basaltic eruption known in the Katla volcanic system and the most recent of its kind. After it, glacial floods from Katla began running to the south-east plains instead of west of Mýrdalsjökull.",
+  "when": {
+    "start": {
+      "year": 939
+    },
+    "end": {
+      "year": 939
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Vatnajökull National Park gives 939 and a wider window of 934 to 940."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "started ~939 CE",
+        "source": "src-imo-eldgja"
+      },
+      {
+        "calendar": "CE",
+        "value": "formed in the year 939",
+        "source": "src-vjp-eldgja"
+      }
+    ],
+    "display": "c. 939 CE (window 934 to 940)"
+  },
+  "where": {
+    "lat": 63.959366,
+    "lon": -18.6263294,
+    "elevation_m": null,
+    "modern_name": "Eldgjá canyon, Skaftárhreppur, southern Iceland",
+    "historical_name": "Eldgjá fissure in the Katla volcanic system, Iceland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-eldgja"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Among the largest historical basaltic fissure eruptions in Iceland; it reshaped Katla flood routes."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0950-medieval-climate-anomaly",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-imo-eldgja",
+      "url": "https://en.vedur.is/volcanoes/katla/katla-eruptions/",
+      "title": "Katla eruptions",
+      "publisher": "Icelandic Meteorological Office",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-vjp-eldgja",
+      "url": "https://www.vatnajokulsthjodgardur.is/en/areas/eldgja-langasjor",
+      "title": "Eldgjá and Langisjór",
+      "publisher": "Vatnajökull National Park",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-eldgja",
+      "url": "https://nominatim.openstreetmap.org/search?q=Eldgj%C3%A1&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim result for Eldgjá, Iceland",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the year: 939 is the central value; Vatnajökull NP gives 934 to 940. The pin is the OSM Eldgjá feature; the full fissure is about 75 km long (Vatnajökull NP), so the point is only a marker on it. Vatnajökull NP calls it a fissure originating in Katla.",
+  "author": "historian-agent:o-s112",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:12:14.678Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "939",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Eldgjá fissure eruption in southern Iceland began around 939 CE and produced about 20 km3 of lava and tephra; the Icelandic Met Office calls it the largest…",
+        "source": "src-imo-eldgja"
+      },
+      {
+        "span": "939",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "After it, glacial floods from Katla began running to the south-east plains instead of west of Mýrdalsjökull.",
+        "source": "src-imo-eldgja",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

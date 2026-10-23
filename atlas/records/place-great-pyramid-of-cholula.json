@@ -1,0 +1,223 @@
+{
+  "id": "place-great-pyramid-of-cholula",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Great Pyramid of Cholula (Tlachihualtepetl)",
+  "summary": "The Great Pyramid of Cholula, in central Mexico, is a vast stepped platform built over centuries in successive layers, the first from the 2nd century BC. Its final form covered more than 1,300 feet a side and stood almost 213 feet high, making it the largest temple base of the pre-Hispanic world. INAH says it was abandoned around the end of the 8th century; McCafferty describes only a partial abandonment in the Early Postclassic, with the pyramid remaining a shrine until the Spanish Conquest.",
+  "when": {
+    "start": {
+      "year": -199
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 99,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "INAH says the first Great Pyramid dates to the second century BC (so -199 to -100); no date is given for the final enlargement. End is the present: the mound survives. Abandonment is placed at the end of the eighth century (about 799)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC/AD (INAH)",
+        "value": "By the second century BC",
+        "source": "src-inah-cholula"
+      },
+      {
+        "calendar": "AD (INAH)",
+        "value": "At the end of the eighth century",
+        "source": "src-inah-cholula"
+      }
+    ],
+    "display": "Built from the 2nd century BCE in successive stages; abandoned c. 8th century CE"
+  },
+  "where": {
+    "lat": 19.05796,
+    "lon": -98.30223,
+    "elevation_m": null,
+    "modern_name": "Great Pyramid of Cholula, San Pedro Cholula, Puebla, Mexico",
+    "historical_name": "Tlachihualtepetl, the \"artificial hill\" sanctuary of the holy city of Cholula",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-cholula"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The largest pyramid by volume in the Americas, a major pre-Hispanic pilgrimage centre, and an anchor of Mexico's built heritage."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-inah-cholula",
+      "url": "https://lugares.inah.gob.mx/en/node/4336",
+      "title": "Cholula (Zona Arqueológica de Cholula)",
+      "publisher": "Instituto Nacional de Antropología e Historia (INAH)",
+      "author": "Eduardo Merlo Juárez / INAH",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-mccafferty-cholula",
+      "url": "https://www.cambridge.org/core/journals/ancient-mesoamerica/article/abs/reinterpreting-the-great-pyramid-of-cholula-mexico/DE6DD03EA886E2EF01AAFB7B072EFF15",
+      "title": "Reinterpreting the Great Pyramid of Cholula, Mexico",
+      "publisher": "Cambridge University Press (Ancient Mesoamerica)",
+      "author": "Geoffrey G. McCafferty",
+      "date_published": "1996",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "importance"
+      ]
+    },
+    {
+      "id": "src-osm-cholula",
+      "url": "https://nominatim.openstreetmap.org/search?q=Great+Pyramid+of+Cholula&format=json",
+      "title": "OpenStreetMap Nominatim result for Great Pyramid of Cholula",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A square base enlarged over three main stages: about 427 feet a side in the first stage, about 558 feet in the second (nine stepped sections, almost 148 feet tall), and more than 1,300 feet a side in the final one. Register figures only.",
+      "source": "src-inah-cholula",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-inah-cholula",
+      "measurements": [
+        {
+          "part": "height (final stage, average, excluding the temple)",
+          "value": 64.9,
+          "unit": "m",
+          "source": "src-inah-cholula",
+          "note": "\"almost 213 feet\""
+        },
+        {
+          "part": "base side length (final stage)",
+          "value": 396.2,
+          "unit": "m",
+          "source": "src-inah-cholula",
+          "note": "\"more than 1,300 feet on each side\"; a lower bound"
+        },
+        {
+          "part": "base side length (second stage)",
+          "value": 170,
+          "unit": "m",
+          "source": "src-inah-cholula",
+          "note": "\"close to 558 feet per side\""
+        },
+        {
+          "part": "height (second stage)",
+          "value": 45.1,
+          "unit": "m",
+          "source": "src-inah-cholula",
+          "note": "\"almost 148 feet tall\""
+        },
+        {
+          "part": "base side length (first stage)",
+          "value": 130.2,
+          "unit": "m",
+          "source": "src-inah-cholula",
+          "note": "\"approximately 427 feet on each side\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a very broad low square platform, hill-like"
+      },
+      {
+        "level": "local",
+        "representation": "procedural stepped square pyramid at the final-stage base and height, with the earlier stages as nested labelled outlines"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": -199,
+        "end_year": 799,
+        "state": "construction",
+        "description": "First Great Pyramid in the second century BC; enlarged over a second and then a final pyramid. INAH gives no dates for the later stages, only that it was in use until the end of the eighth century.",
+        "source": "src-inah-cholula"
+      },
+      {
+        "start_year": 799,
+        "end_year": 2026,
+        "state": "ruined",
+        "description": "The sanctuary was destroyed, sacked and abandoned after wars and a Popocatepetl eruption (INAH, undated within the 8th-century crisis); adobe crumbled and the pyramid took on the look of a hill.",
+        "source": "src-inah-cholula"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": -199,
+        "to_year": 799,
+        "material": "compacted adobe blocks stuck with mud, with a stucco coat painted in bright colours",
+        "source": "src-inah-cholula"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stepped_pyramid (the final stage's outline is a stepped hill-like pyramid). Base is 'more than 1,300 ft', a floor not an exact side; height is the stage average without the temple. Only INAH was opened as a heritage source; other sources give 300-450 m per side, so base and height are the least certain. Thin sourcing: one government page plus OSM for coordinates.",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:12:59.830Z"
+}

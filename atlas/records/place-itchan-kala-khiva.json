@@ -1,0 +1,217 @@
+{
+  "id": "place-itchan-kala-khiva",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Itchan Kala, the walled inner town of Khiva",
+  "summary": "Itchan Kala is the walled inner town of Khiva, Uzbekistan, a rectangle of 650 by 400 m inside brick walls about 10 m high. Ramparts rebuilt by the Kungrats rise from 10th-11th-century substructures; its monuments illustrate Central Asian Islamic architecture from the 14th to the 19th century.",
+  "when": {
+    "start": {
+      "year": 901
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 199,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "ICOMOS dates the rampart substructures to the 10th and 11th centuries (901-1100); the visible fabric is mostly 19th-century Kungrat rebuilding. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (ICOMOS)",
+        "value": "dating from the 10th and 11th centuries",
+        "source": "src-icomos-543"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "between the 14th to the 19th century",
+        "source": "src-unesco-543"
+      }
+    ],
+    "display": "10th-11th century substructures; monuments 14th-19th century"
+  },
+  "where": {
+    "lat": 41.3783452,
+    "lon": 60.3579829,
+    "elevation_m": null,
+    "modern_name": "Itchan Kala (point at Kalta Minor), Khiva, Xorazm Region, Uzbekistan",
+    "historical_name": "Itchan-kala, the inner town of Khiva, Khanate of Khiva under the Kungrats (19th century)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-kalta"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO World Heritage Site (1990) described as a coherent, well-preserved example of Central Asian Muslim architecture."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-543",
+      "url": "https://whc.unesco.org/en/list/543/",
+      "title": "Itchan Kala (World Heritage List no. 543)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-icomos-543",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/543.pdf",
+      "title": "Itchan Kala: ICOMOS advisory body evaluation",
+      "publisher": "ICOMOS (published by UNESCO World Heritage Centre)",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-uzbtravel-kalta",
+      "url": "https://uzbekistan.travel/en/o/kalta-minor/",
+      "title": "Kalta Minor",
+      "publisher": "Uzbekistan Tourism Committee (uzbekistan.travel)",
+      "author": "uzbekistan.travel",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-kalta",
+      "url": "https://www.openstreetmap.org/way/178606424",
+      "title": "OpenStreetMap way 178606424 (Kalta Minor)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Round tapering minaret beside the Muhammad Amin Khan madrasa inside Itchan Kala; lower diameter 14.5 m. Pin is the OSM point of Kalta Minor.",
+      "source": "src-uzbtravel-kalta",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "tower",
+      "source": "src-uzbtravel-kalta",
+      "measurements": [
+        {
+          "part": "Kalta Minor height",
+          "value": 29,
+          "unit": "m",
+          "source": "src-uzbtravel-kalta",
+          "note": "\"the height is 29 meters\""
+        },
+        {
+          "part": "Kalta Minor lower diameter",
+          "value": 14.5,
+          "unit": "m",
+          "source": "src-uzbtravel-kalta",
+          "note": "\"The lower diameter ... is 14,5 meters\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "walled rectangle of 650 by 400 m with the stub minaret marked"
+      },
+      {
+        "level": "local",
+        "representation": "procedural tapering tower at the sourced height and diameter"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1853,
+        "end_year": 1855,
+        "state": "construction",
+        "description": "Begun in 1853 under Muhammad Amin Khan; work stopped in 1855 when the khan was killed (uzbekistan.travel).",
+        "source": "src-uzbtravel-kalta"
+      },
+      {
+        "start_year": 1855,
+        "end_year": null,
+        "state": "intact",
+        "description": "Stands unfinished as a truncated cone, far shorter than intended.",
+        "source": "src-uzbtravel-kalta"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 901,
+        "to_year": null,
+        "material": "brick (city walls)",
+        "source": "src-unesco-543"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Modelled structure is Kalta Minor (tower, 29 m, 14.5 m diameter); the record's date range is for Itchan Kala as a whole. Kalta Minor figures vary by site (a guide site gave 26-29 m height and 14.2-14.5 m diameter) and the start year (1851, 1852, 1853); I could open only uzbekistan.travel. Material 'brick' is for the walls per UNESCO. Least sure of the 901 start. Walled town measurements (kept out of the minaret model): Itchan Kala wall height 10 m (src-unesco-543); Itchan Kala length 650 m (src-unesco-543); Itchan Kala width 400 m (src-unesco-543).",
+  "author": "historian-agent:m-12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-22",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T11:46:34.581Z"
+}

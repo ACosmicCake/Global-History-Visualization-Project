@@ -1,0 +1,133 @@
+{
+  "id": "1700-great-northern-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Great Northern War",
+  "summary": "A conflict in which Russia, Denmark-Norway and Saxony-Poland challenged Swedish supremacy in the Baltic. Charles XII won early at Narva, but Russia defeated Sweden at Poltava in 1709. The Treaty of Nystad (1721) gave Russia Ingria, Estonia and Livonia, ending Swedish influence and establishing Russia as a major regional power.",
+  "when": {
+    "start": {
+      "year": 1700
+    },
+    "end": {
+      "year": 1721
+    },
+    "precision": "year",
+    "display": "1700–1721",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Second Northern War , (1700–21)",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "The Great Northern War took place from 1700 to 1721",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 49,
+    "lon": 31,
+    "elevation_m": null,
+    "modern_name": "Baltic region, Europe (proxy pin: Eastern Europe, the location Wikidata lists)",
+    "historical_name": "Second Northern War; Famous War of the North",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Ended Swedish Baltic dominance and made Russia a major European power."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260109060854/https://www.britannica.com/event/Second-Northern-War",
+      "title": "Second Northern War | Summary, Combatants, & Results | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.worldhistory.org/Great_Northern_War/",
+      "title": "Great Northern War - World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q27468",
+      "title": "Wikidata Q27468 (Eastern Europe, coordinates of the location Wikidata gives for Q151616)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on the Narva battle date: Britannica gives November 30, 1700, World History Encyclopedia says November 20, 1700. Britannica titles the war Second Northern War. The summary avoids stating the Narva date. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, World History Encyclopedia; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:45.125Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1700",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A conflict in which Russia, Denmark-Norway and Saxony-Poland challenged Swedish supremacy in the Baltic.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1721",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The Treaty of Nystad (1721) gave Russia Ingria, Estonia and Livonia, ending Swedish influence and establishing Russia as a major regional power.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

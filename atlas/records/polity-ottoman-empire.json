@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s40",
+  "updated": "2026-10-22",
+  "id": "polity-ottoman-empire",
+  "kind": "polity",
+  "title": "Ottoman Empire",
+  "summary": "The Ottoman Empire is dated 1299 to 1922 and was founded by Osman, an Anatolian chieftain. Bursa became its capital in 1326, and Mehmed II took Constantinople on 29 May 1453, which then became the capital. At its peak in the 16th and 17th centuries it held Anatolia, the Balkans, Syria, Egypt and parts of Arabia and North Africa. The sultanate was abolished on 1 November 1922.",
+  "when": {
+    "start": {
+      "year": 1299
+    },
+    "end": {
+      "year": 1922
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "The pages opened give 1299 (World History Encyclopedia, HISTORY) and 1922 as the end; HISTORY and WHE agree the Republic of Turkey followed on 29 October 1923 and the caliphate was abolished in 1924."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "1299-1922; abolished the monarchy 1 Nov 1922",
+        "source": "src-whe-ottoman"
+      },
+      {
+        "calendar": "CE (HISTORY)",
+        "value": "founded around 1299; officially ended in 1922",
+        "source": "src-history-ottoman"
+      }
+    ],
+    "display": "c. 1299-1922"
+  },
+  "where": {
+    "lat": 41.01,
+    "lon": 28.96028,
+    "elevation_m": null,
+    "modern_name": "Istanbul, Türkiye (pin at the capital after 1453; the empire spanned three continents)",
+    "historical_name": "Constantinople, capital of the Ottoman Empire after 1453",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-istanbul"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "It ruled large areas of the Middle East, Eastern Europe and North Africa for more than 600 years."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1453-fall-of-constantinople",
+      "type": "related"
+    },
+    {
+      "id": "place-hagia-sophia",
+      "type": "related"
+    },
+    {
+      "id": "polity-eastern-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-jerusalem",
+      "type": "related"
+    },
+    {
+      "id": "1917-balfour-declaration",
+      "type": "related"
+    },
+    {
+      "id": "1914-world-war-i",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-ottoman",
+      "url": "https://www.worldhistory.org/Ottoman_Empire/",
+      "title": "Ottoman Empire",
+      "publisher": "World History Encyclopedia",
+      "author": "Syed Muhammad Khan",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-history-ottoman",
+      "url": "https://www.history.com/articles/ottoman-empire",
+      "title": "Ottoman Empire - WWI, Decline & Definition",
+      "publisher": "HISTORY (A+E Networks)",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-istanbul",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q406.json",
+      "title": "Wikidata entry for Istanbul (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: the capital moved (Bursa from 1326, Constantinople after 1453), so Istanbul stands for the empire only from 1453. Encyclopedia.com gives Osman different life dates, so none are stated.",
+  "published_at": "2026-10-22T09:57:08.937Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

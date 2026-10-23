@@ -1,0 +1,261 @@
+{
+  "id": "place-world-trade-center-1973-2001",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "World Trade Center Twin Towers (1973-2001)",
+  "summary": "The Twin Towers of the World Trade Center in Lower Manhattan, designed by Minoru Yamasaki, had 110 stories each. The North Tower was completed in 1972 and the South Tower in 1973, and for a short time they were the tallest buildings in the world. Both were destroyed on 11 September 2001.",
+  "when": {
+    "start": {
+      "year": 1972
+    },
+    "end": {
+      "year": 2001
+    },
+    "precision": "year",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Tower One, the North Tower, was completed in 1972, and Tower Two, the South Tower, was completed the following year",
+        "source": "src-ebsco-wtc"
+      },
+      {
+        "calendar": "CE",
+        "value": "officially opened in April 1973",
+        "source": "src-ebsco-wtc"
+      },
+      {
+        "calendar": "CE",
+        "value": "September 11, 2001",
+        "source": "src-nist"
+      }
+    ],
+    "display": "1972-2001 CE (opened April 1973)"
+  },
+  "where": {
+    "lat": 40.7116,
+    "lon": -74.0131,
+    "elevation_m": null,
+    "modern_name": "World Trade Center site (Twin Towers), Lower Manhattan, New York, USA",
+    "historical_name": "World Trade Center, Twin Towers (1 WTC and 2 WTC), New York City",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.15,
+    "coordinate_sources": [
+      "src-wd-wtc1",
+      "src-wd-wtc2"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The tallest buildings in the world on completion and the site of the 11 September 2001 attacks, a defining event of the 21st century."
+  },
+  "confidence": "established",
+  "audience_note": "This record covers the buildings, which were destroyed in the terrorist attacks of 11 September 2001 in which many people died. The model shows the towers as they stood and does not depict the attack.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-911memorial",
+      "url": "https://911memorial.org/learn/resources/world-trade-center-history",
+      "title": "World Trade Center History",
+      "publisher": "National September 11 Memorial & Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nist",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/NCSTAR/ncstar1.pdf",
+      "title": "Final Report on the Collapse of the World Trade Center Towers (NIST NCSTAR 1)",
+      "publisher": "National Institute of Standards and Technology",
+      "author": null,
+      "date_published": "2005-09",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-ebsco-wtc",
+      "url": "https://www.ebsco.com/research-starters/social-sciences-and-humanities/world-trade-center",
+      "title": "World Trade Center (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "model.phases",
+        "model.materials"
+      ]
+    },
+    {
+      "id": "src-wd-wtc1",
+      "url": "https://www.wikidata.org/wiki/Q20445370",
+      "title": "Wikidata item Q20445370 (1 World Trade Center, North Tower), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-wd-wtc2",
+      "url": "https://www.wikidata.org/wiki/Q20445008",
+      "title": "Wikidata item Q20445008 (Two World Trade Center, South Tower), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Shape: tower (two). Heights are the roof heights, 1,368 ft and 1,362 ft; the North Tower also carried a 360 ft antenna mast (NIST). Footprint about 210 ft square (NIST); floors about 206 ft. The pin is the midpoint of the two Wikidata tower points (1 WTC 40.7121, -74.0132; 2 WTC 40.7111, -74.0131). The start of construction is not stated on any page opened, so the construction phase begins at the 1972 completion of the North Tower.",
+  "model": {
+    "footprint": {
+      "description": "Two square footprints of about 210 ft (64 m) a side, with corners beveled 9 ft 9 in, side by side on a plaza (NIST).",
+      "source": "src-nist",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-nist",
+      "measurements": [
+        {
+          "part": "North Tower (1 WTC) height",
+          "value": 416.97,
+          "unit": "m",
+          "source": "src-911memorial",
+          "note": "1,368 ft, roof"
+        },
+        {
+          "part": "South Tower (2 WTC) height",
+          "value": 415.14,
+          "unit": "m",
+          "source": "src-911memorial",
+          "note": "1,362 ft, roof"
+        },
+        {
+          "part": "base side (each tower)",
+          "value": 64,
+          "unit": "m",
+          "source": "src-nist",
+          "note": "about 210 ft on a side"
+        },
+        {
+          "part": "count",
+          "value": 2,
+          "unit": "count",
+          "source": "src-911memorial",
+          "note": "Twin Towers"
+        },
+        {
+          "part": "stories",
+          "value": 110,
+          "unit": "count",
+          "source": "src-911memorial",
+          "note": "each tower"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "two tall square towers side by side"
+      },
+      {
+        "level": "local",
+        "representation": "procedural square towers with beveled corners and a rooftop mast on the North Tower"
+      },
+      {
+        "level": "street",
+        "representation": "window grid and plaza not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1972,
+        "end_year": 1973,
+        "state": "construction",
+        "description": "North Tower completed 1972 and South Tower 1973; the start of construction is not stated in the sources opened.",
+        "source": "src-ebsco-wtc"
+      },
+      {
+        "start_year": 1973,
+        "end_year": 2001,
+        "state": "intact",
+        "description": "Complex officially opened April 1973.",
+        "source": "src-ebsco-wtc"
+      },
+      {
+        "start_year": 2001,
+        "end_year": 2001,
+        "state": "destroyed",
+        "description": "Both towers collapsed on 11 September 2001.",
+        "source": "src-nist"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1972,
+        "to_year": 2001,
+        "material": "steel (perimeter tube of columns and steel plates)",
+        "source": "src-ebsco-wtc"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "author": "historian-agent:m-2",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:34:39.426Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

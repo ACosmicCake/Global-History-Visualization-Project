@@ -1,0 +1,164 @@
+{
+  "id": "-26ka-beringian-standstill",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Beringian standstill",
+  "summary": "Genetic and paleogenomic analyses indicate that ancestral Native Americans separated from East Asian populations roughly 25,000–20,000 years ago and experienced thousands of years of demographic isolation in Beringia before expanding into the Americas. During this standstill, unique founding mitochondrial and nuclear lineages differentiated, including the newly identified Ancient Beringians, while coalesced glacial ice sheets blocked southward dispersal until late Pleistocene deglaciation opened coastal and interior routes.",
+  "when": {
+    "start": {
+      "year": -23050
+    },
+    "end": {
+      "year": -13050
+    },
+    "precision": "millennium",
+    "as_recorded": [
+      {
+        "calendar": "Years before present (ybp)",
+        "value": "isolation in Beringia might have lasted up to 15,000 years",
+        "source": "src-tamm2007"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "separated from East Asians by 26,100 to 23,900 years ago",
+        "source": "src-potter2018"
+      }
+    ],
+    "display": "c. 25,000–15,000 years ago (divergence c. 26.1–23.9 ka to split c. 17.5–14.6 ka)"
+  },
+  "where": {
+    "lat": 65.7658,
+    "lon": -168.9876,
+    "elevation_m": null,
+    "modern_name": "Bering Strait (Diomede Islands, spanning Russia and the United States; reference anchor for the submerged Bering Land Bridge)",
+    "historical_name": "Central Beringian land bridge, unglaciated steppe-tundra between northeast Asia and northwest North America",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "eastern_asia"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 4,
+    "justification": "The genetic isolation of the founding Native American population in Beringia explains the distinct genetic profile of all Indigenous peoples of the Americas."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-23ka-peopling-of-the-americas",
+      "type": "part_of"
+    },
+    {
+      "id": "-26ka-last-glacial-maximum",
+      "type": "caused_by"
+    },
+    {
+      "id": "-23ka-white-sands-human-footprints",
+      "type": "contemporary"
+    },
+    {
+      "id": "-13ka-clovis-complex",
+      "type": "related"
+    },
+    {
+      "id": "person-anzick-1",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-tamm2007",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1952074/",
+      "title": "Beringian Standstill and Spread of Native American Founders (PLOS ONE 2:e829)",
+      "publisher": "PLOS ONE (via PubMed Central)",
+      "author": "Erika Tamm, Toomas Kivisild, et al.",
+      "date_published": "2007-09-05",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-potter2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6082647/",
+      "title": "Current evidence allows multiple models for the peopling of the Americas (Science Advances 4:eaat5473)",
+      "publisher": "Science Advances (AAAS, via PubMed Central)",
+      "author": "Ben A. Potter, James F. Baichtal, Alwynne B. Beaudoin, et al.",
+      "date_published": "2018-08-08",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where.historical_name",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/4031746/",
+      "title": "GeoNames gazetteer entry for Diomede Islands, Russia (4031746)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the geographical location of the standstill (whether in central Beringia or across northeast Asia from Cis-Baikal to Hokkaido), and the exact onset date.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:35:29.762Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-23050",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Genetic and paleogenomic analyses indicate that ancestral Native Americans separated from East Asian populations roughly 25,000–20,000 years ago and experienced thousands of years of demographic isolation in Beringia…",
+        "source": "src-tamm2007"
+      },
+      {
+        "span": "-13050",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "During this standstill, unique founding mitochondrial and nuclear lineages differentiated, including the newly identified Ancient Beringians, while coalesced glacial ice sheets blocked southward dispersal until late Pleistocene deglaciation…",
+        "source": "src-tamm2007",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

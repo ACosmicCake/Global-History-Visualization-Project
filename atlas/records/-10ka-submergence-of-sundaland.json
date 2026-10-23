@@ -1,0 +1,163 @@
+{
+  "id": "-10ka-submergence-of-sundaland",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "process",
+  "title": "Submergence of Sundaland",
+  "summary": "Following the Last Glacial Maximum, rapid post-glacial sea-level rise and meltwater pulses submerged the vast Sunda Shelf, which had connected mainland Southeast Asia with Sumatra, Java, and Borneo. Flooding over half of Sundaland by approximately 9,500 years ago, this marine transgression created the contemporary Indonesian archipelago, severed terrestrial migration corridors, drove human and faunal relocations, and abruptly intensified regional monsoon rainfall.",
+  "when": {
+    "start": {
+      "year": -12550
+    },
+    "end": {
+      "year": -7550
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 500,
+      "start_plus_years": 500,
+      "end_minus_years": 500,
+      "end_plus_years": 500,
+      "note": "Marine transgression accelerated during Meltwater Pulse 1A (~14.5–14.0 ka) and 1B (~11.5–11.0 ka), with extensive shelf flooding and Java Sea opening dated to approximately 9.5 ka (Griffiths et al. 2010; Peng et al. 2023)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "MWP1A, ~14,500–14,000 years ago",
+        "source": "src-peng2023-pmc"
+      },
+      {
+        "calendar": "ka",
+        "value": "flooding of the Sunda Shelf ~9500years ago",
+        "source": "src-anu-griffiths2010"
+      }
+    ],
+    "display": "c. 14,500–9,500 years ago (c. 12,550–7550 BCE)"
+  },
+  "where": {
+    "lat": 2,
+    "lon": 106.5,
+    "elevation_m": null,
+    "modern_name": "Sunda Shelf, Southeast Asia",
+    "historical_name": "Sundaland continental shelf, late Pleistocene to early Holocene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1200,
+    "coordinate_sources": [
+      "src-marineregions-5841"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Drowned a subcontinent-sized landmass, created the modern maritime Southeast Asian archipelago, and reshaped human and ecological dispersal routes."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-65ka-peopling-of-sahul",
+      "type": "related"
+    },
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related"
+    },
+    {
+      "id": "-3000-austronesian-expansion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-anu-griffiths2010",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/abrupt-increase-in-east-indonesian-rainfall-from-flooding-of-the-/",
+      "title": "Abrupt increase in east Indonesian rainfall from flooding of the Sunda Shelf ~9500years ago",
+      "publisher": "Australian National University (reporting Quaternary Science Reviews)",
+      "author": "Michael L. Griffiths, Russell N. Drysdale, Michael K. Gagan, et al.",
+      "date_published": "2010",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-peng2023-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9899273/",
+      "title": "Prehistoric human migration between Sundaland and South Asia was driven by sea-level rise",
+      "publisher": "Communications Biology (Springer Nature, via PubMed Central)",
+      "author": "Kim-Hock Peng et al.",
+      "date_published": "2023-02-08",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-marineregions-5841",
+      "url": "https://www.marineregions.org/gazetteer.php?p=details&id=5841",
+      "title": "Sunda Shelf (Shelf)",
+      "publisher": "Marine Regions (VLIZ / IHO-IOC GEBCO)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact terminal date of open land bridges between major islands, as local sill depths and tectonic subsidence created regional differences between 11 ka and 7 ka.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-12550",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Following the Last Glacial Maximum, rapid post-glacial sea-level rise and meltwater pulses submerged the vast Sunda Shelf, which had connected mainland Southeast Asia with Sumatra, Java, and Borneo.",
+        "source": "src-anu-griffiths2010"
+      },
+      {
+        "span": "-7550",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Flooding over half of Sundaland by approximately 9,500 years ago, this marine transgression created the contemporary Indonesian archipelago, severed terrestrial migration corridors, drove human and faunal relocations, and…",
+        "source": "src-anu-griffiths2010",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  },
+  "published_at": "2026-10-22T14:01:38.066Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

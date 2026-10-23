@@ -1,0 +1,148 @@
+{
+  "id": "place-taipei-101",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Taipei 101",
+  "aliases": [
+    "Taipei World Financial Center"
+  ],
+  "summary": "Taipei 101 is a 508-metre skyscraper in Taipei, Taiwan, completed in 2004. Taipei city government says construction began in 1998, while another source gives a 1999–2004 construction period with the tower topped out in October 2003 and opened on 31 December 2004. It was the world's tallest building from 2004 to 2010.",
+  "when": {
+    "start": {
+      "year": 1998
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Taipei City Government: construction began in 1998; The Infrastructure Index: 1999–2004. End is the present: the tower is in use."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Taipei City Government)",
+        "value": "began its constructions in 1998",
+        "source": "src-taipei-gov"
+      },
+      {
+        "calendar": "CE (The Infrastructure Index)",
+        "value": "Construction Period: 1999–2004",
+        "source": "src-infraindex-taipei"
+      },
+      {
+        "calendar": "CE (Thornton Tomasetti)",
+        "value": "Completion: 2004",
+        "source": "src-tt-taipei"
+      }
+    ],
+    "display": "Built 1998/1999–2004"
+  },
+  "where": {
+    "lat": 25.03361111111111,
+    "lon": 121.56472222222222,
+    "elevation_m": null,
+    "modern_name": "Taipei 101, Xinyi, Taipei, Taiwan",
+    "historical_name": "Taipei 101 skyscraper, Taipei, Taiwan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wd-taipei101"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Thornton Tomasetti says it was the tallest building in the world from 2004 to 2010."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-taipei-gov",
+      "url": "https://english.gov.taipei/News_Content.aspx?n=96870FBF0C35AC0A&sms=06941229C57D903C&s=99D3DFE5C9A05627",
+      "title": "Taipei 101 - Standing Tall on the Global Architectural Stage",
+      "publisher": "Taipei City Government",
+      "author": "Taipei City Government",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-tt-taipei",
+      "url": "https://www.thorntontomasetti.com/project/taipei-101",
+      "title": "Taipei 101",
+      "publisher": "Thornton Tomasetti",
+      "author": "Thornton Tomasetti",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-infraindex-taipei",
+      "url": "https://theinfrastructureindex.com/article/taipei-101/",
+      "title": "Taipei 101 Skyscraper Guide: Stats, Engineering, and Fun Facts",
+      "publisher": "The Infrastructure Index",
+      "author": "The Infrastructure Index",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-taipei101",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q83101.json",
+      "title": "Wikidata entry for Taipei 101 (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "No model: no tower plan or base width found on an opened page. The OSM outline for 台北101 (147 x 138 m) is the podium/complex, so it was not used. Start year conflicts (1998 vs 1999). Thornton Tomasetti returns HTTP 403 to spotcheck (opened via WebFetch; 508-meter, 2004, 2004-2010 stated there); Infrastructure Index spotchecks 508, 2010 and the dates. 508 m is stated by Thornton Tomasetti (\"508-meter\") and Infrastructure Index.",
+  "author": "historian-agent:m-25",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T16:51:05.889Z"
+}

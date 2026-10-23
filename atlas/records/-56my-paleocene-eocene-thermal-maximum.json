@@ -1,0 +1,149 @@
+{
+  "id": "-56my-paleocene-eocene-thermal-maximum",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Paleocene-Eocene Thermal Maximum",
+  "summary": "Approximately 56 million years ago, a massive and geologically rapid release of thousands of gigatons of carbon triggered the Paleocene-Eocene Thermal Maximum. Global temperatures surged by 5 °C to 8 °C, accompanied by widespread ocean acidification and deoxygenation, causing major benthic foraminiferal extinctions, mammalian dwarfism, and polar migrations. The event serves as the primary deep-time geological analog for understanding the long-term planetary consequences of modern anthropogenic greenhouse emissions.",
+  "when": {
+    "start": {
+      "year": -56000000
+    },
+    "end": {
+      "year": -55800000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 500000,
+      "start_plus_years": 500000,
+      "end_minus_years": 100000,
+      "end_plus_years": 100000,
+      "note": "Onset placed at c. 55.9–56.0 Ma; the main carbon injection and recovery phase lasted approximately 100,000 to 200,000 years."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Millions of years ago",
+        "value": "particularly warm spike at the boundary between the two geological epochs around 56 million years ago",
+        "source": "src-climate-gov-petm"
+      },
+      {
+        "calendar": "Millions of years ago",
+        "value": "Increased productivity and fish abundance in the open ocean during extreme warming 56 million years ago",
+        "source": "src-chen2026-natcom"
+      }
+    ],
+    "display": "c. 56.0–55.8 million years ago"
+  },
+  "where": {
+    "lat": 0,
+    "lon": 0,
+    "elevation_m": null,
+    "modern_name": "Global atmosphere and oceans (worldwide planetary event)",
+    "historical_name": "Global ocean-atmosphere system during the Paleocene–Eocene transition; no human polities existed",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-climate-gov-petm"
+    ]
+  },
+  "regions": [
+    "global",
+    "oceans"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The most prominent Cenozoic hyperthermal event, driving global ocean acidification, benthic extinctions, and major evolutionary turnover in mammals and plants."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related",
+      "because": "The end-Cretaceous extinction ten million years earlier cleared ecological space for the Cenozoic mammalian radiations that diversified during the PETM."
+    },
+    {
+      "id": "-66my-paleogene-mammal-radiation",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "c. 56 Ma",
+        "action": "pulse { radius_km: 5000 }",
+        "caption": "Massive carbon injection into the atmosphere triggers rapid global heating and ocean acidification.",
+        "source": "src-chen2026-natcom",
+        "consequence": false
+      },
+      {
+        "span": "c. 55.9 Ma",
+        "action": "pulse { radius_km: 8000 }",
+        "caption": "Widespread extinction of benthic marine organisms coincides with mammalian dispersals toward the poles.",
+        "source": "src-climate-gov-petm",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-chen2026-natcom",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13601567/",
+      "title": "Coupled increases in pelagic fish productivity and export productivity during the Paleocene-Eocene Thermal Maximum",
+      "publisher": "Nature Communications (Springer Nature, via PubMed Central)",
+      "author": "Lin Chen et al.",
+      "date_published": "2026-03-24",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-climate-gov-petm",
+      "url": "https://www.climate.gov/news-features/climate-qa/whats-hottest-earths-ever-been",
+      "title": "What's the hottest Earth's ever been?",
+      "publisher": "NOAA Climate.gov",
+      "author": "Michon Scott",
+      "date_published": "2020-07-01",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the primary carbon trigger mechanism, which remains debated between North Atlantic magmatism, methane clathrate release, and permafrost thaw.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:26:30.191Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

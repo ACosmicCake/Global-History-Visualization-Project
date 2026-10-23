@@ -1,0 +1,161 @@
+{
+  "id": "1938-11-09-kristallnacht",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Kristallnacht (November Pogrom)",
+  "summary": "On 9-10 November 1938, Nazis attacked Jews across Germany, Austria and the Sudetenland, using the Paris shooting of diplomat Ernst vom Rath by Herschel Grynszpan as pretext. More than 1,400 synagogues were burned or destroyed, thousands of Jewish businesses and homes were vandalised, hundreds of Jews died, and about 26,000 Jewish men were imprisoned in Dachau, Buchenwald and Sachsenhausen. Jews were fined 1 billion Reichsmark.",
+  "when": {
+    "start": {
+      "year": 1938
+    },
+    "end": {
+      "year": 1938
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Single night, 9-10 November 1938."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "on November 9 and 10, 1938",
+        "source": "src-ushmm-kristallnacht"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "between 9 and 10 November 1938",
+        "source": "src-holocaustcz-kristallnacht"
+      }
+    ],
+    "display": "9-10 November 1938"
+  },
+  "where": {
+    "lat": 52.516667,
+    "lon": 13.383333,
+    "elevation_m": null,
+    "modern_name": "Berlin, Germany (representative site; violence was nationwide)",
+    "historical_name": "Berlin, capital of Nazi Germany (German Reich), one of many places across Germany, Austria and the Sudetenland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-berlin",
+      "src-ushmm-kristallnacht"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A nationwide state-orchestrated pogrom that marked a sharp escalation in Nazi persecution of Jews."
+  },
+  "confidence": "established",
+  "audience_note": "Describes antisemitic violence, arson, imprisonment and deaths. The sources give no precise count of the dead.",
+  "related": [
+    {
+      "id": "1941-the-holocaust",
+      "type": "related"
+    },
+    {
+      "id": "person-adolf-hitler",
+      "type": "related"
+    },
+    {
+      "id": "1939-world-war-ii",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ushmm-kristallnacht",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/kristallnacht",
+      "title": "Kristallnacht",
+      "publisher": "United States Holocaust Memorial Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-holocaustcz-kristallnacht",
+      "url": "https://www.holocaust.cz/print/en_US/kristallnacht-2/",
+      "title": "Kristallnacht",
+      "publisher": "Terezin Initiative Institute (holocaust.cz)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-wd-berlin",
+      "url": "https://www.wikidata.org/wiki/Q64",
+      "title": "Wikidata item Q64 (Berlin), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Berlin only as a representative site (USHMM captions show Jewish shops destroyed in central Berlin on 10 November 1938); the event was nationwide, hence 600 km uncertainty. USHMM gives \"hundreds\" dead and \"tens of thousands\" arrested with about 26,000 imprisoned; other synagogue counts from search leads differ and are not used.",
+  "author": "historian-agent:o-s43",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T10:16:56.118Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1938",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "On 9-10 November 1938, Nazis attacked Jews across Germany, Austria and the Sudetenland, using the Paris shooting of diplomat Ernst vom Rath by Herschel Grynszpan as pretext.",
+        "source": "src-ushmm-kristallnacht"
+      },
+      {
+        "span": "1938",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "More than 1,400 synagogues were burned or destroyed, thousands of Jewish businesses and homes were vandalised, hundreds of Jews died, and about 26,000 Jewish men were imprisoned in…",
+        "source": "src-ushmm-kristallnacht",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

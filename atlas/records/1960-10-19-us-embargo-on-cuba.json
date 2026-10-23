@@ -1,0 +1,167 @@
+{
+  "id": "1960-10-19-us-embargo-on-cuba",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "US embargo on Cuba from 1960",
+  "summary": "On 19 October 1960 the United States put general export controls on Cuba, prohibiting nearly all American exports except certain foods and medicines, after Cuban seizures of US-owned property. President Kennedy extended this to a full trade embargo effective 7 February 1962, and the embargo remains in force in later decades.",
+  "when": {
+    "start": {
+      "year": 1960,
+      "iso": "1960-10-19"
+    },
+    "end": {
+      "year": 1962,
+      "iso": "1962-02-07"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The State Department chronology dates the embargo to 19 October 1960; the National Security Archive dates the State Department announcement to 20 October. The end date marks only the full trade embargo of 1962; the embargo continued after it."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Oct 19, 1960: U.S. imposes economic embargo on Cuba, except food and medicine",
+        "source": "src-statechron"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Oct. 20, 1960: the State Department announced general controls to prohibit American exports to Cuba",
+        "source": "src-nsa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "effective February 7, 1962",
+        "source": "src-nsa"
+      }
+    ],
+    "display": "19 October 1960 (full embargo 7 February 1962)"
+  },
+  "where": {
+    "lat": 38.895,
+    "lon": -77.03666666666666,
+    "elevation_m": null,
+    "modern_name": "Washington, DC, United States (where the controls were issued; effect on Cuba)",
+    "historical_name": "Washington, D.C., United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-dc"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The start of the longest-running US sanctions regime, shaping US-Cuba relations and Cuba's economy for decades."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1953-cuban-revolution",
+      "type": "caused_by",
+      "because": "Cuban government seizures of US property after the revolution led the US to impose export controls."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-statechron",
+      "url": "https://1997-2001.state.gov/regions/wha/cuba_chronology.html",
+      "title": "Chronology of Cuban history and Cuban-American relations since 1958",
+      "publisher": "US Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nsa",
+      "url": "https://nsarchive.gwu.edu/briefing-book/cuba/2022-02-02/cuba-embargoed-us-trade-sanctions-turn-sixty",
+      "title": "Cuba Embargoed: U.S. Trade Sanctions Turn Sixty",
+      "publisher": "National Security Archive, George Washington University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-dc",
+      "url": "https://www.wikidata.org/wiki/Q61",
+      "title": "Wikidata item Q61 (Washington, D.C.), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the day: 19 October (State Department chronology) versus 20 October (National Security Archive account of the announcement). The pin is Washington; the embargo's effects fell on Cuba. The record covers the 1960 controls and the 1962 full embargo only.",
+  "author": "historian-agent:o-s8",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1960-10-19",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "The US imposed general export controls on Cuba, prohibiting nearly all exports except food, medicines and medical supplies.",
+        "source": "src-statechron"
+      },
+      {
+        "span": "1960-10-20",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "The controls followed Cuba's nationalization of US-owned businesses and US cuts to Cuban sugar purchases.",
+        "source": "src-nsa"
+      },
+      {
+        "span": "1962-02-07",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "President Kennedy proclaimed a full embargo on all trade with Cuba, effective 7 February 1962.",
+        "source": "src-nsa",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:36:07.277Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "1978-reform-and-opening-of-china",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Reform and Opening-up of China (Third Plenum, 1978)",
+  "summary": "The Third Plenary Session of the 11th Central Committee of the Communist Party of China met in Beijing in December 1978, dated 18 December by one source. It dropped the slogan of class struggle as the key link, shifted the Party's focus to economic construction, and is treated as the start of the Reform and Opening-up era under Deng Xiaoping.",
+  "when": {
+    "start": {
+      "year": 1978
+    },
+    "end": {
+      "year": 1978
+    },
+    "precision": "month",
+    "uncertainty": {
+      "note": "One source dates the session to 18 December 1978; the 2021 Party resolution gives only December 1978."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "December 18, 1978",
+        "source": "src-ocs"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In December 1978, the 11th Central Committee held its third plenary session.",
+        "source": "src-gov"
+      }
+    ],
+    "display": "December 1978"
+  },
+  "where": {
+    "lat": 39.9057136,
+    "lon": 116.3912972,
+    "elevation_m": null,
+    "modern_name": "Beijing, China",
+    "historical_name": "Beijing, capital of the People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Marked the turn to economic reform and opening that reshaped China."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ocs",
+      "url": "https://www.ourchinastory.com/en/13658/Third-Plenum-of-11th-Central-Committee-of-CPC-held",
+      "title": "18 December 1978: Third Plenum of 11th Central Committee of CPC held",
+      "publisher": "Our China Story",
+      "author": "Our China Story",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gov",
+      "url": "https://english.www.gov.cn/policies/latestreleases/202111/16/content_WS6193a935c6d0df57f98e50b0.html",
+      "title": "Resolution of the CPC Central Committee on the Major Achievements and Historical Experience of the Party over the Past Century",
+      "publisher": "Government of the People's Republic of China (English portal)",
+      "author": "Government of the People's Republic of China (English portal)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Beijing&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Beijing (relation 912940)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Both sources are Chinese state or Party outlets, so framing is official; no independent source was opened. Day 18 December rests on one source. Pin is the Beijing centroid, since the venue is not on any page opened.",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1978-12-18",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The Third Plenum meets in Beijing, repudiating the \"Two Whatevers\" and the class-struggle slogan.",
+        "source": "src-ocs",
+        "consequence": false
+      },
+      {
+        "span": "1978-12",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "The Party turns its work toward economic construction, opening the Reform and Opening-up period.",
+        "source": "src-ocs",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:37.194Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

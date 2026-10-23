@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s49",
+  "updated": "2026-10-22",
+  "id": "-0446-construction-of-the-parthenon",
+  "kind": "event",
+  "title": "Construction of the Parthenon",
+  "summary": "Athens began building the Parthenon on the Acropolis in 447 BCE under Pericles, with Iktinos and Kallikrates as architects and Phidias overseeing the sculpture. The building period is given as 447–438 BCE, with decoration finished in 432 BCE. World History Encyclopedia says it was paid for from surplus in the Delian League war treasury.",
+  "when": {
+    "start": {
+      "year": -446
+    },
+    "end": {
+      "year": -431
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Range runs from the start in 447 BCE to the end of decoration in 432 BCE; the building itself is dated 447–438 BCE by Livius and EBSCO."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "447 BCE to 432 BCE",
+        "source": "src-whe-parthenon"
+      },
+      {
+        "calendar": "BCE (Livius.org)",
+        "value": "was built between 447 and 438; the decoration was finished in 432",
+        "source": "src-livius-athens"
+      },
+      {
+        "calendar": "B.C.E. (EBSCO)",
+        "value": "447-438 B.C.E.",
+        "source": "src-ebsco-parthenon"
+      }
+    ],
+    "display": "447–432 BCE"
+  },
+  "where": {
+    "lat": 37.9715034,
+    "lon": 23.7266177,
+    "elevation_m": null,
+    "modern_name": "Parthenon, Acropolis of Athens, Greece",
+    "historical_name": "Acropolis of Athens, sanctuary of Athena, polis of Athens",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-parthenon"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world",
+    "art_music_literature",
+    "religion_philosophy"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Temple that became the best-known symbol of classical Athens."
+  },
+  "related": [
+    {
+      "id": "place-acropolis-of-athens",
+      "type": "part_of"
+    },
+    {
+      "id": "person-phidias",
+      "type": "related"
+    },
+    {
+      "id": "person-pericles",
+      "type": "related"
+    },
+    {
+      "id": "-0477-delian-league",
+      "type": "caused_by",
+      "because": "World History Encyclopedia says the Parthenon was paid for from surplus in the league's war treasury."
+    },
+    {
+      "id": "-0507-classical-athens",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-parthenon",
+      "url": "https://www.worldhistory.org/Parthenon/",
+      "title": "Parthenon",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2012-10-28",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-athens",
+      "url": "https://www.livius.org/articles/place/athens/",
+      "title": "Athens",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-parthenon",
+      "url": "https://www.ebsco.com/research-starters/history/building-parthenon/",
+      "title": "Building of the Parthenon (Research Starter)",
+      "publisher": "EBSCO Information Services",
+      "author": "Kevin Herbert and Jennifer Eastman",
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm-parthenon",
+      "url": "https://nominatim.openstreetmap.org/search?q=Parthenon+Athens&format=json&limit=1",
+      "title": "OpenStreetMap Nominatim: Parthenon, way 910010406 (37.9715034, 23.7266177)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "WHE says 447 to 432; Livius and EBSCO say 447–438 for the building with decoration to 432. The record spans 447–432.",
+  "published_at": "2026-10-22T10:33:52.581Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-446",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Athens began building the Parthenon on the Acropolis in 447 BCE under Pericles, with Iktinos and Kallikrates as architects and Phidias overseeing the sculpture.",
+        "source": "src-whe-parthenon"
+      },
+      {
+        "span": "-431",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The building period is given as 447–438 BCE, with decoration finished in 432 BCE.",
+        "source": "src-whe-parthenon",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

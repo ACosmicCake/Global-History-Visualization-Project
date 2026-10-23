@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s40",
+  "updated": "2026-10-22",
+  "id": "1071-battle-of-manzikert",
+  "kind": "event",
+  "title": "Battle of Manzikert",
+  "summary": "In August 1071 the Seljuk sultan Alp Arslan defeated the Byzantine army of Emperor Romanos IV Diogenes near Manzikert, and Romanos was captured. Turkish troops in the emperor's army defected. Romanos was released after agreeing to a ransom and territorial concessions, then deposed and blinded in Constantinople. One encyclopedia says the defeat opened Asia Minor to Turkish occupation; another stresses the civil war that followed.",
+  "when": {
+    "start": {
+      "year": 1071
+    },
+    "end": {
+      "year": 1071
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO gives 26 August 1071 and World History Encyclopedia gives 25 August 1071, so the day is left open."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (EBSCO)",
+        "value": "August 26, 1071",
+        "source": "src-ebsco-manzikert"
+      },
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "The two leaders and their armies finally met on 25 August near Manzikert (August 1071 CE)",
+        "source": "src-whe-manzikert"
+      }
+    ],
+    "display": "25 or 26 August 1071"
+  },
+  "where": {
+    "lat": 39.1475,
+    "lon": 42.545,
+    "elevation_m": null,
+    "modern_name": "Malazgirt, Muş Province, Türkiye (battlefield near the town)",
+    "historical_name": "Manzikert (Mantzikert), ancient Armenia, Byzantine frontier",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd-manzikert"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "The defeat and capture of a Byzantine emperor preceded Turkish settlement of Asia Minor."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-eastern-roman-empire",
+      "type": "related"
+    },
+    {
+      "id": "1453-fall-of-constantinople",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-manzikert",
+      "url": "https://www.worldhistory.org/article/1189/battle-of-manzikert/",
+      "title": "Battle of Manzikert",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-ebsco-manzikert",
+      "url": "https://www.ebsco.com/research-starters/military-history-and-science/battle-manzikert/",
+      "title": "Battle of Manzikert (Research Starters)",
+      "publisher": "EBSCO Information Services",
+      "author": "Joseph R. Rosenbloom and Nicholas Birns",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-manzikert",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q746811.json",
+      "title": "Wikidata entry for Malazgirt (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact day (25 vs 26 August) and the battlefield location: the pin is the town of Malazgirt, which EBSCO names as the modern Manzikert; the field itself is not located on the pages opened.",
+  "published_at": "2026-10-22T09:57:07.674Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1071",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In August 1071 the Seljuk sultan Alp Arslan defeated the Byzantine army of Emperor Romanos IV Diogenes near Manzikert, and Romanos was captured.",
+        "source": "src-whe-manzikert"
+      },
+      {
+        "span": "1071",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "One encyclopedia says the defeat opened Asia Minor to Turkish occupation; another stresses the civil war that followed.",
+        "source": "src-whe-manzikert",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

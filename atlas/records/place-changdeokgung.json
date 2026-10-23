@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s103",
+  "updated": "2026-10-22",
+  "id": "place-changdeokgung",
+  "kind": "place",
+  "title": "Changdeokgung Palace, Seoul",
+  "summary": "Changdeokgung is a royal palace in Seoul, built in 1405 under King Taejong as a separate palace to the main one. Both palaces were lost in the Imjin War; Changdeokgung was reconstructed in 1610 and then served as the Joseon royal palace for about 270 years. UNESCO inscribed it in 1997. The compound covers about 480,000 square meters.",
+  "when": {
+    "start": {
+      "year": 1405
+    },
+    "end": {
+      "year": 1610
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the construction date; end is the reconstruction after the Imjin War, dated 1610 by Seoul Tourism Organization. The palace continues to stand."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (Korea Heritage Service)",
+        "value": "Changdeok Palace was built in 1405, the fifth year of Taejong",
+        "source": "src-khs"
+      },
+      {
+        "calendar": "Gregorian (Seoul Tourism Organization)",
+        "value": "Reconstructed in the 2nd year of Gwanghaegun (1610)",
+        "source": "src-seoul"
+      }
+    ],
+    "display": "built 1405; reconstructed 1610"
+  },
+  "where": {
+    "lat": 37.5823872,
+    "lon": 126.9917013,
+    "elevation_m": null,
+    "modern_name": "Changdeokgung Palace, Jongno District, Seoul, South Korea",
+    "historical_name": "Changdeok Palace, a secondary royal palace of the Joseon kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-cdg"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A UNESCO World Heritage palace that served as the Joseon royal palace for about 270 years."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-khs",
+      "url": "https://english.khs.go.kr/cop/bbs/selectBoardArticle.do?ctgryLrcls=CTGRY209&nttId=57994&bbsId=BBSMSTR_1205&uniq=0&mn=EN_03_01",
+      "title": "World Heritage: Changdeokgung Palace",
+      "publisher": "Korea Heritage Service (Cultural Heritage Administration)",
+      "author": "Korea Heritage Service",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-seoul",
+      "url": "https://english.visitseoul.net/attractions/Changdeokgung-Palace/ENP000295",
+      "title": "Changdeokgung Palace",
+      "publisher": "Seoul Tourism Organization",
+      "author": "Seoul Tourism Organization",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-cdg",
+      "url": "https://www.openstreetmap.org/way/789965985",
+      "title": "OpenStreetMap way 789965985, Changdeokgung, 37.5823872, 126.9917013",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the end of the 'lost' phase: the Seoul page says both palaces were lost in the Imjin War but gives no year for the loss. The 1997 inscription and the area come from the Korea Heritage Service page. No height or plan for a single structure was sought; this is a palace complex.",
+  "published_at": "2026-10-22T18:09:59.994Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": "0552-buddhism-transmission-to-japan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Transmission of Buddhism to Japan",
+  "summary": "Traditionally dated to 552 CE, Buddhism reached Japan from the Korean kingdom of Baekje, though some sources give 538 instead. The Asuka area is described as the cradle of Buddhism in Japan, where the first nunnery and other Buddhist institutions were founded.",
+  "when": {
+    "start": {
+      "year": 552
+    },
+    "end": {
+      "year": 552
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 14,
+      "start_plus_years": 0,
+      "end_minus_years": 14,
+      "end_plus_years": 0,
+      "note": "Alternative date 538 CE given by both sources; 552 is the traditional date."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "sometime in the 6th century CE, traditionally in 552 CE",
+        "source": "src-whe-asuka"
+      },
+      {
+        "calendar": "CE",
+        "value": "552: Buddhism arrives from Baekje (some sources put the date at 538)",
+        "source": "src-asuka-heritage"
+      }
+    ],
+    "display": "Traditionally 552 CE (alternative 538)"
+  },
+  "where": {
+    "lat": 34.471043,
+    "lon": 135.820884,
+    "elevation_m": null,
+    "modern_name": "Asuka village, Nara Prefecture, Japan",
+    "historical_name": "Asuka, Japan, in the period later called the Asuka period",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-gn-asuka"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The arrival of Buddhism from the Korean peninsula began a religious and cultural tradition that shaped Japan for the following centuries."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0500-rise-of-buddhism",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-asuka",
+      "url": "https://www.worldhistory.org/Asuka_Period/",
+      "title": "Asuka Period",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2017-04-14",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-asuka-heritage",
+      "url": "https://asuka-japan-heritage.jp/global/en/zenshinni/life/p5.html",
+      "title": "Asuka, the cradle of Buddhism in Japan",
+      "publisher": "Asuka Japan Heritage Promotion Committee",
+      "author": "Asuka Japan Heritage Promotion Committee",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-asuka",
+      "url": "https://www.geonames.org/search.html?q=Asuka&country=JP",
+      "title": "Asuka-mura, Japan",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "552 is a traditional date; both sources flag 538 as an alternative. Pin is the Asuka area as named by the heritage committee, not a single temple. Neither page names the Japanese court.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:41.149Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "552",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Traditionally dated to 552 CE, Buddhism reached Japan from the Korean kingdom of Baekje, though some sources give 538 instead.",
+        "source": "src-whe-asuka"
+      },
+      {
+        "span": "552",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Asuka area is described as the cradle of Buddhism in Japan, where the first nunnery and other Buddhist institutions were founded.",
+        "source": "src-whe-asuka",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

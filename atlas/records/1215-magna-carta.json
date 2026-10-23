@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1215-magna-carta",
+  "kind": "event",
+  "title": "Magna Carta sealed at Runnymede",
+  "summary": "On 15 June 1215 King John sealed Magna Carta at Runnymede, a Thames meadow between Windsor and Staines, after rebel barons renounced their allegiance in May. The charter promised liberties to the English Church and free men and set up a council of 25 barons to enforce it. Pope Innocent III declared it void in August, civil war followed in September, and it was reissued in 1216, 1217 and 1225.",
+  "when": {
+    "start": {
+      "year": 1215,
+      "iso": "1215-06-15"
+    },
+    "end": {
+      "year": 1215,
+      "iso": "1215-06-15"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dated 15 June 1215 in the charter and by both sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "regnal",
+        "value": "the fifteenth day of June in the seventeenth year of our reign",
+        "source": "src-tna-mc"
+      },
+      {
+        "calendar": "CE",
+        "value": "At Runnymede on June 15, King John accepted the terms that would become Magna Carta and placed his seal on the charter",
+        "source": "src-loc-mc"
+      }
+    ],
+    "display": "15 June 1215"
+  },
+  "where": {
+    "lat": 51.4333333,
+    "lon": -0.5333333,
+    "elevation_m": null,
+    "modern_name": "Runnymede, Surrey, England",
+    "historical_name": "the meadow called Runnymede, between Windsor and Staines, in King John's kingdom of England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-gn-runnymede"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "A charter binding the king to written terms, reissued repeatedly and later treated as a foundation of constitutional rights."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-tna-mc",
+      "url": "http://www.nationalarchives.gov.uk/education/teaching-resources/magna-carta-1214-1225/",
+      "title": "Magna Carta 1214–1225",
+      "publisher": "The National Archives (UK)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-loc-mc",
+      "url": "https://www.loc.gov/exhibits/magna-carta-muse-and-mentor/rebellion-and-the-great-charter.html",
+      "title": "Rebellion and the Great Charter",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-runnymede",
+      "url": "https://www.geonames.org/search.html?q=Runnymede&country=GB",
+      "title": "GeoNames: Runnymede (meadow)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1215-05",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In May 1215 the barons and church representatives publicly withdraw their loyalty to King John, who then must negotiate.",
+        "source": "src-loc-mc",
+        "consequence": false
+      },
+      {
+        "span": "1215-06-15",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "At Runnymede on 15 June, John seals the charter, which binds the king and sets a council of 25 barons to enforce it.",
+        "source": "src-tna-mc",
+        "consequence": false
+      },
+      {
+        "span": "1215-08",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Pope Innocent III declares the charter void in August and civil war breaks out in September, but reissues follow in 1216, 1217 and 1225.",
+        "source": "src-tna-mc",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "The animation consequence beat rests on the National Archives page. Runnymede pin is the GeoNames meadow point; the exact sealing spot on the meadow is not given.",
+  "author": "historian-agent:o-s65",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T12:13:01.181Z"
+}

@@ -1,0 +1,132 @@
+{
+  "id": "place-xochimilco-chinampas",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Chinampas of Xochimilco",
+  "summary": "The chinampas of Xochimilco are artificial garden plots built from lake sediment, branches and vegetation, separated by canals and edged with ahuejote willows. Developed around the lake shores in the pre-Hispanic Valley of Mexico and expanded with Tenochtitlan from 1325, they remain farmed in southern Mexico City.",
+  "when": {
+    "start": {
+      "year": 1325
+    },
+    "end": {
+      "year": 2025
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 200,
+      "start_plus_years": 0,
+      "end_minus_years": 200,
+      "end_plus_years": 0,
+      "note": "No source gives a founding date: FAO says only \"since Aztecs times\"; Harvard places expansion in 1325. Start is that expansion date, not the invention. End is open (still cultivated)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "in 1325",
+        "source": "src-drclas"
+      },
+      {
+        "calendar": "CE",
+        "value": "since Aztecs times",
+        "source": "src-fao-giahs"
+      }
+    ],
+    "display": "Pre-Hispanic origin, expanded from 1325, still in use"
+  },
+  "where": {
+    "lat": 19.247583,
+    "lon": -99.098222,
+    "elevation_m": null,
+    "modern_name": "Xochimilco, Mexico City, Mexico",
+    "historical_name": "Xochimilco, a lake-shore altepetl in the Valley of Mexico (later within the Mexica empire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8,
+    "coordinate_sources": [
+      "src-wd-xochimilco"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Surviving pre-Hispanic lake agriculture linked to the food supply of the Valley of Mexico."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-tenochtitlan",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-drclas",
+      "url": "https://revista.drclas.harvard.edu/design-with-water/",
+      "title": "Design with Water",
+      "publisher": "Harvard University (DRCLAS)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fao-giahs",
+      "url": "https://www.fao.org/giahs/giahs-around-the-world/mexico-chinampas-agricultural-system/en",
+      "title": "Chinampas agricultural system, Mexico (GIAHS)",
+      "publisher": "FAO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-xochimilco",
+      "url": "https://www.wikidata.org/wiki/Q643026",
+      "title": "Wikidata item Q643026, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "UNESCO WHC 412 (Historic Centre of Mexico City and Xochimilco) could not be opened (403), so the inscription is not claimed here; FAO links to it. FAO lists GIAHS recognition in 2017. The origin date is unsettled; the pin is the borough centroid, not a chinampa zone.",
+  "author": "historian-agent:o-s11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:45:04.402Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

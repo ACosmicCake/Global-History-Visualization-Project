@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1830-belgian-revolution",
+  "kind": "event",
+  "title": "Belgian Revolution",
+  "summary": "A revolt against King William I of the United Kingdom of the Netherlands began in Brussels in August 1830, after an opera performance sparked protests. A provisional government under Charles Rogier proclaimed independence on 4 October 1830. Dutch forces invaded in August 1831 but were halted when a French army arrived, and the Belgians created their own state.",
+  "when": {
+    "start": {
+      "year": 1830
+    },
+    "end": {
+      "year": 1831
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is August 1830 (EBSCO); independence proclaimed 4 October 1830; Rijksmuseum dates the revolution 1830-1831. End year is a loose bound."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "began in August 1830",
+        "source": "src-ebsco"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "October 4",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "1830–1831"
+  },
+  "where": {
+    "lat": 50.8505,
+    "lon": 4.3488,
+    "elevation_m": null,
+    "modern_name": "Brussels, Belgium (city-centre proxy for the uprising's starting point)",
+    "historical_name": "Brussels, United Kingdom of the Netherlands",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Led to the creation of an independent Belgian state separate from the Netherlands."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-rijks",
+      "url": "https://www.rijksmuseum.nl/en/rijksstudio/timeline-dutch-history/1830-1831-the-belgian-revolution",
+      "title": "1830-1831 The Belgian Revolution",
+      "publisher": "Rijksmuseum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/belgian-revolution/",
+      "title": "Belgian Revolution (Research Starters)",
+      "publisher": "EBSCO",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2800866/brussels.html",
+      "title": "Brussels",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "End year 1831 rests only on Rijksmuseum page (read via fetch; spotcheck tool returned 404 for it). Pin is a Brussels city proxy.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T01:20:25.724Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1830",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A revolt against King William I of the United Kingdom of the Netherlands began in Brussels in August 1830, after an opera performance sparked protests.",
+        "source": "src-rijks"
+      },
+      {
+        "span": "1831",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Dutch forces invaded in August 1831 but were halted when a French army arrived, and the Belgians created their own state.",
+        "source": "src-rijks",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

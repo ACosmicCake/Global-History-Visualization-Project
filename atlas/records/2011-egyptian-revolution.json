@@ -1,0 +1,146 @@
+{
+  "id": "2011-egyptian-revolution",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Egyptian Revolution of 2011 (25 January Revolution)",
+  "summary": "In 18 days from 25 January 2011, millions of Egyptians took to the streets against Hosni Mubarak. On 1 February an estimated 2 million people protested in Tahrir Square, Cairo. On 11 February the vice-president announced that Mubarak had resigned and handed power to the army. Amnesty reports at least 840 people killed and 6,467 injured, citing Ministry of Health sources.",
+  "when": {
+    "start": {
+      "year": 2011
+    },
+    "end": {
+      "year": 2011
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Amnesty counts 18 days, day 18 being 11 February."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "DAY 18 – FRIDAY 11 FEBRUARY",
+        "source": "src-amnesty"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "February 11, 2011, when he stepped down",
+        "source": "src-cfr"
+      }
+    ],
+    "display": "25 January – 11 February 2011"
+  },
+  "where": {
+    "lat": 30.0443934,
+    "lon": 31.2357457,
+    "elevation_m": null,
+    "modern_name": "Tahrir Square, Cairo, Egypt",
+    "historical_name": "Tahrir Square, Cairo, Arab Republic of Egypt",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Toppled a ruler of nearly three decades and became a landmark of the 2011 Arab uprisings."
+  },
+  "confidence": "established",
+  "audience_note": "Describes deaths and injuries of protesters and detentions and torture. Casualty counts are official or NGO figures.",
+  "related": [
+    {
+      "id": "2010-arab-spring",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-amnesty",
+      "url": "https://www.amnesty.org/en/wp-content/uploads/2021/06/mde120272011en.pdf",
+      "title": "Egypt Rises: Killings, detentions and torture in the \"25 January Revolution\"",
+      "publisher": "Amnesty International",
+      "author": "Amnesty International",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cfr",
+      "url": "https://www.cfr.org/articles/january-25th-and-egypt-revolution-has-made",
+      "title": "January 25th and the Egypt the Revolution Has Made",
+      "publisher": "Council on Foreign Relations",
+      "author": "Council on Foreign Relations",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Tahrir+Square+Cairo&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Tahrir Square (way 30925727)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The wider Arab Spring is in 2010-arab-spring. CFR gives only the resignation date; start date from Amnesty. The Amnesty PDF was read via text extraction. \"Nearly three decades\" in importance rests on CFR dates 14 Oct 1981 to 11 Feb 2011.",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "2011-02-01",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "An estimated 2 million people protest in Tahrir Square on the \"March of a Million\" day.",
+        "source": "src-amnesty",
+        "consequence": false
+      },
+      {
+        "span": "2011-02-11",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "Vice-President Suleiman announces Mubarak has resigned and handed power to the army.",
+        "source": "src-amnesty",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:36.871Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

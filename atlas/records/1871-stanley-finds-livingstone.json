@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1871-stanley-finds-livingstone",
+  "kind": "event",
+  "title": "Stanley finds Livingstone at Ujiji",
+  "summary": "The New York Herald sent journalist Henry Morton Stanley to find the missing explorer David Livingstone. Stanley left Bagamoyo on 21 March 1871 and reached Ujiji on Lake Tanganyika, where he met Livingstone. Sources give 27 October or 10 November 1871 for the meeting. Livingstone refused to return to Britain and died about eighteen months later.",
+  "when": {
+    "start": {
+      "year": 1871
+    },
+    "end": {
+      "year": 1871
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The meeting date conflicts between pages: History.com gives November 10, 1871 in its article but October 27 in a linked summary; SAHO gives 27 October 1871. Both are recorded; start/end year is the same either way."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "On March 21, 1871",
+        "source": "src-history-stanley"
+      },
+      {
+        "calendar": "CE",
+        "value": "On November 10, 1871",
+        "source": "src-history-stanley"
+      },
+      {
+        "calendar": "CE",
+        "value": "entered the village on October 27",
+        "source": "src-history-stanley"
+      },
+      {
+        "calendar": "CE",
+        "value": "on 27 October 1871",
+        "source": "src-saho-livingstone"
+      }
+    ],
+    "display": "21 March 1871 - 27 October or 10 November 1871"
+  },
+  "where": {
+    "lat": -4.9166666666667,
+    "lon": 29.683333333333,
+    "elevation_m": null,
+    "modern_name": "Ujiji, Tanzania",
+    "historical_name": "Ujiji, a village on the shore of Lake Tanganyika",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -6.4333333333333,
+          "lon": 38.9,
+          "date": "21 March 1871",
+          "year": 1871,
+          "label": "Bagamoyo: Stanley set out from this port on March 21, 1871.",
+          "source": "src-history-stanley",
+          "coordinate_source": "src-wd-bagamoyo"
+        },
+        {
+          "lat": -4.9166666666667,
+          "lon": 29.683333333333,
+          "date": "27 October or 10 November 1871",
+          "year": 1871,
+          "label": "Ujiji, on Lake Tanganyika: Stanley met Livingstone here.",
+          "source": "src-history-stanley",
+          "coordinate_source": "src-wd-ujiji"
+        }
+      ]
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-ujiji"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration",
+    "people"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "A famous meeting that made Stanley an explorer and refocused public attention on the search for the Nile's source."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1853-livingstone-trans-african-journey",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-history-stanley",
+      "url": "https://www.history.com/articles/when-stanley-met-livingstone",
+      "title": "When Stanley Met Livingstone",
+      "publisher": "A&E Television Networks (History.com)",
+      "author": "Evan Andrews",
+      "date_published": "2016-11-10",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-saho-livingstone",
+      "url": "https://sahistory.org.za/people/david-livingstone",
+      "title": "David Livingstone",
+      "publisher": "South African History Online",
+      "author": "SAHO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-ujiji",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q526169.json",
+      "title": "Wikidata entry for Ujiji (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-bagamoyo",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q799843.json",
+      "title": "Wikidata entry for Bagamoyo (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: the meeting date (27 October vs 10 November 1871), which History.com itself states both ways; kept as both. Intermediate stops such as Unyanyembe are not on pages I opened, so the path has two points. The claim that the meeting refocused attention on the Nile is NOT made in the summary; importance justification is editorial.",
+  "author": "historian-agent:o-s74",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "21 March 1871",
+        "action": "path.trace {}",
+        "caption": "Stanley sets out from Bagamoyo leading an expedition sent by the New York Herald to find Livingstone.",
+        "source": "src-history-stanley",
+        "consequence": false
+      },
+      {
+        "span": "October-November 1871",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The caravan reaches Ujiji on Lake Tanganyika, where Stanley meets the missing explorer.",
+        "source": "src-history-stanley",
+        "consequence": false
+      },
+      {
+        "span": "1871-1873",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Stanley urges Livingstone to return to London, but he vows to continue his mission and dies about eighteen months later.",
+        "source": "src-history-stanley",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:57:01.326Z"
+}

@@ -1,0 +1,150 @@
+{
+  "id": "1934-negritude-movement",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Négritude movement",
+  "summary": "The Négritude movement formed in Paris between the wars among three young students: Aimé Césaire of Martinique, Léopold Sédar Senghor of Senegal and Léon-Gontran Damas of Guiana. Having met in Paris in 1931, they began publishing the journal L'Étudiant noir in 1934, the first journal devoted to Négritude.",
+  "when": {
+    "start": {
+      "year": 1934
+    },
+    "end": {
+      "year": 1935
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Poets.org gives 1934 for the first publication of L'Étudiant noir; the Assemblée nationale page shows a March 1935 issue."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "began to publish the first journal devoted to Négritude, L’Étudiant noir (The Black Student), in 1934",
+        "source": "src-poets"
+      },
+      {
+        "calendar": "CE",
+        "value": "March 1935 issue of L'Étudiant noir",
+        "source": "src-an"
+      }
+    ],
+    "display": "1934–1935"
+  },
+  "where": {
+    "lat": 48.85341,
+    "lon": 2.3488,
+    "elevation_m": null,
+    "modern_name": "Paris, France",
+    "historical_name": "Paris, France (Third Republic)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-gn-paris"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "art_music_literature",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The movement gave Black francophone writers a shared literary and political voice in the colonial era."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-poets",
+      "url": "https://poets.org/text/brief-guide-negritude",
+      "title": "A Brief Guide to Négritude",
+      "publisher": "Academy of American Poets",
+      "author": "Academy of American Poets",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-an",
+      "url": "https://www.assemblee-nationale.fr/histoire/aime-cesaire/negritude.asp",
+      "title": "Aimé Césaire et le mouvement de la négritude",
+      "publisher": "Assemblée nationale (France)",
+      "author": "Assemblée nationale",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-paris",
+      "url": "https://www.geonames.org/search.html?q=Paris&country=FR",
+      "title": "Paris, France",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The two pages differ on the first issue (1934 vs a March 1935 issue shown). The Assemblée nationale page says only that the movement formed in Paris between the wars.",
+  "author": "historian-agent:o-s86",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:18:43.004Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1934",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Négritude movement formed in Paris between the wars among three young students: Aimé Césaire of Martinique, Léopold Sédar Senghor of Senegal and Léon-Gontran Damas of Guiana.",
+        "source": "src-poets"
+      },
+      {
+        "span": "1935",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Having met in Paris in 1931, they began publishing the journal L'Étudiant noir in 1934, the first journal devoted to Négritude.",
+        "source": "src-poets",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

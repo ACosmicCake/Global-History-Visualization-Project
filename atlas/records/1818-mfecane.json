@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1818-mfecane",
+  "kind": "period",
+  "title": "Mfecane (Difaqane)",
+  "summary": "The Mfecane, or Difaqane in Sesotho, was a period of warfare, migration and state formation in southern Africa from about 1815 to 1840, linked to drought, population pressure and the rise of the Zulu kingdom. Casualty figures are weak: SAHO reports traditional estimates of one to two million deaths that historians now call exaggerated, while EBSCO says hundreds of thousands died and millions were displaced.",
+  "when": {
+    "start": {
+      "year": 1815
+    },
+    "end": {
+      "year": 1840
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "note": "SAHO gives \"approximately 1815 and 1840\"; EBSCO says the Ndwandwe defeated the Mthethwa by 1818 and dates the period to about 1840. Scholars differ on the span."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "between approximately 1815 and 1840",
+        "source": "src-saho-mfecane"
+      },
+      {
+        "calendar": "CE",
+        "value": "By 1818, the Ndwandwe army had seemingly emerged victorious when it defeated the Mthethwa forces",
+        "source": "src-ebsco-mfecane"
+      }
+    ],
+    "display": "c. 1815-1840"
+  },
+  "where": {
+    "lat": -29,
+    "lon": 31,
+    "elevation_m": null,
+    "modern_name": "KwaZulu-Natal and surrounding southern Africa",
+    "historical_name": "Nguni and Sotho chiefdoms and kingdoms (Ndwandwe, Mthethwa, Zulu) of south-eastern Africa",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-kzn"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Reshaped political geography across southern Africa and remains a central, contested topic in its historiography."
+  },
+  "confidence": "contested",
+  "audience_note": "Describes warfare, famine, forced displacement and mass death. Casualty figures are contested; the sources give no reliable count.",
+  "related": [
+    {
+      "id": "person-shaka-zulu",
+      "type": "related"
+    },
+    {
+      "id": "1835-great-trek",
+      "type": "related"
+    },
+    {
+      "id": "1879-battle-of-isandlwana",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-saho-mfecane",
+      "url": "https://sahistory.org.za/article/mfecane-understanding-period-transformation-southern-africa",
+      "title": "The Mfecane: Understanding a Period of Transformation in Southern Africa",
+      "publisher": "South African History Online",
+      "author": "SAHO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-mfecane",
+      "url": "https://www.ebsco.com/research-starters/ethnic-and-cultural-studies/mfecane",
+      "title": "Mfecane",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-kzn",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q81725.json",
+      "title": "Wikidata entry for KwaZulu-Natal (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: casualties. Neither page names who produced its figures; SAHO calls the 1-2 million \"traditional estimates\" now considered exaggerated, EBSCO says \"hundreds of thousands\" killed and some estimates reach 1-2 million. Both are reported as the publishers' own statements, not consensus. Point is a province centre; the area is much larger. Start 1815 follows SAHO only.",
+  "author": "historian-agent:o-s74",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1818",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "The Ndwandwe army defeats the Mthethwa, leaving two main kingdoms in rivalry with Shaka's growing Zulu state.",
+        "source": "src-ebsco-mfecane",
+        "consequence": false
+      },
+      {
+        "span": "1815-1840",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "Warfare and forced migration spread across southern Africa, folding many smaller groups into larger kingdoms.",
+        "source": "src-saho-mfecane",
+        "consequence": false
+      },
+      {
+        "span": "1815-1840",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Historians dispute the toll: SAHO says much apparent depopulation was flight and migration rather than mass death.",
+        "source": "src-saho-mfecane",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:56:59.395Z"
+}

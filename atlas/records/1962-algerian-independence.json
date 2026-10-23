@@ -1,0 +1,143 @@
+{
+  "id": "1962-algerian-independence",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Independence of Algeria",
+  "summary": "After a ceasefire took effect in March 1962 under the Evian Accords, voters in Algeria approved independence in a referendum on 1 July 1962. France recognised Algeria as independent on 3 July, and the Provisional Executive set 5 July as national independence day. War death estimates range from about 300,000 (FLN, 1962) to 1.5 million (later Algerian sources).",
+  "when": {
+    "start": {
+      "year": 1962
+    },
+    "end": {
+      "year": 1962
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Referendum 1 July, French recognition 3 July, national independence day 5 July; the ceasefire took effect 19 March 1962."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "July 1, 1962 referendum; July 3, 1962 de Gaulle declared Algeria independent; July 5 national independence day",
+        "source": "src-loc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "France recognized Algeria as an independent state on July 3, 1962",
+        "source": "src-histstate"
+      }
+    ],
+    "display": "1–5 July 1962"
+  },
+  "where": {
+    "lat": 36.7729333,
+    "lon": 3.0588445,
+    "elevation_m": null,
+    "modern_name": "Algiers, Algeria",
+    "historical_name": "Algiers, capital of French Algeria, then of the independent Algerian state, 1962",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The end of French rule in Algeria after a long war."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions war casualties; death-toll estimates differ widely by source.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-loc",
+      "url": "https://countrystudies.us/algeria/34.htm",
+      "title": "Algeria country study: independence chapter",
+      "publisher": "Library of Congress Federal Research Division (via countrystudies.us)",
+      "author": "Library of Congress Federal Research Division (via countrystudies.us)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/countries/algeria",
+      "title": "Algeria — Countries",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": "U.S. Department of State, Office of the Historian",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Algiers&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim search result: Algiers (node 299617915)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The Library of Congress study is read on a mirror site (countrystudies.us); the US Historian page gives no 5 July date. Pin is Algiers as capital; the referendum was country-wide. War death figures are attributed estimates.",
+  "author": "historian-agent:o-s73",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1962-07-01",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Algerian voters approve independence in a referendum.",
+        "source": "src-loc",
+        "consequence": false
+      },
+      {
+        "span": "1962-07-05",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "France recognises independence on 3 July; the Provisional Executive proclaims 5 July national independence day.",
+        "source": "src-loc",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T13:36:35.845Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

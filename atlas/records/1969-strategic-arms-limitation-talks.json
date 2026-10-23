@@ -1,0 +1,134 @@
+{
+  "id": "1969-strategic-arms-limitation-talks",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Strategic Arms Limitation Talks (SALT)",
+  "summary": "Negotiations between the United States and Soviet Union aimed at curbing strategic nuclear missiles. Full-scale talks began in November 1969 and produced SALT I (the ABM Treaty and Interim Agreement, 1972) and SALT II (signed 1979). The Senate never ratified SALT II, but both sides observed its limits.",
+  "when": {
+    "start": {
+      "year": 1969
+    },
+    "end": {
+      "year": 1979
+    },
+    "precision": "year",
+    "display": "1969–1979",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "full-scale negotiations began in November 1969",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "signed by Pres. Jimmy Carter and Brezhnev in Vienna on June 18, 1979",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 48.2083,
+    "lon": 16.3725,
+    "elevation_m": null,
+    "modern_name": "Vienna, Austria (proxy pin: the coordinates Wikidata gives for the talks)",
+    "historical_name": "Strategic Arms Limitation Talks",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "global",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First bilateral limits on superpower strategic nuclear forces, central to Cold War arms control."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251120023243/https://www.britannica.com/event/Strategic-Arms-Limitation-Talks",
+      "title": "Strategic Arms Limitation Talks | Cold War Arms Control Negotiations | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20230524061834/https://www.sciencedirect.com/topics/social-sciences/strategic-arms-limitation-talks",
+      "title": "Strategic Arms Limitation Talks - an overview | ScienceDirect Topics",
+      "publisher": "sciencedirect.com",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q623994",
+      "title": "Wikidata Q623994 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on when talks were agreed (summer 1968 vs July 1968), a minor difference. Britannica says SALT II was removed from Senate consideration in January 1980, while ScienceDirect says only that it was not ratified. Start of the talks is taken as November 1969 and the end as SALT II's signing in 1979. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, sciencedirect.com; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:52:37.493Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1969",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Negotiations between the United States and Soviet Union aimed at curbing strategic nuclear missiles.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1979",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Full-scale talks began in November 1969 and produced SALT I (the ABM Treaty and Interim Agreement, 1972) and SALT II (signed 1979).",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

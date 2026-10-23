@@ -1,0 +1,153 @@
+{
+  "id": "-183my-toarcian-oceanic-anoxic-event",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Toarcian Oceanic Anoxic Event",
+  "summary": "The Toarcian Oceanic Anoxic Event, about 183 million years ago in the Early Jurassic, was a time of widespread oxygen loss in the oceans. Uranium isotopes suggest anoxic waters covered about 6 to 8% of the global seafloor at its peak. In Yorkshire, organic-rich Jet Rock and Bituminous Shales record it, and carbon dioxide from the Karoo-Ferrar eruptions is linked to it.",
+  "when": {
+    "start": {
+      "year": -183000000
+    },
+    "end": {
+      "year": -183000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 3000000,
+      "start_plus_years": 0,
+      "end_minus_years": 3000000,
+      "end_plus_years": 0,
+      "note": "PNAS (2024) gives ~183 Mya; Deposits Magazine (2019) says one hundred and eighty million years ago. Neither states an error bar or duration. Years are Ma counted back from the present with no 1950 offset."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Mya",
+        "value": "~183 Mya",
+        "source": "src-remirez2024"
+      },
+      {
+        "calendar": "years ago",
+        "value": "One hundred and eighty million years ago in the Toarcian Stage of the Lower Jurassic Period",
+        "source": "src-deposits2019"
+      }
+    ],
+    "display": "c. 183 million years ago"
+  },
+  "where": {
+    "lat": 54.4858,
+    "lon": -0.6206,
+    "elevation_m": null,
+    "modern_name": "Whitby, North Yorkshire, England (Yorkshire outcrops of the Whitby Mudstone Formation; global event)",
+    "historical_name": "Yorkshire under shallow seas, Early Jurassic; no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wikidata-whitby"
+    ],
+    "paleo": {
+      "lat": 39.51,
+      "lon": 17.21,
+      "age_ma": 183,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "global",
+    "europe"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of the Mesozoic oceanic anoxic events, tied to massive volcanic CO2 release and widespread marine anoxia."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-94my-oceanic-anoxic-event-2",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-remirez2024",
+      "url": "https://authors.library.caltech.edu/records/qp519-a8z91",
+      "title": "Carbonate uranium isotopes record global expansion of marine anoxia during the Toarcian Oceanic Anoxic Event (PNAS 121(27):e2406032121)",
+      "publisher": "Caltech Authors (PNAS)",
+      "author": "M. N. Remírez et al.",
+      "date_published": "2024",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-deposits2019",
+      "url": "https://depositsmag.com/2019/01/14/whitby-jet-and-the-toarcian-oceanic-anoxic-event/",
+      "title": "Whitby Jet and the Toarcian Oceanic Anoxic Event",
+      "publisher": "Deposits Magazine (UKGE Group)",
+      "author": "Arthur Speed",
+      "date_published": "2019-01-14",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-whitby",
+      "url": "https://www.wikidata.org/wiki/Q852778",
+      "title": "Wikidata item Q852778 (Whitby, North Yorkshire), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-0.6206,54.4858&time=183&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the age: PNAS says ~183 Mya, Deposits Magazine says 180 million years. The pin is the town of Whitby (Wikidata), standing in for the Yorkshire outcrops the magazine names; the event was global, so uncertainty is 5000 km. The Karoo-Ferrar link is from the magazine only; the PNAS abstract mentions volcanic CO2 but not the province.",
+  "author": "historian-agent:o-s67",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T12:35:45.845Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "-0003-death-of-herod-the-great",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Death of Herod the Great (4 BCE traditional; 1 BCE minority view)",
+  "summary": "Herod the Great, king of Judea, died after a last illness, with Josephus placing his death between a lunar eclipse and the following Passover and the final scenes at Jericho. Most scholars date this to 4 BCE, linked to the eclipse of March 4 BCE; a minority argue for 1 BCE. The date sets a limit for dating the birth of Jesus.",
+  "when": {
+    "start": {
+      "year": -3
+    },
+    "end": {
+      "year": -3
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 3,
+      "end_minus_years": 0,
+      "end_plus_years": 3,
+      "note": "Traditional date 4 BCE = astronomical -3. The minority 1 BCE view (astronomical 0) rests on a different lunar eclipse (10 January or 29 December, 1 BCE) and on Herod's sons backdating their reigns; a 3 BCE proposal also exists. The range runs from -3 to 0."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "lunar eclipse of March 13, 4 B.C., traditionally associated with Josephus's account of Herod's death",
+        "source": "src-bas-herod"
+      },
+      {
+        "calendar": "BC (Gregorian, proleptic)",
+        "value": "Herod most likely died shortly after the lunar eclipse of December 29, 1 B.C. (minority view argued in a published letter)",
+        "source": "src-bas-herod"
+      }
+    ],
+    "display": "4 BCE (traditional); 1 BCE (minority view)"
+  },
+  "where": {
+    "lat": 31.856111,
+    "lon": 35.463056,
+    "elevation_m": null,
+    "modern_name": "Jericho, West Bank (Herod's winter residence lay just southwest of the modern town)",
+    "historical_name": "Jericho, in Herod's kingdom of Judea",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-jericho"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The end of a major client-king reign in Judea; its disputed date fixes the latest limit for the traditional birth date of Jesus."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-jesus-of-nazareth",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bas-herod",
+      "url": "https://www.biblicalarchaeology.org/daily/people-cultures-in-the-bible/jesus-historical-jesus/herods-death-jesus-birth-and-a-lunar-eclipse/",
+      "title": "Herod's Death, Jesus' Birth and a Lunar Eclipse",
+      "publisher": "Biblical Archaeology Society",
+      "author": "Biblical Archaeology Society",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-josephus-ant17",
+      "url": "https://penelope.uchicago.edu/josephus/ant-17.html",
+      "title": "Josephus, Antiquities of the Jews, Book XVII (Whiston translation)",
+      "publisher": "LacusCurtius / Penelope, University of Chicago",
+      "author": "Flavius Josephus (trans. William Whiston)",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-jericho",
+      "url": "https://www.wikidata.org/wiki/Q5687",
+      "title": "Wikidata item Q5687 (Jericho), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of which date to treat as primary: 4 BCE is the conventional scholarly dating, 1 BCE is a minority view. The BAS page was read for dating, the Josephus translation for the Jericho setting only; the pin is modern Jericho, not the exact palace site. Burial at Herodium was not confirmed on an opened page and is not claimed.",
+  "author": "historian-agent:o-s6",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:55:49.225Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

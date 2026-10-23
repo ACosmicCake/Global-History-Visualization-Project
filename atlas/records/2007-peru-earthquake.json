@@ -1,0 +1,111 @@
+{
+  "id": "2007-peru-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "2007 Peru earthquake",
+  "summary": "A magnitude 8.0 earthquake struck near the coast of central Peru, about 150 km south-southeast of Lima. It occurred on the boundary between the Nazca and South American plates. An early USGS report cited at least 400 deaths and 1500 injuries, with extensive damage at Chincha Alta, Ica and Pisco.",
+  "when": {
+    "start": {
+      "year": 2007
+    },
+    "end": {
+      "year": 2007
+    },
+    "precision": "day",
+    "display": "15 August 2007",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Wednesday, August 15, 2007 at 23:40:57 UTC",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "2007-08-15 23:40:57",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": -13.353,
+    "lon": -76.51,
+    "elevation_m": null,
+    "modern_name": "Near the coast of central Peru (Pisco, Chincha Alta, Ica area)",
+    "historical_name": "Near the coast of central Peru (Pisco, Chincha Alta, Ica area)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Great subduction earthquake with hundreds of deaths and heavy regional damage, but of regional rather than world-historical significance."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions deaths and injuries from a natural disaster.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=12804735",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20070818031936/http://earthquake.usgs.gov/eqcenter/eqinthenews/2007/us2007gbcv/",
+      "title": "Magnitude 8.0 - NEAR THE COAST OF CENTRAL PERU",
+      "publisher": "earthquake.usgs.gov",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q210981",
+      "title": "Wikidata Q210981 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Epicentre coordinates differ between sources (ISC 13.41S 76.67W; USGS 13.353S 76.510W). The death toll is an early USGS figure (at least 400) and may have been revised later. Magnitude is 8.0 in both sources, though one cited paper title says 7.9. (Drafted by the Wikipedia pipeline from isc.ac.uk, earthquake.usgs.gov; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:50.498Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "id": "0751-battle-of-talas",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Talas",
+  "summary": "In 751 an Abbasid army under Ziyad ibn Salih defeated a Tang army led by Gao Xianzhi near Talas in Central Asia. Accounts say Qarluq Turkic auxiliaries changed sides. Tang influence west of the Pamirs faded, though the An Lushan rebellion also drove the withdrawal. Army sizes are disputed, from 30,000-50,000 a side to claims of over 100,000.",
+  "when": {
+    "start": {
+      "year": 751
+    },
+    "end": {
+      "year": 751
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources give the year 751; the month is July in one source and only summer in the other."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "In the summer of 751",
+        "source": "src-medievalists-talas"
+      },
+      {
+        "calendar": "CE",
+        "value": "Talas, July 751",
+        "source": "src-encyc-expansion-islam"
+      }
+    ],
+    "display": "751 CE (July or \"summer\")"
+  },
+  "where": {
+    "lat": 43.916667,
+    "lon": 70.5,
+    "elevation_m": null,
+    "modern_name": "Talas River valley, on the Kazakhstan-Kyrgyzstan border (exact battlefield unlocated; pin is the river item, not the field)",
+    "historical_name": "Talas River valley, frontier between Tang China and the Abbasid Caliphate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-wikidata-q745859",
+      "src-medievalists-talas"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Frontier clash between the Tang and Abbasid empires, traditionally taken as marking the limit of Chinese power in Central Asia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-silk-roads-chang-an-tianshan-corridor",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-medievalists-talas",
+      "url": "https://www.medievalists.net/2020/02/battle-talas/",
+      "title": "The Battle of Talas",
+      "publisher": "Medievalists.net",
+      "author": "Adam Ali",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-expansion-islam",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/expansion-islam-600-1200",
+      "title": "Expansion of Islam (600-1200): Talas, July 751",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q745859",
+      "url": "https://www.wikidata.org/wiki/Q745859",
+      "title": "Wikidata item Q745859 (Talas River), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the exact site (the river is pinned, not the field) and of army sizes: medievalists.net calls 100,000+ per side exaggerated and estimates 30,000-50,000; Qarluq loyalty differs between accounts. The paper-making legend was deliberately not claimed. Medievalists.net is class other; encyclopedia.com carries the non-other weight.",
+  "author": "historian-agent:o-s29",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T08:04:24.799Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "751",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In 751 an Abbasid army under Ziyad ibn Salih defeated a Tang army led by Gao Xianzhi near Talas in Central Asia.",
+        "source": "src-medievalists-talas"
+      },
+      {
+        "span": "751",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "Tang influence west of the Pamirs faded, though the An Lushan rebellion also drove the withdrawal.",
+        "source": "src-medievalists-talas",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

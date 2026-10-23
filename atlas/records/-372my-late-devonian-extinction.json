@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "-372my-late-devonian-extinction",
+  "kind": "event",
+  "title": "Late Devonian (Frasnian–Famennian) extinction",
+  "summary": "Two pulses of oceanic anoxia, the Lower and Upper Kellwasser events, accompanied massive marine biodiversity losses near the Frasnian–Famennian boundary. At the Steinbruch Schmidt quarry in Germany the boundary is dated to 371.870 million years ago, and the two Kellwasser horizons formed over roughly 90 and 110 thousand years.",
+  "when": {
+    "start": {
+      "year": -371978000
+    },
+    "end": {
+      "year": -371762000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Frasnian-Famennian boundary dated 371.870 +/-0.108 Ma (Da Silva et al.); start and end here are that error span. Percival et al. constrain the boundary to 371.93-371.78 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon with astrochronology",
+        "value": "a high-precision age of 371.870 ± 0.108 Ma for the F–F boundary",
+        "source": "src-dasilva"
+      },
+      {
+        "calendar": "U-Pb zircon",
+        "value": "constrained to 371.93–371.78 Ma",
+        "source": "src-percival"
+      }
+    ],
+    "display": "c. 372 million years ago"
+  },
+  "where": {
+    "lat": 51.1029,
+    "lon": 9.0941,
+    "elevation_m": null,
+    "modern_name": "Steinbruch Schmidt quarry, near Bad Wildungen, Hesse, Germany (Kellerwald; boundary section; the event was global)",
+    "historical_name": "Shelf sea on the southern margin of Laurussia (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-osm-wildungen"
+    ],
+    "paleo": {
+      "lat": -20.34,
+      "lon": -17.66,
+      "age_ma": 372,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point 9.09, 51.10 (Bad Wildungen) reconstructed to 372 Ma."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "One of the Big Five mass extinctions of the Phanerozoic."
+  },
+  "related": [
+    {
+      "id": "species-tiktaalik-roseae",
+      "type": "related"
+    },
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dasilva",
+      "url": "https://research.vu.nl/en/publications/anchoring-the-late-devonian-mass-extinction-in-absolute-time-by-i/",
+      "title": "Anchoring the Late Devonian mass extinction in absolute time by integrating climatic controls and radio-isotopic dating",
+      "publisher": "Vrije Universiteit Amsterdam research portal",
+      "author": "Vrije Universiteit Amsterdam research portal",
+      "date_published": "2020",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-percival",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6014997/",
+      "title": "Precisely dating the Frasnian–Famennian boundary: implications for the cause of the Late Devonian mass extinction",
+      "publisher": "PubMed Central (National Library of Medicine)",
+      "author": "PubMed Central (National Library of Medicine)",
+      "date_published": "2018",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-wildungen",
+      "url": "https://nominatim.openstreetmap.org/search?q=Bad+Wildungen&format=json",
+      "title": "OpenStreetMap Nominatim: Bad Wildungen, Hesse, Germany",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Bad Wildungen as a proxy for the Steinbruch Schmidt quarry, which Percival et al. place near there; the quarry has no coordinates on opened pages. No opened page gives a percentage of species lost, so the summary omits one. The id says 372 Ma; the sourced boundary age is 371.87 Ma.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:47.506Z"
+}

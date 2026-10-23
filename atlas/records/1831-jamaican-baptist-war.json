@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1831-jamaican-baptist-war",
+  "kind": "event",
+  "title": "Baptist War, Jamaica, 1831-1832 (Samuel Sharpe)",
+  "summary": "Led by the Baptist deacon Samuel Sharpe, tens of thousands of enslaved people in western Jamaica planned a work stoppage at Christmas 1831. Estates around Montego Bay were set alight and the revolt was crushed within weeks. About fourteen Europeans and over 200 enslaved people died in the fighting, and hundreds more were executed. Sharpe was hanged on 23 May 1832.",
+  "when": {
+    "start": {
+      "year": 1831,
+      "month": 12,
+      "day": 25
+    },
+    "end": {
+      "year": 1832,
+      "month": 5,
+      "day": 23
+    },
+    "precision": "day",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "25 December 1831",
+        "source": "src-gazette-sharpe"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "27 December 1831",
+        "source": "src-rmg-1831"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "May 23, 1832",
+        "source": "src-jamrock"
+      }
+    ],
+    "display": "25 December 1831 - January 1832 (Sharpe hanged 23 May 1832)"
+  },
+  "where": {
+    "lat": 18.466667,
+    "lon": -77.916667,
+    "elevation_m": null,
+    "modern_name": "Montego Bay and St James parish, Jamaica (Kensington Estate lies in the hills above Montego Bay)",
+    "historical_name": "St James parish, British colony of Jamaica",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-montego"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The largest slave revolt in the British West Indies; widely linked to the 1833 Slavery Abolition Act."
+  },
+  "confidence": "established",
+  "audience_note": "Describes killings and executions of enslaved people, including after trials, and the hanging of the leader.",
+  "related": [
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-gazette-sharpe",
+      "url": "https://thegazette.co.uk/all-notices/content/103864",
+      "title": "This month in history: Samuel Sharpe and the Christmas Rebellion",
+      "publisher": "The Gazette (UK official public record)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rmg-1831",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-241921",
+      "title": "Attack and Capture of the Rebels positions near Montego Bay by boats from HMS Blanche 1831",
+      "publisher": "Royal Museums Greenwich",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jamrock",
+      "url": "https://www.jamrockmuseum.com/education/the-christmas-rebellion-1831-the-sam-sharpe-rebellion-that-paved-the-road-to-emancipation-in-jamaica/",
+      "title": "The Christmas Rebellion (1831)",
+      "publisher": "Jamrock Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-montego",
+      "url": "https://www.wikidata.org/wiki/Q637555",
+      "title": "Wikidata item Q637555 (Montego Bay), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1831-12-27",
+        "action": "pulse { radius_km: 5 }",
+        "caption": "27 December 1831: Kensington Estate, above Montego Bay, is set ablaze after Sharpe's call for a Christmas work stoppage.",
+        "source": "src-rmg-1831",
+        "consequence": false
+      },
+      {
+        "span": "1831-12-27",
+        "action": "region.fill { radius_km: 60 }",
+        "caption": "The rising spreads across St James and neighbouring parishes; within a week about 14 Europeans and 200 enslaved people are dead.",
+        "source": "src-jamrock",
+        "consequence": false
+      },
+      {
+        "span": "1833",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Consequence: harsh reprisals, including over 300 executions, provoke outrage in Britain; the revolt is linked to the 1833 Abolition Act.",
+        "source": "src-jamrock",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Sources differ on the start (25 December for the planned strike; 27 December for the fire at Kensington) and on executions (over 300 vs over 500); counts are left as ranges. The 60,000-participant figure is approximate and not used as a counter.",
+  "author": "historian-agent:o-s12",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T04:54:58.372Z"
+}

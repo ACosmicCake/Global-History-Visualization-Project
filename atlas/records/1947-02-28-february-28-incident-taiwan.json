@@ -1,0 +1,179 @@
+{
+  "id": "1947-02-28-february-28-incident-taiwan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "February 28 Incident",
+  "summary": "On 27-28 February 1947 a confrontation between Monopoly Bureau agents and a cigarette vendor in Taipei, followed by shooting of protesters, set off island-wide unrest against Nationalist rule. After troops landed at Keelung on 8 March, the government crushed the unrest and then arrested and executed many people. No exact death toll exists; estimates run from about 10,000 to about 30,000.",
+  "when": {
+    "start": {
+      "year": 1947,
+      "iso": "1947-02-28"
+    },
+    "end": {
+      "year": 1947,
+      "iso": "1947-03-20"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The spark was on the evening of 27 February; protests began 28 February. The end date is the start of the \"Ching-hsiang\" clean-up campaign; arrests and executions continued afterwards."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Late in the afternoon of Feb. 27, 1947, six agents of the Monopoly Bureau",
+        "source": "src-228"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "On the morning of Feb. 28, people went to the Monopoly Bureau to protest",
+        "source": "src-228"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Late in the afternoon of March 8, the troops landed in Keelung",
+        "source": "src-228"
+      }
+    ],
+    "display": "27 February to March 1947"
+  },
+  "where": {
+    "lat": 25.0375,
+    "lon": 121.5625,
+    "elevation_m": null,
+    "modern_name": "Taipei, Taiwan (unrest spread across the island)",
+    "historical_name": "Taipei, Taiwan Province, Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-taipei"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A massacre that shaped decades of Taiwanese politics, martial law and memory, and still a central point of reckoning for the island."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes killings of civilians by troops, executions and political repression. The death toll is contested and there is no exact count.",
+  "related": [
+    {
+      "id": "1949-12-07-republic-of-china-retreat-to-taiwan",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-228",
+      "url": "https://www.228.org.tw/en/the228incident",
+      "title": "The 228 Incident",
+      "publisher": "228 Memorial Foundation / National 228 Memorial Museum (Taiwan)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fpri",
+      "url": "https://www.fpri.org/article/2017/02/taiwans-white-terror-remembering-228-incident/",
+      "title": "Taiwan's White Terror: Remembering the 228 Incident",
+      "publisher": "Foreign Policy Research Institute",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tt2007",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2007/02/28/2003350345",
+      "title": "The 228 Incident: Sixty years on",
+      "publisher": "Taipei Times",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-taipei",
+      "url": "https://www.wikidata.org/wiki/Q1867",
+      "title": "Wikidata item Q1867 (Taipei), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the toll: the 228 Memorial Foundation calls 10,000-20,000 the most cited figure, FPRI quotes 18,000-28,000, and Taipei Times says around 30,000; none is a count. Pin is Taipei, where the events started; unrest and killings occurred island-wide.",
+  "author": "historian-agent:o-s8",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1947-02-28",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "After a vendor was beaten and a bystander shot, crowds protested in Taipei and military police fired on them on 28 February.",
+        "source": "src-228"
+      },
+      {
+        "span": "1947-03-08",
+        "action": "region.fill { radius_km: 150 }",
+        "caption": "Unrest spread across Taiwan; the 21st Division landed at Keelung on 8 March and began crackdowns and killings.",
+        "source": "src-228"
+      },
+      {
+        "span": "1947-03-20",
+        "action": "numbers.counter { range: [18000, 28000] }",
+        "caption": "No exact count exists; one cited range is 18,000 to 28,000 deaths. Martial law followed and was not lifted until 1987.",
+        "source": "src-fpri",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:36:04.632Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s24",
+  "updated": "2026-10-22",
+  "id": "-575my-ediacaran-biota",
+  "kind": "period",
+  "title": "Ediacaran biota",
+  "summary": "The Ediacaran biota were large, mostly soft-bodied organisms, often preserved as impressions and up to about two metres long, that spread through the oceans from about 571 to 541 million years ago. Their relationships to later animals are unresolved. Few forms continue into the Cambrian.",
+  "when": {
+    "start": {
+      "year": -571000000
+    },
+    "end": {
+      "year": -541000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": null,
+    "as_recorded": [
+      {
+        "calendar": "Geological time, Ma",
+        "value": "Globally abundant from about 571 to 541 million years ago; oldest diverse communities (Avalon assemblage) about 571 Ma",
+        "source": "src-palaeo"
+      },
+      {
+        "calendar": "Geological time, Ma (radiometric, volcanic ash)",
+        "value": "Mistaken Point fossils about 565 million years old",
+        "source": "src-ucmp-mp"
+      }
+    ],
+    "display": "c. 571–541 million years ago"
+  },
+  "where": {
+    "lat": 46.6319,
+    "lon": -53.1903,
+    "elevation_m": null,
+    "modern_name": "Mistaken Point Ecological Reserve, Avalon Peninsula, Newfoundland, Canada (representative site for a global biota)",
+    "historical_name": "Deep-marine slope on the Avalon terrane, Ediacaran sea, about 565 Ma",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-mp"
+    ],
+    "body": null,
+    "paleo": {
+      "lat": -64.64,
+      "lon": -46.55,
+      "age_ma": 565,
+      "plate_model": "MERDITH2021 via GPlates Web Service",
+      "source": "src-gplates",
+      "note": "Modern point reconstructed to 565 Ma, the age UCMP gives for the Mistaken Point fossils. Single-model value; at 571 Ma the same model gives lat -62.86, lon -30.48."
+    },
+    "historical_geography_source": "src-gplates"
+  },
+  "regions": [
+    "global",
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "The first large, complex macroscopic life in the fossil record, preceding the Cambrian explosion."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "related"
+    },
+    {
+      "id": "-539my-nama-group-ediacaran-cambrian-boundary",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-palaeo",
+      "url": "https://www.palaeontologyonline.com/?p=4267",
+      "title": "Fossil Focus: The Ediacaran Biota",
+      "publisher": "Palaeontological Association (Palaeontology Online)",
+      "author": "Dunn & Liu summary",
+      "date_published": "2017",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-ucmp-mp",
+      "url": "https://ucmp.berkeley.edu/vendian/mistaken.html",
+      "title": "Mistaken Point, Newfoundland",
+      "publisher": "University of California Museum of Paleontology",
+      "author": "UCMP",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "what"
+      ]
+    },
+    {
+      "id": "src-wd-mp",
+      "url": "https://www.wikidata.org/wiki/Q3301928",
+      "title": "Wikidata item Q3301928 (Mistaken Point Ecological Reserve), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-53.1903,46.6319&time=565&model=MERDITH2021",
+      "title": "GPlates Web Service point reconstruction (MERDITH2021) at 565 Ma",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo",
+        "where.historical_geography_source"
+      ]
+    }
+  ],
+  "reviewer_note": "Queue id says 575 Ma but the pages I opened give about 571 Ma for the oldest diverse assemblage; I used 571 (Palaeontology Online) and dated the pin to Mistaken Point at 565 Ma (UCMP). Other work dates the Drook Formation near 575 Ma; I did not open a page confirming that. The type area (Ediacara Hills, South Australia) was not on a page I opened.",
+  "published_at": "2026-10-22T07:15:49.806Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

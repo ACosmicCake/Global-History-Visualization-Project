@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s105",
+  "updated": "2026-10-22",
+  "model": null,
+  "id": "1804-sokoto-jihad",
+  "kind": "event",
+  "title": "Sokoto jihad of Uthman dan Fodio",
+  "summary": "In 1804 the Fulani scholar Uthman dan Fodio, whose reform community at Degel had been persecuted by the sultans of Gobir, declared a jihad against Hausa rulers. EBSCO says it led to the Sokoto Caliphate by 1809. Gale reports that the caliphate eventually covered 200,000 square miles and lasted from 1804 to 1904, when Britain conquered it.",
+  "when": {
+    "start": {
+      "year": 1804
+    },
+    "end": {
+      "year": 1809
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "EBSCO: jihad declared in 1804, caliphate established by 1809. Gale dates the whole empire 1804 to 1904; the record covers only the founding war."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (EBSCO)",
+        "value": "Uthman declared a jihad in 1804, resulting in the establishment of the Sokoto Caliphate by 1809",
+        "source": "src-ebsco-udf"
+      },
+      {
+        "calendar": "CE (Gale)",
+        "value": "His empire lasted for a century, from 1804 to 1904",
+        "source": "src-gale-udf"
+      }
+    ],
+    "display": "1804–1809"
+  },
+  "where": {
+    "lat": 13.0610588,
+    "lon": 5.2373194,
+    "elevation_m": null,
+    "modern_name": "Sokoto, Sokoto State, Nigeria (proxy pin: the city that became the caliphate's capital; the war began in Gobir and Degel to the north)",
+    "historical_name": "Gobir and the Hausa states, later the Sokoto Caliphate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-osm-sokoto"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "EBSCO calls the resulting Sokoto caliphate the largest empire in West Africa since Songhai."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-udf",
+      "url": "https://www.ebsco.com/research-starters/history/uthman-dan-fodio/",
+      "title": "Uthman dan Fodio",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO Research Starters",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gale-udf",
+      "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/fodio-usuman-dan",
+      "title": "Fodio, Usuman Dan",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Encyclopedia.com (Gale)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-osm-sokoto",
+      "url": "https://nominatim.openstreetmap.org/search?q=Sokoto+city+Nigeria&format=json",
+      "title": "OpenStreetMap Nominatim: Sokoto city (node 501540904; 13.0610588, 5.2373194)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy: Sokoto city, not the Gobir battlefields or Degel (two villages named Degel exist in Sokoto State and no source I opened locates his Degel). Uncertainty 150 km. End year 1809 is the EBSCO \"by 1809\" for the caliphate, not the end of fighting. No death toll is stated on the pages I opened.",
+  "published_at": "2026-10-22T18:40:25.172Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1804",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In 1804 the Fulani scholar Uthman dan Fodio, whose reform community at Degel had been persecuted by the sultans of Gobir, declared a jihad against Hausa rulers.",
+        "source": "src-ebsco-udf"
+      },
+      {
+        "span": "1809",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "EBSCO says it led to the Sokoto Caliphate by 1809.",
+        "source": "src-ebsco-udf",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

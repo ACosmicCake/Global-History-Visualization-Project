@@ -1,0 +1,133 @@
+{
+  "id": "2020-aegean-sea-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Aegean Sea earthquake of 2020",
+  "summary": "A strong earthquake, Mw 6.9 to 7.0 depending on the agency, struck Samos Island in the Aegean Sea. It caused 117 deaths in Turkey and Greece, 1632 injuries in Turkey and heavy building damage, especially in İzmir. It also triggered a tsunami that killed one person in Turkey.",
+  "when": {
+    "start": {
+      "year": 2020
+    },
+    "end": {
+      "year": 2020
+    },
+    "precision": "day",
+    "display": "30 October 2020",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "struck Samos Island in the Aegean Sea on October 30, 2020",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "2020-10-30 11:51:27",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 37.897,
+    "lon": 26.795,
+    "elevation_m": null,
+    "modern_name": "Samos Island, Aegean Sea (epicentre about 70 km from İzmir, Turkey)",
+    "historical_name": "Samos Island, Aegean Sea (epicentre about 70 km from İzmir, Turkey)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Deadly regional earthquake and tsunami affecting Greece and Turkey, with extensive study, but not world-historical."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions deaths and injuries from an earthquake and tsunami.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8782695/",
+      "title": "Field reconnaissance and structural assessment of the October 30, 2020, Samos, Aegean Sea earthquake: an example of severe damage due to the basin effect - PMC",
+      "publisher": "U.S. National Library of Medicine",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=619514791",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q101003145",
+      "title": "Wikidata Q101003145 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Magnitude varies by agency (6.9 KOERI, 7.0 USGS and GCMT). The depth is given as 17.26 km, 14.9 km and 16.1 km in different places. Death toll is from one paper only; the ISC listing is a bibliography without casualty data. (Drafted by the Wikipedia pipeline from U.S. National Library of Medicine, isc.ac.uk; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:33.283Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2020",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "0 depending on the agency, struck Samos Island in the Aegean Sea.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "2020",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "It caused 117 deaths in Turkey and Greece, 1632 injuries in Turkey and heavy building damage, especially in İzmir.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

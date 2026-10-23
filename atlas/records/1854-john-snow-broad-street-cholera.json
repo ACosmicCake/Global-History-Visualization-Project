@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s85",
+  "updated": "2026-10-22",
+  "id": "1854-john-snow-broad-street-cholera",
+  "kind": "event",
+  "title": "John Snow and the Broad Street cholera outbreak",
+  "summary": "A cholera outbreak began in Soho, London, on 31 August 1854 and killed about 500 people in ten days. John Snow plotted the cases from the addresses of the dead and traced them to a pump on Broad Street, now Broadwick Street. Local authorities agreed to remove its handle, and the outbreak subsided.",
+  "when": {
+    "start": {
+      "year": 1854,
+      "iso": "1854-08-31"
+    },
+    "end": {
+      "year": 1854
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the first day of the Soho outbreak. The pages opened do not give the day the pump handle was removed, so the end is recorded only as 1854."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "A third outbreak began in Soho on 31 August 1854.",
+        "source": "src-londonmuseum-snow"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "a violent and sudden outbreak emerged on 31 August 1854",
+        "source": "src-healthfoundation-snow"
+      }
+    ],
+    "display": "31 August 1854 onward"
+  },
+  "where": {
+    "lat": 51.513611,
+    "lon": -0.135833,
+    "elevation_m": null,
+    "modern_name": "Broadwick Street, Soho, London, United Kingdom",
+    "historical_name": "Broad Street, Soho, London, United Kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-wd-broadwick",
+      "src-londonmuseum-snow"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "disease",
+    "science_technology"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A founding case of epidemiology, in which mapping cases pointed to contaminated water as the source of cholera."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-londonmuseum-snow",
+      "url": "https://www.londonmuseum.org.uk/collections/london-stories/john-snow-cholera-broad-street-pump/",
+      "title": "John Snow: Cholera and the Broad Street pump",
+      "publisher": "London Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what",
+        "where",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-healthfoundation-snow",
+      "url": "https://navigator.health.org.uk/theme/john-snow-and-broad-street-cholera-outbreak",
+      "title": "John Snow and the Broad Street cholera outbreak",
+      "publisher": "The Health Foundation (Policy Navigator)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-broadwick",
+      "url": "https://www.wikidata.org/wiki/Q4972570",
+      "title": "Wikidata item Q4972570 (Broadwick Street), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the death toll: the London Museum says 500 died in 10 days, the Health Foundation says 127 died in the first 3 days; the summary uses the first and the figure is not a final count. The pin is the Wikidata point for Broadwick Street, not the exact pump site, which no opened page gives in coordinates.",
+  "published_at": "2026-10-22T16:17:44.116Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

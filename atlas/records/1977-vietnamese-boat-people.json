@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1977-vietnamese-boat-people",
+  "kind": "process",
+  "title": "Vietnamese boat people",
+  "summary": "After the fall of South Vietnam in 1975, many Vietnamese fled by sea in small boats toward nearby countries such as Thailand, Indonesia, Hong Kong and Malaysia. Encyclopedia.com cites estimates that 700,000 to 2.5 million tried to leave by sea and that researchers think 10 to 50 percent died; the National Archives of Australia says as many as 10 to 15 per cent died at sea.",
+  "when": {
+    "start": {
+      "year": 1975
+    },
+    "end": {
+      "year": 1979
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "Encyclopedia.com says \"after 1975\" with no end date; the National Archives of Australia documents events in 1977 and 1979. The span 1975-1979 covers the dated events cited; the exodus continued beyond it in other sources not opened here."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "after 1975",
+        "source": "src-gale-refugees"
+      },
+      {
+        "calendar": "CE",
+        "value": "In 1977 the Minister for Immigration and Ethnic Affairs, Michael MacKellar, announced that Australia was increasing the number of refugees",
+        "source": "src-naa-boat"
+      },
+      {
+        "calendar": "CE",
+        "value": "In June of that year, as the typhoon season neared, Malaysia towed 2500 Vietnamese back to sea",
+        "source": "src-naa-boat"
+      }
+    ],
+    "display": "After 1975 (events cited 1977 and 1979)"
+  },
+  "where": {
+    "lat": 12,
+    "lon": 113,
+    "elevation_m": null,
+    "modern_name": "South China Sea, off the coast of Vietnam",
+    "historical_name": "South China Sea; departures from Vietnam after the fall of South Vietnam",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 800,
+    "coordinate_sources": [
+      "src-wd-scs"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "oceans"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "human_evolution_migration",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The largest mass departure of asylum seekers by sea in modern history, per the National Archives of Australia, which changed refugee policy in receiving countries."
+  },
+  "confidence": "contested",
+  "audience_note": "Describes drowning, piracy, robbery, rape and other abuse of refugees at sea. Casualty figures are rough and the sources differ widely.",
+  "related": [
+    {
+      "id": "1955-vietnam-war",
+      "type": "caused_by",
+      "because": "The National Archives of Australia ties the departures to the end of the Vietnam War and the fall of South Vietnam, when people fled fearing the incoming communist regime."
+    },
+    {
+      "id": "1975-fall-of-saigon",
+      "type": "caused_by",
+      "because": "The fall of South Vietnam in 1975 is given as the point after which people took to boats, fearing for their lives and futures."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-naa-boat",
+      "url": "https://www.naa.gov.au/students-and-teachers/student-research-portal/learning-resource-themes/society-and-culture/migration-and-multiculturalism/sinking-refugees-being-rescued-south-china-sea",
+      "title": "Sinking refugees being rescued on the South China Sea",
+      "publisher": "National Archives of Australia",
+      "author": "National Archives of Australia",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-gale-refugees",
+      "url": "https://www.encyclopedia.com/defense/energy-government-and-defense-magazines/vietnamese-and-hmong-refugees",
+      "title": "Vietnamese and Hmong Refugees",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": "Gale",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-scs",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q37660.json",
+      "title": "Wikidata entry for South China Sea (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure: death toll and span. The two sources give very different rates (10-15% vs 10-50%) and neither names its researchers; both are stated as the publishers' own claims, not consensus. The id year 1977 is a placeholder; neither page dates the start of the boat exodus precisely. Point is the sea centre, not a departure port.",
+  "author": "historian-agent:o-s74",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "after 1975",
+        "action": "numbers.counter { range: [700000, 2500000] }",
+        "caption": "Encyclopedia.com cites an estimated 700,000 to 2.5 million people attempting to leave Vietnam by sea.",
+        "source": "src-gale-refugees",
+        "consequence": false
+      },
+      {
+        "span": "1977",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Australia's immigration minister announces a higher annual refugee intake as the crisis grows.",
+        "source": "src-naa-boat",
+        "consequence": true
+      },
+      {
+        "span": "June 1979",
+        "action": "region.fill { radius_km: 400 }",
+        "caption": "Malaysia tows 2,500 Vietnamese back to sea; at least 500 documented drownings result.",
+        "source": "src-naa-boat",
+        "consequence": true
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T13:57:02.018Z"
+}

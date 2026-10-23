@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1962-publication-of-silent-spring",
+  "kind": "work",
+  "title": "Publication of Silent Spring",
+  "summary": "Silent Spring, Rachel Carson's book on chemical pesticides, especially DDT, and their threat to wildlife and human health, was published on 27 September 1962 after a New Yorker serialization. It sold more than 600,000 copies in its first year, is credited with helping launch the modern environmental movement, and a federal DDT ban followed in 1972.",
+  "when": {
+    "start": {
+      "year": 1962,
+      "iso": "1962-09-27"
+    },
+    "end": {
+      "year": 1962,
+      "iso": "1962-09-27"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Publication day given by EBSCO."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "publication of the book followed on September 27",
+        "source": "src-ebsco-silent-spring"
+      }
+    ],
+    "display": "27 September 1962"
+  },
+  "where": {
+    "lat": 40.7127281,
+    "lon": -74.0060152,
+    "elevation_m": null,
+    "modern_name": "New York City, United States (publisher location as cited)",
+    "historical_name": "New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-osm-nyc"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "art_music_literature",
+    "science_technology",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Book credited with helping launch the modern environmental movement and later US pesticide policy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ebsco-silent-spring",
+      "url": "https://www.ebsco.com/research-starters/history/carson-publishes-silent-spring/",
+      "title": "Carson Publishes Silent Spring",
+      "publisher": "EBSCO Research Starters",
+      "author": "EBSCO",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-bori-silent-spring",
+      "url": "https://billofrightsinstitute.org/essays/rachel-carson-and-silent-spring/",
+      "title": "Rachel Carson and Silent Spring",
+      "publisher": "Bill of Rights Institute",
+      "author": "Bill of Rights Institute",
+      "date_published": "2020-09-11",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-nyc",
+      "url": "https://nominatim.openstreetmap.org/search?q=New+York+City&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for New York City (relation 175905)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of place: the Bill of Rights Institute cites NY: Houghton Mifflin, while an EBSCO bibliography cites Boston for a 2002 edition; pin is a loose publisher-location anchor.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1962-09-27",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Houghton Mifflin published Carson's book on pesticides, following a New Yorker serialization.",
+        "source": "src-ebsco-silent-spring"
+      },
+      {
+        "span": "1972",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "In 1972 the new US Environmental Protection Agency placed a federal ban on DDT.",
+        "source": "src-ebsco-silent-spring",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:11:46.359Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

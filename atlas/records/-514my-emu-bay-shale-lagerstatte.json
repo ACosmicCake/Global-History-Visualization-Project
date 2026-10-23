@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s10",
+  "updated": "2026-10-22",
+  "id": "-514my-emu-bay-shale-lagerstatte",
+  "kind": "place",
+  "title": "Emu Bay Shale Lagerstätte, Kangaroo Island",
+  "summary": "The Emu Bay Shale on the northern coast of Kangaroo Island, South Australia, preserves soft-bodied animals from about 514–509 million years ago, in Cambrian Series 2, Stage 4. At Big Gully it yields giant Anomalocaris-like predators, trilobites and arthropods, and is described as Australia's only Cambrian Konservat-Lagerstätte of this kind.",
+  "when": {
+    "start": {
+      "year": -514000000
+    },
+    "end": {
+      "year": -509000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1000000,
+      "start_plus_years": 1000000,
+      "end_minus_years": 1000000,
+      "end_plus_years": 1000000,
+      "note": "Age given as approximately 514-509 Ma on the Heritage Council document; no numerical age on the Palaeontology paper page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "geological",
+        "value": "Cambrian Series 2, Stage 4 (Estimated to ~514-~509Ma)",
+        "source": "src-sa-heritage"
+      },
+      {
+        "calendar": "geological",
+        "value": "Cambrian Series 2, Stage 4",
+        "source": "src-palass"
+      }
+    ],
+    "display": "about 514–509 million years ago (Cambrian Series 2, Stage 4)"
+  },
+  "where": {
+    "lat": -35.583333,
+    "lon": 137.5,
+    "elevation_m": null,
+    "modern_name": "Big Gully, Emu Bay, Kangaroo Island, South Australia",
+    "historical_name": "Emu Bay Shale, a marine basin on the margin of East Gondwana (no polities exist at this date)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wd-emu"
+    ],
+    "paleo": {
+      "lat": -3.47,
+      "lon": 132.7,
+      "age_ma": 514,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point -35.58, 137.50 reconstructed to 514 Ma. PALEOMAP gives 12.59 N, 159.67 W (about 16 degrees of latitude and 70 degrees of longitude away). MULLER2019 covers only 0-250 Ma and returned an error for 514 Ma. The wide model spread reflects differing absolute reference frames."
+    }
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "Australia's only Burgess Shale-type fossil deposit, showing early Cambrian predators and arthropods in East Gondwana."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "part_of"
+    },
+    {
+      "id": "place-burgess-shale",
+      "type": "related"
+    },
+    {
+      "id": "place-chengjiang-fossil-site",
+      "type": "related"
+    },
+    {
+      "id": "-513my-sinsk-extinction-event",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sa-heritage",
+      "url": "https://data.environment.sa.gov.au/Content/Publications/14548_SSHP_BHI_EmuBayCoastline_15-FEB-2024.pdf",
+      "title": "Better Heritage Information: Emu Bay Coastline (South Australian Heritage Council)",
+      "publisher": "Department for Environment and Water, Government of South Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-palass",
+      "url": "https://palass.org/publications/palaeontology-journal/archive/56/5/article_pp971-990",
+      "title": "New anatomical information on Anomalocaris from the Cambrian Emu Bay Shale of South Australia and a reassessment of its inferred predatory habits",
+      "publisher": "Palaeontological Association (Palaeontology)",
+      "author": "Daley et al. (2013)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-emu",
+      "url": "https://www.wikidata.org/wiki/Q94767",
+      "title": "Wikidata item Q94767 (Emu Bay Shale), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte / GPlates",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The record id uses -514 Ma; the Heritage Council document gives the span 514-509 Ma, the only numerical age on an opened page. The Journal of the Geological Society review (514 +/- 1 Ma) could not be opened. Coordinates are the Wikidata point for the formation (on the north coast near Emu Bay); Big Gully is the fossil locality, within a few km. Model spread for the paleo-position is large; Merdith 2021 is the stored value.",
+  "published_at": "2026-10-22T04:45:25.430Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

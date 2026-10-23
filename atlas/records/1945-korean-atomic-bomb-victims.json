@@ -1,0 +1,171 @@
+{
+  "id": "1945-korean-atomic-bomb-victims",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Korean atomic bomb victims in Hiroshima and Nagasaki",
+  "summary": "When the United States bombed Hiroshima and Nagasaki in August 1945, tens of thousands of Koreans, many of them brought to Japan as colonial subjects and forced laborers, were among the victims. Estimates of those exposed and killed vary widely, and survivors who returned to Korea long struggled for recognition and aid.",
+  "when": {
+    "start": {
+      "year": 1945,
+      "iso": "1945-08-06"
+    },
+    "end": {
+      "year": 1945,
+      "iso": "1945-08-09"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dates are the two bombings; the harm to survivors continued for decades."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Aug. 6 and 9, 1945",
+        "source": "src-koreaherald"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "colonial rule (1910-45)",
+        "source": "src-koreatimes"
+      }
+    ],
+    "display": "6 and 9 August 1945"
+  },
+  "where": {
+    "lat": 34.4,
+    "lon": 132.45,
+    "elevation_m": null,
+    "modern_name": "Hiroshima, Japan (with Nagasaki as the second site)",
+    "historical_name": "Hiroshima, Empire of Japan (Korea then under Japanese rule)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-hiroshima"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Koreans were a large, long-overlooked share of atomic bomb victims, tied to colonial forced labor and postwar claims for recognition."
+  },
+  "confidence": "probable",
+  "audience_note": "Concerns victims of atomic bombing and forced labor; casualty figures are estimates.",
+  "related": [
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "part_of"
+    },
+    {
+      "id": "1945-08-09-nagasaki-bombing",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-koreaherald",
+      "url": "https://www.koreaherald.com/article/2069038",
+      "title": "Korean survivors of atomic bombings (article)",
+      "publisher": "The Korea Herald",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-koreatimes",
+      "url": "https://www.koreatimes.co.kr/foreignaffairs/20211106/memorial-for-korean-victims-of-atomic-bomb-erected-in-japans-nagasaki",
+      "title": "Memorial for Korean victims of atomic bomb erected in Japan's Nagasaki",
+      "publisher": "The Korea Times",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-ipb",
+      "url": "https://ipb.org/korean-a-bomb-victims-head-to-un-to-tell-their-stories-and-seek-accountability/",
+      "title": "Korean A-bomb victims head to UN to tell their stories and seek accountability",
+      "publisher": "International Peace Bureau",
+      "author": "unspecified",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-geonames-hiroshima",
+      "url": "https://www.geonames.org/1862415/hiroshima-shi.html",
+      "title": "GeoNames: Hiroshima",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Numbers differ across sources (about 70,000 exposed and 40,000 killed vs up to 30,000 killed in Hiroshima and 10,000 in Nagasaki) and are not stated in the summary. Pin is Hiroshima only.",
+  "author": "historian-agent:o-s1",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:29:26.103Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945-08-06",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "When the United States bombed Hiroshima and Nagasaki in August 1945, tens of thousands of Koreans, many of them brought to Japan as colonial subjects and forced laborers…",
+        "source": "src-koreaherald"
+      },
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Estimates of those exposed and killed vary widely, and survivors who returned to Korea long struggled for recognition and aid.",
+        "source": "src-koreaherald",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1235-battle-of-kirina",
+  "kind": "event",
+  "title": "Battle of Kirina",
+  "summary": "Traditionally dated to 1235, Kirina is where Sundiata Keita and his allies defeated Sumanguru, king of the Sosso, who fled and was never seen again. Accounts of the fight come largely from oral tradition kept by griots, which adds details such as the white cockspur. The victory is linked to Sundiata founding the Mali Empire around 1240.",
+  "when": {
+    "start": {
+      "year": 1235
+    },
+    "end": {
+      "year": 1235
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 5,
+      "note": "The year 1235 is given as fact by both pages, but the story rests largely on oral tradition and later written compilations."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Sundiata defeated the Sosso in a decisive battle at Krina (aka Kirina) in 1235",
+        "source": "src-whe-sundiata"
+      },
+      {
+        "calendar": "CE",
+        "value": "The Battle of Kirina is dated to \"in 1235\"",
+        "source": "src-encyc-sunjata"
+      }
+    ],
+    "display": "1235 (traditional date)"
+  },
+  "where": {
+    "lat": 12.3056,
+    "lon": -8.1492,
+    "elevation_m": null,
+    "modern_name": "Kirina, Koulikoro Region, Mali (village of that name; the pages do not locate the battlefield)",
+    "historical_name": "Krina (Kirina), Sosso kingdom, before the Mali Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 30,
+    "coordinate_sources": [
+      "src-gn-kirina"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The traditional founding battle of the Mali Empire and the core of the Sundiata epic."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-mali-empire",
+      "type": "caused",
+      "because": "Sundiata's victory over Sumanguru is tied to his founding the Mali Empire around 1240."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-sundiata",
+      "url": "https://www.worldhistory.org/Sundiata_Keita/",
+      "title": "Sundiata Keita",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-sunjata",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/sunjata",
+      "title": "Sunjata",
+      "publisher": "Encyclopedia.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-kirina",
+      "url": "https://www.geonames.org/search.html?q=Kirina&country=ML",
+      "title": "Kirina, Koulikoro (GeoNames)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Tradition: details come from griot oral tradition. Least sure of the location: no opened page places the battle, so the pin is the village named Kirina near Bamako (GeoNames), which may not be the site.",
+  "author": "historian-agent:o-s34",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1235",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "In 1235 Sundiata Keita and his allies defeated Sumanguru of the Sosso at Kirina, according to oral tradition.",
+        "source": "src-whe-sundiata"
+      },
+      {
+        "span": "1240",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Around 1240 Sundiata founded the kingdom of Mali and made Niani his capital.",
+        "source": "src-encyc-sunjata",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T09:04:54.223Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

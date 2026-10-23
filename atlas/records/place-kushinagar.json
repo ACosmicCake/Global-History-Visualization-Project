@@ -1,0 +1,148 @@
+{
+  "id": "place-kushinagar",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Kushinagar, traditional place of the Buddha's death",
+  "summary": "Town in eastern Uttar Pradesh that Buddhist tradition names as the place where the Buddha died among the Mallas. The ruins include a main stupa and a Nirvana temple with a 6.1 m reclining sandstone Buddha, originally installed in the 5th century CE, and the Ramabhar cremation stupa.",
+  "when": {
+    "start": {
+      "year": -481
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 80,
+      "start_plus_years": 80,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Buddha's death date is traditional and debated; the monuments run from the earlier centuries CE (the statue is 5th century CE per the Indian government's UNESCO tentative-list text). End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Pali canon, narrative sequence",
+        "value": "the Buddha tells Ananda to go to Kusinara, where he dies",
+        "source": "src-ati-dn16"
+      },
+      {
+        "calendar": "Centuries AD, Government of India",
+        "value": "Nirvana statue originally installed in the fifth century A.D.",
+        "source": "src-unesco-tl5492"
+      }
+    ],
+    "display": "Traditional site of the Buddha's death (c. 5th century BCE, debated); monuments to the 5th century CE and later"
+  },
+  "where": {
+    "lat": 26.74028,
+    "lon": 83.88889,
+    "elevation_m": null,
+    "modern_name": "Kushinagar (Kasia), Kushinagar district, Uttar Pradesh, India",
+    "historical_name": "Kusinara (Pali), capital of the Mallas (traditional)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-kushinagar",
+      "src-unesco-tl5492"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "One of the four principal Buddhist pilgrimage places, marking the Buddha's death in tradition."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-siddhartha-gautama",
+      "type": "related"
+    },
+    {
+      "id": "-0482-parinirvana-of-the-buddha",
+      "type": "related"
+    },
+    {
+      "id": "place-lumbini",
+      "type": "related"
+    },
+    {
+      "id": "place-bodh-gaya",
+      "type": "related"
+    },
+    {
+      "id": "place-sarnath",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ati-dn16",
+      "url": "https://www.accesstoinsight.org/tipitaka/dn/dn.16.1-6.vaji.html",
+      "title": "Maha-parinibbana Sutta: Last Days of the Buddha (DN 16), translated by Sister Vajira and Francis Story",
+      "publisher": "Access to Insight",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-tl5492",
+      "url": "https://whc.unesco.org/en/tentativelists/5492/",
+      "title": "Silk Road Sites in India (Tentative List no. 5492): Buddhist Remains of Kushinagar",
+      "publisher": "UNESCO World Heritage Centre (text by Government of India)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-kushinagar",
+      "url": "https://www.wikidata.org/wiki/Q825673",
+      "title": "Wikidata Q825673: Kushinagar (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The sutta source is a translation of the canonical text and is undated; the death date is traditional. The Indian tentative-list entry gives 26 45 N, 83 55 E (to the arcminute), while Wikidata gives 26.740 N, 83.889 E, so uncertainty is set to 3 km. I found no model-quality dimensions: the tentative text says the main stupa may once have reached 45.72 m but gives no plan dimension. Confidence \"probable\" because the schema has no \"traditional\" level.",
+  "author": "historian-agent:o-s19",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T06:38:39.564Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

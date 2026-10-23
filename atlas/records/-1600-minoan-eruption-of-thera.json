@@ -1,0 +1,163 @@
+{
+  "id": "-1600-minoan-eruption-of-thera",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Minoan eruption of Thera (Santorini)",
+  "summary": "The Minoan eruption of Santorini (Thera), Greece, spread ash across the Eastern Mediterranean and buried Bronze Age settlements such as Akrotiri. Its date is debated: radiocarbon dating of a buried olive branch gave 1627–1600 BCE (95%), while archaeologists have traditionally placed it in the mid- to late-16th century BCE. A 2023 recalibration gave late 17th to mid-16th century BCE.",
+  "when": {
+    "start": {
+      "year": -1626
+    },
+    "end": {
+      "year": -1500
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 126,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Radiocarbon (Friedrich et al. 2006): 1627-1600 BCE (2 sigma) = -1626 to -1599. Archaeological view: mid- to late-16th century BCE; the end of the range (-1500) is an approximation of \"late 16th century\" for display, not a sourced number. Raj et al. 2023: late 17th to mid-16th century BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE, radiocarbon wiggle-match, 95% (2 sigma)",
+        "value": "1627–1600 B.C.",
+        "source": "src-friedrich2006"
+      },
+      {
+        "calendar": "BCE, archaeological",
+        "value": "mid- to late-16th century B.C.",
+        "source": "src-friedrich2006"
+      },
+      {
+        "calendar": "BCE, recalibrated radiocarbon",
+        "value": "late 17th century BCE to mid-16th century BCE",
+        "source": "src-raj2023"
+      }
+    ],
+    "display": "c. 1627–1500 BCE (radiocarbon 1627–1600 BCE; archaeology mid- to late-16th century BCE)"
+  },
+  "where": {
+    "lat": 36.403611,
+    "lon": 25.396389,
+    "elevation_m": null,
+    "modern_name": "Santorini caldera, Thira, Cyclades, Greece",
+    "historical_name": "Thera, Aegean Sea; Minoan-influenced Bronze Age Cyclades",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-santorini"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "geology_climate",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A major Bronze Age eruption whose ash layer is a dating marker for the Eastern Mediterranean, and whose date is a central chronology dispute."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1815-eruption-of-mount-tambora",
+      "type": "related"
+    },
+    {
+      "id": "1883-krakatoa-eruption",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-friedrich2006",
+      "url": "https://www.ltrr.arizona.edu/~tswetnam/CMATE/Friedrich%20et%20al%20Santorini%20548.pdf",
+      "title": "Santorini Eruption Radiocarbon Dated to 1627-1600 B.C. (Science 312:548)",
+      "publisher": "Science (AAAS)",
+      "author": "Walter L. Friedrich, Bernd Kromer, Michael Friedrich, Jan Heinemeier, Tom Pfeiffer, Sahra Talamo",
+      "date_published": "2006-04-28",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-raj2023",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/B0EF97CF862B04FDEFE8007E2658EDA6/S0033822223000358a.pdf/calibration-of-multiple-tree-ring-blocks-and-its-implication-on-the-debate-of-minoan-eruption-of-santorini-around-17th-16th-century-bce.pdf",
+      "title": "Calibration of Multiple Tree-Ring Blocks and Its Implication on the Debate of Minoan Eruption of Santorini Around 17th-16th Century BCE (Radiocarbon 65(3):681-691)",
+      "publisher": "Radiocarbon (Cambridge University Press for the Arizona Board of Regents)",
+      "author": "Harsh Raj, Lior Regev, Elisabetta Boaretto",
+      "date_published": "2023",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-santorini",
+      "url": "https://www.wikidata.org/wiki/Q2071883",
+      "title": "Wikidata item Q2071883 (Santorini caldera), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of how to set the single date range: sources disagree and I took the radiocarbon start (1627 BCE) and an approximate late-16th-century end. Both source PDFs were read through pdftotext. The pin is the Wikidata caldera point.",
+  "author": "historian-agent:o-s63",
+  "updated": "2026-10-22",
+  "perspectives": [
+    {
+      "holder": "Friedrich et al. (2006), radiocarbon",
+      "account": "Olive branch buried in the eruption pumice dated to 1627-1600 BCE at 95% confidence.",
+      "sources": [
+        "src-friedrich2006"
+      ]
+    },
+    {
+      "holder": "Traditional archaeological chronology",
+      "account": "Based on Aegean-Egyptian cultural links, placed the eruption in the mid- to late-16th century BCE.",
+      "sources": [
+        "src-friedrich2006"
+      ]
+    },
+    {
+      "holder": "Raj, Regev and Boaretto (2023)",
+      "account": "Recalibration with moving-average curves gives a late 17th to mid-16th century BCE span.",
+      "sources": [
+        "src-raj2023"
+      ]
+    }
+  ],
+  "published_at": "2026-10-22T12:14:27.532Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

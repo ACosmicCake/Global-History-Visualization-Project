@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1968-treaty-on-the-non-proliferation-of-nuclear-weapons",
+  "kind": "event",
+  "title": "Treaty on the Non-Proliferation of Nuclear Weapons",
+  "summary": "The Non-Proliferation Treaty was opened for signature on 1 July 1968 in London, Moscow and Washington, and the UK, USSR, USA and over fifty other states signed that day. It took effect on 5 March 1970 and was extended indefinitely on 11 May 1995; 191 states have joined.",
+  "when": {
+    "start": {
+      "year": 1968
+    },
+    "end": {
+      "year": 1970
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is opening for signature (1 July 1968); end is entry into force (5 March 1970). The treaty remains in force."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1 July 1968",
+        "source": "src-un-avl"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "5 March 1970",
+        "source": "src-un-avl"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "11 May 1995",
+        "source": "src-unoda"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 1, 1968",
+        "source": "src-histstate"
+      }
+    ],
+    "display": "Opened for signature 1 July 1968; in force 5 March 1970"
+  },
+  "where": {
+    "lat": 38.8951,
+    "lon": -77.0364,
+    "elevation_m": null,
+    "modern_name": "Washington, D.C., United States (proxy pin: one of three signing capitals)",
+    "historical_name": "Washington, D.C., United States (treaty opened in London, Moscow and Washington)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Near-universal multilateral treaty aimed at stopping the spread of nuclear weapons, with 191 states joined."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-un-avl",
+      "url": "https://legal.un.org/avl/ha/tnpt/tnpt.html",
+      "title": "Treaty on the Non-Proliferation of Nuclear Weapons - Main Page",
+      "publisher": "United Nations Office of Legal Affairs, Audiovisual Library of International Law",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unoda",
+      "url": "https://disarmament.unoda.org/en/our-work/weapons-mass-destruction/nuclear-weapons/treaty-non-proliferation-nuclear-weapons",
+      "title": "Treaty on the Non-Proliferation of Nuclear Weapons",
+      "publisher": "United Nations Office for Disarmament Affairs",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-histstate",
+      "url": "https://history.state.gov/milestones/1961-1968/npt",
+      "title": "The Nuclear Non-Proliferation Treaty (NPT), 1968",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/4140963/washington-d-c.html",
+      "title": "Washington, United States",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy (Washington, one of three signing capitals). 'Opened 1968' vs 'in force 1970' span used for when.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T01:58:35.309Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-10-23",
+      "version": 2,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1968",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Non-Proliferation Treaty was opened for signature on 1 July 1968 in London, Moscow and Washington, and the UK, USSR, USA and over fifty other states signed that…",
+        "source": "src-un-avl"
+      },
+      {
+        "span": "1970",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It took effect on 5 March 1970 and was extended indefinitely on 11 May 1995; 191 states have joined.",
+        "source": "src-un-avl",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

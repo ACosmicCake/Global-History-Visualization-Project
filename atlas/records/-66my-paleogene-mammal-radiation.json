@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "-66my-paleogene-mammal-radiation",
+  "kind": "event",
+  "title": "Paleogene radiation of mammals",
+  "summary": "Following the Cretaceous–Paleogene mass extinction 66 million years ago, surviving mammalian lineages underwent an explosive adaptive radiation across the Paleogene Period. Released from ecological competition with non-avian dinosaurs, mammals rapidly expanded in taxonomic diversity, morphological disparity, and body mass, diversifying from small, mostly nocturnal insectivores into specialized herbivores, carnivores, and aquatic forms that established modern placental and marsupial orders.",
+  "when": {
+    "start": {
+      "year": -66000000
+    },
+    "end": {
+      "year": -23030000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 50000,
+      "start_plus_years": 50000,
+      "end_minus_years": 100000,
+      "end_plus_years": 100000,
+      "note": "Radiation initiated immediately following the Chicxulub impact at the Cretaceous–Paleogene boundary (c. 66.0 Ma) and continued through the Paleogene Period until the beginning of the Neogene (c. 23.03 Ma)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological time",
+        "value": "placental adaptive radiation",
+        "source": "src-chen2026"
+      },
+      {
+        "calendar": "Geological time",
+        "value": "radiation of placental mammals",
+        "source": "src-liu2017"
+      }
+    ],
+    "display": "c. 66–23 million years ago (Paleogene Period)"
+  },
+  "where": {
+    "lat": 38.8666615,
+    "lon": -104.5977482,
+    "elevation_m": null,
+    "modern_name": "Corral Bluffs, El Paso County, Colorado, United States (stratigraphic sequence documenting mammalian recovery and body-mass expansion in the first million years post-impact; process was global)",
+    "historical_name": "Denver Basin, interior North America, early Paleogene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames-corralbluffs"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 5,
+    "justification": "The Paleogene radiation transformed mammals from minor Mesozoic scurriers into the dominant terrestrial and marine vertebrates of the Cenozoic Era."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "caused_by",
+      "because": "The extinction of non-avian dinosaurs and other dominant Mesozoic vertebrates freed up ecological niches for mammals."
+    },
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-chen2026",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13318306/",
+      "title": "Brawn before bite in endemic Asian eutherian mammals after the end-Cretaceous extinction",
+      "publisher": "eLife Sciences Publications, Ltd.",
+      "author": "Meng Chen, Gregory P. Wilson Mantilla, et al.",
+      "date_published": "2026-06-30",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-liu2017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5584403/",
+      "title": "Genomic evidence reveals a radiation of placental mammals uninterrupted by the KPg boundary",
+      "publisher": "National Academy of Sciences",
+      "author": "Liang Liu, et al.",
+      "date_published": "2017-08-14",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-corralbluffs",
+      "url": "https://www.geonames.org/search.html?q=Corral+Bluffs&country=US",
+      "title": "GeoNames search results: Corral Bluffs, Colorado",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The outline anchors the global Paleogene mammalian radiation to the Denver Basin's Corral Bluffs section, which uniquely preserves a continuous fossil record of mammal skull, tooth, and body size evolution from the K-Pg boundary through the first million years of the Paleocene.",
+  "published_at": "2026-10-22T07:06:46.700Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-66000000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Following the Cretaceous–Paleogene mass extinction 66 million years ago, surviving mammalian lineages underwent an explosive adaptive radiation across the Paleogene Period.",
+        "source": "src-chen2026"
+      },
+      {
+        "span": "-23030000",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Released from ecological competition with non-avian dinosaurs, mammals rapidly expanded in taxonomic diversity, morphological disparity, and body mass, diversifying from small, mostly nocturnal insectivores into specialized herbivores, carnivores…",
+        "source": "src-chen2026",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

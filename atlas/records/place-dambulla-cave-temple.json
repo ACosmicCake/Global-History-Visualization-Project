@@ -1,0 +1,127 @@
+{
+  "id": "place-dambulla-cave-temple",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Dambulla Cave Temple",
+  "summary": "The Dambulla cave temple in Sri Lanka's Matale district is a complex of five caves holding Buddhist statues and paintings. The Central Cultural Fund traces its origins to the 1st century BCE, when King Valagamba took refuge in the caves and later turned them into temples. It says King Nissanka Malla in the 12th century and Kandyan kings in the 18th century added statues and paintings.",
+  "when": {
+    "start": {
+      "year": -99
+    },
+    "end": {
+      "year": 0
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "1st century BCE spans astronomical years -99 to 0; the later additions run to the 18th century CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "date back to the 1st century BCE",
+        "source": "src-ccf-dambulla"
+      },
+      {
+        "calendar": "BCE (Gregorian, proleptic)",
+        "value": "King Walagamba converted this cave complex into a temple in the 1st century BCE",
+        "source": "src-slt-dambulla"
+      }
+    ],
+    "display": "1st century BCE"
+  },
+  "where": {
+    "lat": 7.856563,
+    "lon": 80.64834,
+    "elevation_m": null,
+    "modern_name": "Dambulla, Matale District, Central Province, Sri Lanka",
+    "historical_name": "Dambulla rock temple complex, Kingdom of Anuradhapura onward",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wd-dambulla"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "built_world",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The CCF describes layered royal patronage over more than 2,000 years; Sri Lanka Tourism calls it the largest and best-preserved cave complex in Sri Lanka."
+  },
+  "confidence": "probable",
+  "sources": [
+    {
+      "id": "src-ccf-dambulla",
+      "url": "https://ccf.gov.lk/heritage-sites/dambulla-cave-temple/",
+      "title": "Dambulla Cave Temple",
+      "publisher": "Central Cultural Fund, Government of Sri Lanka",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-slt-dambulla",
+      "url": "https://www.srilanka.travel/buddhist-places/attractions.php",
+      "title": "Buddhist places: attractions (Dambulla Cave Temple)",
+      "publisher": "Sri Lanka Tourism Development Authority",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-dambulla",
+      "url": "https://www.wikidata.org/wiki/Q45690",
+      "title": "Wikidata item Q45690 (Dambulla cave temple), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The Valagamba origin is stated by the CCF as history and by Sri Lanka Tourism as \"it is believed\"; the date is therefore given at century precision and confidence is probable. Both pages are official but promotional in tone and there is no scholarly source; UNESCO could not be opened (HTTP 403). The 18th-century Kandyan mural phase is attributed to the CCF only. No sourced height and plan dimensions were opened, so no model block is written.",
+  "audience_note": null,
+  "author": "historian-agent:o-s106",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T18:36:19.093Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

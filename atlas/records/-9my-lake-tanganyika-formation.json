@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s108",
+  "updated": "2026-10-22",
+  "id": "-9my-lake-tanganyika-formation",
+  "kind": "process",
+  "title": "Formation of Lake Tanganyika",
+  "summary": "Lake Tanganyika lies in the western branch of the East African Rift. A 1993 reflection-seismic and radiocarbon study estimated that the basins of central Lake Tanganyika began forming between 9 and 12 Ma, the northern basin at about 7 to 8 Ma and the southern basin at about 2 to 4 Ma. A 2022 paper adds that the sub-basins fused into the present lake about 5 to 6 million years ago.",
+  "when": {
+    "start": {
+      "year": -12000000
+    },
+    "end": {
+      "year": -9000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "note": "Central-basin range from Cohen, Soreghan and Scholz (1993); northern basin 7-8 Ma, southern 2-4 Ma; fusion of sub-basins 5-6 Ma. The id says 9 Ma. Years are Ma counted back from the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma",
+        "value": "structural basins of central Lake Tanganyika began to form between 9 and 12 Ma",
+        "source": "src-osti"
+      },
+      {
+        "calendar": "MYA",
+        "value": "The initial basin was formed around 9–12 million years ago (MYA)",
+        "source": "src-milec2022"
+      }
+    ],
+    "display": "c. 12 to 9 Ma (central basin)"
+  },
+  "where": {
+    "lat": -6.1,
+    "lon": 29.5,
+    "elevation_m": null,
+    "modern_name": "Lake Tanganyika, Tanzania, Democratic Republic of the Congo, Burundi and Zambia (lake-centre proxy)",
+    "historical_name": "Western Rift basin of the East African Rift, Late Miocene; no polities exist",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-wd-tang"
+    ],
+    "paleo": {
+      "lat": -11.01,
+      "lon": 29.81,
+      "age_ma": 10,
+      "plate_model": "MERDITH2021 (via GPlates Web Service)",
+      "source": "src-gplates",
+      "note": "Lake-centre proxy at 10 Ma. MULLER2019 gives 7.85 S, 27.30 E and PALEOMAP 6.54 S, 28.66 E."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 3,
+    "justification": "One of the deepest and oldest rift lakes, with basins that formed at different times."
+  },
+  "confidence": "probable",
+  "related": [
+    {
+      "id": "-25my-formation-of-the-east-african-rift",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-osti",
+      "url": "https://www.osti.gov/biblio/543374",
+      "title": "Estimating the age of formation of lakes: An example from Lake Tanganyika, East African Rift system",
+      "publisher": "U.S. Department of Energy, Office of Scientific and Technical Information (abstract of Cohen et al., Geology 1993)",
+      "author": null,
+      "date_published": "1993",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-milec2022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9635120",
+      "title": "Complete mitochondrial genomes and updated divergence time of the two freshwater clupeids endemic to Lake Tanganyika (Africa) suggest intralacustrine speciation",
+      "publisher": "BMC Ecology and Evolution, via PubMed Central",
+      "author": null,
+      "date_published": "2022",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-tang",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5511.json",
+      "title": "Wikidata item Q5511 (Lake Tanganyika), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=29.5,-6.1&time=10&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction, MERDITH2021 model",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The 9-12 Ma range is for the central basin only and comes from the 1993 RSRM method; rift-initiation timing is not firmly settled. The 2022 paper is a fish-genetics study that restates the geology.",
+  "published_at": "2026-10-22T18:32:04.036Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-12000000",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Lake Tanganyika lies in the western branch of the East African Rift.",
+        "source": "src-osti"
+      },
+      {
+        "span": "-9000000",
+        "action": "pulse { radius_km: 320 }",
+        "caption": "A 1993 reflection-seismic and radiocarbon study estimated that the basins of central Lake Tanganyika began forming between 9 and 12 Ma, the northern basin at about 7 to…",
+        "source": "src-osti",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

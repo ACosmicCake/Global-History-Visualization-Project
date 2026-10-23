@@ -1,0 +1,162 @@
+{
+  "id": "1923-great-kanto-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Great Kanto Earthquake",
+  "summary": "A major earthquake centred beneath Sagami Bay struck the Tokyo–Yokohama area just before noon on 1 September 1923. Collapsing buildings and fires that burned for almost two days destroyed hundreds of thousands of houses. A Japanese government report, as compiled by Nippon.com, counts over 105,000 dead or missing; EBSCO gives a higher total.",
+  "when": {
+    "start": {
+      "year": 1923
+    },
+    "end": {
+      "year": 1923
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Date is consistent across sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 1, 1923",
+        "source": "src-nippon"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "September 1, 1923",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "1 September 1923"
+  },
+  "where": {
+    "lat": 35.6895,
+    "lon": 139.6917,
+    "elevation_m": null,
+    "modern_name": "Tokyo, Japan (proxy pin for the Tokyo–Yokohama–Sagami Bay affected area)",
+    "historical_name": "Tokyo and Yokohama, Empire of Japan",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 80,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Disaster with over 100,000 dead or missing that struck the Tokyo metropolitan area directly and still informs urban disaster planning."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a disaster with very high loss of life, including deaths by fire.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nippon",
+      "url": "https://www.nippon.com/en/japan-data/h00526/looking-back-on-the-1923-great-kanto-earthquake-which-devastated-tokyo-and-yokohama.html",
+      "title": "Looking Back on the 1923 Great Kantō Earthquake",
+      "publisher": "Nippon Communications Foundation (nippon.com)",
+      "author": null,
+      "date_published": "2019-09-05",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "numbers"
+      ]
+    },
+    {
+      "id": "src-brown",
+      "url": "https://library.brown.edu/cds/kanto/ksmith.html",
+      "title": "Kanto earthquake essay (Brown University Library)",
+      "publisher": "Brown University Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/earth-and-atmospheric-sciences/great-kwanto-earthquake/",
+      "title": "Great Kwanto Earthquake",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/1850147",
+      "title": "Tokyo, Japan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death toll varies by source (105,385 dead/missing in Nippon.com vs about 143,000 in EBSCO); magnitude also varies. Pin is Tokyo as a proxy, not the Sagami Bay epicentre. Brown page read earlier but its spotcheck fetch failed twice.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T19:55:46.391Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1923",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "A major earthquake centred beneath Sagami Bay struck the Tokyo–Yokohama area just before noon on 1 September 1923.",
+        "source": "src-nippon"
+      },
+      {
+        "span": "1923",
+        "action": "pulse { radius_km: 128 }",
+        "caption": "Collapsing buildings and fires that burned for almost two days destroyed hundreds of thousands of houses.",
+        "source": "src-nippon",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

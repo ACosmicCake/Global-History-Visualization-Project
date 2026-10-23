@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1904-herero-and-nama-genocide",
+  "kind": "event",
+  "title": "Herero and Nama genocide",
+  "summary": "Between 1904 and 1908, German forces in what is now Namibia killed large parts of the Herero and Nama peoples after the Herero uprising of January 1904. The Montreal Holocaust Museum says more than 80% of the Herero and 50% of the Nama were killed; Al Jazeera cites a 1918 estimate of about 65,000 Herero and 10,000 Nama. Germany formally recognised genocide in May 2021.",
+  "when": {
+    "start": {
+      "year": 1904
+    },
+    "end": {
+      "year": 1908
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years as given by the Montreal Holocaust Museum."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "between 1904 and 1908",
+        "source": "src-mhm-herero"
+      }
+    ],
+    "display": "1904–1908"
+  },
+  "where": {
+    "lat": -21.979231,
+    "lon": 16.9128172,
+    "elevation_m": null,
+    "modern_name": "Okahandja, Otjozondjupa Region, Namibia (uprising site; events spanned Namibia)",
+    "historical_name": "German colony in Namibia (after the Berlin Conference)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-osm-okahandja"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Colonial mass killing of the Herero and Nama, recognised by Germany as genocide in 2021."
+  },
+  "confidence": "established",
+  "audience_note": "This record concerns genocide, forced displacement and deaths in camps. Death figures are attributed estimates and are debated.",
+  "related": [
+    {
+      "id": "1884-berlin-conference",
+      "type": "caused_by",
+      "because": "Al Jazeera says Germany took over Namibia after the Berlin Conference of 1884."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mhm-herero",
+      "url": "https://museeholocauste.ca/en/resources-training/herero-genocide-namibia/",
+      "title": "Herero Genocide in Namibia",
+      "publisher": "Montreal Holocaust Museum",
+      "author": "Montreal Holocaust Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-aj-herero",
+      "url": "https://www.aljazeera.com/features/longform/2022/11/6/reckoning-with-genocide-in-namibia",
+      "title": "Reckoning with the 20th century's first genocide in Namibia",
+      "publisher": "Al Jazeera",
+      "author": "Hamilton Wende",
+      "date_published": "2022-11-06",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-osm-okahandja",
+      "url": "https://nominatim.openstreetmap.org/search?q=Okahandja+Namibia&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for Okahandja (relation 6160499)",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of: historical_name wording and the pin (Okahandja is the uprising site named by both sources, not the whole territory); sources differ on the date of the extermination order (2 vs 3 October 1904), so none is used.",
+  "author": "historian-agent:o-s57",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1904-01-12",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The Herero rebelled, attacking a German garrison at Okahandja.",
+        "source": "src-mhm-herero"
+      },
+      {
+        "span": "1904-08-11",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "At the Battle of Waterberg German soldiers surrounded the Herero.",
+        "source": "src-mhm-herero"
+      },
+      {
+        "span": "2021-05",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "In May 2021 the German government formally recognised what happened as genocide.",
+        "source": "src-aj-herero",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T11:11:48.012Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

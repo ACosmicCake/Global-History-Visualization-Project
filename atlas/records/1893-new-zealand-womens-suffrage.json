@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s28",
+  "updated": "2026-10-22",
+  "id": "1893-new-zealand-womens-suffrage",
+  "kind": "event",
+  "title": "New Zealand women's suffrage",
+  "summary": "On 19 September 1893 the Governor signed New Zealand's Electoral Act, giving adult women the right to vote in parliamentary elections, the first in a self-governing country. Women voted for the first time in the general election of 28 November 1893. Eligible women had to be British subjects, a category that included Māori women.",
+  "when": {
+    "start": {
+      "year": 1893
+    },
+    "end": {
+      "year": 1893
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The Act passed the Legislative Council on 8 September 1893 and was signed on 19 September; the first vote followed on 28 November (20 December in the Māori electorates)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On 19 September 1893, Governor Lord Glasgow signed a new Electoral Act into law",
+        "source": "src-women-govt"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Women first exercised their right to vote at the general election held on 28 November",
+        "source": "src-digitalnz"
+      }
+    ],
+    "display": "19 September 1893"
+  },
+  "where": {
+    "lat": -41.2,
+    "lon": 174,
+    "elevation_m": null,
+    "modern_name": "New Zealand (national centroid)",
+    "historical_name": "New Zealand, a self-governing British colony",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-nz"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First national electoral law to give women the vote in parliamentary elections, an early landmark in suffrage worldwide."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1840-treaty-of-waitangi",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-women-govt",
+      "url": "https://www.women.govt.nz/node/202",
+      "title": "Electoral Act 1893 (Suffrage)",
+      "publisher": "Ministry for Women, New Zealand Government",
+      "author": "Ministry for Women, New Zealand Government",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-digitalnz",
+      "url": "https://digitalnz.org/stories/619d9b57f7cc42002b0b5c1f",
+      "title": "Women first vote on 28 Nov 1893",
+      "publisher": "DigitalNZ (National Library of New Zealand)",
+      "author": "DigitalNZ (National Library of New Zealand)",
+      "date_published": "2023-11-01",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-nz",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q664.json",
+      "title": "Wikidata entry for New Zealand (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the national centroid since the sources do not name a place of signing; the \"first self-governing country\" claim is as stated by the sources and not independently compared.",
+  "published_at": "2026-10-22T08:18:28.939Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1893",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "On 19 September 1893 the Governor signed New Zealand's Electoral Act, giving adult women the right to vote in parliamentary elections, the first in a self-governing country.",
+        "source": "src-women-govt"
+      },
+      {
+        "span": "1893",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Women voted for the first time in the general election of 28 November 1893.",
+        "source": "src-women-govt",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

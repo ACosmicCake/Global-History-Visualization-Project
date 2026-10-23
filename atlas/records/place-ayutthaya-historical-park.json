@@ -1,0 +1,130 @@
+{
+  "id": "place-ayutthaya-historical-park",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Ayutthaya Historical Park",
+  "summary": "Ayutthaya, founded around 1350 in central Thailand, was the Siamese capital until Burmese forces destroyed it in the 18th century. Its ruins, with prang towers and large monasteries, are preserved today as a historical park and World Heritage property.",
+  "when": {
+    "start": {
+      "year": 1350
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Fine Arts Department gives 1893 B.E., which is 1350 CE on the standard Buddhist Era offset (B.E. minus 543); UNESCO says founded c. 1350. Other chronicle-based accounts give 1351, so a small margin is allowed. End is the present: the ruins survive as a park."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Buddhist Era (Fine Arts Department)",
+        "value": "established Krungsri Ayutthaya to be an administrative center in 1893 B.E.",
+        "source": "src-finearts-ayutthaya"
+      },
+      {
+        "calendar": "CE (UNESCO)",
+        "value": "Founded c. 1350",
+        "source": "src-unesco-576"
+      }
+    ],
+    "display": "Founded c. 1350 CE; destroyed 18th century; ruins preserved"
+  },
+  "where": {
+    "lat": 14.3478,
+    "lon": 100.5606,
+    "elevation_m": null,
+    "modern_name": "Ayutthaya Historical Park, Phra Nakhon Si Ayutthaya, Thailand",
+    "historical_name": "Krungsri Ayutthaya, capital of the Ayutthaya Kingdom (Siam)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Second capital of Siam after Sukhothai and the centre of a major trading kingdom; UNESCO-listed ruins."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-576",
+      "url": "https://whc.unesco.org/en/list/576",
+      "title": "Historic City of Ayutthaya (World Heritage List no. 576)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-finearts-ayutthaya",
+      "url": "http://virtualhistoricalpark.finearts.go.th/ayutthaya/index.php/en/history.html",
+      "title": "Historical Background and Importance, Ayutthaya Historical Park",
+      "publisher": "Fine Arts Department, Thailand",
+      "author": "Fine Arts Department, Thailand",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List data (XML export), geolocation of the property",
+      "publisher": "UNESCO World Heritage Centre (list XML)",
+      "author": "UNESCO World Heritage Centre (list XML)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Place pin only. UNESCO gives the destruction only as \"the 18th century\"; I did not open a page with the year 1767, so none is stated. The B.E. conversion (minus 543) is a standard rule, not stated on the page. The \"island at the junction of three rivers\" detail in the summary is not from an opened page and could be cut. Coordinate is the single UNESCO point, uncertainty 3 km.",
+  "author": "historian-agent:m-7",
+  "updated": "2026-10-22",
+  "aliases": [
+    "Historic City of Ayutthaya"
+  ],
+  "published_at": "2026-10-22T07:52:07.336Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

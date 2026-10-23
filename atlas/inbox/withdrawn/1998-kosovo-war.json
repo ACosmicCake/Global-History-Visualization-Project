@@ -1,0 +1,105 @@
+{
+  "id": "1998-kosovo-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "needs_review",
+  "kind": "event",
+  "title": "Kosovo War",
+  "summary": "Armed conflict in Kosovo in which ethnic Albanians, led militarily by the Kosovo Liberation Army, fought Serbian and Yugoslav forces. Atrocities and ethnic cleansing displaced many Albanians. NATO air strikes began on 24 March 1999 and ended with a June peace accord, after which Kosovo came under UN administration.",
+  "when": {
+    "start": {
+      "year": 1998
+    },
+    "end": {
+      "year": 1999
+    },
+    "precision": "month",
+    "display": "February 1998 – June 1999",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "vom 28. Februar 1998 bis zum 10. Juni 1999",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "On March 24 NATO began air strikes against Serbian military targets.",
+        "source": "src-ref1"
+      }
+    ]
+  },
+  "where": {
+    "lat": 42.5,
+    "lon": 21,
+    "elevation_m": null,
+    "modern_name": "Kosovo (proxy pin: Kosovo, the location Wikidata lists)",
+    "historical_name": "Serbian province of Kosovo, Yugoslavia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "NATO intervention and ethnic cleansing reshaped the Balkans and led to UN administration and later independence."
+  },
+  "confidence": "established",
+  "audience_note": "Describes ethnic cleansing, atrocities and mass displacement of civilians.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251228040154/https://www.britannica.com/event/Kosovo-conflict",
+      "title": "Kosovo conflict | Summary & Facts | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://de.openparliament.tv/term/Q190029",
+      "title": "Kosovokrieg | Open Parliament TV",
+      "publisher": "de.openparliament.tv",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q1231",
+      "title": "Wikidata Q1231 (Kosovo, coordinates of the location Wikidata gives for Q190029)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give slightly different end dates: de.openparliament gives 10 June 1999, while Britannica says only June 1999. Wikidata start is 27 February 1998 versus 28 February in the German source; the summary uses month-level precision. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, de.openparliament.tv; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23"
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1855-third-plague-pandemic",
+  "kind": "event",
+  "title": "Third Plague Pandemic",
+  "summary": "The third plague pandemic is dated to about 1855, when plague re-emerged from rodents in Yunnan, China. It travelled along trade routes to the coast, reached Canton and Hong Kong in 1894, then Bombay by 1896, and by 1900 had reached ports on every continent via steamship-borne rats.",
+  "when": {
+    "start": {
+      "year": 1855
+    },
+    "end": {
+      "year": 1900
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "PMC says 'probably' originated around 1855; end year 1900 marks only global port spread, not the end of the pandemic."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "around 1855",
+        "source": "src-pmc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "in 1855",
+        "source": "src-jmvh"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "by 1900",
+        "source": "src-jmvh"
+      }
+    ],
+    "display": "c. 1855 – c. 1900 (spread phase)"
+  },
+  "where": {
+    "lat": 22.2783,
+    "lon": 114.1747,
+    "elevation_m": null,
+    "modern_name": "Hong Kong (proxy pin; origin was Yunnan, China)",
+    "historical_name": "Yunnan Province, Qing China (origin); Hong Kong, British colony (1894 hub)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Pandemic that spread plague to ports on every continent by 1900."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1894-yersin-plague-bacillus",
+      "type": "related"
+    },
+    {
+      "id": "0541-plague-of-justinian",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11136754/",
+      "title": "The overlooked bacterial pandemic",
+      "publisher": "PubMed Central (NIH)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jmvh",
+      "url": "https://jmvh.org/article/the-history-of-plague-part-1-the-three-great-pandemics/",
+      "title": "The History of Plague – Part 1. The Three Great Pandemics",
+      "publisher": "jmvh.org",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/1819729",
+      "title": "Hong Kong",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is a proxy at Hong Kong, not the Yunnan origin. Start year 1855 is hedged ('probably') by PMC. jmvh.org publisher name not stated on page.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:20.697Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

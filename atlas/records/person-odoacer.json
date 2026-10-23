@@ -1,0 +1,148 @@
+{
+  "id": "person-odoacer",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "title": "Odoacer",
+  "summary": "Odoacer (c. 433–493 CE) was a Germanic military officer who deposed Romulus Augustulus in September 476, terminating the Western Roman imperial succession. Declining to appoint a puppet Augustus, he ruled Italy as king (rex) under nominal Eastern Roman suzerainty while preserving Roman administrative systems, law, and the Senate. He governed effectively for thirteen years until Emperor Zeno authorized Theodoric the Ostrogoth to invade Italy; after enduring a three-year siege at Ravenna, Odoacer was assassinated by Theodoric in March 493.",
+  "when": {
+    "start": {
+      "year": 433
+    },
+    "end": {
+      "year": 493,
+      "month": 3,
+      "day": 15,
+      "iso": "0493-03-15"
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 3,
+      "start_plus_years": 3,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth date is approximate (c. 433). Death on 15 March 493 at Ravenna recorded by chroniclers including Cassiodorus and Anonymus Valesianus."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian",
+        "value": "deposed Augustulus from the rule and was made king; he remained on the throne for thirteen years",
+        "source": "src-anonymus-valesianus-2"
+      },
+      {
+        "calendar": "Julian",
+        "value": "On 28 August 476, Orestes was captured and killed by Odovacar near Piacenza... In 493... Theodoric... killed Odoacer",
+        "source": "src-dir-romulus"
+      }
+    ],
+    "display": "c. 433–493 CE (reigned 476–493 CE)"
+  },
+  "where": {
+    "lat": 44.4178,
+    "lon": 12.1978,
+    "elevation_m": null,
+    "modern_name": "Ravenna, Emilia-Romagna, Italy (seat of Odoacer's court and kingdom)",
+    "historical_name": "Ravenna, seat of government, Kingdom of Italy under Odoacer",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-ravenna"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "people",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Ended the Western Roman imperial line by deposing Romulus Augustulus in 476 and governed Italy as its first post-imperial king, initiating the transition to medieval Germanic kingdoms in Italy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0476-fall-of-the-western-roman-empire",
+      "type": "caused",
+      "because": "Odoacer's mutiny and deposition of Romulus Augustulus brought an end to the western imperial office in Italy."
+    },
+    {
+      "id": "person-romulus-augustulus",
+      "type": "contemporary"
+    },
+    {
+      "id": "0493-ostrogothic-kingdom-of-italy",
+      "type": "caused",
+      "because": "Odoacer's independent rule prompted Emperor Zeno to commission Theodoric to conquer Italy and overthrow him."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-anonymus-valesianus-2",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Excerpta_Valesiana/2*.html",
+      "title": "Excerpta Valesiana, Pars Posterior: The History of King Theodoric",
+      "publisher": "LacusCurtius / University of Chicago",
+      "author": "Anonymous (trans. J.C. Rolfe)",
+      "date_published": "1939",
+      "accessed": "2026-10-22",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-dir-romulus",
+      "url": "https://roman-emperors.sites.luc.edu/auggiero.htm",
+      "title": "Romulus Augustulus (475-476 A.D.)--Two Views",
+      "publisher": "De Imperatoribus Romanis / Loyola University Chicago",
+      "author": "Ralph W. Mathisen & Geoffrey S. Nathan",
+      "date_published": "1997",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-ravenna",
+      "url": "https://www.geonames.org/3169561",
+      "title": "Ravenna, Italy (GeoNames 3169561)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth c. 433 CE is approximate. Odoacer's thirteen-year reign (476–493) and death at Ravenna on 15 March 493 are documented in Anonymus Valesianus and Mathisen (DIR). Ravenna served as his primary royal residence and administrative capital.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T07:54:26.045Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

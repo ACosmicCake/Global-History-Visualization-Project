@@ -1,0 +1,133 @@
+{
+  "id": "1853-gadsden-purchase",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Gadsden Purchase",
+  "summary": "The United States bought a strip of northern Mexican territory, now southern Arizona and southern New Mexico, for $10 million. James Gadsden and Santa Anna signed a treaty on 30 December 1853, and a revised version was ratified in 1854. It enabled a southern railroad route and set the present southern border.",
+  "when": {
+    "start": {
+      "year": 1853
+    },
+    "end": {
+      "year": 1854
+    },
+    "precision": "year",
+    "display": "30 December 1853 – 8 June 1854",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Gadsden Purchase , (December 30, 1853)",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "Santa Anna, who signed it on June 8,",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 33.1,
+    "lon": -110.6,
+    "elevation_m": null,
+    "modern_name": "Southern Arizona and southern New Mexico",
+    "historical_name": "La Mesilla (Mesilla Valley)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "It fixed the southern border of the present-day contiguous United States and enabled a southern railroad route."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20260112144255/https://www.britannica.com/event/Gadsden-Purchase",
+      "title": "Gadsden Purchase | History, Facts, & Map | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://history.state.gov/milestones/1830-1860/gadsden-purchase",
+      "title": "Milestones in the History of U.S. Foreign Relations - Office of the Historian",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q827212",
+      "title": "Wikidata Q827212 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on the original treaty terms: Britannica gives $10 million and nearly 30,000 square miles for the purchase, while the State Department says the signed treaty offered $15 million for 45,000 square miles before revision. The end date relies on Santa Anna's signing of the revised treaty on 8 June 1854; the Senate ratified on 25 April 1854.}</br> (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, U.S. Department of State, Office of the Historian; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:49.236Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1853",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "The United States bought a strip of northern Mexican territory, now southern Arizona and southern New Mexico, for $10 million.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1854",
+        "action": "pulse { radius_km: 320 }",
+        "caption": "It enabled a southern railroad route and set the present southern border.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

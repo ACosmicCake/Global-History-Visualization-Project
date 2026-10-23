@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-539my-nama-group-ediacaran-cambrian-boundary",
+  "kind": "process",
+  "title": "Nama Group Ediacaran–Cambrian boundary succession, Namibia",
+  "summary": "The Nama Group of southern Namibia is a well-dated sedimentary record of the final Ediacaran, with volcanic ash beds that give uranium-lead ages around 540–538 million years. The first Treptichnus pedum burrows, a Cambrian marker, appear in its Fish River Subgroup. Its ash-bed ages have been used to place the Ediacaran–Cambrian boundary, but that placement is still debated.",
+  "when": {
+    "start": {
+      "year": -540000000
+    },
+    "end": {
+      "year": -537600000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1000000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 300000,
+      "note": "Range spans dated Spitskop and Nomtsas ash beds (about 540–538 Ma) to the youngest Swartkloofberg ash bed (537.64 Ma). Ash-bed ages individually carry ±0.1–0.7 Ma; Bowyer et al. 2025 warn some may be over 1 Myr too old."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma, zircon U-Pb CA-ID-TIMS",
+        "value": "538.568 ± 0.093 Ma at the Spitskop–Swartkloofberg contact",
+        "source": "src-nelson2026"
+      },
+      {
+        "calendar": "Ma, zircon U-Pb CA-ID-TIMS",
+        "value": "boundary proposed at 538.8–538.6 Ma (Linnemann et al. 2019)",
+        "source": "src-nelson2026"
+      },
+      {
+        "calendar": "Ma, zircon U-Pb CA-ID-TIMS",
+        "value": "538.58 ± 0.19 Ma, lower Nomtsas Formation ash bed",
+        "source": "src-bowyer2025"
+      }
+    ],
+    "display": "c. 540–537.6 Ma (boundary age contested)"
+  },
+  "where": {
+    "lat": -27.444,
+    "lon": 16.556,
+    "elevation_m": null,
+    "modern_name": "Swartkloofberg type area, Witputs Subbasin, southern Namibia",
+    "historical_name": "No polity; Ediacaran foreland basin on the Kalahari Craton",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 60,
+    "coordinate_sources": [
+      "src-nelson2026"
+    ],
+    "paleo": {
+      "lat": -47.64,
+      "lon": 153.18,
+      "age_ma": 539,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "PALEOMAP gives 41.10 S, 152.41 W for the same point (a large longitude difference from MERDITH2021); MULLER2019 does not cover 539 Ma. The spread reflects differing reference frames."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "The Nama Group supplies radiometric dates and trace fossils bearing on the age and position of the Ediacaran–Cambrian boundary, the base of the animal-rich Phanerozoic."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-538my-cambrian-explosion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nelson2026",
+      "url": "https://ajsonline.org/article/151699-a-basin-in-transition-ecological-environmental-and-tectonic-shifts-across-the-ediacaran-cambrian-boundary-in-the-nama-group-kalahari-craton",
+      "title": "A basin in transition: ecological, environmental, and tectonic shifts across the Ediacaran–Cambrian boundary in the Nama Group, Kalahari Craton (Am. J. Sci. 326)",
+      "publisher": "American Journal of Science",
+      "author": "L. L. Nelson, E. F. Smith, S. A. F. Darroch, et al.",
+      "date_published": "2026",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where.lat",
+        "where.lon",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bowyer2025",
+      "url": "https://nora.nerc.ac.uk/id/eprint/540053/1/1-s2.0-S0012825225001308-main.pdf",
+      "title": "Foundational uncertainties in terminal Ediacaran chronostratigraphy revealed by high-precision zircon U-Pb geochronology of the Nama Group, Namibia (Earth-Science Reviews 268:105169)",
+      "publisher": "Earth-Science Reviews (Elsevier), via NERC Open Research Archive",
+      "author": "Fred T. Bowyer, Fabio Messori, Rachel Wood, Ulf Linnemann et al.",
+      "date_published": "2025",
+      "accessed": "2026-10-21",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=16.556,-27.444&time=539&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruct_points (MERDITH2021, PALEOMAP), query for 16.556E 27.444S at 539 Ma",
+      "publisher": "EarthByte Group, University of Sydney",
+      "author": null,
+      "date_published": "2026",
+      "accessed": "2026-10-21",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the boundary: Nelson et al. suggest the Cambrian base may be younger than 537.6 Ma and Bowyer et al. question some ash-bed ages. The pin is the Swartkloofberg area, one of several Nama localities.",
+  "author": "historian-agent:o-s5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T03:43:27.784Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-540000000",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "The Nama Group of southern Namibia is a well-dated sedimentary record of the final Ediacaran, with volcanic ash beds that give uranium-lead ages around 540–538 million years.",
+        "source": "src-nelson2026"
+      },
+      {
+        "span": "-537600000",
+        "action": "pulse { radius_km: 96 }",
+        "caption": "The first Treptichnus pedum burrows, a Cambrian marker, appear in its Fish River Subgroup.",
+        "source": "src-nelson2026",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "audience_note": null,
+  "id": "1991-identification-of-chicxulub-crater",
+  "kind": "event",
+  "title": "Identification of the Chicxulub crater",
+  "summary": "In 1991, Alan Hildebrand, Glen Penfield, and colleagues published the identification of a massive, buried circular impact structure roughly 180 kilometers wide centered near Chicxulub Puerto on Mexico's Yucatán Peninsula. By linking Pemex geophysical surveys, impact melt rocks, shocked quartz, and Caribbean tsunami deposits, the team confirmed Chicxulub as the long-sought impact crater that caused the end-Cretaceous mass extinction 66 million years ago.",
+  "when": {
+    "start": {
+      "year": 1991
+    },
+    "end": {
+      "year": 1991
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Seminal discovery paper published in Geology in September 1991."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Hildebrand et al., 1991",
+        "source": "src-nasa"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Hildebrand A.R., Penfield G.T., Kring D.A., Pilkington M., Camargo Z.A., Jacobsen S.B., and Boynton W.V. (1991)",
+        "source": "src-schmieder2020"
+      }
+    ],
+    "display": "1991"
+  },
+  "where": {
+    "lat": 21.296178,
+    "lon": -89.598666,
+    "elevation_m": 3,
+    "modern_name": "Chicxulub Puerto, Yucatán, Mexico (coastal port situated above the buried center of the ~180-kilometer-wide impact crater)",
+    "historical_name": "Chicxulub Puerto, United Mexican States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-chicxulub"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean"
+  ],
+  "domains": [
+    "science_technology",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Identifying Chicxulub provided the decisive physical crater linking the Alvarez iridium anomaly to the extinction of the dinosaurs."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "same_place",
+      "because": "The 1991 study identified the exact impact site of the 66-million-year-old Chicxulub bolide."
+    },
+    {
+      "id": "1980-alvarez-impact-hypothesis",
+      "type": "caused_by",
+      "because": "The 1980 Alvarez hypothesis motivated the decade-long global search for the Cretaceous-Tertiary impact crater."
+    },
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa",
+      "url": "https://ntrs.nasa.gov/api/citations/19980211540/downloads/19980211540.pdf",
+      "title": "Chicxulub: A Large, Multi-Ring Impact Basin on the Yucatan Peninsula, Mexico",
+      "publisher": "NASA Technical Reports Server",
+      "author": "V. L. Sharpton, et al.",
+      "date_published": "1996",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-schmieder2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6987741/",
+      "title": "Earth's Impact Events Through Geologic Time: A List of Recommended Ages for Terrestrial Impact Structures and Deposits",
+      "publisher": "Mary Ann Liebert, Inc. / Astrobiology",
+      "author": "Martin Schmieder, David A. Kring",
+      "date_published": "2020-01-22",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-chicxulub",
+      "url": "https://www.geonames.org/search.html?q=Chicxulub&country=MX",
+      "title": "GeoNames search results: Chicxulub Puerto, Mexico",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The outline pins Chicxulub Puerto on the north coast of the Yucatán Peninsula, the surface village above the crater center identified by Hildebrand and Penfield from Pemex borehole data and gravity anomalies.",
+  "published_at": "2026-10-22T07:06:47.219Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1991",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1991, Alan Hildebrand, Glen Penfield, and colleagues published the identification of a massive, buried circular impact structure roughly 180 kilometers wide centered near Chicxulub Puerto on Mexico's…",
+        "source": "src-nasa"
+      },
+      {
+        "span": "1991",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "By linking Pemex geophysical surveys, impact melt rocks, shocked quartz, and Caribbean tsunami deposits, the team confirmed Chicxulub as the long-sought impact crater that caused the end-Cretaceous mass…",
+        "source": "src-nasa",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

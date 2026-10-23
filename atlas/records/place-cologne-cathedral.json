@@ -1,0 +1,221 @@
+{
+  "id": "place-cologne-cathedral",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Cologne Cathedral",
+  "aliases": [
+    "Kölner Dom"
+  ],
+  "summary": "Cologne Cathedral is a High Gothic cathedral in Cologne, Germany. Its foundation stone was laid on 15 August 1248, and after building in several stages it was completed in 1880, when its two towers made it the tallest structure in the world according to the cathedral's own history page.",
+  "when": {
+    "start": {
+      "year": 1248
+    },
+    "end": {
+      "year": 1880
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the foundation stone of 15 August 1248; end is the completion in 1880. The cathedral still stands."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (UNESCO)",
+        "value": "Begun in 1248",
+        "source": "src-unesco-292"
+      },
+      {
+        "calendar": "Gregorian (UNESCO)",
+        "value": "not completed until 1880",
+        "source": "src-unesco-292"
+      },
+      {
+        "calendar": "Gregorian (Hohe Domkirche Köln)",
+        "value": "1248 Grundsteinlegung zum gotischen Dom",
+        "source": "src-dom-geschichte"
+      },
+      {
+        "calendar": "Gregorian (Hohe Domkirche Köln)",
+        "value": "1880 Domvollendung",
+        "source": "src-dom-geschichte"
+      }
+    ],
+    "display": "Built 1248–1880"
+  },
+  "where": {
+    "lat": 50.94139,
+    "lon": 6.95833,
+    "elevation_m": null,
+    "modern_name": "Cologne Cathedral, Cologne, Germany",
+    "historical_name": "Hohe Domkirche St. Peter und Maria, Cologne, Holy Roman Empire to the German Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "UNESCO World Heritage property; completed in 1880 with towers over 157 m."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-unesco-292",
+      "url": "https://whc.unesco.org/en/list/292/",
+      "title": "Cologne Cathedral",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-dom-zahlen",
+      "url": "https://www.koelner-dom.de/erleben/der-dom-in-zahlen",
+      "title": "Der Dom in Zahlen",
+      "publisher": "Hohe Domkirche Köln",
+      "author": "Hohe Domkirche Köln",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "model"
+      ]
+    },
+    {
+      "id": "src-dom-geschichte",
+      "url": "https://www.koelner-dom.de/erleben/geschichte",
+      "title": "Geschichte",
+      "publisher": "Hohe Domkirche Köln",
+      "author": "Hohe Domkirche Köln",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q4176",
+      "title": "Wikidata Q4176: Cologne Cathedral (coordinate 50.94138888888889, 6.958333333333333)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Cruciform five-aisled cathedral, 144.58 m long and 86.25 m wide measured outside (cathedral website); UNESCO gives 144.5 m long with a transept 86.25 m wide.",
+      "source": "src-dom-zahlen",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "shape": "block",
+      "source": "src-dom-zahlen",
+      "measurements": [
+        {
+          "part": "height (central nave, interior)",
+          "value": 43.35,
+          "unit": "m",
+          "source": "src-dom-zahlen",
+          "note": "Cathedral site: Mittelschiffe Innenhöhe 43,35 m; UNESCO gives 43.58 m. The towers (157.22 m south, 157.18 m north) are not used because the plan is for the whole church."
+        },
+        {
+          "part": "length (outside)",
+          "value": 144.58,
+          "unit": "m",
+          "source": "src-dom-zahlen",
+          "note": "Cathedral site: Gesamtlänge Aussen 144,58"
+        },
+        {
+          "part": "width (outside, overall)",
+          "value": 86.25,
+          "unit": "m",
+          "source": "src-dom-zahlen",
+          "note": "Cathedral site: Gesamtbreite Aussen 86,25 m"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "block footprint at true length and width"
+      },
+      {
+        "level": "local",
+        "representation": "procedural cruciform block at nave height; towers not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1248,
+        "end_year": 1880,
+        "state": "construction",
+        "description": "Foundation stone laid 15 August 1248; built in stages until completion in 1880.",
+        "source": "src-dom-geschichte"
+      },
+      {
+        "start_year": 1880,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed in 1880; still standing.",
+        "source": "src-unesco-292"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape block: footprint and nave interior height describe the whole church body; tower height (157.22 m) is deliberately not used because the plan is not the tower. Nave height is an interior value (cathedral site 43.35 m, UNESCO 43.58 m). Cathedral-site pages are German; as_recorded strings are verbatim German headings.",
+  "author": "historian-agent:m-22",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T15:54:24.389Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

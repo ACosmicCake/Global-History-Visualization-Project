@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "scale": "civilization",
+  "confidence": "established",
+  "audience_note": null,
+  "domains": [
+    "built_world"
+  ],
+  "author": "historian-agent:m-15",
+  "updated": "2026-10-22",
+  "id": "place-kalyan-minaret-bukhara",
+  "title": "Kalyan minaret, Bukhara",
+  "summary": "The Kalyan minaret in Bukhara, Uzbekistan, is a round brick tower about 45.6 metres tall and 9 metres wide at its base, tapering to 6 metres at the top. Inscriptions give 1127 as the start and 1129 as the completion, under the Qarakhanid ruler Arslan Khan. ICOMOS lists it among the city's outstanding surviving monuments.",
+  "when": {
+    "start": {
+      "year": 1127
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The inscription gives 1127 for the start and 1129 for completion. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Art and Architecture of the Middle Ages)",
+        "value": "1127–29",
+        "source": "src-aama-kalan"
+      },
+      {
+        "calendar": "CE (Orexca)",
+        "value": "The inscription on the cornice announces the date of its construction, 1127",
+        "source": "src-orexca-minarets"
+      }
+    ],
+    "display": "Built 1127–1129; standing today"
+  },
+  "where": {
+    "lat": 39.7756846,
+    "lon": 64.4150094,
+    "elevation_m": null,
+    "modern_name": "Kalyan (Kalon) minaret, Po-i-Kalyan, Bukhara, Uzbekistan",
+    "historical_name": "Minaret of the Kalyan (Friday) mosque, Bukhara, Qarakhanid state",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-kalyan"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "importance": {
+    "score": 3,
+    "justification": "The centrepiece of the Poi-Kalyan ensemble in a UNESCO World Heritage city and a model of brick minaret design."
+  },
+  "related": [
+    {
+      "id": "place-bukhara-historic-centre",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-aama-kalan",
+      "url": "https://artofthemiddleages.com/s/main/item/1619",
+      "title": "Kalan Minaret (Art and Architecture of the Middle Ages: Exploring a Connected World)",
+      "publisher": "Art and Architecture of the Middle Ages (Caskey, Cohen, Safran)",
+      "author": "Art and Architecture of the Middle Ages (Caskey, Cohen, Safran)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-orexca-minarets",
+      "url": "https://orexca.com/uzbekistan/monuments/minarets.htm",
+      "title": "Minarets of Uzbekistan",
+      "publisher": "Orexca.com",
+      "author": "Orexca.com",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements"
+      ]
+    },
+    {
+      "id": "src-icomos-602",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/602.pdf",
+      "title": "Bukhara: ICOMOS advisory body evaluation, no. 602",
+      "publisher": "ICOMOS",
+      "author": "ICOMOS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "model.materials",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-kalyan",
+      "url": "https://nominatim.openstreetmap.org/search?q=Kalon+minaret+Bukhara&format=json",
+      "title": "OpenStreetMap Nominatim: Minorai kalon, way 544425748 (39.7756846, 64.4150094)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Round tower 9 m across at the base beside the Kalyan mosque in the Po-i-Kalyan ensemble; no survey polygon was opened.",
+      "source": "src-aama-kalan",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-aama-kalan",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 45.6,
+          "unit": "m",
+          "source": "src-aama-kalan",
+          "note": "\"It stands 45.6 meters tall\"; Orexca gives \"Total height of the minaret is 45.6m\""
+        },
+        {
+          "part": "base diameter",
+          "value": 9,
+          "unit": "m",
+          "source": "src-aama-kalan",
+          "note": "\"a 9-meter diameter base\""
+        },
+        {
+          "part": "top diameter",
+          "value": 6,
+          "unit": "m",
+          "source": "src-orexca-minarets",
+          "note": "\"tapering to 6m at the top\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "round tapering tower beside the Kalyan mosque"
+      },
+      {
+        "level": "local",
+        "representation": "procedural tapering shaft with a lantern, in the state for the date"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1127,
+        "end_year": 1129,
+        "state": "construction",
+        "description": "An inscription gives 1127 as the start of construction and 1129 as completion.",
+        "source": "src-aama-kalan"
+      },
+      {
+        "start_year": 1129,
+        "end_year": null,
+        "state": "intact",
+        "description": "ICOMOS names the Poi-Kalyan minaret among the surviving monuments of the city.",
+        "source": "src-icomos-602"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 1127,
+        "to_year": null,
+        "material": "brick",
+        "source": "src-icomos-602"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape tower. ICOMOS puts the Poi-Kalyan minaret in the 12th century (and the group in the 11th/12th); 1127-29 comes from the scholarly page and the Orexca page. Least sure of: the phases after 1129 (no damage events sourced) and the top diameter (Orexca, class other).",
+  "published_at": "2026-10-22T12:38:28.432Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

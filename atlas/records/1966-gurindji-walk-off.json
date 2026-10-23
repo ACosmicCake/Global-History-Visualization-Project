@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1966-gurindji-walk-off",
+  "kind": "event",
+  "title": "Gurindji Walk-Off",
+  "summary": "On 23 August 1966 about 200 Gurindji stockmen, domestic workers and their families, led by Vincent Lingiari, went on strike at Wave Hill station in the Northern Territory, then owned by Vestey Brothers. The dispute lasted nine years and ended with a portion of their land being returned in 1975.",
+  "when": {
+    "start": {
+      "year": 1966
+    },
+    "end": {
+      "year": 1975
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Walk-off on 23 August 1966; the wider dispute ran about nine years to the 1975 land handover."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "23 August 1966",
+        "source": "src-nma"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "23 August 1966",
+        "source": "src-indig"
+      }
+    ],
+    "display": "23 August 1966 (dispute to 1975)"
+  },
+  "where": {
+    "lat": -17.447599,
+    "lon": 130.834442,
+    "elevation_m": null,
+    "modern_name": "Kalkarindji (Wave Hill), Northern Territory, Australia",
+    "historical_name": "Wave Hill station, Northern Territory, Australia (Commonwealth of Australia)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-exploroz"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "people"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A strike that NMA links to the start of Australia's First Nations land rights movement and to the 1975 return of land."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nma",
+      "url": "https://www.nma.gov.au/defining-moments/resources/wave-hill-walk-off",
+      "title": "Wave Hill Walk-Off",
+      "publisher": "National Museum of Australia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-indig",
+      "url": "https://www.indigenous.gov.au/stories/legacy-wave-hill-walk",
+      "title": "Legacy of the Wave Hill walk-off",
+      "publisher": "indigenous.gov.au (Australian Government)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-exploroz",
+      "url": "https://www.exploroz.com/places/107636/nt+kalkarindji-wave-hill",
+      "title": "Kalkarindji (Wave Hill), NT",
+      "publisher": "ExplorOz",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Kalkarindji (Wave Hill) locality, a proxy for the station; homestead not separately sourced. Source title for indigenous.gov.au page is approximate.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:26.315Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1966",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 23 August 1966 about 200 Gurindji stockmen, domestic workers and their families, led by Vincent Lingiari, went on strike at Wave Hill station in the Northern Territory…",
+        "source": "src-nma"
+      },
+      {
+        "span": "1975",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The dispute lasted nine years and ended with a portion of their land being returned in 1975.",
+        "source": "src-nma",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

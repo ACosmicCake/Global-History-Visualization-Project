@@ -1,0 +1,230 @@
+{
+  "id": "-1000-incense-route",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Incense Route",
+  "summary": "A caravan network carried frankincense and myrrh from southern Arabia to the Mediterranean, passing Petra and ending at ports such as Gaza. Nabataean traders ran it from the 3rd century BC to the 2nd century AD over roughly 1,800 to 2,000 km, and the trade brought wealth to desert towns, including four in the Negev.",
+  "when": {
+    "start": {
+      "year": -299
+    },
+    "end": {
+      "year": 200
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "Dates are those of the Nabataean trade in the Negev nomination (3rd century BC to 2nd century AD). Livius reports frankincense use and dromedary caravans from earlier centuries, so the wider route is older than this span."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC/AD, centuries",
+        "value": "From the 3rd century BC until 2nd century AD, the Nabateans transported frankincense and myrrh across the desert from Arabia to the Mediterranean coast, a distance of some 1,800 km",
+        "source": "src-israel-nom"
+      }
+    ],
+    "display": "3rd century BCE to 2nd century CE"
+  },
+  "where": {
+    "lat": 30.3220755,
+    "lon": 35.4515251,
+    "elevation_m": null,
+    "modern_name": "Petra, Jordan (central station; the route runs from Shabwa, Yemen to Gaza)",
+    "historical_name": "Nabataean Petra, a station between south Arabia and the Mediterranean ports; Shabwa was capital of Hadramaut",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 15.368888888889,
+          "lon": 47.023611111111,
+          "date": "Undated stage of the route (Livius)",
+          "label": "Shabwa, capital of Hadramaut: Pliny counts sixty-five stations between Shabwa and Gaza.",
+          "source": "src-livius-inc",
+          "coordinate_source": "src-wd-shabwa"
+        },
+        {
+          "lat": 17.4917,
+          "lon": 44.1322,
+          "date": "Undated stage of the route (Livius)",
+          "label": "Najran: caravans went to the oasis of Najran after the capitals of Qataban and Saba.",
+          "source": "src-livius-inc",
+          "coordinate_source": "src-wd-najran"
+        },
+        {
+          "lat": 30.3220755,
+          "lon": 35.4515251,
+          "date": "Undated stage of the route (Livius)",
+          "label": "Petra, capital of the Nabataeans, about 500 km north of the Hegra and Dedan stages. Point is Al-Khazneh, Petra.",
+          "source": "src-livius-inc",
+          "coordinate_source": "src-osm-khazneh"
+        },
+        {
+          "lat": 31.5075,
+          "lon": 34.459722222222,
+          "date": "3rd century BC to 2nd century AD (Israel nomination)",
+          "label": "Gaza: Mediterranean end of the route; ports named by Livius include Gaza.",
+          "source": "src-israel-nom",
+          "coordinate_source": "src-wd-gaza"
+        }
+      ]
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-osm-khazneh",
+      "src-wd-shabwa",
+      "src-wd-najran",
+      "src-wd-gaza"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Long-distance caravan network that supplied the Hellenistic-Roman world with frankincense and enriched the desert towns along it."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-petra",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-israel-nom",
+      "url": "https://meyda.education.gov.il/files/unesco/1107rev.pdf",
+      "title": "The Incense Route - Desert Cities in the Negev (World Heritage nomination dossier)",
+      "publisher": "Ministry of Education, State of Israel",
+      "author": "Ministry of Education, State of Israel",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-livius-inc",
+      "url": "https://www.livius.org/articles/place/incense-route/",
+      "title": "Incense Route",
+      "publisher": "Livius.org",
+      "author": "Livius.org",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-shabwa",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2005211.json",
+      "title": "Wikidata entry for Shabwa (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-najran",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q27174.json",
+      "title": "Wikidata entry for Najran (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-gaza",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q47492.json",
+      "title": "Wikidata entry for Gaza City (coordinates)",
+      "publisher": "Wikidata",
+      "author": "Wikidata",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-khazneh",
+      "url": "https://nominatim.openstreetmap.org/search?q=Al-Khazneh+Petra&format=json",
+      "title": "OpenStreetMap Nominatim result for Al-Khazneh, Petra (coordinates)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "3rd century BC",
+        "action": "path.trace {}",
+        "caption": "Frankincense and myrrh from Oman, Yemen and Somalia travel north by caravan through Shabwa and Najran toward Petra and Gaza.",
+        "source": "src-livius-inc",
+        "consequence": false
+      },
+      {
+        "span": "3rd century BC to 2nd century AD",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "Nabataean carriers move the resins some 1,800 km to the Mediterranean, and Negev towns live off the trade for five centuries.",
+        "source": "src-israel-nom",
+        "consequence": false
+      },
+      {
+        "span": "2nd century AD",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Roman occupation of Petra ends Nabataean control, and the frankincense trade shifts to routes more profitable for the Romans.",
+        "source": "src-israel-nom",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure: route waypoints are undated stages from Livius (Pliny), not dated visits; Timna, Marib, Hegra and Dedan are omitted. Id year -1000 comes from the queue; the sourced span is 3rd century BC to 2nd century AD. UNESCO pages were blocked, so the Israeli nomination dossier (which reproduces the ICOMOS text) is the main source.",
+  "author": "historian-agent:o-s55",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:13:34.095Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

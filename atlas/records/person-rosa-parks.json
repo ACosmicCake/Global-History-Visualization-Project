@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s77",
+  "updated": "2026-10-22",
+  "id": "person-rosa-parks",
+  "kind": "person",
+  "title": "Rosa Parks",
+  "summary": "Born in Tuskegee, Alabama, in 1913, she grew up in Montgomery and joined its NAACP chapter in 1943. Arrested there on 1 December 1955 for refusing to give up her bus seat to a white passenger, she became the spark for the Montgomery bus boycott, a 13-month protest led by Martin Luther King Jr. that helped end bus segregation. She later moved to Detroit and died in 2005 aged 92.",
+  "when": {
+    "start": {
+      "year": 1913
+    },
+    "end": {
+      "year": 2005
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth day and arrest day are stated by the sources; death given only as month and year."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "4 February 1913",
+        "source": "src-king-parks"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1 December 1955",
+        "source": "src-king-parks"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "December 1, 1955",
+        "source": "src-history-parks"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "October 2005",
+        "source": "src-king-parks"
+      }
+    ],
+    "display": "1913–2005"
+  },
+  "where": {
+    "lat": 32.3777111,
+    "lon": -86.3090775,
+    "elevation_m": null,
+    "modern_name": "Montgomery, Alabama, USA (pinned to the city where she grew up, was arrested on 1 December 1955 and helped organise the boycott; city centroid)",
+    "historical_name": "Montgomery, Alabama, USA (city bus segregation by municipal ordinance in 1955)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-osm-montgomery"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "people",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Her December 1955 arrest touched off the Montgomery bus boycott, a landmark of the US civil rights movement."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1954-civil-rights-movement",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-king-parks",
+      "url": "https://kinginstitute.stanford.edu/parks-rosa",
+      "title": "Parks, Rosa",
+      "publisher": "Martin Luther King, Jr. Research and Education Institute, Stanford University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-history-parks",
+      "url": "https://www.history.com/this-day-in-history/december-1/rosa-parks-ignites-bus-boycot",
+      "title": "Rosa Parks ignites bus boycott",
+      "publisher": "HISTORY (A+E Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-montgomery",
+      "url": "https://nominatim.openstreetmap.org/search?q=Montgomery+Alabama&format=json&limit=2",
+      "title": "OpenStreetMap Nominatim result for Montgomery, Alabama",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "History.com says local leaders had been planning a challenge to the bus laws for months and that Parks was privy to the discussion; this is not in the summary. Death day is not given by the opened pages. Link to the civil rights movement record is thematic (part_of).",
+  "published_at": "2026-10-22T15:10:31.683Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

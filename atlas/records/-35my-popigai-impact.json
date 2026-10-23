@@ -1,0 +1,163 @@
+{
+  "id": "-35my-popigai-impact",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-10-22",
+  "kind": "event",
+  "title": "Popigai impact",
+  "summary": "Approximately 36 to 35 million years ago during the Late Eocene, an asteroid roughly five to eight kilometers wide slammed into graphite-rich bedrock in northern Siberia. The hypervelocity collision created a crater approximately one hundred kilometers in diameter, tying as the fourth-largest verified impact structure on Earth. Intense shock compression instantly converted subterranean graphite into enormous deposits of polycrystalline impact diamonds, producing trillions of carats of ultra-hard industrial stones.",
+  "when": {
+    "start": {
+      "year": -35700000
+    },
+    "end": {
+      "year": -35700000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 500000,
+      "start_plus_years": 500000,
+      "end_minus_years": 500000,
+      "end_plus_years": 500000,
+      "note": "Radioisotopic dating of impact melt rock (tagamite) dates the collision to approximately 35.7 ± 0.2 Ma in the Late Eocene, commonly reported as 35 to 36 million years ago (NASA; Ohfuji et al. 2015)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years ago",
+        "value": "About 36 million years ago, an asteroid slammed into northern Siberia",
+        "source": "src-nasa-popigai"
+      },
+      {
+        "calendar": "Ma",
+        "value": "large meteoritic impact about 35 Ma ago in Russia",
+        "source": "src-ohfuji2015-pmc"
+      }
+    ],
+    "display": "c. 36–35 million years ago (Late Eocene)"
+  },
+  "where": {
+    "lat": 71.65,
+    "lon": 111.1833,
+    "elevation_m": 100,
+    "modern_name": "Popigai crater, Siberia, Russia",
+    "historical_name": "Anabar Shield, northern Siberia, Late Eocene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata-popigai"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "One of Earth's largest impact craters (~100 km across), producing the world's largest known deposit of impact diamonds."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related"
+    },
+    {
+      "id": "-2023my-vredefort-impact",
+      "type": "related"
+    },
+    {
+      "id": "-25my-formation-of-lake-baikal",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nasa-popigai",
+      "url": "https://science.nasa.gov/earth/earth-observatory/russias-crater-of-diamonds-148403/",
+      "title": "Russia’s Crater of Diamonds",
+      "publisher": "NASA Earth Observatory",
+      "author": "NASA Earth Observatory",
+      "date_published": "2021-06-07",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ohfuji2015-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4589680/",
+      "title": "Natural occurrence of pure nano-polycrystalline diamond from impact crater",
+      "publisher": "Scientific Reports (Springer Nature, via PubMed Central)",
+      "author": "Hiroaki Ohfuji, Tetsuo Irifune, Konstantin D. Litasov, et al.",
+      "date_published": "2015-10-01",
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-popigai",
+      "url": "https://www.wikidata.org/wiki/Q594483",
+      "title": "Popigai crater (Wikidata Q594483)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the impact's contribution to the late Eocene biotic turnover and subsequent Eocene–Oligocene transition global cooling, as multiple impacts occurred within a 2-million-year window.",
+  "published_at": "2026-10-22T14:01:41.005Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-35700000",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Approximately 36 to 35 million years ago during the Late Eocene, an asteroid roughly five to eight kilometers wide slammed into graphite-rich bedrock in northern Siberia.",
+        "source": "src-nasa-popigai"
+      },
+      {
+        "span": "-35700000",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "The hypervelocity collision created a crater approximately one hundred kilometers in diameter, tying as the fourth-largest verified impact structure on Earth.",
+        "source": "src-nasa-popigai",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

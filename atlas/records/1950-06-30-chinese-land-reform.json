@@ -1,0 +1,159 @@
+{
+  "id": "1950-06-30-chinese-land-reform",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Land reform in the People's Republic of China, 1950-1953",
+  "summary": "On 30 June 1950 the Central People's Government promulgated an Agrarian Reform Law ending landlord ownership and redistributing land to peasants. Nationwide land reform ran until spring 1953 and involved mass struggle meetings and executions of landlords; sourced estimates of those executed run from about one million to about two million, with no exact count.",
+  "when": {
+    "start": {
+      "year": 1950,
+      "iso": "1950-06-30"
+    },
+    "end": {
+      "year": 1953
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The start is the law's promulgation date; the campaign had been run in earlier-liberated areas before 1950 and finished at different times by region (spring 1953 per Chineseposters.net)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Land Reform Law was promulgated on 30 June 1950",
+        "source": "src-posters"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Nationwide agicultural reforms took place from 1950 until the spring of 1953",
+        "source": "src-posters"
+      }
+    ],
+    "display": "30 June 1950 to spring 1953"
+  },
+  "where": {
+    "lat": 39.90403,
+    "lon": 116.407526,
+    "elevation_m": null,
+    "modern_name": "Beijing (seat of the Central People's Government that promulgated the law; the campaign covered mainland China)",
+    "historical_name": "Beijing, People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd-beijing"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Redistributed land to hundreds of millions of peasants and broke the landlord class in the early People's Republic, at the cost of mass violence."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes mass political violence, including public trials and executions of landlords. Death figures are contested estimates, not counts.",
+  "related": [
+    {
+      "id": "1949-chinese-communist-revolution",
+      "type": "caused_by",
+      "because": "Communist victory in 1949 made land reform national policy across mainland China."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-posters",
+      "url": "https://chineseposters.net/themes/land-reform",
+      "title": "Land Reform and Collectivization (1950-1953)",
+      "publisher": "Chineseposters.net (Landsberger collection)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-columbia",
+      "url": "https://afe.easia.columbia.edu/special/china_1950_prc_timeline.htm",
+      "title": "A Chronology of the PRC under Mao Zedong (1949-1976)",
+      "publisher": "Asia for Educators, Columbia University",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-beijing",
+      "url": "https://www.wikidata.org/wiki/Q956",
+      "title": "Wikidata item Q956 (Beijing), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the death toll: Chineseposters.net says about one million landlords executed and the Columbia chronology says roughly two million; neither cites a count and other scholars give different totals. The Columbia page does not mention the Agrarian Reform Law. Coordinates pin the lawmaking seat, not the whole campaign.",
+  "author": "historian-agent:o-s8",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1950-06-30",
+        "action": "pulse { radius_km: 40 }",
+        "caption": "The Central People's Government promulgated the Agrarian Reform Law on 30 June 1950, ending landlord ownership of land.",
+        "source": "src-posters"
+      },
+      {
+        "span": "1950",
+        "action": "region.fill { radius_km: 1500 }",
+        "caption": "Land reform spread across mainland villages until spring 1953, with some places enforcing the law with more force than it called for.",
+        "source": "src-posters"
+      },
+      {
+        "span": "1952",
+        "action": "numbers.counter { range: [1000000, 2000000] }",
+        "caption": "Estimates of landlords executed range from about one million to about two million; no exact count exists.",
+        "source": "src-columbia",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:36:03.025Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

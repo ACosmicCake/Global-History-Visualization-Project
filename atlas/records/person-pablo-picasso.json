@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:o-s44",
+  "updated": "2026-10-22",
+  "id": "person-pablo-picasso",
+  "kind": "person",
+  "title": "Pablo Picasso",
+  "summary": "Pablo Picasso, born in Málaga on 25 October 1881, moved to France permanently in 1904 and lived in the Bateau-Lavoir studio in Montmartre, Paris. He developed Cubism with Georges Braque and painted Guernica in the Grands Augustins studio. He died in Mougins on 8 April 1973.",
+  "when": {
+    "start": {
+      "year": 1881
+    },
+    "end": {
+      "year": 1973
+    },
+    "precision": "year",
+    "uncertainty": {
+      "note": "See as_recorded."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Born October 25, 1881, in Málaga, Spain",
+        "source": "src-artstory-picasso"
+      },
+      {
+        "calendar": "CE",
+        "value": "Died April 8, 1973, in Mougins",
+        "source": "src-artstory-picasso"
+      },
+      {
+        "calendar": "CE",
+        "value": "born in 1881 in Málaga, Spain, and died in 1973 in Mougins",
+        "source": "src-pompidou-picasso"
+      }
+    ],
+    "display": "1881–1973"
+  },
+  "where": {
+    "lat": 48.85341,
+    "lon": 2.3488,
+    "elevation_m": null,
+    "modern_name": "Paris, France (pin: Paris, where he settled in 1904 and painted Guernica)",
+    "historical_name": "Paris, France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-paris"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "art_music_literature",
+    "people"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 4,
+    "justification": "Co-developer of Cubism according to a national modern-art museum."
+  },
+  "confidence": "established",
+  "sources": [
+    {
+      "id": "src-pompidou-picasso",
+      "url": "https://www.centrepompidou.fr/en/ressources/personne/co4g6A",
+      "title": "Pablo Picasso",
+      "publisher": "Centre Pompidou",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-artstory-picasso",
+      "url": "https://www.theartstory.org/artist/picasso-pablo/",
+      "title": "Pablo Picasso Biography",
+      "publisher": "The Art Story",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-paris",
+      "url": "https://www.geonames.org/2988507/paris.html",
+      "title": "GeoNames: Paris",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is Paris (city centre) as the place of the Bateau-Lavoir and Grands Augustins studios named by the Centre Pompidou. He also worked in Barcelona, Vallauris and the south of France.",
+  "published_at": "2026-10-22T10:16:07.117Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

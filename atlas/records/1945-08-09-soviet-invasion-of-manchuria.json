@@ -1,0 +1,169 @@
+{
+  "id": "1945-08-09-soviet-invasion-of-manchuria",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Soviet invasion of Manchuria (August Storm)",
+  "summary": "The day after declaring war on Japan on 8 August 1945, about 1.5 million Soviet troops under Marshal Vasilevsky invaded Japanese-held Manchuria. The Kwantung Army collapsed, and an estimated 1.6 to 1.7 million Japanese troops surrendered in the following weeks; Soviet forces also landed on Sakhalin, in northern Korea and in the Kurils.",
+  "when": {
+    "start": {
+      "year": 1945,
+      "iso": "1945-08-09"
+    },
+    "end": {
+      "year": 1945,
+      "iso": "1945-08-09"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "The offensive began on 9 August 1945 and fighting and surrenders continued for weeks; no opened page gave a firm end date. Force sizes and prisoner counts are estimates (the National WWII Museum gives about 1.5 million Soviet troops and 1.6-1.7 million Japanese surrendering)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "the lightning advance of the Red Army launched on August 9",
+        "source": "src-nww2"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "began the day after the Soviet declaration of war",
+        "source": "src-csis"
+      }
+    ],
+    "display": "9 August 1945"
+  },
+  "where": {
+    "lat": 43.88,
+    "lon": 125.3228,
+    "elevation_m": null,
+    "modern_name": "Manchuria (Northeast China), pin at Changchun",
+    "historical_name": "Manchuria, held by Japan's Kwantung Army",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-cc"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The offensive destroyed Japan's main continental army, shaped the Japanese surrender, and set the stage for the division of Korea."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a large military campaign; sources also report mass rape and pillage against civilians in occupied areas.",
+  "related": [
+    {
+      "id": "1945-08-06-hiroshima-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-09-nagasaki-bombing",
+      "type": "related"
+    },
+    {
+      "id": "1945-08-15-jewel-voice-broadcast",
+      "type": "related"
+    },
+    {
+      "id": "1949-chinese-communist-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nww2",
+      "url": "https://www.nationalww2museum.org/war/articles/japanese-pows-in-soviet-captivity",
+      "title": "The Fate of Japanese POWs in Soviet Captivity",
+      "publisher": "The National WWII Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-csis",
+      "url": "https://www.trumanlibrary.gov/public/Manchuria_DocumentSet.pdf",
+      "title": "The Legacy of the Soviet Offensives of August 1945 (Jeff Mankoff, CSIS), in Truman Library document set on the invasion of Manchuria",
+      "publisher": "Harry S. Truman Presidential Library (reproducing CSIS)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-cc",
+      "url": "https://www.wikidata.org/wiki/Q92161",
+      "title": "Wikidata item Q92161 (Changchun), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin (a regional centre, not a battle site) and the troop figures. No sourced dated waypoints, so no path animation.",
+  "author": "historian-agent:o-s20",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1945-08-08",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The Soviet Union declared war on Japan, honoring its Yalta pledge to enter the war three months after Germany's surrender.",
+        "source": "src-nww2"
+      },
+      {
+        "span": "1945-08-09",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "About 1.5 million Soviet troops under Vasilevsky invaded Manchuria the next day.",
+        "source": "src-nww2"
+      },
+      {
+        "span": "1945-08",
+        "action": "numbers.counter { range: [1600000, 1700000] }",
+        "caption": "Roughly 1.6 to 1.7 million Japanese troops surrendered in the weeks after the invasion began.",
+        "source": "src-nww2",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T06:40:50.533Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1839-first-opium-war",
+  "kind": "event",
+  "title": "First Opium War",
+  "summary": "The First Opium War (1839-1842) was fought between Britain and Qing China after Commissioner Lin Zexu, sent to Canton in 1838, moved to end the opium traffic. British naval forces defeated Chinese forces, and in August 1842, with Nanjing about to be shelled, China signed a treaty with Britain, the first of the unequal treaties.",
+  "when": {
+    "start": {
+      "year": 1839
+    },
+    "end": {
+      "year": 1842
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Treaty of Nanjing is dated August 1842 in the Columbia source."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "the First Opium War between Great Britain and China, from 1839 to 1842",
+        "source": "src-history-state-opium"
+      },
+      {
+        "calendar": "CE",
+        "value": "The Treaty of Nanjing, August 1842",
+        "source": "src-afe-opium"
+      }
+    ],
+    "display": "1839–1842"
+  },
+  "where": {
+    "lat": 23.13,
+    "lon": 113.26,
+    "elevation_m": null,
+    "modern_name": "Guangzhou, Guangdong, China",
+    "historical_name": "Canton (Guangzhou), Qing China, where Lin Zexu was sent in 1838",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-guangzhou"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "trade_exploration",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Began the era of unequal treaties between China and Western powers and reshaped China's relations with the world."
+  },
+  "confidence": "established",
+  "audience_note": "Describes a colonial war fought over the opium trade and the harm of addiction.",
+  "related": [
+    {
+      "id": "1868-meiji-restoration",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-afe-opium",
+      "url": "https://afe.easia.columbia.edu/special/china_1750_opium.htm",
+      "title": "The Opium War and Foreign Encroachment",
+      "publisher": "Asia for Educators, Columbia University",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-history-state-opium",
+      "url": "https://history.state.gov/milestones/1830-1860/china-1",
+      "title": "The Opening to China Part I: the First Opium War, the United States, and the Treaty of Wangxia, 1839-1844",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-guangzhou",
+      "url": "https://www.wikidata.org/wiki/Q16572",
+      "title": "Guangzhou (Wikidata Q16572)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 26,
+    "beats": [
+      {
+        "span": "1838",
+        "action": "pulse { radius_km: 20 }",
+        "caption": "In 1838 the emperor sent Lin Zexu to Canton to end the opium traffic; his seizure of foreign stores eventually brought war.",
+        "source": "src-afe-opium"
+      },
+      {
+        "span": "1842",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "By summer 1842 British ships were preparing to shell Nanjing, and China signed the Treaty of Nanjing, the first unequal treaty.",
+        "source": "src-afe-opium"
+      },
+      {
+        "span": "1844",
+        "action": "region.fill { radius_km: 100 }",
+        "caption": "The United States signed a similar treaty, Wangxia, in 1844, which opened five treaty ports to Western trade.",
+        "source": "src-history-state-opium",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the exact outbreak date: the pages give only the years 1839-1842. The Columbia page says France and the US signed similar treaties in 1843, while the Office of the Historian dates the US treaty to 1844; I used 1844.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "author": "historian-agent:o-s36",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T09:32:43.939Z"
+}

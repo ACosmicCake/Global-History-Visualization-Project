@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1768-cook-endeavour-voyage",
+  "kind": "event",
+  "title": "Cook's Endeavour voyage",
+  "summary": "James Cook sailed HMS Endeavour from Plymouth on 25 August 1768 to observe the transit of Venus at Tahiti and, under secret Admiralty instructions, to search for a southern continent. After the transit he spent about six months charting New Zealand, then ran a survey of the east coast of Australia, including Botany Bay, before the ship returned to England in 1771.",
+  "when": {
+    "start": {
+      "year": 1768,
+      "iso": "1768-08-25"
+    },
+    "end": {
+      "year": 1771
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Departure 25 August 1768 (British Empire site; Ruderman Rare Maps). Return: the British Empire site says the Downs on 12 June 1771 while Ruderman Rare Maps says July 1771, so only the year is used."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The Endeavour sailed from Plymouth on 25 August 1768",
+        "source": "src-brit-empire"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Cook and his crew sailed from Plymouth on August 25, 1768",
+        "source": "src-raremaps"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "anchored in Matavai Bay on the north coast of Tahiti on 13 April 1769",
+        "source": "src-brit-empire"
+      }
+    ],
+    "display": "25 August 1768 - 1771"
+  },
+  "where": {
+    "lat": 50.371389,
+    "lon": -4.142222,
+    "elevation_m": null,
+    "modern_name": "Plymouth, Devon, England (departure) via Tahiti, New Zealand and Botany Bay, Australia",
+    "historical_name": "Plymouth, Kingdom of Great Britain",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 50.371389,
+          "lon": -4.142222,
+          "year": 1768.648,
+          "date": "25 August 1768",
+          "label": "Plymouth: Endeavour sails.",
+          "source": "src-brit-empire",
+          "coordinate_source": "src-wd-plymouth"
+        },
+        {
+          "lat": -17.5,
+          "lon": -149.5,
+          "year": 1769.279,
+          "date": "13 April 1769",
+          "label": "Matavai Bay, Tahiti: anchorage; the transit of Venus is observed on 3 June.",
+          "source": "src-brit-empire",
+          "coordinate_source": "src-wd-matavai"
+        },
+        {
+          "lat": -38.6753,
+          "lon": 178.0255,
+          "year": 1769.77,
+          "date": "about 9 October 1769 (New Zealand sighted 7 October, landing two days later)",
+          "label": "Tūranganui-a-Kīwa / Poverty Bay: first landing in New Zealand at Puhi Kai Iti; nine Māori die in encounters.",
+          "source": "src-doc",
+          "coordinate_source": "src-wd-puhi"
+        },
+        {
+          "lat": -33.983333,
+          "lon": 151.183333,
+          "year": 1770.29,
+          "date": "April 1770",
+          "label": "Botany Bay: landing on the east coast of Australia after sighting the coast on 19 April.",
+          "source": "src-raremaps",
+          "coordinate_source": "src-wd-botany"
+        }
+      ]
+    },
+    "uncertainty_km": 20,
+    "coordinate_sources": [
+      "src-wd-plymouth",
+      "src-wd-matavai",
+      "src-wd-puhi",
+      "src-wd-botany"
+    ]
+  },
+  "regions": [
+    "oceania",
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "The first of Cook's Pacific voyages: it charted New Zealand and the east coast of Australia and ended in British claims over that coast."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1642-tasman-voyage",
+      "type": "related"
+    },
+    {
+      "id": "1769-tupaia-chart",
+      "type": "related"
+    },
+    {
+      "id": "1788-first-fleet-arrival-at-sydney",
+      "type": "caused",
+      "because": "Cook's survey and claim over the east coast of Australia preceded the First Fleet's settlement there."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-brit-empire",
+      "url": "https://britishempire.co.uk/article/plymouth/jamescook.htm",
+      "title": "Empire in Your Backyard: Imperial Plymouth - Captain James Cook",
+      "publisher": "britishempire.co.uk",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-raremaps",
+      "url": "https://raremaps.com/essay/73/cooks-first-voyage-1768-1771",
+      "title": "Cook's first voyage (1768-1771)",
+      "publisher": "Ruderman Rare Maps",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-doc",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/east-coast/places/gisborne-area/puhi-kai-iti-cook-landing-national-reserve/",
+      "title": "Puhi Kai Iti/Cook Landing National Historic Reserve",
+      "publisher": "New Zealand Department of Conservation",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nla",
+      "url": "https://researchdata.edu.au/journal-hms-endeavour-1768-1771/3000271",
+      "title": "Journal of the H.M.S. Endeavour, 1768-1771",
+      "publisher": "National Library of Australia (via Research Data Australia)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-plymouth",
+      "url": "https://www.wikidata.org/wiki/Q43382",
+      "title": "Wikidata: Plymouth (Devon)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-matavai",
+      "url": "https://www.wikidata.org/wiki/Q803710",
+      "title": "Wikidata: Matavai Bay",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-puhi",
+      "url": "https://www.wikidata.org/wiki/Q77504390",
+      "title": "Wikidata: Cook Monument, Gisborne",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-botany",
+      "url": "https://www.wikidata.org/wiki/Q894682",
+      "title": "Wikidata: Botany Bay (Sydney)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates disagree across sources: New Zealand was sighted on 6 October (British Empire site) or 7 October (DOC); the return date is 12 June (British Empire) or July 1771 (Ruderman), so no return waypoint is drawn. Botany Bay has no day-level date on opened pages (the National Library of Australia gives 19 April 1770 for the first sighting of the coast). Endeavour River repairs and Batavia are described in the sources without dates and have no waypoints. The Poverty Bay stop describes the deaths of nine Māori at the landing (DOC); the Aboriginal people at Botany Bay are not described on opened pages.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 36,
+    "beats": [
+      {
+        "span": "1768-08-25",
+        "action": "pulse { radius_km: 60 }",
+        "caption": "Endeavour sails from Plymouth to observe the transit of Venus at Tahiti, with secret orders to look for a southern continent.",
+        "source": "src-brit-empire",
+        "consequence": false
+      },
+      {
+        "span": "1769",
+        "action": "path.trace {}",
+        "caption": "After the transit, Cook spends about six months charting New Zealand, landing first at Tūranganui-a-Kīwa in October 1769.",
+        "source": "src-doc",
+        "consequence": false
+      },
+      {
+        "span": "1770",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "Cook surveys Australia's unmapped east coast, landing at Botany Bay and later claiming the coast for King George III as New South Wales.",
+        "source": "src-brit-empire",
+        "consequence": true
+      }
+    ]
+  },
+  "author": "historian-agent:o-s59",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:39:20.842Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

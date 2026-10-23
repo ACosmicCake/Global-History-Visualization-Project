@@ -1,0 +1,132 @@
+{
+  "id": "1995-great-hanshin-earthquake",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Great Hanshin Earthquake",
+  "summary": "A large earthquake struck the Ōsaka-Kōbe (Hanshin) area of western Japan, among the country's strongest, deadliest and costliest. Estimated deaths were 6,400, with 40,000 injured and over 300,000 homeless. It exposed weak infrastructure and poor disaster preparedness, leading to reinforced structures and revised national response policies.",
+  "when": {
+    "start": {
+      "year": 1995
+    },
+    "end": {
+      "year": 1995
+    },
+    "precision": "day",
+    "display": "17 January 1995",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Jan. 17, 1995",
+        "source": "src-ref2"
+      },
+      {
+        "calendar": "as written",
+        "value": "5:46 am on Tuesday, Jan. 17, 1995",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 34.59833,
+    "lon": 135.03472,
+    "elevation_m": null,
+    "modern_name": "Kōbe and Ōsaka (Hanshin) area, Hyōgo prefecture, Japan; northern Awaji Island epicentre",
+    "historical_name": "Kōbe and Ōsaka (Hanshin) area, Hyōgo prefecture, Japan; northern Awaji Island epicentre",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "One of Japan's deadliest modern earthquakes, prompting national disaster policy revisions."
+  },
+  "confidence": "established",
+  "audience_note": "Mass death and destruction from a natural disaster.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://www.isc.ac.uk/cgi-bin/FormatBibprint.pl?evid=124708",
+      "title": "Search the Event Bibliography",
+      "publisher": "isc.ac.uk",
+      "accessed": "2026-10-23",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20251121211050/https://www.britannica.com/event/Kobe-earthquake-of-1995",
+      "title": "Kōbe earthquake of 1995 | Japan, Response, Casualties & Aftermath | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q214866",
+      "title": "Wikidata Q214866 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The ISC lists origin time as 1995-01-16 20:46:53 (UTC), which corresponds to 17 January local time per Britannica's 5:46 am. Britannica gives magnitude 6.9 (7.3 on the Richter scale); ISC gives Mw 6.9. The ISC source is only a bibliography listing and adds little. (Drafted by the Wikipedia pipeline from isc.ac.uk, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T03:09:30.091Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1995",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "A large earthquake struck the Ōsaka-Kōbe (Hanshin) area of western Japan, among the country's strongest, deadliest and costliest.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1995",
+        "action": "pulse { radius_km: 80 }",
+        "caption": "It exposed weak infrastructure and poor disaster preparedness, leading to reinforced structures and revised national response policies.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

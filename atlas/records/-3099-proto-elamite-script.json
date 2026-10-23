@@ -1,0 +1,153 @@
+{
+  "id": "-3099-proto-elamite-script",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Proto-Elamite script at Susa",
+  "summary": "The proto-Elamite script, used for accounting, appeared in Iran around 3100 BCE. Over 1,400 tablets and fragments come from Susa, with smaller groups from other Iranian sites. Entries use decimal number signs and logograms; the language behind them is unknown and the script remains undeciphered.",
+  "when": {
+    "start": {
+      "year": -3099
+    },
+    "end": {
+      "year": -2899
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Oxford gives ca 3100-2900 BC from archaeological dating; Penn Museum dates the economic texts 2900-2600 BC mainly from seal impressions. Range follows the Oxford dating."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BC",
+        "value": "ca 3100-2900 BC",
+        "source": "src-dahl"
+      },
+      {
+        "calendar": "BC",
+        "value": "2900-2600 B.C.",
+        "source": "src-penn-pe"
+      }
+    ],
+    "display": "c. 3100–2900 BCE (Penn Museum: 2900–2600 BCE)"
+  },
+  "where": {
+    "lat": 32.194167,
+    "lon": 48.243611,
+    "elevation_m": null,
+    "modern_name": "Susa (Shush), Khuzestan, Iran",
+    "historical_name": "Susa, in Susiana, southwestern Iran (Late Susa / proto-Elamite period); no named polity",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-wd-susa"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "One of the earliest known writing systems, distinct from but contemporary with proto-cuneiform."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3300-invention-of-writing",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dahl",
+      "url": "https://ora.ox.ac.uk/objects/uuid:51adb1c2-61de-438c-9b29-125addf3d2a1/files/r6w924c626",
+      "title": "Proto-Elamite and Linear Elamite, a Misunderstood Relationship?",
+      "publisher": "University of Oxford (ORA)",
+      "author": "Jacob L. Dahl",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-penn-pe",
+      "url": "https://www.penn.museum/sites/expedition/a-proto-elamite-account-tablet-from-susa/",
+      "title": "A Proto-Elamite Account Tablet from Susa",
+      "publisher": "Penn Museum (Expedition)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-susa",
+      "url": "https://www.wikidata.org/wiki/Q4168823",
+      "title": "Wikidata item Q4168823, coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The two sources differ by about two centuries; I kept the Oxford range and showed both. The pin is the modern town centroid, not the Acropole mound. The causal link to proto-cuneiform is not claimed here.",
+  "author": "historian-agent:o-s11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T04:45:01.497Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3099",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The proto-Elamite script, used for accounting, appeared in Iran around 3100 BCE.",
+        "source": "src-dahl"
+      },
+      {
+        "span": "-2899",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Entries use decimal number signs and logograms; the language behind them is unknown and the script remains undeciphered.",
+        "source": "src-dahl",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

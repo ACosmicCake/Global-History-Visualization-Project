@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "scale": "civilization",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:m-18",
+  "updated": "2026-10-22",
+  "id": "place-kailasa-temple-ellora",
+  "title": "Kailasa Temple, Ellora (Cave 16)",
+  "summary": "The Kailasa temple, structure no. 16 at Ellora, is described by the ASI as the largest single monolithic excavation in the world. The ASI attributes it to the Rashtrakuta king Krishna I (c. 757-83 AD), and World History Encyclopedia says it is 32 m high, carved from a basalt hill between trenches 90 m long.",
+  "when": {
+    "start": {
+      "year": 757
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 26,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "ASI: Krishna I c. 757-83 A.D.; World History Encyclopedia: Krsna I r. 756-773 CE, temple built in the 8-9th centuries CE. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (ASI)",
+        "value": "c. 757-83 A.D.",
+        "source": "src-asi-ellora"
+      },
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "r. 756-773 CE",
+        "source": "src-whe-ellora"
+      }
+    ],
+    "display": "8th century CE (Krishna I, c. 757-83); standing today"
+  },
+  "where": {
+    "lat": 20.0237529,
+    "lon": 75.1793403,
+    "elevation_m": null,
+    "modern_name": "Kailasa Temple, Ellora, Chhatrapati Sambhajinagar district, Maharashtra, India",
+    "historical_name": "Great Kailasa at Elapura (Ellora), under the Rashtrakuta dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-kailasa"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "importance": {
+    "score": 5,
+    "justification": "The ASI calls it the largest single monolithic excavation in the world."
+  },
+  "related": [
+    {
+      "id": "place-ellora-caves",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-asi-ellora",
+      "url": "https://asi.nic.in/pages/WorldHeritageElloraCaves",
+      "title": "Ellora Caves, World Heritage",
+      "publisher": "Archaeological Survey of India",
+      "author": "Archaeological Survey of India",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-ellora",
+      "url": "https://www.worldhistory.org/article/874/ellora-caves/",
+      "title": "Ellora Caves",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-kailasa",
+      "url": "https://nominatim.openstreetmap.org/search?q=Kailasa+Temple+Ellora&format=json",
+      "title": "OpenStreetMap Nominatim search result",
+      "publisher": "OpenStreetMap contributors (Nominatim)",
+      "author": "OpenStreetMap contributors (Nominatim)",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Covers the Kailasa temple only; Ellora as a whole is place-ellora-caves. No model: the 32 m height (WHE) has no matching plan dimension on an opened page (the 90 m and 53 m figures describe the trenches, and the ASI gives no measurements). Shape would be stepped_pyramid or block. Least sure: start year (ASI and WHE give different reigns for Krishna I).",
+  "published_at": "2026-10-22T13:44:41.378Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

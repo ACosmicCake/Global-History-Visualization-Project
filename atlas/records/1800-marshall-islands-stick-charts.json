@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s104",
+  "updated": "2026-10-22",
+  "id": "1800-marshall-islands-stick-charts",
+  "kind": "work",
+  "title": "Marshall Islands stick charts",
+  "summary": "Marshallese navigators made wooden stick charts to teach apprentices how ocean swells behave around islands. The meddo type shows swells and the islands of the chain; the mattang type is a simpler diagram of swells meeting islands. Museums record such charts from the 19th century onward.",
+  "when": {
+    "start": {
+      "year": 1801
+    },
+    "end": {
+      "year": 1900
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The Royal Museums Greenwich page says Marshall Islands charts are known from the 19th century; the Penn Museum object is described as collected in 1890."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "19th century",
+        "source": "src-rmg-stick"
+      },
+      {
+        "calendar": "Gregorian (as written)",
+        "value": "1890",
+        "source": "src-penn-stick"
+      }
+    ],
+    "display": "19th century"
+  },
+  "where": {
+    "lat": 9.82,
+    "lon": 169.29,
+    "elevation_m": null,
+    "modern_name": "Marshall Islands (proxy pin at the country's coordinate; charts were not tied to one place)",
+    "historical_name": "Marshall Islands, Micronesia (proxy pin)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-marshall"
+    ]
+  },
+  "regions": [
+    "oceania"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "Teaching charts of Marshallese ocean navigation that record swell patterns and island positions in wood, shell and fibre."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-penn-stick",
+      "url": "https://collections.penn.museum/collections/object/266112",
+      "title": "Navigational Chart, P3297",
+      "publisher": "Penn Museum",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rmg-stick",
+      "url": "https://rmg.co.uk/collections/objects/rmgc-object-670368",
+      "title": "Stick chart from the Marshall Islands (ZBA7550)",
+      "publisher": "Royal Museums Greenwich",
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-wd-marshall",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q709&property=P625&format=json",
+      "title": "Marshall Islands coordinate (Wikidata Q709, P625)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Proxy pin at the Marshall Islands as a whole. The 19th-century range comes from museum wording, not a dated first chart; the id year 1800 is only a lookup key.",
+  "published_at": "2026-10-22T18:25:14.159Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "id": "place-djamaa-el-djazair",
+  "title": "Djamaa el Djazair (Great Mosque of Algiers)",
+  "summary": "The Great Mosque of Algiers, Djamaa el Djazair, was built between 2012 and 2019 and opened on 29 April 2019, according to Guinness World Records. Its minaret, designed by KSP Engel, is 265 m tall by the architects' figure and 264.3 m as measured by Guinness, making it the tallest in the world.",
+  "when": {
+    "start": {
+      "year": 2012
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Guinness World Records says the complex was built between 2012 and 2019 and opened on 29 April 2019; Egis says the mosque opened officially after 16 years of construction in a news item dated 2024. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years CE (Guinness World Records)",
+        "value": "constructed between 2012 and 2019; opened on 29 April 2019",
+        "source": "src-guinness-djamaa"
+      }
+    ],
+    "display": "Built 2012–2019; open today"
+  },
+  "where": {
+    "lat": 36.7347531,
+    "lon": 3.1403279,
+    "elevation_m": null,
+    "modern_name": "Djamaa el Djazaïr (Great Mosque of Algiers), Mohammadia, Algiers, Algeria",
+    "historical_name": "Djamaa el Djazaïr, Algiers, Algeria",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-djamaa"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Guinness World Records lists its minaret as the tallest in the world at 264.3 m."
+  },
+  "confidence": "established",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-guinness-djamaa",
+      "url": "http://www.guinnessworldrecords.com/world-records/tallest-minaret",
+      "title": "Tallest minaret",
+      "publisher": "Guinness World Records",
+      "author": "Guinness World Records",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-ksp-djamaa",
+      "url": "https://www.ksp-engel.com/en/journal/das-minarett-als-hochhaus-der-superlative",
+      "title": "The Minaret as a High-Rise of Superlatives",
+      "publisher": "KSP Engel",
+      "author": "KSP Engel",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "model"
+      ]
+    },
+    {
+      "id": "src-egis-djamaa",
+      "url": "https://www.egis-group.com/all-news/algeria-s-giant-mosque-officially-opens-after-16-years-in-the-making",
+      "title": "Algeria's giant mosque officially opens after 16 years in the making",
+      "publisher": "Egis",
+      "author": "Egis",
+      "date_published": "2024-03-11",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-djamaa",
+      "url": "https://www.openstreetmap.org/way/226928471",
+      "title": "OpenStreetMap way 226928471, Djamaa el Djazair (centre 36.7347531, 3.1403279)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A square minaret tower 28 x 28 m in plan and 265 m high at the western end of the complex (KSP Engel).",
+      "source": "src-ksp-djamaa",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "tower",
+      "author": null,
+      "asset_url": null,
+      "license": null,
+      "source": "src-ksp-djamaa",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 264.3,
+          "unit": "m",
+          "source": "src-guinness-djamaa",
+          "note": "Guinness World Records: 264.3 m (867 ft) above the city streets"
+        },
+        {
+          "part": "height (architect)",
+          "value": 265,
+          "unit": "m",
+          "source": "src-ksp-djamaa",
+          "note": "KSP Engel gives 265 meters; Egis also says 265 meters"
+        },
+        {
+          "part": "base length",
+          "value": 28,
+          "unit": "m",
+          "source": "src-ksp-djamaa",
+          "note": "square footprint of 28 x 28 meters"
+        },
+        {
+          "part": "base width",
+          "value": 28,
+          "unit": "m",
+          "source": "src-ksp-djamaa",
+          "note": "square footprint of 28 x 28 meters"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "lit marker"
+      },
+      {
+        "level": "regional",
+        "representation": "tower marker beside the mosque complex"
+      },
+      {
+        "level": "local",
+        "representation": "square tower 28 x 28 m in plan, 265 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 2012,
+        "end_year": 2019,
+        "state": "construction",
+        "description": "Built between 2012 and 2019 (Guinness World Records).",
+        "source": "src-guinness-djamaa"
+      },
+      {
+        "start_year": 2019,
+        "end_year": null,
+        "state": "intact",
+        "description": "Opened on 29 April 2019 (Guinness World Records).",
+        "source": "src-guinness-djamaa"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility",
+    "no_mesh": "The plan dimension comes from the architects' own page and the heights from Guinness and company pages; no heritage body, government or owner page was opened, so the figures are kept as data."
+  },
+  "reviewer_note": "Least sure: no owner/operator (ANARGEMA) or government page was opened, so the model is no_mesh. Height is 264.3 m (Guinness) vs 265 m (KSP Engel, Egis); plan 28 x 28 m is from KSP Engel only. The pin is the OSM mosque outline centre; the minaret is at the western end of a complex about 600 m long, so uncertainty is 0.5 km. The osm-footprint tool found no mapped minaret outline. Tower shape chosen as closest.",
+  "author": "historian-agent:o-s116",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T19:44:15.922Z"
+}

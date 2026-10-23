@@ -1,0 +1,133 @@
+{
+  "id": "1856-second-opium-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Second Opium War",
+  "summary": "Britain and France fought Qing China to gain greater commercial access, beginning after the seizure of the British-registered 'Arrow' in October 1856. Anglo-French forces took Canton, the Taku Forts and Beijing. The Convention of Peking ended the war, opening China further to Western trade and ceding Kowloon to Britain.",
+  "when": {
+    "start": {
+      "year": 1856
+    },
+    "end": {
+      "year": 1860
+    },
+    "precision": "year",
+    "display": "1856–1860",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "Arrow War | 1856–1860",
+        "source": "src-ref1"
+      },
+      {
+        "calendar": "as written",
+        "value": "Between 1856 and 1860, British-Indian forces joined the French",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 39.90403,
+    "lon": 116.40753,
+    "elevation_m": null,
+    "modern_name": "Beijing, China (proxy pin: Anglo-French forces took Beijing, and the Convention of Peking ended the war; fighting also at Canton and the Taku Forts)",
+    "historical_name": "Imperial China under the Qing dynasty; Canton, Tientsin, Peking",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 800,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "trade_exploration"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Major imperial war that opened China to Western trade and weakened the Qing regime."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions deaths in battle, the torture and death of prisoners, and the looting and burning of the Summer Palace.",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ref1",
+      "url": "https://web.archive.org/web/20251231102117/https://www.britannica.com/event/Arrow-War",
+      "title": "Arrow War | 1856–1860 | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://www.nam.ac.uk/explore/second-china-war",
+      "title": "Second China War | National Army Museum",
+      "publisher": "National Army Museum",
+      "accessed": "2026-10-23",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q956",
+      "title": "Wikidata Q956 (Beijing, coordinate location P625)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Both sources agree on 1856–1860; the Convention of Peking in October 1860 is the formal end. Sources give no exact start day beyond 'October 1856'. Also called the Arrow War or Second China War. (Drafted by the Wikipedia pipeline from Encyclopaedia Britannica, National Army Museum; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T04:32:46.918Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1856",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Britain and France fought Qing China to gain greater commercial access, beginning after the seizure of the British-registered 'Arrow' in October 1856.",
+        "source": "src-ref1"
+      },
+      {
+        "span": "1860",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The Convention of Peking ended the war, opening China further to Western trade and ceding Kowloon to Britain.",
+        "source": "src-ref1",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

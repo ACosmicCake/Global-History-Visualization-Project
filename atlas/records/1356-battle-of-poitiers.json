@@ -1,0 +1,133 @@
+{
+  "id": "1356-battle-of-poitiers",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Battle of Poitiers",
+  "summary": "A battle of the Hundred Years' War in western France in which an Anglo-Gascon force under Edward, the Black Prince defeated a larger French army. King John II was captured, along with his son Philip. The defeat led to a truce, populist revolts in France, and the Treaty of Brétigny in 1360.",
+  "when": {
+    "start": {
+      "year": 1356
+    },
+    "end": {
+      "year": 1356
+    },
+    "precision": "day",
+    "display": "19 September 1356",
+    "as_recorded": [
+      {
+        "calendar": "as written",
+        "value": "fought on 19 September 1356",
+        "source": "src-wp"
+      },
+      {
+        "calendar": "as written",
+        "value": "September 19, 1356",
+        "source": "src-ref2"
+      }
+    ]
+  },
+  "where": {
+    "lat": 46.52222,
+    "lon": 0.40333,
+    "elevation_m": null,
+    "modern_name": "south of Poitiers, western France",
+    "historical_name": "south of Poitiers, western France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 3,
+    "justification": "Major Hundred Years' War battle that led to the capture of the French king and the Treaty of Brétigny."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wp",
+      "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Poitiers&oldid=1375694453",
+      "title": "Battle of Poitiers (Wikipedia, revision 1375694453)",
+      "publisher": "Wikipedia",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "FA",
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ref2",
+      "url": "https://web.archive.org/web/20260309120850/https://www.britannica.com/event/Battle-of-Poitiers-French-history-1356",
+      "title": "Battle of Poitiers | Description & Signifiance | Britannica",
+      "publisher": "Encyclopaedia Britannica",
+      "accessed": "2026-10-23",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata",
+      "url": "https://www.wikidata.org/wiki/Q201692",
+      "title": "Wikidata Q201692 (coordinates)",
+      "publisher": "Wikidata",
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ on army sizes: Wikipedia gives 14,000 to 16,000 French against 6,000 Anglo-Gascons, while Britannica gives far larger figures. They also differ on location (5 miles south versus 3 miles east of Poitiers), so the site is approximate. (Drafted by the Wikipedia pipeline from Wikipedia, Encyclopaedia Britannica; quotes machine-checked.)",
+  "author": "wiki-pipeline:claude-sonnet-5-5",
+  "updated": "2026-10-23",
+  "published_at": "2026-10-23T02:44:38.231Z",
+  "changelog": [
+    {
+      "date": "2026-10-23",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1356",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "A battle of the Hundred Years' War in western France in which an Anglo-Gascon force under Edward, the Black Prince defeated a larger French army.",
+        "source": "src-wp"
+      },
+      {
+        "span": "1356",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The defeat led to a truce, populist revolts in France, and the Treaty of Brétigny in 1360.",
+        "source": "src-wp",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

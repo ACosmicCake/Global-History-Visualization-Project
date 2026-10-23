@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1887-rinderpest-panzootic-africa",
+  "kind": "event",
+  "title": "Rinderpest Panzootic in Africa",
+  "summary": "Rinderpest entered Africa in 1887 at Massawa, carried by infected cattle brought for the Italian army. It then spread across the continent, reaching the Zambezi by 1896 and Cape Colony and German Southwest Africa in 1897. One source says Ethiopians lost 95% of their cattle, and famine followed.",
+  "when": {
+    "start": {
+      "year": 1887
+    },
+    "end": {
+      "year": 1897
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Start is the 1887 introduction at Massawa; the end year is the latest spread date found in the sources (1897), not a stated end of the epizootic."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1887",
+        "source": "src-osu"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1887",
+        "source": "src-queens"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1897",
+        "source": "src-queens"
+      }
+    ],
+    "display": "1887–1897"
+  },
+  "where": {
+    "lat": 15.608,
+    "lon": 39.4746,
+    "elevation_m": null,
+    "modern_name": "Massawa, Eritrea (pin is the point of introduction; the epizootic covered much of Africa)",
+    "historical_name": "Massawa, Italian-held port on the Red Sea coast",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-latlong"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "disease",
+    "life_extinction"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Continent-wide livestock epizootic that sources link to famine and to changes in African fauna."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-osu",
+      "url": "https://origins.osu.edu/read/second-disease-eradication-rinderpest",
+      "title": "The Second Disease Eradication: Rinderpest",
+      "publisher": "Ohio State University (Origins)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-queens",
+      "url": "https://www.queensu.ca/academia/forsdyke/rindpst0.htm",
+      "title": "The Murrain Now Known As Rinderpest",
+      "publisher": "Queen's University (Forsdyke site)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-latlong",
+      "url": "https://latlong.info/eritrea/northern-red-sea-region/massawa",
+      "title": "Massawa latitude longitude",
+      "publisher": "latlong.info",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources differ in detail (OSU: Italian forces brought infected cattle; Queen's: Indian cattle). Claim that most cattle across the continent died is not directly verified; only the 95% Ethiopian figure from one source. Coordinate source is weak.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:21.125Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1887",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Rinderpest entered Africa in 1887 at Massawa, carried by infected cattle brought for the Italian army.",
+        "source": "src-osu"
+      },
+      {
+        "span": "1897",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It then spread across the continent, reaching the Zambezi by 1896 and Cape Colony and German Southwest Africa in 1897.",
+        "source": "src-osu",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

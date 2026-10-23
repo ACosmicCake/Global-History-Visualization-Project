@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1944-bretton-woods-conference",
+  "kind": "event",
+  "title": "Bretton Woods Conference",
+  "summary": "In July 1944, delegates from 44 nations met at the Mount Washington Hotel in Bretton Woods, New Hampshire, for the United Nations Monetary and Financial Conference. They agreed to create the International Monetary Fund and what became the World Bank, shaping the postwar international economy.",
+  "when": {
+    "start": {
+      "year": 1944
+    },
+    "end": {
+      "year": 1944
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "World Bank Group Archives says the conference convened on July 1, 1944 and that the Final Act was done by July 22, 1944; other sources give only July 1944."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 1, 1944",
+        "source": "src-wb"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 22, 1944",
+        "source": "src-wb"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 1944",
+        "source": "src-fedres"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "July 1944",
+        "source": "src-ohs"
+      }
+    ],
+    "display": "1–22 July 1944"
+  },
+  "where": {
+    "lat": 44.25736,
+    "lon": -71.43924,
+    "elevation_m": null,
+    "modern_name": "Mount Washington Hotel, Bretton Woods, New Hampshire, USA",
+    "historical_name": "Mount Washington Hotel, Bretton Woods, New Hampshire, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-mapcarta",
+      "src-hmdb"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Created the IMF and World Bank, central institutions of the postwar international economy."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-wb",
+      "url": "https://www.worldbank.org/en/about/archives/history/exhibits/bretton-woods-monetary-conference.print",
+      "title": "Bretton Woods Monetary Conference, July 1-22, 1944",
+      "publisher": "World Bank Group Archives",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fedres",
+      "url": "https://www.federalreservehistory.org/essays/bretton-woods-created",
+      "title": "Creation of the Bretton Woods System",
+      "publisher": "Federal Reserve History (Federal Reserve Board)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ohs",
+      "url": "https://history.state.gov/milestones/1937-1945/bretton-woods",
+      "title": "Bretton Woods-GATT, 1941–1947",
+      "publisher": "U.S. Department of State, Office of the Historian",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mapcarta",
+      "url": "https://mapcarta.com/25404306",
+      "title": "Mount Washington Hotel (OpenStreetMap-based)",
+      "publisher": "Mapcarta",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-hmdb",
+      "url": "https://www.hmdb.org/m.asp?m=77641",
+      "title": "Historical marker, Bretton Woods",
+      "publisher": "Historical Marker Database",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Pin is the Mount Washington Hotel site (OSM-derived and marker coordinates agree within ~0.5 km). Start 1 July and 'by 22 July' come from the World Bank archives page; 22 July as the end is inferred from 'by July 22', which does not strictly say it ended that day.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T20:58:24.373Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In July 1944, delegates from 44 nations met at the Mount Washington Hotel in Bretton Woods, New Hampshire, for the United Nations Monetary and Financial Conference.",
+        "source": "src-wb"
+      },
+      {
+        "span": "1944",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "They agreed to create the International Monetary Fund and what became the World Bank, shaping the postwar international economy.",
+        "source": "src-wb",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

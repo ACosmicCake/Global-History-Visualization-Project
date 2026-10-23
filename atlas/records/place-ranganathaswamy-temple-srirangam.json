@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "audience_note": null,
+  "id": "place-ranganathaswamy-temple-srirangam",
+  "title": "Sri Ranganathaswamy Temple and its Rajagopuram, Srirangam",
+  "summary": "The Sri Ranganathaswamy Temple at Srirangam, near Tiruchirappalli, has a 13-tiered Rajagopuram that Guinness World Records gives as at least 72 m high. Begun under Achyuta Deva Raya, it was not finished until 1987, under the guidance of the Ahobila Mutt. The temple itself is described as over a thousand years old.",
+  "when": {
+    "start": {
+      "year": 1529
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 13,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the beginning of the reign of Achyuta Deva Raya (1529-1542) under whom the gopuram was begun, per Live History India; the exact start of work is not given. The gopuram was completed and consecrated on 25 March 1987. The temple itself is said to be over a thousand years old, which this record does not date. End is the present."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (Live History India)",
+        "value": "originally begun by Achyuta Deva Raya (1529-1542 CE)",
+        "source": "src-lhi-srirangam"
+      },
+      {
+        "calendar": "CE (Live History India)",
+        "value": "completed and consecrated on 25th March 1987",
+        "source": "src-lhi-srirangam"
+      },
+      {
+        "calendar": "CE (Guinness World Records)",
+        "value": "not finished until much more recently in 1987",
+        "source": "src-guinness-srirangam"
+      }
+    ],
+    "display": "Rajagopuram begun in Achyuta Deva Raya's reign (1529–1542); completed 1987"
+  },
+  "where": {
+    "lat": 10.85818,
+    "lon": 78.689716,
+    "elevation_m": null,
+    "modern_name": "Srirangam Rajagopuram, Sri Ranganathaswamy Temple, Srirangam, Tiruchirappalli, Tamil Nadu, India",
+    "historical_name": "Southern gateway tower (Rajagopuram) of the Sri Ranganathaswamy Temple, Srirangam, begun under the Vijayanagara king Achyuta Deva Raya",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.3,
+    "coordinate_sources": [
+      "src-osm-srirangam"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Guinness World Records lists its gopuram among the tallest Hindu temple towers on the page opened; the temple is described as over a thousand years old."
+  },
+  "confidence": "probable",
+  "related": [],
+  "sources": [
+    {
+      "id": "src-guinness-srirangam",
+      "url": "https://www.guinnessworldrecords.com/world-records/91571-tallest-hindu-temple",
+      "title": "Tallest Hindu temple",
+      "publisher": "Guinness World Records",
+      "author": "Guinness World Records",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-lhi-srirangam",
+      "url": "https://livehistoryindia.com/story/monuments/srirangams-grand-temple-island",
+      "title": "Srirangam's Grand Temple Island",
+      "publisher": "Live History India",
+      "author": "Live History India",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when",
+        "model"
+      ]
+    },
+    {
+      "id": "src-osm-srirangam",
+      "url": "https://www.openstreetmap.org/way/96786098",
+      "title": "OpenStreetMap outline of Srirangam Rajagopuram (way 96786098)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "model.geometry"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "Plan of the Rajagopuram from the mapped OpenStreetMap outline named Srirangam Rajagopuram; no surveyed plan opened.",
+      "source": "src-osm-srirangam",
+      "method": "osm"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "stepped_pyramid",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-guinness-srirangam",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 72,
+          "unit": "m",
+          "source": "src-guinness-srirangam",
+          "note": "\"reaches at least 72 m (236 ft 2.64 in) high\"; Live History India gives 73 m"
+        },
+        {
+          "part": "tiers",
+          "value": 13,
+          "unit": "count",
+          "source": "src-guinness-srirangam",
+          "note": "\"13-tiered entrance tower\""
+        },
+        {
+          "part": "footprint length (OSM outline)",
+          "value": 52.8,
+          "unit": "m",
+          "source": "src-osm-srirangam",
+          "note": "OSM outline, minimum bounding rectangle"
+        },
+        {
+          "part": "footprint width (OSM outline)",
+          "value": 31.1,
+          "unit": "m",
+          "source": "src-osm-srirangam",
+          "note": "OSM outline, minimum bounding rectangle"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a tall tapering gateway tower of 13 tiers at the published height"
+      },
+      {
+        "level": "local",
+        "representation": "procedural 13-tier tapering tower; sculptural detail is not modelled"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1529,
+        "end_year": 1986,
+        "state": "construction",
+        "description": "Begun under Achyuta Deva Raya (1529-1542) and left unfinished until 1987 (Live History India; Guinness); the state of the tower in between is not described.",
+        "source": "src-lhi-srirangam"
+      },
+      {
+        "start_year": 1987,
+        "end_year": null,
+        "state": "intact",
+        "description": "Completed and consecrated on 25 March 1987 under the guidance of the Ahobila Mutt.",
+        "source": "src-lhi-srirangam"
+      }
+    ],
+    "materials": [],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape stepped_pyramid with 13 tiers, per the brief; the model is the Rajagopuram only, not the temple, whose own date is not given. Height 72 m is Guinness 'at least'; Live History India says 73 m. The plan is the OSM outline named Srirangam Rajagopuram (52.8 m x 31.1 m). The first phase starts at the king's accession and runs to 1986 as 'construction' though the sources describe no work in between. No UNESCO or government page was opened.",
+  "author": "historian-agent:m-24",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T16:55:36.109Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

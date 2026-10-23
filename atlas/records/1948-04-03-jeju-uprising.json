@@ -1,0 +1,184 @@
+{
+  "id": "1948-04-03-jeju-uprising",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Jeju uprising and massacres",
+  "summary": "On 3 April 1948 an armed uprising began on Jeju Island, South Korea, against a separate southern government. A counterinsurgency by police, army and paramilitary groups followed, lasting until 1954 with mass arrests, forced relocations and killings of civilians. A 2003 government truth commission estimated 25,000 to 30,000 civilians killed.",
+  "when": {
+    "start": {
+      "year": 1948,
+      "iso": "1948-04-03"
+    },
+    "end": {
+      "year": 1954,
+      "iso": "1954-09-21"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Scholarship dates the broader conflict 1947-1954; the uprising itself began 3 April 1948 and the Korea.net account ends the violence on 21 September 1954."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The incident began on April 3, 1948, on Jeju Island, and lasted more than a year",
+        "source": "src-joongang"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "occurred between 1947 and 1954 in the rugged landscape around Mt. Halla",
+        "source": "src-muse"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "until Sept. 21, 1954, when the confinement and lockdown around Hallasan Mountain was finally lifted",
+        "source": "src-korea"
+      }
+    ],
+    "display": "3 April 1948 to 21 September 1954"
+  },
+  "where": {
+    "lat": 33.38,
+    "lon": 126.55,
+    "elevation_m": null,
+    "modern_name": "Jeju Island, South Korea",
+    "historical_name": "Jeju Island (Cheju-do), South Korea (US Army Military Government, then Republic of Korea)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 40,
+    "coordinate_sources": [
+      "src-wd-jeju"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "One of Korea's worst civilian massacres, suppressed for decades, whose official recognition shaped South Korea's transitional justice."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes mass killings of civilians, including women and children, torture and forced relocation. Death figures are estimates.",
+  "related": [
+    {
+      "id": "1950-bodo-league-massacres",
+      "type": "related"
+    },
+    {
+      "id": "1950-korean-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-joongang",
+      "url": "https://www.koreajoongangdaily.com/korea/roh-weighs-apology-for-jeju-april-3-massacre/11067660",
+      "title": "Roh weighs apology for Jeju April 3 massacre",
+      "publisher": "Korea JoongAng Daily",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-muse",
+      "url": "https://muse.jhu.edu/book/43596",
+      "title": "The Massacres at Mt. Halla: Sixty Years of Truth Seeking in South Korea",
+      "publisher": "Cornell University Press via Project MUSE",
+      "author": "Hun Joon Kim",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-korea",
+      "url": "https://www.korea.net/NewsFocus/Society/view?articleId=156633",
+      "title": "Finding the right word for Jeju's historic tragedy",
+      "publisher": "Korea.net (Government of the Republic of Korea)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-jeju",
+      "url": "https://www.wikidata.org/wiki/Q29151",
+      "title": "Wikidata item Q29151 (Jeju Island), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the toll: the 2003 commission figure is 25,000-30,000 civilians (Korea JoongAng Daily, 2003); Project MUSE and Korea.net say about 30,000. The Korea.net page contains an obvious date typo for the start (1941) which is ignored. The Jeju 4.3 Peace Foundation site could not be opened. Pin is the island centre.",
+  "author": "historian-agent:o-s8",
+  "updated": "2026-10-22",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 28,
+    "beats": [
+      {
+        "span": "1948-04-03",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "An armed uprising began on Jeju on 3 April 1948 against the establishment of a separate government in the south.",
+        "source": "src-joongang"
+      },
+      {
+        "span": "1954-09-21",
+        "action": "region.fill { radius_km: 40 }",
+        "caption": "Counterinsurgency by police, military and paramilitaries, with mass arrests and relocations, continued until 21 September 1954, when the Hallasan lockdown was lifted.",
+        "source": "src-korea"
+      },
+      {
+        "span": "2003-03-31",
+        "action": "numbers.counter { range: [25000, 30000] }",
+        "caption": "A 2003 government commission found excessive force and estimated 25,000 to 30,000 civilians killed on Jeju.",
+        "source": "src-joongang",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-10-22T04:36:09.063Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

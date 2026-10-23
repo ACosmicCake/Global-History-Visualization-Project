@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:o-s54",
+  "updated": "2026-10-22",
+  "id": "1347-black-death",
+  "kind": "event",
+  "title": "Black Death",
+  "summary": "The Black Death plague pandemic, reported at the Black Sea port of Caffa in 1346, reached Constantinople, Messina and Marseille in 1347 and Paris in 1348, according to HISTORY. Estimates of deaths vary: EBSCO cites National Geographic at about 25 million Europeans and the CDC at about 60 percent of Europe's population.",
+  "when": {
+    "start": {
+      "year": 1346
+    },
+    "end": {
+      "year": 1353
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "World History Encyclopedia gives 1346 to the early 1350s; HISTORY says spread began to slow in 1351."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Between 1346 and the early 1350s",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "CE",
+        "value": "to the cities of Kaffa and probably Constantinople by the end of the following year",
+        "source": "src-ebsco"
+      }
+    ],
+    "display": "1346 – early 1350s"
+  },
+  "where": {
+    "lat": 45.033669,
+    "lon": 35.3753628,
+    "elevation_m": null,
+    "modern_name": "Feodosia (Caffa), Crimea",
+    "historical_name": "Caffa, Genoese trading colony on the Black Sea",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 45.033669,
+          "lon": 35.3753628,
+          "date": "1346",
+          "label": "Caffa",
+          "source": "src-history",
+          "year": 1346
+        },
+        {
+          "lat": 41.006381,
+          "lon": 28.9758715,
+          "date": "1347-05",
+          "label": "Constantinople",
+          "source": "src-history",
+          "year": 1347
+        },
+        {
+          "lat": 38.1937571,
+          "lon": 15.5542082,
+          "date": "1347-10",
+          "label": "Messina",
+          "source": "src-history",
+          "year": 1347
+        },
+        {
+          "lat": 43.2963986,
+          "lon": 5.3777888,
+          "date": "1347-11",
+          "label": "Marseille",
+          "source": "src-history",
+          "year": 1347
+        },
+        {
+          "lat": 48.8534951,
+          "lon": 2.3483915,
+          "date": "1348",
+          "label": "Paris",
+          "source": "src-history",
+          "year": 1348
+        }
+      ]
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-osm"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "disease"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "One of the largest demographic catastrophes in recorded history, per World History Encyclopedia."
+  },
+  "confidence": "probable",
+  "audience_note": "Describes mass mortality; death-toll estimates are contested and differ by source.",
+  "related": [
+    {
+      "id": "0541-plague-of-justinian",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-history",
+      "url": "https://www.history.com/articles/black-death-timeline",
+      "title": "The Black Death: A Timeline of the Gruesome Pandemic",
+      "publisher": "HISTORY (A&E Television Networks)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/black-death-europe/",
+      "title": "Black Death in Europe",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/image/12038/map-of-the-spread-of-the-plague-in-europe-1346---1/",
+      "title": "Map of the Spread of the Plague in Europe, 1346 - 1353",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-osm",
+      "url": "https://nominatim.openstreetmap.org/search?q=Feodosia+Crimea&format=json&limit=1",
+      "title": "Feodosia, Crimea",
+      "publisher": "OpenStreetMap (Nominatim)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1346",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The plague is reported at Caffa, a Black Sea port besieged by Mongol forces, per HISTORY.",
+        "source": "src-history"
+      },
+      {
+        "span": "1347-05 / 1348",
+        "action": "path.trace {}",
+        "caption": "Ships and merchants carry it to Constantinople, Messina and Marseille in 1347, and it reaches Paris in 1348.",
+        "source": "src-history"
+      },
+      {
+        "span": "1351",
+        "action": "numbers.counter { range: [25000000, 50000000] }",
+        "caption": "HISTORY reports estimates of 25 to 50 million dead; other sources give percentages of Europe instead.",
+        "source": "src-history",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Least sure of the route dates: HISTORY lists Constantinople in May 1347 while EBSCO says only \"by the end of 1347\"; HISTORY also lists Marseille twice (Nov 1347 and summer 1348), I used November 1347. Death tolls are unattributed in HISTORY.",
+  "published_at": "2026-10-22T11:03:03.142Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

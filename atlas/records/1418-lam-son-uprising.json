@@ -1,0 +1,155 @@
+{
+  "id": "1418-lam-son-uprising",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Lam Sơn uprising against Ming rule",
+  "summary": "From 1418 the landowner Lê Lợi led a ten-year armed resistance, centred on his home district of Lam Sơn in Thanh Hóa, against Ming occupation of Vietnam. His early campaigns often failed, but by 1425 he was winning repeatedly, and in 1428 he proclaimed himself emperor and began the Lê dynasty.",
+  "when": {
+    "start": {
+      "year": 1418
+    },
+    "end": {
+      "year": 1427
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Start: the Vietnam National Museum of History says Lê Lợi formally raised the banner of the Lam Sơn uprising in 1418, while EBSCO says the resistance was officially declared in 1417. End: the museum dates the ten-year resistance 1418-1427; EBSCO dates Lê Lợi proclaiming himself emperor to 1428."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (as given by the museum)",
+        "value": "Năm 1418, ông và các hào kiệt chính thức phất ngọn cờ khởi nghĩa Lam Sơn",
+        "source": "src-nmh"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "cuộc kháng chiến mười năm chống quân xâm lược nhà Minh (1418- 1427)",
+        "source": "src-nmh"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "officially declared in 1417",
+        "source": "src-ebsco-le"
+      }
+    ],
+    "display": "1418–1427 (declared 1417 in one source; emperor proclaimed 1428)"
+  },
+  "where": {
+    "lat": 19.9298,
+    "lon": 105.4071,
+    "elevation_m": null,
+    "modern_name": "Lam Sơn, Thanh Hóa Province, Vietnam (proxy pin: the Lam Kinh monument in Lam Sơn, standing in for Lê Lợi's home district; the fighting ranged across several regions)",
+    "historical_name": "Lam Sơn commune, Lương Giang district, Thanh Hóa, under Ming occupation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-lamkinh"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "A ten-year war that ended Ming occupation of Vietnam and led to the Lê dynasty."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-nmh",
+      "url": "https://baotanglichsu.vn/vi/Articles/3098/14470/tai-tri-cua-vua-le-thai-to-trong-muoi-nam-khang-chien-chong-quan-minh-1418-1427.html",
+      "title": "Tài trí của vua Lê Thái Tổ trong mười năm kháng chiến chống quân Minh (1418-1427)",
+      "publisher": "Vietnam National Museum of History",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco-le",
+      "url": "https://www.ebsco.com/research-starters/history/le-dynasty",
+      "title": "Le Dynasty (Research Starter)",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-lamkinh",
+      "url": "https://www.wikidata.org/wiki/Q10784247",
+      "title": "Wikidata item Q10784247 (Lam Kinh, monument in Lam Sơn), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the start year: the museum says 1418, EBSCO says 1417. The pin is a proxy at the Lam Kinh monument in Lam Sơn; the museum names the commune but gives no coordinates. The museum page is in Vietnamese and was read in the original.",
+  "author": "historian-agent:o-s107",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T18:43:52.782Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1418",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 1418 the landowner Lê Lợi led a ten-year armed resistance, centred on his home district of Lam Sơn in Thanh Hóa, against Ming occupation of Vietnam.",
+        "source": "src-nmh"
+      },
+      {
+        "span": "1427",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "His early campaigns often failed, but by 1425 he was winning repeatedly, and in 1428 he proclaimed himself emperor and began the Lê dynasty.",
+        "source": "src-nmh",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

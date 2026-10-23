@@ -1,0 +1,267 @@
+{
+  "id": "place-aksum-stelae",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Stelae of Aksum",
+  "summary": "In the ancient Ethiopian capital Aksum, tall carved granite stelae were raised in the 3rd and 4th centuries CE to mark royal tombs. The largest, about 33 m long, lies where it fell while being erected. Stele 2, 21 m high, was taken to Rome in 1937 and re-erected in Aksum in 2008; a third still stands.",
+  "when": {
+    "start": {
+      "year": 201
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 199,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "UNESCO's fact sheet gives the date of construction as the 3rd to 4th century AD, so the true start lies between 201 and 400. End is the present: the stelae field is still there."
+    },
+    "as_recorded": [
+      {
+        "calendar": "AD (UNESCO)",
+        "value": "3rd to 4th century AD",
+        "source": "src-unesco-stele2"
+      },
+      {
+        "calendar": "AD (UNESCO)",
+        "value": "between the 1st and the 13th century A.D.",
+        "source": "src-unesco-15"
+      }
+    ],
+    "display": "Erected in the 3rd–4th century CE; Stele 2 re-erected 2008"
+  },
+  "where": {
+    "lat": 14.1302,
+    "lon": 38.7186,
+    "elevation_m": null,
+    "modern_name": "Northern Stelae Park, Aksum, Tigray, Ethiopia",
+    "historical_name": "Royal funerary stelae of the Kingdom of Aksum, in its capital Aksum",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "built_world",
+    "civilizations_empires",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The tallest monolithic stelae ever attempted, central to UNESCO's Aksum property and to the story of the Aksumite kingdom."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0330-christianity-in-aksum",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-15",
+      "url": "https://whc.unesco.org/en/list/15/",
+      "title": "Aksum (World Heritage List no. 15)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model"
+      ]
+    },
+    {
+      "id": "src-unesco-stele2",
+      "url": "https://whc.unesco.org/document/102653",
+      "title": "Stele 2 Reinstallation Project (also known as the Aksum Obelisk)",
+      "publisher": "UNESCO World Heritage Centre (project fact sheet)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-stele2b",
+      "url": "https://whc.unesco.org/document/102654",
+      "title": "Aksum Obelisk Reinstallation Project (UNESCO)",
+      "publisher": "UNESCO World Heritage Centre (project document)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-archaeology-aksum",
+      "url": "https://archive.archaeology.org/0905/abstracts/aksum.html",
+      "title": "Aksum (abstract, Archaeology magazine, May/June 2009)",
+      "publisher": "Archaeological Institute of America (Archaeology magazine)",
+      "author": "Archaeology magazine",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List dataset (syndication XML)",
+      "publisher": "UNESCO World Heritage Centre (syndication dataset)",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "footprint": {
+      "description": "A row of rectangular-section granite shafts on foundation blocks in the stelae field; Stele 2's base section is 2.3 m by 1.3 m. No surveyed layout of the field is stored.",
+      "source": "src-unesco-stele2",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "shape": "obelisk",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "source": "src-unesco-stele2",
+      "measurements": [
+        {
+          "part": "Stele 2 height (shaft)",
+          "value": 21,
+          "unit": "m",
+          "source": "src-unesco-stele2",
+          "note": "\"21 metres high\"; 23.4 m with the 2.4 m foundation"
+        },
+        {
+          "part": "Stele 2 base length (horizontal section at base)",
+          "value": 2.3,
+          "unit": "m",
+          "source": "src-unesco-stele2",
+          "note": "2.3 m. x 1.3 m. at base"
+        },
+        {
+          "part": "Stele 2 base width (horizontal section at base)",
+          "value": 1.3,
+          "unit": "m",
+          "source": "src-unesco-stele2"
+        },
+        {
+          "part": "Great Stele (Stele 1) length as fallen",
+          "value": 33,
+          "unit": "m",
+          "source": "src-unesco-15",
+          "note": "\"some 33 meters long\"; Archaeology gives about 108 feet"
+        },
+        {
+          "part": "Stele 3 (King Ezana's Stele) height",
+          "value": 22.9,
+          "unit": "m",
+          "source": "src-archaeology-aksum",
+          "note": "\"about 75 feet tall\""
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled 'enlarged for visibility' in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "a cluster of three tall rectangular shafts, the Great Stele shown fallen, at their true lengths"
+      },
+      {
+        "level": "local",
+        "representation": "procedural square-section obelisks with the carved nine-storey false-door facade as a labelled schematic"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 201,
+        "end_year": 400,
+        "state": "construction",
+        "description": "Stelae erected in the 3rd to 4th century AD as funerary markers; the Great Stele fell and shattered while being raised, in the 4th century.",
+        "source": "src-unesco-stele2"
+      },
+      {
+        "start_year": 400,
+        "end_year": 1937,
+        "state": "intact",
+        "description": "Stele 3 stands and Stele 2 stands until it breaks; the Great Stele lies where it fell. The sources opened give no dated damage before 1937 (UNESCO says only that Stele 2 broke into five pieces near its original location).",
+        "source": "src-unesco-stele2"
+      },
+      {
+        "start_year": 1937,
+        "end_year": 2008,
+        "state": "altered",
+        "description": "Stele 2 was taken to Rome in 1937 and returned to Ethiopia in April 2005 in three blocks.",
+        "source": "src-unesco-stele2b"
+      },
+      {
+        "start_year": 2008,
+        "end_year": 2026,
+        "state": "restored",
+        "description": "Stele 2 re-erected in Aksum in 2008 (UNESCO reinstallation project).",
+        "source": "src-unesco-stele2"
+      }
+    ],
+    "materials": [
+      {
+        "from_year": 201,
+        "to_year": 2026,
+        "material": "monolithic dressed and carved stone (stelae)",
+        "source": "src-unesco-15"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape obelisk. The primary measured stele is Stele 2 (UNESCO gives height and base section); the Great Stele and Stele 3 figures are secondary and vary by source (Stele 3 is quoted from 21 to 24 m elsewhere; Stele 1 from 32.6 to 33 m). Least sure of the intact 400-1937 phase (bridged) and the 201 start (UNESCO says only 3rd-4th century).",
+  "author": "historian-agent:m-4",
+  "updated": "2026-10-22",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T05:12:57.589Z"
+}

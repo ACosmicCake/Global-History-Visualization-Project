@@ -1,0 +1,200 @@
+{
+  "id": "place-three-gorges-dam",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "place",
+  "title": "Three Gorges Dam",
+  "aliases": [
+    "Sanxia Dam"
+  ],
+  "summary": "The Three Gorges Dam crosses the Yangtze River in Hubei province, China. The US Geological Survey gives it as about 181 m tall and 2,335 m long, with the reservoir beginning to fill in June 2003 and the plant becoming the world's largest hydroelectric power plant in 2012. Sources differ on the start of construction, 1992 or 1994, and WorldAtlas says the dam body was finished in 2006.",
+  "when": {
+    "start": {
+      "year": 1992
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start differs by page: USGS says construction began in 1992, WorldAtlas says 1994. I used 1992 (USGS, government) with a 2-year plus range. WorldAtlas says the body was finished in 2006 and full operation came in 2012. End is the present: the dam operates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (USGS EROS)",
+        "value": "Construction began in 1992.",
+        "source": "src-usgs-3g"
+      },
+      {
+        "calendar": "CE (WorldAtlas)",
+        "value": "construction on the Three Gorges Dam began in 1994",
+        "source": "src-worldatlas-3g"
+      },
+      {
+        "calendar": "CE (WorldAtlas)",
+        "value": "construction on the Dam's body finished in 2006",
+        "source": "src-worldatlas-3g"
+      }
+    ],
+    "display": "Built 1992/1994–2006; fully operational 2012"
+  },
+  "where": {
+    "lat": 30.8261831,
+    "lon": 111.0075702,
+    "elevation_m": null,
+    "modern_name": "Three Gorges Dam, Yichang, Hubei, China",
+    "historical_name": "Sanxia (Three Gorges) Dam on the Yangtze River, People's Republic of China",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-osm-3g"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "built_world",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "USGS says it became the world's largest hydroelectric power plant in 2012, at 22,500 megawatts."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-usgs-3g",
+      "url": "https://eros.usgs.gov/earthshots/three-gorges-dam-china",
+      "title": "Three Gorges Dam, China",
+      "publisher": "US Geological Survey, EROS",
+      "author": "US Geological Survey, EROS",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "importance",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-worldatlas-3g",
+      "url": "https://www.worldatlas.com/places/three-gorges-dam.html",
+      "title": "Three Gorges Dam",
+      "publisher": "WorldAtlas",
+      "author": "WorldAtlas",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "model.geometry.measurements",
+        "model.phases"
+      ]
+    },
+    {
+      "id": "src-osm-3g",
+      "url": "https://nominatim.openstreetmap.org/search?q=Three+Gorges+Dam&format=json&limit=3",
+      "title": "OpenStreetMap Nominatim: Three Gorges Dam, way 894098127 (30.8261831, 111.0075702)",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "model": {
+    "linear": true,
+    "footprint": {
+      "description": "A straight concrete wall across the Yangtze, 2,335 m long and about 181 m tall (USGS); drawn by the viewer as a path. No crest width or base width found on the pages opened.",
+      "source": "src-usgs-3g",
+      "method": "register"
+    },
+    "geometry": {
+      "type": "procedural",
+      "asset_url": null,
+      "license": "n/a (generated from published measurements)",
+      "shape": "wall",
+      "author": "Living Atlas procedural model, extruded from published measurements",
+      "source": "src-usgs-3g",
+      "measurements": [
+        {
+          "part": "height",
+          "value": 181,
+          "unit": "m",
+          "source": "src-usgs-3g",
+          "note": "\"about 594 feet (181 meters) tall\"; WorldAtlas gives \"a height of 607 ft\" (about 185 m)"
+        },
+        {
+          "part": "length (dam)",
+          "value": 2335,
+          "unit": "m",
+          "source": "src-usgs-3g",
+          "note": "\"7,770 feet (2,335 meters) long\"; USGS does not say crest; WorldAtlas gives 1.4 miles"
+        }
+      ]
+    },
+    "lod": [
+      {
+        "level": "space",
+        "representation": "single lit marker, labelled \"enlarged for visibility\" in monument emphasis mode"
+      },
+      {
+        "level": "regional",
+        "representation": "dam wall drawn as a path across the Yangtze at true length"
+      },
+      {
+        "level": "local",
+        "representation": "procedural wall 2,335 m long and 181 m high"
+      }
+    ],
+    "phases": [
+      {
+        "start_year": 1992,
+        "end_year": 2006,
+        "state": "construction",
+        "description": "Construction began in 1992 (USGS) or 1994 (WorldAtlas); the reservoir began filling in June 2003 (USGS); the dam body finished in 2006 (WorldAtlas).",
+        "source": "src-usgs-3g"
+      },
+      {
+        "start_year": 2006,
+        "end_year": null,
+        "state": "intact",
+        "description": "Dam body finished in 2006 and fully operational by 2012 (WorldAtlas).",
+        "source": "src-worldatlas-3g"
+      }
+    ],
+    "emphasis_label": "enlarged for visibility"
+  },
+  "reviewer_note": "Shape wall with model.linear true as instructed. Least sure of: start year (USGS 1992 vs WorldAtlas 1994), height (181 m USGS vs 607 ft WorldAtlas) and whether 2,335 m is the crest length; neither page says crest. WorldAtlas is class other; USGS is the only government source. Not found: crest width.",
+  "author": "historian-agent:m-11",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T11:15:36.671Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

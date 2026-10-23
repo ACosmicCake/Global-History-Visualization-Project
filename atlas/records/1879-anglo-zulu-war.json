@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1879-anglo-zulu-war",
+  "kind": "event",
+  "title": "Anglo-Zulu War",
+  "summary": "In 1879 Britain invaded the Zulu Kingdom after King Cetshwayo rejected its demands. The Zulus won at Isandlwana on 22 January, but British firepower prevailed at Ulundi on 4 July. Cetshwayo was captured, the monarchy suppressed and Zululand divided.",
+  "when": {
+    "start": {
+      "year": 1879
+    },
+    "end": {
+      "year": 1879
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is 10 January (SAHO, expiry of ultimatum; others use 12 or 22 January); NAM says January 1879. Ulundi on 4 July ended the main fighting; Cetshwayo was captured in August 1879."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "10 January 1879",
+        "source": "src-saho"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "In January 1879",
+        "source": "src-nam"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "On 22 January 1879",
+        "source": "src-nam"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "On 4 July",
+        "source": "src-nam"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "4 July 1879",
+        "source": "src-kzn"
+      }
+    ],
+    "display": "January–July 1879"
+  },
+  "where": {
+    "lat": -28.311192,
+    "lon": 31.426006,
+    "elevation_m": null,
+    "modern_name": "Ulundi battlefield, KwaZulu-Natal, South Africa (proxy for the war across Zululand)",
+    "historical_name": "Zulu Kingdom (Zululand), royal capital at Ulundi",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-kzn"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Colonial war that ended Zulu independence; included the British army's heavy defeat at Isandlwana."
+  },
+  "confidence": "established",
+  "audience_note": "War with heavy casualties on both sides; sources give thousands of Zulu dead at Ulundi.",
+  "related": [
+    {
+      "id": "1879-battle-of-isandlwana",
+      "type": "has_part"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam",
+      "url": "https://www.nam.ac.uk/explore/zulu-war",
+      "title": "Zulu War",
+      "publisher": "National Army Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-saho",
+      "url": "https://sahistory.org.za/dated-event/beginning-anglo-zulu-war-10-january-1879",
+      "title": "Beginning of the Anglo-Zulu War, 10 January 1879",
+      "publisher": "South African History Online",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-kzn",
+      "url": "https://www.battlefieldsroute.co.za/place/ulundi-battlefield/",
+      "title": "Ulundi Battlefield",
+      "publisher": "KZN Battlefields Route",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where",
+        "when"
+      ]
+    }
+  ],
+  "reviewer_note": "Start date varies by source (10, 12 or 22 January). Pin is the Ulundi battlefield (DMS from Battlefields Route converted to decimal), a proxy for the whole war.",
+  "author": "historian-agent:claude-api-sonnet-5-5",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T21:47:04.544Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1879",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "In 1879 Britain invaded the Zulu Kingdom after King Cetshwayo rejected its demands.",
+        "source": "src-nam"
+      },
+      {
+        "span": "1879",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Cetshwayo was captured, the monarchy suppressed and Zululand divided.",
+        "source": "src-nam",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

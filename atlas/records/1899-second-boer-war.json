@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1899-second-boer-war",
+  "kind": "event",
+  "title": "Second Boer War",
+  "summary": "The Second Boer War (1899-1902) pitted the British Empire against the South African Republic (Transvaal) and the Orange Free State, after disputes over gold, Uitlander voting rights and the Jameson Raid. The Boers turned to guerrilla war from mid-1900, and Britain responded with scorched earth and concentration camps for civilians. The Treaty of Vereeniging ended it on 31 May 1902.",
+  "when": {
+    "start": {
+      "year": 1899
+    },
+    "end": {
+      "year": 1902
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "SAHO gives the ultimatum on 9 October 1899 and the declaration on 11 October 1899. Both opened sources date the end to the Treaty of Vereeniging, 31 May 1902."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "on 11 October the war was officially declared",
+        "source": "src-saho-sa-war"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "from 1899 to 1902",
+        "source": "src-encyc-boer"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "by 31 May 1902 the peace agreement was official",
+        "source": "src-saho-sa-war"
+      }
+    ],
+    "display": "1899-1902 (11 October 1899 to 31 May 1902)"
+  },
+  "where": {
+    "lat": -25.746389,
+    "lon": 28.188056,
+    "elevation_m": null,
+    "modern_name": "Pretoria, South Africa (capital of the Transvaal; the war ranged across the two republics, Cape Colony and Natal)",
+    "historical_name": "Pretoria, South African Republic (Transvaal)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wikidata-pretoria"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "A long, costly colonial war that ended the Boer republics; its camps killed thousands of civilians."
+  },
+  "confidence": "established",
+  "audience_note": "Discusses deaths of civilians, mostly children, in British concentration camps, and the burning of farms.",
+  "related": [
+    {
+      "id": "1884-berlin-conference",
+      "type": "related"
+    },
+    {
+      "id": "1913-natives-land-act",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-saho-sa-war",
+      "url": "https://sahistory.org.za/article/south-african-war-1899-1902",
+      "title": "The South African War 1899-1902",
+      "publisher": "South African History Online",
+      "author": null,
+      "date_published": "2011-11-08",
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-boer",
+      "url": "https://www.encyclopedia.com/history/asia-and-africa/southern-african-history/boer-war",
+      "title": "Boer War",
+      "publisher": "Encyclopedia.com",
+      "author": "Gale",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-pretoria",
+      "url": "https://www.wikidata.org/wiki/Q3926",
+      "title": "Wikidata item Q3926 (Pretoria), coordinate location (P625)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Least sure of the pin: a city centroid stands for a war across several territories. Camp death figures differ between sources and are left out of the summary.",
+  "author": "historian-agent:o-s95",
+  "updated": "2026-10-22",
+  "published_at": "2026-10-22T17:41:09.680Z",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1899",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The Second Boer War (1899-1902) pitted the British Empire against the South African Republic (Transvaal) and the Orange Free State, after disputes over gold, Uitlander voting rights and…",
+        "source": "src-saho-sa-war"
+      },
+      {
+        "span": "1902",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "The Treaty of Vereeniging ended it on 31 May 1902.",
+        "source": "src-saho-sa-war",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

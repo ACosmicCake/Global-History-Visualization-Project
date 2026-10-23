@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "confidence": "established",
+  "audience_note": null,
+  "author": "historian-agent:o-s53",
+  "updated": "2026-10-22",
+  "id": "-310my-carboniferous-coal-forests",
+  "kind": "period",
+  "title": "Carboniferous coal forests",
+  "summary": "Vast swamp forests of the Carboniferous produced the coal that gave the period its name. Seedless lycopsids flourished there and were the main source of carbon for the coal, which is found across northern Europe, Asia and midwestern and eastern North America. In Variscan Euramerica, lycopsid-dominated swamps later gave way to vegetation dominated by marattialean ferns.",
+  "when": {
+    "start": {
+      "year": -359200000
+    },
+    "end": {
+      "year": -299000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The span is the whole Carboniferous Period as given by UCMP (about 359.2 to 299 Ma); no opened page dates the coal forests more tightly, and the id 310 Ma is not on an opened page."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological age",
+        "value": "The Carboniferous Period lasted from about 359.2 to 299 million years ago",
+        "source": "src-ucmp"
+      }
+    ],
+    "display": "Carboniferous, c. 359–299 million years ago"
+  },
+  "where": {
+    "lat": 40.0797,
+    "lon": -89.4337,
+    "elevation_m": null,
+    "modern_name": "Illinois, USA (the Illinois Basin held the last lycopsid-dominated swamps; coal forests spanned tropical Euramerica and beyond)",
+    "historical_name": "Equatorial coal swamps of Euramerica (no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-osm-illinois"
+    ],
+    "paleo": {
+      "lat": -2.99,
+      "lon": -26.74,
+      "age_ma": 329,
+      "plate_model": "MERDITH2021 (Merdith et al. 2021, Earth-Science Reviews 214:103477) via GPlates Web Service",
+      "source": "src-gplates-gws",
+      "note": "Point -89.43, 40.08 reconstructed to 329 Ma, the midpoint of the 359.2-299 Ma span."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "The swamp forests that formed much of the coal later burned by industrial economies."
+  },
+  "related": [
+    {
+      "id": "-335my-assembly-of-pangaea",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ucmp",
+      "url": "https://ucmp.berkeley.edu/carboniferous/carboniferous.php",
+      "title": "The Carboniferous Period",
+      "publisher": "University of California Museum of Paleontology",
+      "author": "University of California Museum of Paleontology",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-njg",
+      "url": "https://njgjournal.nl/index.php/njg/article/view/11994",
+      "title": "Late Moscovian terrestrial biotas and palaeoenvironments of Variscan Euramerica",
+      "publisher": "Netherlands Journal of Geosciences",
+      "author": "Netherlands Journal of Geosciences",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-illinois",
+      "url": "https://nominatim.openstreetmap.org/search?q=Illinois+USA&format=json",
+      "title": "OpenStreetMap Nominatim: Illinois, USA",
+      "publisher": "OpenStreetMap contributors",
+      "author": "OpenStreetMap contributors",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-gplates-gws",
+      "url": "https://gwsdoc.gplates.org/models",
+      "title": "GPlates Web Service: reconstruction models (MERDITH2021, PALEOMAP, MULLER2019); reconstruct_points queries run 2026-10-22",
+      "publisher": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "author": "EarthByte Group, University of Sydney (GPlates Web Service)",
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The date is the whole Carboniferous because no opened page gives 310 Ma. The pin (Illinois) is a sourced locality for the last lycopsid swamps, not the centre of the coal forests; hence 5000 km uncertainty. Paleo age 329 Ma is my midpoint choice.",
+  "changelog": [
+    {
+      "date": "2026-10-22",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-10-22T10:56:48.206Z"
+}
