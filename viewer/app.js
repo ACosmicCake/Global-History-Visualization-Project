@@ -676,14 +676,39 @@ $('#empty-btn').onclick = () => { state.whole = true; $('#whole').setAttribute('
 let timer = null;
 const PLAY = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>';
 const PAUSE = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></svg>';
-$('#play').onclick = () => { // play speed scales with the level (spec 2)
-  if (timer) { clearInterval(timer); timer = null; $('#play').innerHTML = PLAY; $('#play').setAttribute('aria-label', 'Play through time'); return; }
+// Play: the base speed scales with the level (spec 2), a whole scale in about 40 seconds at 1x, or about 12 days a
+// second in the one-year scale; the speed chip multiplies it. Playback stops at the present day rather than looping.
+const SPEEDS = [0.25, 0.5, 1, 2, 4, 8];
+let speed = 1;
+try { const s = +localStorage.getItem('atlas-speed'); if (SPEEDS.includes(s)) speed = s; } catch {}
+const presentT = () => { const d = new Date(), y0 = Date.UTC(d.getUTCFullYear(), 0, 1); return NOW + (d - y0) / (Date.UTC(NOW + 1, 0, 1) - y0); };
+const speedLabel = () => (speed < 1 ? `${speed}×`.replace('0.', '.') : `${speed}×`);
+function stopPlay() { clearInterval(timer); timer = null; $('#play').innerHTML = PLAY; $('#play').setAttribute('aria-label', 'Play through time'); }
+$('#play').onclick = () => {
+  if (timer) return stopPlay();
+  const end = () => Math.min(range().to, presentT());
+  if (state.t >= end() - 1e-6) { state.t = range().from; render(); }   // at the end already: start the scale over
   $('#play').innerHTML = PAUSE; $('#play').setAttribute('aria-label', 'Pause');
+  let last = performance.now();
   timer = setInterval(() => {
-    const { from, to } = range(), step = LEVELS[state.level].key === 'event' ? 1 / 365 : (to - from) / 500;
-    state.t = state.t + step > to ? from : state.t + step; render();
-  }, 80);
+    const now = performance.now(), dt = Math.min(0.25, (now - last) / 1000); last = now;
+    const { from, to } = range(), event = LEVELS[state.level].key === 'event';
+    const rate = (event ? 12.5 / 365 : (to - from) / 40) * speed;   // years per second
+    // the one-year scale's window follows the year, so it plays on into the next year until the present day
+    const stop = event ? presentT() : Math.min(to, presentT());
+    state.t = Math.min(stop, state.t + rate * dt);
+    render();
+    if (state.t >= stop - 1e-9) stopPlay();
+  }, 60);
 };
+$('#speed').textContent = speedLabel();
+$('#speed').onclick = e => {   // click for faster, shift-click or right-click for slower
+  const i = SPEEDS.indexOf(speed), back = e.shiftKey;
+  speed = SPEEDS[(i + (back ? SPEEDS.length - 1 : 1)) % SPEEDS.length];
+  $('#speed').textContent = speedLabel();
+  try { localStorage.setItem('atlas-speed', speed); } catch {}
+};
+$('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
 $('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); };
 for (const [id, key] of [['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun']]) {
   $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); if (key === 'monuments') loadModels(); };

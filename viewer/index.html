@@ -123,7 +123,9 @@
   #levels button { border: 0; background: transparent; color: var(--soft); padding: 5px 10px; border-radius: 6px; font-size: 12px; white-space: nowrap; }
   #levels button:hover { color: var(--text); background: rgba(255,255,255,.05); }
   #levels button.on { background: var(--brass); color: #1a1305; font-weight: 600; }
-  #play { margin-left: auto; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--rule-strong); background: transparent; display: grid; place-items: center; }
+  #speed { margin-left: auto; min-width: 38px; height: 26px; padding: 0 8px; border-radius: 999px; border: 1px solid var(--rule-strong); background: transparent; color: var(--soft); font: 11px var(--f-mono); }
+  #speed:hover { border-color: var(--brass); color: var(--brass); }
+  #play { margin-left: 6px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--rule-strong); background: transparent; display: grid; place-items: center; }
   #play:hover { border-color: var(--brass); }
   #context { position: relative; height: 18px; margin-top: 12px; border-radius: 4px; overflow: hidden; cursor: pointer; display: flex; }
   #context .eon { height: 100%; position: relative; }
@@ -236,7 +238,8 @@
     #levels { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1; }
     #levels::-webkit-scrollbar { display: none; }
     #levels button { padding: 4px 8px; font-size: 11px; }
-    #play { margin-left: 0; flex: none; width: 30px; height: 30px; }
+    #play { margin-left: 4px; flex: none; width: 30px; height: 30px; }
+    #speed { margin-left: 0; flex: none; min-width: 34px; height: 24px; padding: 0 6px; }
     .ctx-labels { display: none; }
     #context .eon span { display: none; }
     #emphasis-flag { top: auto; bottom: 168px; }
@@ -299,6 +302,7 @@
   <div class="time-top">
     <div id="now"></div>
     <div id="levels" role="tablist" aria-label="Time scale"></div>
+    <button id="speed" aria-label="Playback speed (click for faster, shift-click for slower)" title="Playback speed: click for faster, shift-click or right-click for slower">1×</button>
     <button id="play" aria-label="Play through time"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg></button>
   </div>
   <div id="context" title="All of Earth's history. Click to jump there; the orange sliver at the right edge is human history."></div>
