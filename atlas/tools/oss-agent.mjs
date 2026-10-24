@@ -14,9 +14,15 @@
 //   OSS_PRICE_IN / OSS_PRICE_OUT   US$ per million tokens, for the ledger (default 0: local)
 //   OSS_SEARCH_URL optional SearXNG instance (JSON API); otherwise DuckDuckGo's HTML results page is used
 //   OSS_FALLBACKS  OpenRouter only: comma-separated models to route to when the first is busy
+//   OSS_DAILY_USD  a daily spending cap for paid router models (local calendar day). When set, spend goes to its own
+//                  ledger, atlas/oss_spend.json, not to the Claude ledger (api_spend.json), and OpenRouter's own
+//                  per-request cost is used when the response reports it
 // OpenRouter free models (ids ending in :free): 20 requests a minute, and 50 a day per account until it has bought
 // $10 of credits, then 1,000 a day. An outline takes roughly 8-20 requests, so budget accordingly.
 // Options: --model <id>  --max-usd 0.5  --concurrency 2  --dry
+// Occasional paid runs alongside the free default: pass a paid router model, e.g.
+//   node atlas/tools/oss-agent.mjs outline p1024 <id> <id> --model xiaomi/mimo-v2.6-flash --max-usd 0.1
+// (tested 2026-10-23: about US$0.004-0.015 an outline). Spend goes to atlas/oss_spend.json and stops at OSS_DAILY_USD.
 // Open models vary a lot in tool use: run `ping`, then try a batch of 2-3 targets and review them closely.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -96,7 +102,8 @@ const web = {
 
 // ---------- chat-completions loop ----------
 // OSS_FALLBACKS: comma-separated model ids OpenRouter may route to when the first is busy or rate-limited
-const FALLBACKS = String(conf('OSS_FALLBACKS') || '').split(',').map(s => s.trim()).filter(Boolean);
+// (a model chosen with --model runs on its own: the configured fallbacks are free models meant for the default one)
+const FALLBACKS = flags.model ? [] : String(conf('OSS_FALLBACKS') || '').split(',').map(s => s.trim()).filter(Boolean);
 const OPENROUTER = /openrouter\.ai/.test(BASE);
 // Daily request budget for free tiers (atlas/oss_usage.json, per UTC day). OSS_DAILY_REQUESTS defaults to 45 on
 // OpenRouter free models (the account cap is 50 a day without credits) and is unlimited elsewhere.
@@ -110,6 +117,22 @@ function usedToday(add = 0) {
   return u.requests;
 }
 class DailyCap extends Error {}
+// paid router models: their own daily ledger (atlas/oss_spend.json), kept apart from the Claude API ledger
+const DAILY_USD = /:free$/.test(MODEL || '') ? 0 : Number(conf('OSS_DAILY_USD') || 0);   // free models cost nothing and are never blocked by it
+const SPEND = path.join(ROOT, 'oss_spend.json');
+const localDay = () => new Date().toLocaleDateString('en-CA');
+function ossSpend(add = 0, entry = null) {
+  let l = { daily_cap_usd: DAILY_USD, days: {}, runs: [] };
+  try { l = { ...l, ...JSON.parse(fs.readFileSync(SPEND, 'utf8')) }; } catch {}
+  const day = localDay();
+  if (add) {
+    l.days[day] = Math.round(((l.days[day] || 0) + add) * 1e6) / 1e6;
+    l.runs.push({ ...entry, usd: Math.round(add * 1e6) / 1e6, at: new Date().toISOString() });
+    l.daily_cap_usd = DAILY_USD;
+    fs.writeFileSync(SPEND, JSON.stringify(l, null, 2) + '\n');
+  }
+  return l.days[day] || 0;
+}
 async function chat(messages, tools) {
   if (DAILY && usedToday() >= DAILY) throw new DailyCap(`daily free request budget reached (${DAILY}); try again tomorrow`);
   usedToday(1);
@@ -119,7 +142,7 @@ async function chat(messages, tools) {
       headers: { 'Content-Type': 'application/json', ...(KEY ? { Authorization: `Bearer ${KEY}` } : {}),
         ...(OPENROUTER ? { 'HTTP-Referer': 'https://github.com/living-atlas', 'X-Title': 'Living Atlas' } : {}) },
       body: JSON.stringify({ model: MODEL, ...(OPENROUTER && FALLBACKS.length ? { models: [MODEL, ...FALLBACKS].slice(0, 3) } : {}),
-        messages, tools, tool_choice: 'auto', temperature: 0.2 }),
+        messages, tools, tool_choice: 'auto', temperature: 0.2, ...(OPENROUTER ? { usage: { include: true } } : {}) }),
     });
     // free tiers rate-limit (OpenRouter: 20 requests a minute); wait as told, then retry a few times
     if ((res.status === 429 || res.status === 503) && attempt < 6) {
@@ -145,16 +168,18 @@ function runTargetFor(kind) {
     let usd = 0;
     for (let turn = 0; turn < MAX_TURNS; turn++) {
       const l = ledger();
-      if (PIN + POUT > 0 && l.total_usd >= l.cap_usd) return { note: 'stopped: spending cap reached', usd, stop: 'cap' };
+      if (DAILY_USD) { if (ossSpend() >= DAILY_USD) return { note: `stopped: today's US$${DAILY_USD} OpenRouter budget is spent`, usd, stop: 'daily-usd' }; }
+      else if (PIN + POUT > 0 && l.total_usd >= l.cap_usd) return { note: 'stopped: spending cap reached', usd, stop: 'cap' };
       let r;
       try { r = await chat(messages, tools); } catch (e) { return { note: `${e instanceof DailyCap ? '' : 'server error: '}${e.message}`, usd, stop: e instanceof DailyCap ? 'daily-cap' : 'api-error' }; }
-      const u = r.usage || {}, spent = ((u.prompt_tokens || 0) * PIN + (u.completion_tokens || 0) * POUT) / 1e6;
-      usd += spent; if (spent) addSpend({ id: item.id, model: MODEL, usd: spent, turn });
+      const u = r.usage || {}, spent = typeof u.cost === 'number' ? u.cost : ((u.prompt_tokens || 0) * PIN + (u.completion_tokens || 0) * POUT) / 1e6;
+      usd += spent;
+      if (spent) { if (DAILY_USD) ossSpend(spent, { id: item.id, model: MODEL, turn }); else addSpend({ id: item.id, model: MODEL, usd: spent, turn }); }
       const m = r.choices?.[0]?.message;
       if (!m) return { note: 'empty reply from the server', usd, stop: 'api-error' };
       messages.push({ role: 'assistant', content: m.content || '', ...(m.tool_calls?.length ? { tool_calls: m.tool_calls } : {}) });
       if (!m.tool_calls?.length) return { note: m.content || '', usd };
-      if (PIN + POUT > 0 && usd > maxUsd) return { note: `stopped at the $${maxUsd} per-target limit`, usd, stop: 'target-cap' };
+      if ((PIN + POUT > 0 || DAILY_USD) && usd > maxUsd) return { note: `stopped at the $${maxUsd} per-target limit`, usd, stop: 'target-cap' };
       for (const c of m.tool_calls) {
         let input; try { input = JSON.parse(c.function.arguments || '{}'); } catch { input = null; }
         const out = input === null ? 'ERROR: arguments were not valid JSON; send the call again'
