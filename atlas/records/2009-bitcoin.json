@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2009-bitcoin",
+  "kind": "event",
+  "title": "Bitcoin and the first cryptocurrency",
+  "summary": "Bitcoin was set out in a white paper by the pseudonymous Satoshi Nakamoto dated 31 October 2008, and the network began in 2009. Its project describes it as the first decentralized peer-to-peer payment network, with no central authority. Mining paid 50 bitcoins per block at first, halving every 210,000 blocks toward a 21-million-coin limit reached around 2140.",
+  "when": {
+    "start": {
+      "year": 2008
+    },
+    "end": {
+      "year": 2009
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is the date printed on the white paper (31 October 2008). End is the year the network began: bitcoin.org dates the first specification and proof of concept to 2009, Cambridge's index dates the network's inception to 2009, and the genesis block carries Unix time 1231006505 (3 January 2009, 18:15:05 UTC)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as printed on the white paper",
+        "value": "October 31, 2008",
+        "source": "src-nakamoto-institute"
+      },
+      {
+        "calendar": "Gregorian, as written",
+        "value": "The first Bitcoin specification and proof of concept was published in 2009",
+        "source": "src-bitcoin-org-faq"
+      },
+      {
+        "calendar": "Gregorian, as written",
+        "value": "It started at 50 bitcoins per block in 2009",
+        "source": "src-bitcoin-org-halving"
+      },
+      {
+        "calendar": "Gregorian, as written",
+        "value": "since its inception in 2009",
+        "source": "src-ccaf-cbeci"
+      },
+      {
+        "calendar": "Unix time (seconds since 1 January 1970), genesis block header",
+        "value": "time: 1231006505",
+        "source": "src-blockchain-info"
+      }
+    ],
+    "display": "2008–2009"
+  },
+  "where": {
+    "lat": 0,
+    "lon": 0,
+    "elevation_m": null,
+    "modern_name": "Worldwide (nominal pin; global network)",
+    "historical_name": "Worldwide",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 10000,
+    "coordinate_sources": [
+      "src-bitcoin-org-faq"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Bitcoin is the first decentralized cryptocurrency; its 2009 launch turned the white paper's peer-to-peer cash design into a working global network whose energy use is now measured by a university research centre."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2008-10-31",
+        "action": "pulse { radius_km: 1500 }",
+        "caption": "Satoshi Nakamoto publishes the white paper Bitcoin: A Peer-to-Peer Electronic Cash System, dated 31 October 2008.",
+        "source": "src-nakamoto-institute",
+        "consequence": false
+      },
+      {
+        "span": "2009",
+        "action": "numbers.counter { range: [0, 50] }",
+        "caption": "The network begins in 2009, paying miners 50 bitcoins per block on a schedule that ends around 2140.",
+        "source": "src-bitcoin-org-halving",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-nakamoto-institute",
+      "url": "https://nakamotoinstitute.org/library/bitcoin/",
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System (Satoshi Nakamoto, October 31, 2008)",
+      "publisher": "Satoshi Nakamoto Institute",
+      "author": "Satoshi Nakamoto",
+      "date_published": "2008-10-31",
+      "accessed": "2026-11-02",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-bitcoin-org-faq",
+      "url": "https://bitcoin.org/en/faq",
+      "title": "FAQ - Bitcoin",
+      "publisher": "Bitcoin Project (bitcoin.org)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-02",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-bitcoin-org-halving",
+      "url": "https://bitcoin.org/en/halving",
+      "title": "Bitcoin Halving Countdown",
+      "publisher": "Bitcoin Project (bitcoin.org)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-02",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ccaf-cbeci",
+      "url": "https://ccaf.io/cbnsi/cbeci",
+      "title": "Cambridge Bitcoin Electricity Consumption Index (CBECI)",
+      "publisher": "Cambridge Centre for Alternative Finance, University of Cambridge",
+      "author": "Cambridge Centre for Alternative Finance",
+      "date_published": null,
+      "accessed": "2026-11-02",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-blockchain-info",
+      "url": "https://blockchain.info/rawblock/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+      "title": "Genesis block (height 0) raw block data",
+      "publisher": "Blockchain.com",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-02",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "when.uncertainty"
+      ]
+    },
+    {
+      "id": "src-mempool-space",
+      "url": "https://mempool.space/api/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+      "title": "Genesis block header data (height 0, timestamp 1231006505)",
+      "publisher": "Mempool.space",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-02",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when.uncertainty"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-02: 'first decentralized' is attributed to the Bitcoin Project, its only source. Removed the electricity sentence. London had no sourced link to Bitcoin, so the record is now planet-wide. Weakest sourcing of this batch: Cambridge is the only institutional source and supports only the 2009 start.",
+  "author": "historian-agent:oss-xiaomi-mimo-v2.6-flash",
+  "updated": "2026-11-02",
+  "changelog": [
+    {
+      "date": "2026-11-02",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-11-02T16:56:10.807Z"
+}
