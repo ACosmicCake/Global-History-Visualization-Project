@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "polity-byzantine-empire",
+  "kind": "polity",
+  "title": "Byzantine Empire",
+  "summary": "The Byzantine Empire, also known as the Eastern Roman Empire, lasted from 330, when Constantine established its new capital, to 1453, when Constantinople fell to the Ottoman Turks. Its people called themselves Romans; the name 'Byzantine' was coined by 16th-century historians. A Christian state with Greek as its official language, it was the longest-lasting medieval power, and its influence continues in the religion, art, architecture and laws of many states.",
+  "when": {
+    "start": {
+      "year": 330
+    },
+    "end": {
+      "year": 1453
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start and end years follow the Library of Congress and World History Encyclopedia. There is no consensus on a foundation date for the polity; other scholars place it in the 4th, 5th, 7th or 8th century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "lasted for over 1100 years, from 330-1453",
+        "source": "src-loc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "It survived until 1453, when its capital Constantinople fell to the Ottoman Turks.",
+        "source": "src-loc"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "The Byzantine Empire existed from 330 to 1453.",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "terminated on Tuesday 29 May 1453",
+        "source": "src-whe"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "from the fourth to the fifteenth century",
+        "source": "src-doaks"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "successively the capital of the Eastern Roman Empire, and the Ottoman Empire",
+        "source": "src-unesco-356-desc"
+      }
+    ],
+    "display": "330–1453"
+  },
+  "where": {
+    "lat": 41.0083,
+    "lon": 28.98,
+    "elevation_m": null,
+    "modern_name": "Historic peninsula (Sultanahmet), Istanbul, Türkiye",
+    "historical_name": "Constantinople (founded as New Rome), capital of the Roman Empire known today as the Byzantine Empire; in 1453 the capital of the Ottoman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-unesco-356",
+      "src-geonames"
+    ],
+    "body": null,
+    "paleo": null,
+    "historical_geography_source": "src-unesco-356-desc"
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A thousand-year state that preserved Roman law and Greek learning, carried Christianity across eastern Europe, and stood between the Mediterranean and the Islamic world until 1453."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1453-fall-of-constantinople",
+      "type": "has_part",
+      "because": "The Ottoman capture of Constantinople on 29 May 1453 ended the empire."
+    },
+    {
+      "id": "1204-sack-of-constantinople",
+      "type": "related"
+    },
+    {
+      "id": "polity-ottoman-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-theodosian-walls",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-loc",
+      "url": "https://guides.loc.gov/byzantine-empire",
+      "title": "Byzantine Empire: A Resource Guide — Introduction",
+      "publisher": "Library of Congress",
+      "author": "Andrew Gaudio, Reference Specialist, Researcher and Reference Services Division",
+      "date_published": "2021-12-28",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe",
+      "url": "https://www.worldhistory.org/Byzantine_Empire/",
+      "title": "Byzantine Empire",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2018-09-19",
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-doaks",
+      "url": "https://www.doaks.org/research/byzantine",
+      "title": "Byzantine Studies",
+      "publisher": "Dumbarton Oaks Research Library and Collection, Trustees for Harvard University",
+      "author": "Dumbarton Oaks",
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-unesco-356-desc",
+      "url": "https://whc.unesco.org/en/list/356/",
+      "title": "Historic Areas of Istanbul (World Heritage List no. 356)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1985",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where.historical_name",
+        "historical_geography_source"
+      ]
+    },
+    {
+      "id": "src-unesco-356",
+      "url": "https://whc.unesco.org/en/list/356/maps/",
+      "title": "Historic Areas of Istanbul — Geographical data (World Heritage List no. 356)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1985",
+      "accessed": "2026-10-23",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/745044/istanbul.html",
+      "title": "Istanbul (GeoNames 745044)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-23",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-02: removed 'the continuation of the Roman Empire', which World History Encyclopedia qualifies, and the claim that it carried Roman law, Greek letters and Christianity into eastern Europe, which no opened source states.",
+  "author": "historian-agent:oss-xiaomi-mimo-v2.6-flash",
+  "updated": "2026-11-02",
+  "changelog": [
+    {
+      "date": "2026-11-02",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-11-02T16:56:12.992Z"
+}
