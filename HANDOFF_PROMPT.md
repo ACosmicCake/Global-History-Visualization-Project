@@ -2,7 +2,7 @@
 
 You are taking over as coordinator of the **Living Atlas**, a 3D globe of Earth and human history. Records are JSON files placed in space and time. They are published to a static site on GitHub Pages.
 
-- **Repository:** `C:\Users\Kosmic\Desktop\Job Agent\Global History Visualization Project` (GitHub `ACosmicCake/Global-History-Visualization-Project`, branch `main`).
+- **Repository:** the folder this file is in (GitHub `ACosmicCake/Global-History-Visualization-Project`, branch `main`).
 - **Live site:** https://acosmiccake.github.io/Global-History-Visualization-Project/
 - **Deploy:** `.github/workflows/pages.yml` runs `node viewer/build-static.mjs` on every push to `main`.
 

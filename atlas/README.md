@@ -11,6 +11,7 @@ The data the Living Atlas engine reads, written by the Historian Agent loop in `
 | `queue.json` | Discovery queue. Ranked by `tools/queue.mjs next`: visitor corrections, then seed list, then the spec 8 score |
 | `corrections.json` | Visitor and reviewer error reports (triage queue, outranks everything) |
 | `coverage_map.json` | Region × time bin × domain counts, emptiest cells, and the current 100-record balance check |
+| `wiki_aliases.json` | Other names per record, from Wikidata. Used only so search can find a record; never shown as fact and never a source |
 | `changelog.md` | One line per publish: `date · id · new/enriched/corrected · confidence · least-certain field` |
 | `reports/` | Progress reports every 50 records; audit results every 100 |
 | `inbox/` | New targets proposed by agents, ingested into the queue by `tools/ingest.mjs` |
@@ -27,6 +28,11 @@ node atlas/tools/ingest.mjs                 # inbox targets -> queue
 node atlas/tools/coverage.mjs               # rebuild coverage map
 node atlas/tools/commons.mjs "File:X.jpg"   # verify a Wikimedia Commons license and credit
 node atlas/tools/paleo.mjs <lon> <lat> <Ma> # paleo-position via the GPlates Web Service
+node atlas/tools/check-all.mjs              # what CI runs before a deploy: every record, tour and viewer script
+node atlas/tools/aliases.mjs                # refresh other names for search (wiki_aliases.json) from Wikidata
+node atlas/tools/linkcheck.mjs              # test every source link and write a report; changes nothing
+node atlas/tools/build-borders.mjs <file>   # rebuild viewer/site/borders/ from a Cliopatria download
+node atlas/tools/build-sealevel.mjs <a> <b> # rebuild the ice-age coastline data; see the file for what to download
 ```
 
 ## API historian runners
@@ -46,7 +52,7 @@ node atlas/tools/claude-agent.mjs spend                        # estimated spend
   - **Key:** reads `ANTHROPIC_API_KEY` from the environment. Never write the key into a file here.
   - **Models:** defaults to `claude-sonnet-5-5`. `--model claude-opus-5-5` costs about twice as much; an Opus trial cost about $0.74 per outline.
   - **Web access:** web search and fetch run on Anthropic's servers, with Wikipedia and the other banned sites blocked.
-  - **Spending:** every response is priced from its usage and added to `api_spend.json`. A target stops at `--max-usd` (default 1.5). Nothing starts once the total would pass `cap_usd` (95 by default, below the $100 credit). These figures are estimates; the Claude Console shows the real bill.
+  - **Spending:** every response is priced from its usage and added to `api_spend.json`. A target stops at `--max-usd` (default 1.5). Nothing starts once the total would pass `cap_usd` in `api_spend.json`. These figures are estimates; the Claude Console shows the real bill.
 - **Open-weight models (`oss-agent.mjs`).**
   - **Server:** works with any OpenAI-compatible server: Ollama, LM Studio, vLLM, or a hosted router such as OpenRouter.
   - **Settings:** set `OSS_BASE_URL`, `OSS_MODEL` and, for hosted routers only, `OSS_API_KEY` and the `OSS_PRICE_IN`/`OSS_PRICE_OUT` per-million-token prices. You can also copy `oss.example.json` to `oss.json`, but keep keys out of that file.

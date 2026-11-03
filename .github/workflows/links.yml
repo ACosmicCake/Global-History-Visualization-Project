@@ -1,0 +1,25 @@
+# Once a month, test every source link in the atlas and keep the report as a build artifact (atlas/tools/linkcheck.mjs).
+# It reports only: a dead link is a reason to look at the record, not to change it automatically.
+name: Check source links
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node atlas/tools/linkcheck.mjs --out linkcheck.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linkcheck
+          path: linkcheck.json

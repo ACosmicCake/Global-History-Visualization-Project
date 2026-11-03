@@ -60,6 +60,7 @@
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
         nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
         paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 },
+        shelfMap: { value: null }, seaDrop: { value: 0 },
         detailMap: { value: null }, detailBounds: { value: new THREE.Vector4(0, 0, 0.25, 0.5) }, detailMix: { value: 0 },
       },
       vertexShader: `varying vec2 vUv; varying vec3 vN; varying vec3 vW;
@@ -68,6 +69,7 @@
       fragmentShader: `uniform sampler2D dayMap; uniform sampler2D nightMap; uniform sampler2D waterMap; uniform sampler2D topoMap;
         uniform vec3 sunDir; uniform float nightLights; uniform float relief;
         uniform sampler2D detailMap; uniform vec4 detailBounds; uniform float detailMix;
+        uniform sampler2D shelfMap; uniform float seaDrop;
         uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat;
         varying vec2 vUv; varying vec3 vN; varying vec3 vW;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
@@ -93,6 +95,11 @@
               float e = smoothstep(0.0, 0.04, d.x) * smoothstep(1.0, 0.96, d.x) * smoothstep(0.0, 0.04, d.y) * smoothstep(1.0, 0.96, d.y);
               day = mix(day, texture2D(detailMap, d).rgb, e * detailMix);
             }
+          }
+          if (seaDrop > 0.0) {   // ice-age sea level: sea floor shallower than the drop stands exposed as dry land (shelf-depth.png)
+            float s = texture2D(shelfMap, vUv).r, depth = (s * 255.0 - 1.0) * 150.0 / 254.0;
+            float dry = s > 0.002 ? 1.0 - smoothstep(seaDrop - 5.0, seaDrop + 5.0, depth) : 0.0;
+            day = mix(day, vec3(0.37, 0.35, 0.23), dry); water = mix(water, 0.0, dry);
           }
           if (paleoOn > 0.0) {   // deep time: today's imagery gives way to open ocean under the moving land mesh
             day = mix(day, vec3(0.04, 0.12, 0.25), paleoOn);   // open ocean; the land mesh is drawn on top
@@ -160,10 +167,10 @@
     }), 4000);
 
     // Clouds: a translucent shell lit by the same sun
-    // the cloud image (4.4 MB) loads after the globe has drawn; until then the shell is fully transparent
+    // the cloud image (0.4 MB) loads after the globe has drawn; until then the shell is fully transparent
     const cloudUniforms = { map: { value: new THREE.Texture() }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 } };
     idle(() => loadMorph(), 6000);   // the plate data, ready before anyone scrolls into deep time
-    idle(() => loader.load('assets/earth-clouds.png', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }), 1500);
+    idle(() => loader.load('assets/earth-clouds.jpg', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }), 1500);
     cloudMat = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false,
       uniforms: cloudUniforms,
@@ -171,7 +178,7 @@
         vW = (modelMatrix * vec4(position,1.0)).xyz; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
       // only the denser cloud systems, kept thin so the map shows through; fuller toward the limb, where real clouds pile up in view
       fragmentShader: `uniform sampler2D map; uniform vec3 sunDir; uniform float opacity; varying vec2 vUv; varying vec3 vN; varying vec3 vW;
-        void main(){ vec4 t = texture2D(map, vUv); float a = smoothstep(0.35, 0.95, t.a * max(t.r, max(t.g, t.b)));
+        void main(){ vec4 t = texture2D(map, vUv); float a = smoothstep(0.35, 0.95, t.r);
           vec3 n = normalize(vN); float l = smoothstep(-0.1, 0.3, dot(n, normalize(sunDir)));
           float limb = 1.0 - max(dot(n, normalize(cameraPosition - vW)), 0.0);
           gl_FragColor = vec4(vec3(0.95 + 0.05 * l) * (0.1 + 0.9 * l), a * opacity * (0.2 + 0.8 * l) * (0.55 + 0.9 * limb)); }`,
@@ -449,6 +456,14 @@
     return { lat: (Math.asin(Math.max(-1, Math.min(1, p[2]))) * 180) / Math.PI, lon: (Math.atan2(p[1], p[0]) * 180) / Math.PI };
   }
 
+  // How far sea level stands below today's, in metres, for the ice-age coastlines. The depth map loads the first time it's needed.
+  let shelfLoading = false;
+  function setSeaDrop(m) {
+    const u = earthMat.uniforms;
+    if (m > 0 && !u.shelfMap.value && !shelfLoading) { shelfLoading = true; loader.load('assets/shelf-depth.png', t => { t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; u.shelfMap.value = t; u.seaDrop.value = window.__seaDrop || 0; }); }
+    window.__seaDrop = m;
+    if (u.shelfMap.value) u.seaDrop.value = m;
+  }
   function update({ date, sunMode: mode, nightLights, clouds: showClouds, zoomAlt, flat }) {
     if (!globe) return;
     if (!!flat !== isFlat) { isFlat = !!flat; globe.globeMaterial(isFlat ? flatMat : earthMat); }
@@ -463,5 +478,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { init, update, setPaleo, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { init, update, setPaleo, setSeaDrop, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();
