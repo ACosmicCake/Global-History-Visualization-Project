@@ -1,10 +1,145 @@
 {
   "id": "polity-mahdist-state",
-  "title": "Mahdist State",
-  "kind": "polity",
-  "status": "stub",
   "schema_version": "1.0.0",
-  "created_from": "1898-battle-of-omdurman",
-  "created": "2026-10-22",
-  "note": "Stub created from 1898-battle-of-omdurman (part_of: The battle ended the Mahdist State.)."
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "polity",
+  "title": "Mahdist State",
+  "summary": "The Mahdist State was the Sudanese polity built around the Mahdi, who became known in June 1881. After the Mahdists took Khartoum in January 1885, the state was governed from Omdurman, and the Mahdi's successor, Abdallahi, ruled as Khalifa. It ended after its last battle at Karari, outside Omdurman, in September 1898.",
+  "when": {
+    "start": {
+      "year": 1885
+    },
+    "end": {
+      "year": 1898
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 4,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Start is taken as the fall of Khartoum in January 1885; the encyclopedia entry dates the Mahdi becoming known in June 1881, so the start is contested."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In January of the following year Khartoum fell to the Mahdists",
+        "source": "src-enc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "the last battle at Karari, outside Omdurman, in September 1898",
+        "source": "src-enc"
+      }
+    ],
+    "display": "1885–1898"
+  },
+  "where": {
+    "lat": 15.64453,
+    "lon": 32.47773,
+    "elevation_m": null,
+    "modern_name": "Omdurman, Sudan",
+    "historical_name": "Omdurman, Mahdist State",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-gn-omdurman"
+    ]
+  },
+  "regions": [
+    "northern_africa"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "religion_philosophy"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "The state ruled from Omdurman until its last battle at Karari in 1898, which the 1898 Battle of Omdurman record covers."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-enc",
+      "url": "https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/mahdist-state-mahdiyya",
+      "title": "Mahdist State, Mahdiyya",
+      "publisher": "Encyclopedia of Islam and the Muslim World (via Encyclopedia.com)",
+      "author": "Shamil Jeppie",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lc",
+      "url": "https://countrystudies.us/sudan/13.htm",
+      "title": "Sudan - The Khalifa",
+      "publisher": "U.S. Library of Congress, Federal Research Division (mirrored at countrystudies.us)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-omd",
+      "url": "https://encyclopedia.com/places/africa/sudan-political-geography/omdurman",
+      "title": "Omdurman | Encyclopedia.com",
+      "publisher": "Oxford University Press (Oxford Companion to British History, via Encyclopedia.com)",
+      "author": "John Cannon",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-omdurman",
+      "url": "https://www.geonames.org/365137/omdurman.html",
+      "title": "GeoNames search: Omdurman, Khartoum, Sudan",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "id": "1898-battle-of-omdurman",
+      "type": "related"
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-03: summary confirmed on Encyclopedia of Islam and the Muslim World and the Oxford Companion entry (both via encyclopedia.com); Abdallahi and the Khalifa title are on the LoC Country Study, a mirror site. No source opened is a primary institutional host, so the record is weakly sourced. 1885 is the capture of Khartoum, not the start of the movement, which became known in June 1881. GeoNames search page replaced by the Omdurman place page.",
+  "author": "historian-agent:haiku-e",
+  "updated": "2026-11-03",
+  "published_at": "2026-11-03T18:21:08.703Z",
+  "changelog": [
+    {
+      "date": "2026-11-03",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
 }

@@ -1,10 +1,143 @@
 {
   "id": "1973-hybrid-rice-breakthrough",
-  "title": "Hybrid Rice Breakthrough",
-  "kind": "event",
-  "status": "stub",
   "schema_version": "1.0.0",
-  "created_from": "historian-agent:claude-api-sonnet-5-5",
-  "created": "2026-10-22",
-  "note": "Skipped: only one publisher (Asian Scientist) could be confirmed by spotcheck; the Springer/Science Bulletin page could not be machine-verified (spotcheck fetched 305 chars). Leads: three-line system 1973, mass cultivation by 1976."
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Hybrid Rice Breakthrough",
+  "summary": "In 1970 Yuan Longping's team in China found a male-sterile wild rice, which became the basis of a three-line hybrid breeding system. The first hybrid rice with strong heterosis was created in 1973, and mass cultivation had begun by 1976.",
+  "when": {
+    "start": {
+      "year": 1973
+    },
+    "end": {
+      "year": 1973
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources agree on 1973 for the first strong-heterosis three-line hybrid; the 1970 discovery and 1976 mass cultivation are given as separate dates."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "a successful three-line hybrid rice breeding system in 1973",
+        "source": "src-as"
+      }
+    ],
+    "display": "1973"
+  },
+  "where": {
+    "lat": 18.3592512,
+    "lon": 109.1679192,
+    "elevation_m": null,
+    "modern_name": "Yazhou District, Sanya, Hainan, China (district-level pin; the CUHK page places the work in the former Yaxian County)",
+    "historical_name": "Yaxian County, Hainan Province",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-osm-yazhou"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Asian Scientist says a fifth of all rice grown worldwide now comes from the hybrid rice first cultivated by Yuan."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-cuhk",
+      "url": "https://www.iso.cuhk.edu.hk/images/publication/archive/bulletin/200201/html5/english/45",
+      "title": "Bulletin Spring‧Summer 2001",
+      "publisher": "Chinese University of Hong Kong",
+      "author": null,
+      "date_published": "2001",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-as",
+      "url": "https://www.asianscientist.com/?p=128514",
+      "title": "China’s Father Of Hybrid Rice, Yuan Longping, Passes At 90 (In Memoriam)",
+      "publisher": "Asian Scientist Magazine",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-osm-yazhou",
+      "url": "https://nominatim.openstreetmap.org/search?q=Yazhou+District+Sanya&format=json&limit=2",
+      "title": "Yazhou District, Sanya, Hainan",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "related": [],
+  "reviewer_note": "Coordinator review 2026-11-03: summary confirmed on the CUHK bulletin (OCR text) and Asian Scientist. Replaced a GeoNames search page with an OpenStreetMap district point. The CUHK page dates the male-sterile wild rice to November 1970 and the first strongly heterotic hybrid to 1973; Asian Scientist is a magazine, so CUHK is the institutional source.",
+  "author": "historian-agent:haiku-e",
+  "updated": "2026-11-03",
+  "published_at": "2026-11-03T18:21:08.129Z",
+  "changelog": [
+    {
+      "date": "2026-11-03",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1973",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1970 Yuan Longping's team in China found a male-sterile wild rice, which became the basis of a three-line hybrid breeding system.",
+        "source": "src-cuhk"
+      },
+      {
+        "span": "1973",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The first hybrid rice with strong heterosis was created in 1973, and mass cultivation had begun by 1976.",
+        "source": "src-cuhk",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }
