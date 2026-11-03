@@ -1,0 +1,160 @@
+{
+  "id": "1903-wright-brothers-first-flight",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Wright brothers' first powered flight",
+  "summary": "On 17 December 1903 Orville Wright piloted the Wright Flyer about 120 feet at Kill Devil Hills on North Carolina's Outer Banks, the first of four flights that day. The National Park Service dates the brothers' first successful airplane flights to this day.",
+  "when": {
+    "start": {
+      "year": 1903
+    },
+    "end": {
+      "year": 1903
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Day is given as 17 December 1903 on the NPS first-flight page; the year is exact."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "December 17, 1903",
+        "source": "src-nps-first"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "achieved the first successful airplane flights on December 17, 1903",
+        "source": "src-nps-home"
+      }
+    ],
+    "display": "17 December 1903"
+  },
+  "where": {
+    "lat": 36.0159473,
+    "lon": -75.6702913,
+    "elevation_m": null,
+    "modern_name": "Kill Devil Hills, Dare County, North Carolina, USA (Wright Brothers National Memorial)",
+    "historical_name": "Kill Devil Hills, Outer Banks, North Carolina, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-osm-wrbr"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "First successful airplane flight, per the National Park Service."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-nps-first",
+      "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
+      "title": "1903 - The First Flight",
+      "publisher": "National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-nps-home",
+      "url": "https://www.nps.gov/wrbr/index.htm",
+      "title": "Wright Brothers National Memorial (homepage)",
+      "publisher": "National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ebsco",
+      "url": "https://www.ebsco.com/research-starters/history/wright-brothers-national-memorial",
+      "title": "Wright Brothers National Memorial",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-osm-wrbr",
+      "url": "https://nominatim.openstreetmap.org/search?format=json&q=Wright%20Brothers%20National%20Memorial%20Kill%20Devil%20Hills",
+      "title": "OpenStreetMap Nominatim: Wright Brothers National Memorial",
+      "publisher": "OpenStreetMap",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-03: summary reworded to what the NPS pages state. The second source is EBSCO Research Starters, a reference service, not an institution; the Library of Congress and Smithsonian pages could not be opened. NPS is the institutional source.",
+  "author": "historian-agent:haiku-b",
+  "updated": "2026-11-03",
+  "published_at": "2026-11-03T18:10:18.757Z",
+  "changelog": [
+    {
+      "date": "2026-11-03",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1903",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 17 December 1903 Orville Wright piloted the Wright Flyer about 120 feet at Kill Devil Hills on North Carolina's Outer Banks, the first of four flights that…",
+        "source": "src-nps-first"
+      },
+      {
+        "span": "1903",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The National Park Service dates the brothers' first successful airplane flights to this day.",
+        "source": "src-nps-first",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "id": "-68my-tyrannosaurus-rex",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "species",
+  "title": "Tyrannosaurus rex",
+  "summary": "Tyrannosaurus rex was a large theropod dinosaur that lived in forested river valleys of western North America about 66 to 68 million years ago, in the latest Maastrichtian stage of the Late Cretaceous. Tyrannosaurids were the dominant predators of their time and region. Tyrannosaurus is among the last non-avian dinosaurs known before the Cretaceous–Paleogene extinction.",
+  "when": {
+    "start": {
+      "year": -67999950
+    },
+    "end": {
+      "year": -65999950
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1000000,
+      "start_plus_years": 1000000,
+      "end_minus_years": 1000000,
+      "end_plus_years": 1000000,
+      "note": "Years are computed as 1950 minus years before present, from the approximate range 66 to 68 million years ago given by the Burke Museum (University of Washington). The Featured Wikipedia article gives 69 to 66 Ma for the same species; the record uses the institutional figure and flags the difference in reviewer_note."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Millions of years ago, approximate, stated in text",
+        "value": "T. rex lived about 66–68 million years ago",
+        "source": "src-burke2016"
+      },
+      {
+        "calendar": "Geologic stage",
+        "value": "T. rex appeared suddenly in the latest Maastrichtian",
+        "source": "src-scirep2024"
+      }
+    ],
+    "display": "c. 68–66 million years ago (latest Maastrichtian)"
+  },
+  "where": {
+    "lat": 46.9,
+    "lon": -101.5,
+    "elevation_m": null,
+    "modern_name": "Hell Creek Formation (Wikidata point; a proxy, the formation covers a wide area of the northern Great Plains)",
+    "historical_name": "not applicable (Late Cretaceous landmass, now western North America)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 600,
+    "coordinate_sources": [
+      "src-wd-q917642"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "life",
+  "importance": {
+    "score": 3,
+    "justification": "One of the best-known large predatory dinosaurs, whose fossils from the Hell Creek Formation document the final stage of non-avian dinosaurs before the Cretaceous-Paleogene extinction."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-burke2016",
+      "url": "https://www.washington.edu/news/2016/08/18/paleontologists-with-the-burke-museum-uw-discover-major-t-rex-fossil/",
+      "title": "Paleontologists with the UW's Burke Museum discover major T. rex fossil",
+      "publisher": "University of Washington News (Burke Museum of Natural History and Culture)",
+      "author": "University of Washington News",
+      "date_published": "2016-08-18",
+      "accessed": "2026-11-03",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "what"
+      ]
+    },
+    {
+      "id": "src-scirep2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10784284/",
+      "title": "A giant tyrannosaur from the Campanian–Maastrichtian of southern North America and the evolution of tyrannosaurid gigantism",
+      "publisher": "Scientific Reports (Nature Portfolio), via PubMed Central",
+      "author": "Authors of the Scientific Reports 2024 paper",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-ucmp-hellcreek",
+      "url": "https://ucmp.berkeley.edu/science/parks/hellcreek.php",
+      "title": "Hell Creek Formation (UC Museum of Paleontology)",
+      "publisher": "University of California Museum of Paleontology",
+      "author": "UCMP",
+      "accessed": "2026-11-03",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-wiki-tyrannosaurus",
+      "url": "https://en.wikipedia.org/w/index.php?title=Tyrannosaurus&oldid=1381719568",
+      "title": "Tyrannosaurus (Wikipedia, Featured Article, oldid 1381719568)",
+      "publisher": "Wikipedia (English)",
+      "author": "Wikipedia contributors",
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "wiki_quality": "FA",
+      "opened": true,
+      "supports": [
+        "what",
+        "when"
+      ]
+    },
+    {
+      "id": "src-wd-q917642",
+      "url": "https://www.wikidata.org/wiki/Q917642",
+      "title": "Hell Creek Formation",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-03: summary tightened to the sources (removed 'its fossils show' and the unsupported single-species 'dominant predator' claim; the dominant-predator statement is about tyrannosaurids, from Scientific Reports). Replaced HomeTownLocator, a commercial gazetteer, with the Wikidata point for the Hell Creek Formation; it is a proxy with a wide uncertainty. Start bound of the age range is uncertain: Burke says 66-68 Ma, Wikipedia FA 68-66 Ma.",
+  "author": "historian-agent:haiku-a",
+  "updated": "2026-11-03",
+  "published_at": "2026-11-03T18:10:15.262Z",
+  "changelog": [
+    {
+      "date": "2026-11-03",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

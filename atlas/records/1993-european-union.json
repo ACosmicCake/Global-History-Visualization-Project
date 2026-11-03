@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1993-european-union",
+  "kind": "event",
+  "title": "Maastricht Treaty enters into force",
+  "summary": "The Treaty on European Union, signed at Maastricht in the Netherlands on 7 February 1992, entered into force on 1 November 1993. It created the European Union on top of the existing European Communities, and the European Economic Community was renamed the European Community.",
+  "when": {
+    "start": {
+      "year": 1993
+    },
+    "end": {
+      "year": 1993
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Entry-into-force date as stated by the European Parliament and the Council of the EU."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1 November 1993",
+        "source": "src-ep"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1 November 1993",
+        "source": "src-council"
+      }
+    ],
+    "display": "1 November 1993"
+  },
+  "where": {
+    "lat": 50.84833,
+    "lon": 5.68889,
+    "elevation_m": null,
+    "modern_name": "Maastricht, Netherlands",
+    "historical_name": "Maastricht, Netherlands (signing place of the treaty; entry into force had no single location)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The treaty created the European Union and renamed the European Economic Community as the European Community, changing the framework of European integration."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-ep",
+      "url": "https://www.europarl.europa.eu/about-parliament/en/in-the-past/the-parliament-and-the-treaties/maastricht-treaty",
+      "title": "Maastricht Treaty (European Parliament)",
+      "publisher": "European Parliament",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-council",
+      "url": "https://consilium-europa.libguides.com/MaastrichtTreaty",
+      "title": "Maastricht Treaty (Council of the EU library guide)",
+      "publisher": "Council of the European Union library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cup",
+      "url": "https://cambridge.org/core/journals/foreign-policy-bulletin/article/maastricht-treaty-on-european-union-enters-into-force-on-november-1-1993-european-economic-area-created/DC4F79CADE9F3D14BB313217BC8AACE7",
+      "title": "Maastricht Treaty on European Union Enters into Force on November 1, 1993",
+      "publisher": "Cambridge University Press (Foreign Policy Bulletin)",
+      "author": null,
+      "date_published": "1994-04",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2751283/maastricht.html",
+      "title": "Maastricht (GeoNames)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Place is the treaty's signing city (Maastricht), not a location of the entry into force, which took effect across member states; uncertainty_km is set to 500 to reflect that. The EU seat (Brussels) was not stated on any page opened, so it is not used. Wikipedia EU and Pearl Street pages were not citable (quality rating none). Date 1 November 1993 is confirmed on three opened pages.",
+  "author": "historian-agent:haiku-d",
+  "updated": "2026-11-03",
+  "published_at": "2026-11-03T18:10:13.990Z",
+  "changelog": [
+    {
+      "date": "2026-11-03",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1993",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Treaty on European Union, signed at Maastricht in the Netherlands on 7 February 1992, entered into force on 1 November 1993.",
+        "source": "src-ep"
+      },
+      {
+        "span": "1993",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It created the European Union on top of the existing European Communities, and the European Economic Community was renamed the European Community.",
+        "source": "src-ep",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}
