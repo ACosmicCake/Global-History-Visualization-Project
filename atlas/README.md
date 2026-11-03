@@ -35,6 +35,8 @@ node atlas/tools/build-borders.mjs <file>   # rebuild viewer/site/borders/ from 
 node atlas/tools/build-sealevel.mjs <a> <b> # rebuild the ice-age coastline data; see the file for what to download
 ```
 
+When a source page dies, point its `url` at an archived copy you have opened, keep the old address in `original_url`, and the viewer marks it as an archived copy. If no copy exists, replace the source, and drop any claim that only it supported.
+
 ## API historian runners
 
 Two scripts run outline and model passes without a Claude Code session, one conversation per target. They share `tools/agent-core.mjs`, where the agent's tools live. An agent can read files under `atlas/`, check for duplicates, write only its assigned record, and run the gate, spotcheck, paleo and osm-footprint tools. It has no shell. Each batch writes `inbox/<batch>.report.md`, the same as `gemini.mjs`, and every record lands as `needs_review`. The usual review and `publish.mjs` steps still decide what ships.

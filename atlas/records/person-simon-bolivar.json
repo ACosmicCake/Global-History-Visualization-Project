@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "body": null,
   "paleo": null,
   "audience_note": null,
   "author": "historian-agent:o-s35",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "id": "person-simon-bolivar",
   "kind": "person",
   "title": "Simón Bolívar",
@@ -44,12 +44,76 @@
     "modern_name": "Caracas, Venezuela (birthplace)",
     "historical_name": "Caracas, in the Spanish colonial territory of Venezuela, at his birth",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 10.506111,
+          "lon": -66.914444,
+          "date": "24 July 1783",
+          "label": "Caracas: born",
+          "source": "src-biography-bolivar",
+          "year": 1783
+        },
+        {
+          "lat": 40.4168,
+          "lon": -3.7035,
+          "date": "1799",
+          "label": "Spain: sent for his education (pinned at Madrid)",
+          "source": "src-biography-bolivar",
+          "year": 1799,
+          "coordinates_from": "Nominatim search: Madrid, Spain"
+        },
+        {
+          "lat": 10.506111,
+          "lon": -66.914444,
+          "date": "1810",
+          "label": "Caracas: joins the resistance movement",
+          "source": "src-biography-bolivar",
+          "year": 1810
+        },
+        {
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "date": "1810",
+          "label": "Britain: diplomatic mission (pinned at London)",
+          "source": "src-biography-bolivar",
+          "year": 1810,
+          "coordinates_from": "Nominatim search: London, England"
+        },
+        {
+          "lat": 17.9712,
+          "lon": -76.7928,
+          "date": "1815",
+          "label": "Jamaica: flees, writes the Jamaica Letter (pinned at Kingston)",
+          "source": "src-ebsco-bolivar",
+          "year": 1815,
+          "coordinates_from": "Nominatim search: Kingston, Jamaica"
+        },
+        {
+          "lat": 8.1029,
+          "lon": -63.547,
+          "date": "1819",
+          "label": "Angostura: addresses the Congress (modern Ciudad Bolívar)",
+          "source": "src-ebsco-bolivar",
+          "year": 1819,
+          "coordinates_from": "Nominatim search: Ciudad Bolívar, Venezuela"
+        },
+        {
+          "lat": 11.2321,
+          "lon": -74.1951,
+          "date": "17 December 1830",
+          "label": "Santa Marta: dies",
+          "source": "src-biography-bolivar",
+          "year": 1830,
+          "coordinates_from": "Nominatim search: Santa Marta, Colombia"
+        }
+      ]
     },
     "uncertainty_km": 5,
     "coordinate_sources": [
       "src-wikidata-Q1533",
-      "src-biography-bolivar"
+      "src-biography-bolivar",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -90,7 +154,8 @@
       "supports": [
         "when",
         "what",
-        "where"
+        "where",
+        "where.waypoints"
       ]
     },
     {
@@ -105,7 +170,8 @@
       "opened": true,
       "supports": [
         "what",
-        "perspectives"
+        "perspectives",
+        "where.waypoints"
       ]
     },
     {
@@ -136,6 +202,20 @@
       "supports": [
         "where"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Pin is the birthplace; his campaigns ranged across northern South America. No animation: no dated-waypoint path was sourced beyond country lists.",
@@ -145,6 +225,11 @@
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 7 dated stops, each from a cited page"
     }
   ]
 }

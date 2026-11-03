@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "id": "person-sun-yat-sen",
@@ -53,11 +53,112 @@
     "modern_name": "Cuiheng village, Zhongshan, Guangdong, China (birthplace; proxy pin)",
     "historical_name": "Cuiheng village, Xiangshan County, Guangdong, Qing China",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 22.4333,
+          "lon": 113.5167,
+          "date": "12 November 1866",
+          "label": "Tsuiheng (Cuiheng), Guangdong: born",
+          "source": "src-yatsen",
+          "year": 1866
+        },
+        {
+          "lat": 21.3045,
+          "lon": -157.8557,
+          "date": "1879",
+          "label": "Honolulu: school",
+          "source": "src-yatsen",
+          "year": 1879,
+          "coordinates_from": "Nominatim search: Honolulu, Hawaii"
+        },
+        {
+          "lat": 22.3492,
+          "lon": 114.1858,
+          "date": "1883",
+          "label": "Hong Kong: the Diocesan Home",
+          "source": "src-yatsen",
+          "year": 1883,
+          "coordinates_from": "Nominatim search: Hong Kong"
+        },
+        {
+          "lat": 23.1288,
+          "lon": 113.259,
+          "date": "1886",
+          "label": "Canton: begins studying medicine",
+          "source": "src-yatsen",
+          "year": 1886,
+          "coordinates_from": "Nominatim search: Guangzhou, China"
+        },
+        {
+          "lat": 22.3492,
+          "lon": 114.1858,
+          "date": "1887",
+          "label": "Hong Kong: College of Medicine for Chinese",
+          "source": "src-yatsen",
+          "year": 1887,
+          "coordinates_from": "Nominatim search: Hong Kong"
+        },
+        {
+          "lat": 21.3045,
+          "lon": -157.8557,
+          "date": "November 1894",
+          "label": "Honolulu: founds the Hsing Chung Hui",
+          "source": "src-yatsen",
+          "year": 1894,
+          "coordinates_from": "Nominatim search: Honolulu, Hawaii"
+        },
+        {
+          "lat": 22.3492,
+          "lon": 114.1858,
+          "date": "January 1895",
+          "label": "Hong Kong: plots his first uprising",
+          "source": "src-yatsen",
+          "year": 1895,
+          "coordinates_from": "Nominatim search: Hong Kong"
+        },
+        {
+          "lat": 35.4503,
+          "lon": 139.6344,
+          "date": "November 1895",
+          "label": "Yokohama: flees to Japan",
+          "source": "src-yatsen",
+          "year": 1895,
+          "coordinates_from": "Nominatim search: Yokohama, Japan"
+        },
+        {
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "date": "October 1896",
+          "label": "London: kidnapped by the Chinese legation",
+          "source": "src-yatsen",
+          "year": 1896,
+          "coordinates_from": "Nominatim search: London, England"
+        },
+        {
+          "lat": 32.0438,
+          "lon": 118.7789,
+          "date": "1 January 1912",
+          "label": "Nanking: provisional president",
+          "source": "src-yatsen",
+          "year": 1912,
+          "coordinates_from": "Nominatim search: Nanjing, China"
+        },
+        {
+          "lat": 39.9057,
+          "lon": 116.3913,
+          "date": "December 1924–March 1925",
+          "label": "Beijing: dies here on 12 March 1925",
+          "source": "src-yatsen",
+          "year": 1924,
+          "coordinates_from": "Nominatim search: Beijing, China"
+        }
+      ]
     },
     "uncertainty_km": 5,
     "coordinate_sources": [
-      "src-latitude"
+      "src-latitude",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -88,7 +189,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -120,17 +222,36 @@
         "where.lat",
         "where.lon"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Pin is Cuiheng, the birthplace (proxy), not a life-long location. Coordinates are from an aggregator page (Latitude.to) giving 22.4333, 113.5167; another map site showed about 1.7 km away, hence 5 km uncertainty.",
   "author": "historian-agent:claude-api-sonnet-5-5",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "published_at": "2026-10-22T20:41:09.841Z",
   "changelog": [
     {
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 11 dated stops, each from a cited page"
     }
   ]
 }

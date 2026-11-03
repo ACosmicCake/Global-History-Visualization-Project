@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "kind": "person",
@@ -12,7 +12,7 @@
   "scale": "modern",
   "audience_note": null,
   "author": "historian-agent:essentials-b",
-  "updated": "2026-10-23",
+  "updated": "2026-11-03",
   "id": "person-karl-marx",
   "title": "Karl Marx",
   "summary": "Born in Trier in 1818, Marx was a German philosopher and critic of political economy who co-wrote the Manifesto of the Communist Party with Friedrich Engels in 1848. After exile in Paris and Brussels he settled in London in 1849, published the first volume of Capital in 1867, and died there on 14 March 1883.",
@@ -72,11 +72,85 @@
     "modern_name": "London, England (where he lived from 1849 until his death; born in Trier)",
     "historical_name": "London, United Kingdom of Great Britain and Ireland",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 49.7596,
+          "lon": 6.6442,
+          "date": "5 May 1818",
+          "label": "Trier: born",
+          "source": "src-encyc",
+          "year": 1818,
+          "coordinates_from": "Nominatim search: Trier, Germany"
+        },
+        {
+          "lat": 50.7353,
+          "lon": 7.1025,
+          "date": "October 1835",
+          "label": "Bonn: enrols at the university",
+          "source": "src-marxists",
+          "year": 1835,
+          "coordinates_from": "Nominatim search: Bonn, Germany"
+        },
+        {
+          "lat": 52.5174,
+          "lon": 13.3951,
+          "date": "1836",
+          "label": "Berlin: moves to the university",
+          "source": "src-fes",
+          "year": 1836,
+          "coordinates_from": "Nominatim search: Berlin, Germany"
+        },
+        {
+          "lat": 50.9384,
+          "lon": 6.96,
+          "date": "April 1842",
+          "label": "Cologne: writes for the Rheinische Zeitung",
+          "source": "src-fes",
+          "year": 1842,
+          "coordinates_from": "Nominatim search: Cologne, Germany"
+        },
+        {
+          "lat": 48.8535,
+          "lon": 2.3484,
+          "date": "1843–1845",
+          "label": "Paris",
+          "source": "src-wp",
+          "year": 1843,
+          "coordinates_from": "Nominatim search: Paris, France"
+        },
+        {
+          "lat": 50.8467,
+          "lon": 4.3525,
+          "date": "1845",
+          "label": "Brussels: settles after expulsion from Paris",
+          "source": "src-fes",
+          "year": 1845,
+          "coordinates_from": "Nominatim search: Brussels, Belgium"
+        },
+        {
+          "lat": 50.9384,
+          "lon": 6.96,
+          "date": "1848–1849",
+          "label": "Cologne: returns during the 1848 revolutions",
+          "source": "src-wp",
+          "year": 1848,
+          "coordinates_from": "Nominatim search: Cologne, Germany"
+        },
+        {
+          "lat": 51.5072,
+          "lon": -0.1275,
+          "date": "1849–1883",
+          "label": "London: settles for good, dies here in 1883",
+          "source": "src-encyc",
+          "year": 1849
+        }
+      ]
     },
     "uncertainty_km": 20,
     "coordinate_sources": [
-      "src-wd"
+      "src-wd",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -106,7 +180,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -121,7 +196,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -136,7 +212,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -151,7 +228,8 @@
       "opened": true,
       "supports": [
         "when.as_recorded",
-        "summary"
+        "summary",
+        "where.waypoints"
       ],
       "wiki_quality": "GA"
     },
@@ -169,6 +247,20 @@
         "where.lat",
         "where.lon"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Pin is London (main working base), not Trier. Marxists Internet Archive is volunteer-run, so a university or museum source would strengthen the London arrival date.",
@@ -178,6 +270,11 @@
       "date": "2026-10-23",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 8 dated stops, each from a cited page"
     }
   ]
 }

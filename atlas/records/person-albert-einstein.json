@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "id": "person-albert-einstein",
@@ -58,11 +58,103 @@
     "modern_name": "Bern, Switzerland (pinned to the city of the patent office where he worked 1902–1909; city centroid)",
     "historical_name": "Bern, Swiss Confederation (patent office; Einstein was born at Ulm, Württemberg, and died at Princeton, New Jersey)",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 48.3985,
+          "lon": 9.9912,
+          "date": "14 March 1879",
+          "label": "Ulm: born",
+          "source": "src-nobel-einstein",
+          "year": 1879,
+          "coordinates_from": "Nominatim search: Ulm, Germany"
+        },
+        {
+          "lat": 48.1371,
+          "lon": 11.5754,
+          "date": "1879",
+          "label": "Munich: the family moves here",
+          "source": "src-nobel-einstein",
+          "year": 1879,
+          "coordinates_from": "Nominatim search: Munich, Germany"
+        },
+        {
+          "lat": 47.3927,
+          "lon": 8.0444,
+          "date": "1895",
+          "label": "Aarau: finishes secondary school",
+          "source": "src-mactutor-einstein",
+          "year": 1895,
+          "coordinates_from": "Nominatim search: Aarau, Switzerland"
+        },
+        {
+          "lat": 47.3744,
+          "lon": 8.541,
+          "date": "1896",
+          "label": "Zurich: enters the Swiss Federal Polytechnic",
+          "source": "src-nobel-einstein",
+          "year": 1896,
+          "coordinates_from": "Nominatim search: Zürich, Switzerland"
+        },
+        {
+          "lat": 46.9484742,
+          "lon": 7.4521749,
+          "date": "1902–1909",
+          "label": "Bern: works at the patent office",
+          "source": "src-mactutor-einstein",
+          "year": 1902
+        },
+        {
+          "lat": 47.3744,
+          "lon": 8.541,
+          "date": "1909",
+          "label": "Zurich: professor",
+          "source": "src-nobel-einstein",
+          "year": 1909,
+          "coordinates_from": "Nominatim search: Zürich, Switzerland"
+        },
+        {
+          "lat": 50.0875,
+          "lon": 14.4213,
+          "date": "1911",
+          "label": "Prague: professor of theoretical physics",
+          "source": "src-nobel-einstein",
+          "year": 1911,
+          "coordinates_from": "Nominatim search: Prague, Czechia"
+        },
+        {
+          "lat": 47.3744,
+          "lon": 8.541,
+          "date": "1912",
+          "label": "Zurich: returns to a similar post",
+          "source": "src-nobel-einstein",
+          "year": 1912,
+          "coordinates_from": "Nominatim search: Zürich, Switzerland"
+        },
+        {
+          "lat": 52.5174,
+          "lon": 13.3951,
+          "date": "1914–1933",
+          "label": "Berlin: Kaiser Wilhelm Institute and the university",
+          "source": "src-nobel-einstein",
+          "year": 1914,
+          "coordinates_from": "Nominatim search: Berlin, Germany"
+        },
+        {
+          "lat": 40.3497,
+          "lon": -74.6597,
+          "date": "1933–1955",
+          "label": "Princeton: emigrates, dies here in 1955",
+          "source": "src-nobel-einstein",
+          "year": 1933,
+          "coordinates_from": "Nominatim search: Princeton, New Jersey"
+        }
+      ]
     },
     "uncertainty_km": 10,
     "coordinate_sources": [
-      "src-osm-bern"
+      "src-osm-bern",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -98,7 +190,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -113,7 +206,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -129,17 +223,36 @@
       "supports": [
         "where"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Pin is Bern (patent office years) as a city centroid; Ulm is the birthplace and Princeton the place of death. MacTutor notes one reference gives 1878 but its biography gives 1879. Link to the 1919 eclipse record is thematic only. Nobel page was read through a plain HTTP fetch; WebFetch is blocked there.",
   "author": "historian-agent:essentials-a",
-  "updated": "2026-10-23",
+  "updated": "2026-11-03",
   "published_at": "2026-10-23T14:56:18.106Z",
   "changelog": [
     {
       "date": "2026-10-23",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 10 dated stops, each from a cited page"
     }
   ]
 }

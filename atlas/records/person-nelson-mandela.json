@@ -1,7 +1,7 @@
 {
   "id": "person-nelson-mandela",
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "kind": "person",
@@ -41,11 +41,76 @@
     "modern_name": "Mvezo, Eastern Cape, South Africa (birthplace)",
     "historical_name": "Mvezo, a village in the Transkei, Cape Province, Union of South Africa",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": -31.95,
+          "lon": 28.516,
+          "date": "18 July 1918",
+          "label": "Mvezo: born",
+          "source": "src-nmf",
+          "year": 1918
+        },
+        {
+          "lat": -26.205,
+          "lon": 28.0497,
+          "date": "1941",
+          "label": "Johannesburg: arrives after running away",
+          "source": "src-nmf",
+          "year": 1941,
+          "coordinates_from": "Nominatim search: Johannesburg, South Africa"
+        },
+        {
+          "lat": -25.7459,
+          "lon": 28.1879,
+          "date": "November 1962",
+          "label": "Pretoria: tried and sentenced",
+          "source": "src-saho",
+          "year": 1962,
+          "coordinates_from": "Nominatim search: Pretoria, South Africa"
+        },
+        {
+          "lat": -33.8053,
+          "lon": 18.3689,
+          "date": "1964–1982",
+          "label": "Robben Island: life sentence",
+          "source": "src-nobel",
+          "year": 1964,
+          "coordinates_from": "Nominatim search: Robben Island, South Africa"
+        },
+        {
+          "lat": -34.0695,
+          "lon": 18.4381,
+          "date": "31 March 1982",
+          "label": "Pollsmoor Prison, Cape Town",
+          "source": "src-nmf",
+          "year": 1982,
+          "coordinates_from": "Nominatim search: Pollsmoor Prison"
+        },
+        {
+          "lat": -33.731,
+          "lon": 18.9642,
+          "date": "December 1988–February 1990",
+          "label": "Victor Verster Prison, near Paarl: released 11 February 1990",
+          "source": "src-nmf",
+          "year": 1988,
+          "coordinates_from": "Nominatim search: Paarl, South Africa"
+        },
+        {
+          "lat": -26.1582,
+          "lon": 28.059,
+          "date": "5 December 2013",
+          "label": "Houghton, Johannesburg: dies",
+          "source": "src-saho",
+          "year": 2013,
+          "coordinates_from": "Nominatim search: Houghton Estate, Johannesburg"
+        }
+      ]
     },
     "uncertainty_km": 5,
     "coordinate_sources": [
-      "src-wd"
+      "src-wd",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -93,7 +158,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -107,7 +173,8 @@
       "class": "reference",
       "opened": true,
       "supports": [
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -122,7 +189,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -138,17 +206,36 @@
       "supports": [
         "where"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Pin is the birthplace; his life ran through Johannesburg, Robben Island and Pretoria. The Foundation says convicted 11 June 1964 and sentenced the next day; Nobel gives 12 June. The 27-year figure is from SAHO.",
   "author": "historian-agent:o-s18",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "published_at": "2026-10-22T06:26:12.953Z",
   "changelog": [
     {
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 7 dated stops, each from a cited page"
     }
   ]
 }

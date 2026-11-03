@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "id": "person-harriet-tubman",
@@ -58,11 +58,57 @@
     "modern_name": "Harriet Tubman Home and Visitor Center, Auburn, Cayuga County, New York (pinned to her Auburn home, where she lived from 1859 and died; born in Dorchester County, Maryland)",
     "historical_name": "Auburn, New York, home bought from William Seward in 1859",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 38.3931,
+          "lon": -76.0996,
+          "date": "March 1822",
+          "label": "Dorchester County, Maryland: born into slavery",
+          "source": "src-nps-tubman",
+          "year": 1822,
+          "coordinates_from": "Nominatim search: Dorchester County, Maryland"
+        },
+        {
+          "lat": 39.9527,
+          "lon": -75.1635,
+          "date": "1849",
+          "label": "Philadelphia: settles after escaping",
+          "source": "src-abt-tubman",
+          "year": 1849,
+          "coordinates_from": "Nominatim search: Philadelphia, Pennsylvania"
+        },
+        {
+          "lat": 42.911525,
+          "lon": -76.5637234,
+          "date": "1859",
+          "label": "Auburn, New York: buys her home from William Seward",
+          "source": "src-nps-tubman",
+          "year": 1859
+        },
+        {
+          "lat": 32.71,
+          "lon": -80.8303,
+          "date": "June 1863",
+          "label": "Combahee River, South Carolina: the raid that freed over 700",
+          "source": "src-nps-tubman",
+          "year": 1863,
+          "coordinates_from": "Nominatim search: Combahee River, South Carolina"
+        },
+        {
+          "lat": 42.911525,
+          "lon": -76.5637234,
+          "date": "1913",
+          "label": "Auburn, New York: dies",
+          "source": "src-nps-tubman",
+          "year": 1913
+        }
+      ]
     },
     "uncertainty_km": 3,
     "coordinate_sources": [
-      "src-osm-tubman"
+      "src-osm-tubman",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -98,7 +144,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -113,7 +160,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -129,17 +177,36 @@
       "supports": [
         "where"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Birth year is contested between sources (1820-1822); escape year is not stated on the NPS page, so it is not given. The pin is Auburn, not the Maryland routes or South Carolina.",
   "author": "historian-agent:o-s68",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "published_at": "2026-10-22T12:47:01.019Z",
   "changelog": [
     {
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 5 dated stops, each from a cited page"
     }
   ]
 }

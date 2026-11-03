@@ -114,7 +114,7 @@ const liveLinkIndex = () => { if (Date.now() - linkCache.at > 15000) linkCache =
 // the reviewer note with the process clauses dropped and first-person wording made neutral. No text is added, so a
 // note about process alone leaves nothing to show.
 const PROCESS = new RegExp([
-  'Coordinator\\b', 'Link to', 'Link\\b', 'Drafted by', 'pipeline', 'machine-checked', 'WebFetch', 'spotcheck', 'HTTP \\d', '\\b40[34]\\b', '\\bqueue\\b', 'as_recorded', 'on upgrade',
+  'Coordinator\\b', 'Link to', 'Link\\b', 'Drafted by', 'pipeline', 'machine-checked', 'WebFetch', 'spotcheck', 'HTTP \\d', '\\b40[34]\\b', '\\bqueue\\b', 'as_recorded', 'on upgrade', '\\breviewer\\b', 'Review wording', '\\bplaceholders?\\b', 'Rewritten \\d', 'Reworked from', 'withdrawn draft', 'dropped \\(', 'not researched', 'Beat dated',
   '\\bbatch\\b', 'blocked', 'could not (be )?(open|fetch|read|reach)', 'returned \\d', 'truncated', 'script-driven', '\\bOCR\\b', 'mirror', 'snippet', 'fetch',
   'search (page|lead)', '\\bgate\\b', '\\bsummary\\b', '\\bthe id\\b', '\\bid year\\b', '(3D|\\bno|\\bNo) model', 'model[- ](quality|written|block)', 'Linear \\(shape', '^Shape:', '\\bmesh',
   'confidence set', '\\bshape\\b', 'footprint', '\\bphases\\b', 'no_mesh', 'per instructions', 'unopened', 'record ID', 'P625', 'Coordinates now', 'atlas yet', '\\blinks?\\b', '\\boutline\\b', 'skipped', '^(Removed|Replaced|Tightened|Corrected|Reworded)\\b', 'was read\\b', 'read through', 'not opened', '\\bcitable\\b', '\\bclaimed\\b', 'lookup key',

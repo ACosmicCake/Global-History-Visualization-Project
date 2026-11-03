@@ -66,7 +66,7 @@ ${(pub.perspectives || []).length ? `<h2>Perspectives</h2>${pub.perspectives.map
 ${pub.visitor_note ? `<h2>Least certain</h2><p>${esc(pub.visitor_note)}</p>` : ''}
 ${rel.length ? `<h2>Connections</h2><ul class="rel">${rel.map(x => `<li><span>${esc(REL[x.type] || x.type)}</span> <a href="${esc(x.id)}.html">${esc(titles.get(x.id))}</a>${x.because ? ` <small>${esc(x.because)}</small>` : ''}</li>`).join('')}</ul>` : ''}
 <h2>Sources</h2>
-<ol class="srcs">${(pub.sources || []).map(s => `<li><a href="${esc(s.url)}" rel="noopener noreferrer">${esc(s.title)}</a> <small>${esc(s.publisher)} · ${esc(s.class)}</small></li>`).join('')}</ol>
+<ol class="srcs">${(pub.sources || []).map(s => `<li><a href="${esc(s.url)}" rel="noopener noreferrer">${esc(s.title)}</a> <small>${esc(s.publisher)} · ${esc(s.class)}${s.original_url ? ' · archived copy' : ''}</small></li>`).join('')}</ol>
 ${wiki ? `<p><a href="${esc(wiki)}" rel="noopener noreferrer">Read more on Wikipedia</a> <small>Further reading, not one of this record’s sources.</small></p>` : ''}
 <p class="meta">Drafted and reviewed by AI models, then checked against its sources by automated tools. <a href="../about.html">How this is made</a> · <a href="${esc(reportURL(pub.id, pub.title))}" rel="noopener noreferrer">Report a problem</a> · version ${esc(pub.record_version)}, updated ${esc(pub.updated)}</p>
 </article>`;

@@ -143,7 +143,12 @@
       for (let i = Math.ceil(from); i <= steps; i++) { const d = verts[i].clone().normalize().distanceToSquared(p); if (d < bd) { bd = d; best = i; } }
       return best;
     };
-    return { count: steps, verts, at: n => verts[Math.max(0, Math.min(steps, n))], get drawn() { return drawn; }, draw, stepOf, ghost };
+    // the step at waypoint i, by its share of the route's length: the steps are evenly spaced, and a route that passes
+    // near one place twice (out from Plymouth, home to Falmouth) can't confuse it
+    const dirs = pts.map(w => anchor(ctx, w.lat, w.lon, 0).normalize()), run = [0];
+    for (let i = 1; i < dirs.length; i++) run.push(run[i - 1] + dirs[i - 1].angleTo(dirs[i]));
+    const stopStep = i => Math.round(steps * run[Math.min(i, run.length - 1)] / (run[run.length - 1] || 1));
+    return { count: steps, verts, at: n => verts[Math.max(0, Math.min(steps, n))], get drawn() { return drawn; }, draw, stepOf, stopStep, ghost };
   }
   // time counts only while playing, so a pause doesn't eat into the beat; a skip finishes the beat at once
   const tween = (ms, fn) => new Promise(res => {
@@ -192,6 +197,8 @@
     const own = rec.animation?.beats;
     if (own && own.length) return own;
     const wp = rec.where?.geometry?.waypoints || [];
+    // a dated route: one step per stop, moving the clock along with it
+    if (wp.length >= 3 && wp.every(w => typeof w.year === 'number')) return wp.map((w, i) => ({ span: String(w.year), action: i ? `path.trace { stop: ${i} }` : `pulse { lat: ${w.lat}, lon: ${w.lon}, radius_km: 60 }`, caption: `${w.date}. ${w.label}` }));
     const b = [{ span: String(rec.when?.start?.year ?? ''), action: `pulse { radius_km: ${Math.max(30, rec.where?.uncertainty_km || 40)} }`, caption: rec.summary || rec.title }];
     if (wp.length >= 2) b.push({ span: String(rec.when?.start?.year ?? ''), action: 'path.trace {}', caption: `Route: ${wp.map(w => w.label || '').filter(Boolean).slice(0, 4).join(' → ')}` });
     return b;
@@ -216,8 +223,8 @@
     // a beat that moves along the route: a route verb, or a moving marker/person that names where it goes ("marker.pin" stays put)
     const isPath = (name, params = {}) => wp.length >= 2 && (/path|trace|route|march|voyage|migrat/.test(name) || /person|marker/.test(name) && Array.isArray(params.to));
     const isPt = a => Array.isArray(a) && Number.isFinite(a[0]) && Number.isFinite(a[1]);
-    // how far along the route a moving beat ends: its "to" point if it names one, else the end of the route
-    const pathEnd = params => isPt(params.to) ? Math.max(trace.drawn, trace.stepOf(params.to[0], params.to[1], trace.drawn)) : trace.count;
+    // how far along the route a moving beat ends: the stop or "to" point it names, else the end of the route
+    const pathEnd = params => Number.isFinite(params.stop) ? trace.stopStep(params.stop) : isPt(params.to) ? Math.max(trace.drawn, trace.stepOf(params.to[0], params.to[1], trace.drawn)) : trace.count;
     // which point does beat i happen at? explicit lat/lon, a waypoint named in the caption, or the next waypoint
     const placeOf = (i, params) => {
       if (Number.isFinite(params.lat) && Number.isFinite(params.lon)) return { lat: params.lat, lng: params.lon };
