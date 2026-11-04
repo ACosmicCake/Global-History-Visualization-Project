@@ -252,6 +252,7 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
   // greedy placement: the most important names first, skipping any that would overlap one already placed
   wanted.sort((a, b) => b.rank - a.rank);
   const placed = [];
+  window.DeepTime?.placeLabels(placed, state.alt, k, W, H, cam);    // supercontinents and old oceans come first
   for (const w of wanted) {
     const [x0, y0, x1, y1] = w.box;
     if (placed.some(([a0, b0, a1, b1]) => x0 < a1 && x1 > a0 && y0 < b1 && y1 > b0)) continue;
@@ -316,6 +317,9 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, a
   .onObjectClick(o => openRecord(o.id));
 window.Space.init(globe); // satellite Earth, clouds, stars, Sun and Moon (space.js)
 window.Borders?.init(globe); // dated polity borders (borders.js)
+// deep-time visuals: scenes for records, names on the moving continents, marks on the time bar, the film (deeptime.json)
+let deepTime = null, marksKey = '';
+fetch('deeptime.json').then(r => r.json()).then(d => { deepTime = d; window.DeepTime?.init(globe, d.labels); render(); }).catch(err => console.error('deeptime', err));
 // spacecraft in the sky (spacecraft.js): clicking one opens its record once that record is published
 window.Spacecraft?.init(globe, { onPick: id => openRecord(id), known: id => state.pins.some(p => p.id === id) });
 globe.pointOfView({ lat: 28, lng: 25, altitude: state.alt });
@@ -462,6 +466,7 @@ function updateSky() {
   state.seaDrop = map ? 0 : seaDropAt(state.t);
   window.Space.setSeaDrop(state.seaDrop);
   window.Borders?.update(state.t, state.borders);
+  window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
   window.Spacecraft?.update(state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
 }
 
@@ -680,9 +685,9 @@ function render() {
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
     : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). Ice sheets aren’t drawn.`
     : state.t < -12000 ? 'The map shows today’s coastlines. Sea level is drawn only for the last 800,000 years, and ice sheets aren’t drawn.' : '';
-  $('#notice').textContent = notice; show($('#notice'), !!notice && $('#panel').hidden);
+  $('#notice').textContent = notice; show($('#notice'), !!notice && $('#panel').hidden && !(innerWidth <= 760 && !$('#seqbar').hidden));   // on a phone it would cover what a sequence is showing
   const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.end >= from && p.start <= to);
-  show($('#empty'), state.pins.length > 0 && pins.length === 0);
+  show($('#empty'), state.pins.length > 0 && pins.length === 0 && $('#seqbar').hidden);
   const period = state.t < -11700 && periodAt(-state.t / 1e6);
   $('#empty').classList.toggle('period', !!period);
   if (period && pins.length === 0) renderPeriod(period);
@@ -697,6 +702,20 @@ function render() {
   queueURL();
 }
 
+// mass extinctions and ice ages on the time bar, for the scales that reach them; a click opens the record
+function drawMarks(from, to) {
+  const key = `${from}|${to}|${!!deepTime}`;
+  if (key === marksKey || !deepTime) return;
+  marksKey = key;
+  const X = ma => ((-ma * 1e6 - from) / (to - from)) * 100, box = $('#marks');
+  box.innerHTML = deepTime.marks.map(m => {
+    const title = esc(m.label), tag = m.id ? 'button' : 'span', attr = m.id ? `data-id="${esc(m.id)}" aria-label="${title}"` : '';
+    if (m.kind === 'extinction') { const x = X(m.ma); return x < 0 || x > 100 ? '' : `<${tag} class="mark ext" style="left:${x.toFixed(2)}%" title="${title}" ${attr}></${tag}>`; }
+    const a = Math.max(0, X(m.from)), b = Math.min(100, X(m.to));
+    return b <= a ? '' : `<${tag} class="mark ice" style="left:${a.toFixed(2)}%;width:${Math.max(0.4, b - a).toFixed(2)}%" title="${title}" ${attr}></${tag}>`;
+  }).join('');
+  box.querySelectorAll('button').forEach(b => { b.onclick = () => goTo(b.dataset.id); });
+}
 // density strip: how many records fall at each point of the current scale (so empty stretches are visible)
 function drawDensity() {
   const c = $('#density'), dpr = devicePixelRatio || 1, w = c.clientWidth, h = c.clientHeight;
@@ -704,6 +723,7 @@ function drawDensity() {
   c.width = w * dpr; c.height = h * dpr;
   const g = c.getContext('2d'); g.scale(dpr, dpr); g.clearRect(0, 0, w, h);
   const { from, to } = range(), bins = new Array(Math.max(20, Math.floor(w / 4))).fill(0);
+  drawMarks(from, to);
   for (const p of state.pins) {
     if (!inLevel(p) || !domainOn(p) || p.end < from || p.start > to) continue;
     // count where each record begins (long periods would otherwise flood every bin)
@@ -943,7 +963,7 @@ async function openRecord(id) {
       <div class="p-when">${esc(r.when?.display)}</div>
       <div class="p-where">${esc(r.where?.historical_name)}${uncertaintyLine(r)}</div>
       <div class="badges"><span class="badge conf-${esc(r.confidence)}">${esc(CONF_LABEL[r.confidence] || r.confidence)}${r.provisional ? ' · provisional' : ''}</span><span class="badge">Importance ${esc(r.importance?.score)}/5</span>${r.model ? '<span class="badge">3D model</span>' : ''}${r.wiki ? `<a class="badge wiki-badge" href="https://en.wikipedia.org/wiki/${esc(encodeURIComponent(r.wiki.title.replace(/ /g, '_')))}" target="_blank" rel="noopener noreferrer" title="Open the Wikipedia article (further reading, not a source)">Wikipedia ↗</a>` : ''}<button class="badge p-share" id="p-share" title="Copy a link to this record">Copy link</button></div>
-      ${(r.animation?.beats || []).length || (r.where?.geometry?.waypoints || []).length >= 2 ? `<button class="play-seq" id="play-seq"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>${(r.animation?.beats || []).length ? `Play the sequence · ${r.animation.beats.length} beats` : 'Play the route'}</button>` : ''}
+      ${(r.animation?.beats || []).length || (r.where?.geometry?.waypoints || []).length >= 2 || deepTime?.scenes[r.id] ? `<button class="play-seq" id="play-seq"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>${(r.animation?.beats || []).length ? `Play the sequence · ${r.animation.beats.length} beats` : deepTime?.scenes[r.id] ? 'Play the animation' : 'Play the route'}</button>` : ''}
       ${r.audience_note ? `<div class="warn">${esc(r.audience_note)}</div>` : ''}
       ${r.card ? `<p class="lede">${esc(r.card)}</p>` : ''}
       ${r.status === 'outline' ? `<section><h3>Summary</h3><div class="prose">${paras(r.summary)}</div></section>` : ''}
@@ -1030,23 +1050,25 @@ function levelFor(y) { return y < -5.4e8 ? 0 : y < -7e6 ? 1 : y < -3e5 ? 2 : y <
 function playSequence(r) {
   const pin = state.pins.find(p => p.id === r.id);
   window.Sequence.play(r, {
-    globe, color: pin ? baseColor(pin) : '#d9b36a',
+    globe, color: pin ? baseColor(pin) : '#d9b36a', scene: deepTime?.scenes[r.id],
+    ride: ({ lat, lng }) => { const q = placed({ lat, lon: lng }); return { lat: q.lat, lng: q.lon }; },
+    schematic: () => { $('#seq-title').textContent = `${r.title} · schematic animation`; },
     setTime: y => { state.t = Math.min(y, NOW); const lv = levelFor(state.t); if (lv !== state.level && state.level !== 6) setLevel(lv, true); else render(); },
     onStart: n => {
       show($('#panel'), false); show($('#seqbar'), true); show($('#hint'), false);
-      $('#seq-title').textContent = r.title;
+      $('#seq-title').textContent = r.title; $('#seq-caption').textContent = ''; $('#seq-num').textContent = '';
       $('#seq-dots').innerHTML = Array.from({ length: n }, () => '<i></i>').join('');
     },
     caption: (i, text, consequence, num) => {
       $('#seq-caption').textContent = text; $('#seq-num').textContent = num || '';
       $('#seq-dots').querySelectorAll('i').forEach((d, j) => { d.classList.toggle('on', j <= i); d.classList.toggle('now', j === i); if (j === i) d.classList.toggle('cons', !!consequence); });
     },
-    onEnd: () => { show($('#seqbar'), false); show($('#panel'), true); render(); },
+    onEnd: () => { show($('#seqbar'), false); show($('#panel'), !!state.selected); render(); },
   });
 }
 let seqPaused = false;
 $('#seq-pause').onclick = () => { seqPaused = !seqPaused; window.Sequence.setPaused(seqPaused); $('#seq-pause').setAttribute('aria-label', seqPaused ? 'Resume sequence' : 'Pause sequence'); $('#seq-pause').innerHTML = seqPaused ? PLAY.replace('12" height="12"', '11" height="11"') : PAUSE.replace('12" height="12"', '11" height="11"'); };
-$('#seq-stop').onclick = () => { window.Sequence.stop(); seqPaused = false; show($('#seqbar'), false); show($('#panel'), true); render(); };
+$('#seq-stop').onclick = () => { window.Sequence.stop(); seqPaused = false; show($('#seqbar'), false); show($('#panel'), !!state.selected); render(); };
 // skip back and forth: the buttons, the arrow keys, or a click on one of the beat dots
 $('#seq-prev').onclick = () => window.Sequence.step(-1);
 $('#seq-next').onclick = () => window.Sequence.step(1);
@@ -1148,6 +1170,13 @@ async function startTour(id, i = 0) {
   state.tour = { id, title: t.title, stops: t.stops, i: Math.min(i, t.stops.length - 1) };
   goTo(state.tour.stops[state.tour.i]);
 }
+// ---------- the film: the last billion years, played like a record's sequence, each caption drawn from the record it names
+function startFilm() {
+  if (!deepTime) return;
+  closeWelcome(); if (state.selected) closePanel();
+  const f = deepTime.film;
+  playSequence({ id: 'film', title: f.title, when: { start: { year: -1e9 } }, where: { lat: 45.6, lon: -74.6 }, animation: { beats: f.beats, duration_s: f.beats.length * 7 } });
+}
 // ---------- welcome card: what this is, where to start, what happened on this date
 function onThisDay() {
   const d = new Date(), md = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -1158,11 +1187,13 @@ async function openWelcome() {
   box.innerHTML = `<h2>Living Atlas</h2>
     <p>Earth and human history, placed where and when it happened. Drag the globe, move the time bar, and open any pin to read its record and sources.</p>
     ${today.length ? `<h3>On this day</h3><ul class="tour-list">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
+    <h3>Watch</h3><ul class="tour-list"><li><button id="film-btn"><b>${esc(deepTime?.film.title || 'A billion years of Earth')}</b><span>${esc(deepTime?.film.blurb || '')}</span></button></li></ul>
     <h3>Take a tour</h3><ul class="tour-list">${list.map(t => `<li><button data-tour="${esc(t.id)}"><b>${esc(t.title)}</b><span>${esc(t.blurb)} ${t.stops.length} stops.</span></button></li>`).join('')}</ul>
     <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span><button id="welcome-close">Explore on my own</button></div>`;
   box.querySelectorAll('button[data-tour]').forEach(b => { b.onclick = () => startTour(b.dataset.tour); });
   box.querySelectorAll('button[data-id]').forEach(b => { b.onclick = () => { closeWelcome(); goTo(b.dataset.id); }; });
   box.querySelector('#welcome-close').onclick = closeWelcome;
+  box.querySelector('#film-btn').onclick = startFilm;
   show(box, true); box.querySelector('button')?.focus({ preventScroll: true });
 }
 function closeWelcome() { if ($('#welcome').hidden) return; show($('#welcome'), false); try { localStorage.setItem('atlas.welcomed', '1'); } catch {} }
@@ -1247,7 +1278,7 @@ setLegend(collapsed);
 const dismissHint = () => { $('#hint').classList.add('fade'); setTimeout(() => show($('#hint'), false), 900); };
 for (const ev of ['pointerdown', 'wheel', 'touchstart']) $('#globe').addEventListener(ev, dismissHint, { once: true, passive: true });
 setTimeout(dismissHint, 12000);
-window.atlas = { openRecord, goTo, state, globe, startTour }; // handy for debugging from the console
+window.atlas = { openRecord, goTo, state, globe, startTour, startFilm }; // handy for debugging from the console
 buildChrome(); setLevel(4);
 // Live refresh only against the local server, where records are being published; the static site's data changes
 // only with a new deploy, so it is fetched once (and can be cached).
