@@ -42,6 +42,7 @@
 
   let flatMat, isFlat = false, atmoMat;
   const CLOUD_OPACITY = 0.3;
+  let loadClouds = () => {};
   let globe, earthMat, clouds, cloudMat, sun, sunCore, moon, moonMat, stars, sunDir = new THREE.Vector3(1, 0.3, 0.5).normalize();
   const loader = new THREE.TextureLoader();
   const dirOf = (lat, lng) => { const c = globe.getCoords(lat, lng, 0); return new THREE.Vector3(c.x, c.y, c.z).normalize(); };
@@ -61,7 +62,7 @@
         nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
         paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 },
         shelfMap: { value: null }, seaDrop: { value: 0 },
-        iceA: { value: null }, iceB: { value: null }, iceMix: { value: 0 }, iceOn: { value: 0 },
+        iceA: { value: null }, iceB: { value: null }, iceMix: { value: 0 }, iceOn: { value: 0 }, iceAge: { value: 0 }, humid: { value: 0 },
         detailMap: { value: null }, detailBounds: { value: new THREE.Vector4(0, 0, 0.25, 0.5) }, detailMix: { value: 0 },
       },
       vertexShader: `varying vec2 vUv; varying vec3 vN; varying vec3 vW;
@@ -71,7 +72,7 @@
         uniform vec3 sunDir; uniform float nightLights; uniform float relief;
         uniform sampler2D detailMap; uniform vec4 detailBounds; uniform float detailMix;
         uniform sampler2D shelfMap; uniform float seaDrop;
-        uniform sampler2D iceA; uniform sampler2D iceB; uniform float iceMix; uniform float iceOn;
+        uniform sampler2D iceA; uniform sampler2D iceB; uniform float iceMix; uniform float iceOn; uniform float iceAge; uniform float humid;
         uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat;
         varying vec2 vUv; varying vec3 vN; varying vec3 vW;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
@@ -97,6 +98,15 @@
               float e = smoothstep(0.0, 0.04, d.x) * smoothstep(1.0, 0.96, d.x) * smoothstep(0.0, 0.04, d.y) * smoothstep(1.0, 0.96, d.y);
               day = mix(day, texture2D(detailMap, d).rgb, e * detailMix);
             }
+          }
+          // Today's forests and deserts aren't those of the past (schematic; the imagery is all there is to work from). In a cold age
+          // forest gives way to steppe-tundra, most strongly away from the tropics; in the African Humid Period the Sahara turns green.
+          if (iceAge > 0.0 || humid > 0.0) {
+            float latN = asin(clamp(n0.y, -1.0, 1.0)) * 57.2958, lonE = (vUv.x - 0.5) * 360.0, patches = fbm(n0 * 9.0), ground = 1.0 - water;
+            float forest = smoothstep(-0.02, 0.05, day.g - day.r) * ground;
+            day = mix(day, mix(vec3(0.42, 0.40, 0.26), vec3(0.50, 0.47, 0.34), patches), forest * iceAge * mix(0.3, 0.9, smoothstep(15.0, 38.0, abs(latN))));
+            float wob = (patches - 0.5) * 16.0, sahara = smoothstep(11.0, 18.0, latN + wob) * (1.0 - smoothstep(26.0, 34.0, latN + wob)) * smoothstep(-24.0, -12.0, lonE + wob) * (1.0 - smoothstep(30.0, 42.0, lonE + wob));
+            day = mix(day, mix(vec3(0.20, 0.31, 0.12), vec3(0.36, 0.41, 0.19), smoothstep(0.3, 0.7, patches)), humid * sahara * ground * smoothstep(0.0, 0.06, day.r - day.g) * 0.85);
           }
           if (seaDrop > 0.0) {   // ice-age sea level: sea floor shallower than the drop stands exposed as dry land (shelf-depth.png)
             float s = texture2D(shelfMap, vUv).r, depth = (s * 255.0 - 1.0) * 150.0 / 254.0;
@@ -176,10 +186,11 @@
     }), 4000);
 
     // Clouds: a translucent shell lit by the same sun
-    // the cloud image (0.4 MB) loads after the globe has drawn; until then the shell is fully transparent
+    // the cloud image (0.4 MB) loads the first time clouds are turned on; until then the shell is fully transparent
     const cloudUniforms = { map: { value: new THREE.Texture() }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 } };
     idle(() => loadMorph(), 6000);   // the plate data, ready before anyone scrolls into deep time
-    idle(() => loader.load('assets/earth-clouds.jpg', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }), 1500);
+    idle(() => { if (!navigator.connection?.saveData) { loadShelf(); loadIce(); } }, 9000);   // likewise the ice-age coastlines and ice sheets
+    loadClouds = () => { loadClouds = () => {}; loader.load('assets/earth-clouds.jpg', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }); };
     cloudMat = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false,
       uniforms: cloudUniforms,
@@ -279,10 +290,10 @@
   // ---------- detail imagery: NASA Blue Marble (21600 px) cut into 8 × 4 tiles of 45°; when zoomed in, the 2 × 2 tiles
   // around the view are composed into one texture and blended over the base map
   const tileImgs = new Map(), DETAIL_ALT = 1.1;
-  let detailKey = null, detailTex = null, detailCanvas = null, lastDetailCheck = 0;
+  let detailKey = null, detailTex = null, detailCanvas = null, lastDetailCheck = 0, lastPov = null;
   const tileImg = (r, c) => {
     const k = `${r}-${c}`;
-    if (!tileImgs.has(k)) tileImgs.set(k, new Promise(ok => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => ok(null); i.src = `assets/tiles/bm-${k}.jpg`; }));
+    if (!tileImgs.has(k)) tileImgs.set(k, new Promise(ok => { const i = new Image(); i.src = `assets/tiles/bm-${k}.jpg`; (i.decode ? i.decode() : new Promise((y, n) => { i.onload = y; i.onerror = n; })).then(() => ok(i), () => ok(null)); }));
     return tileImgs.get(k);
   };
   function checkDetail(now) {
@@ -291,7 +302,9 @@
     const want = !isFlat && pov.altitude < DETAIL_ALT;
     const target = want && detailKey ? Math.min(1, (DETAIL_ALT - pov.altitude) / 0.35) : 0;
     u.detailMix.value += (target - u.detailMix.value) * 0.6;
-    if (!want) return;
+    const moved = !lastPov || Math.abs(pov.lat - lastPov.lat) + Math.abs(pov.lng - lastPov.lng) > 0.6 || Math.abs(pov.altitude - lastPov.altitude) > 0.02;
+    lastPov = pov;
+    if (!want || moved || window.Sequence?.playing) return;   // the upload takes a moment, so it waits until nothing is moving
     const c0 = ((Math.floor((pov.lng + 180) / 45 - 0.5) % 8) + 8) % 8, r0 = Math.max(0, Math.min(2, Math.floor((90 - pov.lat) / 45 - 0.5)));
     const key = `${r0}-${c0}`;
     if (key === detailKey || detailKey === 'loading:' + key) return;
@@ -303,7 +316,7 @@
       imgs.forEach((im, i) => im && g.drawImage(im, (i % 2) * 2048, Math.floor(i / 2) * 2048, 2048, 2048));
       if (!detailTex) {
         detailTex = new THREE.CanvasTexture(detailCanvas);
-        detailTex.anisotropy = globe.renderer().capabilities.getMaxAnisotropy();
+        detailTex.anisotropy = globe.renderer().capabilities.getMaxAnisotropy(); detailTex.generateMipmaps = false; detailTex.minFilter = THREE.LinearFilter;
         detailTex.wrapS = detailTex.wrapT = THREE.ClampToEdgeWrapping;
         u.detailMap.value = detailTex;
       } else detailTex.needsUpdate = true;
@@ -346,8 +359,18 @@
       let faces; try { faces = THREE.ShapeUtils.triangulateShape(flat, []); } catch (err) { continue; }
       for (const [i, j, k] of faces) tri(vs[i], vs[j], vs[k], r.p);
     }
+    // how far inland each point lies: steps from the nearest coast on a 1-degree grid, 0 at the coast and 1 from about 1,500 km in
+    const GW = 360, GH = 180, far = new Int16Array(GW * GH).fill(-1), queue = [];
+    for (const r of m.rings) for (const [lon, lat] of r.pts) { const i = Math.min(GH - 1, Math.floor(90 - lat)) * GW + (Math.floor(lon + 180) % GW + GW) % GW; if (far[i] < 0) { far[i] = 0; queue.push(i); } }
+    for (let h = 0; h < queue.length; h++) {
+      const i = queue[h], y = Math.floor(i / GW), x = i - y * GW;
+      for (const j of [y * GW + (x + 1) % GW, y * GW + (x + GW - 1) % GW, y > 0 ? i - GW : -1, y < GH - 1 ? i + GW : -1]) if (j >= 0 && far[j] < 0) { far[j] = far[i] + 1; queue.push(j); }
+    }
+    const inland = new Float32Array(pos.length / 3);
+    for (let v = 0; v < inland.length; v++) { const lat = (Math.asin(Math.max(-1, Math.min(1, pos[v * 3 + 2]))) * 180) / Math.PI, lon = (Math.atan2(pos[v * 3 + 1], pos[v * 3]) * 180) / Math.PI; inland[v] = Math.min(1, far[Math.min(GH - 1, Math.floor(90 - lat)) * GW + (Math.floor(lon + 180) % GW + GW) % GW] / 14); }
     const g = new THREE.BufferGeometry();
     g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('inland', new THREE.BufferAttribute(inland, 1));
     g.setAttribute('plate', new THREE.Float32BufferAttribute(plate, 1));
     g.boundingSphere = new THREE.Sphere(new THREE.Vector3(), R * 1.01);
     rotData = new Float32Array(m.plates.length * 4);
@@ -355,27 +378,33 @@
     rotTex.magFilter = rotTex.minFilter = THREE.NearestFilter;
     landMat = new THREE.ShaderMaterial({
       transparent: true, side: THREE.DoubleSide,
-      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, R: { value: R * 1.0008 } },
+      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, R: { value: R * 1.0008 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 } },
       // geographic (x 0°E, y 90°E, z north) to globe.gl's frame (x 90°E, y north, z 0°E)
-      vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; varying vec3 vN; varying float vOk;
-        void main(){ vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.5)); vOk = step(0.5, dot(q, q));
+      vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; attribute float inland; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
+        void main(){ vP = position; vIn = inland; vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.5)); vOk = step(0.5, dot(q, q));
           vec3 v = position; vec3 t = 2.0 * cross(q.yzw, v); vec3 p = v + q.x * t + cross(q.yzw, t);
           vec3 w = vec3(p.y, p.z, p.x);
           vN = normalize(mat3(modelMatrix) * w); gl_Position = projectionMatrix * modelViewMatrix * vec4(w * R, 1.0); }`,
-      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; varying vec3 vN; varying float vOk;
+      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; uniform vec3 flora; uniform float warm; uniform float aridity; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
           return mix(mix(mix(hash(i), hash(i + vec3(1,0,0)), f.x), mix(hash(i + vec3(0,1,0)), hash(i + vec3(1,1,0)), f.x), f.y),
                      mix(mix(hash(i + vec3(0,0,1)), hash(i + vec3(1,0,1)), f.x), mix(hash(i + vec3(0,1,1)), hash(i + vec3(1,1,1)), f.x), f.y), f.z); }
         void main(){ if (vOk < 0.5) discard;
           vec3 n = normalize(vN); float ndl = dot(n, normalize(sunDir)), lit = smoothstep(-0.12, 0.25, ndl);
-          float tex = noise(n * 5.3) * 0.5 + noise(n.zxy * 13.7 + 3.1) * 0.3 + noise(n.yzx * 37.0 + 7.7) * 0.2;
-          // schematic climate belts by latitude then: dry near 25° (subtropical highs), wetter in the tropics and mid-latitudes
-          float lat = abs(asin(clamp(n.y, -1.0, 1.0))) * 57.2958;
-          float arid = clamp(exp(-pow((lat - 25.0) / 14.0, 2.0)) * 0.7 + (tex - 0.5) * 1.6 + 0.12, 0.0, 1.0);
-          vec3 rock = vec3(0.50, 0.40, 0.31), dry = vec3(0.60, 0.48, 0.33), green = vec3(0.27, 0.35, 0.20), cold = vec3(0.40, 0.42, 0.34);
-          vec3 wet = mix(green, cold, smoothstep(50.0, 70.0, lat));
-          vec3 c = mix(rock, mix(wet, dry, smoothstep(0.25, 0.75, arid)), veg) * (0.9 + 0.18 * tex);
+          // the pattern is fixed to the land (vP, today's position), so it travels with the continents
+          float tex = noise(vP * 5.3) * 0.5 + noise(vP.zxy * 13.7 + 3.1) * 0.3 + noise(vP.yzx * 37.0 + 7.7) * 0.2;
+          float broad = noise(vP * 2.1 + 4.0) * 0.6 + noise(vP.yzx * 4.7 + 2.0) * 0.4;
+          // schematic plant cover by the latitude the land stood at then, how far inland it lies, and the age: wet tropics, dry subtropical
+          // belts, then temperate and boreal forest and tundra, with the belts moved poleward in warm ages
+          float lat = abs(asin(clamp(n.y, -1.0, 1.0))) * 57.2958, belt = lat - warm * 0.3;
+          float arid = clamp(exp(-pow((belt - 26.0) / 11.0, 2.0)) * 0.85 + vIn * 0.5 * smoothstep(8.0, 22.0, belt) + aridity + (broad - 0.5) * 1.1 + (tex - 0.5) * 0.5 - 0.1, 0.0, 1.0);
+          vec3 rock = vec3(0.50, 0.40, 0.31), sand = vec3(0.62, 0.50, 0.34), steppe = vec3(0.47, 0.44, 0.25), tundra = vec3(0.40, 0.42, 0.34);
+          vec3 forest = flora * mix(vec3(0.70, 1.02, 0.80), vec3(1.08, 1.0, 0.88), smoothstep(8.0, 38.0, belt)) * mix(0.74, 1.2, smoothstep(0.25, 0.75, broad));
+          forest = mix(forest, flora * vec3(0.60, 0.80, 0.78), smoothstep(46.0 + warm, 60.0 + warm, lat));
+          forest = mix(forest, tundra, smoothstep(60.0 + warm, 74.0 + warm, lat));
+          vec3 plants = mix(mix(forest, steppe, smoothstep(0.22, 0.48, arid)), sand, smoothstep(0.52, 0.8, arid));
+          vec3 c = mix(rock, plants, veg) * (0.9 + 0.18 * tex);
           c = mix(c, vec3(0.90, 0.93, 0.96), smoothstep(iceLat - 4.0, iceLat + 2.0, lat + (tex - 0.5) * 14.0));   // ice sheets
           vec3 col = mix(c * 0.04, c * (0.16 + 1.0 * max(ndl, 0.0)), lit);
           gl_FragColor = vec4(col, opacity); }`,
@@ -393,6 +422,11 @@
     });
     rotTex.needsUpdate = true;
     landMat.uniforms.veg.value = Math.min(1, Math.max(0, (470 - ma) / 70));   // bare rock and soil before land plants spread (c. 470-400 Ma)
+    // plants through the ages, schematic: colour, how far warmth moves the belts poleward (degrees), and extra dryness
+    const FLORA = [[470, 0.38, 0.40, 0.27, 0, 0.1], [400, 0.26, 0.35, 0.20, 4, 0.05], [320, 0.13, 0.30, 0.15, 6, -0.1], [270, 0.27, 0.33, 0.19, 0, 0.22], [230, 0.33, 0.35, 0.20, 6, 0.3],
+      [150, 0.18, 0.31, 0.18, 10, 0.08], [95, 0.20, 0.37, 0.18, 16, 0], [50, 0.15, 0.37, 0.17, 18, 0.04], [20, 0.27, 0.38, 0.19, 6, 0.08], [2, 0.25, 0.36, 0.18, 0, 0.05]];
+    const fi = Math.max(0, FLORA.findIndex(x => x[0] <= ma)), hi = FLORA[Math.max(0, fi - 1)], lo = FLORA[fi], ft = hi === lo ? 0 : (hi[0] - ma) / (hi[0] - lo[0]), at = n => hi[n] + (lo[n] - hi[n]) * ft;
+    landMat.uniforms.flora.value.set(at(1), at(2), at(3)); landMat.uniforms.warm.value = at(4); landMat.uniforms.aridity.value = at(5);
     landMat.uniforms.iceLat.value = earthMat.uniforms.iceLat.value = iceLine(ma);
   }
   // The latitude poleward of which ice is drawn, for the major glaciations (a schematic picture by latitude, not a
@@ -467,9 +501,14 @@
 
   // How far sea level stands below today's, in metres, for the ice-age coastlines. The depth map loads the first time it's needed.
   let shelfLoading = false;
+  function loadShelf() {
+    const u = earthMat.uniforms;
+    if (u.shelfMap.value || shelfLoading) return;
+    shelfLoading = true; loader.load('assets/shelf-depth.png', t => { t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; u.shelfMap.value = t; u.seaDrop.value = window.__seaDrop || 0; });
+  }
   function setSeaDrop(m) {
     const u = earthMat.uniforms;
-    if (m > 0 && !u.shelfMap.value && !shelfLoading) { shelfLoading = true; loader.load('assets/shelf-depth.png', t => { t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; u.shelfMap.value = t; u.seaDrop.value = window.__seaDrop || 0; }); }
+    if (m > 0) loadShelf();
     window.__seaDrop = m;
     if (u.shelfMap.value) u.seaDrop.value = m;
   }
@@ -478,13 +517,18 @@
   // Near today it fades out, because the imagery already shows today's ice; past 80,000 years there's no data, so it fades out too.
   let iceImg = null, iceLoading = false, iceBp = null; const iceFrame = [-1, -1];
   const iceTex = () => { const c = document.createElement('canvas'); c.width = 360; c.height = 181; const t = new THREE.CanvasTexture(c); t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; t.wrapS = THREE.RepeatWrapping; return t; };
+  function loadIce() {
+    if (iceImg || iceLoading) return;
+    iceLoading = true;
+    const img = new Image(), u = earthMat.uniforms;
+    img.onload = () => (img.decode ? img.decode().catch(() => {}) : Promise.resolve()).then(() => { iceImg = img; u.iceA.value = iceTex(); u.iceB.value = iceTex(); setIce(iceBp); });
+    img.onerror = () => { iceLoading = false; };
+    img.src = 'assets/ice-sheets.png';
+  }
   function setIce(bp) {
     const u = earthMat.uniforms; iceBp = bp;
     if (bp == null || bp < 500 || bp > 85000) { u.iceOn.value = 0; return; }
-    if (!iceImg) {
-      if (!iceLoading) { iceLoading = true; const img = new Image(); img.onload = () => { iceImg = img; u.iceA.value = iceTex(); u.iceB.value = iceTex(); setIce(iceBp); }; img.onerror = () => { iceLoading = false; }; img.src = 'assets/ice-sheets.png'; }
-      return;
-    }
+    if (!iceImg) { loadIce(); return; }
     const f = Math.min(32, bp / 2500), a = Math.floor(f), b = Math.min(32, a + 1);
     [[u.iceA.value, a], [u.iceB.value, b]].forEach(([t, k], i) => {
       if (iceFrame[i] === k) return;
@@ -494,6 +538,9 @@
     });
     u.iceMix.value = f - a; u.iceOn.value = Math.min(1, (bp - 500) / 2000) * Math.min(1, (85000 - bp) / 5000);
   }
+
+  // how far the imagery's plant cover is shifted: cold (0-1, from how far sea level has fallen) and the African Humid Period (0-1)
+  function setClimate(cold, wet) { earthMat.uniforms.iceAge.value = cold; earthMat.uniforms.humid.value = wet; }
 
   function update({ date, sunMode: mode, nightLights, clouds: showClouds, zoomAlt, flat }) {
     if (!globe) return;
@@ -505,9 +552,9 @@
     moon.position.copy(dirOf(m.lat, m.lng)).multiplyScalar(R * 14);
     moon.lookAt(0, 0, 0); // keep the familiar near side facing Earth
     earthMat.uniforms.nightLights.value = nightLights ? 1 : 0;
-    clouds.visible = showClouds;
+    clouds.visible = showClouds; if (showClouds) loadClouds();
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { init, update, setPaleo, setSeaDrop, setIce, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { init, update, setPaleo, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();
