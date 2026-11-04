@@ -7,7 +7,7 @@ window.Borders = (() => {
   const BINS = [-3400, -1000, 0, 500, 1000, 1250, 1500, 1750, 1900, 2025];   // one file per span (atlas/tools/build-borders.mjs)
   const files = new Map();   // first year of the span -> { geoms, features } or the promise of them
   let globe = null, data = null, shown = null, wanted = null, lastBuild = 0, timer = 0;
-  let wash, washTex, canvas, ctx, lines, lineMat, labelGroup;
+  let wash, washTex, canvas, ctx, lines, lineMat, labelGroup, builtKey = '';
   const labels = new Map(), _v = new THREE.Vector3();
 
   function init(g) {
@@ -55,6 +55,9 @@ window.Borders = (() => {
   function build() {
     if (!data || wanted == null) return;
     const year = wanted, active = data.features.filter(f => f[1] <= year && f[2] >= year), W = canvas.width, H = canvas.height;
+    const key = `${binOf(year)}:${active.map(f => f[4]).join()}`;
+    if (key === builtKey && wash.visible) { shown = year; return; }   // the same polities as last time: nothing to redraw
+    builtKey = key;
     ctx.clearRect(0, 0, W, H);
     const seg = [];
     labelGroup.clear();
@@ -92,7 +95,8 @@ window.Borders = (() => {
     data = files.get(binOf(clamped)) || null;
     if (!data) { load(binOf(clamped)); return; }
     clearTimeout(timer);
-    const wait = 120 - (performance.now() - lastBuild);
+    for (const near of [clamped - 80, clamped + 80]) if (binOf(near) !== binOf(clamped) && near >= FIRST && near <= LAST) load(binOf(near));
+    const wait = 200 - (performance.now() - lastBuild);
     if (wait <= 0) build(); else timer = setTimeout(build, wait);
   }
   // per frame: name the largest polities facing the camera, in the space the pin names left free

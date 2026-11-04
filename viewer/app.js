@@ -39,7 +39,7 @@ const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
 const GLOBE_R = 100, KM_PER_UNIT = 6371 / GLOBE_R;
 
-const state = { level: 4, t: -500, whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: true, realSun: false, pins: [], models: new Map(), selected: null,
+const state = { level: 4, t: -500, whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
   alt: 2.4, off: new Set(), impOff: new Set() };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -440,6 +440,8 @@ function applyMapStyle() {
 // today's it stood at the date shown. Fetched the first time the date is old enough to need it. Small values near the
 // present are within the study's margin, so nothing is drawn for them.
 let seaCurve = null, seaLoading = false;
+// The African Humid Period, when the Sahara held lakes, animals and people: about 11,000 to 5,000 years ago, ending within a few centuries
+const humidAt = bp => Math.min(1, Math.max(0, (11500 - bp) / 500)) * Math.min(1, Math.max(0, (bp - 4700) / 300));
 function seaDropAt(t) {
   const ka = (1950 - t) / 1000;
   if (ka < 8 || ka > 798) return 0;
@@ -464,7 +466,11 @@ function updateSky() {
     nightLights: !map && state.t >= 1900, clouds: !map && state.clouds, zoomAlt: state.alt, flat: map });
   state.paleoMa = window.Space.setPaleo(!map && state.t < -2e6 ? -state.t / 1e6 : null);
   state.seaDrop = map ? 0 : seaDropAt(state.t);
-  window.Space.setSeaDrop(state.seaDrop);
+  const bp = 1950 - state.t;
+  window.Space.setSeaDrop(state.seaDrop * Math.min(1, Math.max(0, (bp - 8000) / 1000)));   // the shelves flood gradually, not at a stroke, as the curve ends
+  window.Space.setIce(map ? null : bp);
+  state.humid = map ? 0 : humidAt(bp);
+  window.Space.setClimate(Math.min(1, state.seaDrop / 125), state.humid);
   window.Borders?.update(state.t, state.borders);
   window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
   window.Spacecraft?.update(state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
@@ -683,8 +689,8 @@ function render() {
   const notice = state.paleoMa != null && -state.t / 1e6 > window.Space.PALEO_MAX ? eonNote(-state.t / 1e6)
     : state.paleoMa >= 10 ? `Continents as they stood ${Math.round(state.paleoMa)} million years ago, moved plate by plate (MERDITH2021 plate model, GPlates). Pins ride on their plates, from where the evidence is found today.`
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
-    : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). Ice sheets aren’t drawn.`
-    : state.t < -12000 ? 'The map shows today’s coastlines. Sea level is drawn only for the last 800,000 years, and ice sheets aren’t drawn.' : '';
+    : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Ice sheets are drawn only for the last 80,000 years.'} Plant cover is schematic.`
+    : state.t < -12000 ? state.humid > 0 ? 'The Sahara is tinted green for the African Humid Period, about 11,000 to 5,000 years ago. Plant cover is schematic.' : state.mapStyle === 'map' ? 'The map shows today’s coastlines. Sea level, ice sheets and plant cover show in the satellite view.' : `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
   $('#notice').textContent = notice; show($('#notice'), !!notice && $('#panel').hidden && !(innerWidth <= 760 && !$('#seqbar').hidden));   // on a phone it would cover what a sequence is showing
   const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.end >= from && p.start <= to);
   show($('#empty'), state.pins.length > 0 && pins.length === 0 && $('#seqbar').hidden);
@@ -819,23 +825,25 @@ let speed = 1;
 try { const s = +localStorage.getItem('atlas-speed'); if (SPEEDS.includes(s)) speed = s; } catch {}
 const presentT = () => { const d = new Date(), y0 = Date.UTC(d.getUTCFullYear(), 0, 1); return NOW + (d - y0) / (Date.UTC(NOW + 1, 0, 1) - y0); };
 const speedLabel = () => (speed < 1 ? `${speed}×`.replace('0.', '.') : `${speed}×`);
-function stopPlay() { clearInterval(timer); timer = null; $('#play').innerHTML = PLAY; $('#play').setAttribute('aria-label', 'Play through time'); }
+function stopPlay() { cancelAnimationFrame(timer); timer = null; $('#play').innerHTML = PLAY; $('#play').setAttribute('aria-label', 'Play through time'); }
 $('#play').onclick = () => {
   if (timer) return stopPlay();
   const end = () => Math.min(range().to, presentT());
   if (state.t >= end() - 1e-6) { state.t = range().from; render(); }   // at the end already: start the scale over
   $('#play').innerHTML = PAUSE; $('#play').setAttribute('aria-label', 'Pause');
   let last = performance.now();
-  timer = setInterval(() => {
-    const now = performance.now(), dt = Math.min(0.25, (now - last) / 1000); last = now;
+  const step = now => {
+    if (!timer) return;
+    const dt = Math.min(0.1, (now - last) / 1000); last = now;
     const { from, to } = range(), event = LEVELS[state.level].key === 'event';
     const rate = (event ? 12.5 / 365 : (to - from) / 40) * speed;   // years per second
     // the one-year scale's window follows the year, so it plays on into the next year until the present day
     const stop = event ? presentT() : Math.min(to, presentT());
     state.t = Math.min(stop, state.t + rate * dt);
     render();
-    if (state.t >= stop - 1e-9) stopPlay();
-  }, 60);
+    if (state.t >= stop - 1e-9) stopPlay(); else timer = requestAnimationFrame(step);
+  };
+  timer = requestAnimationFrame(step);
 };
 $('#speed').textContent = speedLabel();
 $('#speed').onclick = e => {   // click for faster, shift-click or right-click for slower
@@ -845,7 +853,7 @@ $('#speed').onclick = e => {   // click for faster, shift-click or right-click f
   try { localStorage.setItem('atlas-speed', speed); } catch {}
 };
 $('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
-$('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); };
+$('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); updateSky(); render(); };
 for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun']]) {
   $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); if (key === 'monuments') loadModels(); };
 }
@@ -1050,7 +1058,7 @@ function levelFor(y) { return y < -5.4e8 ? 0 : y < -7e6 ? 1 : y < -3e5 ? 2 : y <
 function playSequence(r) {
   const pin = state.pins.find(p => p.id === r.id);
   window.Sequence.play(r, {
-    globe, color: pin ? baseColor(pin) : '#d9b36a', scene: deepTime?.scenes[r.id],
+    globe, color: pin ? baseColor(pin) : '#d9b36a', scene: deepTime?.scenes[r.id], getTime: () => state.t,
     ride: ({ lat, lng }) => { const q = placed({ lat, lon: lng }); return { lat: q.lat, lng: q.lon }; },
     schematic: () => { $('#seq-title').textContent = `${r.title} · schematic animation`; },
     setTime: y => { state.t = Math.min(y, NOW); const lv = levelFor(state.t); if (lv !== state.level && state.level !== 6) setLevel(lv, true); else render(); },
@@ -1200,7 +1208,7 @@ function closeWelcome() { if ($('#welcome').hidden) return; show($('#welcome'), 
 $('#start').onclick = openWelcome;
 // ---------- the address bar: #t=1945&l=modern&r=<record id>&tour=<id>. Opening or closing a record adds a history entry,
 // so Back returns to the record before; moving through time only updates the current entry.
-let urlTimer = 0, restoring = false;
+let urlTimer = 0, restoring = true;   // nothing is written until the records have loaded, or the opening view would overwrite a shared link
 function stateHash() {
   const h = new URLSearchParams(), level = LEVELS[state.level].key;
   if (state.selected || state.t !== -500 || level !== 'civilization') { h.set('t', String(+state.t.toPrecision(7))); h.set('l', level); }
@@ -1286,6 +1294,7 @@ const LIVE = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
 const dataReady = refresh(); if (LIVE) setInterval(refresh, 15000);
 dataReady.then(() => { // a link to a place in the atlas opens there; a first visit with no link gets the welcome card
   if (location.hash.length > 1) return applyHash();
+  restoring = false;
   let seen = false;
   try { seen = !!localStorage.getItem('atlas.welcomed'); } catch {}
   if (!seen) openWelcome();

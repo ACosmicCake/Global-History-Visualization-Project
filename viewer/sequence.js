@@ -164,7 +164,8 @@
     })(last);
   });
   const wait = ms => tween(ms, () => {});
-  const fly = (ctx, lat, lng, altitude, ms = 1600) => ctx.globe.pointOfView({ lat, lng, altitude }, reduced ? 0 : ms);
+  const flightTime = (ctx, lat, lng) => { const p = ctx.globe.pointOfView(); return clamp(700 + anchor(ctx, p.lat, p.lng, 0).normalize().angleTo(anchor(ctx, lat, lng, 0).normalize()) * 800, 800, 2200); };
+  const fly = (ctx, lat, lng, altitude, ms) => ctx.globe.pointOfView({ lat, lng, altitude }, reduced ? 0 : ms ?? flightTime(ctx, lat, lng));
   const fmt = n => Math.round(n).toLocaleString();
   const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
 
@@ -181,16 +182,23 @@
 
   // Smooth follow: each frame the camera direction eases toward the target with a time constant, instead of
   // snapping to the newest vertex (which stutters), and the target itself is interpolated between vertices.
-  function follower(ctx, altitude) {
-    const cam0 = ctx.globe.camera().position.clone().normalize();
-    let dir = cam0, last = performance.now();
+  // It starts gently and the height eases too, so taking over from a flight is never a jolt or a sudden zoom.
+  function follower(ctx, altitude, tau = 220) {
+    const cam0 = ctx.globe.camera().position.clone().normalize(), born = performance.now();
+    let dir = cam0, last = born, alt = ctx.globe.pointOfView().altitude;
     return target => {
       const now = performance.now(), dt = Math.min(64, now - last); last = now;
-      dir = dir.clone().lerp(target.clone().normalize(), 1 - Math.exp(-dt / 220)).normalize();
+      dir = dir.clone().lerp(target.clone().normalize(), (1 - Math.exp(-dt / tau)) * Math.min(1, (now - born) / 600)).normalize();
+      alt += (altitude - alt) * (1 - Math.exp(-dt / 500));
       const g = ctx.globe.toGeoCoords({ x: dir.x * R, y: dir.y * R, z: dir.z * R });
-      ctx.globe.pointOfView({ lat: g.lat, lng: g.lng, altitude }, 0);
+      ctx.globe.pointOfView({ lat: g.lat, lng: g.lng, altitude: alt }, 0);
     };
   }
+  // the clock runs to a date instead of jumping there, so continents glide and the display counts; each frame can do more
+  const glideTime = (ctx, year, dur, onFrame) => {
+    const from = ctx.getTime ? ctx.getTime() : year;
+    return tween(dur, k => { ctx.setTime(from + (year - from) * (k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2)); onFrame?.(); });
+  };
 
   // ---------- prehistoric scenes: effects for moments with no reconstruction to draw. The place, and the size where the
   // record states one, come from the record; the motion is illustrative, and the viewer labels it as schematic.
@@ -202,6 +210,10 @@
   const tangents = dir => { const u = new THREE.Vector3(0, 1, 0).cross(dir); if (u.lengthSq() < 1e-4) u.set(1, 0, 0); u.normalize(); return [u, dir.clone().cross(u)]; };
   const sceneGroup = () => { const g = new THREE.Group(); layer?.add(g); return g; };
   const ms = t => (reduced ? 1 : t);
+  const flyThere = async (ctx, at, alt) => {
+    const d = flightTime(ctx, at.lat, at.lng);
+    fly(ctx, at.lat, at.lng, alt, reduced ? 0 : d); await wait(ms(d));
+  };
   // a patch of the sphere around a direction that follows the curve at any size; "hollow" keeps only the outer band,
   // "rough" frays the edge like a lava front
   function patch(dir, color, opacity, { hollow = 0, rough = 0 } = {}) {
@@ -249,8 +261,7 @@
     // an asteroid comes in, a flash, shock rings and ejecta, and a crater left glowing. km: the crater, where the record says
     async impact(ctx, at, o) {
       const g = sceneGroup(), dir = unit(ctx, at), km = o.km || 100, end = dir.clone().multiplyScalar(R), side = new THREE.Vector3(0.3, 1, 0.2).cross(dir).normalize();
-      fly(ctx, at.lat, at.lng, o.alt ?? clamp(km / 200, 0.4, 1), 900);
-      await wait(ms(900));
+      await flyThere(ctx, at, o.alt ?? clamp(km / 200, 0.4, 1));
       if (!o.alive()) return;
       const start = dir.clone().multiplyScalar(R * 1.9).add(side.multiplyScalar(R * 0.7)), head = glow('#fff3d6', 4), tail = Array.from({ length: 16 }, (_, i) => glow('#ffb45e', 3 - i * 0.14, 0.55 - i * 0.03));
       g.add(head, ...tail);
@@ -272,8 +283,7 @@
     // lava spreading over the land with ash rising downwind. km: the lava's reach, ash: an ash cloud's, where the record says
     async eruption(ctx, at, o) {
       const g = sceneGroup(), dir = unit(ctx, at), km = o.km || 500, ash = o.ash || km * 0.8, angle = km / 6371, dur = Math.max(4200, o.ms - 1000);
-      fly(ctx, at.lat, at.lng, o.alt ?? clamp(Math.max(km, ash) / 500, 0.45, 1.3), 900);
-      await wait(ms(900));
+      await flyThere(ctx, at, o.alt ?? clamp(Math.max(km, ash) / 500, 0.45, 1.3));
       if (!o.alive()) return;
       const lava = patch(dir, '#ff6a1f', 0.85, { rough: 0.22 }), core = patch(dir, '#ffd27a', 0.8, { rough: 0.3 }), cloud = patch(dir, '#8a8580', 0, { rough: 0.3 }), plume = burst(dir, 320, '#8f8780', 3.6, { spread: Math.min(0.5, ash / 6371), height: clamp(ash / 6000, 0.05, 0.14), loop: true, drift: 0.08 });
       const light = glow('#ff8a3a', 8, 0.7); light.position.copy(dir).multiplyScalar(R * 1.02);
@@ -309,8 +319,7 @@
     // many small impacts over one side of a young planet
     async bombard(ctx, at, o) {
       const g = sceneGroup(), dir = unit(ctx, at), [u, v] = tangents(dir), n = 16, dur = Math.max(5200, o.ms - 1000);
-      fly(ctx, at.lat, at.lng, o.alt ?? 1.5, 900);
-      await wait(ms(900));
+      await flyThere(ctx, at, o.alt ?? 1.5);
       if (!o.alive()) return;
       const hits = Array.from({ length: n }, (_, i) => {
         const th = i * 2.4, d = 0.15 + 0.65 * Math.sqrt(i / n), p = dir.clone().add(u.clone().multiplyScalar(Math.cos(th) * d)).add(v.clone().multiplyScalar(Math.sin(th) * d)).normalize();
@@ -326,8 +335,7 @@
     // a Mars-sized body strikes, and the debris gathers into the Moon
     async giant(ctx, at, o) {
       const g = sceneGroup(), dir = unit(ctx, at), side = new THREE.Vector3(0.2, 1, 0.1).cross(dir).normalize(), dur = Math.max(4600, o.ms - 3200);
-      fly(ctx, at.lat, at.lng, 3.2, 1000);
-      await wait(ms(1000));
+      await flyThere(ctx, at, 3.2);
       if (!o.alive()) return;
       const start = dir.clone().multiplyScalar(R * 3.4).add(side.clone().multiplyScalar(R * 2.6)), end = dir.clone().multiplyScalar(R * 1.3);
       const body = new THREE.Mesh(new THREE.SphereGeometry(R * 0.53, 32, 24), new THREE.MeshBasicMaterial({ color: '#5a4436' })), rim = glow('#ff9a4a', R * 1.5, 0.35);
@@ -355,24 +363,20 @@
     },
     // time runs through a span while the continents glide; the camera stays with a place on the moving land
     async plates(ctx, at, o) {
-      const alt = o.alt ?? 1.7, ride = o.ride, here = () => ride({ lat: at.lat, lng: at.lng });
-      ctx.setTime(-o.from_ma * 1e6);
-      const h0 = here(); fly(ctx, h0.lat, h0.lng, alt, 900);
-      await wait(ms(900));
+      const alt = o.alt ?? 1.7, follow = reduced ? null : follower(ctx, alt, 420), tip = new THREE.Vector3();
+      const track = () => { const p = o.ride({ lat: at.lat, lng: at.lng }); if (follow) follow(tip.copy(anchor(ctx, p.lat, p.lng, 0))); else fly(ctx, p.lat, p.lng, alt, 0); };
+      await glideTime(ctx, -o.from_ma * 1e6, ms(1200), track);
       if (!o.alive()) return;
-      const follow = reduced ? null : follower(ctx, alt), tip = new THREE.Vector3(); let last = 0;
-      await tween(ms(Math.max(4200, o.ms - 900)), k => {
-        const now = performance.now(); if (k < 1 && now - last < 40) { if (follow) follow(tip); return; }
-        last = now;
-        const f = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
-        ctx.setTime(-(o.from_ma + (o.to_ma - o.from_ma) * f) * 1e6);
-        const p = here(); if (follow) follow(tip.copy(anchor(ctx, p.lat, p.lng, 0)));
+      await tween(ms(Math.max(4200, o.ms - 1200)), k => {
+        ctx.setTime(-(o.from_ma + (o.to_ma - o.from_ma) * (k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2)) * 1e6);
+        track();
       });
     },
     // the clock moves to a date and the camera to a place
     async arrive(ctx, at, o) {
-      if (o.year != null) ctx.setTime(o.year);
-      fly(ctx, at.lat, at.lng, o.alt ?? 1.4, 1200);
+      fly(ctx, at.lat, at.lng, o.alt ?? 1.4, reduced ? 0 : 1400);
+      if (o.year != null) await glideTime(ctx, o.year, ms(1400));
+      if (!o.alive()) return;
       const d = dirPulse(ctx, at); await tween(ms(Math.max(4200, o.ms)), k => d(k));
     },
   };
@@ -384,7 +388,7 @@
     if (own && own.length) return own;
     const wp = rec.where?.geometry?.waypoints || [];
     // a dated route: one step per stop, moving the clock along with it
-    if (wp.length >= 3 && wp.every(w => typeof w.year === 'number')) return wp.map((w, i) => ({ span: String(w.year), action: i ? `path.trace { stop: ${i} }` : `pulse { lat: ${w.lat}, lon: ${w.lon}, radius_km: 60 }`, caption: `${w.date}. ${w.label}` }));
+    if (wp.length >= 3 && wp.every(w => typeof w.year === 'number')) return wp.map((w, i) => ({ span: String(w.year), action: i ? `path.trace { stop: ${i} }` : `pulse { lat: ${w.lat}, lon: ${w.lon}, radius_km: 60, route_view: 1 }`, caption: `${w.date}. ${w.label}` }));
     const b = [{ span: String(rec.when?.start?.year ?? ''), action: `pulse { radius_km: ${Math.max(30, rec.where?.uncertainty_km || 40)} }`, caption: rec.summary || rec.title }];
     if (wp.length >= 2) b.push({ span: String(rec.when?.start?.year ?? ''), action: 'path.trace {}', caption: `Route: ${wp.map(w => w.label || '').filter(Boolean).slice(0, 4).join(' → ')}` });
     return b;
@@ -400,11 +404,7 @@
     const per = Math.max(4200, Math.min(9000, total / beats.length));
     const home = { lat: rec.where?.lat ?? 0, lng: rec.where?.lon ?? 0 }, ride = p => (ctx.ride ? ctx.ride(p) : p);
     beatCount = beats.length; cur = 0; ctx.onStart(beats.length);
-    const startYear = spanYear(beats[0]?.span) ?? rec.when?.start?.year;
-    if (startYear != null) ctx.setTime(startYear);
     const view = wp.length >= 2 ? routeView(ctx, wp) : null;
-    if (view) fly(ctx, view.lat, view.lng, view.overview); else { const h = ride(home); fly(ctx, h.lat, h.lng, 0.45); }
-    await wait(reduced ? 200 : 1500);
     let wpIndex = 0, trace = null;
     // a beat that moves along the route: a route verb, or a moving marker/person that names where it goes ("marker.pin" stays put)
     const isPath = (name, params = {}) => wp.length >= 2 && (/path|trace|route|march|voyage|migrat/.test(name) || /person|marker/.test(name) && Array.isArray(params.to));
@@ -451,6 +451,14 @@
         after(name, params);
       }
     };
+    // the opening: a scene that sets its own date and view takes it from here, with no flight in and back out first
+    const first = parseAction(beats[0]?.action), firstScene = sceneFor(0, first.name, first.params);
+    const startYear = spanYear(beats[0]?.span) ?? rec.when?.start?.year;
+    if (startYear != null && !(firstScene?.type === 'plates' || firstScene?.ma != null)) ctx.setTime(startYear);
+    if (!firstScene && !first.params.route_view) {
+      const open = view || ride(home);
+      await flyThere(ctx, open, view ? view.overview : 0.45);
+    }
     for (let i = 0; ; i++) {
       if (id !== run) return;
       if (i >= beats.length) { // the end: a short hold, unless the viewer steps back into the sequence
@@ -468,13 +476,17 @@
 
     async function runBeat(i) {
       const beat = beats[i], { name, params } = parseAction(beat.action);
-      const y = spanYear(beat.span); if (y != null && Math.abs(y) < 1e7) ctx.setTime(y);
+      const y = spanYear(beat.span); if (y != null && Math.abs(y) < 1e7) { if (reduced) ctx.setTime(y); else glideTime(ctx, y, 800); }
       ctx.caption(i, beat.caption || '', beat.consequence);
       const sc = sceneFor(i, name, params);
       if (sc) {
         ctx.schematic?.();
-        if (sc.ma != null) ctx.setTime(-sc.ma * 1e6);
         const raw = sc.at ? { lat: sc.at[0], lng: sc.at[1] } : placeOf(i, params), started = performance.now();
+        if (sc.ma != null) {
+          const follow = reduced ? null : follower(ctx, sc.alt ?? 1.6, 420), tip = new THREE.Vector3();
+          await glideTime(ctx, -sc.ma * 1e6, ms(1200), () => { const p = ride(raw); if (follow) follow(tip.copy(anchor(ctx, p.lat, p.lng, 0))); });
+          if (id !== run) return;
+        }
         const target = reduced ? 3000 : Math.max(per, String(beat.caption || '').length * 55);    // long enough to read the caption
         await SCENES[sc.type](ctx, sc.type === 'plates' ? raw : ride(raw), { ...sc, ms: target, ride, alive: () => id === run });
         const left = target - (performance.now() - started);
@@ -494,7 +506,7 @@
         });
         after(name, params); return;
       }
-      if (!/numbers/.test(name)) fly(ctx, at.lat, at.lng, pointAlt(params.radius_km || (params.radius_m || 0) / 1000 || 120));
+      if (!/numbers/.test(name)) fly(ctx, at.lat, at.lng, params.route_view && view ? view.follow : pointAlt(params.radius_km || (params.radius_m || 0) / 1000 || 120));
       if (/region|fill|area|front/.test(name)) {
         const disc = surfaceRing(ctx, at.lat, at.lng, params.radius_km || (params.radius_m ? params.radius_m / 1000 : 200), color, true);
         await tween(per, k => { disc.scale.setScalar(0.2 + 0.8 * Math.min(1, k * 1.6)); });
