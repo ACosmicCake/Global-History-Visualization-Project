@@ -161,7 +161,7 @@
   #loading.gone { opacity: 0; pointer-events: none; }
 
   /* ---------- Earth's vital signs: a quiet readout above the time bar; a row chooses the curve drawn along the bar */
-  #vitals { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(var(--time-top, 176px) + 10px); width: 226px; padding: 9px 6px 8px; z-index: 3; }
+  #vitals { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(var(--time-top, 176px) + 10px); width: 262px; padding: 9px 6px 8px; z-index: 3; }
   #vitals[hidden], #panel:not([hidden]) ~ #vitals, #welcome:not([hidden]) ~ #vitals, #pinlist:not([hidden]) ~ #vitals, #seqbar:not([hidden]) ~ #vitals { display: none; }
   #vitals h2 { margin: 0 8px 5px; font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
   #v-rows { display: flex; flex-direction: column; gap: 1px; }
@@ -175,9 +175,27 @@
   #v-about summary { cursor: pointer; }
   #v-about summary:hover { color: var(--soft); }
   #v-about p { margin: 5px 0 0; line-height: 1.4; max-height: 150px; overflow-y: auto; }
+  #vitals { max-height: calc(100vh - var(--time-top, 176px) - 24px); overflow-y: auto; }
+  #vitals.only-key h2, #vitals.only-key #v-rows, #vitals.only-key #v-range, #vitals.only-key #v-about { display: none; }
+  #v-fossils { margin: 7px 8px 0; padding-top: 6px; border-top: 1px solid var(--rule); }
+  #vitals.only-key #v-fossils { margin-top: 0; padding-top: 0; border-top: 0; }
+  #v-fossils h3 { margin: 0 0 4px; font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  #v-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 1px 4px; }
+  .f-chip { display: flex; align-items: center; gap: 4px; min-width: 0; padding: 2px 3px; border: 0; border-radius: 4px; background: transparent; color: var(--soft); font-size: 10.5px; text-align: left; cursor: pointer; white-space: nowrap; }
+  .f-chip:hover { background: rgba(255,255,255,.05); }
+  .f-chip i { flex: none; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 5px currentColor; }
+  .f-chip span { overflow: hidden; text-overflow: ellipsis; color: var(--soft); }
+  .f-chip b { margin-left: auto; font: 10px var(--f-mono); color: var(--text); font-variant-numeric: tabular-nums; }
+  .f-chip.none b { color: var(--muted); }
+  .f-chip[aria-pressed="false"] { opacity: .35; }
+  #v-caveat { margin: 4px 0 0; font-size: 10.5px; line-height: 1.35; color: var(--muted); }
   @media (max-width: 900px) {
     #vitals { left: var(--gut); width: auto; padding: 3px; }
-    #vitals h2, #v-range, #v-about { display: none; }
+    #vitals h2, #v-range, #v-about, #v-fossils h3, #v-caveat { display: none; }
+    #v-fossils, #vitals.only-key #v-fossils { margin: 2px 0 0; padding-top: 2px; }
+    #v-chips { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+    #v-chips::-webkit-scrollbar { display: none; }
+    .f-chip { flex: none; }
     #v-rows { flex-direction: row; gap: 2px; overflow-x: auto; scrollbar-width: none; }
     #v-rows::-webkit-scrollbar { display: none; }
     .v-row { flex: 1 0 auto; flex-direction: column; align-items: flex-start; gap: 0; padding: 3px 7px; font-size: 10px; }
@@ -345,9 +363,9 @@
     #speed { margin-left: 0; flex: none; min-width: 40px; height: 40px; padding: 0 6px; }
     .ctx-labels { display: none; }
     #context .eon span { display: none; }
-    #emphasis-flag { top: auto; bottom: 258px; }
-    #hint { bottom: 258px; }
-    #empty.period { bottom: 258px; }
+    #emphasis-flag { top: auto; bottom: 290px; }
+    #hint { bottom: 290px; }
+    #empty.period { bottom: 290px; }
     .v-row i { display: none; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
@@ -378,6 +396,8 @@
       <button class="toggle" id="borders" aria-pressed="true" title="Borders of states and empires at the date shown (Cliopatria). Blank areas are unmapped, not empty.">Borders</button>
       <button class="toggle" id="paths" aria-pressed="false">Routes</button>
       <button class="toggle" id="vitals-toggle" aria-pressed="true" title="Temperature, CO₂, sea level, day length and the Moon’s distance at the date shown, with a curve along the time bar">Vital signs</button>
+      <button class="toggle" id="fossils-toggle" aria-pressed="true" title="In deep time: places where fossils of eight groups have been found in rocks of the age shown (Paleobiology Database)">Fossils</button>
+      <button class="toggle" id="plate-edges" aria-pressed="true" title="In deep time: spreading ridges (pale) and subduction zones (orange) from the same plate model as the continents">Plate edges</button>
       <button class="toggle" id="clouds" aria-pressed="false">Clouds</button>
       <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth from the Sun’s true position for the date shown; rotate to the night side to see it">Real sunlight</button>
       <button class="toggle" id="mapstyle" aria-pressed="false" title="Flat map style with land outlines instead of satellite imagery">Map style</button>
@@ -430,6 +450,7 @@
   <div id="v-rows"></div>
   <div id="v-range"></div>
   <details id="v-about"><summary>Estimates, and how far to trust them</summary><p id="v-source"></p></details>
+  <div id="v-fossils" hidden><h3>Fossil finds at this date</h3><div id="v-chips"></div><p id="v-caveat">Dots show where people have dug and rocks survive, not everywhere life lived. Paleobiology Database.</p></div>
 </section>
 
 <section id="time" class="glass" aria-label="Time">
@@ -457,6 +478,7 @@
 <script src="space.js"></script>
 <script src="spacecraft.js"></script>
 <script src="deeptime.js"></script>
+<script src="fossils.js"></script>
 <script src="borders.js"></script>
 <script src="sequence.js"></script>
 <script src="app.js"></script>

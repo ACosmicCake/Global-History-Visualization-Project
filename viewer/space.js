@@ -61,6 +61,7 @@
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
         nightFloor: { value: 0.24 }, nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
         paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 },
+        ridgeA: { value: null }, ridgeB: { value: null }, ridgeMix: { value: 0 }, ridgeOn: { value: 0 },
         shelfMap: { value: null }, seaDrop: { value: 0 },
         iceA: { value: null }, iceB: { value: null }, iceMix: { value: 0 }, iceOn: { value: 0 }, iceAge: { value: 0 }, humid: { value: 0 },
         detailMap: { value: null }, detailBounds: { value: new THREE.Vector4(0, 0, 0.25, 0.5) }, detailMix: { value: 0 },
@@ -74,6 +75,7 @@
         uniform sampler2D shelfMap; uniform float seaDrop;
         uniform sampler2D iceA; uniform sampler2D iceB; uniform float iceMix; uniform float iceOn; uniform float iceAge; uniform float humid;
         uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat;
+        uniform sampler2D ridgeA; uniform sampler2D ridgeB; uniform float ridgeMix; uniform float ridgeOn;
         varying vec2 vUv; varying vec3 vN; varying vec3 vW;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
@@ -121,7 +123,16 @@
             day = mix(day, iceColor, sheet); water *= 1.0 - sheet;
           }
           if (paleoOn > 0.0) {   // deep time: today's imagery gives way to open ocean under the moving land mesh
-            day = mix(day, vec3(0.04, 0.12, 0.25), paleoOn);   // open ocean; the land mesh is drawn on top
+            // open ocean; the land mesh is drawn on top. Paler over the ridges, where young crust stands high, and darkest along the trenches at subduction
+            // zones. This is distance from the plate boundaries, a stand-in for seafloor age (paleo-ridges.png; atlas/tools/build-plates.mjs).
+            vec3 ocean = vec3(0.04, 0.12, 0.25);
+            if (ridgeOn > 0.0) {
+              vec2 rd = mix(texture2D(ridgeA, vUv).rg, texture2D(ridgeB, vUv).rg, ridgeMix);
+              vec3 floorCol = mix(vec3(0.10, 0.28, 0.42), vec3(0.025, 0.085, 0.19), smoothstep(0.0, 0.42, rd.r + (noise(n0 * 18.0) - 0.5) * 0.03));
+              floorCol = mix(floorCol, vec3(0.012, 0.04, 0.10), (1.0 - smoothstep(0.02, 0.2, rd.g)) * 0.85);
+              ocean = mix(ocean, floorCol, ridgeOn);
+            }
+            day = mix(day, ocean, paleoOn);
             water = mix(water, 1.0, paleoOn);
             // ice ages: sea ice poleward of the ice line, with a ragged edge (schematic, by latitude only)
             float lat0 = abs(asin(clamp(n0.y, -1.0, 1.0))) * 57.2958;
@@ -383,20 +394,26 @@
     rotTex.magFilter = rotTex.minFilter = THREE.NearestFilter;
     landMat = new THREE.ShaderMaterial({
       transparent: true, side: THREE.DoubleSide,
-      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, nightFloor: { value: 0.24 }, R: { value: R * 1.0008 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 } },
+      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, nightFloor: { value: 0.24 }, R: { value: R * 1.0008 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 }, terrA: { value: null }, terrB: { value: null }, terrMix: { value: 0 }, terrOn: { value: 0 } },
       // geographic (x 0°E, y 90°E, z north) to globe.gl's frame (x 90°E, y north, z 0°E)
-      vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; attribute float inland; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
+      vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; attribute float inland; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn; varying vec3 vEast; varying vec3 vNorth;
+        vec3 turn(vec4 q, vec3 v){ vec3 t = 2.0 * cross(q.yzw, v); return v + q.x * t + cross(q.yzw, t); }
         void main(){ vP = position; vIn = inland; vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.5)); vOk = step(0.5, dot(q, q));
-          vec3 v = position; vec3 t = 2.0 * cross(q.yzw, v); vec3 p = v + q.x * t + cross(q.yzw, t);
+          vec3 p = turn(q, position);
           vec3 w = vec3(p.y, p.z, p.x);
+          // today's east and north at this point, carried with the plate, so the relief is lit from the right side wherever the land has moved to
+          vec3 e0 = normalize(vec3(-position.y, position.x, 1e-5)), n1 = cross(position, e0), e1 = turn(q, e0), n2 = turn(q, n1);
+          vEast = normalize(mat3(modelMatrix) * vec3(e1.y, e1.z, e1.x)); vNorth = normalize(mat3(modelMatrix) * vec3(n2.y, n2.z, n2.x));
           vN = normalize(mat3(modelMatrix) * w); gl_Position = projectionMatrix * modelViewMatrix * vec4(w * R, 1.0); }`,
-      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; uniform float nightFloor; uniform vec3 flora; uniform float warm; uniform float aridity; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
+      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; uniform float nightFloor; uniform vec3 flora; uniform float warm; uniform float aridity; uniform sampler2D terrA; uniform sampler2D terrB; uniform float terrMix; uniform float terrOn; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn; varying vec3 vEast; varying vec3 vNorth;
+        float height(vec2 uv){ return mix(texture2D(terrA, uv).r, texture2D(terrB, uv).r, terrMix); }
+        float ground(vec2 uv){ return max(height(uv), 0.502); }
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
           return mix(mix(mix(hash(i), hash(i + vec3(1,0,0)), f.x), mix(hash(i + vec3(0,1,0)), hash(i + vec3(1,1,0)), f.x), f.y),
                      mix(mix(hash(i + vec3(0,0,1)), hash(i + vec3(1,0,1)), f.x), mix(hash(i + vec3(0,1,1)), hash(i + vec3(1,1,1)), f.x), f.y), f.z); }
         void main(){ if (vOk < 0.5) discard;
-          vec3 n = normalize(vN); float ndl = dot(n, normalize(sunDir)), lit = smoothstep(-0.12, 0.25, ndl);
+          vec3 n = normalize(vN); float ndl = dot(n, normalize(sunDir)), lit = smoothstep(-0.12, 0.25, ndl), shade = ndl;
           // the pattern is fixed to the land (vP, today's position), so it travels with the continents
           float tex = noise(vP * 5.3) * 0.5 + noise(vP.zxy * 13.7 + 3.1) * 0.3 + noise(vP.yzx * 37.0 + 7.7) * 0.2;
           float broad = noise(vP * 2.1 + 4.0) * 0.6 + noise(vP.yzx * 4.7 + 2.0) * 0.4;
@@ -410,8 +427,21 @@
           forest = mix(forest, tundra, smoothstep(60.0 + warm, 74.0 + warm, lat));
           vec3 plants = mix(mix(forest, steppe, smoothstep(0.22, 0.48, arid)), sand, smoothstep(0.52, 0.8, arid));
           vec3 c = mix(rock, plants, veg) * (0.9 + 0.18 * tex);
+          // real heights (paleo-terrain.png, from the PaleoDEMs; atlas/tools/build-terrain.mjs): relief, bare rock and snow up high, and shallow seas where land lay under water
+          if (terrOn > 0.0) {
+            vec2 uv = vec2(atan(vP.y, vP.x) / 6.2831853 + 0.5, asin(clamp(vP.z, -1.0, 1.0)) / 3.14159265 + 0.5);
+            float h = height(uv), rag = (noise(vP * 46.0) - 0.5) * 0.018 + (tex - 0.5) * 0.012;
+            float metres = pow(max(0.0, h - 0.502) / 0.498, 2.0) * 6000.0, cosL = max(0.2, length(vP.xy));
+            float dE = (ground(uv + vec2(1.0 / 360.0, 0.0)) - ground(uv - vec2(1.0 / 360.0, 0.0))) / cosL, dN = ground(uv + vec2(0.0, 1.0 / 180.0)) - ground(uv - vec2(0.0, 1.0 / 180.0));
+            float dry = smoothstep(0.494, 0.506, h + rag);
+            shade = mix(ndl, dot(normalize(n - (normalize(vEast) * dE + normalize(vNorth) * dN) * 9.0), normalize(sunDir)), terrOn * dry);
+            vec3 high = mix(c, vec3(0.43, 0.38, 0.33) * (0.85 + 0.3 * tex), smoothstep(1100.0, 2800.0, metres + (tex - 0.5) * 500.0));
+            high = mix(high, vec3(0.90, 0.92, 0.95), smoothstep(3600.0, 4900.0, metres + lat * 28.0 + (tex - 0.5) * 700.0));
+            vec3 sea = mix(vec3(0.11, 0.36, 0.44), vec3(0.045, 0.15, 0.28), smoothstep(0.0, 0.16, 0.5 - h));
+            c = mix(c, mix(sea, high, dry), terrOn);
+          }
           c = mix(c, vec3(0.90, 0.93, 0.96), smoothstep(iceLat - 4.0, iceLat + 2.0, lat + (tex - 0.5) * 14.0));   // ice sheets
-          vec3 col = mix(c * nightFloor * vec3(0.72, 0.82, 1.0), c * (0.16 + 1.0 * max(ndl, 0.0)), lit);
+          vec3 col = mix(c * nightFloor * vec3(0.72, 0.82, 1.0), c * (0.16 + 1.0 * max(shade, 0.0)), lit);
           gl_FragColor = vec4(col, opacity); }`,
     });
     land = new THREE.Mesh(g, landMat); land.renderOrder = 0; land.visible = false; land.frustumCulled = false;
@@ -433,6 +463,61 @@
     const fi = Math.max(0, FLORA.findIndex(x => x[0] <= ma)), hi = FLORA[Math.max(0, fi - 1)], lo = FLORA[fi], ft = hi === lo ? 0 : (hi[0] - ma) / (hi[0] - lo[0]), at = n => hi[n] + (lo[n] - hi[n]) * ft;
     landMat.uniforms.flora.value.set(at(1), at(2), at(3)); landMat.uniforms.warm.value = at(4); landMat.uniforms.aridity.value = at(5);
     landMat.uniforms.iceLat.value = earthMat.uniforms.iceLat.value = iceLine(ma);
+    setDeepFrames(ma);
+  }
+  // Two images of many frames, one for the land's heights (every 5 Ma to 540 Ma) and one for the ocean (every 10 Ma to 1,000 Ma). The two frames
+  // around the date are copied to small canvases for the shader to blend. They load the first time deep time is shown.
+  function frameAtlas(src, w, h, cols, step, last, uA, uB, uMix, onLoad) {
+    const tex = () => { const c = document.createElement('canvas'); c.width = w; c.height = h; const t = new THREE.CanvasTexture(c); t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; t.wrapS = THREE.RepeatWrapping; return t; };
+    let img = null, loading = false, shown = [-1, -1], want = null;
+    const draw = (t, k) => { const g = t.image.getContext('2d'); g.drawImage(img, (k % cols) * w, Math.floor(k / cols) * h, w, h, 0, 0, w, h); t.needsUpdate = true; };
+    return ma => {
+      want = ma;
+      if (!img) {
+        if (!loading) { loading = true; const i = new Image(); i.onload = () => (i.decode ? i.decode().catch(() => {}) : Promise.resolve()).then(() => { img = i; uA.value = tex(); uB.value = tex(); onLoad(); }); i.onerror = () => { loading = false; }; i.src = src; }
+        return false;
+      }
+      const f = Math.min(last, Math.max(0, ma / step)), a = Math.min(last - 1, Math.floor(f)), b = a + 1;
+      if (shown[0] !== a) { draw(uA.value, a); shown[0] = a; }
+      if (shown[1] !== b) { draw(uB.value, b); shown[1] = b; }
+      uMix.value = f - a;
+      return true;
+    };
+  }
+  let terrainAt = null, ridgesAt = null, plateData = null, plateLoad = null, plateFade = 0, plateShow = true;
+  const plateCuts = [null, null], plateGeo = new Map();
+  function plateGeometry(i) {
+    if (plateGeo.has(i)) return plateGeo.get(i);
+    const pos = [], col = [], f = plateData.frames[i], RR = R * 1.0022, K = { r: [0.70, 0.95, 1.0], s: [1.0, 0.50, 0.30], o: [0.55, 0.66, 0.78] };
+    const put = (lon, lat, c) => { const a = (lon * Math.PI) / 180, b = (lat * Math.PI) / 180; pos.push(Math.cos(b) * Math.sin(a) * RR, Math.sin(b) * RR, Math.cos(b) * Math.cos(a) * RR); col.push(c[0], c[1], c[2]); };
+    for (const kind of ['o', 'r', 's']) for (const l of f[kind]) for (let k = 0; k + 3 < l.length; k += 2) {
+      const x0 = l[k], y0 = l[k + 1], x1 = l[k + 2], y1 = l[k + 3], d = Math.hypot(x1 - x0, y1 - y0);
+      if (d > 40) continue;   // a line that wraps round the map
+      const n = Math.ceil(d / 3); const c = kind === 'o' ? K.o.map(v => v * 0.55) : K[kind];
+      for (let j = 0; j < n; j++) { put(x0 + ((x1 - x0) * j) / n, y0 + ((y1 - y0) * j) / n, c); put(x0 + ((x1 - x0) * (j + 1)) / n, y0 + ((y1 - y0) * (j + 1)) / n, c); }
+    }
+    const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+    if (plateGeo.size > 12) { const old = plateGeo.keys().next().value; plateGeo.get(old).dispose(); plateGeo.delete(old); }
+    plateGeo.set(i, g);
+    return g;
+  }
+  function setPlateLines(ma) {
+    if (ma == null || !plateShow || plateFade <= 0) { for (const l of plateCuts) if (l) l.visible = false; return; }
+    if (!plateData) { plateLoad = plateLoad || fetch('paleo/boundaries.json').then(r => r.json()).then(d => { plateData = d; setDeepFrames(paleoMa); }).catch(err => { console.error('plate boundaries', err); }); return; }
+    if (!plateCuts[0]) for (let i = 0; i < 2; i++) { plateCuts[i] = new THREE.LineSegments(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, depthWrite: false })); plateCuts[i].renderOrder = 1; plateCuts[i].frustumCulled = false; globe.scene().add(plateCuts[i]); }
+    const f = Math.min(plateData.frames.length - 1, ma / plateData.step), a = Math.min(plateData.frames.length - 2, Math.floor(f)), t = f - a;
+    [a, a + 1].forEach((k, i) => { const l = plateCuts[i], g = plateGeometry(k); if (l.geometry !== g) l.geometry = g; l.material.opacity = (i ? t : 1 - t) * plateFade * 0.8; l.visible = l.material.opacity > 0.01; });
+  }
+  function setDeepFrames(ma) {
+    if (ma == null) { setPlateLines(null); return; }
+    const u = earthMat.uniforms, lu = landMat.uniforms;
+    terrainAt = terrainAt || frameAtlas('assets/paleo-terrain.png', 360, 180, 11, 5, 108, lu.terrA, lu.terrB, lu.terrMix, () => setDeepFrames(paleoMa));
+    ridgesAt = ridgesAt || frameAtlas('assets/paleo-ridges.png', 180, 90, 11, 10, 100, u.ridgeA, u.ridgeB, u.ridgeMix, () => setDeepFrames(paleoMa));
+    const inReach = Math.min(1, Math.max(0, (560 - ma) / 20));
+    lu.terrOn.value = terrainAt(Math.min(ma, 540)) ? inReach : 0;
+    u.ridgeOn.value = ridgesAt(ma) ? 1 : 0;
+    plateFade = Math.min(1, Math.max(0, (ma - 2) / 8));
+    setPlateLines(ma);
   }
   // The latitude poleward of which ice is drawn, for the major glaciations (a schematic picture by latitude, not a
   // reconstruction of the ice sheets): the Cryogenian "Snowball Earth" glaciations (Sturtian c. 717-660 Ma, Marinoan
@@ -450,7 +535,7 @@
   // ma: millions of years before present, or null for today's Earth. Returns the age shown.
   function setPaleo(ma) {
     const u = earthMat.uniforms;
-    if (ma == null || ma < 2) { paleoMa = null; u.paleoOn.value = 0; u.early.value = 0; if (land) land.visible = false; return null; }
+    if (ma == null || ma < 2) { paleoMa = null; u.paleoOn.value = 0; u.early.value = 0; if (land) land.visible = false; setPlateLines(null); return null; }
     paleoMa = Math.min(ma, PALEO_MAX); shownMa = ma;
     // past the model's reach the land fades away (no continents are invented) and the eon's artist's impression fades in
     const beyond = Math.min(1, Math.max(0, (PALEO_MAX + 100 - ma) / 100));
@@ -460,6 +545,7 @@
       const on = Math.min(1, (ma - 2) / 8);   // fade in between 2 and 10 Ma, where the continents still look like today's
       u.paleoOn.value = on; landMat.uniforms.opacity.value = on * beyond; land.visible = beyond > 0;
       applyPaleo();
+      if (beyond <= 0) setPlateLines(null);
     };
     // once the plate data is loaded the update is immediate, so pins placed right after this call ride the same rotation
     if (morph) apply(); else loadMorph().then(() => { apply(); window.dispatchEvent(new Event('paleo-ready')); });
@@ -561,5 +647,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { init, update, setPaleo, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, showPlateEdges(on) { plateShow = on; if (paleoMa != null && landMat) setDeepFrames(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();

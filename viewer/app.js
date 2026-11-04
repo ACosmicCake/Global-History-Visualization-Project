@@ -39,7 +39,7 @@ const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
 const GLOBE_R = 100, KM_PER_UNIT = 6371 / GLOBE_R;
 
-const state = { level: 4, t: -500, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
+const state = { level: 4, t: -500, fossils: true, plateEdges: true, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
   alt: 2.4, off: new Set(), impOff: new Set() };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -317,6 +317,7 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, a
   .objectLabel(o => `<div class="tip"><span class="d">3D model · ${esc(o.kind)}</span><b>${esc(o.title)}</b><p>${esc(o.note)}</p></div>`)
   .onObjectClick(o => openRecord(o.id));
 window.Space.init(globe); // satellite Earth, clouds, stars, Sun and Moon (space.js)
+window.Fossils.init(globe, () => { fossilCountMa = null; render(); });
 window.Borders?.init(globe); // dated polity borders (borders.js)
 // deep-time visuals: scenes for records, names on the moving continents, marks on the time bar, the film (deeptime.json)
 let deepTime = null, marksKey = '';
@@ -457,7 +458,7 @@ function seaDropAt(t) {
 // Earth's vital signs (paleo/vitals.json, built by atlas/tools/build-vitals.mjs): each curve runs from today back as far as there are estimates.
 // Reconstructed values carry a ≈ and are rounded to what they can bear; older than a curve's oldest estimate shows a dash, not a guess.
 let vitals = null;
-const VITAL_MIN_SPAN = { temp: 1, co2: 30, sea: 5, day: 0.2, moon: 2000 };   // the curve on the time bar won't stretch less than this to fill its height, so a flat stretch stays flat
+const VITAL_MIN_SPAN = { temp: 1, co2: 30, sea: 5, day: 0.2, moon: 2000, life: 100 };   // the curve on the time bar won't stretch less than this to fill its height, so a flat stretch stays flat
 fetch('paleo/vitals.json').then(r => r.json()).then(d => {
   vitals = d;
   $('#v-rows').innerHTML = Object.entries(d.series).map(([k, s]) => `<button class="v-row" data-k="${k}" title="${esc(s.source)}"><span>${esc(s.label).replace(/ (.+)/, '<i> $1</i>')}</span><b></b></button>`).join('');
@@ -484,12 +485,32 @@ function vitalNumber(k, v, ma) {
   if (k === 'co2') return `${(ma <= 9e-6 ? Math.round(v) : ma <= 0.81 ? Math.round(v / 5) * 5 : Math.round(v / 50) * 50).toLocaleString()} ppm`;
   if (k === 'sea') { const m = ma <= 0.81 ? Math.round(v) : Math.round(v / 5) * 5; return `${m > 0 ? '+' : m < 0 ? '−' : ''}${Math.abs(m)} m`; }
   if (k === 'day') return `${v.toFixed(1)} h`;
+  if (k === 'life') return (Math.round(v / 10) * 10).toLocaleString();
   return `${(Math.round(v / 1000) * 1000).toLocaleString()} km`;
 }
 const vitalMeasured = (k, ma) => (k === 'temp' ? ma <= 1e-4 : k === 'co2' ? ma <= 9e-6 : ma <= 1e-4);
 const vitalText = (k, v, ma) => (v == null ? '—' : `${vitalMeasured(k, ma) ? '' : '≈ '}${vitalNumber(k, v, ma)}`);
+// the fossil groups, with how many finds of each are known from rocks of this age; a click hides or shows a group
+let fossilCountMa = null;
+function renderFossilKey() {
+  const groups = window.Fossils.groups, ma = -state.t / 1e6, on = !!(state.fossils && groups && state.paleoMa != null && ma <= 600), box = $('#v-fossils');
+  show(box, on);
+  if (!on) return false;
+  const chips = $('#v-chips');
+  if (!chips.children.length) {
+    chips.innerHTML = groups.map((g, i) => `<button class="f-chip" data-i="${i}" aria-pressed="true" style="color:${window.Fossils.COLORS[i]}" title="Show or hide ${esc(g)}"><i></i><span>${esc(g)}</span><b></b></button>`).join('');
+    chips.querySelectorAll('button').forEach(b => { b.onclick = () => { const i = +b.dataset.i, now = !window.Fossils.isOn(i); window.Fossils.setGroup(i, now); b.setAttribute('aria-pressed', now); }; });
+  }
+  if (fossilCountMa == null || Math.abs(fossilCountMa - ma) >= 0.25) {
+    fossilCountMa = ma;
+    window.Fossils.counts(ma).forEach((n, i) => { const b = chips.children[i], text = n ? n.toLocaleString() : '—'; if (b.lastElementChild.textContent !== text) { b.lastElementChild.textContent = text; b.classList.toggle('none', !n); } });
+  }
+  return true;
+}
 function renderVitals() {
-  show($('#vitals'), !!vitals && state.vitals);
+  const key = renderFossilKey();
+  show($('#vitals'), (!!vitals && state.vitals) || key);
+  $('#vitals').classList.toggle('only-key', !state.vitals);
   if (!vitals || !state.vitals) return;
   const ma = (1950 - state.t) / 1e6;
   for (const b of $('#v-rows').children) { const k = b.dataset.k, text = vitalText(k, vitalAt(vitals.series[k], ma), ma), el = b.lastElementChild; if (el.textContent !== text) el.textContent = text; }
@@ -520,6 +541,7 @@ function updateSky() {
   const map = state.mapStyle === 'map';
   window.Space.update({ date: state.t > -4000 ? yearToDate(state.t) : new Date(), sunMode: state.realSun ? 'real' : 'camera',
     nightLights: !map && state.t >= 1900, clouds: !map && state.clouds, zoomAlt: state.alt, flat: map });
+  window.Space.showPlateEdges(state.plateEdges);
   state.paleoMa = window.Space.setPaleo(!map && state.t < -2e6 ? -state.t / 1e6 : null);
   state.seaDrop = map ? 0 : seaDropAt(state.t);
   const bp = 1950 - state.t;
@@ -529,6 +551,7 @@ function updateSky() {
   window.Space.setClimate(Math.min(1, state.seaDrop / 125), state.humid);
   window.Borders?.update(state.t, state.borders && !state.film);
   window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
+  window.Fossils.update(state.fossils && state.paleoMa != null ? -state.t / 1e6 : null);
   window.Spacecraft?.update(state.film ? -1e9 : state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
 }
 
@@ -743,7 +766,7 @@ function render() {
   Object.assign($('#context .win').style, { left: `${Math.min(left, 1 - width) * 100}%`, width: `${width * 100}%` });
 
   const notice = state.paleoMa != null && -state.t / 1e6 > window.Space.PALEO_MAX ? eonNote(-state.t / 1e6)
-    : state.paleoMa >= 10 ? `Continents as they stood ${Math.round(state.paleoMa)} million years ago, moved plate by plate (MERDITH2021 plate model, GPlates). Pins ride on their plates, from where the evidence is found today.`
+    : state.paleoMa >= 10 ? innerWidth <= 760 ? `Continents ${Math.round(state.paleoMa)} million years ago. Pale lines: ridges. Orange: subduction. Sources in About.` : `Continents ${Math.round(state.paleoMa)} million years ago (MERDITH2021 plate model). ${state.paleoMa <= 540 ? 'Heights and flooded land: PaleoDEMs (Scotese and Wright 2018). ' : ''}${state.plateEdges ? 'Pale lines: spreading ridges. Orange: subduction zones. Ocean shading is distance from them, not measured age.' : ''}`
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
     : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Ice sheets are drawn only for the last 80,000 years.'} Plant cover is schematic.`
     : state.t < -12000 ? state.humid > 0 ? 'The Sahara is tinted green for the African Humid Period, about 11,000 to 5,000 years ago. Plant cover is schematic.' : state.mapStyle === 'map' ? 'The map shows today’s coastlines. Sea level, ice sheets and plant cover show in the satellite view.' : `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
@@ -912,7 +935,7 @@ $('#speed').onclick = e => {   // click for faster, shift-click or right-click f
 };
 $('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
 $('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); updateSky(); render(); };
-for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals']]) {
+for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#plate-edges', 'plateEdges'], ['#fossils-toggle', 'fossils']]) {
   $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); if (key === 'monuments') loadModels(); };
 }
 

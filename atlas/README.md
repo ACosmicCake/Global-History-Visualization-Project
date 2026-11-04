@@ -34,6 +34,9 @@ node atlas/tools/linkcheck.mjs              # test every source link and write a
 node atlas/tools/build-borders.mjs <file>   # rebuild viewer/site/borders/ from a Cliopatria download
 node atlas/tools/build-sealevel.mjs <a> <b> # rebuild the ice-age coastline data; see the file for what to download
 node atlas/tools/build-vitals.mjs <folder>  # rebuild Earth's vital signs; see the file for what to download
+node atlas/tools/build-terrain.mjs <zip> <cache> # rebuild ancient heights from the PaleoDEMs; see the file
+node atlas/tools/build-plates.mjs <cache>   # rebuild plate boundaries and ocean shading from MERDITH2021
+node atlas/tools/build-fossils.mjs <folder> # rebuild fossils and the genera curve; see the file for what to download
 node atlas/tools/build-icesheets.mjs <a> <b> # rebuild the ice-sheet image; see the file for what to download
 ```
 
