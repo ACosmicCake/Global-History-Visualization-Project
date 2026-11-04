@@ -1,0 +1,165 @@
+{
+  "id": "1648-peace-of-westphalia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Peace of Westphalia",
+  "summary": "The Peace of Westphalia was concluded on 24 October 1648. It comprised the peace treaties of Osnabrück, between the Holy Roman Empire and Sweden, and of Münster, between the Empire and France, which formally ended the Thirty Years War. The Library of Congress describes it as an important benchmark for the development of international law and a sovereignty-based international system.",
+  "when": {
+    "start": {
+      "year": 1648
+    },
+    "end": {
+      "year": 1648
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Signed on 24 October 1648 at Münster and Osnabrück."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "24th Day of October, 1648",
+        "source": "src-yale-avalon"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "October 24, 1648",
+        "source": "src-loc-westphalia"
+      }
+    ],
+    "display": "24 October 1648"
+  },
+  "where": {
+    "lat": 51.96236,
+    "lon": 7.62571,
+    "elevation_m": 60,
+    "modern_name": "Münster, North Rhine-Westphalia, Germany",
+    "historical_name": "Münster, Prince-Bishopric of Münster, Holy Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-muenster"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The Peace of Westphalia established foundational principles of sovereign statehood and multilateral diplomatic congresses that structured modern international law."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1620-battle-of-white-mountain",
+      "type": "related"
+    },
+    {
+      "id": "1659-treaty-of-the-pyrenees",
+      "type": "related"
+    },
+    {
+      "id": "1517-protestant-reformation",
+      "type": "caused_by",
+      "because": "Religious divisions initiated by the Reformation ignited the confessional conflicts of the Thirty Years' War that the Westphalian settlement brought to an end."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-yale-avalon",
+      "url": "https://avalon.law.yale.edu/17th_century/westphal.asp",
+      "title": "Treaty of Westphalia",
+      "publisher": "Lillian Goldman Law Library, Yale Law School",
+      "author": "Avalon Project",
+      "date_published": "2008",
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-loc-westphalia",
+      "url": "https://blogs.loc.gov/law/2017/10/the-peace-of-westphalia/",
+      "title": "The Peace of Westphalia",
+      "publisher": "Library of Congress",
+      "author": "Jenny Gesley",
+      "date_published": "2017-10-24",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-muenster",
+      "url": "https://www.geonames.org/2867543/muenster.html",
+      "title": "Münster, Germany",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: summary cut back to what the Yale Avalon treaty text and the Library of Congress blog state ('sovereign equality' and 'diplomatic congresses' removed). Pin is Münster; Osnabrück is the other treaty city.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T01:44:54.845Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1648",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Peace of Westphalia was concluded on 24 October 1648.",
+        "source": "src-yale-avalon"
+      },
+      {
+        "span": "1648",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It comprised the peace treaties of Osnabrück, between the Holy Roman Empire and Sweden, and of Münster, between the Empire and France, which formally ended the Thirty Years…",
+        "source": "src-yale-avalon",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

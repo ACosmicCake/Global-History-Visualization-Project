@@ -1,0 +1,172 @@
+{
+  "id": "1936-spanish-civil-war",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "event",
+  "title": "Spanish Civil War",
+  "summary": "The Spanish Civil War began on 17 July 1936, when generals including Emilio Mola and Francisco Franco launched an uprising against the democratic Spanish Republic. Franco called on Nazi Germany and Fascist Italy for aid, while the Republic received help from the Soviet Union and international volunteers. About 500,000 people lost their lives in the conflict, about 200,000 of them in systematic killings, mob violence, torture or other brutalities. The war ended in 1939 with Franco's victory.",
+  "when": {
+    "start": {
+      "year": 1936
+    },
+    "end": {
+      "year": 1939
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Began with military revolt in July 1936 and concluded with Nationalist victory in spring 1939."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The Spanish Civil War (1936 – 39) ... began on July 17, 1936 ... ended in 1939, with Franco's victory",
+        "source": "src-ushmm-scw"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In July 1936, after months of unrest and politically motivated assassinations, a junta of nationalist generals, including Francisco Franco , led an uprising against the Spanish Republic ... Republic faced utter defeat",
+        "source": "src-encyclopedia-scw"
+      }
+    ],
+    "display": "1936–1939"
+  },
+  "where": {
+    "lat": 40.4165,
+    "lon": -3.70256,
+    "elevation_m": 667,
+    "modern_name": "Madrid, Spain",
+    "historical_name": "Madrid, Second Spanish Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames-madrid"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The war served as an ideological and military prelude to World War II, testing weapons and totalitarian alliances while establishing a 36-year dictatorship in Spain."
+  },
+  "confidence": "established",
+  "audience_note": "This record mentions mass killings, torture and aerial bombings of civilians; casualty figures vary between sources.",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 35,
+    "beats": [
+      {
+        "span": "1936",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Nationalist generals launch an armed uprising in July 1936 against the democratic Spanish Republic.",
+        "source": "src-ushmm-scw",
+        "consequence": false
+      },
+      {
+        "span": "1939",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The civil war ends in 1939 with Franco's victory, leaving 500,000 dead and inaugurating authoritarian rule.",
+        "source": "src-ushmm-scw",
+        "consequence": true
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "1939-world-war-ii",
+      "type": "caused",
+      "because": "The conflict strengthened the Axis alliance and tested modern aerial warfare tactics before the global outbreak of World War II."
+    },
+    {
+      "id": "1941-the-holocaust",
+      "type": "related"
+    },
+    {
+      "id": "person-adolf-hitler",
+      "type": "related"
+    },
+    {
+      "id": "person-benito-mussolini",
+      "type": "related"
+    },
+    {
+      "id": "person-joseph-stalin",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ushmm-scw",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/spanish-civil-war",
+      "title": "Spanish Civil War",
+      "publisher": "United States Holocaust Memorial Museum",
+      "author": "United States Holocaust Memorial Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyclopedia-scw",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/spanish-civil-war",
+      "title": "Spanish Civil War",
+      "publisher": "Encyclopedia.com (Gale / Encyclopedia of Russian History)",
+      "author": "Mary R. Habeck",
+      "date_published": "2004",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-madrid",
+      "url": "https://www.geonames.org/3117735/",
+      "title": "Madrid, Spain (GeoNames entry 3117735)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'aerial bombardments' from the 200,000 killings (USHMM lists systematic killings, mob violence, torture and other brutalities) and the unsourced 'decades of Francoist rule'. USHMM supports every figure; the Encyclopedia.com entry does not give the death counts. Pin is Madrid, a proxy for a national conflict.",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T01:45:05.078Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

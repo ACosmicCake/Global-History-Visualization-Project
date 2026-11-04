@@ -1,0 +1,171 @@
+{
+  "id": "1930-dust-bowl",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Dust Bowl",
+  "summary": "Spanning the 1930s across the Southern Great Plains of the United States, the Dust Bowl was an environmental and agricultural disaster caused by multi-year drought and the destruction of the protective native grassland by plowing. The Oklahoma Historical Society says the dry weather began in the early 1930s and persisted through the early 1940s for some areas, with Cimarron County among the worst hit.",
+  "when": {
+    "start": {
+      "year": 1930
+    },
+    "end": {
+      "year": 1940
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 2,
+      "note": "Severe multi-year drought spanned the 1930s, peaking in 1934–1936 and abating by 1939–1940."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1930s",
+        "source": "src-nws-blacksunday"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "early 1930s and persisted through the early 1940s",
+        "source": "src-ohs-dustbowl"
+      }
+    ],
+    "display": "1930s (to the early 1940s in some areas)"
+  },
+  "where": {
+    "lat": 36.72947,
+    "lon": -102.51324,
+    "elevation_m": 1270,
+    "modern_name": "Boise City, Cimarron County, Oklahoma, United States (proxy pin for the Southern Great Plains)",
+    "historical_name": "Boise City, Cimarron County, Oklahoma, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-geonames-boisecity"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The Dust Bowl was one of the most severe ecological disasters in United States history, transforming federal soil conservation policy and triggering large-scale internal migration."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1929-great-depression",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nws-blacksunday",
+      "url": "https://www.weather.gov/oun/events-19350414",
+      "title": "The Black Sunday Dust Storm of April 14, 1935",
+      "publisher": "National Weather Service",
+      "author": "National Weather Service Norman, Oklahoma",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ohs-dustbowl",
+      "url": "https://www.okhistory.org/publications/enc/entry?entry=DU011",
+      "title": "Dust Bowl (The Encyclopedia of Oklahoma History and Culture)",
+      "publisher": "Oklahoma Historical Society",
+      "author": "Donald A. Wilhite",
+      "date_published": "2009",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-columbia-ldeo",
+      "url": "http://ocp.ldeo.columbia.edu/res/div/ocp/drought/dust_storms.shtml",
+      "title": "Dust Storms in the 1930s Dust Bowl",
+      "publisher": "Lamont-Doherty Earth Observatory of Columbia University",
+      "author": "Ben Cook, Ron Miller, Richard Seager",
+      "date_published": "2009",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-boisecity",
+      "url": "https://www.geonames.org/5515613/boise-city.html",
+      "title": "Boise City, Oklahoma, United States",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed the unsupported 'hundreds of thousands' migrants and the federal conservation claim, neither on an opened page. Summary now follows the Oklahoma Historical Society and the NWS and Columbia pages. Pin is a proxy for a region of several states.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T01:44:59.074Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1930",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Spanning the 1930s across the Southern Great Plains of the United States, the Dust Bowl was an environmental and agricultural disaster caused by multi-year drought and the destruction…",
+        "source": "src-nws-blacksunday"
+      },
+      {
+        "span": "1940",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "The Oklahoma Historical Society says the dry weather began in the early 1930s and persisted through the early 1940s for some areas, with Cimarron County among the worst…",
+        "source": "src-nws-blacksunday",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

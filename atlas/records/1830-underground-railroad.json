@@ -1,0 +1,168 @@
+{
+  "id": "1830-underground-railroad",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Underground Railroad",
+  "summary": "The term Underground Railroad was in use by the 1830s for a network of dozens of secret routes and safe houses leading from the slaveholding states to free states and Canada, along which enslaved people escaped. Escapees were aided by other enslaved people and free Black people more often than by white allies. It gave freedom to thousands and hope to tens of thousands more, and Northern opposition to slavery it fed helped hasten the Civil War.",
+  "when": {
+    "start": {
+      "year": 1820
+    },
+    "end": {
+      "year": 1861
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 5,
+      "end_minus_years": 4,
+      "end_plus_years": 0,
+      "note": "The network operated clandestinely throughout the antebellum period; term in use by the 1830s through the end of the Civil War in 1865."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1830s",
+        "source": "src-nps-running-away"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1820 – 1861",
+        "source": "src-vcu-ugrr"
+      }
+    ],
+    "display": "c. 1820–1861 (the term in use by the 1830s)"
+  },
+  "where": {
+    "lat": 39.95238,
+    "lon": -75.16362,
+    "elevation_m": 12,
+    "modern_name": "Philadelphia, Pennsylvania, United States (proxy pin: the network ran from the slaveholding states to Canada)",
+    "historical_name": "Philadelphia, Pennsylvania, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-geonames-philly"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Underground Railroad directly undermined institutional chattel slavery and catalyzed the political crisis over fugitive slaves that precipitated the American Civil War."
+  },
+  "confidence": "established",
+  "audience_note": "Addresses the history of chattel slavery, violent pursuit of runaways, and the resistance of enslaved people in the United States.",
+  "related": [
+    {
+      "id": "person-harriet-tubman",
+      "type": "related"
+    },
+    {
+      "id": "person-abraham-lincoln",
+      "type": "related"
+    },
+    {
+      "id": "1787-abolition-of-slavery",
+      "type": "related"
+    },
+    {
+      "id": "process-intra-american-slave-trade",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-running-away",
+      "url": "https://www.nps.gov/jeff/learn/historyculture/running-away.htm",
+      "title": "Running Away - Gateway Arch National Park",
+      "publisher": "National Park Service",
+      "author": "National Park Service",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-vcu-ugrr",
+      "url": "https://socialwelfare.library.vcu.edu/eras/antebellum/underground-railroad-1820-1861/",
+      "title": "Underground Railroad, The (1820-1861)",
+      "publisher": "Virginia Commonwealth University Libraries",
+      "author": "Social Welfare History Project",
+      "date_published": "2011",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-philly",
+      "url": "https://www.geonames.org/4560349/philadelphia.html",
+      "title": "Philadelphia, United States",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: 'tens of thousands' freed corrected to the VCU wording (thousands freed, tens of thousands more given hope); 'immense political pressure' replaced with the VCU and NPS wording. Dates widened to the VCU span 1820-1861. Pin is a proxy for a network with no single location.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T01:44:56.940Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1820",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The term Underground Railroad was in use by the 1830s for a network of dozens of secret routes and safe houses leading from the slaveholding states to free…",
+        "source": "src-nps-running-away"
+      },
+      {
+        "span": "1861",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It gave freedom to thousands and hope to tens of thousands more, and Northern opposition to slavery it fed helped hasten the Civil War.",
+        "source": "src-nps-running-away",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

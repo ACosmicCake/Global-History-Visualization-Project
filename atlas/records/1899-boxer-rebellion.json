@@ -1,0 +1,145 @@
+{
+  "id": "1899-boxer-rebellion",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Boxer Rebellion",
+  "summary": "The Boxer uprising began in northern China as the Yihetuan, a secret society, took up arms in 1898 and 1899 against foreigners, Christian missionaries and Chinese Christian converts. The 55-day siege of the foreign legations in Beijing in 1900 prompted an eight-nation alliance to send a 20,000-strong force that relieved them. The settlement required China to pay an indemnity of 450 million taels of silver.",
+  "when": {
+    "start": {
+      "year": 1899
+    },
+    "end": {
+      "year": 1901
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Rural attacks began in 1898–1899 in Shandong; siege of legations and international intervention culminated in 1900–1901."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In 1898 and 1899",
+        "source": "src-mit-boxer"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1900",
+        "source": "src-nam-boxer"
+      }
+    ],
+    "display": "1899–1901"
+  },
+  "where": {
+    "lat": 39.9075,
+    "lon": 116.39723,
+    "elevation_m": 49,
+    "modern_name": "Beijing, China",
+    "historical_name": "Beijing (Peking), Qing Dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-beijing"
+    ]
+  },
+  "regions": [
+    "eastern_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Boxer Rebellion and its harsh settlement weakened the Qing imperial government, accelerating the internal political breakdown that led to the 1911 Revolution."
+  },
+  "confidence": "established",
+  "audience_note": "Addresses violent conflict, the targeting and killing of missionaries and Chinese Christian converts, and punitive reprisals and looting by allied forces.",
+  "related": [
+    {
+      "id": "1839-first-opium-war",
+      "type": "caused_by",
+      "because": "Unequal treaties and foreign concessions imposed after the Opium Wars generated widespread anti-foreign resentment that fueled the Boxer uprising."
+    },
+    {
+      "id": "1911-xinhai-revolution",
+      "type": "caused",
+      "because": "The devastating Boxer Protocol indemnity and foreign military occupation fatally undermined the authority of the Qing dynasty, precipitating the 1911 revolution."
+    },
+    {
+      "id": "1850-taiping-rebellion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam-boxer",
+      "url": "https://www.nam.ac.uk/explore/boxer-rebellion",
+      "title": "The Boxer Rebellion",
+      "publisher": "National Army Museum",
+      "author": "National Army Museum",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mit-boxer",
+      "url": "https://visualizingcultures.mit.edu/boxer_uprising/bx_essay01.html",
+      "title": "The Boxer Uprising - I: The Gathering Storm",
+      "publisher": "MIT Visualizing Cultures",
+      "author": "Peter C. Perdue",
+      "date_published": "2014",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-beijing",
+      "url": "https://www.geonames.org/1816670/beijing.html",
+      "title": "Beijing, China",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: summary tightened to the National Army Museum and MIT pages; the 450 million taels figure is on the MIT page only. 'Supported by elements of the Qing court' dropped as a lead claim. Pin is Beijing, the siege site.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T01:45:01.343Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
