@@ -7,7 +7,7 @@
 // and diversity.json from https://paleobiodb.org/data1.2/occs/diversity.json?base_name=Metazoa,Plantae&count=genera&time_reso=stage
 //
 // Finds in the same half-degree cell, of the same group and dated to the same range, become one dot with a count. Each dot is put on the plate its place
-// sits on today, by the rule the viewer uses for pins (inside a coastline, or else within 8 degrees of one), so it moves with the land. Places with no plate
+// sits on today, by the rule the viewer uses for pins (the map of plates in morph.json, or else within 8 degrees of a coastline), so it moves with the land. Places with no plate
 // are left out, as are finds dated no better than 30 million years. Columns are integers: lat and lon in tenths of a degree, old and young in tenths of a million years.
 // Usage: node atlas/tools/build-fossils.mjs <folder>
 import fs from 'node:fs';
@@ -26,8 +26,10 @@ const LAST = { trilobites: 251.9, ammonites: 66, dinosaurs: 66 };
 const morph = JSON.parse(fs.readFileSync(path.join(VIEWER, 'paleo', 'morph.json'), 'utf8'));
 for (const r of morph.rings) { const xs = r.pts.map(p => p[0]), ys = r.pts.map(p => p[1]); r.box = [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)]; }
 const inRing = (lon, lat, pts) => { let inside = false; for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) { const [xi, yi] = pts[i], [xj, yj] = pts[j]; if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi + 1e-12) + xi) inside = !inside; } return inside; };
-const plates = new Map();
+const plates = new Map(), plateCells = new Int32Array(360 * 180);
+{ let at = 0; for (let i = 0; i < morph.grid.length; i += 2) { plateCells.fill(morph.grid[i], at, at + morph.grid[i + 1]); at += morph.grid[i + 1]; } }
 function plateOf(lat, lon) {   // the same rule as plateOf in viewer/space.js
+  const cell = plateCells[Math.min(179, Math.max(0, Math.floor(90 - lat))) * 360 + Math.min(359, Math.max(0, Math.floor(lon + 180)))]; if (cell >= 0) return cell;
   const key = `${lat},${lon}`; if (plates.has(key)) return plates.get(key);
   let best = null, bd = 8;
   for (const r of morph.rings) {

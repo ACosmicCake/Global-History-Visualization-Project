@@ -26,13 +26,13 @@
       uniforms: { rot: { value: rot.texture }, nPlates: { value: rot.count }, ma: { value: 0 }, R: { value: R }, px: { value: 1 }, fade: { value: 1 }, colors: { value: COLORS.map(c => new THREE.Vector3(...hex(c))) }, show: { value: COLORS.map(() => 1) } },
       vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float ma; uniform float R; uniform float px; uniform vec3 colors[8]; uniform float show[8];
         attribute float plate; attribute vec2 ages; attribute vec2 look; varying vec3 vC; varying float vA;
-        void main(){ int k = int(look.x + 0.5); vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.5));
-          float a = smoothstep(ages.y - 1.2, ages.y, ma) * (1.0 - smoothstep(ages.x, ages.x + 1.2, ma)) * show[k] * step(0.5, dot(q, q));
+        void main(){ int k = int(look.x + 0.5); vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.25));
+          float soft = max(2.5, (ages.x - ages.y) * 0.4), a = smoothstep(ages.y - soft, ages.y + soft * 0.5, ma) * (1.0 - smoothstep(ages.x - soft * 0.5, ages.x + soft, ma)) * show[k] * step(0.5, dot(q, q)) * texture2D(rot, vec2((plate + 0.5) / nPlates, 0.75)).r;
           vC = colors[k]; vA = a;
           if (a <= 0.003) { gl_Position = vec4(2.0, 2.0, 2.0, 1.0); gl_PointSize = 0.0; return; }
           vec3 v = position, t = 2.0 * cross(q.yzw, v), p = v + q.x * t + cross(q.yzw, t);
           gl_Position = projectionMatrix * modelViewMatrix * vec4(vec3(p.y, p.z, p.x) * R, 1.0);
-          gl_PointSize = (5.0 + 1.9 * log(1.0 + look.y)) * px; }`,
+          gl_PointSize = (3.8 + 1.5 * log(1.0 + look.y)) * px; }`,
       fragmentShader: `uniform float fade; varying vec3 vC; varying float vA;
         void main(){ float d = length(gl_PointCoord - 0.5) * 2.0; if (d > 1.0) discard;
           // a dark edge keeps a bright dot readable on pale land, and the halo gives it its glow on dark ocean

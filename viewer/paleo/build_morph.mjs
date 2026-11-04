@@ -3,7 +3,8 @@
 // interpolates the rotations (quaternion slerp) and turns the coastlines, so the continents move instead of
 // cross-fading. Rotations are derived from two reference points per plate reconstructed by the GPlates Web Service.
 // Citation: Merdith et al. 2021, Earth-Science Reviews 214, 103477; GPlates Web Service, EarthByte, University of Sydney.
-// Usage: node viewer/paleo/build_morph.mjs
+// This is one input to atlas/tools/build-world.mjs, which writes the morph.json the site uses.
+// Usage: node viewer/paleo/build_morph.mjs <cache folder>   (writes merdith-morph.json there)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -103,10 +104,11 @@ for (let t = 0; t <= MAX; t += STEP) {
 }
 
 const index = new Map(refs.map((r, i) => [r.pid, i]));
-fs.writeFileSync(path.join(HERE, 'morph.json'), JSON.stringify({
+const OUT = path.join(process.argv[2] || HERE, 'merdith-morph.json');
+fs.writeFileSync(OUT, JSON.stringify({
   model: MODEL, step: STEP, max: MAX, times,
   citation: 'Merdith et al. 2021, Extending full-plate tectonic models into deep time, Earth-Science Reviews 214, 103477; rotations derived from points reconstructed by the GPlates Web Service (gws.gplates.org), EarthByte Group, University of Sydney',
   plates: refs.map((r, i) => ({ pid: r.pid, q: rot[i] })),
   rings: rings.map(r => ({ p: index.get(r.pid), pts: r.pts })),
 }));
-console.log('plates', refs.length, 'written', (fs.statSync(path.join(HERE, 'morph.json')).size / 1e6).toFixed(1), 'MB');
+console.log('plates', refs.length, 'written', (fs.statSync(OUT).size / 1e6).toFixed(1), 'MB');

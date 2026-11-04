@@ -39,7 +39,7 @@ const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
 const GLOBE_R = 100, KM_PER_UNIT = 6371 / GLOBE_R;
 
-const state = { level: 4, t: -500, fossils: true, plateEdges: true, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
+const state = { level: 4, t: -500, fossils: true, plateEdges: false, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
   alt: 2.4, off: new Set(), impOff: new Set() };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -766,7 +766,8 @@ function render() {
   Object.assign($('#context .win').style, { left: `${Math.min(left, 1 - width) * 100}%`, width: `${width * 100}%` });
 
   const notice = state.paleoMa != null && -state.t / 1e6 > window.Space.PALEO_MAX ? eonNote(-state.t / 1e6)
-    : state.paleoMa >= 10 ? innerWidth <= 760 ? `Continents ${Math.round(state.paleoMa)} million years ago. Pale lines: ridges. Orange: subduction. Sources in About.` : `Continents ${Math.round(state.paleoMa)} million years ago (MERDITH2021 plate model). ${state.paleoMa <= 540 ? 'Heights and flooded land: PaleoDEMs (Scotese and Wright 2018). ' : ''}${state.plateEdges ? 'Pale lines: spreading ridges. Orange: subduction zones. Ocean shading is distance from them, not measured age.' : ''}`
+    : state.paleoMa >= 10 ? innerWidth <= 760 ? `Earth ${Math.round(state.paleoMa)} million years ago. ${state.paleoMa <= 540 ? '' : 'Land is a stand-in. '}Sources in About.` : `Earth ${Math.round(state.paleoMa)} million years ago. ${state.paleoMa <= 540 ? 'Land and sea floor: PALEOMAP PaleoDEMs (Scotese and Wright 2018). ' : 'No maps reach this far. Which rock is here comes from plate models; its coasts and heights are a stand-in, from the 540 million-year-old map. '}`
+    : state.paleoMa != null ? 'Today’s imagery, carried back with the plates, fading into the PALEOMAP maps of land and sea floor.'
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
     : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Ice sheets are drawn only for the last 80,000 years.'} Plant cover is schematic.`
     : state.t < -12000 ? state.humid > 0 ? 'The Sahara is tinted green for the African Humid Period, about 11,000 to 5,000 years ago. Plant cover is schematic.' : state.mapStyle === 'map' ? 'The map shows today’s coastlines. Sea level, ice sheets and plant cover show in the satellite view.' : `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
@@ -878,15 +879,27 @@ function setLevel(i, keepT = false) {
 // Dragging the time slider: the scale is fixed when the drag starts (in the one-year scale the range follows the
 // year, so recomputing it mid-drag made the thumb run away), the slider's own value is left alone while it is held,
 // and the globe redraws at most once a frame however fast the input events come
-let slideRange = null, slideFrame = 0;
-const slideEnd = () => { slideRange = null; };
-$('#slider').addEventListener('pointerdown', () => { slideRange = range(); });
-for (const ev of ['pointerup', 'pointercancel', 'change', 'blur']) $('#slider').addEventListener(ev, slideEnd);
-$('#slider').oninput = e => {
+let slideRange = null, slideFrame = 0, sliding = null;
+const slider = $('#slider');
+function slideTo(v) {
   const { from, to } = slideRange || range();
-  state.t = from + (to - from) * (+e.target.value / 1000);
+  state.t = from + (to - from) * (v / 1000);
   if (!slideFrame) slideFrame = requestAnimationFrame(() => { slideFrame = 0; render(); });
-};
+}
+// The slider follows the pointer itself, with the pointer captured, so nothing else on the page can make it let go. The keyboard still works through the input's own events.
+const valueAtPointer = x => { const r = slider.getBoundingClientRect(); return Math.round(Math.min(1, Math.max(0, (x - r.left - 10) / Math.max(1, r.width - 20))) * 1000); };
+slider.addEventListener('pointerdown', e => {
+  if (e.button) return;
+  e.preventDefault(); slider.focus({ preventScroll: true, focusVisible: false });
+  if (timer) stopPlay();   // playback would otherwise fight the drag for the date
+  slideRange = range(); sliding = e.pointerId;
+  try { slider.setPointerCapture(e.pointerId); } catch {}
+  slider.value = valueAtPointer(e.clientX); slideTo(+slider.value);
+});
+slider.addEventListener('pointermove', e => { if (e.pointerId !== sliding) return; slider.value = valueAtPointer(e.clientX); slideTo(+slider.value); });
+const slideEnd = e => { if (e.pointerId !== sliding) return; sliding = null; slideRange = null; render(); };
+for (const ev of ['pointerup', 'pointercancel', 'lostpointercapture']) slider.addEventListener(ev, slideEnd);
+slider.oninput = e => { slideTo(+e.target.value); };
 $('#context').onclick = e => {
   const r = e.currentTarget.getBoundingClientRect(), f = (e.clientX - r.left) / r.width;
   if (f > 0.985) { state.t = -500; return setLevel(4); }  // the Humans sliver opens Civilization (spec 2)
@@ -935,7 +948,7 @@ $('#speed').onclick = e => {   // click for faster, shift-click or right-click f
 };
 $('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
 $('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); updateSky(); render(); };
-for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#plate-edges', 'plateEdges'], ['#fossils-toggle', 'fossils']]) {
+for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#fossils-toggle', 'fossils']]) {
   $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); if (key === 'monuments') loadModels(); };
 }
 
