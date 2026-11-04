@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "body": null,
   "paleo": null,
   "audience_note": null,
   "author": "historian-agent:o-s35",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "id": "person-toussaint-louverture",
   "kind": "person",
   "title": "Toussaint Louverture",
@@ -44,12 +44,41 @@
     "modern_name": "Haut-du-Cap, near Cap-Haïtien, Haiti (birth area)",
     "historical_name": "Bréda plantation at Haut de Cap, French colony of Saint-Domingue",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 19.74,
+          "lon": -72.230111,
+          "date": "1743",
+          "label": "Bréda plantation, Haut-du-Cap, Saint-Domingue: born enslaved",
+          "source": "src-collector-toussaint",
+          "year": 1743
+        },
+        {
+          "lat": 18.4714,
+          "lon": -69.8918,
+          "date": "January 1801",
+          "label": "Santo Domingo: invades the Spanish colony, abolishes slavery",
+          "source": "src-ebsco-toussaint",
+          "year": 1801,
+          "coordinates_from": "Nominatim search: Santo Domingo, Dominican Republic"
+        },
+        {
+          "lat": 46.8721,
+          "lon": 6.374,
+          "date": "1802–1803",
+          "label": "Fort de Joux, France: imprisoned, dies 7 April 1803",
+          "source": "src-collector-toussaint",
+          "year": 1802,
+          "coordinates_from": "Nominatim search: Château de Joux, La Cluse-et-Mijoux"
+        }
+      ]
     },
     "uncertainty_km": 10,
     "coordinate_sources": [
       "src-wikidata-Q47511070",
-      "src-collector-toussaint"
+      "src-collector-toussaint",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -86,7 +115,8 @@
       "supports": [
         "when",
         "what",
-        "where"
+        "where",
+        "where.waypoints"
       ]
     },
     {
@@ -101,7 +131,8 @@
       "opened": true,
       "supports": [
         "what",
-        "perspectives"
+        "perspectives",
+        "where.waypoints"
       ]
     },
     {
@@ -117,6 +148,20 @@
       "supports": [
         "where"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Birth year 1743 rests on one source opened; the pin is the Haut du Cap area named there, with 10 km uncertainty. Perspectives (EBSCO): admirers stress his humanitarianism, detractors his shifting loyalties and occasional brutality. Both sources give 7 June 1802 for the arrest or deportation.",
@@ -126,6 +171,11 @@
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 3 dated stops, each from a cited page"
     }
   ]
 }

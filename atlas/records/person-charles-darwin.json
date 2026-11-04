@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "id": "person-charles-darwin",
@@ -58,11 +58,130 @@
     "modern_name": "Down House, Downe, London Borough of Bromley, England (pinned to the home where he lived for 40 years)",
     "historical_name": "Down House, Down, Kent, England",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 52.7078,
+          "lon": -2.7541,
+          "date": "1809",
+          "label": "Shrewsbury: childhood home, The Mount",
+          "source": "src-dol-itinerary",
+          "year": 1809,
+          "coordinates_from": "Nominatim search: Shrewsbury, Shropshire, England"
+        },
+        {
+          "lat": 55.9533,
+          "lon": -3.1884,
+          "date": "October 1825",
+          "label": "Edinburgh: begins studying medicine",
+          "source": "src-darwinproject",
+          "year": 1825,
+          "coordinates_from": "Nominatim search: Edinburgh, Scotland"
+        },
+        {
+          "lat": 52.1976,
+          "lon": 0.1392,
+          "date": "1828",
+          "label": "Cambridge: joins Christ’s College",
+          "source": "src-darwinproject",
+          "year": 1828,
+          "coordinates_from": "Nominatim search: Cambridge, England"
+        },
+        {
+          "lat": 50.3714,
+          "lon": -4.1424,
+          "date": "27 December 1831",
+          "label": "Plymouth: sails on HMS Beagle",
+          "source": "src-dol-itinerary",
+          "year": 1831,
+          "coordinates_from": "Nominatim search: Plymouth, England"
+        },
+        {
+          "lat": -22.911,
+          "lon": -43.2094,
+          "date": "April–July 1832",
+          "label": "Rio de Janeiro",
+          "source": "src-dol-itinerary",
+          "year": 1832,
+          "coordinates_from": "Nominatim search: Rio de Janeiro, Brazil"
+        },
+        {
+          "lat": -33.0458,
+          "lon": -71.6197,
+          "date": "July–November 1834",
+          "label": "Valparaíso, Chile",
+          "source": "src-dol-itinerary",
+          "year": 1834,
+          "coordinates_from": "Nominatim search: Valparaíso, Chile"
+        },
+        {
+          "lat": -0.9026,
+          "lon": -89.6102,
+          "date": "September–October 1835",
+          "label": "Galápagos Islands",
+          "source": "src-dol-itinerary",
+          "year": 1835,
+          "coordinates_from": "Nominatim search: Puerto Baquerizo Moreno, Galápagos, Ecuador"
+        },
+        {
+          "lat": -17.5374,
+          "lon": -149.566,
+          "date": "November 1835",
+          "label": "Tahiti",
+          "source": "src-dol-itinerary",
+          "year": 1835,
+          "coordinates_from": "Nominatim search: Papeete, French Polynesia"
+        },
+        {
+          "lat": -33.8698,
+          "lon": 151.2083,
+          "date": "January 1836",
+          "label": "Sydney",
+          "source": "src-dol-itinerary",
+          "year": 1836,
+          "coordinates_from": "Nominatim search: Sydney, New South Wales, Australia"
+        },
+        {
+          "lat": -33.9288,
+          "lon": 18.4172,
+          "date": "May–June 1836",
+          "label": "Cape of Good Hope",
+          "source": "src-dol-itinerary",
+          "year": 1836,
+          "coordinates_from": "Nominatim search: Cape Town, South Africa"
+        },
+        {
+          "lat": 50.1552,
+          "lon": -5.0688,
+          "date": "2 October 1836",
+          "label": "Falmouth: the voyage ends",
+          "source": "src-dol-itinerary",
+          "year": 1836,
+          "coordinates_from": "Nominatim search: Falmouth, Cornwall, England"
+        },
+        {
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "date": "November 1836",
+          "label": "London",
+          "source": "src-dol-itinerary",
+          "year": 1836,
+          "coordinates_from": "Nominatim search: London, England"
+        },
+        {
+          "lat": 51.3314488,
+          "lon": 0.0533873,
+          "date": "1842–1882",
+          "label": "Down House: home for 40 years, until his death",
+          "source": "src-eh-down",
+          "year": 1842
+        }
+      ]
     },
     "uncertainty_km": 0.5,
     "coordinate_sources": [
-      "src-osm-downhouse"
+      "src-osm-downhouse",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -103,7 +222,8 @@
       "opened": true,
       "supports": [
         "when",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -119,7 +239,8 @@
       "supports": [
         "when",
         "where",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -135,17 +256,50 @@
       "supports": [
         "where"
       ]
+    },
+    {
+      "id": "src-dol-itinerary",
+      "url": "https://darwin-online.org.uk/EditorialIntroductions/vanWyhe_Itinerary_of_Charles_Darwin.html",
+      "title": "Itinerary of Charles Darwin",
+      "publisher": "Darwin Online",
+      "author": "John van Wyhe",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Birthplace (Shrewsbury) was not confirmed on a page I opened, so it is left out. Darwin Correspondence Project gives no exact Beagle day or place of death; it refers to his home in Downe in the death entry. Down House is in Kent historically and in the London Borough of Bromley today. WebFetch read both pages; the DCP page is script-driven so spotcheck may fail.",
   "author": "historian-agent:essentials-a",
-  "updated": "2026-10-23",
+  "updated": "2026-11-03",
   "published_at": "2026-10-23T14:56:21.292Z",
   "changelog": [
     {
       "date": "2026-10-23",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 13 dated stops, each from a cited page"
     }
   ]
 }

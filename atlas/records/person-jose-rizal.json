@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "id": "person-jose-rizal",
@@ -50,11 +50,49 @@
     "modern_name": "Calamba, Laguna, Philippines (birthplace); executed at the Luneta, Manila",
     "historical_name": "Calamba, Laguna Province, Spanish Philippines",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 14.2167,
+          "lon": 121.1667,
+          "date": "19 June 1861",
+          "label": "Calamba, Laguna: born",
+          "source": "src-biography-rizal",
+          "year": 1861
+        },
+        {
+          "lat": 40.4168,
+          "lon": -3.7035,
+          "date": "1882",
+          "label": "Spain: completes his medical degree (pinned at Madrid)",
+          "source": "src-biography-rizal",
+          "year": 1882,
+          "coordinates_from": "Nominatim search: Madrid, Spain"
+        },
+        {
+          "lat": 8.6549,
+          "lon": 123.4244,
+          "date": "1892–1896",
+          "label": "Dapitan, Mindanao: exile",
+          "source": "src-biography-rizal",
+          "year": 1892,
+          "coordinates_from": "Nominatim search: Dapitan, Philippines"
+        },
+        {
+          "lat": 14.583,
+          "lon": 120.9793,
+          "date": "30 December 1896",
+          "label": "Manila, the Luneta: executed",
+          "source": "src-loc-study-rizal",
+          "year": 1896,
+          "coordinates_from": "Nominatim search: Rizal Park, Ermita, Manila"
+        }
+      ]
     },
     "uncertainty_km": 10,
     "coordinate_sources": [
-      "src-wd-calamba"
+      "src-wd-calamba",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -105,7 +143,8 @@
       "opened": true,
       "supports": [
         "when.as_recorded",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -119,7 +158,8 @@
       "class": "government",
       "opened": true,
       "supports": [
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -136,18 +176,37 @@
         "where",
         "where.coordinate_sources"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Birth coordinates are the Calamba city centre (Wikidata). Noli Me Tangere year omitted: sources open on the page differ or leave it unclear. Execution site is Luneta per the LoC study, \"Manila\" per Biography.com.",
   "audience_note": null,
   "author": "historian-agent:o-s60",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "published_at": "2026-10-22T11:36:56.944Z",
   "changelog": [
     {
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 4 dated stops, each from a cited page"
     }
   ]
 }

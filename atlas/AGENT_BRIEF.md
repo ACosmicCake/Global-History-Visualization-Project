@@ -2,7 +2,7 @@
 
 You are one of several Historian Agents writing the Living Atlas. Your standing instructions are `atlas/spec.md` (sections 1–11) — read it in full before your first record. The machine schema is `atlas/schema/RECORD_SCHEMA.md` — read it in full. Where anything here conflicts with the spec, the spec wins.
 
-All paths below are relative to the repo root `C:\Users\Kosmic\Desktop\Job Agent\Global History Visualization Project`. Run tools with `node atlas/tools/<tool>.mjs`.
+All paths below are relative to the repo root. Run tools with `node atlas/tools/<tool>.mjs`.
 
 ## Budget
 

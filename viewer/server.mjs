@@ -7,16 +7,24 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { pinsPayload, recordPayload } from './api.mjs';
+import { published, pinsPayload, recordPayload, searchPayload } from './api.mjs';
+import { recordPage, browsePage } from './pages.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PORT = +(process.argv[2] || process.env.PORT || 8787);
-const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml' };
 
 http.createServer((req, res) => {
   const url = new URL(req.url, 'http://x');
   const send = (code, type, body) => { res.writeHead(code, { 'Content-Type': type, 'Cache-Control': 'no-store' }); res.end(body); };
   if (url.pathname === '/api/pins.json' || url.pathname === '/api/pins') return send(200, TYPES['.json'], JSON.stringify(pinsPayload()));
+  if (url.pathname === '/api/search.json') return send(200, TYPES['.json'], JSON.stringify(searchPayload()));
+  if (url.pathname === '/browse.html') return send(200, TYPES['.html'], browsePage(published()));
+  const page = url.pathname.match(/^\/r\/([^/]+?)\.html$/);
+  if (page) {
+    const r = recordPayload(decodeURIComponent(page[1]));
+    return r ? send(200, TYPES['.html'], recordPage(r, new Map(published().map(x => [x.id, x.title])))) : send(404, 'text/plain', 'not found');
+  }
   const rec = url.pathname.match(/^\/api\/record\/([^/]+?)(?:\.json)?$/);
   if (rec) {
     const r = recordPayload(decodeURIComponent(rec[1]));

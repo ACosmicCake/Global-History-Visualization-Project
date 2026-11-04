@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "id": "person-hannibal-barca",
@@ -48,11 +48,76 @@
     "modern_name": "Carthage, Tunis Governorate, Tunisia (birthplace and capital; military campaigns traversed Spain, the Alps, Italy, and North Africa)",
     "historical_name": "Qart-ḥadašt (Carthago), capital of the Carthaginian Empire",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 36.853056,
+          "lon": 10.323056,
+          "date": "247 BCE",
+          "label": "Carthage: born",
+          "source": "src-livius-hannibal",
+          "year": -246
+        },
+        {
+          "lat": 39.6793,
+          "lon": -0.2786,
+          "date": "219 BCE",
+          "label": "Saguntum: sacks Rome’s ally in Spain",
+          "source": "src-worldhistory-hannibal",
+          "year": -218,
+          "coordinates_from": "Nominatim search: Sagunto, Valencia, Spain"
+        },
+        {
+          "lat": 44.9313,
+          "lon": 6.7257,
+          "date": "218 BCE",
+          "label": "The Alps: crosses into Italy, probably by Mont Genèvre",
+          "source": "src-livius-hannibal",
+          "year": -217,
+          "coordinates_from": "Nominatim search: Col de Montgenèvre"
+        },
+        {
+          "lat": 41.2966,
+          "lon": 16.1513,
+          "date": "216 BCE",
+          "label": "Cannae: his great victory over Rome",
+          "source": "src-livius-hannibal",
+          "year": -215,
+          "coordinates_from": "Nominatim search: Canne della Battaglia"
+        },
+        {
+          "lat": 36.1121,
+          "lon": 9.2859,
+          "date": "19 October 202 BCE",
+          "label": "Zama: defeated by Scipio (site approximate)",
+          "source": "src-livius-hannibal",
+          "year": -201,
+          "coordinates_from": "Nominatim search: Zama Regia"
+        },
+        {
+          "lat": 33.2721,
+          "lon": 35.1964,
+          "date": "195 BCE",
+          "label": "Tyre: flees Carthage",
+          "source": "src-worldhistory-hannibal",
+          "year": -194,
+          "coordinates_from": "Nominatim search: Tyre, Lebanon"
+        },
+        {
+          "lat": 40.8007,
+          "lon": 29.4318,
+          "date": "winter 183/182 BCE",
+          "label": "Libyssa, Bithynia: takes his own life (modern Gebze, approximate)",
+          "source": "src-livius-hannibal",
+          "year": -182,
+          "coordinates_from": "Nominatim search: Gebze, Turkey"
+        }
+      ]
     },
     "uncertainty_km": 5,
     "coordinate_sources": [
-      "src-pleiades-carthage"
+      "src-pleiades-carthage",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -107,7 +172,8 @@
       "supports": [
         "when",
         "when.as_recorded",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -123,7 +189,8 @@
       "supports": [
         "when",
         "when.as_recorded",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -140,17 +207,36 @@
         "where",
         "where.coordinate_sources"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Least sure of the exact Alpine mountain pass crossed by Hannibal in 218 BCE, which remains an unsettled controversy among modern topographers and geomorphologists.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "published_at": "2026-10-22T08:26:26.954Z",
   "changelog": [
     {
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 7 dated stops, each from a cited page"
     }
   ]
 }

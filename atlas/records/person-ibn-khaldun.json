@@ -1,7 +1,7 @@
 {
   "id": "person-ibn-khaldun",
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "kind": "person",
@@ -43,11 +43,58 @@
     "modern_name": "Medina of Tunis, Tunisia",
     "historical_name": "Tunis, Hafsid Sultanate",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 36.81667,
+          "lon": 10.16667,
+          "date": "27 May 1332",
+          "label": "Tunis: born",
+          "source": "src-muslimheritage-khaldun",
+          "year": 1332
+        },
+        {
+          "lat": 34.0347,
+          "lon": -5.0162,
+          "date": "1354",
+          "label": "Fez: joins the sultan’s council of scholars",
+          "source": "src-muslimheritage-khaldun",
+          "year": 1354,
+          "coordinates_from": "Nominatim search: Fez, Morocco"
+        },
+        {
+          "lat": 37.1735,
+          "lon": -3.5995,
+          "date": "about 1363",
+          "label": "Granada: at the court of Sultan Muhammad",
+          "source": "src-muslimheritage-khaldun",
+          "year": 1363,
+          "coordinates_from": "Nominatim search: Granada, Spain"
+        },
+        {
+          "lat": 36.7512,
+          "lon": 5.0644,
+          "date": "1364",
+          "label": "Bougie (Béjaïa): called by his friend Abu Abdallah",
+          "source": "src-muslimheritage-khaldun",
+          "year": 1364,
+          "coordinates_from": "Nominatim search: Béjaïa, Algeria"
+        },
+        {
+          "lat": 30.0444,
+          "lon": 31.2357,
+          "date": "1382–1406",
+          "label": "Cairo: leaves North Africa for good, dies here in 1406",
+          "source": "src-muslimheritage-khaldun",
+          "year": 1382,
+          "coordinates_from": "Nominatim search: Cairo, Egypt"
+        }
+      ]
     },
     "uncertainty_km": 5,
     "coordinate_sources": [
-      "src-unesco-xml"
+      "src-unesco-xml",
+      "src-osm-lifepath"
     ]
   },
   "regions": [
@@ -92,7 +139,8 @@
         "when",
         "when.as_recorded",
         "where",
-        "summary"
+        "summary",
+        "where.waypoints"
       ]
     },
     {
@@ -125,17 +173,36 @@
         "where.lon",
         "where.coordinate_sources"
       ]
+    },
+    {
+      "id": "src-osm-lifepath",
+      "url": "https://nominatim.openstreetmap.org/",
+      "title": "Nominatim place search, for the coordinates of the life path stops",
+      "publisher": "OpenStreetMap contributors",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.waypoints"
+      ]
     }
   ],
   "reviewer_note": "Least sure of: geographic pin selection between Tunis (birth and education) and Cairo (final 24 years and death); Tunis chosen as the origin of his family and early life.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-10-22",
+  "updated": "2026-11-03",
   "published_at": "2026-10-22T08:26:28.263Z",
   "changelog": [
     {
       "date": "2026-10-22",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-03",
+      "version": 2,
+      "change": "added a life path of 5 dated stops, each from a cited page"
     }
   ]
 }
