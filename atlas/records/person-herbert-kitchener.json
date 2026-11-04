@@ -1,10 +1,134 @@
 {
   "id": "person-herbert-kitchener",
-  "title": "Herbert Kitchener",
-  "kind": "person",
-  "status": "stub",
   "schema_version": "1.0.0",
-  "created_from": "1898-battle-of-omdurman",
-  "created": "2026-10-22",
-  "note": "Stub created from 1898-battle-of-omdurman (related)."
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "title": "Herbert Kitchener",
+  "summary": "Herbert Kitchener (1850–1916) was commissioned into the Royal Engineers in 1871, became Sirdar (commander-in-chief) of the Egyptian Army in 1892 and defeated the Mahdist army at Omdurman in 1898. Appointed Secretary of State for War in August 1914, he drowned on 5 June 1916 when HMS Hampshire struck a mine off Orkney on his way to Russia.",
+  "when": {
+    "start": {
+      "year": 1850
+    },
+    "end": {
+      "year": 1916
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Years of birth and death are as printed on the National Army Museum page; the day of death (5 June 1916) is from the UK Parliament historic Hansard people page. No birth day or birthplace is claimed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian calendar, lifespan",
+        "value": "Kitchener (1850-1916)",
+        "source": "src-nam"
+      },
+      {
+        "calendar": "Gregorian calendar, date of death",
+        "value": "June 5, 1916",
+        "source": "src-hansard"
+      }
+    ],
+    "display": "1850–1916"
+  },
+  "where": {
+    "lat": 15.64453,
+    "lon": 32.47773,
+    "elevation_m": null,
+    "modern_name": "Omdurman, Sudan",
+    "historical_name": "Omdurman, Sudan; site of the 2 September 1898 battle in which the Mahdist army was defeated",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_africa",
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Commander of the Egyptian Army whose victory at Omdurman in 1898 is the event that most ties him to Sudan, and who was Secretary of State for War from August 1914 until his death in 1916."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1898-battle-of-omdurman",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nam",
+      "url": "https://www.nam.ac.uk/explore/herbert-kitchener",
+      "title": "Herbert Kitchener",
+      "publisher": "National Army Museum",
+      "author": "National Army Museum",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-hansard",
+      "url": "https://api.parliament.uk/historic-hansard/people/mr-horatio-kitchener",
+      "title": "Mr Horatio Kitchener, historic Hansard people page",
+      "publisher": "UK Parliament (Historic Hansard)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/365137/omdurman.html",
+      "title": "Omdurman, GeoNames 365137",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-03: summary confirmed against the National Army Museum page. Only the date of death is on the Hansard page, which is a people index, so the museum is the only source for the career. Pin is Omdurman (GeoNames), the site of his 1898 victory, a proxy for a life that spanned several countries.",
+  "author": "historian-agent:haiku-f",
+  "updated": "2026-11-03",
+  "published_at": "2026-11-03T18:21:07.532Z",
+  "changelog": [
+    {
+      "date": "2026-11-03",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
 }

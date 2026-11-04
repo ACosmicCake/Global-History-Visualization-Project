@@ -1,0 +1,158 @@
+{
+  "id": "1637-tulip-mania",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "event",
+  "title": "Dutch tulip mania",
+  "summary": "Between the end of 1634 and February 1637 the price of tulip bulbs in what is now the Netherlands rose spectacularly and then collapsed. Encyclopedia.com's entry says it centred on the tulip-growing region around Haarlem and involved trading in contracts on rare bulbs. The Rijksmuseum calls it the first recorded speculative bubble in history, with trading in which no goods were exchanged.",
+  "when": {
+    "start": {
+      "year": 1634
+    },
+    "end": {
+      "year": 1637
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Speculation accelerated from late 1634 and collapsed in February 1637."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "between the end of 1634 and February of 1637 ... subsequent crash in the market for tulip bulbs",
+        "source": "src-encyclopedia-tulip"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "tulip mania' of the period. This was the first recorded speculative bubble in history, when trading without any actual exchange of goods led to prices soaring before crashing down in 1637.",
+        "source": "src-rijksmuseum-tulip"
+      }
+    ],
+    "display": "1634–1637"
+  },
+  "where": {
+    "lat": 52.38084,
+    "lon": 4.63683,
+    "elevation_m": null,
+    "modern_name": "Haarlem, North Holland, Netherlands",
+    "historical_name": "Haarlem, County of Holland, Dutch Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-haarlem"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "As the earliest widely cited speculative asset bubble, tulip mania established institutional precedent in futures contracting and remains a foundational case study in economic history."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1634",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Speculation in tulip bulb contracts accelerates across Haarlem and Dutch trading centers.",
+        "source": "src-encyclopedia-tulip",
+        "consequence": false
+      },
+      {
+        "span": "1637-02",
+        "action": "pulse { radius_km: 75 }",
+        "caption": "Contract prices collapse abruptly in February 1637, establishing history's earliest recorded speculative bubble.",
+        "source": "src-rijksmuseum-tulip",
+        "consequence": true
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "1602-dutch-east-india-company",
+      "type": "related"
+    },
+    {
+      "id": "place-amsterdam",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyclopedia-tulip",
+      "url": "https://www.encyclopedia.com/social-sciences/applied-and-social-sciences-magazines/great-tulip-mania",
+      "title": "The Great Tulip Mania",
+      "publisher": "Encyclopedia.com (Gale / International Encyclopedia of the Social Sciences)",
+      "author": "International Encyclopedia of the Social Sciences",
+      "date_published": "2008",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rijksmuseum-tulip",
+      "url": "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-displays-tulip-book-from-the-six-collection",
+      "title": "Rijksmuseum displays tulip book from the Six Collection",
+      "publisher": "Rijksmuseum",
+      "author": "Rijksmuseum Press Office",
+      "date_published": "2022-03-16",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-haarlem",
+      "url": "https://www.geonames.org/2755003/",
+      "title": "Haarlem, North Holland, Netherlands (GeoNames entry 2755003)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: summary cut back to the two pages; the Encyclopedia.com entry (Gale) says the episode is less significant than often thought, so the bubble framing is attributed to the Rijksmuseum. Institutional sourcing is the Rijksmuseum press release only.",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T01:45:07.105Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

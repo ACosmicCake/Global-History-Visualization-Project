@@ -1,0 +1,173 @@
+{
+  "id": "1825-erie-canal",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "event",
+  "title": "Opening of the Erie Canal",
+  "summary": "The 363-mile Erie Canal opened in 1825 after eight years of construction. Governor DeWitt Clinton led the inaugural voyage aboard the Seneca Chief, ending in a symbolic Wedding of the Waters in which he emptied two casks of water into the Atlantic. The canal connected the Eastern Seaboard to the Great Lakes and the American West, and the National Park Service says population along its route quadrupled from 1830 to 1850 in Syracuse, Rochester and Buffalo.",
+  "when": {
+    "start": {
+      "year": 1825
+    },
+    "end": {
+      "year": 1825
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Canal opened in 1825 after construction approved in 1817."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The Erie Canal opened in 1825 after eight years of construction. Clinton helmed the inaugural voyage aboard the Seneca Chief, culminating in a symbolic “Wedding of the Waters”",
+        "source": "src-canals-ny"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1825 - The Erie Canal ... \"Seneca Chief,\" the flagship of a flotilla making the maiden voyage down the Erie Canal.",
+        "source": "src-fhwa-rakeman"
+      }
+    ],
+    "display": "1825"
+  },
+  "where": {
+    "lat": 42.88645,
+    "lon": -78.87837,
+    "elevation_m": null,
+    "modern_name": "Buffalo, New York, United States (western end of the canal; proxy pin)",
+    "historical_name": "Buffalo, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 200,
+    "coordinate_sources": [
+      "src-geonames-buffalo"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "built_world",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The canal linked the Great Lakes to the Atlantic Ocean, turning New York City into the continent's dominant port and transforming inland American commerce."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1825",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "The Erie Canal opens as Governor DeWitt Clinton departs Buffalo aboard the Seneca Chief.",
+        "source": "src-canals-ny",
+        "consequence": false
+      },
+      {
+        "span": "1825",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Connecting the Great Lakes to the Atlantic establishes New York City as the nation's leading commercial port.",
+        "source": "src-fhwa-rakeman",
+        "consequence": true
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1869-first-transcontinental-railroad",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-canals-ny",
+      "url": "https://www.canals.ny.gov/About/History",
+      "title": "History of the New York State Canals",
+      "publisher": "New York State Canal Corporation",
+      "author": "NYS Canal System",
+      "date_published": "2025",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fhwa-rakeman",
+      "url": "https://www.fhwa.dot.gov/rakeman/1825.htm",
+      "title": "1825 - The Erie Canal (The Paintings of Carl Rakeman)",
+      "publisher": "Federal Highway Administration",
+      "author": "Federal Highway Administration",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-erie",
+      "url": "https://www.nps.gov/places/erie-canalway-national-heritage-corridor.htm",
+      "title": "Erie Canalway National Heritage Corridor",
+      "publisher": "National Park Service",
+      "author": "National Park Service",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-buffalo",
+      "url": "https://www.geonames.org/5110629/",
+      "title": "Buffalo, New York (GeoNames entry 5110629)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'established New York City as the nation's leading metropolis' and 'inexpensive', which no opened page states. The casks wording is on the Canal Corporation page. Pin is the Buffalo end of a 363-mile line.",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T01:45:03.412Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
