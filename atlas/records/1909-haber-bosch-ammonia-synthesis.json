@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1909-haber-bosch-ammonia-synthesis",
+  "kind": "event",
+  "title": "Haber-Bosch ammonia synthesis",
+  "summary": "In 1909 Fritz Haber, with the help of Robert Le Rossignol, produced ammonia from hydrogen and nitrogen at the Technische Hochschule in Karlsruhe. At BASF, Carl Bosch scaled up the laboratory process, and the Nobel Prize site records that the Oppau nitrogen works opened in 1913 to supply fertilizers. The Science History Institute notes that Germany, whose nitrate supply was cut off by Britain in the First World War, relied on such nitrogen for agriculture and explosives.",
+  "when": {
+    "start": {
+      "year": 1909
+    },
+    "end": {
+      "year": 1913
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Haber achieved laboratory synthesis of ammonia at Karlsruhe in 1909; Bosch brought the industrial-scale process online at BASF's Oppau works in 1913."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In 1909 Fritz Haber, with the help of a colleague, Robert Le Rossignol, produced ammonia from nitrogen and hydrogen",
+        "source": "src-sciencehistory-dirty-business"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Stickstoffwerke (Nitrogen works) in Oppau were opened in 1913",
+        "source": "src-nobel-bosch-1931"
+      }
+    ],
+    "display": "1909–1913"
+  },
+  "where": {
+    "lat": 49.00937,
+    "lon": 8.40444,
+    "elevation_m": 115,
+    "modern_name": "Karlsruhe, Baden-Württemberg, Germany (industrial scale: Oppau, Ludwigshafen)",
+    "historical_name": "Karlsruhe, Grand Duchy of Baden, German Empire (industrial scale: Oppau, Kingdom of Bavaria, German Empire)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-karlsruhe"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The Nobel Prize site says Carl Bosch's methods provided practically every country with nitrogen fertilizers, and the Science History Institute links the process to agricultural fertilizer and explosives."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1914-world-war-i",
+      "type": "related",
+      "because": "The Haber-Bosch process supplied Germany with synthetic ammonia for nitric acid and munitions after the British naval blockade cut off Chilean saltpetre imports."
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1869-mendeleev-periodic-table",
+      "type": "related"
+    },
+    {
+      "id": "1900-planck-quantum-theory",
+      "type": "contemporary"
+    },
+    {
+      "id": "person-albert-einstein",
+      "type": "contemporary"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1909",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "In Karlsruhe, Fritz Haber and Robert Le Rossignol synthesize ammonia directly from nitrogen and hydrogen in a high-pressure laboratory device.",
+        "source": "src-sciencehistory-dirty-business"
+      },
+      {
+        "span": "1913",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Carl Bosch and BASF open the Oppau ammonia works, launching industrial nitrogen fixation and modern synthetic fertilizer manufacture.",
+        "source": "src-nobel-bosch-1931",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-sciencehistory-dirty-business",
+      "url": "https://www.sciencehistory.org/stories/magazine/dirty-business/",
+      "title": "Dirty Business",
+      "publisher": "Science History Institute",
+      "author": "Mark Wolverton",
+      "date_published": "2011",
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nobel-bosch-1931",
+      "url": "https://www.nobelprize.org/prizes/chemistry/1931/bosch/biographical/",
+      "title": "Carl Bosch – Biographical",
+      "publisher": "Nobel Prize Outreach",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-karlsruhe",
+      "url": "https://www.geonames.org/2892794/karlsruhe.html",
+      "title": "Karlsruhe, Germany (GeoNames 2892794)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'half the world's population' and 'massive global population growth', neither stated on an opened page. Karlsruhe is on the Nobel Bosch biography; the 1909 Haber and Le Rossignol detail on the Science History Institute article. The British naval blockade of Chilean nitrates in the First World War is on the Science History Institute article.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:35.920Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

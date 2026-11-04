@@ -1,0 +1,163 @@
+{
+  "id": "1969-stonewall-uprising",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Stonewall uprising",
+  "summary": "In the early hours of 28 June 1969 a police raid on the Stonewall Inn, a gay bar in New York's Greenwich Village, provoked a spontaneous act of resistance. Demonstrations continued over the next several nights at Christopher Park across the street and in the surrounding neighborhood. The National Park Service calls it a milestone for gay and lesbian civil rights that gave momentum to a movement, and the Library of Congress links it to the annual Pride traditions.",
+  "when": {
+    "start": {
+      "year": 1969,
+      "iso": "1969-06-28"
+    },
+    "end": {
+      "year": 1969,
+      "iso": "1969-07-03"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "exact"
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian: early hours of June 28, 1969",
+        "value": "early hours of June 28, 1969",
+        "source": "src-nps-stonewall"
+      },
+      {
+        "calendar": "Gregorian: June 28, 1969",
+        "value": "Stonewall Uprising began on June 28, 1969",
+        "source": "src-loc-stonewall"
+      }
+    ],
+    "display": "28 June 1969 (demonstrations continued over the next several nights)"
+  },
+  "where": {
+    "lat": 40.7338,
+    "lon": -74.0022,
+    "elevation_m": null,
+    "modern_name": "Stonewall Inn, 53 Christopher Street, Greenwich Village, Manhattan, New York City, New York, United States",
+    "historical_name": "Stonewall Inn, 53 Christopher Street, Greenwich Village, New York City, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.05,
+    "coordinate_sources": [
+      "src-osm-stonewall"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "A foundational turning point that catalyzed the modern LGBTQ+ civil rights and liberation movement in the United States and worldwide."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-statue-of-liberty",
+      "type": "same_place"
+    },
+    {
+      "id": "1969-07-20-apollo-11",
+      "type": "contemporary"
+    },
+    {
+      "id": "1968-treaty-on-the-non-proliferation-of-nuclear-weapons",
+      "type": "contemporary"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1969-06-28",
+        "action": "pulse { radius_km: 0.5 }",
+        "caption": "A police raid on the Stonewall Inn on Christopher Street triggers spontaneous street clashes and crowd resistance.",
+        "source": "src-nps-stonewall",
+        "consequence": false
+      },
+      {
+        "span": "1969-07-02",
+        "action": "pulse { radius_km: 1.5 }",
+        "caption": "Nights of demonstrations in Greenwich Village catalyze the modern LGBTQ+ civil rights movement across the United States.",
+        "source": "src-loc-stonewall",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-nps-stonewall",
+      "url": "https://www.nps.gov/ston/learn/historyculture.htm",
+      "title": "History & Culture - Stonewall National Monument",
+      "publisher": "National Park Service",
+      "author": "National Park Service",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-loc-stonewall",
+      "url": "https://guides.loc.gov/lgbtq-studies/stonewall-era",
+      "title": "1969: The Stonewall Uprising - LGBTQIA+ Studies: A Resource Guide",
+      "publisher": "Library of Congress",
+      "author": "Library of Congress",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-osm-stonewall",
+      "url": "https://www.openstreetmap.org/node/368043598",
+      "title": "Stonewall Inn (Node 368043598)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap Contributors",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'catalyzing the modern LGBTQ+ liberation movement' and 'inspiring Pride worldwide', and the 3 July end date, which no opened page gives. NPS has the raid and the several nights; the Library of Congress has the Greenwich Village location and the Pride link.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:30.700Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

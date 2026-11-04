@@ -191,7 +191,7 @@
   ],
   "reviewer_note": "Least sure of: geographic pin selection between Tunis (birth and education) and Cairo (final 24 years and death); Tunis chosen as the origin of his family and early life.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "published_at": "2026-10-22T08:26:28.263Z",
   "changelog": [
     {
@@ -204,5 +204,31 @@
       "version": 2,
       "change": "added a life path of 5 dated stops, each from a cited page"
     }
-  ]
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 31,
+    "beats": [
+      {
+        "span": "1332",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Ibn Khaldun (1332–1406) was a North African Arab scholar, historian, jurist, and statesman born in Tunis who formulated revolutionary foundations for sociology, historiography, and political economy.",
+        "source": "src-muslimheritage-khaldun"
+      },
+      {
+        "span": "1332",
+        "action": "path.trace {}",
+        "caption": "The route runs Tunis to Fez to Granada to Bougie.",
+        "source": "src-muslimheritage-khaldun"
+      },
+      {
+        "span": "1406",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "In his magnum opus, the Muqaddimah (Prolegomena), written in North Africa before his later career as chief judge in Cairo, he introduced the concept of asabiyyah (social cohesion)…",
+        "source": "src-muslimheritage-khaldun"
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -7,7 +7,7 @@
   "paleo": null,
   "audience_note": null,
   "author": "historian-agent:o-s35",
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "id": "person-simon-bolivar",
   "kind": "person",
   "title": "Simón Bolívar",
@@ -231,5 +231,31 @@
       "version": 2,
       "change": "added a life path of 7 dated stops, each from a cited page"
     }
-  ]
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 31,
+    "beats": [
+      {
+        "span": "1783",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Simón Bolívar was born in Caracas in 1783 and led campaigns against Spanish rule that helped create Gran Colombia and several South American republics.",
+        "source": "src-biography-bolivar"
+      },
+      {
+        "span": "1783",
+        "action": "path.trace {}",
+        "caption": "The route runs Caracas to Spain to Caracas to Britain.",
+        "source": "src-biography-bolivar"
+      },
+      {
+        "span": "1830",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He died that year near Santa Marta; admirers and critics weigh his achievements against his authoritarian rule.",
+        "source": "src-biography-bolivar"
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

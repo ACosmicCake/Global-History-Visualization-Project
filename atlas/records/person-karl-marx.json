@@ -12,7 +12,7 @@
   "scale": "modern",
   "audience_note": null,
   "author": "historian-agent:essentials-b",
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "id": "person-karl-marx",
   "title": "Karl Marx",
   "summary": "Born in Trier in 1818, Marx was a German philosopher and critic of political economy who co-wrote the Manifesto of the Communist Party with Friedrich Engels in 1848. After exile in Paris and Brussels he settled in London in 1849, published the first volume of Capital in 1867, and died there on 14 March 1883.",
@@ -276,5 +276,32 @@
       "version": 2,
       "change": "added a life path of 8 dated stops, each from a cited page"
     }
-  ]
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 31,
+    "beats": [
+      {
+        "span": "1818",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Born in Trier in 1818, Marx was a German philosopher and critic of political economy who co-wrote the Manifesto of the Communist Party with Friedrich Engels in 1848.",
+        "source": "src-fes"
+      },
+      {
+        "span": "1818",
+        "action": "path.trace {}",
+        "caption": "The route runs Trier to Bonn to Berlin to Cologne.",
+        "source": "src-fes"
+      },
+      {
+        "span": "1883",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "After exile in Paris and Brussels he settled in London in 1849, published the first volume of Capital in 1867, and died there on 14 March 1883.",
+        "source": "src-fes",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

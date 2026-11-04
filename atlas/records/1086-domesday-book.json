@@ -1,0 +1,158 @@
+{
+  "id": "1086-domesday-book",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "work",
+  "title": "Domesday Book",
+  "summary": "The Domesday survey was ordered by William the Conqueror at Christmas 1085 and undertaken the following year, according to The National Archives. It records who held land and property in England at the end of the 11th century, and how it had changed since the Norman Conquest of 1066, though it is not a census of the population. A University of Cambridge project uses it to study the structure of English landed society and the scale of the dispossession of the English by the Normans.",
+  "when": {
+    "start": {
+      "year": 1085
+    },
+    "end": {
+      "year": 1086
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Ordered Christmas 1085, compiled 1086"
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian (historical English dating: ordered Christmas 1085, undertaken 1086)",
+        "value": "Christmas 1085 and undertaken the following year",
+        "source": "src-tna-domesday"
+      },
+      {
+        "calendar": "Julian (historical English dating: 1086)",
+        "value": "Domesday survey of 1086",
+        "source": "src-cambridge-domesday"
+      }
+    ],
+    "display": "1085–1086"
+  },
+  "where": {
+    "lat": 51.4811,
+    "lon": -0.2792,
+    "elevation_m": null,
+    "modern_name": "The National Archives, Kew, Richmond, Greater London, England, United Kingdom",
+    "historical_name": "Kingdom of England (manuscript of the survey ordered by William the Conqueror; currently held at The National Archives)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-tna-kew"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "England's earliest surviving public record, documenting the comprehensive redistribution of land and wealth following the Norman Conquest."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1066-battle-of-hastings",
+      "type": "caused_by",
+      "because": "The survey recorded the distribution of land across England following William the Conqueror's victory at Hastings."
+    },
+    {
+      "id": "place-tower-of-london",
+      "type": "contemporary"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1085",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "King William the Conqueror orders a comprehensive survey of English landholders and property values at Christmas 1085.",
+        "source": "src-tna-domesday",
+        "consequence": false
+      },
+      {
+        "span": "1086",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Inquests across England produce the Domesday Book, consolidating Norman royal administration and tax assessment.",
+        "source": "src-cambridge-domesday",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-tna-domesday",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/",
+      "title": "Domesday Book",
+      "publisher": "The National Archives",
+      "author": "The National Archives",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-cambridge-domesday",
+      "url": "https://www.cam.ac.uk/research/news/domesday-database-launched-online",
+      "title": "Domesday database launched online",
+      "publisher": "University of Cambridge",
+      "author": "University of Cambridge Office of Communications",
+      "date_published": "2010-08-04",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-osm-tna-kew",
+      "url": "https://www.openstreetmap.org/way/4788807",
+      "title": "The National Archives, Kew (Way 4788807)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap Contributors",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'earliest surviving public record', 'taxable wealth and feudal obligations' and 'unparalleled portrait', none on an opened page. Pin is The National Archives at Kew, where the book is held, not a place of the survey.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:29.106Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

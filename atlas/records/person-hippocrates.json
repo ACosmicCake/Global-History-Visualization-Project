@@ -1,0 +1,100 @@
+{
+  "id": "person-hippocrates",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "needs_review",
+  "kind": "person",
+  "title": "Hippocrates of Kos",
+  "summary": "Hippocrates was a Greek physician from the island of Kos. The U.S. National Library of Medicine says his name and image emerged in the 5th century BCE, and that the Hippocratic Corpus, the collected writings attributed to him, contains about sixty works on medical topics.",
+  "when": {
+    "start": {
+      "year": -459
+    },
+    "end": {
+      "year": -369
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 10,
+      "end_minus_years": 10,
+      "end_plus_years": 10,
+      "note": "Proxy: the source gives only 'c.' for both dates and no range, so a 10-year band labelled as a proxy is used. Astronomical years: 460 BCE = -459, 370 BCE = -369."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Century, as written",
+        "value": "5th century BCE",
+        "source": "src-nlm-greek-medicine"
+      }
+    ],
+    "display": "c. 460–c. 370 BCE"
+  },
+  "where": {
+    "lat": 36.89295,
+    "lon": 27.28768,
+    "elevation_m": null,
+    "modern_name": "Kos, Greece",
+    "historical_name": "Kos (Insel), island of the Asclepiads' medical school; no polity name is given by the sources opened",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-kos"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "disease",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The National Library of Medicine states that Hippocrates is generally credited with turning away from divine notions of medicine toward observation, and that the Hippocratic Corpus contains about sixty works attributed to him, so his name anchors the Western medical tradition's founding texts. Score 5 reflects that breadth of attribution."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "sources": [
+    {
+      "id": "src-nlm-greek-medicine",
+      "url": "https://www.nlm.nih.gov/hmd/topics/greek-medicine/index.html",
+      "title": "Greek Medicine (National Library of Medicine, Historical Medical Division topic page)",
+      "publisher": "U.S. National Library of Medicine (National Institutes of Health)",
+      "author": "National Library of Medicine",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "importance",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-kos",
+      "url": "https://www.geonames.org/259245/kos.html",
+      "title": "Kos, GeoNames ID 259245",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: held: the only other source, a heritage-library authority record (data.mmfc.be), is a catalogue entry and was dropped, leaving the NLM page as the single publisher. Needs a second independent publisher before it can go live. Birth and death years are not stated on the NLM page.",
+  "updated": "2026-11-04",
+  "author": "historian-agent:haiku-j"
+}

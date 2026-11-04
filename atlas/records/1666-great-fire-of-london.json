@@ -1,0 +1,157 @@
+{
+  "id": "1666-great-fire-of-london",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Great Fire of London",
+  "summary": "The Great Fire of London began in the King's baker's house on Pudding Lane in the City of London on 2 September 1666. Over four days, the University of Oxford's Faculty of History says, it destroyed about 85 percent of the area within the city walls, wiping out 13,200 houses and 86 parish churches and leaving 70,000 to 80,000 people homeless. By 13 September the king had set the aim of rebuilding in brick or stone and proposed street widening.",
+  "when": {
+    "start": {
+      "year": 1666,
+      "iso": "1666-09-02"
+    },
+    "end": {
+      "year": 1666
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "exact"
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian (Old Style: 2–6 September 1666)",
+        "value": "2 September to 6 September",
+        "source": "src-rmg-great-fire"
+      },
+      {
+        "calendar": "Julian (Old Style: 2–5 September 1666)",
+        "value": "2-5 September 1666",
+        "source": "src-oxford-great-fire"
+      }
+    ],
+    "display": "2–5 September 1666 (to 6 September per Royal Museums Greenwich)"
+  },
+  "where": {
+    "lat": 51.5101,
+    "lon": -0.0853,
+    "elevation_m": null,
+    "modern_name": "Pudding Lane, City of London, Greater London, England, United Kingdom",
+    "historical_name": "Pudding Lane, City of London, Kingdom of England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.1,
+    "coordinate_sources": [
+      "src-osm-pudding-lane"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 4,
+    "justification": "Destroyed roughly eighty-five percent of the medieval City of London and Old St Paul's Cathedral, reshaping English urban building regulations and architecture."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-tower-of-london",
+      "type": "same_place"
+    },
+    {
+      "id": "1660-founding-of-the-royal-society",
+      "type": "contemporary"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1666-09-02",
+        "action": "pulse { radius_km: 1 }",
+        "caption": "A fire breaks out at Thomas Farynor's bakery on Pudding Lane in the City of London.",
+        "source": "src-rmg-great-fire",
+        "consequence": false
+      },
+      {
+        "span": "1666-09-06",
+        "action": "pulse { radius_km: 3 }",
+        "caption": "Over four days the flames destroy eighty-five percent of the walled city, leaving tens of thousands homeless.",
+        "source": "src-oxford-great-fire",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-rmg-great-fire",
+      "url": "https://www.rmg.co.uk/stories/royal-history/great-fire-london",
+      "title": "The Great Fire of London",
+      "publisher": "Royal Museums Greenwich",
+      "author": "Royal Museums Greenwich",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-oxford-great-fire",
+      "url": "https://www.history.ox.ac.uk/facing-catastrophe-great-fire-london",
+      "title": "Facing up to catastrophe: The Great Fire of London",
+      "publisher": "Faculty of History, University of Oxford",
+      "author": "Ian Archer",
+      "date_published": "2016",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-osm-pudding-lane",
+      "url": "https://www.openstreetmap.org/way/4260247",
+      "title": "Pudding Lane (Way 4260247)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap Contributors",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: summary rewritten to the two pages: baker's house and 85 percent from Royal Museums Greenwich, figures for houses, churches and homeless (70,000-80,000) from Oxford; RMG says up to 100,000 homeless. Removed the unsourced claim that the fire transformed building regulations and civic disaster response. Pin is the street named by RMG.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:28.397Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

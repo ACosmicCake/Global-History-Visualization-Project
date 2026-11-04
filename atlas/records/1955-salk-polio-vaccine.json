@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "audience_note": null,
+  "author": "historian-agent:haiku-k",
+  "updated": "2026-11-04",
+  "id": "1955-salk-polio-vaccine",
+  "kind": "event",
+  "title": "Announcement that the Salk polio vaccine was safe, effective and potent",
+  "summary": "On 12 April 1955 Thomas Francis of the University of Michigan announced in Ann Arbor that Jonas Salk's polio vaccine was safe, effective and potent. The field trial involved nearly two million children. US polio cases then fell sharply, from an average of about 45,000 a year before the vaccine to 910 a year by 1962, and worldwide cases have since fallen by more than 99 percent.",
+  "when": {
+    "start": {
+      "year": 1955,
+      "iso": "1955-04-12"
+    },
+    "end": {
+      "year": 1955,
+      "iso": "1955-04-12"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "note": "Single-day announcement; the date is given in all three opened sources."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "When the announcement came in Ann Arbor, Michigan on April 12, 1955,",
+        "source": "src-salk"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Just three weeks previously, on April 12, Dr. Thomas Francis of the U-M's School of Public Health had made the momentous announcement.",
+        "source": "src-aadl"
+      }
+    ],
+    "display": "12 April 1955"
+  },
+  "where": {
+    "lat": 42.27756,
+    "lon": -83.74088,
+    "elevation_m": null,
+    "modern_name": "Ann Arbor, Michigan, United States (announcement venue: Rackham Auditorium)",
+    "historical_name": "Ann Arbor, Michigan, United States; no polity at this date (venue: Rackham Auditorium, University of Michigan)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-geonames-annarbor"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "disease",
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The Salk Institute's history cites a drop in US polio cases from about 45,000 a year to 910 by 1962, and says worldwide polio cases have fallen by more than 99 percent since the vaccine was introduced."
+  },
+  "confidence": "established",
+  "related": [
+    {
+      "id": "1885-pasteur-rabies-vaccine",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-aadl",
+      "url": "https://aadl.org/node/313466",
+      "title": "Polio in Ann Arbor",
+      "publisher": "Ann Arbor District Library",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-11-03",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "where.modern_name"
+      ]
+    },
+    {
+      "id": "src-salk",
+      "url": "https://www.salk.edu/news-release/the-day-polio-met-its-match-celebrating-70-years-of-the-salk-vaccine/",
+      "title": "The day polio met its match: Celebrating 70 years of the Salk vaccine",
+      "publisher": "Salk Institute for Biological Studies",
+      "author": null,
+      "date_published": "2025-04-11",
+      "accessed": "2026-11-03",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-pbs",
+      "url": "https://www.pbs.org/newshour/health/the-day-polio-began-losing-its-grip-on-america",
+      "title": "The day polio began losing its grip on America",
+      "publisher": "PBS NewsHour",
+      "author": null,
+      "date_published": "2013-04-12",
+      "accessed": "2026-11-03",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "summary",
+        "when"
+      ]
+    },
+    {
+      "id": "src-geonames-annarbor",
+      "url": "https://www.geonames.org/4984247/ann-arbor.html",
+      "title": "GeoNames place page: Ann Arbor, Washtenaw County, Michigan (4984247)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "n.d.",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: summary confirmed on the Ann Arbor District Library (Thomas Francis, 12 April, 'safe, effective and potent', almost two million children) and the Salk Institute (45,000 a year to 910 by 1962; worldwide cases down more than 99 percent). The case figures are from the Salk Institute only. Pin is Ann Arbor, the announcement city.",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "published_at": "2026-11-04T06:57:32.218Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1955-04-12",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 12 April 1955 Thomas Francis of the University of Michigan announced in Ann Arbor that Jonas Salk's polio vaccine was safe, effective and potent.",
+        "source": "src-aadl"
+      },
+      {
+        "span": "1955",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "US polio cases then fell sharply, from an average of about 45,000 a year before the vaccine to 910 a year by 1962, and worldwide cases have since…",
+        "source": "src-aadl",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}

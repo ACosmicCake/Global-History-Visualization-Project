@@ -224,7 +224,7 @@
   ],
   "reviewer_note": "Pin is the birthplace; his life ran through Johannesburg, Robben Island and Pretoria. The Foundation says convicted 11 June 1964 and sentenced the next day; Nobel gives 12 June. The 27-year figure is from SAHO.",
   "author": "historian-agent:o-s18",
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "published_at": "2026-10-22T06:26:12.953Z",
   "changelog": [
     {
@@ -237,5 +237,32 @@
       "version": 2,
       "change": "added a life path of 7 dated stops, each from a cited page"
     }
-  ]
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 31,
+    "beats": [
+      {
+        "span": "1918-07-18",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Nelson Rolihlahla Mandela (1918-2013) was a South African lawyer and African National Congress leader.",
+        "source": "src-nmf"
+      },
+      {
+        "span": "1918-07-18",
+        "action": "path.trace {}",
+        "caption": "The route runs Mvezo to Johannesburg to Pretoria to Robben Island.",
+        "source": "src-nmf"
+      },
+      {
+        "span": "2013",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "de Klerk, and in 1994 became South Africa's first democratically elected president.",
+        "source": "src-nmf",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -240,7 +240,7 @@
   ],
   "reviewer_note": "Pin is Cuiheng, the birthplace (proxy), not a life-long location. Coordinates are from an aggregator page (Latitude.to) giving 22.4333, 113.5167; another map site showed about 1.7 km away, hence 5 km uncertainty.",
   "author": "historian-agent:claude-api-sonnet-5-5",
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "published_at": "2026-10-22T20:41:09.841Z",
   "changelog": [
     {
@@ -253,5 +253,31 @@
       "version": 2,
       "change": "added a life path of 11 dated stops, each from a cited page"
     }
-  ]
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 31,
+    "beats": [
+      {
+        "span": "1866",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Sun Yat-sen was born on 12 November 1866 in a village in Xiangshan County, Guangdong, and became a leading figure of China's republican revolution.",
+        "source": "src-yatsen"
+      },
+      {
+        "span": "1866",
+        "action": "path.trace {}",
+        "caption": "The route runs Tsuiheng to Honolulu to Hong Kong to Canton.",
+        "source": "src-yatsen"
+      },
+      {
+        "span": "1925",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He took up the post of provisional president of the Republic of China at Nanjing in January 1912, and died on 12 March 1925.",
+        "source": "src-yatsen"
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }
