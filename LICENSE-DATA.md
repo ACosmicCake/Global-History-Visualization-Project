@@ -12,6 +12,7 @@ This doesn't cover what records point to or quote. Linked pages, short quotation
 | --- | --- | --- |
 | `viewer/site/borders/` | [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria), Seshat Global History Databank (Scientific Data 12, 247, 2025, doi:10.1038/s41597-025-04516-9) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changed for this site: outlines simplified, small rings dropped, coordinates rounded (`atlas/tools/build-borders.mjs`) |
 | `viewer/assets/shelf-depth.png` | NOAA ETOPO1 (Amante and Eakins 2009), reduced to a 1/6° grid and turned into shelf depth (`atlas/tools/build-sealevel.mjs`) | Free to use and redistribute; not for legal use, and provided without warranty |
+| `viewer/assets/ice-sheets.png` | PaleoMIST 1.0: Gowan et al. 2021, Nature Communications 12:1199, doi:10.1038/s41467-021-21469-w; data doi:10.1594/PANGAEA.905800. One-degree ice thickness reduced to 8 bits (`atlas/tools/build-icesheets.mjs`) | CC BY 4.0 |
 | `viewer/paleo/sealevel.json` | Spratt and Lisiecki 2016, Climate of the Past 12, doi:10.5194/cp-12-1-2016, from NOAA's paleoclimate archive | Credited here. Values rounded to the metre |
 | `viewer/paleo/morph.json` | MERDITH2021 plate model, through GPlates | Credited here |
 | `viewer/site/land-110m.json` | Natural Earth | Public domain |

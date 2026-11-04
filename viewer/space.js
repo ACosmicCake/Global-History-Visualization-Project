@@ -61,6 +61,7 @@
         nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
         paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 },
         shelfMap: { value: null }, seaDrop: { value: 0 },
+        iceA: { value: null }, iceB: { value: null }, iceMix: { value: 0 }, iceOn: { value: 0 },
         detailMap: { value: null }, detailBounds: { value: new THREE.Vector4(0, 0, 0.25, 0.5) }, detailMix: { value: 0 },
       },
       vertexShader: `varying vec2 vUv; varying vec3 vN; varying vec3 vW;
@@ -70,6 +71,7 @@
         uniform vec3 sunDir; uniform float nightLights; uniform float relief;
         uniform sampler2D detailMap; uniform vec4 detailBounds; uniform float detailMix;
         uniform sampler2D shelfMap; uniform float seaDrop;
+        uniform sampler2D iceA; uniform sampler2D iceB; uniform float iceMix; uniform float iceOn;
         uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat;
         varying vec2 vUv; varying vec3 vN; varying vec3 vW;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
@@ -100,6 +102,13 @@
             float s = texture2D(shelfMap, vUv).r, depth = (s * 255.0 - 1.0) * 150.0 / 254.0;
             float dry = s > 0.002 ? 1.0 - smoothstep(seaDrop - 5.0, seaDrop + 5.0, depth) : 0.0;
             day = mix(day, vec3(0.37, 0.35, 0.23), dry); water = mix(water, 0.0, dry);
+          }
+          if (iceOn > 0.0) {   // ice sheets of the last 80,000 years (ice-sheets.png): thicker ice is whiter, and a 1-degree edge gets a ragged line
+            float th = mix(texture2D(iceA, vUv).r, texture2D(iceB, vUv).r, iceMix);
+            float sheet = smoothstep(0.07, 0.15, th + (fbm(n0 * 30.0) - 0.5) * 0.06) * iceOn;
+            float slope = (texture2D(iceA, vUv + vec2(1.5 / 360.0, 0.0)).r - texture2D(iceA, vUv - vec2(1.5 / 360.0, 0.0)).r) - (texture2D(iceA, vUv + vec2(0.0, 1.5 / 181.0)).r - texture2D(iceA, vUv - vec2(0.0, 1.5 / 181.0)).r);
+            vec3 iceColor = mix(vec3(0.52, 0.63, 0.74), vec3(0.80, 0.85, 0.90), smoothstep(0.2, 0.8, th)) * clamp(1.0 + slope * 2.2 + (fbm(n0 * 60.0) - 0.5) * 0.08, 0.72, 1.12);
+            day = mix(day, iceColor, sheet); water *= 1.0 - sheet;
           }
           if (paleoOn > 0.0) {   // deep time: today's imagery gives way to open ocean under the moving land mesh
             day = mix(day, vec3(0.04, 0.12, 0.25), paleoOn);   // open ocean; the land mesh is drawn on top
@@ -464,6 +473,28 @@
     window.__seaDrop = m;
     if (u.shelfMap.value) u.seaDrop.value = m;
   }
+  // Ice sheets of the last 80,000 years (PaleoMIST 1.0, 33 frames 2,500 years apart in one image; atlas/tools/build-icesheets.mjs).
+  // The two frames around the date go to the shader to blend, so ice grows and melts as time moves. bp: years before 1950, or null.
+  // Near today it fades out, because the imagery already shows today's ice; past 80,000 years there's no data, so it fades out too.
+  let iceImg = null, iceLoading = false, iceBp = null; const iceFrame = [-1, -1];
+  const iceTex = () => { const c = document.createElement('canvas'); c.width = 360; c.height = 181; const t = new THREE.CanvasTexture(c); t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; t.wrapS = THREE.RepeatWrapping; return t; };
+  function setIce(bp) {
+    const u = earthMat.uniforms; iceBp = bp;
+    if (bp == null || bp < 500 || bp > 85000) { u.iceOn.value = 0; return; }
+    if (!iceImg) {
+      if (!iceLoading) { iceLoading = true; const img = new Image(); img.onload = () => { iceImg = img; u.iceA.value = iceTex(); u.iceB.value = iceTex(); setIce(iceBp); }; img.onerror = () => { iceLoading = false; }; img.src = 'assets/ice-sheets.png'; }
+      return;
+    }
+    const f = Math.min(32, bp / 2500), a = Math.floor(f), b = Math.min(32, a + 1);
+    [[u.iceA.value, a], [u.iceB.value, b]].forEach(([t, k], i) => {
+      if (iceFrame[i] === k) return;
+      iceFrame[i] = k;
+      const g = t.image.getContext('2d'); g.clearRect(0, 0, 360, 181); g.drawImage(iceImg, (k % 6) * 360, Math.floor(k / 6) * 181, 360, 181, 0, 0, 360, 181);
+      t.needsUpdate = true;
+    });
+    u.iceMix.value = f - a; u.iceOn.value = Math.min(1, (bp - 500) / 2000) * Math.min(1, (85000 - bp) / 5000);
+  }
+
   function update({ date, sunMode: mode, nightLights, clouds: showClouds, zoomAlt, flat }) {
     if (!globe) return;
     if (!!flat !== isFlat) { isFlat = !!flat; globe.globeMaterial(isFlat ? flatMat : earthMat); }
@@ -478,5 +509,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { init, update, setPaleo, setSeaDrop, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { init, update, setPaleo, setSeaDrop, setIce, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();

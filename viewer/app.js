@@ -465,6 +465,7 @@ function updateSky() {
   state.paleoMa = window.Space.setPaleo(!map && state.t < -2e6 ? -state.t / 1e6 : null);
   state.seaDrop = map ? 0 : seaDropAt(state.t);
   window.Space.setSeaDrop(state.seaDrop);
+  window.Space.setIce(map ? null : 1950 - state.t);
   window.Borders?.update(state.t, state.borders);
   window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
   window.Spacecraft?.update(state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
@@ -683,8 +684,8 @@ function render() {
   const notice = state.paleoMa != null && -state.t / 1e6 > window.Space.PALEO_MAX ? eonNote(-state.t / 1e6)
     : state.paleoMa >= 10 ? `Continents as they stood ${Math.round(state.paleoMa)} million years ago, moved plate by plate (MERDITH2021 plate model, GPlates). Pins ride on their plates, from where the evidence is found today.`
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
-    : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). Ice sheets aren’t drawn.`
-    : state.t < -12000 ? 'The map shows today’s coastlines. Sea level is drawn only for the last 800,000 years, and ice sheets aren’t drawn.' : '';
+    : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Ice sheets are drawn only for the last 80,000 years.'}`
+    : state.t < -12000 ? `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
   $('#notice').textContent = notice; show($('#notice'), !!notice && $('#panel').hidden && !(innerWidth <= 760 && !$('#seqbar').hidden));   // on a phone it would cover what a sequence is showing
   const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.end >= from && p.start <= to);
   show($('#empty'), state.pins.length > 0 && pins.length === 0 && $('#seqbar').hidden);
@@ -1200,7 +1201,7 @@ function closeWelcome() { if ($('#welcome').hidden) return; show($('#welcome'), 
 $('#start').onclick = openWelcome;
 // ---------- the address bar: #t=1945&l=modern&r=<record id>&tour=<id>. Opening or closing a record adds a history entry,
 // so Back returns to the record before; moving through time only updates the current entry.
-let urlTimer = 0, restoring = false;
+let urlTimer = 0, restoring = true;   // nothing is written until the records have loaded, or the opening view would overwrite a shared link
 function stateHash() {
   const h = new URLSearchParams(), level = LEVELS[state.level].key;
   if (state.selected || state.t !== -500 || level !== 'civilization') { h.set('t', String(+state.t.toPrecision(7))); h.set('l', level); }
@@ -1286,6 +1287,7 @@ const LIVE = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
 const dataReady = refresh(); if (LIVE) setInterval(refresh, 15000);
 dataReady.then(() => { // a link to a place in the atlas opens there; a first visit with no link gets the welcome card
   if (location.hash.length > 1) return applyHash();
+  restoring = false;
   let seen = false;
   try { seen = !!localStorage.getItem('atlas.welcomed'); } catch {}
   if (!seen) openWelcome();

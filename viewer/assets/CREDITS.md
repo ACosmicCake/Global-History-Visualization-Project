@@ -10,3 +10,4 @@ The night-lights texture shows modern (c. 2012) city lights. The viewer shows it
 | tiles/bm-R-C.jpg (32 tiles, 2700 px each, 45° × 45°) | NASA Visible Earth, Blue Marble Next Generation with topography and bathymetry, July 2004, 21600 × 10800 (eoimages.gsfc.nasa.gov/images/imagerecords/73000/73751) | Public domain (NASA) |
 | shelf-depth.png (2160 × 1081, sea floor down to 150 m) | NOAA ETOPO1, Ice Surface (Amante and Eakins 2009), read at a 1/6° grid. Built by atlas/tools/build-sealevel.mjs | Free to use and redistribute; not for legal use, no warranty |
 | og.jpg | Screenshot of this site, for link previews | Same as the imagery in it |
+| ice-sheets.png (33 frames of 360 × 181, ice thickness for the last 80,000 years) | PaleoMIST 1.0 (Gowan et al. 2021, Nature Communications 12:1199; doi.org/10.1594/PANGAEA.905800), minimal scenario for North America before the last ice-age peak. Reduced to 8 bits by atlas/tools/build-icesheets.mjs | CC BY 4.0 |
