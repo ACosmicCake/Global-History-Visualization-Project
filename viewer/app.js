@@ -39,7 +39,7 @@ const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
 const GLOBE_R = 100, KM_PER_UNIT = 6371 / GLOBE_R;
 
-const state = { level: 4, t: -500, whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
+const state = { level: 4, t: -500, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
   alt: 2.4, off: new Set(), impOff: new Set() };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -102,6 +102,7 @@ const placed = p => {
 };
 window.addEventListener('paleo-ready', () => render());
 function visiblePins() {
+  if (state.film) return [];   // the film is about the Earth; the pins come back when it ends
   const win = windowNow(), mi = minImportance();
   // the open record always shows (with its route), whatever the time scale, filters or zoom thinning: a sequence can
   // move the time axis to a scale the record isn't classed at, and its pin must not vanish while it is being read
@@ -453,7 +454,62 @@ function seaDropAt(t) {
   const drop = -(ma + (mb - ma) * (ka - a) / (b - a));
   return drop >= 5 ? drop : 0;
 }
-// Sky: in the one-year view the Sun and Moon sit where they really were at the selected moment; at coarser scales
+// Earth's vital signs (paleo/vitals.json, built by atlas/tools/build-vitals.mjs): each curve runs from today back as far as there are estimates.
+// Reconstructed values carry a ≈ and are rounded to what they can bear; older than a curve's oldest estimate shows a dash, not a guess.
+let vitals = null;
+const VITAL_MIN_SPAN = { temp: 1, co2: 30, sea: 5, day: 0.2, moon: 2000 };   // the curve on the time bar won't stretch less than this to fill its height, so a flat stretch stays flat
+fetch('paleo/vitals.json').then(r => r.json()).then(d => {
+  vitals = d;
+  $('#v-rows').innerHTML = Object.entries(d.series).map(([k, s]) => `<button class="v-row" data-k="${k}" title="${esc(s.source)}"><span>${esc(s.label).replace(/ (.+)/, '<i> $1</i>')}</span><b></b></button>`).join('');
+  $('#v-rows').querySelectorAll('button').forEach(b => { b.onclick = () => { state.vitalCurve = b.dataset.k; showVitalSource(); drawDensity(); }; });
+  showVitalSource(); render();
+}).catch(err => console.error('vitals', err));
+// the time console's height depends on how its controls wrap, so the panel measures it rather than assuming
+new ResizeObserver(() => document.documentElement.style.setProperty('--time-top', `${Math.round(document.documentElement.clientHeight - $('#time').getBoundingClientRect().top)}px`)).observe($('#time'));
+function showVitalSource() {
+  $('#v-rows').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === state.vitalCurve));
+  $('#v-source').textContent = `${vitals.series[state.vitalCurve].source} ${vitals.note}`;
+}
+function vitalAt(s, ma) {
+  const p = s.points;
+  if (ma > p[p.length - 1][0]) return null;
+  if (ma <= p[0][0]) return p[0][1];
+  let a = 0, b = p.length - 1;
+  while (b - a > 1) { const m = (a + b) >> 1; if (p[m][0] <= ma) a = m; else b = m; }
+  return p[a][1] + (p[b][1] - p[a][1]) * (ma - p[a][0]) / (p[b][0] - p[a][0]);
+}
+// the number alone, rounded for how well it is known at that age
+function vitalNumber(k, v, ma) {
+  if (k === 'temp') return `${ma <= 1e-4 ? v.toFixed(1) : Math.round(v)}°C`;
+  if (k === 'co2') return `${(ma <= 9e-6 ? Math.round(v) : ma <= 0.81 ? Math.round(v / 5) * 5 : Math.round(v / 50) * 50).toLocaleString()} ppm`;
+  if (k === 'sea') { const m = ma <= 0.81 ? Math.round(v) : Math.round(v / 5) * 5; return `${m > 0 ? '+' : m < 0 ? '−' : ''}${Math.abs(m)} m`; }
+  if (k === 'day') return `${v.toFixed(1)} h`;
+  return `${(Math.round(v / 1000) * 1000).toLocaleString()} km`;
+}
+const vitalMeasured = (k, ma) => (k === 'temp' ? ma <= 1e-4 : k === 'co2' ? ma <= 9e-6 : ma <= 1e-4);
+const vitalText = (k, v, ma) => (v == null ? '—' : `${vitalMeasured(k, ma) ? '' : '≈ '}${vitalNumber(k, v, ma)}`);
+function renderVitals() {
+  show($('#vitals'), !!vitals && state.vitals);
+  if (!vitals || !state.vitals) return;
+  const ma = (1950 - state.t) / 1e6;
+  for (const b of $('#v-rows').children) { const k = b.dataset.k, text = vitalText(k, vitalAt(vitals.series[k], ma), ma), el = b.lastElementChild; if (el.textContent !== text) el.textContent = text; }
+}
+// the chosen sign along the time bar, scaled to what it does on this scale; the panel says what that range is
+function drawVitalCurve(g, w, h, from, to) {
+  const k = state.vitalCurve, s = state.vitals && vitals?.series[k];
+  if (!s) return;
+  const n = Math.max(2, Math.ceil(w / 2)), ys = Array.from({ length: n }, (_, i) => vitalAt(s, (1950 - (from + (to - from) * i / (n - 1))) / 1e6)), known = ys.filter(v => v != null);
+  const say = text => { const r = $('#v-range'); if (r.textContent !== text) r.textContent = text; };
+  if (!known.length) { say(`${s.label}: no estimate this far back.`); return; }
+  const lo = Math.min(...known), hi = Math.max(...known), pad = Math.max(0, VITAL_MIN_SPAN[k] - (hi - lo)) / 2, y0 = lo - pad, span = hi + pad - y0, Y = v => h - 3 - ((v - y0) / span) * (h - 6);
+  const age = Math.max(0, (1950 - from) / 1e6);
+  say(`On the time bar: ${s.label}, ${vitalNumber(k, lo, age)} to ${vitalNumber(k, hi, age)} at this scale`);
+  g.beginPath();
+  let pen = false;
+  ys.forEach((v, i) => { if (v == null) { pen = false; return; } const x = (i / (n - 1)) * w; if (pen) g.lineTo(x, Y(v)); else g.moveTo(x, Y(v)); pen = true; });
+  g.strokeStyle = 'rgba(150,215,240,.9)'; g.lineWidth = 1.25; g.lineJoin = 'round'; g.stroke();
+}
+// Sky: the Moon sits where it really was at the selected moment, and with Real sunlight on so does the Sun; otherwise
 // the Sun lights the side being explored. City lights are modern (c. 2012), so they appear only from 1900 on.
 function yearToDate(y) {
   if (!(y > -270000 && y < 270000)) return new Date();
@@ -461,8 +517,8 @@ function yearToDate(y) {
   return new Date(d.getTime() + (y - Math.floor(y)) * 365.2425 * 864e5);
 }
 function updateSky() {
-  const map = state.mapStyle === 'map', eventScale = LEVELS[state.level].key === 'event';
-  window.Space.update({ date: state.t > -4000 ? yearToDate(state.t) : new Date(), sunMode: eventScale || state.realSun ? 'real' : 'camera',
+  const map = state.mapStyle === 'map';
+  window.Space.update({ date: state.t > -4000 ? yearToDate(state.t) : new Date(), sunMode: state.realSun ? 'real' : 'camera',
     nightLights: !map && state.t >= 1900, clouds: !map && state.clouds, zoomAlt: state.alt, flat: map });
   state.paleoMa = window.Space.setPaleo(!map && state.t < -2e6 ? -state.t / 1e6 : null);
   state.seaDrop = map ? 0 : seaDropAt(state.t);
@@ -471,9 +527,9 @@ function updateSky() {
   window.Space.setIce(map ? null : bp);
   state.humid = map ? 0 : humidAt(bp);
   window.Space.setClimate(Math.min(1, state.seaDrop / 125), state.humid);
-  window.Borders?.update(state.t, state.borders);
+  window.Borders?.update(state.t, state.borders && !state.film);
   window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
-  window.Spacecraft?.update(state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
+  window.Spacecraft?.update(state.film ? -1e9 : state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
 }
 
 // ---------- procedural monuments (spec 6.4): built only from the record's own sourced measurements
@@ -704,6 +760,7 @@ function render() {
     if (pins.length === 0) renderNearest();
   }
   show($('#empty-btn'), !period && !state.whole && anyInLevel);
+  renderVitals();
   drawDensity();
   queueURL();
 }
@@ -744,6 +801,7 @@ function drawDensity() {
     g.fillStyle = `rgba(217,179,106,${0.25 + 0.55 * (n / max)})`;
     g.fillRect(i * bw + 0.5, h - bh, Math.max(1, bw - 1), bh);
   });
+  drawVitalCurve(g, w, h, from, to);
   // the open record's dates, with its stated uncertainty as a soft edge rather than a crisp end (spec 11.5)
   const r = state.openRec, y0 = r?.when?.start?.year;
   if (y0 == null) return;
@@ -854,7 +912,7 @@ $('#speed').onclick = e => {   // click for faster, shift-click or right-click f
 };
 $('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
 $('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); updateSky(); render(); };
-for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun']]) {
+for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals']]) {
   $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); if (key === 'monuments') loadModels(); };
 }
 
@@ -1179,12 +1237,67 @@ async function startTour(id, i = 0) {
   goTo(state.tour.stops[state.tour.i]);
 }
 // ---------- the film: the last billion years, played like a record's sequence, each caption drawn from the record it names
+const filmDate = ma => {
+  if (ma >= 999.5) return '1 billion years ago';
+  if (ma >= 1) return `${Math.round(ma)} million years ago`;
+  const y = ma * 1e6 + NOW;   // the clock counts from year 0, the words from today
+  if (y < 200) return 'Today';
+  return `${(Math.round(y / (y >= 100000 ? 10000 : y >= 10000 ? 1000 : 100)) * (y >= 100000 ? 10000 : y >= 10000 ? 1000 : 100)).toLocaleString('en-US')} years ago`;
+};
+function endFilm() {
+  state.film = false; document.body.classList.remove('film'); show($('#film'), false);
+  globe.camera().clearViewOffset(); globe.controls().enabled = true; seqPaused = false; updateSky(); render();
+}
 function startFilm() {
   if (!deepTime) return;
-  closeWelcome(); if (state.selected) closePanel();
-  const f = deepTime.film;
-  playSequence({ id: 'film', title: f.title, when: { start: { year: -1e9 } }, where: { lat: 45.6, lon: -74.6 }, animation: { beats: f.beats, duration_s: f.beats.length * 7 } });
+  closeWelcome(); if (state.selected) closePanel(); if (timer) stopPlay();
+  const f = deepTime.film, box = $('#film');
+  state.film = true; document.body.classList.add('film'); globe.controls().enabled = false; show(box, true); render();
+  $('#film-credit').textContent = f.credit; $('#film-big').textContent = f.title; $('#film-big').classList.add('on');
+  $('#film-pause').innerHTML = PAUSE.replace('12" height="12"', '13" height="13"'); $('#film-pause').setAttribute('aria-label', 'Pause film');
+  $('#film-text').classList.remove('on'); $('#film-bar').style.width = '0';
+  seqPaused = false; box.focus({ preventScroll: true });
+  globe.camera().setViewOffset(innerWidth, innerHeight, 0, innerHeight * 0.08, innerWidth, innerHeight);
+  const chapter = c => {
+    $('#film-text').classList.remove('on');
+    setTimeout(() => {
+      if (!state.film) return;
+      if (c) $('#film-big').classList.remove('on');   // the title stays until the first chapter
+      $('#film-chapter').textContent = c ? c.title : ''; $('#film-caption').textContent = c ? c.caption : '';
+      if (c) $('#film-text').classList.add('on');
+    }, 350);
+  };
+  let lastDate = '', ended = false;
+  window.Sequence.film(f, {
+    globe, getTime: () => state.t,
+    setTime: y => { state.t = Math.min(y, NOW); const lv = levelFor(state.t); if (lv !== state.level && state.level !== 6) setLevel(lv, true); else render(); },
+    ride: ({ lat, lng }) => { const q = placed({ lat, lon: lng }); return { lat: q.lat, lng: q.lon }; },
+    ui: {
+      fade: on => $('#film-fade').classList.toggle('on', on),
+      title: () => {},
+      chapter,
+      progress: (k, ma) => {
+        $('#film-bar').style.width = `${Math.min(100, k * 100).toFixed(2)}%`;
+        const d = filmDate(ma); if (d !== lastDate) { lastDate = d; $('#film-date').textContent = d; }
+        if (vitals) { const line = [['temp', 'Temperature'], ['co2', 'CO₂'], ['day', 'Day']].map(([k, l]) => { const v = vitalAt(vitals.series[k], ma); return v == null ? '' : `${l} ${vitalText(k, v, ma)}`; }).filter(Boolean).join('  ·  '), el = $('#film-vitals'); if (el.textContent !== line) el.textContent = line; }
+        if (k * f.length >= f.endAt && !ended) { ended = true; chapter(null); setTimeout(() => { if (state.film) { $('#film-big').innerHTML = `Today<small>${esc(f.end)}</small>`; $('#film-big').classList.add('on'); } }, 400); }
+      },
+    },
+    onEnd: endFilm,
+  });
 }
+const closeFilm = () => { window.Sequence.stop(); $('#film-fade').classList.remove('on'); endFilm(); };
+$('#film-close').onclick = closeFilm;
+$('#film-pause').onclick = () => { seqPaused = !seqPaused; window.Sequence.setPaused(seqPaused); $('#film-pause').setAttribute('aria-label', seqPaused ? 'Resume film' : 'Pause film'); $('#film-pause').innerHTML = (seqPaused ? PLAY : PAUSE).replace('12" height="12"', '13" height="13"'); };
+$('#film-prev').onclick = () => window.Sequence.filmControl?.step(-1);
+$('#film-next').onclick = () => window.Sequence.filmControl?.step(1);
+addEventListener('keydown', e => {
+  if (!state.film) return;
+  if (e.key === 'Escape') { e.preventDefault(); closeFilm(); }
+  else if (e.key === ' ' && document.activeElement?.tagName !== 'BUTTON') { e.preventDefault(); $('#film-pause').click(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); $('#film-prev').click(); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); $('#film-next').click(); }
+});
 // ---------- welcome card: what this is, where to start, what happened on this date
 function onThisDay() {
   const d = new Date(), md = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;

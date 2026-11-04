@@ -59,7 +59,7 @@
       uniforms: {
         dayMap: { value: loader.load('assets/earth-day.jpg') }, nightMap: { value: loader.load('assets/earth-night.jpg') },
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
-        nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
+        nightFloor: { value: 0.24 }, nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
         paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 },
         shelfMap: { value: null }, seaDrop: { value: 0 },
         iceA: { value: null }, iceB: { value: null }, iceMix: { value: 0 }, iceOn: { value: 0 }, iceAge: { value: 0 }, humid: { value: 0 },
@@ -69,7 +69,7 @@
         void main(){ vUv = uv; vN = normalize(mat3(modelMatrix) * normal); vec4 w = modelMatrix * vec4(position,1.0); vW = w.xyz;
           gl_Position = projectionMatrix * viewMatrix * w; }`,
       fragmentShader: `uniform sampler2D dayMap; uniform sampler2D nightMap; uniform sampler2D waterMap; uniform sampler2D topoMap;
-        uniform vec3 sunDir; uniform float nightLights; uniform float relief;
+        uniform vec3 sunDir; uniform float nightLights; uniform float relief; uniform float nightFloor;
         uniform sampler2D detailMap; uniform vec4 detailBounds; uniform float detailMix;
         uniform sampler2D shelfMap; uniform float seaDrop;
         uniform sampler2D iceA; uniform sampler2D iceB; uniform float iceMix; uniform float iceOn; uniform float iceAge; uniform float humid;
@@ -159,7 +159,7 @@
           }
           vec3 night = texture2D(nightMap, vUv).rgb;
           vec3 dayCol = day * (0.16 + 1.0 * max(mix(ndl0, ndl, 0.85), 0.0));
-          vec3 nightCol = day * 0.04 + night * vec3(1.0, 0.8, 0.52) * 1.7 * nightLights;
+          vec3 nightCol = day * nightFloor * vec3(0.72, 0.82, 1.0) + vec3(0.016, 0.034, 0.066) * water + night * vec3(1.0, 0.8, 0.52) * 1.7 * nightLights;
           vec3 col = mix(nightCol, dayCol, lit);
           // ocean: a tight sun glint and a broad sheen
           vec3 h = normalize(L + v); float nh = max(dot(n0, h), 0.0);
@@ -271,11 +271,16 @@
     // dim globe.gl's camera-attached light so the shader's sun dominates; keep pins readable on the night side
     scene.traverse(o => { if (o.isDirectionalLight) o.intensity = 0.35; if (o.isAmbientLight) o.intensity = 0.9; });
     let last = performance.now();
-    (function spin(now) { const dt = (now - last) / 1000; last = now; clouds.rotation.y += dt * 0.004; if (sunMode === 'camera') aimStudioSun(); checkDetail(now); requestAnimationFrame(spin); })(last);
+    (function spin(now) { const dt = (now - last) / 1000; last = now; clouds.rotation.y += dt * 0.004; if (sunMode === 'camera') aimStudioSun(); liftNight(); checkDetail(now); requestAnimationFrame(spin); })(last);
   }
 
   // Studio sun: lights the hemisphere facing the camera from upper left, so the side being explored is in daylight
   let sunMode = 'camera';
+  // 0.24 of daylight seen from afar, up to 0.62 close to the ground
+  function liftNight() {
+    const alt = globe.camera().position.length() / R - 1, f = 0.24 + 0.38 * (1 - Math.min(1, Math.max(0, (alt - 0.4) / 1.6)));
+    earthMat.uniforms.nightFloor.value = f; if (landMat) landMat.uniforms.nightFloor.value = f;
+  }
   function aimStudioSun() {
     const cam = globe.camera().position.clone().normalize();
     const up = new THREE.Vector3(0, 1, 0), side = new THREE.Vector3().crossVectors(up, cam).normalize();
@@ -378,14 +383,14 @@
     rotTex.magFilter = rotTex.minFilter = THREE.NearestFilter;
     landMat = new THREE.ShaderMaterial({
       transparent: true, side: THREE.DoubleSide,
-      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, R: { value: R * 1.0008 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 } },
+      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, nightFloor: { value: 0.24 }, R: { value: R * 1.0008 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 } },
       // geographic (x 0°E, y 90°E, z north) to globe.gl's frame (x 90°E, y north, z 0°E)
       vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; attribute float inland; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
         void main(){ vP = position; vIn = inland; vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.5)); vOk = step(0.5, dot(q, q));
           vec3 v = position; vec3 t = 2.0 * cross(q.yzw, v); vec3 p = v + q.x * t + cross(q.yzw, t);
           vec3 w = vec3(p.y, p.z, p.x);
           vN = normalize(mat3(modelMatrix) * w); gl_Position = projectionMatrix * modelViewMatrix * vec4(w * R, 1.0); }`,
-      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; uniform vec3 flora; uniform float warm; uniform float aridity; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
+      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; uniform float nightFloor; uniform vec3 flora; uniform float warm; uniform float aridity; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
           return mix(mix(mix(hash(i), hash(i + vec3(1,0,0)), f.x), mix(hash(i + vec3(0,1,0)), hash(i + vec3(1,1,0)), f.x), f.y),
@@ -406,7 +411,7 @@
           vec3 plants = mix(mix(forest, steppe, smoothstep(0.22, 0.48, arid)), sand, smoothstep(0.52, 0.8, arid));
           vec3 c = mix(rock, plants, veg) * (0.9 + 0.18 * tex);
           c = mix(c, vec3(0.90, 0.93, 0.96), smoothstep(iceLat - 4.0, iceLat + 2.0, lat + (tex - 0.5) * 14.0));   // ice sheets
-          vec3 col = mix(c * 0.04, c * (0.16 + 1.0 * max(ndl, 0.0)), lit);
+          vec3 col = mix(c * nightFloor * vec3(0.72, 0.82, 1.0), c * (0.16 + 1.0 * max(ndl, 0.0)), lit);
           gl_FragColor = vec4(col, opacity); }`,
     });
     land = new THREE.Mesh(g, landMat); land.renderOrder = 0; land.visible = false; land.frustumCulled = false;

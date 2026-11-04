@@ -165,7 +165,8 @@
   });
   const wait = ms => tween(ms, () => {});
   const flightTime = (ctx, lat, lng) => { const p = ctx.globe.pointOfView(); return clamp(700 + anchor(ctx, p.lat, p.lng, 0).normalize().angleTo(anchor(ctx, lat, lng, 0).normalize()) * 800, 800, 2200); };
-  const fly = (ctx, lat, lng, altitude, ms) => ctx.globe.pointOfView({ lat, lng, altitude }, reduced ? 0 : ms ?? flightTime(ctx, lat, lng));
+  let filmOn = false;   // while the film plays the camera is the film's: scenes draw, but don't fly
+  const fly = (ctx, lat, lng, altitude, ms) => { if (!filmOn) ctx.globe.pointOfView({ lat, lng, altitude }, reduced ? 0 : ms ?? flightTime(ctx, lat, lng)); };
   const fmt = n => Math.round(n).toLocaleString();
   const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
 
@@ -211,6 +212,7 @@
   const sceneGroup = () => { const g = new THREE.Group(); layer?.add(g); return g; };
   const ms = t => (reduced ? 1 : t);
   const flyThere = async (ctx, at, alt) => {
+    if (filmOn) return;
     const d = flightTime(ctx, at.lat, at.lng);
     fly(ctx, at.lat, at.lng, alt, reduced ? 0 : d); await wait(ms(d));
   };
@@ -522,11 +524,87 @@
       after(name, params);
     }
   }
+  // ---------- the film: one continuous shot rather than a series of stops. Time never halts, it only slows for the big moments, and
+  // the camera eases along a planned path, so nothing cuts or whips. f is the script in deeptime.json; ctx.ui draws the words.
+  function film(f, ctx) {
+    stop(); const id = ++run; paused = false; filmOn = true;
+    layer = new THREE.Group(); ctx.globe.scene().add(layer);
+    active = { id: 'film' };
+    const ride = p => (ctx.ride ? ctx.ride(p) : p), smooth = k => { k = clamp(k, 0, 1); return k * k * k * (k * (6 * k - 15) + 10); };
+    // time: a monotone cubic through the script's points, so its speed changes smoothly and it never runs backward
+    const T = f.time, n = T.length, d = T.slice(0, -1).map((p, i) => (T[i + 1][1] - p[1]) / (T[i + 1][0] - p[0])), m = T.map((_, i) => (i === 0 ? d[0] : i === n - 1 ? d[n - 2] : d[i - 1] * d[i] <= 0 ? 0 : 2 / (1 / d[i - 1] + 1 / d[i])));
+    const maAt = t => {
+      const i = Math.max(0, Math.min(n - 2, T.findIndex(p => p[0] > t) - 1 < 0 ? (t <= T[0][0] ? 0 : n - 2) : T.findIndex(p => p[0] > t) - 1)), h = T[i + 1][0] - T[i][0], u = clamp((t - T[i][0]) / h, 0, 1), u2 = u * u, u3 = u2 * u;
+      return (2 * u3 - 3 * u2 + 1) * T[i][1] + (u3 - 2 * u2 + u) * h * m[i] + (-2 * u3 + 3 * u2) * T[i + 1][1] + (u3 - u2) * h * m[i + 1];
+    };
+    // the camera's goal at a moment, eased from one key to the next; moving points are read at the date being shown
+    const place = k => { const p = k.ride ? ride({ lat: k.ride[0], lng: k.ride[1] }) : { lat: k.at[0], lng: k.at[1] }; return anchor(ctx, p.lat, p.lng, 0).normalize(); };
+    const K = f.camera, aim = new THREE.Vector3();
+    const goal = t => {
+      let i = K.findIndex(k => k.s > t) - 1; if (i < 0) i = t <= K[0].s ? 0 : K.length - 2;
+      const a = K[i], b = K[Math.min(K.length - 1, i + 1)], e = smooth((t - a.s) / Math.max(0.001, b.s - a.s)), p = place(a), q = place(b), w = p.angleTo(q);
+      if (w < 1e-4) aim.copy(q); else aim.copy(p).multiplyScalar(Math.sin((1 - e) * w)).addScaledVector(q, Math.sin(e * w)).divideScalar(Math.sin(w));
+      // on a tall, narrow screen the camera stands further back, so the globe still fits across
+      return { dir: aim.clone().normalize(), alt: (a.alt + (b.alt - a.alt) * e) * clamp(0.66 * innerHeight / innerWidth, 1, 1.5) };
+    };
+    let clock = 0, last = performance.now(), chapter = -2, fired = new Set(), dir = null, alt = 0, held = 0, pending = null, seekTimer = 0;
+    const put = () => { const g = ctx.globe.toGeoCoords({ x: dir.x * R, y: dir.y * R, z: dir.z * R }); ctx.globe.pointOfView({ lat: g.lat, lng: g.lng, altitude: alt }, 0); };
+    const snap = t => { ctx.setTime(-maAt(t) * 1e6); const g = goal(t); dir = g.dir; alt = g.alt; put(); };
+    const chapterAt = t => { let c = -1; f.chapters.forEach((x, i) => { if (x.s <= t) c = i; }); return c; };
+    const frame = now => {
+      if (id !== run) return;
+      const dt = Math.min(100, now - last); last = now;
+      if (!paused) clock += dt / 1000;
+      const c = chapterAt(clock);
+      if (reduced) { if (c !== held || dir === null) { held = c; snap(c < 0 ? 0 : f.chapters[c].s + 3); } }   // no motion: each chapter holds still
+      else {
+        ctx.setTime(-maAt(clock) * 1e6);
+        const g = goal(clock), k = paused ? 0 : 1 - Math.exp(-dt / 700);
+        dir = dir.clone().lerp(g.dir, k).normalize(); alt += (g.alt - alt) * k; put();
+        for (const e of f.effects) if (!fired.has(e) && clock >= e.s) {
+          fired.add(e);
+          if (clock < e.s + 1) SCENES[e.type](ctx, ride({ lat: e.at[0], lng: e.at[1] }), { ...e, ms: e.ms ?? 5000, ride, alive: () => id === run });
+        }
+      }
+      if (c !== chapter) { chapter = c; ctx.ui.chapter(c < 0 ? null : f.chapters[c]); }
+      ctx.ui.progress(clock / f.length, maAt(clock));
+      if (clock >= f.length) {
+        ctx.ui.fade(true); run++; filmOn = false;
+        setTimeout(() => { cleanup(ctx); ctx.onEnd(); ctx.ui.fade(false); }, 900);
+        return;
+      }
+      requestAnimationFrame(frame);
+    };
+    filmControl = {
+      // to a chapter, behind a quick fade, since this is the one cut the film allows
+      to(i) {
+        pending = Math.max(-1, Math.min(i, f.chapters.length - 1));
+        const t = pending < 0 ? 0 : f.chapters[pending].s + 0.01;
+        ctx.ui.fade(true);
+        clearTimeout(seekTimer);
+        seekTimer = setTimeout(() => {
+          pending = null;
+          if (id !== run) return;
+          while (layer.children.length) layer.remove(layer.children[0]);
+          clock = t; fired = new Set(f.effects.filter(e => e.s + 1 <= t)); snap(t); last = performance.now(); ctx.ui.fade(false);
+        }, 320);
+      },
+      step(delta) { this.to((pending ?? chapterAt(clock)) + delta); },   // quick presses add up
+    };
+    // opening: from black, with the date and view already set
+    ctx.ui.fade(true);
+    setTimeout(() => {
+      if (id !== run) return;
+      snap(0); ctx.ui.title(true);
+      setTimeout(() => { if (id !== run) return; last = performance.now(); ctx.ui.fade(false); requestAnimationFrame(frame); }, 500);
+    }, 500);
+  }
+  let filmControl = null;
   function cleanup(ctx) { if (layer && layer.parent) layer.parent.remove(layer); layer = null; active = null; }
-  function stop() { run++; paused = false; skip = false; seekTo = null; if (layer && layer.parent) layer.parent.remove(layer); layer = null; active = null; }
+  function stop() { run++; filmOn = false; paused = false; skip = false; seekTo = null; if (layer && layer.parent) layer.parent.remove(layer); layer = null; active = null; }
   function setPaused(p) { paused = p; }
   // step to another beat: the current one finishes at once and playback continues from beat i (clamped to the sequence)
   function goTo(i) { if (!active) return; seekTo = Math.max(0, Math.min(beatCount - 1, i)); skip = true; }
   function step(delta) { goTo((seekTo ?? cur) + delta); }
-  window.Sequence = { play, stop, setPaused, goTo, step, get playing() { return !!active; }, get recordId() { return active?.id || null; }, get beat() { return cur; }, parseAction, spanYear };
+  window.Sequence = { play, film, stop, setPaused, goTo, step, get filmControl() { return filmControl; }, get playing() { return !!active; }, get recordId() { return active?.id || null; }, get beat() { return cur; }, parseAction, spanYear };
 })();

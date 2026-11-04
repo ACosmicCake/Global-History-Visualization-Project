@@ -160,6 +160,30 @@
   #loading { position: absolute; inset: 0; display: grid; place-items: center; z-index: 5; background: var(--ink); transition: opacity .6s; font: 12px var(--f-mono); letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
   #loading.gone { opacity: 0; pointer-events: none; }
 
+  /* ---------- Earth's vital signs: a quiet readout above the time bar; a row chooses the curve drawn along the bar */
+  #vitals { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(var(--time-top, 176px) + 10px); width: 226px; padding: 9px 6px 8px; z-index: 3; }
+  #vitals[hidden], #panel:not([hidden]) ~ #vitals, #welcome:not([hidden]) ~ #vitals, #pinlist:not([hidden]) ~ #vitals, #seqbar:not([hidden]) ~ #vitals { display: none; }
+  #vitals h2 { margin: 0 8px 5px; font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  #v-rows { display: flex; flex-direction: column; gap: 1px; }
+  .v-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 4px 8px; border: 0; border-radius: 6px; background: transparent; color: var(--soft); font-size: 12px; text-align: left; cursor: pointer; }
+  .v-row:hover { background: rgba(255,255,255,.05); }
+  .v-row[aria-pressed="true"] { background: rgba(150,215,240,.12); color: var(--text); box-shadow: inset 2px 0 0 #96d7f0; }
+  .v-row i { font-style: normal; }
+  .v-row b { font: 500 12px var(--f-mono); color: var(--text); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  #v-range { margin: 6px 8px 0; font: 10px/1.35 var(--f-mono); color: #96d7f0; }
+  #v-about { margin: 5px 8px 0; font-size: 11px; color: var(--muted); }
+  #v-about summary { cursor: pointer; }
+  #v-about summary:hover { color: var(--soft); }
+  #v-about p { margin: 5px 0 0; line-height: 1.4; max-height: 150px; overflow-y: auto; }
+  @media (max-width: 900px) {
+    #vitals { left: var(--gut); width: auto; padding: 3px; }
+    #vitals h2, #v-range, #v-about { display: none; }
+    #v-rows { flex-direction: row; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+    #v-rows::-webkit-scrollbar { display: none; }
+    .v-row { flex: 1 0 auto; flex-direction: column; align-items: flex-start; gap: 0; padding: 3px 7px; font-size: 10px; }
+    .v-row[aria-pressed="true"] { box-shadow: inset 0 -2px 0 #96d7f0; }
+    .v-row b { font-size: 11px; }
+  }
   /* ---------- time console */
   #time { position: absolute; left: var(--gut); right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(14px, env(safe-area-inset-bottom, 0px)); padding: 12px 16px 12px; z-index: 3; }
   .time-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
@@ -256,6 +280,30 @@
 
   .play-seq { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--brass); background: var(--brass-dim); color: var(--brass); font-size: 12px; font-weight: 500; }
   .play-seq:hover { background: rgba(217,179,106,.28); }
+  /* the film: everything else steps aside, and the words sit low over a dark fade */
+  body.film > *:not(#film):not(script):not(#globe) { opacity: 0 !important; pointer-events: none !important; transition: opacity .6s; }
+  #film { position: absolute; inset: 0; z-index: 20; pointer-events: none; color: var(--text); outline: none; }
+  #film button { pointer-events: auto; width: 32px; height: 32px; flex: none; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(255,255,255,.22); background: rgba(10,16,28,.45); color: inherit; }
+  #film button:hover, #film button:focus-visible { border-color: var(--brass); color: var(--brass); }
+  .film-bars::before, .film-bars::after { content: ''; position: absolute; left: 0; right: 0; height: 6vh; background: #000; }
+  .film-bars::before { top: 0; } .film-bars::after { bottom: 0; }
+  #film-big { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); width: min(760px, calc(100vw - 48px)); text-align: center; font: 500 clamp(30px, 6vw, 58px)/1.1 var(--f-display); text-shadow: 0 2px 24px #000; opacity: 0; transition: opacity 1s; }
+  #film-big.on { opacity: 1; }
+  #film-big small { display: block; margin-top: 12px; font: 400 clamp(14px, 2vw, 18px)/1.45 var(--f-display); color: rgba(240,243,248,.8); }
+  .film-foot { position: absolute; left: 0; right: 0; bottom: 0; padding: 90px max(24px, calc(50vw - 380px)) calc(6vh + 8px); background: linear-gradient(to bottom, transparent, rgba(4,7,12,.82) 42%); }
+  #film-date { font: 500 12px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); font-variant-numeric: tabular-nums; margin-bottom: 6px; }
+  #film-text { min-height: 104px; opacity: 0; transform: translateY(6px); transition: opacity .35s, transform .35s; }
+  #film-text.on { opacity: 1; transform: none; transition: opacity .9s, transform .9s; }
+  #film-chapter { margin: 0 0 4px; font: 500 clamp(22px, 3.4vw, 34px)/1.15 var(--f-display); text-shadow: 0 1px 14px #000; }
+  #film-caption { margin: 0; max-width: 62ch; font: 400 clamp(14px, 1.9vw, 17px)/1.45 var(--f-display); color: rgba(240,243,248,.92); text-shadow: 0 1px 8px #000; }
+  .film-row { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+  .film-track { flex: 1; height: 2px; margin-right: 8px; background: rgba(255,255,255,.18); border-radius: 2px; overflow: hidden; }
+  #film-bar { display: block; height: 100%; width: 0; background: var(--brass); }
+  #film-vitals { min-height: 15px; margin: -2px 0 6px; font: 11px var(--f-mono); color: #96d7f0; font-variant-numeric: tabular-nums; }
+  #film-credit { margin-top: 8px; font: 10px/1.4 var(--f-mono); color: rgba(240,243,248,.5); }
+  #film-fade { position: absolute; inset: 0; background: #000; opacity: 0; transition: opacity .32s; pointer-events: none; }
+  #film-fade.on { opacity: 1; }
+  @media (max-width: 760px) { .film-bars { display: none; } .film-foot { padding: 70px 16px 12px; } #film-text { min-height: 128px; } #film button { width: 40px; height: 40px; } }
   #seqbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 186px; width: min(620px, calc(100vw - 32px)); padding: 12px 16px 14px; z-index: 5; background: var(--glass-strong); }
   .seq-top { display: flex; align-items: center; gap: 10px; }
   #seq-title { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }
@@ -297,8 +345,10 @@
     #speed { margin-left: 0; flex: none; min-width: 40px; height: 40px; padding: 0 6px; }
     .ctx-labels { display: none; }
     #context .eon span { display: none; }
-    #emphasis-flag { top: auto; bottom: 214px; }
-    #hint { bottom: 214px; }
+    #emphasis-flag { top: auto; bottom: 258px; }
+    #hint { bottom: 258px; }
+    #empty.period { bottom: 258px; }
+    .v-row i { display: none; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
@@ -322,11 +372,12 @@
     <div id="legend-body">
     <ul id="domains"></ul>
     <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div></div>
-    <p class="sky-note">The Moon is always at its real position for the date shown, and the Sun is too in the one-year view or with Real sunlight on. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
+    <p class="sky-note">The Moon is always at its real position for the date shown, and the Sun is too with Real sunlight on. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
     <div class="toggles">
       <button class="toggle" id="whole" aria-pressed="false" title="Show every record in this time level, not only those near the date">Whole period</button>
       <button class="toggle" id="borders" aria-pressed="true" title="Borders of states and empires at the date shown (Cliopatria). Blank areas are unmapped, not empty.">Borders</button>
       <button class="toggle" id="paths" aria-pressed="false">Routes</button>
+      <button class="toggle" id="vitals-toggle" aria-pressed="true" title="Temperature, CO₂, sea level, day length and the Moon’s distance at the date shown, with a curve along the time bar">Vital signs</button>
       <button class="toggle" id="clouds" aria-pressed="false">Clouds</button>
       <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth from the Sun’s true position for the date shown; rotate to the night side to see it">Real sunlight</button>
       <button class="toggle" id="mapstyle" aria-pressed="false" title="Flat map style with land outlines instead of satellite imagery">Map style</button>
@@ -347,6 +398,24 @@
 <section id="panel" class="glass" hidden aria-label="Record" tabindex="-1"></section>
 <section id="welcome" class="glass" hidden aria-label="Start here" role="dialog"></section>
 <section id="pinlist" class="glass" hidden aria-label="Records"></section>
+<section id="film" hidden tabindex="-1" aria-label="Film: A billion years of Earth">
+  <div class="film-bars" aria-hidden="true"></div>
+  <div id="film-big"></div>
+  <div class="film-foot">
+    <div id="film-date" aria-hidden="true"></div>
+    <div id="film-vitals" aria-hidden="true"></div>
+    <div id="film-text" aria-live="polite"><h2 id="film-chapter"></h2><p id="film-caption"></p></div>
+    <div class="film-row">
+      <div class="film-track" aria-hidden="true"><i id="film-bar"></i></div>
+      <button id="film-prev" aria-label="Previous chapter" title="Previous chapter (←)"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h2v10H2zM11 1v10L4.5 6z" fill="currentColor"/></svg></button>
+      <button id="film-pause" aria-label="Pause film" title="Pause (space)"></button>
+      <button id="film-next" aria-label="Next chapter" title="Next chapter (→)"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1h2v10H8zM1 1v10l6.5-5z" fill="currentColor"/></svg></button>
+      <button id="film-close" aria-label="Close film" title="Close (Esc)"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    </div>
+    <div id="film-credit"></div>
+  </div>
+  <div id="film-fade" aria-hidden="true"></div>
+</section>
 <section id="seqbar" class="glass" hidden aria-live="polite" aria-label="Sequence">
   <div class="seq-top"><span id="seq-title"></span><div id="seq-dots" aria-hidden="true"></div>
     <button id="seq-prev" aria-label="Previous beat" title="Previous beat (←)"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h2v10H2zM11 1v10L4.5 6z" fill="currentColor"/></svg></button>
@@ -354,6 +423,13 @@
     <button id="seq-next" aria-label="Next beat" title="Next beat (→)"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1h2v10H8zM1 1v10l6.5-5z" fill="currentColor"/></svg></button>
     <button id="seq-stop" aria-label="Stop sequence"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
   <p id="seq-caption"></p><div id="seq-num"></div>
+</section>
+
+<section id="vitals" class="glass" hidden aria-label="Earth’s vital signs at the date shown">
+  <h2>Earth’s vital signs</h2>
+  <div id="v-rows"></div>
+  <div id="v-range"></div>
+  <details id="v-about"><summary>Estimates, and how far to trust them</summary><p id="v-source"></p></details>
 </section>
 
 <section id="time" class="glass" aria-label="Time">

@@ -33,6 +33,7 @@ node atlas/tools/aliases.mjs                # refresh other names for search (wi
 node atlas/tools/linkcheck.mjs              # test every source link and write a report; changes nothing
 node atlas/tools/build-borders.mjs <file>   # rebuild viewer/site/borders/ from a Cliopatria download
 node atlas/tools/build-sealevel.mjs <a> <b> # rebuild the ice-age coastline data; see the file for what to download
+node atlas/tools/build-vitals.mjs <folder>  # rebuild Earth's vital signs; see the file for what to download
 node atlas/tools/build-icesheets.mjs <a> <b> # rebuild the ice-sheet image; see the file for what to download
 ```
 
