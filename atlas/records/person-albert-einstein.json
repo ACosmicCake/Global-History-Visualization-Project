@@ -241,7 +241,7 @@
   ],
   "reviewer_note": "Pin is Bern (patent office years) as a city centroid; Ulm is the birthplace and Princeton the place of death. MacTutor notes one reference gives 1878 but its biography gives 1879. Link to the 1919 eclipse record is thematic only. Nobel page was read through a plain HTTP fetch; WebFetch is blocked there.",
   "author": "historian-agent:essentials-a",
-  "updated": "2026-11-04",
+  "updated": "2026-11-03",
   "published_at": "2026-10-23T14:56:18.106Z",
   "changelog": [
     {
@@ -254,31 +254,5 @@
       "version": 2,
       "change": "added a life path of 10 dated stops, each from a cited page"
     }
-  ],
-  "animation": {
-    "template": "path",
-    "spec_version": 1,
-    "duration_s": 31,
-    "beats": [
-      {
-        "span": "1879",
-        "action": "pulse { radius_km: 30 }",
-        "caption": "Born in Ulm in 1879, Einstein worked as a technical expert at the Swiss patent office in Bern from 1902 to 1909 and wrote papers in 1905 that…",
-        "source": "src-mactutor-einstein"
-      },
-      {
-        "span": "1879",
-        "action": "path.trace {}",
-        "caption": "The route runs Ulm to Munich to Aarau to Zurich.",
-        "source": "src-mactutor-einstein"
-      },
-      {
-        "span": "1955",
-        "action": "pulse { radius_km: 48 }",
-        "caption": "He later held posts in Prague, Zurich and Berlin, moved to Princeton in 1933, and died there in 1955.",
-        "source": "src-mactutor-einstein"
-      }
-    ],
-    "generated": "template from summary (atlas/tools/animate.mjs)"
-  }
+  ]
 }
