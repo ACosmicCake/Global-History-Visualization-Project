@@ -102,6 +102,7 @@ const placed = p => {
 };
 window.addEventListener('paleo-ready', () => render());
 function visiblePins() {
+  if (state.film) return [];   // the film is about the Earth; the pins come back when it ends
   const win = windowNow(), mi = minImportance();
   // the open record always shows (with its route), whatever the time scale, filters or zoom thinning: a sequence can
   // move the time axis to a scale the record isn't classed at, and its pin must not vanish while it is being read
@@ -471,9 +472,9 @@ function updateSky() {
   window.Space.setIce(map ? null : bp);
   state.humid = map ? 0 : humidAt(bp);
   window.Space.setClimate(Math.min(1, state.seaDrop / 125), state.humid);
-  window.Borders?.update(state.t, state.borders);
+  window.Borders?.update(state.t, state.borders && !state.film);
   window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
-  window.Spacecraft?.update(state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
+  window.Spacecraft?.update(state.film ? -1e9 : state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
 }
 
 // ---------- procedural monuments (spec 6.4): built only from the record's own sourced measurements
@@ -1179,12 +1180,66 @@ async function startTour(id, i = 0) {
   goTo(state.tour.stops[state.tour.i]);
 }
 // ---------- the film: the last billion years, played like a record's sequence, each caption drawn from the record it names
+const filmDate = ma => {
+  if (ma >= 999.5) return '1 billion years ago';
+  if (ma >= 1) return `${Math.round(ma)} million years ago`;
+  const y = ma * 1e6 + NOW;   // the clock counts from year 0, the words from today
+  if (y < 200) return 'Today';
+  return `${(Math.round(y / (y >= 100000 ? 10000 : y >= 10000 ? 1000 : 100)) * (y >= 100000 ? 10000 : y >= 10000 ? 1000 : 100)).toLocaleString('en-US')} years ago`;
+};
+function endFilm() {
+  state.film = false; document.body.classList.remove('film'); show($('#film'), false);
+  globe.camera().clearViewOffset(); globe.controls().enabled = true; seqPaused = false; updateSky(); render();
+}
 function startFilm() {
   if (!deepTime) return;
-  closeWelcome(); if (state.selected) closePanel();
-  const f = deepTime.film;
-  playSequence({ id: 'film', title: f.title, when: { start: { year: -1e9 } }, where: { lat: 45.6, lon: -74.6 }, animation: { beats: f.beats, duration_s: f.beats.length * 7 } });
+  closeWelcome(); if (state.selected) closePanel(); if (timer) stopPlay();
+  const f = deepTime.film, box = $('#film');
+  state.film = true; document.body.classList.add('film'); globe.controls().enabled = false; show(box, true); render();
+  $('#film-credit').textContent = f.credit; $('#film-big').textContent = f.title; $('#film-big').classList.add('on');
+  $('#film-pause').innerHTML = PAUSE.replace('12" height="12"', '13" height="13"'); $('#film-pause').setAttribute('aria-label', 'Pause film');
+  $('#film-text').classList.remove('on'); $('#film-bar').style.width = '0';
+  seqPaused = false; box.focus({ preventScroll: true });
+  globe.camera().setViewOffset(innerWidth, innerHeight, 0, innerHeight * 0.08, innerWidth, innerHeight);
+  const chapter = c => {
+    $('#film-text').classList.remove('on');
+    setTimeout(() => {
+      if (!state.film) return;
+      if (c) $('#film-big').classList.remove('on');   // the title stays until the first chapter
+      $('#film-chapter').textContent = c ? c.title : ''; $('#film-caption').textContent = c ? c.caption : '';
+      if (c) $('#film-text').classList.add('on');
+    }, 350);
+  };
+  let lastDate = '', ended = false;
+  window.Sequence.film(f, {
+    globe, getTime: () => state.t,
+    setTime: y => { state.t = Math.min(y, NOW); const lv = levelFor(state.t); if (lv !== state.level && state.level !== 6) setLevel(lv, true); else render(); },
+    ride: ({ lat, lng }) => { const q = placed({ lat, lon: lng }); return { lat: q.lat, lng: q.lon }; },
+    ui: {
+      fade: on => $('#film-fade').classList.toggle('on', on),
+      title: () => {},
+      chapter,
+      progress: (k, ma) => {
+        $('#film-bar').style.width = `${Math.min(100, k * 100).toFixed(2)}%`;
+        const d = filmDate(ma); if (d !== lastDate) { lastDate = d; $('#film-date').textContent = d; }
+        if (k * f.length >= f.endAt && !ended) { ended = true; chapter(null); setTimeout(() => { if (state.film) { $('#film-big').innerHTML = `Today<small>${esc(f.end)}</small>`; $('#film-big').classList.add('on'); } }, 400); }
+      },
+    },
+    onEnd: endFilm,
+  });
 }
+const closeFilm = () => { window.Sequence.stop(); $('#film-fade').classList.remove('on'); endFilm(); };
+$('#film-close').onclick = closeFilm;
+$('#film-pause').onclick = () => { seqPaused = !seqPaused; window.Sequence.setPaused(seqPaused); $('#film-pause').setAttribute('aria-label', seqPaused ? 'Resume film' : 'Pause film'); $('#film-pause').innerHTML = (seqPaused ? PLAY : PAUSE).replace('12" height="12"', '13" height="13"'); };
+$('#film-prev').onclick = () => window.Sequence.filmControl?.step(-1);
+$('#film-next').onclick = () => window.Sequence.filmControl?.step(1);
+addEventListener('keydown', e => {
+  if (!state.film) return;
+  if (e.key === 'Escape') { e.preventDefault(); closeFilm(); }
+  else if (e.key === ' ' && document.activeElement?.tagName !== 'BUTTON') { e.preventDefault(); $('#film-pause').click(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); $('#film-prev').click(); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); $('#film-next').click(); }
+});
 // ---------- welcome card: what this is, where to start, what happened on this date
 function onThisDay() {
   const d = new Date(), md = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;

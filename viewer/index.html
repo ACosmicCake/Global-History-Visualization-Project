@@ -256,6 +256,29 @@
 
   .play-seq { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--brass); background: var(--brass-dim); color: var(--brass); font-size: 12px; font-weight: 500; }
   .play-seq:hover { background: rgba(217,179,106,.28); }
+  /* the film: everything else steps aside, and the words sit low over a dark fade */
+  body.film > *:not(#film):not(script):not(#globe) { opacity: 0 !important; pointer-events: none !important; transition: opacity .6s; }
+  #film { position: absolute; inset: 0; z-index: 20; pointer-events: none; color: var(--text); outline: none; }
+  #film button { pointer-events: auto; width: 32px; height: 32px; flex: none; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(255,255,255,.22); background: rgba(10,16,28,.45); color: inherit; }
+  #film button:hover, #film button:focus-visible { border-color: var(--brass); color: var(--brass); }
+  .film-bars::before, .film-bars::after { content: ''; position: absolute; left: 0; right: 0; height: 6vh; background: #000; }
+  .film-bars::before { top: 0; } .film-bars::after { bottom: 0; }
+  #film-big { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); width: min(760px, calc(100vw - 48px)); text-align: center; font: 500 clamp(30px, 6vw, 58px)/1.1 var(--f-display); text-shadow: 0 2px 24px #000; opacity: 0; transition: opacity 1s; }
+  #film-big.on { opacity: 1; }
+  #film-big small { display: block; margin-top: 12px; font: 400 clamp(14px, 2vw, 18px)/1.45 var(--f-display); color: rgba(240,243,248,.8); }
+  .film-foot { position: absolute; left: 0; right: 0; bottom: 0; padding: 90px max(24px, calc(50vw - 380px)) calc(6vh + 8px); background: linear-gradient(to bottom, transparent, rgba(4,7,12,.82) 42%); }
+  #film-date { font: 500 12px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); font-variant-numeric: tabular-nums; margin-bottom: 6px; }
+  #film-text { min-height: 104px; opacity: 0; transform: translateY(6px); transition: opacity .35s, transform .35s; }
+  #film-text.on { opacity: 1; transform: none; transition: opacity .9s, transform .9s; }
+  #film-chapter { margin: 0 0 4px; font: 500 clamp(22px, 3.4vw, 34px)/1.15 var(--f-display); text-shadow: 0 1px 14px #000; }
+  #film-caption { margin: 0; max-width: 62ch; font: 400 clamp(14px, 1.9vw, 17px)/1.45 var(--f-display); color: rgba(240,243,248,.92); text-shadow: 0 1px 8px #000; }
+  .film-row { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+  .film-track { flex: 1; height: 2px; margin-right: 8px; background: rgba(255,255,255,.18); border-radius: 2px; overflow: hidden; }
+  #film-bar { display: block; height: 100%; width: 0; background: var(--brass); }
+  #film-credit { margin-top: 8px; font: 10px/1.4 var(--f-mono); color: rgba(240,243,248,.5); }
+  #film-fade { position: absolute; inset: 0; background: #000; opacity: 0; transition: opacity .32s; pointer-events: none; }
+  #film-fade.on { opacity: 1; }
+  @media (max-width: 760px) { .film-bars { display: none; } .film-foot { padding: 70px 16px 12px; } #film-text { min-height: 128px; } #film button { width: 40px; height: 40px; } }
   #seqbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 186px; width: min(620px, calc(100vw - 32px)); padding: 12px 16px 14px; z-index: 5; background: var(--glass-strong); }
   .seq-top { display: flex; align-items: center; gap: 10px; }
   #seq-title { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }
@@ -347,6 +370,23 @@
 <section id="panel" class="glass" hidden aria-label="Record" tabindex="-1"></section>
 <section id="welcome" class="glass" hidden aria-label="Start here" role="dialog"></section>
 <section id="pinlist" class="glass" hidden aria-label="Records"></section>
+<section id="film" hidden tabindex="-1" aria-label="Film: A billion years of Earth">
+  <div class="film-bars" aria-hidden="true"></div>
+  <div id="film-big"></div>
+  <div class="film-foot">
+    <div id="film-date" aria-hidden="true"></div>
+    <div id="film-text" aria-live="polite"><h2 id="film-chapter"></h2><p id="film-caption"></p></div>
+    <div class="film-row">
+      <div class="film-track" aria-hidden="true"><i id="film-bar"></i></div>
+      <button id="film-prev" aria-label="Previous chapter" title="Previous chapter (←)"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h2v10H2zM11 1v10L4.5 6z" fill="currentColor"/></svg></button>
+      <button id="film-pause" aria-label="Pause film" title="Pause (space)"></button>
+      <button id="film-next" aria-label="Next chapter" title="Next chapter (→)"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1h2v10H8zM1 1v10l6.5-5z" fill="currentColor"/></svg></button>
+      <button id="film-close" aria-label="Close film" title="Close (Esc)"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    </div>
+    <div id="film-credit"></div>
+  </div>
+  <div id="film-fade" aria-hidden="true"></div>
+</section>
 <section id="seqbar" class="glass" hidden aria-live="polite" aria-label="Sequence">
   <div class="seq-top"><span id="seq-title"></span><div id="seq-dots" aria-hidden="true"></div>
     <button id="seq-prev" aria-label="Previous beat" title="Previous beat (←)"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h2v10H2zM11 1v10L4.5 6z" fill="currentColor"/></svg></button>

@@ -23,7 +23,7 @@ for (const t of JSON.parse(fs.readFileSync(path.join(VIEWER, 'tours.json'), 'utf
 const deep = JSON.parse(fs.readFileSync(path.join(VIEWER, 'deeptime.json'), 'utf8'));
 for (const id of Object.keys(deep.scenes)) if (!liveIds.has(id)) fails.push(`deeptime scene: unknown record ${id}`);
 for (const m of deep.marks) if (m.id && !liveIds.has(m.id)) fails.push(`deeptime mark: unknown record ${m.id}`);
-for (const b of deep.film.beats) if (!liveIds.has(b.record)) fails.push(`deeptime film: unknown record ${b.record}`);
+for (const c of deep.film.chapters) if (!liveIds.has(c.record)) fails.push(`deeptime film: unknown record ${c.record}`);
 for (const f of ['app.js', 'space.js', 'spacecraft.js', 'borders.js', 'deeptime.js', 'sequence.js', 'api.mjs', 'pages.mjs', 'server.mjs', 'build-static.mjs']) {
   try { execFileSync(process.execPath, ['--check', path.join(VIEWER, f)], { stdio: 'pipe' }); } catch (e) { fails.push(`viewer/${f}: ${String(e.stderr).split('\n').slice(0, 5).join(' ')}`); }
 }
