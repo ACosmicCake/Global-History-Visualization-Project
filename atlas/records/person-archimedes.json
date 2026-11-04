@@ -1,0 +1,136 @@
+{
+  "id": "person-archimedes",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "person",
+  "title": "Archimedes of Syracuse",
+  "summary": "Archimedes of Syracuse (c. 287–212 BCE) was, in MacTutor's words, the greatest mathematician of his age. The Featured Wikipedia article calls him one of the leading scientists in classical antiquity. MacTutor records that he was killed in 212 BC during the capture of Syracuse by the Romans in the Second Punic War.",
+  "when": {
+    "start": {
+      "year": -286
+    },
+    "end": {
+      "year": -211
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Both dates are given as c. in the Wikipedia Featured article; the MacTutor page gives 287 BC and 212 BC without a range. Astronomical years: 287 BC = -286, 212 BC = -211. The 'c.' qualifier is kept in as_recorded; no band is invented."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Quick Info, birth and death (BC)",
+        "value": "287 BC",
+        "source": "src-mactutor-archimedes"
+      },
+      {
+        "calendar": "Quick Info, death (BC)",
+        "value": "212 BC",
+        "source": "src-mactutor-archimedes"
+      },
+      {
+        "calendar": "Lead sentence, approximate dates (BC)",
+        "value": "c. 287 – c. 212 BC",
+        "source": "src-wiki-archimedes-fa"
+      }
+    ],
+    "display": "c. 287–c. 212 BCE"
+  },
+  "where": {
+    "lat": 37.07542,
+    "lon": 15.28664,
+    "elevation_m": null,
+    "modern_name": "Siracusa (Syracuse), Sicily, Italy",
+    "historical_name": "Syracuse, Sicily; the city was under Roman siege in 212 BC (no polity name beyond that given by the sources opened)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3,
+    "coordinate_sources": [
+      "src-geonames-siracusa"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The Featured Wikipedia article's lead describes Archimedes as considered one of the leading scientists, and MacTutor records his death in the Roman capture of Syracuse in 212 BC, a documented event of the Second Punic War. The main ground for score 5 is the lead's characterisation of him as a leading scientist; the sources opened here do not rank him further."
+  },
+  "confidence": "established",
+  "audience_note": "Records that he was killed during the Roman capture of Syracuse; the sources opened here give no further detail of the death.",
+  "sources": [
+    {
+      "id": "src-mactutor-archimedes",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Archimedes/",
+      "title": "Archimedes (MacTutor History of Mathematics biography)",
+      "publisher": "MacTutor History of Mathematics, School of Mathematics and Statistics, University of St Andrews",
+      "author": "J J O'Connor and E F Robertson",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "audience_note"
+      ]
+    },
+    {
+      "id": "src-wiki-archimedes-fa",
+      "url": "https://en.wikipedia.org/w/index.php?title=Archimedes&oldid=1383347529",
+      "title": "Archimedes (Wikipedia, Featured Article, pinned revision oldid 1383347529)",
+      "publisher": "Wikipedia (English), Featured Article",
+      "author": "Wikipedia contributors",
+      "date_published": "2026-11-02",
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "wiki_quality": "FA",
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-siracusa",
+      "url": "https://www.geonames.org/2523083/siracusa.html",
+      "title": "Siracusa, GeoNames ID 2523083",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: summary rewritten to what MacTutor (University of St Andrews) and the Featured Wikipedia revision state; the 'inventor, astronomer' list and the unconfirmed lead wording were removed. Dates are astronomical -286 to -211 for 287 and 212 BC. Pin is the Siracusa city point from GeoNames.",
+  "updated": "2026-11-04",
+  "author": "historian-agent:haiku-j",
+  "published_at": "2026-11-04T06:57:32.918Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

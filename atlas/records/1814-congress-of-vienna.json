@@ -1,0 +1,165 @@
+{
+  "id": "1814-congress-of-vienna",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Congress of Vienna",
+  "summary": "Representatives from some 200 European states and political entities met in Vienna from September 1814 to June 1815, after decades of war that began with the French Revolution and the Napoleonic Wars. Harvard Gazette reports that they meant to avoid future war by setting up the Congress System of periodic diplomatic conferences. Brown University Library notes the borders they set served to maintain the balance of power, and that nationalists were not always happy with them.",
+  "when": {
+    "start": {
+      "year": 1814,
+      "iso": "1814-09"
+    },
+    "end": {
+      "year": 1815,
+      "iso": "1815-06-09"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "exact"
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian: September 1814 to June 1815",
+        "value": "September of 1814 to June of 1815",
+        "source": "src-harvard-vienna"
+      },
+      {
+        "calendar": "Gregorian: September 1814 to June 1815",
+        "value": "September 1814 and lasted until June 1815",
+        "source": "src-brown-vienna"
+      }
+    ],
+    "display": "September 1814 – June 1815"
+  },
+  "where": {
+    "lat": 48.2083,
+    "lon": 16.3639,
+    "elevation_m": null,
+    "modern_name": "Ballhausplatz, Innere Stadt, Vienna, Austria",
+    "historical_name": "Ballhausplatz, Vienna, Austrian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-osm-ballhausplatz"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "wars_conflict"
+  ],
+  "scale": "event",
+  "importance": {
+    "score": 5,
+    "justification": "Reorganized post-Napoleonic European borders and established the Concert of Europe diplomatic framework, maintaining continent-wide stability for nearly a century."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-first-french-empire",
+      "type": "caused_by",
+      "because": "The collapse and military defeat of Napoleon's First French Empire necessitated the diplomatic renegotiation of European borders at Vienna."
+    },
+    {
+      "id": "1815-battle-of-waterloo",
+      "type": "contemporary"
+    },
+    {
+      "id": "1815-eruption-of-mount-tambora",
+      "type": "contemporary"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1814-09",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "Diplomats from Austria, Britain, Prussia, Russia, and France assemble in Vienna to restructure post-Napoleonic Europe.",
+        "source": "src-harvard-vienna",
+        "consequence": false
+      },
+      {
+        "span": "1815-06",
+        "action": "region.fill { radius_km: 500 }",
+        "caption": "The Final Act establishes the Congress System, averting general European war for nearly a century until 1914.",
+        "source": "src-harvard-vienna",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-harvard-vienna",
+      "url": "https://news.harvard.edu/gazette/story/2014/04/lessons-warnings-in-a-centuries-old-peace/",
+      "title": "Lessons, warnings in a centuries-old peace",
+      "publisher": "Harvard Gazette (Harvard University)",
+      "author": "Corydon Ireland",
+      "date_published": "2014-04-08",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-brown-vienna",
+      "url": "https://library.brown.edu/cds/napoleon/time7.html",
+      "title": "Timeline: The Congress of Vienna, the Hundred Days, and Napoleon's Exile on St. Helena",
+      "publisher": "Brown University Library",
+      "author": "Center for Digital Scholarship, Brown University",
+      "date_published": "2014",
+      "accessed": "2026-11-03",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-osm-ballhausplatz",
+      "url": "https://www.openstreetmap.org/way/4998702",
+      "title": "Ballhausplatz, Vienna (Way 4998702)",
+      "publisher": "OpenStreetMap",
+      "author": "OpenStreetMap Contributors",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'redrew frontiers', 'averted warfare for almost a century' and 'suppressed liberal movements', none stated on the two pages. Brown's page gives the balance-of-power and nationalist-discontent points. Pin is the Ballhausplatz, the Austrian chancellery.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:29.842Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

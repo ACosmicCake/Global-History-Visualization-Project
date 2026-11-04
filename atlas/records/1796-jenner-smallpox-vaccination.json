@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1796-jenner-smallpox-vaccination",
+  "kind": "event",
+  "title": "Edward Jenner's smallpox vaccination",
+  "summary": "On 14 May 1796 in Berkeley, Gloucestershire, Edward Jenner inoculated eight-year-old James Phipps with matter from the cowpox lesions of the dairymaid Sarah Nelms. When he inoculated the boy again in July with matter from a fresh smallpox lesion, no disease developed, and Jenner concluded the protection was complete. The World Health Organization dates the world's first vaccine demonstration to this experiment and records its declaring smallpox eradicated in 1980.",
+  "when": {
+    "start": {
+      "year": 1796,
+      "iso": "1796-05-14"
+    },
+    "end": {
+      "year": 1796,
+      "iso": "1796-07-01"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Jenner inoculated James Phipps with cowpox on 14 May 1796 and tested immunity with variolation in July 1796."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On May 14, 1796, using matter from Nelms' lesions, he inoculated an 8-year-old boy, James Phipps",
+        "source": "src-riedel-jenner-2005"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "It wasn’t until May 1796 that the world’s first vaccine was demonstrated",
+        "source": "src-who-smallpox-vaccination"
+      }
+    ],
+    "display": "14 May 1796"
+  },
+  "where": {
+    "lat": 51.69111,
+    "lon": -2.45917,
+    "elevation_m": 21,
+    "modern_name": "Berkeley, Gloucestershire, England, United Kingdom",
+    "historical_name": "Berkeley, Gloucestershire, Kingdom of Great Britain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-geonames-berkeley"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Jenner's work is widely regarded as the foundation of immunology (Baylor University Medical Center Proceedings), and the World Health Organization records smallpox, the only human disease eradicated so far, as eradicated in 1980."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1980-eradication-of-smallpox",
+      "type": "caused",
+      "because": "Jenner's demonstration of cowpox vaccination began the global vaccination efforts that ultimately eradicated smallpox in 1980."
+    },
+    {
+      "id": "1567-chinese-variolation",
+      "type": "related"
+    },
+    {
+      "id": "1885-pasteur-rabies-vaccine",
+      "type": "related"
+    },
+    {
+      "id": "1543-scientific-revolution",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1796-05-14",
+        "action": "pulse { radius_km: 10 }",
+        "caption": "In Berkeley, Edward Jenner inoculates James Phipps with cowpox matter taken from a lesion on milkmaid Sarah Nelmes.",
+        "source": "src-riedel-jenner-2005"
+      },
+      {
+        "span": "1796-07",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Challenged with smallpox matter, Phipps develops no disease, proving that cowpox inoculation confers immunity against smallpox.",
+        "source": "src-who-smallpox-vaccination",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-riedel-jenner-2005",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1200696/",
+      "title": "Edward Jenner and the history of smallpox and vaccination",
+      "publisher": "Baylor University Medical Center Proceedings (via PubMed Central)",
+      "author": "Stefan Riedel",
+      "date_published": "2005-01-01",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-who-smallpox-vaccination",
+      "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-smallpox-vaccination",
+      "title": "History of smallpox vaccination",
+      "publisher": "World Health Organization",
+      "date_published": "2020-04-03",
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-berkeley",
+      "url": "https://www.geonames.org/2655861/berkeley.html",
+      "title": "Berkeley, Gloucestershire, United Kingdom (GeoNames 2655861)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'founded modern vaccination, replacing dangerous variolation', which overstates the sources (WHO calls cowpox a less dangerous source than variolation; Riedel says Jenner was neither first to suggest cowpox protected nor first to attempt it). May and July details are on the Baylor/PMC article, which also gives the Berkeley birthplace; the WHO page gives May 1796.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:34.497Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

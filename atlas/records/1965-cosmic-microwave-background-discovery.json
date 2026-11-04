@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1965-cosmic-microwave-background-discovery",
+  "kind": "event",
+  "title": "Discovery of the cosmic microwave background",
+  "summary": "In 1964 Arno Penzias and Robert Wilson of Bell Laboratories at Holmdel, New Jersey, found microwaves with a wavelength of about 7 centimeters that were stronger than expected. NASA says the discovery was made more or less by accident and matched a temperature of 3.5 kelvin from empty space. Scientists at nearby Princeton University identified the radiation as a remnant of the Big Bang, and the pair received the 1978 Nobel Prize in Physics.",
+  "when": {
+    "start": {
+      "year": 1964
+    },
+    "end": {
+      "year": 1965,
+      "iso": "1965-07"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Penzias and Wilson detected the isotropic microwave excess during observations in 1964 and published their joint letter with Dicke's Princeton team in July 1965 in the Astrophysical Journal."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "when Arno Penzias and Robert Wilson studied cosmic radiation in 1964, they discovered that microwaves with a wavelength of about 7 centimeters were being received uniformly from all directions",
+        "source": "src-nobel-penzias-1978"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "called \"cosmic background radiation\" was made more or less by accident by Arno Penzias and Robert Wilson of Bell Telephone Laboratories",
+        "source": "src-nasa-cosmic-times-1965"
+      }
+    ],
+    "display": "1964–1965 (announced July 1965)"
+  },
+  "where": {
+    "lat": 40.34511,
+    "lon": -74.18403,
+    "elevation_m": 112,
+    "modern_name": "Holmdel, New Jersey, United States (Holmdel Horn Antenna, Crawford Hill)",
+    "historical_name": "Holmdel, New Jersey, United States (Bell Telephone Laboratories, Crawford Hill)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2,
+    "coordinate_sources": [
+      "src-geonames-holmdel"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "NASA says the discovery provided the first observational evidence that the universe started with a Big Bang, and the Nobel Prize in Physics 1978 was awarded for it."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1905-special-relativity",
+      "type": "related"
+    },
+    {
+      "id": "1990-hubble-space-telescope",
+      "type": "related",
+      "because": "CMB observations and space telescope measurements jointly constrained the Hubble constant, cosmic expansion rate, and cosmological parameters."
+    },
+    {
+      "id": "1961-gagarin-first-human-spaceflight",
+      "type": "contemporary"
+    },
+    {
+      "id": "1969-07-20-apollo-11",
+      "type": "contemporary"
+    },
+    {
+      "id": "2021-james-webb-space-telescope",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1964",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "At Crawford Hill in Holmdel, New Jersey, Arno Penzias and Robert Wilson detect an unexplained isotropic microwave hiss.",
+        "source": "src-nobel-penzias-1978"
+      },
+      {
+        "span": "1965-07",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The radiation is identified as relic heat from the creation of the universe, establishing observational proof of the Big Bang.",
+        "source": "src-nasa-cosmic-times-1965",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-nobel-penzias-1978",
+      "url": "https://www.nobelprize.org/prizes/physics/1978/penzias/facts/",
+      "title": "Arno Penzias – Facts",
+      "publisher": "Nobel Prize Outreach",
+      "date_published": "2024",
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nasa-cosmic-times-1965",
+      "url": "https://imagine.gsfc.nasa.gov/educators/programs/cosmictimes/online_edition/1965/murmur.html",
+      "title": "Murmur of a Bang (Cosmic Times 1965)",
+      "publisher": "NASA Goddard Space Flight Center (Imagine the Universe!)",
+      "date_published": "2008",
+      "accessed": "2026-11-03",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-holmdel",
+      "url": "https://www.geonames.org/5099193/holmdel.html",
+      "title": "Holmdel, New Jersey, United States (GeoNames 5099193)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-03",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed the 20-foot antenna and '7.35 cm', which the opened pages do not give (Nobel says about 7 cm). NASA's Cosmic Times page gives the accident, 3.5 K and Princeton; the Nobel page gives 1964, 7 cm and the Bell Laboratories, Holmdel affiliation. The 1978 prize clause relies on the Nobel page's prize listing.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:37.574Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

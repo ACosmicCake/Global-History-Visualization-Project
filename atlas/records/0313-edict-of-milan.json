@@ -1,0 +1,150 @@
+{
+  "id": "0313-edict-of-milan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Edict of Milan",
+  "summary": "The Edict of Milan was the outcome of a political agreement concluded in Milan between the Roman emperors Constantine I and Licinius in February 313, according to an Arizona State University document. The proclamation, made for the East by Licinius in June 313, established religious toleration for Christians. Fordham's sourcebook gives the 313 text, which orders that places taken from Christians be restored to them without payment.",
+  "when": {
+    "start": {
+      "year": 313
+    },
+    "end": {
+      "year": 313
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Fordham gives 313 AD; ASU gives February 313 for the agreement. Exact month and whether it was a single formal decree are not settled on the opened pages."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Anno Domini, as written on the page heading",
+        "value": "313 AD",
+        "source": "src-fordham"
+      },
+      {
+        "calendar": "Anno Domini, as written in the course document",
+        "value": "in February 313",
+        "source": "src-asu"
+      }
+    ],
+    "display": "313"
+  },
+  "where": {
+    "lat": 45.46427,
+    "lon": 9.18951,
+    "elevation_m": null,
+    "modern_name": "Milan, Italy",
+    "historical_name": "Mediolanum (Milan), in the Roman Empire under Constantine and Licinius",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames"
+    ],
+    "body": null,
+    "paleo": null
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Sources tie the 313 agreement to the legal status of Christian worship and the return of confiscated Christian property in the Roman Empire."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [],
+  "sources": [
+    {
+      "id": "src-fordham",
+      "url": "https://sourcebooks.fordham.edu/source/edict-milan.html",
+      "title": "The 'Edict of Milan' 313 AD (Internet Medieval Sourcebook: Galerius and Constantine, Edicts of Toleration 311/313 AD)",
+      "publisher": "Fordham University, Internet Medieval Sourcebook",
+      "author": "Fordham University Center for Medieval Studies (compiler)",
+      "date_published": "313",
+      "accessed": "2026-11-03",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "what",
+        "where"
+      ]
+    },
+    {
+      "id": "src-asu",
+      "url": "https://www.asu.edu/courses/rel270/documents/key%20terms/EdictOfMilan.htm",
+      "title": "Edict of Milan (course key-terms document, REL 270)",
+      "publisher": "Arizona State University (course document)",
+      "author": "Unstated",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/3173435/milan.html",
+      "title": "Milan, Lombardy, Italy (GeoNames geonameId 3173435)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-11-03",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-04: removed 'met near Mediolanum' and 'free worship', not on the pages opened. Fordham gives the text of the 311/313 edicts of toleration and a note on the 'genuineness of the Edict of Milan'; ASU (a course document) gives the February agreement and June proclamation. Whether it was one edict is disputed, and the record avoids deciding. Pin is Milan, the agreement site.",
+  "author": "historian-agent:haiku-i",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T06:57:25.428Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "313",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Edict of Milan was the outcome of a political agreement concluded in Milan between the Roman emperors Constantine I and Licinius in February 313, according to an…",
+        "source": "src-fordham"
+      },
+      {
+        "span": "313",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The proclamation, made for the East by Licinius in June 313, established religious toleration for Christians.",
+        "source": "src-fordham",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
+}
