@@ -62,7 +62,7 @@
         dayMap: { value: loader.load('assets/earth-day.jpg') }, nightMap: { value: loader.load('assets/earth-night.jpg') },
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
         nightFloor: { value: 0.24 }, nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
-        paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 }, iceSouth: { value: 0 },
+        paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 }, iceSouth: { value: 0 }, studio: { value: 1 },
         shelfMap: { value: null }, seaDrop: { value: 0 },
         iceA: { value: null }, iceB: { value: null }, iceMix: { value: 0 }, iceOn: { value: 0 }, iceAge: { value: 0 }, humid: { value: 0 },
         detailMap: { value: null }, detailBounds: { value: new THREE.Vector4(0, 0, 0.25, 0.5) }, detailMix: { value: 0 },
@@ -75,7 +75,7 @@
         uniform sampler2D detailMap; uniform vec4 detailBounds; uniform float detailMix;
         uniform sampler2D shelfMap; uniform float seaDrop;
         uniform sampler2D iceA; uniform sampler2D iceB; uniform float iceMix; uniform float iceOn; uniform float iceAge; uniform float humid;
-        uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat; uniform float iceSouth;
+        uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat; uniform float iceSouth; uniform float studio;
         #ifdef DEEP3D
         uniform highp sampler3D worldMap; uniform highp sampler3D flowMap; uniform highp sampler3D rockIds; uniform highp sampler2D rotMap;
         #endif
@@ -121,7 +121,7 @@
           float hx = texture2D(topoMap, vUv + vec2(1.0 / 2048.0, 0.0)).r - h0, hy = texture2D(topoMap, vUv + vec2(0.0, 1.0 / 1024.0)).r - h0;
           vec3 n = normalize(n0 - (east * hx + north * hy) * relief * 60.0 * (1.0 - water) * (1.0 - 0.85 * detailMix));
           float ndl0 = dot(n0, L), ndl = dot(n, L);
-          float lit = smoothstep(-0.12, 0.25, ndl0);
+          float lit = mix(smoothstep(-0.12, 0.25, ndl0), 1.0, studio);   // normal lighting has no night side: all that's in view is in daylight, and only the real Sun casts a night
           // colour: slight contrast lift, deeper oceans
           vec3 day = texture2D(dayMap, vUv).rgb;
           if (detailMix > 0.0) {   // sharper NASA imagery for the region in view, faded in at its edges
@@ -234,16 +234,17 @@
             haze = mix(vec3(0.0), vec3(1.0, 0.55, 0.25), (1.0 - hadean) * (1.0 - proto)) * early;   // Archean orange haze
           }
           vec3 night = texture2D(nightMap, vUv).rgb;
-          vec3 dayCol = day * (0.16 + 1.0 * max(mix(ndl0, ndl, 0.85), 0.0));
+          float sunNow = mix(ndl0, ndl, 0.85);
+          vec3 dayCol = day * mix(0.16 + max(sunNow, 0.0), 0.5 + 0.5 * clamp((sunNow + 0.3) / 1.05, 0.0, 1.0), studio);   // in normal lighting the far edge eases to half, so the globe still looks round
           vec3 nightCol = day * nightFloor * vec3(0.72, 0.82, 1.0) + vec3(0.016, 0.034, 0.066) * water + night * vec3(1.0, 0.8, 0.52) * 1.7 * nightLights;
           vec3 col = mix(nightCol, dayCol, lit);
           // ocean: a tight sun glint and a broad sheen
           vec3 h = normalize(L + v); float nh = max(dot(n0, h), 0.0);
-          col += vec3(1.0, 0.94, 0.82) * (pow(nh, 320.0) * 0.35 + pow(nh, 30.0) * 0.05) * water * lit;
+          col += vec3(1.0, 0.94, 0.82) * (pow(nh, 320.0) * 0.35 + pow(nh, 30.0) * 0.05) * water * lit * (1.0 - studio);   // the sun's glint belongs to a real Sun: a light beside the camera would put a white smudge mid-ocean
           // atmosphere: blue haze at the limb on the day side, warm at the terminator
           float fres = pow(1.0 - max(dot(n0, v), 0.0), 2.6);
-          vec3 sky = mix(vec3(1.0, 0.52, 0.25), vec3(0.42, 0.66, 1.0), smoothstep(-0.05, 0.35, ndl0));
-          col = mix(col, sky, fres * 0.4 * smoothstep(-0.25, 0.2, ndl0));
+          vec3 sky = mix(vec3(1.0, 0.52, 0.25), vec3(0.42, 0.66, 1.0), max(studio, smoothstep(-0.05, 0.35, ndl0)));
+          col = mix(col, sky, fres * 0.4 * max(studio, smoothstep(-0.25, 0.2, ndl0)));
           col += vec3(1.0, 0.36, 0.08) * glow * 0.9;                               // magma glows on the night side too
           col = mix(col, haze, fres * 0.55 * length(haze) * 0.8);
           gl_FragColor = vec4(col, 1.0);
@@ -286,13 +287,13 @@
     globe.showAtmosphere(false);
     atmoMat = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false, side: THREE.BackSide, blending: THREE.AdditiveBlending,
-      uniforms: { sunDir: { value: sunDir.clone() } },
+      uniforms: { sunDir: { value: sunDir.clone() }, studio: { value: 1 } },
       vertexShader: `varying vec3 vN; varying vec3 vW; void main(){ vN = normalize(mat3(modelMatrix) * normal);
         vW = (modelMatrix * vec4(position,1.0)).xyz; gl_Position = projectionMatrix * viewMatrix * vec4(vW,1.0); }`,
-      fragmentShader: `uniform vec3 sunDir; varying vec3 vN; varying vec3 vW;
+      fragmentShader: `uniform vec3 sunDir; uniform float studio; varying vec3 vN; varying vec3 vW;
         void main(){ vec3 n = normalize(vN); float d = -dot(n, normalize(cameraPosition - vW));
           float glow = pow(clamp(d / 0.32, 0.0, 1.0), 2.6) * 0.8;
-          float s = dot(n, normalize(sunDir)); float day = smoothstep(-0.35, 0.25, s);
+          float s = mix(dot(n, normalize(sunDir)), 1.0, studio); float day = smoothstep(-0.35, 0.25, s);
           vec3 c = mix(vec3(0.9, 0.42, 0.22), vec3(0.32, 0.58, 1.0), smoothstep(-0.15, 0.3, s));
           gl_FragColor = vec4(c * glow * (0.04 + 1.0 * day), 1.0); }`,
     });
@@ -357,7 +358,7 @@
     (function spin(now) { const dt = (now - last) / 1000; last = now; clouds.rotation.y += dt * 0.004; liftNight(); plateTick(dt); watchSpeed(dt); checkDetail(now); requestAnimationFrame(spin); })(last);
   }
 
-  // Studio sun: lights the hemisphere facing the camera from upper left, so the side being explored is in daylight
+  // Normal lighting: a light just above and to the left of the camera, so all that's in view is lit, with enough angle to model the relief
   let sunMode = 'camera';
   // The studio sun's far side keeps 0.24 of daylight seen from afar, up to 0.62 close to the ground, so nothing is ever lost in the dark. Under the real Sun, night is night, with just enough left to find your way.
   function liftNight() {
@@ -367,7 +368,7 @@
   function aimStudioSun() {
     const cam = globe.camera().position.clone().normalize();
     const up = new THREE.Vector3(0, 1, 0), side = new THREE.Vector3().crossVectors(up, cam).normalize();
-    setSun(cam.multiplyScalar(0.82).add(side.multiplyScalar(-0.45)).add(up.multiplyScalar(0.28)).normalize());
+    setSun(cam.multiplyScalar(0.95).add(side.multiplyScalar(-0.24)).add(up.multiplyScalar(0.16)).normalize());
   }
   function setSun(dir) {
     sunDir.copy(dir);
@@ -837,7 +838,7 @@
   function update({ date, sunDate, sunMode: mode, nightLights, clouds: showClouds, zoomAlt }) {
     if (!globe) return;
     const when = date && !isNaN(date) ? date : new Date();
-    sunMode = mode;
+    sunMode = mode; earthMat.uniforms.studio.value = atmoMat.uniforms.studio.value = mode === 'real' ? 0 : 1;
     if (mode === 'real') { const s = subSolar(sunDate || when); setSun(dirOf(s.lat, s.lng)); }
     const m = subLunar(when);
     moon.position.copy(dirOf(m.lat, m.lng)).multiplyScalar(R * 14);
@@ -847,5 +848,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, showPlateEdges(on) { if (on === plateShow) return; plateShow = on; if (paleoMa != null && landMat) setPlateLines(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { get morph() { return morph; }, get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, showPlateEdges(on) { if (on === plateShow) return; plateShow = on; if (paleoMa != null && landMat) setPlateLines(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();

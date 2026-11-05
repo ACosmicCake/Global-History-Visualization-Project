@@ -55,7 +55,7 @@ export function recordPage(pub, titles) {
 <p class="when">${esc(pub.when?.display)}</p>
 <p class="where">${esc(pub.where?.historical_name)}</p>
 <p><a class="cta" href="../index.html#r=${esc(pub.id)}">Open on the globe</a></p>
-${pub.status === 'outline' ? '<p class="note">Outline: a sourced pin. The full record is still to come.</p>' : ''}
+${pub.status === 'outline' ? '<p class="note">A short record: a summary drawn from the sources below.</p>' : ''}
 ${pub.audience_note ? `<p class="warn">${esc(pub.audience_note)}</p>` : ''}
 ${img ? `<figure><img src="${esc(img.file_url)}" alt="${esc(img.title)}" loading="lazy"><figcaption>${esc(img.title)} · ${esc(img.credit)} · ${esc(img.license)}</figcaption></figure>` : ''}
 ${pub.card ? `<p class="lede">${esc(pub.card)}</p>` : `<div class="lede">${paras(pub.summary)}</div>`}
