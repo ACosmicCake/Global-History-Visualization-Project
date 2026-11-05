@@ -24,10 +24,22 @@ function monthDay(r) {
   const day = a?.[1] ?? b?.[2], month = MONTHS.indexOf((a?.[2] ?? b?.[1] ?? '').toLowerCase());
   return day && month >= 0 ? `${pad(month + 1)}-${pad(day)}` : undefined;
 }
+// The last year a record's pin shows while browsing. A record's dates stay as sourced, but "still standing" or "still going" is
+// not what happened in every year since, and such pins filled the map at every later date. So a long-lived place, or
+// anything still open today, shows from its start for 15% of its age, at least 20 years. People keep their whole lives;
+// planet-wide records show as chips, not pins, so they keep their full span.
+const THIS_YEAR = new Date().getUTCFullYear();
+function shownUntil(r) {
+  const start = r.when?.start?.year, end = r.when?.end?.year ?? start, global = (r.where?.uncertainty_km ?? 0) >= 5000 || r.where?.geometry?.type === 'global';
+  if (global || r.kind === 'person') return end;
+  const standing = r.kind === 'place' && end >= (end - start > 100 ? 1950 : THIS_YEAR - 1), stillGoing = end >= THIS_YEAR - 1 && end - start > 100;
+  if (!standing && !stillGoing) return end;
+  return Math.min(end, start + Math.max(20, (THIS_YEAR - start) * 0.15));
+}
 function pin(r) {
   return {
     id: r.id, title: r.title, summary: teaser(r.summary), kind: r.kind, scale: r.scale, importance: r.importance?.score ?? 1,
-    confidence: r.confidence, domains: r.domains, start: r.when?.start?.year, end: r.when?.end?.year ?? r.when?.start?.year,
+    confidence: r.confidence, domains: r.domains, start: r.when?.start?.year, end: r.when?.end?.year ?? r.when?.start?.year, until: shownUntil(r),
     display: r.when?.display, lat: r.where?.lat, lon: r.where?.lon, global: (r.where?.uncertainty_km ?? 0) >= 5000 || r.where?.geometry?.type === 'global', paleo: r.where?.paleo?.lat != null ? r.where.paleo : null,
     geometry: r.where?.geometry?.type, waypoints: (r.where?.geometry?.waypoints || []).map(w => ({ lat: w.lat, lon: w.lon, year: typeof w.year === 'number' ? w.year : null, date: w.date, label: w.label })),
     regions: (r.where?.geometry?.regions || []).map(g => ({ lat: g.lat, lon: g.lon, name: g.name })),
