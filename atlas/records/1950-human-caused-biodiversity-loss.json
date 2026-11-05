@@ -1,0 +1,148 @@
+{
+  "id": "1950-human-caused-biodiversity-loss",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "Human-caused biodiversity loss",
+  "summary": "A 2015 study found that vertebrate species were lost over the last century up to 100 times faster than the background rate, even under cautious assumptions, and argued that a sixth mass extinction is beginning. The 2019 global assessment by IPBES found that around 1 million animal and plant species are threatened with extinction. It ranks the causes as land and sea use, exploitation, climate change, pollution and invasive species.",
+  "when": {
+    "start": {
+      "year": 1900
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 10,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Mid-twentieth century marks the onset of the Great Acceleration in global land transformation, resource consumption, and species population declines."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The Report finds that around 1 million animal and plant species are now threatened with extinction, many within decades, more than ever before in human history.",
+        "source": "src-ipbes-global-assessment"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Even under our assumptions, which would tend to minimize evidence of an incipient mass extinction, the average rate of vertebrate species loss over the last century is up to 100 times higher than the background rate.",
+        "source": "src-pmc-ceballos2015"
+      }
+    ],
+    "display": "about the last century"
+  },
+  "where": {
+    "lat": 50.7374,
+    "lon": 7.0982,
+    "elevation_m": null,
+    "modern_name": "Worldwide; stand-in pin at Bonn, Germany",
+    "historical_name": "Bonn, Federal Republic of Germany",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-bonn"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Threatens one million species with extinction, compromising biosphere stability and driving Earth's sixth mass extinction."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1850-human-caused-climate-change",
+      "type": "related",
+      "because": "Anthropogenic global heating exacerbates habitat disruption, coral bleaching, and biome shifts that accelerate species extinctions."
+    },
+    {
+      "id": "1800-fossil-fuel-age",
+      "type": "related",
+      "because": "The fossil fuel economy powered global agricultural expansion, resource extraction, and industrial pollution that devastated wild habitats."
+    },
+    {
+      "id": "1992-rio-earth-summit",
+      "type": "related"
+    },
+    {
+      "id": "1988-ipcc-climate-change",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ipbes-global-assessment",
+      "url": "https://www.ipbes.net/news/Media-Release-Global-Assessment",
+      "title": "Media Release: Nature’s Dangerous Decline ‘Unprecedented’; Species Extinction Rates ‘Accelerating’",
+      "publisher": "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)",
+      "author": "IPBES",
+      "date_published": "2019-05-06",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pmc-ceballos2015",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4640606/",
+      "title": "Accelerated modern human–induced species losses: Entering the sixth mass extinction",
+      "publisher": "Science Advances (AAAS, via PubMed Central)",
+      "author": "Gerardo Ceballos, Paul R. Ehrlich, Anthony D. Barnosky, Andrés García, Robert M. Pringle, and Todd M. Palmer",
+      "date_published": "2015-06-19",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-bonn",
+      "url": "https://www.geonames.org/2946447",
+      "title": "GeoNames: Bonn (2946447)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Whether this counts as a sixth mass extinction yet is debated. The start date follows the 100-year window of that study. The pin at Bonn, seat of IPBES, is a stand-in.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:35:09.565Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

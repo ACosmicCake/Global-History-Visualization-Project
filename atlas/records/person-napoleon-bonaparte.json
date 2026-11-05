@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-napoleon-bonaparte",
+  "kind": "person",
+  "title": "Napoleon Bonaparte",
+  "summary": "Napoleon Bonaparte was born on 15 August 1769 in Ajaccio, Corsica. He rose swiftly after the French Revolution, became a general in 1793 and First Consul after the coup of November 1799. In May 1804 he became Emperor of the French and set out to conquer Europe. After his final defeat he was exiled to St Helena, where he died on 5 May 1821.",
+  "when": {
+    "start": {
+      "year": 1769
+    },
+    "end": {
+      "year": 1821
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth and death dates are documented."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "15 August 1769",
+        "source": "src-brown-birth"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1769-1821",
+        "source": "src-chateau-versailles"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "May 1804",
+        "source": "src-chateau-versailles"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "5 May 1821",
+        "source": "src-brown-death"
+      }
+    ],
+    "display": "1769–1821"
+  },
+  "where": {
+    "lat": 41.9189,
+    "lon": 8.7381,
+    "elevation_m": null,
+    "modern_name": "Ajaccio, Corsica, France (birthplace)",
+    "historical_name": "Ajaccio, Province of Corsica, Kingdom of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-ajaccio"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "civilizations_empires",
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "French emperor whose military campaigns, legal codification, and administrative restructuring reshaped European statehood and international order."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "related",
+      "because": "The political disruption of the French Revolution created the military and political opening for Bonaparte's rapid advancement and eventual seizure of power."
+    },
+    {
+      "id": "1803-napoleonic-wars",
+      "type": "related",
+      "because": "Napoleon's imperial ambitions and French continental dominance provoked and sustained the multi-coalition Napoleonic Wars across Europe."
+    },
+    {
+      "id": "1804-napoleonic-code",
+      "type": "related",
+      "because": "Napoleon directed and enacted the French Civil Code of 1804, establishing uniform civil law across the French Empire."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-chateau-versailles",
+      "url": "https://en.chateauversailles.fr/discover/history/great-characters/napoleon-i",
+      "title": "Napoleon I: Emperor of the French 1769-1821",
+      "publisher": "Château de Versailles",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brown-birth",
+      "url": "https://library.brown.edu/cds/napoleon/time1.html",
+      "title": "Napoleonic Satires - Timeline: Birth Through 1799",
+      "publisher": "Brown University Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-brown-death",
+      "url": "https://library.brown.edu/cds/napoleon/time7.html",
+      "title": "Napoleonic Satires - Timeline: The Congress of Vienna, the Hundred Days, and Napoleon's Exile on St. Helena",
+      "publisher": "Brown University Library",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-ajaccio",
+      "url": "https://www.geonames.org/3038334/ajaccio.html",
+      "title": "GeoNames: Ajaccio (3038334)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin marks his birthplace, not his campaigns, which have their own record.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T21:56:54.003Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

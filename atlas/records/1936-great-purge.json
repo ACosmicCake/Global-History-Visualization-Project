@@ -1,0 +1,141 @@
+{
+  "id": "1936-great-purge",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Great Purge in the Soviet Union",
+  "summary": "From 1936 to 1938 Joseph Stalin conducted a campaign of terror against Soviet citizens, reaching its peak in 1937 and 1938. It included show trials of his former Bolshevik opponents, and the Politburo itself approved lists consigning tens of thousands to execution. Millions of innocent people were sent to labor camps or killed in prison. By the time the terror subsided in 1939, it had assured Stalin's absolute dominance.",
+  "when": {
+    "start": {
+      "year": 1936
+    },
+    "end": {
+      "year": 1938
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Show trials began in August 1936; mass NKVD operations peaked in 1937–1938 and subsided by 1939."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1936 to 1938",
+        "source": "src-hoover"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "peak in 1937 and 1938",
+        "source": "src-loc"
+      }
+    ],
+    "display": "1936–1938"
+  },
+  "where": {
+    "lat": 55.75204,
+    "lon": 37.61781,
+    "elevation_m": 156,
+    "modern_name": "Moscow, Russia (proxy pin: the Kremlin and Lubyanka headquarters; repressions spanned the entire USSR)",
+    "historical_name": "Moscow, Russian Soviet Federative Socialist Republic, Soviet Union",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe",
+    "central_asia"
+  ],
+  "domains": [
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "State terror that sent millions to labor camps or death and secured Stalin's absolute dominance."
+  },
+  "confidence": "established",
+  "audience_note": "Contains descriptions of state-directed political terror, show trials, mass executions, and forced labor camps.",
+  "related": [
+    {
+      "id": "person-joseph-stalin",
+      "type": "related"
+    },
+    {
+      "id": "1932-holodomor",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hoover",
+      "url": "https://www.hoover.org/research/documents-terror",
+      "title": "Documents from the Terror",
+      "publisher": "Hoover Institution, Stanford University",
+      "author": "Gordon M. Hahn",
+      "date_published": "1998-07-30",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-loc",
+      "url": "https://www.loc.gov/exhibits/archives/intn.html",
+      "title": "Internal Workings of the Soviet Union - Revelations from the Russian Archives",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/524901/moscow.html",
+      "title": "Moscow, Russia",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Death totals are debated, so the summary gives no exact figure. The pin is Moscow as a proxy, because the terror covered the whole Soviet Union.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T16:49:22.499Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    },
+    {
+      "date": "2026-11-04",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

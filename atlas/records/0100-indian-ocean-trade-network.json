@@ -1,0 +1,148 @@
+{
+  "id": "0100-indian-ocean-trade-network",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Indian Ocean trade network",
+  "summary": "A first-century guide by a Greek-speaking Egyptian merchant, the Periplus of the Erythraean Sea, describes trade routes running from Egypt's Red Sea ports down East Africa and across to India. Ships bound for India caught the monsoon winds across the open ocean to the southwest coast, reaching ports such as Muziris. The annual monsoon winds were the key to making the voyage.",
+  "when": {
+    "start": {
+      "year": 50
+    },
+    "end": {
+      "year": 1500
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 50,
+      "end_plus_years": 50,
+      "note": "Regular open-water navigation across the Indian Ocean using the monsoon winds developed in the early centuries CE (documented in the 1st-century CE Periplus); the network flourished until the Portuguese arrival around 1500."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "1st century CE",
+        "source": "src-whe-peri"
+      },
+      {
+        "calendar": "CE",
+        "value": "middle of the first century CE",
+        "source": "src-uw-peri"
+      }
+    ],
+    "display": "documented from the mid first century CE"
+  },
+  "where": {
+    "lat": 23.943056,
+    "lon": 35.489444,
+    "elevation_m": null,
+    "modern_name": "Berenike (Berenice Troglodytica), Red Sea Governorate, Egypt (western terminal; network spans the Indian Ocean, Arabia, and western India)",
+    "historical_name": "Berenice, Roman Egypt, and the ports of the Erythraean Sea / Indian Ocean",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-bere"
+    ]
+  },
+  "regions": [
+    "oceans",
+    "southern_asia",
+    "western_asia",
+    "northern_africa"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Monsoon sailing tied Africa, Arabia and India into a shared sea trade."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0050-periplus-of-the-erythraean-sea",
+      "type": "related"
+    },
+    {
+      "id": "0100-indianization-of-southeast-asia",
+      "type": "related"
+    },
+    {
+      "id": "1400-rise-of-the-swahili-coast",
+      "type": "has_part"
+    },
+    {
+      "id": "1300-spice-trade-of-the-moluccas",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-peri",
+      "url": "https://www.worldhistory.org/Periplus_of_the_Erythraean_Sea/",
+      "title": "Periplus of the Erythraean Sea",
+      "publisher": "World History Encyclopedia",
+      "author": "James Hancock",
+      "date_published": "2021-07-16",
+      "accessed": "2026-11-05",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-uw-peri",
+      "url": "https://depts.washington.edu/silkroad/texts/periplus/periplus.html",
+      "title": "The Voyage around the Erythraean Sea",
+      "publisher": "University of Washington (Silk Road Seattle)",
+      "author": "Wilfred H. Schoff",
+      "date_published": null,
+      "accessed": "2026-11-05",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-bere",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q819050.json",
+      "title": "Wikidata entry for Berenice Troglodytica (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-05",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "This outline rests on one first-century text. Trade across this ocean began earlier and lasted much longer. The pin marks Berenike, one western port.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T03:31:24.065Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

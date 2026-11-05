@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "id": "person-paul-the-apostle",
+  "kind": "person",
+  "title": "Paul the Apostle",
+  "summary": "Paul the Apostle, known in Christian tradition as Paul of Tarsus, said he received a vision of the resurrected Jesus commissioning him as apostle to the gentiles. He made missionary journeys across Asia Minor, Greece and Rome, and reached Corinth in about the year 50. Later Christians turned to his writings when forming doctrine, and he could be viewed as the founder of Christianity as a separate religion.",
+  "when": {
+    "start": {
+      "year": 5
+    },
+    "end": {
+      "year": 67
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 5,
+      "end_minus_years": 5,
+      "end_plus_years": 0,
+      "note": "WHE visual timeline places Paul's birth in Tarsus at 5 CE; missionary journeys run c. 42–62 CE; death is traditionally placed under Nero in Rome c. 64–67 CE, though historical documentation of his exact death is unconfirmed."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian / CE",
+        "value": "Paul the Apostle is born in Tarsus",
+        "source": "src-whe-paul"
+      },
+      {
+        "calendar": "Julian / CE",
+        "value": "Paul the Apostle goes on missionary journeys across Asia Minor , Greece , and Rome",
+        "source": "src-whe-paul"
+      },
+      {
+        "calendar": "CE",
+        "value": "Paul arrived in Corinth in the year 50",
+        "source": "src-pbs-paul"
+      }
+    ],
+    "display": "c. 5 – 67 CE"
+  },
+  "where": {
+    "lat": 36.91667,
+    "lon": 34.9,
+    "elevation_m": null,
+    "modern_name": "Tarsus, Mersin Province, Turkey (birthplace Saul of Tarsus)",
+    "historical_name": "Tarsus, Cilicia, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-wd-tarsus"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "people"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "His missions and writings helped Christianity grow apart from Judaism."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0030-origins-of-early-christianity",
+      "type": "related",
+      "because": "Paul became a follower of the Jesus movement and preached the message of the early Jerusalem community."
+    },
+    {
+      "id": "0050-spread-of-christianity",
+      "type": "related",
+      "because": "Paul's missionary journeys and letters across the Mediterranean were central to the spread of Christianity to Gentiles."
+    },
+    {
+      "id": "0064-neronian-persecution-of-christians",
+      "type": "contemporary"
+    },
+    {
+      "id": "person-jesus-of-nazareth",
+      "type": "related"
+    },
+    {
+      "id": "0030-crucifixion-of-jesus",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-paul",
+      "url": "https://www.worldhistory.org/Paul_the_Apostle/",
+      "title": "Paul the Apostle",
+      "publisher": "World History Encyclopedia",
+      "author": "Rebecca Denova",
+      "date_published": "2022-01-28",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pbs-paul",
+      "url": "https://www.pbs.org/wgbh/pages/frontline/shows/religion/first/missions.html",
+      "title": "Paul's Mission and Letters (From Jesus to Christ)",
+      "publisher": "Public Broadcasting Service (PBS)",
+      "author": "Wayne A. Meeks and L. Michael White",
+      "date_published": "1998-04",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-tarsus",
+      "url": "https://www.wikidata.org/wiki/Q134287",
+      "title": "Tarsus, Turkey (Wikidata Q134287)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates are approximate. His own letters often conflict with the account in Acts, and his birthplace comes from Acts. The end date is traditional and uncertain.",
+  "published_at": "2026-11-04T21:56:50.047Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

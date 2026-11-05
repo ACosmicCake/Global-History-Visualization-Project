@@ -1,0 +1,150 @@
+{
+  "id": "1991-yugoslav-wars",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Yugoslav Wars",
+  "summary": "The wars that broke up Yugoslavia began after Slovenia and Croatia declared independence on 25 June 1991. The war in Bosnia and Herzegovina was the deadliest: more than 100,000 people were killed and two million forced to flee. In 1995 Serb forces executed more than 8,000 Bosnian Muslim men and boys at Srebrenica, an act of genocide. Fighting followed in Kosovo in 1998–1999 and in Macedonia in 2001.",
+  "when": {
+    "start": {
+      "year": 1991
+    },
+    "end": {
+      "year": 2001
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Began with the Ten-Day War in Slovenia and Croatian fighting in June 1991; major fighting ended with the Dayton Accords in 1995, followed by Kosovo in 1998–1999 and the Ohrid settlement in 2001."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "25 June 1991",
+        "source": "src-icty"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "June 25, 1991",
+        "source": "src-state"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "November 1995",
+        "source": "src-icty"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "several months in 2001",
+        "source": "src-icty"
+      }
+    ],
+    "display": "1991–2001"
+  },
+  "where": {
+    "lat": 43.84864,
+    "lon": 18.35644,
+    "elevation_m": 518,
+    "modern_name": "Sarajevo, Bosnia and Herzegovina (proxy pin: the besieged capital; hostilities occurred across Slovenia, Croatia, Bosnia, Kosovo, and Macedonia)",
+    "historical_name": "Sarajevo, Socialist Republic of Bosnia and Herzegovina, SFR Yugoslavia / Republic of Bosnia and Herzegovina",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 400,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 3,
+    "justification": "Destroyed Yugoslavia in the most horrific fighting Europe had seen since the Second World War."
+  },
+  "confidence": "established",
+  "audience_note": "Contains descriptions of armed conflict, ethnic cleansing, mass displacement, and genocide.",
+  "related": [
+    {
+      "id": "1991-dissolution-of-the-soviet-union",
+      "type": "related"
+    },
+    {
+      "id": "1914-world-war-i",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-icty",
+      "url": "https://www.icty.org/en/about/what-former-yugoslavia/conflicts",
+      "title": "The Conflicts",
+      "publisher": "International Criminal Tribunal for the former Yugoslavia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-state",
+      "url": "https://history.state.gov/milestones/1989-1992/breakup-yugoslavia",
+      "title": "The Breakup of Yugoslavia, 1990–1992",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/3191281/sarajevo.html",
+      "title": "Sarajevo, Bosnia and Herzegovina",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The 100,000 deaths and two million displaced are the tribunal's figures for the Bosnian war, not all the wars. The end date includes Macedonia in 2001. The pin is Sarajevo as a proxy.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T16:50:22.876Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    },
+    {
+      "date": "2026-11-04",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

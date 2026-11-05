@@ -1,0 +1,151 @@
+{
+  "id": "-3000my-onset-of-plate-tectonics",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "Onset of plate tectonics",
+  "summary": "Mineral inclusions in ancient diamonds suggest continents started breaking apart, drifting and colliding about three billion years ago. Compiling more than 4,000 inclusions, Shirey and Richardson found a change at that date: before 3.2 billion years ago only peridotitic diamonds formed, and after 3.0 billion years ago eclogitic diamonds became prevalent. They read this as the start of the Wilson cycle of plate tectonics.",
+  "when": {
+    "start": {
+      "year": -3200000000
+    },
+    "end": {
+      "year": -3000000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 100000000,
+      "start_plus_years": 100000000,
+      "end_minus_years": 100000000,
+      "end_plus_years": 100000000,
+      "note": "Diamond inclusion compilation (Shirey & Richardson 2011) shows only peridotitic compositions before 3.2 Ga, with eclogitic diamonds appearing and prevailing by 3.0 Ga; dates denote the Mesoarchean transition window."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Re-Os and Sm-Nd isotopic ages on diamond inclusions",
+        "value": "continents started breaking apart, drifting, and colliding about three billion years ago",
+        "source": "src-uct-diamonds2011"
+      },
+      {
+        "calendar": "Re-Os and Sm-Nd isotopic systems",
+        "value": "compositional change occurred 3.0 billion years ago (Ga)",
+        "source": "src-science-shirey2011"
+      }
+    ],
+    "display": "c. 3.2–3.0 Ga (Mesoarchean)"
+  },
+  "where": {
+    "lat": -28.7323,
+    "lon": 24.7623,
+    "elevation_m": null,
+    "modern_name": "No single place; stand-in pin at Kimberley, South Africa",
+    "historical_name": "Kaapvaal Craton, Mesoarchean Earth; early continental keels accreting via subduction",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-kimberley"
+    ],
+    "paleo": {
+      "not_applicable": "Predates reliable global plate reconstructions; marks the emergence of the plate tectonic system itself."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "science_technology"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The inception of the global plate tectonic regime established the Wilson cycle, driving continental crust creation, ocean basin turnover, and the carbon-silicate cycle that stabilizes Earth's climate."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-4400my-origin-of-earths-oceans",
+      "type": "related",
+      "because": "Surface water oceans hydrated oceanic crust, lowering melting temperatures and lubricating subduction fault zones necessary for mobile-lid plate tectonics."
+    },
+    {
+      "id": "-2400my-great-oxidation-event",
+      "type": "related"
+    },
+    {
+      "id": "-1000my-assembly-of-rodinia",
+      "type": "related",
+      "because": "The global plate tectonic Wilson cycle enabled the cyclic assembly and breakup of supercontinents like Rodinia."
+    },
+    {
+      "id": "1963-seafloor-spreading-plate-tectonics",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-uct-diamonds2011",
+      "url": "https://www.news.uct.ac.za/article/-2011-08-08-diamonds-pinpoint-start-of-colliding-continents",
+      "title": "Diamonds pinpoint start of colliding continents",
+      "publisher": "University of Cape Town",
+      "author": "UCT News",
+      "date_published": "2011-08-08",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-science-shirey2011",
+      "url": "https://europepmc.org/article/MED/21778395",
+      "title": "Start of the Wilson Cycle at 3 Ga Shown by Diamonds from Subcontinental Mantle (Science 333:434–436), Europe PMC record",
+      "publisher": "Science (AAAS), record from Europe PMC (EMBL-EBI)",
+      "author": "Steven B. Shirey, Stephen H. Richardson",
+      "date_published": "2011-07-22",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-kimberley",
+      "url": "https://www.geonames.org/990930/kimberley.html",
+      "title": "GeoNames entry: Kimberley, South Africa (990930)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "This is one line of evidence, and other studies date the start of plate tectonics differently. The pin in South Africa is a stand-in, not where tectonics began.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:22.039Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

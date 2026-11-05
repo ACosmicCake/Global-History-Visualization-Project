@@ -1,0 +1,141 @@
+{
+  "id": "1983-the-internet",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "The Internet",
+  "summary": "The Internet grew from early research on packet switching and the ARPANET. On January 1, 1983, ARPANET hosts moved from the NCP protocol to TCP/IP in a flag-day transition that required all hosts to convert at once. At its official 1983 launch, the Internet was a modest experimental network of networks owned by the U.S. government. Commercial and worldwide growth came later.",
+  "when": {
+    "start": {
+      "year": 1983,
+      "iso": "1983-01-01"
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "January 1, 1983 was the coordinated Flag Day cutover date when TCP/IP became the standard host protocol on ARPANET."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "transition of the ARPANET host protocol from NCP to TCP/IP as of January 1, 1983",
+        "source": "src-isoc-history"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "At its official 1983 launch, the Internet had been a modest experimental network of networks owned by the U.S. government",
+        "source": "src-chm-net"
+      }
+    ],
+    "display": "from 1 January 1983"
+  },
+  "where": {
+    "lat": 38.87862,
+    "lon": -77.10096,
+    "elevation_m": 81,
+    "modern_name": "Worldwide; stand-in pin at Arlington, Virginia, United States",
+    "historical_name": "Arlington, Virginia, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-arlington"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The adoption of TCP/IP created the universal digital communications backbone interconnecting global commerce, communication, and human society."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1969-arpanet-first-message",
+      "type": "related",
+      "because": "Packet switching pioneered on ARPANET provided the underlying network infrastructure upgraded to TCP/IP."
+    },
+    {
+      "id": "1989-world-wide-web",
+      "type": "related",
+      "because": "The standardized IP internetwork enabled Tim Berners-Lee to develop and deploy the World Wide Web as an application layer protocol."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-isoc-history",
+      "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
+      "title": "Brief History of the Internet",
+      "publisher": "Internet Society",
+      "author": "Barry M. Leiner, Vinton G. Cerf, David D. Clark, Robert E. Kahn, Leonard Kleinrock, Daniel C. Lynch, Jon Postel, Larry G. Roberts, Stephen Wolff",
+      "date_published": "1997",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-chm-net",
+      "url": "https://www.computerhistory.org/timeline/networking-the-web/",
+      "title": "Timeline of Computer History: Networking & The Web",
+      "publisher": "Computer History Museum",
+      "author": "Computer History Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-arlington",
+      "url": "https://www.geonames.org/4744725/arlington.html",
+      "title": "Arlington, Virginia, United States",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The birthdate is a matter of choice: 1969 for ARPANET, 1983 for TCP/IP. The pin at Arlington, Virginia is a stand-in, since the network has no single place.",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T21:56:59.302Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

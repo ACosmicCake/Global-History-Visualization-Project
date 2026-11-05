@@ -1,0 +1,143 @@
+{
+  "id": "1803-napoleonic-wars",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Napoleonic Wars",
+  "summary": "The Napoleonic Wars continued the Wars of the French Revolution, as Britain and France fought for European supremacy. The Peace of Amiens of 1802 paused the fighting, but Britain declared war on France again in 1803. The wars ended with his defeat at Waterloo on 18 June 1815 by a coalition led by Wellington and Blücher.",
+  "when": {
+    "start": {
+      "year": 1803
+    },
+    "end": {
+      "year": 1815
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Began with Britain declaring war on France in 1803; concluded after Waterloo in June 1815 and the subsequent peace settlement."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "Britain declared war on France in 1803",
+        "source": "src-state"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "18 June 1815",
+        "source": "src-nam"
+      }
+    ],
+    "display": "1803–1815"
+  },
+  "where": {
+    "lat": 48.8534,
+    "lon": 2.3488,
+    "elevation_m": null,
+    "modern_name": "Paris, France (proxy pin: the imperial capital of Napoleonic France; the wars spanned Europe, the Atlantic, and overseas colonies)",
+    "historical_name": "Paris, French Republic / French Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "A struggle for supremacy in Europe, ending French imperial power and leading to the Congress of Vienna."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1804-napoleonic-code",
+      "type": "related"
+    },
+    {
+      "id": "1814-congress-of-vienna",
+      "type": "related"
+    },
+    {
+      "id": "1815-battle-of-waterloo",
+      "type": "related"
+    },
+    {
+      "id": "1812-french-invasion-of-russia",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-state",
+      "url": "https://history.state.gov/milestones/1801-1829/napoleonic-wars",
+      "title": "Napoleonic Wars and the United States, 1803–1815",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nam",
+      "url": "https://www.nam.ac.uk/explore/battle-waterloo",
+      "title": "Battle of Waterloo",
+      "publisher": "National Army Museum",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/2988507/paris.html",
+      "title": "Paris, France",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is Paris as a proxy, because the wars spanned Europe and beyond.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T16:47:22.262Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "-60000-earliest-seafaring",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Earliest seafaring",
+  "summary": "To reach Australia and New Guinea, people had to cross the sea through the islands of Wallacea. Modelling by Bird and colleagues concludes that settlement of this land was not an accident, and that modern humans could plan and make open-sea voyages lasting several days by at least 50,000 years ago. An occupation date of 65,000 years in northern Australia would push this back, but is debated.",
+  "when": {
+    "start": {
+      "year": -63050
+    },
+    "end": {
+      "year": -48050
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 5000,
+      "start_plus_years": 5000,
+      "end_minus_years": 3000,
+      "end_plus_years": 3000,
+      "note": "Dating the earliest maritime crossing of Wallacea depends on arrival chronologies in Sahul, ranging from luminescence dates of c. 65,000 years ago at Madjedbebe to widely accepted dates of around 50,000 years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Calibrated years BP (ocean-drift and viewshed model)",
+        "value": "capacity to plan and make open-sea voyages lasting several days by at least 50,000 years ago",
+        "source": "src-bird-2019"
+      },
+      {
+        "calendar": "Optically stimulated luminescence (OSL), years ago",
+        "value": "oldest date for human occupation is 65,000 years ago, which comes from a rock shelter in northern Australia called Madjedbebe",
+        "source": "src-am-way-2020"
+      }
+    ],
+    "display": "by at least 50,000 years ago; perhaps 65,000"
+  },
+  "where": {
+    "lat": -8.5,
+    "lon": 115.85,
+    "elevation_m": null,
+    "modern_name": "Wallacea; stand-in pin at Lombok Strait, Indonesia",
+    "historical_name": "Lombok Strait, open-sea strait separating Pleistocene Sundaland from the islands of Wallacea; no polities or place names existed at this date",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-geonames-lombok"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "oceania"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology",
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "The development of watercraft and maritime navigation enabled humans to cross deep-water oceanic straits and colonize new continents across the Wallace Line."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-65ka-peopling-of-sahul",
+      "type": "related"
+    },
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related",
+      "because": "The dispersal of modern humans out of Africa brought populations to the coast of Southeast Asia where maritime crossings began."
+    },
+    {
+      "id": "-10ka-submergence-of-sundaland",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bird-2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6579762/",
+      "title": "Early human settlement of Sahul was not an accident (Scientific Reports 9:8220)",
+      "publisher": "Nature Publishing Group (Springer Nature, via PubMed Central)",
+      "author": "Michael I. Bird, Scott A. Condie, Sue O'Connor, Damien O'Grady, Christian Reepmeyer, Sean Ulm, Mojca Zega, Frédérik Saltré, Corey J. A. Bradshaw",
+      "date_published": "2019-06-17",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-am-way-2020",
+      "url": "https://australian.museum/blog/amri-news/this-month-in-australian-archaeology/",
+      "title": "This month in Australian Archaeology: The first great maritime migration",
+      "publisher": "Australian Museum",
+      "author": "Amy Mosig Way",
+      "date_published": "2020-06-01",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-lombok",
+      "url": "https://www.geonames.org/1637370/selat-lombok.html",
+      "title": "Selat Lombok (Lombok Strait), GeoNames ID 1637370",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Boats do not survive from this period, so this is inferred from where people reached. The pin is a stand-in in the Wallacean islands.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:27.923Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

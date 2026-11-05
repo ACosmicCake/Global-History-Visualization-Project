@@ -8,7 +8,6 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const RECORDS = path.resolve(HERE, '..', 'atlas', 'records');
 const WIKI_LINKS = path.resolve(HERE, '..', 'atlas', 'wiki_links.json');
 const WIKI_ALIASES = path.resolve(HERE, '..', 'atlas', 'wiki_aliases.json');
-const QUEUE = path.resolve(HERE, '..', 'atlas', 'queue.json');
 
 // Only the fields the engine needs for pins; the full record is fetched on click. The summary is only the hover
 // tooltip's teaser, so it is cut to about two lines (it was most of the pin list's size).
@@ -25,7 +24,7 @@ function monthDay(r) {
   const day = a?.[1] ?? b?.[2], month = MONTHS.indexOf((a?.[2] ?? b?.[1] ?? '').toLowerCase());
   return day && month >= 0 ? `${pad(month + 1)}-${pad(day)}` : undefined;
 }
-function pin(r, rank) {
+function pin(r) {
   return {
     id: r.id, title: r.title, summary: teaser(r.summary), kind: r.kind, scale: r.scale, importance: r.importance?.score ?? 1,
     confidence: r.confidence, domains: r.domains, start: r.when?.start?.year, end: r.when?.end?.year ?? r.when?.start?.year,
@@ -33,7 +32,7 @@ function pin(r, rank) {
     geometry: r.where?.geometry?.type, waypoints: (r.where?.geometry?.waypoints || []).map(w => ({ lat: w.lat, lon: w.lon, year: typeof w.year === 'number' ? w.year : null, date: w.date, label: w.label })),
     regions: (r.where?.geometry?.regions || []).map(g => ({ lat: g.lat, lon: g.lon, name: g.name })),
     outline: r.status === 'outline', hasModel: !!r.model, updated: r.updated, aliases: (r.aliases || []).map(a => a.name).filter(Boolean),
-    region: r.regions?.[0], unc: r.where?.uncertainty_km, md: monthDay(r), rank,
+    region: r.regions?.[0], unc: r.where?.uncertainty_km, md: monthDay(r),
   };
 }
 
@@ -59,30 +58,8 @@ export function published() {
   return out;
 }
 
-// Which pins show when zoomed out. Importance alone barely filters (three in four records are 4 or 5), so among
-// records of the same importance and region the less widely covered ones (queue significance: Wikipedia language
-// editions and pageviews) step down one tier for zoom thinning. Ranking inside each region keeps this from favouring
-// the regions Wikipedia covers best. Importance itself, shown on the record and in the filters, doesn't change.
-function displayRanks(recs) {
-  let sig = new Map();
-  try { sig = new Map(JSON.parse(fs.readFileSync(QUEUE, 'utf8')).items.map(i => [i.id, i.significance])); } catch {}
-  const groups = new Map(), ranks = new Map();
-  for (const r of recs) {
-    const score = r.importance?.score ?? 1, key = `${score}|${r.regions?.[0]}`;
-    ranks.set(r.id, score);
-    if (typeof sig.get(r.id) === 'number') (groups.get(key) || groups.set(key, []).get(key)).push(r);
-  }
-  for (const [key, group] of groups) {
-    const score = +key.split('|')[0], cut = score === 5 ? 0.1 : score === 4 ? 0.5 : 0;    // the share that steps down
-    group.sort((a, b) => sig.get(a.id) - sig.get(b.id));
-    group.slice(0, Math.floor(group.length * cut)).forEach(r => ranks.set(r.id, score - 1));
-  }
-  return ranks;
-}
-
 export function pinsPayload(recs = published()) {
-  const ranks = displayRanks(recs);
-  return { generated: new Date().toISOString(), count: recs.filter(r => r.status === 'published').length, outlines: recs.filter(r => r.status === 'outline').length, pins: recs.map(r => pin(r, ranks.get(r.id))) };
+  return { generated: new Date().toISOString(), count: recs.filter(r => r.status === 'published').length, outlines: recs.filter(r => r.status === 'outline').length, pins: recs.map(r => pin(r)) };
 }
 
 const readLinks = () => { try { return JSON.parse(fs.readFileSync(WIKI_LINKS, 'utf8')); } catch { return {}; } };

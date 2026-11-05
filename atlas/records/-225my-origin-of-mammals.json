@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-225my-origin-of-mammals",
+  "kind": "process",
+  "title": "Origin of mammals",
+  "summary": "Analysis of the jaws of Brasilodon quadrangularis, a mouse-sized animal from southern Brazil dated to about 225 million years ago, found mammal-style tooth replacement. The authors say this pushes the origin of that trait, and possibly of mammals, back about 20 million years. Morganucodon and other Late Triassic to Jurassic animals are usually counted as the first mammal-like forms.",
+  "when": {
+    "start": {
+      "year": -225420000
+    },
+    "end": {
+      "year": -201000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 370000,
+      "start_plus_years": 370000,
+      "end_minus_years": 1000000,
+      "end_plus_years": 1000000,
+      "note": "Start reflects the 225.42 ± 0.37 Ma radiometric date of the upper Candelária Sequence yielding Brasilodon; end marks the Triassic-Jurassic boundary by which mammaliaforms like Morganucodon were established."
+    },
+    "as_recorded": [
+      {
+        "calendar": "radiometric date (Journal of Anatomy / PMC9644961)",
+        "value": "225.42 ± 0.37 Ma age (Norian, Late Triassic)",
+        "source": "src-pmc9644961"
+      },
+      {
+        "calendar": "geological time (King's College London)",
+        "value": "225 million years ago",
+        "source": "src-kcl2022"
+      }
+    ],
+    "display": "c. 225–201 million years ago"
+  },
+  "where": {
+    "lat": -29.575,
+    "lon": -53.445,
+    "elevation_m": null,
+    "modern_name": "Linha São Luiz, Faxinal do Soturno, Rio Grande do Sul, Brazil (type locality of Brasilodon quadrangularis; transition from cynodonts to mammaliaforms occurred across Pangaea)",
+    "historical_name": "Southern Paraná Basin in southwestern Pangaea, Late Triassic; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-faxinal"
+    ],
+    "paleo": {
+      "lat": -41.89,
+      "lon": -10.43,
+      "age_ma": 225,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "global"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The origin of mammals established endothermy, diphyodont dentition, lactation, and high metabolic performance in vertebrates, producing the clade that became ecologically dominant across Cenozoic terrestrial and marine realms."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-312my-origin-of-amniotes",
+      "type": "related",
+      "because": "The initial origin of amniotes produced the synapsid lineage from which cynodonts and mammaliaforms evolved."
+    },
+    {
+      "id": "-66my-paleogene-mammal-radiation",
+      "type": "related",
+      "because": "The Mesozoic origin of mammals provided the lineages that underwent adaptive radiation following the Chicxulub impact."
+    },
+    {
+      "id": "-60my-origin-of-primates",
+      "type": "related",
+      "because": "Mammalian diversification established the placental crown orders, including primates."
+    },
+    {
+      "id": "-251my-early-triassic-biotic-recovery",
+      "type": "related",
+      "because": "Ecosystem recovery after the Permian-Triassic extinction fostered cynodont therapsid diversification toward mammals."
+    },
+    {
+      "id": "species-non-avian-dinosaurs",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pmc9644961",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9644961/",
+      "title": "Diphyodont tooth replacement of Brasilodon—A Late Triassic eucynodont that challenges the time of origin of mammals (Journal of Anatomy 241:1424–1440)",
+      "publisher": "John Wiley & Sons / Anatomical Society (via PubMed Central)",
+      "author": "Sergio F. Cabreira, Cesar L. Schultz, Lúcio R. da Silva, et al.",
+      "date_published": "2022-09-05",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-kcl2022",
+      "url": "https://www.kcl.ac.uk/news/dental-evidence-challenges-origin-time-of-mammals",
+      "title": "Dental evidence challenges origin time of mammals",
+      "publisher": "King's College London",
+      "author": "King's College London News Centre",
+      "date_published": "2022-09-06",
+      "accessed": "2026-11-04",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-wd-faxinal",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1758171.json",
+      "title": "Wikidata item Q1758171: Faxinal do Soturno, coordinates -29.575, -53.445",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-53.445,-29.575&time=225&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction of -53.445, -29.575 at 225 Ma (MERDITH2021 plate model)",
+      "publisher": "EarthByte Group",
+      "author": "EarthByte Group",
+      "date_published": "2021",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "This is one team's interpretation, and the line between mammals and their relatives depends on definition. The pin marks the Brasilodon site in Brazil.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:25.177Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

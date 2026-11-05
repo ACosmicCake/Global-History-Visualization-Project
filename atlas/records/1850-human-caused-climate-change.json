@@ -1,0 +1,153 @@
+{
+  "id": "1850-human-caused-climate-change",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "Human-caused climate change",
+  "summary": "Earth's temperature has risen by an average of 0.06°C per decade since 1850, about 2°F in total, and more than three times as fast since 1982. 2024 was the warmest year on record. Carbon dioxide is rising mostly because of the fossil fuels people burn for energy. John Tyndall discovered the greenhouse effect in 1859 by measuring how gases absorb heat.",
+  "when": {
+    "start": {
+      "year": 1850
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 10,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "1850 marks the start of global instrumental temperature records and the approximate onset of industrial-era warming; laboratory demonstration of the greenhouse effect occurred in 1859."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "since 1850",
+        "source": "src-noaa-temp"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "first created and joined together in 1859 by John Tyndall",
+        "source": "src-ri-tyndall"
+      }
+    ],
+    "display": "c. 1850–present"
+  },
+  "where": {
+    "lat": 51.50954,
+    "lon": -0.149,
+    "elevation_m": 31,
+    "modern_name": "Worldwide; stand-in pin at London, United Kingdom",
+    "historical_name": "Mayfair, London, United Kingdom of Great Britain and Ireland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-mayfair"
+    ]
+  },
+  "regions": [
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Anthropogenic climate change has altered Earth's atmospheric composition and heat balance, driving worldwide environmental transformation and ecological crises."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1800-fossil-fuel-age",
+      "type": "related",
+      "because": "The burning of coal and other fossil fuels released the carbon dioxide driving global temperature rise."
+    },
+    {
+      "id": "1988-ipcc-climate-change",
+      "type": "related",
+      "because": "Mounting evidence of anthropogenic warming prompted governments to establish the Intergovernmental Panel on Climate Change."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-noaa-temp",
+      "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+      "title": "Climate Change: Global Temperature",
+      "publisher": "National Oceanic and Atmospheric Administration",
+      "author": "Rebecca Lindsey and LuAnn Dahlman",
+      "date_published": "2024-01-18",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ri-tyndall",
+      "url": "https://www.rigb.org/explore-science/explore/collection/john-tyndalls-radiant-heat-apparatus",
+      "title": "John Tyndall's radiant heat apparatus",
+      "publisher": "The Royal Institution",
+      "author": "Paul Wilkinson",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-geonames-mayfair",
+      "url": "https://www.geonames.org/2642878/mayfair.html",
+      "title": "Mayfair, United Kingdom",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-noaa-co2",
+      "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+      "title": "Climate Change: Atmospheric Carbon Dioxide",
+      "publisher": "National Oceanic and Atmospheric Administration",
+      "author": "NOAA Climate.gov",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": "Carbon dioxide is rising mostly because of fossil fuels"
+    }
+  ],
+  "reviewer_note": "The pin is a stand-in at the Royal Institution in London, where Tyndall's apparatus is held, because the warming is worldwide. Start date follows the temperature record, not an agreed beginning.",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T21:56:57.646Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "-4000-invention-of-the-plough",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Invention of the plough",
+  "summary": "World History Encyclopedia says wooden plows were likely invented in the 4th millennium BCE in Mesopotamia. In northern Europe, cultivation with the cattle-driven ard, a simple plough, is argued to have spread with land clearance from about 3500 BCE. Some scholars suggest plough farming may go back to the early irrigation at Choga Mami, more than 7,000 years ago.",
+  "when": {
+    "start": {
+      "year": -4000
+    },
+    "end": {
+      "year": -3000
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 200,
+      "start_plus_years": 200,
+      "end_minus_years": 100,
+      "end_plus_years": 100,
+      "note": "Wooden ards date from the fourth millennium BCE in Mesopotamia and across Neolithic Europe, where ard marks and cattle traction pathologies appear by c. 3600–3400 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Conventional BCE",
+        "value": "Wooden plows were likely invented in the 4th millennium BCE",
+        "source": "src-whe-agriculture-plough"
+      },
+      {
+        "calendar": "Calibrated BC (archaeozoological and radiocarbon chronology)",
+        "value": "In the later TRB, c. 3500 cal. BC onwards, it has been argued that land clearance for cultivation with the cattle-driven ard went hand in hand with the use of the retrieved material",
+        "source": "src-pigière-2023"
+      }
+    ],
+    "display": "4th millennium BCE"
+  },
+  "where": {
+    "lat": 31.3234,
+    "lon": 45.6394,
+    "elevation_m": null,
+    "modern_name": "Mesopotamia; stand-in pin at Warka (Uruk), Iraq",
+    "historical_name": "Uruk and southern Mesopotamia, with contemporary adoption of ard cultivation across Neolithic Europe",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-pleiades-uruk-plough",
+      "src-geonames-uruk-plough"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The plough harnessed animal muscle power to till the soil, multiplying agricultural yields per worker and fundamentally altering human social hierarchy and landscape use."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-8500-domestication-of-cattle-sheep-and-goats",
+      "type": "related",
+      "because": "Cattle domestication provided the draft animals required for animal-traction tillage."
+    },
+    {
+      "id": "-6000-invention-of-irrigation",
+      "type": "related"
+    },
+    {
+      "id": "-3500-invention-of-the-wheel",
+      "type": "contemporary"
+    },
+    {
+      "id": "-3200-origin-of-the-state",
+      "type": "related",
+      "because": "Plough agriculture produced the extensive grain surpluses and labor specialization essential for state formation."
+    },
+    {
+      "id": "place-uruk",
+      "type": "same_place"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-agriculture-plough",
+      "url": "https://www.worldhistory.org/article/9/agriculture-in-the-fertile-crescent--mesopotamia/",
+      "title": "Agriculture in the Fertile Crescent & Mesopotamia",
+      "publisher": "World History Encyclopedia",
+      "author": "Jan van der Crabben",
+      "date_published": "2011-04-28",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pigière-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9879418/",
+      "title": "First evidence for cattle traction in Middle Neolithic Ireland: A pivotal element for resource exploitation (PLOS ONE 18:e0279556)",
+      "publisher": "PLOS ONE (via PubMed Central)",
+      "author": "Fabienne Pigière, Jessica Smyth, et al.",
+      "date_published": "2023-01-26",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-uruk-plough",
+      "url": "https://pleiades.stoa.org/places/912986",
+      "title": "Uruk/Orchoe/Erech/Orikut (Pleiades place 912986)",
+      "publisher": "Pleiades gazetteer of ancient places (ISAW, New York University)",
+      "author": "A. Hausleiter, M. Roaf, St J. Simpson, R. Wenke",
+      "date_published": "2024-05-18",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-geonames-uruk-plough",
+      "url": "https://www.geonames.org/90377/erech.html",
+      "title": "Erech (Uruk/Warka), GeoNames ID 90377",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-plos-carling",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868553/",
+      "title": "Carling et al., agricultural ard use",
+      "publisher": "PLOS ONE (via PubMed Central)",
+      "author": "Carling and colleagues",
+      "date_published": "2013",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": "Plough cultivation possibly with early irrigation at Choga Mami"
+    }
+  ],
+  "reviewer_note": "Dates depend on indirect evidence, because wooden ploughs rarely survive. The pin in Mesopotamia is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:29.222Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-4000-first-cities",
+  "kind": "process",
+  "title": "The first cities",
+  "summary": "An urban way of life developed in southern Mesopotamia starting in the 4th millennium BCE. Uruk, Ur, Nippur and Lagash were among the places where, for the first time in human history, large numbers of people came to live together in cities. They grew in the marshy delta of the Tigris and Euphrates, and depended on exchange with the highlands for metals, timber and stone.",
+  "when": {
+    "start": {
+      "year": -3999
+    },
+    "end": {
+      "year": -3000
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 200,
+      "start_plus_years": 200,
+      "end_minus_years": 100,
+      "end_plus_years": 100,
+      "note": "The transition from agrarian villages to major urban settlements in southern Mesopotamia unfolded across the Uruk period, conventionally dated throughout the fourth millennium BCE (c. 4000–3000 BCE)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Archaeological period, conventional BCE",
+        "value": "4th millennium BCE",
+        "source": "src-penn-pittman2018"
+      },
+      {
+        "calendar": "BCE (UNESCO evaluation)",
+        "value": "between the 4th and the 3rd millennium BCE",
+        "source": "src-unesco-1481"
+      }
+    ],
+    "display": "c. 4000–3000 BCE (4th millennium BCE)"
+  },
+  "where": {
+    "lat": 31.3234,
+    "lon": 45.6391,
+    "elevation_m": null,
+    "modern_name": "Uruk (Warka), Al-Muthanna Governorate, Iraq (primary urban center among southern Mesopotamian cities)",
+    "historical_name": "Unug (Uruk), Sumer, southern Mesopotamia (marshland delta of the Tigris and Euphrates rivers)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-pleiades-uruk"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The rise of the first cities marked the urban revolution in human history, inventing centralized administration, specialized labor, monumental architecture, and writing that defined subsequent civilized societies."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-uruk",
+      "type": "same_place"
+    },
+    {
+      "id": "-3500-white-temple-of-uruk",
+      "type": "has_part"
+    },
+    {
+      "id": "-3299-clay-token-envelopes",
+      "type": "part_of"
+    },
+    {
+      "id": "-3200-uruk-expansion",
+      "type": "has_part"
+    },
+    {
+      "id": "place-ahwar-of-southern-iraq",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-penn-pittman2018",
+      "url": "https://www.penn.museum/sites/expedition/highlands-and-lowlands/",
+      "title": "Highlands and Lowlands: The Interaction of Communities (Expedition Magazine 60.1)",
+      "publisher": "Penn Museum (University of Pennsylvania Museum of Archaeology and Anthropology)",
+      "author": "Holly Pittman",
+      "date_published": "2018",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-1481",
+      "url": "https://whc.unesco.org/en/list/1481/",
+      "title": "The Ahwar of Southern Iraq: Refuge of Biodiversity and the Relict Landscape of the Mesopotamian Cities (World Heritage List no. 1481)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "2016",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where.historical_name",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-uruk",
+      "url": "https://pleiades.stoa.org/places/912986",
+      "title": "Uruk/Orchoe/Erech/Orikut (Pleiades place 912986)",
+      "publisher": "Pleiades gazetteer of ancient places (ISAW, New York University)",
+      "author": "A. Hausleiter, M. Roaf, St J. Simpson, R. Wenke, Tom Elliott",
+      "date_published": "2023",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Cities later arose independently elsewhere, and some early towns are older but smaller. The pin marks Uruk, one of several cities.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:35:15.551Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "-0300-latin-and-the-romance-languages",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Latin and the Romance languages",
+  "summary": "Latin was the language of ancient Rome through the Republic and the Empire, which in the West lasted until 476 CE. The Romance languages descend from the Latin of the Roman Empire; their name comes from a medieval Latin word for a Latin vernacular. The Church kept Latin in its rituals long after the Empire fell.",
+  "when": {
+    "start": {
+      "year": -509
+    },
+    "end": {
+      "year": 476
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 100,
+      "note": "Latin expanded across Italy and the Mediterranean from the 4th–3rd centuries BCE; colloquial varieties diverged into mutually distinct Romance languages between the 5th and 9th centuries CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian / BCE",
+        "value": "Roman Republic (509-27 BCE)",
+        "source": "src-whe-roman-legacy"
+      },
+      {
+        "calendar": "Julian / CE",
+        "value": "Roman Empire (27 BCE - 476 CE)",
+        "source": "src-whe-roman-legacy"
+      },
+      {
+        "calendar": "Medieval Latin",
+        "value": "romancium",
+        "source": "src-encyclopedia-romance"
+      }
+    ],
+    "display": "509 BCE–476 CE, with descendants still spoken"
+  },
+  "where": {
+    "lat": 41.89193,
+    "lon": 12.51133,
+    "elevation_m": 21,
+    "modern_name": "Roman Empire; stand-in pin at Rome, Italy",
+    "historical_name": "Roma, Latium, Roman Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-geonames-rome"
+    ]
+  },
+  "regions": [
+    "europe",
+    "latin_america_caribbean",
+    "northern_africa",
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Latin and its descendants shaped languages spoken across several continents."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0400-catholic-church-and-papacy",
+      "type": "related"
+    },
+    {
+      "id": "place-vatican-city",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-roman-legacy",
+      "url": "https://www.worldhistory.org/article/1601/legacy-of-the-ancient-romans/",
+      "title": "Legacy of the Ancient Romans",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2020-08-24",
+      "accessed": "2026-11-05",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyclopedia-romance",
+      "url": "https://www.encyclopedia.com/literature-and-arts/language-linguistics-and-literary-terms/language-and-linguistics/romance-languages",
+      "title": "Romance Languages",
+      "publisher": "Encyclopedia.com",
+      "author": "The Oxford Companion to the English Language / Encyclopedia.com",
+      "date_published": "2018-05-21",
+      "accessed": "2026-11-05",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-91",
+      "url": "https://whc.unesco.org/en/list/91",
+      "title": "Historic Centre of Rome, the Properties of the Holy See in that City Enjoying Extraterritorial Rights and San Paolo Fuori le Mura",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1980",
+      "accessed": "2026-11-05",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-rome",
+      "url": "https://www.geonames.org/3169070/rome.html",
+      "title": "Rome, Italy (GeoNames 3169070)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-05",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The sources do not trace when each Romance language emerged, so the dates cover the Roman period only. The pin at Rome is a stand-in for a much wider area.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:06:24.617Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
