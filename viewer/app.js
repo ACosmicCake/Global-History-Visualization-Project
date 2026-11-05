@@ -1338,7 +1338,11 @@ async function refresh() {
     $('#count').textContent = `${(d.count + d.outlines).toLocaleString()} records`;
     $('#count').title = `${d.count} full records, ${d.outlines.toLocaleString()} outlines`;
     buildLegend(); render();
-  } catch (e) { flash(`The atlas data could not be loaded (${e.message}). Is the viewer server running?`); }
+  } catch (e) {
+    // a failed check for new records changes nothing while the records already loaded are on screen: stay quiet and try again next time
+    if (state.pins.length) console.warn('atlas data refresh failed', e);
+    else flash(`The atlas data could not be loaded (${e.message}). ${LIVE ? 'Is the viewer server running?' : 'Check your connection and reload the page.'}`);
+  }
   $('#loading').classList.add('gone');
   setTimeout(() => show($('#loading'), false), 700); // don't rely on the fade finishing
 }
