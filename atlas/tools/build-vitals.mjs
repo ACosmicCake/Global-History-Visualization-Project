@@ -118,7 +118,10 @@ const out = {
     moon: { label: 'Moon distance', unit: ' km', digits: -3, points: TIDES.map(t => [t[0] * 1000, t[2]]), source: 'Average distance, from the same measurements in Farhat et al. 2022; straight lines between them. Back to 3.2 billion years ago.' },
   },
 };
-fs.writeFileSync(path.join(VIEWER, 'paleo', 'vitals.json'), JSON.stringify(out));
+// build-fossils.mjs adds the "life" curve; keep it across a rebuild
+const vitalsFile = path.join(VIEWER, 'paleo', 'vitals.json'), earlier = fs.existsSync(vitalsFile) ? JSON.parse(fs.readFileSync(vitalsFile, 'utf8')).series.life : null;
+if (earlier) out.series.life = earlier;
+fs.writeFileSync(vitalsFile, JSON.stringify(out));
 
 // ---------- what to look at before trusting the file
 for (const [k, s] of Object.entries(out.series)) console.log(k.padEnd(5), `${s.points.length} points, ${s.points[0][0]} to ${s.points.at(-1)[0]} Ma; ${Math.min(...s.points.map(p => p[1]))} to ${Math.max(...s.points.map(p => p[1]))}${s.unit}`);

@@ -56,11 +56,13 @@
     // Night lights only where the caller allows (they are modern, c. 2012).
     const topo = loader.load('assets/earth-topology.png');
     earthMat = new THREE.ShaderMaterial({
+      extensions: { derivatives: true }, defines: globe.renderer().capabilities.isWebGL2 ? { DEEP3D: 1 } : {},
       uniforms: {
+        detail: { value: 1 }, rockIds: { value: null }, rotMap: { value: null }, rockOn: { value: 0 }, worldMap: { value: null }, flowMap: { value: null }, worldA: { value: 0 }, worldB: { value: 0 }, worldMix: { value: 0 }, flowZ: { value: 0 }, worldOn: { value: 0 }, veg: { value: 1 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 },
         dayMap: { value: loader.load('assets/earth-day.jpg') }, nightMap: { value: loader.load('assets/earth-night.jpg') },
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
         nightFloor: { value: 0.24 }, nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
-        paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 },
+        paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 }, iceSouth: { value: 0 },
         shelfMap: { value: null }, seaDrop: { value: 0 },
         iceA: { value: null }, iceB: { value: null }, iceMix: { value: 0 }, iceOn: { value: 0 }, iceAge: { value: 0 }, humid: { value: 0 },
         detailMap: { value: null }, detailBounds: { value: new THREE.Vector4(0, 0, 0.25, 0.5) }, detailMix: { value: 0 },
@@ -73,13 +75,43 @@
         uniform sampler2D detailMap; uniform vec4 detailBounds; uniform float detailMix;
         uniform sampler2D shelfMap; uniform float seaDrop;
         uniform sampler2D iceA; uniform sampler2D iceB; uniform float iceMix; uniform float iceOn; uniform float iceAge; uniform float humid;
-        uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat;
+        uniform float paleoOn; uniform float early; uniform float ageGa; uniform float iceLat; uniform float iceSouth;
+        #ifdef DEEP3D
+        uniform highp sampler3D worldMap; uniform highp sampler3D flowMap; uniform highp sampler3D rockIds; uniform highp sampler2D rotMap;
+        #endif
+        uniform float rockOn; uniform float worldA; uniform float worldB; uniform float worldMix; uniform float flowZ; uniform float worldOn; uniform float detail; uniform float veg; uniform vec3 flora; uniform float warm; uniform float aridity;
         varying vec2 vUv; varying vec3 vN; varying vec3 vW;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
           return mix(mix(mix(hash(i), hash(i + vec3(1,0,0)), f.x), mix(hash(i + vec3(0,1,0)), hash(i + vec3(1,1,0)), f.x), f.y),
                      mix(mix(hash(i + vec3(0,0,1)), hash(i + vec3(1,0,1)), f.x), mix(hash(i + vec3(0,1,1)), hash(i + vec3(1,1,1)), f.x), f.y), f.z); }
         float fbm(vec3 p){ return noise(p) * 0.5 + noise(p * 2.03 + 1.7) * 0.25 + noise(p * 4.11 + 5.3) * 0.15 + noise(p * 8.3 + 9.1) * 0.1; }
+        ${LAND_GLSL}
+        #ifdef DEEP3D
+        // The plates around a spot on one map, from the four cells around it. Plates turned within a degree of each other count as one, their rotations averaged, so most of the globe has just one.
+        vec4 rockFirst[4], rockSum[4]; float rockShare[4]; int rockCount;
+        void rockCorners(vec2 p, int frame, float share){
+          vec2 st = p * vec2(180.0, 90.0) - 0.5, c = floor(st), f = st - c;
+          for (int b = 0; b < 2; b++) for (int a = 0; a < 2; a++) {
+            float w = share * (a == 0 ? 1.0 - f.x : f.x) * (b == 0 ? 1.0 - f.y : f.y);
+            if (w <= 0.0) continue;
+            ivec2 cell = ivec2(c) + ivec2(a, b); cell.x = ((cell.x % 180) + 180) % 180; cell.y = clamp(cell.y, 0, 89);
+            vec2 code = texelFetch(rockIds, ivec3(cell, frame), 0).rg * 255.0;
+            int id = int(code.x + 0.5) * 256 + int(code.y + 0.5) - 1;
+            vec4 q = id < 0 ? vec4(0.0) : texelFetch(rotMap, ivec2(id, 0), 0);
+            if (dot(q, q) < 0.5) q = vec4(1.0, 0.0, 0.0, 0.0); else q = normalize(q);
+            bool found = false;
+            for (int i = 0; i < rockCount; i++) { float d = dot(q, rockFirst[i]); if (abs(d) > 0.99996) { rockSum[i] += (d < 0.0 ? -w : w) * q; rockShare[i] += w; found = true; break; } }
+            if (!found && rockCount < 4) { rockFirst[rockCount] = q; rockSum[rockCount] = w * q; rockShare[rockCount] = w; rockCount++; }
+          }
+        }
+        vec3 rockSpot(vec4 q, vec3 g){ vec3 ax = -q.yzw, tw = 2.0 * cross(ax, g); return normalize(g + q.x * tw + cross(ax, tw)); }
+        vec3 imageryAt(vec2 uv, vec2 dx, vec2 dy){
+          vec3 c = textureGrad(dayMap, uv, dx, dy).rgb;
+          if (detailMix > 0.0) { vec2 d = vec2(fract(uv.x - detailBounds.x) / detailBounds.z, (uv.y - detailBounds.y) / detailBounds.w); if (d.y > 0.0 && d.y < 1.0 && d.x < 1.0) { float e = smoothstep(0.0, 0.04, d.x) * smoothstep(1.0, 0.96, d.x) * smoothstep(0.0, 0.04, d.y) * smoothstep(1.0, 0.96, d.y); c = mix(c, textureGrad(detailMap, d, dx / detailBounds.zw, dy / detailBounds.zw).rgb, e * detailMix); } }
+          return c;
+        }
+        #endif
         void main(){
           vec3 n0 = normalize(vN), L = normalize(sunDir), v = normalize(cameraPosition - vW);
           float water = texture2D(waterMap, vUv).r, water0 = water;
@@ -120,12 +152,61 @@
             vec3 iceColor = mix(vec3(0.52, 0.63, 0.74), vec3(0.80, 0.85, 0.90), smoothstep(0.2, 0.8, th)) * clamp(1.0 + slope * 2.2 + (fbm(n0 * 60.0) - 0.5) * 0.08, 0.72, 1.12);
             day = mix(day, iceColor, sheet); water *= 1.0 - sheet;
           }
-          if (paleoOn > 0.0) {   // deep time: today's imagery gives way to open ocean under the moving land mesh
-            day = mix(day, vec3(0.04, 0.12, 0.25), paleoOn);   // open ocean; the land mesh is drawn on top
-            water = mix(water, 1.0, paleoOn);
+          if (paleoOn > 0.0) {
+            // Deep time is one surface: the PALEOMAP PaleoDEMs, land and sea floor, and past 540 Ma that map's surface carried back on the rock the plate model has at that age (paleo-world.png; atlas/tools/build-world.mjs). Between two maps the surface glides by the
+            // plates' own motion (paleo-flow.png), each map moved toward the moment shown and then blended, so land travels rather than dissolving and reappearing.
+            bool drawn = false;
+            #ifdef DEEP3D
+            if (worldOn > 0.0) {
+              drawn = true;
+              float px = max(length(dFdx(n0)), length(dFdy(n0))) * detail, latAbs = abs(asin(clamp(n0.y, -1.0, 1.0))) * 57.2958, cosL = max(0.15, length(n0.xz));
+              vec2 base = vec2(vUv.x, 1.0 - vUv.y);
+              vec2 fl = (texture(flowMap, vec3(base, flowZ)).rg * 255.0 - 128.0) / 127.0 * 16.0, move = vec2(fl.x / (360.0 * cosL), -fl.y / 180.0), pa = base - worldMix * move, pb = base + (1.0 - worldMix) * move;
+              float frames = float(textureSize(worldMap, 0).z), roughly = mix(texture(worldMap, vec3(pa, worldA)).r, texture(worldMap, vec3(pb, worldB)).r, worldMix);
+              // Fine detail is pinned to the rock: this spot is turned back to where its rock lies today, and the noise is read there. Each plate near this spot gets its own undistorted reading, weighted by how near it is, because
+              // blending the rotations themselves would squeeze the pattern into streaks along the seam. Two maps' plates count, as with the heights, so a seam moves smoothly from one map to the next.
+              // Open ocean, far below any coast, needs none of it. Plant belts still go by the latitude the land stands at now.
+              vec3 wob = vec3(0.0), past = vec3(0.0); float rough = 0.0, grain = 0.0, tex = 0.0, broad = 0.0, pastWater = 0.0, spread = 0.0;
+              if (roughly > 0.33 || paleoOn < 1.0) {
+                rockCount = 0;
+                if (rockOn > 0.5) { rockCorners(pa, int(worldA * frames), 1.0 - worldMix); if (worldMix > 0.0) rockCorners(pb, int(worldB * frames), worldMix); }
+                if (rockCount == 0) { rockCount = 1; rockSum[0] = vec4(1.0, 0.0, 0.0, 0.0); rockShare[0] = 1.0; }
+                float shares = 0.0; for (int i = 0; i < rockCount; i++) shares += rockShare[i];
+                vec3 g = vec3(n0.z, n0.x, n0.y); vec2 dx = dFdx(vUv), dy = dFdy(vUv);
+                for (int i = 0; i < rockCount; i++) {
+                  float w = rockShare[i] / shares; vec3 rp = rockSpot(normalize(rockSum[i]), g); spread += w * w;
+                  vec3 wb = vec3(noise(rp * 17.0), noise(rp.yzx * 17.0 + 3.0), noise(rp.zxy * 17.0 + 7.0)) - 0.5, wp = normalize(rp + wb * 0.012);
+                  wob += w * wb; rough += w * landRough(wp, px); grain += w * (noise(wp * 90.0) - 0.5) * octave(90.0, px);
+                  tex += w * (noise(rp * 5.3) * 0.5 + noise(rp.zxy * 13.7 + 3.1) * 0.3 + noise(rp.yzx * 37.0 + 7.7) * 0.2); broad += w * (noise(rp * 2.1 + 4.0) * 0.6 + noise(rp.yzx * 4.7 + 2.0) * 0.4);
+                  if (paleoOn < 1.0) { vec2 off = vec2(atan(rp.y, rp.x) - atan(g.y, g.x), asin(clamp(rp.z, -1.0, 1.0)) - asin(clamp(g.z, -1.0, 1.0))) / vec2(6.2831853, 3.14159265); off.x -= floor(off.x + 0.5); vec2 today = vUv + off; today.x = fract(today.x); past += w * imageryAt(today, dx, dy); pastWater += w * textureGrad(waterMap, today, dx, dy).r; }
+                }
+                // noise patterns added together are flatter than any one of them, which would show as a soft band along a seam, so the contrast is put back
+                float lift = 1.0 / sqrt(spread); wob *= lift; rough *= lift; grain *= lift; tex = 0.5 + (tex - 0.5) * lift; broad = 0.5 + (broad - 0.5) * lift;
+              }
+              float wander = 0.012 * smoothstep(0.33, 0.36, roughly);
+              vec2 shift = vec2(wob.x * wander / (6.2831853 * cosL), -wob.y * wander / 3.14159265);
+              vec3 qa = vec3(pa + shift, worldA), qb = vec3(pb + shift, worldB);
+              float height = mix(texture(worldMap, qa).r, texture(worldMap, qb).r, worldMix), soft = mix(smooth3(worldMap, qa, vec2(360.0, 180.0)), smooth3(worldMap, qb, vec2(360.0, 180.0)), worldMix);
+              float dry = landDry(height, rough, grain, px);
+              // the sea floor from the same maps: pale over the shelves, blue down the slope, dark in the deep ocean
+              float s = max(0.0, 0.5 - soft) / 0.5, depth = s * s * 6000.0;
+              vec3 sea = mix(vec3(0.13, 0.38, 0.44), vec3(0.055, 0.21, 0.35), smoothstep(30.0, 500.0, depth));
+              sea = mix(sea, vec3(0.03, 0.115, 0.24), smoothstep(500.0, 2600.0, depth));
+              sea = mix(sea, vec3(0.016, 0.06, 0.15), smoothstep(2600.0, 5200.0, depth));
+              float metres = landMetres(soft), relief = metres + rough * (90.0 + smoothstep(200.0, 2200.0, metres) * 900.0);
+              vec3 bumped = landBump(n0 * 100.0, n0, relief * 0.00055);
+              vec3 ground = landTint(plantCover(latAbs, smoothstep(150.0, 700.0, metres) * 0.6, tex, broad, veg, flora, warm, aridity), relief, latAbs, rough, tex) * landHill(n0, bumped);
+              // Near the present the picture is today's own imagery, carried with its rock, and the maps fade in over it. The rock reaches today's position exactly as they fade out, so the film ends on today's map, not beside it.
+              float change = mix(paleoOn, smoothstep(0.4, 0.6, paleoOn + (broad - 0.5) * 0.7), abs(dry - (1.0 - pastWater)));
+              day = mix(past, mix(sea, ground, dry), change);
+              water = mix(pastWater, 1.0 - dry, change);
+              ndl = mix(ndl, dot(bumped, L), dry * 0.45 * paleoOn);
+            }
+            #endif
+            if (!drawn) { day = mix(day, vec3(0.03, 0.10, 0.22), paleoOn); water = mix(water, 1.0, paleoOn); }
             // ice ages: sea ice poleward of the ice line, with a ragged edge (schematic, by latitude only)
             float lat0 = abs(asin(clamp(n0.y, -1.0, 1.0))) * 57.2958;
-            float seaIce = smoothstep(iceLat - 3.0, iceLat + 3.0, lat0 + (noise(n0 * 7.0) - 0.5) * 10.0) * paleoOn;
+            float seaIce = smoothstep(iceLat - 3.0, iceLat + 3.0, lat0 + (noise(n0 * 7.0) - 0.5) * 10.0) * paleoOn * (n0.y < 0.0 ? 1.0 : 1.0 - iceSouth);
             day = mix(day, vec3(0.80, 0.86, 0.92), seaIce); water *= 1.0 - seaIce;
           }
           // Before the plate model (older than 1 billion years) nobody can map the continents, so the globe shows an
@@ -243,8 +324,8 @@
     stars = new THREE.Points(sg, new THREE.ShaderMaterial({
       transparent: true, depthWrite: false, vertexColors: true,
       uniforms: { pr: { value: Math.min(2, devicePixelRatio || 1) } },
-      vertexShader: `attribute float size; uniform float pr; varying vec3 vC; void main(){ vC = color;
-        gl_PointSize = size * pr; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+      vertexShader: `attribute float size; uniform float pr; varying vec3 vC; void main(){ float s = size * pr; vC = color * min(1.0, s * 0.5);   // anything under two pixels is dimmed rather than shrunk: a smaller point snaps from pixel to pixel and twinkles
+        gl_PointSize = max(2.0, s); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
       fragmentShader: `varying vec3 vC; void main(){ float d = length(gl_PointCoord - 0.5); if (d > 0.5) discard;
         gl_FragColor = vec4(vC, smoothstep(0.5, 0.0, d)); }`,
     }));
@@ -270,8 +351,16 @@
 
     // dim globe.gl's camera-attached light so the shader's sun dominates; keep pins readable on the night side
     scene.traverse(o => { if (o.isDirectionalLight) o.intensity = 0.35; if (o.isAmbientLight) o.intensity = 0.9; });
+    // Aim the studio sun from the very camera about to be drawn. Aimed in its own animation callback, it was a frame behind, and the halo and glint visibly chased the globe as it turned.
+    // The near plane follows the camera. Fixed close to it, a far camera has no depth precision left at the globe, and everything just above the surface flickers against it.
+    let shownNear = 0;
+    scene.onBeforeRender = () => {
+      if (sunMode === 'camera') aimStudioSun();
+      const c = globe.camera(), d = c.position.length(), near = Math.max(0.1, Math.min((d - R) * 0.4, d * 0.02));
+      if (Math.abs(near - shownNear) > shownNear * 0.02) { shownNear = near; c.near = near; c.updateProjectionMatrix(); }
+    };
     let last = performance.now();
-    (function spin(now) { const dt = (now - last) / 1000; last = now; clouds.rotation.y += dt * 0.004; if (sunMode === 'camera') aimStudioSun(); liftNight(); checkDetail(now); requestAnimationFrame(spin); })(last);
+    (function spin(now) { const dt = (now - last) / 1000; last = now; clouds.rotation.y += dt * 0.004; liftNight(); plateTick(dt); watchSpeed(dt); checkDetail(now); requestAnimationFrame(spin); })(last);
   }
 
   // Studio sun: lights the hemisphere facing the camera from upper left, so the side being explored is in daylight
@@ -330,10 +419,55 @@
     });
   }
 
-  // ---------- deep time: continents moved by plate rotations (MERDITH2021 plate model; viewer/paleo/build_morph.mjs).
-  // Today's coastlines are triangulated once into a land mesh whose vertices carry their plate; each frame the
-  // plates' rotations are interpolated between 10 Ma steps (quaternion slerp) and the vertex shader turns the land,
-  // so the continents glide continuously. The globe beneath shows open ocean while this is on.
+  // What the moving land and the ground between its pieces have in common, so they read as one surface. Heights are real at 1 degree; anything finer is fractal detail, each
+  // octave fading before it gets smaller than a pixel so nothing shimmers. The relief is drawn with a fixed light from the upper left, as on a map, as well as the sun, because
+  // the default sun sits behind the viewer, where it shows no slopes at all.
+  const LAND_GLSL = `
+    float ridge(vec3 p){ vec3 q = vec3(0.80 * p.x + 0.48 * p.y + 0.36 * p.z, -0.60 * p.x + 0.64 * p.y + 0.48 * p.z, -0.60 * p.y + 0.80 * p.z); float v = 2.0 * noise(q) - 1.0; return 1.0 - sqrt(v * v + 0.012); }
+    float octave(float f, float px){ return 1.0 - smoothstep(0.12, 0.45, f * px); }
+    // each octave is only worked out when it would show, so the far view costs far less than the close one
+    float landRough(vec3 p, float px){ float r = 0.0, w = octave(24.0, px); if (w > 0.0) r += w * (ridge(p * 24.0) - 0.5); w = octave(53.0, px); if (w > 0.0) r += w * 0.55 * (ridge(p.yzx * 53.0 + 1.0) - 0.5); w = octave(117.0, px); if (w > 0.0) r += w * 0.3 * (ridge(p.zxy * 117.0 + 5.0) - 0.5); w = octave(260.0, px); if (w > 0.0) r += w * 0.14 * (noise(p * 260.0) - 0.5); return r; }
+    #ifdef DEEP3D
+    // a smooth (cubic) reading of a height image: straight-line blending between 1-degree cells is what draws polygons in the shading
+    float smooth3(highp sampler3D map, vec3 p, vec2 size){
+      vec2 st = p.xy * size - 0.5, i = floor(st), f = st - i, f2 = f * f, f3 = f2 * f;
+      vec2 w0 = (1.0 - 3.0 * f + 3.0 * f2 - f3) / 6.0, w1 = (4.0 - 6.0 * f2 + 3.0 * f3) / 6.0, w2 = (1.0 + 3.0 * f + 3.0 * f2 - 3.0 * f3) / 6.0, w3 = f3 / 6.0, g0 = w0 + w1, g1 = w2 + w3;
+      vec2 a = (i - 0.5 + w1 / g0) / size, b = (i + 1.5 + w3 / g1) / size;
+      return g0.y * (g0.x * texture(map, vec3(a.x, a.y, p.z)).r + g1.x * texture(map, vec3(b.x, a.y, p.z)).r) + g1.y * (g0.x * texture(map, vec3(a.x, b.y, p.z)).r + g1.x * texture(map, vec3(b.x, b.y, p.z)).r);
+    }
+    #endif
+    float landMetres(float h){ float s = max(0.0, h - 0.502) / 0.498; return s * s * 6000.0; }
+    float landDry(float h, float rough, float grain, float px){ float edge = clamp(px * 5.0, 0.003, 0.03); return smoothstep(-edge, edge, h - 0.5 + rough * 0.13 + grain * 0.04); }
+    vec3 plantCover(float lat, float inland, float tex, float broad, float veg, vec3 flora, float warm, float aridity){
+      // schematic plant cover by the latitude the land stood at then, how far inland it lies, and the age: wet tropics, dry subtropical belts, then temperate and boreal forest and tundra, with the belts moved poleward in warm ages
+      float belt = lat - warm * 0.3;
+      float arid = clamp(exp(-pow((belt - 26.0) / 11.0, 2.0)) * 0.85 + inland * 0.5 * smoothstep(8.0, 22.0, belt) + aridity + (broad - 0.5) * 1.1 + (tex - 0.5) * 0.5 - 0.1, 0.0, 1.0);
+      vec3 rock = vec3(0.50, 0.40, 0.31), sand = vec3(0.62, 0.50, 0.34), steppe = vec3(0.47, 0.44, 0.25), tundra = vec3(0.40, 0.42, 0.34);
+      vec3 forest = flora * mix(vec3(0.70, 1.02, 0.80), vec3(1.08, 1.0, 0.88), smoothstep(8.0, 38.0, belt)) * mix(0.74, 1.2, smoothstep(0.25, 0.75, broad));
+      forest = mix(forest, flora * vec3(0.60, 0.80, 0.78), smoothstep(46.0 + warm, 60.0 + warm, lat));
+      forest = mix(forest, tundra, smoothstep(60.0 + warm, 74.0 + warm, lat));
+      vec3 plants = mix(mix(forest, steppe, smoothstep(0.22, 0.48, arid)), sand, smoothstep(0.52, 0.8, arid));
+      return mix(rock, plants, veg) * (0.9 + 0.18 * tex);
+    }
+    vec3 landTint(vec3 c, float relief, float lat, float rough, float tex){
+      // lowlands keep their plants and sit a little darker; then tan hills, brown and grey rock, and snow on the highest ground
+      c *= 0.86 + 0.2 * smoothstep(0.0, 700.0, relief);
+      c = mix(c, vec3(0.60, 0.51, 0.37) * (0.86 + 0.28 * tex), smoothstep(450.0, 1300.0, relief) * 0.8);
+      c = mix(c, mix(vec3(0.47, 0.39, 0.31), vec3(0.51, 0.46, 0.40), smoothstep(2000.0, 3600.0, relief + (tex - 0.5) * 2200.0)) * (0.8 + 0.4 * tex), smoothstep(1200.0, 2300.0, relief));
+      // the snow line is high in the tropics and falls toward the poles. Heights are only known to a degree, so snow lies in broken patches along the fractal ridges, and a high plateau stays bare between them
+      float line = 5900.0 - 3400.0 * smoothstep(32.0, 75.0, lat), snow = smoothstep(0.0, 0.1, rough - 0.69 + (tex - 0.5) * 0.3 + (relief - line) / 6000.0);
+      return mix(c, vec3(0.86, 0.88, 0.91), snow * 0.9);
+    }
+    vec3 landBump(vec3 world, vec3 n, float lift){ vec3 sx = dFdx(world), sy = dFdy(world), r1 = cross(sy, n), r2 = cross(n, sx); float det = dot(sx, r1); return normalize(abs(det) * n - sign(det) * (dFdx(lift) * r1 + dFdy(lift) * r2)); }
+    float landHill(vec3 n, vec3 bumped){
+      vec3 right = vec3(viewMatrix[0][0], viewMatrix[1][0], viewMatrix[2][0]), up = vec3(viewMatrix[0][1], viewMatrix[1][1], viewMatrix[2][1]), back = vec3(viewMatrix[0][2], viewMatrix[1][2], viewMatrix[2][2]);
+      vec3 l = normalize(-0.62 * right + 0.66 * up + 0.42 * back);
+      return clamp(1.0 + (dot(bumped, l) / max(dot(n, l), 0.3) - 1.0) * 1.35, 0.55, 1.38);
+    }
+  `;
+  // ---------- deep time: the rotations everything rides on (paleo/morph.json; atlas/tools/build-world.mjs), PALEOMAP to 580 Ma, turning into MERDITH2021 by 680 Ma. They are
+  // interpolated between 10 Ma steps each frame, for pins, names and fossils. The surface itself is in the globe's shader. Today's coastlines, turned by these rotations in a mesh
+  // whose vertices carry their plate, remain only for browsers without WebGL2.
   const PALEO_MAX = 1000;
   let morph = null, morphLoad = null, land = null, landMat = null, rotTex = null, rotData = null, paleoMa = null, shownMa = null;
   function slerp(a, b, f) {
@@ -341,6 +475,14 @@
     if (d > 0.9995) { const q = a.map((x, i) => x + (b[i] - x) * f), n = Math.hypot(...q); return q.map(x => x / n); }
     const th = Math.acos(Math.min(1, d)), s = Math.sin(th), wa = Math.sin((1 - f) * th) / s, wb = Math.sin(f * th) / s;
     return a.map((x, i) => wa * x + wb * b[i]);
+  }
+  // through four rotations in a row, so a plate doesn't change direction with a jolt at each step; a real lurch in the model stays a straight turn, since a curve would overshoot it
+  function smoothTurn(z, a, b, y, f) {
+    const align = (q, ref) => (q && q[0] * ref[0] + q[1] * ref[1] + q[2] * ref[2] + q[3] * ref[3] < 0 ? q.map(v => -v) : q), near = (p, q) => p[0] * q[0] + p[1] * q[1] + p[2] * q[2] + p[3] * q[3] > 0.95;
+    const b1 = align(b, a), z1 = align(z, a), y1 = align(y, b1);
+    if (!z1 || !y1 || !near(z1, a) || !near(a, b1) || !near(b1, y1)) return slerp(a, b1, f);
+    const f2 = f * f, f3 = f2 * f, q = a.map((v, k) => 0.5 * (2 * v + (b1[k] - z1[k]) * f + (2 * z1[k] - 5 * v + 4 * b1[k] - y1[k]) * f2 + (3 * v - z1[k] - 3 * b1[k] + y1[k]) * f3)), n = Math.hypot(...q);
+    return q.map(v => v / n);
   }
   function buildLand(m) {
     const pos = [], plate = [], MAXSEG = (1.5 * Math.PI) / 180;
@@ -354,7 +496,7 @@
       }
       for (const v of [a, b, c]) { pos.push(v.x, v.y, v.z); plate.push(p); }
     };
-    for (const r of m.rings) {
+    for (const r of [...m.rings].sort((a, b) => a.pts.length - b.pts.length)) {   // smallest first, so a continent is never cut by a sliver drawn over it
       const vs = r.pts.map(geo);
       const c = vs.reduce((s, v) => s.add(v), new THREE.Vector3()).normalize();
       // stereographic projection about the ring's centre: a flat outline for the triangulator
@@ -372,58 +514,66 @@
       for (const j of [y * GW + (x + 1) % GW, y * GW + (x + GW - 1) % GW, y > 0 ? i - GW : -1, y < GH - 1 ? i + GW : -1]) if (j >= 0 && far[j] < 0) { far[j] = far[i] + 1; queue.push(j); }
     }
     const inland = new Float32Array(pos.length / 3);
-    for (let v = 0; v < inland.length; v++) { const lat = (Math.asin(Math.max(-1, Math.min(1, pos[v * 3 + 2]))) * 180) / Math.PI, lon = (Math.atan2(pos[v * 3 + 1], pos[v * 3]) * 180) / Math.PI; inland[v] = Math.min(1, far[Math.min(GH - 1, Math.floor(90 - lat)) * GW + (Math.floor(lon + 180) % GW + GW) % GW] / 14); }
+    for (let v = 0; v < inland.length; v++) { const lat = (Math.asin(Math.max(-1, Math.min(1, pos[v * 3 + 2]))) * 180) / Math.PI, lon = (Math.atan2(pos[v * 3 + 1], pos[v * 3]) * 180) / Math.PI; const fx = lon + 180 - 0.5, fy = 90 - lat - 0.5, x0 = Math.floor(fx), y0 = Math.max(0, Math.min(GH - 2, Math.floor(fy))), tx = fx - x0, ty = Math.max(0, Math.min(1, fy - y0)), at = (x, y) => far[y * GW + ((x % GW) + GW) % GW]; inland[v] = Math.min(1, ((at(x0, y0) * (1 - tx) + at(x0 + 1, y0) * tx) * (1 - ty) + (at(x0, y0 + 1) * (1 - tx) + at(x0 + 1, y0 + 1) * tx) * ty) / 14); }
     const g = new THREE.BufferGeometry();
     g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
     g.setAttribute('inland', new THREE.BufferAttribute(inland, 1));
     g.setAttribute('plate', new THREE.Float32BufferAttribute(plate, 1));
     g.boundingSphere = new THREE.Sphere(new THREE.Vector3(), R * 1.01);
-    rotData = new Float32Array(m.plates.length * 4);
-    rotTex = new THREE.DataTexture(rotData, m.plates.length, 1, THREE.RGBAFormat, THREE.FloatType);
+    // first row: each plate's rotation; second row: how visible it is, so a plate whose reconstruction starts or stops can fade
+    rotData = new Float32Array(m.plates.length * 8);
+    rotTex = new THREE.DataTexture(rotData, m.plates.length, 2, THREE.RGBAFormat, THREE.FloatType);
     rotTex.magFilter = rotTex.minFilter = THREE.NearestFilter;
+    earthMat.uniforms.rotMap.value = rotTex;
     landMat = new THREE.ShaderMaterial({
-      transparent: true, side: THREE.DoubleSide,
-      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, nightFloor: { value: 0.24 }, R: { value: R * 1.0008 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 } },
+      // The pieces overlap where plates converge. They're all at one height, so writing depth would make them fight for each pixel; instead later pieces simply paint over earlier ones.
+      transparent: true, depthWrite: false, side: THREE.DoubleSide, extensions: { derivatives: true }, defines: globe.renderer().capabilities.isWebGL2 ? { DEEP3D: 1 } : {},
+      uniforms: { rot: { value: rotTex }, nPlates: { value: m.plates.length }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 }, veg: { value: 1 }, iceLat: { value: 90 }, nightFloor: { value: 0.24 }, R: { value: R * 1.0008 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 }, detail: { value: 1 } },
       // geographic (x 0°E, y 90°E, z north) to globe.gl's frame (x 90°E, y north, z 0°E)
-      vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; attribute float inland; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
-        void main(){ vP = position; vIn = inland; vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.5)); vOk = step(0.5, dot(q, q));
-          vec3 v = position; vec3 t = 2.0 * cross(q.yzw, v); vec3 p = v + q.x * t + cross(q.yzw, t);
+      vertexShader: `uniform sampler2D rot; uniform float nPlates; uniform float R; attribute float plate; attribute float inland; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn; varying float vFade;
+        vec3 turn(vec4 q, vec3 v){ vec3 t = 2.0 * cross(q.yzw, v); return v + q.x * t + cross(q.yzw, t); }
+        void main(){ vP = position; vIn = inland; vec4 q = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.25)); vFade = texture2D(rot, vec2((plate + 0.5) / nPlates, 0.75)).r; vOk = step(0.5, dot(q, q));
+          vec3 p = turn(q, position);
           vec3 w = vec3(p.y, p.z, p.x);
           vN = normalize(mat3(modelMatrix) * w); gl_Position = projectionMatrix * modelViewMatrix * vec4(w * R, 1.0); }`,
-      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; uniform float nightFloor; uniform vec3 flora; uniform float warm; uniform float aridity; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn;
+      fragmentShader: `uniform vec3 sunDir; uniform float opacity; uniform float veg; uniform float iceLat; uniform float nightFloor; uniform vec3 flora; uniform float warm; uniform float aridity; uniform float detail; varying vec3 vN; varying float vOk; varying vec3 vP; varying float vIn; varying float vFade;
         float hash(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
           return mix(mix(mix(hash(i), hash(i + vec3(1,0,0)), f.x), mix(hash(i + vec3(0,1,0)), hash(i + vec3(1,1,0)), f.x), f.y),
                      mix(mix(hash(i + vec3(0,0,1)), hash(i + vec3(1,0,1)), f.x), mix(hash(i + vec3(0,1,1)), hash(i + vec3(1,1,1)), f.x), f.y), f.z); }
-        void main(){ if (vOk < 0.5) discard;
-          vec3 n = normalize(vN); float ndl = dot(n, normalize(sunDir)), lit = smoothstep(-0.12, 0.25, ndl);
+        ${LAND_GLSL}
+        void main(){ if (vOk < 0.5 || vFade <= 0.0) discard;
+          vec3 n = normalize(vN); float ndl = dot(n, normalize(sunDir)), lit = smoothstep(-0.12, 0.25, ndl), shade = ndl;
           // the pattern is fixed to the land (vP, today's position), so it travels with the continents
           float tex = noise(vP * 5.3) * 0.5 + noise(vP.zxy * 13.7 + 3.1) * 0.3 + noise(vP.yzx * 37.0 + 7.7) * 0.2;
           float broad = noise(vP * 2.1 + 4.0) * 0.6 + noise(vP.yzx * 4.7 + 2.0) * 0.4;
           // schematic plant cover by the latitude the land stood at then, how far inland it lies, and the age: wet tropics, dry subtropical
           // belts, then temperate and boreal forest and tundra, with the belts moved poleward in warm ages
-          float lat = abs(asin(clamp(n.y, -1.0, 1.0))) * 57.2958, belt = lat - warm * 0.3;
-          float arid = clamp(exp(-pow((belt - 26.0) / 11.0, 2.0)) * 0.85 + vIn * 0.5 * smoothstep(8.0, 22.0, belt) + aridity + (broad - 0.5) * 1.1 + (tex - 0.5) * 0.5 - 0.1, 0.0, 1.0);
-          vec3 rock = vec3(0.50, 0.40, 0.31), sand = vec3(0.62, 0.50, 0.34), steppe = vec3(0.47, 0.44, 0.25), tundra = vec3(0.40, 0.42, 0.34);
-          vec3 forest = flora * mix(vec3(0.70, 1.02, 0.80), vec3(1.08, 1.0, 0.88), smoothstep(8.0, 38.0, belt)) * mix(0.74, 1.2, smoothstep(0.25, 0.75, broad));
-          forest = mix(forest, flora * vec3(0.60, 0.80, 0.78), smoothstep(46.0 + warm, 60.0 + warm, lat));
-          forest = mix(forest, tundra, smoothstep(60.0 + warm, 74.0 + warm, lat));
-          vec3 plants = mix(mix(forest, steppe, smoothstep(0.22, 0.48, arid)), sand, smoothstep(0.52, 0.8, arid));
-          vec3 c = mix(rock, plants, veg) * (0.9 + 0.18 * tex);
+          float lat = abs(asin(clamp(n.y, -1.0, 1.0))) * 57.2958;
+          vec3 c = plantCover(lat, vIn, tex, broad, veg, flora, warm, aridity);
+          // for browsers without WebGL2: today's coastlines, moved, with generated relief
+          float px = max(length(dFdx(vP)), length(dFdy(vP))) * detail, rough = landRough(vP, px), relief = 150.0 + rough * 300.0, alpha = 1.0;
+          vec3 bumped = landBump(n * 100.0, n, relief * 0.00034);
+          shade = mix(ndl, dot(bumped, normalize(sunDir)), 0.45);
+          c = landTint(c, relief, lat, rough, tex) * landHill(n, bumped);
           c = mix(c, vec3(0.90, 0.93, 0.96), smoothstep(iceLat - 4.0, iceLat + 2.0, lat + (tex - 0.5) * 14.0));   // ice sheets
-          vec3 col = mix(c * nightFloor * vec3(0.72, 0.82, 1.0), c * (0.16 + 1.0 * max(ndl, 0.0)), lit);
-          gl_FragColor = vec4(col, opacity); }`,
+          vec3 col = mix(c * nightFloor * vec3(0.72, 0.82, 1.0), c * (0.16 + 1.0 * max(shade, 0.0)), lit);
+          gl_FragColor = vec4(col, opacity * alpha * vFade); }`,
     });
     land = new THREE.Mesh(g, landMat); land.renderOrder = 0; land.visible = false; land.frustumCulled = false;
     globe.scene().add(land);
   }
   const loadMorph = () => morphLoad || (morphLoad = fetch('paleo/morph.json').then(r => r.json()).then(m => { morph = m; buildLand(m); return m; }).catch(err => { console.error('paleo morph', err); return null; }));
+  // Deep time hands over to today's globe at 2 Ma. Plates and maps run a little fast over the last 4 million years, so every plate is exactly home at that moment, and nothing jumps.
+  const rockAge = ma => (ma == null || ma >= 6 ? ma : Math.max(0, (ma - 2) * 1.5));
   function applyPaleo() {
     if (!morph || paleoMa == null) return;
-    const m = morph, ma = paleoMa, i = Math.min(m.times.length - 2, Math.floor(ma / m.step)), f = Math.min(1, (ma - m.times[i]) / m.step);
+    const m = morph, ma = paleoMa, age = rockAge(ma), i = Math.min(m.times.length - 2, Math.floor(age / m.step)), f = Math.min(1, (age - m.times[i]) / m.step);
     m.plates.forEach((p, k) => {
-      const a = p.q[i], b = p.q[i + 1], q = a && b ? slerp(a, b, f) : a && f < 0.5 ? a : b && f >= 0.5 ? b : [0, 0, 0, 0];
+      const a = p.q[i], b = p.q[i + 1], q = a && b ? smoothTurn(p.q[i - 1], a, b, p.q[i + 2], f) : a || b || [0, 0, 0, 0];
       rotData.set(q, k * 4);
+      const e = a && b ? 1 : a ? 1 - f : b ? f : 0;
+      rotData[(m.plates.length + k) * 4] = e * e * (3 - 2 * e);
     });
     rotTex.needsUpdate = true;
     landMat.uniforms.veg.value = Math.min(1, Math.max(0, (470 - ma) / 70));   // bare rock and soil before land plants spread (c. 470-400 Ma)
@@ -431,8 +581,146 @@
     const FLORA = [[470, 0.38, 0.40, 0.27, 0, 0.1], [400, 0.26, 0.35, 0.20, 4, 0.05], [320, 0.13, 0.30, 0.15, 6, -0.1], [270, 0.27, 0.33, 0.19, 0, 0.22], [230, 0.33, 0.35, 0.20, 6, 0.3],
       [150, 0.18, 0.31, 0.18, 10, 0.08], [95, 0.20, 0.37, 0.18, 16, 0], [50, 0.15, 0.37, 0.17, 18, 0.04], [20, 0.27, 0.38, 0.19, 6, 0.08], [2, 0.25, 0.36, 0.18, 0, 0.05]];
     const fi = Math.max(0, FLORA.findIndex(x => x[0] <= ma)), hi = FLORA[Math.max(0, fi - 1)], lo = FLORA[fi], ft = hi === lo ? 0 : (hi[0] - ma) / (hi[0] - lo[0]), at = n => hi[n] + (lo[n] - hi[n]) * ft;
-    landMat.uniforms.flora.value.set(at(1), at(2), at(3)); landMat.uniforms.warm.value = at(4); landMat.uniforms.aridity.value = at(5);
+    const eu = earthMat.uniforms; eu.veg.value = landMat.uniforms.veg.value;
+    for (const un of [landMat.uniforms, eu]) { un.flora.value.set(at(1), at(2), at(3)); un.warm.value = at(4); un.aridity.value = at(5); }
     landMat.uniforms.iceLat.value = earthMat.uniforms.iceLat.value = iceLine(ma);
+    earthMat.uniforms.iceSouth.value = ma <= 42 ? 1 : 0;   // the present ice age: Antarctica's ice, from 34 Ma
+    setDeepFrames(age);
+  }
+  // The time-lapse images are decoded once, away from the main thread, and handed to the graphics card as 3D textures, which blends between frames by itself.
+  // Moving through time then only changes a number: nothing is copied or uploaded while the slider is being dragged.
+  function loadVolume(src, w, h, cols, depth, channels) {
+    return fetch(src).then(r => r.blob()).then(b => createImageBitmap(b, { premultiplyAlpha: 'none', colorSpaceConversion: 'none' })).then(bmp => {
+      const c = document.createElement('canvas'); c.width = bmp.width; c.height = bmp.height;
+      const g = c.getContext('2d', { willReadFrequently: true }); g.drawImage(bmp, 0, 0);
+      const src4 = g.getImageData(0, 0, bmp.width, bmp.height).data, data = new Uint8Array(w * h * depth * channels);
+      for (let k = 0; k < depth; k++) { const ox = (k % cols) * w, oy = Math.floor(k / cols) * h; for (let y = 0; y < h; y++) { let o = (oy + y) * bmp.width * 4 + ox * 4, d = (k * h + y) * w * channels; for (let x = 0; x < w; x++, o += 4) { data[d++] = src4[o]; if (channels > 1) data[d++] = src4[o + 1]; } } }
+      bmp.close(); c.width = c.height = 0;
+      const t = new THREE.Data3DTexture(data, w, h, depth);
+      t.format = channels > 1 ? THREE.RGFormat : THREE.RedFormat; t.type = THREE.UnsignedByteType; t.minFilter = t.magFilter = THREE.LinearFilter; t.wrapS = THREE.RepeatWrapping; t.wrapT = t.wrapR = THREE.ClampToEdgeWrapping; t.unpackAlignment = 1; t.needsUpdate = true;
+      return t;
+    });
+  }
+  // frames are 5 million years apart back to 540 Ma and 10 million years apart from there to 1,000 Ma
+  const WORLD_FRAMES = 155, worldFrame = ma => (ma <= 540 ? ma / 5 : 108 + (ma - 540) / 10);
+  let volumesStarted = false;
+  function startVolumes() {
+    if (volumesStarted || !globe.renderer().capabilities.isWebGL2) return;
+    volumesStarted = true;
+    const u = earthMat.uniforms;
+    loadVolume('assets/paleo-rock.png', 180, 90, 11, WORLD_FRAMES, 2).then(t => { u.rockIds.value = t; u.rockOn.value = 1; }).catch(err => console.error('deep-time rock', err));
+    Promise.all([loadVolume('assets/paleo-world.png', 360, 180, 11, WORLD_FRAMES, 1), loadVolume('assets/paleo-flow.png', 180, 90, 11, WORLD_FRAMES - 1, 2)])
+      .then(([world, flow]) => { u.worldMap.value = world; u.flowMap.value = flow; setDeepFrames(rockAge(paleoMa)); })
+      .catch(err => console.error('deep-time images', err));
+  }
+  let meshOpacity = 0;
+  let plateData = null, plateLoad = null, plateFade = 0, plateShow = false;
+  const plateCuts = [null, null], plateGeo = new Map();
+  // every age's boundaries get built ahead of time, a few at a moment when the page is idle, so a fast drag never has to stop and build them
+  function buildAllPlates(i = 0) { if (!plateData || i >= plateData.frames.length) return; plateGeometry(i); idle(() => buildAllPlates(i + 1), 500); }
+  // Each boundary is a ribbon a fixed number of pixels wide, shaded in the fragment shader: a fine bright line with a soft glow for ridges, a line with teeth on the overriding plate for
+  // subduction zones (the usual map symbol), and a faint hairline for transforms. Blending by the brighter value means lines don't brighten where segments overlap.
+  function plateGeometry(i) {
+    if (plateGeo.has(i)) return plateGeo.get(i);
+    const pa = [], pb = [], corner = [], along = [], kinds = [], index = [], f = plateData.frames[i], RR = R * 1.0024;
+    const dir = (lon, lat) => { const a = (lon * Math.PI) / 180, b = (lat * Math.PI) / 180; return [Math.cos(b) * Math.sin(a), Math.sin(b), Math.cos(b) * Math.cos(a)]; };
+    const unit = v => { const n = Math.hypot(v[0], v[1], v[2]); return [v[0] / n, v[1] / n, v[2] / n]; }, lerp = (p, q, t) => [p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t, p[2] + (q[2] - p[2]) * t];
+    const emit = (line, kind) => {
+      // rounded corners: cut each corner once, then keep the chords short enough to stay above the sphere
+      let pts = line; if (pts.length > 2) { const c = [pts[0]]; for (let k = 0; k + 1 < pts.length; k++) { if (k) c.push(unit(lerp(pts[k], pts[k + 1], 0.25))); if (k + 2 < pts.length) c.push(unit(lerp(pts[k], pts[k + 1], 0.75))); } c.push(pts[pts.length - 1]); pts = c; }
+      let dist = 0;
+      for (let k = 0; k + 1 < pts.length; k++) {
+        const p = pts[k], q = pts[k + 1], len = Math.acos(Math.min(1, p[0] * q[0] + p[1] * q[1] + p[2] * q[2])), n = Math.max(1, Math.ceil(len / 0.05));
+        for (let j = 0; j < n; j++) {
+          const a = unit(lerp(p, q, j / n)), b = unit(lerp(p, q, (j + 1) / n)), d0 = dist + (len * R * j) / n, d1 = dist + (len * R * (j + 1)) / n, v = pa.length / 3;
+          for (const [t, s] of [[0, -1], [0, 1], [1, -1], [1, 1]]) { pa.push(a[0] * RR, a[1] * RR, a[2] * RR); pb.push(b[0] * RR, b[1] * RR, b[2] * RR); corner.push(t, s); along.push(t ? d1 : d0); kinds.push(kind); }
+          index.push(v, v + 1, v + 2, v + 2, v + 1, v + 3);
+        }
+        dist += len * R;
+      }
+    };
+    [[f.x, 2], [f.r, 0], [f.s, 1]].forEach(([lines, kind]) => { for (const l of lines) {
+      let run = [];
+      for (let k = 0; k < l.length; k += 2) { const p = dir(l[k], l[k + 1]), last = run[run.length - 1]; if (last && last[0] * p[0] + last[1] * p[1] + last[2] * p[2] < 0.9) { if (run.length > 1) emit(run, kind); run = []; } run.push(p); }
+      if (run.length > 1) emit(run, kind);
+    } });
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pa, 3)); g.setAttribute('pb', new THREE.Float32BufferAttribute(pb, 3)); g.setAttribute('corner', new THREE.Float32BufferAttribute(corner, 2)); g.setAttribute('along', new THREE.Float32BufferAttribute(along, 1)); g.setAttribute('kind', new THREE.Float32BufferAttribute(kinds, 1));
+    g.setIndex(index);
+    plateGeo.set(i, g);
+    return g;
+  }
+  const plateMaterial = () => new THREE.ShaderMaterial({
+    defines: globe.renderer().capabilities.isWebGL2 ? { DEEP3D: 1 } : {}, transparent: true, depthWrite: false, side: THREE.DoubleSide, blending: THREE.CustomBlending, blendEquation: THREE.MaxEquation, blendSrc: THREE.OneFactor, blendDst: THREE.OneFactor,
+    uniforms: { res: { value: new THREE.Vector2(1, 1) }, dpr: { value: 1 }, opacity: { value: 0 }, wpp: { value: 1 }, step1: { value: 4 }, stepFade: { value: 0 }, flowMap: { value: null }, flowZ: { value: 0 }, glide: { value: 0 } },
+    vertexShader: `uniform vec2 res; uniform float dpr; attribute vec3 pb; attribute vec2 corner; attribute float along; attribute float kind; varying float vPx; varying float vAlong; varying float vKind; uniform float flowZ; uniform float glide;
+      #ifdef DEEP3D
+      uniform highp sampler3D flowMap;
+      vec3 carried(vec3 p){ if (glide == 0.0) return p; float r = length(p), lat = asin(p.y / r), lon = atan(p.x, p.z); vec2 fl = (textureLod(flowMap, vec3(lon / 6.2831853 + 0.5, 0.5 - lat / 3.14159265, flowZ), 0.0).rg * 255.0 - 128.0) / 127.0 * 16.0 * glide;
+        lon += radians(fl.x / max(0.15, cos(lat))); lat = clamp(lat + radians(fl.y), -1.55, 1.55); return r * vec3(cos(lat) * sin(lon), sin(lat), cos(lat) * cos(lon)); }
+      #else
+      vec3 carried(vec3 p){ return p; }
+      #endif
+      void main(){ vec4 a = projectionMatrix * modelViewMatrix * vec4(carried(position), 1.0), b = projectionMatrix * modelViewMatrix * vec4(carried(pb), 1.0), c = corner.x > 0.5 ? b : a;
+        vec2 d = (b.xy / b.w - a.xy / a.w) * res; float n = length(d); d = n > 1e-4 ? d / n : vec2(1.0, 0.0);
+        float half_ = (kind > 0.5 && kind < 1.5 ? 10.0 : 6.0) * dpr;
+        c.xy += (vec2(-d.y, d.x) * corner.y * half_ + d * (corner.x * 2.0 - 1.0) * dpr) / res * 2.0 * c.w;
+        gl_Position = c; vPx = corner.y * half_; vAlong = along; vKind = kind; }`,
+    fragmentShader: `uniform float dpr; uniform float opacity; uniform float wpp; uniform float step1; uniform float stepFade; varying float vPx; varying float vAlong; varying float vKind;
+      float tooth(float sp){ float dx = abs(fract(vAlong / sp + 0.5) - 0.5) * sp / wpp, h = 5.5 * dpr * (1.0 - dx / (3.6 * dpr)); return smoothstep(-0.7, 0.7, h - vPx) * smoothstep(-0.5, 0.5, vPx); }
+      void main(){ float d = abs(vPx) / dpr; vec3 col;
+        if (vKind < 0.5) col = vec3(0.72, 0.91, 1.0) * (1.0 - smoothstep(0.25, 0.95, d)) * 0.78 + vec3(0.24, 0.52, 0.70) * exp(-d * d / 6.0) * 0.24;
+        else if (vKind < 1.5) { float t = max(tooth(step1 * 2.0), tooth(step1) * stepFade); col = vec3(1.0, 0.66, 0.48) * max((1.0 - smoothstep(0.3, 1.0, d)) * 0.85, t * 0.72) + vec3(0.55, 0.22, 0.12) * exp(-d * d / 7.0) * 0.18; }
+        else col = vec3(0.52, 0.66, 0.78) * (1.0 - smoothstep(0.2, 0.9, d)) * 0.4;
+        col *= opacity; float a = max(col.r, max(col.g, col.b)); if (a < 0.004) discard; gl_FragColor = vec4(col, a); }`,
+  });
+  function setPlateLines(ma) {
+    if (ma == null || !plateShow || plateFade <= 0) { for (const l of plateCuts) if (l) l.visible = false; plateLastMa = null; return; }
+    if (!plateData) { plateLoad = plateLoad || fetch('paleo/boundaries.json').then(r => r.json()).then(d => { plateData = d; setDeepFrames(paleoMa); buildAllPlates(); }).catch(err => { console.error('plate boundaries', err); }); return; }
+    if (!plateCuts[0]) for (let i = 0; i < 2; i++) { plateCuts[i] = new THREE.Mesh(new THREE.BufferGeometry(), plateMaterial()); plateCuts[i].renderOrder = 1; plateCuts[i].frustumCulled = false; globe.scene().add(plateCuts[i]); }
+    const f = Math.min(plateData.frames.length - 1, ma / plateData.step), a = Math.min(plateData.frames.length - 2, Math.floor(f)), t = f - a;
+    plateMix = Math.min(1, Math.max(0, (t - 0.38) / 0.24)); plateMix = plateMix * plateMix * (3 - 2 * plateMix);   // each map holds, then changes quickly to the next, so two sets of lines aren't on screen for long
+    const flow = earthMat.uniforms.flowMap.value, slice = Math.min(WORLD_FRAMES - 2, Math.floor(worldFrame(ma))), span = ma < 540 ? 5 : 10;
+    [a, a + 1].forEach((k, i) => { const l = plateCuts[i], g = plateGeometry(k), u = l.material.uniforms; if (l.geometry !== g) l.geometry = g; u.flowMap.value = flow; u.flowZ.value = (slice + 0.5) / (WORLD_FRAMES - 1); u.glide.value = flow ? (ma - k * plateData.step) / span : 0; });
+    plateTick(0);
+  }
+  // The boundaries exist only every 10 million years. Between those they glide with the surface, and they dim a little while time is moving, because each map's lines end up slightly off the next
+  const slowSamples = []; let lightened = false;
+  function watchSpeed(dt) {
+    if (lightened || paleoMa == null || document.visibilityState !== 'visible' || dt <= 0 || dt > 1) { slowSamples.length = 0; return; }
+    slowSamples.push(dt);
+    if (slowSamples.length < 60) return;
+    const middle = [...slowSamples].sort((a, b) => a - b)[30]; slowSamples.length = 0;
+    if (middle > 0.05) { lightened = true; const r = globe.renderer(); r.setPixelRatio(Math.min(1, r.getPixelRatio())); earthMat.uniforms.detail.value = landMat.uniforms.detail.value = 3; }
+  }
+  let plateMix = 0, plateRest = 1, plateLastMa = null, plateMoved = 0, plateWindow = 0, plateFast = false;
+  function plateTick(dt) {
+    if (!plateCuts[0]) return;
+    const on = paleoMa != null && plateShow && plateFade > 0 && plateData;
+    if (dt > 0 && on) {   // how fast the date has moved over the last third of a second: date changes don't arrive on every animation frame
+      if (plateLastMa != null) plateMoved += Math.abs(paleoMa - plateLastMa);
+      plateLastMa = paleoMa; plateWindow += dt;
+      if (plateWindow > 0.33) { plateFast = plateMoved / plateWindow > 0.4; plateMoved = 0; plateWindow = 0; }
+      plateRest += ((plateFast ? 0 : 1) - plateRest) * (1 - Math.exp(-dt / (plateFast ? 0.2 : 0.6)));
+    }
+    const o = on ? plateFade * (0.4 + 0.6 * plateRest) : 0;
+    // pixel size and how far apart the teeth go: about 20 pixels, doubling in steps as you zoom, with the in-between teeth fading rather than popping
+    const cam = globe.camera(), buf = globe.renderer().getDrawingBufferSize(new THREE.Vector2()), dpr = buf.y / Math.max(1, globe.renderer().domElement.clientHeight), wpp = (2 * Math.max(1, cam.position.length() - R) * Math.tan((cam.fov * Math.PI) / 360)) / buf.y;
+    const level = Math.log2(Math.max(1e-3, 20 * dpr * wpp)), lo = Math.floor(level);
+    [(1 - plateMix) * o, plateMix * o].forEach((op, i) => { const l = plateCuts[i], u = l.material.uniforms; u.opacity.value = op; u.res.value.copy(buf); u.dpr.value = dpr; u.wpp.value = wpp; u.step1.value = 2 ** lo; u.stepFade.value = 1 - (level - lo); l.visible = op > 0.01; });
+  }
+  function setDeepFrames(ma) {
+    if (ma == null) { setPlateLines(null); return; }
+    const u = earthMat.uniforms, ready = !!u.worldMap.value;
+    startVolumes();
+    const f = Math.min(WORLD_FRAMES - 1, worldFrame(ma)), a = Math.min(WORLD_FRAMES - 2, Math.floor(f));
+    u.worldA.value = (a + 0.5) / WORLD_FRAMES; u.worldB.value = (a + 1.5) / WORLD_FRAMES; u.worldMix.value = f - a; u.flowZ.value = (a + 0.5) / (WORLD_FRAMES - 1);
+    u.worldOn.value = ready ? 1 : 0;
+    // today's coastlines only for a browser that can't draw the surface
+    const stand = globe.renderer().capabilities.isWebGL2 ? 0 : 1;
+    landMat.uniforms.opacity.value = meshOpacity * stand; land.visible = meshOpacity * stand > 0.001;
+    plateFade = Math.min(1, Math.max(0, (ma - 2) / 8));
+    setPlateLines(ma);
   }
   // The latitude poleward of which ice is drawn, for the major glaciations (a schematic picture by latitude, not a
   // reconstruction of the ice sheets): the Cryogenian "Snowball Earth" glaciations (Sturtian c. 717-660 Ma, Marinoan
@@ -442,24 +730,25 @@
   function iceLine(ma) {
     let lat = 90;
     for (const [a, b, l] of ICE) {
-      const out = Math.max(0, b - ma, ma - a);   // millions of years outside the glaciation; the ice fades over 3 My
-      if (out < 3) lat = Math.min(lat, l + ((90 - l) * out) / 3);
+      const out = Math.max(0, b - ma, ma - a);   // millions of years outside the glaciation; the ice fades over 8 My, so a scrub through it doesn't flash
+      if (out < 8) lat = Math.min(lat, l + ((90 - l) * out) / 8);
     }
     return lat;
   }
   // ma: millions of years before present, or null for today's Earth. Returns the age shown.
   function setPaleo(ma) {
     const u = earthMat.uniforms;
-    if (ma == null || ma < 2) { paleoMa = null; u.paleoOn.value = 0; u.early.value = 0; if (land) land.visible = false; return null; }
+    if (ma == null || ma < 2) { paleoMa = null; u.paleoOn.value = 0; u.early.value = 0; u.worldOn.value = 0; if (land) land.visible = false; setPlateLines(null); return null; }
     paleoMa = Math.min(ma, PALEO_MAX); shownMa = ma;
     // past the model's reach the land fades away (no continents are invented) and the eon's artist's impression fades in
     const beyond = Math.min(1, Math.max(0, (PALEO_MAX + 100 - ma) / 100));
     u.early.value = 1 - beyond; u.ageGa.value = ma / 1000;
     const apply = () => {
       if (paleoMa == null || !land) return;
-      const on = Math.min(1, (ma - 2) / 8);   // fade in between 2 and 10 Ma, where the continents still look like today's
-      u.paleoOn.value = on; landMat.uniforms.opacity.value = on * beyond; land.visible = beyond > 0;
+      const fade = Math.min(1, (ma - 2) / 13), on = fade * fade * (3 - 2 * fade);   // today's imagery gives way to the maps between 2 and 15 Ma
+      u.paleoOn.value = on; meshOpacity = on * beyond;
       applyPaleo();
+      if (beyond <= 0) setPlateLines(null);
     };
     // once the plate data is loaded the update is immediate, so pins placed right after this call ride the same rotation
     if (morph) apply(); else loadMorph().then(() => { apply(); window.dispatchEvent(new Event('paleo-ready')); });
@@ -467,7 +756,7 @@
   }
   // which plate a present-day point sits on: inside one of today's coastline rings (each tagged with its plate), else
   // the plate of the nearest ring within about 8 degrees; null for open ocean far from any land
-  const plateCache = new Map();
+  const plateCache = new Map(); let plateCells = null;
   function inRing(lon, lat, pts) {
     let inside = false;
     for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
@@ -478,6 +767,8 @@
   }
   function plateOf(lat, lon) {
     if (!morph) return null;
+    if (!plateCells && morph.grid) { plateCells = new Int32Array(360 * 180); let at = 0; for (let i = 0; i < morph.grid.length; i += 2) { plateCells.fill(morph.grid[i], at, at + morph.grid[i + 1]); at += morph.grid[i + 1]; } }
+    if (plateCells) { const id = plateCells[Math.min(179, Math.max(0, Math.floor(90 - lat))) * 360 + Math.min(359, Math.max(0, Math.floor(lon + 180)))]; if (id >= 0) return id; }
     const key = `${lat.toFixed(2)},${lon.toFixed(2)}`;
     if (plateCache.has(key)) return plateCache.get(key);
     let best = null, bd = 8;
@@ -561,5 +852,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { init, update, setPaleo, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, showPlateEdges(on) { if (on === plateShow) return; plateShow = on; if (paleoMa != null && landMat) setPlateLines(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();

@@ -39,7 +39,7 @@ const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
 const GLOBE_R = 100, KM_PER_UNIT = 6371 / GLOBE_R;
 
-const state = { level: 4, t: -500, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
+const state = { level: 4, t: -500, fossils: true, plateEdges: false, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
   alt: 2.4, off: new Set(), impOff: new Set() };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -317,6 +317,7 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, a
   .objectLabel(o => `<div class="tip"><span class="d">3D model · ${esc(o.kind)}</span><b>${esc(o.title)}</b><p>${esc(o.note)}</p></div>`)
   .onObjectClick(o => openRecord(o.id));
 window.Space.init(globe); // satellite Earth, clouds, stars, Sun and Moon (space.js)
+window.Fossils.init(globe, () => { fossilCountMa = null; render(); });
 window.Borders?.init(globe); // dated polity borders (borders.js)
 // deep-time visuals: scenes for records, names on the moving continents, marks on the time bar, the film (deeptime.json)
 let deepTime = null, marksKey = '';
@@ -357,7 +358,7 @@ $('#globe').addEventListener('touchend', () => { pinch = null; }, { passive: tru
 let lastFrame = performance.now(), settleTimer = null, tierKey = '';
 const tier = () => `${minImportance()}|${Math.round(Math.log2(zoomK()) * 3)}`;
 // ---------- planet-wide records: no single place, so no pin. A faint ring at the globe's edge says "something
-// planet-wide is happening now", and one small pill above the globe names how many; clicking it opens a short list.
+// planet-wide is happening now", and one small pill in the left column names how many; clicking it opens a short list.
 let planetList = [], planetOpen = false, planetKey = '';
 function renderPlanet(planet) {
   planetList = [...planet].sort((a, b) => b.importance - a.importance || a.start - b.start);
@@ -382,7 +383,7 @@ function renderPlanet(planet) {
 addEventListener('pointerdown', e => { if (planetOpen && !e.target.closest('#planet')) { planetOpen = false; renderPlanet(planetList); } });
 addEventListener('keydown', e => { if (e.key === 'Escape' && planetOpen) { planetOpen = false; renderPlanet(planetList); } });
 const _o = new THREE.Vector3();
-function placePlanetOrbit() { // per frame: the ring on the globe's edge, the pill just above it (cheap: two style writes)
+function placePlanetOrbit() { // per frame: the ring on the globe's edge (cheap: one style write)
   const box = $('#planet');
   if (box.hidden) return;
   const cam = globe.camera(), el = globe.renderer().domElement, W = el.clientWidth || innerWidth, H = el.clientHeight || innerHeight;
@@ -392,15 +393,6 @@ function placePlanetOrbit() { // per frame: the ring on the globe's edge, the pi
   const ring = $('#planet-ring'), fits = r * 2 < Math.min(W, H) * 1.05;
   ring.hidden = !fits;
   if (fits) ring.style.cssText = `left:${cx - r - 3}px;top:${cy - r - 3}px;width:${r * 2 + 6}px;height:${r * 2 + 6}px`;
-  // the pill sits just above the globe, or near the top of the view when the globe fills it
-  let y = Math.max(14, Math.min(H - 300, (fits ? cy - r : 0) - 40));
-  const x = Math.max(Math.min(180, W / 2), Math.min(W - Math.min(180, W / 2), cx));
-  // never on top of the title, search box and layers button (on a phone they span the width of the screen)
-  const head = $('#masthead').getBoundingClientRect(), pw = (box.firstElementChild?.offsetWidth || 160) / 2;
-  if (x + pw > head.left && x - pw < head.right && y < head.bottom + 8) y = head.bottom + 8;
-  const note = $('#notice');   // nor on top of the notice under the title
-  if (!note.hidden) { const n = note.getBoundingClientRect(); if (x + pw > n.left && x - pw < n.right && y + 34 > n.top && y < n.bottom) y = n.bottom + 6; }
-  box.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
 }
 
 (function zoomFrame(now) {
@@ -457,7 +449,7 @@ function seaDropAt(t) {
 // Earth's vital signs (paleo/vitals.json, built by atlas/tools/build-vitals.mjs): each curve runs from today back as far as there are estimates.
 // Reconstructed values carry a ≈ and are rounded to what they can bear; older than a curve's oldest estimate shows a dash, not a guess.
 let vitals = null;
-const VITAL_MIN_SPAN = { temp: 1, co2: 30, sea: 5, day: 0.2, moon: 2000 };   // the curve on the time bar won't stretch less than this to fill its height, so a flat stretch stays flat
+const VITAL_MIN_SPAN = { temp: 1, co2: 30, sea: 5, day: 0.2, moon: 2000, life: 100 };   // the curve on the time bar won't stretch less than this to fill its height, so a flat stretch stays flat
 fetch('paleo/vitals.json').then(r => r.json()).then(d => {
   vitals = d;
   $('#v-rows').innerHTML = Object.entries(d.series).map(([k, s]) => `<button class="v-row" data-k="${k}" title="${esc(s.source)}"><span>${esc(s.label).replace(/ (.+)/, '<i> $1</i>')}</span><b></b></button>`).join('');
@@ -484,12 +476,32 @@ function vitalNumber(k, v, ma) {
   if (k === 'co2') return `${(ma <= 9e-6 ? Math.round(v) : ma <= 0.81 ? Math.round(v / 5) * 5 : Math.round(v / 50) * 50).toLocaleString()} ppm`;
   if (k === 'sea') { const m = ma <= 0.81 ? Math.round(v) : Math.round(v / 5) * 5; return `${m > 0 ? '+' : m < 0 ? '−' : ''}${Math.abs(m)} m`; }
   if (k === 'day') return `${v.toFixed(1)} h`;
+  if (k === 'life') return (Math.round(v / 10) * 10).toLocaleString();
   return `${(Math.round(v / 1000) * 1000).toLocaleString()} km`;
 }
 const vitalMeasured = (k, ma) => (k === 'temp' ? ma <= 1e-4 : k === 'co2' ? ma <= 9e-6 : ma <= 1e-4);
 const vitalText = (k, v, ma) => (v == null ? '—' : `${vitalMeasured(k, ma) ? '' : '≈ '}${vitalNumber(k, v, ma)}`);
+// the fossil groups, with how many finds of each are known from rocks of this age; a click hides or shows a group
+let fossilCountMa = null;
+function renderFossilKey() {
+  const groups = window.Fossils.groups, ma = -state.t / 1e6, on = !!(state.fossils && groups && state.paleoMa != null && ma <= 600), box = $('#v-fossils');
+  show(box, on);
+  if (!on) return false;
+  const chips = $('#v-chips');
+  if (!chips.children.length) {
+    chips.innerHTML = groups.map((g, i) => `<button class="f-chip" data-i="${i}" aria-pressed="true" style="color:${window.Fossils.COLORS[i]}" title="Show or hide ${esc(g)}"><i></i><span>${esc(g)}</span><b></b></button>`).join('');
+    chips.querySelectorAll('button').forEach(b => { b.onclick = () => { const i = +b.dataset.i, now = !window.Fossils.isOn(i); window.Fossils.setGroup(i, now); b.setAttribute('aria-pressed', now); }; });
+  }
+  if (fossilCountMa == null || Math.abs(fossilCountMa - ma) >= 0.25) {
+    fossilCountMa = ma;
+    window.Fossils.counts(ma).forEach((n, i) => { const b = chips.children[i], text = n ? n.toLocaleString() : '—'; if (b.lastElementChild.textContent !== text) { b.lastElementChild.textContent = text; b.classList.toggle('none', !n); } });
+  }
+  return true;
+}
 function renderVitals() {
-  show($('#vitals'), !!vitals && state.vitals);
+  const key = renderFossilKey();
+  show($('#vitals'), (!!vitals && state.vitals) || key);
+  $('#vitals').classList.toggle('only-key', !state.vitals);
   if (!vitals || !state.vitals) return;
   const ma = (1950 - state.t) / 1e6;
   for (const b of $('#v-rows').children) { const k = b.dataset.k, text = vitalText(k, vitalAt(vitals.series[k], ma), ma), el = b.lastElementChild; if (el.textContent !== text) el.textContent = text; }
@@ -520,6 +532,7 @@ function updateSky() {
   const map = state.mapStyle === 'map';
   window.Space.update({ date: state.t > -4000 ? yearToDate(state.t) : new Date(), sunMode: state.realSun ? 'real' : 'camera',
     nightLights: !map && state.t >= 1900, clouds: !map && state.clouds, zoomAlt: state.alt, flat: map });
+  window.Space.showPlateEdges(state.plateEdges);
   state.paleoMa = window.Space.setPaleo(!map && state.t < -2e6 ? -state.t / 1e6 : null);
   state.seaDrop = map ? 0 : seaDropAt(state.t);
   const bp = 1950 - state.t;
@@ -529,6 +542,7 @@ function updateSky() {
   window.Space.setClimate(Math.min(1, state.seaDrop / 125), state.humid);
   window.Borders?.update(state.t, state.borders && !state.film);
   window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
+  window.Fossils.update(state.fossils && state.paleoMa != null ? -state.t / 1e6 : null);
   window.Spacecraft?.update(state.film ? -1e9 : state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
 }
 
@@ -743,7 +757,8 @@ function render() {
   Object.assign($('#context .win').style, { left: `${Math.min(left, 1 - width) * 100}%`, width: `${width * 100}%` });
 
   const notice = state.paleoMa != null && -state.t / 1e6 > window.Space.PALEO_MAX ? eonNote(-state.t / 1e6)
-    : state.paleoMa >= 10 ? `Continents as they stood ${Math.round(state.paleoMa)} million years ago, moved plate by plate (MERDITH2021 plate model, GPlates). Pins ride on their plates, from where the evidence is found today.`
+    : state.paleoMa >= 10 ? innerWidth <= 760 ? `Earth ${Math.round(state.paleoMa)} million years ago. ${state.paleoMa <= 540 ? '' : 'Land is a stand-in. '}Sources in About.` : `Earth ${Math.round(state.paleoMa)} million years ago. ${state.paleoMa <= 540 ? 'Land and sea floor: PALEOMAP PaleoDEMs (Scotese and Wright 2018). ' : 'No maps reach this far. Which rock is here comes from plate models; its coasts and heights are a stand-in, from the 540 million-year-old map. '}`
+    : state.paleoMa != null ? 'Today’s imagery, carried back with the plates, fading into the PALEOMAP maps of land and sea floor.'
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
     : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Ice sheets are drawn only for the last 80,000 years.'} Plant cover is schematic.`
     : state.t < -12000 ? state.humid > 0 ? 'The Sahara is tinted green for the African Humid Period, about 11,000 to 5,000 years ago. Plant cover is schematic.' : state.mapStyle === 'map' ? 'The map shows today’s coastlines. Sea level, ice sheets and plant cover show in the satellite view.' : `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
@@ -765,7 +780,8 @@ function render() {
   queueURL();
 }
 
-// mass extinctions and ice ages on the time bar, for the scales that reach them; a click opens the record
+// mass extinctions and ice ages on the time bar, for the scales that reach them. A click on an extinction opens its record. Ice ages are only a tint: they sit where people grab the bar, and one that
+// fills most of the scale, as Antarctica's ice does on every short one, says nothing there, so it isn't drawn.
 function drawMarks(from, to) {
   const key = `${from}|${to}|${!!deepTime}`;
   if (key === marksKey || !deepTime) return;
@@ -775,7 +791,7 @@ function drawMarks(from, to) {
     const title = esc(m.label), tag = m.id ? 'button' : 'span', attr = m.id ? `data-id="${esc(m.id)}" aria-label="${title}"` : '';
     if (m.kind === 'extinction') { const x = X(m.ma); return x < 0 || x > 100 ? '' : `<${tag} class="mark ext" style="left:${x.toFixed(2)}%" title="${title}" ${attr}></${tag}>`; }
     const a = Math.max(0, X(m.from)), b = Math.min(100, X(m.to));
-    return b <= a ? '' : `<${tag} class="mark ice" style="left:${a.toFixed(2)}%;width:${Math.max(0.4, b - a).toFixed(2)}%" title="${title}" ${attr}></${tag}>`;
+    return b <= a || b - a > 40 ? '' : `<span class="mark ice" style="left:${a.toFixed(2)}%;width:${Math.max(0.4, b - a).toFixed(2)}%"></span>`;
   }).join('');
   box.querySelectorAll('button').forEach(b => { b.onclick = () => goTo(b.dataset.id); });
 }
@@ -855,15 +871,27 @@ function setLevel(i, keepT = false) {
 // Dragging the time slider: the scale is fixed when the drag starts (in the one-year scale the range follows the
 // year, so recomputing it mid-drag made the thumb run away), the slider's own value is left alone while it is held,
 // and the globe redraws at most once a frame however fast the input events come
-let slideRange = null, slideFrame = 0;
-const slideEnd = () => { slideRange = null; };
-$('#slider').addEventListener('pointerdown', () => { slideRange = range(); });
-for (const ev of ['pointerup', 'pointercancel', 'change', 'blur']) $('#slider').addEventListener(ev, slideEnd);
-$('#slider').oninput = e => {
+let slideRange = null, slideFrame = 0, sliding = null;
+const slider = $('#slider');
+function slideTo(v) {
   const { from, to } = slideRange || range();
-  state.t = from + (to - from) * (+e.target.value / 1000);
+  state.t = from + (to - from) * (v / 1000);
   if (!slideFrame) slideFrame = requestAnimationFrame(() => { slideFrame = 0; render(); });
-};
+}
+// The slider follows the pointer itself, with the pointer captured, so nothing else on the page can make it let go. The keyboard still works through the input's own events.
+const valueAtPointer = x => { const r = slider.getBoundingClientRect(); return Math.round(Math.min(1, Math.max(0, (x - r.left - 10) / Math.max(1, r.width - 20))) * 1000); };
+slider.addEventListener('pointerdown', e => {
+  if (e.button) return;
+  e.preventDefault(); slider.focus({ preventScroll: true, focusVisible: false });
+  if (timer) stopPlay();   // playback would otherwise fight the drag for the date
+  slideRange = range(); sliding = e.pointerId;
+  try { slider.setPointerCapture(e.pointerId); } catch {}
+  slider.value = valueAtPointer(e.clientX); slideTo(+slider.value);
+});
+slider.addEventListener('pointermove', e => { if (e.pointerId !== sliding) return; slider.value = valueAtPointer(e.clientX); slideTo(+slider.value); });
+const slideEnd = e => { if (e.pointerId !== sliding) return; sliding = null; slideRange = null; render(); };
+for (const ev of ['pointerup', 'pointercancel', 'lostpointercapture']) slider.addEventListener(ev, slideEnd);
+slider.oninput = e => { slideTo(+e.target.value); };
 $('#context').onclick = e => {
   const r = e.currentTarget.getBoundingClientRect(), f = (e.clientX - r.left) / r.width;
   if (f > 0.985) { state.t = -500; return setLevel(4); }  // the Humans sliver opens Civilization (spec 2)
@@ -912,7 +940,7 @@ $('#speed').onclick = e => {   // click for faster, shift-click or right-click f
 };
 $('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
 $('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); updateSky(); render(); };
-for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals']]) {
+for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#fossils-toggle', 'fossils']]) {
   $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); if (key === 'monuments') loadModels(); };
 }
 
