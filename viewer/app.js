@@ -39,7 +39,7 @@ const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
 const GLOBE_R = 100;
 
-const state = { level: 4, t: -500, fossils: true, plateEdges: false, vitals: true, vitalCurve: 'temp', whole: false, borders: true, paths: false, clouds: false, realSun: false, pins: [], selected: null,
+const state = { level: 4, t: -500, fossils: true, plateEdges: false, vitals: true, vitalCurve: 'temp', whole: false, borders: true, paths: false, coastlines: false, clouds: false, realSun: false, pins: [], selected: null,
   alt: 2.4, off: new Set(), impOff: new Set() };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -75,8 +75,12 @@ function windowNow() {
 // shrinks in proportion to how long ago the date is (about 300 years around 500 BCE, 10 around 1945), never past 3.5%
 // of the scale, so a pin shown "at 1945" is not a battle from 1526.
 function windowHalf(from, to) { return Math.min((to - from) * 0.035, Math.max(8, (NOW - state.t) * 0.12)); }
-function minImportance() { // spatial density: whole-planet views show only the major pins (spec 11.1)
-  if (state.alt > 2.1) return 4; if (state.alt > 1.2) return 3; if (state.alt > 0.6) return 2; return 1;
+// Near a date every record shows, and importance sets how loud its pin is (see pinPx). A whole period holds far more records, so it thins them from afar (spec 11.1), never past what the filters leave on.
+function minImportance() {
+  if (!state.whole) return 1;
+  const a = state.alt, floor = a > 2.1 ? 4 : a > 1.2 ? 3 : a > 0.6 ? 2 : 1;
+  let top = 5; while (top > 1 && state.impOff.has(top)) top--;
+  return Math.min(floor, top);
 }
 // The coarsest scale a record shows on. Its `scale` sets this, with two corrections so that browsing to a date finds
 // what happened then: nothing is kept to the One-year view or to a scale whose span doesn't reach it, and modern
@@ -88,7 +92,7 @@ function scaleIndex(p) {
   return i;
 }
 const inLevel = p => scaleIndex(p) <= state.level;
-const rankOf = p => p.rank ?? p.importance;   // zoom thinning only (api.mjs displayRanks); filters and the record show importance
+const rankOf = p => p.importance;
 // the Domains & layers filters: a record shows if any of its domains is on and its importance level is on
 const domainOn = p => (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) && !state.impOff.has(p.importance || 0);
 const paleoOn = () => state.paleoMa != null && state.paleoMa >= 10;
@@ -136,7 +140,7 @@ function drawGlyph(g, kind, s) { // s = glyph box size; origin at the badge cent
     default: g.beginPath(); g.arc(0, 0, s * 0.16, 0, 7); g.fill();
   }
 }
-const BADGE_PX = 96, badgeCache = new Map();
+const BADGE_PX = 96, GOLD = '#e3bd6e', badgeCache = new Map();
 function badgeCanvas(domain, full) {
   const key = `${domain}|${full}`;
   if (badgeCache.has(key)) return badgeCache.get(key);
@@ -147,8 +151,8 @@ function badgeCanvas(domain, full) {
   g.shadowColor = 'rgba(0,0,0,0.55)'; g.shadowBlur = BADGE_PX * 0.09; g.shadowOffsetY = BADGE_PX * 0.02;
   g.beginPath(); g.arc(0, 0, r, 0, 7); g.fillStyle = col; g.fill();
   g.shadowColor = 'transparent';
-  g.lineWidth = full ? BADGE_PX * 0.055 : BADGE_PX * 0.025;             // full records wear a bright rim, outlines a fine one
-  g.strokeStyle = full ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.45)'; g.stroke();
+  g.lineWidth = full ? BADGE_PX * 0.07 : BADGE_PX * 0.025;             // full records wear a gold ring, outlines a fine pale one
+  g.strokeStyle = full ? GOLD : 'rgba(255,255,255,0.5)'; g.stroke();
   g.fillStyle = g.strokeStyle = 'rgba(12,17,28,0.88)';
   drawGlyph(g, glyph, r * 1.15);
   badgeCache.set(key, c);
@@ -162,22 +166,40 @@ function badgeTexture(domain, full) {
   if (!texCache.has(key)) { const t = new THREE.CanvasTexture(badgeCanvas(domain, full)); t.anisotropy = 4; texCache.set(key, t); }
   return texCache.get(key);
 }
-// a dense spot draws as one badge with a count (spec 11.1)
-const countCache = new Map();
-function countTexture(n) {
-  const label = n > 99 ? '99+' : String(n);
-  if (countCache.has(label)) return countCache.get(label);
+// A quiet record is a small dot, drawn small inside its sprite so the sprite stays an easy target for the pointer.
+const DOT_R = BADGE_PX * 0.2, textureCache = new Map();
+function cachedTexture(key, draw) {
+  if (textureCache.has(key)) return textureCache.get(key);
   const c = document.createElement('canvas'); c.width = c.height = BADGE_PX;
-  const g = c.getContext('2d'), m = BADGE_PX / 2;
-  g.shadowColor = 'rgba(0,0,0,0.55)'; g.shadowBlur = BADGE_PX * 0.09;
-  g.beginPath(); g.arc(m, m, BADGE_PX * 0.38, 0, 7); g.fillStyle = '#10182a'; g.fill();
-  g.shadowColor = 'transparent'; g.lineWidth = BADGE_PX * 0.05; g.strokeStyle = '#d9b36a'; g.stroke();
-  g.fillStyle = '#f4e7c8'; g.font = `600 ${BADGE_PX * (label.length > 2 ? 0.3 : 0.38)}px "IBM Plex Sans", system-ui, sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
-  g.fillText(label, m, m + BADGE_PX * 0.02);
-  const t = new THREE.CanvasTexture(c); t.anisotropy = 4; countCache.set(label, t);
+  const g = c.getContext('2d'); g.translate(BADGE_PX / 2, BADGE_PX / 2); draw(g, c);
+  const t = new THREE.CanvasTexture(c); t.anisotropy = 4; textureCache.set(key, t);
   return t;
 }
-const pinTexture = p => (p.cluster ? countTexture(p.cluster.length) : badgeTexture(p.domains?.[0], !p.outline));
+const dotTexture = (domain, full) => cachedTexture(`dot|${domain}|${full}`, g => {
+  const col = (DOMAINS[domain] || ['', '#e8edf4'])[1];
+  g.shadowColor = 'rgba(0,0,0,0.6)'; g.shadowBlur = BADGE_PX * 0.05;
+  g.beginPath(); g.arc(0, 0, DOT_R, 0, 7); g.fillStyle = col; g.fill();
+  g.shadowColor = 'transparent'; g.lineWidth = full ? BADGE_PX * 0.07 : BADGE_PX * 0.03; g.strokeStyle = full ? GOLD : 'rgba(8,12,20,0.75)'; g.stroke();
+});
+// several quiet records at one spot: a small dark dot with a gold ring, which opens a list
+const stackTexture = () => cachedTexture('stack', g => {
+  g.shadowColor = 'rgba(0,0,0,0.6)'; g.shadowBlur = BADGE_PX * 0.05;
+  g.beginPath(); g.arc(0, 0, DOT_R * 1.05, 0, 7); g.fillStyle = '#10182a'; g.fill();
+  g.shadowColor = 'transparent'; g.lineWidth = BADGE_PX * 0.065; g.strokeStyle = GOLD; g.stroke();
+  g.beginPath(); g.arc(0, 0, DOT_R * 0.32, 0, 7); g.fillStyle = GOLD; g.fill();
+});
+// major records that share a spot: the most important one's marker, with a count beside it
+const crowdTexture = (domain, full, n) => { const label = n > 99 ? '99+' : String(n); return cachedTexture(`crowd|${domain}|${full}|${label}`, g => {
+  g.drawImage(badgeCanvas(domain, full), -BADGE_PX / 2, -BADGE_PX / 2);
+  const x = BADGE_PX * 0.27, y = -BADGE_PX * 0.27, r = BADGE_PX * 0.17;
+  g.beginPath(); g.arc(x, y, r, 0, 7); g.fillStyle = '#10182a'; g.fill(); g.lineWidth = BADGE_PX * 0.025; g.strokeStyle = GOLD; g.stroke();
+  g.fillStyle = '#f4e7c8'; g.font = `600 ${BADGE_PX * (label.length > 1 ? 0.15 : 0.2)}px "IBM Plex Sans", system-ui, sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(label, x, y + BADGE_PX * 0.008);
+}); };
+// which records stand out at this height: 5s and 4s always; lesser ones as the camera closes in
+const CLOSE_AT = { 3: 0.3, 2: 0.15, 1: 0.08 };
+const isMajor = p => p.importance >= 4;
+const standsOut = (p, alt) => isMajor(p) || alt < (CLOSE_AT[p.importance] ?? CLOSE_AT[1]);
+const pinTexture = (p, big) => (p.cluster ? (isMajor(p) ? crowdTexture(p.domains?.[0], !p.outline, p.cluster.length) : stackTexture()) : big ? badgeTexture(p.domains?.[0], !p.outline) : dotTexture(p.domains?.[0], !p.outline));
 const haloTexture = (() => { // soft pulsing ring behind the selected pin
   const c = document.createElement('canvas'); c.width = c.height = 128;
   const g = c.getContext('2d'); g.translate(64, 64);
@@ -186,13 +208,14 @@ const haloTexture = (() => { // soft pulsing ring behind the selected pin
   return new THREE.CanvasTexture(c);
 })();
 
-// Pin size in screen pixels: importance sets the base, the camera height eases it (a little larger close in),
-// and the hovered and selected pins grow. Sprites keep a constant pixel size, so pins stay crisp at every zoom.
+// Sprite size in screen pixels. Importance sets how loud a pin is: large markers for 5s, medium for 4s, small dots for the rest, which become markers as the camera closes in. The camera height eases
+// it (a little larger close in), and the hovered and selected pins grow. Sprites keep a constant pixel size, so pins stay crisp at every zoom.
 let hoverId = null;
-function pinPx(p, alt) {
+const PIN_SIZE = { 5: 38, 4: 26 }, DOT_SIZE = { 3: 20, 2: 17, 1: 15 };
+function pinPx(p, alt, big) {
   const near = 1 - Math.min(1, Math.max(0, (Math.log(alt) - Math.log(0.08)) / (Math.log(3) - Math.log(0.08)))); // 0 far .. 1 close
-  const base = (11 + p.importance * 2.6) * (0.82 + 0.38 * near);
-  return base * (p.id === state.selected ? 1.55 : p.id === hoverId ? 1.25 : 1) * (p.outline ? 0.9 : 1);
+  const stack = p.cluster && !isMajor(p), base = (stack ? 20 : big ? PIN_SIZE[p.importance] ?? 24 : DOT_SIZE[p.importance] ?? 15) * (0.82 + 0.38 * near);
+  return base * (p.id === state.selected ? 1.4 : p.id === hoverId ? 1.2 : 1);
 }
 // Labels: crisp screen-facing text beside the badge, with a dark halo for legibility on land and sea
 const LABEL_PX = 13, LABEL_RES = 3;
@@ -212,7 +235,7 @@ function drawLabel(text) {
   const tex = new THREE.CanvasTexture(c); tex.anisotropy = 4;
   return { tex, w: c.width / LABEL_RES, h: c.height / LABEL_RES };
 }
-const labelMin = () => (state.alt > 1.6 ? 5 : state.alt > 0.8 ? 4 : state.alt > 0.3 ? 3 : 1); // fewer names from far away
+const labelMin = () => { const a = state.alt; return a > 1.9 ? 5 : a >= CLOSE_AT[3] ? 4 : a >= CLOSE_AT[2] ? 3 : a >= CLOSE_AT[1] ? 2 : 1; };   // 5s are always named, 4s when there's room, the rest as they come to stand out, or on hover
 
 const pinSprites = new Map(); // id -> { group, sprite, halo, label, p }
 const pinData = new Map();    // id -> the datum object handed to globe.gl (kept stable between renders)
@@ -232,8 +255,10 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
     // a record fades and shrinks with its distance from the date shown, so what happened then reads first
     const special = p.id === state.selected || p.id === hoverId;
     const far = special ? 0 : Math.min(1, Math.max(0, p.start - state.t, state.t - p.end) / reach);
-    sprite.material.opacity = vis * (1 - 0.65 * far);
-    const px = pinPx(p, state.alt) * (1 - 0.25 * far);
+    const big = special || standsOut(p, state.alt), tex = pinTexture(p, big);
+    if (sprite.material.map !== tex) { sprite.material.map = tex; sprite.material.needsUpdate = true; }
+    sprite.material.opacity = vis * (1 - 0.65 * far) * (big ? 1 : 0.88);
+    const px = pinPx(p, state.alt, big) * (1 - 0.25 * far);
     sprite.scale.setScalar(px * k);
     if (halo) {
       const pulse = 1.9 + 0.35 * Math.sin(now / 380);
@@ -269,7 +294,7 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
 const zoomK = () => Math.min(1, Math.max(0.0015, state.alt / 1.8)); // pins and labels shrink as the camera comes in, down to street scale
 const tip = p => (p.cluster
   ? `<div class="tip"><span class="d">${p.cluster.length} records here</span>${p.cluster.slice(0, 6).map(x => `<p>${esc(x.title)}</p>`).join('')}${p.cluster.length > 6 ? '<p>…</p>' : ''}</div>`
-  : `<div class="tip"><span class="d">${esc(p.display)}${p.outline ? ' · outline' : ''}${p.unc >= 100 ? ` · place within about ${Math.round(p.unc).toLocaleString()} km` : ''}</span><b>${esc(p.title)}</b><p>${esc(p.summary)}</p></div>`);
+  : `<div class="tip"><span class="d">${esc(p.display)}${p.outline ? '' : ' · full story'}${p.unc >= 100 ? ` · place within about ${Math.round(p.unc).toLocaleString()} km` : ''}</span><b>${esc(p.title)}</b><p>${esc(p.summary)}</p></div>`);
 // High-density screens (2x, 3x) would render 4–9 times the pixels for little visible gain on a moving globe: cap the
 // drawing resolution at 1.5x (and antialias only at 1x, where it is needed and cheap)
 const PR = Math.min(window.devicePixelRatio || 1, 1.5);
@@ -278,7 +303,7 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, a
   .showGraticules(false).showAtmosphere(false)
   .pointsTransitionDuration(0).pathTransitionDuration(0).labelsTransitionDuration(0)
   .customThreeObject(p => { // pins are screen-sized badge sprites (see placePinSprites)
-    const mat = new THREE.SpriteMaterial({ map: pinTexture(p), transparent: true, depthTest: false, depthWrite: false, sizeAttenuation: false });
+    const mat = new THREE.SpriteMaterial({ map: pinTexture(p, standsOut(p, state.alt)), transparent: true, depthTest: false, depthWrite: false, sizeAttenuation: false });
     const group = new THREE.Group(), sprite = new THREE.Sprite(mat);
     sprite.renderOrder = 10 + p.importance; sprite.visible = false; group.add(sprite); // shown by placePinSprites once sized
     sprite.raycast = function (r, hits) { if (this.visible) THREE.Sprite.prototype.raycast.call(this, r, hits); }; // no clicks on hidden pins
@@ -289,12 +314,10 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, a
     return group;
   })
   .customThreeObjectUpdate((obj, p) => { // runs for every pin on each render: move it, and add or drop the selection halo
-    Object.assign(obj.position, globe.getCoords(p.lat, p.lon, 0.004));
+    Object.assign(obj.position, globe.getCoords(p.lat, p.lon, 0.004 + p.importance * 0.0012));   // the most important pin wins the pointer where pins overlap
     const e = pinSprites.get(p.id);
     if (!e) return;
     e.p = p;
-    const tex = pinTexture(p); // a refreshed record may change domain or tier
-    if (e.sprite.material.map !== tex) { e.sprite.material.map = tex; e.sprite.material.needsUpdate = true; }
     const lt = labelTexture(p.title || '');
     if (e.label.material.map !== lt.tex) { e.label.material.map = lt.tex; e.label.userData = { w: lt.w, h: lt.h }; e.label.material.needsUpdate = true; }
     if (p.id === state.selected && !e.halo) {
@@ -313,6 +336,7 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, a
   .arcLabel(a => `<div class="tip"><span class="d">${esc(a.label)}</span><b>${esc(a.title)}</b>${a.because ? `<p>${esc(a.because)}</p>` : ''}</div>`).onArcClick(a => goTo(a.id));
 window.Space.init(globe); // satellite Earth, clouds, stars, Sun and Moon (space.js)
 window.Fossils.init(globe, () => { fossilCountMa = null; render(); });
+window.Coastlines.init(globe);
 window.Borders?.init(globe); // dated polity borders (borders.js)
 // deep-time visuals: scenes for records, names on the moving continents, marks on the time bar, the film (deeptime.json)
 let deepTime = null, marksKey = '';
@@ -528,6 +552,9 @@ function updateSky() {
     nightLights: state.t >= 1900, clouds: state.clouds && present, zoomAlt: state.alt });
   window.Space.showPlateEdges(state.plateEdges);
   state.paleoMa = window.Space.setPaleo(state.t < -2e6 ? -state.t / 1e6 : null);
+  const lifeMa = state.t < -2e6 && -state.t / 1e6 <= 560 ? -state.t / 1e6 : null, coastBtn = $('#coastlines');   // the Life period, easing out just past it
+  if (coastBtn.disabled === (lifeMa != null)) { coastBtn.disabled = lifeMa == null; coastBtn.title = lifeMa != null ? 'Today’s coastlines, carried back with the plates, to show where today’s continents were' : 'Today’s coastlines show on the moving plates in the Life period, the last 540 million years'; }
+  window.Coastlines.update(state.coastlines && !state.film ? lifeMa : null);
   state.seaDrop = seaDropAt(state.t);
   const bp = 1950 - state.t;
   window.Space.setSeaDrop(state.seaDrop * Math.min(1, Math.max(0, (bp - 8000) / 1000)));   // the shelves flood gradually, not at a stroke, as the curve ends
@@ -612,18 +639,18 @@ function eonNote(ma) {
 // Dense spots become one count badge. The cell follows the camera height, about a badge's width on screen; the open
 // record stays out of it. Up close only records at nearly the same place remain together, so a stack stays reachable.
 function clusterPins(pins) {
-  const cell = Math.max(0.01, state.alt), least = state.alt < 0.3 ? 2 : 3, cells = new Map();
+  const cell = Math.max(0.01, state.alt), cells = new Map();
   for (const p of pins) {
     if (p.id === state.selected) continue;
-    const key = `${Math.floor(p.lat / cell)}:${Math.floor(p.lon / cell)}`;
+    const key = `${isMajor(p) ? 'major' : 'quiet'}:${Math.floor(p.lat / cell)}:${Math.floor(p.lon / cell)}`;   // major records never disappear into a stack of quiet ones
     (cells.get(key) || cells.set(key, []).get(key)).push(p);
   }
   const out = pins.filter(p => p.id === state.selected);
   for (const [key, group] of cells) {
-    if (group.length < least) { out.push(...group); continue; }
+    if (group.length < (key.startsWith('major') || state.alt < 0.3 ? 2 : 3)) { out.push(...group); continue; }
     group.sort((a, b) => rankOf(b) - rankOf(a) || b.importance - a.importance);
     const top = group[0], lat = group.reduce((a, p) => a + p.lat, 0) / group.length, lon = group.reduce((a, p) => a + p.lon, 0) / group.length;
-    out.push({ id: `cluster:${key}`, cluster: group, lat, lon, importance: top.importance, rank: top.rank, domains: top.domains, outline: false,
+    out.push({ id: `cluster:${key}`, cluster: group, lat, lon, importance: top.importance, domains: top.domains, outline: top.outline,
       title: `${top.title} +${group.length - 1}`, start: Math.min(...group.map(p => p.start)), end: Math.max(...group.map(p => p.end)) });
   }
   return out;
@@ -855,7 +882,7 @@ $('#speed').onclick = e => {   // click for faster, shift-click or right-click f
 };
 $('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
 setInterval(() => { if (state.realSun) updateSky(); }, 60000);   // the real Sun keeps moving while the page sits still
-for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#paths', 'paths'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#fossils-toggle', 'fossils']]) {
+for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#paths', 'paths'], ['#coastlines', 'coastlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#fossils-toggle', 'fossils']]) {
   $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); };
 }
 
@@ -999,7 +1026,7 @@ async function openRecord(id) {
     ${img ? `<div class="p-credit">${esc(img.title)} · ${esc(img.credit)} · ${esc(img.license)}</div>` : r.wiki ? '<div class="p-credit wiki-credit" hidden></div>' : ''}
     <div class="p-body">
       ${tourNav()}
-      ${r.status === 'outline' ? '<div class="outline-note">Outline: a sourced pin. The full record, with narrative, perspectives and media, is still to come.</div>' : ''}
+      ${r.status === 'outline' ? '<div class="outline-note">A short record: a summary drawn from the sources below.</div>' : ''}
       <div class="p-kicker">${esc((DOMAINS[r.domains?.[0]] || [r.kind])[0])} · ${esc(r.kind)}</div>
       <h2>${esc(r.title)}</h2>
       <div class="p-when">${esc(r.when?.display)}</div>

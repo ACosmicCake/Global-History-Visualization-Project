@@ -124,6 +124,7 @@
   .toggle { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 11px; color: var(--soft); }
   .toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
   .toggle:disabled { opacity: .4; cursor: default; }
+  .imp-key { margin: 6px 0 0; font-size: 11px; line-height: 1.4; color: var(--muted); }
 
   /* ---------- notices */
   #notice { padding: 7px 12px; font-size: 12px; line-height: 1.45; color: var(--soft); text-align: left; background: rgba(8,12,20,0.55); border-radius: 8px; }
@@ -387,7 +388,7 @@
     <button id="legend-toggle" class="legend-head" aria-expanded="true"><h2>Domains &amp; layers</h2><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
     <div id="legend-body">
     <ul id="domains"></ul>
-    <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div></div>
+    <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div><p class="imp-key">Larger markers changed more. A gold ring means a full story.</p></div>
     <p class="sky-note">The Moon is always at its real position for the date shown. With Real sunlight on, the Sun stands where it does right now, or for the season shown on the One year scale. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
     <div class="toggles">
       <button class="toggle" id="whole" aria-pressed="false" title="Show every record in this time level, not only those near the date">Whole period</button>
@@ -395,6 +396,7 @@
       <button class="toggle" id="paths" aria-pressed="false">Routes</button>
       <button class="toggle" id="vitals-toggle" aria-pressed="true" title="Temperature, CO₂, sea level, day length and the Moon’s distance at the date shown, with a curve along the time bar">Vital signs</button>
       <button class="toggle" id="fossils-toggle" aria-pressed="true" title="In deep time: places where fossils of eight groups have been found in rocks of the age shown (Paleobiology Database)">Fossils</button>
+      <button class="toggle" id="coastlines" aria-pressed="false" title="In the Life period: today’s coastlines, carried back with the plates, to show where today’s continents were">Today’s coastlines</button>
       <button class="toggle" id="clouds" aria-pressed="false">Clouds</button>
       <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth as the Sun stands right now, with a dark night side; on the One year scale, for the season shown">Real sunlight</button>
     </div>
@@ -471,6 +473,7 @@
 <script src="spacecraft.js"></script>
 <script src="deeptime.js"></script>
 <script src="fossils.js"></script>
+<script src="coastlines.js"></script>
 <script src="borders.js"></script>
 <script src="sequence.js"></script>
 <script src="app.js"></script>
