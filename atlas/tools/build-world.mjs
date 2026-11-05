@@ -16,8 +16,10 @@
 //   viewer/paleo/boundaries.json   MERDITH2021's plate boundaries, carried across to these positions by the rotations of the nearest rock. PALEOMAP has no boundaries of its own, so
 //                                  younger than 680 Ma these are approximate, and any part that lands inland is left out. Each frame's boundaries are 10 million years apart.
 //
-// Each PaleoDEM was drawn on its own, so coasts jump between neighbours and small islands come and go. Each frame here is a weighted average of the frames 25 million years either side of it, each moved
-// into line first by the flow, so land changes slowly and only what lasts stays. Specks of land or sea a few cells across, which would blink as the coast moves past them, are lowered or filled in.
+// Each PaleoDEM was drawn on its own, so coasts jump between neighbours and small islands come and go. Each frame here takes the middle value of the frames 15 million years either side of it, each moved
+// into line first by the flow, which drops a blip but keeps a real step, such as a sea flooding a continent, sharp and on time; then a light average steadies it. Specks of land or sea a few cells across,
+// which would blink as the coast moves past them, are lowered or filled in. Fossils have the last word: where finds of the date show land or sea and the map as drawn agrees with them, but the filter
+// has changed it, the map as drawn comes back. Nothing is added that the map doesn't have. This reads viewer/paleo/fossils.json, if it's there.
 //
 // Usage: node atlas/tools/build-world.mjs <PaleoDEMS_long_lat_elev_csv_v2.zip> <cache folder>
 // The cache folder keeps the service's answers. It needs merdith-morph.json from viewer/paleo/build_morph.mjs, and merdith-boundaries.json from atlas/tools/build-plates.mjs.
@@ -287,8 +289,48 @@ const settleSpecks = img => {
   }
   return img;
 };
+// The middle value along the plates' path over a few maps. Unlike an average, it drops a blip outright and keeps a real step, such as a sea flooding a continent, sharp and on time.
+const middleAlongFlow = (series, k, flowOf, reach) => {
+  const out = new Float32Array(W * H), vals = new Float32Array(2 * reach + 1);
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    const [lon, lat] = cellOf(x, y); let n = 0; vals[n++] = series[k][y * W + x];
+    for (const dir of [1, -1]) {
+      let lo = lon, la = lat;
+      for (let j = 1; j <= reach; j++) {
+        const m = k + dir * j; if (m < 0 || m >= series.length) break;
+        const [fx, fy] = flowAt(flowOf(dir > 0 ? m - 1 : m), lo, la), cosL = Math.max(0.15, Math.cos(rad(la)));
+        lo += dir * fx / cosL; la = Math.max(-89.5, Math.min(89.5, la + dir * fy));
+        if (lo > 180) lo -= 360; else if (lo < -180) lo += 360;
+        vals[n++] = sampleWorld(series[m], lo, la);
+      }
+    }
+    const v = vals.subarray(0, n).sort(); out[y * W + x] = n % 2 ? v[(n - 1) / 2] : (v[n / 2 - 1] + v[n / 2]) / 2;
+  }
+  return out;
+};
 const putFrame = (k, img) => { const ox = (k % COLS) * W, oy = Math.floor(k / COLS) * H; for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) atlas[(oy + y) * AW + ox + x] = encode(img[y * W + x]); };
-worlds.forEach((_, k) => { const out = settleSpecks(alongFlow(worlds, k, n => flows[n], 5, 2.5)); soft.push(out); putFrame(k, out); });
+{
+  const flowOf = n => flows[n], mid = worlds.map((_, k) => middleAlongFlow(worlds, k, flowOf, 3));
+  // fossils of each date, where they stood then: land animals and plants say land, shelled sea creatures say sea. A find shows from its oldest to its youngest possible age, easing in over 5 million years.
+  const fossilFile = path.join(VIEWER, 'paleo', 'fossils.json'), f = fs.existsSync(fossilFile) ? JSON.parse(fs.readFileSync(fossilFile, 'utf8')) : null;
+  const kinds = f ? f.groups.map(g => (['Dinosaurs', 'Mammals', 'Insects', 'Plants'].includes(g) ? 1 : ['Trilobites', 'Brachiopods', 'Ammonites'].includes(g) ? -1 : 0)) : [];
+  const evidence = t => {
+    const land = new Float32Array(W * H), sea = new Float32Array(W * H); if (!f) return { land, sea };
+    const a = Math.floor(t / 10), s = t / 10 - a;
+    for (let i = 0; i < f.lat.length; i++) {
+      const kind = kinds[f.group[i]], old = f.old[i] / 10, young = f.young[i] / 10; if (!kind || t > old + 2.5 || t < young - 2.5) continue;
+      const qa = table[f.plate[i]]?.q[a], qb = table[f.plate[i]]?.q[a + 1], q = qa && s && qb ? slerp(qa, qb, s) : qa; if (!q) continue;
+      const on = Math.min(1, Math.min(old + 2.5 - t, t - young + 2.5) / 5), [x, y] = ll(apply(quatMatrix(q), xyz([f.lon[i] / 10, f.lat[i] / 10]))), cx = Math.floor(x + 180), cy = Math.floor(90 - y), map = kind > 0 ? land : sea;
+      for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) { const yy = cy + dy; if (yy < 0 || yy >= H) continue; const g = yy * W + ((cx + dx + W) % W), v = on * (dx || dy ? (dx && dy ? 0.35 : 0.6) : 1); if (v > map[g]) map[g] = v; }
+    }
+    return { land, sea };
+  };
+  worlds.forEach((raw, k) => {
+    const out = settleSpecks(alongFlow(mid, k, flowOf, 1, 0.8)), { land, sea } = evidence(k * STEP);
+    for (let i = 0; i < W * H; i++) { const r = raw[i], o = out[i], m = r >= 0 && o < 0 ? land[i] : r < 0 && o >= 0 ? sea[i] : 0; if (m > 0) out[i] = o + (r - o) * m; }
+    soft.push(out); putFrame(k, out);
+  });
+}
 // MERDITH2021 only reconstructs rock it has evidence for at each age. Going back, rock it doesn't have yet retreats toward the rock that lasts: the farthest goes first, from 540 Ma at the earliest since
 // the maps show it until then, and what touches a surviving continent goes last, 90 million years later. Read forward, continents grow outward as terranes join them. Nothing vanishes all at once.
 const rockOldest = cells.map(c => { const q = rock[c] >= 0 ? merdith.plates[rock[c]].q : null; if (q) for (let i = q.length - 1; i >= 0; i--) if (q[i]) return i * merdith.step; return 0; });
@@ -395,6 +437,12 @@ fs.writeFileSync(path.join(VIEWER, 'paleo', 'boundaries.json'), JSON.stringify(o
 console.log('boundaries.json', (fs.statSync(path.join(VIEWER, 'paleo', 'boundaries.json')).size / 1e6).toFixed(2), 'MB');
 
 // ---------- checks: rock followed through time, and how much the coast still jumps
+{ // how close the coasts stay to the maps as drawn
+  const row = []; for (const [a, b] of [[0, 50], [50, 200], [200, 400], [400, 540]]) { let same = 0, all = 0; for (let k = a / STEP; k <= b / STEP; k++) for (let y = 0; y < H; y++) { const c = Math.cos(rad(90 - y - 0.5)); for (let x = 0; x < W; x++) { all += c; if ((soft[k][y * W + x] >= 0) === (worlds[k][y * W + x] >= 0)) same += c; } } row.push(`${a}-${b} Ma ${(same / all * 100).toFixed(1)}%`); }
+  console.log('land or sea as the PaleoDEM has it:', row.join('  '));
+  const share = img => { let l = 0, a = 0; for (let y = 0; y < H; y++) { const c = Math.cos(rad(90 - y - 0.5)); for (let x = 0; x < W; x++) { a += c; if (img[y * W + x] >= 0) l += c; } } return l / a * 100; }, gaps = worlds.map((w, k) => share(soft[k]) - share(w));
+  console.log('land share against the PaleoDEM, % of globe: mean difference', (gaps.reduce((s, v) => s + Math.abs(v), 0) / gaps.length).toFixed(2), 'worst', Math.max(...gaps.map(Math.abs)).toFixed(2));
+}
 const checks = [['Himalaya', 85, 30], ['Rockies, Colorado', -106, 39], ['Kansas', -99, 38], ['Appalachians', -80, 38], ['Sahara, Libya', 18, 27], ['Andes', -69, -20], ['Congo', 22, -2], ['Siberia', 100, 62]], show = [0, 10, 14, 18, 30, 50, 60, 80, 108];
 console.log('height in metres at'.padEnd(20), show.map(k => `${k * STEP}Ma`.padStart(7)).join(''));
 for (const [name, lon, lat] of checks) {

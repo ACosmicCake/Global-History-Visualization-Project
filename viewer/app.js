@@ -1,8 +1,8 @@
 // Living Atlas viewer: a rotatable globe with a nested-scale time axis (spec section 2), pins filtered by
-// time level and importance (spec 11.1), routes for moving events, and procedural monuments (spec 6.4).
+// time level and importance (spec 11.1), and routes for moving events.
 // Data comes from api/pins.json: live from server.mjs locally, refreshed every 15 seconds; a static file, fetched once, on the published site.
-// Libraries load as pinned UMD scripts in index.html: three@0.149.0, globe.gl@2.27.2, topojson-client@3.1.0.
-const { THREE, Globe, topojson } = window;
+// Libraries load as pinned UMD scripts in index.html: three@0.149.0, globe.gl@2.27.2.
+const { THREE, Globe } = window;
 // No WebGL, or the graphics libraries didn't load: say so, and point to the plain pages, which need neither.
 if (!THREE || !Globe || !(() => { try { const c = document.createElement('canvas'); return c.getContext('webgl2') || c.getContext('webgl'); } catch { return null; } })()) {
   document.querySelector('#loading').innerHTML = '<div style="max-width:32em;padding:0 16px;text-align:center;line-height:1.7">The 3D globe can’t run in this browser. <a href="browse.html" style="color:#d9b36a">Read every record as a plain list</a> instead.</div>';
@@ -37,9 +37,9 @@ const DOMAINS = {
 const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 // outlines (amendment A1) draw as faint, translucent pins so full records stand out
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
-const GLOBE_R = 100, KM_PER_UNIT = 6371 / GLOBE_R;
+const GLOBE_R = 100;
 
-const state = { level: 4, t: -500, fossils: true, plateEdges: false, vitals: true, vitalCurve: 'temp', whole: false, borders: true, monuments: false, modelEmph: 1, paths: false, outlines: true, mapStyle: 'satellite', clouds: false, realSun: false, pins: [], models: new Map(), selected: null,
+const state = { level: 4, t: -500, fossils: true, plateEdges: false, vitals: true, vitalCurve: 'temp', whole: false, borders: true, paths: false, clouds: false, realSun: false, pins: [], selected: null,
   alt: 2.4, off: new Set(), impOff: new Set() };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -88,7 +88,6 @@ function scaleIndex(p) {
   return i;
 }
 const inLevel = p => scaleIndex(p) <= state.level;
-const tierOn = p => state.outlines || !p.outline;
 const rankOf = p => p.rank ?? p.importance;   // zoom thinning only (api.mjs displayRanks); filters and the record show importance
 // the Domains & layers filters: a record shows if any of its domains is on and its importance level is on
 const domainOn = p => (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) && !state.impOff.has(p.importance || 0);
@@ -106,7 +105,7 @@ function visiblePins() {
   const win = windowNow(), mi = minImportance();
   // the open record always shows (with its route), whatever the time scale, filters or zoom thinning: a sequence can
   // move the time axis to a scale the record isn't classed at, and its pin must not vanish while it is being read
-  return state.pins.filter(p => p.lat != null && (p.id === state.selected || inLevel(p) && domainOn(p) && tierOn(p) && rankOf(p) >= mi
+  return state.pins.filter(p => p.lat != null && (p.id === state.selected || inLevel(p) && domainOn(p) && rankOf(p) >= mi
     && p.end >= win.from && p.start <= win.to)).map(placed);
 }
 
@@ -277,8 +276,7 @@ const PR = Math.min(window.devicePixelRatio || 1, 1.5);
 const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, alpha: true, powerPreference: 'high-performance' } })($('#globe'))
   .backgroundColor('rgba(0,0,0,0)')
   .showGraticules(false).showAtmosphere(false)
-  .polygonCapColor(() => '#24332c').polygonSideColor(() => 'rgba(0,0,0,0)').polygonStrokeColor(() => 'rgba(160,190,165,0.35)').polygonAltitude(0.003)
-  .polygonsTransitionDuration(0).pointsTransitionDuration(0).pathTransitionDuration(0).labelsTransitionDuration(0)
+  .pointsTransitionDuration(0).pathTransitionDuration(0).labelsTransitionDuration(0)
   .customThreeObject(p => { // pins are screen-sized badge sprites (see placePinSprites)
     const mat = new THREE.SpriteMaterial({ map: pinTexture(p), transparent: true, depthTest: false, depthWrite: false, sizeAttenuation: false });
     const group = new THREE.Group(), sprite = new THREE.Sprite(mat);
@@ -305,17 +303,14 @@ const globe = Globe({ animateIn: true, rendererConfig: { antialias: PR < 1.25, a
     } else if (p.id !== state.selected && e.halo) { obj.remove(e.halo); e.halo.material.dispose(); e.halo = null; }
   })
   .customLayerLabel(tip).onCustomLayerClick(p => (p.cluster ? openCluster(p) : openRecord(p.id)))
-  .onCustomLayerHover(p => { $('#globe').style.cursor = p ? 'pointer' : ''; hoverId = p?.id ?? null; })
+  .onCustomLayerHover(p => { $('#globe').style.cursor = p ? 'pointer' : ''; hoverId = p?.id ?? null; fetchSoon(p && !p.cluster ? p.id : null); })
   .labelLat('lat').labelLng('lon').labelText('title').labelSize(() => 0.5 * zoomK()).labelDotRadius(0)
   .labelColor(() => 'rgba(233,237,244,0.82)').labelAltitude(0.03).labelResolution(2).labelLabel(tip).onLabelClick(p => openRecord(p.id))
   .pathPoints('pts').pathPointLat(p => p.lat).pathPointLng(p => p.lon)
   .pathColor(p => (p.ring ? p.color : [p.color, 'rgba(255,255,255,0.15)'])).pathStroke(p => (p.ring ? 0.7 : p.wall ? 2.2 : p.dated ? 1.8 : 1.1))
   .pathDashLength(p => (p.wall || p.ring ? 1 : 0.04)).pathDashGap(p => (p.wall || p.ring ? 0 : 0.02)).pathDashAnimateTime(p => (p.wall || p.ring ? 0 : 9000))
   .arcStartLat('a').arcStartLng('b').arcEndLat('c').arcEndLng('d').arcColor('color').arcStroke(0.45).arcAltitudeAutoScale(0.3).arcDashLength(0.35).arcDashGap(0.12).arcDashAnimateTime(2600).arcsTransitionDuration(0)
-  .arcLabel(a => `<div class="tip"><span class="d">${esc(a.label)}</span><b>${esc(a.title)}</b>${a.because ? `<p>${esc(a.because)}</p>` : ''}</div>`).onArcClick(a => goTo(a.id))
-  .objectLat('lat').objectLng('lon').objectAltitude(0).objectThreeObject(o => o.obj)
-  .objectLabel(o => `<div class="tip"><span class="d">3D model · ${esc(o.kind)}</span><b>${esc(o.title)}</b><p>${esc(o.note)}</p></div>`)
-  .onObjectClick(o => openRecord(o.id));
+  .arcLabel(a => `<div class="tip"><span class="d">${esc(a.label)}</span><b>${esc(a.title)}</b>${a.because ? `<p>${esc(a.because)}</p>` : ''}</div>`).onArcClick(a => goTo(a.id));
 window.Space.init(globe); // satellite Earth, clouds, stars, Sun and Moon (space.js)
 window.Fossils.init(globe, () => { fossilCountMa = null; render(); });
 window.Borders?.init(globe); // dated polity borders (borders.js)
@@ -353,7 +348,7 @@ $('#globe').addEventListener('touchmove', e => {
 }, { passive: true });
 $('#globe').addEventListener('touchend', () => { pinch = null; }, { passive: true });
 
-// Per frame: ease the camera distance in log space (frame-rate independent) and rescale monuments (cheap).
+// Per frame: ease the camera distance in log space (frame-rate independent).
 // Rebuilding pins and labels is expensive, so that waits until the camera settles and the detail tier changes.
 let lastFrame = performance.now(), settleTimer = null, tierKey = '';
 const tier = () => `${minImportance()}|${Math.round(Math.log2(zoomK()) * 3)}`;
@@ -412,23 +407,14 @@ function placePlanetOrbit() { // per frame: the ring on the globe's edge (cheap:
 let skyAlt = 0;
 function cameraMoved(alt) {
   state.alt = alt;
-  // the sky and model scale depend only on height, so a pan (or a sequence following a route) skips that work
-  if (Math.abs(Math.log(alt / (skyAlt || alt * 2))) > 0.01) { skyAlt = alt; scaleModels(); updateSky(); }
+  // the sky depends only on height, so a pan (or a sequence following a route) skips that work
+  if (Math.abs(Math.log(alt / (skyAlt || alt * 2))) > 0.01) { skyAlt = alt; updateSky(); }
   clearTimeout(settleTimer);
   settleTimer = setTimeout(() => { const t = tier(); if (t !== tierKey) { tierKey = t; render(); } }, 160);
 }
 controls.addEventListener('change', () => cameraMoved(camAlt())); // drags
 setInterval(() => { const a = camAlt(); if (Math.abs(a - state.alt) / state.alt > 0.05) cameraMoved(a); }, 250); // tweened fly-tos
 addEventListener('resize', () => { globe.width(innerWidth).height(innerHeight); drawDensity(); });
-// Natural Earth 1:110m land (public domain), shipped with the page: modern coastlines only.
-// Natural Earth 1:110m land (public domain): the flat "Map" style draws it over a plain ocean.
-let landFeatures = [];
-fetch('site/land-110m.json').then(r => r.json()).then(t => { landFeatures = topojson.feature(t, t.objects.land).features; applyMapStyle(); });
-function applyMapStyle() {
-  const map = state.mapStyle === 'map';
-  globe.polygonsData(map ? landFeatures : []).showGraticules(map);
-  updateSky();
-}
 // Sea level through the ice ages (Spratt and Lisiecki 2016, thousand-year steps back to 798,000 years ago), how far below
 // today's it stood at the date shown. Fetched the first time the date is old enough to need it. Small values near the
 // present are within the study's margin, so nothing is drawn for them.
@@ -521,101 +507,37 @@ function drawVitalCurve(g, w, h, from, to) {
   ys.forEach((v, i) => { if (v == null) { pen = false; return; } const x = (i / (n - 1)) * w; if (pen) g.lineTo(x, Y(v)); else g.moveTo(x, Y(v)); pen = true; });
   g.strokeStyle = 'rgba(150,215,240,.9)'; g.lineWidth = 1.25; g.lineJoin = 'round'; g.stroke();
 }
-// Sky: the Moon sits where it really was at the selected moment, and with Real sunlight on so does the Sun; otherwise
-// the Sun lights the side being explored. City lights are modern (c. 2012), so they appear only from 1900 on.
+// Sky: the Moon sits where it really was at the selected moment. The Sun lights the side being explored, or with Real sunlight on it stands where it does right now, at this time of day and year, which is
+// the real sky at today's date and a fair one at any other: most scales show a year, with no day or hour to place it by. On the One year scale, which does show a day, the season follows that day and the
+// time of day stays the clock's, so scrubbing changes the season rather than spinning the Earth under the Sun. City lights are modern (c. 2012), so they appear only from 1900 on.
 function yearToDate(y) {
   if (!(y > -270000 && y < 270000)) return new Date();
   const d = new Date(Date.UTC(2000, 0, 1)); d.setUTCFullYear(Math.floor(y));
   return new Date(d.getTime() + (y - Math.floor(y)) * 365.2425 * 864e5);
 }
+function sunMoment() {
+  const now = new Date();
+  if (LEVELS[state.level].key !== 'event' || state.t <= -4000) return now;
+  const d = yearToDate(state.t); d.setUTCHours(now.getUTCHours(), now.getUTCMinutes(), 0, 0);
+  return d;
+}
 function updateSky() {
-  const map = state.mapStyle === 'map';
-  window.Space.update({ date: state.t > -4000 ? yearToDate(state.t) : new Date(), sunMode: state.realSun ? 'real' : 'camera',
-    nightLights: !map && state.t >= 1900, clouds: !map && state.clouds, zoomAlt: state.alt, flat: map });
+  const present = state.t >= NOW - 1, cloudBtn = $('#clouds');   // the cloud image is today's weather, so it shows only in the present day
+  if (cloudBtn.disabled === present) { cloudBtn.disabled = !present; cloudBtn.title = present ? 'Clouds from a recent satellite image' : 'Clouds show only in the present day'; }
+  window.Space.update({ date: state.t > -4000 ? yearToDate(state.t) : new Date(), sunDate: sunMoment(), sunMode: state.realSun ? 'real' : 'camera',
+    nightLights: state.t >= 1900, clouds: state.clouds && present, zoomAlt: state.alt });
   window.Space.showPlateEdges(state.plateEdges);
-  state.paleoMa = window.Space.setPaleo(!map && state.t < -2e6 ? -state.t / 1e6 : null);
-  state.seaDrop = map ? 0 : seaDropAt(state.t);
+  state.paleoMa = window.Space.setPaleo(state.t < -2e6 ? -state.t / 1e6 : null);
+  state.seaDrop = seaDropAt(state.t);
   const bp = 1950 - state.t;
   window.Space.setSeaDrop(state.seaDrop * Math.min(1, Math.max(0, (bp - 8000) / 1000)));   // the shelves flood gradually, not at a stroke, as the curve ends
-  window.Space.setIce(map ? null : bp);
-  state.humid = map ? 0 : humidAt(bp);
+  window.Space.setIce(bp);
+  state.humid = humidAt(bp);
   window.Space.setClimate(Math.min(1, state.seaDrop / 125), state.humid);
   window.Borders?.update(state.t, state.borders && !state.film);
   window.DeepTime?.update(state.paleoMa >= 10 && -state.t / 1e6 <= window.Space.PALEO_MAX ? -state.t / 1e6 : null);
   window.Fossils.update(state.fossils && state.paleoMa != null ? -state.t / 1e6 : null);
   window.Spacecraft?.update(state.film ? -1e9 : state.t, state.t > -4000 ? yearToDate(state.t) : new Date());
-}
-
-// ---------- procedural monuments (spec 6.4): built only from the record's own sourced measurements
-function monumentObject(rec) {
-  const m = rec.model, meas = m?.geometry?.measurements || [];
-  if (m.linear || /\bwall\b/i.test(rec.title) || m.geometry?.shape === 'wall') return null; // linear works (walls, roads, canals) are drawn as their path
-  if (m.no_mesh) return null; // the record's measurements don't describe one buildable form
-  const metres = x => /^(m|metres|meters)$/i.test(x.unit || '');
-  const hm = meas.find(x => /height/i.test(x.part) && metres(x)), height = hm?.value;
-  const base = meas.find(x => /base|side|width|length/i.test(x.part) && metres(x) && x.value < 5000)?.value;
-  const reconstruction = m.geometry.type === 'reconstruction';
-  const mat = new THREE.MeshPhongMaterial({ color: 0xd9c49a, emissive: 0x1a140a, shininess: 8, transparent: reconstruction, opacity: reconstruction ? 0.6 : 1 });
-  let geom, note;
-  if (height && base && /pyramid/i.test(hm.part)) {
-    geom = new THREE.ConeGeometry(base / Math.SQRT2, height, 4); geom.rotateY(Math.PI / 4);
-    note = `Pyramid built from ${hm.part.toLowerCase()} (${height} m) and base ${base} m.`;
-  } else if (height) {
-    const w = base || height * 2; geom = new THREE.BoxGeometry(w, height, w);
-    note = `Block ${w} m wide and ${height} m high, from the record's measurements.`;
-  } else {
-    return null; // no sourced height: no 3D model rather than an invented one; the pin still marks the site
-  }
-  geom.translate(0, (geom.parameters?.height || 24) / 2, 0);
-  geom.rotateX(Math.PI / 2);
-  return { mesh: new THREE.Mesh(geom, mat), note };
-}
-// Blender-built meshes (viewer/models, built by build_models.py from the record's measurements) when available;
-// otherwise the in-browser procedural shape.
-let modelIndex = null;
-async function blenderMesh(rec) {
-  try {
-    modelIndex = modelIndex || new Set((await (await fetch('models/index.json', { cache: 'no-store' })).json()).map(m => m.id));
-    if (!modelIndex.has(rec.id)) return null;
-    const d = await (await fetch(`models/${rec.id}.json`)).json();
-    const geom = new THREE.BufferGeometry();
-    geom.setAttribute('position', new THREE.Float32BufferAttribute(d.positions, 3));
-    geom.setAttribute('normal', new THREE.Float32BufferAttribute(d.normals, 3));
-    geom.rotateX(Math.PI / 2); // Y-up model -> globe.gl object frame (Z out of the surface)
-    const c = new THREE.Color(...d.color);
-    const mat = new THREE.MeshPhongMaterial({ color: c, emissive: c.clone().multiplyScalar(0.12), shininess: 6, flatShading: true,
-      transparent: rec.model.geometry.type === 'reconstruction', opacity: rec.model.geometry.type === 'reconstruction' ? 0.7 : 1 });
-    return { mesh: new THREE.Mesh(geom, mat), note: `${d.shape.replace('_', ' ')} modelled in Blender from the record's sourced measurements (procedural, not a scan).` };
-  } catch { return null; }
-}
-async function placeModel(rec) {
-  const b = (await blenderMesh(rec)) || monumentObject(rec);
-  if (!b) return null;
-  const group = new THREE.Group(); group.add(b.mesh);
-  b.mesh.geometry.computeBoundingBox();
-  const size = b.mesh.geometry.boundingBox.getSize(new THREE.Vector3()), sizeM = Math.max(1, size.x, size.y, size.z); // the largest extent sets the on-screen size
-  return { id: rec.id, title: rec.title, lat: rec.where.lat, lon: rec.where.lon, note: b.note, kind: rec.model.geometry.type, sizeM,
-    obj: group, phases: rec.model.phases || [] };
-}
-function modelVisibleAt(o, t) {
-  if (!o.phases.length) return true;
-  if (t < Math.min(...o.phases.map(p => p.start_year))) return false;
-  return !o.phases.some(p => p.state === 'destroyed' && p.start_year <= t && (p.end_year ?? Infinity) >= t);
-}
-// Emphasis (spec 6.4): a monument spans at least MODEL_PX on screen, so it reads at any zoom, and returns to
-// true scale once that is larger. The enlargement is always labelled (#emphasis-flag).
-const MODEL_PX = 40;
-function scaleModels() {
-  const cam = globe.camera(), H = globe.renderer().domElement.clientHeight || innerHeight;
-  const unitsPerPx = Math.max(1e-6, cam.position.length() - GLOBE_R) * 2 / (H * cam.projectionMatrix.elements[5]);
-  const trueK = 1 / (KM_PER_UNIT * 1000); // metres -> globe units
-  state.modelEmph = 1;
-  for (const o of state.models.values()) {
-    const k = Math.max(trueK, MODEL_PX * unitsPerPx / o.sizeM);
-    o.obj.scale.setScalar(k);
-    state.modelEmph = Math.max(state.modelEmph, k / trueK);
-  }
-  $('#emphasis-flag').textContent = `Monuments enlarged up to ${Math.round(state.modelEmph).toLocaleString()}× for visibility`;
 }
 
 // ---------- rendering
@@ -668,7 +590,7 @@ function renderPeriod([a, b, name, text]) {
 }
 // the nearest records either side of the window, so a gap is one click away from something real
 function renderNearest() {
-  const win = windowNow(), mi = minImportance(), cand = state.pins.filter(p => p.lat != null && inLevel(p) && domainOn(p) && tierOn(p) && rankOf(p) >= mi);
+  const win = windowNow(), mi = minImportance(), cand = state.pins.filter(p => p.lat != null && inLevel(p) && domainOn(p) && rankOf(p) >= mi);
   const before = cand.filter(p => p.end < win.from).sort((x, y) => y.end - x.end)[0], after = cand.filter(p => p.start > win.to).sort((x, y) => x.start - y.start)[0];
   $('#empty-near').replaceChildren(...[[before, '←'], [after, '→']].filter(([p]) => p).map(([p, arrow]) => {
     const b2 = document.createElement('button');
@@ -685,7 +607,7 @@ function eonNote(ma) {
     : ga > 2.5 ? 'Archean Earth: a water world with few small islands, under an orange, oxygen-poor haze; microbial life in the seas.'
     : ga > 2.1 && ga < 2.45 ? 'Huronian glaciation: ice reaching far toward the equator as oxygen rose and greenhouse methane fell.'
     : 'Proterozoic Earth: growing continents and shallow seas, oxygen slowly building up; life still mostly single-celled.';
-  return `${scene} Artist’s impression: no plate model reaches back past ${window.Space.PALEO_MAX} million years, so where the land lay is unknown. Faint lines are today’s coastlines; pins mark where the evidence is found today.`;
+  return `${scene} Artist’s impression: no plate model reaches back past ${window.Space.PALEO_MAX} million years, so where the land lay is unknown. Pins mark where the evidence is found today.`;
 }
 // Dense spots become one count badge. The cell follows the camera height, about a badge's width on screen; the open
 // record stays out of it. Up close only records at nearly the same place remain together, so a stack stays reachable.
@@ -736,14 +658,6 @@ function render() {
     .concat(pins.filter(p => p.id === state.selected && p.unc >= 5 && p.unc < 5000 && (!p.geometry || p.geometry === 'point')).map(uncertaintyRing)));
   const arcs = window.Sequence?.playing ? [] : state.arcs;
   if (arcs !== shownArcs) { shownArcs = arcs; globe.arcsData(arcs); }
-  const win = windowNow();
-  const models = !state.monuments ? [] : [...state.models.values()].filter(o => {
-    const p = state.pins.find(x => x.id === o.id);
-    return p && inLevel(p) && domainOn(p) && p.end >= win.from && p.start <= win.to && modelVisibleAt(o, state.t);
-  });
-  globe.objectsData(models);
-  show($('#emphasis-flag'), state.modelEmph > 1.5 && models.length > 0);
-  $('#emphasis-flag').textContent = `Monuments enlarged up to ${Math.round(state.modelEmph).toLocaleString()}× for visibility`;
 
   const { from, to } = range();
   const within = state.whole || LEVELS[state.level].key === 'event' ? '' : ` within ${fmtSpan((windowNow().to - windowNow().from) / 2)}`;
@@ -761,15 +675,16 @@ function render() {
     : state.paleoMa != null ? 'Today’s imagery, carried back with the plates, fading into the PALEOMAP maps of land and sea floor.'
     : state.t < -1e6 ? 'The map shows today’s continents, which have barely moved in the last few million years.'
     : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Ice sheets are drawn only for the last 80,000 years.'} Plant cover is schematic.`
-    : state.t < -12000 ? state.humid > 0 ? 'The Sahara is tinted green for the African Humid Period, about 11,000 to 5,000 years ago. Plant cover is schematic.' : state.mapStyle === 'map' ? 'The map shows today’s coastlines. Sea level, ice sheets and plant cover show in the satellite view.' : `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
+    : state.t < -12000 ? state.humid > 0 ? 'The Sahara is tinted green for the African Humid Period, about 11,000 to 5,000 years ago. Plant cover is schematic.' : `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
   $('#notice').textContent = notice; show($('#notice'), !!notice && $('#panel').hidden && !(innerWidth <= 760 && !$('#seqbar').hidden));   // on a phone it would cover what a sequence is showing
-  const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.end >= from && p.start <= to);
+  const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.end >= from && p.start <= to), anyPublished = anyInLevel || state.pins.some(p => inLevel(p) && p.end >= from && p.start <= to);
   show($('#empty'), state.pins.length > 0 && pins.length === 0 && $('#seqbar').hidden);
   const period = state.t < -11700 && periodAt(-state.t / 1e6);
   $('#empty').classList.toggle('period', !!period);
   if (period && pins.length === 0) renderPeriod(period);
   else {
-    $('#empty-text').textContent = state.whole || !anyInLevel
+    $('#empty-text').textContent = !anyInLevel && anyPublished ? 'Your filters are hiding every record here. Turn on an importance level or a domain to see them.'
+      : state.whole || !anyInLevel
       ? (anyInLevel ? 'Zoom in to see smaller events here.' : `No published records in the ${LEVELS[state.level].name.toLowerCase()} scale yet.`)
       : `Nothing recorded near ${fmtYear(state.t)} yet.`;
     if (pins.length === 0) renderNearest();
@@ -939,9 +854,9 @@ $('#speed').onclick = e => {   // click for faster, shift-click or right-click f
   try { localStorage.setItem('atlas-speed', speed); } catch {}
 };
 $('#speed').oncontextmenu = e => { e.preventDefault(); $('#speed').onclick({ shiftKey: true }); };
-$('#mapstyle').onclick = () => { state.mapStyle = state.mapStyle === 'map' ? 'satellite' : 'map'; $('#mapstyle').setAttribute('aria-pressed', state.mapStyle === 'map'); applyMapStyle(); updateSky(); render(); };
-for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#emph', 'monuments'], ['#paths', 'paths'], ['#outlines', 'outlines'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#fossils-toggle', 'fossils']]) {
-  $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); if (key === 'monuments') loadModels(); };
+setInterval(() => { if (state.realSun) updateSky(); }, 60000);   // the real Sun keeps moving while the page sits still
+for (const [id, key] of [['#borders', 'borders'], ['#whole', 'whole'], ['#paths', 'paths'], ['#clouds', 'clouds'], ['#realsun', 'realSun'], ['#vitals-toggle', 'vitals'], ['#fossils-toggle', 'fossils']]) {
+  $(id).onclick = () => { state[key] = !state[key]; $(id).setAttribute('aria-pressed', state[key]); render(); updateSky(); };
 }
 
 // ---------- search: titles, aliases and other names (spec 11.6), then places and summaries, and dates ("1945", "500 BCE")
@@ -1029,11 +944,44 @@ async function goTo(id) {
 
 // ---------- record panel (all record text is escaped: records are data written by agents)
 const CONF_LABEL = { established: 'Established', probable: 'Probable', contested: 'Contested', legendary: 'Legendary' };
+// A record opens at once from what its pin already knows, then fills in when the full record arrives. Hovering a pin fetches its record ahead of the click.
+const recordCache = new Map(); let openToken = 0, hoverFetch = null;
+function fetchRecord(id) {
+  let got = recordCache.get(id);
+  if (!got) {
+    got = fetch(`api/record/${encodeURIComponent(id)}.json`).then(res => (res.ok ? res.json() : null));
+    recordCache.set(id, got); got.then(r => { if (!r) recordCache.delete(id); }, () => recordCache.delete(id));
+  }
+  return got;
+}
+function fetchSoon(id) { clearTimeout(hoverFetch); if (id) hoverFetch = setTimeout(() => fetchRecord(id).catch(() => {}), 100); }
+// keep the pin in the open part of the screen: left of the side panel, or above the phone's bottom sheet
+function frameRecord(lat, lon, unc) {
+  if (lat == null || (unc ?? 0) >= 5000) return;
+  const phone = innerWidth <= 760, k = Math.min(1, state.alt);
+  globe.pointOfView({ lat: phone ? Math.max(-80, lat - 26 * k) : lat, lng: lon + (phone ? 0 : 14 * k), altitude: Math.min(state.alt, 1.5) }, 1100);
+}
+const CLOSE_ICON = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg>';
+function panelFromPin(p) {
+  const panel = $('#panel');
+  panel.innerHTML = `<div class="p-head"><button class="p-close" aria-label="Close record">${CLOSE_ICON}</button></div>
+    <div class="p-body"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div><div class="prose"><p>${esc(p.summary)}</p></div></div>`;
+  show(panel, true); show($('#notice'), false);
+  panel.querySelector('.p-close').onclick = closePanel;
+  panel.querySelector('.p-close').focus({ preventScroll: true });
+}
 async function openRecord(id) {
-  const res = await fetch(`api/record/${encodeURIComponent(id)}.json`);
-  if (!res.ok) { flash(`“${id}” is not published yet.`); return; }
-  const r = await res.json();
+  const token = ++openToken, pin = state.pins.find(p => p.id === id);
   if (document.activeElement && !$('#panel').contains(document.activeElement)) lastFocus = document.activeElement;
+  if (pin) {
+    panelFromPin(pin);
+    state.selected = id; state.openRec = null; state.arcs = []; render(); writeURL(true);
+    document.title = `${pin.title} · Living Atlas`;
+    frameRecord(pin.lat, pin.lon, pin.unc);
+  }
+  const r = await fetchRecord(id).catch(() => null);
+  if (token !== openToken) return;   // closed, or another record opened, while this one was on its way
+  if (!r) { if (pin) closePanel(); flash(`“${id}” is not published yet.`); return; }
   state.selected = id; state.openRec = r; state.arcs = causalArcs(r); render(); writeURL(true);
   document.title = `${r.title} · Living Atlas`;
   if (state.tour) { const i = state.tour.stops.indexOf(id); if (i >= 0) state.tour.i = i; }
@@ -1056,7 +1004,7 @@ async function openRecord(id) {
       <h2>${esc(r.title)}</h2>
       <div class="p-when">${esc(r.when?.display)}</div>
       <div class="p-where">${esc(r.where?.historical_name)}${uncertaintyLine(r)}</div>
-      <div class="badges"><span class="badge conf-${esc(r.confidence)}">${esc(CONF_LABEL[r.confidence] || r.confidence)}${r.provisional ? ' · provisional' : ''}</span><span class="badge">Importance ${esc(r.importance?.score)}/5</span>${r.model ? '<span class="badge">3D model</span>' : ''}${r.wiki ? `<a class="badge wiki-badge" href="https://en.wikipedia.org/wiki/${esc(encodeURIComponent(r.wiki.title.replace(/ /g, '_')))}" target="_blank" rel="noopener noreferrer" title="Open the Wikipedia article (further reading, not a source)">Wikipedia ↗</a>` : ''}<button class="badge p-share" id="p-share" title="Copy a link to this record">Copy link</button></div>
+      <div class="badges"><span class="badge conf-${esc(r.confidence)}">${esc(CONF_LABEL[r.confidence] || r.confidence)}${r.provisional ? ' · provisional' : ''}</span><span class="badge">Importance ${esc(r.importance?.score)}/5</span>${r.wiki ? `<a class="badge wiki-badge" href="https://en.wikipedia.org/wiki/${esc(encodeURIComponent(r.wiki.title.replace(/ /g, '_')))}" target="_blank" rel="noopener noreferrer" title="Open the Wikipedia article (further reading, not a source)">Wikipedia ↗</a>` : ''}<button class="badge p-share" id="p-share" title="Copy a link to this record">Copy link</button></div>
       ${(r.animation?.beats || []).length || (r.where?.geometry?.waypoints || []).length >= 2 || deepTime?.scenes[r.id] ? `<button class="play-seq" id="play-seq"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>${(r.animation?.beats || []).length ? `Play the sequence · ${r.animation.beats.length} beats` : deepTime?.scenes[r.id] ? 'Play the animation' : 'Play the route'}</button>` : ''}
       ${r.audience_note ? `<div class="warn">${esc(r.audience_note)}</div>` : ''}
       ${r.card ? `<p class="lede">${esc(r.card)}</p>` : ''}
@@ -1085,11 +1033,7 @@ async function openRecord(id) {
   const playBtn = panel.querySelector('#play-seq'); if (playBtn) playBtn.onclick = () => playSequence(r);
   panel.querySelectorAll('.rel button:not([disabled])').forEach(b => { b.onclick = () => goTo(b.dataset.id); });
   if (r.wiki) wikiSummary(id, r.wiki);
-  if (r.where?.lat != null && (r.where.uncertainty_km ?? 0) < 5000) {
-    // keep the pin in the open part of the screen: left of the side panel, or above the phone's bottom sheet
-    const phone = innerWidth <= 760, k = Math.min(1, state.alt);
-    globe.pointOfView({ lat: phone ? Math.max(-80, r.where.lat - 26 * k) : r.where.lat, lng: r.where.lon + (phone ? 0 : 14 * k), altitude: Math.min(state.alt, 1.5) }, 1100);
-  }
+  if (!pin) frameRecord(r.where?.lat, r.where?.lon, r.where?.uncertainty_km);
 }
 // The linked Wikipedia article's lead, fetched live (always current, nothing stored); shown as further reading
 const wikiCache = new Map();
@@ -1174,7 +1118,7 @@ addEventListener('keydown', e => {
 });
 
 function closePanel() {
-  show($('#panel'), false); state.selected = null; state.openRec = null; state.arcs = []; state.tour = null; document.title = 'Living Atlas';
+  openToken++; show($('#panel'), false); state.selected = null; state.openRec = null; state.arcs = []; state.tour = null; document.title = 'Living Atlas';
   render(); writeURL(true);
   if (lastFocus?.isConnected) lastFocus.focus({ preventScroll: true });
 }
@@ -1383,32 +1327,17 @@ addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#panel').hidden
 function flash(msg) { const n = $('#notice'); n.textContent = msg; show(n, true); setTimeout(() => render(), 2500); }
 
 // ---------- live data
-// 3D monuments are fetched (record + mesh, two files each) only while the 3D models layer is on, so a first visit to
-// the published site doesn't download a few hundred files nobody sees; turning the layer on loads them then.
-let modelsLoading = false;
-async function loadModels() {
-  if (!state.monuments || modelsLoading) return;
-  modelsLoading = true;
-  try {
-    for (const p of state.pins) if (p.hasModel && !state.models.has(p.id)) {
-      const rec = await (await fetch(`api/record/${encodeURIComponent(p.id)}.json`)).json();
-      const m = rec.model && rec.where?.lat != null ? await placeModel(rec) : null;
-      if (m) state.models.set(p.id, m);
-    }
-  } finally { modelsLoading = false; }
-  scaleModels(); render();
-}
 let lastSig = '';
 async function refresh() {
   try {
     const d = await (await fetch('api/pins.json', { cache: LIVE ? 'no-store' : 'default' })).json();
     const sig = d.pins.map(p => p.id + p.updated).join('|');
     if (sig === lastSig) return;
+    if (lastSig) recordCache.clear();   // something changed on the live server
     lastSig = sig; state.pins = d.pins;
     $('#count').textContent = `${(d.count + d.outlines).toLocaleString()} records`;
     $('#count').title = `${d.count} full records, ${d.outlines.toLocaleString()} outlines`;
     buildLegend(); render();
-    loadModels();
   } catch (e) { flash(`The atlas data could not be loaded (${e.message}). Is the viewer server running?`); }
   $('#loading').classList.add('gone');
   setTimeout(() => show($('#loading'), false), 700); // don't rely on the fade finishing

@@ -38,14 +38,23 @@ function pin(r, rank) {
 }
 
 // published records plus outlines (amendment A1); stubs and drafts stay out
+const parsed = new Map();   // file name -> its last read: only files that changed are read again
+let recordsVersion = 0;
+export const recordsSeen = () => recordsVersion;
 export function published() {
-  const out = [];
-  for (const f of fs.readdirSync(RECORDS)) {
-    if (!f.endsWith('.json')) continue;
-    let r;
-    try { r = JSON.parse(fs.readFileSync(path.join(RECORDS, f), 'utf8')); }
-    catch (e) { if (process.env.CI) throw new Error(`${f}: ${e.message}`); console.error(`skipped ${f}: ${e.message}`); continue; }
-    if (r.status === 'published' || r.status === 'outline') out.push(r);
+  const out = [], files = fs.readdirSync(RECORDS).filter(f => f.endsWith('.json'));
+  if (files.length !== parsed.size) recordsVersion++;
+  const here = new Set(files);
+  for (const f of parsed.keys()) if (!here.has(f)) parsed.delete(f);
+  for (const f of files) {
+    const file = path.join(RECORDS, f), at = fs.statSync(file).mtimeMs; let seen = parsed.get(f);
+    if (!seen || seen.at !== at) {
+      let r;
+      try { r = JSON.parse(fs.readFileSync(file, 'utf8')); }
+      catch (e) { if (process.env.CI) throw new Error(`${f}: ${e.message}`); console.error(`skipped ${f}: ${e.message}`); r = null; }
+      seen = { at, r }; parsed.set(f, seen); recordsVersion++;
+    }
+    if (seen.r && (seen.r.status === 'published' || seen.r.status === 'outline')) out.push(seen.r);
   }
   return out;
 }
@@ -106,8 +115,14 @@ export function linkIndex(recs = published()) {
   }
   return extra;
 }
-let linkCache = { at: 0, index: null };
-const liveLinkIndex = () => { if (Date.now() - linkCache.at > 15000) linkCache = { at: Date.now(), index: linkIndex() }; return linkCache.index; };
+// Building the index reads every summary against every title, which takes seconds. The live server keeps it ready, and checks for changes after answering, so nobody waits on a click.
+let linkCache = { at: 0, index: null, version: -1 };
+export function warmLinks() { const recs = published(); if (linkCache.version !== recordsVersion) linkCache = { at: Date.now(), index: linkIndex(recs), version: recordsVersion }; else linkCache.at = Date.now(); }
+const liveLinkIndex = () => {
+  if (!linkCache.index) warmLinks();
+  else if (Date.now() - linkCache.at > 15000) { linkCache.at = Date.now(); setTimeout(warmLinks, 0); }
+  return linkCache.index;
+};
 
 // `reviewer_note` is the private process note: how the record was checked, which tool did what. Visitors get
 // `visitor_note`, what remains uncertain about the history itself: the record's own field when it has one, otherwise

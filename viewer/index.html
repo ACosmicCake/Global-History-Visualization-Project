@@ -123,6 +123,7 @@
   .toggles { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
   .toggle { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 11px; color: var(--soft); }
   .toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
+  .toggle:disabled { opacity: .4; cursor: default; }
 
   /* ---------- notices */
   #notice { padding: 7px 12px; font-size: 12px; line-height: 1.45; color: var(--soft); text-align: left; background: rgba(8,12,20,0.55); border-radius: 8px; }
@@ -137,7 +138,6 @@
   #empty.period em { display: block; margin-top: 7px; font-style: normal; font-size: 11px; color: var(--muted); }
   #empty-near { display: flex; gap: 6px; flex-wrap: wrap; justify-content: space-between; }
   #empty-near button { max-width: 48%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-color: rgba(217,179,106,.45); background: transparent; }
-  #emphasis-flag { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: max(16px, env(safe-area-inset-top, 0px)); font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); padding: 4px 8px; border-radius: 6px; z-index: 2; }
   #hint { position: absolute; left: 50%; bottom: 200px; transform: translateX(-50%); padding: 6px 14px; font-size: 12px; color: var(--soft); white-space: nowrap; z-index: 2; transition: opacity .8s; pointer-events: none; }
   #hint.fade { opacity: 0; }
   /* planet-wide records (no single place): a faint ring on the globe's edge and one small pill above it that opens a short list */
@@ -362,7 +362,6 @@
     #speed { margin-left: 0; flex: none; min-width: 40px; height: 40px; padding: 0 6px; }
     .ctx-labels { display: none; }
     #context .eon span { display: none; }
-    #emphasis-flag { top: auto; bottom: 290px; }
     #hint { bottom: 290px; }
     #empty.period { bottom: 290px; }
     .v-row i { display: none; }
@@ -389,7 +388,7 @@
     <div id="legend-body">
     <ul id="domains"></ul>
     <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div></div>
-    <p class="sky-note">The Moon is always at its real position for the date shown, and the Sun is too with Real sunlight on. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
+    <p class="sky-note">The Moon is always at its real position for the date shown. With Real sunlight on, the Sun stands where it does right now, or for the season shown on the One year scale. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
     <div class="toggles">
       <button class="toggle" id="whole" aria-pressed="false" title="Show every record in this time level, not only those near the date">Whole period</button>
       <button class="toggle" id="borders" aria-pressed="true" title="Borders of states and empires at the date shown (Cliopatria). Blank areas are unmapped, not empty.">Borders</button>
@@ -397,10 +396,7 @@
       <button class="toggle" id="vitals-toggle" aria-pressed="true" title="Temperature, CO₂, sea level, day length and the Moon’s distance at the date shown, with a curve along the time bar">Vital signs</button>
       <button class="toggle" id="fossils-toggle" aria-pressed="true" title="In deep time: places where fossils of eight groups have been found in rocks of the age shown (Paleobiology Database)">Fossils</button>
       <button class="toggle" id="clouds" aria-pressed="false">Clouds</button>
-      <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth from the Sun’s true position for the date shown; rotate to the night side to see it">Real sunlight</button>
-      <button class="toggle" id="mapstyle" aria-pressed="false" title="Flat map style with land outlines instead of satellite imagery">Map style</button>
-      <button class="toggle" id="outlines" aria-pressed="true" title="Show outline records: sourced pins whose full record is still to come">Outlines</button>
-      <button class="toggle" id="emph" aria-pressed="false" title="Show 3D monument models (enlarged on screen so they can be found from far away; the enlargement is labelled)">3D models</button>
+      <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth as the Sun stands right now, with a dark night side; on the One year scale, for the season shown">Real sunlight</button>
     </div>
     </div>
   </div>
@@ -409,7 +405,6 @@
 </div>
 
 <div id="empty" class="glass" hidden><p id="empty-text"></p><div id="empty-near"></div><button id="empty-btn">Show the whole period</button></div>
-<div id="emphasis-flag" class="glass" hidden>Monuments enlarged for visibility</div>
 <div id="planet-ring" hidden aria-hidden="true"></div>
 <div id="hint" class="glass">Drag to rotate · scroll or pinch to zoom · click a pin to read its record</div>
 
@@ -472,7 +467,6 @@
 <script>window.__errs = []; addEventListener("error", e => window.__errs.push(e.error && e.error.stack ? e.error.stack.slice(0, 400) : e.message));</script>
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js"></script>
-<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <script src="space.js"></script>
 <script src="spacecraft.js"></script>
 <script src="deeptime.js"></script>
