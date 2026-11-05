@@ -1,7 +1,7 @@
 // Space scene for the Living Atlas globe: satellite Earth with a day/night terminator, ocean glint, clouds,
 // a starfield with a Milky Way band, the Sun, and the Moon. Sun and Moon directions come from low-precision
 // astronomical formulas (accurate to well under a degree, plenty for a view). Distances are not to scale.
-// Exposes window.Space = { init(globe), update({ date, sunMode, nightLights, clouds }) }.
+// Exposes window.Space = { init(globe), update({ date, sunDate, sunMode, nightLights, clouds }) }.
 (function () {
   const { THREE } = window;
   const R = 100;                       // globe.gl globe radius
@@ -40,7 +40,7 @@
     return new THREE.CanvasTexture(c);
   }
 
-  let flatMat, isFlat = false, atmoMat;
+  let atmoMat;
   const CLOUD_OPACITY = 0.3;
   let loadClouds = () => {};
   let globe, earthMat, clouds, cloudMat, sun, sunCore, moon, moonMat, stars, sunDir = new THREE.Vector3(1, 0.3, 0.5).normalize();
@@ -114,7 +114,7 @@
         #endif
         void main(){
           vec3 n0 = normalize(vN), L = normalize(sunDir), v = normalize(cameraPosition - vW);
-          float water = texture2D(waterMap, vUv).r, water0 = water;
+          float water = texture2D(waterMap, vUv).r;
           // relief: tilt the normal by the height gradient (globe.gl: +Y north, longitude grows toward +X from +Z)
           vec3 east = normalize(cross(vec3(0.0, 1.0, 0.0), n0) + vec3(1e-5, 0.0, 0.0)), north = cross(n0, east);
           float h0 = texture2D(topoMap, vUv).r;
@@ -181,13 +181,13 @@
                   if (paleoOn < 1.0) { vec2 off = vec2(atan(rp.y, rp.x) - atan(g.y, g.x), asin(clamp(rp.z, -1.0, 1.0)) - asin(clamp(g.z, -1.0, 1.0))) / vec2(6.2831853, 3.14159265); off.x -= floor(off.x + 0.5); vec2 today = vUv + off; today.x = fract(today.x); past += w * imageryAt(today, dx, dy); pastWater += w * textureGrad(waterMap, today, dx, dy).r; }
                 }
                 // noise patterns added together are flatter than any one of them, which would show as a soft band along a seam, so the contrast is put back
-                float lift = 1.0 / sqrt(spread); wob *= lift; rough *= lift; grain *= lift; tex = 0.5 + (tex - 0.5) * lift; broad = 0.5 + (broad - 0.5) * lift;
+                float lift = 1.0 / sqrt(spread), middle = roughMean(px); wob *= lift; rough = middle + (rough - middle) * lift; grain *= lift; tex = 0.5 + (tex - 0.5) * lift; broad = 0.5 + (broad - 0.5) * lift;
               }
               float wander = 0.012 * smoothstep(0.33, 0.36, roughly);
               vec2 shift = vec2(wob.x * wander / (6.2831853 * cosL), -wob.y * wander / 3.14159265);
               vec3 qa = vec3(pa + shift, worldA), qb = vec3(pb + shift, worldB);
               float height = mix(texture(worldMap, qa).r, texture(worldMap, qb).r, worldMix), soft = mix(smooth3(worldMap, qa, vec2(360.0, 180.0)), smooth3(worldMap, qb, vec2(360.0, 180.0)), worldMix);
-              float dry = landDry(height, rough, grain, px);
+              float dry = landDry(height, rough - roughMean(px), grain, px);
               // the sea floor from the same maps: pale over the shelves, blue down the slope, dark in the deep ocean
               float s = max(0.0, 0.5 - soft) / 0.5, depth = s * s * 6000.0;
               vec3 sea = mix(vec3(0.13, 0.38, 0.44), vec3(0.055, 0.21, 0.35), smoothstep(30.0, 500.0, depth));
@@ -212,8 +212,7 @@
           // Before the plate model (older than 1 billion years) nobody can map the continents, so the globe shows an
           // artist's impression of the eon instead, plainly labelled as such by the viewer: a molten, cratered
           // Hadean; an Archean water world with a few small islands under an orange haze; Proterozoic land of unknown
-          // shape, iced over in the Huronian glaciation (c. 2.4-2.1 Ga). Today's coastlines show as faint lines,
-          // because the pins mark where the evidence for these ages is found today.
+          // shape, iced over in the Huronian glaciation (c. 2.4-2.1 Ga).
           float glow = 0.0; vec3 haze = vec3(0.0);
           if (early > 0.0) {
             vec3 p = n0 * 2.2;
@@ -231,10 +230,6 @@
             float crater = smoothstep(0.86, 0.9, noise(p * 9.0)) * (1.0 - smoothstep(0.9, 0.94, noise(p * 9.0)));
             c = mix(c, vec3(0.09, 0.07, 0.06) * (0.7 + 0.6 * g) + crater * 0.12, hadean); w *= 1.0 - hadean;
             glow = crack * hadean;
-            // today's coastlines, faint, so the pins (where the evidence is found today) have a reference
-            float wn = texture2D(waterMap, vUv + vec2(1.0 / 1600.0, 0.0)).r, ws = texture2D(waterMap, vUv + vec2(0.0, 1.0 / 800.0)).r;
-            float coast = smoothstep(0.25, 0.6, abs(water0 - wn) + abs(water0 - ws));
-            c = mix(c, vec3(0.75, 0.72, 0.62), coast * 0.35);
             day = mix(day, c, early); water = mix(water, w, early);
             haze = mix(vec3(0.0), vec3(1.0, 0.55, 0.25), (1.0 - hadean) * (1.0 - proto)) * early;   // Archean orange haze
           }
@@ -254,7 +249,6 @@
           gl_FragColor = vec4(col, 1.0);
         }`,
     });
-    flatMat = new THREE.MeshPhongMaterial({ color: 0x0d1d33, shininess: 4 });
     globe.globeMaterial(earthMat);
     const caps = globe.renderer().capabilities, aniso = caps.getMaxAnisotropy();
     for (const k of ['dayMap', 'nightMap']) earthMat.uniforms[k].value.anisotropy = aniso;
@@ -365,9 +359,9 @@
 
   // Studio sun: lights the hemisphere facing the camera from upper left, so the side being explored is in daylight
   let sunMode = 'camera';
-  // 0.24 of daylight seen from afar, up to 0.62 close to the ground
+  // The studio sun's far side keeps 0.24 of daylight seen from afar, up to 0.62 close to the ground, so nothing is ever lost in the dark. Under the real Sun, night is night, with just enough left to find your way.
   function liftNight() {
-    const alt = globe.camera().position.length() / R - 1, f = 0.24 + 0.38 * (1 - Math.min(1, Math.max(0, (alt - 0.4) / 1.6)));
+    const alt = globe.camera().position.length() / R - 1, close = 1 - Math.min(1, Math.max(0, (alt - 0.4) / 1.6)), f = sunMode === 'real' ? 0.09 + 0.07 * close : 0.24 + 0.38 * close;
     earthMat.uniforms.nightFloor.value = f; if (landMat) landMat.uniforms.nightFloor.value = f;
   }
   function aimStudioSun() {
@@ -393,7 +387,7 @@
   function checkDetail(now) {
     if (now - lastDetailCheck < 300 || !earthMat) return; lastDetailCheck = now;
     const u = earthMat.uniforms, pov = globe.pointOfView();
-    const want = !isFlat && pov.altitude < DETAIL_ALT;
+    const want = pov.altitude < DETAIL_ALT;
     const target = want && detailKey ? Math.min(1, (DETAIL_ALT - pov.altitude) / 0.35) : 0;
     u.detailMix.value += (target - u.detailMix.value) * 0.6;
     const moved = !lastPov || Math.abs(pov.lat - lastPov.lat) + Math.abs(pov.lng - lastPov.lng) > 0.6 || Math.abs(pov.altitude - lastPov.altitude) > 0.02;
@@ -437,6 +431,8 @@
     }
     #endif
     float landMetres(float h){ float s = max(0.0, h - 0.502) / 0.498; return s * s * 6000.0; }
+    // what landRough averages to with its octaves on, so the coast test can take it off and leave the coast where the map puts it
+    float roughMean(float px){ return 0.1664 * (octave(24.0, px) + 0.55 * octave(53.0, px) + 0.3 * octave(117.0, px)); }
     float landDry(float h, float rough, float grain, float px){ float edge = clamp(px * 5.0, 0.003, 0.03); return smoothstep(-edge, edge, h - 0.5 + rough * 0.13 + grain * 0.04); }
     vec3 plantCover(float lat, float inland, float tex, float broad, float veg, vec3 flora, float warm, float aridity){
       // schematic plant cover by the latitude the land stood at then, how far inland it lies, and the age: wet tropics, dry subtropical belts, then temperate and boreal forest and tundra, with the belts moved poleward in warm ages
@@ -838,12 +834,11 @@
   // how far the imagery's plant cover is shifted: cold (0-1, from how far sea level has fallen) and the African Humid Period (0-1)
   function setClimate(cold, wet) { earthMat.uniforms.iceAge.value = cold; earthMat.uniforms.humid.value = wet; }
 
-  function update({ date, sunMode: mode, nightLights, clouds: showClouds, zoomAlt, flat }) {
+  function update({ date, sunDate, sunMode: mode, nightLights, clouds: showClouds, zoomAlt }) {
     if (!globe) return;
-    if (!!flat !== isFlat) { isFlat = !!flat; globe.globeMaterial(isFlat ? flatMat : earthMat); }
     const when = date && !isNaN(date) ? date : new Date();
     sunMode = mode;
-    if (mode === 'real') { const s = subSolar(when); setSun(dirOf(s.lat, s.lng)); }
+    if (mode === 'real') { const s = subSolar(sunDate || when); setSun(dirOf(s.lat, s.lng)); }
     const m = subLunar(when);
     moon.position.copy(dirOf(m.lat, m.lng)).multiplyScalar(R * 14);
     moon.lookAt(0, 0, 0); // keep the familiar near side facing Earth
