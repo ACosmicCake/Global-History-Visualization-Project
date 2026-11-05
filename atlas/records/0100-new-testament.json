@@ -1,0 +1,170 @@
+{
+  "id": "0100-new-testament",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Formation of the New Testament",
+  "summary": "The New Testament is the second half of the Christian Bible, compiled from the 2nd century. Early 2nd-century writings show knowledge of the four gospels and of collections of Paul's letters. Marcion, who died around 160, is an early figure in the forming of canons. The earliest surviving list of the same 27 books in today's Bible is the Easter letter of Bishop Athanasius of Alexandria in 367.",
+  "when": {
+    "start": {
+      "year": 100
+    },
+    "end": {
+      "year": 367
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": "Early collections of gospels and Pauline epistles were recognized by the early 2nd century; the 27-book canon was fixed by Athanasius in 367 CE and confirmed at the Council of Carthage in 397 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian / CE",
+        "value": "compiled from the 2nd century CE",
+        "source": "src-whe-new-testament"
+      },
+      {
+        "calendar": "Julian / CE",
+        "value": "Muratorian Fragment, dated anywhere from 170-200 to the 4th century CE",
+        "source": "src-whe-new-testament"
+      },
+      {
+        "calendar": "Julian / CE",
+        "value": "early second century",
+        "source": "src-encyclopedia-new-testament"
+      },
+      {
+        "calendar": "Julian / CE",
+        "value": "is in the year 367",
+        "source": "src-yale-rlst152"
+      }
+    ],
+    "display": "c. 2nd century to 367 CE"
+  },
+  "where": {
+    "lat": 31.20176,
+    "lon": 29.91582,
+    "elevation_m": 7,
+    "modern_name": "Mediterranean; stand-in pin at Alexandria, Egypt",
+    "historical_name": "Alexandria, Diocese of the East, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-geonames-alexandria"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "northern_africa",
+    "europe"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Defined the canonical 27-book Christian New Testament, creating the central textual foundation of Western religion, ethics, and culture."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0400-formation-of-the-bible",
+      "type": "related"
+    },
+    {
+      "id": "0030-origins-of-early-christianity",
+      "type": "related",
+      "because": "The life, teachings, and crucifixion of Jesus and early apostolic ministry produced the underlying oral traditions and texts that formed the New Testament."
+    },
+    {
+      "id": "0050-spread-of-christianity",
+      "type": "contemporary"
+    },
+    {
+      "id": "0500-garima-gospels",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-new-testament",
+      "url": "https://www.worldhistory.org/New_Testament/",
+      "title": "New Testament",
+      "publisher": "World History Encyclopedia",
+      "author": "Rebecca Denova",
+      "date_published": "2021-08-31",
+      "accessed": "2026-11-05",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyclopedia-new-testament",
+      "url": "https://www.encyclopedia.com/philosophy-and-religion/bible/new-testament/new-testament",
+      "title": "New Testament",
+      "publisher": "Encyclopedia.com",
+      "author": "Encyclopedia of Religion / Gale",
+      "date_published": "2018",
+      "accessed": "2026-11-05",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-alexandria",
+      "url": "https://www.geonames.org/361058/alexandria.html",
+      "title": "Alexandria, Egypt (GeoNames 361058)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-05",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-yale-rlst152",
+      "url": "https://oyc.yale.edu/religious-studies/rlst-152/lecture-2",
+      "title": "From Stories to Canon",
+      "publisher": "Open Yale Courses, Yale University",
+      "author": "Open Yale Courses",
+      "date_published": "n.d.",
+      "accessed": "2026-11-05",
+      "class": "scholarly",
+      "opened": true,
+      "supports": "Marcion, the formation of canons, and the 367 letter of Athanasius"
+    }
+  ],
+  "reviewer_note": "The date of the Muratorian Fragment, an earlier list, is disputed. The pin at Alexandria marks Athanasius and is a stand-in for many places. Acceptance took longer in some churches.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:06:25.639Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

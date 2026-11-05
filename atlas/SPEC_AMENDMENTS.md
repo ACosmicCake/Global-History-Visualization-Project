@@ -11,3 +11,11 @@ Changes the project owner made to `spec.md`. Where an amendment and the spec dif
 - **Viewers show outlines as distinct "outline" pins**, labelled as not yet full records. This relaxes spec 11 ("visitors see only `status: published`") for outlines only.
 - Every published outline stays in the queue as an `enrichment` / `upgrade-outline` target. The normal loop later rewrites it to a full record, removing `tier`, passing the full quality gate (spec 10), and republishing under the same id.
 - Outlines don't count toward the every-50 progress report or the every-100 audit. The 40% Europe and North America balance rule applies to outlines too: the outline queue is filled from under-covered regions first.
+
+## A2 — A measured definition of importance (2026-11-04)
+
+**Decision (project owner):** importance has a rigorous definition, and everything is ranked by it.
+
+- `atlas/IMPORTANCE.md` defines the score: four ratings (reach, depth, time, leverage) add up to a total that sets the 1–5 score. Ratings are kept in `atlas/importance.json`, and `atlas/tools/importance.mjs` applies them. This replaces the guidance in spec section 4; a 5 still means visible from space.
+- Zoom thinning uses the score alone. It no longer lowers records by Wikipedia coverage.
+- Directed sequences made before this amendment stay on their records even where the new score is below 4.

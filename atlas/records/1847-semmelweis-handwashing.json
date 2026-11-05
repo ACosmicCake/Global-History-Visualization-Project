@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1847-semmelweis-handwashing",
+  "kind": "event",
+  "title": "Semmelweis introduces handwashing at Vienna General Hospital",
+  "summary": "In 1847 at Vienna General Hospital, the Hungarian physician Ignaz Semmelweis concluded that cadaverous particles on doctors' hands from the morgue were causing deadly fever in mothers at the First Clinic. He required students and doctors to wash their hands in a chlorinated lime solution before patient contact. Reported mortality fell from about 18% to under 2%. He is called the father of hand hygiene.",
+  "when": {
+    "start": {
+      "year": 1847
+    },
+    "end": {
+      "year": 1847
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Sources date the handwashing rule to 1847."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "in 1847, the mortality rate of the First Clinic was 18.27%, whereas, in 1848, it had precipitously dropped to 1.27%",
+        "source": "src-tariq2024-pmc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1847 Semmelweis demonstrated that the mortality rate among mothers delivering at the First Obstetrics Clinic at the General Hospital of Vienna was significantly lower when hospital staff cleaned their hands with an antiseptic agent",
+        "source": "src-martini2021-pmc"
+      }
+    ],
+    "display": "1847"
+  },
+  "where": {
+    "lat": 48.2160343,
+    "lon": 16.3513263,
+    "elevation_m": 190,
+    "modern_name": "Campus of the University of Vienna (Altes Allgemeines Krankenhaus), Spitalgasse 2, Alsergrund, Vienna, Austria",
+    "historical_name": "First Obstetrical Clinic, Vienna General Hospital (Allgemeines Krankenhaus der Stadt Wien), Alservorstadt, Vienna, Austrian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.2,
+    "coordinate_sources": [
+      "src-osm-altes-akh"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 2,
+    "justification": "Showed that hand antisepsis could sharply cut deaths from childbed fever, before germ theory was accepted."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1854-john-snow-broad-street-cholera",
+      "type": "related"
+    },
+    {
+      "id": "person-florence-nightingale",
+      "type": "related"
+    },
+    {
+      "id": "1928-discovery-of-penicillin",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-tariq2024-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11568873/",
+      "title": "Pioneering Hand Hygiene: Ignaz Semmelweis and the Fight Against Puerperal Fever",
+      "publisher": "Cureus (Springer Nature, via PubMed Central)",
+      "author": "Muhammad A. Tariq, et al.",
+      "date_published": "2024-10-15",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-martini2021-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8639136/",
+      "title": "SARS-CoV-2 (COVID-19) and the Teaching of Ignaz Semmelweis and Florence Nightingale: a Lesson of Public Health from History, after the \"Introduction of Handwashing\" (1847)",
+      "publisher": "Journal of Preventive Medicine and Hygiene (Pacini Editore, via PubMed Central)",
+      "author": "Mariano Martini, Donatella Lippi",
+      "date_published": "2021-09-02",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-osm-altes-akh",
+      "url": "https://www.openstreetmap.org/node/2154866696",
+      "title": "OpenStreetMap Node 2154866696: Spitalgasse 2 (Altes Allgemeines Krankenhaus Wien)",
+      "publisher": "OpenStreetMap contributors",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "One review gives 18.27% for 1847 and 1.27% for 1848. Those may not be full-year figures, so the summary leaves out the year labels and rounds them. No exact day in 1847 was confirmed.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T15:51:37.878Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    },
+    {
+      "date": "2026-11-04",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

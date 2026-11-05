@@ -1,0 +1,149 @@
+{
+  "id": "person-genghis-khan",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "kind": "person",
+  "title": "Genghis Khan",
+  "summary": "Genghis Khan, born Temujin, probably in 1167 in northeastern Mongolia, founded the Mongol Empire, the most extensive land empire known to history. His supremacy was recognized at an assembly of princes and notables in 1206, after which the great Mongol conquests began. He died in late summer 1227 during his last campaign, against the Hsi Hsia, leaving the military foundation of an empire that kept expanding for half a century.",
+  "when": {
+    "start": {
+      "year": 1162
+    },
+    "end": {
+      "year": 1227
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Birth year is placed around 1162 in World History Encyclopedia and 1167 in Encyclopaedia Iranica; death occurred in 1227."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "1162 - 1227 Life of Genghis Khan , founder of the Mongol Empire .",
+        "source": "src-whe-genghis"
+      },
+      {
+        "calendar": "Hijri / CE (Encyclopaedia Iranica)",
+        "value": "probably born in 562-63/1167 in northeastern Mongolia",
+        "source": "src-iranica-cengiz"
+      },
+      {
+        "calendar": "Hijri / CE (Encyclopaedia Iranica)",
+        "value": "During it, in late summer 624/1227, he died.",
+        "source": "src-iranica-cengiz"
+      }
+    ],
+    "display": "c. 1162/1167–1227"
+  },
+  "where": {
+    "lat": 48.762,
+    "lon": 109.01,
+    "elevation_m": null,
+    "modern_name": "Northeastern Mongolia; stand-in pin at Burkhan Khaldun",
+    "historical_name": "Burkhan Khaldun, Mongol steppe",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-burkhan"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "people",
+    "civilizations_empires",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Founder of the Mongol Empire, which grew into the largest contiguous land empire in world history and transformed Eurasian trade, demographics, and polities."
+  },
+  "confidence": "established",
+  "audience_note": "The Mongol conquests caused large-scale destruction and casualties across Central Asia, Iran, China, and eastern Europe.",
+  "related": [
+    {
+      "id": "1206-founding-of-the-mongol-empire",
+      "type": "related"
+    },
+    {
+      "id": "1219-mongol-invasion-of-khwarezmia",
+      "type": "related",
+      "because": "Genghis Khan ordered the invasion of Khwarezmia following the killing of his envoys and merchants at Otrar."
+    },
+    {
+      "id": "person-sorghaghtani-beki",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-iranica-cengiz",
+      "url": "https://www.iranicaonline.org/articles/cengiz-khan",
+      "title": "ČENGĪZ KHAN",
+      "publisher": "Encyclopaedia Iranica",
+      "author": "David O. Morgan",
+      "date_published": "1990-12-15",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-genghis",
+      "url": "https://www.worldhistory.org/Genghis_Khan/",
+      "title": "Genghis Khan",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2019-09-16",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-burkhan",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1010335.json",
+      "title": "Burkhan Khaldun (Q1010335)",
+      "publisher": "Wikidata",
+      "date_published": "2026-11-04",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Birth year differs by source: 1162 or 1167. His exact birthplace is unknown; the pin at Burkhan Khaldun in northeastern Mongolia is a stand-in.",
+  "published_at": "2026-11-04T21:56:52.786Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

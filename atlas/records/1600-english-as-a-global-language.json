@@ -1,0 +1,170 @@
+{
+  "id": "1600-english-as-a-global-language",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "English as a global language",
+  "summary": "English is now a global lingua franca, for example in universities. One study says English has had a free ride on the back of global capitalism going back to the 1600s. In that century England's East India Company received its royal charter, in 1600, with a monopoly of trade in the Indian Ocean region.",
+  "when": {
+    "start": {
+      "year": 1600
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 10,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The chartering of the East India Company in 1600 and early seventeenth-century transatlantic colonization mark the conventional baseline for the global dispersal of Early Modern English."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Its royal charter, granted by Queen Elizabeth I in 1600, gave it exclusive rights to trade to India and the Far East and its first trading post in India was set up at the city of Surat in 1607.",
+        "source": "src-rmg-east-india-company"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The East India Company obtained it’s royal charter in 1600 to allow it a monopoly of trade in the Indian Ocean region.",
+        "source": "src-tna-17th-century"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "English has had a free ride on the back of global capitalism, going back as far as the 1600 s (O’Regan, 2021 )",
+        "source": "src-pmc-global-english"
+      }
+    ],
+    "display": "c. 1600–present"
+  },
+  "where": {
+    "lat": 51.5085,
+    "lon": -0.1257,
+    "elevation_m": null,
+    "modern_name": "Worldwide; stand-in pin at London, United Kingdom",
+    "historical_name": "London, Kingdom of England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-london"
+    ]
+  },
+  "regions": [
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "art_music_literature",
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "English became the most widely shared language of international exchange."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1600-british-empire",
+      "type": "related"
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "British industrial mechanization and manufacturing dominance reinforced the global commercial necessity of the English language."
+    },
+    {
+      "id": "1543-scientific-revolution",
+      "type": "contemporary"
+    },
+    {
+      "id": "0630-spread-of-arabic",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-rmg-east-india-company",
+      "url": "https://www.rmg.co.uk/collections/research-guides/research-guide-f5-east-india-company",
+      "title": "Research guide F5: The East India Company",
+      "publisher": "Royal Museums Greenwich",
+      "author": "Royal Museums Greenwich",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-tna-17th-century",
+      "url": "https://www.nationalarchives.gov.uk/currency-converter/living-in-the-17th-century/",
+      "title": "Living in the 17th century",
+      "publisher": "The National Archives (UK)",
+      "author": "The National Archives",
+      "date_published": "2017",
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pmc-global-english",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12413410/",
+      "title": "University autonomy is a predictor of English medium instruction in European higher education",
+      "publisher": "Higher Education (Springer Nature, via PubMed Central)",
+      "author": "Peter Wingrove and Beatrice Zuaro",
+      "date_published": "2024-11-06",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-london",
+      "url": "https://www.geonames.org/2643743",
+      "title": "GeoNames: London (2643743)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The sources are thin on how the language spread, and the start date comes from one study's remark. Later American influence is not covered yet. The pin at London is a stand-in.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:35:06.400Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

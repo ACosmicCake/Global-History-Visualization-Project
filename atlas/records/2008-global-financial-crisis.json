@@ -1,0 +1,142 @@
+{
+  "id": "2008-global-financial-crisis",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "Global financial crisis of 2008",
+  "summary": "The crisis grew from the US housing market, the epicenter of what the Federal Reserve calls the Great Recession, which lasted from December 2007 to June 2009, the longest US downturn since the Second World War. After the collapse of Lehman Brothers in mid-September 2008 it intensified sharply. The IMF warned that its reach into all corners of the world economy posed a threat to global prosperity not seen in 70 years.",
+  "when": {
+    "start": {
+      "year": 2007
+    },
+    "end": {
+      "year": 2009
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "US recession began in December 2007 and troughed in June 2009; systemic acute phase erupted with the collapse of Lehman Brothers in September 2008."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "December 2007 to June 2009",
+        "source": "src-fed"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "collapse of Lehman Brothers",
+        "source": "src-imf"
+      }
+    ],
+    "display": "2007–2009"
+  },
+  "where": {
+    "lat": 40.71427,
+    "lon": -74.00597,
+    "elevation_m": null,
+    "modern_name": "New York City, New York, United States (proxy pin: Wall Street and epicenter of investment bank failures; contagion was global)",
+    "historical_name": "New York City, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "trade_exploration",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The most serious threat to global prosperity in decades, according to the IMF at the time."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1929-great-depression",
+      "type": "related"
+    },
+    {
+      "id": "1997-asian-financial-crisis",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-fed",
+      "url": "https://www.federalreservehistory.org/essays/great-recession-of-200709",
+      "title": "The Great Recession",
+      "publisher": "Federal Reserve History",
+      "author": "Robert Rich",
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-imf",
+      "url": "https://www.imf.org/external/pubs/ft/fandd/2008/12/collyns.htm",
+      "title": "The Crisis through the Lens of History",
+      "publisher": "International Monetary Fund",
+      "author": "Charles Collyns",
+      "date_published": "2008-12",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames",
+      "url": "https://www.geonames.org/5128581/new-york-city.html",
+      "title": "New York City, New York, United States",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The Federal Reserve dates describe the US recession; the global crisis has no single agreed span. The IMF statement dates from December 2008, during the crisis. The pin is New York City as a proxy.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T16:51:22.926Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    },
+    {
+      "date": "2026-11-04",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

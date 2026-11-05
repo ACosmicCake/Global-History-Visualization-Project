@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1861-american-civil-war",
+  "kind": "event",
+  "title": "American Civil War",
+  "summary": "After Abraham Lincoln won the 1860 election, seven slave states seceded and formed the Confederacy; four more joined after Confederate forces fired on Fort Sumter in April 1861. Hundreds of thousands of soldiers died in battle or of disease before Robert E. Lee surrendered at Appomattox in April 1865. The Union survived. The Emancipation Proclamation of 1863 and the Thirteenth Amendment of 1865 ended slavery in the United States.",
+  "when": {
+    "start": {
+      "year": 1861,
+      "iso": "1861-04-12"
+    },
+    "end": {
+      "year": 1865,
+      "iso": "1865-04-09"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Hostilities began at Fort Sumter on 12 April 1861. The end date is Lee's surrender at Appomattox on 9 April 1865."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Confederate forces fired the first shots of the Civil War upon Federal troops at Fort Sumter at 4:30 a.m. on April 12, 1861.",
+        "source": "src-nps-sumter"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "As the fighting came to an end that morning of April 9, 1865, the village of Appomattox Court House lay between the two armies. General Robert E. Lee sent a final note to General Ulysses S. Grant asking for a meeting to discuss the surrender of the Army of Northern Virginia.",
+        "source": "src-nps-appomattox"
+      }
+    ],
+    "display": "12 April 1861 – 9 April 1865"
+  },
+  "where": {
+    "lat": 32.7525,
+    "lon": -79.874444,
+    "elevation_m": 0,
+    "modern_name": "Fort Sumter, Charleston Harbor, South Carolina, United States (proxy pin: opening battle site of the war)",
+    "historical_name": "Fort Sumter, Charleston Harbor, South Carolina, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wd-q737517"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Preserved the United States as one country and led to the abolition of slavery there."
+  },
+  "confidence": "established",
+  "audience_note": "Addresses military bloodshed, battlefield devastation, and the wartime destruction of slavery in the American South.",
+  "related": [
+    {
+      "id": "1863-battle-of-gettysburg",
+      "type": "has_part"
+    },
+    {
+      "id": "1865-us-thirteenth-amendment",
+      "type": "caused",
+      "because": "Union military victory in the Civil War enabled the abolition of slavery via the Thirteenth Amendment."
+    },
+    {
+      "id": "person-abraham-lincoln",
+      "type": "related"
+    },
+    {
+      "id": "1862-homestead-act",
+      "type": "contemporary"
+    },
+    {
+      "id": "1830-underground-railroad",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-sumter",
+      "url": "https://www.nps.gov/fosu/learn/historyculture/index.htm",
+      "title": "History & Culture - Fort Sumter and Fort Moultrie National Historical Park",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": "2023-01-28",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-appomattox",
+      "url": "https://www.nps.gov/apco/learn/historyculture/the-surrender-meeting.htm",
+      "title": "The Surrender Meeting - Appomattox Court House National Historical Park",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-archives-emancipation",
+      "url": "https://www.archives.gov/milestone-documents/emancipation-proclamation",
+      "title": "Emancipation Proclamation (1863)",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-abt-overview",
+      "url": "https://www.battlefields.org/learn/articles/brief-overview-american-civil-war",
+      "title": "A Brief Overview of the American Civil War",
+      "publisher": "American Battlefield Trust",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-facts",
+      "url": "https://www.nps.gov/civilwar/facts.htm",
+      "title": "Facts - The Civil War",
+      "publisher": "U.S. National Park Service",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-archives-13th",
+      "url": "https://www.archives.gov/milestone-documents/13th-amendment",
+      "title": "13th Amendment to the U.S. Constitution: Abolition of Slavery (1865)",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-q737517",
+      "url": "https://www.wikidata.org/wiki/Q737517",
+      "title": "Fort Sumter",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The end date is Lee's surrender at Appomattox, not the last fighting elsewhere. Death figures follow the National Park Service tables; the summary gives no single total. The pin marks the war's opening battle, not the whole war.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T15:42:35.577Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    },
+    {
+      "date": "2026-11-04",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

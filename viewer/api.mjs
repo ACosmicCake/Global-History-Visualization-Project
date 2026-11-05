@@ -8,7 +8,6 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const RECORDS = path.resolve(HERE, '..', 'atlas', 'records');
 const WIKI_LINKS = path.resolve(HERE, '..', 'atlas', 'wiki_links.json');
 const WIKI_ALIASES = path.resolve(HERE, '..', 'atlas', 'wiki_aliases.json');
-const QUEUE = path.resolve(HERE, '..', 'atlas', 'queue.json');
 
 // Only the fields the engine needs for pins; the full record is fetched on click. The summary is only the hover
 // tooltip's teaser, so it is cut to about two lines (it was most of the pin list's size).
@@ -25,7 +24,7 @@ function monthDay(r) {
   const day = a?.[1] ?? b?.[2], month = MONTHS.indexOf((a?.[2] ?? b?.[1] ?? '').toLowerCase());
   return day && month >= 0 ? `${pad(month + 1)}-${pad(day)}` : undefined;
 }
-function pin(r, rank) {
+function pin(r) {
   return {
     id: r.id, title: r.title, summary: teaser(r.summary), kind: r.kind, scale: r.scale, importance: r.importance?.score ?? 1,
     confidence: r.confidence, domains: r.domains, start: r.when?.start?.year, end: r.when?.end?.year ?? r.when?.start?.year,
@@ -33,47 +32,34 @@ function pin(r, rank) {
     geometry: r.where?.geometry?.type, waypoints: (r.where?.geometry?.waypoints || []).map(w => ({ lat: w.lat, lon: w.lon, year: typeof w.year === 'number' ? w.year : null, date: w.date, label: w.label })),
     regions: (r.where?.geometry?.regions || []).map(g => ({ lat: g.lat, lon: g.lon, name: g.name })),
     outline: r.status === 'outline', hasModel: !!r.model, updated: r.updated, aliases: (r.aliases || []).map(a => a.name).filter(Boolean),
-    region: r.regions?.[0], unc: r.where?.uncertainty_km, md: monthDay(r), rank,
+    region: r.regions?.[0], unc: r.where?.uncertainty_km, md: monthDay(r),
   };
 }
 
 // published records plus outlines (amendment A1); stubs and drafts stay out
+const parsed = new Map();   // file name -> its last read: only files that changed are read again
+let recordsVersion = 0;
+export const recordsSeen = () => recordsVersion;
 export function published() {
-  const out = [];
-  for (const f of fs.readdirSync(RECORDS)) {
-    if (!f.endsWith('.json')) continue;
-    let r;
-    try { r = JSON.parse(fs.readFileSync(path.join(RECORDS, f), 'utf8')); }
-    catch (e) { if (process.env.CI) throw new Error(`${f}: ${e.message}`); console.error(`skipped ${f}: ${e.message}`); continue; }
-    if (r.status === 'published' || r.status === 'outline') out.push(r);
+  const out = [], files = fs.readdirSync(RECORDS).filter(f => f.endsWith('.json'));
+  if (files.length !== parsed.size) recordsVersion++;
+  const here = new Set(files);
+  for (const f of parsed.keys()) if (!here.has(f)) parsed.delete(f);
+  for (const f of files) {
+    const file = path.join(RECORDS, f), at = fs.statSync(file).mtimeMs; let seen = parsed.get(f);
+    if (!seen || seen.at !== at) {
+      let r;
+      try { r = JSON.parse(fs.readFileSync(file, 'utf8')); }
+      catch (e) { if (process.env.CI) throw new Error(`${f}: ${e.message}`); console.error(`skipped ${f}: ${e.message}`); r = null; }
+      seen = { at, r }; parsed.set(f, seen); recordsVersion++;
+    }
+    if (seen.r && (seen.r.status === 'published' || seen.r.status === 'outline')) out.push(seen.r);
   }
   return out;
 }
 
-// Which pins show when zoomed out. Importance alone barely filters (three in four records are 4 or 5), so among
-// records of the same importance and region the less widely covered ones (queue significance: Wikipedia language
-// editions and pageviews) step down one tier for zoom thinning. Ranking inside each region keeps this from favouring
-// the regions Wikipedia covers best. Importance itself, shown on the record and in the filters, doesn't change.
-function displayRanks(recs) {
-  let sig = new Map();
-  try { sig = new Map(JSON.parse(fs.readFileSync(QUEUE, 'utf8')).items.map(i => [i.id, i.significance])); } catch {}
-  const groups = new Map(), ranks = new Map();
-  for (const r of recs) {
-    const score = r.importance?.score ?? 1, key = `${score}|${r.regions?.[0]}`;
-    ranks.set(r.id, score);
-    if (typeof sig.get(r.id) === 'number') (groups.get(key) || groups.set(key, []).get(key)).push(r);
-  }
-  for (const [key, group] of groups) {
-    const score = +key.split('|')[0], cut = score === 5 ? 0.1 : score === 4 ? 0.5 : 0;    // the share that steps down
-    group.sort((a, b) => sig.get(a.id) - sig.get(b.id));
-    group.slice(0, Math.floor(group.length * cut)).forEach(r => ranks.set(r.id, score - 1));
-  }
-  return ranks;
-}
-
 export function pinsPayload(recs = published()) {
-  const ranks = displayRanks(recs);
-  return { generated: new Date().toISOString(), count: recs.filter(r => r.status === 'published').length, outlines: recs.filter(r => r.status === 'outline').length, pins: recs.map(r => pin(r, ranks.get(r.id))) };
+  return { generated: new Date().toISOString(), count: recs.filter(r => r.status === 'published').length, outlines: recs.filter(r => r.status === 'outline').length, pins: recs.map(r => pin(r)) };
 }
 
 const readLinks = () => { try { return JSON.parse(fs.readFileSync(WIKI_LINKS, 'utf8')); } catch { return {}; } };
@@ -106,8 +92,14 @@ export function linkIndex(recs = published()) {
   }
   return extra;
 }
-let linkCache = { at: 0, index: null };
-const liveLinkIndex = () => { if (Date.now() - linkCache.at > 15000) linkCache = { at: Date.now(), index: linkIndex() }; return linkCache.index; };
+// Building the index reads every summary against every title, which takes seconds. The live server keeps it ready, and checks for changes after answering, so nobody waits on a click.
+let linkCache = { at: 0, index: null, version: -1 };
+export function warmLinks() { const recs = published(); if (linkCache.version !== recordsVersion) linkCache = { at: Date.now(), index: linkIndex(recs), version: recordsVersion }; else linkCache.at = Date.now(); }
+const liveLinkIndex = () => {
+  if (!linkCache.index) warmLinks();
+  else if (Date.now() - linkCache.at > 15000) { linkCache.at = Date.now(); setTimeout(warmLinks, 0); }
+  return linkCache.index;
+};
 
 // `reviewer_note` is the private process note: how the record was checked, which tool did what. Visitors get
 // `visitor_note`, what remains uncertain about the history itself: the record's own field when it has one, otherwise

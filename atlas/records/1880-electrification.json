@@ -1,0 +1,154 @@
+{
+  "id": "1880-electrification",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "Electrification",
+  "summary": "Thomas Edison built small power stations and lighting systems at Menlo Park in 1879, and the modern lightbulb came from Joseph Swan in England and Edison in the United States. Alternating current then won out, because direct current could not be sent long distances economically. By 1940, a United States census found that 78.7 percent of occupied homes there had electric lights.",
+  "when": {
+    "start": {
+      "year": 1879
+    },
+    "end": {
+      "year": 1940
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 5,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Thomas Edison installed lighting aboard the SS Columbia in 1880 and opened Pearl Street Station in 1882; widespread rural and industrial electrification completed across developed economies by mid-twentieth century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Thomas Edison built small power stations and lighting systems at his laboratory in Menlo Park, New Jersey, in 1879, and aboard the steamship Columbia in 1880.",
+        "source": "src-census-electricity"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The early 1880s saw the invention of the modern lightbulb by Joseph Swan in England and Thomas A. Edison in the United States.",
+        "source": "src-nwu-mokyr-electrification"
+      }
+    ],
+    "display": "c. 1879–1940 in early adopting countries"
+  },
+  "where": {
+    "lat": 40.7128,
+    "lon": -74.006,
+    "elevation_m": null,
+    "modern_name": "Worldwide; stand-in pin at New York City, United States",
+    "historical_name": "New York City, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-nyc"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Electrification replaced mechanical and steam energy with flexible, universal electrical power grids, driving twentieth-century productivity and urban expansion."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1882-pearl-street-station-electrification",
+      "type": "part_of"
+    },
+    {
+      "id": "1850-second-industrial-revolution",
+      "type": "part_of",
+      "because": "Electrification formed one of the primary technological systems of the Second Industrial Revolution alongside mass steel and chemicals."
+    },
+    {
+      "id": "1800-fossil-fuel-age",
+      "type": "related",
+      "because": "Central generating stations burning coal established electrical grids as a major driver of fossil fuel combustion."
+    },
+    {
+      "id": "person-thomas-edison",
+      "type": "related"
+    },
+    {
+      "id": "person-nikola-tesla",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-census-electricity",
+      "url": "https://www.census.gov/about/history/stories/monthly/2026/september-2026.html",
+      "title": "History and the Census: Electricity",
+      "publisher": "U.S. Census Bureau",
+      "author": "Jason G. Gauthier",
+      "date_published": "2026-09-01",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nwu-mokyr-electrification",
+      "url": "https://faculty.wcas.northwestern.edu/jmokyr/castronovo.pdf",
+      "title": "The Second Industrial Revolution, 1870-1914",
+      "publisher": "Northwestern University",
+      "author": "Joel Mokyr",
+      "date_published": "1998-08",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-nyc",
+      "url": "https://www.geonames.org/5128581",
+      "title": "GeoNames: City of New York (5128581)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "These sources are mostly about Britain and the United States, and electrification came much later in many countries. The end date is that census. The pin at New York is a stand-in.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:35:08.791Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

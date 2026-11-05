@@ -123,27 +123,26 @@
   .toggles { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
   .toggle { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 11px; color: var(--soft); }
   .toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
+  .toggle:disabled { opacity: .4; cursor: default; }
 
   /* ---------- notices */
-  #notice { position: absolute; left: 50%; transform: translateX(-50%); top: max(16px, env(safe-area-inset-top, 0px)); max-width: min(520px, calc(100vw - 32px)); padding: 7px 12px; font-size: 12px; color: var(--soft); z-index: 2; text-align: center; }
-  @media (max-width: 1100px) { #notice { top: 136px; background: rgba(8,12,20,0.55); border-radius: 8px; } }
+  #notice { padding: 7px 12px; font-size: 12px; line-height: 1.45; color: var(--soft); text-align: left; background: rgba(8,12,20,0.55); border-radius: 8px; }
   #empty { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); text-align: center; padding: 14px 18px; max-width: 320px; z-index: 2; }
   #empty p { margin: 0 0 8px; color: var(--soft); }
   #empty button { border: 1px solid var(--brass); color: var(--brass); background: var(--brass-dim); border-radius: 999px; padding: 4px 12px; font-size: 12px; }
   /* deep time between records: a quiet period card low on the screen, out of the globe's centre */
-  #empty.period { top: auto; bottom: 214px; transform: translateX(-50%); max-width: min(420px, calc(100vw - 32px)); text-align: left; padding: 12px 16px; }
+  #empty.period { left: var(--gut); top: auto; bottom: calc(var(--time-top, 176px) + 10px); transform: none; width: min(340px, calc(100vw - 32px)); max-width: none; text-align: left; padding: 12px 16px; }
   #empty.period p { font-size: 13px; line-height: 1.45; }
   #empty.period b { display: block; font: 500 17px var(--f-display); color: var(--text); }
   #empty.period small { display: block; font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); margin: 2px 0 6px; }
   #empty.period em { display: block; margin-top: 7px; font-style: normal; font-size: 11px; color: var(--muted); }
   #empty-near { display: flex; gap: 6px; flex-wrap: wrap; justify-content: space-between; }
   #empty-near button { max-width: 48%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-color: rgba(217,179,106,.45); background: transparent; }
-  #emphasis-flag { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: max(16px, env(safe-area-inset-top, 0px)); font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); padding: 4px 8px; border-radius: 6px; z-index: 2; }
   #hint { position: absolute; left: 50%; bottom: 200px; transform: translateX(-50%); padding: 6px 14px; font-size: 12px; color: var(--soft); white-space: nowrap; z-index: 2; transition: opacity .8s; pointer-events: none; }
   #hint.fade { opacity: 0; }
   /* planet-wide records (no single place): a faint ring on the globe's edge and one small pill above it that opens a short list */
   #planet-ring { position: absolute; border-radius: 50%; pointer-events: none; z-index: 1; box-shadow: 0 0 0 1px rgba(217,179,106,.18), 0 0 18px rgba(217,179,106,.10); }
-  #planet { position: absolute; left: 0; top: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; width: 0; will-change: transform; }
+  #planet { display: flex; flex-direction: column; align-items: flex-start; }
   #planet .pw-pill { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; padding: 4px 11px 4px 9px; border-radius: 999px; border: 1px solid rgba(217,179,106,.32);
     background: rgba(10,16,28,.62); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: var(--soft); font: 500 10px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
   #planet .pw-pill:hover, #planet .pw-pill[aria-expanded=true] { border-color: var(--brass); color: var(--text); }
@@ -161,7 +160,7 @@
   #loading.gone { opacity: 0; pointer-events: none; }
 
   /* ---------- Earth's vital signs: a quiet readout above the time bar; a row chooses the curve drawn along the bar */
-  #vitals { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(var(--time-top, 176px) + 10px); width: 226px; padding: 9px 6px 8px; z-index: 3; }
+  #vitals { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(var(--time-top, 176px) + 10px); width: 262px; padding: 9px 6px 8px; z-index: 3; }
   #vitals[hidden], #panel:not([hidden]) ~ #vitals, #welcome:not([hidden]) ~ #vitals, #pinlist:not([hidden]) ~ #vitals, #seqbar:not([hidden]) ~ #vitals { display: none; }
   #vitals h2 { margin: 0 8px 5px; font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
   #v-rows { display: flex; flex-direction: column; gap: 1px; }
@@ -175,9 +174,27 @@
   #v-about summary { cursor: pointer; }
   #v-about summary:hover { color: var(--soft); }
   #v-about p { margin: 5px 0 0; line-height: 1.4; max-height: 150px; overflow-y: auto; }
+  #vitals { max-height: calc(100vh - var(--time-top, 176px) - 24px); overflow-y: auto; }
+  #vitals.only-key h2, #vitals.only-key #v-rows, #vitals.only-key #v-range, #vitals.only-key #v-about { display: none; }
+  #v-fossils { margin: 7px 8px 0; padding-top: 6px; border-top: 1px solid var(--rule); }
+  #vitals.only-key #v-fossils { margin-top: 0; padding-top: 0; border-top: 0; }
+  #v-fossils h3 { margin: 0 0 4px; font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  #v-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 1px 4px; }
+  .f-chip { display: flex; align-items: center; gap: 4px; min-width: 0; padding: 2px 3px; border: 0; border-radius: 4px; background: transparent; color: var(--soft); font-size: 10.5px; text-align: left; cursor: pointer; white-space: nowrap; }
+  .f-chip:hover { background: rgba(255,255,255,.05); }
+  .f-chip i { flex: none; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 5px currentColor; }
+  .f-chip span { overflow: hidden; text-overflow: ellipsis; color: var(--soft); }
+  .f-chip b { margin-left: auto; font: 10px var(--f-mono); color: var(--text); font-variant-numeric: tabular-nums; }
+  .f-chip.none b { color: var(--muted); }
+  .f-chip[aria-pressed="false"] { opacity: .35; }
+  #v-caveat { margin: 4px 0 0; font-size: 10.5px; line-height: 1.35; color: var(--muted); }
   @media (max-width: 900px) {
     #vitals { left: var(--gut); width: auto; padding: 3px; }
-    #vitals h2, #v-range, #v-about { display: none; }
+    #vitals h2, #v-range, #v-about, #v-fossils h3, #v-caveat { display: none; }
+    #v-fossils, #vitals.only-key #v-fossils { margin: 2px 0 0; padding-top: 2px; }
+    #v-chips { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+    #v-chips::-webkit-scrollbar { display: none; }
+    .f-chip { flex: none; }
     #v-rows { flex-direction: row; gap: 2px; overflow-x: auto; scrollbar-width: none; }
     #v-rows::-webkit-scrollbar { display: none; }
     .v-row { flex: 1 0 auto; flex-direction: column; align-items: flex-start; gap: 0; padding: 3px 7px; font-size: 10px; }
@@ -345,9 +362,8 @@
     #speed { margin-left: 0; flex: none; min-width: 40px; height: 40px; padding: 0 6px; }
     .ctx-labels { display: none; }
     #context .eon span { display: none; }
-    #emphasis-flag { top: auto; bottom: 258px; }
-    #hint { bottom: 258px; }
-    #empty.period { bottom: 258px; }
+    #hint { bottom: 290px; }
+    #empty.period { bottom: 290px; }
     .v-row i { display: none; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
@@ -372,27 +388,24 @@
     <div id="legend-body">
     <ul id="domains"></ul>
     <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div></div>
-    <p class="sky-note">The Moon is always at its real position for the date shown, and the Sun is too with Real sunlight on. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
+    <p class="sky-note">The Moon is always at its real position for the date shown. With Real sunlight on, the Sun stands where it does right now, or for the season shown on the One year scale. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
     <div class="toggles">
       <button class="toggle" id="whole" aria-pressed="false" title="Show every record in this time level, not only those near the date">Whole period</button>
       <button class="toggle" id="borders" aria-pressed="true" title="Borders of states and empires at the date shown (Cliopatria). Blank areas are unmapped, not empty.">Borders</button>
       <button class="toggle" id="paths" aria-pressed="false">Routes</button>
       <button class="toggle" id="vitals-toggle" aria-pressed="true" title="Temperature, CO₂, sea level, day length and the Moon’s distance at the date shown, with a curve along the time bar">Vital signs</button>
+      <button class="toggle" id="fossils-toggle" aria-pressed="true" title="In deep time: places where fossils of eight groups have been found in rocks of the age shown (Paleobiology Database)">Fossils</button>
       <button class="toggle" id="clouds" aria-pressed="false">Clouds</button>
-      <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth from the Sun’s true position for the date shown; rotate to the night side to see it">Real sunlight</button>
-      <button class="toggle" id="mapstyle" aria-pressed="false" title="Flat map style with land outlines instead of satellite imagery">Map style</button>
-      <button class="toggle" id="outlines" aria-pressed="true" title="Show outline records: sourced pins whose full record is still to come">Outlines</button>
-      <button class="toggle" id="emph" aria-pressed="false" title="Show 3D monument models (enlarged on screen so they can be found from far away; the enlargement is labelled)">3D models</button>
+      <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth as the Sun stands right now, with a dark night side; on the One year scale, for the season shown">Real sunlight</button>
     </div>
     </div>
   </div>
+  <div id="notice" class="glass" hidden></div>
+  <div id="planet" hidden aria-label="Planet-wide records"></div>
 </div>
 
-<div id="notice" class="glass" hidden></div>
 <div id="empty" class="glass" hidden><p id="empty-text"></p><div id="empty-near"></div><button id="empty-btn">Show the whole period</button></div>
-<div id="emphasis-flag" class="glass" hidden>Monuments enlarged for visibility</div>
 <div id="planet-ring" hidden aria-hidden="true"></div>
-<div id="planet" hidden aria-label="Planet-wide records"></div>
 <div id="hint" class="glass">Drag to rotate · scroll or pinch to zoom · click a pin to read its record</div>
 
 <section id="panel" class="glass" hidden aria-label="Record" tabindex="-1"></section>
@@ -430,6 +443,7 @@
   <div id="v-rows"></div>
   <div id="v-range"></div>
   <details id="v-about"><summary>Estimates, and how far to trust them</summary><p id="v-source"></p></details>
+  <div id="v-fossils" hidden><h3>Fossil finds at this date</h3><div id="v-chips"></div><p id="v-caveat">Dots show where people have dug and rocks survive, not everywhere life lived. Paleobiology Database.</p></div>
 </section>
 
 <section id="time" class="glass" aria-label="Time">
@@ -453,10 +467,10 @@
 <script>window.__errs = []; addEventListener("error", e => window.__errs.push(e.error && e.error.stack ? e.error.stack.slice(0, 400) : e.message));</script>
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js"></script>
-<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <script src="space.js"></script>
 <script src="spacecraft.js"></script>
 <script src="deeptime.js"></script>
+<script src="fossils.js"></script>
 <script src="borders.js"></script>
 <script src="sequence.js"></script>
 <script src="app.js"></script>

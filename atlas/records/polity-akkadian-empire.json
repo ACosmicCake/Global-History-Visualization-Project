@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "id": "polity-akkadian-empire",
+  "kind": "polity",
+  "title": "Akkadian Empire",
+  "summary": "Sargon of Akkad founded the Akkadian Empire around 2334 BCE, and it is often described as the first multinational empire in the world. It brought Mesopotamia under one rule, placing its officials as governors in over 65 cities and standardizing administration, weights and measures and a postal system. It ended around 2154 BCE. How it fell remains a mystery, and its capital, Akkad, has never been found; a later Mesopotamian text blames Gutian invaders.",
+  "when": {
+    "start": {
+      "year": -2333
+    },
+    "end": {
+      "year": -2153
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 16,
+      "start_plus_years": 0,
+      "end_minus_years": 10,
+      "end_plus_years": 10,
+      "note": "World History Encyclopedia gives 2350/2334–2154 BCE; Encyclopaedia Iranica dates Sargon's reign to 2334–2279 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE (World History Encyclopedia)",
+        "value": "2350/2334-2154 BCE",
+        "source": "src-whe-akkad"
+      },
+      {
+        "calendar": "B.C.E. (Encyclopaedia Iranica)",
+        "value": "Sargon of Akkad (2334-2279 B.C.E.)",
+        "source": "src-iranica-elam"
+      }
+    ],
+    "display": "c. 2334–2154 BCE"
+  },
+  "where": {
+    "lat": 32.5396,
+    "lon": 44.4242,
+    "elevation_m": null,
+    "modern_name": "Babylon Governorate, Iraq (regional anchor for the unlocated capital city of Akkad/Agade; imperial territory extended across Mesopotamia and Elam)",
+    "historical_name": "Akkad (Agade), capital of the Akkadian Empire, central Mesopotamia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 120,
+    "coordinate_sources": [
+      "src-pleiades-babylon",
+      "src-unesco-babylon"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Often described as the world's first multinational empire, with a standardized administration across Mesopotamia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-sumerian-city-states",
+      "type": "related"
+    },
+    {
+      "id": "-3300-invention-of-writing",
+      "type": "related"
+    },
+    {
+      "id": "place-uruk",
+      "type": "related"
+    },
+    {
+      "id": "polity-achaemenid-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-akkad",
+      "url": "https://www.worldhistory.org/akkad/",
+      "title": "Akkad and the Akkadian Empire: The First Multinational Empire in the World",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2021-03-24",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-iranica-elam",
+      "url": "https://www.iranicaonline.org/articles/elam-i",
+      "title": "Elam i. The History of Elam",
+      "publisher": "Encyclopaedia Iranica Foundation",
+      "author": "François Vallat",
+      "date_published": "1998-12-15",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-babylon",
+      "url": "https://pleiades.stoa.org/places/893951",
+      "title": "Babylon/Babil (Pleiades place 893951)",
+      "publisher": "Pleiades gazetteer of ancient places (ISAW, New York University)",
+      "author": "B. Siewert-Mayer, M. Roaf, St J. Simpson, R. Wenke",
+      "date_published": "2024-05-18",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-babylon",
+      "url": "https://whc.unesco.org/en/list/278/",
+      "title": "Babylon",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "2019",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin is a regional anchor near Babylon, because the capital Akkad has not been located. The Gutian account comes from a later literary text, not a record of the time.",
+  "published_at": "2026-11-04T16:34:19.349Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    },
+    {
+      "date": "2026-11-04",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}
