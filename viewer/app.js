@@ -358,7 +358,7 @@ $('#globe').addEventListener('touchend', () => { pinch = null; }, { passive: tru
 let lastFrame = performance.now(), settleTimer = null, tierKey = '';
 const tier = () => `${minImportance()}|${Math.round(Math.log2(zoomK()) * 3)}`;
 // ---------- planet-wide records: no single place, so no pin. A faint ring at the globe's edge says "something
-// planet-wide is happening now", and one small pill above the globe names how many; clicking it opens a short list.
+// planet-wide is happening now", and one small pill in the left column names how many; clicking it opens a short list.
 let planetList = [], planetOpen = false, planetKey = '';
 function renderPlanet(planet) {
   planetList = [...planet].sort((a, b) => b.importance - a.importance || a.start - b.start);
@@ -383,7 +383,7 @@ function renderPlanet(planet) {
 addEventListener('pointerdown', e => { if (planetOpen && !e.target.closest('#planet')) { planetOpen = false; renderPlanet(planetList); } });
 addEventListener('keydown', e => { if (e.key === 'Escape' && planetOpen) { planetOpen = false; renderPlanet(planetList); } });
 const _o = new THREE.Vector3();
-function placePlanetOrbit() { // per frame: the ring on the globe's edge, the pill just above it (cheap: two style writes)
+function placePlanetOrbit() { // per frame: the ring on the globe's edge (cheap: one style write)
   const box = $('#planet');
   if (box.hidden) return;
   const cam = globe.camera(), el = globe.renderer().domElement, W = el.clientWidth || innerWidth, H = el.clientHeight || innerHeight;
@@ -393,15 +393,6 @@ function placePlanetOrbit() { // per frame: the ring on the globe's edge, the pi
   const ring = $('#planet-ring'), fits = r * 2 < Math.min(W, H) * 1.05;
   ring.hidden = !fits;
   if (fits) ring.style.cssText = `left:${cx - r - 3}px;top:${cy - r - 3}px;width:${r * 2 + 6}px;height:${r * 2 + 6}px`;
-  // the pill sits just above the globe, or near the top of the view when the globe fills it
-  let y = Math.max(14, Math.min(H - 300, (fits ? cy - r : 0) - 40));
-  const x = Math.max(Math.min(180, W / 2), Math.min(W - Math.min(180, W / 2), cx));
-  // never on top of the title, search box and layers button (on a phone they span the width of the screen)
-  const head = $('#masthead').getBoundingClientRect(), pw = (box.firstElementChild?.offsetWidth || 160) / 2;
-  if (x + pw > head.left && x - pw < head.right && y < head.bottom + 8) y = head.bottom + 8;
-  const note = $('#notice');   // nor on top of the notice under the title
-  if (!note.hidden) { const n = note.getBoundingClientRect(); if (x + pw > n.left && x - pw < n.right && y + 34 > n.top && y < n.bottom) y = n.bottom + 6; }
-  box.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
 }
 
 (function zoomFrame(now) {
@@ -789,7 +780,8 @@ function render() {
   queueURL();
 }
 
-// mass extinctions and ice ages on the time bar, for the scales that reach them; a click opens the record
+// mass extinctions and ice ages on the time bar, for the scales that reach them. A click on an extinction opens its record. Ice ages are only a tint: they sit where people grab the bar, and one that
+// fills most of the scale, as Antarctica's ice does on every short one, says nothing there, so it isn't drawn.
 function drawMarks(from, to) {
   const key = `${from}|${to}|${!!deepTime}`;
   if (key === marksKey || !deepTime) return;
@@ -799,7 +791,7 @@ function drawMarks(from, to) {
     const title = esc(m.label), tag = m.id ? 'button' : 'span', attr = m.id ? `data-id="${esc(m.id)}" aria-label="${title}"` : '';
     if (m.kind === 'extinction') { const x = X(m.ma); return x < 0 || x > 100 ? '' : `<${tag} class="mark ext" style="left:${x.toFixed(2)}%" title="${title}" ${attr}></${tag}>`; }
     const a = Math.max(0, X(m.from)), b = Math.min(100, X(m.to));
-    return b <= a ? '' : `<${tag} class="mark ice" style="left:${a.toFixed(2)}%;width:${Math.max(0.4, b - a).toFixed(2)}%" title="${title}" ${attr}></${tag}>`;
+    return b <= a || b - a > 40 ? '' : `<span class="mark ice" style="left:${a.toFixed(2)}%;width:${Math.max(0.4, b - a).toFixed(2)}%"></span>`;
   }).join('');
   box.querySelectorAll('button').forEach(b => { b.onclick = () => goTo(b.dataset.id); });
 }

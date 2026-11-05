@@ -3,7 +3,7 @@
 //   viewer/assets/paleo-world.png  The PALEOMAP PaleoDEMs (Scotese and Wright 2018, zenodo.org/records/5460860, CC BY 4.0) as they are, land and sea floor: 109 frames, 5 million
 //                                  years apart back to 540 Ma, then 46 more, 10 million years apart back to 1,000 Ma, 360 x 180 (1-degree cells, north at the top, starting at 180 W), left
 //                                  to right and top to bottom in 11 columns. No maps reach past 540 Ma, so those 46 are the 540 Ma map's surface carried back by the rotations, keeping only rock that MERDITH2021
-//                                  reconstructs at that age; the rest sinks away over 80 million years. Which rock is there comes from that model; its heights and coasts are a stand-in, and the viewer says so. 128 and up: land, the square root of height up to 6,000 m. Below 128: under water, likewise.
+//                                  reconstructs at that age; going back, the rest retreats toward the surviving continents over 90 million years. Which rock is there comes from that model; its heights and coasts are a stand-in, and the viewer says so. 128 and up: land, the square root of height up to 6,000 m. Below 128: under water, likewise.
 //   viewer/assets/paleo-flow.png   How the surface moves from each frame to the next older one, so the viewer can glide land between frames rather than crossfade: 154 frames, 180 x 90.
 //                                  Red: degrees east (scaled by the cosine of latitude). Green: degrees north. 128 is no movement and 127 steps are 16 degrees. It comes from the plate
 //                                  rotations: each cell of rock is moved with its plate, the movement spreads to its neighbours, and it is blurred.
@@ -16,7 +16,8 @@
 //   viewer/paleo/boundaries.json   MERDITH2021's plate boundaries, carried across to these positions by the rotations of the nearest rock. PALEOMAP has no boundaries of its own, so
 //                                  younger than 680 Ma these are approximate, and any part that lands inland is left out. Each frame's boundaries are 10 million years apart.
 //
-// Each PaleoDEM was drawn on its own, so coasts jump between neighbours. Each frame here is averaged with the ones either side of it, each moved into line first by the flow.
+// Each PaleoDEM was drawn on its own, so coasts jump between neighbours and small islands come and go. Each frame here is a weighted average of the frames 25 million years either side of it, each moved
+// into line first by the flow, so land changes slowly and only what lasts stays. Specks of land or sea a few cells across, which would blink as the coast moves past them, are lowered or filled in.
 //
 // Usage: node atlas/tools/build-world.mjs <PaleoDEMS_long_lat_elev_csv_v2.zip> <cache folder>
 // The cache folder keeps the service's answers. It needs merdith-morph.json from viewer/paleo/build_morph.mjs, and merdith-boundaries.json from atlas/tools/build-plates.mjs.
@@ -252,21 +253,53 @@ const sampleWorld = (img, lon, lat) => { const fx = lon + 180 - 0.5, fy = 90 - l
 // ---------- smooth each frame with its neighbours, moved into line; write the images
 const encode = e => { if (e >= 0) return 128 + Math.round(127 * Math.sqrt(Math.min(e, 6000) / 6000)); const v = 127 - Math.round(127 * Math.sqrt(Math.min(-e, 6000) / 6000)); return e < -1500 ? v & ~1 : v; };   // the deep sea needs less precision
 const OLD_FRAMES = (OLDEST - MAX) / OLD_STEP, ROWS = Math.ceil((FRAMES + OLD_FRAMES) / COLS), AW = COLS * W, AH = ROWS * H, atlas = new Uint8Array(AW * AH), soft = [];
-worlds.forEach((img, k) => {
-  const out = new Float32Array(W * H), before = k > 0 ? { img: worlds[k - 1], fl: flows[k - 1] } : null, after = k + 1 < worlds.length ? { img: worlds[k + 1], fl: flows[k] } : null;
+// one frame of a series, averaged with its neighbours along the plates' path: follow each cell forward and back through the flow, and read each neighbour where the rock has got to
+const alongFlow = (series, k, flowOf, reach, sigma) => {
+  const out = new Float32Array(W * H), weight = []; for (let j = 0; j <= reach; j++) weight.push(Math.exp(-j * j / (2 * sigma * sigma)));
   for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
-    const [lon, lat] = cellOf(x, y), cosL = Math.max(0.15, Math.cos(rad(lat))); let sum = 2 * img[y * W + x], w = 2;
-    if (before) { const [fx, fy] = flowAt(before.fl, lon, lat); sum += sampleWorld(before.img, lon - fx / cosL, Math.max(-89.5, Math.min(89.5, lat - fy))); w++; }
-    if (after) { const [fx, fy] = flowAt(after.fl, lon, lat); sum += sampleWorld(after.img, lon + fx / cosL, Math.max(-89.5, Math.min(89.5, lat + fy))); w++; }
+    const [lon, lat] = cellOf(x, y); let sum = weight[0] * series[k][y * W + x], w = weight[0];
+    for (const dir of [1, -1]) {
+      let lo = lon, la = lat;
+      for (let j = 1; j <= reach; j++) {
+        const n = k + dir * j; if (n < 0 || n >= series.length) break;
+        const [fx, fy] = flowAt(flowOf(dir > 0 ? n - 1 : n), lo, la), cosL = Math.max(0.15, Math.cos(rad(la)));
+        lo += dir * fx / cosL; la = Math.max(-89.5, Math.min(89.5, la + dir * fy));
+        if (lo > 180) lo -= 360; else if (lo < -180) lo += 360;
+        sum += weight[j] * sampleWorld(series[n], lo, la); w += weight[j];
+      }
+    }
     out[y * W + x] = sum / w;
   }
-  soft.push(out);
-  const ox = (k % COLS) * W, oy = Math.floor(k / COLS) * H;
-  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) atlas[(oy + y) * AW + ox + x] = encode(out[y * W + x]);
-});
-// MERDITH2021 only reconstructs rock it has evidence for at each age. Going back, rock it doesn't have yet sinks away over 80 million years: from 540 Ma at the earliest, since the maps show it until then.
+  return out;
+};
+// Land or water only a few degrees across can't hold steady on a 1-degree map. Each is pressed under the waterline, or filled, in proportion to how small it is, so it fades as it shrinks rather than blinking out.
+const settleSpecks = img => {
+  for (const [isIt, limit, sign] of [[v => v >= 0, 9, -1], [v => v < 0, 6, 1]]) {
+    const seen = new Uint8Array(W * H);
+    for (let i = 0; i < W * H; i++) {
+      if (seen[i] || !isIt(img[i])) continue;
+      const q = [i]; seen[i] = 1; let area = 0, far = 0;
+      for (let h = 0; h < q.length; h++) { const c = q[h], y = Math.floor(c / W), x = c - y * W; area += Math.cos(rad(90 - y - 0.5)); far = Math.max(far, Math.abs(img[c])); for (const n of [y * W + (x + 1) % W, y * W + (x + W - 1) % W, y ? c - W : -1, y < H - 1 ? c + W : -1]) if (n >= 0 && !seen[n] && isIt(img[n])) { seen[n] = 1; q.push(n); } }
+      if (area >= limit) continue;
+      const f = area / limit, press = (1 - f * f * (3 - 2 * f)) * (far + 40);
+      for (const c of q) img[c] += sign * press;
+    }
+  }
+  return img;
+};
+const putFrame = (k, img) => { const ox = (k % COLS) * W, oy = Math.floor(k / COLS) * H; for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) atlas[(oy + y) * AW + ox + x] = encode(img[y * W + x]); };
+worlds.forEach((_, k) => { const out = settleSpecks(alongFlow(worlds, k, n => flows[n], 5, 2.5)); soft.push(out); putFrame(k, out); });
+// MERDITH2021 only reconstructs rock it has evidence for at each age. Going back, rock it doesn't have yet retreats toward the rock that lasts: the farthest goes first, from 540 Ma at the earliest since
+// the maps show it until then, and what touches a surviving continent goes last, 90 million years later. Read forward, continents grow outward as terranes join them. Nothing vanishes all at once.
 const rockOldest = cells.map(c => { const q = rock[c] >= 0 ? merdith.plates[rock[c]].q : null; if (q) for (let i = q.length - 1; i >= 0; i--) if (q[i]) return i * merdith.step; return 0; });
-const presence = (i, t) => { const f = Math.max(0, Math.min(1, (t - Math.max(rockOldest[i], MAX)) / 80)); return 1 - f * f * (3 - 2 * f); };
+const rockReach = new Float32Array(cells.length);
+{
+  const steps = new Int16Array(W * H).fill(-1), queue = [];
+  cells.forEach((c, i) => { if (rockOldest[i] < OLDEST - 50) return; const m = rotOld(i, MAX); if (!m) return; const [x, y] = ll(apply(m, rockDirs[i])), g = Math.min(H - 1, Math.floor(90 - y)) * W + Math.min(W - 1, Math.floor(x + 180)); if (steps[g] < 0) { steps[g] = 0; queue.push(g); } });
+  for (let h = 0; h < queue.length; h++) { const i = queue[h], y = Math.floor(i / W), x = i - y * W; for (const n of [y * W + (x + 1) % W, y * W + (x + W - 1) % W, y > 0 ? i - W : -1, y < H - 1 ? i + W : -1]) if (n >= 0 && steps[n] < 0) { steps[n] = steps[i] + 1; queue.push(n); } }
+  cells.forEach((c, i) => { const m = rotOld(i, MAX); if (!m) return; const [x, y] = ll(apply(m, rockDirs[i])), g = Math.min(H - 1, Math.floor(90 - y)) * W + Math.min(W - 1, Math.floor(x + 180)); rockReach[i] = Math.max(0, steps[g]); });
+}
+const presence = (i, t) => { const gone = Math.max(rockOldest[i], MAX) + 90 * (1 - Math.min(1, rockReach[i] / 45)), f = Math.max(0, Math.min(1, (t - gone + 12) / 24)); return 1 - f * f * (3 - 2 * f); };
 // older than the maps: the 540 Ma surface, carried back rock by rock. Each rock is read at 16 points, because rock carried to high latitudes spreads over more cells of the grid, and each point is shared across the four cells around where it lands, so turning the grid leaves no holes; cells beside
 // rock then fill in, so small cracks between plates close, and a light blur takes off the grid.
 const oldWorlds = [];
@@ -274,22 +307,24 @@ const oldWorlds = [];
   const last = soft[FRAMES - 1]; let seaSum = 0, seaN = 0; for (const v of last) if (v < -1500) { seaSum += v; seaN++; } const openSea = seaSum / Math.max(1, seaN);
   const SUB = 4, points = cells.map((c, i) => { const m = rotYoung(i, MAX) || rotOld(i, MAX); if (!m) return null; const out = []; for (let b = 0; b < SUB; b++) for (let a = 0; a < SUB; a++) { const d = xyz([-180 + (c % W) + (a + 0.5) / SUB, 90 - Math.floor(c / W) - (b + 0.5) / SUB]), [x, y] = ll(apply(m, d)); out.push({ d, h: sampleWorld(last, x, y) }); } return out; });
   for (let j = 1; j <= OLD_FRAMES; j++) {
-    const t = MAX + j * OLD_STEP, sum = new Float32Array(W * H), wt = new Float32Array(W * H), cover = new Float32Array(W * H), val = new Float32Array(W * H).fill(openSea), steps = new Int8Array(W * H).fill(-1), queue = [];
+    const t = MAX + j * OLD_STEP, sum = new Float32Array(W * H), wt = new Float32Array(W * H), cover = new Float32Array(W * H), held = new Float32Array(W * H), val = new Float32Array(W * H).fill(openSea), steps = new Int8Array(W * H).fill(-1), queue = [];
     cells.forEach((_, i) => {
       const m = rotOld(i, t), there = presence(i, t); if (!points[i] || !m || there <= 0) return;
       for (const { d, h } of points[i]) {
+        const lift = Math.exp(Math.max(-1500, Math.min(1500, h)) / 400);   // two rocks on one spot merge toward the higher, so a seam never drops land into the sea
         const [x, y] = ll(apply(m, d)), fx = x + 180 - 0.5, fy = 90 - y - 0.5, x0 = Math.floor(fx), y0 = Math.floor(fy), tx = fx - x0, ty = fy - y0;
-        for (const [cx, cy, w] of [[x0, y0, (1 - tx) * (1 - ty)], [x0 + 1, y0, tx * (1 - ty)], [x0, y0 + 1, (1 - tx) * ty], [x0 + 1, y0 + 1, tx * ty]]) { if (cy < 0 || cy >= H || w <= 0) continue; const g = cy * W + ((cx % W) + W) % W; sum[g] += h * w * there; wt[g] += w * there; cover[g] += w; }
+        for (const [cx, cy, w] of [[x0, y0, (1 - tx) * (1 - ty)], [x0 + 1, y0, tx * (1 - ty)], [x0, y0 + 1, (1 - tx) * ty], [x0 + 1, y0 + 1, tx * ty]]) { if (cy < 0 || cy >= H || w <= 0) continue; const g = cy * W + ((cx % W) + W) % W; const top = w * there * lift; sum[g] += h * top; wt[g] += top; held[g] += w * there; cover[g] += w; }
       }
     });
-    for (let g = 0; g < W * H; g++) if (wt[g] > 0.05) { const f = Math.min(1, wt[g] / cover[g]); val[g] = openSea + (sum[g] / wt[g] - openSea) * f * f * (3 - 2 * f); steps[g] = 0; queue.push(g); }
+    for (let g = 0; g < W * H; g++) if (held[g] > 0.05) { const f = Math.min(1, held[g] / cover[g]); val[g] = openSea + (sum[g] / wt[g] - openSea) * f * f * (3 - 2 * f); steps[g] = 0; queue.push(g); }
     for (let q = 0; q < queue.length; q++) { const i = queue[q]; if (steps[i] >= 2) continue; const y = Math.floor(i / W), x = i - y * W; for (const n of [y * W + (x + 1) % W, y * W + (x + W - 1) % W, y > 0 ? i - W : -1, y < H - 1 ? i + W : -1]) if (n >= 0 && steps[n] < 0) { steps[n] = steps[i] + 1; val[n] = val[i]; queue.push(n); } }
     const out = new Float32Array(W * H);
     for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { let v = 0, c = 0; for (const [dx, dy, w] of [[0, 0, 4], [1, 0, 2], [-1, 0, 2], [0, 1, 2], [0, -1, 2], [1, 1, 1], [-1, 1, 1], [1, -1, 1], [-1, -1, 1]]) { const yy = y + dy; if (yy < 0 || yy >= H) continue; v += w * val[yy * W + ((x + dx + W) % W)]; c += w; } out[y * W + x] = v / c; }
     oldWorlds.push(out);
-    const k = FRAMES - 1 + j, ox = (k % COLS) * W, oy = Math.floor(k / COLS) * H;
-    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) atlas[(oy + y) * AW + ox + x] = encode(out[y * W + x]);
   }
+  // the same smoothing through the stand-in frames, starting among the last real maps so there is no join
+  const lead = 4, series = [...soft.slice(FRAMES - 1 - lead), ...oldWorlds], flowOf = n => flows[FRAMES - 1 - lead + n], done = series.map((_, n) => (n < lead - 1 ? series[n] : settleSpecks(alongFlow(series, n, flowOf, 3, 1.5))));
+  done.forEach((img, n) => { const k = FRAMES - 1 - lead + n; if (n < lead - 1) return; if (k < FRAMES) soft[k] = img; else oldWorlds[k - FRAMES] = img; putFrame(k, img); });
 }
 writePng('paleo-world.png', atlas, AW, AH, 1);
 const FA_ROWS = Math.ceil(flows.length / COLS), FAW = COLS * FW, FAH = FA_ROWS * FH, flowImg = new Uint8Array(FAW * FAH * 3); let fastest = 0;

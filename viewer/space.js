@@ -193,8 +193,8 @@
               vec3 sea = mix(vec3(0.13, 0.38, 0.44), vec3(0.055, 0.21, 0.35), smoothstep(30.0, 500.0, depth));
               sea = mix(sea, vec3(0.03, 0.115, 0.24), smoothstep(500.0, 2600.0, depth));
               sea = mix(sea, vec3(0.016, 0.06, 0.15), smoothstep(2600.0, 5200.0, depth));
-              float metres = landMetres(soft), relief = metres + rough * (40.0 + smoothstep(300.0, 2500.0, metres) * 650.0);
-              vec3 bumped = landBump(n0 * 100.0, n0, relief * 0.00034);
+              float metres = landMetres(soft), relief = metres + rough * (90.0 + smoothstep(200.0, 2200.0, metres) * 900.0);
+              vec3 bumped = landBump(n0 * 100.0, n0, relief * 0.00055);
               vec3 ground = landTint(plantCover(latAbs, smoothstep(150.0, 700.0, metres) * 0.6, tex, broad, veg, flora, warm, aridity), relief, latAbs, rough, tex) * landHill(n0, bumped);
               // Near the present the picture is today's own imagery, carried with its rock, and the maps fade in over it. The rock reaches today's position exactly as they fade out, so the film ends on today's map, not beside it.
               float change = mix(paleoOn, smoothstep(0.4, 0.6, paleoOn + (broad - 0.5) * 0.7), abs(dry - (1.0 - pastWater)));
@@ -324,8 +324,8 @@
     stars = new THREE.Points(sg, new THREE.ShaderMaterial({
       transparent: true, depthWrite: false, vertexColors: true,
       uniforms: { pr: { value: Math.min(2, devicePixelRatio || 1) } },
-      vertexShader: `attribute float size; uniform float pr; varying vec3 vC; void main(){ vC = color;
-        gl_PointSize = size * pr; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+      vertexShader: `attribute float size; uniform float pr; varying vec3 vC; void main(){ float s = size * pr; vC = color * min(1.0, s * 0.5);   // anything under two pixels is dimmed rather than shrunk: a smaller point snaps from pixel to pixel and twinkles
+        gl_PointSize = max(2.0, s); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
       fragmentShader: `varying vec3 vC; void main(){ float d = length(gl_PointCoord - 0.5); if (d > 0.5) discard;
         gl_FragColor = vec4(vC, smoothstep(0.5, 0.0, d)); }`,
     }));
@@ -352,7 +352,13 @@
     // dim globe.gl's camera-attached light so the shader's sun dominates; keep pins readable on the night side
     scene.traverse(o => { if (o.isDirectionalLight) o.intensity = 0.35; if (o.isAmbientLight) o.intensity = 0.9; });
     // Aim the studio sun from the very camera about to be drawn. Aimed in its own animation callback, it was a frame behind, and the halo and glint visibly chased the globe as it turned.
-    scene.onBeforeRender = () => { if (sunMode === 'camera') aimStudioSun(); };
+    // The near plane follows the camera. Fixed close to it, a far camera has no depth precision left at the globe, and everything just above the surface flickers against it.
+    let shownNear = 0;
+    scene.onBeforeRender = () => {
+      if (sunMode === 'camera') aimStudioSun();
+      const c = globe.camera(), d = c.position.length(), near = Math.max(0.1, Math.min((d - R) * 0.4, d * 0.02));
+      if (Math.abs(near - shownNear) > shownNear * 0.02) { shownNear = near; c.near = near; c.updateProjectionMatrix(); }
+    };
     let last = performance.now();
     (function spin(now) { const dt = (now - last) / 1000; last = now; clouds.rotation.y += dt * 0.004; liftNight(); plateTick(dt); watchSpeed(dt); checkDetail(now); requestAnimationFrame(spin); })(last);
   }
@@ -456,7 +462,7 @@
     float landHill(vec3 n, vec3 bumped){
       vec3 right = vec3(viewMatrix[0][0], viewMatrix[1][0], viewMatrix[2][0]), up = vec3(viewMatrix[0][1], viewMatrix[1][1], viewMatrix[2][1]), back = vec3(viewMatrix[0][2], viewMatrix[1][2], viewMatrix[2][2]);
       vec3 l = normalize(-0.62 * right + 0.66 * up + 0.42 * back);
-      return clamp(1.0 + (dot(bumped, l) / max(dot(n, l), 0.3) - 1.0) * 1.05, 0.62, 1.32);
+      return clamp(1.0 + (dot(bumped, l) / max(dot(n, l), 0.3) - 1.0) * 1.35, 0.55, 1.38);
     }
   `;
   // ---------- deep time: the rotations everything rides on (paleo/morph.json; atlas/tools/build-world.mjs), PALEOMAP to 580 Ma, turning into MERDITH2021 by 680 Ma. They are

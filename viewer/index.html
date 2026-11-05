@@ -125,13 +125,12 @@
   .toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
 
   /* ---------- notices */
-  #notice { position: absolute; left: 50%; transform: translateX(-50%); top: max(16px, env(safe-area-inset-top, 0px)); max-width: min(520px, calc(100vw - 32px)); padding: 7px 12px; font-size: 12px; color: var(--soft); z-index: 2; text-align: center; }
-  @media (max-width: 1100px) { #notice { top: 136px; background: rgba(8,12,20,0.55); border-radius: 8px; } }
+  #notice { padding: 7px 12px; font-size: 12px; line-height: 1.45; color: var(--soft); text-align: left; background: rgba(8,12,20,0.55); border-radius: 8px; }
   #empty { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); text-align: center; padding: 14px 18px; max-width: 320px; z-index: 2; }
   #empty p { margin: 0 0 8px; color: var(--soft); }
   #empty button { border: 1px solid var(--brass); color: var(--brass); background: var(--brass-dim); border-radius: 999px; padding: 4px 12px; font-size: 12px; }
   /* deep time between records: a quiet period card low on the screen, out of the globe's centre */
-  #empty.period { top: auto; bottom: 214px; transform: translateX(-50%); max-width: min(420px, calc(100vw - 32px)); text-align: left; padding: 12px 16px; }
+  #empty.period { left: var(--gut); top: auto; bottom: calc(var(--time-top, 176px) + 10px); transform: none; width: min(340px, calc(100vw - 32px)); max-width: none; text-align: left; padding: 12px 16px; }
   #empty.period p { font-size: 13px; line-height: 1.45; }
   #empty.period b { display: block; font: 500 17px var(--f-display); color: var(--text); }
   #empty.period small { display: block; font: 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); margin: 2px 0 6px; }
@@ -143,7 +142,7 @@
   #hint.fade { opacity: 0; }
   /* planet-wide records (no single place): a faint ring on the globe's edge and one small pill above it that opens a short list */
   #planet-ring { position: absolute; border-radius: 50%; pointer-events: none; z-index: 1; box-shadow: 0 0 0 1px rgba(217,179,106,.18), 0 0 18px rgba(217,179,106,.10); }
-  #planet { position: absolute; left: 0; top: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; width: 0; will-change: transform; }
+  #planet { display: flex; flex-direction: column; align-items: flex-start; }
   #planet .pw-pill { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; padding: 4px 11px 4px 9px; border-radius: 999px; border: 1px solid rgba(217,179,106,.32);
     background: rgba(10,16,28,.62); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: var(--soft); font: 500 10px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
   #planet .pw-pill:hover, #planet .pw-pill[aria-expanded=true] { border-color: var(--brass); color: var(--text); }
@@ -405,13 +404,13 @@
     </div>
     </div>
   </div>
+  <div id="notice" class="glass" hidden></div>
+  <div id="planet" hidden aria-label="Planet-wide records"></div>
 </div>
 
-<div id="notice" class="glass" hidden></div>
 <div id="empty" class="glass" hidden><p id="empty-text"></p><div id="empty-near"></div><button id="empty-btn">Show the whole period</button></div>
 <div id="emphasis-flag" class="glass" hidden>Monuments enlarged for visibility</div>
 <div id="planet-ring" hidden aria-hidden="true"></div>
-<div id="planet" hidden aria-label="Planet-wide records"></div>
 <div id="hint" class="glass">Drag to rotate · scroll or pinch to zoom · click a pin to read its record</div>
 
 <section id="panel" class="glass" hidden aria-label="Record" tabindex="-1"></section>

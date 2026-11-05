@@ -31,7 +31,7 @@
           vC = colors[k]; vA = a;
           if (a <= 0.003) { gl_Position = vec4(2.0, 2.0, 2.0, 1.0); gl_PointSize = 0.0; return; }
           vec3 v = position, t = 2.0 * cross(q.yzw, v), p = v + q.x * t + cross(q.yzw, t);
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(vec3(p.y, p.z, p.x) * R, 1.0);
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(vec3(p.y, p.z, p.x) * R * 1.0025, 1.0);   // just off the surface, or it fights the globe for depth and flickers
           gl_PointSize = (3.8 + 1.5 * log(1.0 + look.y)) * px; }`,
       fragmentShader: `uniform float fade; varying vec3 vC; varying float vA;
         void main(){ float d = length(gl_PointCoord - 0.5) * 2.0; if (d > 1.0) discard;
