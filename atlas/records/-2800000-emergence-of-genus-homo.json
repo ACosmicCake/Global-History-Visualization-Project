@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-2800000-emergence-of-genus-homo",
+  "kind": "process",
+  "title": "Emergence of the genus Homo",
+  "summary": "A jaw with teeth from Ledi-Geraru in Ethiopia establishes the presence of the genus Homo at 2.80 to 2.75 million years ago. It combines primitive traits seen in early Australopithecus with features found in later Homo. Later Homo habilis lived in eastern and southern Africa from 2.4 to 1.4 million years ago.",
+  "when": {
+    "start": {
+      "year": -2800000
+    },
+    "end": {
+      "year": -1400000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 50000,
+      "start_plus_years": 50000,
+      "end_minus_years": 100000,
+      "end_plus_years": 100000,
+      "note": "Start is the 2.80–2.75 Ma age of the Ledi-Geraru LD 350-1 mandible; end marks the transition to early Homo erectus and global Pleistocene dispersals by c. 1.8 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (Science / Pennsylvania State University portal)",
+        "value": "establishes the presence of Homo at 2.80 to 2.75 Ma",
+        "source": "src-psu-ledigeraru"
+      },
+      {
+        "calendar": "million years ago (Smithsonian Human Origins Program)",
+        "value": "2.4 million to 1.4 million years ago",
+        "source": "src-si-homohabilis"
+      }
+    ],
+    "display": "c. 2.8–1.4 million years ago"
+  },
+  "where": {
+    "lat": 11.35,
+    "lon": 40.8666667,
+    "elevation_m": null,
+    "modern_name": "Ledi-Geraru research area, Afar Regional State, Ethiopia (find spot of the oldest dated Homo fossil; early genus evolution spanned East and South African rift basins)",
+    "historical_name": "Afar Depression, East African Rift System, late Pliocene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-wd-ledigeraru"
+    ],
+    "paleo": {
+      "lat": 10.11,
+      "lon": 40.71,
+      "age_ma": 2.8,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "The origin of the genus Homo marks the founding of our own genus, initiating encephalization, stone tool cultures, and the lineage leading directly to Homo sapiens."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-2800ka-ledi-geraru-jaw",
+      "type": "has_part"
+    },
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related",
+      "because": "Australopithecus afarensis and related gracile australopiths represent the ancestral hominin stock from which early Homo diverged."
+    },
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related",
+      "because": "The evolutionary lineage of the genus Homo produced the speciation event of Homo sapiens in Africa."
+    },
+    {
+      "id": "-60my-origin-of-primates",
+      "type": "related",
+      "because": "The initial radiation of primates established the primate order within which hominins and Homo emerged."
+    },
+    {
+      "id": "-1000000-control-of-fire",
+      "type": "related",
+      "because": "Encephalization and dietary developments in early Homo fostered advanced subsistence strategies including controlled fire."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-psu-ledigeraru",
+      "url": "https://pure.psu.edu/en/publications/early-homo-at-28-ma-from-ledi-geraru-afar-ethiopia/",
+      "title": "Early Homo at 2.8 Ma from Ledi-Geraru, Afar, Ethiopia (Science 347:1352–1355)",
+      "publisher": "Pennsylvania State University research portal (recording Science / AAAS)",
+      "author": "Brian Villmoare, William H. Kimbel, Chalachew Seyoum, et al.",
+      "date_published": "2015-03-20",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-si-homohabilis",
+      "url": "https://humanorigins.si.edu/evidence/human-fossils/species/homo-habilis",
+      "title": "Homo habilis",
+      "publisher": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "author": "Smithsonian Human Origins Program",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-wd-ledigeraru",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q20982430.json",
+      "title": "Wikidata item Q20982430, Ledi-Geraru, coordinates 11.35, 40.86666667",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=40.86666667,11.35&time=2.8&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction of Ledi-Geraru coordinates at 2.8 Ma (MERDITH2021 plate model)",
+      "publisher": "EarthByte Group",
+      "author": "EarthByte Group",
+      "date_published": "2021",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "This rests on one jaw, and the boundaries of the genus are debated. The pin marks the find, not necessarily where Homo first arose.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:26.465Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

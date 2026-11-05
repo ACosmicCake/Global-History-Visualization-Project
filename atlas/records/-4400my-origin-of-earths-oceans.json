@@ -1,0 +1,148 @@
+{
+  "id": "-4400my-origin-of-earths-oceans",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "Origin of Earth's oceans",
+  "summary": "When Earth's oceans formed is debated. A University of Wisconsin study of a Jack Hills zircon finds that Earth's crust had formed at least 4.4 billion years ago, supporting a cool early Earth with liquid water and a hydrosphere before 4.3 billion years ago. NOAA dates the ocean's filling to about 3.8 billion years ago, when water vapour released from the planet's interior condensed into rain.",
+  "when": {
+    "start": {
+      "year": -4404000000
+    },
+    "end": {
+      "year": -3800000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 8000000,
+      "start_plus_years": 8000000,
+      "end_minus_years": 100000000,
+      "end_plus_years": 100000000,
+      "note": "Jack Hills detrital zircon W74/2-36 yields a U-Pb age of 4,404 ± 8 Ma with elevated oxygen isotopes indicating low-temperature surface water interaction (Valley et al.); marine sedimentary rocks in the Isua supracrustal belt confirm widespread oceans by 3.8 Ga."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon geochronology and atom-probe tomography",
+        "value": "habitable to life about 4.4 billion years ago",
+        "source": "src-wisc-valley2014"
+      },
+      {
+        "calendar": "Geological consensus time before present",
+        "value": "At this time, about 3.8 billion years ago, the water condensed into rain which filled the basins that we now know as our world ocean.",
+        "source": "src-noaa-oceans"
+      }
+    ],
+    "display": "c. 4.4–3.8 Ga"
+  },
+  "where": {
+    "lat": -26.0977,
+    "lon": 117.2098,
+    "elevation_m": null,
+    "modern_name": "No single place; stand-in pin at Jack Hills, Western Australia",
+    "historical_name": "Hadean Earth; early oceans condensing across primordial crust",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-jackhills"
+    ],
+    "paleo": {
+      "not_applicable": "Predates plate tectonic reconstructions; global planetary process."
+    }
+  },
+  "regions": [
+    "oceania",
+    "oceans",
+    "global"
+  ],
+  "domains": [
+    "geology_climate",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The accumulation of Earth's oceans established the global hydrosphere, regulating planetary climate and providing the essential aqueous medium for the origin and diversification of life."
+  },
+  "confidence": "contested",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-4540my-formation-of-earth",
+      "type": "related",
+      "because": "Planetary accretion and interior differentiation drove degassing of water vapor into the cooling atmosphere."
+    },
+    {
+      "id": "-4404my-jack-hills-zircon",
+      "type": "related"
+    },
+    {
+      "id": "-3700my-origin-of-life",
+      "type": "related",
+      "because": "The presence of stable liquid oceans provided the necessary chemical soup and hydrothermal environments for the origin of life."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wisc-valley2014",
+      "url": "https://news.wisc.edu/oldest-bit-of-crust-firms-up-idea-of-a-cool-early-earth/",
+      "title": "Oldest bit of crust firms up idea of a cool early Earth",
+      "publisher": "University of Wisconsin–Madison",
+      "author": "Terry Devitt",
+      "date_published": "2014-02-23",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-noaa-oceans",
+      "url": "https://oceanservice.noaa.gov/facts/why_oceans.html",
+      "title": "Why do we have an ocean?",
+      "publisher": "National Oceanic and Atmospheric Administration",
+      "author": "National Ocean Service",
+      "date_published": "2026-09-23",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-jackhills",
+      "url": "https://www.geonames.org/8657140/",
+      "title": "GeoNames entry: Jack Hills, Western Australia (8657140)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The two sources differ by about 600 million years. The pin marks Jack Hills, where the zircon was found, not where oceans began.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:21.442Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

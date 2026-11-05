@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "id": "-0130-silk-roads-network",
+  "kind": "process",
+  "title": "The Silk Roads",
+  "summary": "The Silk Road was a network of trade routes linking regions of the ancient world. In 138 BCE Emperor Wu sent his emissary Zhang Qian west, and Han China officially opened trade with the west in 130 BCE. World History Encyclopedia ends regular use in 1453. UNESCO says the Chang'an–Tianshan corridor stayed in use until the 16th century, carrying trade, religious beliefs, scientific knowledge and technology.",
+  "when": {
+    "start": {
+      "year": -130
+    },
+    "end": {
+      "year": 1453
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 70,
+      "start_plus_years": 30,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": "WHE dates the formal opening to 130 BCE following Zhang Qian's missions; UNESCO notes the network took shape between the 2nd century BCE and 1st century CE and remained active until the 16th century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE/CE",
+        "value": "130 BCE",
+        "source": "src-whe-silk"
+      },
+      {
+        "calendar": "BCE/CE",
+        "value": "between the 2nd century BC and 1st century AD and remained in use until the 16th century",
+        "source": "src-unesco-1442"
+      }
+    ],
+    "display": "130 BCE – 1453 CE (some routes used into the 16th century)"
+  },
+  "where": {
+    "lat": 34.25833,
+    "lon": 108.92861,
+    "elevation_m": null,
+    "modern_name": "Xi'an, China (ancient Chang'an; one end of the network)",
+    "historical_name": "Chang'an, Western Han Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-geonames-xian"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "central_asia",
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The primary trans-Eurasian trade network connecting East Asia, Central Asia, and the Mediterranean, shaping world commerce and cultural diffusion for over a millennium."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-han-dynasty",
+      "type": "related",
+      "because": "Emperor Wu of the Han Dynasty dispatched Zhang Qian and officially opened the trade routes."
+    },
+    {
+      "id": "person-zhang-qian",
+      "type": "related"
+    },
+    {
+      "id": "place-silk-roads-chang-an-tianshan-corridor",
+      "type": "has_part"
+    },
+    {
+      "id": "place-yumen-pass",
+      "type": "has_part"
+    },
+    {
+      "id": "place-mogao-caves",
+      "type": "related"
+    },
+    {
+      "id": "polity-kushan-empire",
+      "type": "contemporary"
+    },
+    {
+      "id": "1453-fall-of-constantinople",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-1442",
+      "url": "https://whc.unesco.org/en/list/1442/",
+      "title": "Silk Roads: the Routes Network of Chang'an-Tianshan Corridor",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "2014",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-silk",
+      "url": "https://www.worldhistory.org/Silk_Road/",
+      "title": "Silk Road",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2018-05-01",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-xian",
+      "url": "https://www.geonames.org/1790630/xi-an.html",
+      "title": "Xi'an (GeoNames 1790630)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Local trade is older than 130 BCE, and sources end the routes at different dates. The pin at Xi'an marks one end of a network, not its centre.",
+  "published_at": "2026-11-04T21:56:48.390Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

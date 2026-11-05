@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "id": "polity-kievan-rus",
+  "kind": "polity",
+  "title": "Kievan Rus'",
+  "summary": "Kievan Rus' was a medieval federation centred on Kyiv, in parts of modern Belarus, Ukraine and Russia. It dates from the mid-9th century, when the Rurik dynasty began. Vladimir the Great converted the region to Christianity, with his baptism dated to 988. Its wealth rested partly on trade with Baltic merchants. The Mongol invasions of 1237–1240 destroyed it, breaking the region into pieces that developed separately.",
+  "when": {
+    "start": {
+      "year": 862
+    },
+    "end": {
+      "year": 1240
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 20,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 2,
+      "note": "Traditional founding dates date from Rurik's arrival in 862 and Oleg's establishment of Kyiv as capital c. 882; the polity dissolved following the Mongol sack of Kyiv in 1240."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian",
+        "value": "862-1242",
+        "source": "src-worldhistory-kievan-rus"
+      },
+      {
+        "calendar": "Julian",
+        "value": "centered around the city of Kiev from the mid-ninth century to 1240",
+        "source": "src-encyclopedia-kievan-rus"
+      },
+      {
+        "calendar": "Julian",
+        "value": "baptism of St Vladimir in 988",
+        "source": "src-unesco-kyiv"
+      }
+    ],
+    "display": "862–1240 CE (traditional founding to the Mongol sack of Kyiv)"
+  },
+  "where": {
+    "lat": 50.45466,
+    "lon": 30.5238,
+    "elevation_m": 187,
+    "modern_name": "Kyiv, Ukraine",
+    "historical_name": "Kyiv, Kievan Rus'",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-geonames-kyiv"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "A formative early state for the peoples of modern Belarus, Ukraine and Russia."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1237-mongol-western-campaign-of-batu",
+      "type": "related"
+    },
+    {
+      "id": "polity-byzantine-empire",
+      "type": "related"
+    },
+    {
+      "id": "place-hagia-sophia",
+      "type": "related"
+    },
+    {
+      "id": "1096-first-crusade-march",
+      "type": "related"
+    },
+    {
+      "id": "polity-carolingian-empire",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-worldhistory-kievan-rus",
+      "url": "https://www.worldhistory.org/Kievan_Rus/",
+      "title": "Kievan Rus",
+      "publisher": "World History Encyclopedia",
+      "author": "Joshua J. Mark",
+      "date_published": "2018-12-03",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyclopedia-kievan-rus",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/kievan-rus",
+      "title": "Kievan Rus",
+      "publisher": "Encyclopedia.com",
+      "author": "Encyclopedia.com",
+      "date_published": "2019",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-kyiv",
+      "url": "https://whc.unesco.org/en/list/527/",
+      "title": "Kyiv: Saint-Sophia Cathedral and Related Monastic Buildings, Kyiv-Pechersk Lavra (World Heritage List no. 527)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "1990",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-kyiv",
+      "url": "https://www.geonames.org/703448",
+      "title": "Kyiv, Ukraine (GeoNames 703448)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Sources give 862 as the traditional start and 1240 or 1242 as the end. How Rus' relates to later states is politically sensitive, so the summary lists modern countries by territory only.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T17:00:28.622Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    },
+    {
+      "date": "2026-11-04",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

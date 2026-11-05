@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-60my-origin-of-primates",
+  "kind": "process",
+  "title": "Origin of primates",
+  "summary": "Plesiadapiforms, an extinct group of stem primates, first appear in the fossil record shortly after the extinction of non-avian dinosaurs. Purgatorius, the oldest of them, lived in what is now northeastern Montana about 65.9 million years ago. It was a small mammal eating fruit and insects, and its ankle bones show that it lived in trees.",
+  "when": {
+    "start": {
+      "year": -65946000
+    },
+    "end": {
+      "year": -65000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 100000,
+      "start_plus_years": 100000,
+      "end_minus_years": 500000,
+      "end_plus_years": 500000,
+      "note": "Start is the early Puercan occurrence of Purgatorius at Harley's Point in Montana (65.946–65.912 Ma); end is the Paleocene-Eocene thermal maximum transition when crown euprimates dispersed globally."
+    },
+    "as_recorded": [
+      {
+        "calendar": "geological time (Royal Society Open Science / PMC8074693)",
+        "value": "65.946–65.912 Ma",
+        "source": "src-pmc8074693"
+      },
+      {
+        "calendar": "years ago (Yale University)",
+        "value": "65-million-year-old",
+        "source": "src-yale2015"
+      }
+    ],
+    "display": "c. 66–65 million years ago"
+  },
+  "where": {
+    "lat": 47.28,
+    "lon": -106.99,
+    "elevation_m": null,
+    "modern_name": "Northeastern Montana, United States (earliest known fossils)",
+    "historical_name": "Interior subtropical forests of North America, early Paleocene; no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-wd-garfield"
+    ],
+    "paleo": {
+      "lat": 53.96,
+      "lon": -68.38,
+      "age_ma": 65,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The origin of primates established the grasping extremities, arboreal agility, stereoscopic vision, and expanded neocortex that underpinned the evolutionary lineage of anthropoids, apes, and humans."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related",
+      "because": "The mass extinction of non-avian dinosaurs cleared arboreal canopy niches that facilitated the rapid diversification of plesiadapiform stem primates."
+    },
+    {
+      "id": "-66my-paleogene-mammal-radiation",
+      "type": "part_of"
+    },
+    {
+      "id": "-225my-origin-of-mammals",
+      "type": "related",
+      "because": "The Triassic emergence of mammals established the mammalian body plan and placental lineage from which primates arose."
+    },
+    {
+      "id": "-30my-fayum-jebel-qatrani-primates",
+      "type": "related",
+      "because": "The Paleocene primate radiation gave rise to the anthropoid lineages that later diversified in Afro-Arabia at Fayum."
+    },
+    {
+      "id": "-2800000-emergence-of-genus-homo",
+      "type": "related",
+      "because": "The primate lineage founded in the early Paleocene ultimately led through hominoids and hominins to the genus Homo."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pmc8074693",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8074693/",
+      "title": "Earliest Palaeocene purgatoriids and the initial radiation of stem primates (Royal Society Open Science 8:210050)",
+      "publisher": "The Royal Society (via PubMed Central)",
+      "author": "Gregory P. Wilson Mantilla, Stephen G. B. Chester, William A. Clemens, et al.",
+      "date_published": "2021-02-24",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-yale2015",
+      "url": "https://news.yale.edu/2015/01/19/fossil-ankles-indicate-earth-s-earliest-primates-lived-trees",
+      "title": "Fossil ankles indicate Earth’s earliest primates lived in trees",
+      "publisher": "Yale University",
+      "author": "Jim Shelton / Yale News",
+      "date_published": "2015-01-19",
+      "accessed": "2026-11-04",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "when.as_recorded",
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-wd-garfield",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q486961.json",
+      "title": "Wikidata item Q486961: Garfield County, Montana, coordinates 47.28, -106.99",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-106.99,47.28&time=65&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction of Garfield County coordinates at 65 Ma (MERDITH2021 plate model)",
+      "publisher": "EarthByte Group",
+      "author": "EarthByte Group",
+      "date_published": "2021",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "Whether plesiadapiforms were true primates or close relatives is debated. The pin is in the Montana fossil region, and primates' place of origin is unknown.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:25.835Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

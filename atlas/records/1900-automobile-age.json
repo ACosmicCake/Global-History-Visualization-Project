@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1900-automobile-age",
+  "kind": "process",
+  "title": "The automobile age",
+  "summary": "Ford's breakthrough came in 1908 with the Model T, built for efficiency, reliability and a reasonable price. At its Highland Park plant in Michigan, Ford introduced assembly-line mass production, with each worker staying in one place while vehicles passed by. In 1926 the United States launched its first federal highway system, including Route 66.",
+  "when": {
+    "start": {
+      "year": 1908
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 5,
+      "start_plus_years": 8,
+      "end_minus_years": 0,
+      "end_plus_years": 10,
+      "note": "Mass motorization emerged around the turn of the twentieth century, catalyzed by Ford's moving assembly line in 1913 and interstate highway networks."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1908 with the introduction of the Model T",
+        "source": "src-dhs-ford"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1926 when the Bureau of Public Roads launched the nation’s first Federal highway system",
+        "source": "src-nps-route66"
+      }
+    ],
+    "display": "from 1908"
+  },
+  "where": {
+    "lat": 42.33143,
+    "lon": -83.04575,
+    "elevation_m": 183,
+    "modern_name": "United States and worldwide; stand-in pin at Detroit",
+    "historical_name": "Detroit, Michigan, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8000,
+    "coordinate_sources": [
+      "src-geonames-detroit"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The transition to automotive transportation fundamentally reshaped global manufacturing through the assembly line, reconfigured urban and rural landscapes through highways, and created modern oil-dependent economies."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1886-benz-patent-motorwagen",
+      "type": "related"
+    },
+    {
+      "id": "1908-ford-model-t",
+      "type": "related"
+    },
+    {
+      "id": "1825-railway-age",
+      "type": "related"
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1850-second-industrial-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dhs-ford",
+      "url": "https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/ford-motor-company",
+      "title": "Ford Motor Company",
+      "publisher": "Detroit Historical Society",
+      "date_published": "2024",
+      "accessed": "2026-11-05",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nps-route66",
+      "url": "https://www.nps.gov/articles/route-66-overview.htm",
+      "title": "Route 66 Overview",
+      "publisher": "National Park Service",
+      "date_published": "2022",
+      "accessed": "2026-11-05",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-detroit",
+      "url": "https://www.geonames.org/4990729/detroit.html",
+      "title": "Detroit, Michigan (GeoNames 4990729)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-05",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "This outline covers the United States only. Benz has an earlier record, and wider effects on cities and oil are not sourced here. The pin at Detroit is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:57:39.486Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

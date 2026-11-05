@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1800-world-population-growth",
+  "kind": "process",
+  "title": "World population growth and the demographic transition",
+  "summary": "Estimates compiled by the U.S. Census Bureau put world population in 1800 at between 813 million and 1.125 billion, and in 1900 at between 1.55 and 1.76 billion. The demographic transition began in Europe by the early 1800s, as death rates fell, followed after a lag by falling birth rates. Demographers have ranked it among the most important changes affecting human society.",
+  "when": {
+    "start": {
+      "year": 1800
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 20,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 25,
+      "note": "Early mortality decline began in western Europe around 1800; global population accelerated from 1 billion to over 6 billion by 2000."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1800 AD",
+        "source": "src-census-worldpop"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "early 1800s",
+        "source": "src-pmc-demographic-transition"
+      }
+    ],
+    "display": "from c. 1800"
+  },
+  "where": {
+    "lat": 51.5085,
+    "lon": -0.1257,
+    "elevation_m": 25,
+    "modern_name": "Worldwide; stand-in pin at London, United Kingdom",
+    "historical_name": "London, Great Britain (stand-in pin for early European demographic transition)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-london"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Falling death rates and then birth rates reshaped how many people live on Earth."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "Agricultural improvements, industrial mechanization, and rising living standards drove the initial mortality decline that launched the demographic transition."
+    },
+    {
+      "id": "1860-germ-theory-of-disease",
+      "type": "related",
+      "because": "Sanitation and germ theory led to public health measures that dramatically reduced infant and child mortality, accelerating global population growth."
+    },
+    {
+      "id": "1850-human-caused-climate-change",
+      "type": "related",
+      "because": "Rapid growth of human populations and industrial economies vastly expanded fossil fuel consumption, land clearing, and global greenhouse emissions."
+    },
+    {
+      "id": "1950-great-acceleration-and-the-anthropocene",
+      "type": "related"
+    },
+    {
+      "id": "1960-enovid-contraceptive-pill",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-census-worldpop",
+      "url": "https://www.census.gov/data/tables/time-series/demo/international-programs/historical-est-worldpop.html",
+      "title": "Historical Estimates of World Population",
+      "publisher": "U.S. Census Bureau",
+      "author": "U.S. Census Bureau, International Programs",
+      "date_published": "2021-12-16",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pmc-demographic-transition",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4112481/",
+      "title": "The New Demographic Transition: Most Gains in Life Expectancy Now Realized Late in Life",
+      "publisher": "American Economic Association (via PubMed Central)",
+      "author": "Karen N. Eggleston, Victor R. Fuchs",
+      "date_published": "2012",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-london",
+      "url": "https://www.geonames.org/2643743/london.html",
+      "title": "London, United Kingdom",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Early population figures are estimates. The transition reached other regions later. The pin at London is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T22:15:06.666Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

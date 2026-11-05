@@ -1,0 +1,151 @@
+{
+  "id": "1850-second-industrial-revolution",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "The Second Industrial Revolution",
+  "summary": "The Second Industrial Revolution is usually dated between 1870 and 1914, though some of its characteristic events date to the 1850s. Bessemer's process, announced in 1856, made inexpensive steel in large quantities. Chemicals, energy, materials and medicine all advanced, and giant corporations rose. Germany established a lead in chemicals, and infant mortality fell by about half across these years.",
+  "when": {
+    "start": {
+      "year": 1856
+    },
+    "end": {
+      "year": 1914
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Economic historians conventionally date the Second Industrial Revolution between 1870 and 1914, though foundational breakthroughs in steel (Bessemer 1856) and synthetic chemicals date to the 1850s."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The second Industrial Revolution is usually dated between 1870 and 1914, although a number of its characteristic events can be dated to the 1850s.",
+        "source": "src-nwu-mokyr-second-ir"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1856, Bessemer announced that he had discovered a way to make inexpensive steel in large quantities without a furnace. The Bessemer process, as it is called, involves blowing air through molten pig iron.",
+        "source": "src-lindahall-bessemer"
+      }
+    ],
+    "display": "c. 1850s–1914"
+  },
+  "where": {
+    "lat": 53.383,
+    "lon": -1.4659,
+    "elevation_m": null,
+    "modern_name": "Several countries; stand-in pin at Sheffield, England",
+    "historical_name": "Sheffield, Yorkshire, United Kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 8000,
+    "coordinate_sources": [
+      "src-geonames-sheffield"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Created mass production systems, widespread electrical grids, and petroleum infrastructure that constitute the technological foundation of modern society."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "The First Industrial Revolution created the mechanized factory system and railway transport upon which mass steel and electrical technologies built."
+    },
+    {
+      "id": "1882-pearl-street-station-electrification",
+      "type": "has_part"
+    },
+    {
+      "id": "1914-world-war-i",
+      "type": "related",
+      "because": "Mass industrial production of steel, chemical high explosives, and combustion engines enabled the unprecedented destructive scale of mechanized warfare in World War I."
+    },
+    {
+      "id": "1800-fossil-fuel-age",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nwu-mokyr-second-ir",
+      "url": "https://faculty.wcas.northwestern.edu/jmokyr/castronovo.pdf",
+      "title": "The Second Industrial Revolution, 1870-1914",
+      "publisher": "Northwestern University",
+      "author": "Joel Mokyr",
+      "date_published": "1998-08",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-lindahall-bessemer",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/henry-bessemer/",
+      "title": "Scientist of the Day - Henry Bessemer",
+      "publisher": "Linda Hall Library",
+      "author": "William B. Ashworth, Jr.",
+      "date_published": "2016-01-19",
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-sheffield",
+      "url": "https://www.geonames.org/2638077",
+      "title": "GeoNames: Sheffield (2638077)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Historians date this differently. The infant mortality figure is from one economic historian. The pin at Sheffield is a stand-in, since the change spanned several countries.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:35:08.057Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

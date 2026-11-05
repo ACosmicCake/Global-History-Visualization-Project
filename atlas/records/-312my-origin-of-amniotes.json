@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-312my-origin-of-amniotes",
+  "kind": "process",
+  "title": "Origin of amniotes",
+  "summary": "Amniotes, the group that includes reptiles, birds and mammals, lay a special kind of egg. A 2025 study of the earliest amniote tracks finds that dates for the group's origin cluster around a median of 319 million years ago, with a spread from 308.5 to 334.7 million. At Joggins in Nova Scotia, Hylonomus lyelli is described as the first true reptile.",
+  "when": {
+    "start": {
+      "year": -319000000
+    },
+    "end": {
+      "year": -308500000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 15000000,
+      "start_plus_years": 15000000,
+      "end_minus_years": 5000000,
+      "end_plus_years": 5000000,
+      "note": "Ages span the late Carboniferous (Bashkirian to Moscovian) cluster for crown-group amniotes centered around 319 Ma and the Joggins Formation yielding Hylonomus (c. 318–310 Ma)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "geological time (Nature / PMC12119326)",
+        "value": "spread of the cluster is 308.5 to 334.7 million years",
+        "source": "src-pmc12119326"
+      },
+      {
+        "calendar": "geological time (Joggins Fossil Institute)",
+        "value": "Pennsylvanian Coal Age",
+        "source": "src-joggins"
+      },
+      {
+        "calendar": "geological time (Nature / PMC12119326)",
+        "value": "median age of 319 million years",
+        "source": "src-pmc12119326"
+      }
+    ],
+    "display": "c. 319–309 million years ago (Late Carboniferous)"
+  },
+  "where": {
+    "lat": 45.694515,
+    "lon": -64.449432,
+    "elevation_m": null,
+    "modern_name": "Joggins Fossil Cliffs, Nova Scotia, Canada (key fossil site)",
+    "historical_name": "Equatorial coal swamps of Euramerica, late Carboniferous (Pennsylvanian); no polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-joggins"
+    ],
+    "paleo": {
+      "lat": -3.9,
+      "lon": -3.29,
+      "age_ma": 315,
+      "plate_model": "MERDITH2021",
+      "source": "src-gplates"
+    }
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The evolution of the cleidoic amniotic egg decoupled vertebrate reproduction from water, enabling permanent colonization of dry land and giving rise to reptiles, dinosaurs, birds, and mammals."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-312my-hylonomus-lyelli",
+      "type": "has_part"
+    },
+    {
+      "id": "-375my-animals-colonize-the-land",
+      "type": "related",
+      "because": "The initial tetrapod colonization of land established the terrestrial vertebrate lineages that later evolved the amniotic egg."
+    },
+    {
+      "id": "-225my-origin-of-mammals",
+      "type": "related",
+      "because": "Synapsid amniotes that diverged shortly after amniote origins diversified into the cynodont ancestors of mammals."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pmc12119326",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12119326/",
+      "title": "Earliest amniote tracks recalibrate the timeline of tetrapod evolution (Nature 641:1193–1198)",
+      "publisher": "Nature Portfolio (Springer Nature, via PubMed Central)",
+      "author": "Spencer G. Lucas, et al.",
+      "date_published": "2025-05-21",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ucmp-amniota",
+      "url": "https://ucmp.berkeley.edu/vertebrates/tetrapods/amniota.html",
+      "title": "Introduction to the Amniota",
+      "publisher": "University of California Museum of Paleontology",
+      "author": "UCMP Berkeley",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "summary",
+        "why_it_matters"
+      ]
+    },
+    {
+      "id": "src-joggins",
+      "url": "https://jogginsfossilcliffs.net/cliffs/",
+      "title": "The Joggins Fossil Cliffs UNESCO World Heritage Site",
+      "publisher": "Joggins Fossil Institute",
+      "author": "Joggins Fossil Institute",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "other",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "when.as_recorded"
+      ]
+    },
+    {
+      "id": "src-gplates",
+      "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?points=-64.449432,45.694515&time=315&model=MERDITH2021",
+      "title": "GPlates Web Service reconstruction of Joggins coordinates at 315 Ma (MERDITH2021 plate model)",
+      "publisher": "EarthByte Group",
+      "author": "EarthByte Group",
+      "date_published": "2021",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.paleo"
+      ]
+    }
+  ],
+  "reviewer_note": "The date is an estimate from many studies. The pin marks Joggins, one key fossil site, not where amniotes began.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:24.512Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
