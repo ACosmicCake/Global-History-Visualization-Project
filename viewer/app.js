@@ -65,11 +65,20 @@ function range(level = state.level) {
   if (L.key === 'event') { const y = Math.floor(state.t); return { from: y, to: y + 1 }; }
   return { from: L.from, to: L.to };
 }
+function dateWindow() { const { from, to } = range(), w = windowHalf(from, to); return { from: state.t - w, to: state.t + w }; }
+// The present has few records of its own, so at today's date a thin view opens out to the whole period (worked out once per render).
+const SPARSE_TODAY = 60;
+const wholeNow = () => state.whole || state.autoWhole;
+function checkToday() {
+  state.autoWhole = false;
+  if (state.whole || LEVELS[state.level].key === 'event' || state.t < NOW - 1) return;
+  const w = dateWindow();
+  state.autoWhole = state.pins.filter(p => p.lat != null && !p.global && inLevel(p) && domainOn(p) && p.until >= w.from && p.start <= w.to).length < SPARSE_TODAY;
+}
 function windowNow() {
   const { from, to } = range();
-  if (state.whole || LEVELS[state.level].key === 'event') return { from, to };
-  const w = windowHalf(from, to);
-  return { from: state.t - w, to: state.t + w };
+  if (wholeNow() || LEVELS[state.level].key === 'event') return { from, to };
+  return dateWindow();
 }
 // How far from the date shown a record may lie and still show. History gets denser toward the present, so the reach
 // shrinks in proportion to how long ago the date is (about 300 years around 500 BCE, 10 around 1945), never past 3.5%
@@ -77,7 +86,7 @@ function windowNow() {
 function windowHalf(from, to) { return Math.min((to - from) * 0.035, Math.max(8, (NOW - state.t) * 0.12)); }
 // Near a date every record shows, and importance sets how loud its pin is (see pinPx). A whole period holds far more records, so it thins them from afar (spec 11.1), never past what the filters leave on.
 function minImportance() {
-  if (!state.whole) return 1;
+  if (!wholeNow()) return 1;
   const a = state.alt, floor = a > 2.1 ? 4 : a > 1.2 ? 3 : a > 0.6 ? 2 : 1;
   let top = 5; while (top > 1 && state.impOff.has(top)) top--;
   return Math.min(floor, top);
@@ -88,7 +97,7 @@ function minImportance() {
 function scaleIndex(p) {
   let i = Math.min(SCALE_INDEX[p.scale] ?? 5, 5);
   if (i === 5 && p.importance >= 4) i = 4;
-  while (i > 0 && p.end < LEVELS[i].from) i--;
+  while (i > 0 && p.until < LEVELS[i].from) i--;
   return i;
 }
 const inLevel = p => scaleIndex(p) <= state.level;
@@ -110,7 +119,7 @@ function visiblePins() {
   // the open record always shows (with its route), whatever the time scale, filters or zoom thinning: a sequence can
   // move the time axis to a scale the record isn't classed at, and its pin must not vanish while it is being read
   return state.pins.filter(p => p.lat != null && (p.id === state.selected || inLevel(p) && domainOn(p) && rankOf(p) >= mi
-    && p.end >= win.from && p.start <= win.to)).map(placed);
+    && p.until >= win.from && p.start <= win.to)).map(placed);
 }
 
 // ---------- pin badges: a coloured disc with the domain's glyph, drawn once per domain on a canvas
@@ -244,7 +253,7 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
   const cam = globe.camera(), el = globe.renderer().domElement, H = el.clientHeight || innerHeight, W = el.clientWidth || innerWidth;
   const p11 = cam.projectionMatrix.elements[5], camPos = cam.position, cd = camPos.length(), now = performance.now();
   const k = 2 / (H * p11), lm = labelMin(), wanted = [];
-  const win = windowNow(), reach = LEVELS[state.level].key === 'event' || state.whole ? Infinity : (win.to - win.from) / 2;
+  const win = windowNow(), reach = LEVELS[state.level].key === 'event' || wholeNow() ? Infinity : (win.to - win.from) / 2;
   for (const entry of pinSprites.values()) {
     const { group, sprite, halo, label, p } = entry, pos = group.position, r = pos.length();
     if (!r) continue;
@@ -254,7 +263,7 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
     sprite.visible = vis > 0.01;
     // a record fades and shrinks with its distance from the date shown, so what happened then reads first
     const special = p.id === state.selected || p.id === hoverId;
-    const far = special ? 0 : Math.min(1, Math.max(0, p.start - state.t, state.t - p.end) / reach);
+    const far = special ? 0 : Math.min(1, Math.max(0, p.start - state.t, state.t - p.until) / reach);
     const big = special || standsOut(p, state.alt), tex = pinTexture(p, big);
     if (sprite.material.map !== tex) { sprite.material.map = tex; sprite.material.needsUpdate = true; }
     sprite.material.opacity = vis * (1 - 0.65 * far) * (big ? 1 : 0.88);
@@ -618,7 +627,7 @@ function renderPeriod([a, b, name, text]) {
 // the nearest records either side of the window, so a gap is one click away from something real
 function renderNearest() {
   const win = windowNow(), mi = minImportance(), cand = state.pins.filter(p => p.lat != null && inLevel(p) && domainOn(p) && rankOf(p) >= mi);
-  const before = cand.filter(p => p.end < win.from).sort((x, y) => y.end - x.end)[0], after = cand.filter(p => p.start > win.to).sort((x, y) => x.start - y.start)[0];
+  const before = cand.filter(p => p.until < win.from).sort((x, y) => y.until - x.until)[0], after = cand.filter(p => p.start > win.to).sort((x, y) => x.start - y.start)[0];
   $('#empty-near').replaceChildren(...[[before, '←'], [after, '→']].filter(([p]) => p).map(([p, arrow]) => {
     const b2 = document.createElement('button');
     b2.textContent = arrow === '←' ? `← ${p.title}` : `${p.title} →`;
@@ -651,7 +660,7 @@ function clusterPins(pins) {
     group.sort((a, b) => rankOf(b) - rankOf(a) || b.importance - a.importance);
     const top = group[0], lat = group.reduce((a, p) => a + p.lat, 0) / group.length, lon = group.reduce((a, p) => a + p.lon, 0) / group.length;
     out.push({ id: `cluster:${key}`, cluster: group, lat, lon, importance: top.importance, domains: top.domains, outline: top.outline,
-      title: `${top.title} +${group.length - 1}`, start: Math.min(...group.map(p => p.start)), end: Math.max(...group.map(p => p.end)) });
+      title: `${top.title} +${group.length - 1}`, start: Math.min(...group.map(p => p.start)), end: Math.max(...group.map(p => p.end)), until: Math.max(...group.map(p => p.until)) });
   }
   return out;
 }
@@ -665,7 +674,7 @@ function uncertaintyRing(p) { // the open record's margin of error for its place
 }
 let shownArcs = null;
 function render() {
-  tierKey = tier(); updateSky();
+  tierKey = tier(); updateSky(); checkToday();
   const shown = visiblePins();
   const pins = shown.filter(p => !p.global), planet = shown.filter(p => p.global);   // planet-wide records get a chip, not a misleading pin
   renderPlanet(planet);
@@ -687,7 +696,7 @@ function render() {
   if (arcs !== shownArcs) { shownArcs = arcs; globe.arcsData(arcs); }
 
   const { from, to } = range();
-  const within = state.whole || LEVELS[state.level].key === 'event' ? '' : ` within ${fmtSpan((windowNow().to - windowNow().from) / 2)}`;
+  const within = state.autoWhole ? ` across ${LEVELS[state.level].name}` : state.whole || LEVELS[state.level].key === 'event' ? '' : ` within ${fmtSpan((windowNow().to - windowNow().from) / 2)}`;
   $('#now').innerHTML = `${esc(fmtYear(state.t))}<small>${pins.length} shown${esc(within)}</small>`;
   $('#slider').setAttribute('aria-valuetext', fmtYear(state.t));
   $('#t0').textContent = fmtYear(from, true);
@@ -704,19 +713,19 @@ function render() {
     : state.seaDrop > 0 ? `Sea level about ${Math.round(state.seaDrop / 5) * 5} m below today’s, so the coastlines are drawn further out (sea level: Spratt and Lisiecki 2016; depths: NOAA ETOPO1). ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Ice sheets are drawn only for the last 80,000 years.'} Plant cover is schematic.`
     : state.t < -12000 ? state.humid > 0 ? 'The Sahara is tinted green for the African Humid Period, about 11,000 to 5,000 years ago. Plant cover is schematic.' : `The map shows today’s coastlines. ${state.t > -80000 ? 'Ice sheets: PaleoMIST 1.0 (Gowan et al. 2021).' : 'Sea level is drawn only for the last 800,000 years, and ice sheets for the last 80,000.'}` : '';
   $('#notice').textContent = notice; show($('#notice'), !!notice && $('#panel').hidden && !(innerWidth <= 760 && !$('#seqbar').hidden));   // on a phone it would cover what a sequence is showing
-  const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.end >= from && p.start <= to), anyPublished = anyInLevel || state.pins.some(p => inLevel(p) && p.end >= from && p.start <= to);
+  const anyInLevel = state.pins.some(p => inLevel(p) && domainOn(p) && p.until >= from && p.start <= to), anyPublished = anyInLevel || state.pins.some(p => inLevel(p) && p.until >= from && p.start <= to);
   show($('#empty'), state.pins.length > 0 && pins.length === 0 && $('#seqbar').hidden);
   const period = state.t < -11700 && periodAt(-state.t / 1e6);
   $('#empty').classList.toggle('period', !!period);
   if (period && pins.length === 0) renderPeriod(period);
   else {
     $('#empty-text').textContent = !anyInLevel && anyPublished ? 'Your filters are hiding every record here. Turn on an importance level or a domain to see them.'
-      : state.whole || !anyInLevel
+      : wholeNow() || !anyInLevel
       ? (anyInLevel ? 'Zoom in to see smaller events here.' : `No published records in the ${LEVELS[state.level].name.toLowerCase()} scale yet.`)
       : `Nothing recorded near ${fmtYear(state.t)} yet.`;
     if (pins.length === 0) renderNearest();
   }
-  show($('#empty-btn'), !period && !state.whole && anyInLevel);
+  show($('#empty-btn'), !period && !wholeNow() && anyInLevel);
   renderVitals();
   drawDensity();
   queueURL();
@@ -746,7 +755,7 @@ function drawDensity() {
   const { from, to } = range(), bins = new Array(Math.max(20, Math.floor(w / 4))).fill(0);
   drawMarks(from, to);
   for (const p of state.pins) {
-    if (!inLevel(p) || !domainOn(p) || p.end < from || p.start > to) continue;
+    if (!inLevel(p) || !domainOn(p) || p.until < from || p.start > to) continue;
     // count where each record begins (long periods would otherwise flood every bin)
     const i = Math.floor(((Math.max(p.start, from) - from) / (to - from)) * bins.length);
     bins[Math.min(bins.length - 1, Math.max(0, i))] += p.start >= from ? 1 : 0.35;
@@ -1190,7 +1199,7 @@ function meanwhile(r) {
   const y = r.when?.start?.year;
   if (y == null) return '';
   const w = Math.max(5, (NOW - y) * 0.02), longest = Math.max(150, w * 10), listed = new Set((r.related || []).map(x => x.id));
-  const others = state.pins.filter(p => p.id !== r.id && p.lat != null && !p.global && !listed.has(p.id) && p.start <= y + w && p.end >= y - w && p.end - p.start <= longest)
+  const others = state.pins.filter(p => p.id !== r.id && p.lat != null && !p.global && !listed.has(p.id) && p.start <= y + w && p.until >= y - w && p.until - p.start <= longest)
     .sort((a, b) => (a.kind === 'person') - (b.kind === 'person') || b.importance - a.importance || Math.abs(a.start - y) - Math.abs(b.start - y));   // people last: a long life overlaps nearly everything
   const pinned = r.where?.lat != null && (r.where.uncertainty_km ?? 0) < 5000;
   const near = pinned ? others.filter(p => kmBetween(r.where.lat, r.where.lon, p.lat, p.lon) < 1000).slice(0, 4) : [];
