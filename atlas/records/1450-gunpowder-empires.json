@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1450-gunpowder-empires",
+  "kind": "period",
+  "title": "Gunpowder empires of Asia",
+  "summary": "The Ottomans were famous for their gunpowder weapons, including light and heavy cannons, and their janissaries carried arquebuses. The Safavid army's failure to use artillery at the Battle of Chaldiran in 1514 was largely responsible for its defeat by them, and Shah Ismail reacted swiftly by organizing firearms troops. The Mughals have their own records.",
+  "when": {
+    "start": {
+      "year": 1453
+    },
+    "end": {
+      "year": 1750
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 3,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": "Spans the era of the three major early modern Islamic gunpowder empires, from the Ottoman conquest of Constantinople in 1453 through the 18th century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian / CE",
+        "value": "The fall of Constantinople in 1453",
+        "source": "src-whe-ottoman"
+      },
+      {
+        "calendar": "Hijri / CE",
+        "value": "1514",
+        "source": "src-iranica-firearms"
+      }
+    ],
+    "display": "c. 15th–18th centuries"
+  },
+  "where": {
+    "lat": 41.01384,
+    "lon": 28.94966,
+    "elevation_m": null,
+    "modern_name": "Western and southern Asia; stand-in pin at Istanbul, Turkey",
+    "historical_name": "Constantinople, Ottoman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-geonames-istanbul"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "southern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The military revolution of the Ottoman, Safavid, and Mughal gunpowder empires reshaped political authority, trade, and culture across early modern Asia."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-ottoman-empire",
+      "type": "has_part"
+    },
+    {
+      "id": "polity-safavid-empire",
+      "type": "has_part"
+    },
+    {
+      "id": "polity-mughal-empire",
+      "type": "has_part"
+    },
+    {
+      "id": "1517-ottoman-conquest-of-egypt",
+      "type": "related"
+    },
+    {
+      "id": "0850-invention-of-gunpowder",
+      "type": "related",
+      "because": "The original invention of gunpowder in China provided the chemical explosive that revolutionized Asian siege and battlefield tactics centuries later."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-ottoman",
+      "url": "https://www.worldhistory.org/Ottoman_Empire/",
+      "title": "Ottoman Empire",
+      "publisher": "World History Encyclopedia",
+      "author": "Syed Muhammad Khan",
+      "date_published": "2020-05-19",
+      "accessed": "2026-11-05",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-iranica-firearms",
+      "url": "https://www.iranicaonline.org/articles/firearms-i-history",
+      "title": "FIREARMS i. HISTORY",
+      "publisher": "Encyclopaedia Iranica Foundation",
+      "author": "Rudi Matthee",
+      "date_published": "1999-12-15",
+      "accessed": "2026-11-05",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-istanbul",
+      "url": "https://www.geonames.org/745044/",
+      "title": "Istanbul, Turkey (GeoNames 745044)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-05",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "The term gunpowder empires is a later label not used on these pages. The dates are approximate and the outline does not yet cover the whole period. The pin at Istanbul is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:35:18.521Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

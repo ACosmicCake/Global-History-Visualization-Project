@@ -1,0 +1,152 @@
+{
+  "id": "-3400my-origin-of-photosynthesis",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "Origin of photosynthesis",
+  "summary": "Photosynthesis lets organisms turn sunlight into chemical energy. Tice and Lowe describe photosynthetic microbial mats living 3,416 million years ago in what is now South Africa. A later MIT study finds that oxygen-producing photosynthesis, which MIT News calls Earth's single most important evolutionary innovation, likely evolved between 3.4 and 2.9 billion years ago.",
+  "when": {
+    "start": {
+      "year": -3416000000
+    },
+    "end": {
+      "year": -2900000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 16000000,
+      "start_plus_years": 84000000,
+      "end_minus_years": 100000000,
+      "end_plus_years": 100000000,
+      "note": "Buck Reef Chert microbial mats are dated to 3,416 Ma (Tice & Lowe 2004); MIT phylogenomic clock models date the emergence of oxygenic cyanobacteria to between 3.4 and 2.9 Ga."
+    },
+    "as_recorded": [
+      {
+        "calendar": "U-Pb zircon geochronology on volcanic tuffs bounding the Buck Reef Chert",
+        "value": "photosynthetic organisms had evolved and were living in a stratified ocean supersaturated in dissolved silica 3,416 Myr ago",
+        "source": "src-nature-tice2004"
+      },
+      {
+        "calendar": "horizontal gene transfer and molecular clock model",
+        "value": "oxygenic photosynthesis likely evolved between 3.4 and 2.9 billion years ago",
+        "source": "src-mit-photosynthesis2021"
+      }
+    ],
+    "display": "c. 3.4–2.9 Ga (Paleoarchean)"
+  },
+  "where": {
+    "lat": -25.7884,
+    "lon": 31.0532,
+    "elevation_m": null,
+    "modern_name": "No single place; stand-in pin at Barberton, South Africa",
+    "historical_name": "Barberton greenstone belt ocean floor, Paleoarchean Earth; euphotic microbial mats",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-barberton"
+    ],
+    "paleo": {
+      "not_applicable": "Predates plate reconstructions; global Paleoarchean metabolic evolution."
+    }
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate",
+    "science_technology"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The invention of photosynthesis expanded global primary biomass production by orders of magnitude and laid the biochemical foundation for the Great Oxidation Event and aerobic respiration."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3700my-origin-of-life",
+      "type": "related",
+      "because": "Primitive chemotrophic cellular life provided the metabolic precursors from which light-driven photophosphorylation evolved."
+    },
+    {
+      "id": "-3480my-dresser-formation-stromatolites",
+      "type": "related"
+    },
+    {
+      "id": "-3430my-strelley-pool-stromatolite-reef",
+      "type": "related"
+    },
+    {
+      "id": "-2400my-great-oxidation-event",
+      "type": "related",
+      "because": "Sustained oxygen production by photosynthetic cyanobacteria eventually overwhelmed geochemical reducing sinks and oxygenated the atmosphere."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nature-tice2004",
+      "url": "https://europepmc.org/article/MED/15457255",
+      "title": "Photosynthetic microbial mats in the 3,416-Myr-old ocean (Nature 431:549–552), Europe PMC record",
+      "publisher": "Nature (Springer Nature), record from Europe PMC (EMBL-EBI)",
+      "author": "Michael M. Tice, Donald R. Lowe",
+      "date_published": "2004-09-30",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-mit-photosynthesis2021",
+      "url": "https://news.mit.edu/2021/photosynthesis-evolution-origins-0928",
+      "title": "When did oxygen-producing photosynthesis evolve?",
+      "publisher": "MIT News Office (Massachusetts Institute of Technology)",
+      "author": "Jennifer Chu",
+      "date_published": "2021-09-28",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-barberton",
+      "url": "https://www.geonames.org/1021086/barberton.html",
+      "title": "GeoNames entry: Barberton, South Africa (1021086)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Dates are estimates, and the earliest forms did not produce oxygen. The pin at Barberton marks the fossil mats, not where photosynthesis began.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:22.636Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

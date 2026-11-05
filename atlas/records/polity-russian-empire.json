@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "polity-russian-empire",
+  "kind": "polity",
+  "title": "Russian Empire",
+  "summary": "In 1721 Peter the Great proclaimed Russia an empire and took the title of Emperor of All Russia. Saint Petersburg, begun under Peter in 1703, became the empire's capital. Serfdom lasted until 1861, when an emancipation manifesto freed about 23 million serfs. In the First World War its huge armies suffered enormous casualties. The February Revolution of 1917 forced Tsar Nicholas II to abdicate, ending three hundred years of Romanov rule.",
+  "when": {
+    "start": {
+      "year": 1721
+    },
+    "end": {
+      "year": 1917
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Proclaimed in 1721 by Peter the Great after the Great Northern War; ended with the February Revolution and Nicholas II's abdication in 1917."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian, as recorded",
+        "value": "In 1721, he proclaimed Russia an Empire",
+        "source": "src-ulethbridge-peter"
+      },
+      {
+        "calendar": "Julian / Gregorian, as recorded",
+        "value": "February Revolution in Petrograd in 1917",
+        "source": "src-openstax-world-11-5"
+      },
+      {
+        "calendar": "Julian / Gregorian, as recorded",
+        "value": "Tsar Nicholas II was forced to abdicate",
+        "source": "src-openstax-world-11-5"
+      }
+    ],
+    "display": "1721–1917"
+  },
+  "where": {
+    "lat": 59.9386,
+    "lon": 30.3141,
+    "elevation_m": null,
+    "modern_name": "Saint Petersburg, Russia (imperial capital)",
+    "historical_name": "Saint Petersburg (renamed Petrograd 1914), Russian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames-spb"
+    ]
+  },
+  "regions": [
+    "europe",
+    "central_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "A great power of Europe and Asia whose fall in 1917 led to the Russian Revolution."
+  },
+  "confidence": "established",
+  "audience_note": "Covers imperial conquest, serfdom, suppression of political opposition, and casualties of the First World War.",
+  "related": [
+    {
+      "id": "1731-kazakh-russian-protectorate",
+      "type": "related"
+    },
+    {
+      "id": "1866-russian-capture-of-tashkent",
+      "type": "related"
+    },
+    {
+      "id": "1891-trans-siberian-railway",
+      "type": "related"
+    },
+    {
+      "id": "1917-russian-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1861-emancipation-of-russian-serfs",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ulethbridge-peter",
+      "url": "https://www.ulethbridge.ca/lib/digitized_collections/ourheritage/Great_Adventures/Waterways_of_Russia/Romanov_Dynasty/1682_Peter_the_Great.html",
+      "title": "Peter the Great",
+      "publisher": "University of Lethbridge Library",
+      "author": "University of Lethbridge Library",
+      "date_published": "2008",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-openstax-world-11-5",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-5-the-war-ends",
+      "title": "The War Ends",
+      "publisher": "OpenStax, Rice University",
+      "author": "Ann Kordas et al.",
+      "date_published": "2023-04-19",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-540",
+      "url": "https://whc.unesco.org/en/list/540",
+      "title": "Historic Centre of Saint Petersburg and Related Groups of Monuments",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "1990",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "what"
+      ]
+    },
+    {
+      "id": "src-geonames-spb",
+      "url": "https://www.geonames.org/498817",
+      "title": "GeoNames: Saint Petersburg (498817)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-loc-serfs",
+      "url": "https://www.loc.gov/exhibits/world/rule.html",
+      "title": "Rule of Law exhibit",
+      "publisher": "Library of Congress",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-04",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "The summary omits the empire's area because the sources opened do not state it. The pin is Saint Petersburg.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T17:00:30.237Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "new"
+    }
+  ]
+}

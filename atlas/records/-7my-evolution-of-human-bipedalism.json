@@ -1,0 +1,158 @@
+{
+  "id": "-7my-evolution-of-human-bipedalism",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "kind": "process",
+  "title": "Evolution of human bipedalism",
+  "summary": "Walking upright developed gradually. Between 7 and 6 million years ago Sahelanthropus may have walked on two legs, and the oldest evidence for it comes from fossils of the earliest known humans. For millions of years these walkers kept features that helped them climb trees. By 1.8 million years ago, our ancestors had long legs and an efficient striding gait suited to travelling longer distances.",
+  "when": {
+    "start": {
+      "year": -7000000
+    },
+    "end": {
+      "year": -1800000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Chronology spans the earliest proposed bipedal fossil indicators around 7–6 Ma to the consolidation of modern striding bipedalism by roughly 1.8 Ma."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago",
+        "value": "7–6 million years ago Sahelanthropus may have walked on two legs",
+        "source": "src-si-walking"
+      },
+      {
+        "calendar": "Years ago",
+        "value": "About seven million years ago, our early ancestors climbed trees and walked on four legs when on the ground",
+        "source": "src-ausmus-biped"
+      },
+      {
+        "calendar": "Cosmogenic nuclide",
+        "value": "an age of 7.04 ± 0.18 Ma for Sahelanthropus tchadensis",
+        "source": "src-pnas-sahel"
+      }
+    ],
+    "display": "c. 7–1.8 million years ago"
+  },
+  "where": {
+    "lat": 16.25,
+    "lon": 17.4833,
+    "elevation_m": null,
+    "modern_name": "Toros-Menalla locality TM 266, Djurab Desert, northern Chad (reference site for Sahelanthropus; bipedalism evolved across central and eastern Africa)",
+    "historical_name": "Chadian lake-margin and African woodland-savanna mosaic; no human polities existed",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 2500,
+    "coordinate_sources": [
+      "src-pnas-sahel"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "northern_africa"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "The primary anatomical innovation distinguishing the hominin clade from other apes, fundamentally restructuring the skeleton and freeing the forelimbs for tool manufacture."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "species-sahelanthropus-tchadensis",
+      "type": "related"
+    },
+    {
+      "id": "-4400ka-ardipithecus-ramidus",
+      "type": "related"
+    },
+    {
+      "id": "place-laetoli-footprints",
+      "type": "related"
+    },
+    {
+      "id": "-3200ka-lucy-australopithecus-afarensis",
+      "type": "related"
+    },
+    {
+      "id": "-2600000-oldowan-stone-tools",
+      "type": "related",
+      "because": "Freeing the forelimbs through habitual upright posture was a physical prerequisite for grasping hammerstones and striking flaked stone tools."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-si-walking",
+      "url": "https://humanorigins.si.edu/human-characteristics/walking-upright",
+      "title": "Walking Upright",
+      "publisher": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "author": "Smithsonian Human Origins Program",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ausmus-biped",
+      "url": "https://australian.museum/learn/science/human-evolution/walking-on-two-legs-bipedalism/",
+      "title": "Walking on two legs – bipedalism",
+      "publisher": "Australian Museum",
+      "author": "Australian Museum",
+      "date_published": "2020-11-13",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pnas-sahel",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2265126/",
+      "title": "Cosmogenic nuclide dating of Sahelanthropus tchadensis and Australopithecus bahrelghazali: Mio-Pliocene hominids from Chad (PNAS 105:3226–3231)",
+      "publisher": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "author": "Anne-Elisabeth Lebatard et al.",
+      "date_published": "2008-03-04",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Whether Sahelanthropus walked upright is uncertain. The pin marks where it was found, not where walking began.",
+  "published_at": "2026-11-04T21:39:15.099Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

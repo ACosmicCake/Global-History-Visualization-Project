@@ -1,0 +1,136 @@
+{
+  "id": "-2000-spread-of-rice-farming-in-southeast-asia",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Spread of rice farming across Southeast Asia",
+  "summary": "Rice farming began in Southeast Asia about 4,500 to 4,000 years ago, with tools and pottery showing connections to southern China. Ancient DNA from Man Bac in Vietnam shows early farmers mixed southern Chinese farmer and local hunter-gatherer ancestry. Ban Chiang in Thailand, dating from 1495 BCE, holds early evidence of settled farming, including wet rice, farm animals, pottery and bronze tools.",
+  "when": {
+    "start": {
+      "year": -2500
+    },
+    "end": {
+      "year": -1495
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 300,
+      "start_plus_years": 300,
+      "end_minus_years": 200,
+      "end_plus_years": 200,
+      "note": "Lipson et al. (Science 2018) date the arrival of rice farming in Southeast Asia to approximately 4500–4000 yBP (c. 2500–2000 BCE); UNESCO dates the continuous agrarian occupation showing wet-rice culture at Ban Chiang from 1495 BC until c. 900 BC."
+    },
+    "as_recorded": [
+      {
+        "calendar": "yBP",
+        "value": "Rice farming began in the region approximately 4500–4000 yBP",
+        "source": "src-science-lipson"
+      },
+      {
+        "calendar": "BC (UNESCO)",
+        "value": "dates from 1,495 BC",
+        "source": "src-unesco-banchiang"
+      }
+    ],
+    "display": "c. 2500–1495 BCE"
+  },
+  "where": {
+    "lat": 17.4078,
+    "lon": 103.2376,
+    "elevation_m": null,
+    "modern_name": "Ban Chiang Archaeological Site, Nong Han District, Udon Thani Province, Thailand (reference anchor for prehistoric agrarian settlement; process spans Southeast Asia)",
+    "historical_name": "Mekong River basin and river deltas of mainland Southeast Asia; Neolithic and Bronze Age agrarian settlements, no polities",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-unesco-banchiang"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 5,
+    "justification": "Settled rice farming became the basis of life across much of Southeast Asia."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-7450-rice-domestication-lower-yangtze",
+      "type": "related",
+      "because": "The initial domestication of rice in the Yangtze basin provided the staple crop that later farming populations carried southward into Southeast Asia."
+    },
+    {
+      "id": "place-ban-chiang",
+      "type": "has_part"
+    },
+    {
+      "id": "place-banaue-rice-terraces",
+      "type": "related"
+    },
+    {
+      "id": "0100-indianization-of-southeast-asia",
+      "type": "related",
+      "because": "Sedentary rice-farming populations in the river valleys and deltas formed the agricultural surplus and demographic base that enabled later Indianized states to emerge."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-science-lipson",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6476732/",
+      "title": "Ancient genomes document multiple waves of migration in Southeast Asian prehistory",
+      "publisher": "American Association for the Advancement of Science (Science), via PubMed Central",
+      "author": "Mark Lipson et al.",
+      "date_published": "2018-05-17",
+      "accessed": "2026-11-05",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-banchiang",
+      "url": "https://whc.unesco.org/en/list/575",
+      "title": "Ban Chiang Archaeological Site",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-05",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "The date range comes from the genetic study and the Ban Chiang listing. Whether farming spread through migration alone is still studied. The pin marks Ban Chiang.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T03:31:26.135Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

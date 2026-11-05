@@ -1,0 +1,141 @@
+{
+  "id": "1800-fossil-fuel-age",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "period",
+  "title": "The fossil fuel age",
+  "summary": "Global energy data going back to 1800 show how slowly energy sources change. Energy production, mainly the burning of fossil fuels, accounts for around three-quarters of global greenhouse gas emissions. NOAA says carbon dioxide is rising mostly because of fossil fuels burned for energy, and atmospheric carbon dioxide is now 50 percent higher than before the Industrial Revolution.",
+  "when": {
+    "start": {
+      "year": 1800
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Transition accelerated from the late eighteenth century with coal-powered steam engines and continues into the twenty-first century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "dating back to the year 1800",
+        "source": "src-owid-energy"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "since the start of the Industrial Revolution",
+        "source": "src-noaa-co2"
+      }
+    ],
+    "display": "c. 1800–present"
+  },
+  "where": {
+    "lat": 52.63821,
+    "lon": -2.49174,
+    "elevation_m": 79,
+    "modern_name": "No single place; stand-in pin at Coalbrookdale, England",
+    "historical_name": "Coalbrookdale, Shropshire, Kingdom of Great Britain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 20000,
+    "coordinate_sources": [
+      "src-geonames-coalbrookdale"
+    ]
+  },
+  "regions": [
+    "europe",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "geology_climate",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The transition from organic energy to fossil fuels unlocked unprecedented mechanical power, reshaping global civilization and altering Earth's atmosphere."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "Mechanization and steam engine deployment during the Industrial Revolution catalyzed the transition to coal and other fossil fuels."
+    },
+    {
+      "id": "1850-human-caused-climate-change",
+      "type": "related",
+      "because": "Combustion of coal, oil, and gas released ancient carbon that accumulated in the atmosphere and drove global warming."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-owid-energy",
+      "url": "https://ourworldindata.org/energy-mix",
+      "title": "Energy Mix",
+      "publisher": "Our World in Data",
+      "author": "Hannah Ritchie, Pablo Rosado and Max Roser",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-noaa-co2",
+      "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+      "title": "Climate Change: Atmospheric Carbon Dioxide",
+      "publisher": "National Oceanic and Atmospheric Administration",
+      "author": "Rebecca Lindsey",
+      "date_published": "2024-04-09",
+      "accessed": "2026-11-04",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-coalbrookdale",
+      "url": "https://www.geonames.org/2652708/coalbrookdale.html",
+      "title": "Coalbrookdale, United Kingdom",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "There is no agreed start date; 1800 is where the energy data begins. The pin at Coalbrookdale in England is a stand-in, not a place the sources name.",
+  "updated": "2026-11-04",
+  "published_at": "2026-11-04T21:56:57.060Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

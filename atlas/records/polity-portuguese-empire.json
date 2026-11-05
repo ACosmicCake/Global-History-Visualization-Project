@@ -1,0 +1,167 @@
+{
+  "id": "polity-portuguese-empire",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-04",
+  "kind": "polity",
+  "title": "Portuguese Empire",
+  "summary": "Portugal's colonial empire, the first established by a European power, began to take shape with the 1415 conquest of Ceuta. It eventually stretched from the Americas to Japan, often as a string of coastal bases. In 1498 Vasco da Gama opened a direct sea route to Asia. Its trade carried gold, spices and silk, and also enslaved people from Africa. It gave up Macao, its last colony, in 1999.",
+  "when": {
+    "start": {
+      "year": 1415
+    },
+    "end": {
+      "year": 1999
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "The empire is dated from the 1415 conquest of Ceuta to the 1999 handover of Macau."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE (World History Encyclopedia)",
+        "value": "1999 Portuguese Macao is handed over to China .",
+        "source": "src-whe-portuguese"
+      },
+      {
+        "calendar": "CE (Encyclopedia.com)",
+        "value": "century with the 1415 conquest of Ceuta",
+        "source": "src-encyc-portuguese"
+      },
+      {
+        "calendar": "CE (Encyclopedia.com)",
+        "value": "In 1999 Portugal relinquished its last remaining colony, the island of Macao, located off the south China coast, to Chinese rule.",
+        "source": "src-encyc-portuguese"
+      }
+    ],
+    "display": "1415–1999"
+  },
+  "where": {
+    "lat": 38.708,
+    "lon": -9.139,
+    "elevation_m": null,
+    "modern_name": "Lisbon, Portugal (capital; the empire spanned several oceans)",
+    "historical_name": "Lisbon, Kingdom of Portugal",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-wd-lisbon"
+    ]
+  },
+  "regions": [
+    "europe",
+    "latin_america_caribbean",
+    "sub_saharan_africa",
+    "southern_asia",
+    "eastern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "First global European maritime empire, initiating the European expansion that created transatlantic commercial systems, maritime routes to Asia, and global colonial trade."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1511-portuguese-capture-of-malacca",
+      "type": "has_part"
+    },
+    {
+      "id": "1808-portuguese-court-flight-to-brazil",
+      "type": "has_part"
+    },
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "contemporary"
+    },
+    {
+      "id": "1418-age-of-discovery",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-portuguese",
+      "url": "https://www.worldhistory.org/Portuguese_Empire/",
+      "title": "Portuguese Empire",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2021-07-19",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-portuguese",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/portuguese-empire",
+      "title": "Portuguese Empire",
+      "publisher": "Encyclopedia.com (Gale)",
+      "date_published": "2018",
+      "accessed": "2026-11-04",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-lisbon",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q597.json",
+      "title": "Lisbon (Q597)",
+      "publisher": "Wikidata",
+      "date_published": "2026-11-04",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-mariners-gama",
+      "url": "https://exploration.marinersmuseum.org/subject/vasco-da-gama/",
+      "title": "Vasco da Gama",
+      "publisher": "The Mariners' Museum and Park",
+      "author": "The Mariners' Museum",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": "Da Gama found a direct sea route to Asia and reached India on 20 May 1498"
+    }
+  ],
+  "reviewer_note": "Pin marks Lisbon, the capital of Portugal. Dates mark the first conquest and the last handover, though most colonies became independent earlier.",
+  "published_at": "2026-11-04T21:56:51.634Z",
+  "changelog": [
+    {
+      "date": "2026-11-04",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

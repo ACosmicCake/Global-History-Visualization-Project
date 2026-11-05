@@ -1,0 +1,160 @@
+{
+  "id": "-385my-first-forests",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "kind": "process",
+  "title": "The first forests",
+  "summary": "The origin of trees and forests in the Mid Devonian, 393 to 383 million years ago, was a turning point in Earth history, with permanent changes to land ecology, geochemical cycles, atmospheric carbon dioxide and climate. At Cairo, New York, scientists found the root systems of a 385-million-year-old forest. One researcher says the world has never been the same since.",
+  "when": {
+    "start": {
+      "year": -393000000
+    },
+    "end": {
+      "year": -383000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 5000000,
+      "start_plus_years": 5000000,
+      "end_minus_years": 2000000,
+      "end_plus_years": 2000000,
+      "note": "Stein et al. (2020) date the Middle Devonian emergence of forests to 393–383 Ma (Eifelian–Givetian), with the Cairo paleosol rooted horizon specifically dated to c. 385 Ma, preceding the c. 382–380 Ma Gilboa forest."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Geological stage correlation (mid-Givetian)",
+        "value": "385-million-year old trees that existed during the Devonian Period",
+        "source": "src-binghamton-cairo2019"
+      },
+      {
+        "calendar": "Standard geological timescale (Givetian)",
+        "value": "origin of trees and forests in the Mid Devonian (393-383 Ma)",
+        "source": "src-cell-stein2020"
+      }
+    ],
+    "display": "c. 393–383 Ma (Middle Devonian, Givetian)"
+  },
+  "where": {
+    "lat": 42.299,
+    "lon": -73.9985,
+    "elevation_m": null,
+    "modern_name": "Cairo, New York, United States (early fossil forest)",
+    "historical_name": "Catskill delta complex, Euramerica (Laurussia); Middle Devonian floodplain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames-cairo"
+    ],
+    "paleo": {
+      "lat": -31.5,
+      "lon": -58.5,
+      "age_ma": 385,
+      "plate_model": "MERDITH2021",
+      "source": "src-cell-stein2020"
+    }
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The spread of Earth's first forests revolutionized continental weathering, drew down atmospheric carbon dioxide, created deep soils, and permanently reshaped global biogeochemical cycles."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-470my-origin-of-land-plants",
+      "type": "related",
+      "because": "The initial colonization of land by non-vascular embryophytes provided the phylogenetic foundation from which arborescent lignophytes evolved."
+    },
+    {
+      "id": "-380my-gilboa-fossil-forest",
+      "type": "has_part"
+    },
+    {
+      "id": "-375my-animals-colonize-the-land",
+      "type": "related",
+      "because": "Canopy forests created complex terrestrial microclimates, leaf litter soils, and food sources that facilitated tetrapod and arthropod terrestrialization."
+    },
+    {
+      "id": "-372my-late-devonian-extinction",
+      "type": "related",
+      "because": "Intensified root weathering accelerated nutrient runoff into epicontinental seas, triggering widespread oceanic eutrophication, anoxia, and mass extinction."
+    },
+    {
+      "id": "-310my-carboniferous-coal-forests",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-binghamton-cairo2019",
+      "url": "https://www.binghamton.edu/news/story/2210/modern-trees-emerged-earlier-than-previously-believed-new-research-reveals",
+      "title": "Modern trees emerged earlier than previously believed, new research reveals",
+      "publisher": "Binghamton University (State University of New York)",
+      "author": "John Brhel",
+      "date_published": "2019-12-19",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-cell-stein2020",
+      "url": "https://europepmc.org/article/MED/31866369",
+      "title": "Mid-Devonian Archaeopteris Roots Signal Revolutionary Change in Earliest Fossil Forests (Current Biology 30:421–431), Europe PMC record",
+      "publisher": "Current Biology (Cell Press / Elsevier), record from Europe PMC (EMBL-EBI)",
+      "author": "William E. Stein, Christopher M. Berry, Jennifer L. Morris, et al.",
+      "date_published": "2020-02-03",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "importance"
+      ]
+    },
+    {
+      "id": "src-geonames-cairo",
+      "url": "https://www.geonames.org/5111056/cairo.html",
+      "title": "GeoNames entry: Cairo, New York (5111056)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "The pin marks one early fossil forest at Cairo, not where forests began. The effects on climate come from these authors' reading of the evidence.",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T00:04:23.863Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

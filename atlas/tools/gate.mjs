@@ -135,7 +135,9 @@ export function gate(rec) {
   // --- animation
   const a = rec.animation || {};
   F(ENUMS.template.includes(a.template), 'animation.template bad');
-  if (a.template === 'directed') F(rec.importance && rec.importance.score >= 4, 'directed sequences only for importance 4-5');
+  // Directed sequences made before the rescoring of amendment A2 stay, whatever the new score.
+  const DIRECTED_BEFORE_A2 = ['0250-classic-maya-period', '1368-ming-great-wall', '1945-08-09-nagasaki-bombing', '1953-cuban-revolution', '1990-end-of-apartheid', 'place-cusco', 'place-giza-pyramids', 'place-tenochtitlan', 'place-troy'];
+  if (a.template === 'directed' && !DIRECTED_BEFORE_A2.includes(rec.id)) F(rec.importance && rec.importance.score >= 4, 'directed sequences only for importance 4-5');
   F(Array.isArray(a.beats) && a.beats.length >= 2, 'animation needs ≥ 2 beats');
   for (const b of a.beats || []) F(isStr(b.span) && isStr(b.action) && isStr(b.caption) && refOk(b.source), `beat "${(b.caption || '').slice(0, 30)}": span, action, caption, source id`);
   F((a.beats || []).some(b => b.consequence === true), 'no beat flagged consequence: true');

@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-7000000-human-chimpanzee-divergence",
+  "kind": "process",
+  "title": "Divergence of humans and chimpanzees",
+  "summary": "DNA evidence shows that our species and chimpanzees diverged from a common ancestor that lived between 8 and 6 million years ago, according to the Smithsonian. A study using generation times in wild chimpanzees and gorillas puts the split at at least 7 to 8 million years. The difference between the human and chimpanzee genomes in the aspects studied is about 1.2%.",
+  "when": {
+    "start": {
+      "year": -8000000
+    },
+    "end": {
+      "year": -6000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 1000000,
+      "start_plus_years": 1000000,
+      "end_minus_years": 1000000,
+      "end_plus_years": 1000000,
+      "note": "Genomic estimates based on ape generation times and mutation rates place the lineage split at least 7–8 million years ago, while fossil discoveries such as Sahelanthropus tchadensis date to between 7 and 6 million years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years ago (molecular clock and fossil calibration)",
+        "value": "between 8 and 6 million years ago",
+        "source": "src-si-genetics"
+      },
+      {
+        "calendar": "Years ago (generation time and mutation rate model)",
+        "value": "at least 7–8 million years",
+        "source": "src-pnas-langergraber2012"
+      }
+    ],
+    "display": "c. 8–6 million years ago"
+  },
+  "where": {
+    "lat": 16.2417,
+    "lon": 17.475,
+    "elevation_m": null,
+    "modern_name": "Africa; stand-in pin at Toros-Menalla, Chad",
+    "historical_name": "Central Africa (late Miocene paleoenvironment; no polities exist)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5000,
+    "coordinate_sources": [
+      "src-wd-toros-menalla"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "The separation of the hominin lineage from the common ancestor shared with chimpanzees initiated the evolutionary history of all hominin species, culminating in modern humanity."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-2my-dmanisi-hominins",
+      "type": "related"
+    },
+    {
+      "id": "-1800ka-homo-erectus-dispersal-from-africa",
+      "type": "related"
+    },
+    {
+      "id": "-1000000-control-of-fire",
+      "type": "related"
+    },
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related",
+      "because": "The divergence of the hominin lineage from chimpanzees was the foundational split that led to early Homo sapiens."
+    },
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-si-genetics",
+      "url": "https://humanorigins.si.edu/evidence/genetics",
+      "title": "Genetics",
+      "publisher": "Smithsonian National Museum of Natural History, Human Origins Program",
+      "author": "Smithsonian Human Origins Program",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pnas-langergraber2012",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3465451/",
+      "title": "Generation times in wild chimpanzees and gorillas suggest earlier divergence times in great ape and human evolution (PNAS 109:15716–15721)",
+      "publisher": "Proceedings of the National Academy of Sciences of the USA (via PubMed Central)",
+      "author": "Kevin E. Langergraber, Kay Prüfer, Carolyn Rowney, et al.",
+      "date_published": "2012-08-13",
+      "accessed": "2026-11-04",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-toros-menalla",
+      "url": "https://www.wikidata.org/wiki/Q56435888",
+      "title": "Toros-Menalla (Wikidata entity Q56435888)",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "n.d.",
+      "accessed": "2026-11-04",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Estimates depend on mutation rates and generation times. The place of the split is unknown. The pin marks Toros-Menalla in Chad, the Sahelanthropus site, as a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-05",
+  "published_at": "2026-11-05T04:35:14.770Z",
+  "changelog": [
+    {
+      "date": "2026-11-05",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
