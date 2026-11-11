@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1600-joint-stock-company",
+  "kind": "process",
+  "title": "The joint-stock company",
+  "summary": "In a joint-stock company, people invested capital and received part of the profits. A royal charter created the English East India Company as one on 31 December 1600. The Dutch East India Company followed in 1602; members of the public could buy its shares, and it is considered the first publicly traded company. Britain's Registration Act of 1844 and Limited Liability Act of 1855 then opened such companies more widely, and 2,488 limited liability companies formed between 1856 and 1862.",
+  "when": {
+    "start": {
+      "year": 1600
+    },
+    "end": {
+      "year": 1862
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian (World History Encyclopedia)",
+        "value": "A royal charter created the English East India Company on 31 December 1600",
+        "source": "src-whe-eic"
+      },
+      {
+        "calendar": "Gregorian (Royal Museums Greenwich)",
+        "value": "Its royal charter, granted by Queen Elizabeth I in 1600",
+        "source": "src-rmg-eic"
+      }
+    ],
+    "display": "from 1600"
+  },
+  "where": {
+    "lat": 51.5133,
+    "lon": -0.0889,
+    "elevation_m": null,
+    "modern_name": "London, United Kingdom; stand-in pin, with Amsterdam",
+    "historical_name": "City of London, Kingdom of England; seat of the Governor and Company of Merchants of London Trading into the East Indies",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-gn-london"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Investors pooling capital for shares became a basic form of large business."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "org-british-east-india-company",
+      "type": "has_part"
+    },
+    {
+      "id": "1602-dutch-east-india-company",
+      "type": "has_part"
+    },
+    {
+      "id": "1600-rise-of-capitalism",
+      "type": "part_of"
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "The capital accumulation and financial corporate structures developed by joint-stock companies financed the technologies and infrastructure of the Industrial Revolution."
+    },
+    {
+      "id": "1793-cotton-gin-and-black-belt",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-eic",
+      "url": "https://www.worldhistory.org/East_India_Company/",
+      "title": "East India Company",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2022",
+      "accessed": "2026-11-08",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-rmg-eic",
+      "url": "https://www.rmg.co.uk/discover/researchers/research-guides/research-guide-f5-east-india-company",
+      "title": "Research guide F5: East India Company",
+      "publisher": "Royal Museums Greenwich",
+      "author": "Royal Museums Greenwich",
+      "date_published": "2020",
+      "accessed": "2026-11-08",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-london",
+      "url": "https://www.geonames.org/2643743/london.html",
+      "title": "GeoNames: London",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-whe-voc",
+      "class": "reference",
+      "publisher": "World History Encyclopedia",
+      "title": "Dutch East India Company",
+      "url": "https://www.worldhistory.org/Dutch_East_India_Company/",
+      "author": "Kim Martins",
+      "date_published": "n.d.",
+      "accessed": "2026-11-08",
+      "opened": true,
+      "supports": "The VOC charter, public shares and first publicly traded company"
+    },
+    {
+      "class": "scholarly",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "id": "src-ebhs-limited",
+      "publisher": "Essays in Economic & Business History",
+      "title": "Accounting, Engineering, or Advertising? Limited Liability, the Company Prospectus, and the Language of Uncertainty in Victorian Britain",
+      "url": "https://www.ebhsoc.org/journal/index.php/ebhs/article/download/134/115",
+      "author": "Economic and Business History Society",
+      "supports": "Limited liability in British law"
+    }
+  ],
+  "reviewer_note": "Company law also developed in other countries. The pin at London is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T04:56:43.110Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

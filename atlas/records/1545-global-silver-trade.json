@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1545-global-silver-trade",
+  "kind": "process",
+  "title": "The global silver trade",
+  "summary": "The silver mines of Potosí were discovered in 1545, and those of Zacatecas began operating under Spanish control in 1547–48, with mining expanded through forced labour. By 1600, 25,000 tons of silver had reached Spain, and commodity prices rose 400% over the 16th century. Across the Pacific, Manila galleons sailed from 1565 to 1815, carrying American silver toward Asia and bringing silk, spices and porcelain back. China needed silver after ending its ban on private maritime trade in 1567 and basing its currency on it.",
+  "when": {
+    "start": {
+      "year": 1545
+    },
+    "end": {
+      "year": 1815
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 10,
+      "end_plus_years": 10,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "discovered in 1545",
+        "source": "src-whe-conquistador-silver"
+      },
+      {
+        "calendar": "CE",
+        "value": "the world's largest industrial complex",
+        "source": "src-unesco-420"
+      }
+    ],
+    "display": "1545 to c. 1815 CE"
+  },
+  "where": {
+    "lat": -19.58361,
+    "lon": -65.75306,
+    "elevation_m": 4090,
+    "modern_name": "Potosí, Department of Potosí, Bolivia",
+    "historical_name": "Villa Imperial de Potosí, Viceroyalty of Peru, Spanish Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-unesco-420",
+      "src-geonames-potosi"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "oceans",
+    "eastern_asia",
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "atrocity_injustice"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "American silver linked the Atlantic, the Pacific and China in one trading system."
+  },
+  "confidence": "established",
+  "audience_note": "Covers early modern colonial mining systems that relied on forced indigenous labor drafts (the mita) and enslaved Africans, with extreme mortality rates in the mines of Upper Peru.",
+  "related": [
+    {
+      "id": "1545-silver-of-potosi",
+      "type": "has_part"
+    },
+    {
+      "id": "1565-manila-galleon-trade",
+      "type": "has_part"
+    },
+    {
+      "id": "1500-caribbean-sugar-plantation-system",
+      "type": "contemporary"
+    },
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-conquistador-silver",
+      "url": "https://www.worldhistory.org/article/2049/the-silver-of-the-conquistadors/",
+      "title": "The Silver of the Conquistadors",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2022-08-15",
+      "accessed": "2026-11-09",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-unesco-420",
+      "url": "https://whc.unesco.org/en/list/420/",
+      "title": "City of Potosí",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1987",
+      "accessed": "2026-11-09",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-potosi",
+      "url": "https://www.geonames.org/3907584/potosi.html",
+      "title": "Potosí, Bolivia (GeoNames 3907584)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-09",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-ebsco-galleon",
+      "class": "reference",
+      "publisher": "EBSCO Research Starters",
+      "title": "Manila galleon",
+      "url": "https://www.ebsco.com/research-starters/history/manila-galleon/",
+      "author": "EBSCO",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Manila galleon route and China's demand for silver"
+    }
+  ],
+  "reviewer_note": "Estimates of how much silver reached China vary and are not given here. The pin marks Potosí.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T05:52:25.010Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

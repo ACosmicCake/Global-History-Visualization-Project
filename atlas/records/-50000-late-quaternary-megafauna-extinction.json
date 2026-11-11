@@ -1,0 +1,151 @@
+{
+  "id": "-50000-late-quaternary-megafauna-extinction",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Late Quaternary megafauna extinction",
+  "summary": "Between about 132,000 and 1,000 years ago, about half of the world's large-bodied mammal species disappeared. In North America about 60 megafaunal species died out, their last dated occurrences typically falling between about 13,000 and 11,000 years ago, and in South America about 66 over a longer span. One global study found extinction severity strongly tied to where humans and other hominins lived, with at most a weak link to climate. Another notes that the causes are still debated.",
+  "when": {
+    "start": {
+      "year": -130000
+    },
+    "end": {
+      "year": 1000
+    },
+    "precision": "ten_millennia",
+    "uncertainty": {
+      "start_minus_years": 10000,
+      "start_plus_years": 10000,
+      "end_minus_years": 500,
+      "end_plus_years": 500,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "years BP",
+        "value": "extinct between the beginning of the Last Interglacial at 132 000 years BP and the late Holocene 1000 years BP",
+        "source": "src-sandom2014"
+      },
+      {
+        "calendar": "years ago / y ago",
+        "value": "youngest occurrences of dated species typically falling between ∼13,000 and 11,000 y ago",
+        "source": "src-barnosky2016"
+      }
+    ],
+    "display": "about 132,000 to 1,000 years ago"
+  },
+  "where": {
+    "lat": 34.0522,
+    "lon": -118.2437,
+    "elevation_m": 87,
+    "modern_name": "Worldwide; stand-in pin at Los Angeles, United States",
+    "historical_name": "Earth, Late Pleistocene to Holocene; worldwide terrestrial ecosystems",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-geonames-la"
+    ]
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "human_origins",
+  "importance": {
+    "score": 5,
+    "justification": "The loss of about half of the world's large mammal species changed ecosystems on several continents."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-45ka-australian-megafauna-extinction",
+      "type": "has_part",
+      "because": "The extinction of Sahul megafauna around 46,000 years ago formed the earliest continental pulse of the late Quaternary extinction wave."
+    },
+    {
+      "id": "-13ka-megafaunal-extinction-in-the-americas",
+      "type": "has_part",
+      "because": "The terminal Pleistocene extinction in the Americas eliminated dozens of megafaunal genera between 13,800 and 11,400 years ago."
+    },
+    {
+      "id": "-70ka-out-of-africa",
+      "type": "related",
+      "because": "The global dispersal of modern humans out of Africa brought human hunting and ecological pressures to naive fauna across all continents."
+    },
+    {
+      "id": "-40ka-extinction-of-neanderthals",
+      "type": "contemporary"
+    },
+    {
+      "id": "-26ka-last-glacial-maximum",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sandom2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4071532/",
+      "title": "Global late Quaternary megafauna extinctions linked to humans, not climate change (Proceedings of the Royal Society B: Biological Sciences 281:20133254)",
+      "publisher": "Proceedings of the Royal Society B: Biological Sciences",
+      "author": "Christopher Sandom, Søren Faurby, Brody Sandel, Jens-Christian Svenning",
+      "date_published": "2014-06-04",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-barnosky2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4739530/",
+      "title": "Variable impact of late-Quaternary megafaunal extinction in causing ecological state shifts in North and South America (PNAS 113:856–861)",
+      "publisher": "Proceedings of the National Academy of Sciences of the United States of America",
+      "author": "Anthony D. Barnosky, Emily L. Lindsey, Natalia A. Villavicencio, et al.",
+      "date_published": "2016-01-26",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-la",
+      "url": "https://www.geonames.org/5368361",
+      "title": "GeoNames gazetteer entry for Los Angeles, United States (5368361)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The causes remain debated, and the effects on ecosystems varied by region. The pin at Los Angeles is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T04:56:31.580Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

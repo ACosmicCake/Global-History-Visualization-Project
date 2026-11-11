@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1865-genetics",
+  "kind": "process",
+  "title": "Genetics and the structure of DNA",
+  "summary": "In 1865 Gregor Mendel presented his pea experiments in Brno; ignored at the time, they were rediscovered in 1900. Thomas Hunt Morgan's fruit fly studies confirmed that genes lie in chromosomes. Oswald Avery's laboratory showed DNA to be the stuff of genes by 1944. In 1953 James Watson and Francis Crick published the double helix, drawing on X-ray images by Maurice Wilkins and Rosalind Franklin. The Human Genome Project (1990–2003) then produced the first sequence of the human genome.",
+  "when": {
+    "start": {
+      "year": 1865
+    },
+    "end": {
+      "year": 2003
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Nature on April 25, 1953",
+        "source": "src-nlm-doublehelix"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1865 Presents the results of the pea experiments in two lectures",
+        "source": "src-pnas-mendel"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 2003, the Human Genome Project produced a genome sequence",
+        "source": "src-hgp"
+      }
+    ],
+    "display": "1865–2003"
+  },
+  "where": {
+    "lat": 49.19522,
+    "lon": 16.60796,
+    "elevation_m": 227,
+    "modern_name": "Brno, Czech Republic (Mendel's abbey); later work elsewhere",
+    "historical_name": "Brünn, Margraviate of Moravia, Austrian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-geonames-brno"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "The rules of inheritance and the structure of DNA are the foundations of modern biology."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1866-mendel-pea-plant-experiments",
+      "type": "has_part"
+    },
+    {
+      "id": "1953-dna-double-helix",
+      "type": "has_part"
+    },
+    {
+      "id": "1859-origin-of-species",
+      "type": "related",
+      "because": "Mendel's laws of particulate inheritance provided the physical mechanism for biological variation and heredity required by natural selection."
+    },
+    {
+      "id": "2003-human-genome-project",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-pnas-mendel",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9335310/",
+      "title": "Gregor Johann Mendel and the development of modern evolutionary biology",
+      "publisher": "Proceedings of the National Academy of Sciences (via PubMed Central)",
+      "author": "Nils Chr. Stenseth et al.",
+      "date_published": "2022-07-20",
+      "accessed": "2026-11-09",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nlm-doublehelix",
+      "url": "https://profiles.nlm.nih.gov/spotlight/sc/feature/doublehelix",
+      "title": "The Discovery of the Double Helix, 1951-1953 (Francis Crick Papers)",
+      "publisher": "U.S. National Library of Medicine",
+      "accessed": "2026-11-09",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-mendel-museum",
+      "url": "https://mendelmuseum.muni.cz/en",
+      "title": "Mendel Museum of Masaryk University",
+      "publisher": "Mendel Museum of Masaryk University",
+      "date_published": "2024",
+      "accessed": "2026-11-09",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-brno",
+      "url": "https://www.geonames.org/3078610/brno.html",
+      "title": "GeoNames: Brno (3078610)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-09",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-hgp",
+      "class": "government",
+      "publisher": "National Human Genome Research Institute",
+      "title": "The Human Genome Project",
+      "url": "https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project",
+      "author": "NHGRI",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Dates of the Human Genome Project"
+    },
+    {
+      "id": "src-nobel-morgan",
+      "class": "reference",
+      "publisher": "Nobel Prize",
+      "title": "Thomas Hunt Morgan: Facts",
+      "url": "https://www.nobelprize.org/prizes/medicine/1933/morgan/facts/",
+      "author": "Nobel Prize Outreach",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Morgan's work on chromosomes"
+    },
+    {
+      "id": "src-nlm-avery",
+      "class": "government",
+      "publisher": "U.S. National Library of Medicine",
+      "title": "DNA as the Stuff of Genes: The Discovery of the Transforming Principle, 1940-1944",
+      "url": "https://profiles.nlm.nih.gov/spotlight/cc/feature/dna",
+      "author": "NLM Profiles in Science",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Avery's work on DNA"
+    }
+  ],
+  "reviewer_note": "This outline gives the main milestones. The pin marks Brno, where Mendel worked; later work took place elsewhere.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T04:56:52.202Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
