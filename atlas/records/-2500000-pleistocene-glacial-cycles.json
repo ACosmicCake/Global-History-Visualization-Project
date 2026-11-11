@@ -1,0 +1,158 @@
+{
+  "id": "-2500000-pleistocene-glacial-cycles",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Pleistocene glacial cycles",
+  "summary": "Over the past 2.6 million years, large ice sheets in the Northern Hemisphere have grown and retreated many times. These cycles first ran at about 41,000 years, then between about 1.25 and 0.7 million years ago became strongly asymmetric 100,000-year cycles. One study explains the change by declining carbon dioxide and glacial erosion of soil. Ice locks up water, lowering sea levels and exposing land. The last glacial period ended about 11,500 years ago.",
+  "when": {
+    "start": {
+      "year": -2600000
+    },
+    "end": {
+      "year": -9500
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 20000,
+      "start_plus_years": 20000,
+      "end_minus_years": 100,
+      "end_plus_years": 100,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Quaternary Period / years ago",
+        "value": "waxed and waned throughout the Quaternary Period (the past 2.6 million years)",
+        "source": "src-noaa-glacial"
+      },
+      {
+        "calendar": "million years (Ma)",
+        "value": "appearance of glacial-interglacial cycles caused by the cyclic growth and decay of continental ice sheets in the Northern Hemisphere",
+        "source": "src-willeit2019"
+      }
+    ],
+    "display": "about 2.6 million to 11,500 years ago"
+  },
+  "where": {
+    "lat": 79.13864,
+    "lon": -3.23897,
+    "elevation_m": null,
+    "modern_name": "Worldwide; stand-in pin in the Arctic Ocean",
+    "historical_name": "Earth, Pleistocene epoch; Northern Hemisphere ice sheets (Laurentide, Fennoscandian, Eurasian)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-wikidata-q788"
+    ],
+    "paleo": {
+      "lat": 77.68,
+      "lon": -1.89,
+      "age_ma": 2.58,
+      "plate_model": "MERDITH2021",
+      "source": "src-wikidata-q788",
+      "note": "Reconstructed high-latitude location at beginning of the Pleistocene."
+    }
+  },
+  "regions": [
+    "global"
+  ],
+  "domains": [
+    "geology_climate"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "Repeated ice ages reshaped climate, sea level and the land surface across the whole planet."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-2580ka-onset-of-northern-hemisphere-glaciation",
+      "type": "has_part",
+      "because": "The onset of Northern Hemisphere glaciation at 2.7 to 2.58 million years ago initiated the Pleistocene glacial sequence."
+    },
+    {
+      "id": "-1000ka-mid-pleistocene-transition",
+      "type": "has_part",
+      "because": "The Mid-Pleistocene Transition restructured the glacial cycles from 41,000-year to 100,000-year periodicity."
+    },
+    {
+      "id": "-129ka-eemian-interglacial",
+      "type": "has_part"
+    },
+    {
+      "id": "-26ka-last-glacial-maximum",
+      "type": "has_part"
+    },
+    {
+      "id": "-300ka-rise-of-homo-sapiens",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-noaa-glacial",
+      "url": "https://www.ncei.noaa.gov/sites/default/files/2021-11/1%20Glacial-Interglacial%20Cycles-Final-OCT%202021.pdf",
+      "title": "Glacial-Interglacial Cycles",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "author": "NOAA Paleoclimatology Program",
+      "date_published": "2021-10",
+      "accessed": "2026-11-08",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-willeit2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6447376/",
+      "title": "Mid-Pleistocene transition in glacial cycles explained by declining CO2 and regolith removal (Science Advances 5:eaav7337)",
+      "publisher": "Science Advances (AAAS, via PubMed Central)",
+      "author": "M. Willeit, A. Ganopolski, R. Calov, V. Brovkin",
+      "date_published": "2019-04-03",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q788",
+      "url": "https://www.wikidata.org/wiki/Q788",
+      "title": "Arctic Ocean (Wikidata Q788)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The cause of the shift to 100,000-year cycles is still studied; one explanation is given here. The pin in the Arctic is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T04:56:30.763Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

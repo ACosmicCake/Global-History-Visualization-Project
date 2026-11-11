@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1850-modern-public-health",
+  "kind": "process",
+  "title": "Modern public health and sanitation",
+  "summary": "England's Public Health Act of 1848 aimed mainly to help build water supplies and sewerage, and it set up local and central units of government responsible for health. In the United States, improved sanitation dramatically reduced typhoid and cholera, and public health accounts for about 25 years of the gain in lifespan since 1900. Worldwide, in 1800 no region had a life expectancy above 40 years. Global average life expectancy rose from 32 years in 1900 to 71 by 2021, through many advances in health.",
+  "when": {
+    "start": {
+      "year": 1848
+    },
+    "end": {
+      "year": 2021
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 6,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "was the main purpose of the 1848 act",
+        "source": "src-bmj-pmc1113797"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Since 1900, the average lifespan of persons in the United States has lengthened by greater than 30 years",
+        "source": "src-cdc-mmwr"
+      }
+    ],
+    "display": "from 1848"
+  },
+  "where": {
+    "lat": 51.50853,
+    "lon": -0.12574,
+    "elevation_m": 25,
+    "modern_name": "Worldwide; stand-in pin at London, United Kingdom",
+    "historical_name": "London, United Kingdom of Great Britain and Ireland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-geonames-london"
+    ]
+  },
+  "regions": [
+    "global",
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "disease",
+    "science_technology",
+    "built_world"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Clean water, sewerage and public health government lengthened lives by decades."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1854-john-snow-broad-street-cholera",
+      "type": "has_part"
+    },
+    {
+      "id": "1860-germ-theory-of-disease",
+      "type": "related",
+      "because": "Germ theory provided the microbiological foundation explaining why clean water and sanitation halted epidemic disease transmission."
+    },
+    {
+      "id": "1800-world-population-growth",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bmj-pmc1113797",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1113797/",
+      "title": "Revolutions in public health: 1848, and 1998? (BMJ 317:587–591)",
+      "publisher": "BMJ Publishing Group (via PubMed Central)",
+      "author": "Christopher Hamlin and Sally Sheard",
+      "date_published": "1998-08-29",
+      "accessed": "2026-11-09",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cdc-mmwr",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/00056796.htm",
+      "title": "Ten Great Public Health Achievements -- United States, 1900-1999 (MMWR 48:241–243)",
+      "publisher": "Centers for Disease Control and Prevention",
+      "date_published": "1999-04-02",
+      "accessed": "2026-11-09",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-london",
+      "url": "https://www.geonames.org/2643743/london.html",
+      "title": "GeoNames: London (2643743)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-09",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-owid-lifeexp",
+      "class": "dataset",
+      "publisher": "Our World in Data",
+      "title": "Life Expectancy",
+      "url": "https://ourworldindata.org/life-expectancy",
+      "author": "Our World in Data",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Global life expectancy since 1800"
+    }
+  ],
+  "reviewer_note": "Public health is only part of the rise in life expectancy, alongside medicine, nutrition and living standards. The pin at London is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T04:56:49.584Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "1820-age-of-mass-migration",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "kind": "movement",
+  "title": "The age of mass migration",
+  "summary": "Long-distance migration boomed worldwide from the mid-19th century as shipping improved. About 55 million people left Europe between 1850 and 1920, nearly 30 million of them for the United States. Over 29 million Indians and over 19 million Chinese moved to Southeast Asia and lands around the Indian Ocean and South Pacific. Migrations across the globe were broadly comparable in size and timing. The US literacy test of 1917 and quotas from 1921 cut American arrivals sharply.",
+  "when": {
+    "start": {
+      "year": 1846
+    },
+    "end": {
+      "year": 1940
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 10,
+      "start_plus_years": 30,
+      "end_minus_years": 10,
+      "end_plus_years": 10,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "about 55 million immigrants left Europe",
+        "source": "src-nber-abramitzky2016"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Age of Mass Migration from Europe (1850-1920)",
+        "source": "src-nber-abramitzky2016"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "over 29 million Indians and over 19 million Chinese",
+        "source": "src-mckeown-global"
+      }
+    ],
+    "display": "1846–1940"
+  },
+  "where": {
+    "lat": 40.71427,
+    "lon": -74.00597,
+    "elevation_m": 10,
+    "modern_name": "Worldwide; stand-in pin at New York City, United States",
+    "historical_name": "New York City, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-geonames-nyc"
+    ]
+  },
+  "regions": [
+    "global",
+    "europe",
+    "northern_america",
+    "south_eastern_asia",
+    "eastern_asia",
+    "southern_asia"
+  ],
+  "domains": [
+    "human_evolution_migration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Tens of millions moved across oceans, changing the populations of the Americas, Southeast Asia and beyond."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "Steam-powered railway and ocean transport drastically lowered the cost and danger of intercontinental travel for millions of migrants."
+    },
+    {
+      "id": "1800-world-population-growth",
+      "type": "contemporary"
+    },
+    {
+      "id": "1800-global-urbanization",
+      "type": "related"
+    },
+    {
+      "id": "1834-indian-indentured-labour-migration",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nber-abramitzky2016",
+      "url": "https://www.nber.org/system/files/working_papers/w21882/w21882.pdf",
+      "title": "Immigration in American Economic History",
+      "publisher": "National Bureau of Economic Research",
+      "author": "Ran Abramitzky, Leah Platt Boustan",
+      "date_published": "2016-01",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-nyc",
+      "url": "https://www.geonames.org/5128581",
+      "title": "New York City (GeoNames 5128581)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "2024",
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-mckeown-global",
+      "class": "scholarly",
+      "publisher": "Journal of World History (via History Cooperative)",
+      "title": "Global Migration, 1846-1940",
+      "url": "https://historycooperative.org/journal/global-migration-1846-1940/",
+      "author": "Adam McKeown",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Scale and timing of migration worldwide"
+    }
+  ],
+  "reviewer_note": "Numbers are estimates, and many migrants later returned. The pin at New York is a stand-in.",
+  "published_at": "2026-11-09T04:56:47.746Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

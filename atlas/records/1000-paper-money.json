@@ -1,0 +1,151 @@
+{
+  "id": "1000-paper-money",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "kind": "process",
+  "title": "Paper money",
+  "summary": "To avoid carrying strings of coins, merchants in late Tang China, around 900 CE, began trading receipts from deposit shops. In the 1020s the Song government took over the system, producing the world's first government-issued paper money. High inflation made it almost obsolete in the late 13th century, though Marco Polo reported its wide use under the Yuan. In Europe, Stockholms Banco issued the first real banknotes in 1661. Its success ended in a bank failure.",
+  "when": {
+    "start": {
+      "year": 900
+    },
+    "end": {
+      "year": 1661
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "in the 1020s the government took over the system, producing the world's first government-issued paper money",
+        "source": "src-columbia-papermoney"
+      },
+      {
+        "calendar": "CE",
+        "value": "Paper money was invented in China and became widely used by merchants during the Song dynasty",
+        "source": "src-whe-papermoney"
+      }
+    ],
+    "display": "from about 900 CE"
+  },
+  "where": {
+    "lat": 30.666667,
+    "lon": 104.066667,
+    "elevation_m": 500,
+    "modern_name": "Sichuan, China; stand-in pin at Chengdu",
+    "historical_name": "Yizhou (Chengdu), Sichuan, Northern Song dynasty",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 800,
+    "coordinate_sources": [
+      "src-geonames-chengdu"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "europe"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Paper money, begun in China, later became a basic form of money."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1024-jiaozi-paper-money",
+      "type": "has_part"
+    },
+    {
+      "id": "0105-cai-lun-papermaking",
+      "type": "related",
+      "because": "Papermaking provided the light, resilient, and printable medium required to replace metallic coin strings."
+    },
+    {
+      "id": "polity-song-dynasty",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-columbia-papermoney",
+      "url": "https://afe.easia.columbia.edu/songdynasty-module/econ-rev-money.html",
+      "title": "From Copper Coins to Paper Notes (The Song Economic Revolution)",
+      "publisher": "Asia for Educators, Columbia University",
+      "author": "Asia for Educators",
+      "date_published": "2009",
+      "accessed": "2026-11-09",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-whe-papermoney",
+      "url": "https://www.worldhistory.org/article/3002/paper-money-in-song-china/",
+      "title": "Paper Money in Song China",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": "2026-10-05",
+      "accessed": "2026-11-09",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-chengdu",
+      "url": "https://www.geonames.org/1815286/chengdu.html",
+      "title": "Chengdu, China (GeoNames 1815286)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2026",
+      "accessed": "2026-11-09",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-riksbank-1661",
+      "class": "government",
+      "publisher": "Sveriges Riksbank",
+      "title": "First banknotes in Europe",
+      "url": "https://www.riksbank.se/en-gb/about-the-riksbank/history/historical-timeline/1600-1699/first-banknotes-in-europe/",
+      "author": "Sveriges Riksbank",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "First banknotes in Europe, 1661"
+    }
+  ],
+  "reviewer_note": "Paper money after 1661 is not traced here. The pin at Chengdu is a stand-in for Sichuan, where one source places the first government certificates.",
+  "published_at": "2026-11-09T05:52:22.253Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

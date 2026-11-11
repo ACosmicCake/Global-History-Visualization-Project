@@ -1,0 +1,148 @@
+{
+  "id": "1750-great-divergence",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "kind": "process",
+  "title": "The Great Divergence",
+  "summary": "The Great Divergence is the rise of the gap in incomes between the West and the rest. Pomeranz put the term into scholarly use in 2000, arguing that the gap began with the Industrial Revolution and modern growth in Britain. Broadberry and Gupta answered, from wage evidence, that it was already well underway before 1800. The gap has narrowed since rapid growth in China, India and other regions from the 1980s, known as the Great Convergence.",
+  "when": {
+    "start": {
+      "year": 1500
+    },
+    "end": {
+      "year": 1980
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 25,
+      "start_plus_years": 25,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "already well underway before 1800",
+        "source": "src-wrap-broadberry2005"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "from the 1980s",
+        "source": "src-hbs-jones2017"
+      }
+    ],
+    "display": "before 1800 (disputed) to the 1980s"
+  },
+  "where": {
+    "lat": 51.50853,
+    "lon": -0.12574,
+    "elevation_m": 11,
+    "modern_name": "Worldwide; stand-in pin at London, United Kingdom",
+    "historical_name": "London, Kingdom of Great Britain",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-geonames-london"
+    ]
+  },
+  "regions": [
+    "global",
+    "europe",
+    "eastern_asia",
+    "southern_asia"
+  ],
+  "domains": [
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "The gap set the modern distribution of wealth between world regions."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "Fossil-fuelled mechanization and factory production provided the technological leap that drove Western economies ahead of agrarian economies."
+    },
+    {
+      "id": "1493-columbian-exchange",
+      "type": "related"
+    },
+    {
+      "id": "1800-world-population-growth",
+      "type": "contemporary"
+    },
+    {
+      "id": "1648-sovereign-state-system",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hbs-jones2017",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/18-004_29724cbe-640d-48ac-a744-f16ef69f3c22.pdf",
+      "title": "Business History, the Great Divergence and the Great Convergence",
+      "publisher": "Harvard Business School",
+      "author": "Geoffrey Jones",
+      "date_published": "2017",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wrap-broadberry2005",
+      "url": "https://wrap.warwick.ac.uk/1709/1/WRAP_Broadberry_CEPR-DP4947%5B1%5D.pdf",
+      "title": "The Early Modern Great Divergence: Wages, Prices and Economic Development in Europe and Asia, 1500-1800",
+      "publisher": "Centre for Economic Policy Research and University of Warwick",
+      "author": "Stephen N. Broadberry, Bishnupriya Gupta",
+      "date_published": "2005-03",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-london",
+      "url": "https://www.geonames.org/2643743",
+      "title": "London (GeoNames 2643743)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "2024",
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The start is disputed, so the dates are broad. The pin at London is a stand-in.",
+  "published_at": "2026-11-09T04:56:44.911Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

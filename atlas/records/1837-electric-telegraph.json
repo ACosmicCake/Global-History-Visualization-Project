@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1837-electric-telegraph",
+  "kind": "process",
+  "title": "The electric telegraph",
+  "summary": "William Fothergill Cooke and Charles Wheatstone patented the electric telegraph in 1837, developing it for Britain's new railways. In the United States, Samuel Morse opened a government-funded line from Baltimore to Washington in 1844. Delegates met at the first International Telegraph Conference in Paris in 1865. A transatlantic cable laid in 1866 lasted, and by the early 1870s cables reached India, Australia, East Asia and South America, nearly all built by British firms. Soon almost every major city joined the global network.",
+  "when": {
+    "start": {
+      "year": 1837
+    },
+    "end": {
+      "year": 1875
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 10,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "patented by William Fothergill Cooke and Charles Wheatstone in 1837",
+        "source": "src-londonmuseum-telegraph"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Joined forces in 1837",
+        "source": "src-berkeley-telegraph"
+      }
+    ],
+    "display": "from 1837"
+  },
+  "where": {
+    "lat": 51.50853,
+    "lon": -0.12574,
+    "elevation_m": 25,
+    "modern_name": "London, United Kingdom; stand-in pin, with work in the United States",
+    "historical_name": "London, United Kingdom of Great Britain and Ireland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-geonames-london"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america",
+    "oceans",
+    "southern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Wires carried messages across countries and then oceans."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1858-first-transatlantic-telegraph-cable",
+      "type": "has_part"
+    },
+    {
+      "id": "1831-faraday-electromagnetic-induction",
+      "type": "related",
+      "because": "Faraday's discovery of electromagnetic induction established the physical principles enabling electromagnetic telegraph receivers and signalling."
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-londonmuseum-telegraph",
+      "url": "https://www.londonmuseum.org.uk/collections/v/object-730100/telegraph-double-needle-telegraph/",
+      "title": "Telegraph, double-needle telegraph (Object description)",
+      "publisher": "London Museum",
+      "accessed": "2026-11-09",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-berkeley-telegraph",
+      "url": "https://people.eecs.berkeley.edu/~randy/Courses/CS39C.S97/telegraph/telegraph.html",
+      "title": "What Hath God Wrought: The Electrical Telegraph",
+      "publisher": "University of California, Berkeley",
+      "author": "Randy H. Katz",
+      "date_published": "1997",
+      "accessed": "2026-11-09",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-london",
+      "url": "https://www.geonames.org/2643743/london.html",
+      "title": "GeoNames: London (2643743)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-09",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-notevenpast-cables",
+      "class": "reference",
+      "publisher": "Not Even Past (University of Texas at Austin)",
+      "title": "To Rule the Waves: Britain's Cable Empire and the Birth of Global Communications",
+      "url": "https://notevenpast.org/to-rule-the-waves-britains-cable-empire-and-the-birth-of-global-communications/",
+      "author": "Not Even Past",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Spread of submarine cables by the 1870s"
+    },
+    {
+      "id": "src-itu-history",
+      "class": "government",
+      "publisher": "International Telecommunication Union",
+      "title": "ITU history",
+      "url": "https://www.itu.int/en/history/Pages/ITUsHistory.aspx",
+      "author": "ITU",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "First International Telegraph Conference, 1865"
+    }
+  ],
+  "reviewer_note": "Later telegraph growth and the move to telephones are outside this record. The pin at London is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T04:56:51.323Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

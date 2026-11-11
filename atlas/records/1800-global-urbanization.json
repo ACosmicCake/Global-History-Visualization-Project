@@ -1,0 +1,145 @@
+{
+  "id": "1800-global-urbanization",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "kind": "process",
+  "title": "Global urbanization",
+  "summary": "Records of cities reach back to 3700 BC, but in AD 1800 Beijing is cited as the only city in the world with a million people. Today, by one measure, around 80% of people live in cities, towns and suburbs, and the world has been mostly urban since at least the 1950s. UN reports using national definitions announced that the world became majority urban in 2007.",
+  "when": {
+    "start": {
+      "year": 1800
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 20,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "the world became majority urban in 2007",
+        "source": "src-owid-urbanization"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "the only city in the world with a population of one million in AD 1800",
+        "source": "src-nature-reba2016"
+      }
+    ],
+    "display": "From c. 1800"
+  },
+  "where": {
+    "lat": 39.9075,
+    "lon": 116.39723,
+    "elevation_m": 44,
+    "modern_name": "Worldwide; stand-in pin at Beijing, China",
+    "historical_name": "Beijing, Qing Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-geonames-beijing"
+    ]
+  },
+  "regions": [
+    "global",
+    "eastern_asia",
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Most people now live in urban places, a change in how humans live."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related",
+      "because": "Industrial mechanization and factory employment pulled millions of agrarian workers into expanding manufacturing cities."
+    },
+    {
+      "id": "1800-world-population-growth",
+      "type": "contemporary"
+    },
+    {
+      "id": "1750-great-divergence",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nature-reba2016",
+      "url": "https://www.nature.com/articles/sdata201634",
+      "title": "Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000",
+      "publisher": "Nature (Springer Nature)",
+      "author": "Meredith Reba, Femke Reitsma, Karen C. Seto",
+      "date_published": "2016-06-07",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-owid-urbanization",
+      "url": "https://ourworldindata.org/urbanization",
+      "title": "Urbanization",
+      "publisher": "Our World in Data (Global Change Data Lab)",
+      "author": "Hannah Ritchie, Veronika Samborska, Max Roser",
+      "date_published": "2024",
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-beijing",
+      "url": "https://www.geonames.org/1816670",
+      "title": "Beijing (GeoNames 1816670)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": "2024",
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The share of people in cities depends on how urban is defined, so two dates are given. The pin at Beijing is a stand-in.",
+  "published_at": "2026-11-09T04:56:45.858Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

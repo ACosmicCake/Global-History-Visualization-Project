@@ -1,0 +1,164 @@
+{
+  "id": "1800-mass-schooling-and-literacy",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "kind": "process",
+  "title": "Mass schooling and literacy",
+  "summary": "Prussia's decree of 1763 ordered children to school from age five until thirteen or fourteen. Two centuries ago, the best estimate is that 12% of the world's people could read and write. Global literacy more than doubled over the 19th century, and more than four out of five people can now read. Literacy improved especially fast in northwest Europe in 1600–1800, and by the mid-19th century, school enrollment in the United States exceeded that of any other nation.",
+  "when": {
+    "start": {
+      "year": 1763
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 20,
+      "start_plus_years": 20,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "12% of the world population was literate",
+        "source": "src-owid-literacy"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "By the mid-nineteenth century school enrollment rates in the United States exceeded those of any other nation",
+        "source": "src-nber-goldin2003"
+      }
+    ],
+    "display": "from 1763"
+  },
+  "where": {
+    "lat": 52.52437,
+    "lon": 13.41053,
+    "elevation_m": 34,
+    "modern_name": "Worldwide; stand-in pin at Berlin, Germany",
+    "historical_name": "Berlin, Kingdom of Prussia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-geonames-berlin2"
+    ]
+  },
+  "regions": [
+    "global",
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Reading went from a skill of a small elite to one held by most people."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1450-gutenberg-printing-press",
+      "type": "related",
+      "because": "Movable-type printing dramatically lowered the cost of books, providing the reading materials essential for widespread literacy."
+    },
+    {
+      "id": "1789-spread-of-democracy",
+      "type": "related"
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-owid-literacy",
+      "url": "https://ourworldindata.org/literacy",
+      "title": "Literacy",
+      "publisher": "Our World in Data (Global Change Data Lab)",
+      "author": "Max Roser, Esteban Ortiz-Ospina",
+      "date_published": "2024",
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nber-goldin2003",
+      "url": "https://www.nber.org/system/files/working_papers/w9958/w9958.pdf",
+      "title": "The 'Virtues' of the Past: Education in the First Hundred Years of the New Republic",
+      "publisher": "National Bureau of Economic Research",
+      "author": "Claudia Goldin, Lawrence F. Katz",
+      "date_published": "2003-09",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-berlin2",
+      "class": "dataset",
+      "publisher": "GeoNames",
+      "title": "Berlin",
+      "url": "https://www.geonames.org/2950159",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Coordinates"
+    },
+    {
+      "id": "src-ghdi-1763",
+      "class": "archive",
+      "publisher": "German History in Documents and Images (German Historical Institute)",
+      "title": "Frederick the Great, Compulsory Education Decree (1763)",
+      "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/friedrich-der-grosse-koeniglich-preussisches-general-land-schul-reglement-1763",
+      "author": "Frederick II of Prussia",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Terms of the 1763 decree"
+    },
+    {
+      "id": "src-owid-education",
+      "class": "dataset",
+      "publisher": "Our World in Data",
+      "title": "Global Education",
+      "url": "https://ourworldindata.org/global-education",
+      "author": "Our World in Data",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Learning gaps in school"
+    }
+  ],
+  "reviewer_note": "Schooling and literacy are not the same, and in many low-income countries children in school still learn little. The pin at Berlin is a stand-in.",
+  "published_at": "2026-11-09T04:56:46.854Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "-400my-rise-of-insects",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Rise of the insects",
+  "summary": "The first fossils that should represent insects come from Devonian rocks as old as 400 million years, but most are problematic. Scotland's Rhynie Chert, around 409 to 411 million years old, holds the oldest springtails and other early hexapods. Its Rhyniognatha is read by one study as the first true insect and by another as an early centipede. Fully winged species appeared suddenly in the Carboniferous. Insects were the first living things to master flight, and became a very diverse and successful group.",
+  "when": {
+    "start": {
+      "year": -411000000
+    },
+    "end": {
+      "year": -299000000
+    },
+    "precision": "million_years",
+    "uncertainty": {
+      "start_minus_years": 10000000,
+      "start_plus_years": 10000000,
+      "end_minus_years": 5000000,
+      "end_plus_years": 5000000,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "million years",
+        "value": "The first fossils that should represent insects have been found in Devonian rocks, being as old as 400 million years.",
+        "source": "src-haug2017"
+      },
+      {
+        "calendar": "million years",
+        "value": "The depositional setting [ 2 ] and stratigraphic age of the cherts of around 409–411 million years",
+        "source": "src-dunlop2018"
+      }
+    ],
+    "display": "about 411 million years ago to the Carboniferous"
+  },
+  "where": {
+    "lat": 57.3367,
+    "lon": -2.84139,
+    "elevation_m": 220,
+    "modern_name": "Rhynie Chert, Aberdeenshire, Scotland (early fossil site)",
+    "historical_name": "Euramerica (Old Red Sandstone continent), southern tropical palaeolatitudes; no human geography",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 100,
+    "coordinate_sources": [
+      "src-wikidata-rhynie"
+    ],
+    "paleo": {
+      "lat": -20,
+      "lon": -15,
+      "age_ma": 407,
+      "plate_model": "MERDITH2021",
+      "source": "src-wikidata-rhynie",
+      "note": "Reconstructed position of Scotland within Euramerica at approximately 407 Ma."
+    }
+  },
+  "regions": [
+    "global",
+    "europe"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "Insects became a very diverse and successful group of animals on land."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-372my-late-devonian-extinction",
+      "type": "contemporary"
+    },
+    {
+      "id": "-445my-late-ordovician-mass-extinction",
+      "type": "related"
+    },
+    {
+      "id": "-252my-permian-triassic-extinction",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-haug2017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5452959/",
+      "title": "The presumed oldest flying insect: more likely a myriapod? (PeerJ 5:e3402)",
+      "publisher": "PeerJ",
+      "author": "Carolin Haug, Joachim T. Haug",
+      "date_published": "2017-05-30",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-dunlop2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5745329/",
+      "title": "Terrestrial invertebrates in the Rhynie chert ecosystem (Philosophical Transactions of the Royal Society B: Biological Sciences 373:20160498)",
+      "publisher": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+      "author": "Jason A. Dunlop",
+      "date_published": "2017-12-18",
+      "accessed": "2026-11-08",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-rhynie",
+      "url": "https://www.wikidata.org/wiki/Q1633601",
+      "title": "Rhynie chert (Wikidata Q1633601)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-08",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-ncsu-pterygota",
+      "class": "scholarly",
+      "publisher": "North Carolina State University, Department of Entomology",
+      "title": "Subclass Pterygota",
+      "url": "https://genent.cals.ncsu.edu/pterygota/",
+      "author": "NC State ENT 425",
+      "date_published": "n.d.",
+      "accessed": "2026-11-09",
+      "opened": true,
+      "supports": "Winged insects in the Carboniferous and the first flight"
+    }
+  ],
+  "reviewer_note": "Whether the oldest fossils are true insects is disputed, and how wings evolved is unknown.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-09",
+  "published_at": "2026-11-09T04:56:32.465Z",
+  "changelog": [
+    {
+      "date": "2026-11-09",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

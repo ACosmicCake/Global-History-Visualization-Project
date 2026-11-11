@@ -2350,3 +2350,44 @@ One line per publish: `date · id · new|enriched|corrected · confidence · lea
 2026-11-05 · 1900-quantum-mechanics · outline · established · This outline covers the 1925-27 work only; Planck's earlier work has its own record, and wave mechanics is not yet covered. The pin marks Göttingen.
 2026-11-05 · 1789-spread-of-democracy · outline · probable · This outline gives two landmarks and one current statement, not the many waves of democracy, and earlier forms exist, such as Athens. Democracy has also retreated at times. The pin at Paris is a stand-in.
 2026-11-05 · 1945-united-states-as-a-superpower · outline · established · American power has changed since 1945, and the end date is open. The sources focus on the early postwar years. The pin at Washington is a stand-in.
+2026-11-09 · -2500000-pleistocene-glacial-cycles · outline · established · The cause of the shift to 100,000-year cycles is still studied; one explanation is given here. The pin in the Arctic is a stand-in.
+2026-11-09 · -50000-late-quaternary-megafauna-extinction · outline · probable · The causes remain debated, and the effects on ecosystems varied by region. The pin at Los Angeles is a stand-in.
+2026-11-09 · -400my-rise-of-insects · outline · probable · This outline covers the earliest fossils only, not the later rise of winged insects. Whether the oldest fossils are true insects is disputed.
+2026-11-09 · -18000-invention-of-pottery · outline · established · Whether pottery was invented once or several times is open. The pin marks Yuchanyan Cave, one of the earliest dated sites.
+2026-11-09 · -5000-origins-of-metallurgy · outline · established · Whether smelting was invented once or several times is not settled here. The pin at Rudna Glava is a stand-in for the Balkans.
+2026-11-09 · -5000-domestication-of-cotton · outline · probable · Separate domestications elsewhere are not covered here. It is not known whether the Mehrgarh cotton was domesticated.
+2026-11-09 · -3500-invention-of-the-sail · outline · probable · Where the sail first appeared is not settled, and the dates are broad. The pin at Uruk is a stand-in.
+2026-11-09 · -1750-written-law-codes · outline · established · Written law in other regions is not covered. The pin marks Babylon.
+2026-11-09 · -0400-daoism · outline · established · Lao Tzu's authorship and dates are uncertain. The dates cover the classical period only. The pin at Luyi is a stand-in; no source here ties early Daoism to one place.
+2026-11-09 · 0070-rabbinic-judaism · outline · established · The pin at Jerusalem is a stand-in; rabbinic Judaism took shape in the Land of Israel and Babylonia.
+2026-11-09 · 0660-sunni-and-shia-islam · outline · established · The two identities formed gradually, so the end date marks only the close of the First Fitna. The pin at Kufa is a stand-in.
+2026-11-09 · 0800-islamic-law · outline · established · This outline covers the formative period of Sunni law. Shia law and the later history of sharia are not covered. The start date is approximate. The pin at Medina is a stand-in for several early centres.
+2026-11-09 · 1100-magnetic-compass · outline · established · The route by which the compass spread is not covered here. The pin at Guangzhou is a stand-in for Song China.
+2026-11-09 · 1206-mongol-conquests · outline · established · Death tolls and the population effects of the conquests are not covered here. The pin marks Karakorum, chosen as the capital in 1235, and stands in for the whole empire.
+2026-11-09 · 1600-joint-stock-company · outline · established · This outline covers the first great companies, not the later spread of the corporation or limited liability. The pin at London is a stand-in.
+2026-11-09 · 1648-sovereign-state-system · outline · established · How much of this was settled at Westphalia, and how much later, is debated. The pin marks Münster, where treaties were concluded.
+2026-11-09 · 1750-great-divergence · outline · established · The start is disputed, so the dates are broad. The pin at London is a stand-in.
+2026-11-09 · 1800-global-urbanization · outline · established · The share of people in cities depends on how urban is defined, so two dates are given. The pin at Beijing is a stand-in.
+2026-11-09 · 1800-mass-schooling-and-literacy · outline · established · The pin at Boston is a stand-in; schooling in Prussia and elsewhere is not covered here.
+2026-11-09 · 1820-age-of-mass-migration · outline · established · This outline follows European migration, mainly to the United States. Asian and other migrations of the period are not covered. The pin at New York is a stand-in.
+2026-11-09 · 1848-womens-rights-movement · outline · established · This outline follows the movement in the United States only. Women's rights and suffrage in other countries are not yet covered here, and they took different paths.
+2026-11-09 · 1850-modern-public-health · outline · established · This outline gives English and American examples, not the worldwide spread of public health. The end date reflects the sources. The pin at London is a stand-in.
+2026-11-09 · 1850-labour-movement-and-socialism · outline · established · This outline covers the First International only, not the wider history of trade unions or socialist parties. The end date reflects papers running to 1876. The pin marks London.
+2026-11-09 · 1837-electric-telegraph · outline · established · Later growth of telegraph networks is not covered here. The pin at London is a stand-in, with Morse's work in the United States.
+2026-11-09 · 1865-genetics · outline · established · Work between 1900 and 1953 is not covered here. The pin marks Brno, where Mendel worked; the double helix came later and elsewhere.
+2026-11-09 · 2 records · corrected · rescored against atlas/IMPORTANCE.md; ratings in atlas/importance.json
+2026-11-09 · -600my-ozone-layer · outline · probable · The date comes from models, because no direct record of ancient ozone exists. The pin at the Rhynie Chert, an early land fossil site, is a stand-in for a worldwide change.
+2026-11-09 · -3my-global-ocean-circulation · outline · established · Reconstructions of past circulation rest on ocean sediment proxies and models. The dates cover the seaway changes, not the whole history of ocean circulation.
+2026-11-09 · -100000-origins-of-religion · outline · probable · Belief itself leaves no direct trace, so these finds are indirect evidence. Other early traditions are not named here. The pin marks Qafzeh Cave.
+2026-11-09 · -3000-calendars-and-timekeeping · outline · established · Dates for the earliest calendars are approximate, and other traditions, such as in China, are not named here. The pin at Uruk is a stand-in for Sumer.
+2026-11-09 · -3000-domestication-of-sorghum · outline · established · The pace of domestication is still studied. The pin at Kassala is a stand-in for the southern Atbai.
+2026-11-09 · -6000-domestication-of-sugarcane · outline · established · The two sources differ by about two thousand years on the start. Kuk is a stand-in pin for New Guinea; no source here ties sugarcane to the site.
+2026-11-09 · -0600-greek-philosophy · outline · established · Little of the earliest writing survives. Other philosophical traditions have their own records. The pin marks Miletus.
+2026-11-09 · 1000-paper-money · outline · established · Paper money after 1661 is not traced here. The pin at Chengdu is a stand-in for Sichuan, where one source places the first government certificates.
+2026-11-09 · 1100-english-common-law · outline · established · Common law's roots go back before 1166, and this outline gives one early landmark. The pin at London is a stand-in.
+2026-11-09 · 1300-islam-in-southeast-asia · outline · established · Muslims were present before the first sultanates, and scholars debate how and why conversion spread. The end date is approximate. The pin marks Samudra Pasai.
+2026-11-09 · 1545-global-silver-trade · outline · established · Estimates of how much silver reached China vary and are not given here. The pin marks Potosí.
+2026-11-09 · 1787-written-constitutions · outline · established · Earlier charters existed, and a few countries have no single written constitution. The pin at Philadelphia is a stand-in.
+2026-11-09 · 1796-spread-of-vaccination · outline · established · Variolation came before vaccination and has its own history. The pin at Berkeley is a stand-in for a worldwide process.
+2026-11-09 · 1945-nuclear-age · outline · established · Nuclear power and the health effects of testing are outside this outline. The pin at the Trinity site is a stand-in.
+2026-11-09 · 0330-eastern-orthodox-christianity · outline · established · Churches such as those of Russia and Ethiopia have their own histories, not traced here. The pin marks Istanbul, historic Constantinople.
