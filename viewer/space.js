@@ -253,13 +253,18 @@
     globe.globeMaterial(earthMat);
     const caps = globe.renderer().capabilities, aniso = caps.getMaxAnisotropy();
     for (const k of ['dayMap', 'nightMap']) earthMat.uniforms[k].value.anisotropy = aniso;
-    // The globe opens on the 4K day map (1.5 MB); once the page is idle, a desktop-class device swaps in the 8K Blue
-    // Marble (4 MB, ~130 MB of GPU memory). Phones and small GPUs keep the 4K map; close-up detail comes from the
-    // Blue Marble tiles either way.
+    // The globe opens on the 4K day map (1.5 MB); the first time the camera comes in closer than altitude 1, a
+    // desktop-class device swaps in the 8K Blue Marble (4 MB, ~130 MB of GPU memory), which only shows its detail up
+    // close. Phones and small GPUs keep the 4K map; close-up detail comes from the Blue Marble tiles either way.
     const strong = caps.maxTextureSize >= 8192 && !matchMedia('(pointer: coarse)').matches && (navigator.deviceMemory ?? 8) >= 4;
-    if (strong) idle(() => loader.load('assets/earth-bluemarble-8k.jpg', t => {
-      t.anisotropy = aniso; const old = earthMat.uniforms.dayMap.value; earthMat.uniforms.dayMap.value = t; old.dispose();
-    }), 4000);
+    if (strong) {
+      const controls = globe.controls(), near = () => {
+        if (globe.pointOfView().altitude >= 1) return;
+        controls.removeEventListener('change', near);
+        loader.load('assets/earth-bluemarble-8k.jpg', t => { t.anisotropy = aniso; const old = earthMat.uniforms.dayMap.value; earthMat.uniforms.dayMap.value = t; old.dispose(); });
+      };
+      controls.addEventListener('change', near);
+    }
 
     // Clouds: a translucent shell lit by the same sun
     // the cloud image (0.4 MB) loads the first time clouds are turned on; until then the shell is fully transparent
