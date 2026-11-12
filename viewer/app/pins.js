@@ -147,12 +147,14 @@ export function placePinSprites() {
   }
   // greedy placement: the most important names first, skipping any that would overlap one already placed
   wanted.sort((a, b) => b.rank - a.rank);
-  const placed = [];
+  const placed = chromeRects(now),
+    shown = [];
   window.DeepTime?.placeLabels(placed, state.alt, k, W, H, cam); // supercontinents and old oceans come first
   for (const w of wanted) {
     const [x0, y0, x1, y1] = w.box;
     if (placed.some(([a0, b0, a1, b1]) => x0 < a1 && x1 > a0 && y0 < b1 && y1 > b0)) continue;
     placed.push(w.box);
+    shown.push(w.box);
     const { label } = w.entry,
       { w: lw, h: lh } = label.userData;
     label.visible = true;
@@ -162,10 +164,29 @@ export function placePinSprites() {
   }
   window.Borders?.placeLabels(placed, state.alt, k, W, H, cam); // polity names take what space is left
   pinsSeen = seen;
+  labelBoxes = shown;
 }
+export let labelBoxes = []; // the pin names drawn this frame, as screen boxes (read by the smoke test)
 // how many of the shown pins face the camera, the importance-weighted centre of them all, and the regions of those
 // out of view; measured each frame by placePinSprites
 export let pinsSeen = { shown: 0, facing: 0, x: 0, y: 0, z: 0, behind: new Map() };
+// The screen's controls, as boxes the label placer treats as taken, so no name draws under the header, a panel or
+// the time console. Measured at most five times a second, not every frame.
+const CHROME = ['#masthead > div:first-child', '#masthead .search', '#legend', '#notice', '#planet', '#panel', '#time', '#vitals', '#cue', '#seqbar', '#pinlist', '#empty'];
+let chrome = [],
+  chromeAt = -1e9;
+function chromeRects(now) {
+  if (now - chromeAt > 200) {
+    chromeAt = now;
+    chrome = [];
+    for (const sel of CHROME) {
+      const el = document.querySelector(sel),
+        r = el?.getBoundingClientRect();
+      if (r && r.width && r.height && getComputedStyle(el).visibility !== 'hidden') chrome.push([r.left - 4, r.top - 4, r.right + 4, r.bottom + 4]);
+    }
+  }
+  return chrome.slice();
+}
 // Dense spots become one count badge. The cell follows the camera height, about a badge's width on screen; the open
 // record stays out of it. Up close only records at nearly the same place remain together, so a stack stays reachable.
 export function clusterPins(pins) {

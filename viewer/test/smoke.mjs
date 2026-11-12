@@ -96,6 +96,11 @@ async function run(name, opts, budget) {
     check(await soon(() => { const l = document.querySelector('#legend'); return !l.classList.contains('collapsed') && Math.abs(l.getBoundingClientRect().bottom - innerHeight) < 2; }),
       'Layers opens the legend as a bottom sheet');
     await page.keyboard.press('Escape');
+    const under = await page.evaluate(async () => {
+      const { labelBoxes } = await import('./app/pins.js'), h = document.querySelector('#masthead > div:first-child').getBoundingClientRect();
+      return labelBoxes.filter(([a, b, c, d]) => a < h.right && c > h.left && b < h.bottom && d > h.top).length;
+    });
+    check(under === 0, `no pin name draws beneath the phone header (${under})`);
     const console_ = await page.evaluate(() => document.querySelector('#time').getBoundingClientRect().height);
     check(console_ <= 120, `the phone time console is no taller than 120 px (${console_}px)`);
     const small = await page.evaluate(() => [...document.querySelectorAll('button, [role=tab]')].filter(b => {
