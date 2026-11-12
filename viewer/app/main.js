@@ -1100,9 +1100,16 @@ function onThisDay() {
 // The welcome is a modal dialog: a backdrop, focus kept inside, Escape closes. Three main choices (the film, a tour,
 // exploring), with "On this day" below; the tours are listed when Take a tour is chosen.
 const welcome = $('#welcome');
+// the newest records (api/recent.json, written by the build), the latest few named on the welcome
+const loadRecent = () =>
+  fetch('api/recent.json')
+    .then(r => (r.ok ? r.json() : []))
+    .catch(() => []);
 async function openWelcome() {
-  const list = await loadTours(),
-    today = onThisDay();
+  const [list, recent] = await Promise.all([loadTours(), loadRecent()]),
+    today = onThisDay(),
+    known = new Set(state.pins.map(p => p.id)),
+    fresh = recent.filter(r => known.has(r.id)).slice(0, 3);
   welcome.innerHTML = `<h2 id="welcome-title">Living Atlas</h2>
     <p>Earth and human history, placed where and when it happened. Drag the globe, move the time bar, and open any pin to read its record and sources.</p>
     <div class="w-main">
@@ -1111,7 +1118,8 @@ async function openWelcome() {
       <button id="welcome-close" class="w-choice" autofocus><b>Explore</b><span>The globe, on your own</span></button>
     </div>
     <ul id="w-tours" class="tour-list" hidden>${list.map(t => `<li><button data-tour="${esc(t.id)}"><b>${esc(t.title)}</b><span>${esc(t.blurb)} ${t.stops.length} stops.</span></button></li>`).join('')}</ul>
-    ${today.length ? `<h3>On this day</h3><ul class="tour-list w-today">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
+    ${fresh.length ? `<h3>Recently added <a class="w-feed" href="browse.html">more</a></h3><ul class="tour-list w-today w-recent">${fresh.map(r => `<li><button data-id="${esc(r.id)}" title="${esc(r.display)}"><b>${esc(r.title)}</b><span>${esc(r.display)}</span></button></li>`).join('')}</ul>` : ''}
+    ${today.length ? `<h3>On this day</h3><ul class="tour-list w-today">${today.map(p => `<li><button data-id="${esc(p.id)}" title="${esc(p.display)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
     <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span></div>`;
   welcome.querySelectorAll('button[data-tour]').forEach(b => {
     b.onclick = () => startTour(b.dataset.tour, 0, true); // chosen from the welcome, a tour plays itself

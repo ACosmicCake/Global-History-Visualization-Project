@@ -29,6 +29,7 @@ function shell({ title, desc, path, root, body, image, type = 'website' }) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${root}site/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${root}site/pages.css">
+<link rel="alternate" type="application/atom+xml" title="Living Atlas: recently added" href="${root}feed.xml">
 </head>
 <body>
 <header class="top"><a class="home" href="${root}index.html">Living Atlas</a><nav><a href="${root}browse.html">All records</a><a href="${root}about.html">How this is made</a></nav></header>
@@ -79,10 +80,11 @@ const ERAS = [
   ['First farmers and cities', SCALE_START.civilization, -500], ['500 BCE to 500 CE', -500, 500], ['500 to 1000', 500, 1000], ['1000 to 1500', 1000, SCALE_START.modern],
   ['1500 to 1800', SCALE_START.modern, 1800], ['1800 to 1900', 1800, 1900], ['1900 to 1950', 1900, 1950], ['1950 to today', 1950, Infinity],
 ];
-export function browsePage(recs) {
+export function browsePage(recs, recent = recentPayload(recs)) {
   const sorted = [...recs].sort((a, b) => a.when.start.year - b.when.start.year || a.title.localeCompare(b.title));
   const body = `<h1>All records</h1>
 <p>Every record in the atlas in time order, ${recs.length.toLocaleString('en')} in all. This page needs no 3D graphics, so it also works on older devices and with screen readers.</p>
+${recent.length ? `<section class="recent"><h2>Recently added <small><a href="feed.xml">Feed</a></small></h2><ul class="list">${recent.slice(0, 10).map(r => `<li><a href="r/${esc(r.id)}.html">${esc(r.title)}</a> <small>${esc(r.display)} · added ${esc(r.added.slice(0, 10))}</small></li>`).join('')}</ul></section>` : ''}
 <label class="filter">Filter this page <input id="f" type="search" autocomplete="off"></label>
 ${ERAS.map(([name, from, to]) => {
     const rows = sorted.filter(r => r.when.start.year >= from && r.when.start.year < to);
@@ -105,3 +107,77 @@ ${recs.map(r => `<url><loc>${esc(`${SITE_URL}r/${r.id}.html`)}</loc>${r.updated 
 </urlset>
 `;
 export const robots = () => `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`;
+
+// The newest records, by when each was first published (its own published_at; its last update if that is missing).
+// Written to api/recent.json for the welcome card, listed on the browse page, and published as an Atom feed.
+export function recentPayload(recs, n = 20) {
+  const when = r => String(r.published_at || r.updated || '');
+  return [...recs]
+    .filter(r => when(r))
+    .sort((a, b) => when(b).localeCompare(when(a)) || a.id.localeCompare(b.id))
+    .slice(0, n)
+    .map(r => ({ id: r.id, title: r.title, display: r.when?.display || '', added: when(r), summary: clip(r.summary, 300) }));
+}
+// Atom 1.0 (RFC 4287): one entry per recent record, linking to its plain page
+export function feed(recent) {
+  const stamp = s => (/T/.test(s) ? new Date(s) : new Date(`${s}T00:00:00Z`)).toISOString();
+  const updated = recent.length ? stamp(recent[0].added) : new Date(0).toISOString();
+  return `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Living Atlas: recently added</title>
+<subtitle>New records in the Living Atlas, a globe of Earth and human history with sources.</subtitle>
+<id>${esc(SITE_URL)}feed.xml</id>
+<link rel="self" type="application/atom+xml" href="${esc(SITE_URL)}feed.xml"/>
+<link rel="alternate" type="text/html" href="${esc(SITE_URL)}browse.html"/>
+<updated>${updated}</updated>
+<author><name>Living Atlas</name></author>
+${recent.map(r => `<entry>
+<title>${esc(r.title)}</title>
+<id>${esc(`${SITE_URL}r/${r.id}.html`)}</id>
+<link rel="alternate" type="text/html" href="${esc(`${SITE_URL}r/${r.id}.html`)}"/>
+<updated>${stamp(r.added)}</updated>
+<summary>${esc(`${r.display}. ${r.summary}`)}</summary>
+</entry>`).join('\n')}
+</feed>
+`;
+}
+
+// Where the atlas is thin: every live record (full and short) counted by region and era, as a plain table shaded by
+// count, with the emptiest cells of human history named. Counted from the records at build time, so it is never stale.
+// A record in several regions counts once in each; records for the whole planet are counted apart.
+export function coveragePage(recs) {
+  const regions = Object.keys(REGION_LABELS).filter(k => k !== 'global'),
+    count = new Map(),
+    key = (reg, i) => `${reg}|${i}`;
+  let planet = 0;
+  for (const r of recs) {
+    const y = r.when?.start?.year, i = ERAS.findIndex(([, from, to]) => y >= from && y < to);
+    if (i < 0) continue;
+    const regs = (r.regions || []).filter(x => regions.includes(x));
+    if (!regs.length) planet++;
+    for (const reg of new Set(regs)) count.set(key(reg, i), (count.get(key(reg, i)) || 0) + 1);
+  }
+  const max = Math.max(1, ...count.values()),
+    shade = n => (n ? (0.12 + 0.88 * Math.log(1 + n) / Math.log(1 + max)).toFixed(2) : 0);
+  const human = ERAS.map((e, i) => i).filter(i => ERAS[i][1] >= SCALE_START.civilization),
+    people = regions.filter(r => !['antarctica', 'oceans'].includes(r));
+  const thin = people.flatMap(reg => human.map(i => ({ reg, i, n: count.get(key(reg, i)) || 0 })))
+    .sort((a, b) => a.n - b.n || a.i - b.i)
+    .slice(0, 12);
+  const body = `<h1>Where the atlas is thin</h1>
+<p>Every record in the atlas, ${recs.length.toLocaleString('en')} in all, counted by the region it is placed in and the era it begins in. Darker cells hold more records. A record placed in several regions counts in each; ${planet.toLocaleString('en')} records about the whole planet are left out of the table.</p>
+<p>The atlas grows from a queue that favours its emptiest cells, so the gaps below are where new records are most needed.</p>
+<h2>The emptiest cells of human history</h2>
+<ul class="list thin">${thin.map(c => `<li>${esc(REGION_LABELS[c.reg])}, ${esc(ERAS[c.i][0].replace(/^./, m => m.toLowerCase()))} <small>${c.n ? `${c.n} record${c.n === 1 ? '' : 's'}` : 'no records'}</small></li>`).join('')}</ul>
+<h2>Regions and eras</h2>
+<div class="cov-wrap"><table class="cov">
+<thead><tr><th scope="col">Region</th>${ERAS.map(([name]) => `<th scope="col">${esc(name)}</th>`).join('')}</tr></thead>
+<tbody>
+${regions.map(reg => `<tr><th scope="row">${esc(REGION_LABELS[reg].replace(/^the /, '').replace(/^./, m => m.toUpperCase()))}</th>${ERAS.map((e, i) => {
+    const n = count.get(key(reg, i)) || 0;
+    return `<td style="--a:${shade(n)}"${n ? '' : ' class="none"'}>${n || '·'}</td>`;
+  }).join('')}</tr>`).join('\n')}
+</tbody></table></div>
+<p><small>Regions follow the United Nations geoscheme, with the oceans and Antarctica added. Counts include short records (outlines) as well as full ones.</small></p>`;
+  return shell({ title: 'Where the atlas is thin · Living Atlas', desc: 'How many records the Living Atlas holds for each region and era, and where it is thinnest.', path: 'coverage.html', root: '', body });
+}

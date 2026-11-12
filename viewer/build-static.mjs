@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { published, pinsPayload, teasersPayload, recordPayload, searchPayload, linkIndex, readLinks } from './api.mjs';
-import { recordPage, browsePage, sitemap, robots } from './pages.mjs';
+import { recordPage, browsePage, sitemap, robots, recentPayload, feed } from './pages.mjs';
 import { execFileSync } from 'node:child_process';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -33,7 +33,10 @@ for (const r of recs) {
   fs.writeFileSync(path.join(OUT, 'api', 'record', `${r.id}.json`), JSON.stringify(pub));
   fs.writeFileSync(path.join(OUT, 'r', `${r.id}.html`), recordPage(pub, titles));
 }
-fs.writeFileSync(path.join(OUT, 'browse.html'), browsePage(recs));
+const recent = recentPayload(recs);
+fs.writeFileSync(path.join(OUT, 'api', 'recent.json'), JSON.stringify(recent));
+fs.writeFileSync(path.join(OUT, 'feed.xml'), feed(recent));
+fs.writeFileSync(path.join(OUT, 'browse.html'), browsePage(recs, recent));
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), sitemap(recs));
 fs.writeFileSync(path.join(OUT, 'robots.txt'), robots());
 // Which deploy is live, for the service worker (sw.js): a new version empties its cache. Set "sw" to false here to switch

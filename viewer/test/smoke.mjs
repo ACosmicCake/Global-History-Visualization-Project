@@ -59,6 +59,8 @@ async function run(name, opts, budget) {
   await soon(() => document.querySelector('#welcome').open);
   const fits = await page.evaluate(() => { const d = document.querySelector('#welcome'); return d.open && d.scrollHeight <= d.clientHeight + 1; });
   check(fits, 'the welcome dialog opens and fits the screen without scrolling');
+  const recent = await page.evaluate(() => document.querySelectorAll('#welcome .w-recent button[data-id]').length);
+  check(recent > 0, `the welcome names recently added records (${recent})`);
   let inside = true;
   for (let i = 0; i < 12; i++) { await page.keyboard.press('Tab'); inside &&= await page.evaluate(() => !!document.activeElement?.closest('#welcome')); }
   check(inside, 'Tab never leaves the open welcome dialog');
