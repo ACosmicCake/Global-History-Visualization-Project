@@ -303,7 +303,7 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
 const zoomK = () => Math.min(1, Math.max(0.0015, state.alt / 1.8)); // pins and labels shrink as the camera comes in, down to street scale
 const tip = p => (p.cluster
   ? `<div class="tip"><span class="d">${p.cluster.length} records here</span>${p.cluster.slice(0, 6).map(x => `<p>${esc(x.title)}</p>`).join('')}${p.cluster.length > 6 ? '<p>…</p>' : ''}</div>`
-  : `<div class="tip"><span class="d">${esc(p.display)}${p.outline ? '' : ' · full story'}${p.unc >= 100 ? ` · place within about ${Math.round(p.unc).toLocaleString()} km` : ''}</span><b>${esc(p.title)}</b><p>${esc(p.summary)}</p></div>`);
+  : `<div class="tip"><span class="d">${esc(p.display)}${p.outline ? '' : ' · full story'}${p.unc >= 100 ? ` · place within about ${Math.round(p.unc).toLocaleString()} km` : ''}</span><b>${esc(p.title)}</b>${p.summary ? `<p>${esc(p.summary)}</p>` : ''}</div>`);
 // High-density screens (2x, 3x) would render 4–9 times the pixels for little visible gain on a moving globe: cap the
 // drawing resolution at 1.5x (and antialias only at 1x, where it is needed and cheap)
 const PR = Math.min(window.devicePixelRatio || 1, 1.5);
@@ -785,6 +785,7 @@ function drawDensity() {
 function buildChrome() {
   $('#levels').innerHTML = LEVELS.map((l, i) => `<button role="tab" data-i="${i}">${l.name}</button>`).join('');
   $('#levels').querySelectorAll('button').forEach(b => { b.onclick = () => setLevel(+b.dataset.i); });
+  $('#levels').querySelectorAll('button').forEach(b => { const from = LEVELS[+b.dataset.i].from; if (from < -2e6) prefetchPaleo(b); if (from < -10000) prefetchIceAge(b); });
   $('#context').innerHTML = EONS.map(e => `<div class="eon" style="flex:${e.to - e.from};background:${e.color}" title="${e.name} eon"><span>${e.name}</span></div>`).join('')
     + '<div class="win"></div><div class="humans" title="Human history"></div>';
 }
@@ -1001,7 +1002,7 @@ const CLOSE_ICON = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden=
 function panelFromPin(p) {
   const panel = $('#panel');
   panel.innerHTML = `<div class="p-head"><button class="p-close" aria-label="Close record">${CLOSE_ICON}</button></div>
-    <div class="p-body"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div><div class="prose"><p>${esc(p.summary)}</p></div></div>`;
+    <div class="p-body"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div><div class="prose">${p.summary ? `<p>${esc(p.summary)}</p>` : ''}</div></div>`;
   show(panel, true); show($('#notice'), false);
   panel.querySelector('.p-close').onclick = closePanel;
   panel.querySelector('.p-close').focus({ preventScroll: true });
@@ -1256,7 +1257,11 @@ function endFilm() {
   state.film = false; document.body.classList.remove('film'); show($('#film'), false);
   globe.camera().clearViewOffset(); globe.controls().enabled = true; seqPaused = false; updateSky(); render();
 }
-function startFilm() {
+// The plate model loads on demand; a pointer or focus on a way into deep time starts the download early.
+const loadPaleo = () => window.Space?.loadPaleo?.() || Promise.resolve();
+function prefetchIceAge(el) { for (const ev of ['pointerenter', 'focus', 'touchstart']) el.addEventListener(ev, () => window.Space?.loadIceAge?.(), { once: true, passive: true }); }
+function prefetchPaleo(el) { for (const ev of ['pointerenter', 'focus', 'touchstart']) el.addEventListener(ev, () => loadPaleo(), { once: true, passive: true }); }
+async function startFilm() {
   if (!deepTime) return;
   closeWelcome(); if (state.selected) closePanel(); if (timer) stopPlay();
   const f = deepTime.film, box = $('#film');
@@ -1275,6 +1280,8 @@ function startFilm() {
       if (c) $('#film-text').classList.add('on');
     }, 350);
   };
+  await loadPaleo();   // the moving continents must be ready before the first frame
+  if (!state.film) return;   // closed while it loaded
   let lastDate = '', ended = false;
   window.Sequence.film(f, {
     globe, getTime: () => state.t,
@@ -1322,7 +1329,7 @@ async function openWelcome() {
   box.querySelectorAll('button[data-tour]').forEach(b => { b.onclick = () => startTour(b.dataset.tour); });
   box.querySelectorAll('button[data-id]').forEach(b => { b.onclick = () => { closeWelcome(); goTo(b.dataset.id); }; });
   box.querySelector('#welcome-close').onclick = closeWelcome;
-  box.querySelector('#film-btn').onclick = startFilm;
+  box.querySelector('#film-btn').onclick = startFilm; prefetchPaleo(box.querySelector('#film-btn'));
   show(box, true); box.querySelector('button')?.focus({ preventScroll: true });
 }
 function closeWelcome() { if ($('#welcome').hidden) return; show($('#welcome'), false); try { localStorage.setItem('atlas.welcomed', '1'); } catch {} }
@@ -1370,10 +1377,11 @@ async function refresh() {
     const sig = d.pins.map(p => p.id + p.updated).join('|');
     if (sig === lastSig) return;
     if (lastSig) recordCache.clear();   // something changed on the live server
-    lastSig = sig; state.pins = d.pins;
+    lastSig = sig; state.pins = d.pins.map(window.AtlasPins.expand);
     $('#count').textContent = `${(d.count + d.outlines).toLocaleString()} records`;
     $('#count').title = `${d.count} full records, ${d.outlines.toLocaleString()} outlines`;
     buildLegend(); render();
+    if (teasers || teasersWanted) applyTeasers();
   } catch (e) {
     // a failed check for new records changes nothing while the records already loaded are on screen: stay quiet and try again next time
     if (state.pins.length) console.warn('atlas data refresh failed', e);
@@ -1381,6 +1389,24 @@ async function refresh() {
   }
   $('#loading').classList.add('gone');
   setTimeout(() => show($('#loading'), false), 700); // don't rely on the fade finishing
+}
+// Tooltip teasers (api/teasers.json, 0.5 MB) load at the visitor's first move, tap or key press, so a first visit that
+// only looks does not download them; until they arrive a tooltip or the instant panel shows no summary. Locally they
+// are fetched again whenever the pins change.
+let teasers = null, teasersSig = '', teasersWanted = false, teasersLoad = null;
+function wantTeasers(e) {
+  if (teasersWanted || (e.type === 'pointermove' && !e.movementX && !e.movementY)) return;   // the browser's own synthetic moves don't count
+  teasersWanted = true; dataReady.then(applyTeasers);
+}
+for (const ev of ['pointermove', 'pointerdown', 'keydown', 'wheel']) addEventListener(ev, wantTeasers, { passive: true });
+async function applyTeasers() {
+  if (!teasers || (LIVE && teasersSig !== lastSig)) {
+    const sig = lastSig;   // one request at a time, shared by every caller
+    teasersLoad = teasersLoad || fetch('api/teasers.json', { cache: LIVE ? 'no-store' : 'default' }).then(r => r.json()).finally(() => { teasersLoad = null; });
+    try { teasers = await teasersLoad; teasersSig = sig; }
+    catch (e) { console.warn('atlas teasers failed', e); return; }
+  }
+  for (const p of state.pins) if (teasers[p.id] != null) p.summary = teasers[p.id];
 }
 // collapsible legend; remembered per viewer (storage may be unavailable, so it is optional)
 const legendKey = `atlas.legend.collapsed.${innerWidth < 760 ? 'phone' : 'desktop'}`;

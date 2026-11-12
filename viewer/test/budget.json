@@ -1,5 +1,5 @@
 {
-  "_note": "Size limits in bytes, about 10% above the sizes measured on 2026-11-12 (pins.json 1.76 MB; first phone load 11.8 to 12.0 MB). pinsJson is checked by build-static.mjs; firstLoadPhone by smoke.mjs: everything a phone downloads in its first 15 seconds with no interaction, other hosts excluded. Lower them as the site gets lighter; raise one only with a reason in the commit.",
-  "pinsJson": 1930000,
-  "firstLoadPhone": 13000000
+  "_note": "Size limits in bytes, 10% above the Phase 1 targets (1.0 MB and 6 MB) so new records do not fail the build at once. pinsJson is checked by build-static.mjs; firstLoadPhone by smoke.mjs: everything a phone downloads in its first 15 seconds with no interaction, other hosts excluded. On 2026-11-12 the sizes were 0.96 MB and 5.6 MB, down from 1.76 MB and 12.0 MB. pins.json grows about 0.4 KB per record. Lower them as the site gets lighter; raise one only with a reason in the commit.",
+  "pinsJson": 1100000,
+  "firstLoadPhone": 6600000
 }

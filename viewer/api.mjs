@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import pinsFormat from './pins-format.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 // ATLAS_RECORDS points the data layer at another folder of records (the unit tests use viewer/test/fixtures/records).
@@ -44,7 +45,7 @@ function pin(r) {
     display: r.when?.display, lat: r.where?.lat, lon: r.where?.lon, global: (r.where?.uncertainty_km ?? 0) >= 5000 || r.where?.geometry?.type === 'global', paleo: r.where?.paleo?.lat != null ? r.where.paleo : null,
     geometry: r.where?.geometry?.type, waypoints: (r.where?.geometry?.waypoints || []).map(w => ({ lat: w.lat, lon: w.lon, year: typeof w.year === 'number' ? w.year : null, date: w.date, label: w.label })),
     regions: (r.where?.geometry?.regions || []).map(g => ({ lat: g.lat, lon: g.lon, name: g.name })),
-    outline: r.status === 'outline', hasModel: !!r.model, updated: r.updated, aliases: (r.aliases || []).map(a => a.name).filter(Boolean),
+    outline: r.status === 'outline', updated: r.updated, aliases: (r.aliases || []).map(a => a.name).filter(Boolean),
     region: r.regions?.[0], unc: r.where?.uncertainty_km, md: monthDay(r),
   };
 }
@@ -71,8 +72,14 @@ export function published() {
   return out;
 }
 
+// The pin list in its compact form (pins-format.js): common values left out, and no teasers, which load after the
+// first render from teasersPayload. The viewer expands each pin back to the full pin() shape.
 export function pinsPayload(recs = published()) {
-  return { generated: new Date().toISOString(), count: recs.filter(r => r.status === 'published').length, outlines: recs.filter(r => r.status === 'outline').length, pins: recs.map(r => pin(r)) };
+  return { generated: new Date().toISOString(), count: recs.filter(r => r.status === 'published').length, outlines: recs.filter(r => r.status === 'outline').length, pins: recs.map(r => pinsFormat.compact(pin(r))) };
+}
+// id -> the short summary shown in the hover tooltip and the panel that opens before the full record arrives
+export function teasersPayload(recs = published()) {
+  return Object.fromEntries(recs.map(r => [r.id, teaser(r.summary)]));
 }
 
 const readLinks = () => { try { return JSON.parse(fs.readFileSync(WIKI_LINKS, 'utf8')); } catch { return {}; } };

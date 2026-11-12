@@ -51,8 +51,11 @@ async function run(name, opts, budget) {
     const total = loaded.reduce((a, [, n]) => a + n, 0);
     console.log(`       first load: ${loaded.length} requests, ${MB(total)}; largest: ${[...loaded].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([u, n]) => `${u} ${MB(n)}`).join(', ')}`);
     check(total <= budget, `first load within budget (${MB(total)} of ${MB(budget)}, viewer/test/budget.json)`);
+    check(!loaded.some(([u]) => u.includes('paleo/morph.json')), 'the plate model is not loaded until deep time is asked for');
   }
   await page.evaluate(() => document.querySelector('#welcome-close')?.click());
+  await page.mouse.move(200, 300);
+  check(await soon(() => window.atlas.state.pins.filter(p => p.summary).length > 2000), 'tooltip teasers arrive at the first pointer move');
 
   // a full record with sources: chosen from the data, so the test does not depend on one record's id
   const id = await page.evaluate(() => window.atlas.state.pins.find(p => !p.outline && p.importance === 5 && p.lat != null && !p.global)?.id);
