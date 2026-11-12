@@ -3,7 +3,8 @@
 import { $, esc } from './dom.js';
 import { EARTH, LEVELS, NOW, domainOn, inLevel, range } from './time.js';
 import { state } from './state.js';
-import { deepTime, drawVitalCurve, goTo, render, setLevel } from './main.js';
+import { deepTime, goTo, render, setLevel } from './main.js';
+import { drawVitalCurve } from './vitals.js';
 
 // mass extinctions and ice ages on the time bar, for the scales that reach them. A click on an extinction opens its record. Ice ages are only a tint: they sit where people grab the bar, and one that
 // fills most of the scale, as Antarctica's ice does on every short one, says nothing there, so it isn't drawn.

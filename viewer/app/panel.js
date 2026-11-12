@@ -5,7 +5,9 @@ import { $, esc, show } from './dom.js';
 import { DOMAINS } from './badges.js';
 import { NOW, fmtSpan, fmtYear } from './time.js';
 import { placed } from './pins.js';
-import { LIVE, deepTime, flash, globe, goTo, playSequence, render, tourNav, tourStep, writeURL } from './main.js';
+import { LIVE, deepTime, globe, goTo, playSequence, render } from './main.js';
+import { flash, writeURL } from './url.js';
+import { tourNav, tourStep } from './tours.js';
 
 // ---------- record panel (all record text is escaped: records are data written by agents)
 export const CONF_LABEL = { established: 'Established', probable: 'Probable', contested: 'Contested', legendary: 'Legendary' };
