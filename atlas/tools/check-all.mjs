@@ -24,8 +24,15 @@ const deep = JSON.parse(fs.readFileSync(path.join(VIEWER, 'deeptime.json'), 'utf
 for (const id of Object.keys(deep.scenes)) if (!liveIds.has(id)) fails.push(`deeptime scene: unknown record ${id}`);
 for (const m of deep.marks) if (m.id && !liveIds.has(m.id)) fails.push(`deeptime mark: unknown record ${m.id}`);
 for (const c of deep.film.chapters) if (!liveIds.has(c.record)) fails.push(`deeptime film: unknown record ${c.record}`);
-for (const f of ['app/main.js', 'space.js', 'spacecraft.js', 'borders.js', 'deeptime.js', 'fossils.js', 'sequence.js', 'pins-format.js', 'sw.js', 'api.mjs', 'pages.mjs', 'server.mjs', 'build-static.mjs']) {
+// every script and module of the viewer, found by pattern so a new file is checked without editing a list (vendored
+// libraries, installed packages and the 3D model sources are left out)
+const SKIP_DIRS = new Set(['vendor', 'node_modules', 'models']);
+const viewerFiles = (dir = VIEWER) => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? (SKIP_DIRS.has(e.name) ? [] : viewerFiles(path.join(dir, e.name))) : /\.(m?js)$/.test(e.name) ? [path.join(dir, e.name)] : []);
+const scripts = viewerFiles().map(f => path.relative(VIEWER, f));
+for (const f of scripts) {
   try { execFileSync(process.execPath, ['--check', path.join(VIEWER, f)], { stdio: 'pipe' }); } catch (e) { fails.push(`viewer/${f}: ${String(e.stderr).split('\n').slice(0, 5).join(' ')}`); }
 }
+// the browser's ES modules link: every import names a file that exists and a name it exports
+try { execFileSync(process.execPath, ['--experimental-vm-modules', '--no-warnings', path.join(VIEWER, 'test', 'link.mjs')], { stdio: 'pipe' }); } catch (e) { fails.push(`viewer/app modules do not link: ${String(e.stderr).trim().split('\n').slice(0, 3).join(' ')}`); }
 if (fails.length) { console.error(`${fails.length} problem(s):\n` + fails.slice(0, 200).join('\n')); process.exit(1); }
-console.log(`ok: ${recs.length} record files, ${live.length} live, viewer scripts parse`);
+console.log(`ok: ${recs.length} record files, ${live.length} live, ${scripts.length} viewer scripts parse and the modules link`);
