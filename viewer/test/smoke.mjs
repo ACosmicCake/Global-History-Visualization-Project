@@ -51,6 +51,7 @@ async function run(name, opts, budget) {
     const total = loaded.reduce((a, [, n]) => a + n, 0);
     console.log(`       first load: ${loaded.length} requests, ${MB(total)}; largest: ${[...loaded].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([u, n]) => `${u} ${MB(n)}`).join(', ')}`);
     check(total <= budget, `first load within budget (${MB(total)} of ${MB(budget)}, viewer/test/budget.json)`);
+    check(!loaded.some(([u]) => u.includes('paleo/morph.json')), 'the plate model is not loaded until deep time is asked for');
   }
   await page.evaluate(() => document.querySelector('#welcome-close')?.click());
 

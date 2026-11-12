@@ -264,7 +264,8 @@
     // Clouds: a translucent shell lit by the same sun
     // the cloud image (0.4 MB) loads the first time clouds are turned on; until then the shell is fully transparent
     const cloudUniforms = { map: { value: new THREE.Texture() }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 } };
-    idle(() => loadMorph(), 6000);   // the plate data, ready before anyone scrolls into deep time
+    // The plate data (4 MB) is not loaded up front: setPaleo loads it when the date passes 2 million years ago, and the viewer
+    // prefetches it when a pointer or focus reaches a deep-time scale or the film (Space.loadPaleo).
     idle(() => { if (!navigator.connection?.saveData) { loadShelf(); loadIce(); } }, 9000);   // likewise the ice-age coastlines and ice sheets
     loadClouds = () => { loadClouds = () => {}; loader.load('assets/earth-clouds.jpg', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }); };
     cloudMat = new THREE.ShaderMaterial({
@@ -848,5 +849,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { get morph() { return morph; }, get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, showPlateEdges(on) { if (on === plateShow) return; plateShow = on; if (paleoMa != null && landMat) setPlateLines(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { get morph() { return morph; }, get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, loadPaleo: () => loadMorph(), showPlateEdges(on) { if (on === plateShow) return; plateShow = on; if (paleoMa != null && landMat) setPlateLines(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();

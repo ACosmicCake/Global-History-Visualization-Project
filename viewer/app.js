@@ -785,6 +785,7 @@ function drawDensity() {
 function buildChrome() {
   $('#levels').innerHTML = LEVELS.map((l, i) => `<button role="tab" data-i="${i}">${l.name}</button>`).join('');
   $('#levels').querySelectorAll('button').forEach(b => { b.onclick = () => setLevel(+b.dataset.i); });
+  $('#levels').querySelectorAll('button').forEach(b => { if (LEVELS[+b.dataset.i].from < -2e6) prefetchPaleo(b); });
   $('#context').innerHTML = EONS.map(e => `<div class="eon" style="flex:${e.to - e.from};background:${e.color}" title="${e.name} eon"><span>${e.name}</span></div>`).join('')
     + '<div class="win"></div><div class="humans" title="Human history"></div>';
 }
@@ -1256,7 +1257,10 @@ function endFilm() {
   state.film = false; document.body.classList.remove('film'); show($('#film'), false);
   globe.camera().clearViewOffset(); globe.controls().enabled = true; seqPaused = false; updateSky(); render();
 }
-function startFilm() {
+// The plate model loads on demand; a pointer or focus on a way into deep time starts the download early.
+const loadPaleo = () => window.Space?.loadPaleo?.() || Promise.resolve();
+function prefetchPaleo(el) { for (const ev of ['pointerenter', 'focus', 'touchstart']) el.addEventListener(ev, () => loadPaleo(), { once: true, passive: true }); }
+async function startFilm() {
   if (!deepTime) return;
   closeWelcome(); if (state.selected) closePanel(); if (timer) stopPlay();
   const f = deepTime.film, box = $('#film');
@@ -1275,6 +1279,8 @@ function startFilm() {
       if (c) $('#film-text').classList.add('on');
     }, 350);
   };
+  await loadPaleo();   // the moving continents must be ready before the first frame
+  if (!state.film) return;   // closed while it loaded
   let lastDate = '', ended = false;
   window.Sequence.film(f, {
     globe, getTime: () => state.t,
@@ -1322,7 +1328,7 @@ async function openWelcome() {
   box.querySelectorAll('button[data-tour]').forEach(b => { b.onclick = () => startTour(b.dataset.tour); });
   box.querySelectorAll('button[data-id]').forEach(b => { b.onclick = () => { closeWelcome(); goTo(b.dataset.id); }; });
   box.querySelector('#welcome-close').onclick = closeWelcome;
-  box.querySelector('#film-btn').onclick = startFilm;
+  box.querySelector('#film-btn').onclick = startFilm; prefetchPaleo(box.querySelector('#film-btn'));
   show(box, true); box.querySelector('button')?.focus({ preventScroll: true });
 }
 function closeWelcome() { if ($('#welcome').hidden) return; show($('#welcome'), false); try { localStorage.setItem('atlas.welcomed', '1'); } catch {} }
