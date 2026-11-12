@@ -1,4 +1,4 @@
-// The compact form of api/pins.json, shared by the data layer (api.mjs, which writes it) and the viewer (app.js,
+// The compact form of api/pins.json, shared by the data layer (api.mjs, which writes it) and the viewer (app/main.js,
 // which reads it). A pin leaves out every field that holds its common value, and the viewer puts them back once after
 // fetching, so the rest of the viewer reads the same fields as before. Tooltip teasers travel separately in
 // api/teasers.json. Loaded as a classic script in the browser (window.AtlasPins) and with import in Node.
