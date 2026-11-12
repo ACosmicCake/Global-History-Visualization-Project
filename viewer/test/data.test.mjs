@@ -10,7 +10,7 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURES = path.join(HERE, 'fixtures', 'records');
 process.env.ATLAS_RECORDS = FIXTURES;   // must be set before api.mjs is loaded
 const api = await import('../api.mjs');
-const { recordPage } = await import('../pages.mjs');
+const { recordPage, recentPayload, feed, coveragePage } = await import('../pages.mjs');
 const pinsFormat = (await import('../pins-format.js')).default;
 
 const rec = id => JSON.parse(fs.readFileSync(path.join(FIXTURES, `${id}.json`), 'utf8'));
@@ -184,4 +184,48 @@ test('recordPage escapes record text', () => {
   const html = recordPage(pub, new Map([[pub.id, pub.title]]));
   assert.ok(!html.includes('<script>alert(1)</script>'));
   assert.ok(html.includes('&lt;script&gt;alert(1)&lt;/script&gt; &amp; &quot;quotes&quot;'));
+});
+
+test('recordPage carries JSON-LD that parses, with headline, dates and citations, and record text cannot end the script', () => {
+  for (const id of api.published().map(r => r.id)) {
+    const pub = api.recordPayload(id, {}, new Map());
+    const html = recordPage(pub, new Map([[pub.id, pub.title]]));
+    const m = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+    assert.ok(m, `${id}: no JSON-LD`);
+    const ld = JSON.parse(m[1]);
+    assert.equal(ld['@type'], 'Article');
+    assert.ok(ld.headline && Array.isArray(ld.citation), id);
+    if (pub.updated) assert.equal(ld.dateModified, String(pub.updated).slice(0, 10));
+    assert.equal(ld.citation.length, (pub.sources || []).filter(s => s.url).length);
+    assert.ok(!m[1].includes('<'), `${id}: a raw < inside the JSON-LD`);
+  }
+});
+
+test('recentPayload lists the newest records first, at most n', () => {
+  const dated = api.published().filter(r => r.published_at || r.updated).length,
+    recent = recentPayload(api.published(), 1);
+  assert.ok(dated >= 2);
+  assert.equal(recent.length, 1);
+  assert.equal(recentPayload(api.published(), 100).length, dated);
+  const all = recentPayload(api.published());
+  for (let i = 1; i < all.length; i++) assert.ok(all[i - 1].added >= all[i].added);
+  assert.deepEqual(Object.keys(recent[0]).sort(), ['added', 'display', 'id', 'summary', 'title']);
+});
+
+test('feed is Atom with one escaped entry per recent record', () => {
+  const recent = recentPayload(api.published());
+  const xml = feed(recent);
+  assert.ok(xml.startsWith('<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">'));
+  assert.equal((xml.match(/<entry>/g) || []).length, recent.length);
+  assert.equal((xml.match(/<updated>/g) || []).length, recent.length + 1);
+  assert.ok(!xml.includes('<script>'));
+  for (const u of xml.match(/<updated>[^<]*<\/updated>/g)) assert.ok(!Number.isNaN(Date.parse(u.slice(9, -10))), u);
+});
+
+test('coveragePage is a plain table that needs no script, and names the emptiest cells', () => {
+  const html = coveragePage(api.published());
+  assert.ok(!/<script/i.test(html));
+  assert.ok(html.includes('<table class="cov">'));
+  assert.ok(html.includes('The emptiest cells of human history'));
+  assert.equal((html.match(/<tr><th scope="row">/g) || []).length, 13);
 });

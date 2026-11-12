@@ -10,7 +10,28 @@ const clip = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return
 const paras = s => String(s || '').split(/\n+/).filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
 const REL = Object.fromEntries(Object.entries(RELATION_LABELS).map(([k, v]) => [k, v[0].toUpperCase() + v.slice(1)]));
 
-function shell({ title, desc, path, root, body, image, type = 'website' }) {
+// structured data for search engines (schema.org JSON-LD); "<" is escaped so record text cannot close the script
+const jsonLD = data => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
+export function recordLD(pub, image) {
+  const url = `${SITE_URL}r/${pub.id}.html`, day = s => (s ? String(s).slice(0, 10) : undefined);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: clip(pub.title, 110),
+    description: clip(pub.summary, 300),
+    url,
+    mainEntityOfPage: url,
+    datePublished: day(pub.published_at) || day(pub.updated),
+    dateModified: day(pub.updated),
+    ...(image ? { image: [image] } : {}),
+    author: { '@type': 'Organization', name: 'Living Atlas', url: SITE_URL },
+    publisher: { '@type': 'Organization', name: 'Living Atlas', url: SITE_URL },
+    isAccessibleForFree: true,
+    inLanguage: 'en',
+    citation: (pub.sources || []).filter(s => s.url).map(s => ({ '@type': 'CreativeWork', name: s.title, url: s.url, ...(s.publisher ? { publisher: { '@type': 'Organization', name: s.publisher } } : {}) })),
+  };
+}
+function shell({ title, desc, path, root, body, image, type = 'website', ld = null }) {
   const url = SITE_URL + path, img = image || `${SITE_URL}assets/og.jpg`;
   return `<!doctype html>
 <html lang="en">
@@ -29,7 +50,7 @@ function shell({ title, desc, path, root, body, image, type = 'website' }) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${root}site/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${root}site/pages.css">
-<link rel="alternate" type="application/atom+xml" title="Living Atlas: recently added" href="${root}feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Living Atlas: recently added" href="${root}feed.xml">${ld ? `\n${jsonLD(ld)}` : ''}
 </head>
 <body>
 <header class="top"><a class="home" href="${root}index.html">Living Atlas</a><nav><a href="${root}browse.html">All records</a><a href="${root}about.html">How this is made</a></nav></header>
@@ -72,7 +93,7 @@ ${rel.length ? `<h2>Connections</h2><ul class="rel">${rel.map(x => `<li><span>${
 ${wiki ? `<p><a href="${esc(wiki)}" rel="noopener noreferrer">Read more on Wikipedia</a> <small>Further reading, not one of this record’s sources.</small></p>` : ''}
 <p class="meta">Drafted and reviewed by AI models, then checked against its sources by automated tools. <a href="../about.html">How this is made</a> · <a href="${esc(reportURL(pub.id, pub.title))}" rel="noopener noreferrer">Report a problem</a> · version ${esc(pub.record_version)}, updated ${esc(pub.updated)}</p>
 </article>`;
-  return shell({ title: `${pub.title} · Living Atlas`, desc: clip(pub.summary, 160), path: `r/${pub.id}.html`, root: '../', body, image: img?.file_url, type: 'article' });
+  return shell({ title: `${pub.title} · Living Atlas`, desc: clip(pub.summary, 160), path: `r/${pub.id}.html`, root: '../', body, image: img?.file_url, type: 'article', ld: recordLD(pub, img?.file_url) });
 }
 
 const ERAS = [
