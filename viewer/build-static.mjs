@@ -39,3 +39,10 @@ let bytes = 0;
 const walk = d => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else bytes += fs.statSync(p).size; } };
 walk(OUT);
 console.log(`built ${recs.length} records -> ${path.relative(process.cwd(), OUT) || '.'} (${(bytes / 1048576).toFixed(1)} MB)`);
+
+// Size budget (viewer/test/budget.json): the pin list is on the critical path of every first visit, so it may not grow
+// unnoticed. The first-load total is measured in a browser by viewer/test/smoke.mjs.
+const budget = JSON.parse(fs.readFileSync(path.join(HERE, 'test', 'budget.json'), 'utf8'));
+const pinsBytes = fs.statSync(path.join(OUT, 'api', 'pins.json')).size, MB = n => `${(n / 1e6).toFixed(2)} MB`;
+console.log(`api/pins.json: ${MB(pinsBytes)} (budget ${MB(budget.pinsJson)})`);
+if (pinsBytes > budget.pinsJson) { console.error(`api/pins.json is over its budget in viewer/test/budget.json`); process.exit(1); }

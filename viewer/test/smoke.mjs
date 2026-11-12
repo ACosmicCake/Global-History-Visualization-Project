@@ -22,18 +22,23 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(file).pipe(res);
 });
 await new Promise(r => server.listen(0, '127.0.0.1', r));
-const BASE = `http://127.0.0.1:${server.address().port}/`;
+// served under a made-up host name, not localhost, so the viewer behaves as on the published site (no live refresh)
+const BASE = `http://atlas.test:${server.address().port}/`;
 
+const BUDGET = JSON.parse(fs.readFileSync(new URL('./budget.json', import.meta.url), 'utf8'));
+const MB = n => `${(n / 1e6).toFixed(2)} MB`;
 const fails = [];
 const check = (ok, what) => { console.log(`${ok ? '  ok ' : '  FAIL'} ${what}`); if (!ok) fails.push(what); };
-const browser = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+const browser = await chromium.launch({ args: ['--host-resolver-rules=MAP atlas.test 127.0.0.1', '--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 
-async function run(name, opts) {
+async function run(name, opts, budget) {
   console.log(name);
   const ctx = await browser.newContext(opts);
   await ctx.route(u => !u.href.startsWith(BASE), r => r.abort());
   const page = await ctx.newPage(), pageErrors = [];
   page.on('pageerror', e => pageErrors.push(String(e.stack || e).slice(0, 400)));
+  const loaded = [];   // [path, bytes] of every response from the site
+  page.on('response', r => r.body().then(b => loaded.push([r.url().slice(BASE.length - 1), b.length]), () => {}));
   const ready = () => page.waitForFunction(() => document.querySelector('#loading')?.classList.contains('gone') && window.atlas?.state.pins.length, null, { timeout: 90000 });
   const soon = (fn, arg) => page.waitForFunction(fn, arg, { timeout: 30000 }).then(() => true, () => false);
 
@@ -41,6 +46,12 @@ async function run(name, opts) {
   check(await ready().then(() => true, () => false), 'the loading screen clears');
   const pins = await page.evaluate(() => window.atlas?.state.pins.length || 0);
   check(pins > 2000, `more than 2,000 pins load (${pins})`);
+  if (budget) {   // what a first visit downloads with no interaction, including the loads the page starts once idle
+    await page.waitForTimeout(15000);
+    const total = loaded.reduce((a, [, n]) => a + n, 0);
+    console.log(`       first load: ${loaded.length} requests, ${MB(total)}; largest: ${[...loaded].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([u, n]) => `${u} ${MB(n)}`).join(', ')}`);
+    check(total <= budget, `first load within budget (${MB(total)} of ${MB(budget)}, viewer/test/budget.json)`);
+  }
   await page.evaluate(() => document.querySelector('#welcome-close')?.click());
 
   // a full record with sources: chosen from the data, so the test does not depend on one record's id
@@ -70,7 +81,7 @@ async function run(name, opts) {
 
 try {
   await run('desktop 1440×900', { viewport: { width: 1440, height: 900 } });
-  await run('phone (iPhone 13)', { ...devices['iPhone 13'] });
+  await run('phone (iPhone 13)', { ...devices['iPhone 13'] }, BUDGET.firstLoadPhone);
 } finally { await browser.close(); server.close(); }
 if (fails.length) { console.error(`\n${fails.length} smoke check(s) failed`); process.exit(1); }
 console.log('\nsmoke test passed');
