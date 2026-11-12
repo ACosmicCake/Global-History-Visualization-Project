@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 2,
+  "record_version": 3,
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:o-s62",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "id": "1789-bounty-mutiny",
   "kind": "event",
   "title": "Mutiny on the Bounty",
@@ -133,15 +133,6 @@
           "label": "Kupang, Timor: Bligh's launch arrives after 48 days.",
           "source": "src-histmar-bounty",
           "coordinate_source": "src-wd-kupang"
-        },
-        {
-          "lat": -25.070556,
-          "lon": -130.104444,
-          "year": 1790.038,
-          "date": "15 January 1790",
-          "label": "Pitcairn Island: Christian's group arrives in the Bounty. A separate journey from Bligh's launch.",
-          "source": "src-ft-bounty",
-          "coordinate_source": "src-wd-pitcairn"
         }
       ]
     },
@@ -150,7 +141,8 @@
       "src-wd-tahiti",
       "src-wd-tofua",
       "src-wd-kupang",
-      "src-wd-pitcairn"
+      "src-wd-pitcairn",
+      "src-gn-tubuai"
     ]
   },
   "regions": [
@@ -283,13 +275,27 @@
       "supports": [
         "where"
       ]
+    },
+    {
+      "id": "src-gn-tubuai",
+      "url": "https://www.geonames.org/4033252/tubuai.html",
+      "title": "Tubuai, GeoNames ID 4033252",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
     }
   ],
-  "reviewer_note": "Least sure: exact mutiny location (sources say near Tofua or near Tonga), launch length (23 vs 24 feet), and Bligh's Tahiti departure (4 vs 5 April 1789), which is not used. The path joins Bligh's launch and Christian's ship as two separate journeys.",
+  "reviewer_note": "Least sure: exact mutiny location (sources say near Tofua or near Tonga), launch length (23 vs 24 feet), and Bligh's Tahiti departure (4 vs 5 April 1789), which is not used. The path joins Bligh's launch and Christian's ship as two separate journeys. Route (2026-11-12): the line now ends at Kupang and follows Bligh's launch only. Christian's separate movements in the Bounty (Tubuai, Tahiti, Pitcairn) are shown as pulses, not joined to the launch's route.",
   "animation": {
     "template": "path",
     "spec_version": 1,
-    "duration_s": 35,
+    "duration_s": 45,
     "beats": [
       {
         "span": "1789-04-28",
@@ -306,8 +312,22 @@
         "consequence": false
       },
       {
+        "span": "1789-05-24",
+        "action": "pulse { lat: -23.366531, lon: -149.480319, radius_km: 60 }",
+        "caption": "Christian takes the Bounty to Tubuai, south of Tahiti, meaning to settle there; fighting with the islanders follows.",
+        "source": "src-ft-bounty",
+        "consequence": false
+      },
+      {
+        "span": "1789-09-21",
+        "action": "pulse { lat: -17.666667, lon: -149.466667, radius_km: 60 }",
+        "caption": "The Bounty leaves 16 men at Matavai Bay, Tahiti, and departs Tahiti for the last time.",
+        "source": "src-ft-bounty",
+        "consequence": false
+      },
+      {
         "span": "1790-01-15",
-        "action": "region.fill { radius_km: 100 }",
+        "action": "region.fill { lat: -25.070556, lon: -130.104444, radius_km: 100 }",
         "caption": "Christian and eight others reach Pitcairn; when found in 1808, only John Adams was left of the nine mutineers.",
         "source": "src-history-bounty",
         "consequence": true
@@ -325,6 +345,11 @@
       "date": "2026-11-04",
       "version": 2,
       "change": "corrected"
+    },
+    {
+      "date": "2026-11-12",
+      "version": 3,
+      "change": "route corrected: Kupang-Pitcairn link removed"
     }
   ]
 }
