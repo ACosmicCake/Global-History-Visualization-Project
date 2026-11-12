@@ -2,29 +2,12 @@
 // time level and importance (spec 11.1), and routes for moving events.
 // Data comes from api/pins.json: live from server.mjs locally, refreshed every 15 seconds; a static file, fetched once, on the published site.
 // Libraries load as pinned UMD scripts in index.html: three@0.149.0, globe.gl@2.27.2.
+import './webgl-check.js';   // first: stops here, with a message, where the globe can't run
+import { $, esc, show } from './dom.js';
+import { state } from './state.js';
+import { EARTH, EONS, LEVELS, NOW, checkToday, domainOn, fmtSpan, fmtYear, inLevel, minImportance, paleoOn, range, rankOf, scaleIndex, wholeNow, windowNow } from './time.js';
 const { THREE, Globe } = window;
-// No WebGL, or the graphics libraries didn't load: say so, and point to the plain pages, which need neither.
-if (!THREE || !Globe || !(() => { try { const c = document.createElement('canvas'); return c.getContext('webgl2') || c.getContext('webgl'); } catch { return null; } })()) {
-  document.querySelector('#loading').innerHTML = '<div style="max-width:32em;padding:0 16px;text-align:center;line-height:1.7">The 3D globe can’t run in this browser. <a href="browse.html" style="color:#d9b36a">Read every record as a plain list</a> instead.</div>';
-  throw new Error('The globe needs WebGL');
-}
 
-const NOW = new Date().getUTCFullYear();
-const EARTH = -4.54e9;
-const LEVELS = [
-  { key: 'deep_time', name: 'Deep time', from: EARTH, to: NOW },
-  { key: 'life', name: 'Life', from: -5.4e8, to: NOW },
-  { key: 'human_origins', name: 'Human origins', from: -7e6, to: NOW },
-  { key: 'prehistory', name: 'Prehistory', from: -3e5, to: NOW },
-  { key: 'civilization', name: 'Civilization', from: -10000, to: NOW },
-  { key: 'modern', name: 'Modern', from: 1500, to: NOW },
-  { key: 'event', name: 'One year', from: null, to: null },
-];
-const SCALE_INDEX = Object.fromEntries(LEVELS.map((l, i) => [l.key, i]));
-const EONS = [ // ICS chronostratigraphic chart, eon boundaries
-  { name: 'Hadean', from: EARTH, to: -4.031e9, color: '#3a1f2b' }, { name: 'Archean', from: -4.031e9, to: -2.5e9, color: '#4a2a3c' },
-  { name: 'Proterozoic', from: -2.5e9, to: -5.388e8, color: '#3c3557' }, { name: 'Phanerozoic', from: -5.388e8, to: NOW, color: '#2c4a63' },
-];
 // name, colour, glyph: each domain has its own colour and its own symbol, so pins read apart even where hues are close
 const DOMAINS = {
   geology_climate: ['Geology & climate', '#6b8cff', 'mountain'], life_extinction: ['Life & extinction', '#4ade80', 'leaf'],
@@ -39,72 +22,7 @@ const baseColor = p => (DOMAINS[p.domains?.[0]] || [0, '#ffffff'])[1];
 const colorOf = p => (p.outline ? baseColor(p) + '66' : baseColor(p));
 const GLOBE_R = 100;
 
-const state = { level: 4, t: -500, fossils: true, plateEdges: false, vitals: true, vitalCurve: 'temp', whole: false, borders: true, paths: false, coastlines: false, clouds: false, realSun: false, pins: [], selected: null,
-  alt: 2.4, off: new Set(), impOff: new Set() };
-const $ = s => document.querySelector(s);
-const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const show = (el, on) => { el.hidden = !on; };
 
-// ---------- time formatting & levels
-function fmtYear(y, short = false) {
-  if (y == null) return '';
-  const a = -y;
-  if (a >= 1e9) return short ? `${(a / 1e9).toFixed(2)} Ga` : `${(a / 1e9).toFixed(2)} billion years ago`;
-  if (a >= 1e6) return short ? `${(a / 1e6).toFixed(a >= 1e8 ? 0 : 1)} Ma` : `${(a / 1e6).toFixed(a >= 1e8 ? 0 : 1)} million years ago`;
-  if (a >= 12000) return short ? `${Math.round(a / 1000)} ka` : `${Math.round(a / 1000).toLocaleString()},000 years ago`;
-  if (y < 1) return `${(1 - Math.floor(y)).toLocaleString()} BCE`; // astronomical year -324.7 is within 325 BCE
-  if (LEVELS[state.level].key === 'event' && !short) {
-    const d = new Date(Date.UTC(Math.floor(y), 0, 1) + (y % 1) * 365.25 * 864e5);
-    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  }
-  return `${Math.floor(y)} CE`;
-}
-const fmtSpan = y => (y >= 1e6 ? `${Math.round(y / 1e6).toLocaleString()} million years` : `${(y >= 1000 ? Math.round(y / 100) * 100 : Math.round(y)).toLocaleString()} years`);
-function range(level = state.level) {
-  const L = LEVELS[level];
-  if (L.key === 'event') { const y = Math.floor(state.t); return { from: y, to: y + 1 }; }
-  return { from: L.from, to: L.to };
-}
-function dateWindow() { const { from, to } = range(), w = windowHalf(from, to); return { from: state.t - w, to: state.t + w }; }
-// The present has few records of its own, so at today's date a thin view opens out to the whole period (worked out once per render).
-const SPARSE_TODAY = 60;
-const wholeNow = () => state.whole || state.autoWhole;
-function checkToday() {
-  state.autoWhole = false;
-  if (state.whole || LEVELS[state.level].key === 'event' || state.t < NOW - 1) return;
-  const w = dateWindow();
-  state.autoWhole = state.pins.filter(p => p.lat != null && !p.global && inLevel(p) && domainOn(p) && p.until >= w.from && p.start <= w.to).length < SPARSE_TODAY;
-}
-function windowNow() {
-  const { from, to } = range();
-  if (wholeNow() || LEVELS[state.level].key === 'event') return { from, to };
-  return dateWindow();
-}
-// How far from the date shown a record may lie and still show. History gets denser toward the present, so the reach
-// shrinks in proportion to how long ago the date is (about 300 years around 500 BCE, 10 around 1945), never past 3.5%
-// of the scale, so a pin shown "at 1945" is not a battle from 1526.
-function windowHalf(from, to) { return Math.min((to - from) * 0.035, Math.max(8, (NOW - state.t) * 0.12)); }
-// Near a date every record shows, and importance sets how loud its pin is (see pinPx). A whole period holds far more records, so it thins them from afar (spec 11.1), never past what the filters leave on.
-function minImportance() {
-  if (!wholeNow()) return 1;
-  const a = state.alt, floor = a > 2.1 ? 4 : a > 1.2 ? 3 : a > 0.6 ? 2 : 1;
-  let top = 5; while (top > 1 && state.impOff.has(top)) top--;
-  return Math.min(floor, top);
-}
-// The coarsest scale a record shows on. Its `scale` sets this, with two corrections so that browsing to a date finds
-// what happened then: nothing is kept to the One-year view or to a scale whose span doesn't reach it, and modern
-// records of note also show on Civilization, where the time window around a recent date is already narrow.
-function scaleIndex(p) {
-  let i = Math.min(SCALE_INDEX[p.scale] ?? 5, 5);
-  if (i === 5 && p.importance >= 4) i = 4;
-  while (i > 0 && p.until < LEVELS[i].from) i--;
-  return i;
-}
-const inLevel = p => scaleIndex(p) <= state.level;
-const rankOf = p => p.importance;
-// the Domains & layers filters: a record shows if any of its domains is on and its importance level is on
-const domainOn = p => (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) && !state.impOff.has(p.importance || 0);
-const paleoOn = () => state.paleoMa != null && state.paleoMa >= 10;
 // in deep time a pin rides on its plate: today's find spot turned with the same rotation as the continents shown,
 // else the record's own sourced paleo-position, else today's coordinates (past the plate model's reach)
 const placed = p => {
