@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1095-the-crusades",
+  "kind": "event",
+  "title": "The Crusades",
+  "summary": "The Crusades were military campaigns organised by popes and western Christian powers to take Jerusalem and the Holy Land from Muslim rule and then hold them. After the Byzantine emperor Alexios I asked for help against the Seljuks, Pope Urban II called the First Crusade at Clermont in November 1095. Crusaders took Jerusalem in 1099 and founded the Crusader States. Saladin won at Hattin in 1187, the Fourth Crusade turned on Constantinople in 1204, and Acre, the last stronghold, fell to the Mamluks in 1291.",
+  "when": {
+    "start": {
+      "year": 1095
+    },
+    "end": {
+      "year": 1291
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Spanning from Pope Urban II's council at Clermont in 1095 to the fall of the last major mainland crusader stronghold at Acre in 1291; later regional crusading efforts continued in the Baltic, Iberia, and eastern Europe."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "27 Nov 1095 At the Council of Clermont , Pope Urban II calls for the First Crusade to form and retake Jerusalem",
+        "source": "src-whe-crusades"
+      },
+      {
+        "calendar": "CE",
+        "value": "18 May 1291 Acre, the last Christian stronghold in the Middle East, falls to the Mamluks",
+        "source": "src-whe-crusades"
+      },
+      {
+        "calendar": "CE",
+        "value": "Speech at Council of Clermont, 1095",
+        "source": "src-fordham-urban"
+      }
+    ],
+    "display": "1095–1291"
+  },
+  "where": {
+    "lat": 31.76904,
+    "lon": 35.21633,
+    "elevation_m": 786,
+    "modern_name": "Jerusalem (stand-in pin for the primary holy objective and Kingdom of Jerusalem)",
+    "historical_name": "Jerusalem, Fatimid Caliphate (1095) / Kingdom of Jerusalem (1099–1187)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1500,
+    "coordinate_sources": [
+      "src-geonames-jerusalem"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Two centuries of war over the Levant between Latin Christians and Muslim powers; its parts have their own records (R3 D3 T3 L2)."
+  },
+  "confidence": "established",
+  "audience_note": "Describes religious warfare, sieges, military violence, and the massacre of civilian populations during the capture of Jerusalem and sack of Constantinople.",
+  "related": [
+    {
+      "id": "1096-first-crusade-march",
+      "type": "has_part",
+      "because": "The First Crusade march across Europe and Asia Minor captured Jerusalem in 1099 and established the crusader states."
+    },
+    {
+      "id": "1099-siege-of-jerusalem",
+      "type": "has_part",
+      "because": "The five-week siege and bloody storming of Jerusalem in July 1099 achieved the initial expedition's goal."
+    },
+    {
+      "id": "1187-battle-of-hattin",
+      "type": "has_part",
+      "because": "Saladin's victory at the Horns of Hattin crushed the field army of the Kingdom of Jerusalem, prompting the Third Crusade."
+    },
+    {
+      "id": "1204-sack-of-constantinople",
+      "type": "has_part",
+      "because": "The Fourth Crusade was diverted to Constantinople, looting the Byzantine capital and partitioning the empire."
+    },
+    {
+      "id": "1291-fall-of-acre",
+      "type": "has_part",
+      "because": "The siege and fall of Acre in 1291 eliminated the final Latin crusader foothold on the Levantine coast."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-crusades",
+      "url": "https://www.worldhistory.org/timeline/Crusades/",
+      "title": "Timeline: Crusades",
+      "publisher": "World History Encyclopedia",
+      "author": "Mark Cartwright",
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fordham-urban",
+      "url": "https://sourcebooks.fordham.edu/source/urban2-5vers.asp",
+      "title": "Medieval Sourcebook: Urban II (1088-1099): Speech at Council of Clermont, 1095",
+      "publisher": "Fordham University",
+      "author": "Paul Halsall",
+      "date_published": "1997-12-01",
+      "accessed": "2026-11-12",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-jerusalem",
+      "url": "https://www.geonames.org/281184/jerusalem.html",
+      "title": "Jerusalem (GeoNames 281184)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-12: every date and claim checked on the WHE timeline (src-whe-crusades); summary reworded. Scope here is the Levantine crusades to 1291; Baltic, Iberian and Albigensian crusades are outside it. The 1099 massacre at Jerusalem is covered by its own record.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-12",
+  "published_at": "2026-11-12T17:37:45.953Z",
+  "changelog": [
+    {
+      "date": "2026-11-12",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

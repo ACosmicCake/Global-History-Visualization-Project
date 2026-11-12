@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1545-counter-reformation",
+  "kind": "movement",
+  "title": "Catholic Reformation (Council of Trent and the Jesuits)",
+  "summary": "The Catholic Reformation, long called the Counter-Reformation, was a revival of the Roman Catholic Church in answer to the Protestant Reformation. Ignatius of Loyola’s Jesuits led it, and missionaries such as Francis Xavier carried it overseas. The Council of Trent, opened under Pope Paul III on 13 December 1545 and closed on 4 December 1563, defined doctrine and issued disciplinary decrees; reforming popes followed with a new Roman Breviary (1568) and Missal (1570). The Catholic Encyclopedia dates the period of revival to 1648.",
+  "when": {
+    "start": {
+      "year": 1545,
+      "iso": "1545-12-13"
+    },
+    "end": {
+      "year": 1648
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 85,
+      "note": "Council of Trent met from 1545 to 1563; the broader Counter-Reformation revival is traditionally dated through the end of the Thirty Years' War in 1648."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian, as recorded",
+        "value": "thirteenth day of the month of December, in the year of the Lord, 1545",
+        "source": "src-hanover-trent"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "close of the Thirty Years' War , 1648",
+        "source": "src-catholic-encyclopedia"
+      },
+      {
+        "calendar": "Julian, as recorded",
+        "value": "terminated on the fourth, day of December, MDLXIII",
+        "source": "src-hanover-trent-25"
+      }
+    ],
+    "display": "1545–1648 (Council of Trent 1545–1563)"
+  },
+  "where": {
+    "lat": 46.06787,
+    "lon": 11.12108,
+    "elevation_m": null,
+    "modern_name": "Trento, Italy",
+    "historical_name": "Trent (Trento), Prince-Bishopric of Trent, Holy Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-trento"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Renewed the Catholic Church and its missions in answer to the Reformation (R3 D3 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1517-protestant-reformation",
+      "type": "caused_by",
+      "because": "The Catholic Reformation arose directly in response to Martin Luther's Protestant challenge and doctrinal fragmentation."
+    },
+    {
+      "id": "1549-francis-xavier-arrival-in-japan",
+      "type": "has_part",
+      "because": "Jesuit global missionary work spearheaded by Francis Xavier formed a key external wing of the Catholic revival."
+    },
+    {
+      "id": "person-martin-luther",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-hanover-trent",
+      "url": "https://history.hanover.edu/texts/trent/ct01.html",
+      "title": "The Council of Trent: The Canons and Decrees of the Sacred and Oecumenical Council of Trent (First Session)",
+      "publisher": "Hanover College",
+      "author": "J. Waterworth",
+      "date_published": "1848",
+      "accessed": "2026-11-12",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-catholic-encyclopedia",
+      "url": "https://www.newadvent.org/cathen/04437a.htm",
+      "title": "The Counter-Reformation (Catholic Encyclopedia, 1908)",
+      "publisher": "Robert Appleton Company",
+      "author": "G. E. Phillips",
+      "date_published": "1908",
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-trento",
+      "url": "https://www.geonames.org/3165243/trento.html",
+      "title": "Trento",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-hanover-trent-25",
+      "url": "https://history.hanover.edu/texts/trent/ct25.html",
+      "title": "The Council of Trent: The Twenty-Fifth Session (trans. J. Waterworth, 1848)",
+      "publisher": "Hanover College",
+      "accessed": "2026-11-12",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "animation"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-12: 1563 was on no cited page; added Hanover text of session 25 (closed 4 December 1563). End set to 1648 as on the Catholic Encyclopedia (1908), which dates the period 1560-1648; Trent shown within it. Summary rewritten. The Catholic Encyclopedia is old and Catholic in viewpoint; add a modern scholarly source at expansion.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-12",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1545-12-13",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The Council of Trent convenes under Pope Paul III to clarify Catholic doctrine and reform church abuses.",
+        "source": "src-hanover-trent",
+        "consequence": false
+      },
+      {
+        "span": "1563-12-04",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The council closes after its twenty-fifth session.",
+        "source": "src-hanover-trent-25",
+        "consequence": false
+      },
+      {
+        "span": "1570",
+        "action": "pulse { radius_km: 600 }",
+        "caption": "After Trent, reforming popes issue a new Roman Breviary (1568) and Roman Missal (1570).",
+        "source": "src-catholic-encyclopedia",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-11-12T17:37:47.674Z",
+  "changelog": [
+    {
+      "date": "2026-11-12",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
