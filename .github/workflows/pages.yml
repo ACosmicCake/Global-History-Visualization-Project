@@ -27,6 +27,8 @@ jobs:
           node-version: 22
       - name: Check every record and the viewer code
         run: node atlas/tools/check-all.mjs
+      - name: Unit tests for the viewer's data layer
+        run: node --test 'viewer/test/*.test.mjs'
 
   build:
     needs: check

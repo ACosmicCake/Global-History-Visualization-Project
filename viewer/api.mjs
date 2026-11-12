@@ -5,7 +5,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-export const RECORDS = path.resolve(HERE, '..', 'atlas', 'records');
+// ATLAS_RECORDS points the data layer at another folder of records (the unit tests use viewer/test/fixtures/records).
+export const RECORDS = process.env.ATLAS_RECORDS ? path.resolve(process.env.ATLAS_RECORDS) : path.resolve(HERE, '..', 'atlas', 'records');
 const WIKI_LINKS = path.resolve(HERE, '..', 'atlas', 'wiki_links.json');
 const WIKI_ALIASES = path.resolve(HERE, '..', 'atlas', 'wiki_aliases.json');
 
@@ -161,4 +162,4 @@ export function recordPayload(id, links = readLinks(), index = liveLinkIndex()) 
   if (links[id]) pub.wiki = links[id];
   return pub;
 }
-export { readLinks };
+export { readLinks, pin, shownUntil, monthDay };
