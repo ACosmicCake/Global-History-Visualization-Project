@@ -10,7 +10,8 @@ import { recordPage, browsePage, sitemap, robots } from './pages.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.resolve(process.argv[2] || path.join(HERE, '..', 'dist'));
-const SKIP = new Set(['server.mjs', 'api.mjs', 'build-static.mjs', 'pages.mjs', 'test']); // tools, not part of the site
+const SKIP = new Set(['server.mjs', 'api.mjs', 'build-static.mjs', 'pages.mjs', 'test',   // tools, not part of the site
+  'models']);   // 3D monument models: paused and not loaded by the viewer, so kept in the repo but not deployed
 const NOT_SITE = /\.(glb|py)$|build_morph\.mjs$/;                                  // source files for the models and plate data
 
 fs.rmSync(OUT, { recursive: true, force: true });

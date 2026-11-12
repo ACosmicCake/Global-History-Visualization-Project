@@ -44,7 +44,7 @@ function pin(r) {
     display: r.when?.display, lat: r.where?.lat, lon: r.where?.lon, global: (r.where?.uncertainty_km ?? 0) >= 5000 || r.where?.geometry?.type === 'global', paleo: r.where?.paleo?.lat != null ? r.where.paleo : null,
     geometry: r.where?.geometry?.type, waypoints: (r.where?.geometry?.waypoints || []).map(w => ({ lat: w.lat, lon: w.lon, year: typeof w.year === 'number' ? w.year : null, date: w.date, label: w.label })),
     regions: (r.where?.geometry?.regions || []).map(g => ({ lat: g.lat, lon: g.lon, name: g.name })),
-    outline: r.status === 'outline', hasModel: !!r.model, updated: r.updated, aliases: (r.aliases || []).map(a => a.name).filter(Boolean),
+    outline: r.status === 'outline', updated: r.updated, aliases: (r.aliases || []).map(a => a.name).filter(Boolean),
     region: r.regions?.[0], unc: r.where?.uncertainty_km, md: monthDay(r),
   };
 }
