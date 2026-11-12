@@ -53,7 +53,15 @@ async function run(name, opts, budget) {
     check(total <= budget, `first load within budget (${MB(total)} of ${MB(budget)}, viewer/test/budget.json)`);
     check(!loaded.some(([u]) => u.includes('paleo/morph.json')), 'the plate model is not loaded until deep time is asked for');
   }
-  await page.evaluate(() => document.querySelector('#welcome-close')?.click());
+  // a first visit gets the welcome as a modal dialog that fits the screen and keeps the keyboard inside
+  await soon(() => document.querySelector('#welcome').open);
+  const fits = await page.evaluate(() => { const d = document.querySelector('#welcome'); return d.open && d.scrollHeight <= d.clientHeight + 1; });
+  check(fits, 'the welcome dialog opens and fits the screen without scrolling');
+  let inside = true;
+  for (let i = 0; i < 12; i++) { await page.keyboard.press('Tab'); inside &&= await page.evaluate(() => !!document.activeElement?.closest('#welcome')); }
+  check(inside, 'Tab never leaves the open welcome dialog');
+  await page.keyboard.press('Escape');
+  check(await soon(() => !document.querySelector('#welcome').open), 'Escape closes the welcome dialog');
   // vital signs: on and closed to one line on a desktop, off on a phone; no row that means nothing at 500 BCE
   await soon(() => document.querySelectorAll('#v-rows .v-row').length > 0);
   const vit = await page.evaluate(() => ({ on: window.atlas.state.vitals, rows: [...document.querySelectorAll('#v-rows .v-row')].filter(b => b.offsetParent).map(b => b.textContent) }));

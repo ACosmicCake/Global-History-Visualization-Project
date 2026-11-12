@@ -1047,38 +1047,63 @@ function onThisDay() {
     .sort((a, b) => b.importance - a.importance || b.start - a.start)
     .slice(0, 3);
 }
+// The welcome is a modal dialog: a backdrop, focus kept inside, Escape closes. Three main choices (the film, a tour,
+// exploring), with "On this day" below; the tours are listed when Take a tour is chosen.
+const welcome = $('#welcome');
 async function openWelcome() {
   const list = await loadTours(),
-    today = onThisDay(),
-    box = $('#welcome');
-  box.innerHTML = `<h2>Living Atlas</h2>
+    today = onThisDay();
+  welcome.innerHTML = `<h2 id="welcome-title">Living Atlas</h2>
     <p>Earth and human history, placed where and when it happened. Drag the globe, move the time bar, and open any pin to read its record and sources.</p>
-    ${today.length ? `<h3>On this day</h3><ul class="tour-list">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
-    <h3>Watch</h3><ul class="tour-list"><li><button id="film-btn"><b>${esc(deepTime?.film.title || 'A billion years of Earth')}</b><span>${esc(deepTime?.film.blurb || '')}</span></button></li></ul>
-    <h3>Take a tour</h3><ul class="tour-list">${list.map(t => `<li><button data-tour="${esc(t.id)}"><b>${esc(t.title)}</b><span>${esc(t.blurb)} ${t.stops.length} stops.</span></button></li>`).join('')}</ul>
-    <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span><button id="welcome-close">Explore on my own</button></div>`;
-  box.querySelectorAll('button[data-tour]').forEach(b => {
+    <div class="w-main">
+      <button id="film-btn" class="w-choice"><b>Watch the film</b><span>${esc(deepTime?.film.title || 'A billion years of Earth')}</span></button>
+      <button id="tours-btn" class="w-choice" aria-expanded="false" aria-controls="w-tours"><b>Take a tour</b><span>${list.length} guided routes through the records</span></button>
+      <button id="welcome-close" class="w-choice" autofocus><b>Explore</b><span>The globe, on your own</span></button>
+    </div>
+    <ul id="w-tours" class="tour-list" hidden>${list.map(t => `<li><button data-tour="${esc(t.id)}"><b>${esc(t.title)}</b><span>${esc(t.blurb)} ${t.stops.length} stops.</span></button></li>`).join('')}</ul>
+    ${today.length ? `<h3>On this day</h3><ul class="tour-list w-today">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
+    <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span></div>`;
+  welcome.querySelectorAll('button[data-tour]').forEach(b => {
     b.onclick = () => startTour(b.dataset.tour);
   });
-  box.querySelectorAll('button[data-id]').forEach(b => {
+  welcome.querySelectorAll('button[data-id]').forEach(b => {
     b.onclick = () => {
       closeWelcome();
       goTo(b.dataset.id);
     };
   });
-  box.querySelector('#welcome-close').onclick = closeWelcome;
-  box.querySelector('#film-btn').onclick = startFilm;
-  prefetchPaleo(box.querySelector('#film-btn'));
-  show(box, true);
-  box.querySelector('button')?.focus({ preventScroll: true });
+  welcome.querySelector('#tours-btn').onclick = e => {
+    const open = welcome.querySelector('#w-tours').hidden;
+    show(welcome.querySelector('#w-tours'), open);
+    e.currentTarget.setAttribute('aria-expanded', open);
+    if (open) welcome.querySelector('#w-tours button')?.focus();
+  };
+  welcome.querySelector('#welcome-close').onclick = closeWelcome;
+  welcome.querySelector('#film-btn').onclick = startFilm;
+  prefetchPaleo(welcome.querySelector('#film-btn'));
+  if (!welcome.open) welcome.showModal();
+  // showModal focuses Explore (autofocus), not the film: focus there would start its 4 MB download
 }
 export function closeWelcome() {
-  if ($('#welcome').hidden) return;
-  show($('#welcome'), false);
+  if (welcome.open) welcome.close();
+}
+// Tab wraps around inside the dialog, rather than leaving the page for the browser's own controls
+welcome.addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const all = [...welcome.querySelectorAll('button, a[href]')].filter(el => el.offsetParent),
+    first = all[0],
+    last = all[all.length - 1];
+  if (e.shiftKey ? document.activeElement === first : document.activeElement === last) {
+    e.preventDefault();
+    (e.shiftKey ? last : first).focus();
+  }
+});
+// however it closes (a choice, Escape), the welcome counts as seen
+welcome.addEventListener('close', () => {
   try {
     localStorage.setItem('atlas.welcomed', '1');
   } catch {}
-}
+});
 $('#start').onclick = openWelcome;
 // ---------- live data
 let lastSig = '';
