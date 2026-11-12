@@ -3,7 +3,8 @@
 import { NOW, fmtYear } from './time.js';
 import { $, esc, show } from './dom.js';
 import { state } from './state.js';
-import { badgeURL, goTo, levelFor, setLevel } from './main.js';
+import { goTo, levelFor, setLevel } from './main.js';
+import { badgeURL } from './badges.js';
 
 // ---------- search: titles, aliases and other names (spec 11.6), then places and summaries, and dates ("1945", "500 BCE")
 export const fold = t => String(t ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
