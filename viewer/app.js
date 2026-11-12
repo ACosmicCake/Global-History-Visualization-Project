@@ -303,7 +303,7 @@ function placePinSprites() { // per frame: size, horizon fade, selection pulse, 
 const zoomK = () => Math.min(1, Math.max(0.0015, state.alt / 1.8)); // pins and labels shrink as the camera comes in, down to street scale
 const tip = p => (p.cluster
   ? `<div class="tip"><span class="d">${p.cluster.length} records here</span>${p.cluster.slice(0, 6).map(x => `<p>${esc(x.title)}</p>`).join('')}${p.cluster.length > 6 ? '<p>…</p>' : ''}</div>`
-  : `<div class="tip"><span class="d">${esc(p.display)}${p.outline ? '' : ' · full story'}${p.unc >= 100 ? ` · place within about ${Math.round(p.unc).toLocaleString()} km` : ''}</span><b>${esc(p.title)}</b><p>${esc(p.summary)}</p></div>`);
+  : `<div class="tip"><span class="d">${esc(p.display)}${p.outline ? '' : ' · full story'}${p.unc >= 100 ? ` · place within about ${Math.round(p.unc).toLocaleString()} km` : ''}</span><b>${esc(p.title)}</b>${p.summary ? `<p>${esc(p.summary)}</p>` : ''}</div>`);
 // High-density screens (2x, 3x) would render 4–9 times the pixels for little visible gain on a moving globe: cap the
 // drawing resolution at 1.5x (and antialias only at 1x, where it is needed and cheap)
 const PR = Math.min(window.devicePixelRatio || 1, 1.5);
@@ -1002,7 +1002,7 @@ const CLOSE_ICON = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden=
 function panelFromPin(p) {
   const panel = $('#panel');
   panel.innerHTML = `<div class="p-head"><button class="p-close" aria-label="Close record">${CLOSE_ICON}</button></div>
-    <div class="p-body"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div><div class="prose"><p>${esc(p.summary)}</p></div></div>`;
+    <div class="p-body"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div><div class="prose">${p.summary ? `<p>${esc(p.summary)}</p>` : ''}</div></div>`;
   show(panel, true); show($('#notice'), false);
   panel.querySelector('.p-close').onclick = closePanel;
   panel.querySelector('.p-close').focus({ preventScroll: true });
@@ -1376,10 +1376,11 @@ async function refresh() {
     const sig = d.pins.map(p => p.id + p.updated).join('|');
     if (sig === lastSig) return;
     if (lastSig) recordCache.clear();   // something changed on the live server
-    lastSig = sig; state.pins = d.pins;
+    lastSig = sig; state.pins = d.pins.map(window.AtlasPins.expand);
     $('#count').textContent = `${(d.count + d.outlines).toLocaleString()} records`;
     $('#count').title = `${d.count} full records, ${d.outlines.toLocaleString()} outlines`;
     buildLegend(); render();
+    applyTeasers();
   } catch (e) {
     // a failed check for new records changes nothing while the records already loaded are on screen: stay quiet and try again next time
     if (state.pins.length) console.warn('atlas data refresh failed', e);
@@ -1387,6 +1388,17 @@ async function refresh() {
   }
   $('#loading').classList.add('gone');
   setTimeout(() => show($('#loading'), false), 700); // don't rely on the fade finishing
+}
+// Tooltip teasers (api/teasers.json) arrive after the pins, so the first render does not wait for them; until then a
+// tooltip or the instant panel shows no summary. Locally they are fetched again whenever the pins change.
+let teasers = null, teasersSig = '';
+async function applyTeasers() {
+  if (!teasers || (LIVE && teasersSig !== lastSig)) {
+    const sig = lastSig;
+    try { teasers = await (await fetch('api/teasers.json', { cache: LIVE ? 'no-store' : 'default' })).json(); teasersSig = sig; }
+    catch (e) { console.warn('atlas teasers failed', e); return; }
+  }
+  for (const p of state.pins) if (teasers[p.id] != null) p.summary = teasers[p.id];
 }
 // collapsible legend; remembered per viewer (storage may be unavailable, so it is optional)
 const legendKey = `atlas.legend.collapsed.${innerWidth < 760 ? 'phone' : 'desktop'}`;

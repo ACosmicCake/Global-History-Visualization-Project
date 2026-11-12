@@ -53,6 +53,7 @@ async function run(name, opts, budget) {
     check(total <= budget, `first load within budget (${MB(total)} of ${MB(budget)}, viewer/test/budget.json)`);
     check(!loaded.some(([u]) => u.includes('paleo/morph.json')), 'the plate model is not loaded until deep time is asked for');
   }
+  check(await soon(() => window.atlas.state.pins.filter(p => p.summary).length > 2000), 'tooltip teasers arrive after the pins');
   await page.evaluate(() => document.querySelector('#welcome-close')?.click());
 
   // a full record with sources: chosen from the data, so the test does not depend on one record's id

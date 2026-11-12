@@ -7,7 +7,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { published, pinsPayload, recordPayload, searchPayload, recordsSeen, warmLinks } from './api.mjs';
+import { published, pinsPayload, teasersPayload, recordPayload, searchPayload, recordsSeen, warmLinks } from './api.mjs';
 import { recordPage, browsePage } from './pages.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -23,6 +23,7 @@ http.createServer((req, res) => {
     if (pinsAnswer.version !== recordsSeen()) pinsAnswer = { version: recordsSeen(), json: JSON.stringify(pinsPayload(recs)) };
     return send(200, TYPES['.json'], pinsAnswer.json);
   }
+  if (url.pathname === '/api/teasers.json') return send(200, TYPES['.json'], JSON.stringify(teasersPayload()));
   if (url.pathname === '/api/search.json') return send(200, TYPES['.json'], JSON.stringify(searchPayload()));
   if (url.pathname === '/browse.html') return send(200, TYPES['.html'], browsePage(published()));
   const page = url.pathname.match(/^\/r\/([^/]+?)\.html$/);

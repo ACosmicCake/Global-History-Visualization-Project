@@ -5,7 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { published, pinsPayload, recordPayload, searchPayload, linkIndex, readLinks } from './api.mjs';
+import { published, pinsPayload, teasersPayload, recordPayload, searchPayload, linkIndex, readLinks } from './api.mjs';
 import { recordPage, browsePage, sitemap, robots } from './pages.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -25,6 +25,7 @@ const recs = published(), links = readLinks(), index = linkIndex(recs), titles =
 fs.mkdirSync(path.join(OUT, 'api', 'record'), { recursive: true });
 fs.mkdirSync(path.join(OUT, 'r'), { recursive: true });
 fs.writeFileSync(path.join(OUT, 'api', 'pins.json'), JSON.stringify(pinsPayload(recs)));
+fs.writeFileSync(path.join(OUT, 'api', 'teasers.json'), JSON.stringify(teasersPayload(recs)));
 fs.writeFileSync(path.join(OUT, 'api', 'search.json'), JSON.stringify(searchPayload(recs)));
 for (const r of recs) {
   const pub = recordPayload(r.id, links, index);

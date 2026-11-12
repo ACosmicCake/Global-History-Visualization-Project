@@ -11,6 +11,7 @@ const FIXTURES = path.join(HERE, 'fixtures', 'records');
 process.env.ATLAS_RECORDS = FIXTURES;   // must be set before api.mjs is loaded
 const api = await import('../api.mjs');
 const { recordPage } = await import('../pages.mjs');
+const pinsFormat = (await import('../pins-format.js')).default;
 
 const rec = id => JSON.parse(fs.readFileSync(path.join(FIXTURES, `${id}.json`), 'utf8'));
 const THIS_YEAR = new Date().getUTCFullYear();
@@ -32,6 +33,27 @@ test('pinsPayload counts full records and outlines separately', () => {
   assert.equal(p.count, 6);
   assert.equal(p.outlines, 2);
   assert.equal(p.pins.length, 8);
+});
+
+test('pinsPayload sends compact pins that expand back to the full pin() shape, without the teaser', () => {
+  const p = api.pinsPayload(), recs = api.published();
+  for (const r of recs) {
+    const compact = p.pins.find(x => x.id === r.id), { summary, ...full } = api.pin(r);
+    assert.ok(!('summary' in compact), 'no teaser in pins.json');
+    assert.deepEqual(pinsFormat.expand(JSON.parse(JSON.stringify(compact))), JSON.parse(JSON.stringify(full)), r.id);
+  }
+  const hastings = p.pins.find(x => x.id === '1066-battle-of-hastings');
+  assert.equal(hastings.full, true);
+  for (const k of ['outline', 'end', 'until', 'confidence', 'geometry', 'global', 'paleo', 'waypoints', 'regions']) assert.ok(!(k in hastings), `${k} is sent`);
+  const voyage = p.pins.find(x => x.id === '1500-the-voyage');
+  assert.ok(!('full' in voyage));
+  assert.equal(voyage.waypoints.length, 2);
+});
+
+test('teasersPayload maps each live record to its short summary', () => {
+  const t = api.teasersPayload();
+  assert.equal(Object.keys(t).length, 8);
+  assert.equal(t['1066-battle-of-hastings'], 'Norman forces under William defeated the English army of Harold Godwinson on 14 October 1066.');
 });
 
 test('pin() carries the fields the viewer reads', () => {
