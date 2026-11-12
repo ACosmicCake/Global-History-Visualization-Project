@@ -3,7 +3,7 @@
 // Data comes from api/pins.json: live from server.mjs locally, refreshed every 15 seconds; a static file, fetched once, on the published site.
 // Libraries load as pinned UMD scripts in index.html: three@0.149.0, globe.gl@2.27.2.
 import './webgl-check.js'; // first: stops here, with a message, where the globe can't run
-import { SCALE_START } from '../shared/labels.mjs';
+import { KIND_LABELS, REGION_LABELS, SCALE_START } from '../shared/labels.mjs';
 import { $, esc, show } from './dom.js';
 import { state } from './state.js';
 import './search.js';
@@ -31,8 +31,9 @@ import { PAUSE, PLAY, drawDensity, fadeTabs, slideRange, stopPlay, timer } from 
 import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
 import { loadTours, startTour } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
-import { applyHash, flash, queueURL, setRestoring } from './url.js';
+import { applyHash, flash, queueURL, resumeLast, setRestoring } from './url.js';
 import { renderVitals } from './vitals.js';
+import { initCue } from './cue.js';
 const { THREE, Globe } = window;
 
 export const GLOBE_R = 100;
@@ -783,7 +784,7 @@ export function render() {
   else {
     $('#empty-text').textContent =
       !anyInLevel && anyPublished
-        ? 'Your filters are hiding every record here. Turn on an importance level or a domain to see them.'
+        ? 'Your filters are hiding every record here. Turn on an importance level or a domain, or choose another region or kind, to see them.'
         : wholeNow() || !anyInLevel
           ? anyInLevel
             ? 'Zoom in to see smaller events here.'
@@ -845,6 +846,29 @@ function buildLegend() {
         render();
       };
     });
+  // region and kind: choosing one or more shows only those; choosing none shows all
+  for (const [box, field, labels, chosen] of [
+    ['#f-regions', 'region', REGION_LABELS, state.regions],
+    ['#f-kinds', 'kind', KIND_LABELS, state.kinds],
+  ]) {
+    const n = {};
+    for (const p of state.pins) n[p[field]] = (n[p[field]] || 0) + 1;
+    $(box).innerHTML = Object.keys(labels)
+      .filter(k => n[k])
+      .sort((a, b) => n[b] - n[a])
+      .map(k => `<button class="chip" data-k="${k}" aria-pressed="${chosen.has(k)}">${esc(labels[k][0].toUpperCase() + labels[k].slice(1))}<span class="n">${n[k].toLocaleString()}</span></button>`)
+      .join('');
+    $(box)
+      .querySelectorAll('button')
+      .forEach(b => {
+        b.onclick = () => {
+          const k = b.dataset.k;
+          chosen.has(k) ? chosen.delete(k) : chosen.add(k);
+          b.setAttribute('aria-pressed', chosen.has(k));
+          render();
+        };
+      });
+  }
   // importance levels: each switches its pins on or off (5 = most important); "Only" keeps just that level
   const lv = {};
   for (const p of state.pins) lv[p.importance || 0] = (lv[p.importance || 0] || 0) + 1;
@@ -1219,6 +1243,7 @@ for (const ev of ['pointerdown', 'wheel', 'touchstart']) $('#globe').addEventLis
 setTimeout(dismissHint, 12000);
 window.atlas = { openRecord, goTo, state, globe, startTour, startFilm }; // handy for debugging from the console
 buildChrome();
+initCue();
 setLevel(4);
 // Live refresh only against the local server, where records are being published; the static site's data changes
 // only with a new deploy, so it is fetched once (and can be cached).
@@ -1228,6 +1253,7 @@ if (LIVE) setInterval(refresh, 15000);
 dataReady.then(() => {
   // a link to a place in the atlas opens there; a first visit with no link gets the welcome card
   if (location.hash.length > 1) return applyHash();
+  resumeLast();
   setRestoring(false);
   let seen = false;
   try {

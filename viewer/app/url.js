@@ -1,6 +1,6 @@
 // The address bar: the date, scale, open record and tour live in the hash, so a link restores the view and Back closes a record.
 import { LEVELS, NOW } from './time.js';
-import { state } from './state.js';
+import { DEFAULT_T, state } from './state.js';
 import { loadTours } from './tours.js';
 import { closePanel, openRecord } from './panel.js';
 import { $, show } from './dom.js';
@@ -16,7 +16,7 @@ export const setRestoring = on => {
 export function stateHash() {
   const h = new URLSearchParams(),
     level = LEVELS[state.level].key;
-  if (state.selected || state.t !== -500 || level !== 'civilization') {
+  if (state.selected || state.t !== DEFAULT_T || level !== 'civilization') {
     h.set('t', String(+state.t.toPrecision(7)));
     h.set('l', level);
   }
@@ -29,6 +29,9 @@ export function writeURL(push) {
   clearTimeout(urlTimer);
   if (restoring) return;
   const h = stateHash();
+  try {
+    localStorage.setItem('atlas.last', JSON.stringify({ t: state.t, l: LEVELS[state.level].key })); // where a visit with no link resumes
+  } catch {}
   if (h !== location.hash) history[push ? 'pushState' : 'replaceState'](null, '', h || location.pathname + location.search);
 }
 export function queueURL() {
@@ -67,4 +70,16 @@ export function flash(msg) {
   n.textContent = msg;
   show(n, true);
   setTimeout(() => render(), 2500);
+}
+// A returning visitor with no link resumes at the date and scale they left
+export function resumeLast() {
+  let last = null;
+  try {
+    last = JSON.parse(localStorage.getItem('atlas.last') || 'null');
+  } catch {}
+  const l = LEVELS.findIndex(x => x.key === last?.l);
+  if (l < 0 || !Number.isFinite(last.t)) return false;
+  state.t = Math.min(last.t, NOW + 1);
+  setLevel(l, true);
+  return true;
 }

@@ -46,6 +46,8 @@ async function run(name, opts, budget) {
   check(await ready().then(() => true, () => false), 'the loading screen clears');
   const pins = await page.evaluate(() => window.atlas?.state.pins.length || 0);
   check(pins > 2000, `more than 2,000 pins load (${pins})`);
+  const first = await page.evaluate(() => document.querySelector('#now').firstChild?.textContent);
+  check(first === '500 BCE', `a first visit opens at 500 BCE (${first})`);
   if (budget) {   // what a first visit downloads with no interaction, including the loads the page starts once idle
     await page.waitForTimeout(15000);
     const total = loaded.reduce((a, [, n]) => a + n, 0);
@@ -96,15 +98,57 @@ async function run(name, opts, budget) {
     check(await soon(() => { const l = document.querySelector('#legend'); return !l.classList.contains('collapsed') && Math.abs(l.getBoundingClientRect().bottom - innerHeight) < 2; }),
       'Layers opens the legend as a bottom sheet');
     await page.keyboard.press('Escape');
+    const under = await page.evaluate(async () => {
+      const { labelBoxes } = await import('./app/pins.js'), h = document.querySelector('#masthead > div:first-child').getBoundingClientRect();
+      return labelBoxes.filter(([a, b, c, d]) => a < h.right && c > h.left && b < h.bottom && d > h.top).length;
+    });
+    check(under === 0, `no pin name draws beneath the phone header (${under})`);
     const console_ = await page.evaluate(() => document.querySelector('#time').getBoundingClientRect().height);
     check(console_ <= 120, `the phone time console is no taller than 120 px (${console_}px)`);
     const small = await page.evaluate(() => [...document.querySelectorAll('button, [role=tab]')].filter(b => {
       const r = b.getBoundingClientRect();
-      return r.width && r.height && r.bottom > 0 && r.top < innerHeight && getComputedStyle(b).visibility !== 'hidden' && !b.classList.contains('mark') && (r.width < 40 || r.height < 40);
+      return r.width && r.height && r.bottom > 0 && r.top < innerHeight && getComputedStyle(b).visibility !== 'hidden' && !b.classList.contains('mark') && !b.classList.contains('lm') && (r.width < 40 || r.height < 40);
     }).map(b => `${b.id || b.className || b.textContent.trim().slice(0, 16)} ${Math.round(b.getBoundingClientRect().width)}×${Math.round(b.getBoundingClientRect().height)}`));
     check(small.length === 0, `no visible button on the phone is under 40 px${small.length ? ': ' + small.join(', ') : ''}`);
     check(await page.evaluate(() => [...document.querySelectorAll('#levels button')].every(b => b.scrollWidth <= b.clientWidth + 1)), 'every scale tab is wide enough for its name');
   }
+  // named landmarks on the time bar, none overlapping
+  const lms = await page.evaluate(() => [...document.querySelectorAll('#landmarks .lm')].map(b => { const r = b.getBoundingClientRect(); return [r.left, r.right, b.textContent]; }));
+  check(lms.length >= (phone ? 2 : 4) && lms.every((a, i) => lms.every((b, j) => i === j || a[1] <= b[0] || b[1] <= a[0])),
+    `the time bar names landmarks that don't overlap (${lms.map(l => l[2]).join(', ')})`);
+  // the time window on the track matches the "within N years" text
+  const win = await page.evaluate(async () => {
+    const { band } = await import('./app/timebar.js'), { range } = await import('./app/time.js'), { from, to } = range();
+    const text = document.querySelector('#now small').textContent, n = +(text.match(/within ([\d,]+) years/)?.[1] || '0').replace(/,/g, '');
+    return { text, ok: !!band && n > 0 && Math.abs((band.z - band.a) - (2 * n / (to - from)) * band.w) <= Math.max(2, 0.03 * (band.z - band.a)) };
+  });
+  check(win.ok, `the band on the track matches the time window (${win.text})`);
+  // at 1944, seen from the Americas, a cue points to where most records are, and one click turns the globe there
+  await page.evaluate(() => { window.atlas.state.t = 1944; document.querySelectorAll('#levels button')[5].click(); window.atlas.globe.pointOfView({ lat: 10, lng: -100, altitude: 2.4 }, 0); });
+  const cued = await soon(() => !document.querySelector('#cue').hidden);
+  check(cued, `a cue points to history out of view (${await page.evaluate(() => document.querySelector('#cue').textContent)})`);
+  if (cued) {
+    await page.click('#cue');
+    await page.waitForTimeout(2500);
+    const seen = await page.evaluate(async () => { const { pinsSeen } = await import('./app/pins.js'); return [pinsSeen.facing, pinsSeen.shown]; });
+    check(seen[0] >= seen[1] / 4, `one click brings the pins into view (${seen[0]} of ${seen[1]} face the camera)`);
+  }
+  await page.evaluate(() => { window.atlas.state.t = -499; document.querySelectorAll('#levels button')[4].click(); });
+  // region and kind filters: Oceania and person leave only matching pins
+  const only = await page.evaluate(async () => {
+    const s = window.atlas.state, { pinSprites } = await import('./app/pins.js'), { domainOn } = await import('./app/time.js');
+    document.querySelector('#f-regions [data-k="oceania"]').click();
+    document.querySelector('#f-kinds [data-k="person"]').click();
+    const matching = s.pins.filter(domainOn), bad = matching.filter(p => p.region !== 'oceania' || p.kind !== 'person').length;
+    const one = matching.find(p => p.lat != null && p.start > 1500);   // go to one of them, so the globe has some to show
+    if (one) { s.t = one.start; document.querySelectorAll('#levels button')[5].click(); }
+    await new Promise(r => setTimeout(r, 800));
+    const recs = [...pinSprites.values()].flatMap(e => e.p.cluster || [e.p]), wrong = recs.filter(p => p.region !== 'oceania' || p.kind !== 'person').length;
+    document.querySelector('#f-regions [data-k="oceania"]').click(); document.querySelector('#f-kinds [data-k="person"]').click();
+    s.t = -499; document.querySelectorAll('#levels button')[4].click();
+    return { matching: matching.length, bad, shown: recs.length, wrong };
+  });
+  check(only.matching > 0 && only.bad === 0 && only.shown > 0 && only.wrong === 0, `choosing Oceania and person leaves only matching pins (${only.matching} records; ${only.shown} on the globe, ${only.wrong} not matching)`);
   // the scale tabs move with the arrow keys
   await page.focus('#levels .on');
   await page.keyboard.press('ArrowRight');
@@ -124,6 +168,17 @@ async function run(name, opts, budget) {
   await ready().catch(() => {});
   check(await soon(id => { const s = window.atlas.state; return s.t === 1945 && s.level === 5 && s.selected === id && !document.querySelector('#panel').hidden; }, id),
     'a #t=1945&l=modern&r=… link restores date, scale and record');
+
+  // a new visit with no link returns to where the visitor left
+  await page.evaluate(() => { const b = document.querySelectorAll('#levels button')[4]; b.click(); window.atlas.state.t = 1066; b.click(); });
+  await page.waitForTimeout(800);
+  const again = await ctx.newPage();
+  again.on('pageerror', e => pageErrors.push(String(e.stack || e).slice(0, 400)));
+  await again.goto(BASE, { waitUntil: 'domcontentloaded' });
+  await again.waitForFunction(() => document.querySelector('#loading')?.classList.contains('gone') && window.atlas?.state.pins.length, null, { timeout: 90000 }).catch(() => {});
+  const back = await again.waitForFunction(() => { const s = window.atlas.state; return Math.abs(s.t - 1066) < 1 && s.level === 4; }, null, { timeout: 15000 }).then(() => true, () => false);
+  check(back, `a new visit with no link returns to the last date and scale (${await again.evaluate(() => `${window.atlas.state.t}, scale ${window.atlas.state.level}`)})`);
+  await again.close();
 
   const errs = [...pageErrors, ...await page.evaluate(() => window.__errs || [])];
   check(errs.length === 0, `no page errors${errs.length ? ':\n      ' + errs.join('\n      ') : ''}`);

@@ -1,8 +1,8 @@
 // The time bar: the density strip and the marks for mass extinctions and ice ages, the slider and its dragging,
 // and Play with its speed menu.
 import { $, esc, show } from './dom.js';
-import { EARTH, LEVELS, NOW, domainOn, inLevel, range } from './time.js';
-import { state } from './state.js';
+import { EARTH, LEVELS, NOW, domainOn, inLevel, range, wholeNow, windowNow } from './time.js';
+import { DEFAULT_T, state } from './state.js';
 import { deepTime, goTo, render, setLevel } from './main.js';
 import { drawVitalCurve } from './vitals.js';
 
@@ -35,6 +35,53 @@ export function drawMarks(from, to) {
     b.onclick = () => goTo(b.dataset.id);
   });
 }
+// Named landmarks above the density strip: the most important records of the scale in view (importance 5, full
+// records and short events first), as short labels placed so none overlap. A click opens the record. At most four on
+// a phone, where they are only labels (the slider takes taps there), and none on the One year scale.
+let landmarksKey = '';
+const shortTitle = t => {
+  const s = t.replace(/\s*\([^)]*\)/g, '').split(/[:;]/)[0].trim();
+  return s.length <= 32 ? s : `${s.slice(0, 31).replace(/\s+\S*$/, '')}…`;
+};
+export function drawLandmarks(from, to, w) {
+  const box = $('#landmarks'),
+    key = [state.level, from, to, w, state.pins.length, [...state.off], [...state.impOff], [...state.regions], [...state.kinds]].join('|');
+  if (key === landmarksKey) return;
+  landmarksKey = key;
+  box.innerHTML = '';
+  if (!w || LEVELS[state.level].key === 'event') return;
+  const max = innerWidth <= 760 ? 4 : 12,
+    span = p => (p.end ?? p.start) - p.start;
+  const cands = state.pins
+    .filter(p => p.importance === 5 && p.start >= from && p.start <= to && inLevel(p) && domainOn(p))
+    .sort((a, b) => !!a.outline - !!b.outline || span(a) - span(b) || a.start - b.start);
+  const taken = [];
+  for (const p of cands) {
+    if (taken.length >= max) break;
+    const b = document.createElement('button'),
+      x = ((p.start - from) / (to - from)) * w;
+    b.className = 'lm';
+    b.textContent = shortTitle(p.title);
+    b.title = `${p.title} · ${p.display}`;
+    b.dataset.id = p.id;
+    box.append(b);
+    const bw = b.offsetWidth;
+    let left = x;
+    if (left + bw > w) {
+      left = x - bw; // near the right end the label sits to the left of its date
+      b.classList.add('r');
+    }
+    left = Math.max(0, left);
+    if (taken.some(([a, z]) => left < z + 6 && left + bw > a - 6)) {
+      b.remove();
+      continue;
+    }
+    taken.push([left, left + bw]);
+    b.style.left = `${left.toFixed(1)}px`;
+    b.onclick = () => goTo(p.id);
+  }
+}
+export let band = null; // the time window as drawn, in pixels along the track (read by the smoke test)
 // density strip: how many records fall at each point of the current scale (so empty stretches are visible)
 export function drawDensity() {
   const c = $('#density'),
@@ -50,6 +97,7 @@ export function drawDensity() {
   const { from, to } = range(),
     bins = new Array(Math.max(20, Math.floor(w / 4))).fill(0);
   drawMarks(from, to);
+  drawLandmarks(from, to, w);
   for (const p of state.pins) {
     if (!inLevel(p) || !domainOn(p) || p.until < from || p.start > to) continue;
     // count where each record begins (long periods would otherwise flood every bin)
@@ -60,6 +108,22 @@ export function drawDensity() {
     bw = w / bins.length;
   g.fillStyle = 'rgba(190,205,230,0.08)';
   g.fillRect(0, h - 1, w, 1);
+  // the time window: the stretch either side of the date whose records show ("within N years"), unless the whole
+  // period is on
+  band = null;
+  if (!wholeNow() && LEVELS[state.level].key !== 'event') {
+    const win = windowNow(),
+      a = Math.max(0, ((win.from - from) / (to - from)) * w),
+      z = Math.min(w, ((win.to - from) / (to - from)) * w);
+    if (z > a) {
+      band = { a, z, w };
+      g.fillStyle = 'rgba(217,179,106,0.14)';
+      g.fillRect(a, 0, Math.max(2, z - a), h);
+      g.fillStyle = 'rgba(217,179,106,0.45)';
+      g.fillRect(a, 0, 1, h);
+      g.fillRect(Math.max(a, z - 1), 0, 1, h);
+    }
+  }
   bins.forEach((n, i) => {
     if (!n) return;
     const bh = 3 + (n / max) * (h - 5);
@@ -144,7 +208,7 @@ $('#context').onclick = e => {
   const r = e.currentTarget.getBoundingClientRect(),
     f = (e.clientX - r.left) / r.width;
   if (f > 0.985) {
-    state.t = -500;
+    state.t = DEFAULT_T;
     return setLevel(4);
   } // the Humans sliver opens Civilization (spec 2)
   state.t = EARTH + f * (NOW - EARTH);
@@ -157,7 +221,7 @@ ctx.setAttribute('aria-label', 'Jump to human history');
 ctx.onkeydown = e => {
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
-    state.t = -500;
+    state.t = DEFAULT_T;
     setLevel(4);
   }
 };
@@ -240,6 +304,7 @@ function openTimeMenu(btn) {
   buildSpeeds();
   menu.classList.toggle('from-more', btn.id === 'more-btn');
   $('#m-whole').setAttribute('aria-pressed', state.whole);
+  $('#m-follow').setAttribute('aria-pressed', $('#follow').getAttribute('aria-pressed'));
   show(menu, true);
   btn.setAttribute('aria-expanded', 'true');
   menu.querySelector('#speeds [aria-pressed="true"]').focus({ preventScroll: true });
@@ -254,6 +319,7 @@ for (const id of ['#speed', '#more-btn']) $(id).onclick = e => (menu.hidden ? op
 $('#m-whole').onclick = () => {
   $('#whole').click();
   $('#m-whole').setAttribute('aria-pressed', state.whole);
+  $('#m-follow').setAttribute('aria-pressed', $('#follow').getAttribute('aria-pressed'));
 };
 $('#m-list').onclick = () => {
   closeTimeMenu(false);

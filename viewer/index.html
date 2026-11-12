@@ -131,6 +131,11 @@
   .tg { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule); }
   .tg h3 { font: 500 11px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px 4px; }
   .toggles { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 12px; color: var(--soft); }
+  .chip .n { font: 11px var(--f-mono); color: var(--muted); }
+  .chip:hover { border-color: var(--rule-strong); color: var(--text); }
+  .chip[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
   .legend-about { display: inline-block; margin: 10px 0 0 4px; font-size: 11px; color: var(--muted); }
   .legend-about:hover { color: var(--brass); }
   #whole { flex: none; }
@@ -154,6 +159,13 @@
   #empty-near button { max-width: 48%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-color: rgba(217,179,106,.45); background: transparent; }
   #hint { position: absolute; left: 50%; bottom: 200px; transform: translateX(-50%); padding: 6px 14px; font-size: 12px; color: var(--soft); white-space: nowrap; z-index: 2; transition: opacity .8s; pointer-events: none; }
   #hint.fade { opacity: 0; }
+  /* the cue toward history out of view */
+  #cue { position: absolute; left: 50%; bottom: calc(var(--time-top, 176px) + 12px); transform: translateX(-50%); z-index: 3; display: inline-flex; align-items: center; gap: 8px;
+    padding: 7px 14px; border-color: rgba(217,179,106,.5); color: var(--text); font-size: 13px; white-space: nowrap; }
+  #cue[hidden] { display: none; }
+  #cue:hover, #cue:focus-visible { border-color: var(--brass); color: var(--brass); }
+  #follow { flex: none; }
+  #follow:disabled { opacity: .4; }
   /* planet-wide records (no single place): a faint ring on the globe's edge and one small pill above it that opens a short list */
   #planet-ring { position: absolute; border-radius: 50%; pointer-events: none; z-index: 1; box-shadow: 0 0 0 1px rgba(217,179,106,.18), 0 0 18px rgba(217,179,106,.10); }
   #planet { display: flex; flex-direction: column; align-items: flex-start; }
@@ -244,7 +256,13 @@
   #context .win { position: absolute; top: 0; bottom: 0; border: 1.5px solid var(--brass); background: rgba(217,179,106,.18); border-radius: 3px; min-width: 4px; pointer-events: none; }
   #context .humans { position: absolute; right: 0; top: 0; bottom: 0; width: 5px; background: #f0a35e; }
   .ctx-labels { display: flex; justify-content: space-between; font: 11px var(--f-mono); color: var(--muted); margin-top: 3px; }
-  .track { position: relative; margin-top: 10px; }
+  .track { position: relative; margin-top: 24px; }
+  /* named landmarks: short labels above the density strip, each with a tick at its date */
+  #landmarks { position: absolute; left: 0; right: 0; top: -19px; height: 17px; z-index: 3; pointer-events: none; }
+  .lm { position: absolute; top: 0; height: 17px; max-width: 220px; padding: 0 5px; border: 0; border-left: 1px solid var(--brass); background: transparent;
+    font: 11px/17px var(--f-ui); color: var(--soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: auto; }
+  .lm.r { border-left: 0; border-right: 1px solid var(--brass); }
+  .lm:hover, .lm:focus-visible { color: var(--brass); }
   #density { display: block; width: 100%; height: 26px; }
   #marks { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
   .mark { position: absolute; top: 0; padding: 0; border: 0; background: none; }
@@ -263,9 +281,9 @@
   .ticks { display: flex; justify-content: space-between; font: 11px var(--f-mono); color: var(--muted); margin-top: 4px; }
   /* the speed menu (on a phone, the "more" menu, with List): six speeds to choose from */
   #time-menu { position: absolute; right: 12px; bottom: calc(100% + 8px); z-index: 6; display: flex; flex-direction: column; gap: 6px; padding: 8px; background: var(--glass-strong); box-shadow: 0 10px 28px rgba(0,0,0,.45); }
-  #time-menu:not(.from-more) #m-list, #time-menu:not(.from-more) #m-whole { display: none !important; }
-  #m-whole[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
-  #m-list, #m-whole { justify-content: flex-start; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: transparent; color: var(--text); font-size: 13px; }
+  #time-menu:not(.from-more) #m-list, #time-menu:not(.from-more) #m-whole, #time-menu:not(.from-more) #m-follow { display: none !important; }
+  #m-whole[aria-pressed="true"], #m-follow[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
+  #m-list, #m-whole, #m-follow { justify-content: flex-start; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: transparent; color: var(--text); font-size: 13px; }
   .m-speed span { display: block; margin: 0 2px 4px; font: 500 11px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
   #speeds { display: flex; gap: 4px; }
   #speeds button { min-width: 40px; height: 32px; padding: 0 6px; border-radius: 6px; border: 1px solid var(--rule); background: transparent; color: var(--soft); font: 12px var(--f-mono); }
@@ -413,7 +431,7 @@
     #t1::before { content: "– "; }
     #more-btn { grid-area: more; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--rule-strong); background: transparent; color: var(--soft); }
     #play { grid-area: play; margin-left: 0; width: 40px; height: 40px; }
-    #list-btn, #speed, #whole { display: none; }
+    #list-btn, #speed, #whole, #follow { display: none; }
     #levels { grid-area: levels; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; min-width: 0; padding: 0; border: 0; background: transparent; scroll-snap-type: x proximity; }
     #levels::-webkit-scrollbar { display: none; }
     #levels.fade-l { -webkit-mask-image: linear-gradient(to right, transparent, #000 28px); mask-image: linear-gradient(to right, transparent, #000 28px); }
@@ -423,6 +441,8 @@
     #context { grid-area: ctx; margin-top: 2px; }
     #time:not(.deep) #context { display: none; }
     .track { grid-area: track; margin-top: 2px; }
+    #landmarks { top: 0; }
+    .lm { pointer-events: none; color: var(--text); text-shadow: 0 0 3px #000, 0 0 6px #000; }
     #time-menu { right: 8px; }
     #speeds button { height: 40px; }
     .ctx-labels { display: none; }
@@ -462,7 +482,12 @@
     #levels button, .brand-links button, .seq-top button, .time-top button { flex: none; }   /* a minimum width would otherwise let them shrink below their text */
     button.mark { pointer-events: none; }
     .badges { align-items: center; }
-    .legend-about { display: inline-flex; align-items: center; min-height: 40px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 12px; color: var(--soft); }
+  .chip .n { font: 11px var(--f-mono); color: var(--muted); }
+  .chip:hover { border-color: var(--rule-strong); color: var(--text); }
+  .chip[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
+  .legend-about { display: inline-flex; align-items: center; min-height: 40px; }
     #seq-dots i::after { inset: -17px -4px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
@@ -491,6 +516,8 @@
     <div id="legend-body">
     <ul id="domains"></ul>
     <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div><p class="imp-key">Larger markers changed more. A gold ring means a full story.</p></div>
+    <div class="tg"><h3>Region</h3><div id="f-regions" class="chips" role="group" aria-label="Show only these regions (none chosen shows all)"></div></div>
+    <div class="tg"><h3>Kind</h3><div id="f-kinds" class="chips" role="group" aria-label="Show only these kinds of record (none chosen shows all)"></div></div>
     <div class="tg"><h3>Show on the globe</h3><div class="toggles">
       <button class="toggle" id="borders" aria-pressed="true" title="Borders of states and empires at the date shown (Cliopatria). Blank areas are unmapped, not empty.">Borders</button>
       <button class="toggle" id="paths" aria-pressed="false">Routes</button>
@@ -511,6 +538,7 @@
 
 <div id="empty" class="glass" hidden><p id="empty-text"></p><div id="empty-near"></div><button id="empty-btn">Show the whole period</button></div>
 <div id="planet-ring" hidden aria-hidden="true"></div>
+<button id="cue" class="glass" hidden></button>
 <div id="hint" class="glass">Drag to rotate · scroll or pinch to zoom · click a pin to read its record</div>
 
 <section id="panel" class="glass" hidden aria-label="Record" tabindex="-1"></section>
@@ -558,12 +586,14 @@
     <div id="levels" role="tablist" aria-label="Time scale"></div>
     <button id="list-btn" title="List the records shown now" aria-expanded="false">List</button>
     <button id="speed" aria-label="Playback speed" title="Playback speed" aria-expanded="false" aria-controls="time-menu">1×</button>
-    <button id="more-btn" class="phone-only" aria-label="More: list the records shown, whole period, playback speed" aria-expanded="false" aria-controls="time-menu"><svg width="16" height="4" viewBox="0 0 16 4" aria-hidden="true"><circle cx="2" cy="2" r="1.6" fill="currentColor"/><circle cx="8" cy="2" r="1.6" fill="currentColor"/><circle cx="14" cy="2" r="1.6" fill="currentColor"/></svg></button>
+    <button id="more-btn" class="phone-only" aria-label="More: list the records shown, whole period, follow, playback speed" aria-expanded="false" aria-controls="time-menu"><svg width="16" height="4" viewBox="0 0 16 4" aria-hidden="true"><circle cx="2" cy="2" r="1.6" fill="currentColor"/><circle cx="8" cy="2" r="1.6" fill="currentColor"/><circle cx="14" cy="2" r="1.6" fill="currentColor"/></svg></button>
+    <button class="toggle" id="follow" aria-pressed="false">Follow</button>
     <button id="play" aria-label="Play through time"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg></button>
   </div>
   <div id="time-menu" class="glass" hidden>
     <button id="m-list" class="phone-only">List the records shown now</button>
     <button id="m-whole" class="phone-only" aria-pressed="false">Show the whole period, not only near the date</button>
+    <button id="m-follow" class="phone-only" aria-pressed="false">Follow: keep turning the globe toward what is shown</button>
     <div class="m-speed"><span id="m-speed-label">Playback speed</span><div id="speeds" role="group" aria-labelledby="m-speed-label"></div></div>
   </div>
   <div id="context" title="All of Earth's history. Click to jump there; the orange sliver at the right edge is human history."></div>
@@ -571,6 +601,7 @@
   <div class="track">
     <canvas id="density" aria-hidden="true"></canvas>
     <div id="marks"></div>
+    <div id="landmarks"></div>
     <input id="slider" type="range" min="0" max="1000" step="1" aria-label="Date within this time scale">
   </div>
   <div class="ticks"><span id="t0"></span><span id="tm"></span><span id="t1"></span></div>

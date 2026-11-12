@@ -92,6 +92,7 @@ export function placePinSprites() {
     wanted = [];
   const win = windowNow(),
     reach = LEVELS[state.level].key === 'event' || wholeNow() ? Infinity : (win.to - win.from) / 2;
+  const seen = { shown: 0, facing: 0, x: 0, y: 0, z: 0, behind: new Map() };
   for (const entry of pinSprites.values()) {
     const { group, sprite, halo, label, p } = entry,
       pos = group.position,
@@ -100,6 +101,15 @@ export function placePinSprites() {
     const facing = pos.dot(camPos) / (r * cd); // cosine between the pin and the camera direction
     const horizon = GLOBE_R / cd; // below this the pin is behind the Earth's limb
     const vis = Math.min(1, Math.max(0, (facing - horizon) / 0.06));
+    // where the shown records are, weighted by importance: for the cue toward history out of view, and for Follow
+    const n = p.cluster ? p.cluster.length : 1,
+      wt = n * (p.importance || 1) ** 2;
+    seen.shown += n;
+    seen.x += (pos.x / r) * wt;
+    seen.y += (pos.y / r) * wt;
+    seen.z += (pos.z / r) * wt;
+    if (facing > horizon + 0.05) seen.facing += n;
+    else for (const q of p.cluster || [p]) seen.behind.set(q.region, (seen.behind.get(q.region) || 0) + (q.importance || 1) ** 2);
     sprite.visible = vis > 0.01;
     // a record fades and shrinks with its distance from the date shown, so what happened then reads first
     const special = p.id === state.selected || p.id === hoverId;
@@ -137,12 +147,14 @@ export function placePinSprites() {
   }
   // greedy placement: the most important names first, skipping any that would overlap one already placed
   wanted.sort((a, b) => b.rank - a.rank);
-  const placed = [];
+  const placed = chromeRects(now),
+    shown = [];
   window.DeepTime?.placeLabels(placed, state.alt, k, W, H, cam); // supercontinents and old oceans come first
   for (const w of wanted) {
     const [x0, y0, x1, y1] = w.box;
     if (placed.some(([a0, b0, a1, b1]) => x0 < a1 && x1 > a0 && y0 < b1 && y1 > b0)) continue;
     placed.push(w.box);
+    shown.push(w.box);
     const { label } = w.entry,
       { w: lw, h: lh } = label.userData;
     label.visible = true;
@@ -151,6 +163,29 @@ export function placePinSprites() {
     label.center.set(-(w.px / 2 + 2) / lw, 0.5); // anchor the text just right of the badge
   }
   window.Borders?.placeLabels(placed, state.alt, k, W, H, cam); // polity names take what space is left
+  pinsSeen = seen;
+  labelBoxes = shown;
+}
+export let labelBoxes = []; // the pin names drawn this frame, as screen boxes (read by the smoke test)
+// how many of the shown pins face the camera, the importance-weighted centre of them all, and the regions of those
+// out of view; measured each frame by placePinSprites
+export let pinsSeen = { shown: 0, facing: 0, x: 0, y: 0, z: 0, behind: new Map() };
+// The screen's controls, as boxes the label placer treats as taken, so no name draws under the header, a panel or
+// the time console. Measured at most five times a second, not every frame.
+const CHROME = ['#masthead > div:first-child', '#masthead .search', '#legend', '#notice', '#planet', '#panel', '#time', '#vitals', '#cue', '#seqbar', '#pinlist', '#empty'];
+let chrome = [],
+  chromeAt = -1e9;
+function chromeRects(now) {
+  if (now - chromeAt > 200) {
+    chromeAt = now;
+    chrome = [];
+    for (const sel of CHROME) {
+      const el = document.querySelector(sel),
+        r = el?.getBoundingClientRect();
+      if (r && r.width && r.height && getComputedStyle(el).visibility !== 'hidden') chrome.push([r.left - 4, r.top - 4, r.right + 4, r.bottom + 4]);
+    }
+  }
+  return chrome.slice();
 }
 // Dense spots become one count badge. The cell follows the camera height, about a badge's width on screen; the open
 // record stays out of it. Up close only records at nearly the same place remain together, so a stack stays reachable.
