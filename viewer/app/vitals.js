@@ -23,6 +23,7 @@ fetch('paleo/vitals.json')
       .querySelectorAll('button')
       .forEach(b => {
         b.onclick = () => {
+          if (compact()) return setVitalsOpen(true); // the one-line chip opens the full readout
           state.vitalCurve = b.dataset.k;
           showVitalSource();
           drawDensity();
@@ -39,6 +40,33 @@ new ResizeObserver(() =>
     `${Math.round(document.documentElement.clientHeight - $('#time').getBoundingClientRect().top)}px`,
   ),
 ).observe($('#time'));
+// Vital signs are on by default on a desktop and off on a phone, and the visitor's choice is remembered. On a desktop
+// they start as a one-line chip showing the sign drawn on the time bar; a click opens the full readout.
+const store = (k, v) => {
+  try {
+    if (v === undefined) return localStorage.getItem(k);
+    localStorage.setItem(k, v);
+  } catch {}
+};
+state.vitals = (store('atlas.vitals') ?? (innerWidth <= 760 ? '0' : '1')) === '1';
+$('#vitals-toggle').setAttribute('aria-pressed', state.vitals);
+$('#vitals-toggle').addEventListener('click', () => store('atlas.vitals', state.vitals ? '1' : '0'));
+const wide = matchMedia('(min-width: 901px)');
+let vitalsOpen = store('atlas.vitals.open') === '1';
+const compact = () => wide.matches && !vitalsOpen;
+export function setVitalsOpen(open) {
+  vitalsOpen = open;
+  store('atlas.vitals.open', open ? '1' : '0');
+  $('#vitals').classList.toggle('compact', !open);
+  $('#v-head').setAttribute('aria-expanded', open);
+  render();
+}
+$('#vitals').classList.toggle('compact', !vitalsOpen);
+$('#v-head').setAttribute('aria-expanded', vitalsOpen);
+$('#v-head').onclick = () => setVitalsOpen(!vitalsOpen);
+// rows that say nothing at the date step out: known genera after 10,000 BCE, and day length and the Moon's distance
+// outside the Deep time and Life scales, where neither changes enough to show
+const rowShown = k => (k === 'life' ? state.t < -10000 : k === 'day' || k === 'moon' ? state.level <= 1 : true);
 export function showVitalSource() {
   $('#v-rows')
     .querySelectorAll('button')
@@ -79,9 +107,16 @@ export function renderVitals() {
   $('#vitals').classList.toggle('only-key', !state.vitals);
   if (!vitals || !state.vitals) return;
   const ma = (1950 - state.t) / 1e6;
+  if (!rowShown(state.vitalCurve)) {
+    state.vitalCurve = 'temp';
+    showVitalSource();
+    drawDensity();
+  }
   for (const b of $('#v-rows').children) {
-    const k = b.dataset.k,
-      text = vitalText(k, vitalAt(vitals.series[k], ma), ma),
+    const k = b.dataset.k;
+    b.hidden = !rowShown(k);
+    if (b.hidden) continue;
+    const text = vitalText(k, vitalAt(vitals.series[k], ma), ma),
       el = b.lastElementChild;
     if (el.textContent !== text) el.textContent = text;
   }

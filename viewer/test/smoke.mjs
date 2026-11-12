@@ -54,6 +54,10 @@ async function run(name, opts, budget) {
     check(!loaded.some(([u]) => u.includes('paleo/morph.json')), 'the plate model is not loaded until deep time is asked for');
   }
   await page.evaluate(() => document.querySelector('#welcome-close')?.click());
+  // vital signs: on and closed to one line on a desktop, off on a phone; no row that means nothing at 500 BCE
+  const vit = await page.evaluate(() => ({ on: window.atlas.state.vitals, rows: [...document.querySelectorAll('#v-rows .v-row')].filter(b => b.offsetParent).map(b => b.textContent) }));
+  if (budget) check(!vit.on, 'vital signs are off on a phone');
+  else check(vit.on && vit.rows.length === 1 && !vit.rows.some(t => /genera/i.test(t)), `vital signs show one line, with no known genera, at 500 BCE (${vit.rows.join(' | ')})`);
   await page.mouse.move(200, 300);
   check(await soon(() => window.atlas.state.pins.filter(p => p.summary).length > 2000), 'tooltip teasers arrive at the first pointer move');
 
