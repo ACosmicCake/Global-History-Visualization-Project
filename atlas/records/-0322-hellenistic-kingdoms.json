@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0322-hellenistic-kingdoms",
+  "kind": "period",
+  "title": "Hellenistic kingdoms (Seleucid, Ptolemaic, Antigonid)",
+  "summary": "When Alexander the Great died in 323 BCE, his generals, the Diadochi, met at Babylon, then fought a series of wars over his empire. By 300 BCE it had split into three large parts, and after 280 BCE three great states remained: Antigonid Macedonia, Ptolemaic Egypt and the Seleucid kingdom in Asia. Centralised kingdoms replaced the city-state model, and Greek rule and new colonies spread Hellenic culture across these lands. Weakened by constant wars, they fell to rivals and to Rome, which took Egypt, the last, in 31 BCE.",
+  "when": {
+    "start": {
+      "year": -322
+    },
+    "end": {
+      "year": -30
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Begins with Alexander’s death in 323 BCE; WHE ends the period with Rome’s conquest of Egypt in 31 BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Proleptic Julian, BCE",
+        "value": "death of the Macedonian king and conqueror Alexander the Great in 323 BCE",
+        "source": "src-livius-diadochi"
+      },
+      {
+        "calendar": "Proleptic Julian, BCE",
+        "value": "begin in 323 BCE with Alexander's death and ends in 31 BCE",
+        "source": "src-whe-hellenistic"
+      }
+    ],
+    "display": "323–31 BCE"
+  },
+  "where": {
+    "lat": 32.54197,
+    "lon": 44.42083,
+    "elevation_m": 25,
+    "modern_name": "Babylon, Babil Governorate, Iraq (stand-in pin: site of the first settlement among the Diadochi)",
+    "historical_name": "Babylon, held by Alexander’s successors; later in the Seleucid kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-unesco-babylon"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "northern_africa",
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Spread Greek rule and culture from Egypt to Asia for three centuries before Rome (R3 D3 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0323-death-of-alexander-the-great",
+      "type": "caused_by",
+      "because": "Alexander's unexpected death without an adult heir left his vast empire to be partitioned by his rival generals into separate dynasties."
+    },
+    {
+      "id": "person-alexander-the-great",
+      "type": "related"
+    },
+    {
+      "id": "person-cleopatra-vii",
+      "type": "related"
+    },
+    {
+      "id": "person-euclid",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-hellenistic",
+      "url": "https://www.worldhistory.org/Hellenistic_Period/",
+      "title": "Hellenistic Period",
+      "publisher": "World History Publishing",
+      "author": "Antoine Simonin",
+      "date_published": "2011-04-28",
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-diadochi",
+      "url": "https://www.livius.org/articles/concept/diadochi/",
+      "title": "Alexander's successors: the Diadochi",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "2006",
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-babylon",
+      "url": "https://whc.unesco.org/en/list/278/",
+      "title": "Babylon",
+      "publisher": "UNESCO World Heritage Centre",
+      "accessed": "2026-11-12",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-12: the GeoNames source cited for Babylon was the page for Sulaymaniyah; replaced with UNESCO Babylon (same coordinates, N32 32 31 E44 25 15). End set to 31 BCE as on WHE (draft had 30 BCE, unsourced). Philosophy, art and Central Asia claims dropped; summary rewritten to Livius and WHE.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-12",
+  "published_at": "2026-11-12T17:37:41.396Z",
+  "changelog": [
+    {
+      "date": "2026-11-12",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
