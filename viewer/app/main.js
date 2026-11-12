@@ -10,6 +10,7 @@ import { EARTH, EONS, LEVELS, NOW, checkToday, domainOn, fmtSpan, fmtYear, inLev
 import { CLOSE_AT, DOMAINS, badgeURL, baseColor, colorOf, haloTexture, isMajor, pinTexture, standsOut } from './badges.js';
 import { clusterPins, labelTexture, pinData, pinSprites, placePinSprites, placed, visiblePins } from './pins.js';
 import { PAUSE, PLAY, drawDensity, slideRange, stopPlay, timer } from './timebar.js';
+import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
 const { THREE, Globe } = window;
 
 export const GLOBE_R = 100;
@@ -485,150 +486,9 @@ export async function goTo(id) {
   openRecord(id);
 }
 
-// ---------- record panel (all record text is escaped: records are data written by agents)
-const CONF_LABEL = { established: 'Established', probable: 'Probable', contested: 'Contested', legendary: 'Legendary' };
-// A record opens at once from what its pin already knows, then fills in when the full record arrives. Hovering a pin fetches its record ahead of the click.
-const recordCache = new Map(); let openToken = 0, hoverFetch = null;
-function fetchRecord(id) {
-  let got = recordCache.get(id);
-  if (!got) {
-    got = fetch(`api/record/${encodeURIComponent(id)}.json`).then(res => (res.ok ? res.json() : null));
-    recordCache.set(id, got); got.then(r => { if (!r) recordCache.delete(id); }, () => recordCache.delete(id));
-  }
-  return got;
-}
-function fetchSoon(id) { clearTimeout(hoverFetch); if (id) hoverFetch = setTimeout(() => fetchRecord(id).catch(() => {}), 100); }
-// keep the pin in the open part of the screen: left of the side panel, or above the phone's bottom sheet
-function frameRecord(lat, lon, unc) {
-  if (lat == null || (unc ?? 0) >= 5000) return;
-  const phone = innerWidth <= 760, k = Math.min(1, state.alt);
-  globe.pointOfView({ lat: phone ? Math.max(-80, lat - 26 * k) : lat, lng: lon + (phone ? 0 : 14 * k), altitude: Math.min(state.alt, 1.5) }, 1100);
-}
-const CLOSE_ICON = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg>';
-function panelFromPin(p) {
-  const panel = $('#panel');
-  panel.innerHTML = `<div class="p-head"><button class="p-close" aria-label="Close record">${CLOSE_ICON}</button></div>
-    <div class="p-body"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div><div class="prose">${p.summary ? `<p>${esc(p.summary)}</p>` : ''}</div></div>`;
-  show(panel, true); show($('#notice'), false);
-  panel.querySelector('.p-close').onclick = closePanel;
-  panel.querySelector('.p-close').focus({ preventScroll: true });
-}
-async function openRecord(id) {
-  const token = ++openToken, pin = state.pins.find(p => p.id === id);
-  if (document.activeElement && !$('#panel').contains(document.activeElement)) lastFocus = document.activeElement;
-  if (pin) {
-    panelFromPin(pin);
-    state.selected = id; state.openRec = null; state.arcs = []; render(); writeURL(true);
-    document.title = `${pin.title} · Living Atlas`;
-    frameRecord(pin.lat, pin.lon, pin.unc);
-  }
-  const r = await fetchRecord(id).catch(() => null);
-  if (token !== openToken) return;   // closed, or another record opened, while this one was on its way
-  if (!r) { if (pin) closePanel(); flash(`“${id}” is not published yet.`); return; }
-  state.selected = id; state.openRec = r; state.arcs = causalArcs(r); render(); writeURL(true);
-  document.title = `${r.title} · Living Atlas`;
-  if (state.tour) { const i = state.tour.stops.indexOf(id); if (i >= 0) state.tour.i = i; }
-  const img = (r.media || []).find(m => m.type === 'image' || m.type === 'map');
-  const paras = s => esc(s).split(/\n+/).filter(Boolean).map(x => `<p>${x}</p>`).join('');
-  const known = new Set(state.pins.map(p => p.id));
-  const relLabel = { caused: 'led to', caused_by: 'caused by', part_of: 'part of', has_part: 'includes', same_person: 'same person', same_place: 'same place', contemporary: 'same time', related: 'related', mentions: 'mentions', mentioned_in: 'mentioned in' };
-  const num = n => n.low === n.high ? Number(n.low).toLocaleString() : `${Number(n.low).toLocaleString()}–${Number(n.high).toLocaleString()}`;
-  const panel = $('#panel');
-  panel.innerHTML = `
-    <div class="p-head">
-      ${img ? `<img class="p-hero" src="${esc(img.file_url)}" alt="${esc(img.title)}">` : r.wiki ? '<img class="p-hero wiki-hero" alt="" hidden>' : ''}
-      <button class="p-close" aria-label="Close record"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg></button>
-    </div>
-    ${img ? `<div class="p-credit">${esc(img.title)} · ${esc(img.credit)} · ${esc(img.license)}</div>` : r.wiki ? '<div class="p-credit wiki-credit" hidden></div>' : ''}
-    <div class="p-body">
-      ${tourNav()}
-      ${r.status === 'outline' ? '<div class="outline-note">A short record: a summary drawn from the sources below.</div>' : ''}
-      <div class="p-kicker">${esc((DOMAINS[r.domains?.[0]] || [r.kind])[0])} · ${esc(r.kind)}</div>
-      <h2>${esc(r.title)}</h2>
-      <div class="p-when">${esc(r.when?.display)}</div>
-      <div class="p-where">${esc(r.where?.historical_name)}${uncertaintyLine(r)}</div>
-      <div class="badges"><span class="badge conf-${esc(r.confidence)}">${esc(CONF_LABEL[r.confidence] || r.confidence)}${r.provisional ? ' · provisional' : ''}</span><span class="badge">Importance ${esc(r.importance?.score)}/5</span>${r.wiki ? `<a class="badge wiki-badge" href="https://en.wikipedia.org/wiki/${esc(encodeURIComponent(r.wiki.title.replace(/ /g, '_')))}" target="_blank" rel="noopener noreferrer" title="Open the Wikipedia article (further reading, not a source)">Wikipedia ↗</a>` : ''}<button class="badge p-share" id="p-share" title="Copy a link to this record">Copy link</button></div>
-      ${(r.animation?.beats || []).length || (r.where?.geometry?.waypoints || []).length >= 2 || deepTime?.scenes[r.id] ? `<button class="play-seq" id="play-seq"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>${(r.animation?.beats || []).length ? `Play the sequence · ${r.animation.beats.length} beats` : deepTime?.scenes[r.id] ? 'Play the animation' : 'Play the route'}</button>` : ''}
-      ${r.audience_note ? `<div class="warn">${esc(r.audience_note)}</div>` : ''}
-      ${r.card ? `<p class="lede">${esc(r.card)}</p>` : ''}
-      ${r.status === 'outline' ? `<section><h3>Summary</h3><div class="prose">${paras(r.summary)}</div></section>` : ''}
-      ${r.what ? `<section><h3>What happened</h3><div class="prose">${paras(r.what)}</div></section>` : ''}
-      ${r.why_it_matters ? `<section><h3>Why it matters</h3><div class="prose">${paras(r.why_it_matters)}</div></section>` : ''}
-      ${r.how ? `<section><details><summary><h3>How it happened</h3></summary><div class="prose">${paras(r.how)}</div></details></section>` : ''}
-      ${(r.perspectives || []).length ? `<section><h3>Perspectives</h3>${r.perspectives.map(p => `<div class="persp"><b>${esc(p.holder)}</b><span>${esc(p.account)}</span></div>`).join('')}</section>` : ''}
-      ${(r.numbers || []).length ? `<section><h3>Numbers</h3><table class="nums">${r.numbers.map(n => `<tr><td>${esc(n.label || n.field)}</td><td>${esc(num(n))} ${esc(n.unit)}</td></tr>`).join('')}</table></section>` : ''}
-      ${(r.related || []).length ? `<section><h3>Connections</h3><div class="rel">${r.related.map(x => `<button data-id="${esc(x.id)}" ${known.has(x.id) ? '' : 'disabled title="Not written yet"'}><i>${esc(relLabel[x.type] || x.type)}</i>${esc(x.title || (state.pins.find(p => p.id === x.id)?.title) || x.id)}${x.because ? `<span class="because">${esc(x.because)}</span>` : ''}</button>`).join('')}</div></section>` : ''}
-      ${meanwhile(r)}
-      ${r.where?.paleo?.lat != null ? `<section><h3>Position then</h3><div class="prose"><p>${esc(r.where.paleo.lat)}°, ${esc(r.where.paleo.lon)}° at ${esc(r.where.paleo.age_ma)} million years ago (${esc(r.where.paleo.plate_model)}).</p></div></section>` : ''}
-      <section><details><summary><h3>Sources (${(r.sources || []).length})</h3></summary><ol class="srcs">${(r.sources || []).map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a> <span class="cls">${esc(s.class)}</span>${s.original_url ? ' <span class="cls">archived copy</span>' : ''}<br><span style="color:var(--muted)">${esc(s.publisher)}</span></li>`).join('')}</ol></details></section>
-      ${r.wiki ? `<section class="wiki"><h3>On Wikipedia${r.wiki.quality ? ` <span class="wq">${r.wiki.quality === 'FA' ? 'Featured article' : 'Good article'}</span>` : ''}</h3><div class="wiki-body">Loading the article summary…</div></section>` : ''}
-      ${r.visitor_note ? `<section><h3>Least certain</h3><div class="prose"><p style="font-size:13px;color:var(--soft)">${esc(r.visitor_note)}</p></div></section>` : ''}
-      <div class="meta-line">Drafted and reviewed by AI models, then checked against its sources by automated tools. <a href="about.html" target="_blank" rel="noopener">How this is made</a> · <a href="${esc(reportLink(r))}" target="_blank" rel="noopener noreferrer">Report a problem</a><br>${esc(r.id)} · version ${esc(r.record_version)} · updated ${esc(r.updated)}</div>
-    </div>`;
-  show(panel, true); show($('#notice'), false);
-  panel.querySelector('.p-body').scrollTop = 0;
-  panel.querySelector('.p-close').onclick = closePanel;
-  panel.querySelector('.p-close').focus({ preventScroll: true });
-  panel.querySelector('#p-share').onclick = shareRecord;
-  panel.querySelector('#tour-prev')?.addEventListener('click', () => tourStep(-1));
-  panel.querySelector('#tour-next')?.addEventListener('click', () => tourStep(1));
-  panel.querySelector('#tour-end')?.addEventListener('click', () => { state.tour = null; panel.querySelector('.tour-nav').remove(); writeURL(false); });
-  const playBtn = panel.querySelector('#play-seq'); if (playBtn) playBtn.onclick = () => playSequence(r);
-  panel.querySelectorAll('.rel button:not([disabled])').forEach(b => { b.onclick = () => goTo(b.dataset.id); });
-  if (r.wiki) wikiSummary(id, r.wiki);
-  if (!pin) frameRecord(r.where?.lat, r.where?.lon, r.where?.uncertainty_km);
-}
-// The linked Wikipedia article's lead, fetched live (always current, nothing stored); shown as further reading
-const wikiCache = new Map();
-async function wikiSummary(id, w) {
-  const box = $('#panel .wiki-body');
-  try {
-    if (!wikiCache.has(w.title)) {
-      const res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(w.title.replace(/ /g, '_'))}`);
-      if (!res.ok) throw new Error(res.status);
-      wikiCache.set(w.title, await res.json());
-    }
-    if (state.selected !== id || !box?.isConnected) return; // the reader has moved on
-    const s = wikiCache.get(w.title), url = s.content_urls?.desktop?.page || `https://en.wikipedia.org/wiki/${encodeURIComponent(w.title)}`;
-    box.innerHTML = `<p class="wiki-text">${esc(s.extract || '')}</p>
-      <a class="wiki-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Read “${esc(s.title || w.title)}” on Wikipedia →</a>
-      <div class="wiki-note">Text from Wikipedia, CC BY-SA 4.0. Further reading, not one of this record’s sources.</div>`;
-    wikiImage(id, s);
-  } catch {
-    if (box?.isConnected) box.innerHTML = `<a class="wiki-link" href="https://en.wikipedia.org/wiki/${encodeURIComponent(w.title.replace(/ /g, '_'))}" target="_blank" rel="noopener noreferrer">Read “${esc(w.title)}” on Wikipedia →</a>`;
-  }
-}
-// The article's lead image as the panel picture, for records without media of their own. Only freely licensed
-// Wikimedia Commons files are used (an English-Wikipedia-only upload may be a non-free "fair use" image), each
-// credited with its author and licence from the file's Commons metadata; with no licence on record, no image.
-const imageCredit = new Map();
-async function wikiImage(id, s) {
-  const hero = $('#panel .wiki-hero'), credit = $('#panel .wiki-credit');
-  const src = s.thumbnail?.source || s.originalimage?.source;
-  if (!hero || !src || !/(upload|thumb)\.wikimedia\.org\/wikipedia\/commons\//.test(src)) return;
-  const file = decodeURIComponent((src.match(/\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/]+)/) || [])[1] || '');
-  if (!file) return;
-  try {
-    if (!imageCredit.has(file)) {
-      const j = await (await fetch(`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&prop=imageinfo&iiprop=extmetadata|url&titles=${encodeURIComponent('File:' + file)}`)).json();
-      const info = Object.values(j.query?.pages || {})[0]?.imageinfo?.[0], m = info?.extmetadata || {};
-      // plain text from Commons' HTML; a name its markup repeats ("Unknown authorUnknown author") is said once
-      const text = h => new DOMParser().parseFromString(String(h || ''), 'text/html').body.textContent.replace(/\s+/g, ' ').trim()
-        .replace(/^(.+?)\s*\1$/, '$1').replace(/\.$/, '');
-      imageCredit.set(file, info && m.LicenseShortName ? { author: text(m.Artist?.value).slice(0, 80), license: text(m.LicenseShortName.value), page: info.descriptionurl } : null);
-    }
-    const c = imageCredit.get(file);
-    if (!c || state.selected !== id || !hero.isConnected) return;
-    hero.src = src.replace(/\/(\d+)px-/, (x, n) => (+n < 960 ? '/960px-' : x)); // a sharper thumbnail; Commons serves standard widths (500, 960…), not 640
-    // a file smaller than 960px has no 960px thumbnail: fall back to the article's own one, then give up quietly
-    hero.alt = s.title || ''; hero.onerror = () => { if (hero.src !== src) hero.src = src; else { show(hero, false); show(credit, false); } };
-    credit.innerHTML = `${c.author ? esc(c.author) + ' · ' : ''}${esc(c.license)} · <a href="${esc(c.page)}" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>`;
-    show(hero, true); show(credit, true);
-  } catch {}
-}
 // ---------- authored sequences (spec 6.2): the time axis locks to each beat; the panel steps aside while playing
 export function levelFor(y) { return y < -5.4e8 ? 0 : y < -7e6 ? 1 : y < -3e5 ? 2 : y < -10000 ? 3 : y < 1500 ? 4 : 5; }
-function playSequence(r) {
+export function playSequence(r) {
   const pin = state.pins.find(p => p.id === r.id);
   window.Sequence.play(r, {
     globe, color: pin ? baseColor(pin) : '#d9b36a', scene: deepTime?.scenes[r.id], getTime: () => state.t,
@@ -660,62 +520,7 @@ addEventListener('keydown', e => {
   else if (e.key === 'ArrowRight') { e.preventDefault(); window.Sequence.step(1); }
 });
 
-function closePanel() {
-  openToken++; show($('#panel'), false); state.selected = null; state.openRec = null; state.arcs = []; state.tour = null; document.title = 'Living Atlas';
-  render(); writeURL(true);
-  if (lastFocus?.isConnected) lastFocus.focus({ preventScroll: true });
-}
-let lastFocus = null;
 state.arcs = [];
-// ---------- helpers for the record panel
-const REPO = 'ACosmicCake/Global-History-Visualization-Project';
-function reportLink(r) {
-  const body = `Record: ${r.id}\nPage: ${location.origin}${location.pathname.replace(/[^/]*$/, '')}r/${r.id}.html\n\nWhat looks wrong:\n\nA source that shows this (a link, if you have one):\n`;
-  return `https://github.com/${REPO}/issues/new?labels=correction&title=${encodeURIComponent(`Correction: ${r.title}`)}&body=${encodeURIComponent(body)}`;
-}
-function uncertaintyLine(r) { // how exact the pin and the date are, in the record's own stated margins
-  const km = r.where?.uncertainty_km, u = r.when?.uncertainty || {}, yrs = Math.max(u.start_minus_years || 0, u.start_plus_years || 0, u.end_minus_years || 0, u.end_plus_years || 0), bits = [];
-  if (km >= 5 && km < 5000) bits.push(`Place within about ${Math.round(km).toLocaleString()} km`);
-  if (yrs >= 1) bits.push(`dates within about ${fmtSpan(yrs)}`);
-  return bits.length ? `<small>${esc(bits.join(' · '))}</small>` : '';
-}
-async function shareRecord(e) { // the plain page carries a preview for chat apps and search engines, and links on to the globe
-  const r = state.openRec, url = LIVE ? location.href : new URL(`r/${r.id}.html`, location.href.split('#')[0]).href, b = e.currentTarget;
-  if (navigator.share && matchMedia('(pointer: coarse)').matches) { try { await navigator.share({ title: r.title, url }); } catch {} return; }
-  try { await navigator.clipboard.writeText(url); b.textContent = 'Link copied'; } catch { prompt('Copy this link', url); }
-  setTimeout(() => { if (b.isConnected) b.textContent = 'Copy link'; }, 1600);
-}
-// Cause and effect drawn on the globe (spec 11.8): an arc from each cause to its effect, for the open record's causal links
-function causalArcs(r) {
-  if (r.where?.lat == null || (r.where.uncertainty_km ?? 0) >= 5000) return [];
-  const here = placed({ lat: r.where.lat, lon: r.where.lon });
-  return (r.related || []).filter(x => x.type === 'caused' || x.type === 'caused_by').flatMap(x => {
-    const p = state.pins.find(q => q.id === x.id);
-    if (!p || p.lat == null || p.global) return [];
-    const there = placed(p), out = x.type === 'caused';
-    return [{ id: p.id, title: p.title, because: x.because, label: out ? 'Led to' : 'Caused by', color: out ? ['#d9b36a', '#f0d9a4'] : ['#8fb0e8', '#d9b36a'],
-      a: out ? here.lat : there.lat, b: out ? here.lon : there.lon, c: out ? there.lat : here.lat, d: out ? there.lon : here.lon }];
-  });
-}
-function kmBetween(a, b, c, d) {
-  const R = Math.PI / 180, h = Math.sin((c - a) * R / 2) ** 2 + Math.cos(a * R) * Math.cos(c * R) * Math.sin((d - b) * R / 2) ** 2;
-  return 12742 * Math.asin(Math.min(1, Math.sqrt(h)));
-}
-// What else was happening: other records of about the same date, near this one and across the other regions of the world
-function meanwhile(r) {
-  const y = r.when?.start?.year;
-  if (y == null) return '';
-  const w = Math.max(5, (NOW - y) * 0.02), longest = Math.max(150, w * 10), listed = new Set((r.related || []).map(x => x.id));
-  const others = state.pins.filter(p => p.id !== r.id && p.lat != null && !p.global && !listed.has(p.id) && p.start <= y + w && p.until >= y - w && p.until - p.start <= longest)
-    .sort((a, b) => (a.kind === 'person') - (b.kind === 'person') || b.importance - a.importance || Math.abs(a.start - y) - Math.abs(b.start - y));   // people last: a long life overlaps nearly everything
-  const pinned = r.where?.lat != null && (r.where.uncertainty_km ?? 0) < 5000;
-  const near = pinned ? others.filter(p => kmBetween(r.where.lat, r.where.lon, p.lat, p.lon) < 1000).slice(0, 4) : [];
-  const regions = new Set([r.regions?.[0]]), far = [];
-  for (const p of others) { if (far.length >= 5) break; if (!near.includes(p) && p.region && !regions.has(p.region)) { regions.add(p.region); far.push(p); } }
-  if (!near.length && !far.length) return '';
-  const row = p => `<button data-id="${esc(p.id)}"><i>${esc(fmtYear(p.start, true))}</i>${esc(p.title)}</button>`;
-  return `<section><h3>Meanwhile</h3>${near.length ? `<div class="mw-h">Nearby</div><div class="rel">${near.map(row).join('')}</div>` : ''}${far.length ? `<div class="mw-h">Elsewhere in the world</div><div class="rel">${far.map(row).join('')}</div>` : ''}</section>`;
-}
 // ---------- lists of pins: a dense spot opened, or everything shown now (for the keyboard and for crowded screens)
 function openPinList(title, pins) {
   const box = $('#pinlist');
@@ -739,11 +544,11 @@ addEventListener('keydown', e => { if (e.key === 'Escape') { closePinList(); clo
 // ---------- tours: a fixed order of existing records, each opened in turn; no text beyond the records' own
 let tours = null;
 const loadTours = async () => { if (!tours) { await dataReady; const known = new Set(state.pins.map(p => p.id)); tours = (await (await fetch('tours.json')).json()).map(t => ({ ...t, stops: t.stops.filter(id => known.has(id)) })).filter(t => t.stops.length >= 2); } return tours; };
-function tourNav() {
+export function tourNav() {
   const t = state.tour;
   return t ? `<div class="tour-nav"><span>${esc(t.title)} · ${t.i + 1} of ${t.stops.length}</span><button id="tour-prev" aria-label="Previous stop" ${t.i ? '' : 'disabled'}>‹</button><button id="tour-next" aria-label="Next stop" ${t.i < t.stops.length - 1 ? '' : 'disabled'}>›</button><button id="tour-end" aria-label="Leave the tour">×</button></div>` : '';
 }
-function tourStep(d) { const t = state.tour; if (t && t.stops[t.i + d]) goTo(t.stops[t.i + d]); }
+export function tourStep(d) { const t = state.tour; if (t && t.stops[t.i + d]) goTo(t.stops[t.i + d]); }
 async function startTour(id, i = 0) {
   const t = (await loadTours()).find(x => x.id === id);
   if (!t) return;
@@ -851,7 +656,7 @@ function stateHash() {
   const out = h.toString();
   return out ? `#${out}` : '';
 }
-function writeURL(push) {
+export function writeURL(push) {
   clearTimeout(urlTimer);
   if (restoring) return;
   const h = stateHash();
@@ -873,7 +678,7 @@ async function applyHash() {
 }
 addEventListener('popstate', applyHash);
 addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#panel').hidden) closePanel(); });
-function flash(msg) { const n = $('#notice'); n.textContent = msg; show(n, true); setTimeout(() => render(), 2500); }
+export function flash(msg) { const n = $('#notice'); n.textContent = msg; show(n, true); setTimeout(() => render(), 2500); }
 
 // ---------- live data
 let lastSig = '';
@@ -932,7 +737,7 @@ window.atlas = { openRecord, goTo, state, globe, startTour, startFilm }; // hand
 buildChrome(); setLevel(4);
 // Live refresh only against the local server, where records are being published; the static site's data changes
 // only with a new deploy, so it is fetched once (and can be cached).
-const LIVE = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+export const LIVE = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
 const dataReady = refresh(); if (LIVE) setInterval(refresh, 15000);
 dataReady.then(() => { // a link to a place in the atlas opens there; a first visit with no link gets the welcome card
   if (location.hash.length > 1) return applyHash();
