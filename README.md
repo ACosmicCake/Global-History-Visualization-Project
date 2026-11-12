@@ -10,7 +10,7 @@ The records are drafted and reviewed by AI models and tied to the sources they c
 
 | Path | What it is |
 | --- | --- |
-| `viewer/` | The site: the globe (`app.js`, `space.js`, `spacecraft.js`, `sequence.js`), the tours, the plain HTML pages (`pages.mjs`), and the local server and static build |
+| `viewer/` | The site: the globe (`app/` modules, `space.js`, `spacecraft.js`, `sequence.js`), the tours, the plain HTML pages (`pages.mjs`), and the local server and static build |
 | `atlas/records/` | One JSON file per record |
 | `atlas/tools/` | The quality gate, publishing tools and research runners. See [atlas/README.md](atlas/README.md) |
 | `atlas/spec.md`, `atlas/SPEC_AMENDMENTS.md` | What the atlas is meant to be and the rules for writing records |
