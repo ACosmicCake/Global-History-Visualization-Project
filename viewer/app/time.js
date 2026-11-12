@@ -15,9 +15,12 @@ export const LEVELS = [
   { key: 'event', name: 'One year', from: null, to: null },
 ];
 export const SCALE_INDEX = Object.fromEntries(LEVELS.map((l, i) => [l.key, i]));
-export const EONS = [ // ICS chronostratigraphic chart, eon boundaries
-  { name: 'Hadean', from: EARTH, to: -4.031e9, color: '#3a1f2b' }, { name: 'Archean', from: -4.031e9, to: -2.5e9, color: '#4a2a3c' },
-  { name: 'Proterozoic', from: -2.5e9, to: PHANEROZOIC_START, color: '#3c3557' }, { name: 'Phanerozoic', from: PHANEROZOIC_START, to: NOW, color: '#2c4a63' },
+export const EONS = [
+  // ICS chronostratigraphic chart, eon boundaries
+  { name: 'Hadean', from: EARTH, to: -4.031e9, color: '#3a1f2b' },
+  { name: 'Archean', from: -4.031e9, to: -2.5e9, color: '#4a2a3c' },
+  { name: 'Proterozoic', from: -2.5e9, to: PHANEROZOIC_START, color: '#3c3557' },
+  { name: 'Phanerozoic', from: PHANEROZOIC_START, to: NOW, color: '#2c4a63' },
 ];
 // ---------- time formatting & levels
 export function fmtYear(y, short = false) {
@@ -33,13 +36,23 @@ export function fmtYear(y, short = false) {
   }
   return `${Math.floor(y)} CE`;
 }
-export const fmtSpan = y => (y >= 1e6 ? `${Math.round(y / 1e6).toLocaleString()} million years` : `${(y >= 1000 ? Math.round(y / 100) * 100 : Math.round(y)).toLocaleString()} years`);
+export const fmtSpan = y =>
+  y >= 1e6
+    ? `${Math.round(y / 1e6).toLocaleString()} million years`
+    : `${(y >= 1000 ? Math.round(y / 100) * 100 : Math.round(y)).toLocaleString()} years`;
 export function range(level = state.level) {
   const L = LEVELS[level];
-  if (L.key === 'event') { const y = Math.floor(state.t); return { from: y, to: y + 1 }; }
+  if (L.key === 'event') {
+    const y = Math.floor(state.t);
+    return { from: y, to: y + 1 };
+  }
   return { from: L.from, to: L.to };
 }
-export function dateWindow() { const { from, to } = range(), w = windowHalf(from, to); return { from: state.t - w, to: state.t + w }; }
+export function dateWindow() {
+  const { from, to } = range(),
+    w = windowHalf(from, to);
+  return { from: state.t - w, to: state.t + w };
+}
 // The present has few records of its own, so at today's date a thin view opens out to the whole period (worked out once per render).
 export const SPARSE_TODAY = 60;
 export const wholeNow = () => state.whole || state.autoWhole;
@@ -47,7 +60,9 @@ export function checkToday() {
   state.autoWhole = false;
   if (state.whole || LEVELS[state.level].key === 'event' || state.t < NOW - 1) return;
   const w = dateWindow();
-  state.autoWhole = state.pins.filter(p => p.lat != null && !p.global && inLevel(p) && domainOn(p) && p.until >= w.from && p.start <= w.to).length < SPARSE_TODAY;
+  state.autoWhole =
+    state.pins.filter(p => p.lat != null && !p.global && inLevel(p) && domainOn(p) && p.until >= w.from && p.start <= w.to).length <
+    SPARSE_TODAY;
 }
 export function windowNow() {
   const { from, to } = range();
@@ -57,12 +72,16 @@ export function windowNow() {
 // How far from the date shown a record may lie and still show. History gets denser toward the present, so the reach
 // shrinks in proportion to how long ago the date is (about 300 years around 500 BCE, 10 around 1945), never past 3.5%
 // of the scale, so a pin shown "at 1945" is not a battle from 1526.
-export function windowHalf(from, to) { return Math.min((to - from) * 0.035, Math.max(8, (NOW - state.t) * 0.12)); }
+export function windowHalf(from, to) {
+  return Math.min((to - from) * 0.035, Math.max(8, (NOW - state.t) * 0.12));
+}
 // Near a date every record shows, and importance sets how loud its pin is (see pinPx). A whole period holds far more records, so it thins them from afar (spec 11.1), never past what the filters leave on.
 export function minImportance() {
   if (!wholeNow()) return 1;
-  const a = state.alt, floor = a > 2.1 ? 4 : a > 1.2 ? 3 : a > 0.6 ? 2 : 1;
-  let top = 5; while (top > 1 && state.impOff.has(top)) top--;
+  const a = state.alt,
+    floor = a > 2.1 ? 4 : a > 1.2 ? 3 : a > 0.6 ? 2 : 1;
+  let top = 5;
+  while (top > 1 && state.impOff.has(top)) top--;
   return Math.min(floor, top);
 }
 // The coarsest scale a record shows on. Its `scale` sets this, with two corrections so that browsing to a date finds
@@ -77,5 +96,6 @@ export function scaleIndex(p) {
 export const inLevel = p => scaleIndex(p) <= state.level;
 export const rankOf = p => p.importance;
 // the Domains & layers filters: a record shows if any of its domains is on and its importance level is on
-export const domainOn = p => (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) && !state.impOff.has(p.importance || 0);
+export const domainOn = p =>
+  (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) && !state.impOff.has(p.importance || 0);
 export const paleoOn = () => state.paleoMa != null && state.paleoMa >= 10;
