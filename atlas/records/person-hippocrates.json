@@ -20,13 +20,18 @@
       "start_plus_years": 10,
       "end_minus_years": 10,
       "end_plus_years": 10,
-      "note": "Proxy: the source gives only 'c.' for both dates and no range, so a 10-year band labelled as a proxy is used. Astronomical years: 460 BCE = -459, 370 BCE = -369."
+      "note": "Birth and death dates are traditional. The Dictionary of Scientific Biography gives 460 and c. 370 BCE; Britannica gives c. 460 and c. 375 BCE; the NLM page gives only the 5th century BCE. A 10-year band is used. Astronomical years: 460 BCE = -459, 370 BCE = -369."
     },
     "as_recorded": [
       {
         "calendar": "Century, as written",
         "value": "5th century BCE",
         "source": "src-nlm-greek-medicine"
+      },
+      {
+        "calendar": "B.C.",
+        "value": "(b Cos, 460 b.c.; d. Larissa, ca. 370 b.c.)",
+        "source": "src-dsb-hippocrates"
       }
     ],
     "display": "c. 460–c. 370 BCE"
@@ -55,7 +60,7 @@
   "scale": "civilization",
   "importance": {
     "score": 3,
-    "justification": "The National Library of Medicine states that Hippocrates is generally credited with turning away from divine notions of medicine toward observation, and that the Hippocratic Corpus contains about sixty works attributed to him, so his name anchors the Western medical tradition's founding texts. Score 5 reflects that breadth of attribution."
+    "justification": "The National Library of Medicine states that Hippocrates is generally credited with turning away from divine notions of medicine toward observation, and that the Hippocratic Corpus contains about sixty works attributed to him, though probably by several authors."
   },
   "confidence": "probable",
   "audience_note": null,
@@ -78,6 +83,23 @@
       ]
     },
     {
+      "id": "src-dsb-hippocrates",
+      "url": "https://www.encyclopedia.com/people/medicine/medicine-biographies/hippocrates",
+      "title": "Hippocrates (Complete Dictionary of Scientific Biography, via Encyclopedia.com)",
+      "publisher": "Encyclopedia.com (Gale / Charles Scribner's Sons)",
+      "author": "Encyclopedia.com",
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
       "id": "src-geonames-kos",
       "url": "https://www.geonames.org/259245/kos.html",
       "title": "Kos, GeoNames ID 259245",
@@ -94,7 +116,7 @@
       ]
     }
   ],
-  "reviewer_note": "Coordinator review 2026-11-04: held: the only other source, a heritage-library authority record (data.mmfc.be), is a catalogue entry and was dropped, leaving the NLM page as the single publisher. Needs a second independent publisher before it can go live. Birth and death years are not stated on the NLM page.",
-  "updated": "2026-11-04",
+  "reviewer_note": "Review 2026-11-12: Dictionary of Scientific Biography entry added as the second independent publisher (birth on Cos 460 BCE, death c. 370 BCE). Fixed the importance text, which said \"Score 5\" for a score of 3. Least sure: the dates, which all sources call traditional.",
+  "updated": "2026-11-12",
   "author": "historian-agent:haiku-j"
 }
