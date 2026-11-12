@@ -141,7 +141,7 @@
   ],
   "reviewer_note": "Raids continued after 1066, so the end date is a convention. The pin is the royal site of Jelling in Denmark, as a proxy.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:41:21.133Z",
   "changelog": [
     {
@@ -154,5 +154,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "793",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 8 June 793 Viking raiders struck Lindisfarne, and for about the next 300 years Scandinavians raided, traded and settled across Europe and the North Atlantic.",
+        "source": "src-whe-vikings"
+      },
+      {
+        "span": "1066",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "They settled Iceland and Greenland, colonized Normandy, established the Danelaw in Britain and traded as far as the Byzantine Empire.",
+        "source": "src-whe-vikings",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

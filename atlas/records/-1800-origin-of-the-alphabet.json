@@ -158,7 +158,7 @@
   ],
   "reviewer_note": "Dates and place of origin are debated: 1900-1800 BCE near Thebes in one source, about 1700 BCE in central Egypt in another. The CUNY author questions this account. The pin marks Serabit el-Khadim.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:39:20.845Z",
   "changelog": [
     {
@@ -166,5 +166,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1900",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Scholars trace most alphabets of the Near East and Europe, including Arabic and Latin, to the Proto-Sinaitic script, first found at Serabit el-Khadim in the Sinai in 1905…",
+        "source": "src-encyclopedia-egypt"
+      },
+      {
+        "span": "-1699",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Few early texts can be read, and their nature remains open to interpretation.",
+        "source": "src-encyclopedia-egypt",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

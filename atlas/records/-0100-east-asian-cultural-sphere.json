@@ -129,7 +129,7 @@
   ],
   "reviewer_note": "These sources show only part of this spread, and do not cover script, Buddhism or law in detail. Local states adapted these ideas. Dates are approximate, and the pin at Xi'an is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:17.639Z",
   "changelog": [
     {
@@ -137,5 +137,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-130",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Han China's expansion under Emperor Wu reached the regions of modern Korea and Vietnam.",
+        "source": "src-worldhistory-han"
+      },
+      {
+        "span": "1600",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Later Confucian thinkers Zhu Xi and Wang Yangming had tremendous influence in Korea, Japan and Vietnam, and a great deal of Confucian debate in East Asia is still…",
+        "source": "src-worldhistory-han",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -145,7 +145,7 @@
   ],
   "reviewer_note": "This outline covers the movement's start in Moscow. Later communist states have their own records, and its global spread still needs a fuller treatment. The pin marks Moscow.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:56:56.361Z",
   "changelog": [
     {
@@ -153,5 +153,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1917",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "After the Bolshevik takeover of Russia in 1917 and a civil war, the Communist International, or Comintern, was founded in Moscow in March 1919 amid proclamations of the…",
+        "source": "src-msu-comintern"
+      },
+      {
+        "span": "1991",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Communist rule in Russia ended with the Soviet dissolution of 1991.",
+        "source": "src-msu-comintern",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

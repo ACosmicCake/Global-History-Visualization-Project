@@ -138,7 +138,7 @@
   ],
   "reviewer_note": "The evidence from the mummy is suggestive, not proven. The pin near Luxor marks the Valley of the Kings, and the disease itself was global. Other records cover its effects in the Americas.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:10.347Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1157",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Smallpox, caused by the variola virus, was one of the greatest infectious killers of humankind and dates back at least 3,000 years.",
+        "source": "src-cdc-smallpox"
+      },
+      {
+        "span": "1980",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Variolation was an early method of control, and vaccination began in 1796 with Edward Jenner.",
+        "source": "src-cdc-smallpox",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

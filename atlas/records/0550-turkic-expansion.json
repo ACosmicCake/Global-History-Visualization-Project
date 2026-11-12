@@ -119,7 +119,7 @@
   ],
   "reviewer_note": "Dates are approximate and mark early Turkic presence in the Orkhon Valley, not a single start. The genetic evidence dates the change only broadly. The pin marks the Orkhon Valley.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T03:31:25.249Z",
   "changelog": [
     {
@@ -127,5 +127,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "550",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A study of ancient DNA finds that historical events, including short-lived khanates in the Medieval period, transformed the Eurasian steppes from being home to Indo-European speakers to the…",
+        "source": "src-unesco-orkhon"
+      },
+      {
+        "span": "1500",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Turkic peoples were among those who settled the Orkhon Valley in Mongolia, which holds archaeological remains dating back to the 6th century.",
+        "source": "src-unesco-orkhon",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

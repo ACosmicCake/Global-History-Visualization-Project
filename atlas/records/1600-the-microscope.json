@@ -123,7 +123,7 @@
   ],
   "reviewer_note": "Who invented the microscope is uncertain. The pin at Middelburg is a stand-in for Janssen's Netherlands, not confirmed by these sources.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:32.202Z",
   "changelog": [
     {
@@ -131,5 +131,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1590",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The modern light microscope goes back to sometime between 1590 and 1618, when the Dutch spectacle maker Zacharias Janssen made an early one with several lenses in a…",
+        "source": "src-aps-microscope"
+      },
+      {
+        "span": "1700",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Antonie van Leeuwenhoek improved the instrument further, and in 1700 made the first description of a cell nucleus.",
+        "source": "src-aps-microscope",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

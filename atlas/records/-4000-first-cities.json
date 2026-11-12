@@ -138,7 +138,7 @@
   ],
   "reviewer_note": "Cities later arose independently elsewhere, and some early towns are older but smaller. The pin marks Uruk, one of several cities.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:15.551Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3999",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "An urban way of life developed in southern Mesopotamia starting in the 4th millennium BCE.",
+        "source": "src-penn-pittman2018"
+      },
+      {
+        "span": "-3000",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Uruk, Ur, Nippur and Lagash were among the places where, for the first time in human history, large numbers of people came to live together in cities.",
+        "source": "src-penn-pittman2018",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

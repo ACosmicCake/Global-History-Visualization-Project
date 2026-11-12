@@ -124,7 +124,7 @@
   ],
   "reviewer_note": "Death totals are debated, so the summary gives no exact figure. The pin is Moscow as a proxy, because the terror covered the whole Soviet Union.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:49:22.499Z",
   "changelog": [
     {
@@ -137,5 +137,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1936",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "From 1936 to 1938 Joseph Stalin conducted a campaign of terror against Soviet citizens, reaching its peak in 1937 and 1938.",
+        "source": "src-hoover"
+      },
+      {
+        "span": "1938",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Millions of innocent people were sent to labor camps or killed in prison.",
+        "source": "src-hoover",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

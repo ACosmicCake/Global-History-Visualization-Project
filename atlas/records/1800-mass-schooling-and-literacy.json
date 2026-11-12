@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Mass schooling and literacy",
   "summary": "Prussia's decree of 1763 ordered children to school from age five until thirteen or fourteen. Two centuries ago, the best estimate is that 12% of the world's people could read and write. Global literacy more than doubled over the 19th century, and more than four out of five people can now read. Literacy improved especially fast in northwest Europe in 1600–1800, and by the mid-19th century, school enrollment in the United States exceeded that of any other nation.",
@@ -160,5 +160,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1763",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Prussia's decree of 1763 ordered children to school from age five until thirteen or fourteen.",
+        "source": "src-owid-literacy"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Literacy improved especially fast in northwest Europe in 1600–1800, and by the mid-19th century, school enrollment in the United States exceeded that of any other nation.",
+        "source": "src-owid-literacy",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

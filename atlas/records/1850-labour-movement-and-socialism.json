@@ -140,7 +140,7 @@
   ],
   "reviewer_note": "The labour movement outside Europe and after 1914 is outside this record. The pin marks London, where the First International was founded.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:50.418Z",
   "changelog": [
     {
@@ -148,5 +148,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1864",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "As industry grew, trade unions organized to protect workers and improve wages and conditions.",
+        "source": "src-uwisc-iwa"
+      },
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In 1864 a mass meeting of European trade unionists in London founded the First International, whose rules said the working classes must win their own emancipation.",
+        "source": "src-uwisc-iwa",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

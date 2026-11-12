@@ -137,7 +137,7 @@
   ],
   "reviewer_note": "This outline gives two landmarks and one current statement, not the many waves of democracy, and earlier forms exist, such as Athens. Democracy has also retreated at times. The pin at Paris is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:57:40.873Z",
   "changelog": [
     {
@@ -145,5 +145,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1789-08-26",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "France's 1789 Declaration of the Rights of Man held that all sovereignty resides essentially in the nation.",
+        "source": "src-yale-rights-of-man"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Today the United Nations calls democracy a core value, and supports it through human rights, development and peace and security.",
+        "source": "src-yale-rights-of-man",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

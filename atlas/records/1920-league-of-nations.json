@@ -133,7 +133,7 @@
   ],
   "reviewer_note": "The date marks when the League began, not when it moved to Geneva. The pin is the city of Geneva, its headquarters. The sources opened do not call it the first organization of its kind, so the summary does not either.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:46:37.377Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1920-01-10",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The League of Nations came into being on 10 January 1920, when the Treaty of Versailles took effect.",
+        "source": "src-uk-national-archives-league"
+      },
+      {
+        "span": "1920",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Headquartered in Geneva, it was created after the First World War as a forum for resolving international disputes, drawing on theories of collective security.",
+        "source": "src-uk-national-archives-league",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -139,7 +139,7 @@
   ],
   "reviewer_note": "Speaker counts in the sources are old and differ, 100 and 185 million. Local languages survived in many places. The pin at Damascus is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:23.327Z",
   "changelog": [
     {
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "630",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Classical Arabic, the language of the Quran, began to spread during the Islamic expansion of the 7th and 8th centuries.",
+        "source": "src-encyclopedia-arabic"
+      },
+      {
+        "span": "1000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In Iran it became the language of the dominant class, of religion and government, and by extension of science and literature.",
+        "source": "src-encyclopedia-arabic",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

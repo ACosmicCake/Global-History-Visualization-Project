@@ -135,7 +135,7 @@
   ],
   "reviewer_note": "This outline covers the 1925-27 work only; Planck's earlier work has its own record, and wave mechanics is not yet covered. The pin marks Göttingen.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:57:40.198Z",
   "changelog": [
     {
@@ -143,5 +143,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1925",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In 1925 Werner Heisenberg invented matrix mechanics, the first version of quantum mechanics, and Max Born and Pascual Jordan at Göttingen recognized its algebra as matrix algebra.",
+        "source": "src-mactutor-heisenberg"
+      },
+      {
+        "span": "1927",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In 1927 Heisenberg proposed the uncertainty relation, which limits how precisely a particle's position and velocity can both be known, and attended the Solvay Conference in Brussels.",
+        "source": "src-mactutor-heisenberg",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

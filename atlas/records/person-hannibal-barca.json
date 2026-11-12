@@ -225,7 +225,7 @@
   ],
   "reviewer_note": "Least sure of the exact Alpine mountain pass crossed by Hannibal in 218 BCE, which remains an unsettled controversy among modern topographers and geomorphologists.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-10-22T08:26:26.954Z",
   "changelog": [
     {
@@ -243,5 +243,31 @@
       "version": 3,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 31,
+    "beats": [
+      {
+        "span": "-246",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Hannibal Barca was a Carthaginian general of the Second Punic War (218–202 BCE).",
+        "source": "src-livius-hannibal"
+      },
+      {
+        "span": "-246",
+        "action": "path.trace {}",
+        "caption": "The route runs Carthage to Saguntum to The Alps to Cannae.",
+        "source": "src-livius-hannibal"
+      },
+      {
+        "span": "-182",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He led an army with war elephants across the Pyrenees and Alps into Italy and defeated Roman armies at the Trebia, Lake Trasimene and Cannae, before Scipio Africanus…",
+        "source": "src-livius-hannibal"
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

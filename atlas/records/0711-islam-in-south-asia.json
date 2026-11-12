@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "The arrival and spread of Islam in South Asia",
   "summary": "Islam reached South Asia through traders, soldiers, teachers and refugees. In 711 Muhammad bin Qasim arrived in Sind, made local alliances and declared Hindus and Buddhists protected groups who could keep their religion. From the tenth century Turkish and Afghan groups entered India from the northwest, and sultans ruled from Delhi. The Mughals, founded in 1526, later held much of the subcontinent. Pakistan, India and Bangladesh are now among the ten countries with the largest Muslim populations.",
@@ -169,5 +169,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "711",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Islam reached South Asia through traders, soldiers, teachers and refugees.",
+        "source": "src-cambridge-formichi2020"
+      },
+      {
+        "span": "1526",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In 711 Muhammad bin Qasim arrived in Sind, made local alliances and declared Hindus and Buddhists protected groups who could keep their religion.",
+        "source": "src-cambridge-formichi2020",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

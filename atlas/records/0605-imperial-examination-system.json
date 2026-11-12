@@ -128,7 +128,7 @@
   ],
   "reviewer_note": "Exact founding year is not given in the sources, and merit was limited in practice. The pin at Xi'an, the Sui and Tang capital, is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:18.718Z",
   "changelog": [
     {
@@ -136,5 +136,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "581",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "China's civil service examinations began in the Sui dynasty (581–618) and were fully developed under the Qing.",
+        "source": "src-worldhistory-exam"
+      },
+      {
+        "span": "1905",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "By selecting candidates on merit, they weakened the hold of the hereditary aristocracy and created a class of scholar-officials.",
+        "source": "src-worldhistory-exam",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

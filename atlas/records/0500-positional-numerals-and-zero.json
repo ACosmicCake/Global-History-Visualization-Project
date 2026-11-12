@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Positional numerals and zero",
   "summary": "Around 500 CE the Indian mathematician Aryabhata devised a positional number system, though it had no zero. In 628 CE Brahmagupta's Brahmasphutasiddhanta became the first text to treat zero as a number in its own right and to discuss its arithmetic. Earlier signs of a placeholder zero appear in the Bakhshali manuscript, which has its own record.",
@@ -134,5 +134,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "499",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Around 500 CE the Indian mathematician Aryabhata devised a positional number system, though it had no zero.",
+        "source": "src-mactutor-zero"
+      },
+      {
+        "span": "628",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In 628 CE Brahmagupta's Brahmasphutasiddhanta became the first text to treat zero as a number in its own right and to discuss its arithmetic.",
+        "source": "src-mactutor-zero",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

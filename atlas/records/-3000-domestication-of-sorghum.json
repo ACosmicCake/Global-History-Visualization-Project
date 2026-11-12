@@ -139,7 +139,7 @@
   ],
   "reviewer_note": "The pace of domestication is still studied. The pin at Kassala is a stand-in for the southern Atbai.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T05:52:19.769Z",
   "changelog": [
     {
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-4000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The eastern Sahel has long been proposed as the most likely centre of sorghum domestication.",
+        "source": "src-winchell2018"
+      },
+      {
+        "span": "-3000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Sorghum was first domesticated in northeast-central Africa, likely 5,000 to 6,000 years ago, and later spread across Africa and into India.",
+        "source": "src-winchell2018",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

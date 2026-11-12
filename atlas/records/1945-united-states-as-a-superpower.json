@@ -165,7 +165,7 @@
   ],
   "reviewer_note": "American power has changed since 1945, and the end date is open. The sources focus on the early postwar years. The pin at Washington is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "changelog": [
     {
       "date": "2026-11-05",
@@ -173,5 +173,26 @@
       "change": "outline"
     }
   ],
-  "published_at": "2026-11-05T04:57:41.565Z"
+  "published_at": "2026-11-05T04:57:41.565Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The United States emerged from World War II as one of the foremost economic, political and military powers in the world.",
+        "source": "src-nationalww2museum"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The war had created two new superpowers, the United States and the Soviet Union, whose military forces dwarfed all others.",
+        "source": "src-nationalww2museum",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

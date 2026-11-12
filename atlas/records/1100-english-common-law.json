@@ -137,7 +137,7 @@
   ],
   "reviewer_note": "Common law's roots go back before 1166, and this outline gives one early landmark. The pin at London is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T05:52:23.164Z",
   "changelog": [
     {
@@ -145,5 +145,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1166",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Common law is law developed through judicial decisions rather than enacted statutes.",
+        "source": "src-avalon-assize-clarendon"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The English tradition later spread: early courts in the United States relied heavily on English common law before developing their own doctrines.",
+        "source": "src-avalon-assize-clarendon",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

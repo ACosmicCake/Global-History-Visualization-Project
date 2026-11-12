@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Evolution of human bipedalism",
   "summary": "Walking upright developed gradually. Between 7 and 6 million years ago Sahelanthropus may have walked on two legs, and the oldest evidence for it comes from fossils of the earliest known humans. For millions of years these walkers kept features that helped them climb trees. By 1.8 million years ago, our ancestors had long legs and an efficient striding gait suited to travelling longer distances.",
@@ -154,5 +154,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-7000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Walking upright developed gradually.",
+        "source": "src-si-walking"
+      },
+      {
+        "span": "-1800000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "For millions of years these walkers kept features that helped them climb trees.",
+        "source": "src-si-walking",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

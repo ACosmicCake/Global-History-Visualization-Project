@@ -136,7 +136,7 @@
   ],
   "reviewer_note": "Muslims were present before the first sultanates, and scholars debate how and why conversion spread. The end date is approximate. The pin marks Samudra Pasai.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T05:52:24.087Z",
   "changelog": [
     {
@@ -144,5 +144,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1282",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Islamic communities appeared with a political profile in the thirteenth century as port city-states ruled by sultans, the earliest being Pasai in North Sumatra, whose ruler Malik as-Salih…",
+        "source": "src-hawkley2020"
+      },
+      {
+        "span": "1500",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "Muslim centres spread the faith through preaching, trade, alliances and intermarriage.",
+        "source": "src-hawkley2020",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -140,7 +140,7 @@
   ],
   "reviewer_note": "The record marks the 1871 proclamation; unification itself took place over several years. The pin is the Palace of Versailles, where the ceremony was held.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:48:22.302Z",
   "changelog": [
     {
@@ -153,5 +153,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1871",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 18 January 1871, with France defeated, the German Empire was proclaimed in the Hall of Mirrors at Versailles, and Prussia's King Wilhelm I became German Emperor.",
+        "source": "src-versailles"
+      },
+      {
+        "span": "1871",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Chancellor Otto von Bismarck had first formed the North German Confederation, uniting all the states except those in the south, which then joined it during the war.",
+        "source": "src-versailles",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

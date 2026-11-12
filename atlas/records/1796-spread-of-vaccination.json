@@ -146,7 +146,7 @@
   ],
   "reviewer_note": "Variolation came before vaccination and has its own history. The pin at Berkeley is a stand-in for a worldwide process.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T05:52:26.717Z",
   "changelog": [
     {
@@ -154,5 +154,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1796",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In May 1796 the English physician Edward Jenner inoculated a boy with matter from a cowpox sore, the basis of vaccination against smallpox.",
+        "source": "src-who-history-vaccination"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In 1885 Louis Pasteur prevented rabies through vaccination, and Jonas Salk developed the first effective polio vaccine in 1952–55.",
+        "source": "src-who-history-vaccination",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

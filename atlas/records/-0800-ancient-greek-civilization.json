@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "period",
   "title": "Ancient Greek civilization",
   "summary": "The Greek Archaic Period, about 800 to 479 BCE, followed the little-known Dark Age and ended with the Persians driven from Greece. The four major Panhellenic games were founded in this time. The Classical Period, about 510 to 323 BCE, left tragedies, comedies, histories and legal cases. From Thales to the Stoics, Greek philosophy provided roots for the Western intellectual tradition.",
@@ -151,5 +151,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-800",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Greek Archaic Period, about 800 to 479 BCE, followed the little-known Dark Age and ended with the Persians driven from Greece.",
+        "source": "src-worldhistory-archaic"
+      },
+      {
+        "span": "-323",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The four major Panhellenic games were founded in this time.",
+        "source": "src-worldhistory-archaic",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

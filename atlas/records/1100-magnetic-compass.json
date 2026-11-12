@@ -140,7 +140,7 @@
   ],
   "reviewer_note": "How the compass travelled west remains uncertain. The pin at Guangzhou is a stand-in for Song China.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:41.182Z",
   "changelog": [
     {
@@ -148,5 +148,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Chinese long knew that a magnetic needle points north-south, and by the eleventh century they had turned their south pointer into a magnetic compass.",
+        "source": "src-afe-compass"
+      },
+      {
+        "span": "1200",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In Song times the needle was made smaller and fixed to a stem, sometimes in a small case with a glass top, which suited it to sea travel.",
+        "source": "src-afe-compass",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

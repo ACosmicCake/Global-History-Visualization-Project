@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Global urbanization",
   "summary": "Records of cities reach back to 3700 BC, but in AD 1800 Beijing is cited as the only city in the world with a million people. Today, by one measure, around 80% of people live in cities, towns and suburbs, and the world has been mostly urban since at least the 1950s. UN reports using national definitions announced that the world became majority urban in 2007.",
@@ -141,5 +141,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1800",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Records of cities reach back to 3700 BC, but in AD 1800 Beijing is cited as the only city in the world with a million people.",
+        "source": "src-nature-reba2016"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Today, by one measure, around 80% of people live in cities, towns and suburbs, and the world has been mostly urban since at least the 1950s.",
+        "source": "src-nature-reba2016",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

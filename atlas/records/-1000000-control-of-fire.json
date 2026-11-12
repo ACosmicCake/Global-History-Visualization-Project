@@ -136,7 +136,7 @@
   ],
   "reviewer_note": "Burning at a site does not prove people could make or control fire at will. Earlier claims remain debated. The pin marks Wonderwerk Cave.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T22:15:32.393Z",
   "changelog": [
     {
@@ -144,5 +144,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Controlling fire was a crucial turning point in human evolution, but there is no consensus on when it began.",
+        "source": "src-pmc-wonderwerk"
+      },
+      {
+        "span": "-1000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The earliest secure evidence for burning in an archaeological setting is burned bone and ashed plant remains from about 1 million years ago at Wonderwerk Cave, South Africa.",
+        "source": "src-pmc-wonderwerk",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

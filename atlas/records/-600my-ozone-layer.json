@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Formation of the ozone layer",
   "summary": "Blue-green algae began releasing oxygen through photosynthesis long before an ozone layer could form. By about 600 million years ago, when oxygen stood at about 10% of today's level, enough ozone is believed to have existed to shield Earth from lethal ultraviolet light of 200 to 300 nanometres. Until then, life was restricted to the ocean. The ozone layer enabled organisms to develop and live on land.",
@@ -141,5 +141,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-600000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Blue-green algae began releasing oxygen through photosynthesis long before an ozone layer could form.",
+        "source": "src-colorado-ozone"
+      },
+      {
+        "span": "-600000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "By about 600 million years ago, when oxygen stood at about 10% of today's level, enough ozone is believed to have existed to shield Earth from lethal ultraviolet…",
+        "source": "src-colorado-ozone",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

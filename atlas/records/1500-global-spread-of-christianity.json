@@ -146,7 +146,7 @@
   ],
   "reviewer_note": "This outline shows two regions only. Missions in Africa and the Pacific, and later Protestant work, are not yet covered. Dates are approximate. The pin at Goa is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:20.076Z",
   "changelog": [
     {
@@ -154,5 +154,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1500",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "European colonization of the Americas was presented by its victors as bringing civilization and converting Indigenous people to Christianity, a story now challenged for its cultural losses and…",
+        "source": "src-whe-colonization"
+      },
+      {
+        "span": "1800",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In Goa, the Portuguese-era churches, including the tomb of St Francis Xavier, illustrate the evangelization of Asia, and from the 16th to 18th centuries spread European art across…",
+        "source": "src-whe-colonization",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

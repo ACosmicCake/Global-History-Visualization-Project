@@ -184,7 +184,7 @@
   ],
   "reviewer_note": "This outline gives the main milestones. The pin marks Brno, where Mendel worked; later work took place elsewhere.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:52.202Z",
   "changelog": [
     {
@@ -192,5 +192,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1865",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In 1865 Gregor Mendel presented his pea experiments in Brno; ignored at the time, they were rediscovered in 1900.",
+        "source": "src-pnas-mendel"
+      },
+      {
+        "span": "2003",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The Human Genome Project (1990–2003) then produced the first sequence of the human genome.",
+        "source": "src-pnas-mendel",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

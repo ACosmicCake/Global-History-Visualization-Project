@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "movement",
   "title": "The age of mass migration",
   "summary": "Long-distance migration boomed worldwide from the mid-19th century as shipping improved. About 55 million people left Europe between 1850 and 1920, nearly 30 million of them for the United States. Over 29 million Indians and over 19 million Chinese moved to Southeast Asia and lands around the Indian Ocean and South Pacific. Migrations across the globe were broadly comparable in size and timing. The US literacy test of 1917 and quotas from 1921 cut American arrivals sharply.",
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1846",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Long-distance migration boomed worldwide from the mid-19th century as shipping improved.",
+        "source": "src-nber-abramitzky2016"
+      },
+      {
+        "span": "1940",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "About 55 million people left Europe between 1850 and 1920, nearly 30 million of them for the United States.",
+        "source": "src-nber-abramitzky2016",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

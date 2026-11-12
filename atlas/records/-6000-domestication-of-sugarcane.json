@@ -145,7 +145,7 @@
   ],
   "reviewer_note": "The two sources differ by about two thousand years on the start. Kuk is a stand-in pin for New Guinea; no source here ties sugarcane to the site.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T05:52:20.567Z",
   "changelog": [
     {
@@ -153,5 +153,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-8000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Sugarcane was domesticated from the wild species Saccharum robustum in New Guinea and nearby islands, around 8,000 years ago by one study and around 8000 BC by another.",
+        "source": "src-cirad-2025"
+      },
+      {
+        "span": "-6000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Cultivation and refining then spread to China, Persia and the Mediterranean, and sugarcane reached Spain around 715 AD.",
+        "source": "src-cirad-2025",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

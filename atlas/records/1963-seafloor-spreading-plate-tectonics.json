@@ -146,7 +146,7 @@
   ],
   "reviewer_note": "The date is the publication of the Vine and Matthews paper; plate-tectonics theory developed over a longer period. The pin is the city of Cambridge, where the authors worked, and Morley worked separately in Canada.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:49:37.722Z",
   "changelog": [
     {
@@ -159,5 +159,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1963-09-07",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1963 the British geologists Fred Vine and Drummond Matthews, and also Lawrence Morley of the Canadian Geological Survey, proposed that zebra-stripe magnetic patterns on the ocean floor…",
+        "source": "src-nature-vine-matthews"
+      },
+      {
+        "span": "1963",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Comparing the stripes with dated reversals became a clinching argument for seafloor spreading, a major advance towards plate-tectonics theory.",
+        "source": "src-nature-vine-matthews",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

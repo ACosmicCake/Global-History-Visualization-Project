@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "The Acheulean handaxe tradition",
   "summary": "By about 1.76 million years ago, early humans in East Africa were striking very large flakes and shaping them into handaxes, the mark of the Acheulean toolkit. The earliest dated sites include Kokiselei in Kenya and Konso in Ethiopia, at about 1.75 million years ago. The technology appeared when Homo ergaster or erectus did, and handaxes later turned up in Europe and India. In different places the tradition ended between about 400,000 and 250,000 years ago.",
@@ -168,5 +168,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1760000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "76 million years ago, early humans in East Africa were striking very large flakes and shaping them into handaxes, the mark of the Acheulean toolkit.",
+        "source": "src-si-tools"
+      },
+      {
+        "span": "-250000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In different places the tradition ended between about 400,000 and 250,000 years ago.",
+        "source": "src-si-tools",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

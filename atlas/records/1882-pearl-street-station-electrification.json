@@ -134,7 +134,7 @@
     }
   ],
   "reviewer_note": "This is one station, in one country. Sources differ on when it finally closed.",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T22:15:08.614Z",
   "changelog": [
     {
@@ -142,5 +142,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1882-09-04",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On September 4, 1882, Thomas Edison's Pearl Street Station in New York City became the first commercial central electric power station in the United States.",
+        "source": "src-census-pearl-street"
+      },
+      {
+        "span": "1882",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It stayed in operation until a fire partially destroyed it in January 1890.",
+        "source": "src-census-pearl-street",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -139,7 +139,7 @@
   ],
   "reviewer_note": "The causes remain debated, and the effects on ecosystems varied by region. The pin at Los Angeles is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:31.580Z",
   "changelog": [
     {
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-130000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Between about 132,000 and 1,000 years ago, about half of the world's large-bodied mammal species disappeared.",
+        "source": "src-sandom2014"
+      },
+      {
+        "span": "1000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Another notes that the causes are still debated.",
+        "source": "src-sandom2014",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

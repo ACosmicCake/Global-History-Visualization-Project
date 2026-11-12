@@ -138,7 +138,7 @@
   ],
   "reviewer_note": "The start date is approximate, and fiqh developed over hundreds of years. The pin at Medina is a stand-in for several early centres.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:40.289Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "720",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In the early eighth century, groups of pious specialists formed the ancient schools of Islamic law, among them those of Kufa, Basra, Medina, Mecca and Syria.",
+        "source": "src-fordham-schacht"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Major schools today include the Hanafi, Maliki, Shafi'i and Hanbali, and the Ja'fari, the main Shia school.",
+        "source": "src-fordham-schacht",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

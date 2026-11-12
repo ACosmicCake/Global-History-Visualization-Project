@@ -4,7 +4,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "id": "-2700-sericulture-and-silk",
   "kind": "process",
   "title": "Silk production in China",
@@ -131,5 +131,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-2699",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The earliest known woven silk dates to about 2700 BCE and comes from Qianshanyang in China.",
+        "source": "src-whe-silk"
+      },
+      {
+        "span": "-2000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Silk became China's most important export for much of its history and gave its name to the Silk Road, the trading network that connected East Asia to Europe…",
+        "source": "src-whe-silk",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

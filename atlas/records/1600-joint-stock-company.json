@@ -163,7 +163,7 @@
   ],
   "reviewer_note": "Company law also developed in other countries. The pin at London is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:43.110Z",
   "changelog": [
     {
@@ -171,5 +171,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1600",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In a joint-stock company, people invested capital and received part of the profits.",
+        "source": "src-whe-eic"
+      },
+      {
+        "span": "1862",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "A royal charter created the English East India Company as one on 31 December 1600.",
+        "source": "src-whe-eic",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

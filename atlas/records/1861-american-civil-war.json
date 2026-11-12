@@ -196,7 +196,7 @@
   ],
   "reviewer_note": "The end date is Lee's surrender at Appomattox, not the last fighting elsewhere. Death figures follow the National Park Service tables; the summary gives no single total. The pin marks the war's opening battle, not the whole war.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:42:35.577Z",
   "changelog": [
     {
@@ -209,5 +209,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1861-04-12",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "After Abraham Lincoln won the 1860 election, seven slave states seceded and formed the Confederacy; four more joined after Confederate forces fired on Fort Sumter in April 1861.",
+        "source": "src-nps-sumter"
+      },
+      {
+        "span": "1865",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Emancipation Proclamation of 1863 and the Thirteenth Amendment of 1865 ended slavery in the United States.",
+        "source": "src-nps-sumter",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

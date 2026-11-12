@@ -150,7 +150,7 @@
   ],
   "reviewer_note": "Churches such as those of Russia and Ethiopia have their own histories, not traced here. The pin marks Istanbul, historic Constantinople.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T05:52:28.628Z",
   "changelog": [
     {
@@ -158,5 +158,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "330",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The history of Constantinople as a patriarchate began in 330, when Constantine I moved his government to Byzantium.",
+        "source": "src-loc-byzantine-guide"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "From 520 its head became known as the ecumenical patriarch.",
+        "source": "src-loc-byzantine-guide",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

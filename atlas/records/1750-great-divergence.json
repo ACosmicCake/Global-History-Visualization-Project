@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "The Great Divergence",
   "summary": "The Great Divergence is the rise of the gap in incomes between the West and the rest. Pomeranz put the term into scholarly use in 2000, arguing that the gap began with the Industrial Revolution and modern growth in Britain. Broadberry and Gupta answered, from wage evidence, that it was already well underway before 1800. The gap has narrowed since rapid growth in China, India and other regions from the 1980s, known as the Great Convergence.",
@@ -144,5 +144,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1500",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Great Divergence is the rise of the gap in incomes between the West and the rest.",
+        "source": "src-hbs-jones2017"
+      },
+      {
+        "span": "1980",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Pomeranz put the term into scholarly use in 2000, arguing that the gap began with the Industrial Revolution and modern growth in Britain.",
+        "source": "src-hbs-jones2017",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

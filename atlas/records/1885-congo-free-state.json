@@ -137,7 +137,7 @@
   ],
   "reviewer_note": "Population loss in the colony is an estimate and is debated, so the summary gives no figure. The pin is Boma, as a proxy for the Congo basin.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T17:00:31.964Z",
   "changelog": [
     {
@@ -150,5 +150,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1885",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 1885 to 1908 the Congo Free State was the private possession of King Leopold II of Belgium.",
+        "source": "src-state-congo"
+      },
+      {
+        "span": "1908",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Morel, among others, helped expose it, and an international movement forced Leopold to give up the territory to Belgium in 1908.",
+        "source": "src-state-congo",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -131,7 +131,7 @@
   ],
   "reviewer_note": "The pin is Paris as a proxy, because the wars spanned Europe and beyond.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:47:22.262Z",
   "changelog": [
     {
@@ -139,5 +139,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1803",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Napoleonic Wars continued the Wars of the French Revolution, as Britain and France fought for European supremacy.",
+        "source": "src-state"
+      },
+      {
+        "span": "1815",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The wars ended with his defeat at Waterloo on 18 June 1815 by a coalition led by Wellington and Blücher.",
+        "source": "src-state",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Oldowan stone tools",
   "summary": "By about 2.6 million years ago, early humans in east Africa were making simple stone tools from chipped pebbles and flakes. They are called Oldowan tools because the first such artefacts came from Olduvai Gorge. The Natural History Museum dates this type of tool from about 3.0 to 1.3 million years ago and calls it a significant shift in the technology available to early humans.",
@@ -168,5 +168,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-2600000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "6 million years ago, early humans in east Africa were making simple stone tools from chipped pebbles and flakes.",
+        "source": "src-si-early-tools"
+      },
+      {
+        "span": "-1300000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "They are called Oldowan tools because the first such artefacts came from Olduvai Gorge.",
+        "source": "src-si-early-tools",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

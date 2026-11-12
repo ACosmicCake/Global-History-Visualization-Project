@@ -125,7 +125,7 @@
   ],
   "reviewer_note": "Lao Tzu's authorship and dates are uncertain. The dates cover the classical period only. The pin at Luyi is a stand-in; no source here ties early Daoism to one place.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:37.621Z",
   "changelog": [
     {
@@ -133,5 +133,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-476",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Daoism goes back to China's Warring States period (476–221 BC).",
+        "source": "src-whe-daoism"
+      },
+      {
+        "span": "-221",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Its two classical texts, the Laozi and the Zhuangzi, emerged between the fifth and third centuries BC, and historians first coined the category of Daoist during the Han.",
+        "source": "src-whe-daoism",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -136,7 +136,7 @@
   ],
   "reviewer_note": "This outline covers the United States only. Benz has an earlier record, and wider effects on cities and oil are not sourced here. The pin at Detroit is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:57:39.486Z",
   "changelog": [
     {
@@ -144,5 +144,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1908",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Ford's breakthrough came in 1908 with the Model T, built for efficiency, reliability and a reasonable price.",
+        "source": "src-dhs-ford"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In 1926 the United States launched its first federal highway system, including Route 66.",
+        "source": "src-dhs-ford",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

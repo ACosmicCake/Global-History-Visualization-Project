@@ -143,7 +143,7 @@
   ],
   "reviewer_note": "The death toll is an estimate from one source. The pin is Prague, where the war began, as a proxy.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:45:21.692Z",
   "changelog": [
     {
@@ -156,5 +156,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1618",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Thirty Years' War began in May 1618 with the Bohemian Revolt after the Second Defenestration of Prague.",
+        "source": "src-loc-westphalia"
+      },
+      {
+        "span": "1648",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Battle, famine and disease killed approximately 8 million people.",
+        "source": "src-loc-westphalia",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

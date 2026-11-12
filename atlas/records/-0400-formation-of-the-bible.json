@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Formation of the Hebrew Bible",
   "summary": "The Hebrew Bible is an assemblage of writings dating from about 1000 BCE down to the 160s BCE. The Torah came from a long process of editing, with most scholars placing its final major edits after 539 BCE. It probably reached fixed, authoritative status first, then the Prophets and finally the Writings. By the end of the first century all of this was probably organized.",
@@ -137,5 +137,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Hebrew Bible is an assemblage of writings dating from about 1000 BCE down to the 160s BCE.",
+        "source": "src-worldhistory-torah"
+      },
+      {
+        "span": "-160",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It probably reached fixed, authoritative status first, then the Prophets and finally the Writings.",
+        "source": "src-worldhistory-torah",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

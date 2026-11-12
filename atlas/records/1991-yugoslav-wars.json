@@ -133,7 +133,7 @@
   ],
   "reviewer_note": "The 100,000 deaths and two million displaced are the tribunal's figures for the Bosnian war, not all the wars. The end date includes Macedonia in 2001. The pin is Sarajevo as a proxy.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:50:22.876Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1991",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The wars that broke up Yugoslavia began after Slovenia and Croatia declared independence on 25 June 1991.",
+        "source": "src-icty"
+      },
+      {
+        "span": "2001",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The war in Bosnia and Herzegovina was the deadliest: more than 100,000 people were killed and two million forced to flee.",
+        "source": "src-icty",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

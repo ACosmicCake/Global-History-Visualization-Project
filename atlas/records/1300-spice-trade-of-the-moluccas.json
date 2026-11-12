@@ -126,7 +126,7 @@
   ],
   "reviewer_note": "The start date is approximate and marks the European-era trade, though Asian trade in these spices is older. The source for Banda is a UNESCO tentative listing written by Indonesia.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T03:31:22.501Z",
   "changelog": [
     {
@@ -134,5 +134,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1400",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "The search for direct access to the lucrative Eastern spice trade was a major motive of the European Age of Exploration.",
+        "source": "src-whe-spicetrade"
+      },
+      {
+        "span": "1700",
+        "action": "pulse { radius_km: 240 }",
+        "caption": "Francisco Serrão sailed to the Spice Islands in 1512, the Dutch challenged the Portuguese from 1596, and in the 17th century built a nutmeg plantation system to hold…",
+        "source": "src-whe-spicetrade",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

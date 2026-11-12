@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "movement",
   "title": "Greek philosophy",
   "summary": "The Presocratics were Greek thinkers of the sixth and fifth centuries BCE who introduced a new way of inquiring into the world. Thales of Miletus suggested water as the first cause of existence, without denying the gods; Anaximander and Anaximenes also came from Miletus. Socrates widened philosophy to ethics, his pupil Plato followed, and Plato's student Aristotle founded his own school. Antiquity recognized these thinkers as the West's first philosophers and scientists, and their ideas spread to shape Western civilization.",
@@ -160,5 +160,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-599",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Presocratics were Greek thinkers of the sixth and fifth centuries BCE who introduced a new way of inquiring into the world.",
+        "source": "src-sep-presocratics"
+      },
+      {
+        "span": "-322",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Thales of Miletus suggested water as the first cause of existence, without denying the gods; Anaximander and Anaximenes also came from Miletus.",
+        "source": "src-sep-presocratics",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

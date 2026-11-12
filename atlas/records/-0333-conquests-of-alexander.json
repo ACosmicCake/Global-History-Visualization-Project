@@ -147,5 +147,26 @@
   ],
   "reviewer_note": "Held for review: no institutional source has been opened yet. World History Encyclopedia and Livius are the only sources for the events; the UNESCO page supports only the Babylon location. Museum pages tried were blocked.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04"
+  "updated": "2026-11-12",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-333",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 334 BCE Alexander III of Macedon crossed into Asia and began his conquest of the Achaemenid Persian Empire, winning at the Granicus, Issus and Gaugamela.",
+        "source": "src-whe-alexander"
+      },
+      {
+        "span": "-322",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He made Babylon his capital and died there in 323 BCE.",
+        "source": "src-whe-alexander",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

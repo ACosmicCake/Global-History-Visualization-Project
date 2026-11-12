@@ -158,7 +158,7 @@
   ],
   "reviewer_note": "The date of the Muratorian Fragment, an earlier list, is disputed. The pin at Alexandria marks Athanasius and is a stand-in for many places. Acceptance took longer in some churches.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:25.639Z",
   "changelog": [
     {
@@ -166,5 +166,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "100",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The New Testament is the second half of the Christian Bible, compiled from the 2nd century.",
+        "source": "src-whe-new-testament"
+      },
+      {
+        "span": "367",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The earliest surviving list of the same 27 books in today's Bible is the Easter letter of Bishop Athanasius of Alexandria in 367.",
+        "source": "src-whe-new-testament",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

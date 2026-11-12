@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "period",
   "title": "Age of Discovery",
   "summary": "Portuguese sailors landed at Porto Santo in the Madeira islands during a storm in 1418. At Sagres in 1419, Prince Henry the Navigator assembled experts in cartography, navigation and ship design, and helped launch what is called the Age of Discovery. Columbus reached the Americas in 1492, and in 1498 Vasco da Gama became the first European to sail to India around Africa.",
@@ -181,5 +181,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1418",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Portuguese sailors landed at Porto Santo in the Madeira islands during a storm in 1418.",
+        "source": "src-whe-henry"
+      },
+      {
+        "span": "1522",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "At Sagres in 1419, Prince Henry the Navigator assembled experts in cartography, navigation and ship design, and helped launch what is called the Age of Discovery.",
+        "source": "src-whe-henry",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -171,7 +171,7 @@
   ],
   "reviewer_note": "The ship types overlap and developed over centuries, so the dates are approximate. The pin at Lisbon is a stand-in for Atlantic Europe's shipbuilding and voyages.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "published_at": "2026-11-11T23:38:25.223Z",
   "changelog": [
     {
@@ -179,5 +179,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1200",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Carracks and caravels were the main ships of the early Age of Discovery.",
+        "source": "src-mariners-caravel"
+      },
+      {
+        "span": "1600",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The caravel, a small trading vessel rigged with lateen sails, was used heavily from the 14th to the 17th centuries and made some of the earliest Atlantic crossings.",
+        "source": "src-mariners-caravel",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

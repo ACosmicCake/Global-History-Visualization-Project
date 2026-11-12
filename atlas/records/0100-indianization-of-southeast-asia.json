@@ -142,7 +142,7 @@
   ],
   "reviewer_note": "Local peoples chose and changed these ideas, so this was not simple transfer. The record ends with the Khmer Empire in 1431, though the influence continued. The pin marks Sambor Prei Kuk.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T03:31:20.243Z",
   "changelog": [
     {
@@ -150,5 +150,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "100",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Southeast Asian societies adapted Indian ideas for over a millennium.",
+        "source": "src-unesco-1532"
+      },
+      {
+        "span": "1431",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Funan, active from the first century CE in what is now Cambodia and Vietnam, adopted Indian influences, with Hinduism and Buddhism both prevalent.",
+        "source": "src-unesco-1532",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

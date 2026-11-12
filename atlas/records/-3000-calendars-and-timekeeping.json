@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Calendars and timekeeping",
   "summary": "Five thousand years ago, Sumerians had a calendar of 30-day months, with the day divided into 12 periods. Egyptians, seeing that Sirius rose beside the sun every 365 days, near the Nile flood, devised a 365-day calendar that seems to have begun around 3100 BCE. Babylonians used a 354-day year of lunar months, and the Maya built 260-day and 365-day calendars. Calendars served religion, farming and government. Today's Gregorian calendar is a slight change to the Julian one.",
@@ -152,5 +152,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3100",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Five thousand years ago, Sumerians had a calendar of 30-day months, with the day divided into 12 periods.",
+        "source": "src-nist-calendars"
+      },
+      {
+        "span": "-2000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Today's Gregorian calendar is a slight change to the Julian one.",
+        "source": "src-nist-calendars",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

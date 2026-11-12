@@ -128,7 +128,7 @@
   ],
   "reviewer_note": "Sources give the Old Style and New Style dates. The pin is Saint Petersburg, the imperial capital, as a proxy for a reform across the empire.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T17:00:32.570Z",
   "changelog": [
     {
@@ -141,5 +141,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1861",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 3 March 1861 (19 February in the Russian calendar of the time), Emperor Alexander II issued the Emancipation Manifesto, abolishing serfdom in Russia.",
+        "source": "src-loc-serfs"
+      },
+      {
+        "span": "1861",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Approximately 23 million serfs gained personal freedom and a grant of land.",
+        "source": "src-loc-serfs",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -128,7 +128,7 @@
     }
   ],
   "reviewer_note": "Others, including Semmelweis, Lister and Koch, were also involved. The end date is approximate, since the sources say only the latter half of the century. The pin at Paris is a stand-in.",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:56:58.180Z",
   "changelog": [
     {
@@ -136,5 +136,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1860",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Throughout the early 1860s Louis Pasteur ran experiments to prove his atmospheric germ theory, which held that microorganisms travel through the air, and his work opposed spontaneous generation.",
+        "source": "src-sciencehistory-pasteur"
+      },
+      {
+        "span": "1899",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Later in the century, techniques introduced by Pasteur, Robert Koch and others led to the discovery of a myriad of bacteria.",
+        "source": "src-sciencehistory-pasteur",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

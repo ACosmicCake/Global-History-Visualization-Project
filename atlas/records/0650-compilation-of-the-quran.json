@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "event",
   "title": "Compilation of the Quran",
   "summary": "In about 650 CE, some 18 years after the death of Muhammad, the verses of the Quran were collected and assembled into the book's current form by the third caliph, Uthman ibn Affan. Its final, authoritative written form was fixed under his direction. Muslims believe that the Quran they read today is the same text standardized under Uthman.",
@@ -141,5 +141,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "650",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In about 650 CE, some 18 years after the death of Muhammad, the verses of the Quran were collected and assembled into the book's current form by the…",
+        "source": "src-birmingham-quran"
+      },
+      {
+        "span": "650",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Muslims believe that the Quran they read today is the same text standardized under Uthman.",
+        "source": "src-birmingham-quran",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

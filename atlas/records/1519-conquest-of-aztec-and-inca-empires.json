@@ -184,7 +184,7 @@
   ],
   "reviewer_note": "The record joins two separate campaigns, in Mexico and in the Andes, as one turning point. The pin at Mexico City, on the site of Tenochtitlan, is a stand-in for both.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "published_at": "2026-11-11T16:29:47.902Z",
   "changelog": [
     {
@@ -192,5 +192,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1519",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Between 1519 and 1533, small Spanish forces overthrew the two great empires of the Americas.",
+        "source": "src-utexas-cajamarca"
+      },
+      {
+        "span": "1533",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Hernán Cortés took the Aztec capital Tenochtitlan in 1521, helped by Tlaxcalans and other peoples keen to see the Aztecs fall.",
+        "source": "src-utexas-cajamarca",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

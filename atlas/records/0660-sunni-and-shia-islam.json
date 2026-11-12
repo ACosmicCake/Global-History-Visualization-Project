@@ -131,7 +131,7 @@
   ],
   "reviewer_note": "The two identities formed gradually, so the end date marks only the close of the First Fitna. The pin at Kufa is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:39.439Z",
   "changelog": [
     {
@@ -139,5 +139,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "632",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Sunni and Shia identities first formed around a dispute over who should lead the Muslim community after Muhammad's death in 632.",
+        "source": "src-whe-first-fitna"
+      },
+      {
+        "span": "661",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The First Fitna (656–661), a civil war between Caliph Ali and Muawiya, governor of Syria, saw Ali move his capital to Kufa; he was assassinated in 661.",
+        "source": "src-whe-first-fitna",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

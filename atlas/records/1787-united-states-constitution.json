@@ -131,7 +131,7 @@
   ],
   "reviewer_note": "The source gives May 1787 for the opening, so no exact opening day is stated. Ratification came later and is not covered here.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:42:36.406Z",
   "changelog": [
     {
@@ -144,5 +144,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1787",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In May 1787 the Constitutional Convention met at the State House in Philadelphia to revise the Articles of Confederation, under which leaders feared the young country might collapse.",
+        "source": "src-nara-constitution"
+      },
+      {
+        "span": "1787",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It remains one of the world's longest-lived and most emulated constitutions.",
+        "source": "src-nara-constitution",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -124,7 +124,7 @@
   ],
   "reviewer_note": "The cost figure describes shipping before containers, not a measured saving from this voyage. The arrival date comes from the Smithsonian's five-days-later wording.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "changelog": [
     {
       "date": "2026-11-04",
@@ -132,5 +132,26 @@
       "change": "new"
     }
   ],
-  "published_at": "2026-11-04T15:54:38.518Z"
+  "published_at": "2026-11-04T15:54:38.518Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1956-04-26",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 26 April 1956 a crane loaded 58 containers onto the Ideal X, an aging tanker, at Port Newark, one every seven minutes and all in under eight…",
+        "source": "src-panynj-idealx"
+      },
+      {
+        "span": "1956",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Ocean freight had often cost 15 to 20 percent of a cargo's value, and containers opened the way to modern globalization.",
+        "source": "src-panynj-idealx",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -4,7 +4,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "id": "0050-spread-of-christianity",
   "kind": "process",
   "title": "Spread of Christianity",
@@ -167,5 +167,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "49",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Word of Jesus's teachings spread to Jewish communities across the Roman Empire, helped by the empire's communications and by apostles such as Paul, who travelled around 10,000 miles…",
+        "source": "src-pbs-earlychr"
+      },
+      {
+        "span": "100",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "By the end of the first century, these Gentile Christians dominated the movement.",
+        "source": "src-pbs-earlychr",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }
