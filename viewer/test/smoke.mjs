@@ -109,6 +109,13 @@ async function run(name, opts, budget) {
   const lms = await page.evaluate(() => [...document.querySelectorAll('#landmarks .lm')].map(b => { const r = b.getBoundingClientRect(); return [r.left, r.right, b.textContent]; }));
   check(lms.length >= (phone ? 2 : 4) && lms.every((a, i) => lms.every((b, j) => i === j || a[1] <= b[0] || b[1] <= a[0])),
     `the time bar names landmarks that don't overlap (${lms.map(l => l[2]).join(', ')})`);
+  // the time window on the track matches the "within N years" text
+  const win = await page.evaluate(async () => {
+    const { band } = await import('./app/timebar.js'), { range } = await import('./app/time.js'), { from, to } = range();
+    const text = document.querySelector('#now small').textContent, n = +(text.match(/within ([\d,]+) years/)?.[1] || '0').replace(/,/g, '');
+    return { text, ok: !!band && n > 0 && Math.abs((band.z - band.a) - (2 * n / (to - from)) * band.w) <= Math.max(2, 0.03 * (band.z - band.a)) };
+  });
+  check(win.ok, `the band on the track matches the time window (${win.text})`);
   // the scale tabs move with the arrow keys
   await page.focus('#levels .on');
   await page.keyboard.press('ArrowRight');

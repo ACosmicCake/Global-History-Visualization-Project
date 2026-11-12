@@ -1,7 +1,7 @@
 // The time bar: the density strip and the marks for mass extinctions and ice ages, the slider and its dragging,
 // and Play with its speed menu.
 import { $, esc, show } from './dom.js';
-import { EARTH, LEVELS, NOW, domainOn, inLevel, range } from './time.js';
+import { EARTH, LEVELS, NOW, domainOn, inLevel, range, wholeNow, windowNow } from './time.js';
 import { state } from './state.js';
 import { deepTime, goTo, render, setLevel } from './main.js';
 import { drawVitalCurve } from './vitals.js';
@@ -81,6 +81,7 @@ export function drawLandmarks(from, to, w) {
     b.onclick = () => goTo(p.id);
   }
 }
+export let band = null; // the time window as drawn, in pixels along the track (read by the smoke test)
 // density strip: how many records fall at each point of the current scale (so empty stretches are visible)
 export function drawDensity() {
   const c = $('#density'),
@@ -107,6 +108,22 @@ export function drawDensity() {
     bw = w / bins.length;
   g.fillStyle = 'rgba(190,205,230,0.08)';
   g.fillRect(0, h - 1, w, 1);
+  // the time window: the stretch either side of the date whose records show ("within N years"), unless the whole
+  // period is on
+  band = null;
+  if (!wholeNow() && LEVELS[state.level].key !== 'event') {
+    const win = windowNow(),
+      a = Math.max(0, ((win.from - from) / (to - from)) * w),
+      z = Math.min(w, ((win.to - from) / (to - from)) * w);
+    if (z > a) {
+      band = { a, z, w };
+      g.fillStyle = 'rgba(217,179,106,0.14)';
+      g.fillRect(a, 0, Math.max(2, z - a), h);
+      g.fillStyle = 'rgba(217,179,106,0.45)';
+      g.fillRect(a, 0, 1, h);
+      g.fillRect(Math.max(a, z - 1), 0, 1, h);
+    }
+  }
   bins.forEach((n, i) => {
     if (!n) return;
     const bh = 3 + (n / max) * (h - 5);
