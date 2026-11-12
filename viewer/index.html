@@ -131,6 +131,11 @@
   .tg { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule); }
   .tg h3 { font: 500 11px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px 4px; }
   .toggles { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 12px; color: var(--soft); }
+  .chip .n { font: 11px var(--f-mono); color: var(--muted); }
+  .chip:hover { border-color: var(--rule-strong); color: var(--text); }
+  .chip[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
   .legend-about { display: inline-block; margin: 10px 0 0 4px; font-size: 11px; color: var(--muted); }
   .legend-about:hover { color: var(--brass); }
   #whole { flex: none; }
@@ -477,7 +482,12 @@
     #levels button, .brand-links button, .seq-top button, .time-top button { flex: none; }   /* a minimum width would otherwise let them shrink below their text */
     button.mark { pointer-events: none; }
     .badges { align-items: center; }
-    .legend-about { display: inline-flex; align-items: center; min-height: 40px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 12px; color: var(--soft); }
+  .chip .n { font: 11px var(--f-mono); color: var(--muted); }
+  .chip:hover { border-color: var(--rule-strong); color: var(--text); }
+  .chip[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
+  .legend-about { display: inline-flex; align-items: center; min-height: 40px; }
     #seq-dots i::after { inset: -17px -4px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
@@ -506,6 +516,8 @@
     <div id="legend-body">
     <ul id="domains"></ul>
     <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div><p class="imp-key">Larger markers changed more. A gold ring means a full story.</p></div>
+    <div class="tg"><h3>Region</h3><div id="f-regions" class="chips" role="group" aria-label="Show only these regions (none chosen shows all)"></div></div>
+    <div class="tg"><h3>Kind</h3><div id="f-kinds" class="chips" role="group" aria-label="Show only these kinds of record (none chosen shows all)"></div></div>
     <div class="tg"><h3>Show on the globe</h3><div class="toggles">
       <button class="toggle" id="borders" aria-pressed="true" title="Borders of states and empires at the date shown (Cliopatria). Blank areas are unmapped, not empty.">Borders</button>
       <button class="toggle" id="paths" aria-pressed="false">Routes</button>

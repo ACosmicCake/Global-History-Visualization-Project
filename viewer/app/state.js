@@ -18,5 +18,7 @@ export const state = {
   alt: 2.4,
   off: new Set(),
   impOff: new Set(),
+  regions: new Set(), // regions chosen in the legend; none chosen shows every region
+  kinds: new Set(), // kinds chosen (person, place, event…); none chosen shows every kind
   seqPaused: false,
 };

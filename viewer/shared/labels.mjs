@@ -23,3 +23,9 @@ export const REGION_LABELS = {
   northern_america: 'North America', latin_america_caribbean: 'Latin America and the Caribbean', oceania: 'Oceania',
   antarctica: 'Antarctica', oceans: 'the oceans', global: 'the whole planet',
 };
+
+// Kinds of record, as the legend's filter names them (plural)
+export const KIND_LABELS = {
+  event: 'Events', person: 'People', place: 'Places', process: 'Processes', work: 'Works', polity: 'States and empires',
+  movement: 'Movements', period: 'Periods', organization: 'Organizations', species: 'Species',
+};

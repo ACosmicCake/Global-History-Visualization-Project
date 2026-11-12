@@ -45,7 +45,7 @@ const shortTitle = t => {
 };
 export function drawLandmarks(from, to, w) {
   const box = $('#landmarks'),
-    key = [state.level, from, to, w, state.pins.length, [...state.off], [...state.impOff]].join('|');
+    key = [state.level, from, to, w, state.pins.length, [...state.off], [...state.impOff], [...state.regions], [...state.kinds]].join('|');
   if (key === landmarksKey) return;
   landmarksKey = key;
   box.innerHTML = '';

@@ -132,6 +132,21 @@ async function run(name, opts, budget) {
     check(seen[0] >= seen[1] / 4, `one click brings the pins into view (${seen[0]} of ${seen[1]} face the camera)`);
   }
   await page.evaluate(() => { window.atlas.state.t = -500; document.querySelectorAll('#levels button')[4].click(); });
+  // region and kind filters: Oceania and person leave only matching pins
+  const only = await page.evaluate(async () => {
+    const s = window.atlas.state, { pinSprites } = await import('./app/pins.js'), { domainOn } = await import('./app/time.js');
+    document.querySelector('#f-regions [data-k="oceania"]').click();
+    document.querySelector('#f-kinds [data-k="person"]').click();
+    const matching = s.pins.filter(domainOn), bad = matching.filter(p => p.region !== 'oceania' || p.kind !== 'person').length;
+    const one = matching.find(p => p.lat != null && p.start > 1500);   // go to one of them, so the globe has some to show
+    if (one) { s.t = one.start; document.querySelectorAll('#levels button')[5].click(); }
+    await new Promise(r => setTimeout(r, 800));
+    const recs = [...pinSprites.values()].flatMap(e => e.p.cluster || [e.p]), wrong = recs.filter(p => p.region !== 'oceania' || p.kind !== 'person').length;
+    document.querySelector('#f-regions [data-k="oceania"]').click(); document.querySelector('#f-kinds [data-k="person"]').click();
+    s.t = -500; document.querySelectorAll('#levels button')[4].click();
+    return { matching: matching.length, bad, shown: recs.length, wrong };
+  });
+  check(only.matching > 0 && only.bad === 0 && only.shown > 0 && only.wrong === 0, `choosing Oceania and person leaves only matching pins (${only.matching} records; ${only.shown} on the globe, ${only.wrong} not matching)`);
   // the scale tabs move with the arrow keys
   await page.focus('#levels .on');
   await page.keyboard.press('ArrowRight');

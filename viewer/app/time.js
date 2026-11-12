@@ -95,7 +95,11 @@ export function scaleIndex(p) {
 }
 export const inLevel = p => scaleIndex(p) <= state.level;
 export const rankOf = p => p.importance;
-// the Domains & layers filters: a record shows if any of its domains is on and its importance level is on
+// the Domains & layers filters: a record shows if any of its domains is on, its importance level is on, and its
+// region and kind are among those chosen (choosing none shows all)
 export const domainOn = p =>
-  (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) && !state.impOff.has(p.importance || 0);
+  (!(p.domains || []).length || (p.domains || []).some(d => !state.off.has(d))) &&
+  !state.impOff.has(p.importance || 0) &&
+  (!state.regions.size || state.regions.has(p.region)) &&
+  (!state.kinds.size || state.kinds.has(p.kind));
 export const paleoOn = () => state.paleoMa != null && state.paleoMa >= 10;
