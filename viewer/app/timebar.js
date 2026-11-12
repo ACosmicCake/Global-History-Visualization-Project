@@ -304,6 +304,7 @@ function openTimeMenu(btn) {
   buildSpeeds();
   menu.classList.toggle('from-more', btn.id === 'more-btn');
   $('#m-whole').setAttribute('aria-pressed', state.whole);
+  $('#m-follow').setAttribute('aria-pressed', $('#follow').getAttribute('aria-pressed'));
   show(menu, true);
   btn.setAttribute('aria-expanded', 'true');
   menu.querySelector('#speeds [aria-pressed="true"]').focus({ preventScroll: true });
@@ -318,6 +319,7 @@ for (const id of ['#speed', '#more-btn']) $(id).onclick = e => (menu.hidden ? op
 $('#m-whole').onclick = () => {
   $('#whole').click();
   $('#m-whole').setAttribute('aria-pressed', state.whole);
+  $('#m-follow').setAttribute('aria-pressed', $('#follow').getAttribute('aria-pressed'));
 };
 $('#m-list').onclick = () => {
   closeTimeMenu(false);

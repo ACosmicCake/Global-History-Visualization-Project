@@ -33,6 +33,7 @@ import { loadTours, startTour } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
 import { applyHash, flash, queueURL, setRestoring } from './url.js';
 import { renderVitals } from './vitals.js';
+import { initCue } from './cue.js';
 const { THREE, Globe } = window;
 
 export const GLOBE_R = 100;
@@ -1219,6 +1220,7 @@ for (const ev of ['pointerdown', 'wheel', 'touchstart']) $('#globe').addEventLis
 setTimeout(dismissHint, 12000);
 window.atlas = { openRecord, goTo, state, globe, startTour, startFilm }; // handy for debugging from the console
 buildChrome();
+initCue();
 setLevel(4);
 // Live refresh only against the local server, where records are being published; the static site's data changes
 // only with a new deploy, so it is fetched once (and can be cached).

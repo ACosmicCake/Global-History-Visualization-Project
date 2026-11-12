@@ -116,6 +116,17 @@ async function run(name, opts, budget) {
     return { text, ok: !!band && n > 0 && Math.abs((band.z - band.a) - (2 * n / (to - from)) * band.w) <= Math.max(2, 0.03 * (band.z - band.a)) };
   });
   check(win.ok, `the band on the track matches the time window (${win.text})`);
+  // at 1944, seen from the Americas, a cue points to where most records are, and one click turns the globe there
+  await page.evaluate(() => { window.atlas.state.t = 1944; document.querySelectorAll('#levels button')[5].click(); window.atlas.globe.pointOfView({ lat: 10, lng: -100, altitude: 2.4 }, 0); });
+  const cued = await soon(() => !document.querySelector('#cue').hidden);
+  check(cued, `a cue points to history out of view (${await page.evaluate(() => document.querySelector('#cue').textContent)})`);
+  if (cued) {
+    await page.click('#cue');
+    await page.waitForTimeout(2500);
+    const seen = await page.evaluate(async () => { const { pinsSeen } = await import('./app/pins.js'); return [pinsSeen.facing, pinsSeen.shown]; });
+    check(seen[0] >= seen[1] / 4, `one click brings the pins into view (${seen[0]} of ${seen[1]} face the camera)`);
+  }
+  await page.evaluate(() => { window.atlas.state.t = -500; document.querySelectorAll('#levels button')[4].click(); });
   // the scale tabs move with the arrow keys
   await page.focus('#levels .on');
   await page.keyboard.press('ArrowRight');
