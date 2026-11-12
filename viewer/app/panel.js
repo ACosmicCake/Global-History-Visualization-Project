@@ -8,7 +8,7 @@ import { NOW, fmtSpan, fmtYear } from './time.js';
 import { placed } from './pins.js';
 import { LIVE, deepTime, globe, goTo, playSequence, render } from './main.js';
 import { flash, writeURL } from './url.js';
-import { tourNav, tourStep } from './tours.js';
+import { playTour, stopPlaying, tourNav, tourPlaying, tourStep } from './tours.js';
 
 // ---------- record panel (all record text is escaped: records are data written by agents)
 export const CONF_LABEL = { established: 'Established', probable: 'Probable', contested: 'Contested', legendary: 'Legendary' };
@@ -215,9 +215,12 @@ export async function openRecord(id) {
   panel.querySelector('#p-share').onclick = shareRecord;
   panel.querySelector('#tour-prev')?.addEventListener('click', () => tourStep(-1));
   panel.querySelector('#tour-next')?.addEventListener('click', () => tourStep(1));
+  panel.querySelector('#tour-play')?.addEventListener('click', () => (tourPlaying() ? stopPlaying() : playTour()));
   panel.querySelector('#tour-end')?.addEventListener('click', () => {
+    stopPlaying();
     state.tour = null;
     panel.querySelector('.tour-nav').remove();
+    panel.querySelector('.tour-line')?.remove();
     writeURL(false);
   });
   const playBtn = panel.querySelector('#play-seq');
@@ -309,6 +312,7 @@ export function closePanel() {
   state.selected = null;
   state.openRec = null;
   state.arcs = [];
+  stopPlaying();
   state.tour = null;
   document.title = 'Living Atlas';
   render();

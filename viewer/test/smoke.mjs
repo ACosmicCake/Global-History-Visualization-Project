@@ -158,6 +158,19 @@ async function run(name, opts, budget) {
   await page.click(phone ? '#more-btn' : '#speed');
   await page.click('#speeds button[data-s="2"]');
   check(await page.evaluate(() => document.querySelector('#time-menu').hidden && document.querySelector('#speed').textContent === '2×'), 'a speed can be chosen from the menu');
+  // a tour plays itself: each stop opens with its tour note, its sequence plays, then the next stop, with no click
+  // (here the holds are shortened and each sequence is skipped to its last beat)
+  await page.evaluate(() => { window.atlas.state.tourPace = 0.05; window.atlas.startTour('space', 0, true); });
+  check(await soon(() => /^Tour note/.test(document.querySelector('#panel .tour-line')?.textContent || '')), 'a tour stop shows its editorial line, marked as a tour note');
+  const toured = await page.waitForFunction(() => {
+    const s = window.atlas.state;
+    if (window.Sequence.playing && window.__skipped !== window.Sequence.recordId) { window.__skipped = window.Sequence.recordId; window.Sequence.goTo(999); }   // once per sequence
+    return s.tour && s.tour.i === s.tour.stops.length - 1 && !window.atlas.tourPlaying() && s.openRec?.id === s.tour.stops.at(-1);
+  }, null, { timeout: 180000, polling: 500 }).then(() => true, () => false);
+  check(toured, `a played tour reaches its last stop on its own (${await page.evaluate(() => `${window.atlas.state.tour?.i + 1} of ${window.atlas.state.tour?.stops.length}`)})`);
+  await page.evaluate(() => { delete window.atlas.state.tourPace; });
+  if (await page.isVisible('#seq-stop')) await page.click('#seq-stop');
+  if (await page.isVisible('#panel .p-close')) await page.click('#panel .p-close');
   if (phone) await page.click('#search-open');
   await page.fill('#q', 'world war 2');
   check(await soon(() => !document.querySelector('#results').hidden && document.querySelectorAll('#results button[data-id]').length > 0), 'searching "world war 2" returns a result');

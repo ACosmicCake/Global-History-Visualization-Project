@@ -29,7 +29,7 @@ import { CLOSE_AT, DOMAINS, badgeURL, baseColor, colorOf, haloTexture, isMajor, 
 import { clusterPins, labelTexture, pinData, pinSprites, placePinSprites, placed, visiblePins } from './pins.js';
 import { PAUSE, PLAY, drawDensity, fadeTabs, slideRange, stopPlay, timer } from './timebar.js';
 import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
-import { loadTours, startTour } from './tours.js';
+import { loadTours, startTour, tourPlaying } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
 import { applyHash, flash, queueURL, resumeLast, setRestoring } from './url.js';
 import { renderVitals } from './vitals.js';
@@ -957,7 +957,8 @@ export function levelFor(y) {
   const S = SCALE_START;
   return y < S.life ? 0 : y < S.human_origins ? 1 : y < S.prehistory ? 2 : y < S.civilization ? 3 : y < S.modern ? 4 : 5;
 }
-export function playSequence(r) {
+// onDone runs when the sequence reaches its end (not when it is stopped): a playing tour moves on from there
+export function playSequence(r, onDone) {
   const pin = state.pins.find(p => p.id === r.id);
   window.Sequence.play(r, {
     globe,
@@ -1001,6 +1002,7 @@ export function playSequence(r) {
       show($('#seqbar'), false);
       show($('#panel'), !!state.selected);
       render();
+      onDone?.();
     },
   });
 }
@@ -1098,7 +1100,7 @@ async function openWelcome() {
     ${today.length ? `<h3>On this day</h3><ul class="tour-list w-today">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
     <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span></div>`;
   welcome.querySelectorAll('button[data-tour]').forEach(b => {
-    b.onclick = () => startTour(b.dataset.tour);
+    b.onclick = () => startTour(b.dataset.tour, 0, true); // chosen from the welcome, a tour plays itself
   });
   welcome.querySelectorAll('button[data-id]').forEach(b => {
     b.onclick = () => {
@@ -1241,7 +1243,7 @@ const dismissHint = () => {
 };
 for (const ev of ['pointerdown', 'wheel', 'touchstart']) $('#globe').addEventListener(ev, dismissHint, { once: true, passive: true });
 setTimeout(dismissHint, 12000);
-window.atlas = { openRecord, goTo, state, globe, startTour, startFilm }; // handy for debugging from the console
+window.atlas = { openRecord, goTo, state, globe, startTour, startFilm, tourPlaying }; // handy for debugging from the console
 buildChrome();
 initCue();
 setLevel(4);

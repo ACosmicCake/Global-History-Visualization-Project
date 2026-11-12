@@ -52,7 +52,7 @@ export async function applyHash() {
     else render();
     if (tour && state.tour?.id !== tour) {
       const x = (await loadTours()).find(k => k.id === tour);
-      if (x) state.tour = { id: tour, title: x.title, stops: x.stops, i: Math.max(0, x.stops.indexOf(r)) };
+      if (x) state.tour = { id: tour, title: x.title, stops: x.stops, lines: x.lines, i: Math.max(0, x.stops.indexOf(r)) };
     }
     if (!tour) state.tour = null;
     if (r && r !== state.selected) await (Number.isNaN(t) ? goTo(r) : openRecord(r));
