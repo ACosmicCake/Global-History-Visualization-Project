@@ -11,3 +11,10 @@ The night-lights texture shows modern (c. 2012) city lights. The viewer shows it
 | shelf-depth.png (2160 × 1081, sea floor down to 150 m) | NOAA ETOPO1, Ice Surface (Amante and Eakins 2009), read at a 1/6° grid. Built by atlas/tools/build-sealevel.mjs | Free to use and redistribute; not for legal use, no warranty |
 | og.jpg | Screenshot of this site, for link previews | Same as the imagery in it |
 | ice-sheets.png (33 frames of 360 × 181, ice thickness for the last 80,000 years) | PaleoMIST 1.0 (Gowan et al. 2021, Nature Communications 12:1199; doi.org/10.1594/PANGAEA.905800), minimal scenario for North America before the last ice-age peak. Reduced to 8 bits by atlas/tools/build-icesheets.mjs | CC BY 4.0 |
+
+# Code libraries
+
+| File | Source | Licence |
+| --- | --- | --- |
+| vendor/three-0.149.0.min.js | three.js r149 (mrdoob/three.js), from npm three@0.149.0 | MIT (vendor/LICENSE-three) |
+| vendor/globe.gl-2.27.2.min.js | globe.gl 2.27.2 (vasturiano/globe.gl), from npm globe.gl@2.27.2 | MIT (vendor/LICENSE-globe.gl) |
