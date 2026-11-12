@@ -19,7 +19,14 @@ for (const r of live) {
   for (const x of r.related || []) if (!ids.has(x.id)) fails.push(`${r.id}: links to unknown record ${x.id}`);
 }
 const VIEWER = path.resolve(ROOT, '..', 'viewer'), liveIds = new Set(live.map(r => r.id));
-for (const t of JSON.parse(fs.readFileSync(path.join(VIEWER, 'tours.json'), 'utf8'))) for (const id of t.stops) if (!liveIds.has(id)) fails.push(`tour ${t.id}: unknown stop ${id}`);
+for (const t of JSON.parse(fs.readFileSync(path.join(VIEWER, 'tours.json'), 'utf8'))) {
+  for (const id of t.stops) if (!liveIds.has(id)) fails.push(`tour ${t.id}: unknown stop ${id}`);
+  // a tour's editorial lines: one per stop at most, 25 words or fewer
+  for (const [id, line] of Object.entries(t.lines || {})) {
+    if (!t.stops.includes(id)) fails.push(`tour ${t.id}: a line for ${id}, which is not a stop`);
+    if (String(line).trim().split(/\s+/).length > 25) fails.push(`tour ${t.id}: the line for ${id} is over 25 words`);
+  }
+}
 const deep = JSON.parse(fs.readFileSync(path.join(VIEWER, 'deeptime.json'), 'utf8'));
 for (const id of Object.keys(deep.scenes)) if (!liveIds.has(id)) fails.push(`deeptime scene: unknown record ${id}`);
 for (const m of deep.marks) if (m.id && !liveIds.has(m.id)) fails.push(`deeptime mark: unknown record ${m.id}`);

@@ -28,8 +28,8 @@ import {
 import { CLOSE_AT, DOMAINS, badgeURL, baseColor, colorOf, haloTexture, isMajor, pinTexture, standsOut } from './badges.js';
 import { clusterPins, labelTexture, pinData, pinSprites, placePinSprites, placed, visiblePins } from './pins.js';
 import { PAUSE, PLAY, drawDensity, fadeTabs, slideRange, stopPlay, timer } from './timebar.js';
-import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
-import { loadTours, startTour } from './tours.js';
+import { aroundTheWorld, closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
+import { loadTours, startTour, tourPlaying } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
 import { applyHash, flash, queueURL, resumeLast, setRestoring } from './url.js';
 import { renderVitals } from './vitals.js';
@@ -957,7 +957,8 @@ export function levelFor(y) {
   const S = SCALE_START;
   return y < S.life ? 0 : y < S.human_origins ? 1 : y < S.prehistory ? 2 : y < S.civilization ? 3 : y < S.modern ? 4 : 5;
 }
-export function playSequence(r) {
+// onDone runs when the sequence reaches its end (not when it is stopped): a playing tour moves on from there
+export function playSequence(r, onDone) {
   const pin = state.pins.find(p => p.id === r.id);
   window.Sequence.play(r, {
     globe,
@@ -1001,6 +1002,7 @@ export function playSequence(r) {
       show($('#seqbar'), false);
       show($('#panel'), !!state.selected);
       render();
+      onDone?.();
     },
   });
 }
@@ -1040,32 +1042,46 @@ addEventListener('keydown', e => {
 
 state.arcs = [];
 // ---------- lists of pins: a dense spot opened, or everything shown now (for the keyboard and for crowded screens)
-function openPinList(title, pins) {
+// rows of pins, optionally under headings: [{ label, pins }]; `by` names the button that opened it (aria-expanded)
+const pinRows = pins =>
+  `<ul>${pins.map(p => `<li><button data-id="${esc(p.id)}"><img alt="" src="${badgeURL(p.domains?.[0], !p.outline)}"><span>${esc(p.title)}</span><span class="d">${esc(p.display || '')}</span></button></li>`).join('')}</ul>`;
+let listBy = '#list-btn';
+function openPinList(title, pins, groups = null, by = '#list-btn') {
   const box = $('#pinlist');
-  box.innerHTML = `<h2>${esc(title)}<button aria-label="Close list">×</button></h2><ul>${pins.map(p => `<li><button data-id="${esc(p.id)}"><img alt="" src="${badgeURL(p.domains?.[0], !p.outline)}"><span>${esc(p.title)}</span><span class="d">${esc(p.display || '')}</span></button></li>`).join('')}</ul>`;
+  closePinList();
+  listBy = by;
+  box.innerHTML = `<h2>${esc(title)}<button aria-label="Close list">×</button></h2>${groups ? groups.map(g => `<h3>${esc(g.label)}</h3>${pinRows(g.pins)}`).join('') : pinRows(pins)}`;
   box.querySelector('h2 button').onclick = closePinList;
   box.querySelectorAll('button[data-id]').forEach(b => {
-    b.onclick = () => openRecord(b.dataset.id);
+    b.onclick = () => (groups ? goTo(b.dataset.id) : openRecord(b.dataset.id));
   });
+  box.dataset.kind = groups ? 'world' : 'list';
   show(box, true);
-  $('#list-btn').setAttribute('aria-expanded', 'true');
+  $(listBy).setAttribute('aria-expanded', 'true');
   box.querySelector('button[data-id]')?.focus({ preventScroll: true });
 }
 function closePinList() {
   show($('#pinlist'), false);
-  $('#list-btn').setAttribute('aria-expanded', 'false');
+  $(listBy).setAttribute('aria-expanded', 'false');
 }
 function openCluster(c) {
   openPinList(`${c.cluster.length} records here`, c.cluster);
   globe.pointOfView({ lat: c.lat, lng: c.lon, altitude: Math.max(0.15, state.alt * 0.55) }, 800);
 }
 $('#list-btn').onclick = () => {
-  if (!$('#pinlist').hidden) return closePinList();
+  if (!$('#pinlist').hidden && listBy === '#list-btn') return closePinList();
   const pins = visiblePins()
     .filter(p => !p.global)
     .sort((a, b) => b.importance - a.importance || a.start - b.start);
   openPinList(`${pins.length} records shown now`, pins.slice(0, 200));
 };
+// Around the world: for the date shown, the top two records under way in each region
+export function openWorld() {
+  if (!$('#pinlist').hidden && listBy === '#world-btn') return closePinList();
+  const groups = aroundTheWorld(state.t);
+  openPinList(`Around the world in ${fmtYear(Math.round(state.t))}`, null, groups.length ? groups : [{ label: 'Nothing pinned near this date', pins: [] }], '#world-btn');
+}
+$('#world-btn').onclick = openWorld;
 addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closePinList();
@@ -1084,9 +1100,16 @@ function onThisDay() {
 // The welcome is a modal dialog: a backdrop, focus kept inside, Escape closes. Three main choices (the film, a tour,
 // exploring), with "On this day" below; the tours are listed when Take a tour is chosen.
 const welcome = $('#welcome');
+// the newest records (api/recent.json, written by the build), the latest few named on the welcome
+const loadRecent = () =>
+  fetch('api/recent.json')
+    .then(r => (r.ok ? r.json() : []))
+    .catch(() => []);
 async function openWelcome() {
-  const list = await loadTours(),
-    today = onThisDay();
+  const [list, recent] = await Promise.all([loadTours(), loadRecent()]),
+    today = onThisDay(),
+    known = new Set(state.pins.map(p => p.id)),
+    fresh = recent.filter(r => known.has(r.id)).slice(0, 3);
   welcome.innerHTML = `<h2 id="welcome-title">Living Atlas</h2>
     <p>Earth and human history, placed where and when it happened. Drag the globe, move the time bar, and open any pin to read its record and sources.</p>
     <div class="w-main">
@@ -1095,10 +1118,11 @@ async function openWelcome() {
       <button id="welcome-close" class="w-choice" autofocus><b>Explore</b><span>The globe, on your own</span></button>
     </div>
     <ul id="w-tours" class="tour-list" hidden>${list.map(t => `<li><button data-tour="${esc(t.id)}"><b>${esc(t.title)}</b><span>${esc(t.blurb)} ${t.stops.length} stops.</span></button></li>`).join('')}</ul>
-    ${today.length ? `<h3>On this day</h3><ul class="tour-list w-today">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
+    ${fresh.length ? `<h3>Recently added <a class="w-feed" href="browse.html">more</a></h3><ul class="tour-list w-today w-recent">${fresh.map(r => `<li><button data-id="${esc(r.id)}" title="${esc(r.display)}"><b>${esc(r.title)}</b><span>${esc(r.display)}</span></button></li>`).join('')}</ul>` : ''}
+    ${today.length ? `<h3>On this day</h3><ul class="tour-list w-today">${today.map(p => `<li><button data-id="${esc(p.id)}" title="${esc(p.display)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
     <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span></div>`;
   welcome.querySelectorAll('button[data-tour]').forEach(b => {
-    b.onclick = () => startTour(b.dataset.tour);
+    b.onclick = () => startTour(b.dataset.tour, 0, true); // chosen from the welcome, a tour plays itself
   });
   welcome.querySelectorAll('button[data-id]').forEach(b => {
     b.onclick = () => {
@@ -1241,7 +1265,7 @@ const dismissHint = () => {
 };
 for (const ev of ['pointerdown', 'wheel', 'touchstart']) $('#globe').addEventListener(ev, dismissHint, { once: true, passive: true });
 setTimeout(dismissHint, 12000);
-window.atlas = { openRecord, goTo, state, globe, startTour, startFilm }; // handy for debugging from the console
+window.atlas = { openRecord, goTo, state, globe, startTour, startFilm, tourPlaying }; // handy for debugging from the console
 buildChrome();
 initCue();
 setLevel(4);

@@ -59,6 +59,8 @@ async function run(name, opts, budget) {
   await soon(() => document.querySelector('#welcome').open);
   const fits = await page.evaluate(() => { const d = document.querySelector('#welcome'); return d.open && d.scrollHeight <= d.clientHeight + 1; });
   check(fits, 'the welcome dialog opens and fits the screen without scrolling');
+  const recent = await page.evaluate(() => document.querySelectorAll('#welcome .w-recent button[data-id]').length);
+  check(recent > 0, `the welcome names recently added records (${recent})`);
   let inside = true;
   for (let i = 0; i < 12; i++) { await page.keyboard.press('Tab'); inside &&= await page.evaluate(() => !!document.activeElement?.closest('#welcome')); }
   check(inside, 'Tab never leaves the open welcome dialog');
@@ -158,6 +160,25 @@ async function run(name, opts, budget) {
   await page.click(phone ? '#more-btn' : '#speed');
   await page.click('#speeds button[data-s="2"]');
   check(await page.evaluate(() => document.querySelector('#time-menu').hidden && document.querySelector('#speed').textContent === '2×'), 'a speed can be chosen from the menu');
+  // Around the world: at 1500, the top records of at least six regions
+  await page.evaluate(() => { const b = document.querySelectorAll('#levels button')[5]; b.click(); window.atlas.state.t = 1500; b.click(); });
+  if (phone) { await page.click('#more-btn'); await page.click('#m-world'); } else await page.click('#world-btn');
+  const world = await page.evaluate(() => ({ title: document.querySelector('#pinlist h2')?.textContent, regions: document.querySelectorAll('#pinlist h3').length, rows: document.querySelectorAll('#pinlist button[data-id]').length }));
+  check(world.title?.startsWith('Around the world in 1500') && world.regions >= 6 && world.rows <= world.regions * 2, `around the world at 1500 lists records from ${world.regions} regions`);
+  await page.click('#pinlist h2 button');
+  // a tour plays itself: each stop opens with its tour note, its sequence plays, then the next stop, with no click
+  // (here the holds are shortened and each sequence is skipped to its last beat)
+  await page.evaluate(() => { window.atlas.state.tourPace = 0.05; window.atlas.startTour('space', 0, true); });
+  check(await soon(() => /^Tour note/.test(document.querySelector('#panel .tour-line')?.textContent || '')), 'a tour stop shows its editorial line, marked as a tour note');
+  const toured = await page.waitForFunction(() => {
+    const s = window.atlas.state;
+    if (window.Sequence.playing && window.__skipped !== window.Sequence.recordId) { window.__skipped = window.Sequence.recordId; window.Sequence.goTo(999); }   // once per sequence
+    return s.tour && s.tour.i === s.tour.stops.length - 1 && !window.atlas.tourPlaying() && s.openRec?.id === s.tour.stops.at(-1);
+  }, null, { timeout: 180000, polling: 500 }).then(() => true, () => false);
+  check(toured, `a played tour reaches its last stop on its own (${await page.evaluate(() => `${window.atlas.state.tour?.i + 1} of ${window.atlas.state.tour?.stops.length}`)})`);
+  await page.evaluate(() => { delete window.atlas.state.tourPace; });
+  if (await page.isVisible('#seq-stop')) await page.click('#seq-stop');
+  if (await page.isVisible('#panel .p-close')) await page.click('#panel .p-close');
   if (phone) await page.click('#search-open');
   await page.fill('#q', 'world war 2');
   check(await soon(() => !document.querySelector('#results').hidden && document.querySelectorAll('#results button[data-id]').length > 0), 'searching "world war 2" returns a result');

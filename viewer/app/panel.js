@@ -1,6 +1,6 @@
 // The record panel: opens at once from the pin, fills in from the full record, with its Wikipedia box, Meanwhile list,
 // connections, sources, sharing and the report link. All record text is escaped: records are data written by agents.
-import { REPO, RELATION_LABELS } from '../shared/labels.mjs';
+import { REGION_LABELS, REPO, RELATION_LABELS } from '../shared/labels.mjs';
 import { state } from './state.js';
 import { $, esc, show } from './dom.js';
 import { DOMAINS } from './badges.js';
@@ -8,7 +8,7 @@ import { NOW, fmtSpan, fmtYear } from './time.js';
 import { placed } from './pins.js';
 import { LIVE, deepTime, globe, goTo, playSequence, render } from './main.js';
 import { flash, writeURL } from './url.js';
-import { tourNav, tourStep } from './tours.js';
+import { playTour, stopPlaying, tourNav, tourPlaying, tourStep } from './tours.js';
 
 // ---------- record panel (all record text is escaped: records are data written by agents)
 export const CONF_LABEL = { established: 'Established', probable: 'Probable', contested: 'Contested', legendary: 'Legendary' };
@@ -215,9 +215,12 @@ export async function openRecord(id) {
   panel.querySelector('#p-share').onclick = shareRecord;
   panel.querySelector('#tour-prev')?.addEventListener('click', () => tourStep(-1));
   panel.querySelector('#tour-next')?.addEventListener('click', () => tourStep(1));
+  panel.querySelector('#tour-play')?.addEventListener('click', () => (tourPlaying() ? stopPlaying() : playTour()));
   panel.querySelector('#tour-end')?.addEventListener('click', () => {
+    stopPlaying();
     state.tour = null;
     panel.querySelector('.tour-nav').remove();
+    panel.querySelector('.tour-line')?.remove();
     writeURL(false);
   });
   const playBtn = panel.querySelector('#play-seq');
@@ -309,6 +312,7 @@ export function closePanel() {
   state.selected = null;
   state.openRec = null;
   state.arcs = [];
+  stopPlaying();
   state.tour = null;
   document.title = 'Living Atlas';
   render();
@@ -383,27 +387,36 @@ export function kmBetween(a, b, c, d) {
   return 12742 * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 // What else was happening: other records of about the same date, near this one and across the other regions of the world
-export function meanwhile(r) {
-  const y = r.when?.start?.year;
-  if (y == null) return '';
+// what was under way around year y, pinned somewhere (not planet-wide), most important first and people last, since
+// a long life overlaps nearly everything. The window widens with distance from today: ±5 years near now, ±2% of the
+// time before it further back. Used by Meanwhile and by Around the world.
+export function underWay(y, skip = () => false) {
   const w = Math.max(5, (NOW - y) * 0.02),
-    longest = Math.max(150, w * 10),
-    listed = new Set((r.related || []).map(x => x.id));
-  const others = state.pins
-    .filter(
-      p =>
-        p.id !== r.id &&
-        p.lat != null &&
-        !p.global &&
-        !listed.has(p.id) &&
-        p.start <= y + w &&
-        p.until >= y - w &&
-        p.until - p.start <= longest,
-    )
+    longest = Math.max(150, w * 10);
+  return state.pins
+    .filter(p => p.lat != null && !p.global && !skip(p) && p.start <= y + w && p.until >= y - w && p.until - p.start <= longest)
     .sort(
       (a, b) =>
         (a.kind === 'person') - (b.kind === 'person') || b.importance - a.importance || Math.abs(a.start - y) - Math.abs(b.start - y),
-    ); // people last: a long life overlaps nearly everything
+    );
+}
+// Around the world: for year y, the top two records in each region, regions in a fixed order
+export function aroundTheWorld(y, per = 2) {
+  const by = new Map();
+  for (const p of underWay(y)) {
+    if (!p.region) continue;
+    const list = by.get(p.region) || by.set(p.region, []).get(p.region);
+    if (list.length < per) list.push(p);
+  }
+  return Object.keys(REGION_LABELS)
+    .filter(k => by.has(k))
+    .map(k => ({ region: k, label: REGION_LABELS[k], pins: by.get(k) }));
+}
+export function meanwhile(r) {
+  const y = r.when?.start?.year;
+  if (y == null) return '';
+  const listed = new Set((r.related || []).map(x => x.id));
+  const others = underWay(y, p => p.id === r.id || listed.has(p.id));
   const pinned = r.where?.lat != null && (r.where.uncertainty_km ?? 0) < 5000;
   const near = pinned ? others.filter(p => kmBetween(r.where.lat, r.where.lon, p.lat, p.lon) < 1000).slice(0, 4) : [];
   const regions = new Set([r.regions?.[0]]),

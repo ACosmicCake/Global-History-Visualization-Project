@@ -325,6 +325,10 @@ $('#m-list').onclick = () => {
   closeTimeMenu(false);
   $('#list-btn').click();
 };
+$('#m-world').onclick = () => {
+  closeTimeMenu(false);
+  $('#world-btn').click();
+};
 addEventListener('pointerdown', e => {
   if (!menu.hidden && !menu.contains(e.target) && !e.target.closest('#speed, #more-btn')) closeTimeMenu(false);
 });
