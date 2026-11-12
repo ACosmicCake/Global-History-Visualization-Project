@@ -2,12 +2,13 @@
 // can be found by a search engine, previewed when shared, and read without WebGL), a browsable index of every record,
 // and the sitemap. All record text is escaped: records are data written by agents.
 export const SITE_URL = (process.env.SITE_URL || 'https://acosmiccake.github.io/Global-History-Visualization-Project/').replace(/\/?$/, '/');
-export const REPO = 'ACosmicCake/Global-History-Visualization-Project';
+import { REPO, RELATION_LABELS, SCALE_START, PHANEROZOIC_START } from './shared/labels.mjs';
+export { REPO };
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const clip = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length <= n ? s : s.slice(0, n).replace(/\s+\S*$/, '') + '…'; };
 const paras = s => String(s || '').split(/\n+/).filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('');
-const REL = { caused: 'Led to', caused_by: 'Caused by', part_of: 'Part of', has_part: 'Includes', same_person: 'Same person', same_place: 'Same place', contemporary: 'Same time', related: 'Related', mentions: 'Mentions', mentioned_in: 'Mentioned in' };
+const REL = Object.fromEntries(Object.entries(RELATION_LABELS).map(([k, v]) => [k, v[0].toUpperCase() + v.slice(1)]));
 
 function shell({ title, desc, path, root, body, image, type = 'website' }) {
   const url = SITE_URL + path, img = image || `${SITE_URL}assets/og.jpg`;
@@ -74,9 +75,9 @@ ${wiki ? `<p><a href="${esc(wiki)}" rel="noopener noreferrer">Read more on Wikip
 }
 
 const ERAS = [
-  ['Earth before life on land', -Infinity, -5.388e8], ['Life and the changing planet', -5.388e8, -7e6], ['Human origins', -7e6, -10000],
-  ['First farmers and cities', -10000, -500], ['500 BCE to 500 CE', -500, 500], ['500 to 1000', 500, 1000], ['1000 to 1500', 1000, 1500],
-  ['1500 to 1800', 1500, 1800], ['1800 to 1900', 1800, 1900], ['1900 to 1950', 1900, 1950], ['1950 to today', 1950, Infinity],
+  ['Earth before life on land', -Infinity, PHANEROZOIC_START], ['Life and the changing planet', PHANEROZOIC_START, SCALE_START.human_origins], ['Human origins', SCALE_START.human_origins, SCALE_START.civilization],
+  ['First farmers and cities', SCALE_START.civilization, -500], ['500 BCE to 500 CE', -500, 500], ['500 to 1000', 500, 1000], ['1000 to 1500', 1000, SCALE_START.modern],
+  ['1500 to 1800', SCALE_START.modern, 1800], ['1800 to 1900', 1800, 1900], ['1900 to 1950', 1900, 1950], ['1950 to today', 1950, Infinity],
 ];
 export function browsePage(recs) {
   const sorted = [...recs].sort((a, b) => a.when.start.year - b.when.start.year || a.title.localeCompare(b.title));

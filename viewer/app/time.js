@@ -1,22 +1,23 @@
 // Time: the scales (levels), eons, year formatting, the time window around the date shown, and which records a scale
 // and the filters let through. Reads the shared state; no DOM.
 import { state } from './state.js';
+import { SCALE_START, EARTH_FORMED, PHANEROZOIC_START } from '../shared/labels.mjs';
 
 export const NOW = new Date().getUTCFullYear();
-export const EARTH = -4.54e9;
+export const EARTH = EARTH_FORMED;
 export const LEVELS = [
   { key: 'deep_time', name: 'Deep time', from: EARTH, to: NOW },
-  { key: 'life', name: 'Life', from: -5.4e8, to: NOW },
-  { key: 'human_origins', name: 'Human origins', from: -7e6, to: NOW },
-  { key: 'prehistory', name: 'Prehistory', from: -3e5, to: NOW },
-  { key: 'civilization', name: 'Civilization', from: -10000, to: NOW },
-  { key: 'modern', name: 'Modern', from: 1500, to: NOW },
+  { key: 'life', name: 'Life', from: SCALE_START.life, to: NOW },
+  { key: 'human_origins', name: 'Human origins', from: SCALE_START.human_origins, to: NOW },
+  { key: 'prehistory', name: 'Prehistory', from: SCALE_START.prehistory, to: NOW },
+  { key: 'civilization', name: 'Civilization', from: SCALE_START.civilization, to: NOW },
+  { key: 'modern', name: 'Modern', from: SCALE_START.modern, to: NOW },
   { key: 'event', name: 'One year', from: null, to: null },
 ];
 export const SCALE_INDEX = Object.fromEntries(LEVELS.map((l, i) => [l.key, i]));
 export const EONS = [ // ICS chronostratigraphic chart, eon boundaries
   { name: 'Hadean', from: EARTH, to: -4.031e9, color: '#3a1f2b' }, { name: 'Archean', from: -4.031e9, to: -2.5e9, color: '#4a2a3c' },
-  { name: 'Proterozoic', from: -2.5e9, to: -5.388e8, color: '#3c3557' }, { name: 'Phanerozoic', from: -5.388e8, to: NOW, color: '#2c4a63' },
+  { name: 'Proterozoic', from: -2.5e9, to: PHANEROZOIC_START, color: '#3c3557' }, { name: 'Phanerozoic', from: PHANEROZOIC_START, to: NOW, color: '#2c4a63' },
 ];
 // ---------- time formatting & levels
 export function fmtYear(y, short = false) {

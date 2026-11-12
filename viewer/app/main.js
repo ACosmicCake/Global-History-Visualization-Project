@@ -3,6 +3,7 @@
 // Data comes from api/pins.json: live from server.mjs locally, refreshed every 15 seconds; a static file, fetched once, on the published site.
 // Libraries load as pinned UMD scripts in index.html: three@0.149.0, globe.gl@2.27.2.
 import './webgl-check.js';   // first: stops here, with a message, where the globe can't run
+import { SCALE_START } from '../shared/labels.mjs';
 import { $, esc, show } from './dom.js';
 import { state } from './state.js';
 import './search.js';
@@ -422,7 +423,7 @@ export async function goTo(id) {
   closePinList();
   const p = state.pins.find(x => x.id === id);
   if (p) {
-    const lvl = Math.max(scaleIndex(p), p.start < -1e6 ? 0 : p.start < -10000 ? 3 : p.start < 1500 ? 4 : 5);
+    const lvl = Math.max(scaleIndex(p), p.start < -1e6 ? 0 : p.start < SCALE_START.civilization ? 3 : p.start < SCALE_START.modern ? 4 : 5);
     state.t = Math.min(Math.max(p.start, range(lvl).from ?? p.start), NOW);
     setLevel(Math.min(lvl, 5), true);
   }
@@ -430,7 +431,8 @@ export async function goTo(id) {
 }
 
 // ---------- authored sequences (spec 6.2): the time axis locks to each beat; the panel steps aside while playing
-export function levelFor(y) { return y < -5.4e8 ? 0 : y < -7e6 ? 1 : y < -3e5 ? 2 : y < -10000 ? 3 : y < 1500 ? 4 : 5; }
+// the scale a date belongs to: the narrowest of Deep time to Modern that reaches back to it
+export function levelFor(y) { const S = SCALE_START; return y < S.life ? 0 : y < S.human_origins ? 1 : y < S.prehistory ? 2 : y < S.civilization ? 3 : y < S.modern ? 4 : 5; }
 export function playSequence(r) {
   const pin = state.pins.find(p => p.id === r.id);
   window.Sequence.play(r, {

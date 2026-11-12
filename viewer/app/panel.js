@@ -1,5 +1,6 @@
 // The record panel: opens at once from the pin, fills in from the full record, with its Wikipedia box, Meanwhile list,
 // connections, sources, sharing and the report link. All record text is escaped: records are data written by agents.
+import { REPO, RELATION_LABELS } from '../shared/labels.mjs';
 import { state } from './state.js';
 import { $, esc, show } from './dom.js';
 import { DOMAINS } from './badges.js';
@@ -55,7 +56,7 @@ export async function openRecord(id) {
   const img = (r.media || []).find(m => m.type === 'image' || m.type === 'map');
   const paras = s => esc(s).split(/\n+/).filter(Boolean).map(x => `<p>${x}</p>`).join('');
   const known = new Set(state.pins.map(p => p.id));
-  const relLabel = { caused: 'led to', caused_by: 'caused by', part_of: 'part of', has_part: 'includes', same_person: 'same person', same_place: 'same place', contemporary: 'same time', related: 'related', mentions: 'mentions', mentioned_in: 'mentioned in' };
+  const relLabel = RELATION_LABELS;
   const num = n => n.low === n.high ? Number(n.low).toLocaleString() : `${Number(n.low).toLocaleString()}–${Number(n.high).toLocaleString()}`;
   const panel = $('#panel');
   panel.innerHTML = `
@@ -157,7 +158,6 @@ export function closePanel() {
   if (lastFocus?.isConnected) lastFocus.focus({ preventScroll: true });
 }
 // ---------- helpers for the record panel
-export const REPO = 'ACosmicCake/Global-History-Visualization-Project';
 export function reportLink(r) {
   const body = `Record: ${r.id}\nPage: ${location.origin}${location.pathname.replace(/[^/]*$/, '')}r/${r.id}.html\n\nWhat looks wrong:\n\nA source that shows this (a link, if you have one):\n`;
   return `https://github.com/${REPO}/issues/new?labels=correction&title=${encodeURIComponent(`Correction: ${r.title}`)}&body=${encodeURIComponent(body)}`;
