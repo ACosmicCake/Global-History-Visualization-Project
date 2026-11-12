@@ -81,7 +81,7 @@
   .tour-nav span { flex: 1; min-width: 0; }
   .tour-nav button { min-width: 30px; height: 28px; padding: 0 8px; border-radius: 6px; border: 1px solid var(--brass); background: transparent; color: var(--brass); }
   .tour-nav button[disabled] { opacity: .35; cursor: default; }
-  #pinlist { position: absolute; right: var(--gut); bottom: 186px; width: min(340px, calc(100vw - 32px)); max-height: min(50vh, 420px); overflow-y: auto; padding: 10px; z-index: 5; background: var(--glass-strong); }
+  #pinlist { position: absolute; right: var(--gut); bottom: calc(var(--time-top, 176px) + 10px); width: min(340px, calc(100vw - 32px)); max-height: min(50vh, 420px); overflow-y: auto; padding: 10px; z-index: 5; background: var(--glass-strong); }
   #pinlist h2 { display: flex; justify-content: space-between; align-items: center; margin: 0 0 6px 4px; font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
   #pinlist h2 button { border: 0; background: transparent; color: var(--soft); font-size: 14px; }
   #pinlist ul { list-style: none; margin: 0; padding: 0; }
@@ -248,6 +248,15 @@
   #slider::-moz-range-thumb { width: 20px; height: 30px; border: 0; border-radius: 3px; cursor: grab;
     background: linear-gradient(90deg, transparent 5px, var(--brass) 5px, var(--brass) 8px, #fff3d6 8px, #fff3d6 12px, var(--brass) 12px, var(--brass) 15px, transparent 15px); }
   .ticks { display: flex; justify-content: space-between; font: 10px var(--f-mono); color: var(--muted); margin-top: 4px; }
+  /* the speed menu (on a phone, the "more" menu, with List): six speeds to choose from */
+  #time-menu { position: absolute; right: 12px; bottom: calc(100% + 8px); z-index: 6; display: flex; flex-direction: column; gap: 6px; padding: 8px; background: var(--glass-strong); box-shadow: 0 10px 28px rgba(0,0,0,.45); }
+  #time-menu:not(.from-more) #m-list { display: none !important; }
+  #m-list { justify-content: flex-start; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: transparent; color: var(--text); font-size: 13px; }
+  .m-speed span { display: block; margin: 0 2px 4px; font: 500 11px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  #speeds { display: flex; gap: 4px; }
+  #speeds button { min-width: 40px; height: 32px; padding: 0 6px; border-radius: 6px; border: 1px solid var(--rule); background: transparent; color: var(--soft); font: 12px var(--f-mono); }
+  #speeds button:hover { border-color: var(--brass); color: var(--text); }
+  #speeds button[aria-pressed="true"] { background: var(--brass); border-color: var(--brass); color: #1a1305; font-weight: 600; }
 
   /* ---------- record panel */
   #panel { position: absolute; top: max(14px, env(safe-area-inset-top, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); bottom: 178px; width: min(460px, calc(100vw - 32px)); z-index: 4; display: flex; flex-direction: column; overflow: hidden; background: var(--glass-strong); }
@@ -332,7 +341,7 @@
   #film-fade { position: absolute; inset: 0; background: #000; opacity: 0; transition: opacity .32s; pointer-events: none; }
   #film-fade.on { opacity: 1; }
   @media (max-width: 760px) { .film-bars { display: none; } .film-foot { padding: 70px 16px 12px; } #film-text { min-height: 128px; } #film button { width: 40px; height: 40px; } }
-  #seqbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 186px; width: min(620px, calc(100vw - 32px)); padding: 12px 16px 14px; z-index: 5; background: var(--glass-strong); }
+  #seqbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(var(--time-top, 176px) + 10px); width: min(620px, calc(100vw - 32px)); padding: 12px 16px 14px; z-index: 5; background: var(--glass-strong); }
   .seq-top { display: flex; align-items: center; gap: 10px; }
   #seq-title { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }
   #seq-dots { display: flex; gap: 4px; }
@@ -345,7 +354,7 @@
   #seq-caption { margin: 8px 0 0; font: 400 16px/1.5 var(--f-display); color: var(--text); text-wrap: pretty; }
   #seq-num { font: 500 22px var(--f-mono); color: var(--brass); margin-top: 4px; }
   #seq-num:empty { display: none; }
-  @media (max-width: 760px) { #seqbar { bottom: 190px; } #seq-caption { font-size: 14px; } }
+  @media (max-width: 760px) { #seq-caption { font-size: 14px; } }
   .tip { font: 12px/1.45 var(--f-ui); max-width: 280px; }
   .tip b { display: block; font: 600 14px/1.25 var(--f-display); margin-bottom: 2px; }
   .tip .d { font: 10px var(--f-mono); color: var(--brass); }
@@ -358,23 +367,39 @@
     #masthead { width: calc(100vw - 32px); }
     .tagline { display: none; }
     .brand .count { display: none; }
-    #pinlist { bottom: 196px; right: 16px; }
+    #pinlist { right: 16px; }
     #panel { top: auto; bottom: 0; right: 0; left: 0; width: 100%; height: 66vh; border-radius: 16px 16px 0 0; z-index: 6; box-shadow: 0 -12px 40px rgba(0,0,0,.5); }
     #panel::before { content: ""; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 36px; height: 4px; border-radius: 2px; background: var(--rule-strong); z-index: 2; }
-    #time { padding: 10px 12px; }
-    .time-top { flex-wrap: wrap; gap: 8px 10px; }
-    #now { font-size: 17px; min-width: 0; flex: 1; }
+    /* the time console in two rows, no taller than 120 px: the date with the scale's span, more and play; then the
+       scale tabs, which scroll with fading edges; then the track. The eon strip shows on the Deep time scale only. */
+    #time { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto auto; grid-template-areas: "now ticks more play" "levels levels levels levels" "ctx ctx ctx ctx" "track track track track";
+      column-gap: 8px; align-items: center; padding: 5px 10px; }
+    .time-top { display: contents; }
+    #now { grid-area: now; font-size: 17px; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     #now small { display: none; }
-    #levels { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1 0 100%; order: 3; }
+    .ticks { grid-area: ticks; justify-content: flex-end; gap: 4px; margin: 0; font-size: 11px; white-space: nowrap; overflow: hidden; }
+    #tm { display: none; }
+    #t0 { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+    #t1 { flex: none; }
+    #t1::before { content: "– "; }
+    #more-btn { grid-area: more; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--rule-strong); background: transparent; color: var(--soft); }
+    #play { grid-area: play; margin-left: 0; width: 40px; height: 40px; }
+    #list-btn, #speed { display: none; }
+    #levels { grid-area: levels; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; min-width: 0; padding: 0; border: 0; background: transparent; scroll-snap-type: x proximity; }
     #levels::-webkit-scrollbar { display: none; }
-    #levels button { padding: 4px 8px; font-size: 11px; }
-    #play { margin-left: 0; flex: none; width: 40px; height: 40px; }
-    #list-btn { height: 40px; padding: 0 12px; }
-    #speed { margin-left: 0; flex: none; min-width: 40px; height: 40px; padding: 0 6px; }
+    #levels.fade-l { -webkit-mask-image: linear-gradient(to right, transparent, #000 28px); mask-image: linear-gradient(to right, transparent, #000 28px); }
+    #levels.fade-r { -webkit-mask-image: linear-gradient(to left, transparent, #000 28px); mask-image: linear-gradient(to left, transparent, #000 28px); }
+    #levels.fade-l.fade-r { -webkit-mask-image: linear-gradient(to right, transparent, #000 28px, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, transparent, #000 28px, #000 calc(100% - 28px), transparent); }
+    #levels button { height: 40px; padding: 0 12px; font-size: 13px; scroll-snap-align: center; }
+    #context { grid-area: ctx; margin-top: 2px; }
+    #time:not(.deep) #context { display: none; }
+    .track { grid-area: track; margin-top: 2px; }
+    #time-menu { right: 8px; }
+    #speeds button { height: 40px; }
     .ctx-labels { display: none; }
     #context .eon span { display: none; }
-    #hint { bottom: 290px; }
-    #empty.period { bottom: 290px; }
+    #hint { bottom: calc(var(--time-top, 176px) + 12px); }
+    #empty.period { bottom: calc(var(--time-top, 176px) + 76px); }
     .v-row i { display: none; }
   }
   /* phones: the header is one row (title, a search button that opens the field in its place, Layers, Start here),
@@ -491,8 +516,13 @@
     <div id="now"></div>
     <div id="levels" role="tablist" aria-label="Time scale"></div>
     <button id="list-btn" title="List the records shown now" aria-expanded="false">List</button>
-    <button id="speed" aria-label="Playback speed (click for faster, shift-click for slower)" title="Playback speed: click for faster, shift-click or right-click for slower">1×</button>
+    <button id="speed" aria-label="Playback speed" title="Playback speed" aria-expanded="false" aria-controls="time-menu">1×</button>
+    <button id="more-btn" class="phone-only" aria-label="More: list the records shown, playback speed" aria-expanded="false" aria-controls="time-menu"><svg width="16" height="4" viewBox="0 0 16 4" aria-hidden="true"><circle cx="2" cy="2" r="1.6" fill="currentColor"/><circle cx="8" cy="2" r="1.6" fill="currentColor"/><circle cx="14" cy="2" r="1.6" fill="currentColor"/></svg></button>
     <button id="play" aria-label="Play through time"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg></button>
+  </div>
+  <div id="time-menu" class="glass" hidden>
+    <button id="m-list" class="phone-only">List the records shown now</button>
+    <div class="m-speed"><span id="m-speed-label">Playback speed</span><div id="speeds" role="group" aria-labelledby="m-speed-label"></div></div>
   </div>
   <div id="context" title="All of Earth's history. Click to jump there; the orange sliver at the right edge is human history."></div>
   <div class="ctx-labels"><span>4.54 billion years ago</span><span>today</span></div>

@@ -1,6 +1,6 @@
 // The time bar: the density strip and the marks for mass extinctions and ice ages, the slider and its dragging,
-// and Play with its speed chip.
-import { $, esc } from './dom.js';
+// and Play with its speed menu.
+import { $, esc, show } from './dom.js';
 import { EARTH, LEVELS, NOW, domainOn, inLevel, range } from './time.js';
 import { state } from './state.js';
 import { deepTime, goTo, render, setLevel } from './main.js';
@@ -172,7 +172,7 @@ export const PLAY =
 export const PAUSE =
   '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></svg>';
 // Play: the base speed scales with the level (spec 2), a whole scale in about 40 seconds at 1x, or about 12 days a
-// second in the one-year scale; the speed chip multiplies it. Playback stops at the present day rather than looping.
+// second in the one-year scale; the chosen speed multiplies it. Playback stops at the present day rather than looping.
 export const SPEEDS = [0.25, 0.5, 1, 2, 4, 8];
 export let speed = 1;
 try {
@@ -184,7 +184,7 @@ export const presentT = () => {
     y0 = Date.UTC(d.getUTCFullYear(), 0, 1);
   return NOW + (d - y0) / (Date.UTC(NOW + 1, 0, 1) - y0);
 };
-export const speedLabel = () => (speed < 1 ? `${speed}×`.replace('0.', '.') : `${speed}×`);
+export const speedLabel = (s = speed) => (s < 1 ? `${s}×`.replace('0.', '.') : `${s}×`);
 export function stopPlay() {
   cancelAnimationFrame(timer);
   timer = null;
@@ -217,18 +217,56 @@ $('#play').onclick = () => {
   };
   timer = requestAnimationFrame(step);
 };
+// Speed is a menu of the six speeds. On a phone, List and the speed share one "more" menu.
+const menu = $('#time-menu');
+let opener = null;
+function buildSpeeds() {
+  $('#speeds').innerHTML = SPEEDS.map(s => `<button data-s="${s}" aria-pressed="${s === speed}">${speedLabel(s)}</button>`).join('');
+  $('#speeds')
+    .querySelectorAll('button')
+    .forEach(b => {
+      b.onclick = () => {
+        speed = +b.dataset.s;
+        $('#speed').textContent = speedLabel();
+        try {
+          localStorage.setItem('atlas-speed', speed);
+        } catch {}
+        closeTimeMenu(true);
+      };
+    });
+}
+function openTimeMenu(btn) {
+  opener = btn;
+  buildSpeeds();
+  menu.classList.toggle('from-more', btn.id === 'more-btn');
+  show(menu, true);
+  btn.setAttribute('aria-expanded', 'true');
+  menu.querySelector('#speeds [aria-pressed="true"]').focus({ preventScroll: true });
+}
+export function closeTimeMenu(refocus) {
+  if (menu.hidden) return;
+  show(menu, false);
+  opener?.setAttribute('aria-expanded', 'false');
+  if (refocus) opener?.focus({ preventScroll: true });
+}
+for (const id of ['#speed', '#more-btn']) $(id).onclick = e => (menu.hidden ? openTimeMenu(e.currentTarget) : closeTimeMenu(true));
+$('#m-list').onclick = () => {
+  closeTimeMenu(false);
+  $('#list-btn').click();
+};
+addEventListener('pointerdown', e => {
+  if (!menu.hidden && !menu.contains(e.target) && !e.target.closest('#speed, #more-btn')) closeTimeMenu(false);
+});
+addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeTimeMenu(true);
+});
 $('#speed').textContent = speedLabel();
-$('#speed').onclick = e => {
-  // click for faster, shift-click or right-click for slower
-  const i = SPEEDS.indexOf(speed),
-    back = e.shiftKey;
-  speed = SPEEDS[(i + (back ? SPEEDS.length - 1 : 1)) % SPEEDS.length];
-  $('#speed').textContent = speedLabel();
-  try {
-    localStorage.setItem('atlas-speed', speed);
-  } catch {}
-};
-$('#speed').oncontextmenu = e => {
-  e.preventDefault();
-  $('#speed').onclick({ shiftKey: true });
-};
+// On a phone the scale tabs scroll sideways; a faded edge shows there is more past it
+const tabs = $('#levels');
+export function fadeTabs() {
+  const more = tabs.scrollWidth - tabs.clientWidth;
+  tabs.classList.toggle('fade-l', more > 1 && tabs.scrollLeft > 1);
+  tabs.classList.toggle('fade-r', more > 1 && tabs.scrollLeft < more - 1);
+}
+tabs.addEventListener('scroll', fadeTabs, { passive: true });
+addEventListener('resize', fadeTabs);

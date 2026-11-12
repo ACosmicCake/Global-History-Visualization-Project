@@ -79,8 +79,14 @@ async function run(name, opts, budget) {
     check(await soon(() => { const l = document.querySelector('#legend'); return !l.classList.contains('collapsed') && Math.abs(l.getBoundingClientRect().bottom - innerHeight) < 2; }),
       'Layers opens the legend as a bottom sheet');
     await page.keyboard.press('Escape');
-    await page.click('#search-open');
+    const console_ = await page.evaluate(() => document.querySelector('#time').getBoundingClientRect().height);
+    check(console_ <= 120, `the phone time console is no taller than 120 px (${console_}px)`);
   }
+  // speed is chosen from a menu (on a phone, the "more" menu)
+  await page.click(phone ? '#more-btn' : '#speed');
+  await page.click('#speeds button[data-s="2"]');
+  check(await page.evaluate(() => document.querySelector('#time-menu').hidden && document.querySelector('#speed').textContent === '2×'), 'a speed can be chosen from the menu');
+  if (phone) await page.click('#search-open');
   await page.fill('#q', 'world war 2');
   check(await soon(() => !document.querySelector('#results').hidden && document.querySelectorAll('#results button[data-id]').length > 0), 'searching "world war 2" returns a result');
   await page.keyboard.press('Escape');

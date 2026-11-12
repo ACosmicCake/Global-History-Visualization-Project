@@ -27,7 +27,7 @@ import {
 } from './time.js';
 import { CLOSE_AT, DOMAINS, badgeURL, baseColor, colorOf, haloTexture, isMajor, pinTexture, standsOut } from './badges.js';
 import { clusterPins, labelTexture, pinData, pinSprites, placePinSprites, placed, visiblePins } from './pins.js';
-import { PAUSE, PLAY, drawDensity, slideRange, stopPlay, timer } from './timebar.js';
+import { PAUSE, PLAY, drawDensity, fadeTabs, slideRange, stopPlay, timer } from './timebar.js';
 import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
 import { loadTours, startTour } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
@@ -878,7 +878,9 @@ export function setLevel(i, keepT = false) {
   const tabs = $('#levels'),
     on = tabs.querySelector('.on'); // keep the active scale visible when the tabs scroll (phones)
   if (on && tabs.scrollWidth > tabs.clientWidth)
-    tabs.scrollTo({ left: on.offsetLeft - (tabs.clientWidth - on.offsetWidth) / 2, behavior: 'smooth' });
+    tabs.scrollTo({ left: on.offsetLeft - tabs.offsetLeft - (tabs.clientWidth - on.offsetWidth) / 2, behavior: 'smooth' });
+  fadeTabs();
+  $('#time').classList.toggle('deep', i === 0);
   render();
 }
 setInterval(() => {
