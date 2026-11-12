@@ -28,7 +28,7 @@ import {
 import { CLOSE_AT, DOMAINS, badgeURL, baseColor, colorOf, haloTexture, isMajor, pinTexture, standsOut } from './badges.js';
 import { clusterPins, labelTexture, pinData, pinSprites, placePinSprites, placed, visiblePins } from './pins.js';
 import { PAUSE, PLAY, drawDensity, fadeTabs, slideRange, stopPlay, timer } from './timebar.js';
-import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
+import { aroundTheWorld, closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
 import { loadTours, startTour, tourPlaying } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
 import { applyHash, flash, queueURL, resumeLast, setRestoring } from './url.js';
@@ -1042,32 +1042,46 @@ addEventListener('keydown', e => {
 
 state.arcs = [];
 // ---------- lists of pins: a dense spot opened, or everything shown now (for the keyboard and for crowded screens)
-function openPinList(title, pins) {
+// rows of pins, optionally under headings: [{ label, pins }]; `by` names the button that opened it (aria-expanded)
+const pinRows = pins =>
+  `<ul>${pins.map(p => `<li><button data-id="${esc(p.id)}"><img alt="" src="${badgeURL(p.domains?.[0], !p.outline)}"><span>${esc(p.title)}</span><span class="d">${esc(p.display || '')}</span></button></li>`).join('')}</ul>`;
+let listBy = '#list-btn';
+function openPinList(title, pins, groups = null, by = '#list-btn') {
   const box = $('#pinlist');
-  box.innerHTML = `<h2>${esc(title)}<button aria-label="Close list">×</button></h2><ul>${pins.map(p => `<li><button data-id="${esc(p.id)}"><img alt="" src="${badgeURL(p.domains?.[0], !p.outline)}"><span>${esc(p.title)}</span><span class="d">${esc(p.display || '')}</span></button></li>`).join('')}</ul>`;
+  closePinList();
+  listBy = by;
+  box.innerHTML = `<h2>${esc(title)}<button aria-label="Close list">×</button></h2>${groups ? groups.map(g => `<h3>${esc(g.label)}</h3>${pinRows(g.pins)}`).join('') : pinRows(pins)}`;
   box.querySelector('h2 button').onclick = closePinList;
   box.querySelectorAll('button[data-id]').forEach(b => {
-    b.onclick = () => openRecord(b.dataset.id);
+    b.onclick = () => (groups ? goTo(b.dataset.id) : openRecord(b.dataset.id));
   });
+  box.dataset.kind = groups ? 'world' : 'list';
   show(box, true);
-  $('#list-btn').setAttribute('aria-expanded', 'true');
+  $(listBy).setAttribute('aria-expanded', 'true');
   box.querySelector('button[data-id]')?.focus({ preventScroll: true });
 }
 function closePinList() {
   show($('#pinlist'), false);
-  $('#list-btn').setAttribute('aria-expanded', 'false');
+  $(listBy).setAttribute('aria-expanded', 'false');
 }
 function openCluster(c) {
   openPinList(`${c.cluster.length} records here`, c.cluster);
   globe.pointOfView({ lat: c.lat, lng: c.lon, altitude: Math.max(0.15, state.alt * 0.55) }, 800);
 }
 $('#list-btn').onclick = () => {
-  if (!$('#pinlist').hidden) return closePinList();
+  if (!$('#pinlist').hidden && listBy === '#list-btn') return closePinList();
   const pins = visiblePins()
     .filter(p => !p.global)
     .sort((a, b) => b.importance - a.importance || a.start - b.start);
   openPinList(`${pins.length} records shown now`, pins.slice(0, 200));
 };
+// Around the world: for the date shown, the top two records under way in each region
+export function openWorld() {
+  if (!$('#pinlist').hidden && listBy === '#world-btn') return closePinList();
+  const groups = aroundTheWorld(state.t);
+  openPinList(`Around the world in ${fmtYear(Math.round(state.t))}`, null, groups.length ? groups : [{ label: 'Nothing pinned near this date', pins: [] }], '#world-btn');
+}
+$('#world-btn').onclick = openWorld;
 addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closePinList();

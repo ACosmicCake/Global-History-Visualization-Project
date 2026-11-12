@@ -158,6 +158,12 @@ async function run(name, opts, budget) {
   await page.click(phone ? '#more-btn' : '#speed');
   await page.click('#speeds button[data-s="2"]');
   check(await page.evaluate(() => document.querySelector('#time-menu').hidden && document.querySelector('#speed').textContent === '2×'), 'a speed can be chosen from the menu');
+  // Around the world: at 1500, the top records of at least six regions
+  await page.evaluate(() => { const b = document.querySelectorAll('#levels button')[5]; b.click(); window.atlas.state.t = 1500; b.click(); });
+  if (phone) { await page.click('#more-btn'); await page.click('#m-world'); } else await page.click('#world-btn');
+  const world = await page.evaluate(() => ({ title: document.querySelector('#pinlist h2')?.textContent, regions: document.querySelectorAll('#pinlist h3').length, rows: document.querySelectorAll('#pinlist button[data-id]').length }));
+  check(world.title?.startsWith('Around the world in 1500') && world.regions >= 6 && world.rows <= world.regions * 2, `around the world at 1500 lists records from ${world.regions} regions`);
+  await page.click('#pinlist h2 button');
   // a tour plays itself: each stop opens with its tour note, its sequence plays, then the next stop, with no click
   // (here the holds are shortened and each sequence is skipped to its last beat)
   await page.evaluate(() => { window.atlas.state.tourPace = 0.05; window.atlas.startTour('space', 0, true); });
