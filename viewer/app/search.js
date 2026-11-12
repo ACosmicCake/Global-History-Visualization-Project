@@ -96,6 +96,7 @@ export function renderSearch() {
       b.onclick = () => {
         show($('#results'), false);
         $('#q').value = '';
+        setSearching(false);
         goTo(b.dataset.id);
       };
     });
@@ -104,6 +105,7 @@ export function renderSearch() {
     ?.addEventListener('click', e => {
       show($('#results'), false);
       $('#q').value = '';
+      setSearching(false);
       state.t = +e.currentTarget.dataset.year;
       setLevel(levelFor(state.t), true);
     });
@@ -118,6 +120,7 @@ addEventListener('pointerdown', e => {
 }); // a click elsewhere closes the list
 $('#q').onkeydown = e => {
   if (e.key === 'Escape') {
+    if (!e.target.value) closeSearch();
     e.target.value = '';
     show($('#results'), false);
   }
@@ -144,3 +147,22 @@ $('#results').onkeydown = e => {
     $('#q').focus();
   }
 };
+// On a phone the search box is a button in the one-row header until it is opened; it then takes the row, and closes
+// again once a result is chosen, or when it is left empty
+export function setSearching(on) {
+  $('#masthead').classList.toggle('searching', on);
+  $('#search-open').setAttribute('aria-expanded', on);
+  if (on) $('#q').focus();
+}
+function closeSearch() {
+  if (!$('#masthead').classList.contains('searching')) return;
+  $('#q').value = '';
+  show($('#results'), false);
+  setSearching(false);
+  $('#search-open').focus({ preventScroll: true });
+}
+$('#search-open').onclick = () => setSearching(true);
+$('#search-close').onclick = closeSearch;
+$('.search').addEventListener('focusout', e => {
+  if (!e.currentTarget.contains(e.relatedTarget) && !$('#q').value) setSearching(false);
+});

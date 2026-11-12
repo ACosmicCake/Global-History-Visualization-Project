@@ -1137,22 +1137,41 @@ async function applyTeasers() {
   }
   for (const p of state.pins) if (teasers[p.id] != null) p.summary = teasers[p.id];
 }
-// collapsible legend; remembered per viewer (storage may be unavailable, so it is optional)
-const legendKey = `atlas.legend.collapsed.${innerWidth < 760 ? 'phone' : 'desktop'}`;
-let collapsed = innerWidth < 760;
+// On a desktop the legend is a collapsible box whose state is remembered; on a phone it is a closed sheet
+// from the bottom of the screen, opened by the Layers button and closed by its header, Escape or a touch on the globe.
+const phoneLayout = () => innerWidth <= 760;
+let collapsed = phoneLayout();
 try {
-  const v = localStorage.getItem(legendKey);
-  if (v != null) collapsed = v === '1';
+  if (!phoneLayout()) collapsed = localStorage.getItem('atlas.legend.collapsed.desktop') === '1';
 } catch {}
 function setLegend(c) {
   collapsed = c;
   $('#legend').classList.toggle('collapsed', c);
   $('#legend-toggle').setAttribute('aria-expanded', String(!c));
+  $('#layers-btn').setAttribute('aria-expanded', String(!c));
+  $('#masthead').classList.toggle('sheet-open', !c && phoneLayout());
+  if (phoneLayout()) return;
   try {
-    localStorage.setItem(legendKey, c ? '1' : '0');
+    localStorage.setItem('atlas.legend.collapsed.desktop', c ? '1' : '0');
   } catch {}
 }
-$('#legend-toggle').onclick = () => setLegend(!collapsed);
+$('#legend-toggle').onclick = () => {
+  setLegend(!collapsed);
+  if (collapsed && phoneLayout()) $('#layers-btn').focus({ preventScroll: true });
+};
+$('#layers-btn').onclick = () => {
+  setLegend(!collapsed);
+  if (!collapsed) $('#legend-toggle').focus({ preventScroll: true });
+};
+$('#globe').addEventListener('pointerdown', () => {
+  if (!collapsed && phoneLayout()) setLegend(true);
+});
+addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !collapsed && phoneLayout()) {
+    setLegend(true);
+    $('#layers-btn').focus({ preventScroll: true });
+  }
+});
 setLegend(collapsed);
 // first-visit hint: fades on the first real interaction with the globe
 const dismissHint = () => {

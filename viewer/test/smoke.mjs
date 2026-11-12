@@ -67,6 +67,16 @@ async function run(name, opts, budget) {
   await page.goBack();
   check(await soon(() => document.querySelector('#panel').hidden && !window.atlas.state.selected), 'Back closes the record');
 
+  const phone = await page.isVisible('#search-open');
+  if (phone) {   // the one-row phone header, with the legend as a sheet from the bottom
+    const row = await page.evaluate(() => document.querySelector('.brand').getBoundingClientRect().height);
+    check(row <= 48, `the phone header is one row (${row}px tall)`);
+    await page.click('#layers-btn');
+    check(await soon(() => { const l = document.querySelector('#legend'); return !l.classList.contains('collapsed') && Math.abs(l.getBoundingClientRect().bottom - innerHeight) < 2; }),
+      'Layers opens the legend as a bottom sheet');
+    await page.keyboard.press('Escape');
+    await page.click('#search-open');
+  }
   await page.fill('#q', 'world war 2');
   check(await soon(() => !document.querySelector('#results').hidden && document.querySelectorAll('#results button[data-id]').length > 0), 'searching "world war 2" returns a result');
   await page.keyboard.press('Escape');
