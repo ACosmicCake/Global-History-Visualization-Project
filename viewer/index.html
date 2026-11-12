@@ -478,5 +478,16 @@
 <script src="sequence.js"></script>
 <script src="pins-format.js"></script>
 <script src="app.js"></script>
+<script>
+// Service worker for return visits (sw.js), on the published site only: version.json says which deploy is live and
+// can switch the worker off ({ "sw": false }), which also removes one already installed.
+if ('serviceWorker' in navigator && !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) addEventListener('load', () => {
+  fetch('version.json', { cache: 'no-store' }).then(r => (r.ok ? r.json() : null)).then(v => {
+    if (!v) return;
+    if (v.sw === false) return navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
+    return navigator.serviceWorker.register('sw.js');
+  }).catch(() => {});
+});
+</script>
 </body>
 </html>

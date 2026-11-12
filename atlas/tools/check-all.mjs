@@ -24,7 +24,7 @@ const deep = JSON.parse(fs.readFileSync(path.join(VIEWER, 'deeptime.json'), 'utf
 for (const id of Object.keys(deep.scenes)) if (!liveIds.has(id)) fails.push(`deeptime scene: unknown record ${id}`);
 for (const m of deep.marks) if (m.id && !liveIds.has(m.id)) fails.push(`deeptime mark: unknown record ${m.id}`);
 for (const c of deep.film.chapters) if (!liveIds.has(c.record)) fails.push(`deeptime film: unknown record ${c.record}`);
-for (const f of ['app.js', 'space.js', 'spacecraft.js', 'borders.js', 'deeptime.js', 'fossils.js', 'sequence.js', 'pins-format.js', 'api.mjs', 'pages.mjs', 'server.mjs', 'build-static.mjs']) {
+for (const f of ['app.js', 'space.js', 'spacecraft.js', 'borders.js', 'deeptime.js', 'fossils.js', 'sequence.js', 'pins-format.js', 'sw.js', 'api.mjs', 'pages.mjs', 'server.mjs', 'build-static.mjs']) {
   try { execFileSync(process.execPath, ['--check', path.join(VIEWER, f)], { stdio: 'pipe' }); } catch (e) { fails.push(`viewer/${f}: ${String(e.stderr).split('\n').slice(0, 5).join(' ')}`); }
 }
 if (fails.length) { console.error(`${fails.length} problem(s):\n` + fails.slice(0, 200).join('\n')); process.exit(1); }
