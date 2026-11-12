@@ -55,6 +55,7 @@ async function run(name, opts, budget) {
   }
   await page.evaluate(() => document.querySelector('#welcome-close')?.click());
   // vital signs: on and closed to one line on a desktop, off on a phone; no row that means nothing at 500 BCE
+  await soon(() => document.querySelectorAll('#v-rows .v-row').length > 0);
   const vit = await page.evaluate(() => ({ on: window.atlas.state.vitals, rows: [...document.querySelectorAll('#v-rows .v-row')].filter(b => b.offsetParent).map(b => b.textContent) }));
   if (budget) check(!vit.on, 'vital signs are off on a phone');
   else check(vit.on && vit.rows.length === 1 && !vit.rows.some(t => /genera/i.test(t)), `vital signs show one line, with no known genera, at 500 BCE (${vit.rows.join(' | ')})`);
@@ -67,6 +68,13 @@ async function run(name, opts, budget) {
   await page.evaluate(id => window.atlas.goTo(id), id);
   check(await soon(() => { const p = document.querySelector('#panel'); return p && !p.hidden && p.querySelector('h2')?.textContent.trim() && p.querySelectorAll('.srcs li').length > 0; }),
     'goTo opens a panel with a title and sources');
+  const shown = await page.evaluate(() => {
+    const h = document.querySelector('#panel h2').getBoundingClientRect();
+    return { title: h.top >= 0 && h.bottom <= innerHeight };
+  });
+  check(shown.title, 'the record title is on screen when the record opens');
+  check(await soon(() => { const fig = document.querySelector('#panel .p-fig'), img = fig?.querySelector('img');
+    return !fig || fig.hidden || !img || img.hidden || (img.complete && img.naturalWidth > 0); }), 'a picture that cannot load leaves no empty box');
   await page.waitForFunction(id => location.hash.includes(`r=${id}`), id, { timeout: 5000 }).catch(() => {});
   await page.goBack();
   check(await soon(() => document.querySelector('#panel').hidden && !window.atlas.state.selected), 'Back closes the record');

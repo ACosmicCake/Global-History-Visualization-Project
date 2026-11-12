@@ -261,16 +261,21 @@
   /* ---------- record panel */
   #panel { position: absolute; top: max(14px, env(safe-area-inset-top, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); bottom: 178px; width: min(460px, calc(100vw - 32px)); z-index: 4; display: flex; flex-direction: column; overflow: hidden; background: var(--glass-strong); }
   #panel[hidden] { display: none; }
-  .p-head { position: relative; flex: none; }
+  .p-bar { position: absolute; top: 10px; right: 10px; z-index: 2; display: flex; gap: 6px; }
+  .p-scroll { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
+  .p-fig { order: -1; flex: none; }
+  .p-intro { padding: 14px 20px 0; flex: none; }
   .p-hero { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; background: var(--deep); }
   .p-credit { font-size: 10px; color: var(--muted); padding: 4px 18px 0; }
   .p-credit a { color: var(--muted); }
   a.badge.wiki-badge { color: #9cc3ff; border-color: rgba(156,195,255,.4); text-decoration: none; }
   a.badge.wiki-badge:hover { background: rgba(156,195,255,.12); }
-  .p-close { position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--rule-strong); background: rgba(4,7,12,.65); display: grid; place-items: center; }
-  .p-body { overflow-y: auto; padding: 14px 20px 22px; min-width: 0; }
+  .p-close, .p-size { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--rule-strong); background: rgba(4,7,12,.65); display: grid; place-items: center; }
+  .p-size[disabled] { opacity: .35; cursor: default; }
+  .p-body { padding: 0 20px 22px; min-width: 0; flex: none; }
   .p-kicker { font: 500 10px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
-  .p-body h2 { font: 600 24px/1.2 var(--f-display); margin: 6px 0 4px; text-wrap: balance; }
+  .p-intro h2 { font: 600 24px/1.2 var(--f-display); margin: 6px 0 4px; text-wrap: balance; }
+  .p-intro .tour-nav { margin-right: 44px; }
   .p-when { font: 13px var(--f-mono); color: var(--soft); }
   .p-where { color: var(--muted); font-size: 12px; margin-top: 2px; }
   .badges { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0 0; }
@@ -368,8 +373,18 @@
     .tagline { display: none; }
     .brand .count { display: none; }
     #pinlist { right: 16px; }
-    #panel { top: auto; bottom: 0; right: 0; left: 0; width: 100%; height: 66vh; border-radius: 16px 16px 0 0; z-index: 6; box-shadow: 0 -12px 40px rgba(0,0,0,.5); }
-    #panel::before { content: ""; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 36px; height: 4px; border-radius: 2px; background: var(--rule-strong); z-index: 2; }
+    /* the record as a sheet from the bottom, at one of three heights; title first, then the picture */
+    #panel { top: auto; bottom: 0; right: 0; left: 0; width: 100%; height: calc(var(--sheet, .62) * 100vh); height: var(--sheet-px, calc(var(--sheet, .62) * 100dvh));
+      border-radius: 16px 16px 0 0; z-index: 6; box-shadow: 0 -12px 40px rgba(0,0,0,.5); transition: height .25s ease; }
+    .p-bar { position: static; flex: none; display: flex; align-items: center; gap: 6px; padding: 4px 8px 0 8px; }
+    .p-grip { order: -1; flex: 1; height: 40px; align-items: center; justify-content: center; border: 0; background: transparent; touch-action: none; cursor: grab; }
+    .p-grip i { width: 40px; height: 5px; border-radius: 3px; background: var(--rule-strong); }
+    .p-close, .p-size { width: 40px; height: 40px; align-items: center; justify-content: center; }
+    .p-close { display: grid; }
+    .p-intro { padding-top: 2px; }
+    .p-intro .tour-nav { margin-right: 0; }
+    .p-fig { order: 0; margin-top: 12px; }
+    .p-hero { max-height: 28vh; }
     /* the time console in two rows, no taller than 120 px: the date with the scale's span, more and play; then the
        scale tabs, which scroll with fading edges; then the track. The eon strip shows on the Deep time scale only. */
     #time { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto auto; grid-template-areas: "now ticks more play" "levels levels levels levels" "ctx ctx ctx ctx" "track track track track";
