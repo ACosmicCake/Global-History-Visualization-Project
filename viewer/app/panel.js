@@ -34,26 +34,92 @@ export function fetchSoon(id) {
   clearTimeout(hoverFetch);
   if (id) hoverFetch = setTimeout(() => fetchRecord(id).catch(() => {}), 100);
 }
-// keep the pin in the open part of the screen: left of the side panel, or above the phone's bottom sheet
+// keep the pin in the open part of the screen: left of the side panel, or above the phone's bottom sheet, whose
+// height the visitor can change (a sheet at its tallest leaves no globe to frame)
+let framed = null;
 export function frameRecord(lat, lon, unc) {
+  framed = lat == null ? null : [lat, lon, unc];
   if (lat == null || (unc ?? 0) >= 5000) return;
   const phone = innerWidth <= 760,
     k = Math.min(1, state.alt);
+  if (phone && sheetStep === 2) return;
   globe.pointOfView(
-    { lat: phone ? Math.max(-80, lat - 26 * k) : lat, lng: lon + (phone ? 0 : 14 * k), altitude: Math.min(state.alt, 1.5) },
+    { lat: phone ? Math.max(-80, lat - 26 * k * (SHEET[sheetStep] / 0.62)) : lat, lng: lon + (phone ? 0 : 14 * k), altitude: Math.min(state.alt, 1.5) },
     1100,
   );
 }
+// On a phone the record is a sheet with three heights. Its handle can be dragged between them (down past the lowest
+// closes the record), and the buttons beside it step up and down; the title always comes first.
+const SHEET = [0.32, 0.62, 0.92];
+let sheetStep = 1;
+function setSheet(i) {
+  sheetStep = Math.max(0, Math.min(SHEET.length - 1, i));
+  const panel = $('#panel');
+  panel.style.setProperty('--sheet', SHEET[sheetStep]);
+  panel.style.removeProperty('--sheet-px');
+  panel.querySelector('.p-taller')?.toggleAttribute('disabled', sheetStep === SHEET.length - 1);
+  panel.querySelector('.p-shorter')?.toggleAttribute('disabled', sheetStep === 0);
+  panel.querySelector('.p-grip')?.setAttribute('aria-valuenow', sheetStep + 1);
+  if (framed) frameRecord(...framed);
+}
+function wirePanel(panel) {
+  panel.querySelector('.p-close').onclick = closePanel;
+  panel.querySelector('.p-close').focus({ preventScroll: true });
+  panel.querySelector('.p-taller').onclick = () => setSheet(sheetStep + 1);
+  panel.querySelector('.p-shorter').onclick = () => setSheet(sheetStep - 1);
+  const grip = panel.querySelector('.p-grip');
+  grip.onkeydown = e => {
+    const d = { ArrowUp: 1, ArrowDown: -1 }[e.key];
+    if (d) {
+      e.preventDefault();
+      setSheet(sheetStep + d);
+    }
+  };
+  grip.onclick = () => setSheet(sheetStep === SHEET.length - 1 ? 0 : sheetStep + 1);
+  let drag = null;
+  grip.onpointerdown = e => {
+    drag = { y: e.clientY, h: panel.getBoundingClientRect().height, moved: false, id: e.pointerId };
+    try {
+      grip.setPointerCapture(e.pointerId);
+    } catch {}
+  };
+  grip.onpointermove = e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const dy = e.clientY - drag.y;
+    if (Math.abs(dy) > 4) drag.moved = true;
+    if (drag.moved) panel.style.setProperty('--sheet-px', `${Math.max(80, Math.min(innerHeight * 0.95, drag.h - dy))}px`);
+  };
+  grip.onpointerup = grip.onpointercancel = e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const { moved } = drag,
+      h = panel.getBoundingClientRect().height / innerHeight;
+    drag = null;
+    if (!moved) return; // a tap: the click handler steps the height
+    grip.addEventListener('click', ev => ev.stopImmediatePropagation(), { capture: true, once: true });
+    if (h < SHEET[0] - 0.1) return closePanel();
+    let best = 0;
+    SHEET.forEach((f, i) => {
+      if (Math.abs(f - h) < Math.abs(SHEET[best] - h)) best = i;
+    });
+    setSheet(best);
+  };
+  setSheet(sheetStep);
+}
+const PANEL_BAR = `<div class="p-bar">
+    <button class="p-grip phone-only" role="slider" aria-label="Record sheet height" aria-valuemin="1" aria-valuemax="3" aria-valuenow="2"><i></i></button>
+    <button class="p-size p-shorter phone-only" aria-label="Make the record sheet shorter"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <button class="p-size p-taller phone-only" aria-label="Make the record sheet taller"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 8l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <button class="p-close" aria-label="Close record"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg></button>
+  </div>`;
 export const CLOSE_ICON =
   '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg>';
 export function panelFromPin(p) {
   const panel = $('#panel');
-  panel.innerHTML = `<div class="p-head"><button class="p-close" aria-label="Close record">${CLOSE_ICON}</button></div>
-    <div class="p-body"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div><div class="prose">${p.summary ? `<p>${esc(p.summary)}</p>` : ''}</div></div>`;
+  panel.innerHTML = `${PANEL_BAR}<div class="p-scroll"><div class="p-intro"><div class="p-kicker">${esc((DOMAINS[p.domains?.[0]] || [p.kind])[0])} · ${esc(p.kind)}</div><h2>${esc(p.title)}</h2><div class="p-when">${esc(p.display)}</div></div>
+    <div class="p-body"><div class="prose">${p.summary ? `<p>${esc(p.summary)}</p>` : ''}</div></div></div>`;
   show(panel, true);
   show($('#notice'), false);
-  panel.querySelector('.p-close').onclick = closePanel;
-  panel.querySelector('.p-close').focus({ preventScroll: true });
+  wirePanel(panel);
 }
 export async function openRecord(id) {
   const token = ++openToken,
@@ -99,18 +165,23 @@ export async function openRecord(id) {
     n.low === n.high ? Number(n.low).toLocaleString() : `${Number(n.low).toLocaleString()}–${Number(n.high).toLocaleString()}`;
   const panel = $('#panel');
   panel.innerHTML = `
-    <div class="p-head">
-      ${img ? `<img class="p-hero" src="${esc(img.file_url)}" alt="${esc(img.title)}">` : r.wiki ? '<img class="p-hero wiki-hero" alt="" hidden>' : ''}
-      <button class="p-close" aria-label="Close record"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.6"/></svg></button>
-    </div>
-    ${img ? `<div class="p-credit">${esc(img.title)} · ${esc(img.credit)} · ${esc(img.license)}</div>` : r.wiki ? '<div class="p-credit wiki-credit" hidden></div>' : ''}
-    <div class="p-body">
+    ${PANEL_BAR}
+    <div class="p-scroll">
+    <div class="p-intro">
       ${tourNav()}
-      ${r.status === 'outline' ? '<div class="outline-note">A short record: a summary drawn from the sources below.</div>' : ''}
       <div class="p-kicker">${esc((DOMAINS[r.domains?.[0]] || [r.kind])[0])} · ${esc(r.kind)}</div>
       <h2>${esc(r.title)}</h2>
       <div class="p-when">${esc(r.when?.display)}</div>
       <div class="p-where">${esc(r.where?.historical_name)}${uncertaintyLine(r)}</div>
+    </div>
+    ${
+      img || r.wiki
+        ? `<div class="p-fig">${img ? `<img class="p-hero" src="${esc(img.file_url)}" alt="${esc(img.title)}">` : '<img class="p-hero wiki-hero" alt="" hidden>'}
+      ${img ? `<div class="p-credit">${esc(img.title)} · ${esc(img.credit)} · ${esc(img.license)}</div>` : '<div class="p-credit wiki-credit" hidden></div>'}</div>`
+        : ''
+    }
+    <div class="p-body">
+      ${r.status === 'outline' ? '<div class="outline-note">A short record: a summary drawn from the sources below.</div>' : ''}
       <div class="badges"><span class="badge conf-${esc(r.confidence)}">${esc(CONF_LABEL[r.confidence] || r.confidence)}${r.provisional ? ' · provisional' : ''}</span><span class="badge">Importance ${esc(r.importance?.score)}/5</span>${r.wiki ? `<a class="badge wiki-badge" href="https://en.wikipedia.org/wiki/${esc(encodeURIComponent(r.wiki.title.replace(/ /g, '_')))}" target="_blank" rel="noopener noreferrer" title="Open the Wikipedia article (further reading, not a source)">Wikipedia ↗</a>` : ''}<button class="badge p-share" id="p-share" title="Copy a link to this record">Copy link</button></div>
       ${(r.animation?.beats || []).length || (r.where?.geometry?.waypoints || []).length >= 2 || deepTime?.scenes[r.id] ? `<button class="play-seq" id="play-seq"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>${(r.animation?.beats || []).length ? `Play the sequence · ${r.animation.beats.length} beats` : deepTime?.scenes[r.id] ? 'Play the animation' : 'Play the route'}</button>` : ''}
       ${r.audience_note ? `<div class="warn">${esc(r.audience_note)}</div>` : ''}
@@ -128,12 +199,19 @@ export async function openRecord(id) {
       ${r.wiki ? `<section class="wiki"><h3>On Wikipedia${r.wiki.quality ? ` <span class="wq">${r.wiki.quality === 'FA' ? 'Featured article' : 'Good article'}</span>` : ''}</h3><div class="wiki-body">Loading the article summary…</div></section>` : ''}
       ${r.visitor_note ? `<section><h3>Least certain</h3><div class="prose"><p style="font-size:13px;color:var(--soft)">${esc(r.visitor_note)}</p></div></section>` : ''}
       <div class="meta-line">Drafted and reviewed by AI models, then checked against its sources by automated tools. <a href="about.html" target="_blank" rel="noopener">How this is made</a> · <a href="${esc(reportLink(r))}" target="_blank" rel="noopener noreferrer">Report a problem</a><br>${esc(r.id)} · version ${esc(r.record_version)} · updated ${esc(r.updated)}</div>
+    </div>
     </div>`;
   show(panel, true);
   show($('#notice'), false);
-  panel.querySelector('.p-body').scrollTop = 0;
-  panel.querySelector('.p-close').onclick = closePanel;
-  panel.querySelector('.p-close').focus({ preventScroll: true });
+  panel.querySelector('.p-scroll').scrollTop = 0;
+  wirePanel(panel);
+  // a picture that fails to load leaves no empty box: it and its credit step out
+  const hero = panel.querySelector('.p-hero:not(.wiki-hero)');
+  if (hero) {
+    const gone = () => show(panel.querySelector('.p-fig'), false);
+    hero.onerror = gone;
+    if (hero.complete && !hero.naturalWidth) gone();
+  }
   panel.querySelector('#p-share').onclick = shareRecord;
   panel.querySelector('#tour-prev')?.addEventListener('click', () => tourStep(-1));
   panel.querySelector('#tour-next')?.addEventListener('click', () => tourStep(1));

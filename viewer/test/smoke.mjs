@@ -53,7 +53,21 @@ async function run(name, opts, budget) {
     check(total <= budget, `first load within budget (${MB(total)} of ${MB(budget)}, viewer/test/budget.json)`);
     check(!loaded.some(([u]) => u.includes('paleo/morph.json')), 'the plate model is not loaded until deep time is asked for');
   }
-  await page.evaluate(() => document.querySelector('#welcome-close')?.click());
+  // a first visit gets the welcome as a modal dialog that fits the screen and keeps the keyboard inside
+  await soon(() => document.querySelector('#welcome').open);
+  const fits = await page.evaluate(() => { const d = document.querySelector('#welcome'); return d.open && d.scrollHeight <= d.clientHeight + 1; });
+  check(fits, 'the welcome dialog opens and fits the screen without scrolling');
+  let inside = true;
+  for (let i = 0; i < 12; i++) { await page.keyboard.press('Tab'); inside &&= await page.evaluate(() => !!document.activeElement?.closest('#welcome')); }
+  check(inside, 'Tab never leaves the open welcome dialog');
+  await page.keyboard.press('Escape');
+  check(await soon(() => !document.querySelector('#welcome').open), 'Escape closes the welcome dialog');
+  // vital signs: on and closed to one line on a desktop, off on a phone; no row that means nothing at 500 BCE
+  await soon(() => document.querySelectorAll('#v-rows .v-row').length > 0);
+  const vit = await page.evaluate(() => ({ on: window.atlas.state.vitals, rows: [...document.querySelectorAll('#v-rows .v-row')].filter(b => b.offsetParent).map(b => b.textContent) }));
+  check(await page.evaluate(() => document.querySelector('#legend').classList.contains('collapsed')), 'the legend is closed on a first visit');
+  if (budget) check(!vit.on, 'vital signs are off on a phone');
+  else check(vit.on && vit.rows.length === 1 && !vit.rows.some(t => /genera/i.test(t)), `vital signs show one line, with no known genera, at 500 BCE (${vit.rows.join(' | ')})`);
   await page.mouse.move(200, 300);
   check(await soon(() => window.atlas.state.pins.filter(p => p.summary).length > 2000), 'tooltip teasers arrive at the first pointer move');
 
@@ -63,10 +77,44 @@ async function run(name, opts, budget) {
   await page.evaluate(id => window.atlas.goTo(id), id);
   check(await soon(() => { const p = document.querySelector('#panel'); return p && !p.hidden && p.querySelector('h2')?.textContent.trim() && p.querySelectorAll('.srcs li').length > 0; }),
     'goTo opens a panel with a title and sources');
+  const shown = await page.evaluate(() => {
+    const h = document.querySelector('#panel h2').getBoundingClientRect();
+    return { title: h.top >= 0 && h.bottom <= innerHeight };
+  });
+  check(shown.title, 'the record title is on screen when the record opens');
+  check(await soon(() => { const fig = document.querySelector('#panel .p-fig'), img = fig?.querySelector('img');
+    return !fig || fig.hidden || !img || img.hidden || (img.complete && img.naturalWidth > 0); }), 'a picture that cannot load leaves no empty box');
   await page.waitForFunction(id => location.hash.includes(`r=${id}`), id, { timeout: 5000 }).catch(() => {});
   await page.goBack();
   check(await soon(() => document.querySelector('#panel').hidden && !window.atlas.state.selected), 'Back closes the record');
 
+  const phone = await page.isVisible('#search-open');
+  if (phone) {   // the one-row phone header, with the legend as a sheet from the bottom
+    const row = await page.evaluate(() => document.querySelector('.brand').getBoundingClientRect().height);
+    check(row <= 48, `the phone header is one row (${row}px tall)`);
+    await page.click('#layers-btn');
+    check(await soon(() => { const l = document.querySelector('#legend'); return !l.classList.contains('collapsed') && Math.abs(l.getBoundingClientRect().bottom - innerHeight) < 2; }),
+      'Layers opens the legend as a bottom sheet');
+    await page.keyboard.press('Escape');
+    const console_ = await page.evaluate(() => document.querySelector('#time').getBoundingClientRect().height);
+    check(console_ <= 120, `the phone time console is no taller than 120 px (${console_}px)`);
+    const small = await page.evaluate(() => [...document.querySelectorAll('button, [role=tab]')].filter(b => {
+      const r = b.getBoundingClientRect();
+      return r.width && r.height && r.bottom > 0 && r.top < innerHeight && getComputedStyle(b).visibility !== 'hidden' && !b.classList.contains('mark') && (r.width < 40 || r.height < 40);
+    }).map(b => `${b.id || b.className || b.textContent.trim().slice(0, 16)} ${Math.round(b.getBoundingClientRect().width)}×${Math.round(b.getBoundingClientRect().height)}`));
+    check(small.length === 0, `no visible button on the phone is under 40 px${small.length ? ': ' + small.join(', ') : ''}`);
+    check(await page.evaluate(() => [...document.querySelectorAll('#levels button')].every(b => b.scrollWidth <= b.clientWidth + 1)), 'every scale tab is wide enough for its name');
+  }
+  // the scale tabs move with the arrow keys
+  await page.focus('#levels .on');
+  await page.keyboard.press('ArrowRight');
+  check(await page.evaluate(() => window.atlas.state.level === 5 && document.activeElement === document.querySelector('#levels .on')), 'the arrow keys move between the scale tabs');
+  await page.keyboard.press('ArrowLeft');
+  // speed is chosen from a menu (on a phone, the "more" menu)
+  await page.click(phone ? '#more-btn' : '#speed');
+  await page.click('#speeds button[data-s="2"]');
+  check(await page.evaluate(() => document.querySelector('#time-menu').hidden && document.querySelector('#speed').textContent === '2×'), 'a speed can be chosen from the menu');
+  if (phone) await page.click('#search-open');
   await page.fill('#q', 'world war 2');
   check(await soon(() => !document.querySelector('#results').hidden && document.querySelectorAll('#results button[data-id]').length > 0), 'searching "world war 2" returns a result');
   await page.keyboard.press('Escape');

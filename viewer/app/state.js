@@ -5,7 +5,7 @@ export const state = {
   t: -500,
   fossils: true,
   plateEdges: false,
-  vitals: true,
+  vitals: true, // set from the visitor's last choice in vitals.js
   vitalCurve: 'temp',
   whole: false,
   borders: true,

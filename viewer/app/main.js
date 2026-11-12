@@ -27,7 +27,7 @@ import {
 } from './time.js';
 import { CLOSE_AT, DOMAINS, badgeURL, baseColor, colorOf, haloTexture, isMajor, pinTexture, standsOut } from './badges.js';
 import { clusterPins, labelTexture, pinData, pinSprites, placePinSprites, placed, visiblePins } from './pins.js';
-import { PAUSE, PLAY, drawDensity, slideRange, stopPlay, timer } from './timebar.js';
+import { PAUSE, PLAY, drawDensity, fadeTabs, slideRange, stopPlay, timer } from './timebar.js';
 import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
 import { loadTours, startTour } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
@@ -798,7 +798,16 @@ export function render() {
 }
 
 function buildChrome() {
-  $('#levels').innerHTML = LEVELS.map((l, i) => `<button role="tab" data-i="${i}">${l.name}</button>`).join('');
+  $('#levels').innerHTML = LEVELS.map((l, i) => `<button role="tab" data-i="${i}" tabindex="-1">${l.name}</button>`).join('');
+  // the scale tabs are one stop for Tab; the arrow keys, Home and End move between them
+  $('#levels').onkeydown = e => {
+    const n = LEVELS.length,
+      i = { ArrowRight: state.level + 1, ArrowLeft: state.level - 1, Home: 0, End: n - 1 }[e.key];
+    if (i == null) return;
+    e.preventDefault();
+    setLevel((i + n) % n);
+    $('#levels .on')?.focus();
+  };
   $('#levels')
     .querySelectorAll('button')
     .forEach(b => {
@@ -874,11 +883,14 @@ export function setLevel(i, keepT = false) {
       const on = +b.dataset.i === i;
       b.classList.toggle('on', on);
       b.setAttribute('aria-selected', on);
+      b.tabIndex = on ? 0 : -1;
     });
   const tabs = $('#levels'),
     on = tabs.querySelector('.on'); // keep the active scale visible when the tabs scroll (phones)
   if (on && tabs.scrollWidth > tabs.clientWidth)
-    tabs.scrollTo({ left: on.offsetLeft - (tabs.clientWidth - on.offsetWidth) / 2, behavior: 'smooth' });
+    tabs.scrollTo({ left: on.offsetLeft - tabs.offsetLeft - (tabs.clientWidth - on.offsetWidth) / 2, behavior: 'smooth' });
+  fadeTabs();
+  $('#time').classList.toggle('deep', i === 0);
   render();
 }
 setInterval(() => {
@@ -1045,38 +1057,63 @@ function onThisDay() {
     .sort((a, b) => b.importance - a.importance || b.start - a.start)
     .slice(0, 3);
 }
+// The welcome is a modal dialog: a backdrop, focus kept inside, Escape closes. Three main choices (the film, a tour,
+// exploring), with "On this day" below; the tours are listed when Take a tour is chosen.
+const welcome = $('#welcome');
 async function openWelcome() {
   const list = await loadTours(),
-    today = onThisDay(),
-    box = $('#welcome');
-  box.innerHTML = `<h2>Living Atlas</h2>
+    today = onThisDay();
+  welcome.innerHTML = `<h2 id="welcome-title">Living Atlas</h2>
     <p>Earth and human history, placed where and when it happened. Drag the globe, move the time bar, and open any pin to read its record and sources.</p>
-    ${today.length ? `<h3>On this day</h3><ul class="tour-list">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
-    <h3>Watch</h3><ul class="tour-list"><li><button id="film-btn"><b>${esc(deepTime?.film.title || 'A billion years of Earth')}</b><span>${esc(deepTime?.film.blurb || '')}</span></button></li></ul>
-    <h3>Take a tour</h3><ul class="tour-list">${list.map(t => `<li><button data-tour="${esc(t.id)}"><b>${esc(t.title)}</b><span>${esc(t.blurb)} ${t.stops.length} stops.</span></button></li>`).join('')}</ul>
-    <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span><button id="welcome-close">Explore on my own</button></div>`;
-  box.querySelectorAll('button[data-tour]').forEach(b => {
+    <div class="w-main">
+      <button id="film-btn" class="w-choice"><b>Watch the film</b><span>${esc(deepTime?.film.title || 'A billion years of Earth')}</span></button>
+      <button id="tours-btn" class="w-choice" aria-expanded="false" aria-controls="w-tours"><b>Take a tour</b><span>${list.length} guided routes through the records</span></button>
+      <button id="welcome-close" class="w-choice" autofocus><b>Explore</b><span>The globe, on your own</span></button>
+    </div>
+    <ul id="w-tours" class="tour-list" hidden>${list.map(t => `<li><button data-tour="${esc(t.id)}"><b>${esc(t.title)}</b><span>${esc(t.blurb)} ${t.stops.length} stops.</span></button></li>`).join('')}</ul>
+    ${today.length ? `<h3>On this day</h3><ul class="tour-list w-today">${today.map(p => `<li><button data-id="${esc(p.id)}"><b>${esc(p.title)}</b><span>${esc(p.display)}</span></button></li>`).join('')}</ul>` : ''}
+    <div class="welcome-foot"><span>Written by AI models from cited sources. <a href="about.html">How this is made</a></span></div>`;
+  welcome.querySelectorAll('button[data-tour]').forEach(b => {
     b.onclick = () => startTour(b.dataset.tour);
   });
-  box.querySelectorAll('button[data-id]').forEach(b => {
+  welcome.querySelectorAll('button[data-id]').forEach(b => {
     b.onclick = () => {
       closeWelcome();
       goTo(b.dataset.id);
     };
   });
-  box.querySelector('#welcome-close').onclick = closeWelcome;
-  box.querySelector('#film-btn').onclick = startFilm;
-  prefetchPaleo(box.querySelector('#film-btn'));
-  show(box, true);
-  box.querySelector('button')?.focus({ preventScroll: true });
+  welcome.querySelector('#tours-btn').onclick = e => {
+    const open = welcome.querySelector('#w-tours').hidden;
+    show(welcome.querySelector('#w-tours'), open);
+    e.currentTarget.setAttribute('aria-expanded', open);
+    if (open) welcome.querySelector('#w-tours button')?.focus();
+  };
+  welcome.querySelector('#welcome-close').onclick = closeWelcome;
+  welcome.querySelector('#film-btn').onclick = startFilm;
+  prefetchPaleo(welcome.querySelector('#film-btn'));
+  if (!welcome.open) welcome.showModal();
+  // showModal focuses Explore (autofocus), not the film: focus there would start its 4 MB download
 }
 export function closeWelcome() {
-  if ($('#welcome').hidden) return;
-  show($('#welcome'), false);
+  if (welcome.open) welcome.close();
+}
+// Tab wraps around inside the dialog, rather than leaving the page for the browser's own controls
+welcome.addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const all = [...welcome.querySelectorAll('button, a[href]')].filter(el => el.offsetParent),
+    first = all[0],
+    last = all[all.length - 1];
+  if (e.shiftKey ? document.activeElement === first : document.activeElement === last) {
+    e.preventDefault();
+    (e.shiftKey ? last : first).focus();
+  }
+});
+// however it closes (a choice, Escape), the welcome counts as seen
+welcome.addEventListener('close', () => {
   try {
     localStorage.setItem('atlas.welcomed', '1');
   } catch {}
-}
+});
 $('#start').onclick = openWelcome;
 // ---------- live data
 let lastSig = '';
@@ -1137,22 +1174,41 @@ async function applyTeasers() {
   }
   for (const p of state.pins) if (teasers[p.id] != null) p.summary = teasers[p.id];
 }
-// collapsible legend; remembered per viewer (storage may be unavailable, so it is optional)
-const legendKey = `atlas.legend.collapsed.${innerWidth < 760 ? 'phone' : 'desktop'}`;
-let collapsed = innerWidth < 760;
+// On a desktop the legend is a collapsible box, closed on a first visit, whose state is remembered; on a phone it is a sheet
+// from the bottom of the screen, opened by the Layers button and closed by its header, Escape or a touch on the globe.
+const phoneLayout = () => innerWidth <= 760;
+let collapsed = phoneLayout();
 try {
-  const v = localStorage.getItem(legendKey);
-  if (v != null) collapsed = v === '1';
+  if (!phoneLayout()) collapsed = localStorage.getItem('atlas.legend.collapsed.desktop') !== '0'; // closed until opened once
 } catch {}
 function setLegend(c) {
   collapsed = c;
   $('#legend').classList.toggle('collapsed', c);
   $('#legend-toggle').setAttribute('aria-expanded', String(!c));
+  $('#layers-btn').setAttribute('aria-expanded', String(!c));
+  $('#masthead').classList.toggle('sheet-open', !c && phoneLayout());
+  if (phoneLayout()) return;
   try {
-    localStorage.setItem(legendKey, c ? '1' : '0');
+    localStorage.setItem('atlas.legend.collapsed.desktop', c ? '1' : '0');
   } catch {}
 }
-$('#legend-toggle').onclick = () => setLegend(!collapsed);
+$('#legend-toggle').onclick = () => {
+  setLegend(!collapsed);
+  if (collapsed && phoneLayout()) $('#layers-btn').focus({ preventScroll: true });
+};
+$('#layers-btn').onclick = () => {
+  setLegend(!collapsed);
+  if (!collapsed) $('#legend-toggle').focus({ preventScroll: true });
+};
+$('#globe').addEventListener('pointerdown', () => {
+  if (!collapsed && phoneLayout()) setLegend(true);
+});
+addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !collapsed && phoneLayout()) {
+    setLegend(true);
+    $('#layers-btn').focus({ preventScroll: true });
+  }
+});
 setLegend(collapsed);
 // first-visit hint: fades on the first real interaction with the globe
 const dismissHint = () => {
