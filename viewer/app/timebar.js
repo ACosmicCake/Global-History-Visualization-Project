@@ -35,6 +35,52 @@ export function drawMarks(from, to) {
     b.onclick = () => goTo(b.dataset.id);
   });
 }
+// Named landmarks above the density strip: the most important records of the scale in view (importance 5, full
+// records and short events first), as short labels placed so none overlap. A click opens the record. At most four on
+// a phone, where they are only labels (the slider takes taps there), and none on the One year scale.
+let landmarksKey = '';
+const shortTitle = t => {
+  const s = t.replace(/\s*\([^)]*\)/g, '').split(/[:;]/)[0].trim();
+  return s.length <= 32 ? s : `${s.slice(0, 31).replace(/\s+\S*$/, '')}…`;
+};
+export function drawLandmarks(from, to, w) {
+  const box = $('#landmarks'),
+    key = [state.level, from, to, w, state.pins.length, [...state.off], [...state.impOff]].join('|');
+  if (key === landmarksKey) return;
+  landmarksKey = key;
+  box.innerHTML = '';
+  if (!w || LEVELS[state.level].key === 'event') return;
+  const max = innerWidth <= 760 ? 4 : 12,
+    span = p => (p.end ?? p.start) - p.start;
+  const cands = state.pins
+    .filter(p => p.importance === 5 && p.start >= from && p.start <= to && inLevel(p) && domainOn(p))
+    .sort((a, b) => !!a.outline - !!b.outline || span(a) - span(b) || a.start - b.start);
+  const taken = [];
+  for (const p of cands) {
+    if (taken.length >= max) break;
+    const b = document.createElement('button'),
+      x = ((p.start - from) / (to - from)) * w;
+    b.className = 'lm';
+    b.textContent = shortTitle(p.title);
+    b.title = `${p.title} · ${p.display}`;
+    b.dataset.id = p.id;
+    box.append(b);
+    const bw = b.offsetWidth;
+    let left = x;
+    if (left + bw > w) {
+      left = x - bw; // near the right end the label sits to the left of its date
+      b.classList.add('r');
+    }
+    left = Math.max(0, left);
+    if (taken.some(([a, z]) => left < z + 6 && left + bw > a - 6)) {
+      b.remove();
+      continue;
+    }
+    taken.push([left, left + bw]);
+    b.style.left = `${left.toFixed(1)}px`;
+    b.onclick = () => goTo(p.id);
+  }
+}
 // density strip: how many records fall at each point of the current scale (so empty stretches are visible)
 export function drawDensity() {
   const c = $('#density'),
@@ -50,6 +96,7 @@ export function drawDensity() {
   const { from, to } = range(),
     bins = new Array(Math.max(20, Math.floor(w / 4))).fill(0);
   drawMarks(from, to);
+  drawLandmarks(from, to, w);
   for (const p of state.pins) {
     if (!inLevel(p) || !domainOn(p) || p.until < from || p.start > to) continue;
     // count where each record begins (long periods would otherwise flood every bin)

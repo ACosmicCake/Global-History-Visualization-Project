@@ -100,11 +100,15 @@ async function run(name, opts, budget) {
     check(console_ <= 120, `the phone time console is no taller than 120 px (${console_}px)`);
     const small = await page.evaluate(() => [...document.querySelectorAll('button, [role=tab]')].filter(b => {
       const r = b.getBoundingClientRect();
-      return r.width && r.height && r.bottom > 0 && r.top < innerHeight && getComputedStyle(b).visibility !== 'hidden' && !b.classList.contains('mark') && (r.width < 40 || r.height < 40);
+      return r.width && r.height && r.bottom > 0 && r.top < innerHeight && getComputedStyle(b).visibility !== 'hidden' && !b.classList.contains('mark') && !b.classList.contains('lm') && (r.width < 40 || r.height < 40);
     }).map(b => `${b.id || b.className || b.textContent.trim().slice(0, 16)} ${Math.round(b.getBoundingClientRect().width)}×${Math.round(b.getBoundingClientRect().height)}`));
     check(small.length === 0, `no visible button on the phone is under 40 px${small.length ? ': ' + small.join(', ') : ''}`);
     check(await page.evaluate(() => [...document.querySelectorAll('#levels button')].every(b => b.scrollWidth <= b.clientWidth + 1)), 'every scale tab is wide enough for its name');
   }
+  // named landmarks on the time bar, none overlapping
+  const lms = await page.evaluate(() => [...document.querySelectorAll('#landmarks .lm')].map(b => { const r = b.getBoundingClientRect(); return [r.left, r.right, b.textContent]; }));
+  check(lms.length >= (phone ? 2 : 4) && lms.every((a, i) => lms.every((b, j) => i === j || a[1] <= b[0] || b[1] <= a[0])),
+    `the time bar names landmarks that don't overlap (${lms.map(l => l[2]).join(', ')})`);
   // the scale tabs move with the arrow keys
   await page.focus('#levels .on');
   await page.keyboard.press('ArrowRight');
