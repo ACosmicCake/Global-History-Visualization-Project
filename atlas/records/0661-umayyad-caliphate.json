@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0661-umayyad-caliphate",
+  "kind": "polity",
+  "title": "Umayyad Caliphate",
+  "summary": "Muawiya, governor of Syria, founded the Umayyad dynasty in 661, the first dynasty to hold the caliphate, and ruled from Damascus. Under the Umayyads the caliphate reached its greatest extent, adding North Africa beyond Egypt, most of Spain by 714, Transoxiana and parts of the Indian subcontinent. The Umayyad Great Mosque of Damascus remains one of the oldest sites of continuous Muslim prayer. Civil wars weakened the dynasty, and the Abbasids overthrew it in 750.",
+  "when": {
+    "start": {
+      "year": 661
+    },
+    "end": {
+      "year": 750
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Established in 661 CE following the accession of Muawiya I; overthrown by the Abbasid Revolution in 750 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE, as recorded",
+        "value": "The Umayyad Dynasty (661-750 CE), the first dynasty to take the title of Caliphate, was established in 661 CE by Muawiya",
+        "source": "src-whe-umayyad"
+      },
+      {
+        "calendar": "CE, as recorded",
+        "value": "In particular, the Umayyad caliphate created Damascus as its capital",
+        "source": "src-unesco-damascus"
+      }
+    ],
+    "display": "661–750 CE"
+  },
+  "where": {
+    "lat": 33.5108,
+    "lon": 36.3097,
+    "elevation_m": null,
+    "modern_name": "Damascus, Syria (capital; stand-in pin for the caliphate)",
+    "historical_name": "Damascus, capital of the Umayyad Caliphate",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1000,
+    "coordinate_sources": [
+      "src-unesco-damascus"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Carried Muslim rule from Spain to Transoxiana and set the first dynastic caliphate (R3 D4 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-abbasid-caliphate",
+      "type": "caused",
+      "because": "The overthrow of the Umayyad Caliphate in the 750 CE Abbasid Revolution led directly to the establishment of the Abbasid Caliphate."
+    },
+    {
+      "id": "0680-battle-of-karbala",
+      "type": "related"
+    },
+    {
+      "id": "0696-abd-al-malik-coinage-reform",
+      "type": "has_part"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-umayyad",
+      "url": "https://www.worldhistory.org/Umayyad_Dynasty/",
+      "title": "Umayyad Dynasty",
+      "publisher": "World History Encyclopedia",
+      "author": "Syed Muhammad Khan",
+      "date_published": "2020-01-28",
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-damascus",
+      "url": "https://whc.unesco.org/en/list/20/",
+      "title": "Ancient City of Damascus",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1979",
+      "accessed": "2026-11-12",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources",
+        "when.as_recorded",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-12: summary rewritten to WHE and UNESCO wording-checked claims; \"hereditary\" and \"adoption of Arabic\" dropped (not on the opened pages); Dome of the Rock link removed (only an image caption on WHE). Uncertainty widened: the pin stands for an empire from Spain to Transoxiana. Only two publishers; add a scholarly source at expansion.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-12",
+  "published_at": "2026-11-12T17:37:34.047Z",
+  "changelog": [
+    {
+      "date": "2026-11-12",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

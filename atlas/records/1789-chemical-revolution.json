@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1789-chemical-revolution",
+  "kind": "process",
+  "title": "Chemical revolution (Lavoisier)",
+  "summary": "Working in Paris with his collaborator and wife Marie-Anne Paulze Lavoisier, Antoine Lavoisier overturned the phlogiston theory, showing that burning and breathing both need a gas he named oxygen. Over about a decade his precise weighing established that matter is conserved in reactions, and he showed water is made of hydrogen and oxygen. His Traité élémentaire de chimie of 1789, the textbook of the new chemistry, listed elements a modern chemist would recognise and remade the field’s principles and methods.",
+  "when": {
+    "start": {
+      "year": 1789
+    },
+    "end": {
+      "year": 1789
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 5,
+      "note": "Anchored to the 1789 publication of Lavoisier's Traité élémentaire de chimie; the broader experimental transition spanned roughly the 1770s to 1790s."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1789",
+        "source": "src-shi-lavoisier"
+      },
+      {
+        "calendar": "Gregorian, as recorded",
+        "value": "1789",
+        "source": "src-sep-chemistry"
+      }
+    ],
+    "display": "1789"
+  },
+  "where": {
+    "lat": 48.85341,
+    "lon": 2.3488,
+    "elevation_m": null,
+    "modern_name": "Paris, France",
+    "historical_name": "Paris, Kingdom of France",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-geonames-paris"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Made chemistry a quantitative science of elements and conservation of mass (R4 D2 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1800-atomic-theory",
+      "type": "caused",
+      "because": "Lavoisier's quantitative conservation of mass and table of elements provided the empirical foundation for Dalton's chemical atomic theory."
+    },
+    {
+      "id": "1869-mendeleev-periodic-table",
+      "type": "caused",
+      "because": "Operational definitions of elements and systematic nomenclature enabled subsequent classification into the periodic system."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-shi-lavoisier",
+      "url": "https://www.sciencehistory.org/historical-profile/antoine-laurent-lavoisier",
+      "title": "Antoine-Laurent Lavoisier",
+      "publisher": "Science History Institute",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-sep-chemistry",
+      "url": "https://plato.stanford.edu/entries/chemistry/",
+      "title": "Philosophy of Chemistry",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "author": "Michael Weisberg, Paul Needham, Robin Hendry",
+      "date_published": "2019-01-28",
+      "accessed": "2026-11-12",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-paris",
+      "url": "https://www.geonames.org/2988507/paris.html",
+      "title": "Paris",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-12: summary and captions rewritten to the Science History Institute and SEP pages; nomenclature and alchemy claims dropped (not on the opened pages). Dated to the 1789 Traité; the work it crowned ran over the preceding decade. Lavoisier died in 1794.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-12",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1789",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "Lavoisier publishes the Traité élémentaire de chimie, the definitive textbook of the new chemistry.",
+        "source": "src-shi-lavoisier",
+        "consequence": false
+      },
+      {
+        "span": "1789",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "His 1789 list of elements is one a modern chemist would recognise; he is often called the father of modern chemistry.",
+        "source": "src-sep-chemistry",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-11-12T17:37:48.535Z",
+  "changelog": [
+    {
+      "date": "2026-11-12",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

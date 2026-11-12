@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0910-neo-assyrian-empire",
+  "kind": "period",
+  "title": "Neo-Assyrian Empire",
+  "summary": "The Neo-Assyrian Empire, the last phase of Assyrian power, began with the reign of Adad-nirari II in 912 BCE, who retook lost lands and deported defeated Aramaeans into the Assyrian heartland. Later kings extended it across Mesopotamia, the Levant, Anatolia and parts of Persia; Sennacherib took Israel and Judah, and Esarhaddon conquered Egypt. Ashurbanipal gathered a vast library at Nineveh. Revolts followed his death in 627, and in 612 BCE Medes and Babylonians sacked Ashur, Kalhu and Nineveh; a last king held out at Harran.",
+  "when": {
+    "start": {
+      "year": -911
+    },
+    "end": {
+      "year": -611
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 3,
+      "note": "WHE dates the empire 912-612 BCE; the EBSCO king list gives Adad-nirari II c. 911-891. After the capitals fell, the last king held out at Harran."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE, as recorded",
+        "value": "The Neo-Assyrian Empire (912-612 BCE)",
+        "source": "src-whe-neo-assyrian"
+      },
+      {
+        "calendar": "BCE, as recorded",
+        "value": "c. 911-891: Adad-nirâri II",
+        "source": "src-ebsco-ashurbanipal"
+      },
+      {
+        "calendar": "BCE, as recorded",
+        "value": "In 612 b.c., however, Assyria s capital, Nineveh , was besieged and destroyed",
+        "source": "src-enc-assyria"
+      }
+    ],
+    "display": "912–612 BCE"
+  },
+  "where": {
+    "lat": 36.36768,
+    "lon": 43.15667,
+    "elevation_m": null,
+    "modern_name": "Nineveh, Mosul, Iraq (last capital; stand-in pin for the empire)",
+    "historical_name": "Nineveh (Ninua), Neo-Assyrian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 800,
+    "coordinate_sources": [
+      "src-geonames-nineveh"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The first empire to rule from Mesopotamia to Egypt, for three centuries (R3 D3 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0612-fall-of-nineveh",
+      "type": "has_part",
+      "because": "The 612 BCE sack of Nineveh marked the catastrophic military collapse of the Neo-Assyrian imperial core."
+    },
+    {
+      "id": "-0701-siege-of-lachish",
+      "type": "has_part",
+      "because": "Sennacherib's siege of Lachish was a major campaign demonstrating Assyrian imperial siegecraft in the Levant."
+    },
+    {
+      "id": "person-ashurbanipal",
+      "type": "has_part",
+      "because": "Ashurbanipal ruled the empire at its territorial and cultural zenith, creating the famous royal library at Nineveh."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ebsco-ashurbanipal",
+      "url": "https://www.ebsco.com/research-starters/history/ashurbanipal",
+      "title": "Ashurbanipal",
+      "publisher": "EBSCO Research Starters",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-enc-assyria",
+      "url": "https://www.encyclopedia.com/history/asia-and-africa/ancient-history-middle-east/assyria",
+      "title": "Assyria",
+      "publisher": "Encyclopedia.com (Gale)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "where.historical_name"
+      ]
+    },
+    {
+      "id": "src-geonames-nineveh",
+      "url": "https://www.geonames.org/92878/",
+      "title": "Nineveh",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.lat",
+        "where.lon"
+      ]
+    },
+    {
+      "id": "src-whe-neo-assyrian",
+      "url": "https://www.worldhistory.org/Neo-Assyrian_Empire/",
+      "title": "Neo-Assyrian Empire",
+      "author": "Joshua J. Mark",
+      "publisher": "World History Encyclopedia",
+      "date_published": "2014-06-30",
+      "accessed": "2026-11-12",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-12: 911 as the empire start and the standing-army claim were on no cited page; added WHE Neo-Assyrian Empire (912-612 BCE) and rewrote summary and beats to it, EBSCO and Encyclopedia.com. Encyclopedia.com credits the sack of Nineveh to Medes, Scythians and Chaldeans; WHE to Medes, Babylonians and Persians. The 1-3 year tail covers the Harran remnant (EBSCO). Fall of Nineveh, Lachish and Ashurbanipal records linked.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-12",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "912 BCE",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Adad-nirari II begins his reign, retaking lost lands and securing Assyria’s borders.",
+        "source": "src-whe-neo-assyrian",
+        "consequence": false
+      },
+      {
+        "span": "612 BCE",
+        "action": "pulse { radius_km: 800 }",
+        "caption": "Medes, Babylonians and Persian forces sack Ashur, Kalhu and Nineveh, bringing down the Assyrian empire.",
+        "source": "src-whe-neo-assyrian",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-11-12T17:37:49.484Z",
+  "changelog": [
+    {
+      "date": "2026-11-12",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
