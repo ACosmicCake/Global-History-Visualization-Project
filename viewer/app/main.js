@@ -1164,12 +1164,12 @@ async function applyTeasers() {
   }
   for (const p of state.pins) if (teasers[p.id] != null) p.summary = teasers[p.id];
 }
-// On a desktop the legend is a collapsible box whose state is remembered; on a phone it is a closed sheet
+// On a desktop the legend is a collapsible box, closed on a first visit, whose state is remembered; on a phone it is a sheet
 // from the bottom of the screen, opened by the Layers button and closed by its header, Escape or a touch on the globe.
 const phoneLayout = () => innerWidth <= 760;
 let collapsed = phoneLayout();
 try {
-  if (!phoneLayout()) collapsed = localStorage.getItem('atlas.legend.collapsed.desktop') === '1';
+  if (!phoneLayout()) collapsed = localStorage.getItem('atlas.legend.collapsed.desktop') !== '0'; // closed until opened once
 } catch {}
 function setLegend(c) {
   collapsed = c;

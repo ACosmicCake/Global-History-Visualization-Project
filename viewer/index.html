@@ -106,7 +106,7 @@
   .meta-line a { color: var(--brass); }
 
   /* ---------- legend / layers */
-  #legend { padding: 10px 12px; }
+  #legend { padding: 10px 12px; max-height: calc(100vh - var(--time-top, 176px) - 150px); overflow-y: auto; }
   .legend-head { display: flex; width: 100%; align-items: center; justify-content: space-between; border: 0; background: transparent; padding: 0; color: var(--muted); }
   .legend-head h2 { margin: 0 !important; }
   .legend-head svg { transition: transform .2s; }
@@ -128,8 +128,12 @@
   #imp-levels .n { font: 10px var(--f-mono); color: var(--muted); }
   #legend .sw { width: 20px; height: 20px; flex: none; margin: -2px -2px -2px -4px; }
   #legend .n { margin-left: auto; font: 10px var(--f-mono); color: var(--muted); }
-  .sky-note { margin: 10px 0 0; font-size: 11px; color: var(--muted); }
-  .toggles { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
+  .tg { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule); }
+  .tg h3 { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px 4px; }
+  .toggles { display: flex; gap: 6px; flex-wrap: wrap; }
+  .legend-about { display: inline-block; margin: 10px 0 0 4px; font-size: 11px; color: var(--muted); }
+  .legend-about:hover { color: var(--brass); }
+  #whole { flex: none; }
   .toggle { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font-size: 11px; color: var(--soft); }
   .toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
   .toggle:disabled { opacity: .4; cursor: default; }
@@ -259,8 +263,9 @@
   .ticks { display: flex; justify-content: space-between; font: 10px var(--f-mono); color: var(--muted); margin-top: 4px; }
   /* the speed menu (on a phone, the "more" menu, with List): six speeds to choose from */
   #time-menu { position: absolute; right: 12px; bottom: calc(100% + 8px); z-index: 6; display: flex; flex-direction: column; gap: 6px; padding: 8px; background: var(--glass-strong); box-shadow: 0 10px 28px rgba(0,0,0,.45); }
-  #time-menu:not(.from-more) #m-list { display: none !important; }
-  #m-list { justify-content: flex-start; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: transparent; color: var(--text); font-size: 13px; }
+  #time-menu:not(.from-more) #m-list, #time-menu:not(.from-more) #m-whole { display: none !important; }
+  #m-whole[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); background: var(--brass-dim); }
+  #m-list, #m-whole { justify-content: flex-start; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: transparent; color: var(--text); font-size: 13px; }
   .m-speed span { display: block; margin: 0 2px 4px; font: 500 11px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
   #speeds { display: flex; gap: 4px; }
   #speeds button { min-width: 40px; height: 32px; padding: 0 6px; border-radius: 6px; border: 1px solid var(--rule); background: transparent; color: var(--soft); font: 12px var(--f-mono); }
@@ -408,7 +413,7 @@
     #t1::before { content: "– "; }
     #more-btn { grid-area: more; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--rule-strong); background: transparent; color: var(--soft); }
     #play { grid-area: play; margin-left: 0; width: 40px; height: 40px; }
-    #list-btn, #speed { display: none; }
+    #list-btn, #speed, #whole { display: none; }
     #levels { grid-area: levels; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; min-width: 0; padding: 0; border: 0; background: transparent; scroll-snap-type: x proximity; }
     #levels::-webkit-scrollbar { display: none; }
     #levels.fade-l { -webkit-mask-image: linear-gradient(to right, transparent, #000 28px); mask-image: linear-gradient(to right, transparent, #000 28px); }
@@ -476,17 +481,18 @@
     <div id="legend-body">
     <ul id="domains"></ul>
     <div class="imp-filter"><h3>Importance</h3><div id="imp-levels" role="group" aria-label="Show pins by importance"></div><p class="imp-key">Larger markers changed more. A gold ring means a full story.</p></div>
-    <p class="sky-note">The Moon is always at its real position for the date shown. With Real sunlight on, the Sun stands where it does right now, or for the season shown on the One year scale. Distances are not to scale. Borders: <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer" style="color:inherit">Cliopatria</a> (Seshat), <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:inherit">CC BY 4.0</a>, simplified; blank areas are unmapped, not empty.</p>
-    <div class="toggles">
-      <button class="toggle" id="whole" aria-pressed="false" title="Show every record in this time level, not only those near the date">Whole period</button>
+    <div class="tg"><h3>Show on the globe</h3><div class="toggles">
       <button class="toggle" id="borders" aria-pressed="true" title="Borders of states and empires at the date shown (Cliopatria). Blank areas are unmapped, not empty.">Borders</button>
       <button class="toggle" id="paths" aria-pressed="false">Routes</button>
-      <button class="toggle" id="vitals-toggle" aria-pressed="true" title="Temperature, CO₂, sea level, day length and the Moon’s distance at the date shown, with a curve along the time bar">Vital signs</button>
       <button class="toggle" id="fossils-toggle" aria-pressed="true" title="In deep time: places where fossils of eight groups have been found in rocks of the age shown (Paleobiology Database)">Fossils</button>
       <button class="toggle" id="coastlines" aria-pressed="false" title="In the Life period: today’s coastlines, carried back with the plates, to show where today’s continents were">Today’s coastlines</button>
-      <button class="toggle" id="clouds" aria-pressed="false">Clouds</button>
+      <button class="toggle" id="vitals-toggle" aria-pressed="true" title="Temperature, CO₂, sea level, day length and the Moon’s distance at the date shown, with a curve along the time bar">Vital signs</button>
+    </div></div>
+    <div class="tg"><h3>Lighting</h3><div class="toggles">
       <button class="toggle" id="realsun" aria-pressed="false" title="Light the Earth as the Sun stands right now, with a dark night side; on the One year scale, for the season shown">Real sunlight</button>
-    </div>
+      <button class="toggle" id="clouds" aria-pressed="false">Clouds</button>
+    </div></div>
+    <a class="legend-about" href="about.html#globe">About the Moon, the Sun and the borders</a>
     </div>
   </div>
   <div id="notice" class="glass" hidden></div>
@@ -538,14 +544,16 @@
 <section id="time" class="glass" aria-label="Time">
   <div class="time-top">
     <div id="now"></div>
+    <button class="toggle" id="whole" aria-pressed="false" title="Show every record in this time scale, not only those near the date">Whole period</button>
     <div id="levels" role="tablist" aria-label="Time scale"></div>
     <button id="list-btn" title="List the records shown now" aria-expanded="false">List</button>
     <button id="speed" aria-label="Playback speed" title="Playback speed" aria-expanded="false" aria-controls="time-menu">1×</button>
-    <button id="more-btn" class="phone-only" aria-label="More: list the records shown, playback speed" aria-expanded="false" aria-controls="time-menu"><svg width="16" height="4" viewBox="0 0 16 4" aria-hidden="true"><circle cx="2" cy="2" r="1.6" fill="currentColor"/><circle cx="8" cy="2" r="1.6" fill="currentColor"/><circle cx="14" cy="2" r="1.6" fill="currentColor"/></svg></button>
+    <button id="more-btn" class="phone-only" aria-label="More: list the records shown, whole period, playback speed" aria-expanded="false" aria-controls="time-menu"><svg width="16" height="4" viewBox="0 0 16 4" aria-hidden="true"><circle cx="2" cy="2" r="1.6" fill="currentColor"/><circle cx="8" cy="2" r="1.6" fill="currentColor"/><circle cx="14" cy="2" r="1.6" fill="currentColor"/></svg></button>
     <button id="play" aria-label="Play through time"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg></button>
   </div>
   <div id="time-menu" class="glass" hidden>
     <button id="m-list" class="phone-only">List the records shown now</button>
+    <button id="m-whole" class="phone-only" aria-pressed="false">Show the whole period, not only near the date</button>
     <div class="m-speed"><span id="m-speed-label">Playback speed</span><div id="speeds" role="group" aria-labelledby="m-speed-label"></div></div>
   </div>
   <div id="context" title="All of Earth's history. Click to jump there; the orange sliver at the right edge is human history."></div>
