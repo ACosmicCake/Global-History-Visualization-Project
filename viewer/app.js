@@ -785,7 +785,7 @@ function drawDensity() {
 function buildChrome() {
   $('#levels').innerHTML = LEVELS.map((l, i) => `<button role="tab" data-i="${i}">${l.name}</button>`).join('');
   $('#levels').querySelectorAll('button').forEach(b => { b.onclick = () => setLevel(+b.dataset.i); });
-  $('#levels').querySelectorAll('button').forEach(b => { if (LEVELS[+b.dataset.i].from < -2e6) prefetchPaleo(b); });
+  $('#levels').querySelectorAll('button').forEach(b => { const from = LEVELS[+b.dataset.i].from; if (from < -2e6) prefetchPaleo(b); if (from < -10000) prefetchIceAge(b); });
   $('#context').innerHTML = EONS.map(e => `<div class="eon" style="flex:${e.to - e.from};background:${e.color}" title="${e.name} eon"><span>${e.name}</span></div>`).join('')
     + '<div class="win"></div><div class="humans" title="Human history"></div>';
 }
@@ -1259,6 +1259,7 @@ function endFilm() {
 }
 // The plate model loads on demand; a pointer or focus on a way into deep time starts the download early.
 const loadPaleo = () => window.Space?.loadPaleo?.() || Promise.resolve();
+function prefetchIceAge(el) { for (const ev of ['pointerenter', 'focus', 'touchstart']) el.addEventListener(ev, () => window.Space?.loadIceAge?.(), { once: true, passive: true }); }
 function prefetchPaleo(el) { for (const ev of ['pointerenter', 'focus', 'touchstart']) el.addEventListener(ev, () => loadPaleo(), { once: true, passive: true }); }
 async function startFilm() {
   if (!deepTime) return;

@@ -59,7 +59,7 @@
       extensions: { derivatives: true }, defines: globe.renderer().capabilities.isWebGL2 ? { DEEP3D: 1 } : {},
       uniforms: {
         detail: { value: 1 }, rockIds: { value: null }, rotMap: { value: null }, rockOn: { value: 0 }, worldMap: { value: null }, flowMap: { value: null }, worldA: { value: 0 }, worldB: { value: 0 }, worldMix: { value: 0 }, flowZ: { value: 0 }, worldOn: { value: 0 }, veg: { value: 1 }, flora: { value: new THREE.Vector3(0.25, 0.36, 0.18) }, warm: { value: 0 }, aridity: { value: 0 },
-        dayMap: { value: loader.load('assets/earth-day.jpg') }, nightMap: { value: loader.load('assets/earth-night.jpg') },
+        dayMap: { value: loader.load('assets/earth-day.webp') }, nightMap: { value: loader.load('assets/earth-night.webp') },
         waterMap: { value: loader.load('assets/earth-water.png') }, topoMap: { value: topo }, sunDir: { value: sunDir.clone() },
         nightFloor: { value: 0.24 }, nightLights: { value: 0 }, relief: { value: 0.0 },   // 0: NASA imagery as photographed, no added relief
         paleoOn: { value: 0 }, early: { value: 0 }, ageGa: { value: 0 }, iceLat: { value: 90 }, iceSouth: { value: 0 }, studio: { value: 1 },
@@ -271,7 +271,7 @@
     const cloudUniforms = { map: { value: new THREE.Texture() }, sunDir: { value: sunDir.clone() }, opacity: { value: 0 } };
     // The plate data (4 MB) is not loaded up front: setPaleo loads it when the date passes 2 million years ago, and the viewer
     // prefetches it when a pointer or focus reaches a deep-time scale or the film (Space.loadPaleo).
-    idle(() => { if (!navigator.connection?.saveData) { loadShelf(); loadIce(); } }, 9000);   // likewise the ice-age coastlines and ice sheets
+    // The ice-age coastlines and ice sheets load when a date needs them (setSeaDrop, setIce), or early through Space.loadIceAge.
     loadClouds = () => { loadClouds = () => {}; loader.load('assets/earth-clouds.jpg', t => { cloudUniforms.map.value = t; cloudUniforms.opacity.value = CLOUD_OPACITY; }); };
     cloudMat = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false,
@@ -854,5 +854,5 @@
     cloudMat.uniforms.opacity.value = CLOUD_OPACITY * Math.min(1, Math.max(0, ((zoomAlt ?? 2) - 0.6) / 1.2)); // clear the view well before zooming in
   }
 
-  window.Space = { get morph() { return morph; }, get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, loadPaleo: () => loadMorph(), showPlateEdges(on) { if (on === plateShow) return; plateShow = on; if (paleoMa != null && landMat) setPlateLines(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
+  window.Space = { get morph() { return morph; }, get plateRotations() { return rotTex ? { texture: rotTex, count: morph.plates.length } : null; }, init, update, setPaleo, loadPaleo: () => loadMorph(), loadIceAge() { if (!navigator.connection?.saveData) { loadShelf(); loadIce(); } }, showPlateEdges(on) { if (on === plateShow) return; plateShow = on; if (paleoMa != null && landMat) setPlateLines(paleoMa); }, setSeaDrop, setIce, setClimate, platePos, PALEO_MAX, subSolar, subLunar, get debug() { return { sun, sunCore, moon, sunDir, stars, land }; } };
 })();
