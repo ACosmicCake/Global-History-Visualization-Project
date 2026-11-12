@@ -1381,7 +1381,7 @@ async function refresh() {
     $('#count').textContent = `${(d.count + d.outlines).toLocaleString()} records`;
     $('#count').title = `${d.count} full records, ${d.outlines.toLocaleString()} outlines`;
     buildLegend(); render();
-    applyTeasers();
+    if (teasers || teasersWanted) applyTeasers();
   } catch (e) {
     // a failed check for new records changes nothing while the records already loaded are on screen: stay quiet and try again next time
     if (state.pins.length) console.warn('atlas data refresh failed', e);
@@ -1390,13 +1390,20 @@ async function refresh() {
   $('#loading').classList.add('gone');
   setTimeout(() => show($('#loading'), false), 700); // don't rely on the fade finishing
 }
-// Tooltip teasers (api/teasers.json) arrive after the pins, so the first render does not wait for them; until then a
-// tooltip or the instant panel shows no summary. Locally they are fetched again whenever the pins change.
-let teasers = null, teasersSig = '';
+// Tooltip teasers (api/teasers.json, 0.5 MB) load at the visitor's first move, tap or key press, so a first visit that
+// only looks does not download them; until they arrive a tooltip or the instant panel shows no summary. Locally they
+// are fetched again whenever the pins change.
+let teasers = null, teasersSig = '', teasersWanted = false, teasersLoad = null;
+function wantTeasers(e) {
+  if (teasersWanted || (e.type === 'pointermove' && !e.movementX && !e.movementY)) return;   // the browser's own synthetic moves don't count
+  teasersWanted = true; dataReady.then(applyTeasers);
+}
+for (const ev of ['pointermove', 'pointerdown', 'keydown', 'wheel']) addEventListener(ev, wantTeasers, { passive: true });
 async function applyTeasers() {
   if (!teasers || (LIVE && teasersSig !== lastSig)) {
-    const sig = lastSig;
-    try { teasers = await (await fetch('api/teasers.json', { cache: LIVE ? 'no-store' : 'default' })).json(); teasersSig = sig; }
+    const sig = lastSig;   // one request at a time, shared by every caller
+    teasersLoad = teasersLoad || fetch('api/teasers.json', { cache: LIVE ? 'no-store' : 'default' }).then(r => r.json()).finally(() => { teasersLoad = null; });
+    try { teasers = await teasersLoad; teasersSig = sig; }
     catch (e) { console.warn('atlas teasers failed', e); return; }
   }
   for (const p of state.pins) if (teasers[p.id] != null) p.summary = teasers[p.id];
