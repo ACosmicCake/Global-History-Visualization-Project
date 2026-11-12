@@ -31,7 +31,7 @@ import { PAUSE, PLAY, drawDensity, fadeTabs, slideRange, stopPlay, timer } from 
 import { closePanel, fetchSoon, openRecord, recordCache } from './panel.js';
 import { loadTours, startTour } from './tours.js';
 import { prefetchIceAge, prefetchPaleo, startFilm } from './film.js';
-import { applyHash, flash, queueURL, setRestoring } from './url.js';
+import { applyHash, flash, queueURL, resumeLast, setRestoring } from './url.js';
 import { renderVitals } from './vitals.js';
 import { initCue } from './cue.js';
 const { THREE, Globe } = window;
@@ -1253,6 +1253,7 @@ if (LIVE) setInterval(refresh, 15000);
 dataReady.then(() => {
   // a link to a place in the atlas opens there; a first visit with no link gets the welcome card
   if (location.hash.length > 1) return applyHash();
+  resumeLast();
   setRestoring(false);
   let seen = false;
   try {

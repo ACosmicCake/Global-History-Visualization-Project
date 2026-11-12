@@ -2,7 +2,7 @@
 // and Play with its speed menu.
 import { $, esc, show } from './dom.js';
 import { EARTH, LEVELS, NOW, domainOn, inLevel, range, wholeNow, windowNow } from './time.js';
-import { state } from './state.js';
+import { DEFAULT_T, state } from './state.js';
 import { deepTime, goTo, render, setLevel } from './main.js';
 import { drawVitalCurve } from './vitals.js';
 
@@ -208,7 +208,7 @@ $('#context').onclick = e => {
   const r = e.currentTarget.getBoundingClientRect(),
     f = (e.clientX - r.left) / r.width;
   if (f > 0.985) {
-    state.t = -500;
+    state.t = DEFAULT_T;
     return setLevel(4);
   } // the Humans sliver opens Civilization (spec 2)
   state.t = EARTH + f * (NOW - EARTH);
@@ -221,7 +221,7 @@ ctx.setAttribute('aria-label', 'Jump to human history');
 ctx.onkeydown = e => {
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
-    state.t = -500;
+    state.t = DEFAULT_T;
     setLevel(4);
   }
 };

@@ -46,6 +46,8 @@ async function run(name, opts, budget) {
   check(await ready().then(() => true, () => false), 'the loading screen clears');
   const pins = await page.evaluate(() => window.atlas?.state.pins.length || 0);
   check(pins > 2000, `more than 2,000 pins load (${pins})`);
+  const first = await page.evaluate(() => document.querySelector('#now').firstChild?.textContent);
+  check(first === '500 BCE', `a first visit opens at 500 BCE (${first})`);
   if (budget) {   // what a first visit downloads with no interaction, including the loads the page starts once idle
     await page.waitForTimeout(15000);
     const total = loaded.reduce((a, [, n]) => a + n, 0);
@@ -131,7 +133,7 @@ async function run(name, opts, budget) {
     const seen = await page.evaluate(async () => { const { pinsSeen } = await import('./app/pins.js'); return [pinsSeen.facing, pinsSeen.shown]; });
     check(seen[0] >= seen[1] / 4, `one click brings the pins into view (${seen[0]} of ${seen[1]} face the camera)`);
   }
-  await page.evaluate(() => { window.atlas.state.t = -500; document.querySelectorAll('#levels button')[4].click(); });
+  await page.evaluate(() => { window.atlas.state.t = -499; document.querySelectorAll('#levels button')[4].click(); });
   // region and kind filters: Oceania and person leave only matching pins
   const only = await page.evaluate(async () => {
     const s = window.atlas.state, { pinSprites } = await import('./app/pins.js'), { domainOn } = await import('./app/time.js');
@@ -143,7 +145,7 @@ async function run(name, opts, budget) {
     await new Promise(r => setTimeout(r, 800));
     const recs = [...pinSprites.values()].flatMap(e => e.p.cluster || [e.p]), wrong = recs.filter(p => p.region !== 'oceania' || p.kind !== 'person').length;
     document.querySelector('#f-regions [data-k="oceania"]').click(); document.querySelector('#f-kinds [data-k="person"]').click();
-    s.t = -500; document.querySelectorAll('#levels button')[4].click();
+    s.t = -499; document.querySelectorAll('#levels button')[4].click();
     return { matching: matching.length, bad, shown: recs.length, wrong };
   });
   check(only.matching > 0 && only.bad === 0 && only.shown > 0 && only.wrong === 0, `choosing Oceania and person leaves only matching pins (${only.matching} records; ${only.shown} on the globe, ${only.wrong} not matching)`);
@@ -166,6 +168,17 @@ async function run(name, opts, budget) {
   await ready().catch(() => {});
   check(await soon(id => { const s = window.atlas.state; return s.t === 1945 && s.level === 5 && s.selected === id && !document.querySelector('#panel').hidden; }, id),
     'a #t=1945&l=modern&r=… link restores date, scale and record');
+
+  // a new visit with no link returns to where the visitor left
+  await page.evaluate(() => { const b = document.querySelectorAll('#levels button')[4]; b.click(); window.atlas.state.t = 1066; b.click(); });
+  await page.waitForTimeout(800);
+  const again = await ctx.newPage();
+  again.on('pageerror', e => pageErrors.push(String(e.stack || e).slice(0, 400)));
+  await again.goto(BASE, { waitUntil: 'domcontentloaded' });
+  await again.waitForFunction(() => document.querySelector('#loading')?.classList.contains('gone') && window.atlas?.state.pins.length, null, { timeout: 90000 }).catch(() => {});
+  const back = await again.waitForFunction(() => { const s = window.atlas.state; return Math.abs(s.t - 1066) < 1 && s.level === 4; }, null, { timeout: 15000 }).then(() => true, () => false);
+  check(back, `a new visit with no link returns to the last date and scale (${await again.evaluate(() => `${window.atlas.state.t}, scale ${window.atlas.state.level}`)})`);
+  await again.close();
 
   const errs = [...pageErrors, ...await page.evaluate(() => window.__errs || [])];
   check(errs.length === 0, `no page errors${errs.length ? ':\n      ' + errs.join('\n      ') : ''}`);
