@@ -1,6 +1,7 @@
 # Publish the Living Atlas viewer to GitHub Pages on every push to main (or on demand from the Actions tab).
 # The records and viewer code are checked first (atlas/tools/check-all.mjs), so a failed check stops the deploy; pull
-# requests run the same check. The build writes the viewer plus its data as static JSON and plain HTML into dist/.
+# requests run the same check, plus unit tests and a browser smoke test of the built site (viewer/test/), and a failed
+# smoke test also stops the deploy. The build writes the viewer plus its data as static JSON and plain HTML into dist/.
 name: Deploy the atlas to GitHub Pages
 
 on:
@@ -30,8 +31,24 @@ jobs:
       - name: Unit tests for the viewer's data layer
         run: node --test 'viewer/test/*.test.mjs'
 
-  build:
+  smoke:
     needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the static site
+        run: node viewer/build-static.mjs dist
+      - name: Install Playwright and Chromium
+        working-directory: viewer/test
+        run: npm ci && npx playwright install --with-deps chromium
+      - name: Smoke test the built site in a browser
+        run: node viewer/test/smoke.mjs dist
+
+  build:
+    needs: [check, smoke]
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
