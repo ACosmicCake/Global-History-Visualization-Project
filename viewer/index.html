@@ -83,9 +83,10 @@
   .w-recent button { padding: 6px 10px; overflow: hidden; }
   .w-recent b { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .w-recent span { display: none; }
-  /* on a phone both short lists keep two rows of one line each, so the welcome fits without scrolling */
+  /* on a phone the short lists keep one line a row (two new records, one on this day), so the welcome fits without scrolling */
   @media (max-width: 760px) {
-    .w-today li { min-width: 0; } .w-today li:nth-child(n+3) { display: none; }
+    .w-today li { min-width: 0; } .w-today li:nth-child(n+3), .w-today:not(.w-recent) li:nth-child(n+2) { display: none; }
+    #welcome h3 { margin: 10px 0 4px; }
     .w-today button { padding: 6px 10px; overflow: hidden; } .w-today b { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .w-today span { display: none; }
   }
   #welcome h3 .w-feed { float: right; letter-spacing: 0; text-transform: none; color: var(--brass); font: 12px var(--f-ui); }
