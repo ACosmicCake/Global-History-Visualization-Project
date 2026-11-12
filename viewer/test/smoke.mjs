@@ -98,7 +98,18 @@ async function run(name, opts, budget) {
     await page.keyboard.press('Escape');
     const console_ = await page.evaluate(() => document.querySelector('#time').getBoundingClientRect().height);
     check(console_ <= 120, `the phone time console is no taller than 120 px (${console_}px)`);
+    const small = await page.evaluate(() => [...document.querySelectorAll('button, [role=tab]')].filter(b => {
+      const r = b.getBoundingClientRect();
+      return r.width && r.height && r.bottom > 0 && r.top < innerHeight && getComputedStyle(b).visibility !== 'hidden' && !b.classList.contains('mark') && (r.width < 40 || r.height < 40);
+    }).map(b => `${b.id || b.className || b.textContent.trim().slice(0, 16)} ${Math.round(b.getBoundingClientRect().width)}×${Math.round(b.getBoundingClientRect().height)}`));
+    check(small.length === 0, `no visible button on the phone is under 40 px${small.length ? ': ' + small.join(', ') : ''}`);
+    check(await page.evaluate(() => [...document.querySelectorAll('#levels button')].every(b => b.scrollWidth <= b.clientWidth + 1)), 'every scale tab is wide enough for its name');
   }
+  // the scale tabs move with the arrow keys
+  await page.focus('#levels .on');
+  await page.keyboard.press('ArrowRight');
+  check(await page.evaluate(() => window.atlas.state.level === 5 && document.activeElement === document.querySelector('#levels .on')), 'the arrow keys move between the scale tabs');
+  await page.keyboard.press('ArrowLeft');
   // speed is chosen from a menu (on a phone, the "more" menu)
   await page.click(phone ? '#more-btn' : '#speed');
   await page.click('#speeds button[data-s="2"]');

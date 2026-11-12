@@ -798,7 +798,16 @@ export function render() {
 }
 
 function buildChrome() {
-  $('#levels').innerHTML = LEVELS.map((l, i) => `<button role="tab" data-i="${i}">${l.name}</button>`).join('');
+  $('#levels').innerHTML = LEVELS.map((l, i) => `<button role="tab" data-i="${i}" tabindex="-1">${l.name}</button>`).join('');
+  // the scale tabs are one stop for Tab; the arrow keys, Home and End move between them
+  $('#levels').onkeydown = e => {
+    const n = LEVELS.length,
+      i = { ArrowRight: state.level + 1, ArrowLeft: state.level - 1, Home: 0, End: n - 1 }[e.key];
+    if (i == null) return;
+    e.preventDefault();
+    setLevel((i + n) % n);
+    $('#levels .on')?.focus();
+  };
   $('#levels')
     .querySelectorAll('button')
     .forEach(b => {
@@ -874,6 +883,7 @@ export function setLevel(i, keepT = false) {
       const on = +b.dataset.i === i;
       b.classList.toggle('on', on);
       b.setAttribute('aria-selected', on);
+      b.tabIndex = on ? 0 : -1;
     });
   const tabs = $('#levels'),
     on = tabs.querySelector('.on'); // keep the active scale visible when the tabs scroll (phones)
