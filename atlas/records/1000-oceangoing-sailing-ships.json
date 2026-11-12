@@ -1,0 +1,183 @@
+{
+  "id": "1000-oceangoing-sailing-ships",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Caravels and carracks: the ships of the Age of Discovery",
+  "summary": "Carracks and caravels were the main ships of the early Age of Discovery. The caravel, a small trading vessel rigged with lateen sails, was used heavily from the 14th to the 17th centuries and made some of the earliest Atlantic crossings. The carrack, a blend of Atlantic and Mediterranean ship types, had room for a large crew and cargo. Columbus's Santa Maria and Magellan's Victoria were carracks, and the Portuguese used carracks in their Indian Ocean trade.",
+  "when": {
+    "start": {
+      "year": 1200
+    },
+    "end": {
+      "year": 1600
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 200,
+      "end_minus_years": 0,
+      "end_plus_years": 50,
+      "note": "The id year 1000 reflects the medieval diffusion of lateen-rigged vessels; The Mariners' Museum dates the carrack to 1200-1600 CE and the caravel to 1400-1600 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian proleptic / Common Era",
+        "value": "1400 CE - 1600 CE",
+        "source": "src-mariners-caravel"
+      },
+      {
+        "calendar": "Gregorian proleptic / Common Era",
+        "value": "1200 CE - 1600 CE",
+        "source": "src-mariners-carrack"
+      },
+      {
+        "calendar": "Gregorian proleptic / Common Era",
+        "value": "the 1500s carrack",
+        "source": "src-eve-carrack"
+      }
+    ],
+    "display": "about 1200–1600 CE"
+  },
+  "where": {
+    "lat": 38.7251,
+    "lon": -9.1498,
+    "elevation_m": null,
+    "modern_name": "Lisbon, Portugal (stand-in pin for Atlantic ship design and voyages)",
+    "historical_name": "Lisbon, Kingdom of Portugal (hub of caravel and carrack construction and departure point for oceanic expeditions)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-geonames-lisbon"
+    ]
+  },
+  "regions": [
+    "europe",
+    "oceans"
+  ],
+  "domains": [
+    "trade_exploration",
+    "science_technology"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "These ships made the long ocean voyages of the Age of Discovery possible."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-3500-invention-of-the-sail",
+      "type": "related"
+    },
+    {
+      "id": "1405-zheng-he-treasure-voyages",
+      "type": "contemporary"
+    },
+    {
+      "id": "1418-age-of-discovery",
+      "type": "related",
+      "because": "The technical synthesis of caravel manoeuvrability and carrack cargo capacity provided the vessels required for systematic transoceanic exploration."
+    },
+    {
+      "id": "1434-gil-eanes-passage-of-cape-bojador",
+      "type": "related",
+      "because": "Lateen-rigged caravels enabled Portuguese mariners to tack against offshore African winds and round Cape Bojador."
+    },
+    {
+      "id": "1488-dias-rounding-the-cape",
+      "type": "related"
+    },
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related"
+    },
+    {
+      "id": "1498-vasco-da-gama-reaches-calicut",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mariners-caravel",
+      "url": "https://exploration.marinersmuseum.org/watercraft/caravel/",
+      "title": "Caravel - Ages of Exploration",
+      "publisher": "The Mariners' Museum and Park",
+      "date_published": "2020",
+      "accessed": "2026-11-11",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-mariners-carrack",
+      "url": "https://exploration.marinersmuseum.org/watercraft/carrack/",
+      "title": "Carrack (Não) - Ages of Exploration",
+      "publisher": "The Mariners' Museum and Park",
+      "date_published": "2020",
+      "accessed": "2026-11-11",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-eve-carrack",
+      "url": "https://eve.fcsh.unl.pt/en/themes-and-facts/carrack-ship",
+      "title": "Carrack Ship (Encyclopaedia of Portuguese Expansion)",
+      "publisher": "CHAM - Centre for the Humanities, NOVA FCSH, Universidade Nova de Lisboa",
+      "author": "Francisco Contente Domingues",
+      "date_published": "2009",
+      "accessed": "2026-11-11",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-lisbon",
+      "url": "https://www.geonames.org/2267057/lisbon.html",
+      "title": "Lisbon, Portugal (GeoNames 2267057)",
+      "publisher": "GeoNames",
+      "accessed": "2026-11-11",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The ship types overlap and developed over centuries, so the dates are approximate. The pin at Lisbon is a stand-in for Atlantic Europe's shipbuilding and voyages.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-11",
+  "published_at": "2026-11-11T23:38:25.223Z",
+  "changelog": [
+    {
+      "date": "2026-11-11",
+      "version": 1,
+      "change": "new"
+    }
+  ]
+}

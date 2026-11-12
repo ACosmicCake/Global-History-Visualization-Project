@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-8000-malaria-and-human-history",
+  "kind": "process",
+  "title": "Malaria and human history",
+  "summary": "Malaria is caused by Plasmodium parasites passed between people by female Anopheles mosquitoes. One species, Plasmodium falciparum, is thought to have become a major human pathogen within the past 5,000 to 10,000 years, as farming took root in western and central Africa and changed the human environment. Human genetic traits that protect against malaria, such as sickle cell trait, were selected in response. In 2024 malaria caused an estimated 610,000 deaths, 95% of them in the WHO African Region.",
+  "when": {
+    "start": {
+      "year": -8000
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 2000,
+      "start_plus_years": 3000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Before Present / Years Ago",
+        "value": "Around 4,000 to 5,000 years ago, the Neolithic agrarian revolution, which is believed to have begun in the “Fertile Crescent,” southern Turkey and northeastern Iraq, 8,000 years ago, took root in",
+        "source": "src-carter-mendis-2002"
+      },
+      {
+        "calendar": "Before Christ, Julian calendar proleptic",
+        "value": "Malaria is an ancient disease and references to what was almost certainly malaria occur in a Chinese document from about 2700 BC, clay tablets from Mesopotamia from 2000 BC",
+        "source": "src-cox-2010"
+      },
+      {
+        "calendar": "Before Present / Years Ago",
+        "value": "the more recent emergence of P. falciparum within the past 5,000 to 10,000 years",
+        "source": "src-carter-mendis-2002"
+      }
+    ],
+    "display": "within the past 5,000–10,000 years (uncertain), to the present"
+  },
+  "where": {
+    "lat": 7.37756,
+    "lon": 3.90591,
+    "elevation_m": 227,
+    "modern_name": "West Africa; stand-in pin at Ibadan, Nigeria",
+    "historical_name": "Sub-Saharan Africa, equatorial forest and savanna belt (no contemporary polities recorded)",
+    "geometry": {
+      "type": "global"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-geonames-ibadan"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa",
+    "global"
+  ],
+  "domains": [
+    "disease",
+    "human_evolution_migration",
+    "life_extinction"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Malaria has shaped human genetics and health for thousands of years and still kills hundreds of thousands each year."
+  },
+  "confidence": "probable",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "related"
+    },
+    {
+      "id": "1897-ross-malaria-transmission",
+      "type": "has_part"
+    },
+    {
+      "id": "1850-modern-public-health",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-carter-mendis-2002",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC126857/",
+      "title": "Evolutionary and Historical Aspects of the Burden of Malaria",
+      "publisher": "Clinical Microbiology Reviews (American Society for Microbiology, via PubMed Central)",
+      "author": "Richard Carter and Kamini N. Mendis",
+      "date_published": "2002-10-01",
+      "accessed": "2026-11-11",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-who-malaria-factsheet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+      "title": "Malaria Fact Sheet",
+      "publisher": "World Health Organization",
+      "author": null,
+      "date_published": "2025-03-27",
+      "accessed": "2026-11-11",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-cox-2010",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2825508/",
+      "title": "History of the discovery of the malaria parasites and their vectors",
+      "publisher": "Parasites & Vectors (BioMed Central, via PubMed Central)",
+      "author": "Francis E. G. Cox",
+      "date_published": "2010-02-01",
+      "accessed": "2026-11-11",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-ibadan",
+      "url": "https://www.geonames.org/2335197/ibadan.html",
+      "title": "Ibadan, Nigeria (GeoNames 2335197)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-11",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "The start is uncertain: the source gives a range of 5,000 to 10,000 years for falciparum, and farming reached West and Central Africa 4,000 to 5,000 years ago. The pin at Ibadan is a stand-in for West Africa.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-11",
+  "published_at": "2026-11-11T16:29:50.028Z",
+  "changelog": [
+    {
+      "date": "2026-11-11",
+      "version": 1,
+      "change": "new"
+    }
+  ]
+}

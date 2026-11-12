@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1492-spanish-empire",
+  "kind": "polity",
+  "title": "The Spanish Empire",
+  "summary": "From Columbus's first voyage in 1492, Spain built an overseas empire across the Americas and the Philippines. Its Council of the Indies, formed in 1524, governed the American colonies, with viceroyalties set up in New Spain in 1535 and Peru in 1543. Silver from mines such as Potosí flowed to Seville and brought economic change far beyond Spain. After the war of 1898, Spain gave up Cuba and ceded Puerto Rico, Guam and the Philippines to the United States.",
+  "when": {
+    "start": {
+      "year": 1492
+    },
+    "end": {
+      "year": 1898
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 78,
+      "note": ""
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1492 - 1493 First Voyage of Christopher Columbus to the New World",
+        "source": "src-whe-timeline"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Spanish-American War of 1898 ended Spain’s colonial empire in the Western Hemisphere",
+        "source": "src-statedept-1898"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1524 - 1834 The Council of the Indies governs Spanish territories in the Americas",
+        "source": "src-whe-timeline"
+      }
+    ],
+    "display": "1492–1898"
+  },
+  "where": {
+    "lat": 40.4165,
+    "lon": -3.70256,
+    "elevation_m": 667,
+    "modern_name": "Madrid, Spain (stand-in pin for an empire across several continents)",
+    "historical_name": "Madrid, Kingdom of Spain (Monarquía Hispánica)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 4000,
+    "coordinate_sources": [
+      "src-geonames-madrid"
+    ]
+  },
+  "regions": [
+    "europe",
+    "latin_america_caribbean",
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration",
+    "wars_conflict"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 5,
+    "justification": "Spain's empire governed much of the Americas and the Philippines for centuries and moved American silver across the world."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1492-columbus-first-voyage",
+      "type": "related",
+      "because": "Columbus's first transatlantic voyage in 1492 initiated Spanish overseas territorial claims and imperial expansion."
+    },
+    {
+      "id": "1492-spanish-colonization-of-the-americas",
+      "type": "has_part"
+    },
+    {
+      "id": "1545-global-silver-trade",
+      "type": "related"
+    },
+    {
+      "id": "1898-spanish-american-war",
+      "type": "related",
+      "because": "Spanish defeat in 1898 forced Spain to cede Cuba, Puerto Rico, Guam, and the Philippines."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-timeline",
+      "url": "https://www.worldhistory.org/timeline/Spanish_Empire/",
+      "title": "Timeline: Spanish Empire",
+      "publisher": "World History Encyclopedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-11",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-statedept-1898",
+      "url": "https://history.state.gov/milestones/1866-1898/spanish-american-war",
+      "title": "The Spanish-American War, 1898",
+      "publisher": "Office of the Historian, Foreign Service Institute, United States Department of State",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-11",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-yale-avalon-paris",
+      "url": "https://avalon.law.yale.edu/19th_century/sp1898.asp",
+      "title": "Treaty of Peace Between the United States and Spain; December 10, 1898",
+      "publisher": "Lillian Goldman Law Library, Yale Law School",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-11",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-madrid",
+      "url": "https://www.geonames.org/3117735/madrid.html",
+      "title": "Madrid, Spain (GeoNames 3117735)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-11",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-unesco-420",
+      "class": "government",
+      "publisher": "UNESCO World Heritage Centre",
+      "title": "Potosí",
+      "url": "https://whc.unesco.org/en/list/420/",
+      "author": "UNESCO",
+      "date_published": "n.d.",
+      "accessed": "2026-11-11",
+      "opened": true,
+      "supports": "Silver shipped from Potosí to Seville"
+    }
+  ],
+  "reviewer_note": "The dates run from Columbus's first voyage to the war of 1898, though small Spanish holdings in Africa lasted longer. The pin at Madrid is a stand-in for an empire on several continents.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-11",
+  "published_at": "2026-11-11T16:29:46.792Z",
+  "changelog": [
+    {
+      "date": "2026-11-11",
+      "version": 1,
+      "change": "new"
+    }
+  ]
+}
