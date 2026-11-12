@@ -2,7 +2,7 @@
 // can be found by a search engine, previewed when shared, and read without WebGL), a browsable index of every record,
 // and the sitemap. All record text is escaped: records are data written by agents.
 export const SITE_URL = (process.env.SITE_URL || 'https://acosmiccake.github.io/Global-History-Visualization-Project/').replace(/\/?$/, '/');
-import { REPO, RELATION_LABELS, SCALE_START, PHANEROZOIC_START } from './shared/labels.mjs';
+import { REPO, RELATION_LABELS, REGION_LABELS, SCALE_START, PHANEROZOIC_START } from './shared/labels.mjs';
 export { REPO };
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -102,7 +102,7 @@ document.getElementById('f').addEventListener('input', e => {
 
 export const sitemap = recs => `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${['', 'about.html', 'browse.html'].map(p => `<url><loc>${esc(SITE_URL + p)}</loc></url>`).join('\n')}
+${['', 'about.html', 'browse.html', 'coverage.html'].map(p => `<url><loc>${esc(SITE_URL + p)}</loc></url>`).join('\n')}
 ${recs.map(r => `<url><loc>${esc(`${SITE_URL}r/${r.id}.html`)}</loc>${r.updated ? `<lastmod>${esc(String(r.updated).slice(0, 10))}</lastmod>` : ''}</url>`).join('\n')}
 </urlset>
 `;

@@ -30,4 +30,10 @@ ul.list li { padding: 4px 0; border-bottom: 1px solid rgba(190, 205, 230, .07); 
 .filter { display: flex; flex-direction: column; gap: 4px; margin: 16px 0; font: 13px system-ui, sans-serif; color: var(--muted); }
 .filter input { padding: 9px 12px; font-size: 16px; border-radius: 8px; border: 1px solid var(--rule); background: #0a1220; color: var(--text); }
 :focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+.cov-wrap { overflow-x: auto; margin: 0 -20px; padding: 0 20px; }
+.cov { border-collapse: collapse; font: 12px system-ui, "Segoe UI", sans-serif; min-width: 760px; }
+.cov th { font-weight: 500; color: var(--soft); text-align: left; padding: 4px 6px; vertical-align: bottom; }
+.cov thead th { font-size: 11px; color: var(--muted); max-width: 70px; }
+.cov td { width: 52px; text-align: center; padding: 6px 4px; border: 1px solid var(--ink); background: rgba(217, 179, 106, calc(var(--a) * .85)); color: var(--text); font-variant-numeric: tabular-nums; }
+.cov td.none { background: transparent; color: var(--muted); outline: 1px dashed var(--rule); outline-offset: -3px; }
 @media (prefers-color-scheme: light) { :root { --ink: #fbfaf6; --text: #1b2230; --soft: #3b4557; --muted: #5d687b; --brass: #8a6416; --rule: rgba(30, 40, 60, .16); --alert: #b4402f; } .filter input { background: #fff; } }

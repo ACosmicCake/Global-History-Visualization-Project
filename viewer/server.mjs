@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { published, pinsPayload, teasersPayload, recordPayload, searchPayload, recordsSeen, warmLinks } from './api.mjs';
-import { recordPage, browsePage, recentPayload, feed } from './pages.mjs';
+import { recordPage, browsePage, coveragePage, recentPayload, feed } from './pages.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PORT = +(process.argv[2] || process.env.PORT || 8787);
@@ -27,6 +27,7 @@ http.createServer((req, res) => {
   if (url.pathname === '/api/search.json') return send(200, TYPES['.json'], JSON.stringify(searchPayload()));
   if (url.pathname === '/api/recent.json') return send(200, TYPES['.json'], JSON.stringify(recentPayload(published())));
   if (url.pathname === '/feed.xml') return send(200, 'application/atom+xml; charset=utf-8', feed(recentPayload(published())));
+  if (url.pathname === '/coverage.html') return send(200, TYPES['.html'], coveragePage(published()));
   if (url.pathname === '/browse.html') return send(200, TYPES['.html'], browsePage(published()));
   const page = url.pathname.match(/^\/r\/([^/]+?)\.html$/);
   if (page) {
