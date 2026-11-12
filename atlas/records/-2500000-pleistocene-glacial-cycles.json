@@ -146,7 +146,7 @@
   ],
   "reviewer_note": "The cause of the shift to 100,000-year cycles is still studied; one explanation is given here. The pin in the Arctic is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:30.763Z",
   "changelog": [
     {
@@ -154,5 +154,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-2600000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "6 million years, large ice sheets in the Northern Hemisphere have grown and retreated many times.",
+        "source": "src-noaa-glacial"
+      },
+      {
+        "span": "-9500",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "7 million years ago became strongly asymmetric 100,000-year cycles.",
+        "source": "src-noaa-glacial",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

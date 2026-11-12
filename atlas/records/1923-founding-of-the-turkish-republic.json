@@ -133,7 +133,7 @@
   ],
   "reviewer_note": "One source is an official Turkish government message and is used only for the date. The summary leaves out its description of the victory. Whether Atatürk was a reformer or a dictator is discussed in the other source.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T17:00:33.135Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1923",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "After the Turkish War of National Independence, the sultanate was abolished by a vote of the Grand National Assembly in November 1922, ending Ottoman imperial rule.",
+        "source": "src-mfa-turkey"
+      },
+      {
+        "span": "1923",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The Republic of Turkey was officially declared on 29 October 1923, with Ankara as its capital and Mustafa Kemal Atatürk as its first president.",
+        "source": "src-mfa-turkey",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

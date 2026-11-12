@@ -139,7 +139,7 @@
     }
   ],
   "reviewer_note": "Historians date this differently. The infant mortality figure is from one economic historian. The pin at Sheffield is a stand-in, since the change spanned several countries.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:08.057Z",
   "changelog": [
     {
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1856",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Second Industrial Revolution is usually dated between 1870 and 1914, though some of its characteristic events date to the 1850s.",
+        "source": "src-nwu-mokyr-second-ir"
+      },
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Bessemer's process, announced in 1856, made inexpensive steel in large quantities.",
+        "source": "src-nwu-mokyr-second-ir",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

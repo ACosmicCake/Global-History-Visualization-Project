@@ -142,7 +142,7 @@
   ],
   "reviewer_note": "The sources here give no reliable total of deaths. The pin marks Karakorum, chosen as the capital in 1235, and stands in for the whole empire.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:42.158Z",
   "changelog": [
     {
@@ -150,5 +150,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1206",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "From 1206 Genghis Khan and his successors conquered almost all of Asia, from the Black Sea to Korea, with fast cavalry, diplomacy and terror, creating the largest contiguous…",
+        "source": "src-whe-mongol-empire"
+      },
+      {
+        "span": "1368",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Cities were destroyed down to their foundations, civilians massacred and irrigation systems wrecked; Baghdad was sacked in 1258.",
+        "source": "src-whe-mongol-empire",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

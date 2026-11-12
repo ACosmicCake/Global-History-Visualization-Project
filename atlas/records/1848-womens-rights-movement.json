@@ -146,7 +146,7 @@
   ],
   "reviewer_note": "The right to vote is only one part of women's rights, and rights in law did not always mean rights in practice. The pin at Seneca Falls is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:48.606Z",
   "changelog": [
     {
@@ -154,5 +154,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1848",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In 1848 a convention at Seneca Falls, New York, resolved that women should secure the elective franchise.",
+        "source": "src-nps-seneca-falls"
+      },
+      {
+        "span": "2015",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Sweden gave some women local votes in 1862, and New Zealand's Electoral Act of 1893 made it the first self-governing nation to give women the national vote.",
+        "source": "src-nps-seneca-falls",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

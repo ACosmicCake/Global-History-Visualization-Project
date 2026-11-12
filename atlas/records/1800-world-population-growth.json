@@ -139,7 +139,7 @@
   ],
   "reviewer_note": "Early population figures are estimates. The transition reached other regions later. The pin at London is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T22:15:06.666Z",
   "changelog": [
     {
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1800",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "S.",
+        "source": "src-census-worldpop"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The demographic transition began in Europe by the early 1800s, as death rates fell, followed after a lag by falling birth rates.",
+        "source": "src-census-worldpop",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -164,7 +164,7 @@
   ],
   "reviewer_note": "This is one team's interpretation, and the line between mammals and their relatives depends on definition. The pin marks the Brasilodon site in Brazil.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T00:04:25.177Z",
   "changelog": [
     {
@@ -172,5 +172,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-225420000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Analysis of the jaws of Brasilodon quadrangularis, a mouse-sized animal from southern Brazil dated to about 225 million years ago, found mammal-style tooth replacement.",
+        "source": "src-pmc9644961"
+      },
+      {
+        "span": "-201000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Morganucodon and other Late Triassic to Jurassic animals are usually counted as the first mammal-like forms.",
+        "source": "src-pmc9644961",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

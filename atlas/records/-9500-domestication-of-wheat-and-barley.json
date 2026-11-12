@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Domestication of wheat and barley",
   "summary": "Cereal farming arose in the Fertile Crescent of southwestern Asia. Barley remains show almost purely wild, shattering plants before 9500 BC, then non-shattering ears rising to as much as 30% in a few sites between 9000 and 8500 BC, and fixed at some sites after 7400 BC. The earliest domesticated barley samples come from Jarmo in northern Iraq. Bread wheat later became a staple food of humanity.",
@@ -174,5 +174,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-9500",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Cereal farming arose in the Fertile Crescent of southwestern Asia.",
+        "source": "src-royalsoc-fuller"
+      },
+      {
+        "span": "-7400",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Barley remains show almost purely wild, shattering plants before 9500 BC, then non-shattering ears rising to as much as 30% in a few sites between 9000 and 8500…",
+        "source": "src-royalsoc-fuller",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -148,7 +148,7 @@
   ],
   "reviewer_note": "The sources do not trace when each Romance language emerged, so the dates cover the Roman period only. The pin at Rome is a stand-in for a much wider area.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:24.617Z",
   "changelog": [
     {
@@ -156,5 +156,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-509",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Latin was the language of ancient Rome through the Republic and the Empire, which in the West lasted until 476 CE.",
+        "source": "src-whe-roman-legacy"
+      },
+      {
+        "span": "476",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The Church kept Latin in its rituals long after the Empire fell.",
+        "source": "src-whe-roman-legacy",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

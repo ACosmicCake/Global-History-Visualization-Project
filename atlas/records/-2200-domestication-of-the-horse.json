@@ -135,7 +135,7 @@
   ],
   "reviewer_note": "This traces the ancestors of today's horses. Earlier horse use, as at Botai, is a separate question. The pin is a stand-in in the Volga-Don region.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:39:18.884Z",
   "changelog": [
     {
@@ -143,5 +143,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-2200",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A genetic study traced modern domestic horses to the Volga-Don region, where they were domesticated around 2200 BCE.",
+        "source": "src-nature-librado2021"
+      },
+      {
+        "span": "-1999",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "From about 2000 BCE these horses spread rapidly across Eurasia alongside spoke-wheeled chariots, and replaced almost all other local horse populations.",
+        "source": "src-nature-librado2021",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

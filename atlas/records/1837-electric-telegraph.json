@@ -154,7 +154,7 @@
   ],
   "reviewer_note": "Later telegraph growth and the move to telephones are outside this record. The pin at London is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:51.323Z",
   "changelog": [
     {
@@ -162,5 +162,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1837",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "William Fothergill Cooke and Charles Wheatstone patented the electric telegraph in 1837, developing it for Britain's new railways.",
+        "source": "src-londonmuseum-telegraph"
+      },
+      {
+        "span": "1875",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In the United States, Samuel Morse opened a government-funded line from Baltimore to Washington in 1844.",
+        "source": "src-londonmuseum-telegraph",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

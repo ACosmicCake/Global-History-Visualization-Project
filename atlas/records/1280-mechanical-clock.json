@@ -124,7 +124,7 @@
   ],
   "reviewer_note": "The Dunstable entry does not say what kind of clock it was, so it may not be mechanical. The pin marks Dunstable, not the place of invention, which is unknown.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:29.062Z",
   "changelog": [
     {
@@ -132,5 +132,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1280",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The first mechanical clocks were probably made in the late 1200s.",
+        "source": "src-uh-engines"
+      },
+      {
+        "span": "1283",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The first was the verge and foliot, driven by a heavy stone.",
+        "source": "src-uh-engines",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

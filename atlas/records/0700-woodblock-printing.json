@@ -127,7 +127,7 @@
   ],
   "reviewer_note": "The exact date of invention is unknown. A printed Diamond Sutra of 868 has its own record. The pin at Xi'an, the Tang capital, is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:19.812Z",
   "changelog": [
     {
@@ -135,5 +135,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "700",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Woodblock printing developed in China during the Tang dynasty.",
+        "source": "src-worldhistory-literature"
+      },
+      {
+        "span": "1100",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "As in Europe centuries later, printing dramatically lowered the price of books, aiding the spread of literacy and boosting drama and popular culture.",
+        "source": "src-worldhistory-literature",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

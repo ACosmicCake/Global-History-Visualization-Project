@@ -159,7 +159,7 @@
   ],
   "reviewer_note": "The end date of 30 BCE comes from the Roman conquest, covered in other records. The pin marks Memphis. New Kingdom and Unification records cover parts of this period in more detail.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:16.308Z",
   "changelog": [
     {
@@ -167,5 +167,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3100",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Radiocarbon dating puts the foundation of the Egyptian state, with the accession of King Aha, between 3111 and 3045 BCE.",
+        "source": "src-pmc-dee2013"
+      },
+      {
+        "span": "-30",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The Penn Museum dates the First Dynasty to about 3100 to 2900 BCE.",
+        "source": "src-pmc-dee2013",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

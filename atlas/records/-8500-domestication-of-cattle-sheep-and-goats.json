@@ -148,7 +148,7 @@
   ],
   "reviewer_note": "The study converts to about 9000–8000 BCE. Sheep herding in the Zagros is also dated to 9000 BCE by World History Encyclopedia. The pin is a stand-in within the region.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:39:18.176Z",
   "changelog": [
     {
@@ -156,5 +156,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-9000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Sheep and goats came under domestication, probably independently of one another and possibly several times, in the region from the northern Zagros to southeastern Anatolia between about 11,000…",
+        "source": "src-zeder2008"
+      },
+      {
+        "span": "-8000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Taurine cattle were first domesticated somewhere in the upper Euphrates Valley between about 11,000 and 10,000 years ago.",
+        "source": "src-zeder2008",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

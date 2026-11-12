@@ -147,7 +147,9 @@
     // near one place twice (out from Plymouth, home to Falmouth) can't confuse it
     const dirs = pts.map(w => anchor(ctx, w.lat, w.lon, 0).normalize()), run = [0];
     for (let i = 1; i < dirs.length; i++) run.push(run[i - 1] + dirs[i - 1].angleTo(dirs[i]));
-    const stopStep = i => Math.round(steps * run[Math.min(i, run.length - 1)] / (run[run.length - 1] || 1));
+    // route-shape points (via) bend the line over open water but are not stops, so stop i is the i-th point that is not one
+    const stopAt = []; pts.forEach((w, k) => { if (!w.via) stopAt.push(k); });
+    const stopStep = i => Math.round(steps * run[stopAt[Math.min(i, stopAt.length - 1)] ?? 0] / (run[run.length - 1] || 1));
     return { count: steps, verts, at: n => verts[Math.max(0, Math.min(steps, n))], get drawn() { return drawn; }, draw, stepOf, stopStep, ghost };
   }
   // time counts only while playing, so a pause doesn't eat into the beat; a skip finishes the beat at once
@@ -388,7 +390,7 @@
   function beatsFor(rec) {
     const own = rec.animation?.beats;
     if (own && own.length) return own;
-    const wp = rec.where?.geometry?.waypoints || [];
+    const wp = (rec.where?.geometry?.waypoints || []).filter(w => !w.via);
     // a dated route: one step per stop, moving the clock along with it
     if (wp.length >= 3 && wp.every(w => typeof w.year === 'number')) return wp.map((w, i) => ({ span: String(w.year), action: i ? `path.trace { stop: ${i} }` : `pulse { lat: ${w.lat}, lon: ${w.lon}, radius_km: 60, route_view: 1 }`, caption: `${w.date}. ${w.label}` }));
     const b = [{ span: String(rec.when?.start?.year ?? ''), action: `pulse { radius_km: ${Math.max(30, rec.where?.uncertainty_km || 40)} }`, caption: rec.summary || rec.title }];
@@ -401,12 +403,12 @@
     layer = new THREE.Group(); ctx.globe.scene().add(layer);
     active = rec;
     const color = new THREE.Color(ctx.color || '#d9b36a');
-    const beats = beatsFor(rec), wp = rec.where?.geometry?.waypoints || [], regions = rec.where?.geometry?.regions || [];
+    const beats = beatsFor(rec), wpAll = rec.where?.geometry?.waypoints || [], wp = wpAll.filter(w => !w.via), regions = rec.where?.geometry?.regions || [];
     const total = rec.animation?.duration_s ? rec.animation.duration_s * 1000 : beats.length * 6000;
     const per = Math.max(4200, Math.min(9000, total / beats.length));
     const home = { lat: rec.where?.lat ?? 0, lng: rec.where?.lon ?? 0 }, ride = p => (ctx.ride ? ctx.ride(p) : p);
     beatCount = beats.length; cur = 0; ctx.onStart(beats.length);
-    const view = wp.length >= 2 ? routeView(ctx, wp) : null;
+    const view = wp.length >= 2 ? routeView(ctx, wpAll) : null;
     let wpIndex = 0, trace = null;
     // a beat that moves along the route: a route verb, or a moving marker/person that names where it goes ("marker.pin" stays put)
     const isPath = (name, params = {}) => wp.length >= 2 && (/path|trace|route|march|voyage|migrat/.test(name) || /person|marker/.test(name) && Array.isArray(params.to));
@@ -448,7 +450,7 @@
       for (let j = 0; j < t; j++) {
         const { name, params } = parseAction(beats[j].action), at = ride(placeOf(j, params)), sc = sceneFor(j, name, params);
         if (sc) { if (sc.type === 'plates') ctx.setTime(-sc.to_ma * 1e6); after(name, params); continue; }
-        if (isPath(name, params)) { trace = trace || traceLine(ctx, wp, color); trace.draw(pathEnd(params)); }
+        if (isPath(name, params)) { trace = trace || traceLine(ctx, wpAll, color); trace.draw(pathEnd(params)); }
         else if (/region|fill|area|front/.test(name)) surfaceRing(ctx, at.lat, at.lng, params.radius_km || (params.radius_m ? params.radius_m / 1000 : 200), color, true);
         after(name, params);
       }
@@ -497,7 +499,7 @@
       }
       const at = ride(placeOf(i, params));
       if (isPath(name, params)) {
-        trace = trace || traceLine(ctx, wp, color);
+        trace = trace || traceLine(ctx, wpAll, color);
         const from = trace.drawn, to = pathEnd(params);
         const follow = reduced ? null : follower(ctx, view ? view.follow : 0.5), tip = new THREE.Vector3();
         await tween(per, k => {

@@ -132,7 +132,7 @@
   ],
   "reviewer_note": "The pin is the city of Mannheim, where Benz had his factory; the sources opened do not give its address. One source is the carmaker's own public archive, so its praise was left out.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:52:38.046Z",
   "changelog": [
     {
@@ -145,5 +145,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1886-01-29",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On 29 January 1886 Carl Benz of Mannheim applied for a patent on his three-wheeled vehicle with a gas engine, and it was granted on 2 November.",
+        "source": "src-dpma-benz"
+      },
+      {
+        "span": "1886",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He first drove it in public around Mannheim on 3 July 1886.",
+        "source": "src-dpma-benz",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

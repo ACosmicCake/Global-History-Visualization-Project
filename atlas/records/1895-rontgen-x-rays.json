@@ -128,7 +128,7 @@
   ],
   "reviewer_note": "Röntgen is the accepted discoverer, but the Busch review sets out earlier observations and rival claims of priority. The pin is the Röntgen memorial at Röntgenring 8a, Würzburg.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:50:37.645Z",
   "changelog": [
     {
@@ -141,5 +141,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1895-11-08",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "On the evening of 8 November 1895 at the University of Würzburg, Wilhelm Conrad Röntgen found that a plate coated with barium platinocyanide glowed even when his discharge…",
+        "source": "src-nobel-rontgen"
+      },
+      {
+        "span": "1895",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "He received the very first Nobel Prize in Physics in 1901.",
+        "source": "src-nobel-rontgen",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

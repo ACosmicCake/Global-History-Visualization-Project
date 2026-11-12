@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Paper money",
   "summary": "To avoid carrying strings of coins, merchants in late Tang China, around 900 CE, began trading receipts from deposit shops. In the 1020s the Song government took over the system, producing the world's first government-issued paper money. High inflation made it almost obsolete in the late 13th century, though Marco Polo reported its wide use under the Yuan. In Europe, Stockholms Banco issued the first real banknotes in 1661. Its success ended in a bank failure.",
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "900",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "To avoid carrying strings of coins, merchants in late Tang China, around 900 CE, began trading receipts from deposit shops.",
+        "source": "src-columbia-papermoney"
+      },
+      {
+        "span": "1661",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In the 1020s the Song government took over the system, producing the world's first government-issued paper money.",
+        "source": "src-columbia-papermoney",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

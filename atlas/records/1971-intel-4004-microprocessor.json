@@ -135,7 +135,7 @@
   ],
   "reviewer_note": "The pin is approximate: Santa Clara is where a source places an Intel facility, but no source opened says where the 4004 was designed. Only the year 1971 and the November advertisement are dated. Stanley Mazor also worked on the architecture.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "changelog": [
     {
       "date": "2026-11-04",
@@ -148,5 +148,26 @@
       "change": "corrected"
     }
   ],
-  "published_at": "2026-11-04T15:56:38.707Z"
+  "published_at": "2026-11-04T15:56:38.707Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1971",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1971 Intel introduced the 4004, advertised that November as the first commercially available microprocessor.",
+        "source": "src-chm-4004"
+      },
+      {
+        "span": "1971",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It began as a contract for the Japanese calculator company Busicom, when Ted Hoff proposed a general-purpose 4-bit computer on four chips.",
+        "source": "src-chm-4004",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

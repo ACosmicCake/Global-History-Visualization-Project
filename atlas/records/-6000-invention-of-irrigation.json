@@ -155,7 +155,7 @@
   ],
   "reviewer_note": "Choga Mami is an early example, not proof of the first. The pin marks Choga Mami.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T00:04:28.554Z",
   "changelog": [
     {
@@ -163,5 +163,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-5000",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "An irrigation canal more than 7,000 years old has been found at Choga Mami, 110 km east of Baghdad.",
+        "source": "src-carling-2013"
+      },
+      {
+        "span": "-5000",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "In Mesopotamia, artificial irrigation became a key innovation as people moved into the floodplains, where they could not rely on rain alone.",
+        "source": "src-carling-2013",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -138,7 +138,7 @@
   ],
   "reviewer_note": "Earlier national feeling existed, and historians date this differently. The record ends at German unification, though nationalism continues. The pin at Paris marks the 1789 declaration.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:56:55.746Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1789",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "France's 1789 Declaration of the Rights of Man held that all sovereignty resides essentially in the nation.",
+        "source": "src-yale-avalon-rights"
+      },
+      {
+        "span": "1871",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "As a consequence of the French Revolution and its wars, the idea of a nation began to give people a sense of belonging.",
+        "source": "src-yale-avalon-rights",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -4,7 +4,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "id": "-0130-silk-roads-network",
   "kind": "process",
   "title": "The Silk Roads",
@@ -159,5 +159,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-130",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Silk Road was a network of trade routes linking regions of the ancient world.",
+        "source": "src-unesco-1442"
+      },
+      {
+        "span": "1453",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In 138 BCE Emperor Wu sent his emissary Zhang Qian west, and Han China officially opened trade with the west in 130 BCE.",
+        "source": "src-unesco-1442",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

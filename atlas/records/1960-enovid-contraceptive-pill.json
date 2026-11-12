@@ -149,7 +149,7 @@
   ],
   "reviewer_note": "PBS gives 11 May 1960 for the announcement, while the Embryo Project says summer 1960. Enovid was already approved for menstrual disorders from 1957. The pin marks the FDA's city, Washington.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "changelog": [
     {
       "date": "2026-11-04",
@@ -162,5 +162,26 @@
       "change": "corrected"
     }
   ],
-  "published_at": "2026-11-04T15:55:38.623Z"
+  "published_at": "2026-11-04T15:55:38.623Z",
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1960-05-11",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "D.",
+        "source": "src-pbs-pill"
+      },
+      {
+        "span": "1960",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Margaret Sanger and Katharine McCormick backed the research by Gregory Pincus, Min-Chueh Chang and John Rock, some of it unethical by today's standards.",
+        "source": "src-pbs-pill",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

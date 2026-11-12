@@ -129,7 +129,7 @@
     }
   ],
   "reviewer_note": "There is no agreed start date. The sources cover its beginnings, not its wider effects on society. The pin marks ENIAC in Philadelphia, and the change itself is worldwide.",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:56:58.744Z",
   "changelog": [
     {
@@ -137,5 +137,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "In 1945 John von Neumann outlined the architecture of a stored-program computer in a widely circulated paper.",
+        "source": "src-upenn-eniac"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "ENIAC, announced on February 14, 1946 at the University of Pennsylvania, was the first general-purpose electronic computer.",
+        "source": "src-upenn-eniac",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

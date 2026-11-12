@@ -124,7 +124,7 @@
   ],
   "reviewer_note": "Banking has older roots, and these sources do not call this its origin. One of the two sources is a finance blog. The pin marks Florence.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:29.960Z",
   "changelog": [
     {
@@ -132,5 +132,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1300",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "At the start of the 14th century, merchant companies of Florence such as the Bardi and Peruzzi were well established.",
+        "source": "src-bho-bardi"
+      },
+      {
+        "span": "1345",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "They collapsed around 1345.",
+        "source": "src-bho-bardi",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

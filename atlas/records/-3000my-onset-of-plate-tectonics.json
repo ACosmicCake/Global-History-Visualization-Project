@@ -139,7 +139,7 @@
     }
   ],
   "reviewer_note": "This is one line of evidence, and other studies date the start of plate tectonics differently. The pin in South Africa is a stand-in, not where tectonics began.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T00:04:22.039Z",
   "changelog": [
     {
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3200000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Mineral inclusions in ancient diamonds suggest continents started breaking apart, drifting and colliding about three billion years ago.",
+        "source": "src-uct-diamonds2011"
+      },
+      {
+        "span": "-3000000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "0 billion years ago eclogitic diamonds became prevalent.",
+        "source": "src-uct-diamonds2011",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

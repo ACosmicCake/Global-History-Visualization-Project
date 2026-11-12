@@ -149,7 +149,7 @@
   ],
   "reviewer_note": "The date range applies to the Near East. Penn Museum authors caution that systematic use of tin there is hard to show before the end of the 3rd millennium BCE. The pin at Uruk is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:39:19.559Z",
   "changelog": [
     {
@@ -157,5 +157,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3300",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Bronze Age followed the Stone Age and preceded the Iron Age, when weapons and tools were made of bronze, an alloy of tin and copper.",
+        "source": "src-history-bronze-age"
+      },
+      {
+        "span": "-1200",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "It began in the Near East and southeastern Europe in the late 4th and early 3rd millennium BCE, and in the Middle East lasted until about 1200 BCE.",
+        "source": "src-history-bronze-age",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

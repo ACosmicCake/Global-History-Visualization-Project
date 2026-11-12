@@ -155,7 +155,7 @@
   ],
   "reviewer_note": "The date of about 450 BCE follows the Roman tradition for the Twelve Tables, whose text survives only in later quotations. The pin at Rome is a stand-in for a legal tradition now used worldwide.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "published_at": "2026-11-11T16:29:49.022Z",
   "changelog": [
     {
@@ -163,5 +163,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-450",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Roman law began, by tradition, with the Twelve Tables of about 450 BCE.",
+        "source": "src-yale-avalon-twelve-tables"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Today the civil-law tradition built on it, with written codes rather than judicial precedent, is the most widely adopted legal system, found across Europe, Latin America, Asia and…",
+        "source": "src-yale-avalon-twelve-tables",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

@@ -138,7 +138,7 @@
   ],
   "reviewer_note": "Earlier mathematicians prepared the way. The pin marks Woolsthorpe, though Leibniz worked elsewhere.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:20.791Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1665",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Isaac Newton invented calculus in the mid to late 1660s, while at home in Woolsthorpe when plague closed his university.",
+        "source": "src-sep-newton"
+      },
+      {
+        "span": "1675",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "By 1675 Leibniz had settled on the notation still written today.",
+        "source": "src-sep-newton",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

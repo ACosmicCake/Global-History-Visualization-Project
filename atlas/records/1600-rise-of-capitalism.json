@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Rise of capitalism",
   "summary": "Capitalism is generally described by private ownership of productive assets, labour hired for wages, and competitive markets. Its development is officially dated to the 16th century, though markets and profits are thousands of years old. Large chartered trading companies appeared in this period: the English East India Company in 1600 and the Dutch East India Company in 1602, whose stock became enormously valuable at its height.",
@@ -173,5 +173,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1501",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Capitalism is generally described by private ownership of productive assets, labour hired for wages, and competitive markets.",
+        "source": "src-whe-eic"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Large chartered trading companies appeared in this period: the English East India Company in 1600 and the Dutch East India Company in 1602, whose stock became enormously valuable…",
+        "source": "src-whe-eic",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

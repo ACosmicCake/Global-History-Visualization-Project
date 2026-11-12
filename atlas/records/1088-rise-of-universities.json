@@ -124,7 +124,7 @@
   ],
   "reviewer_note": "The 1088 date has been traditionally celebrated for about 150 years. Older centres of learning elsewhere, such as Al-Qarawiyyin and Nalanda, have their own records. The second source is a popular history site.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:28.007Z",
   "changelog": [
     {
@@ -132,5 +132,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1088",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The University of Bologna says its Studium, established around 1088 by tradition, is what turned a village into a medieval metropolis.",
+        "source": "src-unibo-history"
+      },
+      {
+        "span": "1200",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "This outline covers Bologna, often described as the first university in the Western world, as the start of the European university.",
+        "source": "src-unibo-history",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

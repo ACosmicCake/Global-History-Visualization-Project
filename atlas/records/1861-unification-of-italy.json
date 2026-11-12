@@ -128,7 +128,7 @@
   ],
   "reviewer_note": "The date marks the proclamation; unification was completed by 1871. The pin is the city of Turin.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T17:00:31.331Z",
   "changelog": [
     {
@@ -141,5 +141,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1861",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The unification of Italy was proclaimed on 17 March 1861 at Palazzo Carignano in Turin, where the Chamber of Deputies sat.",
+        "source": "src-museo"
+      },
+      {
+        "span": "1861",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "The new Kingdom of Italy joined most of the peninsula under the House of Savoy, with Victor Emmanuel II as its first king.",
+        "source": "src-museo",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

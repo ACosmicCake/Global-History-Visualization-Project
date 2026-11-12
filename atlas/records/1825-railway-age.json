@@ -138,7 +138,7 @@
   ],
   "reviewer_note": "Trevithick ran earlier steam railway engines from 1803. Railways later spread worldwide, including the records for Japan and the Trans-Siberian, but this outline covers Britain. The end date is approximate.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:57:37.802Z",
   "changelog": [
     {
@@ -146,5 +146,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1825-09-27",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Canals had long been Britain's best way to move goods, but railways offered a cheaper and much faster alternative.",
+        "source": "src-smg-locomotion"
+      },
+      {
+        "span": "1914",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "On 27 September 1825 the Locomotion, on the opening day of the Stockton and Darlington Railway, carried the first railway passengers in northeast England.",
+        "source": "src-smg-locomotion",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

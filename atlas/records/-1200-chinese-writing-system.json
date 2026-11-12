@@ -129,7 +129,7 @@
   ],
   "reviewer_note": "Earlier marks on pottery may be early forms of Chinese graphs, so the start date is for full writing. The record covers its origin, not its later spread. The pin marks Yin Xu, near Anyang.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:06:16.268Z",
   "changelog": [
     {
@@ -137,5 +137,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1200",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "China's written history begins around 1200 BCE with inscriptions on tortoise shells and cattle bones used for divination in the Shang dynasty.",
+        "source": "src-columbia-afe"
+      },
+      {
+        "span": "-1046",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "The script evolved into the standard Chinese logographic writing system still in use today.",
+        "source": "src-columbia-afe",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

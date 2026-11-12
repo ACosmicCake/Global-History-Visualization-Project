@@ -161,7 +161,7 @@
   ],
   "reviewer_note": "The dates follow the Abbasid dynasty, and some scholars extend the period beyond 1258. Specific advances in mathematics, medicine and optics are left out because the sources opened here do not detail them. The pin is Baghdad.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T17:00:35.256Z",
   "changelog": [
     {
@@ -179,5 +179,26 @@
       "version": 3,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "750",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Under the Abbasid caliphs, who took power in 750, Baghdad became a centre of learning.",
+        "source": "src-whe-abbasid"
+      },
+      {
+        "span": "1258",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Abbasid rule ended when the Mongols destroyed Baghdad in 1258.",
+        "source": "src-whe-abbasid",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

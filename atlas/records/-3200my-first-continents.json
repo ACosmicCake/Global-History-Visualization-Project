@@ -135,7 +135,7 @@
   ],
   "reviewer_note": "Whether plate tectonics was needed for this is debated. The pin in Jharkhand, India, marks the study area and is a stand-in for a global process.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:12.159Z",
   "changelog": [
     {
@@ -143,5 +143,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-3300000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "2 billion years ago.",
+        "source": "src-pnas-chowdhury2021"
+      },
+      {
+        "span": "-3000000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Sandstones there formed in rivers and shallow seas, and would once have formed some of the world's first beaches.",
+        "source": "src-pnas-chowdhury2021",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

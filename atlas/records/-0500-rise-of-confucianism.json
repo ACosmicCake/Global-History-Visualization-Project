@@ -136,7 +136,7 @@
   ],
   "reviewer_note": "The sources opened date its adoption only to the Han dynasty, so the end year marks the start of the Han. Confucius's own dates are traditional. The pin is Qufu in Shandong, as a proxy.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T17:00:28.077Z",
   "changelog": [
     {
@@ -144,5 +144,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-550",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Confucianism grew from the teachings of Confucius (traditionally 551–479 BCE), who was born in the domain of Zou, in modern Shandong.",
+        "source": "src-plato-confucius"
+      },
+      {
+        "span": "-201",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It developed in 6th-century BCE China and taught that a moral code and ritual led to a productive and peaceful life, with virtues including benevolence, righteousness and filial…",
+        "source": "src-plato-confucius",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

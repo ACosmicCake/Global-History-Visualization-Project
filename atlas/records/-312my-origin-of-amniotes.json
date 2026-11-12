@@ -158,7 +158,7 @@
   ],
   "reviewer_note": "The date is an estimate from many studies. The pin marks Joggins, one key fossil site, not where amniotes began.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T00:04:24.512Z",
   "changelog": [
     {
@@ -166,5 +166,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-319000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Amniotes, the group that includes reptiles, birds and mammals, lay a special kind of egg.",
+        "source": "src-pmc12119326"
+      },
+      {
+        "span": "-308500000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "At Joggins in Nova Scotia, Hylonomus lyelli is described as the first true reptile.",
+        "source": "src-pmc12119326",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

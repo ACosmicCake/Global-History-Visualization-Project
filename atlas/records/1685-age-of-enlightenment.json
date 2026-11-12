@@ -160,7 +160,7 @@
   ],
   "reviewer_note": "Dates vary: one source uses a long 18th century of 1685–1815, while this record ends at 1789. The pin is Paris, home of the philosophes, as a proxy for a movement across two continents.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:46:22.067Z",
   "changelog": [
     {
@@ -168,5 +168,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1685",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "The Enlightenment was a revolution in thought in Europe and North America from the late 17th to the late 18th century.",
+        "source": "src-history-enlightenment"
+      },
+      {
+        "span": "1789",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Its heart lay among the French philosophes, including Voltaire, Montesquieu and Diderot, whose Encyclopedia became its central work.",
+        "source": "src-history-enlightenment",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

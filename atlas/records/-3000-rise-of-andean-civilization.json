@@ -4,7 +4,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "id": "-3000-rise-of-andean-civilization",
   "kind": "process",
   "title": "Rise of Andean civilization",
@@ -132,5 +132,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-2999",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "In the Initial Formative period, from 3000 to 1800 BCE, the Sacred City of Caral and 24 other centres with monumental architecture rose in coastal Peru.",
+        "source": "src-scirep-caral"
+      },
+      {
+        "span": "-1799",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "Its settlements had public buildings and sunken circular plazas.",
+        "source": "src-scirep-caral",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

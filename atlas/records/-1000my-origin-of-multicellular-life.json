@@ -134,7 +134,7 @@
   ],
   "reviewer_note": "The two sources date Bangiomorpha differently. The pin is a stand-in, because neither opened source gives a location I could use.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:39:13.325Z",
   "changelog": [
     {
@@ -142,5 +142,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1200000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "2 billion in another study.",
+        "source": "src-primer3-multicellularity"
+      },
+      {
+        "span": "-1000000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "This fossil gives a minimum age for complex multicellular life, not the moment it began.",
+        "source": "src-primer3-multicellularity",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

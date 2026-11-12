@@ -139,7 +139,7 @@
   ],
   "reviewer_note": "Timing rests on fossils whose identity is debated. The pin is an arbitrary stand-in: these cells have no known place of origin.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T21:39:12.657Z",
   "changelog": [
     {
@@ -147,5 +147,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1800000000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Eukaryotic cells have a nucleus, a sophisticated endomembrane system and mitochondria, the last from an ancient endosymbiosis with a proteobacterium.",
+        "source": "src-ucmp-eukaryota"
+      },
+      {
+        "span": "-1600000000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "How this complex cell evolved is still a puzzle, partly because few living intermediates remain.",
+        "source": "src-ucmp-eukaryota",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

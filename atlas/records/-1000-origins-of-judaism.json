@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "Origins of Judaism",
   "summary": "Israelites remained henotheists, focusing on one supreme god among many, through the time of the Judges and the Kingdom of Israel. The Kingdom of Judah survived until 586 BCE, when the Babylonians conquered it, Jerusalem fell, and its people went into exile. Those who gave the Hebrew scriptures their final form held an ethical monotheistic perspective, and tried to impose it on their older source material.",
@@ -137,5 +137,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1080",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Israelites remained henotheists, focusing on one supreme god among many, through the time of the Judges and the Kingdom of Israel.",
+        "source": "src-worldhistory-yahweh"
+      },
+      {
+        "span": "-586",
+        "action": "pulse { radius_km: 480 }",
+        "caption": "The Kingdom of Judah survived until 586 BCE, when the Babylonians conquered it, Jerusalem fell, and its people went into exile.",
+        "source": "src-worldhistory-yahweh",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

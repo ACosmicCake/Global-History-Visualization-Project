@@ -5,7 +5,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "kind": "process",
   "title": "The sovereign state system",
   "summary": "A system of sovereign states developed in Europe, culminating at the Peace of Westphalia in 1648, after which interference in other states' governing prerogatives became illegitimate. Medieval popes, emperors, kings and nobles had lacked supreme authority within a territory. The form spread worldwide over three centuries. With the decline of European colonial empires in the mid-20th century, the state became the only polity ever to cover the globe's entire land surface.",
@@ -144,5 +144,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1648",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "A system of sovereign states developed in Europe, culminating at the Peace of Westphalia in 1648, after which interference in other states' governing prerogatives became illegitimate.",
+        "source": "src-stanford-sovereignty"
+      },
+      {
+        "span": "2026",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "The form spread worldwide over three centuries.",
+        "source": "src-stanford-sovereignty",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

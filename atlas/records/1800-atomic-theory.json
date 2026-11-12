@@ -144,7 +144,7 @@
   ],
   "reviewer_note": "Ideas about atoms are ancient; this outline covers the chemical theory. The pin marks Manchester.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:21.684Z",
   "changelog": [
     {
@@ -152,5 +152,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1799",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "John Dalton, working in Manchester, is best known for his pioneering theory of atomism.",
+        "source": "src-shi-dalton"
+      },
+      {
+        "span": "1808",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "He published the basic features of his chemistry in 1808, which became the starting point for chemical formulae.",
+        "source": "src-shi-dalton",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

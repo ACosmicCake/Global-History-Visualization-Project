@@ -149,7 +149,7 @@
   ],
   "reviewer_note": "This outline covers Central and East Asia. Spread to Southeast Asia, Korea, Japan and Tibet has other records. Dates are approximate. The pin marks Taxila.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T04:35:16.985Z",
   "changelog": [
     {
@@ -157,5 +157,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-500",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Taxila, in present-day Pakistan, was an important Buddhist centre of learning from the 5th century BCE to the 2nd century CE.",
+        "source": "src-penn-waugh2010"
+      },
+      {
+        "span": "600",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "During the 2nd century CE, Buddhism began to spread vigorously into Central Asia and China with the active support of local rulers.",
+        "source": "src-penn-waugh2010",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

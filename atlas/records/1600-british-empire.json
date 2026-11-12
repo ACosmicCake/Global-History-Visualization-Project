@@ -173,7 +173,7 @@
   ],
   "reviewer_note": "An empire has no agreed start or end, so 1600 and 1997 are conventions. The sources opened do not give its size, so figures for its area and population were left out. The pin is London as a proxy.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T17:00:29.726Z",
   "changelog": [
     {
@@ -181,5 +181,26 @@
       "version": 1,
       "change": "new"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1600",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1600 Elizabeth I granted London merchants a royal charter with exclusive rights over English trade east of the Cape of Good Hope, founding the East India Company.",
+        "source": "src-rmg-traders"
+      },
+      {
+        "span": "1997",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Hong Kong's return to China on 1 July 1997 ended British rule there.",
+        "source": "src-rmg-traders",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

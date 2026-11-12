@@ -149,7 +149,7 @@
   ],
   "reviewer_note": "Whether the oldest fossils are true insects is disputed, and how wings evolved is unknown.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:32.465Z",
   "changelog": [
     {
@@ -157,5 +157,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-411000000",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The first fossils that should represent insects come from Devonian rocks as old as 400 million years, but most are problematic.",
+        "source": "src-haug2017"
+      },
+      {
+        "span": "-299000000",
+        "action": "pulse { radius_km: 160 }",
+        "caption": "Its Rhyniognatha is read by one study as the first true insect and by another as an early centipede.",
+        "source": "src-haug2017",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

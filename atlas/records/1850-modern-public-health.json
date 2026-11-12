@@ -143,7 +143,7 @@
   ],
   "reviewer_note": "Public health is only part of the rise in life expectancy, alongside medicine, nutrition and living standards. The pin at London is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:49.584Z",
   "changelog": [
     {
@@ -151,5 +151,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1848",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "England's Public Health Act of 1848 aimed mainly to help build water supplies and sewerage, and it set up local and central units of government responsible for health.",
+        "source": "src-bmj-pmc1113797"
+      },
+      {
+        "span": "2021",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In the United States, improved sanitation dramatically reduced typhoid and cholera, and public health accounts for about 25 years of the gain in lifespan since 1900.",
+        "source": "src-bmj-pmc1113797",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

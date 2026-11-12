@@ -129,7 +129,7 @@
   ],
   "reviewer_note": "One review gives 18.27% for 1847 and 1.27% for 1848. Those may not be full-year figures, so the summary leaves out the year labels and rounds them. No exact day in 1847 was confirmed.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:51:37.878Z",
   "changelog": [
     {
@@ -142,5 +142,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1847",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "In 1847 at Vienna General Hospital, the Hungarian physician Ignaz Semmelweis concluded that cadaverous particles on doctors' hands from the morgue were causing deadly fever in mothers at…",
+        "source": "src-tariq2024-pmc"
+      },
+      {
+        "span": "1847",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Reported mortality fell from about 18% to under 2%.",
+        "source": "src-tariq2024-pmc",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

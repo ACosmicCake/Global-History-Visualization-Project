@@ -168,7 +168,7 @@
   ],
   "reviewer_note": "Dates depend on indirect evidence, because wooden ploughs rarely survive. The pin in Mesopotamia is a stand-in.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "published_at": "2026-11-05T00:04:29.222Z",
   "changelog": [
     {
@@ -176,5 +176,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-4000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "World History Encyclopedia says wooden plows were likely invented in the 4th millennium BCE in Mesopotamia.",
+        "source": "src-whe-agriculture-plough"
+      },
+      {
+        "span": "-3000",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "In northern Europe, cultivation with the cattle-driven ard, a simple plough, is argued to have spread with land clearance from about 3500 BCE.",
+        "source": "src-whe-agriculture-plough",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

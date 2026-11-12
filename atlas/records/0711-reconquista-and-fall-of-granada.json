@@ -170,7 +170,7 @@
   ],
   "reviewer_note": "Reconquista is a later label, and historians debate when these wars became religiously motivated. The pin is Granada, site of the final surrender.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T16:44:21.475Z",
   "changelog": [
     {
@@ -183,5 +183,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "711",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Muslim forces conquered Visigothic Spain from 711.",
+        "source": "src-fordham-conqspain"
+      },
+      {
+        "span": "1492",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It fell to Isabella of Castile and Ferdinand of Aragon on 2 January 1492, ending what World History Encyclopedia calls a 770-year military effort.",
+        "source": "src-fordham-conqspain",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

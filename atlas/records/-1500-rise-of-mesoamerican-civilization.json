@@ -4,7 +4,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "id": "-1500-rise-of-mesoamerican-civilization",
   "kind": "process",
   "title": "Rise of Mesoamerican civilization",
@@ -142,5 +142,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1500",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "The Olmec of Mexico's Gulf lowlands were one of the earliest complex societies of ancient Mesoamerica.",
+        "source": "src-encyclopedia-sanlorenzo"
+      },
+      {
+        "span": "-400",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Olmec influence and trade spread from 1200 BCE as far south as present-day Nicaragua.",
+        "source": "src-encyclopedia-sanlorenzo",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

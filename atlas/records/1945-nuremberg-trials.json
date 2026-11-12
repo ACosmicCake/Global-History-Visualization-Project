@@ -140,7 +140,7 @@
   ],
   "reviewer_note": "The US Holocaust Memorial Museum says 24 were indicted and 22 stood trial. It dates the verdict to 1 October 1946. The later Nuremberg proceedings are separate and not covered here.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-04",
+  "updated": "2026-11-12",
   "published_at": "2026-11-04T15:43:36.935Z",
   "changelog": [
     {
@@ -153,5 +153,26 @@
       "version": 2,
       "change": "corrected"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1945-11-20",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "From 20 November 1945 to 1 October 1946, an International Military Tribunal set up by the United States, Britain, France and the Soviet Union sat in Nuremberg's Palace…",
+        "source": "src-ushmm-imt"
+      },
+      {
+        "span": "1946",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "It established crimes against humanity as crimes under international law.",
+        "source": "src-ushmm-imt",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

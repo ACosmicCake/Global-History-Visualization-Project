@@ -128,7 +128,7 @@
   ],
   "reviewer_note": "Whether pottery was invented once or several times is open. The pin marks Yuchanyan Cave, one of the earliest dated sites.",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "published_at": "2026-11-09T04:56:33.329Z",
   "changelog": [
     {
@@ -136,5 +136,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-18000",
+        "action": "pulse { radius_km: 30 }",
+        "caption": "Pottery first emerged among East Asian hunter-gatherers towards the end of the Late Pleistocene, long before it spread across northern Eurasia.",
+        "source": "src-boaretto2009"
+      },
+      {
+        "span": "-13480",
+        "action": "pulse { radius_km: 48 }",
+        "caption": "Pottery became common worldwide.",
+        "source": "src-boaretto2009",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }

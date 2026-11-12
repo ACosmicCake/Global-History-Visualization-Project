@@ -4,7 +4,7 @@
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-05",
+  "updated": "2026-11-12",
   "id": "-2000-babylonian-astronomy-and-mathematics",
   "kind": "process",
   "title": "Babylonian astronomy and mathematics",
@@ -133,5 +133,26 @@
       "version": 1,
       "change": "outline"
     }
-  ]
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-1999",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Babylonian civilization replaced that of the Sumerians from around 2000 BCE, and built on their sexagesimal, or base 60, counting.",
+        "source": "src-standrews-babmath"
+      },
+      {
+        "span": "-599",
+        "action": "pulse { radius_km: 640 }",
+        "caption": "Babylonian mathematicians solved quadratic equations and divided the day into 24 hours, each hour into 60 minutes and each minute into 60 seconds, a count that has survived…",
+        "source": "src-standrews-babmath",
+        "consequence": true
+      }
+    ],
+    "generated": "template from summary (atlas/tools/animate.mjs)"
+  }
 }
