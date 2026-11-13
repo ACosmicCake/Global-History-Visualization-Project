@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "person-thomas-aquinas",
+  "kind": "person",
+  "title": "Thomas Aquinas and scholasticism",
+  "summary": "Thomas Aquinas, born around 1225 into a family whose castle stood at Roccasecca, joined the new Dominican order as a student in Naples. He studied in Paris and under Albert the Great in Cologne, then taught theology at the University of Paris. Drawing especially on Aristotle, he fused Greek philosophy with Christian theology in works such as the Summa contra gentiles and the Summa theologiae, models of the universities' scholastic method. He died in 1274; in 1879 Pope Leo XIII held him up as the model Christian philosopher.",
+  "when": {
+    "start": {
+      "year": 1225
+    },
+    "end": {
+      "year": 1274,
+      "iso": "1274-03-07"
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 1,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Born between 1224 and 1226 at Roccasecca; died 7 March 1274 at Fossanova Abbey."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Between antiquity and modernity stands Thomas Aquinas (ca. 1225–1274)... died, in the Cistercian abbey of Fossanova, on March 7, 1274.",
+        "source": "src-sep-aquinas"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "St. Thomas Aquinas was born sometime between 1224 and 1226 in Roccasecca, Italy, near Naples.",
+        "source": "src-iep-aquinas"
+      }
+    ],
+    "display": "c. 1225 – 7 March 1274"
+  },
+  "where": {
+    "lat": 41.55132,
+    "lon": 13.66711,
+    "elevation_m": 205,
+    "modern_name": "Roccasecca, Frosinone, Lazio, Italy",
+    "historical_name": "Roccasecca castle, Terra di Lavoro, Kingdom of Sicily",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-gn-roccasecca"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "people",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "His synthesis of Aristotle and Christian theology became the core of Catholic philosophy (R3 D2 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-aristotle",
+      "type": "related",
+      "because": "Aquinas drew above all on Aristotle and wrote commentaries on his principal works (SEP)."
+    },
+    {
+      "id": "1088-rise-of-universities",
+      "type": "related",
+      "because": "SEP calls his work the epitome of the scholastic method of the newly founded universities; he taught at Paris."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sep-aquinas",
+      "url": "https://plato.stanford.edu/entries/aquinas/",
+      "title": "Thomas Aquinas",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "author": "Robert Pasnau",
+      "date_published": "2022-12-07",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-iep-aquinas",
+      "url": "https://iep.utm.edu/aquinas/",
+      "title": "Thomas Aquinas",
+      "publisher": "Internet Encyclopedia of Philosophy",
+      "author": "Christopher M. Brown",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-roccasecca",
+      "url": "https://www.geonames.org/3169135/roccasecca.html",
+      "title": "Roccasecca, Lazio, Italy (GeoNames 3169135)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1225",
+        "action": "pulse { radius_km: 15 }",
+        "caption": "Thomas Aquinas is born near Aquino at the castle of Roccasecca.",
+        "source": "src-iep-aquinas",
+        "consequence": false
+      },
+      {
+        "span": "1274-03-07",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Aquinas dies at Fossanova Abbey, leaving a philosophical synthesis of Christian theology and Aristotelian philosophy.",
+        "source": "src-sep-aquinas",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from SEP and IEP; unrelated Magna Carta and Holy Roman Empire links replaced with Aristotle and the rise of universities. Pin at Roccasecca, the family castle (SEP: born near Aquino).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:36:47.834Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

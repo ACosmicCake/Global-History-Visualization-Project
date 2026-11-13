@@ -1,0 +1,159 @@
+{
+  "id": "1607-english-colonization-of-north-america",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "English colonization of North America",
+  "summary": "After failed attempts at Roanoke and Newfoundland, the Virginia Company of London founded Jamestown on the James River in 1607, England's first permanent settlement in North America. Disease, hunger and conflict with the Powhatan confederacy marked its first years, until tobacco became a cash crop. In 1619 Virginia held the first representative assembly in what is now the United States, and the first documented Africans were forcibly brought there to work. English colonies spread along the coast; in 1776 thirteen of them declared independence from Britain.",
+  "when": {
+    "start": {
+      "year": 1607
+    },
+    "end": {
+      "year": 1776
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Exact calendar years for the founding of Jamestown (1607) and the Declaration of Independence (1776)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In 1607, 104 English men and boys arrived in North America to start a settlement. On May 13 they picked Jamestown, Virginia for their settlement",
+        "source": "src-nps-jamestown"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "England established its first permanent North American settlement, Jamestown, in 1607",
+        "source": "src-uh-colonization"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "By issuing the Declaration of Independence, adopted by the Continental Congress on July 4, 1776, the 13 American colonies severed their political connections to Great Britain",
+        "source": "src-state-declaration"
+      }
+    ],
+    "display": "1607–1776"
+  },
+  "where": {
+    "lat": 37.2092,
+    "lon": -76.7775,
+    "elevation_m": 4,
+    "modern_name": "Jamestown, Virginia, United States",
+    "historical_name": "Jamestown, Colony of Virginia, Kingdom of England",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wikidata-jamestown"
+    ]
+  },
+  "regions": [
+    "northern_america"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Planted the English-speaking settler society, representative assemblies and slavery from which the United States grew (R3 D3 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions the forced transport of enslaved Africans and conflict with Native peoples.",
+  "related": [
+    {
+      "id": "1775-american-revolution",
+      "type": "caused",
+      "because": "Tensions over British imperial administration, taxation, and colonial self-governance culminated directly in the American Revolutionary War."
+    },
+    {
+      "id": "1803-us-westward-expansion",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nps-jamestown",
+      "url": "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm",
+      "title": "A Short History of Jamestown",
+      "publisher": "U.S. National Park Service",
+      "author": "National Park Service",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-uh-colonization",
+      "url": "https://www.digitalhistory.uh.edu/disp_textbook.cfm?smtID=2&psid=3574",
+      "title": "English Colonization Begins",
+      "publisher": "University of Houston",
+      "author": "Steven Mintz",
+      "date_published": "2021",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-state-declaration",
+      "url": "https://history.state.gov/milestones/1776-1783/declaration",
+      "title": "The Declaration of Independence, 1776",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "Office of the Historian",
+      "date_published": "2020",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-jamestown",
+      "url": "https://www.wikidata.org/wiki/Q323813",
+      "title": "Jamestown",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from NPS, Digital History (UH) and State Department pages; \"transatlantic trade networks\" and \"economic and political maturity\" wording dropped as unsourced. The spread of the colonies between Jamestown and 1776 is stated only in outline.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:36:40.745Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

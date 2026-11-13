@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0800-feudalism-and-manorialism",
+  "kind": "process",
+  "title": "Feudalism and manorialism in medieval Europe",
+  "summary": "Feudalism is the name historians give to the bonds of lordship and land that ordered western European society between the eighth and fifteenth centuries. A lord granted a vassal a fief, usually land, in return for an oath of homage and service, often military; the Carolingian kings fostered the system. Its smallest unit was the manor, where the lord kept a demesne worked by serfs bound to the land by heredity. Historians still debate its roots, and it waned as monarchs built centralised states.",
+  "when": {
+    "start": {
+      "year": 800
+    },
+    "end": {
+      "year": 1500
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 50,
+      "end_plus_years": 50,
+      "note": "Emerged in the post-Roman and Carolingian era during the eighth and ninth centuries, persisting as the dominant agrarian and aristocratic framework until early modern centralized states and commercial markets displaced them."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "used variously to describe legal, political, military, social, and economic features of western European society between the eighth and the fifteenth centuries.",
+        "source": "src-encyc-feudalism"
+      },
+      {
+        "calendar": "CE",
+        "value": "The Capitulary De Villis 9th Century [Extracts] We desire that each steward shall make an annual statement of all our income, giving an account of our lands cultivated by the oxen which our own plowmen drive and of our lands which the tenants of farms ought to plow",
+        "source": "src-fordham-devillis"
+      }
+    ],
+    "display": "c. 8th to 15th centuries CE"
+  },
+  "where": {
+    "lat": 50.774747,
+    "lon": 6.08392,
+    "elevation_m": 173,
+    "modern_name": "Aachen Cathedral, Aachen, Germany (stand-in pin at Charlemagne's palace chapel)",
+    "historical_name": "Aachen (Aquisgranum), Carolingian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-unesco-aachen"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Ordered landholding, war and peasant labour across western Europe for some seven centuries (R3 D3 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-carolingian-empire",
+      "type": "related"
+    },
+    {
+      "id": "0843-treaty-of-verdun",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyc-feudalism",
+      "url": "https://www.encyclopedia.com/history/modern-europe/ancient-history-middle-ages-and-feudalism/feudalism",
+      "title": "Feudalism",
+      "publisher": "Encyclopedia.com (Gale / Macmillan / Scribner)",
+      "author": "Fredric L. Cheyette",
+      "date_published": "2004",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-fordham-devillis",
+      "url": "https://sourcebooks.fordham.edu/source/carol-devillis.asp",
+      "title": "The Capitulary De Villis, 9th Century [Extracts]",
+      "publisher": "Internet Medieval Sourcebook (Center for Medieval Studies, Fordham University)",
+      "author": "Paul Halsall / Oliver J. Thatcher & Edgar Holmes McNeal",
+      "date_published": "1996",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-aachen",
+      "url": "https://whc.unesco.org/en/list/3/",
+      "title": "Aachen Cathedral (World Heritage Site 3)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1978",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "0800",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Carolingian rulers codify estate management and vassalage oaths across Frankish territories.",
+        "source": "src-fordham-devillis",
+        "consequence": false
+      },
+      {
+        "span": "1100",
+        "action": "pulse { radius_km: 800 }",
+        "caption": "Manorial agriculture and feudal tenure become the dominant socio-economic foundation across Western Europe.",
+        "source": "src-encyc-feudalism",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from the Encyclopedia.com feudalism entries and the Fordham Capitulare de villis; \"crystallizing within the Carolingian empire\" softened to the source's \"fostered\". UNESCO gives N50 46 29 E6 5 2 for the cathedral, matching the pin.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:36:48.795Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
