@@ -1,0 +1,172 @@
+{
+  "id": "-360000000-origin-of-seed-plants",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Origin of seed plants",
+  "summary": "Earlier land plants reproduced by spores, as mosses and ferns still do. The seed let plants colonise environments that had been unsuitable. The oldest known seeds, borne in branching cupules, come from Late Devonian (Famennian) rocks of the Hampshire Formation in Randolph County, West Virginia; the plant, Elkinsia polymorpha, grew in swamps on an ancient coastal plain and is the oldest seed plant known in North America. By the Mississippian and Pennsylvanian, from 345 million years ago, seed plants spread as great forests across much of the earth.",
+  "when": {
+    "start": {
+      "year": -360000000
+    },
+    "end": {
+      "year": -345000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 10000000,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Nature (Gillespie et al. 1981) dates the seeds to the Famennian (Fa2c) stage of the Late Devonian without a numeric age; the West Virginia Encyclopedia dates the seed-plant forests of the Mississippian and Pennsylvanian to 345-280 million years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Late Devonian (Famennian, Fa2c), geological dating",
+        "value": "late Devonian Hampshire Formation of Randolph County, West Virginia, USA",
+        "source": "src-nature-seeds"
+      },
+      {
+        "calendar": "Late Devonian, geological dating",
+        "value": "oldest seed-bearing plant in North America. This plant fossil, named Elkinsia polymorpha , occurs with several other types of plant fossils in Late Devonian-age stone known as the Hampshire Formation",
+        "source": "src-wv-encyclopedia"
+      },
+      {
+        "calendar": "Ma",
+        "value": "Mississippian and Pennsylvanian periods of geologic time, 345 million to 280 million years ago",
+        "source": "src-wv-encyclopedia"
+      }
+    ],
+    "display": "Late Devonian (Famennian), before c. 345 million years ago"
+  },
+  "where": {
+    "lat": 38.9214,
+    "lon": -79.8508,
+    "elevation_m": null,
+    "modern_name": "Elkins, Randolph County, West Virginia, United States (Elkinsia polymorpha was found a few miles east, along U.S. 33)",
+    "historical_name": "Eastern coastal margin of Laurussia (no polities or human geographic names existed at this geological epoch)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata-q952594"
+    ],
+    "paleo": {
+      "not_applicable": "Plate-model reconstructions of eastern Laurentia at 360 Ma vary widely across tectonic models; none adopted."
+    }
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "life_extinction",
+    "science_technology"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 5,
+    "justification": "The seed let plants conquer dry land, leading to forests, conifers and flowering plants (R4 D3 T4 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-470my-origin-of-land-plants",
+      "type": "caused_by",
+      "because": "The initial colonization of land by non-vascular and early vascular plants provided the ancestral lineage and terrestrial soils from which seed plants evolved."
+    },
+    {
+      "id": "-130my-rise-of-flowering-plants",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "c. 365 million years ago",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Early seed plants such as Elkinsia polymorpha evolve cupulate ovules along coastal wetlands of Laurussia.",
+        "source": "src-nature-seeds",
+        "consequence": false
+      },
+      {
+        "span": "c. 359 million years ago",
+        "action": "pulse { radius_km: 1000 }",
+        "caption": "Seed-bearing plants spread across continental interiors, initiating the global diversification of gymnosperms.",
+        "source": "src-wv-encyclopedia",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-nature-seeds",
+      "url": "https://www.nature.com/articles/293462a0",
+      "title": "The earliest seeds (Nature 293:462–464)",
+      "publisher": "Nature Portfolio",
+      "author": "William H. Gillespie, Gar W. Rothwell, Stephen E. Scheckler",
+      "date_published": "1981-10-08",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wv-encyclopedia",
+      "url": "https://www.wvencyclopedia.org/entries/2136",
+      "title": "Elkinsia Polymorpha",
+      "publisher": "e-WV: The West Virginia Encyclopedia (West Virginia Humanities Council)",
+      "author": "Ron Mullennex",
+      "date_published": "2010-11-29",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wikidata-q952594",
+      "url": "https://www.wikidata.org/wiki/Q952594",
+      "title": "Elkins, West Virginia (Wikidata Q952594)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: the 365-359 Ma figures were not on the opened pages, so the record uses the stage name and the WV Encyclopedia's 345 Ma; pin moved from an unusable GeoNames postal page to Elkins (Wikidata). Coal-swamp and fertilisation-without-water claims dropped. Flowering-plants link made related.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:18.173Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

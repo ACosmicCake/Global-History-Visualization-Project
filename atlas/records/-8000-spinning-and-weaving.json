@@ -1,0 +1,182 @@
+{
+  "id": "-8000-spinning-and-weaving",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "The invention of spinning and weaving",
+  "summary": "Spinning twists fibres into continuous yarn; weaving interlaces yarn into cloth. More than a hundred perforated pebbles from the 12,000-year-old Natufian village of Nahal Ein-Gev II in Israel are interpreted as spindle whorls, flywheels for spinning fibres, among the earliest rotational tools. Woven textiles from Catalhoyuk in Anatolia, a town occupied between 7400 and 6200 BCE, are among the earliest known in the Near East and Europe; new analysis shows they were made from local oak bast rather than flax, so tree fibres mattered more than once thought.",
+  "when": {
+    "start": {
+      "year": -10000
+    },
+    "end": {
+      "year": -6200
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 1000,
+      "start_plus_years": 1000,
+      "end_minus_years": 500,
+      "end_plus_years": 500,
+      "note": "Earliest rotary spinning apparatus attested by perforated pebble spindle whorls at Nahal Ein Gev II (c. 12,000 BP / 10,000 BCE); earliest widely documented woven bast textiles preserved at Neolithic Çatalhöyük (occupation c. 7400–6200 BCE)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years before present (calibrated)",
+        "value": "assemblage of over a hundred perforated pebbles from the 12,000-year-old Natufian village of Nahal Ein-Gev II, Israel",
+        "source": "src-plos-whorls"
+      },
+      {
+        "calendar": "BCE (unspecified)",
+        "value": "Neolithic occupation between 7400 bc and 6200 bc",
+        "source": "src-unesco-catalhoyuk"
+      },
+      {
+        "calendar": "Archaeological period (Neolithic)",
+        "value": "Woven textiles from Çatalhöyük in southern Anatolia are among the earliest-known examples of weaving in the Near East and Europe",
+        "source": "src-cambridge-catalhoyuk"
+      }
+    ],
+    "display": "c. 10,000–6200 BCE"
+  },
+  "where": {
+    "lat": 37.666667,
+    "lon": 32.828056,
+    "elevation_m": null,
+    "modern_name": "Çatalhöyük, Konya Province, Türkiye",
+    "historical_name": "Çatalhöyük and early Neolithic textile centers of Southwest Asia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 500,
+    "coordinate_sources": [
+      "src-unesco-catalhoyuk"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 5,
+    "justification": "Turned fibres into cloth, a basic technology of clothing, trade and craft in every later society (R4 D3 T4 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-catalhoyuk",
+      "type": "same_place"
+    },
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "related"
+    },
+    {
+      "id": "-12000-natufian-culture",
+      "type": "contemporary"
+    },
+    {
+      "id": "-40000-sewn-clothing-and-eyed-needle",
+      "type": "related",
+      "because": "Sewing and fitted clothing preceded woven cloth; both are textile technologies."
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "c. 10,000 BCE",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Early perforated pebble spindle whorls at Nahal Ein Gev II demonstrate rotational fiber spinning in the Natufian Levant.",
+        "source": "src-plos-whorls",
+        "consequence": false
+      },
+      {
+        "span": "c. 6500 BCE",
+        "action": "pulse { radius_km: 600 }",
+        "caption": "Preserved oak-bast woven cloth at Çatalhöyük confirms the expansion of structured loom weaving across Neolithic Southwest Asia.",
+        "source": "src-cambridge-catalhoyuk",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-plos-whorls",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312007",
+      "title": "12,000-year-old spindle whorls and the innovation of wheeled rotational technologies",
+      "publisher": "PLOS (Public Library of Science)",
+      "author": "Talia Yashuv and Leore Grosman",
+      "date_published": "2024-11-13",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cambridge-catalhoyuk",
+      "url": "https://doi.org/10.15184/aqy.2021.89",
+      "title": "The use of local fibres for textiles at Neolithic Çatalhöyük",
+      "publisher": "Cambridge University Press (Antiquity)",
+      "author": "Antoinette Rast-Eicher, Sabine Karg, and Lise Bender Jørgensen",
+      "date_published": "2021-07-14",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-unesco-catalhoyuk",
+      "url": "https://whc.unesco.org/en/list/1405/",
+      "title": "Neolithic Site of Çatalhöyük (World Heritage List no. 1405)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "2012",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: relaunched with the scope widened to spinning and weaving as a technology. Thin: the opened pages cover the Natufian whorls (Yashuv and Grosman 2024) and Catalhoyuk textiles (Antiquity 2021); earlier cordage is not covered. Insulation and lashing claims dropped. UNESCO gives N37 40 0 E32 49 41 for Catalhoyuk.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:20.780Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-11-13",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

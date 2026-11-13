@@ -1,0 +1,172 @@
+{
+  "id": "1840-chinese-diaspora",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "movement",
+  "title": "Chinese diaspora",
+  "summary": "After the Opium Wars forced treaty ports on China, emigration from the southern coastal provinces, especially Guangdong and Fujian, surged amid turmoil at home. Many left as contract labourers in the coolie trade; others were merchants and artisans who helped build colonial cities in Southeast Asia, and Chinese communities also grew in the Americas, Australia and India. Hostility followed: the United States suspended Chinese labour immigration in 1882, a ban not repealed until 1943. Historians treat 1842-1949 as the formative age of the diaspora.",
+  "when": {
+    "start": {
+      "year": 1840
+    },
+    "end": {
+      "year": 1949
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 2,
+      "start_plus_years": 2,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Modern mass emigration accelerated following the First Opium War (1839–1842) and treaty port openings, continuing through the mid-20th century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1842 and 1949 on a global framework",
+        "source": "src-biswas2021"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "May 6, 1882",
+        "source": "src-nara-exclusion"
+      }
+    ],
+    "display": "c. 1840–1949"
+  },
+  "where": {
+    "lat": 23.11667,
+    "lon": 113.25,
+    "elevation_m": null,
+    "modern_name": "Guangzhou, Guangdong, China (primary departure region alongside Fujian)",
+    "historical_name": "Canton (Guangzhou), Guangdong, Qing Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-geonames-guangzhou"
+    ]
+  },
+  "regions": [
+    "eastern_asia",
+    "south_eastern_asia",
+    "northern_america",
+    "latin_america_caribbean",
+    "oceania"
+  ],
+  "domains": [
+    "human_evolution_migration",
+    "trade_exploration",
+    "atrocity_injustice"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Spread Chinese communities across Southeast Asia and the Pacific world, shaping their economies and societies (R4 D3 T3 L2)."
+  },
+  "confidence": "established",
+  "audience_note": "Addresses racial discrimination, coolie trade labor exploitation, and discriminatory exclusion acts directed against Chinese migrants.",
+  "related": [
+    {
+      "id": "1851-victorian-gold-rush",
+      "type": "related"
+    },
+    {
+      "id": "1882-chinese-exclusion-act",
+      "type": "related",
+      "because": "The US Chinese Exclusion Act of 1882 suspended the immigration of Chinese laborers (National Archives)."
+    },
+    {
+      "id": "1839-first-opium-war",
+      "type": "caused_by",
+      "because": "Biswas (2021) cites the Opium Wars and the treaty ports they opened as the background to the era of the coolie trade."
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1842",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Following the First Opium War, mass emigration accelerates from coastal Guangdong and Fujian toward Southeast Asia and the Americas.",
+        "source": "src-biswas2021",
+        "consequence": false
+      },
+      {
+        "span": "1882",
+        "action": "pulse { radius_km: 800 }",
+        "caption": "Rising xenophobic backlash prompts the United States to pass the Chinese Exclusion Act, prohibiting Chinese laborers from immigrating.",
+        "source": "src-nara-exclusion",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-biswas2021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8635470/",
+      "title": "Global Chinese migration in geographical perspective: a Kolkata (Calcutta) case study",
+      "publisher": "Springer Nature",
+      "author": "Camellia Biswas, T. V. Sekher",
+      "date_published": "2021-12-01",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nara-exclusion",
+      "url": "https://www.archives.gov/milestone-documents/chinese-exclusion-act",
+      "title": "Chinese Exclusion Act (1882)",
+      "publisher": "U.S. National Archives and Records Administration",
+      "author": "National Archives",
+      "date_published": "2022-02-08",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-guangzhou",
+      "url": "https://www.geonames.org/1809858/",
+      "title": "Guangzhou, Guangdong, China (GeoNames 1809858)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: railway and mining labour claims dropped (not on the opened pages); Opium-war link kept with a sourced reason; exclusion-act link changed from caused to related. Summary rewritten from Biswas 2021 (GeoJournal) and the National Archives. Guangzhou is a stand-in pin.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:08.435Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "1973-oil-embargo",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "event",
+  "title": "1973 oil embargo",
+  "summary": "During the October 1973 Arab-Israeli war, Arab oil ministers met at the Kuwait headquarters of OAPEC, the Organization of Arab Petroleum Exporting Countries, while Gulf members of OPEC demanded a 70 percent rise in posted prices. Arab producers imposed an embargo on the United States for resupplying Israel, extended it to the Netherlands, Portugal and South Africa, and cut production. The price of oil doubled and then quadrupled, straining whole economies and dividing the United States from Europe and Japan. The embargo was lifted in March 1974.",
+  "when": {
+    "start": {
+      "year": 1973,
+      "iso": "1973-10-17"
+    },
+    "end": {
+      "year": 1974,
+      "month": 3
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Declared at Kuwait on October 17, 1973; the embargo against the United States was formally lifted on March 18, 1974."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "critical decisions taken by member states in 1973, at its Kuwait headquarters, was the oil embargo following the Arab-Israel War",
+        "source": "src-encyclopedia-oapec"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Telegram 3784 from Kuwait, October 17, reported that the Persian Gulf Oil Ministers at the October 16 OPEC meeting in Kuwait decided to present the oil companies with a “take it or leave it” demand for a 70 percent increase in posted prices. Meanwhile, the Oil Ministers were meeting at OAPEC headquarters to discuss the role of oil in the current Middle East crisis.",
+        "source": "src-state-frus-d198"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "During the 1973 Arab-Israeli War, Arab members of the Organization of Petroleum Exporting Countries (OPEC) imposed an embargo against the United States in retaliation for the U.S. decision to re-supply the Israeli military",
+        "source": "src-state-milestones"
+      }
+    ],
+    "display": "17 October 1973 – March 1974"
+  },
+  "where": {
+    "lat": 29.3697,
+    "lon": 47.9783,
+    "elevation_m": null,
+    "modern_name": "Kuwait City, Kuwait (location of OAPEC headquarters where the embargo and production cuts were resolved)",
+    "historical_name": "Kuwait City, State of Kuwait",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-kuwait"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "global"
+  ],
+  "domains": [
+    "trade_exploration",
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Quadrupled oil prices and showed the political power of Arab oil producers (R4 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1973-yom-kippur-war",
+      "type": "caused_by",
+      "because": "The outbreak of the October 1973 war and subsequent American military resupply of Israel prompted Arab oil producers to wield oil as a political weapon."
+    },
+    {
+      "id": "1938-persian-gulf-oil",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1973-10-17",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Arab oil ministers meeting in Kuwait City declare production cutbacks and an oil embargo against supporters of Israel.",
+        "source": "src-state-frus-d198",
+        "consequence": false
+      },
+      {
+        "span": "1973-12-01",
+        "action": "pulse { radius_km: 2500 }",
+        "caption": "Global oil prices quadruple, triggering severe fuel rationing, stagflation, and macroeconomic crises across Western economies.",
+        "source": "src-state-milestones",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-encyclopedia-oapec",
+      "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/organization-arab-petroleum-exporting-countries-oapec",
+      "title": "Organization of Arab Petroleum Exporting Countries (OAPEC)",
+      "publisher": "Encyclopedia.com (Encyclopedia of the Modern Middle East and North Africa)",
+      "author": "Encyclopedia.com",
+      "date_published": "2018",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-state-milestones",
+      "url": "https://history.state.gov/milestones/1969-1976/oil-embargo",
+      "title": "Oil Embargo, 1973–1974",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "Office of the Historian",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-state-frus-d198",
+      "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d198",
+      "title": "Minutes of Washington Special Actions Group Meeting, Washington, October 17, 1973, 3:05–4:04 p.m. (FRUS, 1969–1976, Volume XXV, Document 198)",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "United States Department of State",
+      "date_published": "1973-10-17",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-kuwait",
+      "url": "https://www.geonames.org/285787/",
+      "title": "Kuwait City, Capital, Kuwait (GeoNames 285787)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: relaunched record. The park reason (no sourced location) is resolved: Encyclopedia.com says the embargo decision was taken at OAPEC's Kuwait headquarters, and the FRUS document reports the ministers meeting there. The 5 percent monthly cuts and the stagflation claim were not on the opened pages and were dropped; the end is now March 1974 (State Department).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:18.796Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-11-13",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}

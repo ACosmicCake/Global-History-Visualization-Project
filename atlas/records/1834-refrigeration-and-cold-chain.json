@@ -1,0 +1,163 @@
+{
+  "id": "1834-refrigeration-and-cold-chain",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Refrigeration and the cold chain",
+  "summary": "Artificial cooling was first shown in Edinburgh in 1756, but the vapour-compression cycle behind modern refrigerators and air conditioning was first demonstrated by Jacob Perkins, an American working in London, under a British patent of 1834. His machine made ice continuously, though he never sold it. Alexander Twining's trials from 1848 and James Harrison's ice-making machine of 1851 followed, and in the 1870s Carl von Linde's systems began the rapid commercial spread of mechanical refrigeration, which came to replace natural ice for preserving food.",
+  "when": {
+    "start": {
+      "year": 1834
+    },
+    "end": {
+      "year": 1879
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 10,
+      "note": "From Perkins's 1834 patent to the rapid commercialisation of vapour compression in the 1870s (ASME)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "August 14, 1834",
+        "source": "src-asme-perkins"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "1834 British patent",
+        "source": "src-nist-cryogenics"
+      }
+    ],
+    "display": "1834 – 1870s"
+  },
+  "where": {
+    "lat": 51.50853,
+    "lon": -0.12574,
+    "elevation_m": null,
+    "modern_name": "London, United Kingdom (site of Jacob Perkins's prototype construction and patent filing)",
+    "historical_name": "London, United Kingdom of Great Britain and Ireland",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames-london"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america",
+    "oceania",
+    "latin_america_caribbean",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "built_world",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Made artificial cold cheap, transforming food storage and later the whole food supply (R4 D3 T3 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1850-second-industrial-revolution",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1834-08-14",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Jacob Perkins patents the closed-cycle vapor-compression refrigerator in London, constructing the first working prototype with John Hague.",
+        "source": "src-asme-perkins",
+        "consequence": false
+      },
+      {
+        "span": "1880",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Refrigerated steamships transport frozen meat from Australia and the Americas to Europe, establishing transoceanic cold chains.",
+        "source": "src-nist-cryogenics",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-asme-perkins",
+      "url": "https://www.asme.org/getmedia/cb9bea09-6d23-425e-bfe5-5f6d786919fb/274-perkins-vapor-comp-refrig.pdf",
+      "title": "Perkins Vapor-Compression Cycle for Refrigeration: A Historic Mechanical Engineering Landmark",
+      "publisher": "American Society of Mechanical Engineers",
+      "author": "ASME History and Heritage Committee",
+      "date_published": "2021",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nist-cryogenics",
+      "url": "https://trc.nist.gov/cryogenics/Papers/Review/2007-Historical_Summary_of_Cryogenics.pdf",
+      "title": "Historical Summary of Cryogenics",
+      "publisher": "National Institute of Standards and Technology",
+      "author": "Ray Radebaugh",
+      "date_published": "2007",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-london",
+      "url": "https://www.geonames.org/2643743/",
+      "title": "London, United Kingdom (GeoNames 2643743)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: refrigerated rail, ships and meat-trade claims (the cold chain) are not on the opened ASME and NIST pages and were dropped; end moved from c. 1930 to the 1870s commercialisation. Loose transport links dropped. London pin is where Perkins took out the patent (NIST: an American who had moved to England).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:09.796Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
