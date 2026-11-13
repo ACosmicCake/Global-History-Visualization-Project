@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1897-zionism",
+  "kind": "movement",
+  "title": "Zionism",
+  "summary": "Zionism, the movement for a Jewish national home, took organised form when Theodor Herzl convened the First Zionist Congress in the concert hall of Basel's Municipal Casino on 29 August 1897. About 200 people from seventeen countries took part. The congress founded the World Zionist Organization, elected Herzl president and adopted the Basel Program, which sought a home for the Jewish people in Palestine secured by public law. Herzl wrote in his diary that at Basel he had founded the Jewish State.",
+  "when": {
+    "start": {
+      "year": 1897,
+      "iso": "1897-08-29"
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Dated from the First Zionist Congress; the movement continues."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The first Zionist Congress convenes in Basle, which constitutes the foundation of the World Zionist Organization, and Herzl is elected president. The Congress, in which 197 delegates participate, accepts the Basle Program: Zionism strives to create for the Jewish people a home in Palestine secured by public law",
+        "source": "src-zionistarchives-congress1"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The Congress took place in the concert hall of the Basel Municipal Casino on August 29, 1897",
+        "source": "src-jvl-congress1"
+      }
+    ],
+    "display": "from 29 August 1897"
+  },
+  "where": {
+    "lat": 47.554444,
+    "lon": 7.589444,
+    "elevation_m": 260,
+    "modern_name": "Stadtcasino Basel, Steinenberg 14, Basel, Switzerland",
+    "historical_name": "Municipal Casino (Stadtcasino), Basel, Swiss Confederation",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-q2327045"
+    ]
+  },
+  "regions": [
+    "europe",
+    "western_asia"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Organised the movement whose diplomacy and settlement led to the State of Israel, reshaping the Middle East (R3 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1917-balfour-declaration",
+      "type": "caused",
+      "because": "Zionist diplomatic advocacy led directly to the British government issuing the Balfour Declaration in 1917."
+    },
+    {
+      "id": "1948-israeli-declaration-of-independence",
+      "type": "caused",
+      "because": "The institutional framework and political mobilization begun at Basel culminated in the declaration of Israeli independence in 1948."
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1897-08-29",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Theodor Herzl opens the First Zionist Congress at the Stadtcasino in Basel, adopting the Basel Program.",
+        "source": "src-jvl-congress1"
+      },
+      {
+        "span": "1948-05-14",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "The political Zionist movement culminates fifty years later in the proclamation of the State of Israel.",
+        "source": "src-zionistarchives-congress1",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-zionistarchives-congress1",
+      "url": "http://www.zionistarchives.org.il/en/datelist/Pages/Congress1.aspx",
+      "title": "The First Zionist Congress",
+      "publisher": "The Central Zionist Archives",
+      "author": "The Central Zionist Archives",
+      "date_published": "2020",
+      "accessed": "2026-11-13",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-jvl-congress1",
+      "url": "https://www.jewishvirtuallibrary.org/first-zionist-congress-and-basel-program-1897",
+      "title": "First Zionist Congress & Basel Program (August 1897)",
+      "publisher": "Jewish Virtual Library (American-Israeli Cooperative Enterprise)",
+      "author": "Jewish Virtual Library",
+      "date_published": "2023",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wikidata-q2327045",
+      "url": "https://www.wikidata.org/wiki/Q2327045",
+      "title": "Stadtcasino Basel (Wikidata Q2327045)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: end 1948 dropped as unsourced on the opened pages (the record is now open-ended; statehood is in the linked 1948 record). JVL page read in a browser (it renders by script). Pin from Wikidata for the Stadtcasino.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:09.466Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

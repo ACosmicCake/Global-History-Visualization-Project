@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-6000-domestication-of-the-chicken",
+  "kind": "process",
+  "title": "Domestication of the chicken",
+  "summary": "Chickens descend mainly from the red junglefowl subspecies Gallus gallus spadiceus of south-western China, Thailand and Myanmar. A genetic split is estimated at about 9,500 years ago, but the first unambiguous domestic chicken bones come from Neolithic Ban Non Wat in Thailand, about 1650 to 1250 BCE. Their appearance with rice and millet farming suggests stored grain drew junglefowl into human settlements. Chickens reached China, South Asia and Mesopotamia in the late second millennium BCE and Mediterranean Europe by about 800 BCE; they are now the most numerous domestic animal.",
+  "when": {
+    "start": {
+      "year": -1649
+    },
+    "end": {
+      "year": -799
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 400,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Peters et al. 2022: first unambiguous domestic chickens at Ban Non Wat, c. 1650-1250 BCE; in Ethiopia and Mediterranean Europe by c. 800 BCE. Wang et al. 2020 estimate a genetic split from G. g. spadiceus about 9500 +/- 3300 years ago, which need not mark domestication."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Years before present, molecular clock divergence estimate",
+        "value": "domestic chickens diverged from G. g. spadiceus ~9500 ± 3300 years ago",
+        "source": "src-wang2020"
+      },
+      {
+        "calendar": "BCE, radiocarbon and stratigraphic dating of domestic faunal remains",
+        "value": "first unambiguous domestic chicken bones are found at Neolithic Ban Non Wat in central Thailand dated to ∼1650 to 1250 BCE",
+        "source": "src-peters2022"
+      },
+      {
+        "calendar": "BCE",
+        "value": "in Ethiopia and Mediterranean Europe by ∼800 BCE",
+        "source": "src-peters2022"
+      }
+    ],
+    "display": "c. 1650 BCE (first certain chickens) to c. 800 BCE"
+  },
+  "where": {
+    "lat": 15.2744,
+    "lon": 102.2689,
+    "elevation_m": 155,
+    "modern_name": "Ban Non Wat, Nakhon Ratchasima Province, Thailand (earliest securely identified domestic chicken remains; domestication centred in Southeast Asia)",
+    "historical_name": "Mun River valley, Khorat Plateau, Southeast Asia during the Neolithic (no recorded polities or historical names)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-wd-bannonwat"
+    ]
+  },
+  "regions": [
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Produced the most numerous domestic animal, a staple food across the world (R4 D2 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-8500-domestication-of-cattle-sheep-and-goats",
+      "type": "related"
+    },
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "part_of"
+    },
+    {
+      "id": "-2200-domestication-of-the-horse",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "c. 1650 BCE",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "Wild red junglefowl were attracted to early rice cultivation at sites like Ban Non Wat, establishing domestic lineages.",
+        "source": "src-peters2022",
+        "consequence": false
+      },
+      {
+        "span": "c. 800 BCE",
+        "action": "region.fill { radius_km: 2000 }",
+        "caption": "Domestic chickens spread across Asia, Africa, and the Mediterranean, becoming the world's most widespread domestic bird.",
+        "source": "src-peters2022",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-peters2022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9214543/",
+      "title": "The biocultural origins and dispersal of domestic chickens (PNAS 119:e2121978119)",
+      "publisher": "Proceedings of the National Academy of Sciences of the USA (via PubMed Central)",
+      "author": "Joris Peters, Ophélie Lebrasseur, Evan K. Irving-Pease, et al.",
+      "date_published": "2022-06-06",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wang2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7395088/",
+      "title": "863 genomes reveal the origin and domestication of chicken (Cell Research 30:693–701)",
+      "publisher": "Cell Research (Springer Nature, via PubMed Central)",
+      "author": "Ming-Shan Wang, Mukesh Thakur, Min-Sheng Peng, et al.",
+      "date_published": "2020-06-25",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wd-bannonwat",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q806037.json",
+      "title": "Wikidata entry for Ban Non Wat archaeological site (Q806037)",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "2026",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: dates reset to the archaeological evidence (c. 1650 BCE start, c. 800 BCE spread to the Mediterranean); the record id keeps its queue form. Summary rewritten from Peters et al. 2022 and Wang et al. 2020.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:22.050Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

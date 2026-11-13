@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1938-persian-gulf-oil",
+  "kind": "event",
+  "title": "Oil discoveries in Saudi Arabia and Kuwait",
+  "summary": "In 1938 oil was struck on both sides of the Gulf's western shore. In Kuwait, a well in the Burgan area hit a high-pressure sandstone on 23 February 1938 and gushed; Burgan proved the world's largest sandstone oil field, second only to Saudi Arabia's Ghawar, and its first crude was shipped in 1946. In Saudi Arabia, after ten disappointing shallower wells at Dammam, deeper well 7 first yielded oil on 4 March 1938 from the Upper Jurassic Arab Formation. The finds put both countries on the world oil map.",
+  "when": {
+    "start": {
+      "year": 1938
+    },
+    "end": {
+      "year": 1938
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Burgan Well No. 1 struck oil on 23 February 1938; Dammam Well No. 7 yielded commercial oil on 4 March 1938."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "on 23 February 1938 the well hit a high-pressure sandstone unit at a depth of 1,120m",
+        "source": "src-geoexpro-burgan"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "March 4, 1938",
+        "source": "src-usgs-pp560d"
+      }
+    ],
+    "display": "February–March 1938"
+  },
+  "where": {
+    "lat": 26.3178,
+    "lon": 50.1272,
+    "elevation_m": null,
+    "modern_name": "Dammam well 7, Dhahran, Eastern Province, Saudi Arabia (reference pin for both 1938 strikes; Burgan lies about 330 km north-west)",
+    "historical_name": "Dammam Dome near Dhahran, Kingdom of Saudi Arabia, and Burgan, Sheikhdom of Kuwait",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-usgs-pp560d"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Opened the oil wealth of Saudi Arabia and Kuwait, central to the world economy and Gulf politics since (R4 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1938-02-23",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Burgan Well No. 1 strikes high-pressure oil in Kuwait at 1,120 meters depth.",
+        "source": "src-geoexpro-burgan",
+        "consequence": false
+      },
+      {
+        "span": "1938-03-04",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Dammam Well No. 7 yields oil in Saudi Arabia, unlocking the Arabian Peninsula's immense petroleum reserves.",
+        "source": "src-usgs-pp560d",
+        "consequence": true
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "1908-05-26-masjed-soleyman-oil-discovery",
+      "type": "related"
+    },
+    {
+      "id": "1960-founding-of-opec",
+      "type": "caused",
+      "because": "The massive oil discoveries in Kuwait and Saudi Arabia created the major Gulf producers that established OPEC to coordinate production and pricing."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-geoexpro-burgan",
+      "url": "https://geoexpro.com/the-great-burgan-field-kuwait/",
+      "title": "The Great Burgan Field, Kuwait",
+      "publisher": "GeoExpro",
+      "author": "Rasoul Sorkhabi",
+      "date_published": "2012-02-15",
+      "accessed": "2026-11-13",
+      "class": "journalism",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-usgs-pp560d",
+      "url": "https://pubs.usgs.gov/pp/0560d/report.pdf",
+      "title": "Geology of the Arabian Peninsula: Sedimentary Geology of Saudi Arabia (USGS Professional Paper 560-D)",
+      "publisher": "U.S. Geological Survey",
+      "author": "R. W. Powers, L. F. Ramirez, C. D. Redmond, E. L. Elberg Jr.",
+      "date_published": "1966",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources",
+        "summary"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from GeoExpro (Sorkhabi 2012) and USGS Professional Paper 560-D; USGS gives Dammam well 7 at 26 19 04 N, 50 07 38 E, matching the pin. Weak links to Kuwait Towers and the first Saudi state dropped. World's-largest-reserves and geopolitics claims dropped. spotcheck.mjs (pdftotext -layout) misses one as_recorded phrase in the PDF; it was confirmed in a plain-text extract of the same PDF.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:16.386Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

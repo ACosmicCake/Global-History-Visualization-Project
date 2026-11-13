@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "id": "1958-integrated-circuit",
+  "kind": "event",
+  "title": "Integrated circuit",
+  "summary": "In 1958 Jack Kilby moved to Dallas to work on miniaturising components at Texas Instruments. On 12 September 1958 he built a working circuit from germanium slices etched to form a transistor, capacitor and resistor, joined by fine gold wires. TI announced the solid circuit in March 1959 and sold its first device in March 1960. Robert Noyce of Fairchild developed an integrated circuit at almost the same time, and planar chips with deposited-metal wiring followed. The idea caught on rapidly.",
+  "when": {
+    "start": {
+      "year": 1958,
+      "iso": "1958-09-12"
+    },
+    "end": {
+      "year": 1960
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Start is the day Kilby demonstrated the first working germanium phase-shift oscillator circuit; end spans the development of Robert Noyce's silicon planar integrated circuit at Fairchild Semiconductor in early 1959."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "On September 12, 1958, Jack Kilby of Texas Instruments built a circuit using germanium mesa p-n-p transistor slices",
+        "source": "src-chm-solid-circuit"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Jack Kilby of Texas Instruments made this, the first integrated circuit, in 1958. At virtually the same time Robert Noyce also developed an integrated circuit.",
+        "source": "src-ethw-ic"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "introduced its first commercial device in March 1960",
+        "source": "src-chm-solid-circuit"
+      }
+    ],
+    "display": "12 September 1958 – 1960"
+  },
+  "where": {
+    "lat": 32.779167,
+    "lon": -96.808889,
+    "elevation_m": null,
+    "modern_name": "Dallas, Texas, United States",
+    "historical_name": "Dallas, Texas, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 10,
+    "coordinate_sources": [
+      "src-wikidata-q16557"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "science_technology"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Put whole circuits on one chip, the basis of all later electronics; Noyce's parallel invention lowers leverage (R4 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1947-invention-of-the-transistor",
+      "type": "caused_by",
+      "because": "The invention of the point-contact and junction transistors created the active solid-state elements that integrated circuits combined onto single semiconductor substrates."
+    },
+    {
+      "id": "1971-intel-4004-microprocessor",
+      "type": "caused",
+      "because": "Advances in silicon monolithic integrated circuits enabled the concentration of complete processor architectures onto a single microchip."
+    },
+    {
+      "id": "1945-digital-revolution",
+      "type": "part_of"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-chm-solid-circuit",
+      "url": "https://www.computerhistory.org/siliconengine/all-semiconductor-solid-circuit-is-demonstrated/",
+      "title": "1958: All Semiconductor 'Solid Circuit' is Demonstrated",
+      "publisher": "Computer History Museum",
+      "author": null,
+      "date_published": "2007",
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ethw-ic",
+      "url": "https://ethw.org/Integrated_Circuits",
+      "title": "Integrated Circuits",
+      "publisher": "Engineering and Technology History Wiki",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nobel-kilby",
+      "url": "https://www.nobelprize.org/prizes/physics/2000/kilby/biographical/",
+      "title": "Jack S. Kilby: Biographical",
+      "publisher": "Nobel Prize Outreach (nobelprize.org)",
+      "author": "Jack S. Kilby",
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "primary",
+      "opened": true,
+      "supports": [
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q16557",
+      "url": "https://www.wikidata.org/wiki/Q16557",
+      "title": "Dallas (Wikidata Q16557)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: end 1959 replaced with TI's first commercial device (March 1960, CHM); \"microprocessors and the digital age\" dropped (not on opened pages; see linked records). Added Kilby's Nobel autobiography for his 1958 move to Dallas, which supports the Dallas pin (Wikidata coordinates).",
+  "published_at": "2026-11-13T07:59:13.953Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

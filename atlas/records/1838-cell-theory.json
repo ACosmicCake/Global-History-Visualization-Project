@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1838-cell-theory",
+  "kind": "process",
+  "title": "Cell theory",
+  "summary": "In Johannes Müller's laboratory at the University of Berlin, the botanist Matthias Schleiden met the physiologist Theodor Schwann; both sought a unit common to plants and animals. In 1838 Schleiden published his account of the role of cells in plant development, and in 1839 Schwann's Microscopic Researches argued that a single cell is the basic structural unit of every living organism. The pair are counted the founders of cell theory, which Rudolf Virchow later carried into pathology in Berlin.",
+  "when": {
+    "start": {
+      "year": 1838
+    },
+    "end": {
+      "year": 1839
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Schleiden published on plant cells in 1838; Schwann published his unifying monograph on animal and plant cells in 1839."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In 1838, Schleiden published",
+        "source": "src-asu-schleiden"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1838, Schwann initiated a collaboration with Matthias Schleiden. The meeting of the two scientists was to have major and far-reaching consequences: the founding of cell theory [ 7 ]. According to their new idea, a single cell was the basic structural unit of every living organism... In 1839, he published an extensive work on histology: Mikroskopische Untersuchungen über die Übereinstimmung in der Struktur und dem Wachstum der Thiere und Pflanzen",
+        "source": "src-pmc-schwann"
+      }
+    ],
+    "display": "1838–1839"
+  },
+  "where": {
+    "lat": 52.518056,
+    "lon": 13.393333,
+    "elevation_m": 34,
+    "modern_name": "Humboldt University of Berlin main building, Unter den Linden, Berlin (stand-in pin; Müller's laboratory was at the university)",
+    "historical_name": "Friedrich-Wilhelms-Universität, Berlin, Kingdom of Prussia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-q152087"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "life_extinction"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Made the cell the basic unit of all life, the foundation of modern biology and pathology (R4 D2 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1860-germ-theory-of-disease",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1838",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Matthias Schleiden proposes that all plant structures originate from cells as elementary units.",
+        "source": "src-asu-schleiden"
+      },
+      {
+        "span": "1839",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Theodor Schwann unifies animal and plant biology by demonstrating that all organisms are constructed of cells.",
+        "source": "src-pmc-schwann",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-pmc-schwann",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8563666/",
+      "title": "Theodor Schwann (1810–1882)",
+      "publisher": "Journal of Neurology (Springer Nature, via PubMed Central)",
+      "author": "Michał K. Owecki",
+      "date_published": "2021-06-05",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-asu-schleiden",
+      "url": "https://embryo.asu.edu/pages/matthias-jacob-schleiden-1804-1881",
+      "title": "Matthias Jacob Schleiden (1804–1881)",
+      "publisher": "Embryo Project Encyclopedia, Arizona State University",
+      "author": "Sara Parker",
+      "date_published": "2017-05-29",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wikidata-q152087",
+      "url": "https://www.wikidata.org/wiki/Q152087",
+      "title": "Humboldt-Universität zu Berlin (Wikidata Q152087)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from ASU Embryo Project and the Journal of Neurology profile; as_recorded trimmed to the matchable phrase (the page drops the umlaut). Pin coordinates now from Wikidata rather than GeoNames city centre.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:10.294Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

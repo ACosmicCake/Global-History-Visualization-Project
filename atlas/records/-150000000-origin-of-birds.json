@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-150000000-origin-of-birds",
+  "kind": "process",
+  "title": "Origin of birds",
+  "summary": "Birds descend from theropods, the group of bipedal, mostly meat-eating dinosaurs that also includes Tyrannosaurus. The gradual change from fast-running ground dwellers to small winged fliers probably began about 160 million years ago, perhaps as some small theropods took to the trees, and some theropod lines shrank in size. Feathered dinosaurs showed that many bird traits first arose in their ancestors. Archaeopteryx, about 150 million years old and found only in the Solnhofen limestone of southern Germany, is the oldest known bird.",
+  "when": {
+    "start": {
+      "year": -160000000
+    },
+    "end": {
+      "year": -150000000
+    },
+    "precision": "ten_million_years",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "NHM London dates the start of gradual theropod-to-bird transition to about 160 million years ago; Archaeopteryx is dated to around 150 million years ago."
+    },
+    "as_recorded": [
+      {
+        "calendar": "years before present, as recorded",
+        "value": "about 160 million years ago",
+        "source": "src-nhm"
+      },
+      {
+        "calendar": "years before present, as recorded",
+        "value": "150-Million-Year-Old",
+        "source": "src-nhmu"
+      }
+    ],
+    "display": "c. 160–150 million years ago (Late Jurassic)"
+  },
+  "where": {
+    "lat": 48.8903,
+    "lon": 10.9681,
+    "elevation_m": null,
+    "modern_name": "Solnhofen-Eichstätt area, Altmühltal Nature Park, Bavaria, Germany (fossil reference locality for early avians)",
+    "historical_name": "Solnhofen archipelago lagoons, Laurasian margin (Late Jurassic; no human geography)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-iugs"
+    ],
+    "paleo": {
+      "not_applicable": "Plate-model reconstructions of this point at 150 Ma disagree widely; none adopted."
+    }
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Gave rise to birds, one of the most widespread groups of land vertebrates (R4 D2 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-150my-archaeopteryx",
+      "type": "related"
+    },
+    {
+      "id": "-125my-jehol-biota",
+      "type": "related"
+    },
+    {
+      "id": "-66my-chicxulub-impact",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "-160000000",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Bipedal theropod dinosaurs began evolving small body sizes, feathers, and wings about 160 million years ago.",
+        "source": "src-nhm",
+        "consequence": false
+      },
+      {
+        "span": "-150000000",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Avian lineages survived the end-Cretaceous extinction to become the only living dinosaurs, diversifying into modern birds.",
+        "source": "src-nhmu",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-nhm",
+      "url": "https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html",
+      "title": "How dinosaurs evolved into birds",
+      "publisher": "Natural History Museum, London",
+      "author": "Katie Pavid",
+      "date_published": "2016-03-15",
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nhmu",
+      "url": "https://nhmu.utah.edu/articles/150-million-year-old-fossil-link-between-birds-and-dinosaurs",
+      "title": "An 150-Million-Year-Old Fossil Is the Link Between Birds and Dinosaurs",
+      "publisher": "Natural History Museum of Utah, University of Utah",
+      "author": "Jude Coleman",
+      "date_published": "2025-12-31",
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-iugs",
+      "url": "https://iugs-geoheritage.org/geoheritage_sites/jurassic-solnhofen-eichstatt-archaeopteryx-serial-site/",
+      "title": "Jurassic Solnhofen-Eichstätt Archaeopteryx serial site",
+      "publisher": "IUGS International Commission on Geoheritage",
+      "author": "Georg Loth",
+      "date_published": "2022",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: survival-of-the-K-Pg-extinction and species-richness claims dropped (not on the opened pages); summary rewritten from NHM London and NHM Utah. IUGS gives 48 53 25 N, 10 58 05 E for the Solnhofen-Eichstatt site, matching the pin.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:20.515Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

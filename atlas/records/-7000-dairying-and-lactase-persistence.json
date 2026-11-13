@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-7000-dairying-and-lactase-persistence",
+  "kind": "process",
+  "title": "Dairying and lactase persistence",
+  "summary": "Fat residues in ancient pots show people milking domestic animals in north-west Anatolia by the seventh millennium BCE, and milk use was widespread in Europe from the Neolithic on. Early farmers mostly could not digest milk sugar as adults. Lactase persistence, the ability to do so, became the most strongly selected single-gene trait of the last 10,000 years in Europe and parts of Africa, the Middle East and South Asia. Its main European variant began to be favoured about 7,500 years ago between the central Balkans and central Europe.",
+  "when": {
+    "start": {
+      "year": -7000
+    },
+    "end": {
+      "year": -5500
+    },
+    "precision": "millennium",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 1000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Earliest milk residues in the 7th millennium BCE (Evershed et al. 2022); selection for the -13,910*T allele from about 7,500 years ago (Itan et al. 2009). Both continue later."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE, organic residue analysis of pottery fats",
+        "value": "earliest organic residue-based evidence of dairying locates to 7 th millennium BCE northwest Anatolia",
+        "source": "src-evershed2022"
+      },
+      {
+        "calendar": "Years ago, Bayesian inference on ancient DNA and allele frequencies",
+        "value": "−13,910*T allele first underwent selection among dairying farmers around 7,500 years ago",
+        "source": "src-itan2009"
+      }
+    ],
+    "display": "7th millennium BCE – c. 5500 BCE (onset)"
+  },
+  "where": {
+    "lat": 40.2666,
+    "lon": 29.6021,
+    "elevation_m": 230,
+    "modern_name": "Northwestern Anatolia (stand-in pin at Barcın Höyük, Bursa Province, Turkey; early dairying spread across Europe)",
+    "historical_name": "Northwestern Anatolia during the Early Neolithic (no recorded polities)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 250,
+    "coordinate_sources": [
+      "src-wd-barcin"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "human_evolution_migration"
+  ],
+  "scale": "prehistory",
+  "importance": {
+    "score": 4,
+    "justification": "Made milk a lifelong food for many peoples, the strongest recent genetic adaptation in humans (R3 D3 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-8500-domestication-of-cattle-sheep-and-goats",
+      "type": "caused_by",
+      "because": "The domestication of ruminants provided the milk supply that initiated dairy technology and subsequent selection for lactase persistence."
+    },
+    {
+      "id": "-7050-neolithic-spread-into-europe",
+      "type": "related"
+    },
+    {
+      "id": "-10000-neolithic-revolution",
+      "type": "part_of"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "c. 7000 BCE",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "Neolithic farming communities in northwestern Anatolia began processing ruminant milk in ceramic vessels.",
+        "source": "src-evershed2022",
+        "consequence": false
+      },
+      {
+        "span": "c. 5500 BCE",
+        "action": "region.fill { radius_km: 1500 }",
+        "caption": "Strong natural selection favoured the lactase persistence allele, allowing adult milk digestion across European populations.",
+        "source": "src-itan2009",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-evershed2022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7615474/",
+      "title": "Dairying, diseases and the evolution of lactase persistence in Europe (Nature 608:336–345)",
+      "publisher": "Nature (Springer Nature, via PubMed Central)",
+      "author": "Richard P. Evershed, George Davey-Smith, Mélanie Roffet-Salque, et al.",
+      "date_published": "2022-07-27",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-itan2009",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2722739/",
+      "title": "The Origins of Lactase Persistence in Europe (PLoS Computational Biology 5:e1000491)",
+      "publisher": "PLoS Computational Biology (Public Library of Science, via PubMed Central)",
+      "author": "Yuval Itan, Adam Powell, Mark A. Beaumont, Joachim Burger, Mark G. Thomas",
+      "date_published": "2009-08-28",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wd-barcin",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q6099594.json",
+      "title": "Wikidata entry for Barcın Höyük archaeological site (Q6099594)",
+      "publisher": "Wikidata",
+      "author": "Wikidata contributors",
+      "date_published": "2026",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: end -1500 unsourced, so the record marks the onset; famine-resilience claim softened (Evershed et al. favour famine and disease as selective factors, but this is not stated in the summary). Barcin Hoyuk is a stand-in pin in north-west Anatolia (Wikidata).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:23.813Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

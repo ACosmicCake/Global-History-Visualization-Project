@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1846-anaesthesia-and-antiseptic-surgery",
+  "kind": "process",
+  "title": "Modern surgery: anaesthesia and antisepsis",
+  "summary": "On 16 October 1846 the dentist William Morton gave ether to a patient for a tumour operation by the surgeon John Collins Warren in the Ether Dome of Massachusetts General Hospital in Boston, showing that surgery could be painless. In Glasgow in the 1860s, Joseph Lister, drawing on Pasteur's work, used carbolic acid to kill germs in wounds and published his results in The Lancet in 1867. Together, anaesthesia and antisepsis let surgeons attempt complex operations with far lower death rates.",
+  "when": {
+    "start": {
+      "year": 1846,
+      "iso": "1846-10-16"
+    },
+    "end": {
+      "year": 1867
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Morton demonstrated surgical ether anaesthesia on 16 October 1846; Lister published his landmark series on antiseptic surgery in The Lancet in 1867."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "first used 16 October 1846",
+        "source": "src-sciencemuseum-morton"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1846, William T.G. Morton successfully anesthetized Edward Gilbert Abbott for a tumor excision",
+        "source": "src-pmc-surgery-history"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The results of those experiments were published in six articles in The Lancet from March 1867 to July 1867",
+        "source": "src-pmc-lister"
+      }
+    ],
+    "display": "16 October 1846 – 1867"
+  },
+  "where": {
+    "lat": 42.363528,
+    "lon": -71.067861,
+    "elevation_m": 10,
+    "modern_name": "Ether Dome, Massachusetts General Hospital, 55 Fruit Street, Boston, Massachusetts, United States",
+    "historical_name": "Operating Amphitheatre (Ether Dome), Massachusetts General Hospital, Boston, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-q257073"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "disease"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Made painless and far safer surgery possible worldwide (R4 D2 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1847-semmelweis-handwashing",
+      "type": "contemporary"
+    },
+    {
+      "id": "1804-hanaoka-seishu-general-anaesthesia",
+      "type": "related"
+    },
+    {
+      "id": "1860-germ-theory-of-disease",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1846-10-16",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "William Morton demonstrates surgical ether anaesthesia at Massachusetts General Hospital's Ether Dome in Boston.",
+        "source": "src-sciencemuseum-morton"
+      },
+      {
+        "span": "1867",
+        "action": "pulse { radius_km: 50 }",
+        "caption": "Joseph Lister introduces carbolic antisepsis in surgery, drastically reducing fatal post-operative wound sepsis.",
+        "source": "src-pmc-lister",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-sciencemuseum-morton",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co75839/copy-of-mortons-inhaler-for-ether-anaesthesia",
+      "title": "Copy of Morton's inhaler for ether anaesthesia",
+      "publisher": "Science Museum Group",
+      "author": "Science Museum Group",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-pmc-surgery-history",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13207150/",
+      "title": "The Contemporary Role of Oral Maxillofacial Surgeons in Head and Neck Reconstructions",
+      "publisher": "Medicina (MDPI, via PubMed Central)",
+      "author": "Giacomo Colletti et al.",
+      "date_published": "2024-11-20",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pmc-lister",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9854334/",
+      "title": "Joseph Lister (1827-1912): A Pioneer of Antiseptic Surgery",
+      "publisher": "Cureus (via PubMed Central)",
+      "author": "Gagandeep Singh et al.",
+      "date_published": "2022-12-20",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wikidata-q257073",
+      "url": "https://www.wikidata.org/wiki/Q257073",
+      "title": "Ether Dome (Wikidata Q257073)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: as_recorded trimmed to short page phrases; summary rewritten from the Science Museum Group record and the two PMC reviews. Pin from Wikidata for the Ether Dome; Glasgow is named in the summary only.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:11.713Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
