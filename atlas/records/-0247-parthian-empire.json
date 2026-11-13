@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0247-parthian-empire",
+  "kind": "polity",
+  "title": "Parthian Empire",
+  "summary": "The Parni, a nomadic people from the Central Asian steppe, seized the Seleucid satrapy of Parthia under Arsaces around 247 BCE. Their Arsacid kings went on to rule Iran and Mesopotamia, took tolls on the Silk Road and used mounted archers to defeat Rome, most famously at Carrhae in 53 BCE. Nisa and later Ctesiphon served as capitals. The empire ended in 224 CE, when its Persian vassal Ardashir overthrew the last Arsacid king and founded the Sasanian Empire.",
+  "when": {
+    "start": {
+      "year": -246
+    },
+    "end": {
+      "year": 224
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 1,
+      "start_plus_years": 10,
+      "end_minus_years": 0,
+      "end_plus_years": 2,
+      "note": "Dating traditional start from the Arsacid era beginning around 247 BCE; Livius notes Parni occupation of Astavene in 238 BCE. End is dated to 224 CE when Ardashir I defeated the last Arsacid monarch."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE/CE",
+        "value": "The Parthians ruled from 247 BCE to 224 CE",
+        "source": "src-whe-parthia"
+      },
+      {
+        "calendar": "BC/AD",
+        "value": "a major power from the mid 3rd century BC to the 3rd century AD",
+        "source": "src-unesco-nisa"
+      },
+      {
+        "calendar": "CE",
+        "value": "The end of this loosely organized empire came in 224",
+        "source": "src-livius-parthia"
+      }
+    ],
+    "display": "247 BCE – 224 CE"
+  },
+  "where": {
+    "lat": 37.951147,
+    "lon": 58.212408,
+    "elevation_m": null,
+    "modern_name": "Old Nisa, Bagyr, near Ashgabat, Turkmenistan (stand-in pin at an early royal capital)",
+    "historical_name": "Mithradatkirt (Nisa), Parthian Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wikidata-q854672"
+    ]
+  },
+  "regions": [
+    "western_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "civilizations_empires",
+    "wars_conflict",
+    "trade_exploration"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Ruled Iran and Mesopotamia for nearly five centuries and held the Roman advance east at the Euphrates (R3 D3 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "polity-sasanian-empire",
+      "type": "caused",
+      "because": "Ardashir I overthrew the last Arsacid monarch in 224 CE to establish the Sasanian Empire."
+    },
+    {
+      "id": "place-ctesiphon-taq-kisra",
+      "type": "same_place",
+      "because": "Ctesiphon on the Tigris served as the winter imperial capital of the Parthian Empire."
+    },
+    {
+      "id": "polity-han-dynasty",
+      "type": "contemporary",
+      "because": "Han dynasty embassies under Emperor Wu established formal diplomatic and trade relations with Parthia along the Silk Road."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-whe-parthia",
+      "url": "https://www.worldhistory.org/Parthian_Empire/",
+      "title": "Parthia (Empire)",
+      "publisher": "World History Encyclopedia",
+      "author": "Patrick Scott Smith",
+      "date_published": "2019-07-22",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-unesco-nisa",
+      "url": "https://whc.unesco.org/en/list/1242/",
+      "title": "Parthian Fortresses of Nisa (World Heritage List no. 1242)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": "2007",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-livius-parthia",
+      "url": "https://www.livius.org/articles/misc/parthian-empire/",
+      "title": "Parthian Empire",
+      "publisher": "Livius.org",
+      "author": "Jona Lendering",
+      "date_published": "2004",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q854672",
+      "url": "https://www.wikidata.org/wiki/Q854672",
+      "title": "Nisa, capital of the Parthian Empire (Wikidata Q854672)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from the WHE, Livius and UNESCO pages; coordinates now from Wikidata (UNESCO syndication XML not openable); dropped the unrelated Han-Nanyue link. 247 BCE is the conventional start; Livius dates the Parni occupation of Astavene to 238 BCE.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:36:31.565Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

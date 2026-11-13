@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0200-talmud",
+  "kind": "work",
+  "title": "Mishnah and Talmud",
+  "summary": "Early in the third century Rabbi Judah ha-Nasi compiled the Mishnah, a code of Jewish oral law arranged in six orders, from teachings handed down since the first century BCE. It was at once adopted in both Palestine and Babylonia, and the rabbinic academies of Sepphoris, Sura, Nehardea and Pumbedita spent the next three centuries discussing it. Their debates were gathered into two Talmuds, the Jerusalem and the Babylonian; the Babylonian became the Talmud par excellence, the core of Jewish study and law.",
+  "when": {
+    "start": {
+      "year": 200
+    },
+    "end": {
+      "year": 500
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 20,
+      "start_plus_years": 20,
+      "end_minus_years": 50,
+      "end_plus_years": 50,
+      "note": "The Mishnah was codified around 200 CE; the Jerusalem Talmud took shape by c. 400 CE and the Babylonian Talmud was redacted by c. 500–600 CE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "The Mishnah is a codification compiled by Rabbi judah ha-nasi in the beginning of the 3d Christian century on the basis of earlier oral collections",
+        "source": "src-encyc-mishnah"
+      },
+      {
+        "calendar": "CE",
+        "value": "The Mishnah of Judah I. was adopted simultaneously in Babylon and Palestine as the halakic collection par excellence; and at the same time the development of the Talmud was begun both at Sepphoris, where the Mishnah was redacted, and at Nehardea and Sura",
+        "source": "src-jewishencyc-talmud"
+      },
+      {
+        "calendar": "CE",
+        "value": "during the amoraic period, which extended from the third to the fifth century C.E.",
+        "source": "src-jewishencyc-talmud"
+      }
+    ],
+    "display": "c. 200 – c. 500 CE"
+  },
+  "where": {
+    "lat": 32.753155,
+    "lon": 35.278875,
+    "elevation_m": 286,
+    "modern_name": "Sepphoris (Tzipori), Northern District, Israel",
+    "historical_name": "Sepphoris (Diocaesarea), Galilee, Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-pleiades-sepphoris"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Gave rabbinic Judaism its code of law and its central text of study for every later Jewish community (R3 D3 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0070-rabbinic-judaism",
+      "type": "part_of"
+    },
+    {
+      "id": "polity-roman-empire",
+      "type": "contemporary"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyc-mishnah",
+      "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/mishnah",
+      "title": "Mishnah",
+      "publisher": "New Catholic Encyclopedia (Gale / Catholic University of America, via Encyclopedia.com)",
+      "author": "L. F. Hartman",
+      "date_published": "2003",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-jewishencyc-talmud",
+      "url": "https://www.jewishencyclopedia.com/articles/14213-talmud",
+      "title": "Talmud",
+      "publisher": "The Kopelman Foundation (JewishEncyclopedia.com)",
+      "author": "Wilhelm Bacher",
+      "date_published": "1906",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-pleiades-sepphoris",
+      "url": "https://pleiades.stoa.org/places/678387/json",
+      "title": "Sepphoris/Diocaesarea (Pleiades 678387 JSON)",
+      "publisher": "Pleiades gazetteer (ISAW, New York University)",
+      "author": "E.M. Meyers, J.P. Brown et al.",
+      "date_published": "2023-06-08",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "0200",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Rabbi Judah ha-Nasi compiles and redacts the Mishnah at Sepphoris in Galilee.",
+        "source": "src-jewishencyc-talmud",
+        "consequence": false
+      },
+      {
+        "span": "0600",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Centuries of rabbinic analysis across Palestine and Babylonia yield the Talmuds, establishing the legal foundation of rabbinic Judaism.",
+        "source": "src-encyc-mishnah",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: end moved from 600 to c. 500, the close of the amoraic period per the Jewish Encyclopedia. Summary rewritten from the New Catholic Encyclopedia and Jewish Encyclopedia pages. Sepphoris pin: the Jewish Encyclopedia says the Mishnah was redacted there.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:36:45.981Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

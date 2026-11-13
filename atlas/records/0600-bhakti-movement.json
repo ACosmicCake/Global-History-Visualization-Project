@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0600-bhakti-movement",
+  "kind": "movement",
+  "title": "Bhakti movement",
+  "summary": "Bhakti, loving devotion to a personal god, found its first great voice in Tamil poet-saints of South India between about the sixth and ninth centuries, who sang hymns to Shiva and Vishnu in Tamil rather than the Sanskrit of temple ritual. Some were from low castes; their hymns were sung across the region and inspired new temples. Devotional movements later arose in other regions, from the Virashaiva poets of Karnataka to Kabir, Nanak and Mirabai in North India, many criticising caste and religious establishments.",
+  "when": {
+    "start": {
+      "year": 600
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Tamil devotional poems are dated 6th-10th centuries (Encyclopedia of Religion) or 7th-9th (Smithsonian); bhakti remains a living tradition."
+    },
+    "as_recorded": [
+      {
+        "calendar": "CE",
+        "value": "Tamil poet-saints of the seventh through ninth centuries CE offer an important perspective on the south Indian worship of key Hindu deities. Their devotional perspective is known as bhakti.",
+        "source": "src-si-bhakti"
+      },
+      {
+        "calendar": "CE",
+        "value": "The period from the sixth to the tenth century ce is the most likely one for the composition of the poems in the Prabandham.",
+        "source": "src-encyc-alvars"
+      }
+    ],
+    "display": "from c. 6th century CE"
+  },
+  "where": {
+    "lat": 12.83515,
+    "lon": 79.70006,
+    "elevation_m": 83,
+    "modern_name": "Kanchipuram, Tamil Nadu, India (regional anchor for the South Indian Bhakti movement)",
+    "historical_name": "Kanchipuram, Pallava kingdom, Tamilakam",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-gn-kanchipuram"
+    ]
+  },
+  "regions": [
+    "southern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "art_music_literature"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Made personal devotion, sung in regional languages, central to Hindu religious life across India (R3 D3 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-kabir",
+      "type": "related"
+    },
+    {
+      "id": "person-mirabai",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-si-bhakti",
+      "url": "https://asia-archive.si.edu/learn/india-shiva-nataraja-lord-of-the-dance/devotionalpoetry/",
+      "title": "Devotional Poetry - Smithsonian's National Museum of Asian Art",
+      "publisher": "Smithsonian's National Museum of Asian Art",
+      "author": "National Museum of Asian Art",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-alvars",
+      "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/alvars",
+      "title": "Āḻvārs",
+      "publisher": "Encyclopedia of Religion (Gale / Macmillan Reference USA, via Encyclopedia.com)",
+      "author": "Friedhelm E. Hardy",
+      "date_published": "1987",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-gn-kanchipuram",
+      "url": "https://www.geonames.org/1268159/kanchipuram.html",
+      "title": "Kanchipuram, Tamil Nadu, India (GeoNames 1268159)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    },
+    {
+      "id": "src-encyc-bhakti",
+      "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/bhakti",
+      "title": "Bhakti (Encyclopedia of Religion)",
+      "publisher": "Encyclopedia.com (Gale / Macmillan Reference USA)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "0600",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Tamil poet-saints in South India compose devotional hymns in vernacular Tamil dedicated to Shiva and Vishnu.",
+        "source": "src-si-bhakti",
+        "consequence": false
+      },
+      {
+        "span": "1000",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Devotional bhakti poetry inspires widespread temple construction and transforms popular Hindu religious life across the subcontinent.",
+        "source": "src-si-bhakti",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: end 1700 was unsourced; the record is now open-ended. Added the Encyclopedia of Religion \"Bhakti\" article for the later regional movements (Karnataka, Kabir, Nanak, Mirabai). \"Democratized religious practice\" wording dropped. Kanchipuram is a stand-in pin.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:36:45.122Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
