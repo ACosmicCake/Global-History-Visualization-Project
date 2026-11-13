@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "0100-mahayana-buddhism",
+  "kind": "movement",
+  "title": "Mahayana Buddhism",
+  "summary": "Mahayana Buddhism took shape in India around the beginning of the Common Era as a body of new scriptures, such as the Perfection of Wisdom texts, that exalted the bodhisattva who seeks awakening for all beings. Its texts were reaching Central Asian and Chinese readers by the end of the second century. Nagarjuna (c. 150-250 CE) built its philosophy of the middle way around emptiness. Mahayana came to predominate in northern India, Central Asia, Tibet, China, Korea, Japan and parts of Vietnam.",
+  "when": {
+    "start": {
+      "year": 100
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 100,
+      "start_plus_years": 100,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Scholarly consensus dates the emergence of Mahayana literature and movement to around the turn of the Common Era (c. 1st century BCE to 2nd century CE)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Common Era",
+        "value": "beginning of the common era",
+        "source": "src-encyclopedia-mahayana"
+      },
+      {
+        "calendar": "CE",
+        "value": "between 150 and 250 CE",
+        "source": "src-sep-nagarjuna"
+      }
+    ],
+    "display": "c. 100 CE – present (1st century CE)"
+  },
+  "where": {
+    "lat": 33.7373,
+    "lon": 72.8006,
+    "elevation_m": 549,
+    "modern_name": "Taxila, Punjab, Pakistan (stand-in pin in Gandhara, north-western India)",
+    "historical_name": "Taxila, Gandhara, Kushan Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 800,
+    "coordinate_sources": [
+      "src-geonames-taxila"
+    ]
+  },
+  "regions": [
+    "southern_asia",
+    "eastern_asia",
+    "central_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The form of Buddhism of East Asia and Tibet, shaping their religion, thought and art (R4 D3 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0250-theravada-buddhism",
+      "type": "related"
+    },
+    {
+      "id": "-0300-spread-of-buddhism-across-asia",
+      "type": "related"
+    },
+    {
+      "id": "-0500-rise-of-buddhism",
+      "type": "related"
+    },
+    {
+      "id": "0067-introduction-of-buddhism-to-china",
+      "type": "related",
+      "because": "Mahayana texts were available to Central Asian or Chinese readers by the end of the second century (Encyclopedia of Religion)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyclopedia-mahayana",
+      "url": "https://www.encyclopedia.com/philosophy-and-religion/eastern-religions/buddhism/mahayana",
+      "title": "Mahayana (Encyclopedia of Religion)",
+      "publisher": "Gale / Macmillan Reference USA",
+      "author": "Encyclopedia of Religion",
+      "date_published": "2018-06-08",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-sep-nagarjuna",
+      "url": "https://plato.stanford.edu/entries/nagarjuna/",
+      "title": "Nāgārjuna (Stanford Encyclopedia of Philosophy)",
+      "publisher": "Stanford University",
+      "author": "Jan Westerhoff",
+      "date_published": "2026-05-31",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-taxila",
+      "url": "https://www.geonames.org/11785970",
+      "title": "Taxila (GeoNames 11785970)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "c. 100",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Around the beginning of the Common Era, Mahayana teachings emphasizing the bodhisattva ideal and emptiness emerged in India.",
+        "source": "src-encyclopedia-mahayana"
+      },
+      {
+        "span": "c. 200",
+        "action": "pulse { radius_km: 600 }",
+        "caption": "Philosophers such as Nagarjuna systematized Madhyamaka thought, establishing foundations that spread along Silk Road routes to East Asia.",
+        "source": "src-sep-nagarjuna",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: causal China link changed to related; Gandharan-art link dropped. Taxila is a stand-in pin; the opened pages give no single place of origin. Summary rewritten from the Encyclopedia of Religion and SEP (Nagarjuna).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:12.939Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

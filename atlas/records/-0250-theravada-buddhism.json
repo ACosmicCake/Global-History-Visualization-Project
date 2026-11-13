@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-0250-theravada-buddhism",
+  "kind": "movement",
+  "title": "Theravada Buddhism",
+  "summary": "Theravada traces itself to the third century BCE, when the Mauryan emperor Ashoka called a Buddhist council at Pataliputra and supported missions abroad; his son Mahinda and daughter Sanghamitta are credited with bringing Theravada and its canon to Sri Lanka. It holds the Pali canon as its highest scripture and Pali as its sacred language. In the twelfth century Sri Lanka's Mahavihara lineage became the model of orthodoxy, sought out by monks from mainland Southeast Asia. It is now the main Buddhism of Sri Lanka, Myanmar, Thailand, Laos and Cambodia.",
+  "when": {
+    "start": {
+      "year": -249
+    },
+    "end": {
+      "year": 2026
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 25,
+      "start_plus_years": 25,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Traditional establishment dated to the Third Buddhist Council during the reign of Mauryan Emperor Ashoka (c. 268-232 BCE) and Mahinda's mission to Sri Lanka in the third century BCE."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE",
+        "value": "third century b.c.e.",
+        "source": "src-encyclopedia-theravada"
+      },
+      {
+        "calendar": "BCE",
+        "value": "third Buddhist council at Pataliputra",
+        "source": "src-uw-mauryans"
+      },
+      {
+        "calendar": "BCE",
+        "value": "reign of Asoka (ruling ca. 268-232 BCE)",
+        "source": "src-uw-mauryans"
+      }
+    ],
+    "display": "c. 250 BCE – present (third century BCE)"
+  },
+  "where": {
+    "lat": 8.3122,
+    "lon": 80.4131,
+    "elevation_m": 81,
+    "modern_name": "Anuradhapura, Sri Lanka (stand-in pin for the Sri Lankan centre of early Theravada)",
+    "historical_name": "Anuradhapura (Mahavihara), Kingdom of Anuradhapura",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 300,
+    "coordinate_sources": [
+      "src-geonames-anuradhapura"
+    ]
+  },
+  "regions": [
+    "southern_asia",
+    "south_eastern_asia"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "The Buddhism of Sri Lanka and mainland Southeast Asia for two millennia (R3 D3 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0300-spread-of-buddhism-across-asia",
+      "type": "related"
+    },
+    {
+      "id": "-0500-rise-of-buddhism",
+      "type": "related"
+    },
+    {
+      "id": "polity-maurya-empire",
+      "type": "related"
+    },
+    {
+      "id": "person-ashoka",
+      "type": "related",
+      "because": "Ashoka called the third Buddhist council at Pataliputra and supported missionaries, including his son Mahinda, who brought Buddhism to Sri Lanka (UW Silk Road; Encyclopedia of Religion)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-encyclopedia-theravada",
+      "url": "https://www.encyclopedia.com/philosophy-and-religion/eastern-religions/buddhism/theravada",
+      "title": "Theravada (Encyclopedia of Religion)",
+      "publisher": "Gale / Macmillan Reference USA",
+      "author": "Encyclopedia of Religion",
+      "date_published": "2018-05-23",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-uw-mauryans",
+      "url": "https://depts.washington.edu/silkroad/exhibit/mauryans/essay.html",
+      "title": "The Mauryan Empire (Silk Road Seattle)",
+      "publisher": "University of Washington, Walter Chapin Simpson Center for the Humanities",
+      "author": "Jason Neelis",
+      "date_published": "2002",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-anuradhapura",
+      "url": "https://www.geonames.org/1251081",
+      "title": "Anuradhapura (GeoNames 1251081)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "-0249",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In the third century BCE, Emperor Ashoka supported the Third Buddhist Council at Pataliputra and dispatched monastic missions.",
+        "source": "src-uw-mauryans"
+      },
+      {
+        "span": "-0249",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "Mahinda introduced the Theravada lineage and Pali canon to Sri Lanka, establishing the foundation for its spread to Southeast Asia.",
+        "source": "src-encyclopedia-theravada",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: Ashoka link changed from caused_by to related with sourced reasons; Ruwanwelisaya link dropped. Anuradhapura is a stand-in pin: the opened pages do not place the Mahavihara there. Summary rewritten from the Encyclopedia of Religion and UW Silk Road.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:12.246Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

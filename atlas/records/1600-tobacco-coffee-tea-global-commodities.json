@@ -1,0 +1,171 @@
+{
+  "id": "1600-tobacco-coffee-tea-global-commodities",
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Tobacco, coffee and tea as global commodities",
+  "summary": "Coffee, tea, cocoa, tobacco and sugar are counted among the first modern commodities. In Virginia, John Rolfe was growing Spanish-type tobacco by 1612, and by 1615-16 the colony was shipping it to England, saving its economy. Coffee, monopolised by Yemen until the Dutch began growing it on Java at the end of the 1600s, spread to the Caribbean and Latin America on slave plantations. In North America it went from a luxury in the seventeenth century to a mass drink by the mid-nineteenth, rivalling tea.",
+  "when": {
+    "start": {
+      "year": 1600
+    },
+    "end": {
+      "year": 1850
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 12,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "From early 17th-century commercial tobacco (Rolfe, 1612) to coffee becoming a mass drink by the mid-19th century (Topik and McDonald)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1612 in Virginia",
+        "source": "src-nps-tobacco"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "17th Century",
+        "source": "src-lse-commodities"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "from luxury beverage in the seventeenth century to mass consumer drink by the mid-nineteenth century",
+        "source": "src-lse-commodities"
+      }
+    ],
+    "display": "c. 1600 – mid-19th century"
+  },
+  "where": {
+    "lat": 37.2092,
+    "lon": -76.7775,
+    "elevation_m": null,
+    "modern_name": "Jamestown, Virginia, United States (stand-in pin where Rolfe first grew export tobacco)",
+    "historical_name": "Jamestown, Colony of Virginia",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 3000,
+    "coordinate_sources": [
+      "src-wikidata-q323813"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america",
+    "eastern_asia",
+    "western_asia",
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "trade_exploration",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Turned stimulants into mass commodities, tied to plantation slavery and colonial trade (R4 D3 T3 L2)."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions plantation slavery.",
+  "related": [
+    {
+      "id": "1500-caribbean-sugar-plantation-system",
+      "type": "related"
+    },
+    {
+      "id": "1501-transatlantic-slave-trade",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "1612",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Commercial tobacco cultivation begins in Virginia, establishing the first major Atlantic cash crop export to England.",
+        "source": "src-nps-tobacco",
+        "consequence": false
+      },
+      {
+        "span": "1652",
+        "action": "pulse { radius_km: 600 }",
+        "caption": "The emergence of coffeehouses and retail tea transforms urban European sociability and spurs maritime commodity imports.",
+        "source": "src-lse-commodities",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-lse-commodities",
+      "url": "https://www.lse.ac.uk/Economic-History/Assets/Documents/Research/GEHN/GEHNConferences/conf10/Conf10-TopikMcDonald.pdf",
+      "title": "Why Americans Drink Coffee: The Caffeinated Route to the Creation of a Consumer Culture",
+      "publisher": "London School of Economics",
+      "author": "Steven Topik, Michelle McDonald",
+      "date_published": "2005",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-nps-tobacco",
+      "url": "https://www.nps.gov/jame/learn/historyculture/tobacco-the-early-history-of-a-new-world-crop.htm",
+      "title": "Tobacco: The Early History of a New World Crop",
+      "publisher": "U.S. National Park Service",
+      "author": "National Park Service",
+      "date_published": "2021",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wikidata-q323813",
+      "url": "https://www.wikidata.org/wiki/Q323813",
+      "title": "Jamestown, Virginia (Wikidata Q323813)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: thin record. The LSE paper (Topik and McDonald) is mainly about coffee in America, and NPS covers Virginia tobacco; London coffeehouse, working-class and \"consumer capitalism\" claims were not on the opened pages and were dropped, as was the causal Industrial Revolution link. End moved to the mid-19th century; pin moved to Jamestown as a stand-in. Tea is covered only in passing.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:09.099Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

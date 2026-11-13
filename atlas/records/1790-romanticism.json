@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1790-romanticism",
+  "kind": "movement",
+  "title": "Romanticism",
+  "summary": "Romanticism was a European movement in all the arts, at its height in Britain from about 1785 to 1825; the term itself came from Germany. Its founding voice was Rousseau, who taught that passion speaks truer than reason, and it put imagination, emotion, nature and the inner self at the centre of art. In Jena around 1798 Friedrich and August Schlegel, Novalis and Schleiermacher published the Athenaeum fragments, while in England Wordsworth and Coleridge issued Lyrical Ballads that year. A second generation, Keats and Shelley among them, followed.",
+  "when": {
+    "start": {
+      "year": 1785
+    },
+    "end": {
+      "year": 1825
+    },
+    "precision": "decade",
+    "uncertainty": {
+      "start_minus_years": 15,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 25,
+      "note": "The Oxford Companion dates its height in Britain to 1785-1825; the German Jena circle flourished c. 1796-1801."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Romanticism was a European phenomenon, at its height in Britain from 1785 to 1825",
+        "source": "src-oxford-romanticism"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Lyrical Ballads in 1798",
+        "source": "src-oxford-romanticism"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "philosophical importance of early German Romanticism",
+        "source": "src-sep-schlegel"
+      }
+    ],
+    "display": "c. 1785–1825 (height in Britain)"
+  },
+  "where": {
+    "lat": 50.9319,
+    "lon": 11.5906,
+    "elevation_m": 145,
+    "modern_name": "Jena, Thuringia, Germany",
+    "historical_name": "Jena, Duchy of Saxe-Weimar, Holy Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 15,
+    "coordinate_sources": [
+      "src-geonames-jena"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america"
+  ],
+  "domains": [
+    "art_music_literature",
+    "religion_philosophy"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Recast how Western art and thought value feeling, nature and the individual (R3 D2 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1789-french-revolution",
+      "type": "contemporary"
+    },
+    {
+      "id": "person-ludwig-van-beethoven",
+      "type": "contemporary"
+    },
+    {
+      "id": "1685-age-of-enlightenment",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-oxford-romanticism",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/romanticism",
+      "title": "Romanticism (The Oxford Companion to British History)",
+      "publisher": "Oxford University Press (via Encyclopedia.com)",
+      "author": "The Oxford Companion to British History",
+      "date_published": "2018-05-23",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-sep-schlegel",
+      "url": "https://plato.stanford.edu/entries/schlegel/",
+      "title": "Friedrich Schlegel (Stanford Encyclopedia of Philosophy)",
+      "publisher": "Stanford University",
+      "author": "Allen Speight",
+      "date_published": "2025-03-17",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-jena",
+      "url": "https://www.geonames.org/2895042",
+      "title": "Jena (GeoNames 2895042)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1798",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "In 1798, the Jena circle and British publications like Lyrical Ballads launched European Romanticism.",
+        "source": "src-oxford-romanticism"
+      },
+      {
+        "span": "1825",
+        "action": "pulse { radius_km: 800 }",
+        "caption": "Romantic aesthetics transformed literature, philosophy, visual art, and music across Europe and North America.",
+        "source": "src-oxford-romanticism",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: dates set to the Oxford Companion's 1785-1825 (end 1850 unsourced); Industrial Revolution causal link dropped and Enlightenment link made related, as neither cause is stated on the opened pages. Jena pin from GeoNames.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:14.243Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

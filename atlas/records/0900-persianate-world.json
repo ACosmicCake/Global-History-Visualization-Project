@@ -1,0 +1,177 @@
+{
+  "id": "0900-persianate-world",
+  "schema_version": "1.0.0",
+  "record_version": 2,
+  "tier": "outline",
+  "status": "outline",
+  "kind": "process",
+  "title": "Persian as a language of courts and literature across Asia",
+  "summary": "New Persian first appears as a literary language in the late ninth century at the court of the Samanids, whose capital Bukhara and Samarkand became centres of Persian art and letters. By the eleventh century it was a language of literature, administration and science, and Ferdowsi's Shahnameh became Iran's national epic. Carried by Turkic, Mongol and Indian dynasties into Central Asia and North India, Persian language and culture shaped Islamic civilisation from Anatolia to the fringes of China until the nineteenth century.",
+  "when": {
+    "start": {
+      "year": 900
+    },
+    "end": {
+      "year": 1850
+    },
+    "precision": "century",
+    "uncertainty": {
+      "start_minus_years": 50,
+      "start_plus_years": 50,
+      "end_minus_years": 50,
+      "end_plus_years": 50,
+      "note": "Iranica: the oldest known Persian poets are recorded at the Samanid court in the late 9th century, and Persian culture led Islamic civilisation from the 11th up until the 19th century."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The oldest known Persian poets are recorded in the second half of the 9th century at the Samanid court",
+        "source": "src-iranica-early-new-persian"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "cities of Bukhara (the Samanid capital) and Samarkand became centers of Persian art and literature",
+        "source": "src-encyclopedia-samanid"
+      }
+    ],
+    "display": "c. 900 – 19th century"
+  },
+  "where": {
+    "lat": 39.77472,
+    "lon": 64.42861,
+    "elevation_m": null,
+    "modern_name": "Bukhara, Uzbekistan (Samanid capital and early focal center of the New Persian literary renaissance)",
+    "historical_name": "Bukhara, Samanid State",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-unesco-bukhara"
+    ]
+  },
+  "regions": [
+    "central_asia",
+    "western_asia",
+    "southern_asia"
+  ],
+  "domains": [
+    "art_music_literature",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Made Persian the shared language of courts and literature across much of Asia for nearly a millennium (R4 D3 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "place-bukhara-historic-centre",
+      "type": "same_place"
+    },
+    {
+      "id": "polity-mughal-empire",
+      "type": "related"
+    },
+    {
+      "id": "1037-seljuk-empire",
+      "type": "related"
+    },
+    {
+      "id": "polity-timurid-empire",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 30,
+    "beats": [
+      {
+        "span": "c. 900",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The Samanid court at Bukhara patronizes New Persian as an administrative and literary language, sparking a poetic renaissance.",
+        "source": "src-iranica-early-new-persian",
+        "consequence": false
+      },
+      {
+        "span": "c. 1300",
+        "action": "pulse { radius_km: 2500 }",
+        "caption": "Persian court literature and bureaucratic norms expand across Central, Western, and South Asia, creating a shared Persianate cultural sphere.",
+        "source": "src-encyclopedia-samanid",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-iranica-early-new-persian",
+      "url": "https://www.iranicaonline.org/articles/persian-language-1-early-new-persian/",
+      "title": "PERSIAN LANGUAGE i. Early New Persian",
+      "publisher": "Encyclopædia Iranica Foundation",
+      "author": "Bo Utas",
+      "date_published": "2024-10-20",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-encyclopedia-samanid",
+      "url": "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/samanid",
+      "title": "Samanid",
+      "publisher": "The Columbia Encyclopedia (via Encyclopedia.com)",
+      "author": "The Columbia Encyclopedia",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-unesco-bukhara",
+      "url": "https://whc.unesco.org/en/list/602/",
+      "title": "Historic Centre of Bukhara (World Heritage List no. 602)",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO",
+      "date_published": "1993",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: relaunched record, checked against Iranica, Columbia Encyclopedia and UNESCO. End 1857 was not on the opened pages and is now the 19th century (Iranica); Rudaki and the colonial-era claim dropped. UNESCO gives N39 46 29 E64 25 43 for Bukhara, now used.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T16:00:20.099Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    },
+    {
+      "date": "2026-11-13",
+      "version": 2,
+      "change": "corrected"
+    }
+  ]
+}
