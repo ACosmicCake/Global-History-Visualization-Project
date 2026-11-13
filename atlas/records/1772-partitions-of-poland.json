@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1772-partitions-of-poland",
+  "kind": "event",
+  "title": "Partitions of Poland",
+  "summary": "Weak against its neighbours, the Polish-Lithuanian Commonwealth was carved up by Russia, Prussia and Austria in three steps. The first partition, agreed on 5 August 1772, left a smaller Poland still standing. Reforms that culminated in the liberal constitution of 1791 alarmed Russia and Prussia, which sent troops and took more land in the second partition of 1793. After crushing a Polish revolt in 1794, the three powers divided what remained on 24 October 1795, and Poland vanished from the map of Europe until 1918.",
+  "when": {
+    "start": {
+      "year": 1772,
+      "iso": "1772-08-05"
+    },
+    "end": {
+      "year": 1795,
+      "iso": "1795-10-24"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "First partition treaty signed 5 August 1772; third partition concluded 24 October 1795."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "signed by Russia, Prussia, and Austria on August 5, 1772",
+        "source": "src-ghdi-poland"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "In 1772, Austria, Russia, and Prussia conducted the First Partition of Poland",
+        "source": "src-state-poland"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "divided the remnants of Poland between themselves on October 24, 1795",
+        "source": "src-ghdi-poland"
+      }
+    ],
+    "display": "5 August 1772 – 24 October 1795"
+  },
+  "where": {
+    "lat": 52.22977,
+    "lon": 21.01178,
+    "elevation_m": 100,
+    "modern_name": "Warsaw, Poland",
+    "historical_name": "Warsaw, Polish–Lithuanian Commonwealth",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-geonames-warsaw"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "civilizations_empires",
+    "law_politics_rights"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Erased a large European state for over a century and set the borders of eastern Europe (R3 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1787-written-constitutions",
+      "type": "related"
+    },
+    {
+      "id": "1939-09-01-invasion-of-poland",
+      "type": "related"
+    },
+    {
+      "id": "polity-russian-empire",
+      "type": "related"
+    },
+    {
+      "id": "1814-congress-of-vienna",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ghdi-poland",
+      "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/ghdi:map-3665",
+      "title": "The Partitions of Poland, 1772-1795",
+      "publisher": "German History in Documents and Images (German Historical Institute, Washington)",
+      "author": "German Historical Institute",
+      "date_published": "2020",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-state-poland",
+      "url": "https://history.state.gov/countries/poland",
+      "title": "A Guide to the United States' History of Recognition, Diplomatic, and Consular Relations, by Country, since 1776: Poland",
+      "publisher": "Office of the Historian, United States Department of State",
+      "author": "Office of the Historian",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-warsaw",
+      "url": "https://www.geonames.org/756135/",
+      "title": "Warsaw, Poland (GeoNames 756135)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1772-08-05",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "Russia, Prussia, and Austria sign the First Partition treaty, stripping the Polish-Lithuanian Commonwealth of about one-third of its territory.",
+        "source": "src-ghdi-poland"
+      },
+      {
+        "span": "1793",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "Russia and Prussia impose the Second Partition after Polish constitutional reforms, reducing the Commonwealth to a rump state.",
+        "source": "src-ghdi-poland"
+      },
+      {
+        "span": "1795-10-24",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The three partitioning powers complete the Third Partition, extinguishing Poland as an independent state until 1918.",
+        "source": "src-ghdi-poland",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from GHDI and the State Department; Congress of Vienna link changed from caused to related (no causal claim on the opened pages). Warsaw is a stand-in pin.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T08:16:43.100Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

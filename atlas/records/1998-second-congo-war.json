@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1998-second-congo-war",
+  "kind": "event",
+  "title": "Second Congo War",
+  "summary": "On 2 August 1998 a rebellion broke out against President Laurent-Desire Kabila of the Democratic Republic of the Congo. Rwanda, which admitted in November that its troops were helping the rebels, Uganda, Angola, Zimbabwe and Namibia all became involved, and new rebel groups appeared. A ceasefire signed at Lusaka in July 1999 brought a UN mission, but fighting went on. Kabila was assassinated in 2001, and a transitional government took office in 2003. The US State Department counts upwards of five million Congolese deaths.",
+  "when": {
+    "start": {
+      "year": 1998,
+      "iso": "1998-08-02"
+    },
+    "end": {
+      "year": 2003,
+      "iso": "2003-06-30"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Hostilities began on 2 August 1998 with mutinies against Kabila; major interstate warfare concluded with the installation of the transitional government in mid-2003."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "against the government of President Laurent-Desire Kabila was launched on 2 August 1998",
+        "source": "src-upenn-congo"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "African World War (1997-2003) during which time nine African countries fought over the D.R.C's resources, causing the deaths of upwards of five million Congolese. Following the 2001 assassination of the country's president, a United Nations peacekeeping mission deployed throughout the country, and a transitional government took office in 2003",
+        "source": "src-state-drc"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Lusaka Ceasefire Agreement in July 1999 between the Democratic Republic of the Congo (DRC) and five regional States in July 1999",
+        "source": "src-un-monuc"
+      }
+    ],
+    "display": "2 August 1998 – June 2003"
+  },
+  "where": {
+    "lat": -4.32758,
+    "lon": 15.31357,
+    "elevation_m": 240,
+    "modern_name": "Kinshasa, Democratic Republic of the Congo (stand-in pin at the capital; fighting was mostly in the east)",
+    "historical_name": "Kinshasa, Democratic Republic of the Congo",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-geonames-kinshasa"
+    ]
+  },
+  "regions": [
+    "sub_saharan_africa"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "The deadliest war in modern African history, drawing in nine countries (R3 D4 T2 L2)."
+  },
+  "confidence": "established",
+  "audience_note": "Includes mass violence, widespread atrocities, and war-induced famine resulting in millions of civilian deaths across the Democratic Republic of the Congo.",
+  "related": [
+    {
+      "id": "1885-congo-free-state",
+      "type": "related"
+    },
+    {
+      "id": "1994-rwandan-genocide",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-upenn-congo",
+      "url": "https://www.africa.upenn.edu/Hornet/irin6999b.html",
+      "title": "DRC: IRIN Chronology of the Rebellion",
+      "publisher": "University of Pennsylvania African Studies Center",
+      "author": "UN Office for the Coordination of Humanitarian Affairs, Integrated Regional Information Network (IRIN)",
+      "date_published": "1999-06-09",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-state-drc",
+      "url": "https://2009-2017.state.gov/r/pa/ei/bgn/2823.htm",
+      "title": "U.S. Relations With Democratic Republic of the Congo",
+      "publisher": "U.S. Department of State, Bureau of African Affairs",
+      "author": "U.S. Department of State",
+      "date_published": "2016-07-08",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-un-monuc",
+      "url": "https://peacekeeping.un.org/en/mission/past/monuc/",
+      "title": "United Nations Organization Mission in the Democratic Republic of the Congo (MONUC)",
+      "publisher": "United Nations Peacekeeping",
+      "author": "United Nations Department of Peacekeeping Operations",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-kinshasa",
+      "url": "https://www.geonames.org/2314302/",
+      "title": "Kinshasa, Democratic Republic of the Congo (GeoNames 2314302)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1998-08-02",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "Rebellion erupts against Laurent-Désiré Kabila in eastern Congo, quickly drawing in Rwandan and Ugandan military forces.",
+        "source": "src-upenn-congo"
+      },
+      {
+        "span": "1999-07",
+        "action": "region.fill { radius_km: 600 }",
+        "caption": "Regional belligerents sign the Lusaka Ceasefire Agreement, setting up the UN peacekeeping mission MONUC to monitor forces.",
+        "source": "src-un-monuc"
+      },
+      {
+        "span": "2003",
+        "action": "pulse { radius_km: 500 }",
+        "caption": "A power-sharing transitional government takes office in Kinshasa, ending large-scale interstate warfare that killed upwards of five million.",
+        "source": "src-state-drc",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: alliances stated only as on the opened pages (the UPenn IRIN chronology names Rwanda, Uganda, Namibia, Zimbabwe and Angola); the Rwanda-genocide link changed from caused_by to related because no opened page states the cause; Cuban-expedition link dropped. Death figure as the State Department gives it for 1997-2003.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T08:16:44.631Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
