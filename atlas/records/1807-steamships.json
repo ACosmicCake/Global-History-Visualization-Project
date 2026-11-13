@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "id": "1807-steamships",
+  "kind": "process",
+  "title": "Steamships and ocean steam navigation",
+  "summary": "On 17 August 1807 Robert Fulton's North River steamboat left New York City and reached Albany, 150 miles up the Hudson, in about 32 hours: the first commercially successful steamboat. Steam river boats soon transformed American transport. At sea, the Great Western Steamship Company's SS Great Western opened a transatlantic service in 1838, and its SS Great Britain, the first large ocean-going ship to combine an iron hull with a screw propeller, crossed the Atlantic in 14 days in 1845.",
+  "when": {
+    "start": {
+      "year": 1807,
+      "iso": "1807-08-17"
+    },
+    "end": {
+      "year": 1845
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "From Fulton's first Hudson run (17 August 1807) to the first Atlantic crossing by an iron screw steamer (1845)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "The North River left New York City on Aug 17, 1807",
+        "source": "src-lindahall-fulton"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Fulton's Clermont made its historic first run in August 1807 on the Hudson River",
+        "source": "src-nihf-fulton"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "She was the first iron steamer to cross the Atlantic Ocean, which she did in 1845, in 14 days",
+        "source": "src-wiki-ss-great-britain"
+      }
+    ],
+    "display": "1807–1845"
+  },
+  "where": {
+    "lat": 40.712778,
+    "lon": -74.006111,
+    "elevation_m": null,
+    "modern_name": "New York City, New York, United States",
+    "historical_name": "New York City, New York, United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 5,
+    "coordinate_sources": [
+      "src-wikidata-q60"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "oceans",
+    "global"
+  ],
+  "domains": [
+    "science_technology",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Steam power freed shipping from wind and current, speeding trade and migration across rivers and oceans (R4 D3 T3 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "1825-railway-age",
+      "type": "contemporary",
+      "because": "Steam navigation on rivers and oceans developed alongside steam locomotives on rails during the early nineteenth-century transport revolution."
+    },
+    {
+      "id": "1760-industrial-revolution",
+      "type": "caused_by",
+      "because": "The development of high-power steam engines during the Industrial Revolution provided the mechanical prime movers adapted to paddle wheels and marine propellers."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-lindahall-fulton",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/robert-fulton/",
+      "title": "Robert Fulton - Scientist of the Day",
+      "publisher": "Linda Hall Library",
+      "author": "William B. Ashworth, Jr.",
+      "date_published": "2022-11-14",
+      "accessed": "2026-11-13",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-nihf-fulton",
+      "url": "https://www.invent.org/inductees/robert-fulton",
+      "title": "NIHF Inductee and Steamboat Inventor Robert Fulton",
+      "publisher": "National Inventors Hall of Fame",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wiki-ss-great-britain",
+      "url": "https://en.wikipedia.org/w/index.php?title=SS_Great_Britain&oldid=1381104141",
+      "title": "SS Great Britain (Good Article, pinned revision)",
+      "publisher": "Wikipedia",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "wiki_quality": "GA",
+      "opened": true,
+      "supports": [
+        "when",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q60",
+      "url": "https://www.wikidata.org/wiki/Q60",
+      "title": "New York City (Wikidata Q60)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: the drafted sources covered only Fulton's river boat, so the ocean claims and the 1838 end were unsourced. Added the SS Great Britain Good Article (pinned oldid) for the Great Western and Great Britain; end moved to 1845. \"Naval warfare\" and \"replacing sail\" dropped.",
+  "published_at": "2026-11-13T07:59:13.254Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

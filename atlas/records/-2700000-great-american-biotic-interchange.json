@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "-2700000-great-american-biotic-interchange",
+  "kind": "process",
+  "title": "Great American Biotic Interchange",
+  "summary": "Once the Isthmus of Panama joined North and South America in the Pliocene, land animals that had evolved apart for millions of years began to cross. Earlier crossings, such as ground sloths reaching North America about 9 million years ago, were few and mostly by sea. Just before 2.7 million years ago dispersal surged both ways: armadillos, ground sloths, opossums and porcupines moved north, while dogs, cats, bears, weasels and horses invaded South America. This Great American Biotic Interchange mixed the faunas of the two continents.",
+  "when": {
+    "start": {
+      "year": -2700000
+    },
+    "end": {
+      "year": -2600000
+    },
+    "precision": "hundred_millennia",
+    "uncertainty": {
+      "start_minus_years": 100000,
+      "start_plus_years": 100000,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "O'Dea et al. (2016): mammal dispersal accelerated just before 2.7 Ma and the GABI surge is traditionally dated from about 2.6 Ma; crossings continued afterwards."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Ma (millions of years ago)",
+        "value": "an observed acceleration in the rate of dispersal of terrestrial mammals between continents sometime just before 2.7 Ma",
+        "source": "src-odea2016"
+      },
+      {
+        "calendar": "Ma (millions of years ago)",
+        "value": "Panamanian land-bridge between North and South America appeared during the Pliocene, allowing migrations of plants and animals into new habitats",
+        "source": "src-ucmp-pliocene"
+      }
+    ],
+    "display": "from c. 2.7 million years ago"
+  },
+  "where": {
+    "lat": 9,
+    "lon": -80,
+    "elevation_m": null,
+    "modern_name": "Isthmus of Panama, Panama (GeoNames centroid)",
+    "historical_name": "Emergent Panamanian land bridge connecting North and South America (Pliocene epoch; no human polities existed)",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 150,
+    "coordinate_sources": [
+      "src-geonames-panama"
+    ]
+  },
+  "regions": [
+    "latin_america_caribbean",
+    "northern_america"
+  ],
+  "domains": [
+    "life_extinction"
+  ],
+  "scale": "deep_time",
+  "importance": {
+    "score": 4,
+    "justification": "Merged the land faunas of two continents, reshaping the mammals of the Americas; a consequence of the Panama closure (R3 D3 T4 L2)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "c. 2.7 Ma",
+        "action": "pulse { radius_km: 200 }",
+        "caption": "The completed Panamanian land bridge initiates a massive wave of reciprocal mammal migrations between North and South America.",
+        "source": "src-odea2016",
+        "consequence": false
+      },
+      {
+        "span": "c. 1.8 Ma",
+        "action": "pulse { radius_km: 400 }",
+        "caption": "Northern placental mammals diversify across South America as native ungulates and marsupials suffer severe ecological displacement.",
+        "source": "src-ucmp-pliocene",
+        "consequence": true
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "-3my-closure-of-isthmus-of-panama",
+      "type": "caused_by",
+      "because": "The tectonic uplift and closure of the Isthmus of Panama created the continuous subaerial land bridge that enabled terrestrial fauna to cross between the continents."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-odea2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4988774/",
+      "title": "Formation of the Isthmus of Panama",
+      "publisher": "Science Advances (AAAS, via PubMed Central)",
+      "author": "Aaron O'Dea, Harilaos A. Lessios, Anthony G. Coates, et al.",
+      "date_published": "2016-08-17",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-ucmp-pliocene",
+      "url": "https://ucmp.berkeley.edu/tertiary/pliocene.php",
+      "title": "The Pliocene Epoch",
+      "publisher": "University of California Museum of Paleontology",
+      "author": "University of California Museum of Paleontology",
+      "date_published": "2011",
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-geonames-panama",
+      "url": "https://www.geonames.org/3703437/isthmus-of-panama.html",
+      "title": "Isthmus of Panama (GeoNames entry 3703437)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "2024",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: glyptodont, camelid and extinction claims dropped (not on the opened pages); end -1.8 Ma unsourced, so the record now marks the onset. Pin set to the GeoNames isthmus centroid (9.0, -80.0) cited. Rated below the parent Panama closure record.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:19.768Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1919-fascism",
+  "kind": "movement",
+  "title": "Fascism as a movement",
+  "summary": "On 23 March 1919 Benito Mussolini founded the Fasci italiani di combattimento at a meeting of about fifty interventionists, former socialists, syndicalists, arditi and futurists in Milan's Piazza San Sepolcro. Its squads attacked unions, socialist cooperatives and opposition papers. In 1921 the movement became the National Fascist Party, and after the March on Rome in 1922 Mussolini ruled Italy as dictator until 1943. His was the first fully fledged fascist regime, a model for other movements across interwar Europe.",
+  "when": {
+    "start": {
+      "year": 1919
+    },
+    "end": {
+      "year": 1945
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Founded 23 March 1919 at Piazza San Sepolcro in Milan; European fascist regimes collapsed at the close of World War II in 1945."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "23 marzo 1919 diede vita ai Fasci italiani di combattimento, in una riunione che si svolse a Milano, in un palazzo di piazza S. Sepolcro",
+        "source": "src-treccani-gentile"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "23 Mar 1919 Benito Mussolini creates the Fasci Italiani di Combattimento",
+        "source": "src-worldhistory-mussolini"
+      }
+    ],
+    "display": "1919–1945"
+  },
+  "where": {
+    "lat": 45.462997,
+    "lon": 9.185097,
+    "elevation_m": 120,
+    "modern_name": "Piazza San Sepolcro, Milan, Lombardy, Italy",
+    "historical_name": "Piazza San Sepolcro, Milan, Kingdom of Italy",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-q3902322"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "civilizations_empires",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Created the first fascist regime and the model copied across interwar Europe, leading towards the Second World War (R3 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": "Mentions political violence by fascist squads.",
+  "related": [
+    {
+      "id": "person-benito-mussolini",
+      "type": "related"
+    },
+    {
+      "id": "person-adolf-hitler",
+      "type": "related"
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1919-03-23",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Benito Mussolini founds the Fasci Italiani di Combattimento in Piazza San Sepolcro, Milan.",
+        "source": "src-treccani-gentile"
+      },
+      {
+        "span": "1922-10-28",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Fascists seize power in Italy following the March on Rome, establishing Europe's first fascist dictatorship.",
+        "source": "src-worldhistory-mussolini",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-treccani-gentile",
+      "url": "https://www.treccani.it/enciclopedia/benito-mussolini_(Dizionario-Biografico)/",
+      "title": "MUSSOLINI, Benito (Dizionario Biografico degli Italiani, Vol. 77)",
+      "publisher": "Istituto della Enciclopedia Italiana",
+      "author": "Emilio Gentile",
+      "date_published": "2012",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-worldhistory-mussolini",
+      "url": "https://www.worldhistory.org/Benito_Mussolini/",
+      "title": "Benito Mussolini: Founder of Fascism",
+      "publisher": "World History Encyclopedia",
+      "author": "Fabio Sappino",
+      "date_published": "2025-07-23",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wikidata-q3902322",
+      "url": "https://www.wikidata.org/wiki/Q3902322",
+      "title": "Piazza San Sepolcro, Milan (Wikidata Q3902322)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from Treccani and WHE; Pin moved from Milan centre to Piazza San Sepolcro (Wikidata). End 1945 kept (Mussolini shot April 1945, WHE).",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:08.590Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1979-neoliberal-turn",
+  "kind": "process",
+  "title": "Neoliberal turn (Thatcher, Reagan, Washington Consensus)",
+  "summary": "Neoliberal ideas, kept on the margins by Keynesian economics for decades, gained ground when stagflation struck in the 1970s. After Chile's early turn and the elections of Margaret Thatcher in Britain in 1979 and Ronald Reagan in the United States, they won wide influence on policy: more competition through deregulation and open markets, including for capital, and a smaller state through privatisation and limits on deficits. In 1990 John Williamson summed up the reforms urged on indebted Latin America as the Washington consensus.",
+  "when": {
+    "start": {
+      "year": 1979
+    },
+    "end": {
+      "year": 1990
+    },
+    "precision": "year",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 1,
+      "note": "Spans Margaret Thatcher taking office in May 1979 to John Williamson's codification of the Washington Consensus in late 1989."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "1979 May 4 Fr Margaret Thatcher Remarks on becoming Prime Minister",
+        "source": "src-thatcher-1979"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "strong and widespread global trend toward neoliberalism since the 1980s",
+        "source": "src-imf-ostry2016"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Published April 1990",
+        "source": "src-piie-williamson1989"
+      }
+    ],
+    "display": "1979–1990"
+  },
+  "where": {
+    "lat": 51.503333,
+    "lon": -0.127778,
+    "elevation_m": 12,
+    "modern_name": "10 Downing Street, Westminster, London, United Kingdom (stand-in pin for the global neoliberal policy turn)",
+    "historical_name": "10 Downing Street, Westminster, London, United Kingdom",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-wikidata-q169101"
+    ]
+  },
+  "regions": [
+    "europe",
+    "northern_america",
+    "global"
+  ],
+  "domains": [
+    "law_politics_rights",
+    "trade_exploration"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Reset economic policy in much of the world towards markets, privatisation and open capital flows (R4 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1979-05-04",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Margaret Thatcher becomes British Prime Minister, launching extensive privatization and free-market reforms.",
+        "source": "src-thatcher-1979",
+        "consequence": false
+      },
+      {
+        "span": "1989",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The Washington Consensus codifies deregulation and free-market structural adjustment across global financial institutions.",
+        "source": "src-piie-williamson1989",
+        "consequence": true
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "1944-bretton-woods-conference",
+      "type": "caused_by",
+      "because": "The breakdown of the post-war Bretton Woods monetary framework and 1970s stagflation prompted the pivot to neoliberal market mechanisms."
+    },
+    {
+      "id": "1960-founding-of-opec",
+      "type": "related"
+    },
+    {
+      "id": "1991-dissolution-of-the-soviet-union",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-thatcher-1979",
+      "url": "https://www.margaretthatcher.org/document/104078",
+      "title": "Remarks on becoming Prime Minister (St Francis's prayer)",
+      "publisher": "Margaret Thatcher Foundation",
+      "author": "Margaret Thatcher",
+      "date_published": "1979-05-04",
+      "accessed": "2026-11-13",
+      "class": "archive",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-imf-ostry2016",
+      "url": "https://www.imf.org/external/pubs/ft/fandd/2016/06/ostry.htm",
+      "title": "Neoliberalism: Oversold?",
+      "publisher": "International Monetary Fund",
+      "author": "Jonathan D. Ostry, Prakash Loungani, Davide Furceri",
+      "date_published": "2016-06",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-piie-williamson1989",
+      "url": "https://www.piie.com/commentary/speeches-papers/what-washington-means-policy-reform",
+      "title": "What Washington Means by Policy Reform",
+      "publisher": "Peterson Institute for International Economics",
+      "author": "John Williamson",
+      "date_published": "1989-11",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-encyc-neoliberalism",
+      "url": "https://www.encyclopedia.com/social-sciences/applied-and-social-sciences-magazines/neoliberalism",
+      "title": "Neoliberalism (International Encyclopedia of the Social Sciences)",
+      "publisher": "Encyclopedia.com (Gale / Macmillan Reference USA)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q169101",
+      "url": "https://www.wikidata.org/wiki/Q169101",
+      "title": "10 Downing Street (Wikidata Q169101)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: the drafted sources did not tie Thatcher or Reagan to the policies, so the Encyclopedia.com Neoliberalism article was added. End changed from 1989 to the April 1990 publication of Williamson's chapter (PIIE). Inequality and sovereign-autonomy claims dropped from the summary; IMF (Ostry et al. 2016) notes increased inequality. Pin is a stand-in.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:17.358Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

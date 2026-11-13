@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1938-discovery-of-nuclear-fission",
+  "kind": "event",
+  "title": "Discovery of nuclear fission",
+  "summary": "In December 1938, bombarding uranium with neutrons at the Kaiser Wilhelm Institute for Chemistry in Berlin-Dahlem, Otto Hahn and Fritz Strassmann found radioactive barium among the products: the uranium nucleus had burst. In January 1939 Lise Meitner, who had fled to Sweden, and her nephew Otto Frisch explained it with the liquid-drop model as a split into two fragments releasing huge energy, and Frisch named it nuclear fission. The discovery opened the way to nuclear energy and led directly to the atomic bomb.",
+  "when": {
+    "start": {
+      "year": 1938,
+      "iso": "1938-12-19"
+    },
+    "end": {
+      "year": 1939,
+      "iso": "1939-01-31"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Hahn and Straßmann identified radioactive barium on 19 December 1938; Meitner and Frisch formulated the theoretical explanation in Sweden over Christmas 1938 and published it in January 1939."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Nuclear fission was discovered at the Kaiser Wilhelm Institute for Chemistry in December 1938... On 19 December 1938, they arrived at an unexpected conclusion: Hahn and Straßmann showed, with the help of special chemical separation and analytical methods, that the reaction products observed were radioactive barium isotopes",
+        "source": "src-mpic-fission"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Hahn s most spectacular discovery came at the end of 1938 when, while working jointly with Fritz Strassmann, Hahn discovered the fission of uranium",
+        "source": "src-ahf-hahn"
+      }
+    ],
+    "display": "19 December 1938 – January 1939"
+  },
+  "where": {
+    "lat": 52.447984,
+    "lon": 13.284274,
+    "elevation_m": 48,
+    "modern_name": "Kaiser Wilhelm Institute for Chemistry (now Hahn-Meitner-Bau, Free University of Berlin), Thielallee 63, Berlin-Dahlem, Germany",
+    "historical_name": "Kaiser-Wilhelm-Institut für Chemie, Berlin-Dahlem, German Reich",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 0.5,
+    "coordinate_sources": [
+      "src-wikidata-q61768425"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "science_technology",
+    "wars_conflict"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 5,
+    "justification": "Opened the nuclear age of atomic weapons and nuclear power (R4 D3 T2 L4)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "person-lise-meitner",
+      "type": "related"
+    },
+    {
+      "id": "1942-manhattan-project",
+      "type": "caused",
+      "because": "The discovery of nuclear fission demonstrated the feasibility of an explosive nuclear chain reaction, prompting the Allied race to develop the atomic bomb."
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "1938-12-19",
+        "action": "pulse { radius_km: 25 }",
+        "caption": "Otto Hahn and Fritz Straßmann detect barium isotopes from neutron-bombarded uranium in Berlin.",
+        "source": "src-mpic-fission"
+      },
+      {
+        "span": "1939-01-16",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Lise Meitner and Otto Frisch provide the theoretical physical explanation of nuclear fission.",
+        "source": "src-mpic-fission",
+        "consequence": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-mpic-fission",
+      "url": "https://www.mpic.de/4469988/die-entdeckung-der-kernspaltung",
+      "title": "The Discovery of Nuclear Fission",
+      "publisher": "Max Planck Institute for Chemistry",
+      "author": "Max Planck Institute for Chemistry",
+      "date_published": "2023",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-ahf-hahn",
+      "url": "https://ahf.nuclearmuseum.org/ahf/profile/otto-hahn/",
+      "title": "Otto Hahn - Nuclear Museum",
+      "publisher": "Atomic Heritage Foundation (National Museum of Nuclear Science & History)",
+      "author": "Atomic Heritage Foundation",
+      "date_published": "2023",
+      "accessed": "2026-11-13",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-wikidata-q61768425",
+      "url": "https://www.wikidata.org/wiki/Q61768425",
+      "title": "Hahn-Meitner-Bau, Berlin-Dahlem (Wikidata Q61768425)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from MPIC and AHF pages; coordinates now from Wikidata for the former institute building (Hahn-Meitner-Bau) instead of GeoNames city centre.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:11.016Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1949-nato",
+  "kind": "event",
+  "title": "North Atlantic Treaty Organization (NATO)",
+  "summary": "On 4 April 1949 the United States, Canada, Belgium, Denmark, France, Iceland, Italy, Luxembourg, the Netherlands, Norway, Portugal and the United Kingdom signed the North Atlantic Treaty in Washington. Under Article 5 an armed attack on one member in Europe or North America is an attack on all. Built for collective security against the Soviet Union, it was the first peacetime military alliance the United States joined outside the Western Hemisphere. West Germany's entry in 1955 prompted the Warsaw Pact; NATO remains the largest peacetime alliance.",
+  "when": {
+    "start": {
+      "year": 1949,
+      "iso": "1949-04-04"
+    },
+    "end": {
+      "year": 1949,
+      "iso": "1949-04-04"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Signed in Washington on 4 April 1949; entered into force on 24 August 1949 after all initial ratifications were deposited."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "Washington D.C. - 4 April 1949",
+        "source": "src-nato-treaty1949"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "The North Atlantic Treaty Organization was created in 1949 by the United States, Canada, and several Western European nations",
+        "source": "src-state-nato1949"
+      }
+    ],
+    "display": "4 April 1949"
+  },
+  "where": {
+    "lat": 38.892611,
+    "lon": -77.029697,
+    "elevation_m": 10,
+    "modern_name": "Andrew W. Mellon Auditorium, Washington, D.C., United States (site of the signing of the North Atlantic Treaty)",
+    "historical_name": "Departmental Auditorium, Washington, D.C., United States",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 1,
+    "coordinate_sources": [
+      "src-wikidata-q4758815"
+    ]
+  },
+  "regions": [
+    "northern_america",
+    "europe"
+  ],
+  "domains": [
+    "wars_conflict",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Bound North America to Western Europe's defence through the Cold War and after (R3 D3 T2 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1949-04-04",
+        "action": "pulse { radius_km: 100 }",
+        "caption": "Representatives of twelve North American and Western European nations sign the North Atlantic Treaty in Washington.",
+        "source": "src-nato-treaty1949",
+        "consequence": false
+      },
+      {
+        "span": "1949-08-24",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "The treaty enters into force, establishing the primary collective defense framework that shaped Cold War geopolitics.",
+        "source": "src-state-nato1949",
+        "consequence": true
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "1947-cold-war",
+      "type": "caused_by",
+      "because": "Escalating post-war tensions with the Soviet Union prompted Western nations to establish a permanent collective military alliance."
+    },
+    {
+      "id": "1948-marshall-plan",
+      "type": "related"
+    },
+    {
+      "id": "org-united-nations",
+      "type": "related"
+    },
+    {
+      "id": "1989-11-09-fall-of-the-berlin-wall",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-nato-treaty1949",
+      "url": "https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/1949/04/04/the-north-atlantic-treaty",
+      "title": "The North Atlantic Treaty",
+      "publisher": "North Atlantic Treaty Organization",
+      "author": "North Atlantic Treaty Organization",
+      "date_published": "1949-04-04",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "where",
+        "where.coordinate_sources",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-state-nato1949",
+      "url": "https://history.state.gov/milestones/1945-1952/nato",
+      "title": "North Atlantic Treaty Organization (NATO), 1949",
+      "publisher": "Office of the Historian, U.S. Department of State",
+      "author": "Office of the Historian, U.S. Department of State",
+      "date_published": "2013",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-q4758815",
+      "url": "https://www.wikidata.org/wiki/Q4758815",
+      "title": "Andrew W. Mellon Auditorium (Wikidata Q4758815)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "reviewer_note": "Coordinator review 2026-11-13: NATO treaty URL updated to its current address (the old one redirects); summary rewritten from the treaty text and State Department page. Pin coordinates from Wikidata for the signing hall.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T07:59:18.918Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
