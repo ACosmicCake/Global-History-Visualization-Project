@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "2011-syrian-civil-war",
+  "kind": "event",
+  "title": "Syrian civil war",
+  "summary": "In March 2011 the arrest of students in Daraa for anti-regime graffiti, and the government's brutal response, set off nationwide protests that turned into armed conflict. Rebel groups fought President Bashar al-Assad's forces, the self-proclaimed Islamic State seized territory from 2013, a US-led coalition fought it, Turkey attacked Kurdish forces, and Russia began air strikes for the government in 2015. The regime was accused of repeated chemical attacks. UN estimates put the dead at over 580,000. Assad was overthrown in December 2024.",
+  "when": {
+    "start": {
+      "year": 2011,
+      "iso": "2011-03"
+    },
+    "end": {
+      "year": 2024,
+      "iso": "2024-12"
+    },
+    "precision": "month",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Protests and armed clashes began in March 2011; large-scale civil war under the Assad regime ended with its collapse in December 2024."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Gregorian",
+        "value": "In March 2011, a group of Syrian students was arrested in the southern city of Dara'a for writing political graffiti on walls that said, “Down with the regime.” The government’s brutal response to the Syrian people’s call for freedom and dignity sparked nation-wide demonstrations and escalating tensions, which descended into an armed conflict",
+        "source": "src-state-syria"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Syria’s Civil War (2011-24) What began as protests against President Assad’s regime in 2011 quickly escalated into a full-scale war between the Syrian government and anti-government rebel groups",
+        "source": "src-cfr-syria"
+      },
+      {
+        "calendar": "Gregorian",
+        "value": "Since the ouster of the Bashar al-Assad regime in December 2024",
+        "source": "src-cfr-syria"
+      }
+    ],
+    "display": "March 2011 – December 2024"
+  },
+  "where": {
+    "lat": 33.5102,
+    "lon": 36.29128,
+    "elevation_m": 680,
+    "modern_name": "Damascus, Syria",
+    "historical_name": "Damascus, Syrian Arab Republic",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 50,
+    "coordinate_sources": [
+      "src-geonames-damascus"
+    ]
+  },
+  "regions": [
+    "western_asia"
+  ],
+  "domains": [
+    "wars_conflict",
+    "atrocity_injustice",
+    "law_politics_rights"
+  ],
+  "scale": "modern",
+  "importance": {
+    "score": 4,
+    "justification": "Killed hundreds of thousands, displaced over half of Syria and drove a refugee crisis felt across the Middle East and Europe (R3 D4 T2 L2)."
+  },
+  "confidence": "established",
+  "audience_note": "Includes chemical weapons attacks, siege warfare, torture, mass displacement, and heavy civilian casualties.",
+  "related": [
+    {
+      "id": "2010-arab-spring",
+      "type": "caused_by",
+      "because": "The regional wave of Arab Spring demonstrations in early 2011 inspired the initial anti-government street protests across Syrian cities."
+    },
+    {
+      "id": "2003-iraq-war",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-state-syria",
+      "url": "https://2009-2017.state.gov/r/pa/ei/bgn/3580.htm",
+      "title": "U.S. Relations With Syria",
+      "publisher": "U.S. Department of State, Bureau of Near Eastern Affairs",
+      "author": "U.S. Department of State",
+      "date_published": "2014-03-20",
+      "accessed": "2026-11-13",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-cfr-syria",
+      "url": "https://www.cfr.org/global-conflict-tracker/conflict/conflict-syria",
+      "title": "Instability in Syria",
+      "publisher": "Council on Foreign Relations",
+      "author": "Council on Foreign Relations",
+      "date_published": "2026",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-damascus",
+      "url": "https://www.geonames.org/170654/",
+      "title": "Damascus, Syria (GeoNames 170654)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "2011-03",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Anti-government protests erupt across Syria and meet violent state repression, triggering armed conflict.",
+        "source": "src-state-syria"
+      },
+      {
+        "span": "2024-12",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "The collapse and ouster of the Assad regime concludes the civil war after more than a decade of devastation.",
+        "source": "src-cfr-syria",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from the State Department and CFR; the UN estimate of at least 580,000 dead and over half the population displaced is from CFR. Recent subject: T capped at 2. Damascus is a stand-in pin.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T08:16:45.363Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}

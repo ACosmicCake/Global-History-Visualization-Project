@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "id": "1075-investiture-controversy",
+  "kind": "event",
+  "title": "Investiture Controversy",
+  "summary": "From 1075 to 1122 the popes and the German kings Henry IV and Henry V fought over who should invest bishops. At his Lenten synod of 1075 Pope Gregory VII took from the king the right to dispose of bishoprics. Henry had German bishops declare Gregory deposed at Worms in 1076; the pope excommunicated him, and in January 1077 Henry stood barefoot for three days at Canossa to win pardon. The Concordat of Worms of 23 September 1122 ended the dispute in a compromise between royal and church claims.",
+  "when": {
+    "start": {
+      "year": 1075
+    },
+    "end": {
+      "year": 1122,
+      "iso": "1122-09-23"
+    },
+    "precision": "day",
+    "uncertainty": {
+      "start_minus_years": 0,
+      "start_plus_years": 0,
+      "end_minus_years": 0,
+      "end_plus_years": 0,
+      "note": "Began with Gregory VII's 1075 prohibition of lay investiture and concluded with the Concordat of Worms on 23 September 1122."
+    },
+    "as_recorded": [
+      {
+        "calendar": "Julian",
+        "value": "great struggle between the popes and the German kings Henry IV and Henry V, during the period 1075-1122",
+        "source": "src-newadvent-investiture"
+      },
+      {
+        "calendar": "Julian",
+        "value": "Gregory at the Lenten (Roman) Synod of 1075 withdrew \"from the king the right of disposing of bishoprics in future, and relieved all lay persons of the investiture of churches\"",
+        "source": "src-newadvent-investiture"
+      },
+      {
+        "calendar": "Julian",
+        "value": "finally came to an end with the Concordat or Worms in 1122. The King was recognized as having the right to invest bishops with secular authority, but not with sacred authority",
+        "source": "src-fordham-worms"
+      }
+    ],
+    "display": "1075 – 23 September 1122"
+  },
+  "where": {
+    "lat": 49.63278,
+    "lon": 8.35916,
+    "elevation_m": 100,
+    "modern_name": "Worms, Rhineland-Palatinate, Germany",
+    "historical_name": "Worms, Holy Roman Empire",
+    "geometry": {
+      "type": "point"
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-geonames-worms"
+    ]
+  },
+  "regions": [
+    "europe"
+  ],
+  "domains": [
+    "religion_philosophy",
+    "law_politics_rights",
+    "civilizations_empires"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 4,
+    "justification": "Set lasting limits between church and royal power in western Europe (R3 D2 T3 L3)."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "0400-catholic-church-and-papacy",
+      "type": "related"
+    },
+    {
+      "id": "1054-east-west-schism",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-newadvent-investiture",
+      "url": "https://www.newadvent.org/cathen/08084c.htm",
+      "title": "Conflict of Investitures",
+      "publisher": "Robert Appleton Company (hosted by New Advent)",
+      "author": "Catholic Encyclopedia",
+      "date_published": "1910",
+      "accessed": "2026-11-13",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-fordham-worms",
+      "url": "https://sourcebooks.fordham.edu/source/worms1.asp",
+      "title": "Medieval Sourcebook: The Concordat of Worms 1122",
+      "publisher": "Fordham University Center for Medieval Studies",
+      "author": "Oliver J. Thatcher and Edgar Holmes McNeal",
+      "date_published": "1996",
+      "accessed": "2026-11-13",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-geonames-worms",
+      "url": "https://www.geonames.org/2806142/",
+      "title": "Worms, Germany (GeoNames 2806142)",
+      "publisher": "GeoNames",
+      "author": "GeoNames",
+      "date_published": "n.d.",
+      "accessed": "2026-11-13",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where",
+        "where.coordinate_sources"
+      ]
+    }
+  ],
+  "animation": {
+    "template": "point",
+    "spec_version": 1,
+    "duration_s": 25,
+    "beats": [
+      {
+        "span": "1075",
+        "action": "pulse { radius_km: 150 }",
+        "caption": "Pope Gregory VII prohibits lay investiture, initiating a constitutional clash between the papacy and the Holy Roman Empire.",
+        "source": "src-newadvent-investiture"
+      },
+      {
+        "span": "1122-09-23",
+        "action": "pulse { radius_km: 250 }",
+        "caption": "The Concordat of Worms settles the dispute by granting the church spiritual investiture while preserving imperial temporal prerogatives.",
+        "source": "src-fordham-worms",
+        "consequence": true
+      }
+    ]
+  },
+  "reviewer_note": "Coordinator review 2026-11-13: summary rewritten from the Catholic Encyclopedia (New Advent) and the Fordham sourcebook; \"institutional autonomy of the Church\" softened to the Concordat as compromise; loose contemporary links dropped. Worms pin from GeoNames.",
+  "author": "historian-agent:gemini-flash-outline",
+  "updated": "2026-11-13",
+  "published_at": "2026-11-13T08:16:43.864Z",
+  "changelog": [
+    {
+      "date": "2026-11-13",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
