@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0.0",
+  "record_version": 1,
+  "tier": "outline",
+  "status": "outline",
+  "author": "historian-agent:claude-silk-roads",
+  "updated": "2026-11-14",
+  "id": "place-silk-roads-zarafshan-karakum-corridor",
+  "kind": "place",
+  "title": "Silk Roads: Zarafshan–Karakum corridor",
+  "summary": "An 866 km World Heritage corridor of 34 sites in Tajikistan, Uzbekistan and Turkmenistan. It follows the Zarafshan River west, then old caravan roads across the Karakum Desert to the Merv oasis, linking Samarkand, Bukhara and Merv. UNESCO dates its use from the 2nd century BCE to the 16th century CE, with peaks when Sogdian merchants rose, in trade with the Muslim world, and under Mongol rule.",
+  "when": {
+    "start": {
+      "year": -199
+    },
+    "end": {
+      "year": 1600
+    },
+    "precision": "century",
+    "uncertainty": {
+      "note": "UNESCO gives the 2nd century BCE to the 16th century CE; its own list of prosperous periods runs the Mongol-era one to the 17th century. Samarkand was a way station from the 4th century BCE (Smithsonian)."
+    },
+    "as_recorded": [
+      {
+        "calendar": "BCE/CE",
+        "value": "between the 2nd century BCE and the 16th century CE",
+        "source": "src-unesco-1675"
+      },
+      {
+        "calendar": "BCE/CE",
+        "value": "first became a way station on the Silk Road in the 4th century B.C.E.",
+        "source": "src-si-samarkand"
+      }
+    ],
+    "display": "2nd century BCE – 16th century CE"
+  },
+  "where": {
+    "lat": 39.774722,
+    "lon": 64.428611,
+    "elevation_m": null,
+    "modern_name": "Zarafshan valley and Karakum Desert, from Samarkand by Bukhara to Merv (Tajikistan, Uzbekistan, Turkmenistan)",
+    "historical_name": "Sogdiana and Margiana: the Zarafshan (Zeravshan) valley caravan road to the Merv oasis",
+    "geometry": {
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 39.6547,
+          "lon": 66.9756,
+          "date": "Undated stage of the route",
+          "label": "Samarkand in the Zarafshan valley, capital of Sogdiana. Point is the Registan.",
+          "source": "src-si-samarkand",
+          "coordinate_source": "src-wikidata-registan"
+        },
+        {
+          "lat": 39.774722,
+          "lon": 64.428611,
+          "date": "Undated stage of the route",
+          "label": "Bukhara: caravans ran between Samarkand, Bukhara and Merv.",
+          "source": "src-si-samarkand",
+          "coordinate_source": "src-wd-bukhara"
+        },
+        {
+          "lat": 37.6675,
+          "lon": 62.1775,
+          "date": "Undated stage of the route",
+          "label": "Merv oasis, the western end of the corridor across the Karakum Desert.",
+          "source": "src-unesco-1675",
+          "coordinate_source": "src-unesco-xml"
+        }
+      ]
+    },
+    "uncertainty_km": 25,
+    "coordinate_sources": [
+      "src-wd-bukhara",
+      "src-wikidata-registan",
+      "src-unesco-xml"
+    ]
+  },
+  "regions": [
+    "central_asia"
+  ],
+  "domains": [
+    "trade_exploration",
+    "built_world"
+  ],
+  "scale": "civilization",
+  "importance": {
+    "score": 3,
+    "justification": "The Central Asian stretch of the Silk Roads through Sogdiana, carrying goods and ideas between east and west for some eighteen centuries."
+  },
+  "confidence": "established",
+  "audience_note": null,
+  "related": [
+    {
+      "id": "-0130-silk-roads-network",
+      "type": "part_of"
+    },
+    {
+      "id": "place-silk-roads-chang-an-tianshan-corridor",
+      "type": "related"
+    },
+    {
+      "id": "place-merv",
+      "type": "has_part"
+    },
+    {
+      "id": "place-bukhara-historic-centre",
+      "type": "has_part"
+    },
+    {
+      "id": "place-registan-samarkand",
+      "type": "related"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-unesco-1675",
+      "url": "https://whc.unesco.org/en/list/1675/",
+      "title": "Silk Roads: Zarafshan-Karakum Corridor",
+      "publisher": "UNESCO World Heritage Centre",
+      "author": "UNESCO World Heritage Centre",
+      "date_published": null,
+      "accessed": "2026-11-14",
+      "class": "government",
+      "opened": true,
+      "supports": [
+        "when",
+        "when.as_recorded",
+        "summary",
+        "where"
+      ]
+    },
+    {
+      "id": "src-si-samarkand",
+      "url": "https://festival.si.edu/2002/the-silk-road/samarkand-geography-and-history/smithsonian",
+      "title": "Samarkand: Geography and History (Smithsonian Folklife Festival 2002, The Silk Road)",
+      "publisher": "Smithsonian Institution, Center for Folklife and Cultural Heritage",
+      "author": null,
+      "date_published": "2002",
+      "accessed": "2026-11-14",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-wikidata-registan",
+      "url": "https://www.wikidata.org/wiki/Q1373583",
+      "title": "Registan (Q1373583), coordinate statement P625",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-wd-bukhara",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5764.json",
+      "title": "Wikidata entry for Bukhara (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List data (XML export), geolocation of Ancient Merv",
+      "publisher": "UNESCO World Heritage Centre (list XML)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    }
+  ],
+  "reviewer_note": "The UNESCO page names no component sites and no eastern start; Samarkand and Bukhara come from the Smithsonian page, not the listing, and the line is drawn through them as stops. The inscription year was not on the page opened, so it is left out.",
+  "animation": {
+    "template": "path",
+    "spec_version": 1,
+    "duration_s": 24,
+    "beats": [
+      {
+        "span": "2nd century BCE",
+        "action": "path.trace {}",
+        "caption": "Caravans follow the Zarafshan River west and cross the Karakum Desert to the Merv oasis.",
+        "source": "src-unesco-1675"
+      },
+      {
+        "span": "5th to 8th centuries CE",
+        "action": "region.fill { radius_km: 200 }",
+        "caption": "Sogdian merchants rise, the first of the corridor's three prosperous periods.",
+        "source": "src-unesco-1675"
+      },
+      {
+        "span": "2nd century BCE to 16th century CE",
+        "action": "pulse { radius_km: 300 }",
+        "caption": "For some eighteen centuries goods, ideas and beliefs pass along the corridor, leaving mosques, caravanserais and cities.",
+        "source": "src-unesco-1675",
+        "consequence": true
+      }
+    ]
+  },
+  "published_at": "2026-11-14T17:40:14.934Z",
+  "changelog": [
+    {
+      "date": "2026-11-14",
+      "version": 1,
+      "change": "outline"
+    }
+  ]
+}
