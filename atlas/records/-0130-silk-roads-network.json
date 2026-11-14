@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "record_version": 1,
+  "record_version": 2,
   "tier": "outline",
   "status": "outline",
   "author": "historian-agent:gemini-flash-outline",
-  "updated": "2026-11-12",
+  "updated": "2026-11-14",
   "id": "-0130-silk-roads-network",
   "kind": "process",
   "title": "The Silk Roads",
-  "summary": "The Silk Road was a network of trade routes linking regions of the ancient world. In 138 BCE Emperor Wu sent his emissary Zhang Qian west, and Han China officially opened trade with the west in 130 BCE. World History Encyclopedia ends regular use in 1453. UNESCO says the Chang'an–Tianshan corridor stayed in use until the 16th century, carrying trade, religious beliefs, scientific knowledge and technology.",
+  "summary": "The Silk Roads were overland trade routes linking China with Central Asia, Iran and the Mediterranean. Han China officially opened trade with the west in 130 BCE after Zhang Qian's missions. From Chang'an the routes ran through the Hexi Corridor and the Jade Gate, split around the Tarim Basin, met again at Kashgar, and continued through Samarkand, Bukhara and Merv toward Syria. Silk, porcelain, paper and spices went west; horses, glassware, gold and silver went east, and Buddhism travelled along them. World History Encyclopedia ends regular use in 1453.",
   "when": {
     "start": {
       "year": -130
@@ -42,14 +42,120 @@
     "lat": 34.25833,
     "lon": 108.92861,
     "elevation_m": null,
-    "modern_name": "Xi'an, China (ancient Chang'an; one end of the network)",
-    "historical_name": "Chang'an, Western Han Empire",
+    "modern_name": "Xi'an, China (ancient Chang'an), eastern end of the main overland route to Antioch (Antakya, Türkiye)",
+    "historical_name": "Chang'an, capital of the Western Han; the route crosses the Han frontier, the Tarim Basin oasis states, Sogdiana and Parthian Margiana to Roman Syria",
     "geometry": {
-      "type": "point"
+      "type": "path",
+      "waypoints": [
+        {
+          "lat": 34.25833,
+          "lon": 108.92861,
+          "date": "Undated stage of the route",
+          "label": "Chang'an (modern Xi'an): with Luoyang, the eastern start of the routes in Han and Tang times.",
+          "source": "src-uw-neelis",
+          "coordinate_source": "src-geonames-xian"
+        },
+        {
+          "lat": 38.9,
+          "lon": 100.5,
+          "date": "route shape only",
+          "label": "Route shape only, not a recorded stop: the routes run west from Chang'an through the Hexi Corridor (UNESCO).",
+          "source": "src-unesco-1442",
+          "via": true
+        },
+        {
+          "lat": 40.352172,
+          "lon": 93.863826,
+          "date": "Undated stage of the route",
+          "label": "Yumen Pass, the Jade Gate outside Dunhuang, where the northern route around the Tarim Basin began; the southern route left by the Yang Pass.",
+          "source": "src-uw-neelis",
+          "coordinate_source": "src-wd-yumen"
+        },
+        {
+          "lat": 42.94769,
+          "lon": 89.17886,
+          "date": "Undated stage of the route",
+          "label": "Turfan, an oasis on the northern route along the Tian Shan side of the Taklamakan.",
+          "source": "src-uw-neelis",
+          "coordinate_source": "src-gn-turpan"
+        },
+        {
+          "lat": 41.71497,
+          "lon": 82.93249,
+          "date": "Undated stage of the route",
+          "label": "Kucha, a northern-route oasis whose Buddhist cave art dates to about the 3rd to 7th centuries CE. Point is GeoNames' Xincheng, alternate name Kuqa.",
+          "source": "src-uw-neelis",
+          "coordinate_source": "src-gn-kuqa"
+        },
+        {
+          "lat": 39.46718,
+          "lon": 75.98675,
+          "date": "Undated stage of the route",
+          "label": "Kashgar, where the northern and southern routes around the Taklamakan met.",
+          "source": "src-uw-neelis",
+          "coordinate_source": "src-gn-kashgar"
+        },
+        {
+          "lat": 39.6547,
+          "lon": 66.9756,
+          "date": "Undated stage of the route",
+          "label": "Samarkand in the Zarafshan valley, capital of Sogdiana and a Silk Road way station from the 4th century BCE. Point is the Registan.",
+          "source": "src-si-samarkand",
+          "coordinate_source": "src-wikidata-registan"
+        },
+        {
+          "lat": 39.774722,
+          "lon": 64.428611,
+          "date": "Undated stage of the route",
+          "label": "Bukhara, an oasis city on the caravan road between Samarkand and Merv.",
+          "source": "src-si-samarkand",
+          "coordinate_source": "src-wd-bukhara"
+        },
+        {
+          "lat": 37.6675,
+          "lon": 62.1775,
+          "date": "Undated stage of the route",
+          "label": "Merv (ancient Margiana), from which routes ran on through Iran and Mesopotamia toward Syria.",
+          "source": "src-uw-neelis",
+          "coordinate_source": "src-unesco-xml"
+        },
+        {
+          "lat": 35.6,
+          "lon": 51.4,
+          "date": "route shape only",
+          "label": "Route shape only, not a recorded stop: beyond Merv the routes ran through Iran and Mesopotamia toward Syria (UW Silk Road Seattle).",
+          "source": "src-uw-neelis",
+          "via": true
+        },
+        {
+          "lat": 33.8,
+          "lon": 43.0,
+          "date": "route shape only",
+          "label": "Route shape only, not a recorded stop: beyond Merv the routes ran through Iran and Mesopotamia toward Syria (UW Silk Road Seattle).",
+          "source": "src-uw-neelis",
+          "via": true
+        },
+        {
+          "lat": 36.20655,
+          "lon": 36.15722,
+          "date": "Undated stage of the route",
+          "label": "Antioch (modern Antakya), one of the western end-points with Damascus and Constantinople.",
+          "source": "src-asiasoc-geo",
+          "coordinate_source": "src-gn-antakya"
+        }
+      ]
     },
-    "uncertainty_km": 3000,
+    "uncertainty_km": 25,
     "coordinate_sources": [
-      "src-geonames-xian"
+      "src-geonames-xian",
+      "src-wd-yumen",
+      "src-gn-turpan",
+      "src-gn-kuqa",
+      "src-gn-kashgar",
+      "src-wikidata-registan",
+      "src-wd-bukhara",
+      "src-unesco-xml",
+      "src-gn-antakya"
     ]
   },
   "regions": [
@@ -98,6 +204,42 @@
     {
       "id": "1453-fall-of-constantinople",
       "type": "related"
+    },
+    {
+      "id": "0700-maritime-silk-road",
+      "type": "related"
+    },
+    {
+      "id": "place-silk-roads-zarafshan-karakum-corridor",
+      "type": "has_part"
+    },
+    {
+      "id": "place-merv",
+      "type": "has_part"
+    },
+    {
+      "id": "place-registan-samarkand",
+      "type": "related"
+    },
+    {
+      "id": "place-bukhara-historic-centre",
+      "type": "related"
+    },
+    {
+      "id": "-2700-sericulture-and-silk",
+      "type": "related"
+    },
+    {
+      "id": "0067-introduction-of-buddhism-to-china",
+      "type": "related"
+    },
+    {
+      "id": "0629-xuanzang-journey-to-india",
+      "type": "related"
+    },
+    {
+      "id": "1271-marco-polo-journey-to-china",
+      "type": "related"
     }
   ],
   "sources": [
@@ -129,10 +271,10 @@
       "class": "reference",
       "opened": true,
       "supports": [
-        "when",
-        "when.as_recorded",
+        "animation",
         "summary",
-        "animation"
+        "when",
+        "when.as_recorded"
       ]
     },
     {
@@ -149,36 +291,203 @@
         "where.lat",
         "where.lon"
       ]
+    },
+    {
+      "id": "src-uw-neelis",
+      "url": "https://depts.washington.edu/silkroad/exhibit/trade/essay.html",
+      "title": "Silk Road Trade Routes",
+      "publisher": "University of Washington, Silk Road Seattle",
+      "author": "Jason Neelis",
+      "date_published": null,
+      "accessed": "2026-11-14",
+      "class": "scholarly",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints",
+        "summary",
+        "animation"
+      ]
+    },
+    {
+      "id": "src-si-samarkand",
+      "url": "https://festival.si.edu/2002/the-silk-road/samarkand-geography-and-history/smithsonian",
+      "title": "Samarkand: Geography and History (Smithsonian Folklife Festival 2002, The Silk Road)",
+      "publisher": "Smithsonian Institution, Center for Folklife and Cultural Heritage",
+      "author": null,
+      "date_published": "2002",
+      "accessed": "2026-11-14",
+      "class": "museum",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints",
+        "summary"
+      ]
+    },
+    {
+      "id": "src-asiasoc-geo",
+      "url": "https://asiasociety.org/geographical-setting-silk-roads",
+      "title": "Geographical Setting of the Silk Roads",
+      "publisher": "Asia Society",
+      "author": "John Major",
+      "date_published": null,
+      "accessed": "2026-11-14",
+      "class": "reference",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-gn-kashgar",
+      "url": "https://www.geonames.org/1280849",
+      "title": "Kashgar (GeoNames 1280849)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-14",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-gn-antakya",
+      "url": "https://www.geonames.org/323779",
+      "title": "Antakya (GeoNames 323779)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-14",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-gn-kuqa",
+      "url": "https://www.geonames.org/search.html?q=Kuqa&country=CN",
+      "title": "Xincheng, alternate name Kuqa (GeoNames 1529363)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-14",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-gn-turpan",
+      "url": "https://www.geonames.org/search.html?q=Turpan&country=CN",
+      "title": "Turpan (GeoNames 1529114)",
+      "publisher": "GeoNames",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-11-14",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-wd-yumen",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1324562.json",
+      "title": "Wikidata entry for Yumen Pass (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-wikidata-registan",
+      "url": "https://www.wikidata.org/wiki/Q1373583",
+      "title": "Registan (Q1373583), coordinate statement P625",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-wd-bukhara",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5764.json",
+      "title": "Wikidata entry for Bukhara (coordinates)",
+      "publisher": "Wikidata",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
+    },
+    {
+      "id": "src-unesco-xml",
+      "url": "https://whc.unesco.org/en/list/xml/",
+      "title": "UNESCO World Heritage List data (XML export), geolocation of Ancient Merv",
+      "publisher": "UNESCO World Heritage Centre (list XML)",
+      "author": null,
+      "date_published": null,
+      "accessed": "2026-10-22",
+      "class": "dataset",
+      "opened": true,
+      "supports": [
+        "where.geometry.waypoints"
+      ]
     }
   ],
-  "reviewer_note": "Local trade is older than 130 BCE, and sources end the routes at different dates. The pin at Xi'an marks one end of a network, not its centre.",
+  "reviewer_note": "Local trade is older than 130 BCE, and sources end the routes at different dates (WHE 1453; UNESCO the 16th century). The drawn line is one main route, not the whole network: UW Silk Road Seattle also describes a southern route by Miran, Niya and Khotan, and branches to India. Between Merv and Antioch no source opened names the stops; the line there bends through Iran and Mesopotamia on route-shape points only. Kucha is placed at GeoNames' Xincheng (alt. Kuqa).",
   "published_at": "2026-11-04T21:56:48.390Z",
   "changelog": [
     {
       "date": "2026-11-04",
       "version": 1,
       "change": "outline"
+    },
+    {
+      "date": "2026-11-14",
+      "version": 2,
+      "change": "enriched"
     }
   ],
   "animation": {
-    "template": "point",
+    "template": "path",
     "spec_version": 1,
-    "duration_s": 24,
+    "duration_s": 30,
     "beats": [
       {
-        "span": "-130",
-        "action": "pulse { radius_km: 400 }",
-        "caption": "The Silk Road was a network of trade routes linking regions of the ancient world.",
-        "source": "src-unesco-1442"
+        "span": "130 BCE",
+        "action": "path.trace {}",
+        "caption": "After Zhang Qian's missions, Han China officially opens trade with the west from Chang'an.",
+        "source": "src-whe-silk"
+      },
+      {
+        "span": "Han to Tang periods",
+        "action": "region.fill { radius_km: 300 }",
+        "caption": "Monks and merchants carry silk, gems and Buddhist objects between oases on both sides of the Taklamakan.",
+        "source": "src-uw-neelis"
       },
       {
         "span": "1453",
         "action": "pulse { radius_km: 640 }",
-        "caption": "In 138 BCE Emperor Wu sent his emissary Zhang Qian west, and Han China officially opened trade with the west in 130 BCE.",
-        "source": "src-unesco-1442",
+        "caption": "After Constantinople falls, the Ottomans close the routes to the west, and Europe turns to the sea.",
+        "source": "src-whe-silk",
         "consequence": true
       }
-    ],
-    "generated": "template from summary (atlas/tools/animate.mjs)"
+    ]
   }
 }
