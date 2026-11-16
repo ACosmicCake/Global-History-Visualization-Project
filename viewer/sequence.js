@@ -66,13 +66,13 @@
 
   // ---------- scene helpers
   function anchor(ctx, lat, lng, alt = 0.004) { const c = ctx.globe.getCoords(lat, lng, alt); return new THREE.Vector3(c.x, c.y, c.z); }
-  function surfaceRing(ctx, lat, lng, radiusKm, color, filled) {
+  function surfaceRing(ctx, lat, lng, radiusKm, color, filled, into = layer) {
     const rad = Math.max(0.4, radiusKm / 63.71);     // km -> globe units (R = 100 = 6371 km)
     const geo = filled ? new THREE.CircleGeometry(rad, 64) : new THREE.RingGeometry(rad * 0.86, rad, 96);
     const mat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: filled ? 0.28 : 0.9, side: THREE.DoubleSide, depthWrite: false });
     const mesh = new THREE.Mesh(geo, mat);
     mesh.position.copy(anchor(ctx, lat, lng, 0.006)); mesh.lookAt(0, 0, 0); mesh.renderOrder = 5;
-    layer.add(mesh); return mesh;
+    into.add(mesh); return mesh;
   }
   function greatCircle(ctx, pts, alt = 0.01) {     // interpolated points along consecutive waypoints
     const out = [];
@@ -211,7 +211,39 @@
   };
   const unit = (ctx, p) => anchor(ctx, p.lat, p.lng, 0).normalize();
   const tangents = dir => { const u = new THREE.Vector3(0, 1, 0).cross(dir); if (u.lengthSq() < 1e-4) u.set(1, 0, 0); u.normalize(); return [u, dir.clone().cross(u)]; };
-  const sceneGroup = () => { const g = new THREE.Group(); layer?.add(g); return g; };
+  // ---------- keeping effects on the ground. An effect is drawn where its place stood when it began, but in deep time
+  // that place rides a plate: the date can move on while it plays (the film, a glide, a scrub), and the plate model can
+  // arrive after it was drawn. So each effect hangs in a group pinned to its present-day place, and every frame the
+  // group is turned with that place's plate: its position, and its heading from a second point just north of it.
+  let anchors = [], rideNow = p => p, toVec = null;
+  const _m0 = new THREE.Matrix4(), _m1 = new THREE.Matrix4(), NUDGE = 0.5;   // degrees north for the heading
+  function frameAt(raw) {
+    const dn = raw.lat > 89 ? -NUDGE : NUDGE, p = rideNow(raw), q = rideNow({ lat: raw.lat + dn, lng: raw.lng });
+    const up = toVec(p.lat, p.lng), n = toVec(q.lat, q.lng), along = n.clone().addScaledVector(up, -n.dot(up));
+    // the second point rode another plate (near a boundary): keep just the position, not the heading
+    const step = (Math.abs(dn) * Math.PI) / 180, ok = along.lengthSq() > 1e-12 && Math.abs(n.angleTo(up) - step) < 0.25 * step;
+    return { up, along: ok ? along.normalize().multiplyScalar(Math.sign(dn)) : null };
+  }
+  function pinTo(raw) {
+    const g = new THREE.Group(); layer?.add(g);
+    if (toVec && raw && Number.isFinite(raw.lat) && Number.isFinite(raw.lng)) anchors.push({ g, raw, base: frameAt(raw) });
+    return g;
+  }
+  function reanchor() {
+    anchors = anchors.filter(a => a.g.parent);
+    for (const a of anchors) {
+      const b = a.base, now = frameAt(a.raw);
+      if (b.along && now.along) {
+        _m0.makeBasis(b.along.clone().cross(b.up), b.along, b.up); _m1.makeBasis(now.along.clone().cross(now.up), now.along, now.up);
+        a.g.quaternion.setFromRotationMatrix(_m1.multiply(_m0.transpose()));
+      } else a.g.quaternion.setFromUnitVectors(b.up, now.up);
+    }
+  }
+  function startAnchoring(ctx, ride, id) {
+    anchors = []; rideNow = ride; toVec = (lat, lng) => anchor(ctx, lat, lng, 0).normalize();
+    (function tick() { if (id !== run) return; reanchor(); requestAnimationFrame(tick); })();
+  }
+  const sceneGroup = o => pinTo(o?.raw);
   const ms = t => (reduced ? 1 : t);
   const flyThere = async (ctx, at, alt) => {
     if (filmOn) return;
@@ -264,7 +296,7 @@
   const SCENES = {
     // an asteroid comes in, a flash, shock rings and ejecta, and a crater left glowing. km: the crater, where the record says
     async impact(ctx, at, o) {
-      const g = sceneGroup(), dir = unit(ctx, at), km = o.km || 100, end = dir.clone().multiplyScalar(R), side = new THREE.Vector3(0.3, 1, 0.2).cross(dir).normalize();
+      const g = sceneGroup(o), dir = unit(ctx, at), km = o.km || 100, end = dir.clone().multiplyScalar(R), side = new THREE.Vector3(0.3, 1, 0.2).cross(dir).normalize();
       await flyThere(ctx, at, o.alt ?? clamp(km / 200, 0.4, 1));
       if (!o.alive()) return;
       const start = dir.clone().multiplyScalar(R * 1.9).add(side.multiplyScalar(R * 0.7)), head = glow('#fff3d6', 4), tail = Array.from({ length: 16 }, (_, i) => glow('#ffb45e', 3 - i * 0.14, 0.55 - i * 0.03));
@@ -286,7 +318,7 @@
     },
     // lava spreading over the land with ash rising downwind. km: the lava's reach, ash: an ash cloud's, where the record says
     async eruption(ctx, at, o) {
-      const g = sceneGroup(), dir = unit(ctx, at), km = o.km || 500, ash = o.ash || km * 0.8, angle = km / 6371, dur = Math.max(4200, o.ms - 1000);
+      const g = sceneGroup(o), dir = unit(ctx, at), km = o.km || 500, ash = o.ash || km * 0.8, angle = km / 6371, dur = Math.max(4200, o.ms - 1000);
       await flyThere(ctx, at, o.alt ?? clamp(Math.max(km, ash) / 500, 0.45, 1.3));
       if (!o.alive()) return;
       const lava = patch(dir, '#ff6a1f', 0.85, { rough: 0.22 }), core = patch(dir, '#ffd27a', 0.8, { rough: 0.3 }), cloud = patch(dir, '#8a8580', 0, { rough: 0.3 }), plume = burst(dir, 320, '#8f8780', 3.6, { spread: Math.min(0.5, ash / 6371), height: clamp(ash / 6000, 0.05, 0.14), loop: true, drift: 0.08 });
@@ -303,7 +335,7 @@
     },
     // the whole globe darkens and recovers: darkness after an impact, or a dying ocean
     async dim(ctx, at, o) {
-      const g = sceneGroup(), s = shell(o.color || '#06040a', o.level ?? 0.62), dir = unit(ctx, at), rings = [0, 1].map(() => patch(dir, o.color ? '#ffffff' : '#ff6a5a', 0.5, { hollow: 0.95 }));
+      const g = sceneGroup(o), s = shell(o.color || '#06040a', o.level ?? 0.62), dir = unit(ctx, at), rings = [0, 1].map(() => patch(dir, o.color ? '#ffffff' : '#ff6a5a', 0.5, { hollow: 0.95 }));
       g.add(s, ...rings);
       fly(ctx, at.lat, at.lng, o.alt ?? 1.5, 900);
       await tween(ms(Math.max(4200, o.ms)), k => {
@@ -314,7 +346,7 @@
     },
     // waves running out from a point
     async wave(ctx, at, o) {
-      const g = sceneGroup(), dir = unit(ctx, at), km = o.km || 1000, reach = km / 6371, rings = [0, 1, 2, 3].map(() => patch(dir, '#9fdcf5', 0.8, { hollow: 0.965 }));
+      const g = sceneGroup(o), dir = unit(ctx, at), km = o.km || 1000, reach = km / 6371, rings = [0, 1, 2, 3].map(() => patch(dir, '#9fdcf5', 0.8, { hollow: 0.965 }));
       g.add(...rings);
       fly(ctx, at.lat, at.lng, o.alt ?? clamp(km / 2000, 0.45, 1), 900);
       await tween(ms(Math.max(4200, o.ms)), k => rings.forEach((r, i) => { const p = Math.min(1, Math.max(0, k * 1.3 - i * 0.1)); r.setAngle(0.002 + reach * p); r.material.opacity = 0.85 * (1 - p); }));
@@ -322,7 +354,7 @@
     },
     // many small impacts over one side of a young planet
     async bombard(ctx, at, o) {
-      const g = sceneGroup(), dir = unit(ctx, at), [u, v] = tangents(dir), n = 16, dur = Math.max(5200, o.ms - 1000);
+      const g = sceneGroup(o), dir = unit(ctx, at), [u, v] = tangents(dir), n = 16, dur = Math.max(5200, o.ms - 1000);
       await flyThere(ctx, at, o.alt ?? 1.5);
       if (!o.alive()) return;
       const hits = Array.from({ length: n }, (_, i) => {
@@ -338,7 +370,7 @@
     },
     // a Mars-sized body strikes, and the debris gathers into the Moon
     async giant(ctx, at, o) {
-      const g = sceneGroup(), dir = unit(ctx, at), side = new THREE.Vector3(0.2, 1, 0.1).cross(dir).normalize(), dur = Math.max(4600, o.ms - 3200);
+      const g = sceneGroup(o), dir = unit(ctx, at), side = new THREE.Vector3(0.2, 1, 0.1).cross(dir).normalize(), dur = Math.max(4600, o.ms - 3200);
       await flyThere(ctx, at, 3.2);
       if (!o.alive()) return;
       const start = dir.clone().multiplyScalar(R * 3.4).add(side.clone().multiplyScalar(R * 2.6)), end = dir.clone().multiplyScalar(R * 1.3);
@@ -381,10 +413,10 @@
       fly(ctx, at.lat, at.lng, o.alt ?? 1.4, reduced ? 0 : 1400);
       if (o.year != null) await glideTime(ctx, o.year, ms(1400));
       if (!o.alive()) return;
-      const d = dirPulse(ctx, at); await tween(ms(Math.max(4200, o.ms)), k => d(k));
+      const d = dirPulse(ctx, at, o); await tween(ms(Math.max(4200, o.ms)), k => d(k));
     },
   };
-  const dirPulse = (ctx, at) => { const g = sceneGroup(), rings = [0, 1, 2].map(() => surfaceRing(ctx, at.lat, at.lng, 90, new THREE.Color('#d9b36a'), false)); rings.forEach(m => g.add(m)); return k => rings.forEach((m, j) => { const p = (k * 2 + j / 3) % 1; m.scale.setScalar(0.15 + p * 1.6); m.material.opacity = 0.9 * (1 - p); }); };
+  const dirPulse = (ctx, at, o) => { const g = sceneGroup(o), rings = [0, 1, 2].map(() => surfaceRing(ctx, at.lat, at.lng, 90, new THREE.Color('#d9b36a'), false, g)); return k => rings.forEach((m, j) => { const p = (k * 2 + j / 3) % 1; m.scale.setScalar(0.15 + p * 1.6); m.material.opacity = 0.9 * (1 - p); }); };
 
   // ---------- build beats: record's own, or a generated point template for outlines (spec 6.2)
   function beatsFor(rec) {
@@ -402,11 +434,13 @@
     stop(); const id = ++run; paused = false;
     layer = new THREE.Group(); ctx.globe.scene().add(layer);
     active = rec;
+    const ride = p => (ctx.ride ? ctx.ride(p) : p);
+    startAnchoring(ctx, ride, id);
     const color = new THREE.Color(ctx.color || '#d9b36a');
     const beats = beatsFor(rec), wpAll = rec.where?.geometry?.waypoints || [], wp = wpAll.filter(w => !w.via), regions = rec.where?.geometry?.regions || [];
     const total = rec.animation?.duration_s ? rec.animation.duration_s * 1000 : beats.length * 6000;
     const per = Math.max(4200, Math.min(9000, total / beats.length));
-    const home = { lat: rec.where?.lat ?? 0, lng: rec.where?.lon ?? 0 }, ride = p => (ctx.ride ? ctx.ride(p) : p);
+    const home = { lat: rec.where?.lat ?? 0, lng: rec.where?.lon ?? 0 };
     beatCount = beats.length; cur = 0; ctx.onStart(beats.length);
     const view = wp.length >= 2 ? routeView(ctx, wpAll) : null;
     let wpIndex = 0, trace = null;
@@ -448,10 +482,10 @@
       while (layer.children.length) layer.remove(layer.children[0]);
       wpIndex = 0; trace = null;
       for (let j = 0; j < t; j++) {
-        const { name, params } = parseAction(beats[j].action), at = ride(placeOf(j, params)), sc = sceneFor(j, name, params);
+        const { name, params } = parseAction(beats[j].action), raw = placeOf(j, params), at = ride(raw), sc = sceneFor(j, name, params);
         if (sc) { if (sc.type === 'plates') ctx.setTime(-sc.to_ma * 1e6); after(name, params); continue; }
         if (isPath(name, params)) { trace = trace || traceLine(ctx, wpAll, color); trace.draw(pathEnd(params)); }
-        else if (/region|fill|area|front/.test(name)) surfaceRing(ctx, at.lat, at.lng, params.radius_km || (params.radius_m ? params.radius_m / 1000 : 200), color, true);
+        else if (/region|fill|area|front/.test(name)) surfaceRing(ctx, at.lat, at.lng, params.radius_km || (params.radius_m ? params.radius_m / 1000 : 200), color, true, pinTo(raw));
         after(name, params);
       }
     };
@@ -459,6 +493,8 @@
     const first = parseAction(beats[0]?.action), firstScene = sceneFor(0, first.name, first.params);
     const startYear = spanYear(beats[0]?.span) ?? rec.when?.start?.year;
     if (startYear != null && !(firstScene?.type === 'plates' || firstScene?.ma != null)) ctx.setTime(startYear);
+    // in deep time places ride the plates: wait for the plate model, so the first flight goes where the land will be
+    await ctx.ready?.(); if (id !== run) return;
     if (!firstScene && !first.params.route_view) {
       const open = view || ride(home);
       await flyThere(ctx, open, view ? view.overview : 0.45);
@@ -492,12 +528,12 @@
           if (id !== run) return;
         }
         const target = reduced ? 3000 : Math.max(per, String(beat.caption || '').length * 55);    // long enough to read the caption
-        await SCENES[sc.type](ctx, sc.type === 'plates' ? raw : ride(raw), { ...sc, ms: target, ride, alive: () => id === run });
+        await SCENES[sc.type](ctx, sc.type === 'plates' ? raw : ride(raw), { ...sc, raw, ms: target, ride, alive: () => id === run });
         const left = target - (performance.now() - started);
         if (left > 0 && id === run) await wait(left);
         after(name, params); return;
       }
-      const at = ride(placeOf(i, params));
+      const raw = placeOf(i, params), at = ride(raw);
       if (isPath(name, params)) {
         trace = trace || traceLine(ctx, wpAll, color);
         const from = trace.drawn, to = pathEnd(params);
@@ -512,16 +548,16 @@
       }
       if (!/numbers/.test(name)) fly(ctx, at.lat, at.lng, params.route_view && view ? view.follow : pointAlt(params.radius_km || (params.radius_m || 0) / 1000 || 120));
       if (/region|fill|area|front/.test(name)) {
-        const disc = surfaceRing(ctx, at.lat, at.lng, params.radius_km || (params.radius_m ? params.radius_m / 1000 : 200), color, true);
+        const disc = surfaceRing(ctx, at.lat, at.lng, params.radius_km || (params.radius_m ? params.radius_m / 1000 : 200), color, true, pinTo(raw));
         await tween(per, k => { disc.scale.setScalar(0.2 + 0.8 * Math.min(1, k * 1.6)); });
       } else if (/numbers|counter/.test(name)) {
         const [lo, hi] = Array.isArray(params.range) ? params.range : [params.from || 0, params.to || 0];
         await tween(per, k => ctx.caption(i, `${beat.caption || ''}`, beat.consequence, lo === hi ? fmt(lo * Math.min(1, k * 1.5)) : `${fmt(lo * Math.min(1, k * 1.5))}–${fmt(hi * Math.min(1, k * 1.5))}`));
       } else { // pulse, layer.*, overlay.*, camera, anything else: a pulse at the beat's place
         const km = params.radius_km || (params.radius_m ? params.radius_m / 1000 : 60);
-        const rings = [0, 1, 2].map(() => surfaceRing(ctx, at.lat, at.lng, km, color, false));
+        const g = pinTo(raw), rings = [0, 1, 2].map(() => surfaceRing(ctx, at.lat, at.lng, km, color, false, g));
         await tween(per, k => rings.forEach((m, j) => { const p = (k * 2 + j / 3) % 1; m.scale.setScalar(0.15 + p * 1.6); m.material.opacity = 0.9 * (1 - p); }));
-        rings.forEach(m => m.parent?.remove(m)); // the layer is gone if the sequence was stopped mid-pulse
+        g.parent?.remove(g); // the layer is gone if the sequence was stopped mid-pulse
       }
       after(name, params);
     }
@@ -532,7 +568,9 @@
     stop(); const id = ++run; paused = false; filmOn = true;
     layer = new THREE.Group(); ctx.globe.scene().add(layer);
     active = { id: 'film' };
-    const ride = p => (ctx.ride ? ctx.ride(p) : p), smooth = k => { k = clamp(k, 0, 1); return k * k * k * (k * (6 * k - 15) + 10); };
+    const ride = p => (ctx.ride ? ctx.ride(p) : p);
+    startAnchoring(ctx, ride, id);
+    const smooth = k => { k = clamp(k, 0, 1); return k * k * k * (k * (6 * k - 15) + 10); };
     // time: a monotone cubic through the script's points, so its speed changes smoothly and it never runs backward
     const T = f.time, n = T.length, d = T.slice(0, -1).map((p, i) => (T[i + 1][1] - p[1]) / (T[i + 1][0] - p[0])), m = T.map((_, i) => (i === 0 ? d[0] : i === n - 1 ? d[n - 2] : d[i - 1] * d[i] <= 0 ? 0 : 2 / (1 / d[i - 1] + 1 / d[i])));
     const maAt = t => {
@@ -565,7 +603,7 @@
         dir = dir.clone().lerp(g.dir, k).normalize(); alt += (g.alt - alt) * k; put();
         for (const e of f.effects) if (!fired.has(e) && clock >= e.s) {
           fired.add(e);
-          if (clock < e.s + 1) SCENES[e.type](ctx, ride({ lat: e.at[0], lng: e.at[1] }), { ...e, ms: e.ms ?? 5000, ride, alive: () => id === run });
+          if (clock < e.s + 1) { const raw = { lat: e.at[0], lng: e.at[1] }; SCENES[e.type](ctx, ride(raw), { ...e, raw, ms: e.ms ?? 5000, ride, alive: () => id === run }); }
         }
       }
       if (c !== chapter) { chapter = c; ctx.ui.chapter(c < 0 ? null : f.chapters[c]); }

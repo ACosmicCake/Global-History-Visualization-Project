@@ -969,6 +969,8 @@ export function playSequence(r, onDone) {
       const q = placed({ lat, lon: lng });
       return { lat: q.lat, lng: q.lon };
     },
+    // deep time: resolves once the plate model is in, so places ride their plates from the first frame
+    ready: () => (state.t < -2e6 ? window.Space?.loadPaleo?.() : null),
     schematic: () => {
       $('#seq-title').textContent = `${r.title} · schematic animation`;
     },
